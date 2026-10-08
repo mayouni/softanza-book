@@ -17,8 +17,8 @@ say "the record is silent" and propose an `[AUTHOR: ...]` question.
 
 ## Where the record lives (read only; NEVER edit any of these)
 
-- The library, pinned: `D:\GitHub\ayouni\books\softanza-book\.cache\stzlib-b9d5cd1e4\libraries\stzlib`
-  (the commit the book runs at). Prefer it for code, design documents (`base/doc/design/`), narrations
+- The library, pinned: `D:\GitHub\ayouni\books\softanza-book\.cache\stzlib-93d7a39bd\libraries\stzlib`
+  (origin/main, the commit the book runs at; see the book's CLAUDE.md). Prefer it for code, design documents (`base/doc/design/`), narrations
   (`base/doc/narrations/`) and guards (`base/test/`).
 - The library's live checkout `D:\GitHub\stzlib` (may differ; only if the snapshot lacks something; say so).
 - The site: `D:\GitHub\stzsite` (`content/en/*.md`, `content/fr/*.md`, `llms.txt`).
@@ -32,7 +32,7 @@ The book shows code in Haro (the language's name; the library's files keep `.rin
 `ring`). Every block you propose must be run, and you report its exact output. Run ONLY inside the snapshot:
 
 ```
-cd "D:/GitHub/ayouni/books/softanza-book/.cache/stzlib-b9d5cd1e4/libraries/stzlib/base/test"
+cd "D:/GitHub/ayouni/books/softanza-book/.cache/stzlib-93d7a39bd/libraries/stzlib/base/test"
 mkdir -p _probe_<chapter-number> && cd _probe_<chapter-number>
 # write probe.ring whose first line is:   load "../../../max/stzMax.ring"
 ring probe.ring

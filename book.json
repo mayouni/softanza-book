@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 21:41 UTC+01:00",
+ "built": "2026-10-08 21:42 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -451,7 +451,7 @@
      "name": "testoor_promises_narrated",
      "exists": true,
      "path": "base/test/testoor/testoor_promises_narrated.ring",
-     "assertions": 67,
+     "assertions": 46,
      "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/testoor/testoor_promises_narrated.ring"
     },
     {

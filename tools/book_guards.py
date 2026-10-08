@@ -39,10 +39,13 @@ def count_assertions(text):
         m = re.match(r"(\w+)\s*\(", s)
         if m and m.group(1).lower() in helpers:
             by[m.group(1)] = by.get(m.group(1), 0) + 1
-    # the house's classic form asserts by promise: a line `#--> value` under the expression it judges
-    promises = len(re.findall(r"(?m)^[ \t]*(?:#|//)[ \t]*-->|\S[ \t]+#-->", text))
-    if promises:
-        by["#-->"] = promises
+    # the house's classic form asserts by promise: a line `#--> value` under the expression it judges.
+    # Counted only in a guard that asserts no other way: a narrated guard may hold `#-->` inside the strings
+    # it tests (the promise grammar's own guard does), and those are fixtures, not its assertions.
+    if not by:
+        promises = len(re.findall(r"(?m)^[ \t]*(?:#|//)[ \t]*-->|\S[ \t]+#-->", text))
+        if promises:
+            by["#-->"] = promises
     return sum(by.values()), by
 
 

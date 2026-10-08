@@ -57,6 +57,10 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 
 ## Working state
 
-- Phase 0 (the skeleton) built 2026-10-08 and waiting for the author's verdict on the format. Do not write a
-  third chapter before that verdict (§8).
+- Phase 0 (the skeleton) built 2026-10-08; its decisions taken on the author's delegation (`DECISIONS.md`).
+- Phase 1 (the spine) drafted 2026-10-08: chapters 1, 2, 3, 4, 5, 11, 17, 32, 33, all `status: draft`, all blocks kept
+  at origin/main 93d7a39bd. Memo and library requests: `sessions/2026-10-08-phase-1-spine.md`.
+- Next: Phase 2, Parts II, IV and VI. Method per chapter: a research session writes `research/chNN.md` from the
+  record (brief: `research/BRIEF.md`; its snapshot paths must name the current `.cache/stzlib-<sha>`), runs every
+  block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
