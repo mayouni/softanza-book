@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:25 UTC+01:00",
+ "read": "2026-10-08 22:28 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -252,6 +252,66 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring",
    "also_found": []
   },
+  "00_overflow_narrated": {
+   "exists": true,
+   "path": "base/test/reactivestream/00_overflow_narrated.ring",
+   "assertions": 17,
+   "by_helper": {
+    "Then": 17
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/reactivestream/00_overflow_narrated.ring",
+   "also_found": []
+  },
+  "60_reaxis_on_reactor_narrated": {
+   "exists": true,
+   "path": "base/test/reactive/60_reaxis_on_reactor_narrated.ring",
+   "assertions": 9,
+   "by_helper": {
+    "Then": 9
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/reactive/60_reaxis_on_reactor_narrated.ring",
+   "also_found": []
+  },
+  "piagent_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/piagent_narrated.ring",
+   "assertions": 14,
+   "by_helper": {
+    "chk": 14
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/piagent_narrated.ring",
+   "also_found": []
+  },
+  "00_grid_narrated": {
+   "exists": true,
+   "path": "base/test/grid/00_grid_narrated.ring",
+   "assertions": 24,
+   "by_helper": {
+    "Then": 24
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/grid/00_grid_narrated.ring",
+   "also_found": []
+  },
+  "test_timeline_regression": {
+   "exists": true,
+   "path": "base/test/timeline/test_timeline_regression.ring",
+   "assertions": 20,
+   "by_helper": {
+    "chk": 20
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/timeline/test_timeline_regression.ring",
+   "also_found": []
+  },
+  "01_deeplist_narrated": {
+   "exists": true,
+   "path": "base/test/list/01_deeplist_narrated.ring",
+   "assertions": 16,
+   "by_helper": {
+    "Then": 16
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/01_deeplist_narrated.ring",
+   "also_found": []
+  },
   "refinablecode_narrated": {
    "exists": true,
    "path": "base/test/refine/refinablecode_narrated.ring",
@@ -372,16 +432,6 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentgraph_narrated.ring",
    "also_found": []
   },
-  "piagent_narrated": {
-   "exists": true,
-   "path": "base/test/agentic/piagent_narrated.ring",
-   "assertions": 14,
-   "by_helper": {
-    "chk": 14
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/piagent_narrated.ring",
-   "also_found": []
-  },
   "ownagentstack_narrated": {
    "exists": true,
    "path": "base/test/agentic/ownagentstack_narrated.ring",
@@ -492,6 +542,14 @@
    "621_perform",
    "483_w_and_wf_forms_in_conditional_code",
    "495_walking_until_and_until_before"
+  ],
+  "en/09-patterns-of-thought": [
+   "00_overflow_narrated",
+   "60_reaxis_on_reactor_narrated",
+   "piagent_narrated",
+   "00_grid_narrated",
+   "test_timeline_regression",
+   "01_deeplist_narrated"
   ],
   "en/10-programming-becomes-refinement": [
    "refinablecode_narrated",

@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:25 UTC+01:00",
+ "built": "2026-10-08 22:28 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:24 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:24 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:24 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:24 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:24 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,9 +638,124 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 7,
     "runnable": 7
+   }
+  },
+  {
+   "number": 9,
+   "id": "patterns-of-thought",
+   "title": "Patterns of thought: the Softanzuter, Reaxis and the engines",
+   "part": 2,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint",
+    "designed": "the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its three siblings, genetic, linguistic and quantic",
+    "absent": "a dependency chain that links one trigger to another; a section-merging verb the article presents as its point"
+   },
+   "guards": [
+    {
+     "name": "00_overflow_narrated",
+     "exists": true,
+     "path": "base/test/reactivestream/00_overflow_narrated.ring",
+     "assertions": 17,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/reactivestream/00_overflow_narrated.ring"
+    },
+    {
+     "name": "60_reaxis_on_reactor_narrated",
+     "exists": true,
+     "path": "base/test/reactive/60_reaxis_on_reactor_narrated.ring",
+     "assertions": 9,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/reactive/60_reaxis_on_reactor_narrated.ring"
+    },
+    {
+     "name": "piagent_narrated",
+     "exists": true,
+     "path": "base/test/agentic/piagent_narrated.ring",
+     "assertions": 14,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/piagent_narrated.ring"
+    },
+    {
+     "name": "00_grid_narrated",
+     "exists": true,
+     "path": "base/test/grid/00_grid_narrated.ring",
+     "assertions": 24,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/grid/00_grid_narrated.ring"
+    },
+    {
+     "name": "test_timeline_regression",
+     "exists": true,
+     "path": "base/test/timeline/test_timeline_regression.ring",
+     "assertions": 20,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/timeline/test_timeline_regression.ring"
+    },
+    {
+     "name": "01_deeplist_narrated",
+     "exists": true,
+     "path": "base/test/list/01_deeplist_narrated.ring",
+     "assertions": 16,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/01_deeplist_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "rxu() {\n\tTrigger(:SensitiveData = \"(password|secret|key):\\s*(\\w+)\")\n\t@C(:When = :SensitiveData, :Do = '{ @value = \"REDACTED-\" + len(@value) }')\n\tProcess(\"User credentials: password: abc123 secret: def456\")\n\t? @@( Results() )\n\t#--> [ \"REDACTED-16\", \"REDACTED-14\" ]\n\t? @@( Positions() )\n\t#--> [ 19, 36 ]\n\t? State()[1][:matchedvalue]\n\t#--> password: abc123\n\t? State()[1][:computedvalue]\n\t#--> REDACTED-16\n\t? @@( State()[2][:dependson] )\n\t#--> [ \"sensitivedata\" ]\n}",
+     "verdict": "kept"
+    },
+    {
+     "code": "rxu() {\n\tTrigger(:Number = \"\\d+\")\n\tTrigger(:Big = \"\\d{3,}\")\n\t@C(:When = :Number, :Do = '{ @value = @number(@value) * 100 }')\n\t@C(:When = :Big, :Do = '{ @value = \"BIG\" }')\n\tProcess(\"Found 7 items\")\n\t? @@( Matches() )\n\t#--> [ \"7\" ]\n\t? @@( Results() )\n\t#--> [ 700 ]\n\t? @@( Triggers() )\n\t#--> [ \"number\" ]\n}",
+     "verdict": "kept"
+    },
+    {
+     "code": "oAgent = new stzPIAgent(\"cook\")\noAgent.MemoryQ().Learn(\"order\", \"state\", \"placed\")\ns1 = new stzAgentSkill(\"cook\")\ns1.SetWhen(func oM { return oM.Fact(\"order\", \"state\", \"placed\") })\ns1.SetDoes(func oM { oM.Forget(\"order\",\"state\",\"placed\") oM.Learn(\"order\",\"state\",\"cooking\") return 1 })\ns2 = new stzAgentSkill(\"serve\")\ns2.SetWhen(func oM { return oM.Fact(\"order\", \"state\", \"cooking\") })\ns2.SetDoes(func oM { oM.Forget(\"order\",\"state\",\"cooking\") oM.Learn(\"order\",\"state\",\"served\") return 1 })\noAgent.AddSkill(s1)\noAgent.AddSkill(s2)\n? oAgent.Pursue()\n#--> 2\n? oAgent.MemoryQ().Fact(\"order\", \"state\", \"served\")\n#--> TRUE\n? oAgent.Pursue()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "aSeen = []\nRs = new stzReactiveSystem()\nRs {\n\toStream = CreateStream(\"prices\")\n\toStream {\n\t\tTransform(func price { return price * 1.20 })\n\t\tFilter(func price { return price >= 100 })\n\t\tOnPassed(func item { aSeen + item })\n\t\tFeedMany([ 80, 90, 100, 120 ])\n\t}\n\tRunLoop()\n}\n? @@( aSeen )\n#--> [ 108, 120, 144 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oRs = new stzReactiveSystem()\noS = oRs.CreateStream(\"probe\")\noS.SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)\nfor i = 1 to 4\n\toS.Receive(i)\nnext\n? oS.OverflowStats()[:currentBuffer]\n#--> 2\n? oS.OverflowStats()[:droppedCount]\n#--> 2",
+     "verdict": "kept"
+    },
+    {
+     "code": "nSettled = 0\noRs4 = new stzReactive()\noX = oRs4.ReactiveObject()\noX.WaitForAttributeToSettle(\"query\", 50, func(attr, oldV, newV) { nSettled++ })\noX.SetAttribute(\"query\", \"s\")\noX.SetAttribute(\"query\", \"so\")\noX.SetAttribute(\"query\", \"sof\")\noX { ProcessPendingReactions() }\noRs4.RunLoop()\n? nSettled\n#--> 1\noRs4.Stop()",
+     "verdict": "kept"
+    },
+    {
+     "code": "oTl = new stzTimeLine(\"2024-01-01 00:00:00\", \"2024-12-31 23:59:59\")\noTl.AddSpan(\"PHASE1\", \"2024-01-01 00:00:00\", \"2024-02-15 23:59:59\")\noTl.AddSpan(\"PHASE2\", \"2024-03-01 00:00:00\", \"2024-04-15 23:59:59\")\n? len(oTl.Gaps())\n#--> 1\n? oTl.Gaps()[1][:after]\n#--> PHASE1\n? oTl.Gaps()[1][:before]\n#--> PHASE2\n? oTl.HasOverlaps()\n#--> FALSE\noTl.AddSpan(\"PHASE2B\", \"2024-04-01 00:00:00\", \"2024-05-15 23:59:59\")\n? oTl.HasOverlaps()\n#--> TRUE\noB = new stzTimeLine(\"2024-01-01\", \"2024-12-31\")\noB.AddBlockedSpan(\"MAINTENANCE\", \"2024-06-15 09:00:00\", \"2024-06-15 17:00:00\")\noB.AddPoint(\"EVENT1\", \"2024-06-15 08:00:00\")\ntry\n\toB.AddPoint(\"EVENT2\", \"2024-06-15 12:00:00\")\ncatch\n\t? cCatchError\ndone\n#--> Point 'EVENT2' falls within a blocked span or blocked point",
+     "verdict": "kept"
+    },
+    {
+     "code": "o = new stzGrid([ 5, 5 ])\no.MoveDown()\no.MoveDown()\no.MoveRight()\no.MoveRight()\no.MoveRight()\n? @@( o.CurrentPosition() )\n#--> [ 4, 3 ]\no.MoveRight()\no.MoveRight()\no.MoveRight()\n? @@( o.CurrentPosition() )\n#--> [ 5, 3 ]",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stzregexuter-regex-as-computational-reactive-medium.md",
+    "stz-reaxis-reactive-programming-narration.md",
+    "stz-managing-deep-lists-narration.md"
+   ],
+   "rulings": [
+    "12.4",
+    "12.18",
+    "12.19"
+   ],
+   "doors": {
+    "programmer": "Bind a pattern to code, and process; or declare a stream and say in words what happens to the data that flows through it.",
+    "analyst": "Time is a workspace: gaps, overlaps and blocked regions are computed, and a point that would fall in a blocked region is refused with the reason.",
+    "designer": "The state of a reaction keeps its why: the match, the computed value, the position, the trigger.",
+    "decision-maker": "Overflow is a number you can read: kept, dropped. A strategy that lost data and said nothing was found by an audit, and fixed.",
+    "educator": "The ladder is a curriculum: a pattern, a reaction, a state, a goal.",
+    "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
+   },
+   "run": {
+    "ran": "2026-10-08 22:27 UTC+01:00",
+    "kept": 8,
+    "runnable": 8
    }
   },
   {
@@ -734,7 +849,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -875,7 +990,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:27 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -992,7 +1107,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:28 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1094,7 +1209,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:28 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1167,7 +1282,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:28 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1249,7 +1364,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:25 UTC+01:00",
+    "ran": "2026-10-08 22:28 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
