@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:29 UTC+01:00",
+  "date": "2026-10-08 22:35 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:29 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-08 22:35 UTC+01:00",
+   "seconds": 6.1
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:29 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-08 22:35 UTC+01:00",
+   "seconds": 7.1
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:29 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 6.0
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 5.9
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 7.4
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 6.7
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 7.6
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 6.1
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -526,8 +526,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 15.7
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 17.2
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -600,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 7.6
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 6.8
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -682,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 6.2
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -780,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:30 UTC+01:00",
-   "seconds": 29.0
+   "ran": "2026-10-08 22:36 UTC+01:00",
+   "seconds": 26.6
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -854,8 +854,78 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:31 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-08 22:37 UTC+01:00",
+   "seconds": 5.8
+  },
+  "en/19-the-domain-language-model": {
+   "id": "the-domain-language-model",
+   "blocks": [
+    {
+     "hash": "928138789a8c",
+     "promise": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]"
+    },
+    {
+     "hash": "bf622f1bf7de",
+     "promise": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]"
+    },
+    {
+     "hash": "3b4d644030d7",
+     "promise": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'."
+    },
+    {
+     "hash": "f3c264dc8a59",
+     "promise": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\nmargherita | dish\ntiramisu | dish\nchianti | wine\nrelations\ncontains\npairs-with\nfacts\nmargherita | contains | tomato-sauce\nmargherita | contains | mozzarella\nmargherita | pairs-with | chianti\nlaws\ngoldens\nwhat is margherita | Margherita is a dish.\nwhat is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\n    margherita | dish\n    tiramisu | dish\n    chianti | wine\nrelations\n    contains\n    pairs-with\nfacts\n    margherita | contains | tomato-sauce\n    margherita | contains | mozzarella\n    margherita | pairs-with | chianti\nlaws\ngoldens\n    what is margherita | Margherita is a dish.\n    what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\n\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0"
+    },
+    {
+     "hash": "7df6db528cb8",
+     "promise": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2"
+    },
+    {
+     "hash": "1874fcbcd841",
+     "promise": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0"
+    },
+    {
+     "hash": "f486682e559c",
+     "promise": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-08 22:37 UTC+01:00",
+   "seconds": 6.1
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -911,8 +981,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:31 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-08 22:37 UTC+01:00",
+   "seconds": 6.1
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -945,8 +1015,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:31 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-08 22:37 UTC+01:00",
+   "seconds": 5.9
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -986,8 +1056,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:31 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-08 22:37 UTC+01:00",
+   "seconds": 6.1
   }
  }
 }

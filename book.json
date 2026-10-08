@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:32 UTC+01:00",
+ "built": "2026-10-08 22:37 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:29 UTC+01:00",
+    "ran": "2026-10-08 22:35 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:29 UTC+01:00",
+    "ran": "2026-10-08 22:35 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:29 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:30 UTC+01:00",
+    "ran": "2026-10-08 22:36 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,9 +1236,112 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:31 UTC+01:00",
+    "ran": "2026-10-08 22:37 UTC+01:00",
     "kept": 8,
     "runnable": 8
+   }
+  },
+  {
+   "number": 19,
+   "id": "the-domain-language-model",
+   "title": "The domain language model",
+   "part": 4,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law",
+    "designed": "a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger",
+    "absent": "a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far"
+   },
+   "guards": [
+    {
+     "name": "dlm_narrated",
+     "exists": true,
+     "path": "base/test/learning/dlm_narrated.ring",
+     "assertions": 16,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/learning/dlm_narrated.ring"
+    },
+    {
+     "name": "structuredoutput_narrated",
+     "exists": true,
+     "path": "base/test/neural/structuredoutput_narrated.ring",
+     "assertions": 73,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/structuredoutput_narrated.ring"
+    },
+    {
+     "name": "schema_grammar_narrated",
+     "exists": true,
+     "path": "base/test/neural/schema_grammar_narrated.ring",
+     "assertions": 28,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/schema_grammar_narrated.ring"
+    },
+    {
+     "name": "knowledge_integration_narrated",
+     "exists": true,
+     "path": "base/test/natural/knowledge_integration_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring"
+    },
+    {
+     "name": "constrained_decoding_narrated",
+     "exists": true,
+     "path": "base/test/neural/constrained_decoding_narrated.ring",
+     "assertions": 50,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"restaurant\")\noKB.Know(\"margherita\", \"dish\").\n    Know(\"tiramisu\", \"dish\").\n    Know(\"chianti\", \"wine\").\n    KnowRelation(\"margherita\", \"contains\", \"tomato-sauce\").\n    KnowRelation(\"margherita\", \"contains\", \"mozzarella\").\n    KnowRelation(\"margherita\", \"pairs-with\", \"chianti\")\noDLM = StzDlmQ(oKB)\n? @@( oDLM.GenerateCorpus() )\n#--> [ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n? @@( oDLM.Tokenizer() )\n#--> [ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n? @@( oDLM.Tokenize(\"margherita contains something-new\") )\n#--> [ 2, 7, 1 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "? @@( oDLM.Complete(\"margherita\") )\n#--> [ \"contains\", \"pairs-with\" ]\n? @@( oDLM.Complete(\"contains\") )\n#--> [ \"tomato-sauce\", \"mozzarella\" ]\n? @@( oDLM.Complete(\"tira\") )\n#--> [ \"tiramisu\" ]\n? @@( oDLM.Complete(\"pizza\") )\n#--> [ ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "aLex = oDLM.Lexicon()\nacObjects = []\nfor aFact in oKB.Facts()\n\tif aFact[2] != \"is-a\" and find(acObjects, aFact[3]) = 0\n\t\tacObjects + aFact[3]\n\tok\nnext\noS = StzOutputSchemaQ([\n\t[ :field = \"subject\",  :type = :oneof, :choices = aLex[:entities] ],\n\t[ :field = \"relation\", :type = :oneof, :choices = aLex[:relations] ],\n\t[ :field = \"object\",   :type = :oneof, :choices = acObjects ]\n])\n? oS.ToGBNF()\n#--> root ::= subject-line relation-line object-line\n#    subject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\n#    relation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\n#    object-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\n#    text ::= [^\\n]+\n#    number ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\n#    boolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\ncGood = \"subject: margherita\" + nl + \"relation: contains\" + nl + \"object: mozzarella\" + nl\ncOut  = \"subject: pizza\" + nl + \"relation: contains\" + nl + \"object: mozzarella\" + nl\ncLie  = \"subject: tiramisu\" + nl + \"relation: contains\" + nl + \"object: mozzarella\" + nl\n? oS.Accepts(cGood)\n#--> 1\n? oS.Accepts(cOut)\n#--> 0\n? oS.Accepts(cLie)\n#--> 1\n? oDLM.Ask(\"tiramisu contains what?\")\n#--> I hold no 'contains' knowledge about 'tiramisu'.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oDLM.AddGolden(\"what is margherita\", \"Margherita is a dish.\")\noDLM.AddGolden(\"what is the weather today?\",\n\t\"That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\")\ncFile = oDLM.Save(\"probe_dlm\")\n? cFile\n#--> probe_dlm.zdlm\n? read(cFile)\n#--> dlm \"restaurant\"\n#    entities\n#        margherita | dish\n#        tiramisu | dish\n#        chianti | wine\n#    relations\n#        contains\n#        pairs-with\n#    facts\n#        margherita | contains | tomato-sauce\n#        margherita | contains | mozzarella\n#        margherita | pairs-with | chianti\n#    laws\n#    goldens\n#        what is margherita | Margherita is a dish.\n#        what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\noShipped = StzDlmQ(\"\")\noShipped.LoadFrom(cFile)\n? oShipped.Ask(\"what is tiramisu\")\n#--> Tiramisu is a dish.\n? @@( oShipped.RunGoldens() )\n#--> [ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\nremove(cFile)\n? fexists(cFile)\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oDLM.TrainNeuralRung(500)\n? oDLM.NeuralWhy()\n#--> neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\n? oDLM.NextToken(\"is\")\n#--> a\n? oDLM.NextTokenConfidence(\"is\")\n#--> 1.00\ncGguf = oDLM.ExportNeuralGguf(\"probe_bigram\")\n? cGguf\n#--> probe_bigram.gguf\n? StzEngineNeuralGgufInspect(cGguf)\n#--> 2\nremove(cGguf)",
+     "verdict": "kept"
+    },
+    {
+     "code": "aCorpus = oDLM.GenerateCorpus()\nfor cSeed in [ \"tiramisu\", \"chianti\", \"margherita\" ]\n\tcSaid = oDLM.NeuralGenerate(cSeed, 3)\n\t? cSaid + \"  ->  \" + ( find(aCorpus, cSaid + \".\") > 0 )\nnext\n#--> tiramisu is a wine  ->  0\n#    chianti is a wine  ->  1\n#    margherita contains mozzarella is  ->  0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKB.ConstrainRelation(\"is-a\", :Unique)\naVerdict = oKB.Admit(\"tiramisu\", \"is-a\", \"wine\", [ :source = \"rung 2\" ])\n? aVerdict[:admitted]\n#--> 0\n? aVerdict[:why]\n#--> 'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n? @@( oKB.Contradictions() )\n#--> [ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\n? oKB.Admit(\"pizza\", \"is-a\", \"dish\", [ :source = \"rung 2\" ])[:why]\n#--> admitted: 'pizza' is-a 'dish'",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-knowledge-programming-narration.md"
+   ],
+   "rulings": [
+    "12.19",
+    "12.26",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "A model is a file you can read, diff and test: its facts, its laws and its goldens.",
+    "analyst": "A fact you add makes the model know more, and a law you add makes it refuse more, with no training.",
+    "designer": "The model's refusal is part of its contract: the golden test says what it must decline to answer.",
+    "decision-maker": "The model can only say what the domain holds, and the gate keeps the record of what it refused and why.",
+    "educator": "Rung one is a model a learner can read in full. Rung two is small enough to train in front of a class.",
+    "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
+   },
+   "run": {
+    "ran": "2026-10-08 22:37 UTC+01:00",
+    "kept": 7,
+    "runnable": 7
    }
   },
   {
@@ -1338,7 +1441,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:31 UTC+01:00",
+    "ran": "2026-10-08 22:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1411,7 +1514,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:31 UTC+01:00",
+    "ran": "2026-10-08 22:37 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1493,7 +1596,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:31 UTC+01:00",
+    "ran": "2026-10-08 22:37 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

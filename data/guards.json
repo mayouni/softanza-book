@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:31 UTC+01:00",
+ "read": "2026-10-08 22:37 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -619,6 +619,13 @@
    "agentgraph_narrated",
    "piagent_narrated",
    "ownagentstack_narrated"
+  ],
+  "en/19-the-domain-language-model": [
+   "dlm_narrated",
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "knowledge_integration_narrated",
+   "constrained_decoding_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",
