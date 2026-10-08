@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:53 UTC+01:00",
+ "read": "2026-10-08 22:57 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -492,6 +492,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/education/tutor_gaps_narrated.ring",
    "also_found": []
   },
+  "agentloop_engine_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/agentloop_engine_narrated.ring",
+   "assertions": 54,
+   "by_helper": {
+    "chk": 54
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentloop_engine_narrated.ring",
+   "also_found": []
+  },
+  "containment_drill_narrated": {
+   "exists": true,
+   "path": "base/test/security/containment_drill_narrated.ring",
+   "assertions": 27,
+   "by_helper": {
+    "Then": 27
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/containment_drill_narrated.ring",
+   "also_found": []
+  },
+  "virtual_system_twin_narrated": {
+   "exists": true,
+   "path": "base/test/system/virtual_system_twin_narrated.ring",
+   "assertions": 48,
+   "by_helper": {
+    "chk": 48
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring",
+   "also_found": []
+  },
   "service_delivery_narrated": {
    "exists": true,
    "path": "base/test/system/service_delivery_narrated.ring",
@@ -672,16 +702,6 @@
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_project_narrated.ring",
    "also_found": []
-  },
-  "virtual_system_twin_narrated": {
-   "exists": true,
-   "path": "base/test/system/virtual_system_twin_narrated.ring",
-   "assertions": 48,
-   "by_helper": {
-    "chk": 48
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring",
-   "also_found": []
   }
  },
  "chapters": {
@@ -773,6 +793,13 @@
    "schema_grammar_narrated",
    "knowledge_integration_narrated",
    "constrained_decoding_narrated"
+  ],
+  "en/20-agents-that-cannot-hurt-you": [
+   "safeworld_narrated",
+   "agentfile_narrated",
+   "agentloop_engine_narrated",
+   "containment_drill_narrated",
+   "virtual_system_twin_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",

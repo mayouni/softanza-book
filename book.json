@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:53 UTC+01:00",
+ "built": "2026-10-08 22:57 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:51 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:55 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:56 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,7 +1236,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:56 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1368,7 +1368,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:56 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -1471,9 +1471,126 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 22:52 UTC+01:00",
+    "ran": "2026-10-08 22:56 UTC+01:00",
     "kept": 7,
     "runnable": 7
+   }
+  },
+  {
+   "number": 20,
+   "id": "agents-that-cannot-hurt-you",
+   "title": "Agents that cannot hurt you",
+   "part": 4,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots, inbox and queue",
+    "designed": "the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks",
+    "absent": "a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check"
+   },
+   "guards": [
+    {
+     "name": "safeworld_narrated",
+     "exists": true,
+     "path": "base/test/agentic/safeworld_narrated.ring",
+     "assertions": 76,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/safeworld_narrated.ring"
+    },
+    {
+     "name": "agentfile_narrated",
+     "exists": true,
+     "path": "base/test/agentic/agentfile_narrated.ring",
+     "assertions": 88,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentfile_narrated.ring"
+    },
+    {
+     "name": "agentloop_engine_narrated",
+     "exists": true,
+     "path": "base/test/agentic/agentloop_engine_narrated.ring",
+     "assertions": 54,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentloop_engine_narrated.ring"
+    },
+    {
+     "name": "containment_drill_narrated",
+     "exists": true,
+     "path": "base/test/security/containment_drill_narrated.ring",
+     "assertions": 27,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/containment_drill_narrated.ring"
+    },
+    {
+     "name": "virtual_system_twin_narrated",
+     "exists": true,
+     "path": "base/test/system/virtual_system_twin_narrated.ring",
+     "assertions": 48,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oGov = new stzGovernance(\"shop\")\noGov.DeclareReversibility(\"restocker\", :Compensable)\n? oGov.ReversibilityOf(\"restocker\")\n#--> compensable\n? oGov.MayRegister(\"mystery\", \"\", \"reversible\")\n#--> 0\n? oGov.Why()\n#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.\n? oGov.MayRegister(\"mystery\", \"reorders stock\", \"\")\n#--> 0\n? oGov.Why()\n#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.\n? oGov.MayRegister(\"mystery\", \"reorders stock\", :Compensable)\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "aPostures = [ \"trusted\", \"external\", \"sandboxed\" ]\naClasses = [ \"reversible\", \"compensable\", \"irreversible\" ]\nfor cP in aPostures\n\tcRow = cP + \":\"\n\tfor cC in aClasses\n\t\tif StzPostureReversibilityRefusal(cP, cC) = \"\"\n\t\t\tcRow += \" yes\"\n\t\telse\n\t\t\tcRow += \" no\"\n\t\tok\n\tnext\n\t? cRow\nnext\n#--> trusted: yes yes yes\n#--> external: yes yes no\n#--> sandboxed: yes no no\n? StzPostureReversibilityRefusal(\"sandboxed\", \"irreversible\")\n#--> a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzAllowAgentFunction(\"ScribblePrices\", \"trusted\")\ncFx = StzReplace(WorkingDirectory(), \"\\\", \"/\") + \"/_fixture\"\nStzDirCreatePath(cFx)\n$cPrices = cFx + \"/prices.csv\"\ncPia = \"pia: 2\nname: scribbler\nkind: pi\ncoverage: writes a price list and records that it did\nreversibility: compensable\nschedule:\n  timer: 20\nskills:\n  - name: scribble\n    when: always\n    does: ring:ScribblePrices\n    verify: fact prices were written\n    posture: trusted\n\"\noAg = StzAgentDeclarationQ(cPia).ToAgent()\noAg.GiveWorkbench()\n? oAg.Cycle()\n#--> 1\n? oAg.MemoryQ().Fact(\"prices\", \"were\", \"written\")\n#--> 1\n? StzFileExists($cPrices)\n#--> 0\n? oAg.WorkbenchQ().Exists($cPrices)\n#--> 1\n? oAg.WorkbenchQ().ContentOf($cPrices)\n#--> espresso,2.40\n#--> flat-white,3.10\n\nfunc ScribblePrices(poMemory)\n\tStzActiveWorkbenchQ().WriteFile($cPrices, \"espresso,2.40\" + char(10) + \"flat-white,3.10\")\n\tpoMemory.Learn(\"prices\", \"were\", \"written\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "oPlan = oAg.GenerateUpdatePlan()\n? StzReplace(oPlan.Narration(), cFx, \"<fixture>\")\n#--> Update plan (1 of 1 operations to commit):\n#-->   * 1. write 29 bytes to '<fixture>/prices.csv'\noPlan.SetExecutor(LLMActor(\"eager-llm\"))\n? oPlan.MayCommit()[2]\n#--> actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\noScope = new stzCommitScope()\noScope.AllowUnder(\"/somewhere/else\")\noPlan2 = oAg.GenerateUpdatePlan()\noPlan2.SetExecutor(PIActor(\"shop-committer\"))\noPlan2.SetScope(oScope)\noPlan2.Execute()\n? StzFileExists($cPrices)\n#--> 0\noScope3 = new stzCommitScope()\noScope3.AllowUnder(cFx)\noPlan3 = oAg.GenerateUpdatePlan()\noPlan3.SetExecutor(PIActor(\"shop-committer\"))\noPlan3.SetScope(oScope3)\noPlan3.Execute()\n? StzFileExists($cPrices)\n#--> 1\n? @@(oPlan3.AuditTrail())\n#--> [ [ 1, \"committed\", \"write_file\", \"shop-committer\" ] ]\nStzDirDeleteAll(cFx)",
+     "verdict": "kept"
+    },
+    {
+     "code": "cIrrev = StzReplace(StzReplace(cPia, \"reversibility: compensable\", \"reversibility: irreversible\"), \"posture: trusted\", \"posture: sandboxed\")\noD = StzAgentDeclarationQ(cIrrev)\n? oD.IsValid()\n#--> 0\n? oD.CiteFindings()\n#--> [pia-posture-reversibility @ skills.scribble.posture] a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)",
+     "verdict": "kept"
+    },
+    {
+     "code": "cDir = StzReplace(WorkingDirectory(), \"\\\", \"/\") + \"/_course\"\nStzDirCreatePath(cDir)\nfor i = 1 to 30\n\tStzFileWrite(cDir + \"/lesson\" + i + \".txt\", \"lesson \" + i)\nnext\noBench = new stzVirtualFileSystem()\noBench.SetActor(\"tidy-bot\")\nfor i = 1 to 30\n\toBench.MirrorFile(cDir + \"/lesson\" + i + \".txt\")\n\toBench.DeleteFile(cDir + \"/lesson\" + i + \".txt\")\nnext\noBig = oBench.GenerateUpdatePlan()\n? oBig.NumberOfOperations()\n#--> 30\n? len(oBig.Risks())\n#--> 30\noBig.SetExecutor(LLMActor(\"helper-llm\"))\n? oBig.MayCommit()[2]\n#--> actor 'helper-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\noBig.Execute()\nnLeft = 0\nfor i = 1 to 30\n\tnLeft += StzFileExists(cDir + \"/lesson\" + i + \".txt\")\nnext\n? nLeft\n#--> 30",
+     "verdict": "kept"
+    },
+    {
+     "code": "oRev = oBench.GenerateUpdatePlan()\noRev.RejectOperation(2, \"reviewer: keep lesson 2\")\noRev.SetExecutor(PIActor(\"oncall\"))\noScopeC = new stzCommitScope()\noScopeC.AllowUnder(cDir)\noRev.SetScope(oScopeC)\naRes = oRev.Execute()\n? aRes[1][2]\n#--> 29\n? aRes[2][2]\n#--> 1\nnLeft = 0\nfor i = 1 to 30\n\tnLeft += StzFileExists(cDir + \"/lesson\" + i + \".txt\")\nnext\n? nLeft\n#--> 1\nStzDirDeleteAll(cDir)",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzResetEngineAgentLoop()\nnL = stzenginezutercreate(\"summarizer\")\n? stzengineagentloopregister(nL, 1, 1, 0, 1, 0, 10, \"summarises tickets\")\n#--> -6\n? stzengineagentlooplastrefusal()\n#--> AGENTLOOP-R6: agent 'summarizer' (slot 0) breaks the rule no-llm-effectful -- llm actor holds 'effectful' -- an LLM proposes, only a pi-gate commits. Registration refuses it. Drop the effectful capability, or register it as a pi-gated composition rather than an llm actor.\nnL2 = stzenginezutercreate(\"proposer\")\n? stzengineagentloopregister(nL2, 1, 1, 0, 0, 0, 10, \"proposes summaries\")\n#--> 0\nStzResetEngineAgentLoop()",
+     "verdict": "kept"
+    },
+    {
+     "code": "cEstate = StzReplace(WorkingDirectory(), \"\\\", \"/\") + \"/_estate\"\nStzDirCreatePath(cEstate + \"/dashboard\")\nStzDirCreatePath(cEstate + \"/journal\")\nSetEnvVar(\"STZ_SOFTANZA_ROOT\", cEstate)\nStzFileWrite(cEstate + \"/journal/2000-01-scar.md\", \"an old journal entry\" + char(10))\nStzFileWrite(cEstate + \"/dashboard/SESSION-LOG.md\", \"# SESSION-LOG\" + char(10) + char(10) + \"2000-01-15 09:00 | someone | long ago\" + char(10))\nStzAllowAgentFunction(\"RollRelocateMonths\", \"trusted\")\nStzAllowAgentFunction(\"RollWritePointer\", \"trusted\")\ncRoll = \"pia: 2\nname: ledger-roll\nkind: pi\ncoverage: moves journal months before the current one into archive and leaves a pointer\nreversibility: reversible\nschedule:\n  event: roll\ngovernance:\n  authority: delegated\n  risks:\n    relocate-evidence: 2\n  grants:\n    - relocate-evidence\nskills:\n  - name: relocate\n    when: always\n    does: ring:RollRelocateMonths\n    verify: fact archive holds month\n    effect: relocate-evidence\n    posture: trusted\n  - name: pointer\n    when: fact archive holds month\n    does: ring:RollWritePointer\n    verify: fact ledger holds pointer\n    effect: relocate-evidence\n    posture: trusted\n\"\noRoll = StzAgentDeclarationQ(cRoll).ToAgent()\noRoll.GiveWorkbench()\n? oRoll.Cycle()\n#--> 2\n? StzFileExists(cEstate + \"/journal/2000-01-scar.md\")\n#--> 1\n? StzFileExists(cEstate + \"/journal/archive/2000-01-scar.md\")\n#--> 0\noRP = oRoll.GenerateUpdatePlan()\n? oRP.NumberOfOperations()\n#--> 7\n? len(oRP.Risks()) >= 1\n#--> 1\noRP.SetExecutor(PIActor(\"roll-committer\"))\noScopeR = new stzCommitScope()\noScopeR.AllowUnder(cEstate)\noRP.SetScope(oScopeR)\noRP.Execute()\n? StzFileExists(cEstate + \"/journal/2000-01-scar.md\")\n#--> 0\n? StzFileExists(cEstate + \"/journal/archive/2000-01-scar.md\")\n#--> 1\nStzDirDeleteAll(cEstate)",
+     "verdict": "kept"
+    },
+    {
+     "code": "cDirMine = StzReplace(WorkingDirectory(), \"\\\", \"/\") + \"/_mine\"\nStzDirCreatePath(cDirMine)\nfor i = 1 to 10\n\tStzFileWrite(cDirMine + \"/file\" + i + \".txt\", \"file \" + i)\nnext\noMine = new stzVirtualFileSystem()\noMine.SetActor(\"my-tidy-bot\")\n# your tidy-up proposal here, with the promise you expect under each line\nStzDirDeleteAll(cDirMine)",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-agents-that-cannot-hurt-you-narration.md",
+    "stz-service-virtualization-code-first-subscribe-later.md"
+   ],
+   "rulings": [
+    "12.18",
+    "12.19",
+    "12.22",
+    "12.23",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "Your agent is a file and a few functions. It runs and believes it acted, and the disk does not move. You read the plan, choose the committing actor and the scope, and the court tells you in one sentence which rule refused you.",
+    "analyst": "Every proposal is a narrated plan of operations with the destructive steps flagged, and an audit line for each commit. You can read what the agent meant to do, step by step, without running it. The flags are by kind, not scored.",
+    "designer": "The plan is the one artefact that crosses from the agent to the person, and a person can reject one step. The Right to a Human says a person is reachable wherever a machine serves, and the right is held by judgment.",
+    "decision-maker": "You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. A model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.",
+    "educator": "A learner's agent that tidies a course folder by deleting everything is a lesson in what a plan is. She sees what it would have done, and the files are still there.",
+    "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
+   },
+   "run": {
+    "ran": "2026-10-08 22:56 UTC+01:00",
+    "kept": 9,
+    "runnable": 9
    }
   },
   {
@@ -1573,7 +1690,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:56 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1679,7 +1796,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:57 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -1788,7 +1905,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:57 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1907,7 +2024,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:57 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1980,7 +2097,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:57 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -2062,7 +2179,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:53 UTC+01:00",
+    "ran": "2026-10-08 22:57 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

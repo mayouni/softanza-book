@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-08 22:53 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
+Built 2026-10-08 22:57 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
 
 Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
 
@@ -24,6 +24,7 @@ Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: 
 - 17. Law: programmatic by default, the model last, admission over generation [draft, spine] guards: dlm_narrated (16), wisecoding_narrated (13), knowledge_integration_narrated (19), agentgraph_narrated (11), piagent_narrated (14), ownagentstack_narrated (10); run: 8 of 8 blocks kept
 - 18. The five registers, and conversations that ask [draft] guards: wisecoding_narrated (13), wisecoding_rich_narrated (52), ownagentstack_narrated (10), tutor_gaps_narrated (29); run: 15 of 15 blocks kept
 - 19. The domain language model [draft] guards: dlm_narrated (16), structuredoutput_narrated (73), schema_grammar_narrated (28), knowledge_integration_narrated (19), constrained_decoding_narrated (50); run: 7 of 7 blocks kept
+- 20. Agents that cannot hurt you [draft] guards: safeworld_narrated (76), agentfile_narrated (88), agentloop_engine_narrated (54), containment_drill_narrated (27), virtual_system_twin_narrated (48); run: 9 of 9 blocks kept
 - 28. A restaurant in Lyon [draft] guards: 06_stzsuperapp_narrated (21), service_delivery_narrated (60), payments_port_narrated (49), judgment_narrated (41), graphrule_object_narrated (34); run: 5 of 5 blocks kept
 - 29. A bank in Niamey [draft] guards: orgrule_narrated (22), 14_bceao_governance (1), 15_multiple_validators (1), 13_segregation_of_duties (1), rulereport_narrated (23), 36_import_from_stzorg (3); run: 6 of 6 blocks kept
 - 30. An organisation in the field [draft] guards: graphruleset_narrated (25), gg_rule_governance (29), wisecoding_narrated (13), governance_narrated (19), governance_lineage_narrated (37), 01_platform_narrated (31); run: 7 of 7 blocks kept
