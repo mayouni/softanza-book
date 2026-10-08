@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:41 UTC+01:00",
+  "date": "2026-10-08 22:47 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:41 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 5.6
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:41 UTC+01:00",
-   "seconds": 5.4
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 6.0
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 6.9
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 7.0
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 6.8
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-08 22:47 UTC+01:00",
+   "seconds": 7.3
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -526,8 +526,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 13.2
+   "ran": "2026-10-08 22:48 UTC+01:00",
+   "seconds": 19.1
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -600,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-08 22:48 UTC+01:00",
+   "seconds": 6.3
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -682,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 5.2
+   "ran": "2026-10-08 22:48 UTC+01:00",
+   "seconds": 6.6
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -780,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:42 UTC+01:00",
-   "seconds": 23.6
+   "ran": "2026-10-08 22:48 UTC+01:00",
+   "seconds": 22.1
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -854,8 +854,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 22:48 UTC+01:00",
+   "seconds": 6.0
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -924,8 +924,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 5.4
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 5.7
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -981,8 +981,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 6.3
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1039,8 +1039,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 6.1
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1105,8 +1105,67 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 6.6
+  },
+  "en/31-what-the-projects-did-not-prove": {
+   "id": "what-the-projects-did-not-prove",
+   "blocks": [
+    {
+     "hash": "5c1f9b079e95",
+     "promise": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use."
+    },
+    {
+     "hash": "125794d1ea79",
+     "promise": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\nScope: esp32 (espidf)\n[rehearsed] read pin 4",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\n\nScope: esp32 (espidf)\n  [rehearsed] read pin 4"
+    },
+    {
+     "hash": "aa560b37ecb4",
+     "promise": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n\n0"
+    },
+    {
+     "hash": "2073ee3ba3d2",
+     "promise": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()"
+    },
+    {
+     "hash": "42afda7ed916",
+     "promise": "0\nSHORTFALL -- host too small\n1\nprovision on aws",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nSHORTFALL -- host too small\n1\nprovision on aws"
+    },
+    {
+     "hash": "8d5f1f1ccbdd",
+     "promise": "what you expect\nwhat you expect\nwhat you expect",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 1,
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 6.8
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1139,8 +1198,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 5.2
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 5.7
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1180,8 +1239,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:43 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-08 22:49 UTC+01:00",
+   "seconds": 5.7
   }
  }
 }

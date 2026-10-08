@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:43 UTC+01:00",
+ "built": "2026-10-08 22:49 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:41 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:41 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:47 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:48 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:48 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:48 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:42 UTC+01:00",
+    "ran": "2026-10-08 22:48 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,7 +1236,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:48 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1339,7 +1339,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1441,7 +1441,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1547,7 +1547,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -1656,9 +1656,128 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 7,
     "runnable": 7
+   }
+  },
+  {
+   "number": 31,
+   "id": "what-the-projects-did-not-prove",
+   "title": "What the projects did not prove",
+   "part": 6,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it",
+    "designed": "the customers' declarations written as Softanza's own; the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board",
+    "absent": "any customer platform on the engine; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it"
+   },
+   "guards": [
+    {
+     "name": "service_registry_narrated",
+     "exists": true,
+     "path": "base/test/system/service_registry_narrated.ring",
+     "assertions": 93,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_registry_narrated.ring"
+    },
+    {
+     "name": "full_scope_model_narrated",
+     "exists": true,
+     "path": "base/test/system/full_scope_model_narrated.ring",
+     "assertions": 62,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring"
+    },
+    {
+     "name": "payments_live_adapter_narrated",
+     "exists": true,
+     "path": "base/test/system/payments_live_adapter_narrated.ring",
+     "assertions": 125,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/payments_live_adapter_narrated.ring"
+    },
+    {
+     "name": "sound_mu5_narrated",
+     "exists": true,
+     "path": "base/test/sound/sound_mu5_narrated.ring",
+     "assertions": 20,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_mu5_narrated.ring"
+    },
+    {
+     "name": "deployment_narrated",
+     "exists": true,
+     "path": "base/test/system/deployment_narrated.ring",
+     "assertions": 63,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring"
+    },
+    {
+     "name": "orgrule_narrated",
+     "exists": true,
+     "path": "base/test/graph/orgrule_narrated.ring",
+     "assertions": 22,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/orgrule_narrated.ring"
+    },
+    {
+     "name": "governance_narrated",
+     "exists": true,
+     "path": "base/test/governance/governance_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oReg = new stzServiceRegistry(\"shop\")\noReg.DeclareMany([ :mail, :payments ])\n? @@( oReg.UnboundServices() )\n#--> [ \"mail\", \"payments\" ]\n? oReg.Findings()[1][:invariant]\n#--> unbound-service\n? oReg.IsSound()\n#--> 0\ntry\n\toReg.Service(:payments)\ncatch\n\t? cCatchError\ndone\n#--> stzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSol = new stzPlatformProfile(\"kiosk\")\noSol.DevelopedOn(:Windows)\noSol.WithServer(:backend, :LinuxServer)\noSol.WithApp(:firmware, :ESP32)\noFw = oSol.App(:firmware).System()\n? oFw.ReadPin(4)\n#--> rehearsed\ntry\n\toFw.Spawn(\"worker\")\ncatch\n\t? cCatchError\ndone\n#--> scope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\noFw.Show()\n#--> Scope: esp32 (espidf)\n#      [rehearsed] read pin 4",
+     "verdict": "kept"
+    },
+    {
+     "code": "oAd = new stzPispiHttpAdapter()\noAd.WithParticipant(\"shop\")\noAd.WithBaseUrl(\"https://pispi.example\")\noAd.AsLive()\n? oAd.IsSandbox()\n#--> 0\ntry\n\toAd.Request(\"GET\", \"/comptes\", [], [])\ncatch\n\t? cCatchError\ndone\n#--> stzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n? oAd.TokensFetched()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oVoice = StzSoundFormantVoiceQ()\noVoice.Sing(\"la la la\", \"c4 e4 g4\")\n? oVoice.Refusals()\n#--> 1\n? oVoice.LastError()\n#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\naVerdicts = StzSoundSingingVerdict()\n? aVerdicts[:formant][:verdict]\n#--> UNPERCEIVED\n? aVerdicts[:retuned][:verdict]\n#--> SINGING\n? aVerdicts[:retuned][:date]\n#--> 2026-09-27\n? aVerdicts[:retuned][:said]\n#--> the retuned voice is somehow singing, open Sing()",
+     "verdict": "kept"
+    },
+    {
+     "code": "oBrain = new stzDelivery(\"shop\")\noBrain.AddBackend(:api, :LinuxServer)\noBrain.RequiresIn(:api, StzResourcesQ().SetMemoryQ(2048).SetComputeQ(2).SetStorageQ(20))\noSmall = new stzDeploymentSite(\"tiny\")\noSmall.SetKindQ(:Server).SetCapacityQ(StzResourcesQ().SetMemoryQ(512).SetComputeQ(1).SetStorageQ(5))\noTiny = new stzDeployment(oBrain)\noTiny.SetTarget(:api, oSmall)\n? oTiny.Feasible()\n#--> 0\n? oTiny.Feasibility()[1][5]\n#--> SHORTFALL -- host too small\noCloud = new stzDeploymentSite(\"pool\")\noCloud.SetKindQ(:Server).SetProviderQ(:aws)\noPool = new stzDeployment(oBrain)\noPool.SetTarget(:api, oCloud)\n? oPool.Feasible()\n#--> 1\n? oPool.Feasibility()[1][5]\n#--> provision on aws",
+     "verdict": "kept"
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"my-project\")\noReg.DeclareMany([ :mail, :payments, :your_service ])\n? @@( oReg.UnboundServices() )\n#--> what you expect\n? oReg.IsSound()\n#--> what you expect\noReg.Bind(:mail, new stzMailSandbox())\n? @@( oReg.UnboundServices() )\n#--> what you expect",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-built-on-real-world-need.md",
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-getting-paid-and-paying-narration.md",
+    "stz-system-dev-to-deploy-narration.md"
+   ],
+   "rulings": [
+    "12.5",
+    "12.10",
+    "12.13",
+    "12.21",
+    "12.22",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "Your demo is a rehearsal until a target has run it. Ask the scope whether the line was native, rehearsed or refused, and write the same word beside your own claims.",
+    "analyst": "When you cite a project, write three columns: the claim, the document, and what is absent. Do not fill the third from memory.",
+    "designer": "A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology.",
+    "decision-maker": "Read the stage word before the testimonial. \"Built\" is a statement about a guard. \"Runs at a customer\" is a statement about a document, and you can ask for it in writing, with a name beside it.",
+    "educator": "Teach the difference between a project that taught the library and a project that runs on it. The first is proved here, and the second is the line still owed. Unperceived is a state, not a failure.",
+    "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
+   },
+   "run": {
+    "ran": "2026-10-08 22:49 UTC+01:00",
+    "kept": 5,
+    "runnable": 5
    }
   },
   {
@@ -1729,7 +1848,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1811,7 +1930,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:43 UTC+01:00",
+    "ran": "2026-10-08 22:49 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

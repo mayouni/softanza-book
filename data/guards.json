@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:43 UTC+01:00",
+ "read": "2026-10-08 22:49 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -613,6 +613,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_lineage_narrated.ring",
    "also_found": []
   },
+  "payments_live_adapter_narrated": {
+   "exists": true,
+   "path": "base/test/system/payments_live_adapter_narrated.ring",
+   "assertions": 125,
+   "by_helper": {
+    "Then": 125
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/payments_live_adapter_narrated.ring",
+   "also_found": []
+  },
+  "sound_mu5_narrated": {
+   "exists": true,
+   "path": "base/test/sound/sound_mu5_narrated.ring",
+   "assertions": 20,
+   "by_helper": {
+    "Chk": 20
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_mu5_narrated.ring",
+   "also_found": []
+  },
+  "deployment_narrated": {
+   "exists": true,
+   "path": "base/test/system/deployment_narrated.ring",
+   "assertions": 63,
+   "by_helper": {
+    "chk": 63
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring",
+   "also_found": []
+  },
   "codegraph_narrated": {
    "exists": true,
    "path": "base/test/meta/codegraph_narrated.ring",
@@ -750,6 +780,15 @@
    "governance_narrated",
    "governance_lineage_narrated",
    "01_platform_narrated"
+  ],
+  "en/31-what-the-projects-did-not-prove": [
+   "service_registry_narrated",
+   "full_scope_model_narrated",
+   "payments_live_adapter_narrated",
+   "sound_mu5_narrated",
+   "deployment_narrated",
+   "orgrule_narrated",
+   "governance_narrated"
   ],
   "en/32-many-minds-on-one-body-of-work": [
    "coderule_narrated",
