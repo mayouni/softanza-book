@@ -1008,6 +1008,14 @@ pre .c-promise{color:var(--code-promise);}
 .doors td{font-family:var(--serif);font-size:1.12em;line-height:1.5;}
 .doors td:first-child{font-family:var(--sans);font-size:1em;}
 
+.author-q{font-family:var(--sans);font-size:0.72em;font-weight:600;color:var(--bookmark);border:1px dashed var(--bookmark);border-radius:4px;padding:1px 6px;}
+.sources{background:var(--sidebar-bg);border-left:3px solid var(--rule-strong);border-radius:0 4px 4px 0;padding:14px 20px;margin:48px 0 0;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);}
+.sources ul{list-style:none;margin:6px 0 0 !important;padding:0;}
+.chapter-page .sources li{margin:4px 0;line-height:1.5;}
+.sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
+.sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
+.book-fig{margin:2em -8px;}
+.book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}
 
@@ -1163,7 +1171,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 </a>
 <a class="chapter-card is-spine" href="#ch1-change-arrives-faster-than-trust">
 <span class="card-bookmark"></span><div class="card-preview"><p>Ask the industry what changed in programming these last years and you will get one answer, said with excitement or with dread: machines write the code now. The picture is familiar. A model proposes a function, a file, a whole application. A person…</p></div>
-<div class="card-meta"><h3 class="card-title">Change arrives faster than trust</h3><p class="card-words">Part I · Chapter 1 · 2191 words</p></div>
+<div class="card-meta"><h3 class="card-title">Change arrives faster than trust</h3><p class="card-words">Part I · Chapter 1 · 2189 words</p></div>
 </a>
 </section>
 
@@ -1277,7 +1285,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <div class="status-banner st-missing">Missing · the source has not been received</div>
 
 <div class="ch-rule"></div>
-<p>[AUTHOR: the preface draft, <code>book-00-preface.md</code>, was not among the files received on 2026-10-08. This page holds its place until it arrives. By the method, the preface is rewritten last, from the book that exists.]</p>
+<p><span class="author-q">[AUTHOR: the preface draft, <code>book-00-preface.md</code>, was not among the files received on 2026-10-08. This page holds its place until it arrives. By the method, the preface is rewritten last, from the book that exists.]</span></p>
 </article>
 <article class="chapter-page" id="page-ch1-change-arrives-faster-than-trust" data-slug="ch1-change-arrives-faster-than-trust" data-title="Change arrives faster than trust" data-prev="preface" data-next="">
 <div class="ch-eyebrow">Part I · Chapter 1<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
@@ -1324,7 +1332,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 </section>
 <h3 class="subsection-h">5. The court</h3>
 <p>What proves this chapter? Three things, and I give them to you by name so that you can check them rather than believe me.</p>
-<p>The service registry's refusal of a fake in production is a guard, <code>service_registry_narrated</code>, in the system plane. The agent's propose, rehearse, judge and commit is <code>safeworld_narrated</code>, seventy-six assertions, in the security plane, beside <code>governance_crossing_narrated</code> for the crossing itself. The two code blocks above were run by the site's own runner on the night of publication, each side in a fresh process, and their outputs are shown as they came.</p>
+<p>The service registry's refusal of a fake in production is a guard, <code>service_registry_narrated</code>, in the system plane. The agent's propose, rehearse, judge and commit is <code>safeworld_narrated</code>, seventy-six assertions, in the agentic plane, beside <code>governance_crossing_narrated</code> for the crossing itself. The code block above was run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.</p>
 <p>Three guards for a chapter of philosophy may seem few. They are the right three, because they are the three places where philosophy meets a verdict.</p>
 <div class="court"><p class="court-head">Read from the library&#x27;s test tree at commit b9d5cd1e4 on 2026-10-08 20:23 UTC+01:00. The figure is the number of assertions the guard holds, counted in its file; the site shows each one run.</p><ul><li><span class="g-name"><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/service_registry_narrated.ring" target="_blank" rel="noopener"><code>service_registry_narrated</code></a></span><span class="g-count">51 assertions</span><span class="g-path">base/test/system/service_registry_narrated.ring</span></li><li><span class="g-name"><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/safeworld_narrated.ring" target="_blank" rel="noopener"><code>safeworld_narrated</code></a></span><span class="g-count">76 assertions</span><span class="g-path">base/test/agentic/safeworld_narrated.ring</span></li><li><span class="g-name"><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring" target="_blank" rel="noopener"><code>governance_crossing_narrated</code></a></span><span class="g-count">31 assertions</span><span class="g-path">base/test/system/governance_crossing_narrated.ring</span></li></ul></div>
 <h3 class="subsection-h">6. The field, and where it leads</h3>
@@ -1346,7 +1354,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <span class="c-promise">#--&gt; the line it must print</span></code></pre>
 <p class="ran nv-exercise">not run: an exercise, written for you to run</p>
 </div>
-<p>Run it. If the line matches, you have your first promise. If it does not, you have your first finding, and you have learned more about that function in a minute than the model's explanation told you. Do not fix it yet. Chapter 2 is about who you are when you do.</p>
+<p>Run it. If the line matches, you have your first promise. If it does not, you have your first finding, and you have learned more about that function in a minute than the model's explanation told you. Do not fix it yet. Chapter 2 is about who you are when you do.</p><aside class="sources"><div class="aside-h">Where the evidence lives</div><ul><li><span class="src-k">On the site</span><a href="../../../../stzsite/en/forged.html" target="_blank" rel="noopener">forged</a></li><li><span class="src-k">On the site</span><a href="../../../../stzsite/en/agentic.html" target="_blank" rel="noopener">agentic</a></li><li><span class="src-k">Rulings of the study</span>12.10, 12.11, 12.15, 12.28, 12.29</li></ul></aside>
 </article>
 
 <nav class="ch-nav" id="chapterNav" aria-label="Chapter navigation">
@@ -2368,6 +2376,14 @@ pre .c-promise{color:var(--code-promise);}
 .doors td{font-family:var(--serif);font-size:1.12em;line-height:1.5;}
 .doors td:first-child{font-family:var(--sans);font-size:1em;}
 
+.author-q{font-family:var(--sans);font-size:0.72em;font-weight:600;color:var(--bookmark);border:1px dashed var(--bookmark);border-radius:4px;padding:1px 6px;}
+.sources{background:var(--sidebar-bg);border-left:3px solid var(--rule-strong);border-radius:0 4px 4px 0;padding:14px 20px;margin:48px 0 0;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);}
+.sources ul{list-style:none;margin:6px 0 0 !important;padding:0;}
+.chapter-page .sources li{margin:4px 0;line-height:1.5;}
+.sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
+.sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
+.book-fig{margin:2em -8px;}
+.book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}
 

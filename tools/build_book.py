@@ -23,6 +23,7 @@ from book_common import (ROOT, SRC, sources, structure, code_blocks, block_hash,
                          load_json, now, stamp)
 from book_judge import WORDS
 
+SITE_BASE = "../../../../stzsite/"   # the site's pages, relative to en/ and fr/; structure.yaml's site_base overrides
 ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 
 # ============================================================================ UI words
@@ -51,6 +52,8 @@ UI = {
     "description": "Softanza, the Software Makers Platform of the AI Age: rethinking programming, languages and intelligence, from first principles. By Mansour Ayouni. Second of the AYOUNI books.",
     "theme": "Light or dark", "langs": "Language",
     "status_link": "Status of the book",
+    "src_head": "Where the evidence lives", "src_narration": "Narration", "src_site": "On the site",
+    "src_rulings": "Rulings of the study",
   },
   "fr": {
     "lang": "fr", "other": "en", "part": "Partie", "chapter": "Chapitre", "preface": "Préface",
@@ -76,6 +79,8 @@ UI = {
     "description": "Softanza, la plateforme des makers du logiciel à l'ère de l'IA : repenser la programmation, ses langages et son intelligence depuis les premiers principes. Par Mansour Ayouni. Deuxième des livres AYOUNI.",
     "theme": "Clair ou sombre", "langs": "Langue",
     "status_link": "État du livre",
+    "src_head": "Où sont les preuves", "src_narration": "Narration", "src_site": "Sur le site",
+    "src_rulings": "Décisions de l'étude",
   },
 }
 
@@ -320,6 +325,14 @@ pre .c-promise{color:var(--code-promise);}
 .doors td{font-family:var(--serif);font-size:1.12em;line-height:1.5;}
 .doors td:first-child{font-family:var(--sans);font-size:1em;}
 
+.author-q{font-family:var(--sans);font-size:0.72em;font-weight:600;color:var(--bookmark);border:1px dashed var(--bookmark);border-radius:4px;padding:1px 6px;}
+.sources{background:var(--sidebar-bg);border-left:3px solid var(--rule-strong);border-radius:0 4px 4px 0;padding:14px 20px;margin:48px 0 0;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);}
+.sources ul{list-style:none;margin:6px 0 0 !important;padding:0;}
+.chapter-page .sources li{margin:4px 0;line-height:1.5;}
+.sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
+.sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
+.book-fig{margin:2em -8px;}
+.book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}
 
@@ -377,7 +390,13 @@ def inline(text):
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
     text = re.sub(r"\x00C(\d+)\x00", lambda m: "<code>" + codes[int(m.group(1))] + "</code>", text)
+    # the author's open questions stay visible on the page until answered (method, section 5)
+    text = re.sub(r"\[AUTHOR:(.*?)\]", r'<span class="author-q">[AUTHOR:\1]</span>', text)
     return text
+
+
+def author_questions(body):
+    return re.findall(r"\[AUTHOR:(.*?)\]", body, re.S)
 
 
 def plain(text):
@@ -439,6 +458,33 @@ def code_cell(text, flags, rec, ui, run_date):
     return "\n".join(parts)
 
 
+def figure_html(slug, caption):
+    """A figure is an SVG file in assets/figures/, inlined so the reader stays one file (the Refine build's form)."""
+    f = ROOT / "assets" / "figures" / f"{slug}.svg"
+    if not f.exists():
+        raise SystemExit(f"figure {slug}: assets/figures/{slug}.svg does not exist")
+    svg = f.read_text(encoding="utf-8")
+    cap = f"<figcaption><strong>Fig.</strong> {inline(caption)}</figcaption>" if caption else ""
+    return f'<figure class="book-fig" id="fig-{slug}">{svg}{cap}</figure>'
+
+
+def sources_box(meta, ui, runs):
+    """Where the chapter's evidence lives: the narrations it argues from, the site's pages, the rulings."""
+    sha = runs.get("run", {}).get("library", {}).get("commit", "main")
+    rows = []
+    for n in meta.get("narrations") or []:
+        url = f"https://github.com/mayouni/stzlib/blob/{sha}/libraries/stzlib/base/doc/narrations/{n}"
+        rows.append(f'<li><span class="src-k">{ui["src_narration"]}</span><a href="{url}" target="_blank" rel="noopener"><code>{html.escape(n)}</code></a></li>')
+    for page in meta.get("site") or []:
+        url = SITE_BASE + f'{ui["lang"]}/{page}.html'
+        rows.append(f'<li><span class="src-k">{ui["src_site"]}</span><a href="{url}" target="_blank" rel="noopener">{html.escape(page)}</a></li>')
+    if meta.get("rulings"):
+        rows.append(f'<li><span class="src-k">{ui["src_rulings"]}</span>{html.escape(", ".join(str(r) for r in meta["rulings"]))}</li>')
+    if not rows:
+        return ""
+    return f'<aside class="sources"><div class="aside-h">{ui["src_head"]}</div><ul>{"".join(rows)}</ul></aside>'
+
+
 def section_number(head):
     m = re.match(r"(\d+)\.\s", head)
     return int(m.group(1)) if m else None
@@ -490,6 +536,9 @@ def convert_body(body, meta, ui, run_rec, run_date, guards):
             flush(); out.append(f'<h4 class="subsubsection-h">{inline(s[4:].strip())}</h4>'); i += 1; continue
         if s == "---":
             flush(); out.append('<div class="divider">· · ·</div>'); i += 1; continue
+        mfig = re.match(r"^\{\{fig:([a-z0-9-]+)(?:\|(.*))?\}\}$", s)
+        if mfig:
+            flush(); out.append(figure_html(mfig.group(1), mfig.group(2))); i += 1; continue
         if s.startswith("```"):
             flush()
             info = s[3:].strip().split()
@@ -625,7 +674,7 @@ def build_pages(lang, st, en_src, src_by_id, runs, guards, ui):
         key = f"{lang}/{p_path.stem}"
         run_rec = runs.get("chapters", {}).get(key) if own else None
         if own:
-            body_html = convert_body(b, m, ui, run_rec, run_date, guards)
+            body_html = convert_body(b, m, ui, run_rec, run_date, guards) + sources_box(m, ui, runs)
         else:
             other = "en" if lang == "fr" else "fr"
             body_html = (f'<div class="untranslated"><p>{ui["untranslated"]}</p>'
@@ -822,7 +871,7 @@ def render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built):
         sp = "●" if (num in st["spine"] or num == 0) else ""
         if num not in by_number:
             rows.append(f'<tr class="absent"><td>{num or ""}</td><td>{html.escape(title)}</td><td>{sp}</td>'
-                        f'<td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>')
+                        f'<td>not drafted</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>')
             continue
         path, m, body = by_number[num]
         key = f"en/{path.stem}"
@@ -850,7 +899,7 @@ def render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built):
         marks = " ".join(f'<span class="{"ok" if c else "no"}">{lbl}</span>' for c, lbl in zip(checks, ["runs", "guards", "FR", "read"]))
         rows.append(f'<tr><td>{num or ""}</td><td><a href="en/index.html#{"preface" if num == 0 else f"ch{num}-{m["id"]}"}">{html.escape(m["title"])}</a></td>'
                     f'<td>{sp}</td><td>{html.escape(m.get("status", ""))}</td><td class="{"" if run_ok else "bad"}">{run_txt}</td>'
-                    f'<td>{"<br>".join(gl)}</td><td class="num">{words_of(body)}</td><td>{"yes" if fr else "no"}</td>'
+                    f'<td>{"<br>".join(gl)}</td><td class="num">{words_of(body)}</td><td class="num">{len(author_questions(body)) or ""}</td><td>{"yes" if fr else "no"}</td>'
                     f'<td>{"<b>done</b>" if done else ""} {marks}</td></tr>')
     lib = runs.get("run", {}).get("library", {})
     eng = lib.get("engine_binaries", {})
@@ -885,7 +934,7 @@ code {{ font-family: ui-monospace, Consolas, monospace; font-size: 12px; }}
 <p class="meta">Engine binaries: {eng.get("count", "null")} copied from {html.escape(str(eng.get("copied_from", "")))}, newest built {html.escape(str(eng.get("newest_build", "null")))}; {"pinned" if eng.get("pinned") else "not pinned to the commit"}.</p>
 <p class="meta">Guards read {html.escape(guards.get("read", "never"))}. A chapter is done when its code runs, its guards resolve, its French exists, and the author has read it: {done_count} done.</p>
 <div class="wrap"><table>
-<thead><tr><th>#</th><th>Chapter</th><th>Spine</th><th>Status</th><th>Run</th><th>Guards · assertions</th><th>Words</th><th>FR</th><th>Done</th></tr></thead>
+<thead><tr><th>#</th><th>Chapter</th><th>Spine</th><th>Status</th><th>Run</th><th>Guards · assertions</th><th>Words</th><th>Open questions</th><th>FR</th><th>Done</th></tr></thead>
 <tbody>
 {chr(10).join(rows)}
 </tbody></table></div>
@@ -947,6 +996,8 @@ def main():
                 raise SystemExit(f"{tool} could not run (exit {r.returncode})")
     built = stamp(now())
     st = structure()
+    global SITE_BASE
+    SITE_BASE = st.get("site_base", SITE_BASE)
     runs = load_json("book-run.json", {})
     guards = load_json("guards.json", {})
     en_src = sources("en")

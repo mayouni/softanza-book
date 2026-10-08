@@ -19,6 +19,9 @@ fr:
 
 spine: [1, 2, 3, 4, 5, 11, 17, 32, 33]
 
+# where the site's pages are, relative to en/ and fr/ (the site repository beside this one on the author's machine)
+site_base: "../../../../stzsite/"
+
 parts:
   - number: 1
     title: The age, the maker, the method

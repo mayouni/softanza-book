@@ -5,6 +5,7 @@ number: 1
 title: Change arrives faster than trust
 spine: true
 narrations: []
+site: [forged, agentic]
 guards: [service_registry_narrated, safeworld_narrated, governance_crossing_narrated]
 stage:
   built: the court that admits or refuses a change, for a person and for a machine
@@ -12,6 +13,12 @@ stage:
 status: draft
 rulings: ["12.10", "12.11", "12.15", "12.28", "12.29"]
 source: drafts/book-01-change-arrives-faster-than-trust.md
+edits: ["section 5: one block, run by the book's runner (DECISIONS CH01-a)", "section 5: safeworld_narrated is in the agentic plane (CH01-b)"]
+figures:
+  - "seventy-six assertions: safeworld_narrated, counted at build (data/guards.json)"
+  - "ninety-three percent: base holds 93.2 per cent of the lines, study 12.15, stzlib 93d7a39"
+  - "a factor between one and two: Luau leads all six rows, 1.04 to 1.88 times, study 12.10 and the estate memo of 2026-09-13"
+  - "twenty-two verbs, one hundred and twenty-two rules: the interface constitution, study 12.23"
 ---
 
 ## 1. The concept, as the field holds it
@@ -78,7 +85,7 @@ What was refused is as much a part of Softanza as what was built. You will not f
 
 What proves this chapter? Three things, and I give them to you by name so that you can check them rather than believe me.
 
-The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the security plane, beside `governance_crossing_narrated` for the crossing itself. The two code blocks above were run by the site's own runner on the night of publication, each side in a fresh process, and their outputs are shown as they came.
+The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the agentic plane, beside `governance_crossing_narrated` for the crossing itself. The code block above was run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.
 
 Three guards for a chapter of philosophy may seem few. They are the right three, because they are the three places where philosophy meets a verdict.
 
