@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 20:48 UTC+01:00",
+ "read": "2026-10-08 20:49 UTC+01:00",
  "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "guards": {
   "service_registry_narrated": {
@@ -62,6 +62,56 @@
    "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring",
    "also_found": []
   },
+  "dlm_narrated": {
+   "exists": true,
+   "path": "base/test/learning/dlm_narrated.ring",
+   "assertions": 16,
+   "by_helper": {
+    "chk": 16
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/learning/dlm_narrated.ring",
+   "also_found": []
+  },
+  "knowledge_integration_narrated": {
+   "exists": true,
+   "path": "base/test/natural/knowledge_integration_narrated.ring",
+   "assertions": 19,
+   "by_helper": {
+    "chk": 19
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring",
+   "also_found": []
+  },
+  "agentgraph_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/agentgraph_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "chk": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/agentgraph_narrated.ring",
+   "also_found": []
+  },
+  "piagent_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/piagent_narrated.ring",
+   "assertions": 14,
+   "by_helper": {
+    "chk": 14
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/piagent_narrated.ring",
+   "also_found": []
+  },
+  "ownagentstack_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/ownagentstack_narrated.ring",
+   "assertions": 10,
+   "by_helper": {
+    "chk": 10
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring",
+   "also_found": []
+  },
   "coderule_narrated": {
    "exists": true,
    "path": "base/test/meta/coderule_narrated.ring",
@@ -104,6 +154,14 @@
    "modality_narrated",
    "wisecoding_narrated",
    "wisecoding_rich_narrated"
+  ],
+  "en/17-law-programmatic-by-default": [
+   "dlm_narrated",
+   "wisecoding_narrated",
+   "knowledge_integration_narrated",
+   "agentgraph_narrated",
+   "piagent_narrated",
+   "ownagentstack_narrated"
   ],
   "en/32-many-minds-on-one-body-of-work": [
    "coderule_narrated",

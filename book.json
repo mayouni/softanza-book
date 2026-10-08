@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 20:48 UTC+01:00",
+ "built": "2026-10-08 20:49 UTC+01:00",
  "library_commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 20:48 UTC+01:00",
+    "ran": "2026-10-08 20:49 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -187,9 +187,126 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 20:48 UTC+01:00",
+    "ran": "2026-10-08 20:49 UTC+01:00",
     "kept": 5,
     "runnable": 5
+   }
+  },
+  {
+   "number": 17,
+   "id": "law-programmatic-by-default",
+   "title": "Law: programmatic by default, the model last, admission over generation",
+   "part": 4,
+   "law": "programmatic by default, the model last, admission over generation",
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the domain language model's first rung; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model",
+    "designed": "the thinking machine's cascade across faculties; the typed unit of prediction validated in five stages; the negotiation between an agent and its reviewer",
+    "absent": "four of the library's five own agents, induction from examples among them"
+   },
+   "guards": [
+    {
+     "name": "dlm_narrated",
+     "exists": true,
+     "path": "base/test/learning/dlm_narrated.ring",
+     "assertions": 16,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/learning/dlm_narrated.ring"
+    },
+    {
+     "name": "wisecoding_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_narrated.ring",
+     "assertions": 13,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+    },
+    {
+     "name": "knowledge_integration_narrated",
+     "exists": true,
+     "path": "base/test/natural/knowledge_integration_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring"
+    },
+    {
+     "name": "agentgraph_narrated",
+     "exists": true,
+     "path": "base/test/agentic/agentgraph_narrated.ring",
+     "assertions": 11,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/agentgraph_narrated.ring"
+    },
+    {
+     "name": "piagent_narrated",
+     "exists": true,
+     "path": "base/test/agentic/piagent_narrated.ring",
+     "assertions": 14,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/piagent_narrated.ring"
+    },
+    {
+     "name": "ownagentstack_narrated",
+     "exists": true,
+     "path": "base/test/agentic/ownagentstack_narrated.ring",
+     "assertions": 10,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"restaurant\")\noKB.Know(\"margherita\", \"dish\").\n    KnowRelation(\"margherita\", \"contains\", \"tomato-sauce\").\n    KnowRelation(\"margherita\", \"contains\", \"mozzarella\")\noDLM = StzDlmQ(oKB)\n? oDLM.Ask(\"margherita contains what?\")\n#--> Margherita contains tomato-sauce and mozzarella.\n? oDLM.Why()\n#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n? oDLM.AskXT(\"margherita contains what?\")[:certainty]\n#--> 1\n? oDLM.Ask(\"who won the 1998 world cup?\")\n#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).",
+     "verdict": "kept"
+    },
+    {
+     "code": "oMenu = new stzKnowledgeGraph(\"menu\")\noMenu.Know(\"margherita\", \"dish\").Know(\"tiramisu\", \"dish\")\noMenu.AddConversationQ(\"setup\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\n? oMenu.AskIn(\"setup\")\n#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\ntry\n\toMenu.ConcludeIn(\"setup\", \"menu\")\ncatch\n\t? cCatchError\ndone\n#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKG = new stzKnowledgeGraph(\"kitchen\")\noKG.ConstrainRelation(\"contains\", :Transitive)\noKG.KnowRelation(\"margherita\", \"contains\", \"tomato-sauce\").\n    KnowRelation(\"tomato-sauce\", \"contains\", \"tomato\")\n? oKG.Prove([ \"margherita\", \"contains\", \"tomato\" ])[:narration]\n#--> proved: margherita contains tomato-sauce contains tomato\n? oKG.Prove([ \"margherita\", \"contains\", \"luigi\" ])[:narration]\n#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'",
+     "verdict": "kept"
+    },
+    {
+     "code": "oG = new stzAgentGraph(\"mailer\")\noG.AddLLMActor(\"writer\")\noG.AddEffect(\"send\")\noG.Proposes(\"writer\", \"send\")\n? oG.IsSound()\n#--> 0\n? len(oG.Violations())\n#--> 3",
+     "verdict": "kept"
+    },
+    {
+     "code": "oF = new stzLLMFunction(\"sum\")\noF.SetPrompt(\"summarize: {input}\")\noF.Budget(2)\noF.SeedAnswer(\"hello world\", \"a greeting\")\noLLM = new stzLLMAgent(\"summarizer\")\noLLM.SetSkillFrom(oF)\n? oLLM.Propose(\"hello world\")\n#--> a greeting\n? oLLM.HoldsEffectful()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oRog = new stzPIAgent(\"rogue-bot\")\noRog.MemoryQ().Learn(\"stock\", \"level\", \"low\")\noRog.GovernanceQ().DeclareRisk(\"order-stock\", 2)\noSk = new stzAgentSkill(\"restock\")\noSk.SetWhen(func oM { return oM.Fact(\"stock\", \"level\", \"low\") })\noSk.SetDoes(func oM { oM.Learn(\"stock\", \"level\", \"ordered\")  return 1 })\noRog.AddGovernedSkill(oSk, \"order-stock\")\n? oRog.Pursue()\n#--> 0\n? oRog.DecisionLog()[1][:why]\n#--> refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'",
+     "verdict": "kept"
+    },
+    {
+     "code": "? len(StzOwnAgents())\n#--> 5\n? StzOwnAgentIsWired(\"wise-coder\")\n#--> 1\n? StzOwnAgentIsWired(\"induction\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? oDLM.Ask(\"what does margherita contain?\")\n#--> Margherita is a dish.",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-agents-that-cannot-hurt-you-narration.md",
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-knowledge-programming-narration.md"
+   ],
+   "rulings": [
+    "12.18",
+    "12.19",
+    "12.25",
+    "12.26",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "Your agent's mind is code you can test with ordinary promises. A model may be one faculty; it can never hold an effect.",
+    "analyst": "A fact or a rule you add makes the system know more, with no code change and no training, and every answer carries its why.",
+    "designer": "The system asks the user one accountable question at a time, and the question can be rendered in any medium: a terminal, a page, an agent.",
+    "decision-maker": "A decision costs nothing per call, runs offline and is the same tomorrow. The four agents still reserved are the honest gap.",
+    "educator": "The conversation asks and never answers first, and it uses a model's fluency only when a model is really there, so a learner always sees the floor.",
+    "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
+   },
+   "run": {
+    "ran": "2026-10-08 20:49 UTC+01:00",
+    "kept": 8,
+    "runnable": 8
    }
   },
   {
@@ -260,7 +377,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 20:48 UTC+01:00",
+    "ran": "2026-10-08 20:49 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

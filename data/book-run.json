@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 20:48 UTC+01:00",
+  "date": "2026-10-08 20:49 UTC+01:00",
   "library": {
    "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
    "short": "b9d5cd1e4",
@@ -47,8 +47,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 20:48 UTC+01:00",
-   "seconds": 2.6
+   "ran": "2026-10-08 20:49 UTC+01:00",
+   "seconds": 2.8
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -104,8 +104,82 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 20:48 UTC+01:00",
-   "seconds": 2.7
+   "ran": "2026-10-08 20:49 UTC+01:00",
+   "seconds": 3.8
+  },
+  "en/17-law-programmatic-by-default": {
+   "id": "law-programmatic-by-default",
+   "blocks": [
+    {
+     "hash": "5f4f2bbbbc61",
+     "promise": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations)."
+    },
+    {
+     "hash": "b360347d517d",
+     "promise": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question."
+    },
+    {
+     "hash": "adfd08cbf9a9",
+     "promise": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'"
+    },
+    {
+     "hash": "e6b4a509f631",
+     "promise": "0\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n3"
+    },
+    {
+     "hash": "940b7efd95f1",
+     "promise": "a greeting\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "a greeting\n0"
+    },
+    {
+     "hash": "c340cac7de55",
+     "promise": "0\nrefused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nrefused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'"
+    },
+    {
+     "hash": "e708028b0c97",
+     "promise": "5\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "5\n1\n0"
+    },
+    {
+     "hash": "546c0563b065",
+     "promise": "Margherita is a dish.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Margherita is a dish."
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "ran": "2026-10-08 20:49 UTC+01:00",
+   "seconds": 2.9
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -138,8 +212,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 20:48 UTC+01:00",
-   "seconds": 2.8
+   "ran": "2026-10-08 20:49 UTC+01:00",
+   "seconds": 2.6
   }
  }
 }

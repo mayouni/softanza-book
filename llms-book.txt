@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-08 20:48 UTC+01:00. Library commit b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115.
+Built 2026-10-08 20:49 UTC+01:00. Library commit b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115.
 
 Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
 
@@ -13,4 +13,5 @@ Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: 
 - 0. Preface [missing, spine] guards: none; run: no code
 - 1. Change arrives faster than trust [draft, spine] guards: service_registry_narrated (51), safeworld_narrated (76), governance_crossing_narrated (31); run: 1 of 1 blocks kept
 - 3. The method, from first principles [draft, spine] guards: modality_narrated (45), wisecoding_narrated (13), wisecoding_rich_narrated (52); run: 5 of 5 blocks kept
+- 17. Law: programmatic by default, the model last, admission over generation [draft, spine] guards: dlm_narrated (16), wisecoding_narrated (13), knowledge_integration_narrated (19), agentgraph_narrated (11), piagent_narrated (14), ownagentstack_narrated (10); run: 8 of 8 blocks kept
 - 32. Many minds on one body of work [draft, spine] guards: coderule_narrated (77), codegraph_narrated (28), coderule_project_narrated (13); run: 3 of 3 blocks kept
