@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 23:51 UTC+01:00",
+  "date": "2026-10-09 00:07 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 23:51 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 5.1
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:51 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 5.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:51 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 6.0
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 6.3
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 6.2
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 7.4
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 4.9
+   "ran": "2026-10-09 00:07 UTC+01:00",
+   "seconds": 6.5
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 14.8
+   "ran": "2026-10-09 00:08 UTC+01:00",
+   "seconds": 20.4
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-09 00:08 UTC+01:00",
+   "seconds": 6.6
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 00:08 UTC+01:00",
+   "seconds": 7.6
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 15.6
+   "ran": "2026-10-09 00:08 UTC+01:00",
+   "seconds": 28.3
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1002,8 +1002,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-08 23:52 UTC+01:00",
-   "seconds": 3.1
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 6.5
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1123,8 +1123,115 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 5.7
+  },
+  "en/16-seven-languages-one-door": {
+   "id": "seven-languages-one-door",
+   "blocks": [
+    {
+     "hash": "59b52061755c",
+     "promise": "c: 1\nnodejs: 1\njulia: 1\nr: 1\nprolog: 1\npython: 1\nring: 0\ncobol: 0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "c: 1\nnodejs: 1\njulia: 1\nr: 1\nprolog: 1\npython: 1\nring: 0\ncobol: 0"
+    },
+    {
+     "hash": "e4751e6f68bd",
+     "promise": "Language 'cobol' is not supported",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Language 'cobol' is not supported"
+    },
+    {
+     "hash": "2cc3c9576838",
+     "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1"
+    },
+    {
+     "hash": "0e744afec921",
+     "promise": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]"
+    },
+    {
+     "hash": "48e980c00cf5",
+     "promise": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]"
+    },
+    {
+     "hash": "c0aeefd24e7d",
+     "promise": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared"
+    },
+    {
+     "hash": "d8e2cd7f0942",
+     "promise": "1\nUpdate plan (1 of 1 operations to commit):\n* 1. spawn process: python analyse.py\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nUpdate plan (1 of 1 operations to commit):\n  * 1. spawn process: python analyse.py\n\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]"
+    },
+    {
+     "hash": "7393d862a580",
+     "promise": "0\n42",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n42"
+    },
+    {
+     "hash": "7c2217f48ff4",
+     "promise": "xYz",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "xYz"
+    },
+    {
+     "hash": "96d3c3e67570",
+     "promise": "1\n0",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "10cd358d1815",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 7.8
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1197,8 +1304,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 6.0
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1334,8 +1441,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 8.0
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1404,8 +1511,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 4.1
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 6.0
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1502,8 +1609,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-09 00:09 UTC+01:00",
+   "seconds": 6.7
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1585,7 +1692,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
+   "ran": "2026-10-09 00:09 UTC+01:00",
    "seconds": 6.8
   },
   "en/22-compared-honestly": {
@@ -1642,8 +1749,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 16.8
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 23.1
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -1699,8 +1806,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 5.4
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 6.6
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1757,8 +1864,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 5.4
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1823,8 +1930,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:53 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 7.9
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -1882,8 +1989,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:54 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 5.7
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1916,8 +2023,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 23:54 UTC+01:00",
-   "seconds": 5.4
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 5.3
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1957,8 +2064,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 23:54 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-09 00:10 UTC+01:00",
+   "seconds": 5.3
   }
  }
 }

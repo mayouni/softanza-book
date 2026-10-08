@@ -18,7 +18,7 @@ What differs from the site's runner, and why:
     python tools/book_run.py                 # the library at its current HEAD
     python tools/book_run.py --commit <sha>  # the library at a named commit
 """
-import re, sys, subprocess, shutil
+import os, re, sys, subprocess, shutil
 from book_common import (sources, code_blocks, block_hash, snapshot, now, stamp, save_json, ROOT, LIB_REF)
 from book_judge import parse, verdict, effects_of
 
@@ -55,7 +55,10 @@ def run_chapter(lib, name, blocks):
     script.write_text("\n".join(main_lines + [""] + tail) + "\n", encoding="utf-8")
     t0 = now()
     try:
-        p = subprocess.run(["ring", script.name], cwd=work, capture_output=True, text=True,
+        # the library's door to foreign runtimes starts its script by bare name, which a machine that sets
+        # NoDefaultCurrentDirectoryInExePath cannot find; the chapter on the door needs it unset
+        env = {k: v for k, v in os.environ.items() if k.lower() != "nodefaultcurrentdirectoryinexepath"}
+        p = subprocess.run(["ring", script.name], cwd=work, capture_output=True, text=True, env=env,
                            encoding="utf-8", errors="replace", timeout=300)
         out = (p.stdout or "").replace("\r", "")
     except subprocess.TimeoutExpired as e:

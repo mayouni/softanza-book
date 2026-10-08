@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 23:54 UTC+01:00",
+ "read": "2026-10-09 00:11 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -572,6 +572,56 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graphex/00_graphex_narrated.ring",
    "also_found": []
   },
+  "51_extercode_narrated": {
+   "exists": true,
+   "path": "base/test/extercode/51_extercode_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "Then": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/extercode/51_extercode_narrated.ring",
+   "also_found": []
+  },
+  "governance_narrated": {
+   "exists": true,
+   "path": "base/test/governance/governance_narrated.ring",
+   "assertions": 19,
+   "by_helper": {
+    "chk": 19
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_narrated.ring",
+   "also_found": []
+  },
+  "virtual_environment_twin_narrated": {
+   "exists": true,
+   "path": "base/test/system/virtual_environment_twin_narrated.ring",
+   "assertions": 38,
+   "by_helper": {
+    "chk": 38
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_environment_twin_narrated.ring",
+   "also_found": []
+  },
+  "pycodegraph_narrated": {
+   "exists": true,
+   "path": "base/test/meta/pycodegraph_narrated.ring",
+   "assertions": 48,
+   "by_helper": {
+    "Then": 48
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/pycodegraph_narrated.ring",
+   "also_found": []
+  },
+  "jscodegraph_narrated": {
+   "exists": true,
+   "path": "base/test/meta/jscodegraph_narrated.ring",
+   "assertions": 13,
+   "by_helper": {
+    "Then": 13
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/jscodegraph_narrated.ring",
+   "also_found": []
+  },
   "dlm_narrated": {
    "exists": true,
    "path": "base/test/learning/dlm_narrated.ring",
@@ -853,16 +903,6 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/gg_rule_governance.ring",
    "also_found": []
   },
-  "governance_narrated": {
-   "exists": true,
-   "path": "base/test/governance/governance_narrated.ring",
-   "assertions": 19,
-   "by_helper": {
-    "chk": 19
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_narrated.ring",
-   "also_found": []
-  },
   "governance_lineage_narrated": {
    "exists": true,
    "path": "base/test/governance/governance_lineage_narrated.ring",
@@ -1016,6 +1056,13 @@
    "tablex_narrated",
    "00_matrex_narrated",
    "00_graphex_narrated"
+  ],
+  "en/16-seven-languages-one-door": [
+   "51_extercode_narrated",
+   "governance_narrated",
+   "virtual_environment_twin_narrated",
+   "pycodegraph_narrated",
+   "jscodegraph_narrated"
   ],
   "en/17-law-programmatic-by-default": [
    "dlm_narrated",

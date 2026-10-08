@@ -191,7 +191,7 @@ Three crafters: a restaurateur who is not a programmer, a bank under a regulator
 
 ## 5. The court
 
-`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` proves the Hausa path. `00_orgchart_narrated` proves the organisation chart and its validators.
+`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` proves the Hausa path. It does not pass at this commit: I ran it on 9 October 2026 and it stops with an error raised from a string-splitting function, before it ends, so the page counts its assertions and does not claim its verdict. `00_orgchart_narrated` proves the organisation chart and its validators.
 
 ## 6. The field, and where it leads
 
