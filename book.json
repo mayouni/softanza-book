@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 00:24 UTC+01:00",
+ "built": "2026-10-09 00:38 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:34 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 00:20 UTC+01:00",
+    "ran": "2026-10-09 00:35 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 00:21 UTC+01:00",
+    "ran": "2026-10-09 00:35 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 00:21 UTC+01:00",
+    "ran": "2026-10-09 00:35 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,7 +1271,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 00:21 UTC+01:00",
+    "ran": "2026-10-09 00:35 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1379,7 +1379,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:21 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1538,7 +1538,7 @@
     "old articles have decayed": "The 2020 sentence needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ`, `TheirQ().FirstCharQ()` and `ReplaceLowercaseCharsQ` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. Of the twelve chains of that article that I ran, eight work. The bridging article's paragraph still runs in permissive mode, and prints two nested boxes around \"NOTHING SOFTANZA\" instead of the one it promises. The machine said so, since `UnderstoodAll()` is 0 and the unresolved word is named, but a reader has to ask."
    },
    "run": {
-    "ran": "2026-10-09 00:21 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -1658,7 +1658,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1792,7 +1792,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1916,7 +1916,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -2033,7 +2033,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2165,7 +2165,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2268,7 +2268,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2385,7 +2385,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 00:22 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2527,7 +2527,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2622,9 +2622,133 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
+   }
+  },
+  {
+   "number": 23,
+   "id": "a-world-a-constellation-a-platform",
+   "title": "A world, a constellation, a platform, and the architect",
+   "part": 5,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes",
+    "designed": "the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal",
+    "absent": "a world that judges its own truths; a narration for the constellation or the platform envelope; a page for the architect; the five-row guarantee sheet"
+   },
+   "guards": [
+    {
+     "name": "06_stzsuperapp_narrated",
+     "exists": true,
+     "path": "base/test/app/06_stzsuperapp_narrated.ring",
+     "assertions": 21,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/06_stzsuperapp_narrated.ring"
+    },
+    {
+     "name": "01_platform_narrated",
+     "exists": true,
+     "path": "base/test/platform/01_platform_narrated.ring",
+     "assertions": 31,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/platform/01_platform_narrated.ring"
+    },
+    {
+     "name": "full_scope_model_narrated",
+     "exists": true,
+     "path": "base/test/system/full_scope_model_narrated.ring",
+     "assertions": 62,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring"
+    },
+    {
+     "name": "04_stzapp_pursue_narrated",
+     "exists": true,
+     "path": "base/test/app/04_stzapp_pursue_narrated.ring",
+     "assertions": 11,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/04_stzapp_pursue_narrated.ring"
+    },
+    {
+     "name": "05_stzapp_live_narrated",
+     "exists": true,
+     "path": "base/test/app/05_stzapp_live_narrated.ring",
+     "assertions": 11,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/05_stzapp_live_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oApp = new stzApp(\"FieldVisits\")\noApp {\n    AddThingQ(:Account) { Has([ :number, :chapter, :balance ])  IsTrue(:balance, \"@ >= 0\") }\n    AddThingQ(:Client)  { Has([ :code, :name, :city ])  Owns(:Account) }\n    AddThingQ(:Visit)   { Of(:Client)  Has([ :agent, :date, :subject ]) }\n    AddRelation(:Account, :belongsTo, :Client)\n    AddFlowQ(:agent, :records, :Visit) { Require(:subject) }\n    AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }\n    AddGoalQ(:EveryClientSeenThisQuarter) {\n        Means      = \"every :Client Has(:visit) Since(:quarterStart)\"\n        ReachedBy  = :planning\n    }\n    SetBody([ :GraphDB, :Files ]) { Graph = \".stzapp/world.stzgraf\"  Files = \"./\" }\n}\noApp.AddScreenQ(:ClientFile) { ToUnderstand(:Client)  Shows([ :identity, :accounts, :visits ]) }\noApp.AddRefinementQ(:balance).Bounds(0, 1000000)\noApp.AddReaches([ :mobile, :desktop, :web ])\noApp.Explain()\n#--> WORLD FieldVisits   lives in: graphdb + files\n#      BEING\n#        account (number, chapter, balance)\n#            true when balance @ >= 0\n#        client (code, name, city)\n#        visit (agent, date, subject)\n#      RELATIONS\n#        client owns account\n#        visit of client\n#        account belongsto client\n#      BECOMING\n#        when agent records visit require subject\n#        whenever client unseen 90 days -> propose visit\n#        wants everyclientseenthisquarter -> reached by planning\n#      MET FROM WITHOUT\n#        screen clientfile: understand client shows identity, accounts, visits\n#        refine balance bounds [0..1000000]\n#        reaches mobile, desktop, web",
+     "verdict": "kept"
+    },
+    {
+     "code": "oApp = StzAppQ(\"visits\")\noApp.AddThingQ(:Client) { Has([ :code, :name ]) }\noApp.AddThingQ(:Visit)  { Of(:Client) }\noApp.AddGoalQ(:EveryClientVisited) { Means = \"every :Client Has(:visited)\"  ReachedBy = :planning }\noApp.AddInstance(\"anna\", :Client)\noApp.AddInstance(\"bilal\", :Client)\noApp.Relate(\"anna\", :visited, \"visit1\")\n? @@( oApp.Pursue(:EveryClientVisited) )\n#--> pursuing everyclientvisited via planning -- 1 proposal(s)\n#    [ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n? oApp.GoalSatisfied(:EveryClientVisited)\n#--> 0\noApp.Relate(\"bilal\", :visited, \"visit2\")\n? @@( oApp.Pursue(:EveryClientVisited) )\n#--> pursuing everyclientvisited via planning -- 0 proposal(s)\n#    [ ]\n? oApp.GoalSatisfied(:EveryClientVisited)\n#--> 1\noApp.AddGoalQ(:Vague) { Means = \"make things nice\" }\ntry\n    oApp.Pursue(:Vague)\ncatch\n    ? cCatchError\ndone\n#--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oResto = StzAppQ(\"resto\")\noResto.AddThingQ(:dish) { Has([ :name, :price ]) }\noSupplier = StzAppQ(\"supplier\")\noSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }\noCon = new stzSuperApp(\"acme-group\")\noCon.AddWorld(\"resto\", oResto)\noCon.AddWorld(\"supplier\", oSupplier)\noCon.Bond(\"resto\", \"supplier\", \"order-produce\")\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n#--> 0\n? oCon.Why()\n#--> governance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\noCon.GovDeclareRisk(\"order-produce\", 2)\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n#--> 0\n? oCon.Why()\n#--> governance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\noCon.GovGrant(\"resto\", \"order-produce\")\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n#--> 0\n? oCon.Why()\n#--> governance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\noCon.GovSetAuthority(\"resto\", :Delegated)\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n#--> 1\n? oCon.Why()\n#--> allowed: active + bonded + governed\n? oCon.GovernanceQ().NumberOfDecisions()\n#--> 1\n? @@( oCon.GovernanceQ().DecisionsOf(\"resto\")[1][2] )\n#--> [ \"rationale\", \"cross-world call cleared\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oCon = new stzSuperApp(\"acme-group\")\noDb = new stzDatabase(\":memory:\")\noCon.OpenCommonsOn(oDb)\n? classname( oCon.CommonsQ() )\n#--> stzplatform\n? oCon.RegisterIdentity(\"owner\", \"s3cret\")\n#--> 1\n? oCon.RegisterIdentity(\"owner\", \"other\")\n#--> 0\n? len( oCon.OpenSession(\"owner\", \"s3cret\") ) > 0\n#--> 1\n? oCon.OpenSession(\"owner\", \"wrong\") = \"\"\n#--> 1\noCon.StorePut(\"currency\", \"EUR\")\n? oCon.StoreGet(\"currency\")\n#--> EUR\noDb.Close()",
+     "verdict": "kept"
+    },
+    {
+     "code": "oResto = StzAppQ(\"resto\")\noResto.AddThingQ(:dish) { Has([ :name, :price ]) }\noCon = new stzSuperApp(\"acme-group\")\noCon.AddWorld(\"resto\", oResto)\noCon.AddWorld(\"supplier\", StzAppQ(\"supplier\"))\noCon.Bond(\"resto\", \"supplier\", \"order-produce\")\noCon.GovDeclareRisk(\"order-produce\", 2)\noCon.GovGrant(\"resto\", \"order-produce\")\noCon.GovSetAuthority(\"resto\", :Delegated)\noNew = StzAppQ(\"supplier-v2\")\noCon.Swap(\"supplier\", oNew)\n? oCon.NumberOfWorlds()\n#--> 2\n? oCon.WorldQ(\"supplier\").Name()\n#--> supplier-v2\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n#--> 1\noHolding = new stzSuperApp(\"holding\")\noHolding.AddConstellation(\"acme\", oCon)\n? oHolding.KindOf(\"acme\")\n#--> super\n? oHolding.WorldQ(\"acme\").NumberOfWorlds()\n#--> 2\n? oCon.KindOf(\"resto\")\n#--> app\ntry\n    oCon.AddWorld(\"resto\", oResto)\ncatch\n    ? cCatchError\ndone\n#--> stzSuperApp: world 'resto' already in the constellation.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oGov = new stzGovernance(\"resto-regime\")\noGov.GrantPermission(\"resto\", \"use-camera\")\noGov.GrantPermission(\"resto\", \"use-payments\")\noGov.SetAuthority(\"resto\", :Delegated)\noResto = StzAppQ(\"resto\")\noResto.AddThingQ(:dish) { Has([ :name, :price ]) }\noPlat = StzPlatformQ(\"resto-envelope\")\noPlat.SetWorld(oResto)\noPlat.SetGovernedBy(oGov)\noPlat.AddCapabilityQ(:camera).SetPurposes([ :scan_dish_photo ])\n? oPlat.Granted(:camera)\n#--> 1\noPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])\n? oPlat.Granted(:payments)\n#--> 0\n? oPlat.Why()\n#--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSol = new stzPlatformProfile(\"greenhouse\")\noSol.DevelopedOn(:Windows)\noSol.WithServer(:backend, :LinuxServer)\noSol.WithSuperApp(:phone, :Android)\noSol.WithApp(:sensor, :ESP32)\n? oSol.DevelopmentSystem().OSName()\n#--> windows\n? oSol.App(:phone).System().OSName()\n#--> android\n? oSol.App(:sensor).System().OSName()\n#--> espidf\n? @@( oSol.App(:sensor).System().System().Capabilities() )\n#--> [ \"gpio\", \"network\", \"clock\", \"threads\" ]\n? oSol.CurrentSystem().IsRuntime()\n#--> 1\n? oSol.App(:backend).System().Spawn(\"cron\")\n#--> native\ntry\n    oSol.App(:phone).System().Spawn(\"cron\")\ncatch\n    ? cCatchError\ndone\n#--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSol = new stzPlatformProfile(\"greenhouse\")\noSol.DevelopedOn(:Windows)\noSol.WithServer(:backend, :LinuxServer)\noSol.WithSuperApp(:phone, :Android)\noSol.WithApp(:sensor, :ESP32)\n? oSol.ToStzPlatform()\n#--> # .stzplatform -- a Softanza solution profile\n#    platform: greenhouse\n#    developed_on: windows\n#    server: backend -> linux\n#    superapp: phone -> android\n#    app: sensor -> espidf\noBack = StzPlatformProfileQ()\noBack.FromString( oSol.ToStzPlatform() )\n? oBack.App(:sensor).DeploymentOSName()\n#--> espidf\noBad = new stzPlatformProfile(\"empty\")\n? @@( oBad.Validate() )\n#--> [ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\noPlat = StzPlatformQ(\"empty\")\noPlat.SetProfile(oBad)\ntry\n    oPlat.Build()\ncatch\n    ? cCatchError\ndone\n#--> stzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps",
+     "verdict": "kept"
+    },
+    {
+     "code": "oA = StzAppQ(\"clinic-a\")\noA.AddThingQ(:Patient) { Has([ :name ]) }\noA.AddThing(:Checkup)\noA.AddReactionQ(:Patient).Unseen(90, :Days) { Propose(:Checkup) }\noA.AddInstance(\"alice\", :Patient)\noA.AddInstance(\"bob\", :Patient)\noA.Relate(\"alice\", :checkup, \"checkup-1\")\noB = StzAppQ(\"clinic-b\")\noB.AddThingQ(:Patient) { Has([ :name ]) }\noB.AddThing(:Checkup)\noB.AddReactionQ(:Patient).Unseen(1, :Days) { Propose(:Checkup) }\noB.AddInstance(\"alice\", :Patient)\noB.AddInstance(\"bob\", :Patient)\noB.Relate(\"alice\", :checkup, \"checkup-1\")\noA.Live()\n#--> [clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\noB.Live()\n#--> [clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n? @@( oA.Proposals() )\n#--> [ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n? @@( oB.Proposals() )\n#--> [ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSuper = new stzSuperApp(\"acme-group\")\ntry\n    oSuper.Hosts(:VisitApp)\ncatch\n    ? cCatchError\ndone\n#--> Error (R14) : Calling Method without definition: hosts\ntry\n    oSuper.Admits(:VisitApp)\ncatch\n    ? cCatchError\ndone\n#--> Error (R14) : Calling Method without definition: admits\ntry\n    oSuper.Explain()\ncatch\n    ? cCatchError\ndone\n#--> Error (R14) : Calling Method without definition: explain",
+     "verdict": "kept"
+    },
+    {
+     "code": "? YourConstellation.CallAcross(\"a\", \"b\", \"act\")\n#--> 1",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stzApp-building-your-first-app-narration.md",
+    "stz-system-dev-to-deploy-narration.md",
+    "stz-built-on-real-world-need.md"
+   ],
+   "rulings": [
+    "12.2",
+    "12.12",
+    "12.13",
+    "12.15",
+    "12.19",
+    "12.25",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "You declare a world with braces, ask it to explain itself, and cross between worlds with a call that returns 0 and a `Why()` that names the gate. Watch the copy: configure, then register.",
+    "analyst": "You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated and not yet judged.",
+    "designer": "A world declares screens as intents, a refinement as a bounded knob, and where it appears. The shells generated today are stubs, and the persona a world serves is not a field.",
+    "decision-maker": "You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision with the actor, the authority and the risk of its moment. Your architect's file is text you own.",
+    "educator": "The record is thin. The education plan lists a ladder from practitioner to architect to contributor among six competing level schemes, and I say so. The exercise below is judged by running.",
+    "agent": "A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed whoever calls."
+   },
+   "run": {
+    "ran": "2026-10-09 00:37 UTC+01:00",
+    "kept": 10,
+    "runnable": 10
    }
   },
   {
@@ -2724,7 +2848,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2830,7 +2954,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:38 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2939,7 +3063,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:38 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -3058,7 +3182,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:38 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3131,7 +3255,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 00:23 UTC+01:00",
+    "ran": "2026-10-09 00:38 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3213,7 +3337,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 00:24 UTC+01:00",
+    "ran": "2026-10-09 00:38 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

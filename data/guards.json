@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:24 UTC+01:00",
+ "read": "2026-10-09 00:38 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -832,6 +832,26 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/number/engine_is_optimised_narrated.ring",
    "also_found": []
   },
+  "04_stzapp_pursue_narrated": {
+   "exists": true,
+   "path": "base/test/app/04_stzapp_pursue_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "Then": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/04_stzapp_pursue_narrated.ring",
+   "also_found": []
+  },
+  "05_stzapp_live_narrated": {
+   "exists": true,
+   "path": "base/test/app/05_stzapp_live_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "Then": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/05_stzapp_live_narrated.ring",
+   "also_found": []
+  },
   "service_delivery_narrated": {
    "exists": true,
    "path": "base/test/system/service_delivery_narrated.ring",
@@ -1164,6 +1184,13 @@
    "numeric_no_loss_narrated",
    "semantic_resolver_narrated",
    "engine_is_optimised_narrated"
+  ],
+  "en/23-a-world-a-constellation-a-platform": [
+   "06_stzsuperapp_narrated",
+   "01_platform_narrated",
+   "full_scope_model_narrated",
+   "04_stzapp_pursue_narrated",
+   "05_stzapp_live_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",

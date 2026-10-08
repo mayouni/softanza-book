@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-09 00:20 UTC+01:00",
+  "date": "2026-10-09 00:34 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 5.4
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 5.9
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 7.4
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 7.0
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 6.9
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 7.1
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 5.2
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 7.4
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-09 00:34 UTC+01:00",
+   "seconds": 7.5
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-09 00:20 UTC+01:00",
-   "seconds": 12.9
+   "ran": "2026-10-09 00:35 UTC+01:00",
+   "seconds": 14.3
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:21 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-09 00:35 UTC+01:00",
+   "seconds": 7.3
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-09 00:21 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-09 00:35 UTC+01:00",
+   "seconds": 7.0
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-09 00:21 UTC+01:00",
-   "seconds": 20.1
+   "ran": "2026-10-09 00:35 UTC+01:00",
+   "seconds": 26.0
   },
   "en/12-a-language-declared": {
    "id": "a-language-declared",
@@ -958,8 +958,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-09 00:21 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 9.1
   },
   "en/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -1111,8 +1111,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 1,
-   "ran": "2026-10-09 00:21 UTC+01:00",
-   "seconds": 28.8
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 26.7
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1236,8 +1236,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 6.3
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1357,8 +1357,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 7.2
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1464,8 +1464,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 6.8
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1538,8 +1538,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-09 00:36 UTC+01:00",
+   "seconds": 5.5
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1675,8 +1675,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 7.4
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 7.3
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1745,8 +1745,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 6.4
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1843,8 +1843,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 00:22 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 6.5
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1926,8 +1926,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 6.5
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -1983,8 +1983,107 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 22.4
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 20.1
+  },
+  "en/23-a-world-a-constellation-a-platform": {
+   "id": "a-world-a-constellation-a-platform",
+   "blocks": [
+    {
+     "hash": "6a547cc32926",
+     "promise": "WORLD FieldVisits   lives in: graphdb + files\nBEING\naccount (number, chapter, balance)\ntrue when balance @ >= 0\nclient (code, name, city)\nvisit (agent, date, subject)\nRELATIONS\nclient owns account\nvisit of client\naccount belongsto client\nBECOMING\nwhen agent records visit require subject\nwhenever client unseen 90 days -> propose visit\nwants everyclientseenthisquarter -> reached by planning\nMET FROM WITHOUT\nscreen clientfile: understand client shows identity, accounts, visits\nrefine balance bounds [0..1000000]\nreaches mobile, desktop, web",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "WORLD FieldVisits   lives in: graphdb + files\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n    visit (agent, date, subject)\n  RELATIONS\n    client owns account\n    visit of client\n    account belongsto client\n  BECOMING\n    when agent records visit require subject\n    whenever client unseen 90 days -> propose visit\n    wants everyclientseenthisquarter -> reached by planning\n  MET FROM WITHOUT\n    screen clientfile: understand client shows identity, accounts, visits\n    refine balance bounds [0..1000000]\n    reaches mobile, desktop, web"
+    },
+    {
+     "hash": "6b36cf1588f0",
+     "promise": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'."
+    },
+    {
+     "hash": "6b6edd759bdb",
+     "promise": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]"
+    },
+    {
+     "hash": "d86059de8f46",
+     "promise": "stzplatform\n1\n0\n1\n1\nEUR",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzplatform\n1\n0\n1\n1\nEUR"
+    },
+    {
+     "hash": "26ad3779f943",
+     "promise": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation."
+    },
+    {
+     "hash": "068c2af00c5f",
+     "promise": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)"
+    },
+    {
+     "hash": "3244caff7e07",
+     "promise": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability."
+    },
+    {
+     "hash": "99aef33a4b72",
+     "promise": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\n\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps"
+    },
+    {
+     "hash": "bfdc37c8c6ba",
+     "promise": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]"
+    },
+    {
+     "hash": "8ca9c66a1ce2",
+     "promise": "Error (R14) : Calling Method without definition: hosts\nError (R14) : Calling Method without definition: admits\nError (R14) : Calling Method without definition: explain",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Error (R14) : Calling Method without definition: hosts\nError (R14) : Calling Method without definition: admits\nError (R14) : Calling Method without definition: explain"
+    },
+    {
+     "hash": "06ef71af5708",
+     "promise": "1",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 7.2
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -2040,8 +2139,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 7.9
+   "ran": "2026-10-09 00:37 UTC+01:00",
+   "seconds": 7.2
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -2098,8 +2197,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 7.5
+   "ran": "2026-10-09 00:38 UTC+01:00",
+   "seconds": 6.8
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -2164,8 +2263,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-09 00:38 UTC+01:00",
+   "seconds": 6.3
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -2223,8 +2322,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-09 00:38 UTC+01:00",
+   "seconds": 6.4
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -2257,8 +2356,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-09 00:23 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-09 00:38 UTC+01:00",
+   "seconds": 6.8
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -2298,8 +2397,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-09 00:24 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-09 00:38 UTC+01:00",
+   "seconds": 8.4
   }
  }
 }
