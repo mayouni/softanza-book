@@ -4,8 +4,8 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 20:49 UTC+01:00",
- "library_commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
+ "built": "2026-10-08 21:13 UTC+01:00",
+ "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
   2,
@@ -55,22 +55,22 @@
      "name": "service_registry_narrated",
      "exists": true,
      "path": "base/test/system/service_registry_narrated.ring",
-     "assertions": 51,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/service_registry_narrated.ring"
+     "assertions": 93,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_registry_narrated.ring"
     },
     {
      "name": "safeworld_narrated",
      "exists": true,
      "path": "base/test/agentic/safeworld_narrated.ring",
      "assertions": 76,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/safeworld_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/safeworld_narrated.ring"
     },
     {
      "name": "governance_crossing_narrated",
      "exists": true,
      "path": "base/test/system/governance_crossing_narrated.ring",
      "assertions": 31,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/governance_crossing_narrated.ring"
     }
    ],
    "promises": [
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 20:49 UTC+01:00",
+    "ran": "2026-10-08 21:12 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -124,21 +124,21 @@
      "exists": true,
      "path": "base/test/natural/modality_narrated.ring",
      "assertions": 45,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/modality_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/modality_narrated.ring"
     },
     {
      "name": "wisecoding_narrated",
      "exists": true,
      "path": "base/test/conversation/wisecoding_narrated.ring",
      "assertions": 13,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
     },
     {
      "name": "wisecoding_rich_narrated",
      "exists": true,
      "path": "base/test/conversation/wisecoding_rich_narrated.ring",
      "assertions": 52,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring"
     }
    ],
    "promises": [
@@ -187,7 +187,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 20:49 UTC+01:00",
+    "ran": "2026-10-08 21:13 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -211,42 +211,42 @@
      "exists": true,
      "path": "base/test/learning/dlm_narrated.ring",
      "assertions": 16,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/learning/dlm_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/learning/dlm_narrated.ring"
     },
     {
      "name": "wisecoding_narrated",
      "exists": true,
      "path": "base/test/conversation/wisecoding_narrated.ring",
      "assertions": 13,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
     },
     {
      "name": "knowledge_integration_narrated",
      "exists": true,
      "path": "base/test/natural/knowledge_integration_narrated.ring",
      "assertions": 19,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring"
     },
     {
      "name": "agentgraph_narrated",
      "exists": true,
      "path": "base/test/agentic/agentgraph_narrated.ring",
      "assertions": 11,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/agentgraph_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentgraph_narrated.ring"
     },
     {
      "name": "piagent_narrated",
      "exists": true,
      "path": "base/test/agentic/piagent_narrated.ring",
      "assertions": 14,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/piagent_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/piagent_narrated.ring"
     },
     {
      "name": "ownagentstack_narrated",
      "exists": true,
      "path": "base/test/agentic/ownagentstack_narrated.ring",
      "assertions": 10,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring"
     }
    ],
    "promises": [
@@ -304,7 +304,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 20:49 UTC+01:00",
+    "ran": "2026-10-08 21:13 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -328,21 +328,21 @@
      "exists": true,
      "path": "base/test/meta/coderule_narrated.ring",
      "assertions": 77,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_narrated.ring"
     },
     {
      "name": "codegraph_narrated",
      "exists": true,
      "path": "base/test/meta/codegraph_narrated.ring",
      "assertions": 28,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/codegraph_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/codegraph_narrated.ring"
     },
     {
      "name": "coderule_project_narrated",
      "exists": true,
      "path": "base/test/meta/coderule_project_narrated.ring",
      "assertions": 13,
-     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_project_narrated.ring"
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_project_narrated.ring"
     }
    ],
    "promises": [
@@ -377,7 +377,89 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 20:49 UTC+01:00",
+    "ran": "2026-10-08 21:13 UTC+01:00",
+    "kept": 3,
+    "runnable": 3
+   }
+  },
+  {
+   "number": 33,
+   "id": "the-one-line-still-owed",
+   "title": "The one line still owed",
+   "part": 7,
+   "law": null,
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service",
+    "designed": "the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board",
+    "absent": "a customer solution running on the Softanza engine, and a named person's verdict on it"
+   },
+   "guards": [
+    {
+     "name": "full_scope_model_narrated",
+     "exists": true,
+     "path": "base/test/system/full_scope_model_narrated.ring",
+     "assertions": 62,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring"
+    },
+    {
+     "name": "virtual_system_twin_narrated",
+     "exists": true,
+     "path": "base/test/system/virtual_system_twin_narrated.ring",
+     "assertions": 48,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring"
+    },
+    {
+     "name": "service_delivery_narrated",
+     "exists": true,
+     "path": "base/test/system/service_delivery_narrated.ring",
+     "assertions": 60,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oSol = new stzPlatformProfile(\"bank\")\noSol.DevelopedOn(:Windows)\noSol.WithServer(:backend, :LinuxServer)\noPlatform = StzPlatformQ(\"bank\")\noPlatform.SetProfile(oSol)\ntry\n\toPlatform.Deploy()\ncatch\n\t? cCatchError\ndone\n#--> stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n? oPlatform.IsDeployed()\n#--> 0\noPlatform.Build()\noPlatform.Deploy()\n? oPlatform.IsDeployed()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oTwin = new stzVirtualFileSystem()\noTwin.CreateFile(\"orders/today.txt\", \"3 couscous\")\n? oTwin.ContentOf(\"orders/today.txt\")\n#--> 3 couscous\n? oTwin.OriginOf(\"orders/today.txt\")\n#--> virtual\n? StzEngineFileExists(\"orders/today.txt\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"shop\")\noReg.BindSandbox(:payments, new stzPaymentsSandbox())\noDel = new stzDelivery(\"shop\")\noDel.AddBackend(\"api\", \"linux\")\noDel.UseServicesQ(oReg)\noDel.DeployTo(StzDeploymentSiteQ(\"host1\"), \"api\")\noDel.SetActor(HumanActor(\"dana\"))\noDep = oDel.Deploy(:Production)\n? oDep.WasCommitted()\n#--> 0\n? oDel.Log().EntriesOfLevel(:error)[2][:message]\n#--> sandbox-in-production @ shop/payments",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSol = new stzPlatformProfile(\"my-project\")\noSol.DevelopedOn(:Windows)\noSol.WithServer(:backend, :LinuxServer)\noP = StzPlatformQ(\"my-project\")\noP.SetProfile(oSol)\n# your three questions here, each with the line you expect under it",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-built-on-real-world-need.md",
+    "stz-system-dev-to-deploy-narration.md",
+    "stz-emulating-the-whole-solution-narration.md",
+    "stz-service-virtualization-code-first-subscribe-later.md"
+   ],
+   "rulings": [
+    "12.5",
+    "12.10",
+    "12.13",
+    "12.21",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "Your code runs today through build, rehearsal and a governed deployment. What you cannot claim yet is that a customer runs it on the engine, and the record will not let you claim it.",
+    "analyst": "Ask for two things before you count a project as proof: a document, and a named verdict.",
+    "designer": "What you design is judged last by a person's sense. A model's opinion of a picture is a result; a person's is the verdict.",
+    "decision-maker": "Read the stage word before the promise. Today the court is built, and the customer run is absent.",
+    "educator": "Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.",
+    "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
+   },
+   "run": {
+    "ran": "2026-10-08 21:13 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

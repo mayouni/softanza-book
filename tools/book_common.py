@@ -16,6 +16,10 @@ DATA = ROOT / "data"
 CACHE = ROOT / ".cache"
 LIB_REPO = pathlib.Path("D:/GitHub/stzlib")          # the library's repository, read only
 LIB_IN_REPO = "libraries/stzlib"
+# The library's public line, which the book runs against unless a commit is named. The working checkout is
+# often on a working branch of another session (it was on ringpp/migrate-rule-a when the book began), and a
+# side branch is not the library a reader can fetch.
+LIB_REF = "origin/main"
 GH_BLOB = "https://github.com/mayouni/stzlib/blob/{sha}/libraries/stzlib/{path}"
 
 FENCE = re.compile(r"(?ms)^```([^\n]*)\n(.*?)^```[ \t]*$")
@@ -86,10 +90,10 @@ def git(*args):
                           encoding="utf-8", errors="replace", check=True).stdout.strip()
 
 
-def snapshot(commit="HEAD"):
+def snapshot(commit=None):
     """The library's files at one commit, exported once into .cache/, with the engine binaries beside them.
     Returns (path to libraries/stzlib in the snapshot, provenance dict)."""
-    sha = git("rev-parse", commit)
+    sha = git("rev-parse", commit or LIB_REF)
     short = sha[:9]
     base = CACHE / f"stzlib-{short}"
     lib = base / LIB_IN_REPO
@@ -101,27 +105,49 @@ def snapshot(commit="HEAD"):
         archive.wait()
     bin_dst = lib / "engine" / "zig-out" / "bin"
     if not prov_file.exists() or not any(bin_dst.glob("*.dll")):
-        bin_src = LIB_REPO / LIB_IN_REPO / "engine" / "zig-out" / "bin"
+        tree = engine_tree(sha)
+        bin_src = tree / LIB_IN_REPO / "engine" / "zig-out" / "bin"
         bin_dst.mkdir(parents=True, exist_ok=True)
         dlls = sorted(bin_src.glob("*.dll"))
         for f in dlls:
             shutil.copy2(f, bin_dst / f.name)
         newest = max((f.stat().st_mtime for f in dlls), default=None)
+        tree_head = subprocess.run(["git", "-C", str(tree), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+        # engine sources committed after the binaries were built: the gap the proof line must admit
+        later = []
+        if newest:
+            since = datetime.datetime.fromtimestamp(newest).astimezone().isoformat()
+            later = [l for l in git("log", f"--since={since}", "--format=%h %ci %s", sha, "--",
+                                    f"{LIB_IN_REPO}/engine/src", f"{LIB_IN_REPO}/engine/build.zig").split("\n") if l]
         prov = {
             "commit": sha, "short": short,
-            "branch": git("rev-parse", "--abbrev-ref", "HEAD"),
+            "ref": commit or LIB_REF,
             "commit_date": git("show", "-s", "--format=%ci", sha),
             "exported": stamp(now()),
             "engine_binaries": {
                 "count": len(dlls),
                 "copied_from": str(bin_src).replace("\\", "/"),
+                "built_in_a_tree_at_this_commit": tree_head == sha,
                 "newest_build": (stamp(datetime.datetime.fromtimestamp(newest).astimezone()) if newest else None),
-                "pinned": False,
+                "engine_commits_after_build": later,
+                "pinned": tree_head == sha and not later,
                 "why": "build products are in no commit; a pinned engine build was not run (the machine's build-load rule)",
             },
         }
         prov_file.write_text(json.dumps(prov, indent=1), encoding="utf-8")
     return lib, json.loads(prov_file.read_text(encoding="utf-8"))
+
+
+def engine_tree(sha):
+    """The checkout whose engine build is closest to the commit: a worktree of the library at that exact commit
+    (the estate keeps several beside the repository, D:/GitHub/_wt*), else the library's own checkout."""
+    for tree in sorted(LIB_REPO.parent.glob("_wt*")) + [LIB_REPO]:
+        if not (tree / LIB_IN_REPO / "engine" / "zig-out" / "bin").is_dir():
+            continue
+        head = subprocess.run(["git", "-C", str(tree), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+        if head == sha:
+            return tree
+    return LIB_REPO
 
 
 def load_json(name, default):

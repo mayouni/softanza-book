@@ -19,7 +19,7 @@ What differs from the site's runner, and why:
     python tools/book_run.py --commit <sha>  # the library at a named commit
 """
 import re, sys, subprocess, shutil
-from book_common import (sources, code_blocks, block_hash, snapshot, now, stamp, save_json, ROOT)
+from book_common import (sources, code_blocks, block_hash, snapshot, now, stamp, save_json, ROOT, LIB_REF)
 from book_judge import parse, verdict, effects_of
 
 
@@ -85,11 +85,24 @@ def run_chapter(lib, name, blocks):
     return records, {"ran": stamp(t0), "seconds": seconds}
 
 
+def runtime():
+    """Which runtime ran the blocks, read from the runtime itself: the book must say it is not yet Haro."""
+    exe = shutil.which("ring") or "ring"
+    probe = ROOT / ".cache" / "_runtime_probe.ring"
+    probe.parent.mkdir(exist_ok=True)
+    probe.write_text("? version()\n", encoding="utf-8")
+    try:
+        v = subprocess.run([exe, probe.name], cwd=probe.parent, capture_output=True, text=True, timeout=30).stdout.strip()
+    finally:
+        probe.unlink(missing_ok=True)
+    return {"name": "Ring", "version": v or None, "path": exe.replace("\\", "/")}
+
+
 def main():
-    commit = sys.argv[sys.argv.index("--commit") + 1] if "--commit" in sys.argv else "HEAD"
+    commit = sys.argv[sys.argv.index("--commit") + 1] if "--commit" in sys.argv else LIB_REF
     lib, prov = snapshot(commit)
     started = now()
-    result = {"run": {"date": stamp(started), "library": prov}, "chapters": {}}
+    result = {"run": {"date": stamp(started), "library": prov, "runtime": runtime()}, "chapters": {}}
     failed = []
     for lang in ("en", "fr"):
         for path, meta, body in sources(lang):
@@ -110,7 +123,7 @@ def main():
             print(line, flush=True)
     result["run"]["failed"] = failed
     save_json("book-run.json", result)
-    print(f"library at {prov['short']} ({prov['branch']}); engine binaries copied, newest built "
+    print(f"library at {prov['short']} ({prov.get('ref', '')}); engine binaries copied, newest built "
           f"{prov['engine_binaries']['newest_build']} -> data/book-run.json")
     if failed:
         print(f"FAILED: {len(failed)} chapter(s) did not keep all their promises")

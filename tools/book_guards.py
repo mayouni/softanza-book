@@ -43,7 +43,7 @@ def count_assertions(text):
 
 def main():
     run = load_json("book-run.json", None)
-    commit = run["run"]["library"]["commit"] if run else "HEAD"
+    commit = run["run"]["library"]["commit"] if run else None
     lib, prov = snapshot(commit)
     tests = [p for p in lib.rglob("*.ring") if "test" in p.relative_to(lib).parts[:-1]]
     index = {}

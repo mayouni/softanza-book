@@ -36,7 +36,10 @@ UI = {
     "missing": "Missing · the source has not been received",
     "proof": "Run on {d} inside the library at commit {sha}: {k} of {n} blocks kept their promise.",
     "proof_none": "This page has no code to run.",
-    "engine": "The engine binaries were copied from the library's working checkout, newest built {d}; they are not pinned to this commit.",
+    "engine": "The blocks were run by the runtime of the former host language, version {v}; Haro does not run the library yet. {eng}",
+    "eng_at": "The engine binaries were built in a checkout of this commit, newest built {d}; {n} engine change(s) committed after that build are not in them.",
+    "eng_at0": "The engine binaries were built in a checkout of this commit, newest built {d}.",
+    "eng_copy": "The engine binaries were copied from the library's working checkout, newest built {d}; they are not pinned to this commit.",
     "stale": "This page's code changed after its last run; its verdicts are not shown until it runs again.",
     "contents": "Contents", "not_drafted": "not yet drafted", "words": "words",
     "decision": "The decision, and what was refused",
@@ -63,7 +66,10 @@ UI = {
     "missing": "Manquant · la source n'a pas été reçue",
     "proof": "Exécuté le {d} dans la bibliothèque au commit {sha} : {k} bloc(s) sur {n} ont tenu leur promesse.",
     "proof_none": "Cette page n'a pas de code à exécuter.",
-    "engine": "Les binaires du moteur ont été copiés depuis la copie de travail de la bibliothèque, le plus récent construit le {d} ; ils ne sont pas liés à ce commit.",
+    "engine": "Les blocs ont été exécutés par le runtime de l'ancien langage hôte, version {v} ; Haro n'exécute pas encore la bibliothèque. {eng}",
+    "eng_at": "Les binaires du moteur ont été construits dans une copie de ce commit, le plus récent le {d} ; {n} changement(s) du moteur commité(s) après cette construction n'y sont pas.",
+    "eng_at0": "Les binaires du moteur ont été construits dans une copie de ce commit, le plus récent le {d}.",
+    "eng_copy": "Les binaires du moteur ont été copiés depuis la copie de travail de la bibliothèque, le plus récent construit le {d} ; ils ne sont pas liés à ce commit.",
     "stale": "Le code de cette page a changé depuis sa dernière exécution ; ses verdicts ne sont pas montrés avant qu'elle soit exécutée à nouveau.",
     "contents": "Sommaire", "not_drafted": "pas encore rédigé", "words": "mots",
     "decision": "La décision, et ce qui a été refusé",
@@ -715,8 +721,12 @@ def proof_html(p, runs, ui, stale):
     fails = run["kept"] < run["runnable"]
     eng = lib.get("engine_binaries", {})
     out = f'<p class="proof{" fails" if fails else ""}"><strong>{html.escape(line)}</strong></p>'
-    if eng and not eng.get("pinned"):
-        out += f'<p class="proof-engine">{html.escape(ui["engine"].format(d=eng.get("newest_build", "")))}</p>'
+    if eng:
+        later = len(eng.get("engine_commits_after_build") or [])
+        key = ("eng_at" if later else "eng_at0") if eng.get("built_in_a_tree_at_this_commit") else "eng_copy"
+        note = ui[key].format(d=eng.get("newest_build", ""), n=later)
+        v = (runs.get("run", {}).get("runtime") or {}).get("version") or "null"
+        out += f'<p class="proof-engine">{html.escape(ui["engine"].format(v=v, eng=note))}</p>'
     return out
 
 
@@ -930,7 +940,7 @@ code {{ font-family: ui-monospace, Consolas, monospace; font-size: 12px; }}
 </style></head><body><main>
 <p class="meta"><a href="en/index.html">← Softanza</a></p>
 <h1>Status of the book</h1>
-<p class="meta">Built {html.escape(built)}. Blocks run {html.escape(runs.get("run", {}).get("date", "never"))} inside the library at commit {html.escape(lib.get("short", "none"))} ({html.escape(lib.get("branch", ""))}, committed {html.escape(lib.get("commit_date", ""))}).</p>
+<p class="meta">Built {html.escape(built)}. Blocks run {html.escape(runs.get("run", {}).get("date", "never"))} inside the library at commit {html.escape(lib.get("short", "none"))} ({html.escape(lib.get("ref", ""))}, committed {html.escape(lib.get("commit_date", ""))}).</p>
 <p class="meta">Engine binaries: {eng.get("count", "null")} copied from {html.escape(str(eng.get("copied_from", "")))}, newest built {html.escape(str(eng.get("newest_build", "null")))}; {"pinned" if eng.get("pinned") else "not pinned to the commit"}.</p>
 <p class="meta">Guards read {html.escape(guards.get("read", "never"))}. A chapter is done when its code runs, its guards resolve, its French exists, and the author has read it: {done_count} done.</p>
 <div class="wrap"><table>

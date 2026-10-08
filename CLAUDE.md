@@ -23,11 +23,13 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 
 `python tools/build_book.py` — see `README.md`. `FORMAT.md` records what the reader took from the Refine book.
 
-- **The library is run from a snapshot**, never from `D:\GitHub\stzlib` itself: other sessions write that tree
-  all the time (956 uncommitted entries and a HEAD that moved during the first session). `book_common.snapshot`
-  exports the library at a commit into `.cache/` with `git archive`, which writes nothing in the library's repo.
-- **The engine binaries are not pinned.** They are build products, in no commit; they are copied from the
-  library's working checkout and their newest build time is printed under every proof line. A pinned engine
+- **The library is run from a snapshot of `origin/main`**, never from `D:\GitHub\stzlib` itself: other sessions
+  write that tree all the time, and its checkout sits on their working branches (it was on `ringpp/migrate-rule-a`,
+  a side branch, when the book began). `book_common.snapshot` exports the commit into `.cache/` with `git archive`,
+  which writes nothing in the library's repo. `LIB_REF` in `tools/book_common.py` names the line.
+- **The engine binaries are taken from a worktree at the same commit** when one exists (`D:\GitHub\_wt*`), else
+  from the library's checkout; their build time and any engine commit made after it are printed under every proof
+  line, with the runtime's version (the former host language's, until Haro runs the library). A pinned engine
   build (`zig build`) was not run: on this machine that build has frozen the system before (see stzlib's
   `CLAUDE.md`, "This machine stops dead under memory pressure"). Do not run it without the author's word.
 - **Never background a heavy command here**; a hook refuses it. Stage files by explicit path; a hook refuses
