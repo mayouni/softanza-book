@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 23:02 UTC+01:00",
+  "date": "2026-10-08 23:06 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 7.6
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 7.4
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 5.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 6.2
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 6.9
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 5.9
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 5.9
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-08 23:02 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 5.8
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 16.0
+   "ran": "2026-10-08 23:06 UTC+01:00",
+   "seconds": 13.6
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-08 23:07 UTC+01:00",
+   "seconds": 6.2
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-08 23:07 UTC+01:00",
+   "seconds": 6.8
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 22.2
+   "ran": "2026-10-08 23:07 UTC+01:00",
+   "seconds": 26.1
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -951,8 +951,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-08 23:07 UTC+01:00",
+   "seconds": 6.2
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1088,8 +1088,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-08 23:03 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 23:07 UTC+01:00",
+   "seconds": 5.4
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1158,8 +1158,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.1
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1256,8 +1256,91 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.4
+  },
+  "en/21-the-court": {
+   "id": "the-court",
+   "blocks": [
+    {
+     "hash": "b69887ec05e9",
+     "promise": "kept\ndiverged\nunjudged\n1",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 3,
+     "verdict": "kept",
+     "out": "kept\ndiverged\nunjudged\n1"
+    },
+    {
+     "hash": "27390b3847d3",
+     "promise": "kept\nfinished\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 2,
+     "verdict": "kept",
+     "out": "kept\nfinished\n0"
+    },
+    {
+     "hash": "44c8923f475e",
+     "promise": "8\n7\nHEARD",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "8\n7\nHEARD"
+    },
+    {
+     "hash": "5212bb1a3d79",
+     "promise": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited"
+    },
+    {
+     "hash": "dcbef8311e43",
+     "promise": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n\n1"
+    },
+    {
+     "hash": "6d419185d7ed",
+     "promise": "1\n1\n0\n1\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n0\n1\n2"
+    },
+    {
+     "hash": "beae8eb61df9",
+     "promise": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n#1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n#1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n  1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n  #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n  #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)"
+    },
+    {
+     "hash": "d664ae8e9424",
+     "promise": "",
+     "effects": [
+      "files"
+     ],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 1,
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.9
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -1313,8 +1396,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 5.8
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1371,8 +1454,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 8.1
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.1
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1437,8 +1520,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.3
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -1496,8 +1579,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 7.1
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1530,8 +1613,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 5.7
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1571,8 +1654,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 23:04 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-08 23:08 UTC+01:00",
+   "seconds": 6.1
   }
  }
 }

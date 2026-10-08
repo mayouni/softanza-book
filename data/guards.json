@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 23:04 UTC+01:00",
+ "read": "2026-10-08 23:08 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -582,6 +582,76 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring",
    "also_found": []
   },
+  "security_ledger_narrated": {
+   "exists": true,
+   "path": "base/test/system/security_ledger_narrated.ring",
+   "assertions": 35,
+   "by_helper": {
+    "chk": 35
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/security_ledger_narrated.ring",
+   "also_found": []
+  },
+  "secretstore_narrated": {
+   "exists": true,
+   "path": "base/test/system/secretstore_narrated.ring",
+   "assertions": 26,
+   "by_helper": {
+    "chk": 26
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/secretstore_narrated.ring",
+   "also_found": []
+  },
+  "secret_narrated": {
+   "exists": true,
+   "path": "base/test/system/secret_narrated.ring",
+   "assertions": 53,
+   "by_helper": {
+    "chk": 53
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/secret_narrated.ring",
+   "also_found": []
+  },
+  "stopwatch_narrated": {
+   "exists": true,
+   "path": "base/test/perf/stopwatch_narrated.ring",
+   "assertions": 35,
+   "by_helper": {
+    "chk": 35
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/stopwatch_narrated.ring",
+   "also_found": []
+  },
+  "tracing_tail_narrated": {
+   "exists": true,
+   "path": "base/test/perf/tracing_tail_narrated.ring",
+   "assertions": 26,
+   "by_helper": {
+    "chk": 26
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/tracing_tail_narrated.ring",
+   "also_found": []
+  },
+  "governed_loop_narrated": {
+   "exists": true,
+   "path": "base/test/perf/governed_loop_narrated.ring",
+   "assertions": 31,
+   "by_helper": {
+    "chk": 31
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/governed_loop_narrated.ring",
+   "also_found": []
+  },
+  "security_sentinel_narrated": {
+   "exists": true,
+   "path": "base/test/system/security_sentinel_narrated.ring",
+   "assertions": 33,
+   "by_helper": {
+    "chk": 33
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/security_sentinel_narrated.ring",
+   "also_found": []
+  },
   "service_delivery_narrated": {
    "exists": true,
    "path": "base/test/system/service_delivery_narrated.ring",
@@ -872,6 +942,17 @@
    "agentloop_engine_narrated",
    "containment_drill_narrated",
    "virtual_system_twin_narrated"
+  ],
+  "en/21-the-court": [
+   "testoor_promises_narrated",
+   "threat_model_narrated",
+   "security_ledger_narrated",
+   "secretstore_narrated",
+   "secret_narrated",
+   "stopwatch_narrated",
+   "tracing_tail_narrated",
+   "governed_loop_narrated",
+   "security_sentinel_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",

@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 23:04 UTC+01:00",
+ "built": "2026-10-08 23:08 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-08 23:02 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:06 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:07 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:07 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,7 +1271,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:07 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1388,7 +1388,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:07 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1520,7 +1520,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-08 23:03 UTC+01:00",
+    "ran": "2026-10-08 23:07 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -1623,7 +1623,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1740,9 +1740,151 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 9,
     "runnable": 9
+   }
+  },
+  {
+   "number": 21,
+   "id": "the-court",
+   "title": "The court: promises, perception, security and performance",
+   "part": 4,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted",
+    "designed": "routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan",
+    "absent": "a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store"
+   },
+   "guards": [
+    {
+     "name": "testoor_promises_narrated",
+     "exists": true,
+     "path": "base/test/testoor/testoor_promises_narrated.ring",
+     "assertions": 46,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/testoor/testoor_promises_narrated.ring"
+    },
+    {
+     "name": "threat_model_narrated",
+     "exists": true,
+     "path": "base/test/security/threat_model_narrated.ring",
+     "assertions": 11,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/threat_model_narrated.ring"
+    },
+    {
+     "name": "security_ledger_narrated",
+     "exists": true,
+     "path": "base/test/system/security_ledger_narrated.ring",
+     "assertions": 35,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/security_ledger_narrated.ring"
+    },
+    {
+     "name": "secretstore_narrated",
+     "exists": true,
+     "path": "base/test/system/secretstore_narrated.ring",
+     "assertions": 26,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/secretstore_narrated.ring"
+    },
+    {
+     "name": "secret_narrated",
+     "exists": true,
+     "path": "base/test/system/secret_narrated.ring",
+     "assertions": 53,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/secret_narrated.ring"
+    },
+    {
+     "name": "stopwatch_narrated",
+     "exists": true,
+     "path": "base/test/perf/stopwatch_narrated.ring",
+     "assertions": 35,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/stopwatch_narrated.ring"
+    },
+    {
+     "name": "tracing_tail_narrated",
+     "exists": true,
+     "path": "base/test/perf/tracing_tail_narrated.ring",
+     "assertions": 26,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/tracing_tail_narrated.ring"
+    },
+    {
+     "name": "governed_loop_narrated",
+     "exists": true,
+     "path": "base/test/perf/governed_loop_narrated.ring",
+     "assertions": 31,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/governed_loop_narrated.ring"
+    },
+    {
+     "name": "security_sentinel_narrated",
+     "exists": true,
+     "path": "base/test/system/security_sentinel_narrated.ring",
+     "assertions": 33,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/security_sentinel_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "write(\"tour.haro\", '? 1 + 1' + nl + '#--> 2' + nl +\n\t'? 1 + 1' + nl + '#--> 3' + nl +\n\t'? \"C\"  #--> \"C\" but should be \"sm_AS\"' + nl)\noTour = TravellerQ().Silent().Walk(\"tour.haro\")\naClaims = oTour.Records()[1][:run][:stops][1][:claims]\n? aClaims[1][:state]\n#--> kept\n? aClaims[2][:state]\n#--> diverged\n? aClaims[3][:state]\n#--> unjudged\n? oTour.ExitCode()\n#--> 1\nremove(\"tour.haro\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "write(\"raise.haro\", '? \"before\"  #--> before' + nl +\n\t'? Boom()  #--> ERROR: boom happened' + nl +\n\t'func Boom()' + nl + char(9) + 'raise(\"boom happened\")' + nl)\noRaise = TravellerQ().Silent().Walk(\"raise.haro\")\naRun = oRaise.Records()[1][:run]\n? aRun[:stops][1][:claims][2][:state]\n#--> kept\n? aRun[:end]\n#--> finished\n? oRaise.ExitCode()\n#--> 0\nremove(\"raise.haro\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "nUnheard = 0\nfor cName in StzSoundUniverses()\n\tif StzSoundUniverseQ(cName).Listener() = \"UNPERCEIVED\"\n\t\tnUnheard++\n\tok\nnext\n? len(StzSoundUniverses())\n#--> 8\n? nUnheard\n#--> 7\n? left(StzSoundUniverseQ(\"tunisian\").Listener(), 5)\n#--> HEARD",
+     "verdict": "kept"
+    },
+    {
+     "code": "oLed = StzSecurityLedger(256)\noLed.Record(StzSecurityRefusal(\"auth.login.failed\", HumanActor(\"admin\"), \"user:admin\", \"wrong credentials\"))\noLed.Record(StzSecurityRefusal(\"secret.reveal.refused\", LLMActor(\"advisor\"), \"secret:payments-key\", \"actor is not effectful\"))\noLed.SealTo(\"evidence.txt\", \"the-evidence-key\")\n? StzVerifySealedLedger(\"evidence.txt\", \"the-evidence-key\")[:why]\n#--> chain intact over 2 entries\n? StzVerifySealedLedger(\"evidence.txt\", \"another-key\")[:why]\n#--> the chain is intact but the SEAL does not match this key\nwrite(\"evidence.txt\", StzReplace(read(\"evidence.txt\"), \"actor is not effectful\", \"routine maintenance\"))\n? StzVerifySealedLedger(\"evidence.txt\", \"the-evidence-key\")[:why]\n#--> the chain breaks at entry 2 -- that record (or one before it) was edited\nremove(\"evidence.txt\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzOpenSecurityLedger(64)\noKey = new stzSecret(\"deploy-key\")\noKey.FromLiteralQ(\"ssh-ed25519-AAAA\")\n? oKey.Descriptor()\n#--> <secret 'deploy-key' (secret) from literal>\n? oKey.Reveal(HumanActor(\"ops\"))\n#--> ssh-ed25519-AAAA\ntry\n\toKey.Reveal(LLMActor(\"planner\"))\ncatch\n\t? cCatchError\ndone\n#--> Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n? len(StzSecurityLedgerQ().Refusals())\n#--> 1\nStzCloseSecurityLedger()",
+     "verdict": "kept"
+    },
+    {
+     "code": "w = StzStopwatchXT(\"import-orders\")\nw.Lap(\"parsed\")\nw.Pause()\nStzEngineTimeSleepMs(200)\nw.Resume()\nw.Stop()\n? isnumber(w.ElapsedMs())\n#--> 1\n? w.ElapsedMs() < 200\n#--> 1\n? w.Record()[:running]\n#--> 0\nw2 = StzStopwatchXT(\"notify-customer\")\nw2.JoinTrace(w.TraceParent())\nw2.Stop()\n? w2.TraceId() = w.TraceId()\n#--> 1\noBatch = StzOtelBatch(\"shop\")\noBatch.AddSpan(w).AddSpan(w2)\n? Q(oBatch.ToJson()).NumberOfOccurrence(w.TraceId())\n#--> 2",
+     "verdict": "kept"
+    },
+    {
+     "code": "oPlan = StzPerfPlan(\"relieve-queue\")\noPlan.Propose(:ScaleUp, \"nlp\", \"queue.depth: measured 900 (must be <= 100)\")\noFleet = new FakeFleet\n? oPlan.MayCommit(LLMActor(\"advisor\"))\n#--> 0\n? oPlan.ExecuteOn(oFleet, LLMActor(\"advisor\"))\n#--> 0\n? oFleet.CallCount()\n#--> 0\n? oPlan.ExecuteOn(oFleet, HumanActor(\"mansour\"))\n#--> 1\n? oFleet.CallCount()\n#--> 1\noPlan.Show()\n#--> Perf plan relieve-queue -- 1 proposed action(s).\n#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\n#    Audit (2):\n#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)\n\nclass FakeFleet\n\taFleetCalls = []\n\tdef ScaleUp(pcTag)\n\t\taFleetCalls + [ \"scaleup\", pcTag ]\n\tdef CallCount()\n\t\treturn len(aFleetCalls)",
+     "verdict": "kept"
+    },
+    {
+     "code": "write(\"mine.haro\", '? 2 * 3' + nl + '#--> 6' + nl +\n\t'? 2 * 3' + nl + '#--> 7' + nl +\n\t'? \"ok\"  #--> \"ok\" but see why' + nl)\n# before you run: which state will each of the three promises have?\noMine = TravellerQ().Silent().Walk(\"mine.haro\")\naMine = oMine.Records()[1][:run][:stops][1][:claims]\n# your three predictions, then:  ? aMine[1][:state]   ? aMine[2][:state]   ? aMine[3][:state]\nremove(\"mine.haro\")",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-security-ledger-narration.md",
+    "stz-governance-lineage-narration.md",
+    "stz-perf-governed-loop-narration.md",
+    "stz-honest-stopwatch-narration.md",
+    "stz-security-drill-narration.md"
+   ],
+   "rulings": [
+    "12.13",
+    "12.16",
+    "12.19",
+    "12.20",
+    "12.22",
+    "12.26",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "Your examples already carry their expected output. The traveller reads them as promises and says kept, diverged or unjudged, and prose that argues with itself is never accused.",
+    "analyst": "The threat model is a table you can read: each row with the guard that proves it and its honest limit. The performance judgment is declared before the code runs.",
+    "designer": "A picture or a sound is a claim only a person can close. The gallery says a model looked and no human has. Your verdict is a named line in the record.",
+    "decision-maker": "\"Who decided, and what is written down\" has a mechanical answer in both planes: the same action refused for the model and committed for the human, both in one audit, and the evidence sealed so that an edit is named.",
+    "educator": "The tutor's rule meets the court. Predict the verdict of a promise before the traveller walks it.",
+    "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
+   },
+   "run": {
+    "ran": "2026-10-08 23:08 UTC+01:00",
+    "kept": 7,
+    "runnable": 7
    }
   },
   {
@@ -1842,7 +1984,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1948,7 +2090,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2057,7 +2199,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2176,7 +2318,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2249,7 +2391,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -2331,7 +2473,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 23:04 UTC+01:00",
+    "ran": "2026-10-08 23:08 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
