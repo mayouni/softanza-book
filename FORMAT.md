@@ -81,7 +81,9 @@ or the build stops. So if the Refine shell changes, the book notices.
 
 ## The cover
 
-There is no cover artwork yet. The overview shows a **working cover**, a typographic SVG drawn by the build: the
-three cover lines exactly as §0 gives them, the author, the wordmark and the series line. Its colours are
-variables, so it follows the theme. Like the Refine book, the final cover will be an image the author supplies.
-The back-cover lines are shown on the overview under "From the back cover".
+The overview shows the author's cover: a flat image, `assets/cover/cover.png` (English) and `cover.fr.png` (French),
+composed by `tools/make_cover.py` from the two images the author supplied (`assets/cover/source/`: the AYOUNI wordmark and
+the elder from Niger), in the layout of the *Refinement-Oriented Programming* cover (wordmark top left, title block on the
+left, the figure on the right, author bottom left, cities and year bottom right), without the hands: the strict rectangular
+image only. The build embeds it as a JPEG so each reader stays one file. If the image is missing the build falls back to
+the typographic working cover it drew before. The back-cover lines are shown on the overview under "From the back cover".

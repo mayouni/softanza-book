@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-08 23:13 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
+Built 2026-10-08 23:27 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
 
 Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
 

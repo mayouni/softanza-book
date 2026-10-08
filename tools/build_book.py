@@ -636,6 +636,17 @@ def words_of(body):
 
 # ============================================================================ the cover (typographic, a working cover)
 def cover_svg(st, ui, lang):
+    """The author's cover image when assets/cover has one (a flat image, embedded so the reader stays one file);
+    else the typographic working cover."""
+    img = ROOT / "assets" / "cover" / ("cover.fr.png" if lang == "fr" else "cover.png")
+    if img.exists():
+        import base64, io
+        from PIL import Image
+        buf = io.BytesIO()
+        Image.open(img).convert("RGB").save(buf, "JPEG", quality=86, optimize=True)
+        data = base64.b64encode(buf.getvalue()).decode("ascii")
+        return (f'<img class="cover-img" src="data:image/jpeg;base64,{data}" width="1097" height="1434" '
+                f'alt="{html.escape(ui["cover_alt"])}">')
     sub = st["fr"]["subtitle"] if lang == "fr" else st["subtitle"]
     tag = st["fr"]["tagline"] if lang == "fr" else st["tagline"]
     def wrap(text, width):
