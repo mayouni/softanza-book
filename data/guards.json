@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:57 UTC+01:00",
+ "read": "2026-10-08 23:04 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -252,14 +252,64 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring",
    "also_found": []
   },
-  "00_regex_narrated": {
+  "602_l_function": {
    "exists": true,
-   "path": "base/test/regex/00_regex_narrated.ring",
-   "assertions": 28,
+   "path": "base/test/list/602_l_function.ring",
+   "assertions": 6,
    "by_helper": {
-    "Then": 28
+    "#-->": 6
    },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/00_regex_narrated.ring",
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/602_l_function.ring",
+   "also_found": []
+  },
+  "59_use_of_the_l_small_function": {
+   "exists": true,
+   "path": "base/test/list/59_use_of_the_l_small_function.ring",
+   "assertions": 8,
+   "by_helper": {
+    "#-->": 8
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/59_use_of_the_l_small_function.ring",
+   "also_found": []
+  },
+  "527_identifying_lists_inside_a_string": {
+   "exists": true,
+   "path": "base/test/string/527_identifying_lists_inside_a_string.ring",
+   "assertions": 32,
+   "by_helper": {
+    "Then": 32
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/527_identifying_lists_inside_a_string.ring",
+   "also_found": []
+  },
+  "48_replacebymany": {
+   "exists": true,
+   "path": "base/test/string/48_replacebymany.ring",
+   "assertions": 1,
+   "by_helper": {
+    "Then": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/48_replacebymany.ring",
+   "also_found": []
+  },
+  "28_numberofoccurrenceofcharleftside": {
+   "exists": true,
+   "path": "base/test/string/28_numberofoccurrenceofcharleftside.ring",
+   "assertions": 8,
+   "by_helper": {
+    "Then": 8
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/28_numberofoccurrenceofcharleftside.ring",
+   "also_found": []
+  },
+  "646_content": {
+   "exists": true,
+   "path": "base/test/string/646_content.ring",
+   "assertions": 1,
+   "by_helper": {
+    "Then": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/646_content.ring",
    "also_found": []
   },
   "972_narration_viz-finding_a_recurring_substring": {
@@ -270,6 +320,16 @@
     "Then": 7
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/972_narration_viz-finding_a_recurring_substring.ring",
+   "also_found": []
+  },
+  "00_regex_narrated": {
+   "exists": true,
+   "path": "base/test/regex/00_regex_narrated.ring",
+   "assertions": 28,
+   "by_helper": {
+    "Then": 28
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/00_regex_narrated.ring",
    "also_found": []
   },
   "system_scope_model_narrated": {
@@ -743,6 +803,18 @@
    "621_perform",
    "483_w_and_wf_forms_in_conditional_code",
    "495_walking_until_and_until_before"
+  ],
+  "en/07-the-writing-style-and-the-seven-goals": [
+   "coderule_narrated",
+   "602_l_function",
+   "59_use_of_the_l_small_function",
+   "527_identifying_lists_inside_a_string",
+   "48_replacebymany",
+   "483_w_and_wf_forms_in_conditional_code",
+   "28_numberofoccurrenceofcharleftside",
+   "646_content",
+   "972_narration_viz-finding_a_recurring_substring",
+   "testoor_promises_narrated"
   ],
   "en/08-functions-as-linguistic-expressions-and-scope": [
    "00_regex_narrated",
