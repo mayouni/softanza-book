@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:15 UTC+01:00",
+ "read": "2026-10-09 00:24 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -510,6 +510,36 @@
     "chk": 14
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/table/calc_column_engine_narrated.ring",
+   "also_found": []
+  },
+  "nnl_narrated": {
+   "exists": true,
+   "path": "base/test/natural/nnl_narrated.ring",
+   "assertions": 87,
+   "by_helper": {
+    "Then": 87
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/nnl_narrated.ring",
+   "also_found": []
+  },
+  "truthchain_narrated": {
+   "exists": true,
+   "path": "base/test/natural/truthchain_narrated.ring",
+   "assertions": 12,
+   "by_helper": {
+    "Then": 12
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/truthchain_narrated.ring",
+   "also_found": []
+  },
+  "interrogative_narrated": {
+   "exists": true,
+   "path": "base/test/natural/interrogative_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "Then": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/interrogative_narrated.ring",
    "also_found": []
   },
   "knowledge_integration_narrated": {
@@ -1061,6 +1091,15 @@
    "constrained_decoding_narrated",
    "483_w_and_wf_forms_in_conditional_code",
    "calc_column_engine_narrated"
+  ],
+  "en/13-natural-and-executable": [
+   "nnl_narrated",
+   "multilingual_pack_narrated",
+   "semantic_resolver_narrated",
+   "question_narrated",
+   "literate_templates_narrated",
+   "truthchain_narrated",
+   "interrogative_narrated"
   ],
   "en/14-knowledge-programming": [
    "knowledge_integration_narrated",

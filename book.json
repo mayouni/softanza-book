@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 00:15 UTC+01:00",
+ "built": "2026-10-09 00:24 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 00:12 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 00:12 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 00:12 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 00:12 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 00:12 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:20 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:21 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:21 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,7 +1271,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 00:13 UTC+01:00",
+    "ran": "2026-10-09 00:21 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1379,9 +1379,168 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:21 UTC+01:00",
     "kept": 8,
     "runnable": 8
+   }
+  },
+  {
+   "number": 13,
+   "id": "natural-and-executable",
+   "title": "Natural, and executable: two directions, one discipline",
+   "part": 3,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates",
+    "designed": "a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures",
+    "absent": "any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run"
+   },
+   "guards": [
+    {
+     "name": "nnl_narrated",
+     "exists": true,
+     "path": "base/test/natural/nnl_narrated.ring",
+     "assertions": 87,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/nnl_narrated.ring"
+    },
+    {
+     "name": "multilingual_pack_narrated",
+     "exists": true,
+     "path": "base/test/natural/multilingual_pack_narrated.ring",
+     "assertions": 45,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/multilingual_pack_narrated.ring"
+    },
+    {
+     "name": "semantic_resolver_narrated",
+     "exists": true,
+     "path": "base/test/natural/semantic_resolver_narrated.ring",
+     "assertions": 83,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring"
+    },
+    {
+     "name": "question_narrated",
+     "exists": true,
+     "path": "base/test/natural/question_narrated.ring",
+     "assertions": 21,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/question_narrated.ring"
+    },
+    {
+     "name": "literate_templates_narrated",
+     "exists": true,
+     "path": "base/test/natural/literate_templates_narrated.ring",
+     "assertions": 10,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/literate_templates_narrated.ring"
+    },
+    {
+     "name": "truthchain_narrated",
+     "exists": true,
+     "path": "base/test/natural/truthchain_narrated.ring",
+     "assertions": 12,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/truthchain_narrated.ring"
+    },
+    {
+     "name": "interrogative_narrated",
+     "exists": true,
+     "path": "base/test/natural/interrogative_narrated.ring",
+     "assertions": 11,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/interrogative_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "? TheWordQ(\"haro\").IsAQ([ :Lowercase, :Latin, :Word ]).WithQ().ALengthQ().OfQ(4).UnitQ(:Letters).AndQ().OnlyQ(2).VowelNB()\n#--> TRUE\n? TheWordQ(\"haro\").IsAQ([ :Lowercase, :Latin, :Word ]).WithQ().ALengthQ().OfQ(4).UnitQ(:Letters).AndQ().OnlyQ(1).VowelNB()\n#--> FALSE\n? Why()\n#--> no: expected exactly 1, found 2",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Q(\"AnnIE\").AtLeast(2).VowelNB()\n#--> TRUE\n? Q(\"AnnIE\").AtMost(2).VowelNB()\n#--> FALSE\n? Why()\n#--> no: expected atmost 2, found 3",
+     "verdict": "kept"
+    },
+    {
+     "code": "try\n\tQ(5).VowelNB()\ncatch\n\t? cCatchError\ndone\n#--> NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\n? Q(\"haro\").IsAQ(:String).IfSo(\"majuscule\").Content()\n#--> HARO\ntry\n\tQ(\"haro\").IsAQ(:String).IfSo(\"uppercse\")\ncatch\n\t? cCatchError\ndone\n#--> NNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Q(\"haro\").IsAQ(:String).IfSo(:Uppercase).Otherwise(:Reverse).Content()\n#--> HARO\n? Q(\"hello\").IsAQ(:Number).IfSo(:Reverse).Otherwise(:Uppercase).Content()\n#--> HELLO\n? Q(\"hello brave world\").TheNth(2, :Words)\n#--> brave",
+     "verdict": "kept"
+    },
+    {
+     "code": "? @@( WhatQ().TheQ().VowelsQ().OfQ(\"AnnIE\").Is() )\n#--> [ \"A\", \"I\", \"E\" ]\n? HowManyQ().WordsQ().Of(\"hello brave world\")\n#--> 3\nClearAnswers()\n? IsQ().TheQ().LengthQ().OfQ(\"Haro\").TheSameAsQ().TheQ().LengthQ().OfQ(\"Ruby\").OrNot()\n#--> 1\n? Why()\n#--> yes: 4 is the same as 4\n? IsQ().TheQ().LengthQ().OfQ(\"Haro\").TheSameAsQ().TheQ().LengthQ().OfQ(\"softanza\").OrNot()\n#--> 0\n? Why()\n#--> no: 4 is not the same as 8\n? @@( AnswersSoFar() )\n#--> [ 1, 0 ]\n? AllYesSoFar()\n#--> FALSE\n? AnyYesSoFar()\n#--> TRUE",
+     "verdict": "kept"
+    },
+    {
+     "code": "oT = Naturally(\"Create a string with 'haro' Is it lowercase ? Does it contain 'r' ?\")\n? @@( oT.Answers() )\n#--> [ 1, 1 ]\n? oT.AllYes()\n#--> TRUE\n? oT.Understood()\n#--> create a string with haro -> ask: is lowercase -> ask: contains\n? TruthOf(\"haro\").IsA(:Lowercase).AndIsA(:Latin).AndContaining(\"r\").Holds()\n#--> TRUE\n? Why()\n#--> yes: \"haro\" is lowercase and is latin and containing \"r\"\n? Certainty()\n#--> 1\n? Evidentially()\n#--> certainly",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = Naturally(\"Create a string with 'test.data' Replace '.' with '_' Uppercase it\")\n? o1.Result()\n#--> TEST_DATA\n? o1.Code()\n#--> oStr = StzStringQ(\"test.data\")\n#    oStr.Replace(\".\", \"_\")\n#    oStr.Uppercase()\n#    @result = oStr.Content()",
+     "verdict": "kept"
+    },
+    {
+     "code": "oE = Naturally(\"Make a string with 'hello niger' inside Spacify it and uppercase it\")\noH = NaturallyIn(\"hausa\", \"Yi rubutu da dauke 'hello niger' a ciki Raba shi kuma maida shi\")\n? oE.Code() = oH.Code()\n#--> TRUE\n? oH.Understood()\n#--> yi rubutu dauke hello niger -> raba -> maida\n? oE.Understood()\n#--> create a string with hello niger -> spacify -> uppercase",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Naturally(\"Create a string with 'softanza' Capitals it\").Result()\n#--> SOFTANZA\n? Naturally(\"Create a string with 'capitals' Uppercase it\").Result()\n#--> CAPITALS\n? Naturally(\"Create a string with 'a-sep-b' Replace sep with '_'\").Result()\n#--> a-_-b",
+     "verdict": "kept"
+    },
+    {
+     "code": "? StzResolveSemanticInLang(\"fr\", \"doublons\")\n#--> METHOD_REMOVEDUPLICATES\n? StzResolveSemanticInLang(\"ar\", \"تكرارات\")\n#--> METHOD_REMOVEDUPLICATES\n? StzResolveSemanticInLang(\"tr\", \"tekrarları\")\n#--> METHOD_REMOVEDUPLICATES\n? StzResolveSemantic(\"removeduplicates\")\n#--> METHOD_REMOVEDUPLICATES",
+     "verdict": "kept"
+    },
+    {
+     "code": "? NaturallyIn(\"tr\", \"'a.b' ile bir metin oluştur '.' yerine '_' koy\").Result()\n#--> a_b\n? NaturallyIn(\"tr\", \"'haro' ile bir metin oluştur ve tersine çevir\").Result()\n#--> orah\n? NaturallyIn(\"ar\", \"أنشئ نصا بـ 'haro' ثم اقلبه\").Result()\n#--> orah\n? NaturallyIn(\"ar\", \"أنشئ نصًا بـ 'haro' ثمّ اقلِبْه\").Result()\n#--> orah\n? NaturallyIn(\"ar\", \"أنشئ نصا بـ 'haro' ثم اقلبه\").Understood()\n#--> أنشئ سلسلة بـ haro -> اعكس\n? NaturallyIn(\"fr\", \"Crée une chaine avec 'haro' et mets la à l'envers\").Result()\n#--> orah",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzAddNaturalLanguage([\n\t:code = \"sw\",\n\t:name = \"swahili\",\n\t:script = \"latin\",\n\t:ignored_words = [ \"na\", \"ya\", \"kwa\", \"hii\" ],\n\t:semantic_mappings = [\n\t\t[:natural = \"unda\",   :semantic = \"CREATE_OBJECT\"],\n\t\t[:natural = \"orodha\", :semantic = \"OBJECT_LIST\"],\n\t\t[:natural = \"na\",     :semantic = \"VALUE_INDICATOR\"],\n\t\t[:natural = \"panga\",  :semantic = \"METHOD_SORT\"]\n\t],\n\t:phrases = [\n\t\t[:semantic = \"METHOD_REMOVEDUPLICATES\", :words = \"ondoa nakala, futa nakala\"]\n\t]\n])\n? StzHasLanguagePack(\"sw\")\n#--> TRUE\nosw = NaturallyIn(\"sw\", \"Unda orodha na [ 9, 4, 9 ] ondoa nakala\")\n? @@( osw.Result() )\n#--> [ 9, 4 ]\n? osw.Understood()\n#--> unda orodha na [ 9, 4, 9 ] -> ondoa nakala",
+     "verdict": "kept"
+    },
+    {
+     "code": "cDoc = \"This tutorial explains deduplication.\" + nl +\n\t\"#<\" + nl +\n\t\"Create a list with [ 3, 1, 3 ] and remove its duplicates\" + nl +\n\t\"#>\" + nl +\n\t\"The end.\"\n? len( StzNaturalBlocks(cDoc) )\n#--> 1\n? @@( NaturallyFromDoc(cDoc)[1].Result() )\n#--> [ 3, 1 ]\ncT = \"Create a list with {#1} and remove its duplicates\"\n? @@( NaturallyWith(cT, [ [ 5, 3, 5 ] ]).Result() )\n#--> [ 5, 3 ]\n? @@( NaturallyWith(cT, [ [ 9, 9, 4 ] ]).Result() )\n#--> [ 9, 4 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "for cLang in [ \"en\", \"ha\", \"fr\", \"ar\", \"tr\" ]\n\taC = StzPackCoverage(cLang)\n\t? cLang + \" \" + aC[:covered] + \" of \" + aC[:total]\nnext\n#--> en 23 of 25\n#    ha 9 of 25\n#    fr 25 of 25\n#    ar 16 of 25\n#    tr 10 of 25\n? StzHasNeuralModel()\n#--> FALSE",
+     "verdict": "kept"
+    },
+    {
+     "code": "? TheWordQ(\"haro\").IsAQ(:Word).WhichQ().HasQ().ALengthQ().Of(4)\n#--> TRUE\n? TheWordQ(\"haro\").IsAQ(:Word).WhichQ().ALengthQ().Of(4)\n#--> TRUE",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Q(\"haro\").IsAXT([ \"String('x') and HostRan() and @isString\" ])\n#--> host code ran\n#    TRUE\n\nfunc HostRan()\n\t? \"host code ran\"\n\treturn 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "o = Naturally(\"Create a string with 'softanza' Spacify it and_ Uppercase it\")\n? o.Result()\n#--> S O F T A N Z A\n? o.UnderstoodAll()\n#--> FALSE\n? @@( o.Unresolved() )\n#--> [ [ \"and_\", \"addn\" ] ]\ntry\n\tNaturallyStrict(\"Create a string with 'softanza' Spacify it and_ Uppercase it\")\ncatch\n\t? cCatchError\ndone\n#--> Strict natural mode: not understood: 'and_' (did you mean 'addn'?)",
+     "verdict": "kept"
+    },
+    {
+     "code": "# 1. as a chain, where you are the parser:\n# 2. as a Naturally sentence, where the library is:",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stznatural-vs-ring-naturallib.md",
+    "stz-near-natural-language-programming.md",
+    "stznatural-narration.md",
+    "stz-bridging-minds-and-code.md"
+   ],
+   "rulings": [
+    "12.2",
+    "12.6",
+    "12.27",
+    "12.30"
+   ],
+   "doors": {
+    "old articles have decayed": "The 2020 sentence needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ`, `TheirQ().FirstCharQ()` and `ReplaceLowercaseCharsQ` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. Of the twelve chains of that article that I ran, eight work. The bridging article's paragraph still runs in permissive mode, and prints two nested boxes around \"NOTHING SOFTANZA\" instead of the one it promises. The machine said so, since `UnderstoodAll()` is 0 and the unresolved word is named, but a reader has to ask."
+   },
+   "run": {
+    "ran": "2026-10-09 00:21 UTC+01:00",
+    "kept": 17,
+    "runnable": 17
    }
   },
   {
@@ -1499,7 +1658,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1633,7 +1792,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1757,7 +1916,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1874,7 +2033,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2006,7 +2165,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2109,7 +2268,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2226,7 +2385,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:22 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2368,7 +2527,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 00:14 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2463,7 +2622,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2565,7 +2724,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2671,7 +2830,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2780,7 +2939,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2899,7 +3058,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2972,7 +3131,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:23 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3054,7 +3213,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 00:15 UTC+01:00",
+    "ran": "2026-10-09 00:24 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

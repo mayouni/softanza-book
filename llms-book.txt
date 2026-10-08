@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-09 00:15 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
+Built 2026-10-09 00:24 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
 
 Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
 
@@ -23,6 +23,7 @@ Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: 
 - 10. Programming becomes refinement [draft] guards: refinablecode_narrated (17), refine_deepening_narrated (24), gate_deepening_narrated (19); run: 9 of 9 blocks kept
 - 11. Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it [draft, spine] guards: multilingual_pack_narrated (45), semantic_resolver_narrated (83), literate_templates_narrated (10), question_narrated (21), structuredoutput_narrated (73), schema_grammar_narrated (28), constrained_decoding_narrated (50); run: 11 of 11 blocks kept
 - 12. A language, declared [draft] guards: structuredoutput_narrated (73), schema_grammar_narrated (28), constrained_decoding_narrated (50), 483_w_and_wf_forms_in_conditional_code (2), calc_column_engine_narrated (14); run: 8 of 8 blocks kept
+- 13. Natural, and executable: two directions, one discipline [draft] guards: nnl_narrated (87), multilingual_pack_narrated (45), semantic_resolver_narrated (83), question_narrated (21), literate_templates_narrated (10), truthchain_narrated (12), interrogative_narrated (11); run: 17 of 17 blocks kept
 - 14. Knowledge programming [draft] guards: knowledge_integration_narrated (19), provenance_survives_save_narrated (23), program_narrated (21); run: 13 of 13 blocks kept
 - 15. Pattern languages [draft] guards: 00_regex_narrated (28), 00_numbrex_narrated (15), tablex_narrated (95), 00_matrex_narrated (8), 00_graphex_narrated (27); run: 13 of 13 blocks kept
 - 16. Seven languages, one door [draft] guards: 51_extercode_narrated (11), governance_narrated (19), virtual_environment_twin_narrated (38), pycodegraph_narrated (48), jscodegraph_narrated (13); run: 10 of 10 blocks kept
