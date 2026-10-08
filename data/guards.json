@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 21:13 UTC+01:00",
+ "read": "2026-10-08 21:15 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -62,6 +62,46 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring",
    "also_found": []
   },
+  "coderule_narrated": {
+   "exists": true,
+   "path": "base/test/meta/coderule_narrated.ring",
+   "assertions": 77,
+   "by_helper": {
+    "Then": 77
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_narrated.ring",
+   "also_found": []
+  },
+  "testoor_promises_narrated": {
+   "exists": true,
+   "path": "base/test/testoor/testoor_promises_narrated.ring",
+   "assertions": 46,
+   "by_helper": {
+    "Then": 46
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/testoor/testoor_promises_narrated.ring",
+   "also_found": []
+  },
+  "05_containsemptystrings": {
+   "exists": true,
+   "path": "base/test/list/05_containsemptystrings.ring",
+   "assertions": 5,
+   "by_helper": {
+    "Then": 5
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/05_containsemptystrings.ring",
+   "also_found": []
+  },
+  "466_keeping_the_history_of_updates_of_a_softanza_objec": {
+   "exists": true,
+   "path": "base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring",
+   "assertions": 2,
+   "by_helper": {
+    "Then": 2
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring",
+   "also_found": []
+  },
   "dlm_narrated": {
    "exists": true,
    "path": "base/test/learning/dlm_narrated.ring",
@@ -110,16 +150,6 @@
     "chk": 10
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring",
-   "also_found": []
-  },
-  "coderule_narrated": {
-   "exists": true,
-   "path": "base/test/meta/coderule_narrated.ring",
-   "assertions": 77,
-   "by_helper": {
-    "Then": 77
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_narrated.ring",
    "also_found": []
   },
   "codegraph_narrated": {
@@ -184,6 +214,12 @@
    "modality_narrated",
    "wisecoding_narrated",
    "wisecoding_rich_narrated"
+  ],
+  "en/05-law-the-code-adheres-to-the-way-a-person-thinks": [
+   "coderule_narrated",
+   "testoor_promises_narrated",
+   "05_containsemptystrings",
+   "466_keeping_the_history_of_updates_of_a_softanza_objec"
   ],
   "en/17-law-programmatic-by-default": [
    "dlm_narrated",

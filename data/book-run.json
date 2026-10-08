@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 21:12 UTC+01:00",
+  "date": "2026-10-08 21:15 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 21:12 UTC+01:00",
-   "seconds": 17.0
+   "ran": "2026-10-08 21:15 UTC+01:00",
+   "seconds": 4.2
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -113,8 +113,76 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 21:13 UTC+01:00",
+   "ran": "2026-10-08 21:15 UTC+01:00",
    "seconds": 3.5
+  },
+  "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
+   "id": "law-the-code-adheres-to-the-way-a-person-thinks",
+   "blocks": [
+    {
+     "hash": "18a26bb437f1",
+     "promise": "S O F T A N Z A\nS O F T A N Z A",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "S O F T A N Z A\nS O F T A N Z A"
+    },
+    {
+     "hash": "b47bad84b1d8",
+     "promise": "TRUE\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]"
+    },
+    {
+     "hash": "b45229cbde5c",
+     "promise": "RING\nRIxxNxG\nRING\nR I N G",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "RING\nRIxxNxG\nRING\nR I N G"
+    },
+    {
+     "hash": "0ed2c04313b1",
+     "promise": "I ♥ Haro\n[ \"fish\", \"rice\", \"tea\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "I ♥ Haro\n[ \"fish\", \"rice\", \"tea\" ]"
+    },
+    {
+     "hash": "aa8f19adbcb6",
+     "promise": "1\n3\n[ 1, 10, 20 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3\n[ 1, 10, 20 ]"
+    },
+    {
+     "hash": "86a9de70f09d",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
+     "hash": "5e1deb80314f",
+     "promise": "FALSE\nq-returns-object",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nq-returns-object"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-08 21:15 UTC+01:00",
+   "seconds": 3.7
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -187,8 +255,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 21:13 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-08 21:15 UTC+01:00",
+   "seconds": 4.2
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -221,8 +289,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 21:13 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-08 21:15 UTC+01:00",
+   "seconds": 3.5
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -262,8 +330,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 21:13 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-08 21:15 UTC+01:00",
+   "seconds": 3.6
   }
  }
 }

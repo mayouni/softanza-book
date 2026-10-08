@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 21:13 UTC+01:00",
+ "built": "2026-10-08 21:15 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 21:12 UTC+01:00",
+    "ran": "2026-10-08 21:15 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -187,9 +187,111 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 21:13 UTC+01:00",
+    "ran": "2026-10-08 21:15 UTC+01:00",
     "kept": 5,
     "runnable": 5
+   }
+  },
+  {
+   "number": 5,
+   "id": "law-the-code-adheres-to-the-way-a-person-thinks",
+   "title": "Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it",
+   "part": 2,
+   "law": "the code adheres to the way a person thinks, and the court judges it whoever wrote it",
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form",
+    "designed": "a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it",
+    "absent": "any machine that judges today the style of a program written with the library"
+   },
+   "guards": [
+    {
+     "name": "coderule_narrated",
+     "exists": true,
+     "path": "base/test/meta/coderule_narrated.ring",
+     "assertions": 77,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_narrated.ring"
+    },
+    {
+     "name": "testoor_promises_narrated",
+     "exists": true,
+     "path": "base/test/testoor/testoor_promises_narrated.ring",
+     "assertions": 46,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/testoor/testoor_promises_narrated.ring"
+    },
+    {
+     "name": "05_containsemptystrings",
+     "exists": true,
+     "path": "base/test/list/05_containsemptystrings.ring",
+     "assertions": 5,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/05_containsemptystrings.ring"
+    },
+    {
+     "name": "466_keeping_the_history_of_updates_of_a_softanza_objec",
+     "exists": true,
+     "path": "base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring",
+     "assertions": 2,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "? StzListOfStringsQ( StzStringQ(\"softanza\").UppercaseQ().Chars() ).ConcatenatedUsing(\" \")\n#--> S O F T A N Z A\n? StzStringQ(\"softanza\").UppercaseQ().Spacified()\n#--> S O F T A N Z A",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzList([ \"A\", \"\", \"B\", \"\", \"\", \"C\" ])\n? o1.ContainsEmptyStrings()\n#--> TRUE\n? o1.CountEmptyStrings()\n#--> 3\n? @@( o1.FindEmptyStrings() )\n#--> [ 2, 4, 5 ]\no1.ReplaceEmptyStrings(:With = \"~\")\n? @@( o1.Content() )\n#--> [ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzString(\"RIxxNxG\")\n? o1.Removed(\"x\")\n#--> RING\n? o1.Content()\n#--> RIxxNxG\no1.Remove(\"x\")\n? o1.Content()\n#--> RING\n? Q(\"rixxnxg\").RemoveQ(\"x\").UppercaseQ().Spacified()\n#--> R I N G",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Q(\"I love Haro\").Replaced(\"love\", :With = \"♥\")\n#--> I ♥ Haro\no2 = new stzList([ \"tea\", \"rice\", \"fish\" ])\no2.SwapItems(:AtPositions = 1, :And = 3)\n? @@( o2.Content() )\n#--> [ \"fish\", \"rice\", \"tea\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "Q(\"haro php HARO ruby Haro\") {\n\t? NumberOfOccurrence(:Of = \"haro\")\n\t#--> 1\n\t? NumberOfOccurrenceCS(:Of = \"haro\", :CS = FALSE)\n\t#--> 3\n\t? @@( FindAllCS(\"haro\", FALSE) )\n\t#--> [ 1, 10, 20 ]\n}",
+     "verdict": "kept"
+    },
+    {
+     "code": "? @@( Qh(12500).AddQ(500).RetrieveQ(1500).DivideByQ(500).MultiplyByQ(2).History() )\n#--> [ 12500, 13000, 11500, 23, 46 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "cCode = \"class Basket\" + nl + \"def Add(x)\" + nl + \"\treturn x\" + nl + \"def AddQ(x)\" + nl + \"\treturn 42\" + nl\n? StzCodeIsClean(cCode)\n#--> FALSE\n? StzCheckCode(cCode)[1][:rule]\n#--> q-returns-object",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-mental-mode-narration.md",
+    "stz-bridging-minds-and-code.md",
+    "stz-functions-as-linguistic-expressions.md",
+    "stzobject-history-narration.md",
+    "stz-near-natural-language-programming.md"
+   ],
+   "rulings": [
+    "12.2",
+    "12.3",
+    "12.14",
+    "12.16",
+    "12.17",
+    "12.21"
+   ],
+   "doors": {
+    "programmer": "Your lines follow your reasoning: select, contain, count, find, act. Each question carries its promise, and a court reads it whether you wrote it or an agent did.",
+    "analyst": "The method starts from your problem in plain words. The keywords you use become the names of the steps.",
+    "designer": "The verb's form is an interface contract: the past participle never touches the object.",
+    "decision-maker": "A style a machine can be held to can be reviewed goal by goal, not line by line, which is the only reading one person can give to hundreds of thousands of lines.",
+    "educator": "The course teaches the discipline whole, and in order: formulate, then express, then be judged.",
+    "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
+   },
+   "run": {
+    "ran": "2026-10-08 21:15 UTC+01:00",
+    "kept": 7,
+    "runnable": 7
    }
   },
   {
@@ -304,7 +406,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 21:13 UTC+01:00",
+    "ran": "2026-10-08 21:15 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -377,7 +479,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 21:13 UTC+01:00",
+    "ran": "2026-10-08 21:15 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -459,7 +561,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 21:13 UTC+01:00",
+    "ran": "2026-10-08 21:15 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
