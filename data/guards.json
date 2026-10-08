@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:44 UTC+01:00",
+ "read": "2026-10-09 00:53 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -882,6 +882,56 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring",
    "also_found": []
   },
+  "sms_port_narrated": {
+   "exists": true,
+   "path": "base/test/system/sms_port_narrated.ring",
+   "assertions": 53,
+   "by_helper": {
+    "Then": 53
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/sms_port_narrated.ring",
+   "also_found": []
+  },
+  "sound_convergence_narrated": {
+   "exists": true,
+   "path": "base/test/sound/sound_convergence_narrated.ring",
+   "assertions": 26,
+   "by_helper": {
+    "Chk": 26
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_convergence_narrated.ring",
+   "also_found": []
+  },
+  "sound_listener_narrated": {
+   "exists": true,
+   "path": "base/test/sound/sound_listener_narrated.ring",
+   "assertions": 21,
+   "by_helper": {
+    "Chk": 21
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_listener_narrated.ring",
+   "also_found": []
+  },
+  "sound_semantics_narrated": {
+   "exists": true,
+   "path": "base/test/sound/sound_semantics_narrated.ring",
+   "assertions": 41,
+   "by_helper": {
+    "Chk": 41
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_semantics_narrated.ring",
+   "also_found": []
+  },
+  "payments_webhooks_narrated": {
+   "exists": true,
+   "path": "base/test/system/payments_webhooks_narrated.ring",
+   "assertions": 51,
+   "by_helper": {
+    "Then": 51
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/payments_webhooks_narrated.ring",
+   "also_found": []
+  },
   "payments_port_narrated": {
    "exists": true,
    "path": "base/test/system/payments_port_narrated.ring",
@@ -1210,6 +1260,14 @@
    "emulator_narrated",
    "deployment_narrated",
    "full_scope_model_narrated"
+  ],
+  "en/25-your-users-keep-their-medium": [
+   "sms_port_narrated",
+   "wisecoding_rich_narrated",
+   "sound_convergence_narrated",
+   "sound_listener_narrated",
+   "sound_semantics_narrated",
+   "payments_webhooks_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",

@@ -199,7 +199,7 @@ Coding agents lead in hands. They already read, search, edit and run, on any pro
 
 Low-code leads in installed base and in everything around it. The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications; the crafter's platform sits beside the field's tools, not in place of them.
 
-The messaging apps lead where the crafters already are. The restaurateur's tools before the project were his head, a paper notebook, a spreadsheet and the messaging apps on his phone. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
+The messaging apps lead where the crafters already are. The restaurateur's tools before the project were his head, a paper notebook and a spreadsheet; his own report of 4 July 2026 gives the spreadsheet, and the line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
 
 And the educator's door is the least proven of the six. The course's editions in French, Arabic and Hausa are drafts that no reviewer has read, and no institution has adopted it.
 
