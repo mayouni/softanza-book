@@ -1015,6 +1015,17 @@ pre .c-promise{color:var(--code-promise);}
 .sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
 .sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
 .book-fig{margin:2em -8px;}
+.book-fig .fg-box{fill:var(--card-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-box-strong{fill:var(--card-bg);stroke:var(--ink);stroke-width:1.4;}
+.book-fig .fg-floor{fill:var(--sidebar-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-court{fill:var(--decision-bg);stroke:var(--ink);stroke-width:1.2;}
+.book-fig .fg-txt{fill:var(--ink);}
+.book-fig .fg-soft{fill:var(--soft);}
+.book-fig .fg-accent{fill:var(--bookmark);}
+.book-fig .fg-arrow{stroke:var(--soft-2);stroke-width:1.2;fill:none;}
+.book-fig .fg-arrow-strong{stroke:var(--bookmark);stroke-width:2;fill:none;}
+.book-fig .fg-head{fill:var(--soft-2);}
+.book-fig .fg-head-strong{fill:var(--bookmark);}
 .book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}
@@ -1181,6 +1192,10 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <span class="card-bookmark"></span><div class="card-preview"><p></p></div>
 <div class="card-meta"><h3 class="card-title">The method, from first principles</h3><p class="card-words">Partie I · Chapitre 3</p></div>
 </a>
+<a class="chapter-card is-spine" href="#ch4-the-platform-in-one-picture">
+<span class="card-bookmark"></span><div class="card-preview"><p></p></div>
+<div class="card-meta"><h3 class="card-title">The platform in one picture</h3><p class="card-words">Partie I · Chapitre 4</p></div>
+</a>
 <a class="chapter-card is-spine" href="#ch5-law-the-code-adheres-to-the-way-a-person-thinks">
 <span class="card-bookmark"></span><div class="card-preview"><p></p></div>
 <div class="card-meta"><h3 class="card-title">Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</h3><p class="card-words">Partie II · Chapitre 5</p></div>
@@ -1211,7 +1226,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <div class="ce-row is-spine"><span class="ce-num">1</span><a class="ce-title" href="#ch1-change-arrives-faster-than-trust">Change arrives faster than trust</a><span class="ce-spine">Colonne</span></div>
 <div class="ce-row is-spine"><span class="ce-num">2</span><a class="ce-title" href="#ch2-the-software-maker">The software maker</a><span class="ce-spine">Colonne</span></div>
 <div class="ce-row is-spine"><span class="ce-num">3</span><a class="ce-title" href="#ch3-the-method-from-first-principles">The method, from first principles</a><span class="ce-spine">Colonne</span></div>
-<div class="ce-row is-absent is-spine"><span class="ce-num">4</span><span class="ce-title">The platform in one picture</span><span class="ce-spine">Colonne</span><span class="ce-pg">pas encore rédigé</span></div>
+<div class="ce-row is-spine"><span class="ce-num">4</span><a class="ce-title" href="#ch4-the-platform-in-one-picture">The platform in one picture</a><span class="ce-spine">Colonne</span></div>
 <div class="ce-part">Partie II · Programming, rethought</div>
 <div class="ce-row is-spine"><span class="ce-num">5</span><a class="ce-title" href="#ch5-law-the-code-adheres-to-the-way-a-person-thinks">Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</a><span class="ce-spine">Colonne</span></div>
 <div class="ce-row is-absent"><span class="ce-num">6</span><span class="ce-title">The mental model, and the metaphors</span><span class="ce-pg">pas encore rédigé</span></div>
@@ -1266,7 +1281,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <a class="sidebar-link is-spine" href="#ch1-change-arrives-faster-than-trust"><span class="sl-text" data-t="1 · Change arrives faster than trust"><span class="sl-spine"></span>1 · Change arrives faster than trust</span><span class="sl-leader"></span></a>
 <a class="sidebar-link is-spine" href="#ch2-the-software-maker"><span class="sl-text" data-t="2 · The software maker"><span class="sl-spine"></span>2 · The software maker</span><span class="sl-leader"></span></a>
 <a class="sidebar-link is-spine" href="#ch3-the-method-from-first-principles"><span class="sl-text" data-t="3 · The method, from first principles"><span class="sl-spine"></span>3 · The method, from first principles</span><span class="sl-leader"></span></a>
-<span class="sidebar-link is-absent is-spine" title="pas encore rédigé"><span class="sl-text" data-t="4 · The platform in one picture"><span class="sl-spine"></span>4 · The platform in one picture</span></span>
+<a class="sidebar-link is-spine" href="#ch4-the-platform-in-one-picture"><span class="sl-text" data-t="4 · The platform in one picture"><span class="sl-spine"></span>4 · The platform in one picture</span><span class="sl-leader"></span></a>
 <div class="sb-part">Partie II · Programming, rethought</div>
 <a class="sidebar-link is-spine" href="#ch5-law-the-code-adheres-to-the-way-a-person-thinks"><span class="sl-text" data-t="5 · Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it"><span class="sl-spine"></span>5 · Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</span><span class="sl-leader"></span></a>
 <span class="sidebar-link is-absent" title="pas encore rédigé"><span class="sl-text" data-t="6 · The mental model, and the metaphors"><span class="sl-spine"></span>6 · The mental model, and the metaphors</span></span>
@@ -1331,7 +1346,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <div class="ch-rule"></div>
 <div class="untranslated"><p>Ce chapitre n'est pas encore écrit en français. Le français est rédigé à partir de l'anglais que l'auteur a marqué « lu ».</p><p><a href="../en/index.html#ch2-the-software-maker">Le lire en anglais</a></p></div>
 </article>
-<article class="chapter-page" id="page-ch3-the-method-from-first-principles" data-slug="ch3-the-method-from-first-principles" data-title="The method, from first principles" data-prev="ch2-the-software-maker" data-next="ch5-law-the-code-adheres-to-the-way-a-person-thinks">
+<article class="chapter-page" id="page-ch3-the-method-from-first-principles" data-slug="ch3-the-method-from-first-principles" data-title="The method, from first principles" data-prev="ch2-the-software-maker" data-next="ch4-the-platform-in-one-picture">
 <div class="ch-eyebrow">Partie I · Chapitre 3<span class="spine-badge" title="Un des neuf chapitres de la colonne : ils portent tout l&#x27;argument et se lisent seuls">Colonne</span></div>
 <h1 class="ch-title">The method, from first principles</h1>
 
@@ -1339,7 +1354,15 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <div class="ch-rule"></div>
 <div class="untranslated"><p>Ce chapitre n'est pas encore écrit en français. Le français est rédigé à partir de l'anglais que l'auteur a marqué « lu ».</p><p><a href="../en/index.html#ch3-the-method-from-first-principles">Le lire en anglais</a></p></div>
 </article>
-<article class="chapter-page" id="page-ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-slug="ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-title="Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it" data-prev="ch3-the-method-from-first-principles" data-next="ch11-law-a-language-is-declared-and-closed">
+<article class="chapter-page" id="page-ch4-the-platform-in-one-picture" data-slug="ch4-the-platform-in-one-picture" data-title="The platform in one picture" data-prev="ch3-the-method-from-first-principles" data-next="ch5-law-the-code-adheres-to-the-way-a-person-thinks">
+<div class="ch-eyebrow">Partie I · Chapitre 4<span class="spine-badge" title="Un des neuf chapitres de la colonne : ils portent tout l&#x27;argument et se lisent seuls">Colonne</span></div>
+<h1 class="ch-title">The platform in one picture</h1>
+
+
+<div class="ch-rule"></div>
+<div class="untranslated"><p>Ce chapitre n'est pas encore écrit en français. Le français est rédigé à partir de l'anglais que l'auteur a marqué « lu ».</p><p><a href="../en/index.html#ch4-the-platform-in-one-picture">Le lire en anglais</a></p></div>
+</article>
+<article class="chapter-page" id="page-ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-slug="ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-title="Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it" data-prev="ch4-the-platform-in-one-picture" data-next="ch11-law-a-language-is-declared-and-closed">
 <div class="ch-eyebrow">Partie II · Chapitre 5<span class="spine-badge" title="Un des neuf chapitres de la colonne : ils portent tout l&#x27;argument et se lisent seuls">Colonne</span></div>
 <h1 class="ch-title">Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</h1>
 
@@ -2406,6 +2429,17 @@ pre .c-promise{color:var(--code-promise);}
 .sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
 .sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
 .book-fig{margin:2em -8px;}
+.book-fig .fg-box{fill:var(--card-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-box-strong{fill:var(--card-bg);stroke:var(--ink);stroke-width:1.4;}
+.book-fig .fg-floor{fill:var(--sidebar-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-court{fill:var(--decision-bg);stroke:var(--ink);stroke-width:1.2;}
+.book-fig .fg-txt{fill:var(--ink);}
+.book-fig .fg-soft{fill:var(--soft);}
+.book-fig .fg-accent{fill:var(--bookmark);}
+.book-fig .fg-arrow{stroke:var(--soft-2);stroke-width:1.2;fill:none;}
+.book-fig .fg-arrow-strong{stroke:var(--bookmark);stroke-width:2;fill:none;}
+.book-fig .fg-head{fill:var(--soft-2);}
+.book-fig .fg-head-strong{fill:var(--bookmark);}
 .book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}

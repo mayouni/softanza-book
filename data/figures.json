@@ -1,0 +1,86 @@
+{
+ "core_libs": 4,
+ "base_libs": 85,
+ "max_libs": 0,
+ "vendored": 19,
+ "guards": 529,
+ "atlas": {
+  "version": 21,
+  "read_at": "2026-09-30",
+  "commit": "0e72e2e2c",
+  "areas": 28,
+  "lanes": 334
+ },
+ "bands": [
+  {
+   "en": "Core data & language",
+   "fr": "Données et langage de base",
+   "areas": [
+    "String",
+    "Pattern matching",
+    "Collections & objects",
+    "Numeric & optimization",
+    "Tables & data"
+   ],
+   "lanes": 60
+  },
+  {
+   "en": "Language & intelligence",
+   "fr": "Langage et intelligence",
+   "areas": [
+    "Internationalization",
+    "NLP & linguistics",
+    "Neural tier",
+    "Agents & conversation"
+   ],
+   "lanes": 48
+  },
+  {
+   "en": "Visual & spatial",
+   "fr": "Visuel et spatial",
+   "areas": [
+    "Graphics",
+    "Geo & cartography",
+    "Diagramming & graphs",
+    "GPU",
+    "GUI & reactive",
+    "Statistics & data-viz"
+   ],
+   "lanes": 72
+  },
+  {
+   "en": "Systems & runtime",
+   "fr": "Systèmes et exécution",
+   "areas": [
+    "System programming",
+    "Concurrency & distribution",
+    "Web & app server",
+    "Performance",
+    "Metaprogramming & code rules"
+   ],
+   "lanes": 60
+  },
+  {
+   "en": "I/O, formats, extensibility, media",
+   "fr": "Entrées-sorties, formats, extensibilité, médias",
+   "areas": [
+    "Files & formats",
+    "Binary formats",
+    "Security & governance",
+    "Extensibility & foreign code",
+    "Sound"
+   ],
+   "lanes": 58
+  },
+  {
+   "en": "Cross-cutting disciplines",
+   "fr": "Disciplines transversales",
+   "areas": [
+    "Test & quality system",
+    "Documentation system",
+    "Governance doctrine"
+   ],
+   "lanes": 36
+  }
+ ]
+}

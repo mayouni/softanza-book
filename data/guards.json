@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 21:29 UTC+01:00",
+ "read": "2026-10-08 21:40 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -102,6 +102,56 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring",
    "also_found": []
   },
+  "00_stzapp_narrated": {
+   "exists": true,
+   "path": "base/test/app/00_stzapp_narrated.ring",
+   "assertions": 3,
+   "by_helper": {
+    "#-->": 3
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/00_stzapp_narrated.ring",
+   "also_found": []
+  },
+  "06_stzsuperapp_narrated": {
+   "exists": true,
+   "path": "base/test/app/06_stzsuperapp_narrated.ring",
+   "assertions": 21,
+   "by_helper": {
+    "Then": 21
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/06_stzsuperapp_narrated.ring",
+   "also_found": []
+  },
+  "full_scope_model_narrated": {
+   "exists": true,
+   "path": "base/test/system/full_scope_model_narrated.ring",
+   "assertions": 62,
+   "by_helper": {
+    "chk": 62
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring",
+   "also_found": []
+  },
+  "01_platform_narrated": {
+   "exists": true,
+   "path": "base/test/platform/01_platform_narrated.ring",
+   "assertions": 31,
+   "by_helper": {
+    "Then": 31
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/platform/01_platform_narrated.ring",
+   "also_found": []
+  },
+  "threat_model_narrated": {
+   "exists": true,
+   "path": "base/test/security/threat_model_narrated.ring",
+   "assertions": 11,
+   "by_helper": {
+    "Then": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/threat_model_narrated.ring",
+   "also_found": []
+  },
   "coderule_narrated": {
    "exists": true,
    "path": "base/test/meta/coderule_narrated.ring",
@@ -115,9 +165,10 @@
   "testoor_promises_narrated": {
    "exists": true,
    "path": "base/test/testoor/testoor_promises_narrated.ring",
-   "assertions": 46,
+   "assertions": 67,
    "by_helper": {
-    "Then": 46
+    "Then": 46,
+    "#-->": 21
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/testoor/testoor_promises_narrated.ring",
    "also_found": []
@@ -272,16 +323,6 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_project_narrated.ring",
    "also_found": []
   },
-  "full_scope_model_narrated": {
-   "exists": true,
-   "path": "base/test/system/full_scope_model_narrated.ring",
-   "assertions": 62,
-   "by_helper": {
-    "chk": 62
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring",
-   "also_found": []
-  },
   "virtual_system_twin_narrated": {
    "exists": true,
    "path": "base/test/system/virtual_system_twin_narrated.ring",
@@ -321,6 +362,13 @@
    "modality_narrated",
    "wisecoding_narrated",
    "wisecoding_rich_narrated"
+  ],
+  "en/04-the-platform-in-one-picture": [
+   "00_stzapp_narrated",
+   "06_stzsuperapp_narrated",
+   "full_scope_model_narrated",
+   "01_platform_narrated",
+   "threat_model_narrated"
   ],
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": [
    "coderule_narrated",

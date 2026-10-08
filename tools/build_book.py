@@ -338,6 +338,17 @@ pre .c-promise{color:var(--code-promise);}
 .sources .src-k{display:inline-block;min-width:150px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);}
 .sources code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:none;padding:0;}
 .book-fig{margin:2em -8px;}
+.book-fig .fg-box{fill:var(--card-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-box-strong{fill:var(--card-bg);stroke:var(--ink);stroke-width:1.4;}
+.book-fig .fg-floor{fill:var(--sidebar-bg);stroke:var(--rule);stroke-width:1;}
+.book-fig .fg-court{fill:var(--decision-bg);stroke:var(--ink);stroke-width:1.2;}
+.book-fig .fg-txt{fill:var(--ink);}
+.book-fig .fg-soft{fill:var(--soft);}
+.book-fig .fg-accent{fill:var(--bookmark);}
+.book-fig .fg-arrow{stroke:var(--soft-2);stroke-width:1.2;fill:none;}
+.book-fig .fg-arrow-strong{stroke:var(--bookmark);stroke-width:2;fill:none;}
+.book-fig .fg-head{fill:var(--soft-2);}
+.book-fig .fg-head-strong{fill:var(--bookmark);}
 .book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
 .untranslated a{color:var(--bookmark);font-weight:600;}
@@ -1010,6 +1021,12 @@ def main():
     SITE_BASE = st.get("site_base", SITE_BASE)
     runs = load_json("book-run.json", {})
     guards = load_json("guards.json", {})
+    # the figures that carry numbers are generated from the snapshot the book ran at
+    short = runs.get("run", {}).get("library", {}).get("short")
+    snap = ROOT / ".cache" / f"stzlib-{short}" / "libraries" / "stzlib"
+    if short and snap.exists():
+        import figures
+        figures.generate(ROOT, snap)
     en_src = sources("en")
     fr_src = sources("fr")
     errors = []

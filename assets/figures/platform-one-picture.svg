@@ -1,0 +1,93 @@
+<svg viewBox="0 0 805 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Softanza platform in one picture: five floors, and a court beside each">
+<defs><marker id="fgarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="fg-head"/></marker><marker id="fgarr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="fg-head-strong"/></marker></defs>
+<rect x="588" y="18" width="205" height="664" rx="8" class="fg-court"/>
+<text x="690.5" y="40" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">The court</text>
+<text x="690.5" y="57" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="middle" font-style="italic">nothing is believed,</text>
+<text x="690.5" y="71" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="middle" font-style="italic">everything is judged</text>
+<rect x="70" y="90" width="500" height="92" rx="8" class="fg-floor"/>
+<text x="82" y="108" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The makers</text>
+<line x1="570" y1="136.0" x2="588" y2="136.0" class="fg-arrow" marker-end="url(#fgarr)"/>
+<text x="600" y="133.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">the interface constitution:</text>
+<text x="600" y="147.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">every element traces to a verb</text>
+<rect x="70" y="196" width="500" height="112" rx="8" class="fg-floor"/>
+<text x="82" y="214" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The worlds</text>
+<line x1="570" y1="252.0" x2="588" y2="252.0" class="fg-arrow" marker-end="url(#fgarr)"/>
+<text x="600" y="242.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">bonds and norms between worlds;</text>
+<text x="600" y="256.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">build before deploy;</text>
+<text x="600" y="270.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">no fake in production</text>
+<rect x="70" y="322" width="500" height="150" rx="8" class="fg-floor"/>
+<text x="82" y="340" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The areas</text>
+<line x1="570" y1="397.0" x2="588" y2="397.0" class="fg-arrow" marker-end="url(#fgarr)"/>
+<text x="600" y="394.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">334 lanes, each rated</text>
+<text x="600" y="408.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">with its proof line</text>
+<rect x="70" y="486" width="500" height="92" rx="8" class="fg-floor"/>
+<text x="82" y="504" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The layers</text>
+<line x1="570" y1="532.0" x2="588" y2="532.0" class="fg-arrow" marker-end="url(#fgarr)"/>
+<text x="600" y="529.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">529 narrated guards,</text>
+<text x="600" y="543.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">one dependency rule</text>
+<rect x="70" y="592" width="500" height="92" rx="8" class="fg-floor"/>
+<text x="82" y="610" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The engine</text>
+<line x1="570" y1="638.0" x2="588" y2="638.0" class="fg-arrow" marker-end="url(#fgarr)"/>
+<text x="600" y="635.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">engine tests; contracts</text>
+<text x="600" y="649.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">between the floors</text>
+<rect x="82.0" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="119.16666666666666" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">programmer</text>
+<rect x="162.33333333333331" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="199.49999999999997" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">analyst</text>
+<rect x="242.66666666666666" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="279.8333333333333" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">designer</text>
+<rect x="323.0" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="360.1666666666667" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">decision-maker</text>
+<rect x="403.3333333333333" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="440.5" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">educator</text>
+<rect x="483.66666666666663" y="116" width="74.33333333333333" height="52" rx="6" class="fg-box"/>
+<text x="520.8333333333333" y="147" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">agent</text>
+<rect x="82.0" y="222" width="152.0" height="46" rx="6" class="fg-box"/>
+<text x="158.0" y="241" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">a world</text>
+<text x="158.0" y="257" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle">stzApp</text>
+<rect x="244.0" y="222" width="152.0" height="46" rx="6" class="fg-box"/>
+<text x="320.0" y="241" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">a constellation</text>
+<text x="320.0" y="257" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle">stzSuperApp</text>
+<rect x="406.0" y="222" width="152.0" height="46" rx="6" class="fg-box"/>
+<text x="482.0" y="241" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">a platform</text>
+<text x="482.0" y="257" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle">stzPlatform</text>
+<text x="320.0" y="292" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="middle" font-style="italic">three scopes: development · deployment · runtime</text>
+<rect x="82.0" y="346" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="90.0" y="363" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">Core data &amp; language</text>
+<text x="90.0" y="378" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">string, pattern matching, collec…</text>
+<text x="90.0" y="391" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">5 areas · 60 lanes</text>
+<rect x="243.33333333333334" y="346" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="251.33333333333334" y="363" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">Language &amp; intelligence</text>
+<text x="251.33333333333334" y="378" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">internationalization, nlp &amp; ling…</text>
+<text x="251.33333333333334" y="391" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">4 areas · 48 lanes</text>
+<rect x="404.6666666666667" y="346" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="412.6666666666667" y="363" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">Visual &amp; spatial</text>
+<text x="412.6666666666667" y="378" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">graphics, geo &amp; cartography, dia…</text>
+<text x="412.6666666666667" y="391" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">6 areas · 72 lanes</text>
+<rect x="82.0" y="406" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="90.0" y="423" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">Systems &amp; runtime</text>
+<text x="90.0" y="438" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">system programming, concurrency …</text>
+<text x="90.0" y="451" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">5 areas · 60 lanes</text>
+<rect x="243.33333333333334" y="406" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="251.33333333333334" y="423" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">I/O, formats, extensibility,…</text>
+<text x="251.33333333333334" y="438" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">files &amp; formats, binary formats,…</text>
+<text x="251.33333333333334" y="451" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">5 areas · 58 lanes</text>
+<rect x="404.6666666666667" y="406" width="153.33333333333334" height="52" rx="6" class="fg-box"/>
+<text x="412.6666666666667" y="423" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="start">Cross-cutting disciplines</text>
+<text x="412.6666666666667" y="438" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">test &amp; quality system, documenta…</text>
+<text x="412.6666666666667" y="451" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="400" text-anchor="start">3 areas · 36 lanes</text>
+<rect x="82" y="512" width="90" height="52" rx="6" class="fg-box"/>
+<text x="127" y="534" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">core</text>
+<text x="127" y="550" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle">stk · lean</text>
+<rect x="180" y="512" width="270" height="52" rx="6" class="fg-box-strong"/>
+<text x="315" y="534" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">base</text>
+<text x="315" y="550" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle">stz · most of the code, by debt</text>
+<rect x="458" y="512" width="100" height="52" rx="6" class="fg-box" stroke-dasharray="5 4"/>
+<text x="508" y="534" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">max</text>
+<text x="508" y="550" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle">stx · in part</text>
+<rect x="82" y="618" width="476" height="52" rx="6" class="fg-box-strong"/>
+<text x="320.0" y="638" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle">Zig · 89 libraries behind a C interface: 4 for core, 85 for base, none yet for max</text>
+<text x="320.0" y="656" class="fg-soft" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle">19 third-party libraries vendored and pinned: none that anyone can withdraw</text>
+<line x1="36" y1="680" x2="36" y2="96" class="fg-arrow-strong" marker-end="url(#fgarr2)"/>
+<text x="28" y="390" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" transform="rotate(-90 28 390)">the platform architect</text>
+</svg>

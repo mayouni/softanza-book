@@ -5,7 +5,8 @@ A guard is named in a chapter's front matter (`guards: [...]`) by its file stem.
 `<name>.ring` under the test tree of the library snapshot the runner used, and counts the assertion
 calls in it: the calls to the shared helper Then, to the helpers the house writes in its guards
 (chk, Chk, ChkEq, Check, Expect, Assert, Verify), and to any function the guard itself defines that
-counts a pass or a failure. A definition (`func chk`) is not an assertion; only calls are counted.
+counts a pass or a failure, and the promise lines of the house's classic form (`#--> value`), which a
+runner judges against the output. A definition (`func chk`) is not an assertion; only calls are counted.
 
 The count is read from the file, not from a run: it says how many assertions the guard holds, not
 that they passed. A guard that does not exist fails the build: exit status 1.
@@ -38,6 +39,10 @@ def count_assertions(text):
         m = re.match(r"(\w+)\s*\(", s)
         if m and m.group(1).lower() in helpers:
             by[m.group(1)] = by.get(m.group(1), 0) + 1
+    # the house's classic form asserts by promise: a line `#--> value` under the expression it judges
+    promises = len(re.findall(r"(?m)^[ \t]*(?:#|//)[ \t]*-->|\S[ \t]+#-->", text))
+    if promises:
+        by["#-->"] = promises
     return sum(by.values()), by
 
 
