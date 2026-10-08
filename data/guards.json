@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:49 UTC+01:00",
+ "read": "2026-10-08 22:53 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -482,6 +482,16 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring",
    "also_found": []
   },
+  "tutor_gaps_narrated": {
+   "exists": true,
+   "path": "base/test/education/tutor_gaps_narrated.ring",
+   "assertions": 29,
+   "by_helper": {
+    "Then": 29
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/education/tutor_gaps_narrated.ring",
+   "also_found": []
+  },
   "service_delivery_narrated": {
    "exists": true,
    "path": "base/test/system/service_delivery_narrated.ring",
@@ -750,6 +760,12 @@
    "agentgraph_narrated",
    "piagent_narrated",
    "ownagentstack_narrated"
+  ],
+  "en/18-the-five-registers": [
+   "wisecoding_narrated",
+   "wisecoding_rich_narrated",
+   "ownagentstack_narrated",
+   "tutor_gaps_narrated"
   ],
   "en/19-the-domain-language-model": [
    "dlm_narrated",

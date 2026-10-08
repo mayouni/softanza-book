@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:49 UTC+01:00",
+ "built": "2026-10-08 22:53 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:47 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:48 UTC+01:00",
+    "ran": "2026-10-08 22:51 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:48 UTC+01:00",
+    "ran": "2026-10-08 22:52 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:48 UTC+01:00",
+    "ran": "2026-10-08 22:52 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:48 UTC+01:00",
+    "ran": "2026-10-08 22:52 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,9 +1236,141 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:48 UTC+01:00",
+    "ran": "2026-10-08 22:52 UTC+01:00",
     "kept": 8,
     "runnable": 8
+   }
+  },
+  {
+   "number": 18,
+   "id": "the-five-registers",
+   "title": "The five registers, and conversations that ask",
+   "part": 4,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent",
+    "designed": "several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise",
+    "absent": "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a reply with a space in it"
+   },
+   "guards": [
+    {
+     "name": "wisecoding_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_narrated.ring",
+     "assertions": 13,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+    },
+    {
+     "name": "wisecoding_rich_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_rich_narrated.ring",
+     "assertions": 52,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring"
+    },
+    {
+     "name": "ownagentstack_narrated",
+     "exists": true,
+     "path": "base/test/agentic/ownagentstack_narrated.ring",
+     "assertions": 10,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring"
+    },
+    {
+     "name": "tutor_gaps_narrated",
+     "exists": true,
+     "path": "base/test/education/tutor_gaps_narrated.ring",
+     "assertions": 29,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/education/tutor_gaps_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"pizzeria\")\noKB.Know(\"pizza1\", \"dish\").Know(\"pizza2\", \"dish\").Know(\"pizza3\", \"dish\").Know(\"pizza4\", \"dish\")\noKB.AddConversationQ(\"frame\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"topping\"))\noKB.AskIn(\"frame\")\noKB.ReplyIn(\"frame\", \"cheese\")\noKB.AskIn(\"frame\")\noKB.ReplyIn(\"frame\", \"olives\")\n? oKB.AskIn(\"frame\")\n#--> Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n? @@(oKB.ReplyIn(\"frame\", 2)[:admitted])\n#--> [ \"olives\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "? oKB.AskIn(\"frame\")\n#--> Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\naV = oKB.ReplyIn(\"frame\", 99)\n? @@(aV[:admitted])\n#--> [ ]\n? @@(aV[:refused])\n#--> [ [ \"(99)\", \"no such option\" ] ]\n? oKB.ConversationQ(\"frame\").Checkpoints()[1][:why]\n#--> no option (99) was offered -- 2 option(s) on the table\n? aV[:goalState]\n#--> pursuing",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKF = new stzKnowledgeGraph(\"pizzeria2\")\noKF.Know(\"p1\", \"dish\").Know(\"p2\", \"dish\")\noKF.AddConversationQ(\"f\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"topping\"))\n? oKF.AskInXT(\"f\")[:force]\n#--> what\noKF.ReplyIn(\"f\", \"cheese\")\naQ = oKF.AskInXT(\"f\")\n? aQ[:force]\n#--> which\n? @@(aQ[:options])\n#--> [ \"cheese\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKD = new stzKnowledgeGraph(\"desserts\")\noKD.Know(\"tiramisu\", \"dish\")\noKD.AddConversationQ(\"setup\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\noKD.AskIn(\"setup\")\naV = oKD.ReplyIn(\"setup\", [ \"mascarpone\", \"espresso\" ])\n? @@(aV[:admitted])\n#--> [ \"mascarpone\", \"espresso\" ]\n? aV[:goalState]\n#--> fulfilled",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKM = new stzKnowledgeGraph(\"menu\")\noKM.Know(\"margherita\", \"dish\")\noKM.AddConversationQ(\"setup\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\noKM.AskIn(\"setup\")\noKM.ReplyIn(\"setup\", \"tomato-sauce and mozzarella\")\n? oKM.ConversationQ(\"setup\").Transcript()\n#--> SOFTANZA: Goal adopted -- this conversation is now accountable for it.\n#--> SOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\n#--> YOU:      tomato-sauce and mozzarella\n#-->   -> admitted: 'margherita' contains 'tomato-sauce'\n#-->   -> admitted: 'margherita' contains 'mozzarella'\n#--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKS = new stzKnowledgeGraph(\"staffing\")\noKS.AddConversationQ(\"s\").SetGoal(StzGoalQ().RequireOne(\"kitchen3\", \"led-by\"))\noKS.ConstrainRelation(\"led-by\", :Unique)\noKS.AskIn(\"s\")\naV = oKS.ReplyIn(\"s\", \"mario and giovanni\")\n? @@(aV[:admitted])\n#--> [ \"mario\" ]\n? @@(aV[:refused])\n#--> [ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n? len(oKS.ConversationQ(\"s\").Checkpoints())\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKP = new stzKnowledgeGraph(\"shop\")\noKP.Know(\"tea\", \"product\")\noKP.AddConversationQ(\"price\").SetGoal(StzGoalQ().RequireEach(\"product\", \"price\"))\noKP.AskIn(\"price\")\n? @@(oKP.ReplyIn(\"price\", \"=12*3\")[:admitted])\n#--> [ \"=12*3\" ]\n? oKP.Query([ \"tea\", \"price\", \"?o\" ])[1]\n#--> =12*3",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKX = new stzKnowledgeGraph(\"phones\")\noKX.Know(\"contact1\", \"contact\")\noKX.AddConversationQ(\"fmt\").SetGoal(StzGoalQ().RequireEach(\"contact\", \"number-pattern\"))\noKX.AskIn(\"fmt\")\naV = oKX.ReplyIn(\"fmt\", [ [ \"+216-21-298-374\", \"valid\" ], [ \"+33-6-12-34-56-78\", \"valid\" ] ])\n? @@(aV[:admitted])\n#--> [ ]\n? @@(aV[:refused])\n#--> [ ]\n? aV[:goalState]\n#--> pursuing\n? len(oKX.ConversationQ(\"fmt\").Checkpoints())\n#--> 0\ntry\n\tStzOwnAgent(\"induction\")\ncatch\n\t? cCatchError\ndone\n#--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKT = new stzKnowledgeGraph(\"ttl\")\noKT.AddConversationQ(\"t\").SetGoal(StzGoalQ().RequireOne(\"kitchen\", \"led-by\"))\noKT.AskIn(\"t\")\noKT.ReplyIn(\"t\", 7)\n? len(oKT.ConversationQ(\"t\").Checkpoints())\n#--> 1\noKT.ConversationQ(\"t\").SetCheckpointTTL(1)\noKT.AskIn(\"t\")\noKT.AskIn(\"t\")\n? len(oKT.ConversationQ(\"t\").Checkpoints())\n#--> 0\n? len(oKT.ConversationQ(\"t\").AllCheckpoints())\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKG = new stzKnowledgeGraph(\"lifecycle\")\noKG.Know(\"d1\", \"dish\").Know(\"d2\", \"dish\")\noKG.AddConversationQ(\"s1\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"sauce\"))\noKG.AddConversationQ(\"s2\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"garnish\"))\n? oKG.ConversationQ(\"s1\").GoalState()\n#--> pursuing\noKG.AskIn(\"s1\")\noKG.ReplyIn(\"s1\", \"pesto\")\noKG.AskIn(\"s1\")\noKG.ReplyIn(\"s1\", \"pesto\")\n? oKG.ConversationQ(\"s1\").GoalState()\n#--> fulfilled\n? oKG.ConversationQ(\"s1\").GoalWhy()\n#--> every required slot is filled in 'lifecycle'\noKG.AskIn(\"s2\")\noKG.ConversationQ(\"s2\").RevokeGoal(\"out of scope tonight\")\n? oKG.ConversationQ(\"s2\").GoalState()\n#--> revoked\n? oKG.ConversationQ(\"s2\").GoalWhy()\n#--> out of scope tonight\n? len(oKG.OpenConversations())\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKW = new stzKnowledgeGraph(\"menu\")\noKW.Know(\"margherita\", \"dish\").Know(\"tiramisu\", \"dish\")\nanswers = [ [ \"margherita\", \"tomato-sauce\" ], [ \"tiramisu\", \"mascarpone\" ] ]\naR = StzOwnAgent(\"wise-coder\").PursueGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"), oKW, func subj, rel {\n\tfor a in answers\n\t\tif a[1] = subj\n\t\t\treturn a[2]\n\t\tok\n\tnext\n\treturn \"\"\n})\n? aR[:filled]\n#--> 1\n? aR[:asked]\n#--> 2\n? aR[:why]\n#--> goal filled in 2 question(s), governed admission throughout\noKV = new stzKnowledgeGraph(\"desserts\")\noKV.Know(\"panna-cotta\", \"dish\")\naR2 = StzOwnAgent(\"wise-coder\").PursueGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"), oKV, func subj, rel { return \"\" })\n? aR2[:filled]\n#--> 0\n? aR2[:why]\n#--> stopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKA = new stzKnowledgeGraph(\"مطعم\")\noKA.Know(\"بيتزا\", \"dish\")\noKA.AddConversationQ(\"c\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\n? oKA.AskIn(\"c\")\n#--> What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\naV = oKA.ReplyIn(\"c\", [ \"جبن\", \"طماطم\" ])\n? @@(aV[:admitted])\n#--> [ \"جبن\", \"طماطم\" ]\n? aV[:goalState]\n#--> fulfilled",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKH = new stzKnowledgeGraph(\"menu\")\noKH.Know(\"pizza\", \"dish\")\noKH.AddConversationQ(\"c\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\noKH.AskIn(\"c\")\ncCandidate = NaturallyIn(\"ha\", \"Yi rubutu dauke 'jibini' Maida shi\").Result()\n? cCandidate\n#--> JIBINI\naV = oKH.ReplyIn(\"c\", cCandidate)\n? aV[:narration]\n#--> admitted: 'pizza' contains 'jibini'",
+     "verdict": "kept"
+    },
+    {
+     "code": "oEx = StzProgramQ(\"../../education/program\").CourseQ(\"elementary-introduction\").ExerciseQ(\"ex-01-01\")\n? oEx.GapText(\"finds\", \"en\")\n#--> Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\n? oEx.GapText(\"finds\", \"fr\")\n#--> Où sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\n? oEx.GapText(\"finds\", \"ar\")\n#--> أين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\n? oEx.GapText(\"finds\", \"ha\")\n#--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKF2 = new stzKnowledgeGraph(\"fluency-space\")\noKF2.AddConversation(\"f\")\n? oKF2.ConversationQ(\"f\").Fluency()\n#--> plain\noKF2.ConversationQ(\"f\").SetFluency(:neural)\n? oKF2.ConversationQ(\"f\").Fluency()\n#--> neural\n? oKF2.ConversationQ(\"f\").IsFluencyNeural()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oWorld = new stzKnowledgeGraph(\"my-world\")\noWorld.Know(\"item1\", \"thing\").Know(\"item2\", \"thing\")\noWorld.AddConversationQ(\"mine\").SetGoal(StzGoalQ().RequireEach(\"thing\", \"colour\"))\noWorld.AskIn(\"mine\")\n# your five replies here, each with the verdict you expect",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-knowledge-programming-narration.md",
+    "stznatural-narration.md"
+   ],
+   "rulings": [
+    "12.25",
+    "12.26",
+    "12.27"
+   ],
+   "doors": {
+    "programmer": "A reply is a verdict you can test with ordinary promises: what was admitted, what was refused, and the state of the goal.",
+    "analyst": "The goal is the schema of a complete model. The gaps are the list of what is missing. The transcript and the checkpoints are the evidence of how each fact got in.",
+    "designer": "The question comes back as data: force, subject, relation, options, reason. Any medium can render it. The library renders English, and the tutor shows the pattern for four languages.",
+    "decision-maker": "A reply is judged before it counts. A refusal reaches a person with its context and a lifetime. The roster is honest: one agent of five is wired, and two of the five registers are not available.",
+    "educator": "The tutor is wise coding. It names the missing step as a question and never as the answer, in the learner's language, and its wording in three of those languages awaits a native reviewer.",
+    "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
+   },
+   "run": {
+    "ran": "2026-10-08 22:52 UTC+01:00",
+    "kept": 15,
+    "runnable": 15
    }
   },
   {
@@ -1339,7 +1471,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:52 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1441,7 +1573,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1547,7 +1679,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -1656,7 +1788,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1775,7 +1907,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1848,7 +1980,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1930,7 +2062,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:49 UTC+01:00",
+    "ran": "2026-10-08 22:53 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

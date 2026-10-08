@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:47 UTC+01:00",
+  "date": "2026-10-08 22:51 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 7.0
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 6.1
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 5.4
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 7.1
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 6.1
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:47 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 6.2
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -526,8 +526,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 22:48 UTC+01:00",
-   "seconds": 19.1
+   "ran": "2026-10-08 22:51 UTC+01:00",
+   "seconds": 14.4
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -600,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:48 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 8.0
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -682,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:48 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 9.0
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -780,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:48 UTC+01:00",
-   "seconds": 22.1
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 27.2
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -854,8 +854,145 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:48 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 7.2
+  },
+  "en/18-the-five-registers": {
+   "id": "the-five-registers",
+   "blocks": [
+    {
+     "hash": "4eca6e1e600d",
+     "promise": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]"
+    },
+    {
+     "hash": "33c893b36796",
+     "promise": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing"
+    },
+    {
+     "hash": "e361bfe19cb9",
+     "promise": "what\nwhich\n[ \"cheese\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "what\nwhich\n[ \"cheese\" ]"
+    },
+    {
+     "hash": "58121915fcd5",
+     "promise": "[ \"mascarpone\", \"espresso\" ]\nfulfilled",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mascarpone\", \"espresso\" ]\nfulfilled"
+    },
+    {
+     "hash": "44737c524fd0",
+     "promise": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n-> admitted: 'margherita' contains 'tomato-sauce'\n-> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n  -> admitted: 'margherita' contains 'tomato-sauce'\n  -> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'"
+    },
+    {
+     "hash": "bba558135e1a",
+     "promise": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1"
+    },
+    {
+     "hash": "4217e97691d9",
+     "promise": "[ \"=12*3\" ]\n=12*3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"=12*3\" ]\n=12*3"
+    },
+    {
+     "hash": "83aa5929b94e",
+     "promise": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents()."
+    },
+    {
+     "hash": "dcfa876f8f59",
+     "promise": "1\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1"
+    },
+    {
+     "hash": "6fb51b072487",
+     "promise": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0"
+    },
+    {
+     "hash": "126774f01e74",
+     "promise": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human"
+    },
+    {
+     "hash": "34118cc05e0f",
+     "promise": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled"
+    },
+    {
+     "hash": "cd4cef4627ae",
+     "promise": "JIBINI\nadmitted: 'pizza' contains 'jibini'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "JIBINI\nadmitted: 'pizza' contains 'jibini'"
+    },
+    {
+     "hash": "f8bd87cc7249",
+     "promise": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)"
+    },
+    {
+     "hash": "485a01a30065",
+     "promise": "plain\nneural\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "plain\nneural\n0"
+    },
+    {
+     "hash": "8c2def6273d3",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 15,
+   "runnable": 15,
+   "exercises": 1,
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 7.0
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -924,8 +1061,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:52 UTC+01:00",
+   "seconds": 6.1
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -981,8 +1118,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 8.1
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1039,8 +1176,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 5.8
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1105,8 +1242,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 6.3
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -1164,8 +1301,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 5.2
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1198,8 +1335,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 5.6
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1239,8 +1376,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:49 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:53 UTC+01:00",
+   "seconds": 5.8
   }
  }
 }
