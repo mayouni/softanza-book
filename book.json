@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 21:18 UTC+01:00",
+ "built": "2026-10-08 21:30 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,9 +100,130 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 1,
     "runnable": 1
+   }
+  },
+  {
+   "number": 2,
+   "id": "the-software-maker",
+   "title": "The software maker",
+   "part": 1,
+   "law": null,
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic",
+    "designed": "a journey page for each kind of maker, with each step run; the door through which a coding agent asks the library to judge its work",
+    "absent": "the three makers' platforms running on the Softanza engine; a maker's own medium, the messaging app on their phone, as a target"
+   },
+   "guards": [
+    {
+     "name": "agentfile_narrated",
+     "exists": true,
+     "path": "base/test/agentic/agentfile_narrated.ring",
+     "assertions": 88,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentfile_narrated.ring"
+    },
+    {
+     "name": "service_registry_narrated",
+     "exists": true,
+     "path": "base/test/system/service_registry_narrated.ring",
+     "assertions": 93,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_registry_narrated.ring"
+    },
+    {
+     "name": "graphrule_object_narrated",
+     "exists": true,
+     "path": "base/test/graph/graphrule_object_narrated.ring",
+     "assertions": 34,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/graphrule_object_narrated.ring"
+    },
+    {
+     "name": "semantic_resolver_narrated",
+     "exists": true,
+     "path": "base/test/natural/semantic_resolver_narrated.ring",
+     "assertions": 83,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring"
+    },
+    {
+     "name": "00_orgchart_narrated",
+     "exists": true,
+     "path": "base/test/orgchart/00_orgchart_narrated.ring",
+     "assertions": 10,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/00_orgchart_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "o1 = new stzList([ \"tea\", \"rice\", \"tea\", \"fish\", \"rice\", \"tea\" ])\n? o1.ContainsDuplicates()\n#--> 1\n? o1.NumberOfOccurrence(\"tea\")\n#--> 3",
+     "verdict": "kept"
+    },
+    {
+     "code": "o = new stzTable([ [ :region, :population ],\n    [ \"Agadez\", 487620 ], [ \"Maradi\", 3402094 ], [ \"Zinder\", 3539764 ] ])\no.Show()\n#--> ╭────────┬────────────╮\n#    │ Region │ Population │\n#    ├────────┼────────────┤\n#    │ Agadez │     487620 │\n#    │ Maradi │    3402094 │\n#    │ Zinder │    3539764 │\n#    ╰────────┴────────────╯",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Q(\"Softanza\").BoxedXT([ :AllCorners = :Round ])\n#--> ╭──────────╮\n#    │ Softanza │\n#    ╰──────────╯",
+     "verdict": "kept"
+    },
+    {
+     "code": "cPia = \"pia: 1\nname: stock-watcher\nkind: pi\nreversibility: compensable\nschedule:\n  timer: 20\nskills:\n  - name: restock\n    does: learn stock level ordered\n\"\noD = StzAgentDeclarationQ(cPia)\n? oD.IsValid()\n#--> 0\n? oD.CiteFindings()\n#--> [pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "verdict": "kept"
+    },
+    {
+     "code": "? NaturallyIn(\"ha\", \"Yi rubutu dauke 'hello' Maida shi\").Result()\n#--> HELLO\n? Q(\"سلام\").NumberOfChars()\n#--> 4\n? Q(\"مرحبا بالعالم\").Script()\n#--> arabic",
+     "verdict": "kept"
+    },
+    {
+     "code": "cLlm = \"pia: 1\nname: rogue\nkind: llm\ncoverage: proposes a summary\nreversibility: reversible\nschedule:\n  timer: 20\nproposes:\n  prompt: Summarize {input}\n  structure:\n    - field: topic\n      type: string\nskills:\n  - name: send\n    when: always\n    does: propose\n    effect: send-email\n\"\noBad = StzAgentDeclarationQ(cLlm)\n? oBad.IsValid()\n#--> 0\n? oBad.CiteFindings()\n#--> [no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).",
+     "verdict": "kept"
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"restaurant\")\noReg.Bind(:payments, new stzPaymentsSandbox())\noReg.SetPhase(:emulated)\n? oReg.IsSound()\n#--> 1\noReg.SetPhase(:production)\n? oReg.IsSound()\n#--> 0\n? oReg.Findings()[1][:message]\n#--> still bound to a SANDBOX in a production phase -- a fake must never ship",
+     "verdict": "kept"
+    },
+    {
+     "code": "oOrg = new stzOrgChart(\"bank\")\noOrg.AddPositionXTT(\"ceo\", \"Chief Executive\", [ :department = \"executive\" ])\noOrg.AddPositionXTT(\"audit\", \"Internal Audit\", [ :department = \"audit\", :reportsTo = \"ceo\" ])\n? @@( oOrg.ValidateBCEAOGovernance() )\n#--> [ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oRule = new stzGraphRule(\"no-llm-effectful\")\noRule.SetDomainQ(\"agentic\")\noRule.WhenQ(\"kind\", \"equals\", \"llm_actor\")\noRule.WhenQ(\"capabilities\", \"contains\", \"effectful\")\noRule.ThenViolationQ(\"an LLM proposes, only a pi-gate commits\")\ng = new stzGraph(\"agents\")\ng.AddNode(\"writer\")\ng.SetNodeProperty(\"writer\", \"kind\", \"llm_actor\")\ng.SetNodeProperty(\"writer\", \"capabilities\", [ \"inference\", \"effectful\" ])\ng.AddRule(oRule)\n? g.RulesAreSound()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? StzAgentDeclarationQ(cYourAgent).IsValid()\n#--> 1",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-built-on-real-world-need.md",
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-agents-that-cannot-hurt-you-narration.md",
+    "stz-rules-as-graph-rules-narration.md",
+    "stzOrgChartDoc-BankUseCase.md"
+   ],
+   "rulings": [
+    "12.2",
+    "12.12",
+    "12.13",
+    "12.25",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "You declare intent in a library that reads like a sentence, and an engine computes under every call. You stay the first audience.",
+    "analyst": "You declare your organisation's entities, rules and flows in plain text, and the rules judge the model.",
+    "designer": "You declare a picture, a map or a screen as a program, and the rule of two gestures came from a real user.",
+    "decision-maker": "You declare your world, your governance, and what each actor may commit, and you own all of it, in plain text.",
+    "educator": "You declare a course in your learners' language, and every exercise is checked by running.",
+    "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
+   },
+   "run": {
+    "ran": "2026-10-08 21:29 UTC+01:00",
+    "kept": 9,
+    "runnable": 9
    }
   },
   {
@@ -187,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -289,7 +410,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -430,7 +551,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -547,7 +668,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -620,7 +741,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -702,7 +823,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 21:17 UTC+01:00",
+    "ran": "2026-10-08 21:29 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

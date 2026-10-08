@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 21:17 UTC+01:00",
+  "date": "2026-10-08 21:29 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,97 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.3
+  },
+  "en/02-the-software-maker": {
+   "id": "the-software-maker",
+   "blocks": [
+    {
+     "hash": "e8cdd4236252",
+     "promise": "1\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3"
+    },
+    {
+     "hash": "b28fe61b4381",
+     "promise": "╭────────┬────────────╮\n│ Region │ Population │\n├────────┼────────────┤\n│ Agadez │     487620 │\n│ Maradi │    3402094 │\n│ Zinder │    3539764 │\n╰────────┴────────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭────────┬────────────╮\n│ Region │ Population │\n├────────┼────────────┤\n│ Agadez │     487620 │\n│ Maradi │    3402094 │\n│ Zinder │    3539764 │\n╰────────┴────────────╯"
+    },
+    {
+     "hash": "03e69b64d77b",
+     "promise": "╭──────────╮\n│ Softanza │\n╰──────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭──────────╮\n│ Softanza │\n╰──────────╯"
+    },
+    {
+     "hash": "043ec0e67521",
+     "promise": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick."
+    },
+    {
+     "hash": "87ec0a9879c2",
+     "promise": "HELLO\n4\narabic",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "HELLO\n4\narabic"
+    },
+    {
+     "hash": "8e6ca7e58239",
+     "promise": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited)."
+    },
+    {
+     "hash": "c9cdc44a4340",
+     "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
+    },
+    {
+     "hash": "e2570e740079",
+     "promise": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]"
+    },
+    {
+     "hash": "c3044cc86cfc",
+     "promise": "0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0"
+    },
+    {
+     "hash": "d92db1bbc1b5",
+     "promise": "1",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 1,
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -113,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.6
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.4
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -181,8 +270,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.8
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -279,8 +368,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 33.8
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 13.9
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -353,8 +442,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.6
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -387,8 +476,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.1
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.7
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -428,8 +517,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 21:17 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-08 21:29 UTC+01:00",
+   "seconds": 3.6
   }
  }
 }

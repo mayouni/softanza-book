@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-08 21:18 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
+Built 2026-10-08 21:30 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70.
 
 Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
 
@@ -12,6 +12,7 @@ Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: 
 
 - 0. Preface [missing, spine] guards: none; run: no code
 - 1. Change arrives faster than trust [draft, spine] guards: service_registry_narrated (93), safeworld_narrated (76), governance_crossing_narrated (31); run: 1 of 1 blocks kept
+- 2. The software maker [draft, spine] guards: agentfile_narrated (88), service_registry_narrated (93), graphrule_object_narrated (34), semantic_resolver_narrated (83), 00_orgchart_narrated (10); run: 9 of 9 blocks kept
 - 3. The method, from first principles [draft, spine] guards: modality_narrated (45), wisecoding_narrated (13), wisecoding_rich_narrated (52); run: 5 of 5 blocks kept
 - 5. Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it [draft, spine] guards: coderule_narrated (77), testoor_promises_narrated (46), 05_containsemptystrings (5), 466_keeping_the_history_of_updates_of_a_softanza_objec (2); run: 7 of 7 blocks kept
 - 11. Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it [draft, spine] guards: multilingual_pack_narrated (45), semantic_resolver_narrated (83), literate_templates_narrated (10), question_narrated (21), structuredoutput_narrated (73), schema_grammar_narrated (28), constrained_decoding_narrated (50); run: 11 of 11 blocks kept

@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 21:18 UTC+01:00",
+ "read": "2026-10-08 21:29 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -30,6 +30,46 @@
     "chk": 31
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/governance_crossing_narrated.ring",
+   "also_found": []
+  },
+  "agentfile_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/agentfile_narrated.ring",
+   "assertions": 88,
+   "by_helper": {
+    "chk": 88
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/agentfile_narrated.ring",
+   "also_found": []
+  },
+  "graphrule_object_narrated": {
+   "exists": true,
+   "path": "base/test/graph/graphrule_object_narrated.ring",
+   "assertions": 34,
+   "by_helper": {
+    "Then": 34
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/graphrule_object_narrated.ring",
+   "also_found": []
+  },
+  "semantic_resolver_narrated": {
+   "exists": true,
+   "path": "base/test/natural/semantic_resolver_narrated.ring",
+   "assertions": 83,
+   "by_helper": {
+    "Then": 83
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring",
+   "also_found": []
+  },
+  "00_orgchart_narrated": {
+   "exists": true,
+   "path": "base/test/orgchart/00_orgchart_narrated.ring",
+   "assertions": 10,
+   "by_helper": {
+    "Then": 10
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/00_orgchart_narrated.ring",
    "also_found": []
   },
   "modality_narrated": {
@@ -110,16 +150,6 @@
     "Then": 45
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/multilingual_pack_narrated.ring",
-   "also_found": []
-  },
-  "semantic_resolver_narrated": {
-   "exists": true,
-   "path": "base/test/natural/semantic_resolver_narrated.ring",
-   "assertions": 83,
-   "by_helper": {
-    "Then": 83
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring",
    "also_found": []
   },
   "literate_templates_narrated": {
@@ -279,6 +309,13 @@
    "service_registry_narrated",
    "safeworld_narrated",
    "governance_crossing_narrated"
+  ],
+  "en/02-the-software-maker": [
+   "agentfile_narrated",
+   "service_registry_narrated",
+   "graphrule_object_narrated",
+   "semantic_resolver_narrated",
+   "00_orgchart_narrated"
   ],
   "en/03-the-method-from-first-principles": [
    "modality_narrated",
