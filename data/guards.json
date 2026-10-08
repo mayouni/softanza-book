@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 23:50 UTC+01:00",
+ "read": "2026-10-08 23:54 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -502,6 +502,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring",
    "also_found": []
   },
+  "knowledge_integration_narrated": {
+   "exists": true,
+   "path": "base/test/natural/knowledge_integration_narrated.ring",
+   "assertions": 19,
+   "by_helper": {
+    "chk": 19
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring",
+   "also_found": []
+  },
+  "provenance_survives_save_narrated": {
+   "exists": true,
+   "path": "base/test/security/provenance_survives_save_narrated.ring",
+   "assertions": 23,
+   "by_helper": {
+    "Then": 23
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/provenance_survives_save_narrated.ring",
+   "also_found": []
+  },
+  "program_narrated": {
+   "exists": true,
+   "path": "base/test/education/program_narrated.ring",
+   "assertions": 21,
+   "by_helper": {
+    "Then": 21
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/education/program_narrated.ring",
+   "also_found": []
+  },
   "00_numbrex_narrated": {
    "exists": true,
    "path": "base/test/numbrex/00_numbrex_narrated.ring",
@@ -550,16 +580,6 @@
     "chk": 16
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/learning/dlm_narrated.ring",
-   "also_found": []
-  },
-  "knowledge_integration_narrated": {
-   "exists": true,
-   "path": "base/test/natural/knowledge_integration_narrated.ring",
-   "assertions": 19,
-   "by_helper": {
-    "chk": 19
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring",
    "also_found": []
   },
   "agentgraph_narrated": {
@@ -984,6 +1004,11 @@
    "structuredoutput_narrated",
    "schema_grammar_narrated",
    "constrained_decoding_narrated"
+  ],
+  "en/14-knowledge-programming": [
+   "knowledge_integration_narrated",
+   "provenance_survives_save_narrated",
+   "program_narrated"
   ],
   "en/15-pattern-languages": [
    "00_regex_narrated",

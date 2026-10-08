@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 23:48 UTC+01:00",
+  "date": "2026-10-08 23:51 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 23:51 UTC+01:00",
+   "seconds": 3.9
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-08 23:51 UTC+01:00",
+   "seconds": 4.0
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-08 23:51 UTC+01:00",
+   "seconds": 3.5
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 3.8
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 4.0
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 5.2
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 3.5
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 4.9
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 23:48 UTC+01:00",
-   "seconds": 13.0
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 14.8
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 4.4
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 3.9
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,133 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 19.2
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 15.6
+  },
+  "en/14-knowledge-programming": {
+   "id": "knowledge-programming",
+   "blocks": [
+    {
+     "hash": "c62ff787545c",
+     "promise": "not derivable: no recorded fact or lawful chain gives 'couscous' made-from 'millet'\nproved: couscous made-from flour made-from millet",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "not derivable: no recorded fact or lawful chain gives 'couscous' made-from 'millet'\nproved: couscous made-from flour made-from millet"
+    },
+    {
+     "hash": "9743d9fa4353",
+     "promise": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'"
+    },
+    {
+     "hash": "374572229ae7",
+     "promise": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet."
+    },
+    {
+     "hash": "d9fb8c25a90a",
+     "promise": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n0\nknowledge \"clinic\"\n\nfacts\nfatou | treated-by | dr-diallo\n\nprovenance\nfatou | treated-by | dr-diallo | source | text | registry\nfatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\nfatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\ntreated-by | unique",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n\n0\nknowledge \"clinic\"\n\nfacts\n    fatou | treated-by | dr-diallo\n\nprovenance\n    fatou | treated-by | dr-diallo | source | text | registry\n    fatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\n    fatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\n    treated-by | unique"
+    },
+    {
+     "hash": "ef89e8481613",
+     "promise": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0"
+    },
+    {
+     "hash": "c374beb1ff4c",
+     "promise": "1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1"
+    },
+    {
+     "hash": "35faaad5e297",
+     "promise": "softanza-education\n[ \"en\", \"fr\", \"ar\", \"ha\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "softanza-education\n[ \"en\", \"fr\", \"ar\", \"ha\" ]"
+    },
+    {
+     "hash": "8690c0620a6e",
+     "promise": "1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "02e87d27524f",
+     "promise": "1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "8f52b1cfc37a",
+     "promise": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)."
+    },
+    {
+     "hash": "aec432a3d756",
+     "promise": "[ \"couscous\" ]\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"couscous\" ]\n[ ]"
+    },
+    {
+     "hash": "588d5e89df0b",
+     "promise": "1\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ ]"
+    },
+    {
+     "hash": "bb8b6d81ea50",
+     "promise": "[ \"company\", \"fruit\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"company\", \"fruit\" ]"
+    },
+    {
+     "hash": "c66fc1dc5340",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 1,
+   "ran": "2026-10-08 23:52 UTC+01:00",
+   "seconds": 3.1
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -998,8 +1123,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 5.3
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1072,8 +1197,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 3.8
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1209,8 +1334,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 4.4
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1279,8 +1404,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 4.1
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1377,8 +1502,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:49 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 5.8
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1460,8 +1585,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 6.8
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -1517,8 +1642,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 13.1
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 16.8
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -1574,8 +1699,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 5.4
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1632,8 +1757,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 5.3
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1698,8 +1823,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 4.1
+   "ran": "2026-10-08 23:53 UTC+01:00",
+   "seconds": 3.9
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -1757,8 +1882,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 5.2
+   "ran": "2026-10-08 23:54 UTC+01:00",
+   "seconds": 4.6
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1791,8 +1916,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-08 23:54 UTC+01:00",
+   "seconds": 5.4
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1832,8 +1957,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 23:50 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-08 23:54 UTC+01:00",
+   "seconds": 4.4
   }
  }
 }

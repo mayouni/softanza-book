@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 23:50 UTC+01:00",
+ "built": "2026-10-08 23:54 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:51 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:51 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:51 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 23:48 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,9 +1271,129 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:52 UTC+01:00",
     "kept": 11,
     "runnable": 11
+   }
+  },
+  {
+   "number": 14,
+   "id": "knowledge-programming",
+   "title": "Knowledge programming",
+   "part": 3,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory",
+    "designed": "rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load",
+    "absent": "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips"
+   },
+   "guards": [
+    {
+     "name": "knowledge_integration_narrated",
+     "exists": true,
+     "path": "base/test/natural/knowledge_integration_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/knowledge_integration_narrated.ring"
+    },
+    {
+     "name": "provenance_survives_save_narrated",
+     "exists": true,
+     "path": "base/test/security/provenance_survives_save_narrated.ring",
+     "assertions": 23,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/security/provenance_survives_save_narrated.ring"
+    },
+    {
+     "name": "program_narrated",
+     "exists": true,
+     "path": "base/test/education/program_narrated.ring",
+     "assertions": 21,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/education/program_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "cFacts = 'knowledge \"coop\"' + nl + nl + \"facts\" + nl +\n         \"    flour | made-from | millet\" + nl + \"    couscous | made-from | flour\" + nl\noA = new stzKnowledgeGraph(\"coop\")\noA.ImportKnow(cFacts)\n? oA.Prove([ \"couscous\", \"made-from\", \"millet\" ])[:narration]\n#--> not derivable: no recorded fact or lawful chain gives 'couscous' made-from 'millet'\noB = new stzKnowledgeGraph(\"coop\")\noB.ImportKnow(cFacts + nl + \"ontology\" + nl + \"    made-from | transitive\" + nl)\n? oB.Prove([ \"couscous\", \"made-from\", \"millet\" ])[:narration]\n#--> proved: couscous made-from flour made-from millet",
+     "verdict": "kept"
+    },
+    {
+     "code": "oB.KnowRelation(\"porridge\", \"made-from\", \"couscous\")\n? oB.Prove([ \"porridge\", \"made-from\", \"millet\" ])[:narration]\n#--> proved: porridge made-from couscous made-from flour made-from millet\n? oA.Prove([ \"porridge\", \"made-from\", \"millet\" ])[:narration]\n#--> not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"coop\")\noKB.Know(\"couscous\", \"dish\").KnowRelation(\"couscous\", \"contains\", \"semolina\")\noDLM = StzDlmQ(oKB)\n? oDLM.Ask(\"what is millet?\")\n#--> That is outside the 'coop' domain (I know 1 entities and 1 relations).\noKB.Know(\"millet\", \"grain\").KnowRelation(\"couscous\", \"contains\", \"millet\")\n? oDLM.Ask(\"what is millet?\")\n#--> That is outside the 'coop' domain (I know 1 entities and 1 relations).\noDLM = StzDlmQ(oKB)\n? oDLM.Ask(\"what is millet?\")\n#--> Millet is a grain.\n? oDLM.Ask(\"couscous contains what?\")\n#--> Couscous contains semolina and millet.",
+     "verdict": "kept"
+    },
+    {
+     "code": "oCl = new stzKnowledgeGraph(\"clinic\")\noCl.ConstrainRelation(\"treated-by\", :Unique)\noCl.EnableStrictMode()\ntry\n\toCl.AddFact(\"fatou\", \"treated-by\", \"dr-diallo\")\ncatch\n\t? cCatchError\ndone\n#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\noCl.AddFactXT(\"fatou\", \"treated-by\", \"dr-diallo\", [ :source = \"registry\", :confidence = 0.95 ])\n? oCl.AddFactXT(\"fatou\", \"treated-by\", \"dr-sani\", [ :source = \"rumour\", :confidence = 0.2 ])\n#--> 0\noCl.WriteToKnowFile(\"clinic\")\n? read(\"clinic.zknw\")\n#--> knowledge \"clinic\"\n#\n#    facts\n#        fatou | treated-by | dr-diallo\n#\n#    provenance\n#        fatou | treated-by | dr-diallo | source | text | registry\n#        fatou | treated-by | dr-diallo | confidence | number | 0.95\n#\n#    contradictions\n#        fatou | treated-by | dr-diallo | dr-sani | rumour\n#\n#    ontology\n#        treated-by | unique",
+     "verdict": "kept"
+    },
+    {
+     "code": "oBack = new stzKnowledgeGraph(\"clinic\")\noBack.EnableStrictMode()\naR = oBack.ImportKnow(\"clinic.zknw\")\n? aR[:merged]\n#--> 1\n? @@( oBack.MetaOfFact(\"fatou\", \"treated-by\", \"dr-diallo\") )\n#--> [ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n? len(oBack.Contradictions())\n#--> 1\n? oBack.RelationHasLaw(\"treated-by\", \"unique\")\n#--> 1\nremove(\"clinic.zknw\")\n? fexists(\"clinic.zknw\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzConstrainRelation(\"married-to\", :Symmetric)\nStzKnowRelation(\"amina\", \"married-to\", \"ibrahim\")\n? DefaultKnowledgeGraph().Query([ \"ibrahim\", \"married-to\", \"amina\" ])\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oP = StzProgramQ(\"../../education/program\")\n? oP.Id()\n#--> softanza-education\n? @@( oP.Languages() )\n#--> [ \"en\", \"fr\", \"ar\", \"ha\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "cRules = 'knowledge \"pairs\"' + nl + nl + \"facts\" + nl + \"    margherita | pairs-with | chianti\" + nl + nl +\n         \"rules\" + nl + \"    pairs-with | symmetric\" + nl\noRul = new stzKnowledgeGraph(\"pairs\")\naM = oRul.ImportKnow(cRules)\n? aM[:merged]\n#--> 1\n? len(oRul.Ontology())\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oSy = new stzKnowledgeGraph(\"pairs\")\noSy.ConstrainRelation(\"pairs-with\", :Symmetric)\noSy.KnowRelation(\"margherita\", \"pairs-with\", \"chianti\")\n? oSy.RelationHasLaw(\"pairs-with\", \"symmetric\")\n#--> 1\n? oSy.Query([ \"chianti\", \"pairs-with\", \"margherita\" ])\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oShop = new stzKnowledgeGraph(\"shop\")\noShop.KnowRelation(\"amina\", \"sells\", \"bread\")\naV = oShop.Admit(\"amina\", \"buys\", \"bread\", [ :source = \"till\" ])\n? aV[:admitted]\n#--> 0\n? aV[:why]\n#--> Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair).",
+     "verdict": "kept"
+    },
+    {
+     "code": "oQ = new stzKnowledgeGraph(\"coop2\")\noQ.KnowRelation(\"amina\", \"sells\", \"couscous\").KnowRelation(\"couscous\", \"made-from\", \"flour\")\n? @@( oQ.QueryPath([ [ \"amina\", \"sells\", \"?p\" ], [ \"?p\", \"made-from\", \"?m\" ] ]) )\n#--> [ \"couscous\" ]\n? @@( oQ.Query([ \"amina\", \"?p\", \"?o\" ]) )\n#--> [ ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "cBad = 'knowledge \"t\"' + nl + nl + \"facts\" + nl + \"    a | likes | b\" + nl + \"    c | likes\" + nl +\n       \"    d | likes | e | f\" + nl + \"    g likes h\" + nl\noT = new stzKnowledgeGraph(\"t\")\naBad = oT.ImportKnow(cBad)\n? aBad[:merged]\n#--> 1\n? @@(aBad[:refused])\n#--> [ ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "StzKnow(:Apple, :Company)\nStzKnow(:Apple, :Fruit)\n? @@( WhatIs(:Apple) )\n#--> [ \"company\", \"fruit\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "cWorld = 'knowledge \"school\"' + nl + nl + \"facts\" + nl +\n         \"    class-3b | part-of | grade-3\" + nl +\n         \"    grade-3 | part-of | primary\" + nl\noW = new stzKnowledgeGraph(\"school\")\noW.ImportKnow(cWorld)\n? oW.Prove([ \"class-3b\", \"part-of\", \"primary\" ])[:narration]\n# this prints a refusal. Your promise: the line proving that class-3b is part of primary,\n# with the chain written out. Change the world, not the question.",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-knowledge-programming-narration.md",
+    "stz-bridging-minds-and-code.md",
+    "stz-rules-as-graph-rules-narration.md"
+   ],
+   "rulings": [
+    "12.2",
+    "12.6",
+    "12.12",
+    "12.13",
+    "12.19"
+   ],
+   "doors": {
+    "programmer": "One class and a text file: `Know`, `KnowRelation`, `ConstrainRelation`, `Prove`, `Query`, `WriteToKnowFile`, `ImportKnow`. The file is diffable and ships with the program.",
+    "analyst": "The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read \"rules\" as the limit above. Where to start, in the course: the chapter called \"Teach a world\".",
+    "designer": "The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.",
+    "decision-maker": "The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. It runs offline, with nothing to subscribe to.",
+    "educator": "The whole education program is knowledge files. A learner teaches a world, then questions it, and the project's guard checks the world file, the agent file and one printed answer. An institution adapts by overlay, never by fork.",
+    "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
+   },
+   "run": {
+    "ran": "2026-10-08 23:52 UTC+01:00",
+    "kept": 13,
+    "runnable": 13
    }
   },
   {
@@ -1405,7 +1525,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1522,7 +1642,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1654,7 +1774,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -1757,7 +1877,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1874,7 +1994,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-08 23:49 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2016,7 +2136,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2111,7 +2231,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2213,7 +2333,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2319,7 +2439,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2428,7 +2548,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:53 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2547,7 +2667,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:54 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2620,7 +2740,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:54 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -2702,7 +2822,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 23:50 UTC+01:00",
+    "ran": "2026-10-08 23:54 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
