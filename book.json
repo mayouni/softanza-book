@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 21:15 UTC+01:00",
+ "built": "2026-10-08 21:18 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -187,7 +187,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -289,9 +289,150 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 7,
     "runnable": 7
+   }
+  },
+  {
+   "number": 11,
+   "id": "law-a-language-is-declared-and-closed",
+   "title": "Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it",
+   "part": 3,
+   "law": "a language is declared and closed, and whatever speaks it, person or model, is judged by it",
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages",
+    "designed": "the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar",
+    "absent": "a natural layer closed all the way down: one form of list still reaches host code; the standard Hausa letter ɗ in the Hausa pack"
+   },
+   "guards": [
+    {
+     "name": "multilingual_pack_narrated",
+     "exists": true,
+     "path": "base/test/natural/multilingual_pack_narrated.ring",
+     "assertions": 45,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/multilingual_pack_narrated.ring"
+    },
+    {
+     "name": "semantic_resolver_narrated",
+     "exists": true,
+     "path": "base/test/natural/semantic_resolver_narrated.ring",
+     "assertions": 83,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring"
+    },
+    {
+     "name": "literate_templates_narrated",
+     "exists": true,
+     "path": "base/test/natural/literate_templates_narrated.ring",
+     "assertions": 10,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/literate_templates_narrated.ring"
+    },
+    {
+     "name": "question_narrated",
+     "exists": true,
+     "path": "base/test/natural/question_narrated.ring",
+     "assertions": 21,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/question_narrated.ring"
+    },
+    {
+     "name": "structuredoutput_narrated",
+     "exists": true,
+     "path": "base/test/neural/structuredoutput_narrated.ring",
+     "assertions": 73,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/structuredoutput_narrated.ring"
+    },
+    {
+     "name": "schema_grammar_narrated",
+     "exists": true,
+     "path": "base/test/neural/schema_grammar_narrated.ring",
+     "assertions": 28,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/schema_grammar_narrated.ring"
+    },
+    {
+     "name": "constrained_decoding_narrated",
+     "exists": true,
+     "path": "base/test/neural/constrained_decoding_narrated.ring",
+     "assertions": 50,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "Naturally(\"\n    Make a string with 'hello niger' inside\n    Spacify it and uppercase it\n    @Box it while the box@ is rounded\n    Display it on the screen\n\")\n#--> ╭───────────────────────╮\n#    │ H E L L O   N I G E R │\n#    ╰───────────────────────╯",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Naturally(\"Create a string with 'hello' and uppercase it\").Result()\n#--> HELLO\n? NaturallyIn(\"hausa\", \"Yi rubutu dauke 'hello' Maida shi\").Result()\n#--> HELLO\n? NaturallyIn(\"fr\", \"Crée une chaine avec 'hello' et mets la en majuscules\").Result()\n#--> HELLO\n? NaturallyIn(\"ar\", \"أنشئ نصا بـ 'hello' ثم كبّره\").Result()\n#--> HELLO",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = NaturallyIn(\"ar\", \"أنشئ قائمة بـ [ 5, 3, 5 ] ثم أزل تكراراتها\")\n? @@( o1.Result() )\n#--> [ 5, 3 ]\n? o1.Understood()\n#--> أنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = Naturally(\"Create a string with 'softanza' Uppercse it\")\n? o1.Result()\n#--> softanza\n? @@( o1.Unresolved() )\n#--> [ [ \"Uppercse\", \"uppercase\" ] ]\n? o1.UnderstoodAll()\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "try\n\tNaturallyStrict(\"Create a string with 'x' Fooify it\")\ncatch\n\t? cCatchError\ndone\n#--> Strict natural mode: not understood: 'Fooify' (did you mean 'boxify'?)\ntry\n\tNaturallyStrictIn(\"en\", \"Create a list with [ 3, 1 ] Reverse it\", [ \"METHOD_REMOVEDUPLICATES\" ])\ncatch\n\t? cCatchError\ndone\n#--> Operation not permitted in this world: METHOD_REVERSE",
+     "verdict": "kept"
+    },
+    {
+     "code": "? IsQ().TheQ().LengthQ().OfQ(\"softanza\").LessThanQ().TheQ().LengthQ().Of(\"Haro\")\n#--> 0\n? Why()\n#--> no: 8 is not less than 4",
+     "verdict": "kept"
+    },
+    {
+     "code": "try\n\tStzOutputSchemaQ([ [ :field = \"x\", :type = :colour ] ])\ncatch\n\t? cCatchError\ndone\n#--> stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure).",
+     "verdict": "kept"
+    },
+    {
+     "code": "oS = StzOutputSchemaQ([\n\t[ :field = \"name\", :type = :string ],\n\t[ :field = \"age\",  :type = :number, :must = [ [ \">=\", 0 ], [ \"<=\", 130 ] ] ],\n\t[ :field = \"mood\", :type = :oneof,  :choices = [ \"positive\", \"negative\" ] ]\n])\n? oS.Accepts(\"name: Hadiza\" + nl + \"age: 41\" + nl + \"mood: positive\")\n#--> 1\n? oS.Accepts(\"name: Hadiza\" + nl + \"age: 41\" + nl + \"mood: angry\")\n#--> 0\n? oS.Accepts(\"name: Hadiza\" + nl + \"age: 900000\" + nl + \"mood: positive\")\n#--> 0\n? oS.Accepts(\"name: Hadiza\" + nl + \"age: 62\" + nl + \"mood: positive\")\n#--> 1\n? oS.ToGBNF()\n#--> root ::= name-line age-line mood-line\n#    name-line ::= \"name: \" text \"\\n\"\n#    age-line ::= \"age: \" number \"\\n\"\n#    mood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\n#    text ::= [^\\n]+\n#    number ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\n#    boolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "try\n\tNaturallyWith(\"Create a string with {#1} and {#2} it\", [ \"x\" ])\ncatch\n\t? cCatchError\ndone\n#--> Unfilled template hole! The narration still contains a {#n} slot with no value for it.",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Lx(\"[@N, @S]\").Match([42, \"hello\"])\n#--> 1\n? Lx(\"[@N, @S]\").Match([\"hello\", 42])\n#--> 0\n? Lx(\"[@N, [@N2], @N]\").Match([1, [2, 3], 4])\n#--> 1\n? Lx(\"[@N, [@N2], @N]\").Match([1, [2], 4])\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? @@( Naturally(\"Create a list with [ upper('x'), 1 ] and remove its duplicates\").Result() )\n#--> [ \"X\", 1 ]",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stznatural-vs-ring-naturallib.md",
+    "stz-near-natural-language-programming.md",
+    "stz-bridging-minds-and-code.md",
+    "stzlistex-pattern-matching-for-lists.md"
+   ],
+   "rulings": [
+    "12.4",
+    "12.10",
+    "12.16",
+    "12.19",
+    "12.21",
+    "12.27",
+    "12.28",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "You keep writing code. What you declare is a closed grammar, and the court judges your sentence and an agent's by the same rules.",
+    "analyst": "Your domain's words become a data pack, and the system understands them or refuses them with the reason.",
+    "designer": "The refusals are part of the language: what is not a sentence cannot be said, so it never needs a warning.",
+    "decision-maker": "A model held to a declared grammar answers in the right shape. It can still answer a falsehood in the right shape, and the record prints that limit with the result.",
+    "educator": "A sentence in Hausa, French or Arabic runs and says back what it understood, so a learner reads the machine's reading of their own words.",
+    "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
+   },
+   "run": {
+    "ran": "2026-10-08 21:17 UTC+01:00",
+    "kept": 11,
+    "runnable": 11
    }
   },
   {
@@ -406,7 +547,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -479,7 +620,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -561,7 +702,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 21:15 UTC+01:00",
+    "ran": "2026-10-08 21:17 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

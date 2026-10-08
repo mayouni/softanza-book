@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 21:15 UTC+01:00",
+  "date": "2026-10-08 21:17 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.2
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -113,8 +113,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.6
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -181,8 +181,106 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.4
+  },
+  "en/11-law-a-language-is-declared-and-closed": {
+   "id": "law-a-language-is-declared-and-closed",
+   "blocks": [
+    {
+     "hash": "06948e338d9f",
+     "promise": "╭───────────────────────╮\n│ H E L L O   N I G E R │\n╰───────────────────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭───────────────────────╮\n│ H E L L O   N I G E R │\n╰───────────────────────╯"
+    },
+    {
+     "hash": "b29581fe39b1",
+     "promise": "HELLO\nHELLO\nHELLO\nHELLO",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "HELLO\nHELLO\nHELLO\nHELLO"
+    },
+    {
+     "hash": "31a6caf3097a",
+     "promise": "[ 5, 3 ]\nأنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 5, 3 ]\nأنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات"
+    },
+    {
+     "hash": "9c9fc778eb06",
+     "promise": "softanza\n[ [ \"Uppercse\", \"uppercase\" ] ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "softanza\n[ [ \"Uppercse\", \"uppercase\" ] ]\n0"
+    },
+    {
+     "hash": "f0ae20e70e9b",
+     "promise": "Strict natural mode: not understood: 'Fooify' (did you mean 'boxify'?)\nOperation not permitted in this world: METHOD_REVERSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Strict natural mode: not understood: 'Fooify' (did you mean 'boxify'?)\n\nOperation not permitted in this world: METHOD_REVERSE"
+    },
+    {
+     "hash": "371afc3870fc",
+     "promise": "0\nno: 8 is not less than 4",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nno: 8 is not less than 4"
+    },
+    {
+     "hash": "55e56f5af5a3",
+     "promise": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure)."
+    },
+    {
+     "hash": "b743b937925a",
+     "promise": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")"
+    },
+    {
+     "hash": "d6b8996b62a5",
+     "promise": "Unfilled template hole! The narration still contains a {#n} slot with no value for it.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Unfilled template hole! The narration still contains a {#n} slot with no value for it."
+    },
+    {
+     "hash": "f3537a7c15a2",
+     "promise": "1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0"
+    },
+    {
+     "hash": "38e3c7ba9c26",
+     "promise": "[ \"X\", 1 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"X\", 1 ]"
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 33.8
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -255,8 +353,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.2
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -289,8 +387,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.1
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -330,8 +428,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 21:15 UTC+01:00",
-   "seconds": 3.6
+   "ran": "2026-10-08 21:17 UTC+01:00",
+   "seconds": 3.3
   }
  }
 }

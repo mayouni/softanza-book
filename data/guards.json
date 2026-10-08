@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 21:15 UTC+01:00",
+ "read": "2026-10-08 21:18 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -100,6 +100,76 @@
     "Then": 2
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring",
+   "also_found": []
+  },
+  "multilingual_pack_narrated": {
+   "exists": true,
+   "path": "base/test/natural/multilingual_pack_narrated.ring",
+   "assertions": 45,
+   "by_helper": {
+    "Then": 45
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/multilingual_pack_narrated.ring",
+   "also_found": []
+  },
+  "semantic_resolver_narrated": {
+   "exists": true,
+   "path": "base/test/natural/semantic_resolver_narrated.ring",
+   "assertions": 83,
+   "by_helper": {
+    "Then": 83
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/semantic_resolver_narrated.ring",
+   "also_found": []
+  },
+  "literate_templates_narrated": {
+   "exists": true,
+   "path": "base/test/natural/literate_templates_narrated.ring",
+   "assertions": 10,
+   "by_helper": {
+    "Then": 10
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/literate_templates_narrated.ring",
+   "also_found": []
+  },
+  "question_narrated": {
+   "exists": true,
+   "path": "base/test/natural/question_narrated.ring",
+   "assertions": 21,
+   "by_helper": {
+    "Then": 21
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/natural/question_narrated.ring",
+   "also_found": []
+  },
+  "structuredoutput_narrated": {
+   "exists": true,
+   "path": "base/test/neural/structuredoutput_narrated.ring",
+   "assertions": 73,
+   "by_helper": {
+    "chk": 73
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/structuredoutput_narrated.ring",
+   "also_found": []
+  },
+  "schema_grammar_narrated": {
+   "exists": true,
+   "path": "base/test/neural/schema_grammar_narrated.ring",
+   "assertions": 28,
+   "by_helper": {
+    "chk": 28
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/schema_grammar_narrated.ring",
+   "also_found": []
+  },
+  "constrained_decoding_narrated": {
+   "exists": true,
+   "path": "base/test/neural/constrained_decoding_narrated.ring",
+   "assertions": 50,
+   "by_helper": {
+    "chk": 50
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring",
    "also_found": []
   },
   "dlm_narrated": {
@@ -220,6 +290,15 @@
    "testoor_promises_narrated",
    "05_containsemptystrings",
    "466_keeping_the_history_of_updates_of_a_softanza_objec"
+  ],
+  "en/11-law-a-language-is-declared-and-closed": [
+   "multilingual_pack_narrated",
+   "semantic_resolver_narrated",
+   "literate_templates_narrated",
+   "question_narrated",
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "constrained_decoding_narrated"
   ],
   "en/17-law-programmatic-by-default": [
    "dlm_narrated",
