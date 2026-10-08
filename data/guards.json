@@ -1,0 +1,44 @@
+{
+ "read": "2026-10-08 20:23 UTC+01:00",
+ "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
+ "guards": {
+  "service_registry_narrated": {
+   "exists": true,
+   "path": "base/test/system/service_registry_narrated.ring",
+   "assertions": 51,
+   "by_helper": {
+    "Then": 51
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/service_registry_narrated.ring",
+   "also_found": []
+  },
+  "safeworld_narrated": {
+   "exists": true,
+   "path": "base/test/agentic/safeworld_narrated.ring",
+   "assertions": 76,
+   "by_helper": {
+    "chk": 76
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/safeworld_narrated.ring",
+   "also_found": []
+  },
+  "governance_crossing_narrated": {
+   "exists": true,
+   "path": "base/test/system/governance_crossing_narrated.ring",
+   "assertions": 31,
+   "by_helper": {
+    "chk": 31
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring",
+   "also_found": []
+  }
+ },
+ "chapters": {
+  "en/00-preface": [],
+  "en/01-change-arrives-faster-than-trust": [
+   "service_registry_narrated",
+   "safeworld_narrated",
+   "governance_crossing_narrated"
+  ]
+ }
+}

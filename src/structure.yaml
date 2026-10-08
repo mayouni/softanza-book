@@ -1,0 +1,88 @@
+# The book's contents, transcribed from drafts/softanza-book-structure.md (settled 2026-10-08 01:25 UTC).
+# The builder reads this file for the contents page, the navigation, the spine and the status page.
+# A chapter with a source file in src/<lang>/ is drafted; the others are listed as not yet drafted.
+
+title: Softanza
+subtitle: The Software Makers Platform of the AI Age
+tagline: Rethinking programming, languages and intelligence, from first principles
+author: Mansour Ayouni
+series: Second of the AYOUNI books
+back_cover:
+  - "Born in Africa. Useful to the World!"
+  - "Declare, then govern."
+
+fr:
+  title: Softanza
+  subtitle: La plateforme des makers du logiciel à l'ère de l'IA
+  tagline: Repenser la programmation, ses langages et son intelligence depuis les premiers principes
+  series: Deuxième des livres AYOUNI
+
+spine: [1, 2, 3, 4, 5, 11, 17, 32, 33]
+
+parts:
+  - number: 1
+    title: The age, the maker, the method
+    chapters:
+      - [1, Change arrives faster than trust]
+      - [2, The software maker]
+      - [3, "The method, from first principles"]
+      - [4, The platform in one picture]
+  - number: 2
+    title: Programming, rethought
+    law: "the code adheres to the way a person thinks, and the court judges it whoever wrote it"
+    chapters:
+      - [5, "Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it"]
+      - [6, "The mental model, and the metaphors"]
+      - [7, "The writing style, and the seven goals"]
+      - [8, "Functions as linguistic expressions, and scope"]
+      - [9, "Patterns of thought: the Softanzuter, Reaxis and the engines"]
+      - [10, Programming becomes refinement]
+  - number: 3
+    title: Languages, rethought
+    law: "a language is declared and closed, and whatever speaks it, person or model, is judged by it"
+    chapters:
+      - [11, "Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it"]
+      - [12, "A language, declared"]
+      - [13, "Natural, and executable: two directions, one discipline"]
+      - [14, Knowledge programming]
+      - [15, Pattern languages]
+      - [16, "Seven languages, one door"]
+  - number: 4
+    title: Intelligence, rethought
+    law: "programmatic by default, the model last, admission over generation"
+    chapters:
+      - [17, "Law: programmatic by default, the model last, admission over generation"]
+      - [18, "The five registers, and conversations that ask"]
+      - [19, The domain language model]
+      - [20, Agents that cannot hurt you]
+      - [21, "The court: promises, perception, security and performance"]
+      - [22, "Compared, honestly"]
+  - number: 5
+    title: The platform, assembled
+    chapters:
+      - [23, "A world, a constellation, a platform, and the architect"]
+      - [24, "Rehearse, then commit"]
+      - [25, Your users keep their medium]
+      - [26, The environment]
+      - [27, "The engine beneath: three layers, one engine, Haro"]
+  - number: 6
+    title: Software makers, forged
+    chapters:
+      - [28, A restaurant in Lyon]
+      - [29, A bank in Niamey]
+      - [30, An organisation in the field]
+      - [31, What the projects did not prove]
+  - number: 7
+    title: What is owed
+    chapters:
+      - [32, Many minds on one body of work]
+      - [33, The one line still owed]
+
+appendices:
+  - [A, "The register of innovations"]
+  - [B, The fourteen house rules]
+  - [C, The twenty-two verbs and the constitution]
+  - [D, "The glossary: words name states, never people"]
+  - [E, "The guards and fixtures cited, by chapter"]
+  - [F, The narrations the book argues from]
+  - [G, "The book as data, for the agent that reads it"]

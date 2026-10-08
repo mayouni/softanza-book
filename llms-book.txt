@@ -1,0 +1,14 @@
+# Softanza · The Software Makers Platform of the AI Age
+
+> Rethinking programming, languages and intelligence, from first principles. By Mansour Ayouni. Second of the AYOUNI books.
+
+This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
+
+Built 2026-10-08 20:23 UTC+01:00. Library commit b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115.
+
+Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.
+
+## Chapters
+
+- 0. Preface [missing, spine] guards: none; run: no code
+- 1. Change arrives faster than trust [draft, spine] guards: service_registry_narrated (51), safeworld_narrated (76), governance_crossing_narrated (31); run: 1 of 1 blocks kept

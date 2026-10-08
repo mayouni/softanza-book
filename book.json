@@ -1,0 +1,110 @@
+{
+ "title": "Softanza",
+ "subtitle": "The Software Makers Platform of the AI Age",
+ "tagline": "Rethinking programming, languages and intelligence, from first principles",
+ "author": "Mansour Ayouni",
+ "series": "Second of the AYOUNI books",
+ "built": "2026-10-08 20:23 UTC+01:00",
+ "library_commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
+ "spine": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  11,
+  17,
+  32,
+  33
+ ],
+ "chapters": [
+  {
+   "number": 0,
+   "id": "preface",
+   "title": "Preface",
+   "part": 0,
+   "law": null,
+   "spine": true,
+   "status": "missing",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 1,
+   "id": "change-arrives-faster-than-trust",
+   "title": "Change arrives faster than trust",
+   "part": 1,
+   "law": null,
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the court that admits or refuses a change, for a person and for a machine",
+    "absent": "a customer platform running on the Softanza engine"
+   },
+   "guards": [
+    {
+     "name": "service_registry_narrated",
+     "exists": true,
+     "path": "base/test/system/service_registry_narrated.ring",
+     "assertions": 51,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/service_registry_narrated.ring"
+    },
+    {
+     "name": "safeworld_narrated",
+     "exists": true,
+     "path": "base/test/agentic/safeworld_narrated.ring",
+     "assertions": 76,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/safeworld_narrated.ring"
+    },
+    {
+     "name": "governance_crossing_narrated",
+     "exists": true,
+     "path": "base/test/system/governance_crossing_narrated.ring",
+     "assertions": 31,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "o1 = new stzList([ \"tea\", \"rice\", \"tea\", \"fish\", \"rice\", \"tea\" ])\n? @@( o1.FindAll(\"tea\") )\n#--> [ 1, 3, 6 ]\n? @@( o1.DuplicatesRemoved() )\n#--> [ \"tea\", \"rice\", \"fish\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "? YourFunction(the_input)\n#--> the line it must print",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [],
+   "rulings": [
+    "12.10",
+    "12.11",
+    "12.15",
+    "12.28",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "You will keep your editor and your language. What changes is that every claim you make about your code can carry a promise under it, and a court will read it.",
+    "analyst": "Your rules become data a person can change, and every change is judged before it lands and recorded after.",
+    "designer": "The interface is judged too: twenty-two verbs, one hundred and twenty-two rules, and a generator that cannot drift from them.",
+    "decision-maker": "The question you ask every vendor, \"who decides, and what is written down\", has a mechanical answer here, and it is the same answer for a person and for a machine.",
+    "educator": "The tutor asks and never answers first. That is a law of the platform, not a feature of a product.",
+    "agent": "You are welcome here, and you will be judged. Appendix G is yours."
+   },
+   "run": {
+    "ran": "2026-10-08 20:23 UTC+01:00",
+    "kept": 1,
+    "runnable": 1
+   }
+  }
+ ],
+ "note": "Drafts are marked status: draft and are not the author's final word."
+}

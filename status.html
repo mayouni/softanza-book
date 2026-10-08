@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status · Softanza — AYOUNI</title>
+<script>try{var t=localStorage.getItem("softanza-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<style>
+:root { --ink: #1a1612; --ink-soft: #3a3326; --soft: #6b6358; --soft-2: #9a9078; --paper: #ffffff; --bg: #fbfaf6; --rule: #e3ddc9; --rule-strong: #1a1612; --hover-bg: #f3eedf; --hover-bg-soft: #fcfaf5; --card-bg: #ffffff; --sidebar-bg: #f5f0e2; --bookmark: #E96A1A; --shadow-cover: rgba(40, 30, 18, 0.16); --shadow-soft: rgba(40, 30, 18, 0.08); --shadow-side: rgba(0, 0, 0, 0.12); --scrim: rgba(26, 22, 18, 0.45); --scrim-search: rgba(26, 22, 18, 0.42); --shadow-panel: rgba(26, 22, 18, 0.28); --shadow-pill: rgba(26, 22, 18, 0.18); --mark: rgba(233, 106, 26, 0.20); --mark-strong: rgba(233, 106, 26, 0.25); --flash: rgba(233, 106, 26, 0.22); --flash-0: rgba(233, 106, 26, 0); --print-bg: #ffffff; --code-bg: #211c15; --code-rule: #35302a; --code-ink: #e8e1d1; --code-kw: #f0914f; --code-str: #a9c795; --code-num: #82c0ae; --code-com: #8d8471; --code-promise: #d8c3a5; --code-label: #a39a88; --ok: #2f6b3f; --ok-bg: #e8f0e6; --bad: #a3392b; --bad-bg: #f6e5e0; --neutral: #5d564b; --neutral-bg: #eee9dc; --designed: #2f5d7c; --designed-bg: #e3ecf2; --decision-bg: #f3eee2; --cover-bg: #1a1612; --cover-ink: #fbfaf6; --cover-soft: #bdb4a2; --cover-accent: #E96A1A; }
+:root[data-theme="dark"] { --ink: #ece6da; --ink-soft: #cfc6b4; --soft: #a39a88; --soft-2: #7d7565; --paper: #1d1a16; --bg: #14120f; --rule: #3a342b; --rule-strong: #ece6da; --hover-bg: #2a251e; --hover-bg-soft: #221e19; --card-bg: #1d1a16; --sidebar-bg: #191612; --bookmark: #ef7a2e; --shadow-cover: rgba(0, 0, 0, 0.55); --shadow-soft: rgba(0, 0, 0, 0.35); --shadow-side: rgba(0, 0, 0, 0.5); --scrim: rgba(0, 0, 0, 0.6); --scrim-search: rgba(0, 0, 0, 0.58); --shadow-panel: rgba(0, 0, 0, 0.6); --shadow-pill: rgba(0, 0, 0, 0.5); --mark: rgba(239, 122, 46, 0.28); --mark-strong: rgba(239, 122, 46, 0.34); --flash: rgba(239, 122, 46, 0.26); --flash-0: rgba(239, 122, 46, 0); --print-bg: #ffffff; --code-bg: #0f0d0b; --code-rule: #2e2923; --code-ink: #e8e1d1; --code-kw: #f0914f; --code-str: #a9c795; --code-num: #82c0ae; --code-com: #8d8471; --code-promise: #d8c3a5; --code-label: #8d8471; --ok: #8cc79a; --ok-bg: #1f2d22; --bad: #e99484; --bad-bg: #3a211c; --neutral: #b9b0a0; --neutral-bg: #2a261f; --designed: #8fb7d3; --designed-bg: #1d2a33; --decision-bg: #1f1b16; --cover-bg: #0f0d0b; --cover-ink: #f3eee3; --cover-soft: #a39a88; --cover-accent: #ef7a2e; color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #ece6da; --ink-soft: #cfc6b4; --soft: #a39a88; --soft-2: #7d7565; --paper: #1d1a16; --bg: #14120f; --rule: #3a342b; --rule-strong: #ece6da; --hover-bg: #2a251e; --hover-bg-soft: #221e19; --card-bg: #1d1a16; --sidebar-bg: #191612; --bookmark: #ef7a2e; --shadow-cover: rgba(0, 0, 0, 0.55); --shadow-soft: rgba(0, 0, 0, 0.35); --shadow-side: rgba(0, 0, 0, 0.5); --scrim: rgba(0, 0, 0, 0.6); --scrim-search: rgba(0, 0, 0, 0.58); --shadow-panel: rgba(0, 0, 0, 0.6); --shadow-pill: rgba(0, 0, 0, 0.5); --mark: rgba(239, 122, 46, 0.28); --mark-strong: rgba(239, 122, 46, 0.34); --flash: rgba(239, 122, 46, 0.26); --flash-0: rgba(239, 122, 46, 0); --print-bg: #ffffff; --code-bg: #0f0d0b; --code-rule: #2e2923; --code-ink: #e8e1d1; --code-kw: #f0914f; --code-str: #a9c795; --code-num: #82c0ae; --code-com: #8d8471; --code-promise: #d8c3a5; --code-label: #8d8471; --ok: #8cc79a; --ok-bg: #1f2d22; --bad: #e99484; --bad-bg: #3a211c; --neutral: #b9b0a0; --neutral-bg: #2a261f; --designed: #8fb7d3; --designed-bg: #1d2a33; --decision-bg: #1f1b16; --cover-bg: #0f0d0b; --cover-ink: #f3eee3; --cover-soft: #a39a88; --cover-accent: #ef7a2e; color-scheme: dark; } }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--ink); margin: 0; padding: 32px 16px 64px; }
+main { max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 6px; }
+p.meta { color: var(--soft); font-size: 13px; line-height: 1.6; margin: 0 0 4px; }
+a { color: var(--ink); }
+.wrap { overflow-x: auto; margin-top: 22px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { border-bottom: 1px solid var(--rule); padding: 7px 9px; text-align: left; vertical-align: top; }
+th { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--soft); }
+tr.absent td { color: var(--soft-2); }
+td.num { font-variant-numeric: tabular-nums; }
+.bad, b.bad { color: var(--bad); }
+span.ok, span.no { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; margin: 1px 2px 1px 0; }
+span.ok { color: var(--ok); background: var(--ok-bg); }
+span.no { color: var(--neutral); background: var(--neutral-bg); }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 12px; }
+</style></head><body><main>
+<p class="meta"><a href="en/index.html">← Softanza</a></p>
+<h1>Status of the book</h1>
+<p class="meta">Built 2026-10-08 20:23 UTC+01:00. Blocks run 2026-10-08 20:23 UTC+01:00 inside the library at commit b9d5cd1e4 (ringpp/migrate-rule-a, committed 2026-10-08 19:46:35 +0100).</p>
+<p class="meta">Engine binaries: 92 copied from D:/GitHub/stzlib/libraries/stzlib/engine/zig-out/bin, newest built 2026-10-03 19:46 UTC+01:00; not pinned to the commit.</p>
+<p class="meta">Guards read 2026-10-08 20:23 UTC+01:00. A chapter is done when its code runs, its guards resolve, its French exists, and the author has read it: 0 done.</p>
+<div class="wrap"><table>
+<thead><tr><th>#</th><th>Chapter</th><th>Spine</th><th>Status</th><th>Run</th><th>Guards · assertions</th><th>Words</th><th>FR</th><th>Done</th></tr></thead>
+<tbody>
+<tr><td></td><td><a href="en/index.html#preface">Preface</a></td><td>●</td><td>missing</td><td class="">no code</td><td></td><td class="num">39</td><td>no</td><td> <span class="no">runs</span> <span class="ok">guards</span> <span class="no">FR</span> <span class="no">read</span></td></tr>
+<tr><td>1</td><td><a href="en/index.html#ch1-change-arrives-faster-than-trust">Change arrives faster than trust</a></td><td>●</td><td>draft</td><td class="">1 of 1 kept · 1 exercise</td><td><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/service_registry_narrated.ring"><code>service_registry_narrated</code></a> 51<br><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/agentic/safeworld_narrated.ring"><code>safeworld_narrated</code></a> 76<br><a href="https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring"><code>governance_crossing_narrated</code></a> 31</td><td class="num">2191</td><td>no</td><td> <span class="ok">runs</span> <span class="ok">guards</span> <span class="no">FR</span> <span class="no">read</span></td></tr>
+<tr class="absent"><td>2</td><td>The software maker</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>3</td><td>The method, from first principles</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>4</td><td>The platform in one picture</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>5</td><td>Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>6</td><td>The mental model, and the metaphors</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>7</td><td>The writing style, and the seven goals</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>8</td><td>Functions as linguistic expressions, and scope</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>9</td><td>Patterns of thought: the Softanzuter, Reaxis and the engines</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>10</td><td>Programming becomes refinement</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>11</td><td>Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>12</td><td>A language, declared</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>13</td><td>Natural, and executable: two directions, one discipline</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>14</td><td>Knowledge programming</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>15</td><td>Pattern languages</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>16</td><td>Seven languages, one door</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>17</td><td>Law: programmatic by default, the model last, admission over generation</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>18</td><td>The five registers, and conversations that ask</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>19</td><td>The domain language model</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>20</td><td>Agents that cannot hurt you</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>21</td><td>The court: promises, perception, security and performance</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>22</td><td>Compared, honestly</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>23</td><td>A world, a constellation, a platform, and the architect</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>24</td><td>Rehearse, then commit</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>25</td><td>Your users keep their medium</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>26</td><td>The environment</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>27</td><td>The engine beneath: three layers, one engine, Haro</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>28</td><td>A restaurant in Lyon</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>29</td><td>A bank in Niamey</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>30</td><td>An organisation in the field</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>31</td><td>What the projects did not prove</td><td></td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>32</td><td>Many minds on one body of work</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="absent"><td>33</td><td>The one line still owed</td><td>●</td><td>not drafted</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+</main></body></html>
