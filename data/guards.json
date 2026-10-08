@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:11 UTC+01:00",
+ "read": "2026-10-08 22:19 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -302,6 +302,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/agentic/ownagentstack_narrated.ring",
    "also_found": []
   },
+  "service_delivery_narrated": {
+   "exists": true,
+   "path": "base/test/system/service_delivery_narrated.ring",
+   "assertions": 60,
+   "by_helper": {
+    "Then": 60
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring",
+   "also_found": []
+  },
+  "payments_port_narrated": {
+   "exists": true,
+   "path": "base/test/system/payments_port_narrated.ring",
+   "assertions": 49,
+   "by_helper": {
+    "Then": 49
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/payments_port_narrated.ring",
+   "also_found": []
+  },
+  "judgment_narrated": {
+   "exists": true,
+   "path": "base/test/perf/judgment_narrated.ring",
+   "assertions": 41,
+   "by_helper": {
+    "chk": 41
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/judgment_narrated.ring",
+   "also_found": []
+  },
   "codegraph_narrated": {
    "exists": true,
    "path": "base/test/meta/codegraph_narrated.ring",
@@ -330,16 +360,6 @@
     "chk": 48
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring",
-   "also_found": []
-  },
-  "service_delivery_narrated": {
-   "exists": true,
-   "path": "base/test/system/service_delivery_narrated.ring",
-   "assertions": 60,
-   "by_helper": {
-    "Then": 60
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring",
    "also_found": []
   }
  },
@@ -391,6 +411,13 @@
    "agentgraph_narrated",
    "piagent_narrated",
    "ownagentstack_narrated"
+  ],
+  "en/28-a-restaurant-in-lyon": [
+   "06_stzsuperapp_narrated",
+   "service_delivery_narrated",
+   "payments_port_narrated",
+   "judgment_narrated",
+   "graphrule_object_narrated"
   ],
   "en/32-many-minds-on-one-body-of-work": [
    "coderule_narrated",

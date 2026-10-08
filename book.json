@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:11 UTC+01:00",
+ "built": "2026-10-08 22:19 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:17 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -215,13 +215,13 @@
    "doors": {
     "programmer": "You declare intent in a library that reads like a sentence, and an engine computes under every call. You stay the first audience.",
     "analyst": "You declare your organisation's entities, rules and flows in plain text, and the rules judge the model.",
-    "designer": "You declare a picture, a map or a screen as a program, and the rule of two gestures came from a real user.",
+    "designer": "You declare a picture, a map or a screen as a program, and the first rule of an interface can come from a real trade: for a restaurateur, the speed of ordering.",
     "decision-maker": "You declare your world, your governance, and what each actor may commit, and you own all of it, in plain text.",
     "educator": "You declare a course in your learners' language, and every exercise is checked by running.",
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:18 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -237,7 +237,7 @@
    "stage": {
     "built": "the court behind every block of this chapter, and the stage words the site prints on every product",
     "designed": "the register of rethought concepts as data, with a guard that fails when a concept has no proof",
-    "absent": "a page that shows every rethought concept with its proof; a guard for three of the paradigm engines"
+    "absent": "a page that shows every rethought concept with its proof; a test file for the paradigm engine of section merging"
    },
    "guards": [
     {
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:18 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:18 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:18 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -664,7 +664,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:09 UTC+01:00",
+    "ran": "2026-10-08 22:18 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -781,9 +781,111 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:10 UTC+01:00",
+    "ran": "2026-10-08 22:19 UTC+01:00",
     "kept": 8,
     "runnable": 8
+   }
+  },
+  {
+   "number": 28,
+   "id": "a-restaurant-in-lyon",
+   "title": "A restaurant in Lyon",
+   "part": 6,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the constellation of worlds with its bonds and norms; the payments sandbox and the delivery gate that refuses a fake; the speed budget declared and judged",
+    "designed": "the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; a speed expectation in the owner's own percentile; browser-side timing",
+    "absent": "the restaurant's live payment adapter; a measurement of the budget on a real mobile network; the platform on the Softanza engine"
+   },
+   "guards": [
+    {
+     "name": "06_stzsuperapp_narrated",
+     "exists": true,
+     "path": "base/test/app/06_stzsuperapp_narrated.ring",
+     "assertions": 21,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/app/06_stzsuperapp_narrated.ring"
+    },
+    {
+     "name": "service_delivery_narrated",
+     "exists": true,
+     "path": "base/test/system/service_delivery_narrated.ring",
+     "assertions": 60,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring"
+    },
+    {
+     "name": "payments_port_narrated",
+     "exists": true,
+     "path": "base/test/system/payments_port_narrated.ring",
+     "assertions": 49,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/payments_port_narrated.ring"
+    },
+    {
+     "name": "judgment_narrated",
+     "exists": true,
+     "path": "base/test/perf/judgment_narrated.ring",
+     "assertions": 41,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/judgment_narrated.ring"
+    },
+    {
+     "name": "graphrule_object_narrated",
+     "exists": true,
+     "path": "base/test/graph/graphrule_object_narrated.ring",
+     "assertions": 34,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/graphrule_object_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oRule = new stzGraphRule(\"the-lock\")\noRule.SetDomainQ(\"scope\")\noRule.WhenQ(\"kind\", \"equals\", \"world\")\noRule.WhenQ(\"admitted-by\", \"missing\", \"\")\noRule.ThenViolationQ(\"a world entered the cycle with no written admission\")\ng = new stzGraph(\"cycle-1\")\ng.AddNode(\"customer-phone\")\ng.SetNodeProperty(\"customer-phone\", \"kind\", \"world\")\ng.SetNodeProperty(\"customer-phone\", \"admitted-by\", \"the opening scope\")\ng.AddRule(oRule)\n? g.RulesAreSound()\n#--> 1\ng.AddNode(\"loyalty-club\")\ng.SetNodeProperty(\"loyalty-club\", \"kind\", \"world\")\ng.RulesReport()\n#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n#      [scope] 1 finding(s)\n#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\ng.SetNodeProperty(\"loyalty-club\", \"admitted-by\", \"a notebook entry, and one exit written\")\n? g.RulesAreSound()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oPay = new stzPaymentsSandbox()\noPay.DeclineTokenQ(\"tok_chargeback\")\n? oPay.Authorize(4200, \"tok_chargeback\")[:status]\n#--> declined\noPay.FailNextQ()\n? oPay.Authorize(4200, \"tok_visa\")[:status]\n#--> refused\naAuth = oPay.Authorize(4200, \"tok_visa\")\n? aAuth[:status]\n#--> authorized\noPay.Capture(aAuth[:id])\n? oPay.Capture(aAuth[:id])[:why]\n#--> this authorization was already captured",
+     "verdict": "kept"
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"shop\")\noReg.BindSandbox(:payments, new stzPaymentsSandbox())\noDel = new stzDelivery(\"shop\")\noDel.AddBackend(\"api\", \"linux\")\noDel.UseServicesQ(oReg)\noDel.NeedsServiceInQ(\"api\", [ :payments ])\noDel.DeployTo(StzDeploymentSiteQ(\"host1\"), \"api\")\noDel.SetActor( HumanActor(\"owner\") )\n? oDel.Deploy(:Production).WasCommitted()\n#--> 0\n? oDel.Log().EntriesOfLevel(:error)[1][:message]\n#--> REFUSED -- the external surface is not production-ready\n? oDel.WhyServicesNotReady()\n#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\noDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), \"payments_key\")\n? oDel.ServicesAreProductionReady()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oCon = new stzSuperApp(\"neighbourhood\")\noCon.AddWorld(\"customer\", StzAppQ(\"customer\"))\noCon.AddWorld(\"kitchen\", StzAppQ(\"kitchen\"))\noCon.AddWorld(\"supplier\", StzAppQ(\"supplier\"))\noCon.Bond(\"customer\", \"kitchen\", \"send-order\")\noCon.Bond(\"kitchen\", \"supplier\", \"order-produce\")\noCon.GovDeclareRisk(\"send-order\", 1)\noCon.GovDeclareRisk(\"order-produce\", 2)\noCon.GovGrant(\"customer\", \"send-order\")\noCon.GovGrant(\"kitchen\", \"order-produce\")\noCon.GovSetAuthority(\"customer\", :Delegated)\noCon.GovSetAuthority(\"kitchen\", :Delegated)\noCon.Retire(\"supplier\")\n? oCon.CallAcross(\"customer\", \"kitchen\", \"send-order\")\n#--> 1\n? oCon.CallAcross(\"kitchen\", \"supplier\", \"order-produce\")\n#--> 0\n? oCon.Why()\n#--> target world 'supplier' is not active.\noCon.Revive(\"supplier\")\n? oCon.CallAcross(\"kitchen\", \"supplier\", \"order-produce\")\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oMon = StzPerfMonitor(\"remote-control\")\noMon.NewTimer(\"first.display.ms\").Record(900)\noMon.NewTimer(\"tap.ms\").Record(40)\noMon.NewTimer(\"order.to.kitchen.ms\").Record(1800)\noSla = StzSla(\"speed-budget\")\noSla.ExpectP95(\"first.display.ms\").Under(1200)\noSla.ExpectP95(\"tap.ms\").Under(80)\noSla.ExpectP95(\"order.to.kitchen.ms\").Under(2500)\noSla.CheckAgainst(oMon)\noSla.Show()\n#--> SLA speed-budget -- 3 expectation(s), last check: MET.\n#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)\n#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)\n#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)\noMon.MetricQ(\"order.to.kitchen.ms\").Record(3100)\noSla.CheckAgainst(oMon)\noRep = new stzRuleReport(\"cycle-gate\")\noRep.Ingest(oSla.Findings())\n? oRep.IsSound()\n#--> 0\n? oSla.Findings()[1][:message]\n#--> p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)",
+     "verdict": "kept"
+    },
+    {
+     "code": "? YourGraph.RulesAreSound()\n#--> 1",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-perf-judgment-narration.md",
+    "stzApp-building-your-first-app-narration.md"
+   ],
+   "rulings": [
+    "12.15",
+    "12.19",
+    "12.25",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "You declare worlds and bonds and run a constellation in which a call to a world that is not yet active is refused with its reason. The restaurant's own code, however, is a web application.",
+    "analyst": "Rigour in numbers was the contract of the first application: a due date computed from the invoice date, a date required, a debt with no due date made visible.",
+    "designer": "Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. [AUTHOR: Who held the phone in the eleven iterations, the owner or you? The project's files say the real user, and they say you; the sentence needs one answer.]",
+    "decision-maker": "The owner accepted the Lock in writing, tightened the speed budget himself, and kept the gate on fixed fees. The library's mirror is a deployment that an entitled person may commit and that is still refused over a fake.",
+    "educator": "The record supports only a small thing: the first application taught its user by doing, with guides whose words leave no doubt. There is no educator in this story, and I say so.",
+    "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
+   },
+   "run": {
+    "ran": "2026-10-08 22:19 UTC+01:00",
+    "kept": 5,
+    "runnable": 5
    }
   },
   {
@@ -854,7 +956,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:10 UTC+01:00",
+    "ran": "2026-10-08 22:19 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -936,7 +1038,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:10 UTC+01:00",
+    "ran": "2026-10-08 22:19 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

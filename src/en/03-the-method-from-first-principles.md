@@ -10,7 +10,7 @@ guards: [modality_narrated, wisecoding_narrated, wisecoding_rich_narrated]
 stage:
   built: "the court behind every block of this chapter, and the stage words the site prints on every product"
   designed: "the register of rethought concepts as data, with a guard that fails when a concept has no proof"
-  absent: "a page that shows every rethought concept with its proof; a guard for three of the paradigm engines"
+  absent: "a page that shows every rethought concept with its proof; a test file for the paradigm engine of section merging"
 status: draft
 rulings: ["12.19", "12.22", "12.29", "12.30"]
 research: research/ch03.md
@@ -147,7 +147,7 @@ What is built: the court behind every block of this chapter, and the five stage 
 
 What is designed: the register of rethought concepts as data, one row per concept with its article, its code, its guard and its stage, and a guard that fails when a new concept arrives without a row. It is a specification today.
 
-What is absent: a page that shows the whole register with its proofs; a guard for three of the paradigm engines, adverbs, section merging and named variables, which have no test file at all; and a few rethinks that do not run as their article wrote them. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today; its friendlier quantifiers, some, most and few, draw at random, so they cannot carry a promise. The register is a reading, and a reading can miss a concept that lives in only one article.
+What is absent: a page that shows the whole register with its proofs; a test file for one of the paradigm engines, section merging, which has none of its own; and a few rethinks that do not run as their article wrote them. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today; its friendlier quantifiers, some, most and few, draw at random, so they cannot carry a promise. The register is a reading, and a reading can miss a concept that lives in only one article.
 
 ## 8. Six doors
 
