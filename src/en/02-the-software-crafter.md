@@ -129,9 +129,9 @@ oBad = StzAgentDeclarationQ(cLlm)
 
 Now the three crafters this book is for. They are not personas. They are people with documents, and Part VI tells each of them in full. Here, a page each.
 
-**A restaurateur in Lyon.** He owns a couscous restaurant, and with a few neighbours he wanted a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery. In July 2026 he reversed the order of the work, and the library's constellation of worlds was redrawn around his order. The first amendment closed on 4 August 2026, with one ergonomic rule: at most two gestures per action. The rules of the interface were forged by eleven iterations with him, phone in hand. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect. [AUTHOR: Chapter 1 says the first demonstration was made by the owner himself, on his own phone, over a messaging app. The record has the demonstration day, 15 August 2026, and his own measurements of 19 August. Who demonstrated what on the 15th?]
+**A restaurateur in Lyon.** He owns a couscous restaurant, and with a few neighbours he wanted a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery. On 4 July 2026 he answered a scoping report in his own words and reversed the order of the work: customer first, restaurateur next, supplier last. The project's architecture was redrawn as a constellation of worlds, using the library's design, and the first amendment closed on 4 August 2026. The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules, and in his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect. [AUTHOR: Chapter 1 says the first demonstration was made by the owner himself, on his own phone, over a messaging app. The record's checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line, and the measurements he took over a messaging app are those of 19 August. May the sentence in chapter 1 stay as written?]
 
-One of his needs became a law of the library: try payments before paying anyone for an account. A fake payments service is welcome while you rehearse, and refused when you go live:
+One of his needs is carried by a law of the library: try payments before paying anyone for an account. A fake payments service is welcome while you rehearse, and refused when you go live:
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
@@ -217,7 +217,7 @@ What is absent: the three crafters' platforms running on the Softanza engine. To
 
 **The analyst.** You declare your organisation's entities, rules and flows in plain text, and the rules judge the model.
 
-**The designer.** You declare a picture, a map or a screen as a program, and the rule of two gestures came from a real user.
+**The designer.** You declare a picture, a map or a screen as a program, and the first rule of an interface can come from a real trade: for a restaurateur, the speed of ordering.
 
 **The decision-maker.** You declare your world, your governance, and what each actor may commit, and you own all of it, in plain text.
 
