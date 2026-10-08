@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:22 UTC+01:00",
+ "built": "2026-10-08 22:25 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:20 UTC+01:00",
+    "ran": "2026-10-08 22:24 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:20 UTC+01:00",
+    "ran": "2026-10-08 22:24 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:24 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:24 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:24 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,9 +638,105 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 7,
     "runnable": 7
+   }
+  },
+  {
+   "number": 10,
+   "id": "programming-becomes-refinement",
+   "title": "Programming becomes refinement",
+   "part": 2,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining",
+    "designed": "the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro",
+    "absent": "a saved history: the file keeps the source and nothing of the timeline"
+   },
+   "guards": [
+    {
+     "name": "refinablecode_narrated",
+     "exists": true,
+     "path": "base/test/refine/refinablecode_narrated.ring",
+     "assertions": 17,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/refinablecode_narrated.ring"
+    },
+    {
+     "name": "refine_deepening_narrated",
+     "exists": true,
+     "path": "base/test/refine/refine_deepening_narrated.ring",
+     "assertions": 24,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/refine_deepening_narrated.ring"
+    },
+    {
+     "name": "gate_deepening_narrated",
+     "exists": true,
+     "path": "base/test/refine/gate_deepening_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/gate_deepening_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "cSrc = 'vat_rate = <R:PARAM name=\"vat\" value=\"0.20\" min=\"0\" max=\"0.25\">' + nl +\n       'sort_by  = <R:ALGO name=\"sort\" value=\"quick\" options=\"quick|merge|heap\">'\no = new stzRefinableCode(cSrc)\n? o.NumberOfPoints()\n#--> 2\n? @@( o.RefinementPoints() )\n#--> [ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\n? o.KindOf(\"vat\")\n#--> param",
+     "verdict": "kept"
+    },
+    {
+     "code": "r = o.Refine(\"vat\").To(\"0.22\")\n? r[:admitted]\n#--> 1\n? o.ValueOf(\"vat\")\n#--> 0.22\n? o.NumberOfSteps()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "r2 = o.Refine(\"vat\").To(\"0.99\")\n? r2[:admitted]\n#--> 0\n? r2[:why]\n#--> constraint: 0.99 above max 0.25\n? o.ValueOf(\"vat\")\n#--> 0.22\n? o.Refine(\"sort\").To(\"bubble\")[:why]\n#--> constraint: 'bubble' not in options quick|merge|heap\n? o.Refine(\"ghost\").To(\"1\")[:why]\n#--> structural: no refinement point 'ghost'\n? o.NumberOfSteps()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "cPrice = 'price = <R:PARAM name=\"vat\" value=\"0.20\" min=\"0\" max=\"0.30\"> * <R:PARAM name=\"margin\" value=\"1.1\" min=\"1\" max=\"2\">' + nl +\n         'floor = <R:PARAM name=\"floor\" value=\"0.10\" min=\"0\" max=\"0.30\">'\noc = new stzRefinableCode(cPrice)\naC = oc.Cascade(\"vat\")\n? aC[:lines][1]\n#--> 1\n? @@( aC[:alsoTouches] )\n#--> [ \"margin\" ]\n? oc.Cascade(\"floor\")[:lines][1]\n#--> 2\n? len(oc.Cascade(\"floor\")[:alsoTouches])\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "cCls = 'class Tariff' + nl +\n       '\tdef Rate()' + nl +\n       '\t\treturn 0.20' + nl +\n       'class Invoice from Tariff' + nl +\n       '\tdef Total()' + nl +\n       '\t\treturn 1' + nl +\n       'class Receipt from Invoice' + nl +\n       '\tdef Print()' + nl +\n       '\t\treturn 1' + nl +\n       'class Quote from Tariff' + nl +\n       '\tdef Rate()' + nl +\n       '\t\treturn 0.18' + nl\ng0 = new stzRingCodeGraph(\"\")\ng0.ScanSource(cCls, \"world.ring\")\ng0.BuildGraph()\n? @@( g0.Cascade(\"Tariff\")[:descendants] )\n#--> [ \"Invoice\", \"Quote\", \"Receipt\" ]\n? g0.Cascade(\"Tariff\")[:blastRadius]\n#--> 3\n? @@( g0.ImpactOf(\"Rate\")[:inheritedBy] )\n#--> [ \"Invoice\", \"Receipt\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "d = new stzRefinableCode(cPrice)\nd.DeclareDerivation(\"vat-above-floor\",\n\tfunc oCode { return ring_number(oCode.ValueOf(\"vat\")) >= ring_number(oCode.ValueOf(\"floor\")) },\n\t\"vat must not drop below floor\")\n? d.Refine(\"vat\").To(\"0.30\")[:admitted]\n#--> 1\nr3 = d.Refine(\"vat\").To(\"0.05\")\n? r3[:admitted]\n#--> 0\n? r3[:why]\n#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n? d.ValueOf(\"vat\")\n#--> 0.30",
+     "verdict": "kept"
+    },
+    {
+     "code": "d.TrustFloor(\"vat\", :trusted)\nr4 = d.Refine(\"vat\").As(:llm).To(\"0.25\")\n? r4[:admitted]\n#--> 0\n? r4[:why]\n#--> trust: posture :llm below the required floor for 'vat'\n? d.ValueOf(\"vat\")\n#--> 0.30\n? d.Refine(\"vat\").As(:trusted).To(\"0.25\")[:admitted]\n#--> 1\n? d.PostureOf(d.NumberOfSteps())\n#--> trusted",
+     "verdict": "kept"
+    },
+    {
+     "code": "gv = new stzRefinableCode(cPrice)\ngv.SetGovernedBy(new stzGovernance(\"release-ops\")).SetActor(\"release-bot\")\ngv.SetRiskFor(\"vat\", 3).SetAllowRefine(\"vat\").SetAuthorityLevel(:Delegated)\nr5 = gv.Refine(\"vat\").To(\"0.22\")\n? r5[:admitted]\n#--> 0\n? r5[:why]\n#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n? gv.ValueOf(\"vat\")\n#--> 0.20\ngv.SetAuthorityLevel(:Autonomous)\n? gv.Refine(\"vat\").To(\"0.22\")[:admitted]\n#--> 1\n? gv.GovernanceQ().NumberOfDecisions()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "t = new stzRefinableCode(cPrice)\nt.Refine(\"vat\").To(\"0.21\")\nt.Refine(\"vat\").To(\"0.22\")\nt.Checkpoint(\"reviewed\")\nt.Refine(\"vat\").To(\"0.28\")\n? t.ValueOf(\"vat\")\n#--> 0.28\nt.RevertToCheckpoint(\"reviewed\")\n? t.ValueOf(\"vat\")\n#--> 0.22\n? t.NumberOfSteps()\n#--> 2\nt.RevertTo(0)\n? t.ValueOf(\"vat\")\n#--> 0.20\n? t.CanRevert()\n#--> 0\nt.Redo()\n? t.ValueOf(\"vat\")\n#--> 0.21",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stzpolycode-refinement-centered_programming.md"
+   ],
+   "rulings": [
+    "12.19",
+    "12.23",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "Declare the places that may change, and propose changes to them as typed proposals. A refusal names its stage.",
+    "analyst": "The rule that spans several points is yours to declare, and the gate judges it on the state the change would produce.",
+    "designer": "The cascade is what you read instead of the diff: which line, which points on it, which classes inherit.",
+    "decision-maker": "Who may turn which knob is a permission and an authority against a risk tier, and the decision is recorded with its authority at the time.",
+    "educator": "Step back one, rewind to a named checkpoint, rewind to zero, go forward again. A learner can try without fear because every step keeps its prior value.",
+    "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
+   },
+   "run": {
+    "ran": "2026-10-08 22:25 UTC+01:00",
+    "kept": 9,
+    "runnable": 9
    }
   },
   {
@@ -779,7 +875,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -896,7 +992,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -998,7 +1094,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1071,7 +1167,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1153,7 +1249,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:21 UTC+01:00",
+    "ran": "2026-10-08 22:25 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

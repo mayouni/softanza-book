@@ -46,7 +46,8 @@ def run_chapter(lib, name, blocks):
     # the max entry loads base first, then the max layer, as the site's narration runner does
     main_lines, tail = ['load "../../../max/stzMax.ring"', ""], []
     for i, code, _ in runnable:
-        cut = next((j for j, l in enumerate(code) if re.match(r"(?i)\s*(func|class)\s+\w", l)), None)
+        # a definition starts at column 0; an anonymous function inside a call may sit on an indented line
+        cut = next((j for j, l in enumerate(code) if re.match(r"(?i)(func|class)\s+\w", l)), None)
         body, defs = (code[:cut], code[cut:]) if cut is not None else (code, [])
         tail += defs
         main_lines += [f'? "@@BEGIN {i}"', "try"] + body + ["catch", '    ? "@@ERROR " + cCatchError', "done", f'? "@@END {i}"', ""]

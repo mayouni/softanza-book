@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:22 UTC+01:00",
+ "read": "2026-10-08 22:25 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -252,6 +252,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring",
    "also_found": []
   },
+  "refinablecode_narrated": {
+   "exists": true,
+   "path": "base/test/refine/refinablecode_narrated.ring",
+   "assertions": 17,
+   "by_helper": {
+    "chk": 17
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/refinablecode_narrated.ring",
+   "also_found": []
+  },
+  "refine_deepening_narrated": {
+   "exists": true,
+   "path": "base/test/refine/refine_deepening_narrated.ring",
+   "assertions": 24,
+   "by_helper": {
+    "chk": 24
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/refine_deepening_narrated.ring",
+   "also_found": []
+  },
+  "gate_deepening_narrated": {
+   "exists": true,
+   "path": "base/test/refine/gate_deepening_narrated.ring",
+   "assertions": 19,
+   "by_helper": {
+    "Then": 19
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/refine/gate_deepening_narrated.ring",
+   "also_found": []
+  },
   "multilingual_pack_narrated": {
    "exists": true,
    "path": "base/test/natural/multilingual_pack_narrated.ring",
@@ -462,6 +492,11 @@
    "621_perform",
    "483_w_and_wf_forms_in_conditional_code",
    "495_walking_until_and_until_before"
+  ],
+  "en/10-programming-becomes-refinement": [
+   "refinablecode_narrated",
+   "refine_deepening_narrated",
+   "gate_deepening_narrated"
   ],
   "en/11-law-a-language-is-declared-and-closed": [
    "multilingual_pack_narrated",
