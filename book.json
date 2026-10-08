@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:40 UTC+01:00",
+ "built": "2026-10-08 22:43 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:38 UTC+01:00",
+    "ran": "2026-10-08 22:41 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:38 UTC+01:00",
+    "ran": "2026-10-08 22:41 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:38 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:39 UTC+01:00",
+    "ran": "2026-10-08 22:42 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,7 +1236,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1339,7 +1339,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1441,7 +1441,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -1547,9 +1547,118 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 6,
     "runnable": 6
+   }
+  },
+  {
+   "number": 30,
+   "id": "an-organisation-in-the-field",
+   "title": "An organisation in the field",
+   "part": 6,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "a rule written as data on a model, changed and judged again; the governor that names a rule that governs nothing; a refusal that reaches a person with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for",
+    "designed": "the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone",
+    "absent": "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
+   },
+   "guards": [
+    {
+     "name": "graphruleset_narrated",
+     "exists": true,
+     "path": "base/test/graph/graphruleset_narrated.ring",
+     "assertions": 25,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/graphruleset_narrated.ring"
+    },
+    {
+     "name": "gg_rule_governance",
+     "exists": true,
+     "path": "base/test/graph/gg_rule_governance.ring",
+     "assertions": 29,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/gg_rule_governance.ring"
+    },
+    {
+     "name": "wisecoding_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_narrated.ring",
+     "assertions": 13,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+    },
+    {
+     "name": "governance_narrated",
+     "exists": true,
+     "path": "base/test/governance/governance_narrated.ring",
+     "assertions": 19,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_narrated.ring"
+    },
+    {
+     "name": "governance_lineage_narrated",
+     "exists": true,
+     "path": "base/test/governance/governance_lineage_narrated.ring",
+     "assertions": 37,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_lineage_narrated.ring"
+    },
+    {
+     "name": "01_platform_narrated",
+     "exists": true,
+     "path": "base/test/platform/01_platform_narrated.ring",
+     "assertions": 31,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/platform/01_platform_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oG = new stzGraph(\"advances\")\noG.AddNodeXTT(\"a0\", \"A0\", [ :amount = 120, :approvals = 1 ])\noG.AddNodeXTT(\"a1\", \"A1\", [ :amount = 250, :approvals = 1 ])\noG.AddNodeXTT(\"a2\", \"A2\", [ :amount = 600, :approvals = 1 ])\noG.AddNodeXTT(\"a3\", \"A3\", [ :amount = 900, :approvals = 2 ])\noRule = new stzGraphRule(\"second-approval\")\noRule.SetDomainQ(\"advances\")\noRule.SetMessageQ(\"above the ceiling an advance needs two approvals\")\noRule.WhenQ(\"amount\", \"greaterthan\", 500)\noRule.ThenQ(\"approvals\", \"greaterthan\", 1)\noRule.ThenViolationQ(\"two approvals needed\")\noG.AddRule(oRule)\noG.RulesReport()\n#--> Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n#      [advances] 1 finding(s)\n#        ERROR second-approval @ a2 -- two approvals needed\n? len(oRule.SubjectsIn(oG))\n#--> 2",
+     "verdict": "kept"
+    },
+    {
+     "code": "oG.ClearAttachedRules()\noRule = new stzGraphRule(\"second-approval\")\noRule.SetDomainQ(\"advances\")\noRule.SetMessageQ(\"above the ceiling an advance needs two approvals\")\noRule.WhenQ(\"amount\", \"greaterthan\", 200)\noRule.ThenQ(\"approvals\", \"greaterthan\", 1)\noRule.ThenViolationQ(\"two approvals needed\")\noG.AddRule(oRule)\noG.RulesReport()\n#--> Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n#      [advances] 2 finding(s)\n#        ERROR second-approval @ a1 -- two approvals needed\n#        ERROR second-approval @ a2 -- two approvals needed\n? len(oRule.SubjectsIn(oG))\n#--> 3",
+     "verdict": "kept"
+    },
+    {
+     "code": "oTypo = new stzGraphRule(\"second-approval-typo\")\noTypo.SetMessageQ(\"above the ceiling an advance needs two approvals\")\noTypo.WhenQ(\"amont\", \"greaterthan\", 200)\noTypo.ThenQ(\"approvals\", \"greaterthan\", 1)\noTypo.ThenViolationQ(\"two approvals needed\")\n? len(oTypo.Check(oG))\n#--> 0\noWatch = StzRuleGovernance(\"hub\")\noWatch.AddRule(oTypo)\noWatch.AddCase(\"advances\", oG)\naF = oWatch.CheckRules()\n? aF[1][:rule]\n#--> scope_empty\n? aF[1][:message]\n#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\noWatch2 = StzRuleGovernance(\"hub\")\noWatch2.AddRule(oRule)\noWatch2.AddCase(\"advances\", oG)\n? len(oWatch2.CheckRules())\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"requests\")\noKB.AddConversationQ(\"review\").SetGoal(StzGoalQ().RequireOne(\"request-7\", \"approved-by\"))\n? oKB.AskIn(\"review\")\n#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\noKB.ConstrainRelation(\"approved-by\", :Unique)\noKB.KnowRelation(\"request-7\", \"approved-by\", \"approver-1\")\naR = oKB.ReplyIn(\"review\", \"approver-2\")\n? aR[:refused][1][2]\n#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\naCp = oKB.ConversationQ(\"review\").Checkpoints()\n? len(aCp)\n#--> 1\n? aCp[1][:attempted]\n#--> approver-2\n? aCp[1][:why]\n#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique",
+     "verdict": "kept"
+    },
+    {
+     "code": "oGov = new stzGovernance(\"hub\")\noGov.DeclareRisk(\"prepare-file\", 1)\noGov.DeclareRisk(\"release-advance\", 3)\noGov.GrantPermission(\"assistant\", \"prepare-file\")\noGov.GrantPermission(\"assistant\", \"release-advance\")\noGov.SetAuthority(\"assistant\", :Advisory)\noGov.GrantPermission(\"approver-1\", \"release-advance\")\noGov.SetAuthority(\"approver-1\", :Autonomous)\n? oGov.MayProceed(\"assistant\", \"prepare-file\")\n#--> 1\n? oGov.MayProceed(\"assistant\", \"release-advance\")\n#--> 0\n? oGov.Why()\n#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n? oGov.MayProceed(\"approver-1\", \"release-advance\")\n#--> 1\n? oGov.Why()\n#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3",
+     "verdict": "kept"
+    },
+    {
+     "code": "nAt = 1785700000000\noGov.RecordDecisionAt(\"c-1\", \"ceiling raised for the harvest season\", \"approver-1\", \"release-advance\", nAt)\noGov.RecordDecisionAt(\"c-1\", \"ceiling restored, the season is over\", \"approver-1\", \"release-advance\", nAt + 3600000)\n? oGov.LineageOf(\"c-1\")[:rationale]\n#--> ceiling restored, the season is over\n? len(oGov.LineageHistoryOf(\"c-1\"))\n#--> 2\n? oGov.LineageHistoryOf(\"c-1\")[1][:rationale]\n#--> ceiling raised for the harvest season\n? oGov.LineageOf(\"c-1\")[:authorityAtTime]\n#--> autonomous",
+     "verdict": "kept"
+    },
+    {
+     "code": "oApp = StzAppQ(\"field-visits\")\noPlat = StzPlatformQ(\"field\")\noPlat.SetWorld(oApp)\noRegime = new stzGovernance(\"field-regime\")\noRegime.GrantPermission(\"field-visits\", \"use-offline\")\noRegime.SetAuthority(\"field-visits\", :Advisory)\noPlat.SetGovernedBy(oRegime)\n? oPlat.Granted(:offline)\n#--> 0\n? oPlat.Why()\n#--> capability 'offline' was never requested via AddCapabilityQ().\noPlat.AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])\n? oPlat.Granted(:offline)\n#--> 1\n? oPlat.Why()\n#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-rules-as-graph-rules-narration.md",
+    "stz-governance-lineage-narration.md"
+   ],
+   "rulings": [
+    "12.13",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "A rule is an object with a comparison and a requirement, attached to a model, and a governor tells you when it governs nothing.",
+    "analyst": "You change a rule's values, not its program, and the model is judged again with the new scope.",
+    "designer": "A refusal keeps its context for the person who will read it.",
+    "decision-maker": "Authority is not permission: ask which level covers which risk, and read the lineage of a decision.",
+    "educator": "An organisation's rule can be taught as a sentence with a number in it.",
+    "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
+   },
+   "run": {
+    "ran": "2026-10-08 22:43 UTC+01:00",
+    "kept": 7,
+    "runnable": 7
    }
   },
   {
@@ -1620,7 +1729,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1702,7 +1811,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:40 UTC+01:00",
+    "ran": "2026-10-08 22:43 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

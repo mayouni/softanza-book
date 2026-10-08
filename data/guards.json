@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:40 UTC+01:00",
+ "read": "2026-10-08 22:43 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -572,6 +572,47 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/36_import_from_stzorg.ring",
    "also_found": []
   },
+  "graphruleset_narrated": {
+   "exists": true,
+   "path": "base/test/graph/graphruleset_narrated.ring",
+   "assertions": 25,
+   "by_helper": {
+    "Then": 25
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/graphruleset_narrated.ring",
+   "also_found": []
+  },
+  "gg_rule_governance": {
+   "exists": true,
+   "path": "base/test/graph/gg_rule_governance.ring",
+   "assertions": 29,
+   "by_helper": {
+    "chkeq": 18,
+    "chk": 11
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/gg_rule_governance.ring",
+   "also_found": []
+  },
+  "governance_narrated": {
+   "exists": true,
+   "path": "base/test/governance/governance_narrated.ring",
+   "assertions": 19,
+   "by_helper": {
+    "chk": 19
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_narrated.ring",
+   "also_found": []
+  },
+  "governance_lineage_narrated": {
+   "exists": true,
+   "path": "base/test/governance/governance_lineage_narrated.ring",
+   "assertions": 37,
+   "by_helper": {
+    "chk": 37
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/governance/governance_lineage_narrated.ring",
+   "also_found": []
+  },
   "codegraph_narrated": {
    "exists": true,
    "path": "base/test/meta/codegraph_narrated.ring",
@@ -701,6 +742,14 @@
    "13_segregation_of_duties",
    "rulereport_narrated",
    "36_import_from_stzorg"
+  ],
+  "en/30-an-organisation-in-the-field": [
+   "graphruleset_narrated",
+   "gg_rule_governance",
+   "wisecoding_narrated",
+   "governance_narrated",
+   "governance_lineage_narrated",
+   "01_platform_narrated"
   ],
   "en/32-many-minds-on-one-body-of-work": [
    "coderule_narrated",

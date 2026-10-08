@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:38 UTC+01:00",
+  "date": "2026-10-08 22:41 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:38 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 22:41 UTC+01:00",
+   "seconds": 5.7
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:38 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 22:41 UTC+01:00",
+   "seconds": 5.4
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:38 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 6.2
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 5.7
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 6.1
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 5.8
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -526,8 +526,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 14.1
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 13.2
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -600,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 7.2
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -682,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 5.2
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -780,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:39 UTC+01:00",
-   "seconds": 25.6
+   "ran": "2026-10-08 22:42 UTC+01:00",
+   "seconds": 23.6
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -854,8 +854,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 5.6
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -924,8 +924,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 5.4
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -981,8 +981,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 5.9
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1039,8 +1039,74 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 4.7
+  },
+  "en/30-an-organisation-in-the-field": {
+   "id": "an-organisation-in-the-field",
+   "blocks": [
+    {
+     "hash": "5bb1b33ae1dd",
+     "promise": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 1 finding(s)\nERROR second-approval @ a2 -- two approvals needed\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 1 finding(s)\n    ERROR second-approval @ a2 -- two approvals needed\n2"
+    },
+    {
+     "hash": "de05cb034536",
+     "promise": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 2 finding(s)\nERROR second-approval @ a1 -- two approvals needed\nERROR second-approval @ a2 -- two approvals needed\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 2 finding(s)\n    ERROR second-approval @ a1 -- two approvals needed\n    ERROR second-approval @ a2 -- two approvals needed\n3"
+    },
+    {
+     "hash": "561f5196af5b",
+     "promise": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0"
+    },
+    {
+     "hash": "d2f3a9773207",
+     "promise": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique"
+    },
+    {
+     "hash": "a0453c091cc6",
+     "promise": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3"
+    },
+    {
+     "hash": "a72bd3f99758",
+     "promise": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous"
+    },
+    {
+     "hash": "c210ea6a699c",
+     "promise": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 6.2
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1073,8 +1139,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 5.6
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 5.2
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1114,8 +1180,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:40 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-08 22:43 UTC+01:00",
+   "seconds": 5.3
   }
  }
 }
