@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 23:27 UTC+01:00",
+ "read": "2026-10-08 23:50 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -502,6 +502,46 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring",
    "also_found": []
   },
+  "00_numbrex_narrated": {
+   "exists": true,
+   "path": "base/test/numbrex/00_numbrex_narrated.ring",
+   "assertions": 15,
+   "by_helper": {
+    "Then": 15
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/numbrex/00_numbrex_narrated.ring",
+   "also_found": []
+  },
+  "tablex_narrated": {
+   "exists": true,
+   "path": "base/test/regex/tablex_narrated.ring",
+   "assertions": 95,
+   "by_helper": {
+    "Then": 95
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/tablex_narrated.ring",
+   "also_found": []
+  },
+  "00_matrex_narrated": {
+   "exists": true,
+   "path": "base/test/matrex/00_matrex_narrated.ring",
+   "assertions": 8,
+   "by_helper": {
+    "Then": 8
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/matrex/00_matrex_narrated.ring",
+   "also_found": []
+  },
+  "00_graphex_narrated": {
+   "exists": true,
+   "path": "base/test/graphex/00_graphex_narrated.ring",
+   "assertions": 27,
+   "by_helper": {
+    "Then": 27
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graphex/00_graphex_narrated.ring",
+   "also_found": []
+  },
   "dlm_narrated": {
    "exists": true,
    "path": "base/test/learning/dlm_narrated.ring",
@@ -944,6 +984,13 @@
    "structuredoutput_narrated",
    "schema_grammar_narrated",
    "constrained_decoding_narrated"
+  ],
+  "en/15-pattern-languages": [
+   "00_regex_narrated",
+   "00_numbrex_narrated",
+   "tablex_narrated",
+   "00_matrex_narrated",
+   "00_graphex_narrated"
   ],
   "en/17-law-programmatic-by-default": [
    "dlm_narrated",

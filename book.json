@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 23:27 UTC+01:00",
+ "built": "2026-10-08 23:50 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 23:23 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 23:23 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 23:23 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:48 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 23:24 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,9 +1271,143 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 11,
     "runnable": 11
+   }
+  },
+  {
+   "number": 15,
+   "id": "pattern-languages",
+   "title": "Pattern languages",
+   "part": 3,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens)",
+    "designed": "one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples",
+    "absent": "the refusal of a word the pattern language does not know, in three of the media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
+   },
+   "guards": [
+    {
+     "name": "00_regex_narrated",
+     "exists": true,
+     "path": "base/test/regex/00_regex_narrated.ring",
+     "assertions": 28,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/00_regex_narrated.ring"
+    },
+    {
+     "name": "00_numbrex_narrated",
+     "exists": true,
+     "path": "base/test/numbrex/00_numbrex_narrated.ring",
+     "assertions": 15,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/numbrex/00_numbrex_narrated.ring"
+    },
+    {
+     "name": "tablex_narrated",
+     "exists": true,
+     "path": "base/test/regex/tablex_narrated.ring",
+     "assertions": 95,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/tablex_narrated.ring"
+    },
+    {
+     "name": "00_matrex_narrated",
+     "exists": true,
+     "path": "base/test/matrex/00_matrex_narrated.ring",
+     "assertions": 8,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/matrex/00_matrex_narrated.ring"
+    },
+    {
+     "name": "00_graphex_narrated",
+     "exists": true,
+     "path": "base/test/graphex/00_graphex_narrated.ring",
+     "assertions": 27,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graphex/00_graphex_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "? rx(pat(:isoDate)).Match(\"2023-12-25\")\n#--> 1\n? rx(pat(:isoDate)).Match(\"25/12/2023\")\n#--> 0\n? rx(pat(:isoDate)).Explain()\n#--> Matches ISO 8601 date format (YYYY-MM-DD)\ntry\n\tpat(:banana)\ncatch\n\t? cCatchError\ndone\n#--> The pattern name you provided does not exist in stzRegexData file.",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzRegex(\"^\\d{3}-\\d{2}-\\d{4}$\")\n? o1.MatchAsYouType(\"123-45\")\n#--> 1\n? o1.MatchAsYouType(\"abc\")\n#--> 0\n? o1.IsPartialMatch(\"123-45\")\n#--> 1\n? o1.IsPartialMatch(\"123-45-6789\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Lx(\"[@N+, @S]\").Match([1, 2, 3, \"end\"])\n#--> 1\n? Lx(\"[@N1-3, @S]\").Match([1, 2, 3, 4, \"end\"])\n#--> 0\n? Lx(\"[@S, [@N+]]\").Match([\"tea\", [1, 2, 3]])\n#--> 1\n? Lx(\"[@S, [@N+]]\").Match([\"tea\", [\"x\"]])\n#--> 0\n? Lx(\"[@!N, @N]\").Match([\"a\", 1])\n#--> 1\n? Lx(\"[@!N, @N]\").Match([1, 1])\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Nx(\"{@Property(Even) & @Property(Prime)}\").Match(2)\n#--> 1\n? Nx(\"{@Property(Even) & @Property(Prime)}\").Match(4)\n#--> 0\n? Nx(\"{@Digit(:unique)+}\").Match(1234)\n#--> 1\n? Nx(\"{@Digit(:unique)+}\").Match(1223)\n#--> 0\n? Nx(\"{@Relation(Mod:5=0)}\").Match(10)\n#--> 1\n? @@( Nx(\"{@Property(Perfect)}\").MatchingNumbersBetween(1, 500) )\n#--> [ 6, 28, 496 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oT = new stzTable([\n\t[ :ID, :NAME, :AGE, :CITY ],\n\t[ 1, \"Ali\", 28, \"Niamey\" ],\n\t[ 2, \"Sara\", 32, \"Paris\" ],\n\t[ 3, \"Omar\", 41, \"Niamey\" ],\n\t[ 4, \"Awa\", 25, \"Dakar\" ]\n])\n? Tbx(\"{cols(4) & unique(id) & avgcol(age:>30)}\").Match(oT)\n#--> 1\n? Tbx(\"{cols(4) & unique(city)}\").Match(oT)\n#--> 0\n? Tbx(\"{@!unique(city)}\").Match(oT)\n#--> 1\n? Tbx(\"{sorted(id) & numeric(age) & alphabetic(name)}\").Match(oT)\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oA = new stzTablex(\"{cols(4)}\")\noB = new stzTablex(\"{rows(4)}\")\noAnd = oA.And_(oB)\n? oAnd.Pattern()\n#--> {cols(4) & rows(4)}\n? oAnd.Match(oT)\n#--> 1\n? oA.Not_().Pattern()\n#--> {@!cols(4)}\n? oA.Not_().Match(oT)\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Mx(\"{shape(square) & property(symmetric)}\").Match([ [1,2,3], [2,4,5], [3,5,6] ])\n#--> 1\n? Mx(\"{shape(square) & property(symmetric)}\").Match([ [1,2,3], [4,5,6], [7,8,9] ])\n#--> 0\n? Mx(\"{size(2x3)}\").Match([ [1,2,3], [4,5,6] ])\n#--> 1\n? Mx(\"{property(identity)}\").Match([ [1,0], [0,1] ])\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oTm = new stzTimex(\"{@Duration(1h..2h:15min)}\")\n? oTm.Match(new stzDuration(\"1 hour 30 minutes\"))\n#--> 1\n? oTm.Match(new stzDuration(\"1 hour 20 minutes\"))\n#--> 0\n? oTm.Match(new stzDuration(\"3 hours\"))\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "g = new stzGraph(\"Order\")\ng.AddNodeXT(:a, \"Placed\")\ng.AddNodeXT(:b, \"Cooking\")\ng.AddNodeXT(:c, \"Served\")\ng.AddEdgeXT(:a, :b, \"starts\")\ng.AddEdgeXT(:b, :c, \"finishes\")\n? (new stzGraphex(\"{@Node(placed) -> @Edge(starts) -> @Node(cooking)}\", g)).Match(g)\n#--> 1\n? (new stzGraphex(\"{@Node(served) -> @Node(placed)}\", g)).Match(g)\n#--> 0\n? (new stzGraphex(\"{@Node(placed) -> @!Node(refunded)}\", g)).Match(g)\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "? len( Lx(\"[@N, @S]\").Tokens() )\n#--> 2\n? Lx(\"[@N, @S]\").Tokens()[2][:type]\n#--> string\n? Nx(\"{@Property(Even) & @Property(Prime)}\").Tokens()[1][:type]\n#--> conjunction\n? len( Mx(\"{shape(square) & property(symmetric)}\").Tokens()[1][:conditions] )\n#--> 2",
+     "verdict": "kept"
+    },
+    {
+     "code": "oTl = new stzTimeLine(\"2025-10-22\", \"2025-10-22\")\noTl.AddInstant(\"Meeting\", \"2025-10-22 09:00:00\")\noTl.AddSpan(\"Break\", \"2025-10-22 10:00:00\", \"2025-10-22 10:15:00\")\noTl.AddInstant(\"Lunch\", \"2025-10-22 12:00:00\")\no1 = new stzTimex(\"{@Event(Meeting) -> @Duration* -> @Event(Break)}\")\n? o1.MatchPartial(oTl)\n#--> 0\no2 = new stzTimex(\"{@Event(Lunch)}\")\n? o2.MatchPartial(oTl)\n#--> 0\n? @@( o2.Tokens()[1][:label] )\n#--> \"Lunch)\"",
+     "verdict": "kept"
+    },
+    {
+     "code": "? (new stzGraphex(\"{@Node(placed) -> @Node(served)}\", g)).Match(g)\n#--> 1\n? (new stzGraphex(\"{@Node(placed) -> @Node10 -> @Node(served)}\", g)).Match(g)\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "? Nx(\"{@Banana(3)}\").Match(7)\n#--> 1\n? Nx(\"{@Banana(3)}\").Match(1000003)\n#--> 1\n? @@( Nx(\"{@Banana(3)}\").Tokens() )\n#--> [ ]\n? Nx(\"{@Property(Banana)}\").Match(7)\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "t1 = new stzTable([ [ :ID, :EMAIL ], [ 1, \"ali@x.org\" ], [ 2, \"sara@x.org\" ] ])\nt2 = new stzTable([ [ :ID, :EMAIL ], [ 1, \"ali@x.org\" ], [ 1, \"sara@x.org\" ] ])\nt3 = new stzTable([ [ :ID, :EMAIL ], [ 1, \"ali@x.org\" ], [ 2, \"\" ] ])\n# write ONE pattern, then print whether it matches t1, t2, t3, on three lines\ncPattern = \"{ ... }\"\n? Tbx(cPattern).Match(t1)\n? Tbx(cPattern).Match(t2)\n? Tbx(cPattern).Match(t3)\n#--> 1\n#--> 0\n#--> 0",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stznumbrex-pattern-language-for-number.md",
+    "stztablex-pattern-langauge-for-tables.md.md",
+    "stzlistex-pattern-matching-for-lists.md",
+    "stzTimex-A-Pattern-Language-for-Time-in-Softanza.md",
+    "stzMatrex-Declarative-Pattern-Matching-for-Matrices.md"
+   ],
+   "rulings": [
+    "12.4",
+    "12.18",
+    "12.26"
+   ],
+   "doors": {
+    "programmer": "One habit across seven kinds of data: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the six verified ones, and build nothing on the cache of a reused list pattern.",
+    "analyst": "A data-quality rule is a sentence of the table language. The person who owns the data can read it.",
+    "designer": "A pattern states a shape the interface can show before the data arrives, and a half-typed value is answered on the way.",
+    "decision-maker": "A rule is a line and not a procedure. It can be reviewed, and its verdict is 1 or 0. Say beside it that a pattern with an unknown word is not refused, and that a graph arrow means *later*.",
+    "educator": "The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number, table.",
+    "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
+   },
+   "run": {
+    "ran": "2026-10-08 23:49 UTC+01:00",
+    "kept": 13,
+    "runnable": 13
    }
   },
   {
@@ -1388,7 +1522,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1520,7 +1654,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -1623,7 +1757,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1740,7 +1874,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:49 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1882,7 +2016,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-08 23:25 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1977,7 +2111,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-08 23:26 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2079,7 +2213,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 23:26 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2185,7 +2319,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-08 23:26 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2294,7 +2428,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-08 23:26 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2413,7 +2547,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-08 23:26 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2486,7 +2620,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 23:27 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -2568,7 +2702,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 23:27 UTC+01:00",
+    "ran": "2026-10-08 23:50 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

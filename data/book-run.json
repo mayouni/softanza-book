@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 23:23 UTC+01:00",
+  "date": "2026-10-08 23:48 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 23:23 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 5.6
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:23 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 5.3
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,7 +202,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:23 UTC+01:00",
+   "ran": "2026-10-08 23:48 UTC+01:00",
    "seconds": 6.9
   },
   "en/04-the-platform-in-one-picture": {
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 8.0
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 6.2
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 7.6
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 6.4
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 5.2
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 7.5
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 4.5
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 20.2
+   "ran": "2026-10-08 23:48 UTC+01:00",
+   "seconds": 13.0
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 7.7
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 7.1
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 23:24 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 3.8
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,129 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 23.9
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 19.2
+  },
+  "en/15-pattern-languages": {
+   "id": "pattern-languages",
+   "blocks": [
+    {
+     "hash": "7c47520acd2d",
+     "promise": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file."
+    },
+    {
+     "hash": "3418ef785835",
+     "promise": "1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0"
+    },
+    {
+     "hash": "17aa4f26e3bd",
+     "promise": "1\n0\n1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0\n1\n0"
+    },
+    {
+     "hash": "6248f2f7971c",
+     "promise": "1\n0\n1\n0\n1\n[ 6, 28, 496 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0\n1\n[ 6, 28, 496 ]"
+    },
+    {
+     "hash": "a7caa1af8497",
+     "promise": "1\n0\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n1"
+    },
+    {
+     "hash": "0170e87eedaf",
+     "promise": "{cols(4) & rows(4)}\n1\n{@!cols(4)}\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "{cols(4) & rows(4)}\n1\n{@!cols(4)}\n0"
+    },
+    {
+     "hash": "8fa5ef4052e2",
+     "promise": "1\n0\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n1"
+    },
+    {
+     "hash": "eeb9487a3c3b",
+     "promise": "1\n0\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n0"
+    },
+    {
+     "hash": "a034999fa53e",
+     "promise": "1\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1"
+    },
+    {
+     "hash": "9c456af8b27a",
+     "promise": "2\nstring\nconjunction\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nstring\nconjunction\n2"
+    },
+    {
+     "hash": "34f1776a0791",
+     "promise": "0\n0\n\"Lunch)\"",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n\"Lunch)\""
+    },
+    {
+     "hash": "8fcf2dd1119a",
+     "promise": "1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1"
+    },
+    {
+     "hash": "6aa0f70a4ebd",
+     "promise": "1\n1\n[ ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n[ ]\n0"
+    },
+    {
+     "hash": "35b5269fbf94",
+     "promise": "1\n0\n0",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 1,
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 4.0
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -951,8 +1072,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 6.6
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 5.5
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1088,8 +1209,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 7.9
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 4.7
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1158,8 +1279,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 7.8
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 4.0
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1256,8 +1377,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 7.8
+   "ran": "2026-10-08 23:49 UTC+01:00",
+   "seconds": 4.6
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1339,8 +1460,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-08 23:25 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 3.9
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -1396,8 +1517,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:26 UTC+01:00",
-   "seconds": 24.8
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 13.1
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -1453,8 +1574,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:26 UTC+01:00",
-   "seconds": 9.1
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 3.8
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -1511,8 +1632,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-08 23:26 UTC+01:00",
-   "seconds": 8.3
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 4.3
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -1577,8 +1698,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 23:26 UTC+01:00",
-   "seconds": 9.5
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 4.1
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -1636,8 +1757,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 23:26 UTC+01:00",
-   "seconds": 8.1
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 5.2
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1670,8 +1791,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 23:27 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 4.5
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1711,8 +1832,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 23:27 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-08 23:50 UTC+01:00",
+   "seconds": 3.7
   }
  }
 }
