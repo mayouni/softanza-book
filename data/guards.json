@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 23:08 UTC+01:00",
+ "read": "2026-10-08 23:13 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -652,6 +652,36 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/security_sentinel_narrated.ring",
    "also_found": []
   },
+  "numeric_exactness_narrated": {
+   "exists": true,
+   "path": "base/test/number/numeric_exactness_narrated.ring",
+   "assertions": 39,
+   "by_helper": {
+    "Then": 39
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/number/numeric_exactness_narrated.ring",
+   "also_found": []
+  },
+  "numeric_no_loss_narrated": {
+   "exists": true,
+   "path": "base/test/number/numeric_no_loss_narrated.ring",
+   "assertions": 31,
+   "by_helper": {
+    "Then": 31
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/number/numeric_no_loss_narrated.ring",
+   "also_found": []
+  },
+  "engine_is_optimised_narrated": {
+   "exists": true,
+   "path": "base/test/number/engine_is_optimised_narrated.ring",
+   "assertions": 7,
+   "by_helper": {
+    "Then": 7
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/number/engine_is_optimised_narrated.ring",
+   "also_found": []
+  },
   "service_delivery_narrated": {
    "exists": true,
    "path": "base/test/system/service_delivery_narrated.ring",
@@ -953,6 +983,12 @@
    "tracing_tail_narrated",
    "governed_loop_narrated",
    "security_sentinel_narrated"
+  ],
+  "en/22-compared-honestly": [
+   "numeric_exactness_narrated",
+   "numeric_no_loss_narrated",
+   "semantic_resolver_narrated",
+   "engine_is_optimised_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",
