@@ -125,3 +125,10 @@ your chapter (`_probe_NN`) and remove it when done. If a guard leaves a file bes
 **Be economical**: you have no need to read every file the study cites; read the sections named in your task, the
 narrations and guards you will use, and the sources for the decision and the limit. Write the research file as
 specified. Short quotes only (under 25 words each), always with path. Report your file path and the block table.
+
+**Two corrections, 2026-10-08 22:10.** (1) The author ruled that the book says **crafter**, not "maker": the cover is
+"The Software Crafters Platform of the AI Age", chapter 2 is "The software crafter", Part VI is "Software crafters, forged".
+The structure and the prompt in `drafts/` still say "makers" (they are the author's, untouched): treat "crafter" as current
+in anything you write; "decision-maker" is a door's name and stays. (2) The library is pinned by commit, not by branch:
+`origin/main` has moved since (five fix branches merged at 21:34 to 21:43) and it changes the max layer; the snapshot
+`.cache/stzlib-93d7a39bd` is the only library the book runs at. Never look at the live checkout for a block.
