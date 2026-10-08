@@ -18,7 +18,7 @@ The build FAILS (exit status 1) when: a chapter's runnable blocks did not all ke
 a block changed since it was last run; a named guard does not exist; a fence still carries the former
 host language's name. It still writes every page first, so the failure is visible where it happened.
 """
-import html, json, re, subprocess, sys
+import html, json, re, subprocess, sys, urllib.parse
 from book_common import (ROOT, SRC, sources, structure, code_blocks, block_hash, former_name_fences,
                          load_json, now, stamp)
 from book_judge import WORDS
@@ -490,7 +490,7 @@ def sources_box(meta, ui, runs):
     sha = runs.get("run", {}).get("library", {}).get("commit", "main")
     rows = []
     for n in meta.get("narrations") or []:
-        url = f"https://github.com/mayouni/stzlib/blob/{sha}/libraries/stzlib/base/doc/narrations/{n}"
+        url = f"https://github.com/mayouni/stzlib/blob/{sha}/libraries/stzlib/base/doc/narrations/{urllib.parse.quote(n)}"
         rows.append(f'<li><span class="src-k">{ui["src_narration"]}</span><a href="{url}" target="_blank" rel="noopener"><code>{html.escape(n)}</code></a></li>')
     for page in meta.get("site") or []:
         url = SITE_BASE + f'{ui["lang"]}/{page}.html'

@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:19 UTC+01:00",
+ "built": "2026-10-08 22:22 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:17 UTC+01:00",
+    "ran": "2026-10-08 22:20 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:18 UTC+01:00",
+    "ran": "2026-10-08 22:20 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:18 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:18 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,122 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:18 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
+    "kept": 7,
+    "runnable": 7
+   }
+  },
+  {
+   "number": 6,
+   "id": "the-mental-model-and-the-metaphors",
+   "title": "The mental model, and the metaphors",
+   "part": 2,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the one-dimensional walker, the checker, the yielder and the performer on lists and strings; the condition language compiled by the engine, with its host-code twin",
+    "designed": "the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure",
+    "absent": "runnable code for the three models of the founding article; the edge table of the walker narration as written"
+   },
+   "guards": [
+    {
+     "name": "00_yielder_narrated",
+     "exists": true,
+     "path": "base/test/yielder/00_yielder_narrated.ring",
+     "assertions": 8,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/yielder/00_yielder_narrated.ring"
+    },
+    {
+     "name": "597_walker_basics",
+     "exists": true,
+     "path": "base/test/list/597_walker_basics.ring",
+     "assertions": 6,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/597_walker_basics.ring"
+    },
+    {
+     "name": "611_checkw",
+     "exists": true,
+     "path": "base/test/list/611_checkw.ring",
+     "assertions": 1,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/611_checkw.ring"
+    },
+    {
+     "name": "621_perform",
+     "exists": true,
+     "path": "base/test/list/621_perform.ring",
+     "assertions": 2,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/621_perform.ring"
+    },
+    {
+     "name": "483_w_and_wf_forms_in_conditional_code",
+     "exists": true,
+     "path": "base/test/list/483_w_and_wf_forms_in_conditional_code.ring",
+     "assertions": 2,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/483_w_and_wf_forms_in_conditional_code.ring"
+    },
+    {
+     "name": "495_walking_until_and_until_before",
+     "exists": true,
+     "path": "base/test/list/495_walking_until_and_until_before.ring",
+     "assertions": 4,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "o1 = new stzString(\"You and you\")\n? o1.ContainsCS(\"YOU\", FALSE)\n#--> TRUE\n? o1.NumberOfOccurrenceCS(\"YOU\", FALSE)\n#--> 2\n? o1.FindNthCS(2, \"YOU\", FALSE)\n#--> 9\no1.ReplaceSection(9, 11, :With = \"Me\")\n? o1.Content()\n#--> You and Me",
+     "verdict": "kept"
+    },
+    {
+     "code": "oWalker = Wk(1, 10, 2)\n? @@( oWalker.Walkables() )\n#--> [ 1, 3, 5, 7, 9 ]\n? @@( oWalker.Unwalkables() )\n#--> [ 2, 4, 6, 8, 10 ]\n? @@( oWalker.Walk() )\n#--> [ 1, 3 ]\n? oWalker.CurrentPosition()\n#--> 3\n? @@( oWalker.RemainingWalkables() )\n#--> [ 5, 7, 9 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oWalker = Wk(1, 10, 3)\n? @@( oWalker.WalkNSteps(10) )\n#--> [ 1, 4, 7, 10 ]\n? @@( oWalker.Walk() )\n#--> [ 10 ]\noWalker = Wk(1, 10, 3)\ntry\n\toWalker.WalkBackward()\ncatch\n\t? cCatchError\ndone\n#--> Can't walk backward! Already at the beginning of walkable positions.",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzList([ \"A\", 5, \"B\", \"C\" ])\n? o1.CheckW('{ isString(@item) and IsUppercase(@item) }')\n#--> FALSE\n? o1.ContainsW('{ isNumber(@item) }')\n#--> TRUE\n? @@( o1.FindW('{ isNumber(@item) }') )\n#--> [ 2 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzYielder([ 1, -2, 3, -4, 5 ])\n? @@( o1.Filter(:IsPositive) )\n#--> [ 1, 3, 5 ]\n? @@( o1.Map(:Abs) )\n#--> [ 1, 2, 3, 4, 5 ]\n? o1.Reduce(:Sum)\n#--> 3\no2 = new stzList([ 1, \"haro\", 3, \"python\", 5, \"ruby\" ])\n? @@( o2.YieldW('isString(@item)', 'upper(@item)') )\n#--> [ \"HARO\", \"PYTHON\", \"RUBY\" ]\n? @@( o2.Content() )\n#--> [ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\no2.PerformW('isString(@item)', 'upper(@item)')\n? @@( o2.Content() )\n#--> [ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])\ncCond = '{ @item > 5 }'\n? @@( o1.FindW(cCond) )\n#--> [ 2, 4, 6 ]\n? @@( o1.ItemsW(cCond) )\n#--> [ 8, 12, 9 ]\n? o1.ContainsW(cCond)\n#--> TRUE\n? @@( o1.FindWF( func x { return x > 5 } ) )\n#--> [ 2, 4, 6 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])\n? @@( o1.FindW('{ @item > 5 and print(\"hacked\") }') )\n#--> [ ]\n? @@( W('{ @item > 5 }') )\n#--> [ \"where\", \"{ @item > 5 }\" ]",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-mental-mode-narration.md",
+    "stzwalker-beyond-loops-the -walker-metaphor.md",
+    "stzwalker-walking-at-the-edge-narration.md",
+    "stz-conditional-code-narration.md",
+    "stz-bridging-minds-and-code.md"
+   ],
+   "rulings": [
+    "12.3",
+    "12.6",
+    "12.14",
+    "12.16",
+    "12.17"
+   ],
+   "doors": {
+    "programmer": "Ask the same four questions of any object, and when you reach for a loop, name the move: walk, check, yield or perform.",
+    "analyst": "Say the problem in plain words, and the verbs you used are the steps: \"are all of them\", \"which ones\", \"give me the big ones\", \"make them negative\".",
+    "designer": "The yielder never changes the list and the performer does, and the verb tells you which.",
+    "decision-maker": "A W condition is a string the engine reads and cannot run as code, so it can be stored, shown and approved. The price is a small language and a mistake that stays quiet.",
+    "educator": "The self-study book already has the order: find, then apply, then walk, ask, produce and act.",
+    "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
+   },
+   "run": {
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -664,7 +779,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:18 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -781,7 +896,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:19 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -883,7 +998,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:19 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -956,7 +1071,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:19 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1038,7 +1153,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:19 UTC+01:00",
+    "ran": "2026-10-08 22:21 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

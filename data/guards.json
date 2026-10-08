@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:19 UTC+01:00",
+ "read": "2026-10-08 22:22 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -190,6 +190,66 @@
     "Then": 2
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/466_keeping_the_history_of_updates_of_a_softanza_objec.ring",
+   "also_found": []
+  },
+  "00_yielder_narrated": {
+   "exists": true,
+   "path": "base/test/yielder/00_yielder_narrated.ring",
+   "assertions": 8,
+   "by_helper": {
+    "Then": 8
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/yielder/00_yielder_narrated.ring",
+   "also_found": []
+  },
+  "597_walker_basics": {
+   "exists": true,
+   "path": "base/test/list/597_walker_basics.ring",
+   "assertions": 6,
+   "by_helper": {
+    "#-->": 6
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/597_walker_basics.ring",
+   "also_found": []
+  },
+  "611_checkw": {
+   "exists": true,
+   "path": "base/test/list/611_checkw.ring",
+   "assertions": 1,
+   "by_helper": {
+    "#-->": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/611_checkw.ring",
+   "also_found": []
+  },
+  "621_perform": {
+   "exists": true,
+   "path": "base/test/list/621_perform.ring",
+   "assertions": 2,
+   "by_helper": {
+    "#-->": 2
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/621_perform.ring",
+   "also_found": []
+  },
+  "483_w_and_wf_forms_in_conditional_code": {
+   "exists": true,
+   "path": "base/test/list/483_w_and_wf_forms_in_conditional_code.ring",
+   "assertions": 2,
+   "by_helper": {
+    "#-->": 2
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/483_w_and_wf_forms_in_conditional_code.ring",
+   "also_found": []
+  },
+  "495_walking_until_and_until_before": {
+   "exists": true,
+   "path": "base/test/list/495_walking_until_and_until_before.ring",
+   "assertions": 4,
+   "by_helper": {
+    "#-->": 4
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring",
    "also_found": []
   },
   "multilingual_pack_narrated": {
@@ -394,6 +454,14 @@
    "testoor_promises_narrated",
    "05_containsemptystrings",
    "466_keeping_the_history_of_updates_of_a_softanza_objec"
+  ],
+  "en/06-the-mental-model-and-the-metaphors": [
+   "00_yielder_narrated",
+   "597_walker_basics",
+   "611_checkw",
+   "621_perform",
+   "483_w_and_wf_forms_in_conditional_code",
+   "495_walking_until_and_until_before"
   ],
   "en/11-law-a-language-is-declared-and-closed": [
    "multilingual_pack_narrated",
