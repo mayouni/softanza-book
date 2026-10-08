@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 20:46 UTC+01:00",
+ "read": "2026-10-08 20:48 UTC+01:00",
  "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "guards": {
   "service_registry_narrated": {
@@ -61,6 +61,36 @@
    },
    "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring",
    "also_found": []
+  },
+  "coderule_narrated": {
+   "exists": true,
+   "path": "base/test/meta/coderule_narrated.ring",
+   "assertions": 77,
+   "by_helper": {
+    "Then": 77
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_narrated.ring",
+   "also_found": []
+  },
+  "codegraph_narrated": {
+   "exists": true,
+   "path": "base/test/meta/codegraph_narrated.ring",
+   "assertions": 28,
+   "by_helper": {
+    "chk": 28
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/codegraph_narrated.ring",
+   "also_found": []
+  },
+  "coderule_project_narrated": {
+   "exists": true,
+   "path": "base/test/meta/coderule_project_narrated.ring",
+   "assertions": 13,
+   "by_helper": {
+    "Then": 13
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_project_narrated.ring",
+   "also_found": []
   }
  },
  "chapters": {
@@ -74,6 +104,11 @@
    "modality_narrated",
    "wisecoding_narrated",
    "wisecoding_rich_narrated"
+  ],
+  "en/32-many-minds-on-one-body-of-work": [
+   "coderule_narrated",
+   "codegraph_narrated",
+   "coderule_project_narrated"
   ]
  }
 }

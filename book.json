@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 20:46 UTC+01:00",
+ "built": "2026-10-08 20:48 UTC+01:00",
  "library_commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 20:46 UTC+01:00",
+    "ran": "2026-10-08 20:48 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -187,9 +187,82 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 20:46 UTC+01:00",
+    "ran": "2026-10-08 20:48 UTC+01:00",
     "kept": 5,
     "runnable": 5
+   }
+  },
+  {
+   "number": 32,
+   "id": "many-minds-on-one-body-of-work",
+   "title": "Many minds on one body of work",
+   "part": 7,
+   "law": null,
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the protocol, its memos and its ledger of rulings; three hooks that refuse wholesale staging and a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules over a code graph",
+    "designed": "a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes",
+    "absent": "token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language"
+   },
+   "guards": [
+    {
+     "name": "coderule_narrated",
+     "exists": true,
+     "path": "base/test/meta/coderule_narrated.ring",
+     "assertions": 77,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_narrated.ring"
+    },
+    {
+     "name": "codegraph_narrated",
+     "exists": true,
+     "path": "base/test/meta/codegraph_narrated.ring",
+     "assertions": 28,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/codegraph_narrated.ring"
+    },
+    {
+     "name": "coderule_project_narrated",
+     "exists": true,
+     "path": "base/test/meta/coderule_project_narrated.ring",
+     "assertions": 13,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/meta/coderule_project_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "cCode = \"class Shop\" + nl + \"def KillOrder()\" + nl + \"  return\" + nl\naFindings = StzCheckCode(cCode)\n? aFindings[1][:rule]\n#--> no-aggressive-verbs\n? aFindings[1][:message]\n#--> aggressive verb in method 'KillOrder' -- prefer Remove/Delete/Dispose/Clear/Close (Softanza tone)\n? StzCodeIsClean(cCode)\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "cCode = \"class Shop\" + nl + \"def RemoveOrder()\" + nl + \"  return\" + nl\n? len( StzCheckCode(cCode) )\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? len( StzCodeRuleNames() )\n#--> 14\n? StzCodeRuleNames()[3]\n#--> no-aggressive-verbs",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stz-rules-as-graph-rules-narration.md",
+    "stz-governance-lineage-narration.md"
+   ],
+   "rulings": [
+    "12.16",
+    "12.20",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "Stage by explicit path, read a file again before you write it, read the time from the clock. Each rule cost someone an edit.",
+    "analyst": "The record is data you can query, and it publishes its own error rates beside its rules.",
+    "designer": "A word names a state, never a person. A message is a closed structure a reader scans in one glance, tested on a reader whose first language is not English.",
+    "decision-maker": "A ruling is written only in your presence. When no figure can answer a question, decide by judgement and write down that it was judgement.",
+    "educator": "Teach a rule with the failure that earned it. A rule whose cost you cannot name is a rule you will talk yourself out of at two in the morning.",
+    "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
+   },
+   "run": {
+    "ran": "2026-10-08 20:48 UTC+01:00",
+    "kept": 3,
+    "runnable": 3
    }
   }
  ],

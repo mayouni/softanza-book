@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 20:46 UTC+01:00",
+  "date": "2026-10-08 20:48 UTC+01:00",
   "library": {
    "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
    "short": "b9d5cd1e4",
@@ -47,8 +47,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 20:46 UTC+01:00",
-   "seconds": 2.5
+   "ran": "2026-10-08 20:48 UTC+01:00",
+   "seconds": 2.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -104,8 +104,42 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 20:46 UTC+01:00",
-   "seconds": 2.5
+   "ran": "2026-10-08 20:48 UTC+01:00",
+   "seconds": 2.7
+  },
+  "en/32-many-minds-on-one-body-of-work": {
+   "id": "many-minds-on-one-body-of-work",
+   "blocks": [
+    {
+     "hash": "26541a650cb6",
+     "promise": "no-aggressive-verbs\naggressive verb in method 'KillOrder' -- prefer Remove/Delete/Dispose/Clear/Close (Softanza tone)\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "no-aggressive-verbs\naggressive verb in method 'KillOrder' -- prefer Remove/Delete/Dispose/Clear/Close (Softanza tone)\n1"
+    },
+    {
+     "hash": "4efb5ff21b46",
+     "promise": "0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0"
+    },
+    {
+     "hash": "a27b33844581",
+     "promise": "14\nno-aggressive-verbs",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "14\nno-aggressive-verbs"
+    }
+   ],
+   "kept": 3,
+   "runnable": 3,
+   "exercises": 0,
+   "ran": "2026-10-08 20:48 UTC+01:00",
+   "seconds": 2.8
   }
  }
 }
