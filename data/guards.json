@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:37 UTC+01:00",
+ "read": "2026-10-08 22:40 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -512,6 +512,66 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/judgment_narrated.ring",
    "also_found": []
   },
+  "orgrule_narrated": {
+   "exists": true,
+   "path": "base/test/graph/orgrule_narrated.ring",
+   "assertions": 22,
+   "by_helper": {
+    "Then": 22
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/orgrule_narrated.ring",
+   "also_found": []
+  },
+  "14_bceao_governance": {
+   "exists": true,
+   "path": "base/test/orgchart/14_bceao_governance.ring",
+   "assertions": 1,
+   "by_helper": {
+    "#-->": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/14_bceao_governance.ring",
+   "also_found": []
+  },
+  "15_multiple_validators": {
+   "exists": true,
+   "path": "base/test/orgchart/15_multiple_validators.ring",
+   "assertions": 1,
+   "by_helper": {
+    "#-->": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/15_multiple_validators.ring",
+   "also_found": []
+  },
+  "13_segregation_of_duties": {
+   "exists": true,
+   "path": "base/test/orgchart/13_segregation_of_duties.ring",
+   "assertions": 1,
+   "by_helper": {
+    "#-->": 1
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/13_segregation_of_duties.ring",
+   "also_found": []
+  },
+  "rulereport_narrated": {
+   "exists": true,
+   "path": "base/test/graph/rulereport_narrated.ring",
+   "assertions": 23,
+   "by_helper": {
+    "Then": 23
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/rulereport_narrated.ring",
+   "also_found": []
+  },
+  "36_import_from_stzorg": {
+   "exists": true,
+   "path": "base/test/orgchart/36_import_from_stzorg.ring",
+   "assertions": 3,
+   "by_helper": {
+    "#-->": 3
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/36_import_from_stzorg.ring",
+   "also_found": []
+  },
   "codegraph_narrated": {
    "exists": true,
    "path": "base/test/meta/codegraph_narrated.ring",
@@ -633,6 +693,14 @@
    "payments_port_narrated",
    "judgment_narrated",
    "graphrule_object_narrated"
+  ],
+  "en/29-a-bank-in-niamey": [
+   "orgrule_narrated",
+   "14_bceao_governance",
+   "15_multiple_validators",
+   "13_segregation_of_duties",
+   "rulereport_narrated",
+   "36_import_from_stzorg"
   ],
   "en/32-many-minds-on-one-body-of-work": [
    "coderule_narrated",

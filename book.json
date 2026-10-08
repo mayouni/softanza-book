@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 22:37 UTC+01:00",
+ "built": "2026-10-08 22:40 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 22:35 UTC+01:00",
+    "ran": "2026-10-08 22:38 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 22:35 UTC+01:00",
+    "ran": "2026-10-08 22:38 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:38 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -767,7 +767,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -882,7 +882,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -978,7 +978,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1119,7 +1119,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 22:36 UTC+01:00",
+    "ran": "2026-10-08 22:39 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1236,7 +1236,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 22:37 UTC+01:00",
+    "ran": "2026-10-08 22:40 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1339,7 +1339,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-08 22:37 UTC+01:00",
+    "ran": "2026-10-08 22:40 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1441,9 +1441,115 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-08 22:37 UTC+01:00",
+    "ran": "2026-10-08 22:40 UTC+01:00",
     "kept": 5,
     "runnable": 5
+   }
+  },
+  {
+   "number": 29,
+   "id": "a-bank-in-niamey",
+   "title": "A bank in Niamey",
+   "part": 6,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict",
+    "designed": "the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads",
+    "absent": "the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced"
+   },
+   "guards": [
+    {
+     "name": "orgrule_narrated",
+     "exists": true,
+     "path": "base/test/graph/orgrule_narrated.ring",
+     "assertions": 22,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/orgrule_narrated.ring"
+    },
+    {
+     "name": "14_bceao_governance",
+     "exists": true,
+     "path": "base/test/orgchart/14_bceao_governance.ring",
+     "assertions": 1,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/14_bceao_governance.ring"
+    },
+    {
+     "name": "15_multiple_validators",
+     "exists": true,
+     "path": "base/test/orgchart/15_multiple_validators.ring",
+     "assertions": 1,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/15_multiple_validators.ring"
+    },
+    {
+     "name": "13_segregation_of_duties",
+     "exists": true,
+     "path": "base/test/orgchart/13_segregation_of_duties.ring",
+     "assertions": 1,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/13_segregation_of_duties.ring"
+    },
+    {
+     "name": "rulereport_narrated",
+     "exists": true,
+     "path": "base/test/graph/rulereport_narrated.ring",
+     "assertions": 23,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/graph/rulereport_narrated.ring"
+    },
+    {
+     "name": "36_import_from_stzorg",
+     "exists": true,
+     "path": "base/test/orgchart/36_import_from_stzorg.ring",
+     "assertions": 3,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/orgchart/36_import_from_stzorg.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "cChart = '\norgchart \"bank\"\n\npositions\n    board\n        title: Board of Directors\n        level: executive\n        department: board\n        reportsTo:\n\n    ceo\n        title: Chief Executive\n        level: executive\n        department: executive\n        reportsTo: board\n\n    risk\n        title: Chief Risk Officer\n        level: management\n        department: risk\n        reportsTo: board\n\n    audit\n        title: Internal Audit\n        level: management\n        department: audit\n        reportsTo: ceo\n'\noOrg = new stzOrgChart(\"bank\")\noOrg.ImportStzOrg(cChart)\n? oOrg.NodeCount()\n#--> 4\n? @@( oOrg.ValidateXT(:BCEAO)[:issues] )\n#--> [ \"BCEAO-002: Audit reports to non-board position\" ]\n? oOrg.IsValidXT(:BCEAO)\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "oOrg.AddManagementPositionXT(\"treasury\", \"Treasury\")\noOrg.SetPositionDepartment(\"treasury\", \"treasury\")\noOrg.AddManagementPositionXT(\"ops\", \"Operations\")\noOrg.SetPositionDepartment(\"ops\", \"operations\")\noOrg.ReportsTo(\"treasury\", \"ceo\")\noOrg.ReportsTo(\"ops\", \"treasury\")\naV = oOrg.ValidateXT([ :BCEAO, :SOD ])\n? aV[:validatorsFailed]\n#--> 2\n? aV[:results][1][:issues][1]\n#--> BCEAO-002: Audit reports to non-board position\n? aV[:results][2][:issues][1]\n#--> SOD-001: Operations reports through Treasury\n? oOrg.ComplianceReport()[:overallStatus]\n#--> non-compliant",
+     "verdict": "kept"
+    },
+    {
+     "code": "aBases = [ new stzBCEAORuleBase(), new stzBaselIIIRuleBase(), new stzSOXRuleBase(), new stzPCIDSSRuleBase(),\n           new stzISO27001RuleBase(), new stzGDPRRuleBase(), new stzHIPAARuleBase() ]\nfor oBase in aBases\n\t? oBase.Name() + \" : \" + oBase.NumberOfRules()\nnext\n#--> BCEAO : 4\n#--> Basel III : 4\n#--> SOX : 5\n#--> PCI-DSS : 4\n#--> ISO 27001 : 4\n#--> GDPR : 4\n#--> HIPAA : 4",
+     "verdict": "kept"
+    },
+    {
+     "code": "oRule = new stzGraphRule(\"audit-reports-to-board\")\noRule.SetDomainQ(\"orgchart\")\noRule.WhenQ(\"department\", \"equals\", \"audit\")\noRule.ThenQ(\"reportsTo\", \"equals\", \"board\")\noRule.ThenViolationQ(\"internal audit must report to the board\")\noBasel = new stzBaselIIIRuleBase()\noBasel.AddRule(oRule)\noRep = new stzRuleReport(\"bank\")\noRep.Ingest(oOrg.CheckCompliance(oBasel))\noRep.Report()\n#--> Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n#      [orgchart] 1 finding(s)\n#        ERROR audit-reports-to-board @ audit -- internal audit must report to the board",
+     "verdict": "kept"
+    },
+    {
+     "code": "oOrg.ReportsTo(\"audit\", \"board\")\noOrg.ReportsTo(\"ops\", \"ceo\")\n? oOrg.IsValidXT([ :BCEAO, :SOD ])\n#--> 1\n? oOrg.ComplianceReport()[:overallStatus]\n#--> compliant\noRep = new stzRuleReport(\"bank\")\noRep.Ingest(oOrg.CheckCompliance(oBasel))\noRep.Report()\n#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n? oRep.IsSound()\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oOrg2 = new stzOrgChart(\"bank\")\noOrg2.ImportStzOrg( substr(cChart, \"department: executive\", \"department:\") )\n? oOrg2.IsValidXT(:BCEAO)\n#--> 1\n? oOrg2.ValidateXT(:Banking)[:status]\n#--> pass\noOrg2.SetPositionDepartment(\"ceo\", \"executive\")\n? oOrg2.IsValidXT(:BCEAO)\n#--> 0",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [
+    "stzOrgChartDoc-BankUseCase.md",
+    "stz-rules-as-graph-rules-narration.md"
+   ],
+   "rulings": [
+    "12.19",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "The chart is a text, the rule is data, the court is a call. A finding names the rule and the position.",
+    "analyst": "You change a reporting line in a text and you re-run: the verdict follows the chart.",
+    "designer": "The report is one verdict over every court: sound or unsound, with each finding where it was found.",
+    "decision-maker": "Ask which of the regulations the library holds, and ask for the count. Seven regimes, one with real content of its own and one that adds a rule; the rest carry the universal four.",
+    "educator": "The narration of a virtual bank tells the move from a non-compliant structure to a governed one, and the book shows the move with calls that run.",
+    "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
+   },
+   "run": {
+    "ran": "2026-10-08 22:40 UTC+01:00",
+    "kept": 6,
+    "runnable": 6
    }
   },
   {
@@ -1514,7 +1620,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 22:37 UTC+01:00",
+    "ran": "2026-10-08 22:40 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -1596,7 +1702,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 22:37 UTC+01:00",
+    "ran": "2026-10-08 22:40 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

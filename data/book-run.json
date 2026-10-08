@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:35 UTC+01:00",
+  "date": "2026-10-08 22:38 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:35 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:38 UTC+01:00",
+   "seconds": 6.2
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:35 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-08 22:38 UTC+01:00",
+   "seconds": 6.3
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 6.0
+   "ran": "2026-10-08 22:38 UTC+01:00",
+   "seconds": 5.8
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 6.2
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 6.0
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,7 +410,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
+   "ran": "2026-10-08 22:39 UTC+01:00",
    "seconds": 6.1
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
@@ -526,8 +526,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 17.2
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 14.1
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -600,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 6.5
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -682,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 6.2
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 6.1
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -780,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:36 UTC+01:00",
-   "seconds": 26.6
+   "ran": "2026-10-08 22:39 UTC+01:00",
+   "seconds": 25.6
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -854,8 +854,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:37 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 6.1
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -924,8 +924,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:37 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 5.9
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -981,8 +981,66 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:37 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 5.8
+  },
+  "en/29-a-bank-in-niamey": {
+   "id": "a-bank-in-niamey",
+   "blocks": [
+    {
+     "hash": "67ae32ec172c",
+     "promise": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0"
+    },
+    {
+     "hash": "b2a84000ea51",
+     "promise": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant"
+    },
+    {
+     "hash": "e32fe390128d",
+     "promise": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4"
+    },
+    {
+     "hash": "9807673c6d6a",
+     "promise": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[orgchart] 1 finding(s)\nERROR audit-reports-to-board @ audit -- internal audit must report to the board",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [orgchart] 1 finding(s)\n    ERROR audit-reports-to-board @ audit -- internal audit must report to the board"
+    },
+    {
+     "hash": "cb825c9c5646",
+     "promise": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1"
+    },
+    {
+     "hash": "59d6daf40360",
+     "promise": "1\npass\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\npass\n0"
+    }
+   ],
+   "kept": 6,
+   "runnable": 6,
+   "exercises": 0,
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 6.0
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -1015,8 +1073,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:37 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 5.6
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -1056,8 +1114,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:37 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-08 22:40 UTC+01:00",
+   "seconds": 5.7
   }
  }
 }
