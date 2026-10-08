@@ -21,7 +21,7 @@ did:
   - showed, rather than hid, four defects as limits with running promises: the domain model answering a rephrased
     question with the wrong answer (ch17); a list in a natural sentence reaching host code (ch11); the max layer's
     classes loaded by no entry file (ch4); the 2022 slide's chain no longer running (ch5, shown in prose)
-  - build: 10 pages, 55 of 55 runnable blocks kept their promise at 93d7a39bd; 39 guards resolve; build passes
+  - build: 10 pages, 55 of 55 runnable blocks kept their promise at 93d7a39bd; 34 distinct guards resolve; build passes
 
 state:
   library:         origin/main 93d7a39bd; engine binaries from the worktree at that commit, built 2026-10-05 20:27
