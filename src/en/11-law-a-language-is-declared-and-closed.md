@@ -211,7 +211,7 @@ And the age cuts both ways. The same flood of generated code makes careless lang
 
 What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals; the court of structured output with its grammar compiler and its sampler; the pattern languages.
 
-What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer and its grammar for a model. A first sketch of it was built outside the library in October 2026; the library cannot run it yet, and the vision's own verdict is that the factory has not yet produced a language. A grammar for every declared language is promised and not shipped.
+What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer and its grammar for a model. A first sketch of it was built outside the library in October 2026; the library cannot run it yet. The vision's text says the factory has not yet forged; the sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
 
 What is absent, and the law must say it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate, so a host function inside the brackets runs:
 

@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:11 UTC+01:00",
+ "read": "2026-10-09 00:15 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -500,6 +500,16 @@
     "chk": 50
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring",
+   "also_found": []
+  },
+  "calc_column_engine_narrated": {
+   "exists": true,
+   "path": "base/test/table/calc_column_engine_narrated.ring",
+   "assertions": 14,
+   "by_helper": {
+    "chk": 14
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/table/calc_column_engine_narrated.ring",
    "also_found": []
   },
   "knowledge_integration_narrated": {
@@ -1044,6 +1054,13 @@
    "structuredoutput_narrated",
    "schema_grammar_narrated",
    "constrained_decoding_narrated"
+  ],
+  "en/12-a-language-declared": [
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "constrained_decoding_narrated",
+   "483_w_and_wf_forms_in_conditional_code",
+   "calc_column_engine_narrated"
   ],
   "en/14-knowledge-programming": [
    "knowledge_integration_narrated",

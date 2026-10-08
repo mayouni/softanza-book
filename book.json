@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 00:11 UTC+01:00",
+ "built": "2026-10-09 00:15 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:12 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:12 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:12 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:12 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:12 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:07 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 00:08 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 00:08 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 00:08 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,9 +1271,117 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 00:08 UTC+01:00",
+    "ran": "2026-10-09 00:13 UTC+01:00",
     "kept": 11,
     "runnable": 11
+   }
+  },
+  {
+   "number": 12,
+   "id": "a-language-declared",
+   "title": "A language, declared",
+   "part": 3,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages",
+    "designed": "the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); a grammar that closes a menu in the forge's output; the projections of a language to an application",
+    "absent": "a factory in the library; the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold"
+   },
+   "guards": [
+    {
+     "name": "structuredoutput_narrated",
+     "exists": true,
+     "path": "base/test/neural/structuredoutput_narrated.ring",
+     "assertions": 73,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/structuredoutput_narrated.ring"
+    },
+    {
+     "name": "schema_grammar_narrated",
+     "exists": true,
+     "path": "base/test/neural/schema_grammar_narrated.ring",
+     "assertions": 28,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/schema_grammar_narrated.ring"
+    },
+    {
+     "name": "constrained_decoding_narrated",
+     "exists": true,
+     "path": "base/test/neural/constrained_decoding_narrated.ring",
+     "assertions": 50,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/neural/constrained_decoding_narrated.ring"
+    },
+    {
+     "name": "483_w_and_wf_forms_in_conditional_code",
+     "exists": true,
+     "path": "base/test/list/483_w_and_wf_forms_in_conditional_code.ring",
+     "assertions": 2,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/483_w_and_wf_forms_in_conditional_code.ring"
+    },
+    {
+     "name": "calc_column_engine_narrated",
+     "exists": true,
+     "path": "base/test/table/calc_column_engine_narrated.ring",
+     "assertions": 14,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/table/calc_column_engine_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oO = StzOutputSchemaQ([\n\t[ :field = \"dish\",     :type = :oneof,  :choices = [ \"margherita\", \"tiramisu\" ] ],\n\t[ :field = \"quantity\", :type = :number, :must = [ [ \">=\", 1 ], [ \"<=\", 12 ] ] ],\n\t[ :field = \"note\",     :type = :string, :optional = 1 ]\n])\n? oO.Describe()\n#--> schema 'output' -- 3 field(s)\n#      dish : oneof (margherita | tiramisu) [required]\n#      quantity : number [required], must be at least '1', must be at most '12'\n#      note : string [optional]\n? oO.PromptClause()\n#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:\n#\n#    dish: <one of: margherita | tiramisu>\n#    quantity: <number>\n#    note: <text>\naV = oO.Verify([ :dish = \"pizza\", :quantity = 40 ])\n? aV[:ok]\n#--> 0\n? aV[:findings][1][:message]\n#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.\n? aV[:findings][2][:message]\n#--> field 'quantity' must be at most '12', and the model answered '40'.",
+     "verdict": "kept"
+    },
+    {
+     "code": "cG = oO.ToGBNF()\ncGood  = \"dish: margherita\" + nl + \"quantity: 2\" + nl + \"note: no basil\" + nl\ncBand  = \"dish: margherita\" + nl + \"quantity: 40\" + nl + \"note: no basil\" + nl\ncShape = \"dish: margherita\" + nl + \"quantity: many\" + nl + \"note: no basil\" + nl\n? StzGrammarAccepts(cG, cGood)\n#--> 1\n? oO.Accepts(cGood)\n#--> 1\n? StzGrammarAccepts(cG, cBand)\n#--> 1\n? oO.Accepts(cBand)\n#--> 0\n? StzGrammarAccepts(cG, cShape)\n#--> 0\n? oO.Accepts(cShape)\n#--> 0\n? len(StzFind(\"lessequal\", oO.UnenforcedByGrammar())) > 0\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "? StzGrammarCouldContinue(cG, \"dish: t\")\n#--> 1\n? StzGrammarCouldContinue(cG, \"dish: p\")\n#--> 0\n? StzGrammarCouldContinue(cG, \"dish: margherita\" + nl + \"quantity: 2\")\n#--> 1\n? StzGrammarCouldContinue(cG, \"dish: margherita\" + nl + \"quantity: <\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "cY = 'root ::= \"yes\" \"\\n\"'\n? StzGrammarCouldContinue(cY, \"y\")\n#--> 1\n? StzGrammarCouldContinue(cY, \"ye\")\n#--> 1\n? StzGrammarCouldContinue(cY, \"yesterday\")\n#--> 0",
+     "verdict": "kept"
+    },
+    {
+     "code": "? left(StzGrammarRefusal('root ::= tail' + nl + 'tail ::= tail \"x\" | \"x\"'), 7)\n#--> GBNF-M7\n? left(StzGrammarRefusal('root ::= greeting'), 7)\n#--> GBNF-M4\n? StzGrammarRefusal(cG) = \"\"\n#--> 1\noNest = StzOutputSchemaQ([\n\t[ :field = \"title\",  :type = :string ],\n\t[ :field = \"author\", :type = :structure, :fields = [ [ :field = \"name\", :type = :string ] ] ]\n])\n? oNest.IsExpressibleAsGrammar()\n#--> 0\ntry\n\toNest.ToGBNF()\ncatch\n\t? len(StzFind(\"GBNF-F5\", cCatchError)) > 0\ndone\n#--> 1\n? oNest.ParseOutput('{ \"title\":\"T\", \"author\":{\"name\":\"Ada\"} }')[:ok]\n#--> 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "try\n\tStzOutputSchemaQ([ [ :field = \"x\", :type = :string, :requird = 0 ] ])\ncatch\n\t? cCatchError\ndone\n#--> stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description).",
+     "verdict": "kept"
+    },
+    {
+     "code": "o = new stzList([ 4, 7, 10, 3, 8 ])\n? @@( o.FindW('{ sqrt(@item) < 3 }') )\n#--> [ 1, 2, 4, 5 ]\n? @@( o.FindW('{ sin(@item) < 2 }') )\n#--> [ ]\n? @@( o.FindWF( func x { return sin(x) < 2 } ) )\n#--> [ 1, 2, 3, 4, 5 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "o1 = new stzTableAggregator([\n\t[ :A, [ 0, 1, 4 ] ],\n\t[ :B, [ 2, 4, 20 ] ]\n])\no1.AddCalculatedCol(:SINE, 'sin(@(:A))')\n? @@( o1.Col(:SINE) )\n#--> [ 0, 0.84, -0.76 ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "cG = 'root ::= ...'     # your grammar here\n? StzGrammarAccepts(cG, \"dish: <your first dish>\" + nl)\n#--> ?\n? StzGrammarAccepts(cG, \"dish: <a dish not on your menu>\" + nl)\n#--> ?\n? StzGrammarCouldContinue(cG, \"dish: <the first letters of your first dish>\")\n#--> ?\n? StzGrammarAccepts(cG, \"dish: <the first letters of your first dish>\")\n#--> ?\n? StzGrammarRefusal(cG) = \"\"\n#--> ?",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-conditional-code-narration.md",
+    "stznatural-vs-ring-naturallib.md",
+    "stznatural-narration.md",
+    "stz-bridging-minds-and-code.md"
+   ],
+   "rulings": [
+    "12.10",
+    "12.21",
+    "12.27",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {},
+   "run": {
+    "ran": "2026-10-09 00:14 UTC+01:00",
+    "kept": 8,
+    "runnable": 8
    }
   },
   {
@@ -1391,7 +1499,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1525,7 +1633,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1649,7 +1757,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1766,7 +1874,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1898,7 +2006,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2001,7 +2109,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2118,7 +2226,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2260,7 +2368,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 00:09 UTC+01:00",
+    "ran": "2026-10-09 00:14 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2355,7 +2463,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2457,7 +2565,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2563,7 +2671,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -2672,7 +2780,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2791,7 +2899,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2864,7 +2972,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -2946,7 +3054,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 00:10 UTC+01:00",
+    "ran": "2026-10-09 00:15 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
