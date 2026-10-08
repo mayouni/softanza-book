@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 20:37 UTC+01:00",
+ "built": "2026-10-08 20:46 UTC+01:00",
  "library_commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "spine": [
   1,
@@ -100,9 +100,96 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 20:23 UTC+01:00",
+    "ran": "2026-10-08 20:46 UTC+01:00",
     "kept": 1,
     "runnable": 1
+   }
+  },
+  {
+   "number": 3,
+   "id": "the-method-from-first-principles",
+   "title": "The method, from first principles",
+   "part": 1,
+   "law": null,
+   "spine": true,
+   "status": "draft",
+   "stage": {
+    "built": "the court behind every block of this chapter, and the stage words the site prints on every product",
+    "designed": "the register of rethought concepts as data, with a guard that fails when a concept has no proof",
+    "absent": "a page that shows every rethought concept with its proof; a guard for three of the paradigm engines"
+   },
+   "guards": [
+    {
+     "name": "modality_narrated",
+     "exists": true,
+     "path": "base/test/natural/modality_narrated.ring",
+     "assertions": 45,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/modality_narrated.ring"
+    },
+    {
+     "name": "wisecoding_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_narrated.ring",
+     "assertions": 13,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring"
+    },
+    {
+     "name": "wisecoding_rich_narrated",
+     "exists": true,
+     "path": "base/test/conversation/wisecoding_rich_narrated.ring",
+     "assertions": 52,
+     "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "? Q(\"text\").Count(\"\")\n#--> 0\n? Q(\"text\").Contains(\"\")\n#--> FALSE",
+     "verdict": "kept"
+    },
+    {
+     "code": "ConstrainQ(\"score\").ToBeQ(:Number).AndQ().ToBeQ(:Positive).AndQ().ToBeQ(:Even)\n? CanQ(42).BeA(\"score\")\n#--> TRUE\n? CanQ(-4).BeA(\"score\")\n#--> FALSE\n? Why()\n#--> no: -4 is not positive (constraint 2 of 'score')",
+     "verdict": "kept"
+    },
+    {
+     "code": "oName = new stzString(\"hello\")\noName.EnforceConstraint(\"keep-lowercase\", :Lowercase)\nbRefused = FALSE\ntry\n\toName.UpdateWith(\"HELLO\")\ncatch\n\tbRefused = TRUE\ndone\n? bRefused\n#--> TRUE\n? oName.Content()\n#--> hello",
+     "verdict": "kept"
+    },
+    {
+     "code": "oKB = new stzKnowledgeGraph(\"restaurant\")\noKB.Know(\"margherita\", \"dish\").Know(\"tiramisu\", \"dish\")\noKB.AddConversationQ(\"setup\").SetGoal(StzGoalQ().RequireEach(\"dish\", \"contains\"))\naQ = oKB.AskInXT(\"setup\")\n? aQ[:why]\n#--> every dish needs 'contains'\ntry\n\toKB.ConcludeIn(\"setup\", \"world\")\ncatch\n\t? cCatchError\ndone\n#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
+     "verdict": "kept"
+    },
+    {
+     "code": "SetItemsMakingAListFalse([ \"false\", \"wrong\", \"dangerous\" ])\n? IsTrue([ \"hello\", \"this\", \"is\", \"wrong\" ])\n#--> TRUE\n? IsTrueXT([ \"hello\", \"this\", \"is\", \"wrong\" ])\n#--> FALSE",
+     "verdict": "kept"
+    },
+    {
+     "code": "? YourDefault(the_input)\n#--> what your language prints today\n? YourRule(the_input)\n#--> what your declared rule must print",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stzstring-emptiness-narration.md",
+    "istrue-softanza-truth.md",
+    "stz-built-on-real-world-need.md"
+   ],
+   "rulings": [
+    "12.19",
+    "12.22",
+    "12.29",
+    "12.30"
+   ],
+   "doors": {
+    "programmer": "Every claim you make can carry its promise, and a declared constraint refuses a bad update at the one place updates happen.",
+    "analyst": "Your rule is a declaration, and its verdict names the rule that failed, by number.",
+    "designer": "The stage word is part of the interface. A product that does not exist yet says so, in a word you can check.",
+    "decision-maker": "Ask every vendor for the loss beside the win. Here it is printed, with its date.",
+    "educator": "Each rethink has an article that argues it: the concept, the field's form, the redesign. That is a curriculum, ordered by family.",
+    "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
+   },
+   "run": {
+    "ran": "2026-10-08 20:46 UTC+01:00",
+    "kept": 5,
+    "runnable": 5
    }
   }
  ],

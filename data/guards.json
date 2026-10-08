@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 20:23 UTC+01:00",
+ "read": "2026-10-08 20:46 UTC+01:00",
  "commit": "b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115",
  "guards": {
   "service_registry_narrated": {
@@ -31,6 +31,36 @@
    },
    "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/system/governance_crossing_narrated.ring",
    "also_found": []
+  },
+  "modality_narrated": {
+   "exists": true,
+   "path": "base/test/natural/modality_narrated.ring",
+   "assertions": 45,
+   "by_helper": {
+    "Then": 45
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/natural/modality_narrated.ring",
+   "also_found": []
+  },
+  "wisecoding_narrated": {
+   "exists": true,
+   "path": "base/test/conversation/wisecoding_narrated.ring",
+   "assertions": 13,
+   "by_helper": {
+    "chk": 13
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_narrated.ring",
+   "also_found": []
+  },
+  "wisecoding_rich_narrated": {
+   "exists": true,
+   "path": "base/test/conversation/wisecoding_rich_narrated.ring",
+   "assertions": 52,
+   "by_helper": {
+    "chk": 52
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/b9d5cd1e4d32f80a4bfb3bc3d156c8b8926b1115/libraries/stzlib/base/test/conversation/wisecoding_rich_narrated.ring",
+   "also_found": []
   }
  },
  "chapters": {
@@ -39,6 +69,11 @@
    "service_registry_narrated",
    "safeworld_narrated",
    "governance_crossing_narrated"
+  ],
+  "en/03-the-method-from-first-principles": [
+   "modality_narrated",
+   "wisecoding_narrated",
+   "wisecoding_rich_narrated"
   ]
  }
 }
