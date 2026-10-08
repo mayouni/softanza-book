@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 00:38 UTC+01:00",
+ "built": "2026-10-09 00:44 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,7 +100,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -638,7 +638,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -790,7 +790,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:34 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -919,7 +919,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 00:35 UTC+01:00",
+    "ran": "2026-10-09 00:40 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1034,7 +1034,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 00:35 UTC+01:00",
+    "ran": "2026-10-09 00:41 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1130,7 +1130,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 00:35 UTC+01:00",
+    "ran": "2026-10-09 00:41 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1271,7 +1271,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 00:35 UTC+01:00",
+    "ran": "2026-10-09 00:41 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1379,7 +1379,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:41 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1538,7 +1538,7 @@
     "old articles have decayed": "The 2020 sentence needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ`, `TheirQ().FirstCharQ()` and `ReplaceLowercaseCharsQ` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. Of the twelve chains of that article that I ran, eight work. The bridging article's paragraph still runs in permissive mode, and prints two nested boxes around \"NOTHING SOFTANZA\" instead of the one it promises. The machine said so, since `UnderstoodAll()` is 0 and the unresolved word is named, but a reader has to ask."
    },
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:41 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -1658,7 +1658,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1792,7 +1792,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1916,7 +1916,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -2033,7 +2033,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 00:36 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2165,7 +2165,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2268,7 +2268,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2385,7 +2385,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2527,7 +2527,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2622,7 +2622,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:42 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2746,9 +2746,153 @@
     "agent": "A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed whoever calls."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 10,
     "runnable": 10
+   }
+  },
+  {
+   "number": 24,
+   "id": "rehearse-then-commit",
+   "title": "Rehearse, then commit",
+   "part": 5,
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {
+    "built": "a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production",
+    "designed": "the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy",
+    "absent": "any live adapter for payments, a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path"
+   },
+   "guards": [
+    {
+     "name": "service_registry_narrated",
+     "exists": true,
+     "path": "base/test/system/service_registry_narrated.ring",
+     "assertions": 93,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_registry_narrated.ring"
+    },
+    {
+     "name": "service_delivery_narrated",
+     "exists": true,
+     "path": "base/test/system/service_delivery_narrated.ring",
+     "assertions": 60,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring"
+    },
+    {
+     "name": "virtual_system_twin_narrated",
+     "exists": true,
+     "path": "base/test/system/virtual_system_twin_narrated.ring",
+     "assertions": 48,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_system_twin_narrated.ring"
+    },
+    {
+     "name": "virtual_environment_twin_narrated",
+     "exists": true,
+     "path": "base/test/system/virtual_environment_twin_narrated.ring",
+     "assertions": 38,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/virtual_environment_twin_narrated.ring"
+    },
+    {
+     "name": "emulator_narrated",
+     "exists": true,
+     "path": "base/test/system/emulator_narrated.ring",
+     "assertions": 39,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/emulator_narrated.ring"
+    },
+    {
+     "name": "deployment_narrated",
+     "exists": true,
+     "path": "base/test/system/deployment_narrated.ring",
+     "assertions": 63,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring"
+    },
+    {
+     "name": "full_scope_model_narrated",
+     "exists": true,
+     "path": "base/test/system/full_scope_model_narrated.ring",
+     "assertions": 62,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/full_scope_model_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "oBench = new stzVirtualFileSystem()\noBench.CreateFolder(\"config\")\noBench.CreateFile(\"config/pump.ini\", \"threshold=40\")\noBench.MoveFile(\"old_settings.txt\", \"config/legacy.ini\")\noPlan = oBench.GenerateUpdatePlan()\n? oPlan.Narration()\n#--> Update plan (3 of 3 operations to commit):\n#-->   * 1. create folder 'config'\n#-->   * 2. create file 'config/pump.ini' (12 bytes)\n#-->   * 3. move 'old_settings.txt' -> 'config/legacy.ini'\n? @@(oPlan.Risks())\n#--> [ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n? @@(oPlan.Validate())\n#--> [ [ 3, \"source absent in reality: old_settings.txt\" ] ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oEnv = new stzVirtualEnvironment()\noEnv.SetActor(\"agent-42\")\noEnv.SetVar(\"SHOP_MODE\", \"rehearsal\")\noEnv.Cd(\"/srv/shop\")\noEnv.Spawn(\"backup-database --all\")\n? oEnv.Var(\"SHOP_MODE\")\n#--> rehearsal\n? oEnv.NumberOfPendingSpawns()\n#--> 1\n? (new stzEnvironment()).Has(\"SHOP_MODE\")\n#--> 0\noEnvPlan = oEnv.GenerateUpdatePlan()\n? oEnvPlan.Narration()\n#--> Update plan (3 of 3 operations to commit):\n#-->   * 1. set env var 'SHOP_MODE' = 'rehearsal'\n#-->   * 2. change directory to '/srv/shop'\n#-->   * 3. spawn process: backup-database --all\n? @@(oEnvPlan.Risks())\n#--> [ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oProduct = new stzPlatformProfile(\"greenhouse\")\noProduct.DevelopedOn(:Windows)\noProduct.WithApp(:sensor, :ESP32)\n? oProduct.ReadPinIn(:sensor, 34)\n#--> rehearsed\n? oProduct.WritePinIn(:sensor, 26, 1)\n#--> rehearsed\noPlatform = StzPlatformQ(\"greenhouse\")\noPlatform.SetProfile(oProduct)\noPlatform.Build()\ntry\n\toPlatform.DeployAs(LLMActor(\"copilot\"))\ncatch\n\t? cCatchError\ndone\n#--> stzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n? oPlatform.IsDeployed()\n#--> 0\noPlatform.DeployAs(HumanActor(\"me\"))\n? oPlatform.ArtifactFor(:sensor)\n#--> // firmware generated by the Softanza lowering bridge\n#--> // target: espidf\n#--> void setup() {}\n#--> void loop() {\n#-->   digitalRead(34);\n#-->   digitalWrite(26, 1);\n#--> }",
+     "verdict": "kept"
+    },
+    {
+     "code": "oShip = new stzDelivery(\"shop\")\noShip.AddSuperApp(:phone, :Android)\noShip.NeedsIn(:phone, [ :Unicode, :PivotTable, :Collection, :Neural ])\noShip.Plan().Show()\n#--> Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n#--> ==============================================================================\n#-->\n#-->   Part 'phone' [superapp] -> android (mobile / edge)\n#-->      Unicode            [target]    Unicode: the target-platform is strong at it -> use its own\n#-->      PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\n#-->      Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\n#-->      Neural             [server]    Neural: heavy -> runs on the backend, not the edge\n#-->      -> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\n#-->\n#-->   Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\n#-->   Build() will compile exactly this scope; Deploy() will commit it.",
+     "verdict": "kept"
+    },
+    {
+     "code": "cHere = StzReplace(WorkingDirectory(), \"\\\", \"/\")\noFront = new stzDelivery(\"shopfront\")\noFront.AddSuperApp(:web, :Browser)\noFront.NeedsIn(:web, [ :Unicode, :PivotTable, :Collection ])\noBundle = new stzEmulator(oFront)\noBundle.CompileEngineQ(FALSE)\noBundle.SetOutDirQ(cHere + \"/_bundle\")\noBundle.Build()\noSite = new stzDeploymentSite(\"cdn\")\noSite.SetKindQ(:LocalRepo).SetStoreAtQ(cHere + \"/_live\")\noFront.DeployTo(oSite, :web)\noFront.ShipSlice(:web, oBundle)\noFront.SetActor(LLMActor(\"assistant\"))\noFront.Deploy(:Production)\n? oSite.Status()\n#--> absent\noFront.SetActor(HumanActor(\"ops\"))\noFront.Deploy(:Production)\n? oSite.Status()\n#--> launched\n? @@(StzEngineDirListFiles(cHere + \"/_live\"))\n#--> [ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n? read(cHere + \"/_live/deploy.json\")\n#--> {\n#-->   \"solution\": \"shopfront\",\n#-->   \"part\": \"web\",\n#-->   \"engine\": \"aggregation\",\n#-->   \"artifacts\": \"index.html,stz.js\"\n#--> }\nStzDirDeleteAll(cHere + \"/_bundle\")\nStzDirDeleteAll(cHere + \"/_live\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "cHere = StzReplace(WorkingDirectory(), \"\\\", \"/\")\noShop10 = new stzDelivery(\"shop\")\noShop10.AddBackend(:api, :LinuxServer)\noShop10.AddSuperApp(:web, :Browser)\noGood = new stzDeploymentSite(\"cdn\")\noGood.SetKindQ(:LocalRepo).SetStoreAtQ(cHere + \"/_site_cdn\")\noBad = new stzDeploymentSite(\"prod-api\")\noBad.SetKindQ(:Server)\noRun = new stzDeployment(oShop10)\noRun.SetActor(HumanActor(\"ops\"))\noRun.SetTarget(:web, oGood)\noRun.SetTarget(:api, oBad)\noRun.RunAfter(:api, :web)\naRun = oRun.Run()\n? aRun[1]\n#--> 0\nfor aLine in aRun[2]\n\t? aLine[1] + \" -> \" + aLine[2]\nnext\n#--> store:web -> done\n#--> launch:web -> done\n#--> verify:web -> done\n#--> store:api -> FAILED\n#--> launch:api -> skipped\n#--> verify:api -> skipped\n? oGood.Status()\n#--> rolledback\nStzDirDeleteAll(cHere + \"/_site_cdn\")",
+     "verdict": "kept"
+    },
+    {
+     "code": "oPay = new stzPaymentsSandbox()\noReg = new stzServiceRegistry(\"shop\")\noReg.DeclareMany([ :payments, :mail ])\noReg.Bind(:payments, oPay)\noReg.Bind(:mail, new stzMailSandbox())\n? Checkout(oReg, 4200)\n#--> authorized\n? oPay.NumberOfAuthorizations()\n#--> 1\noStoreCf = new stzSecretStore(\"shop\")\noStoreCf.Register( (new stzApiKey(\"stripe-key\")).FromLiteralQ(\"sk-test-123\") )\noStoreCf.Register( (new stzApiKey(\"mail-key\")).FromLiteralQ(\"mk-test-123\") )\noReg.BindLive(:payments, new LiveGateway, \"stripe-key\")\noReg.BindLive(:mail, new LiveMailer, \"mail-key\")\n? Checkout(oReg, 4200)\n#--> authorized\n? oPay.NumberOfAuthorizations()\n#--> 1\n? oReg.PostureOf(:payments)\n#--> live\noReg.SetPhase(:production)\n? oReg.IsSoundVia(oStoreCf)\n#--> 1\n\nfunc Checkout poReg, nCents\n\taRes = poReg.Service(:payments).Authorize(nCents, \"tok_visa\")\n\tpoReg.Service(:mail).Send(\"dana@example.com\", \"Receipt\", \"Thank you.\")\n\treturn aRes[:status]\n\nclass LiveGateway\n\tdef init\n\t\treturn\n\tdef Authorize nAmount, cToken\n\t\treturn [ :status = \"authorized\" ]\n\nclass LiveMailer\n\tdef init\n\t\treturn\n\tdef Send cTo, cSubject, cBody\n\t\treturn 1",
+     "verdict": "kept"
+    },
+    {
+     "code": "oStoreSf = new stzSecretStore(\"shop\")\noSurf = new stzServiceRegistry(\"shop\")\noSurf.Bind(:payments, new stzPaymentsSandbox())\noSurf.Bind(:scratch, StzMemoryDataSourceQ())\noSurf.BindLive(:cache, new stzString(\"cache-adapter\"), \"redis-url\")\noSurf.BindLive(:sms, new stzString(\"sms-adapter\"), \"\")\noSurf.Declare(:reporting)\n? oSurf.IsSoundVia(oStoreSf)\n#--> 0\noSurf.SetPhase(:production)\noSurf.ReportVia(oStoreSf)\n#--> Service registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n#-->   [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n#-->   [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n#-->   [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n#-->   [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n#-->   [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret",
+     "verdict": "kept"
+    },
+    {
+     "code": "oStoreWw = new stzSecretStore(\"shop\")\noOne = new stzServiceRegistry(\"shop\")\noOne.Bind(:payments, new stzPaymentsSandbox())\n? oOne.Phase()\n#--> development\n? oOne.MayGoLive(LLMActor(\"assistant\"), oStoreWw)\n#--> 0\n? oOne.WhyNotLive(LLMActor(\"assistant\"), oStoreWw)\n#--> actor 'assistant' is not effectful -- it may propose, not commit\n? oOne.MayGoLive(HumanActor(\"dana\"), oStoreWw)\n#--> 0\n? oOne.WhyNotLive(HumanActor(\"dana\"), oStoreWw)\n#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n? oOne.Phase()\n#--> development",
+     "verdict": "kept"
+    },
+    {
+     "code": "oS3 = new stzServiceRegistry(\"shop\")\noS3.DeclareMany([ :payments, :cache ])\noS3.BindSandbox(:payments, new stzPaymentsSandbox())\noS3.BindLocal(:cache, StzMemoryBlobStoreQ())\noD3 = new stzDelivery(\"shop\")\noD3.AddBackend(\"api\", \"linux\")\noD3.AddApp(\"web\", \"browser\")\noD3.UseServicesQ(oS3)\noD3.NeedsServiceInQ(\"api\", [ :payments, :cache ])\noD3.NeedsServiceInQ(\"web\", [ :reporting ])\noD3.DeployTo(StzDeploymentSiteQ(\"host1\"), \"api\")\n? oS3.Phase()\n#--> development\n? len(oS3.Findings())\n#--> 0\nfor aF in StzCheckServiceDelivery(oD3)\n\t? aF[:rule] + \" @ \" + aF[:where] + \" [\" + aF[:severity] + \"]\"\nnext\n#--> production-part-uses-sandbox @ api [error]\n#--> production-part-uses-ephemeral @ api [error]\n#--> part-uses-undeclared-service @ web [warning]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oUndeclared = new stzServiceRegistry(\"shop\")\noUndeclared.Bind(:payments, new AlwaysYes)\noUndeclared.SetPhase(:production)\n? oUndeclared.PostureOf(:payments)\n#--> live\n? oUndeclared.IsSound()\n#--> 1\n\nclass AlwaysYes\n\tdef init\n\t\treturn\n\tdef Authorize nAmount, cToken\n\t\treturn [ :status = \"authorized\" ]",
+     "verdict": "kept"
+    },
+    {
+     "code": "oMine = new stzServiceRegistry(\"my-project\")\noMine.Bind(:payments, new stzPaymentsSandbox())\noMine.Bind(:notes, StzMemoryDataSourceQ())\noMine.BindLive(:maps, new stzString(\"maps-adapter\"), \"maps_key\")\noStoreMine = new stzSecretStore(\"my-project\")\n# under each line, write the line you expect before you run it\n? oMine.IsSound()\n? oMine.IsSoundVia(oStoreMine)\n? len(oMine.FindingsForProductionVia(oStoreMine))\n? oMine.MayGoLive(HumanActor(\"me\"), oStoreMine)\n? oMine.Phase()",
+     "verdict": "exercise"
+    }
+   ],
+   "narrations": [
+    "stz-service-virtualization-code-first-subscribe-later.md",
+    "stz-emulating-the-whole-solution-narration.md",
+    "stz-deploying-to-target-sites-narration.md",
+    "stz-planning-and-provisioning-a-deployment-narration.md",
+    "stz-system-dev-to-deploy-narration.md"
+   ],
+   "rulings": [
+    "12.13",
+    "12.19",
+    "12.21",
+    "12.22",
+    "12.25",
+    "12.28",
+    "12.29"
+   ],
+   "doors": {
+    "programmer": "You code the whole integration against names, with doubles that raise when you forgot something and a counter that lets you assert a fee. The day you subscribe, you change a binding and not a line. The loss: the always-yes double you wrote yourself passes the gate.",
+    "analyst": "Before anything moves you can read the placement plan, the external dependencies with the credentials production will ask for by name, the step graph, and which part depends on a fake. The sizes are estimates, and the findings are by part.",
+    "designer": "The emulator generates a surface from the plan, with a parts grid by role and one window per part. I checked the generated text only, and never the look. Say \"generated\", and not \"seen\".",
+    "decision-maker": "\"Who may deploy?\" is a property. An assistant may plan the release and the site stays absent. A person may commit. Neither may ship a fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.",
+    "educator": "A learner can build a whole shop's integration with no account, no key and no fee, and watch the double refuse what she forgot. Her deployment fails safely and rolls back.",
+    "agent": "You may rehearse the whole integration and plan the whole release, in a world where nothing real can move: a sandbox payment moves no money and a mail sink sends no mail. You may ask whether you may go live and be told why not. You cannot commit. The loss: that guarantee covers the library's own doubles, and a surface bound to something live is outside it."
+   },
+   "run": {
+    "ran": "2026-10-09 00:43 UTC+01:00",
+    "kept": 11,
+    "runnable": 11
    }
   },
   {
@@ -2848,7 +2992,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 00:37 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2954,7 +3098,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 00:38 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -3063,7 +3207,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 00:38 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -3182,7 +3326,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 00:38 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3255,7 +3399,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 00:38 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3337,7 +3481,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 00:38 UTC+01:00",
+    "ran": "2026-10-09 00:43 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }

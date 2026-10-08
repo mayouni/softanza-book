@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-09 00:34 UTC+01:00",
+  "date": "2026-10-09 00:40 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 5.9
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 4.7
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 7.4
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 6.0
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 4.8
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 5.6
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 7.1
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 5.6
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 7.4
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 6.8
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 00:34 UTC+01:00",
-   "seconds": 7.5
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 7.1
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-09 00:35 UTC+01:00",
-   "seconds": 14.3
+   "ran": "2026-10-09 00:40 UTC+01:00",
+   "seconds": 12.6
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:35 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-09 00:41 UTC+01:00",
+   "seconds": 5.6
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-09 00:35 UTC+01:00",
-   "seconds": 7.0
+   "ran": "2026-10-09 00:41 UTC+01:00",
+   "seconds": 5.6
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-09 00:35 UTC+01:00",
-   "seconds": 26.0
+   "ran": "2026-10-09 00:41 UTC+01:00",
+   "seconds": 22.1
   },
   "en/12-a-language-declared": {
    "id": "a-language-declared",
@@ -958,8 +958,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 9.1
+   "ran": "2026-10-09 00:41 UTC+01:00",
+   "seconds": 5.3
   },
   "en/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -1111,8 +1111,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 1,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 26.7
+   "ran": "2026-10-09 00:41 UTC+01:00",
+   "seconds": 23.2
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1236,8 +1236,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.4
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1357,8 +1357,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.7
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1464,8 +1464,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 6.7
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1538,8 +1538,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 00:36 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.8
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1675,8 +1675,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 7.3
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 6.1
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1745,8 +1745,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.4
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1843,8 +1843,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.3
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1926,8 +1926,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 6.5
+   "ran": "2026-10-09 00:42 UTC+01:00",
+   "seconds": 5.3
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -1983,7 +1983,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
+   "ran": "2026-10-09 00:42 UTC+01:00",
    "seconds": 20.1
   },
   "en/23-a-world-a-constellation-a-platform": {
@@ -2082,8 +2082,115 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 6.4
+  },
+  "en/24-rehearse-then-commit": {
+   "id": "rehearse-then-commit",
+   "blocks": [
+    {
+     "hash": "f59d1b7870b3",
+     "promise": "Update plan (3 of 3 operations to commit):\n* 1. create folder 'config'\n* 2. create file 'config/pump.ini' (12 bytes)\n* 3. move 'old_settings.txt' -> 'config/legacy.ini'\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Update plan (3 of 3 operations to commit):\n  * 1. create folder 'config'\n  * 2. create file 'config/pump.ini' (12 bytes)\n  * 3. move 'old_settings.txt' -> 'config/legacy.ini'\n\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]"
+    },
+    {
+     "hash": "f70ba2a0862e",
+     "promise": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n* 1. set env var 'SHOP_MODE' = 'rehearsal'\n* 2. change directory to '/srv/shop'\n* 3. spawn process: backup-database --all\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n  * 1. set env var 'SHOP_MODE' = 'rehearsal'\n  * 2. change directory to '/srv/shop'\n  * 3. spawn process: backup-database --all\n\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]"
+    },
+    {
+     "hash": "a6e9abec952e",
+     "promise": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\ndigitalRead(34);\ndigitalWrite(26, 1);\n}",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\n  digitalRead(34);\n  digitalWrite(26, 1);\n}"
+    },
+    {
+     "hash": "625dad2b59d9",
+     "promise": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\nPart 'phone' [superapp] -> android (mobile / edge)\nUnicode            [target]    Unicode: the target-platform is strong at it -> use its own\nPivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\nCollection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\nNeural             [server]    Neural: heavy -> runs on the backend, not the edge\n-> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\nSummary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\nBuild() will compile exactly this scope; Deploy() will commit it.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\n\n  Part 'phone' [superapp] -> android (mobile / edge)\n     Unicode            [target]    Unicode: the target-platform is strong at it -> use its own\n     PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\n     Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\n     Neural             [server]    Neural: heavy -> runs on the backend, not the edge\n     -> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\n\n  Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\n  Build() will compile exactly this scope; Deploy() will commit it."
+    },
+    {
+     "hash": "aced2076317e",
+     "promise": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n\"solution\": \"shopfront\",\n\"part\": \"web\",\n\"engine\": \"aggregation\",\n\"artifacts\": \"index.html,stz.js\"\n}",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n  \"solution\": \"shopfront\",\n  \"part\": \"web\",\n  \"engine\": \"aggregation\",\n  \"artifacts\": \"index.html,stz.js\"\n}"
+    },
+    {
+     "hash": "02f3ac0e4630",
+     "promise": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback"
+    },
+    {
+     "hash": "59a4d10f2650",
+     "promise": "authorized\n1\nauthorized\n1\nlive\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "authorized\n1\nauthorized\n1\nlive\n1"
+    },
+    {
+     "hash": "113df73703d2",
+     "promise": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n[ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n[ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n[ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n[ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n[WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n  [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n  [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n  [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n  [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n  [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret"
+    },
+    {
+     "hash": "70bc9ce10ea1",
+     "promise": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment"
+    },
+    {
+     "hash": "635ce048849e",
+     "promise": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]"
+    },
+    {
+     "hash": "a4e90aee4a48",
+     "promise": "live\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "live\n1"
+    },
+    {
+     "hash": "4a47c6464137",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 1,
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 7.7
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -2139,8 +2246,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:37 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 8.2
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -2197,8 +2304,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-09 00:38 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 7.9
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -2263,8 +2370,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 00:38 UTC+01:00",
-   "seconds": 6.3
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 6.1
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -2322,8 +2429,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 00:38 UTC+01:00",
-   "seconds": 6.4
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 6.6
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -2356,8 +2463,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-09 00:38 UTC+01:00",
-   "seconds": 6.8
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 6.0
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -2397,8 +2504,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-09 00:38 UTC+01:00",
-   "seconds": 8.4
+   "ran": "2026-10-09 00:43 UTC+01:00",
+   "seconds": 7.0
   }
  }
 }

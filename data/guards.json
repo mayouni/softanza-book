@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:38 UTC+01:00",
+ "read": "2026-10-09 00:44 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -862,6 +862,26 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/service_delivery_narrated.ring",
    "also_found": []
   },
+  "emulator_narrated": {
+   "exists": true,
+   "path": "base/test/system/emulator_narrated.ring",
+   "assertions": 39,
+   "by_helper": {
+    "chk": 39
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/emulator_narrated.ring",
+   "also_found": []
+  },
+  "deployment_narrated": {
+   "exists": true,
+   "path": "base/test/system/deployment_narrated.ring",
+   "assertions": 63,
+   "by_helper": {
+    "chk": 63
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring",
+   "also_found": []
+  },
   "payments_port_narrated": {
    "exists": true,
    "path": "base/test/system/payments_port_narrated.ring",
@@ -991,16 +1011,6 @@
     "Chk": 20
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/sound/sound_mu5_narrated.ring",
-   "also_found": []
-  },
-  "deployment_narrated": {
-   "exists": true,
-   "path": "base/test/system/deployment_narrated.ring",
-   "assertions": 63,
-   "by_helper": {
-    "chk": 63
-   },
-   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/deployment_narrated.ring",
    "also_found": []
   },
   "codegraph_narrated": {
@@ -1191,6 +1201,15 @@
    "full_scope_model_narrated",
    "04_stzapp_pursue_narrated",
    "05_stzapp_live_narrated"
+  ],
+  "en/24-rehearse-then-commit": [
+   "service_registry_narrated",
+   "service_delivery_narrated",
+   "virtual_system_twin_narrated",
+   "virtual_environment_twin_narrated",
+   "emulator_narrated",
+   "deployment_narrated",
+   "full_scope_model_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",
