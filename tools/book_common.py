@@ -16,10 +16,12 @@ DATA = ROOT / "data"
 CACHE = ROOT / ".cache"
 LIB_REPO = pathlib.Path("D:/GitHub/stzlib")          # the library's repository, read only
 LIB_IN_REPO = "libraries/stzlib"
-# The library's public line, which the book runs against unless a commit is named. The working checkout is
-# often on a working branch of another session (it was on ringpp/migrate-rule-a when the book began), and a
-# side branch is not the library a reader can fetch.
-LIB_REF = "origin/main"
+# The commit of the library the book runs at, named in full: a branch name moves under the book. It moved on
+# 2026-10-08 (five fix branches merged into origin/main, 21:34 to 21:43) and every chapter failed to load until
+# the pin was a commit. This one is origin/main as the book's first drafts saw it (2026-10-05 21:50); the
+# working checkout was then on a side branch, which is not the library a reader can fetch. Move the pin
+# deliberately, then re-run: `python tools/book_run.py --commit <sha>` shows what a newer commit does first.
+LIB_REF = "93d7a39bdd040f82eae21d949460d69c32a75c70"
 GH_BLOB = "https://github.com/mayouni/stzlib/blob/{sha}/libraries/stzlib/{path}"
 
 FENCE = re.compile(r"(?ms)^```([^\n]*)\n(.*?)^```[ \t]*$")

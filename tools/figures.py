@@ -59,7 +59,7 @@ def platform_svg(f, lang="en"):
     out.append(T(CX + CCW / 2, 57, "nothing is believed,", "fg-soft", 11, 400, "middle", True))
     out.append(T(CX + CCW / 2, 71, "everything is judged", "fg-soft", 11, 400, "middle", True))
     floors = [  # y, height, title, court lines
-        (90, 92, "The makers", ["the interface constitution:", "every element traces to a verb"]),
+        (90, 92, "The crafters", ["the interface constitution:", "every element traces to a verb"]),
         (196, 112, "The worlds", ["bonds and norms between worlds;", "build before deploy;", "no fake in production"]),
         (322, 150, "The areas", [f"{f['atlas']['lanes']} lanes, each rated", "with its proof line"]),
         (486, 92, "The layers", [f"{f['guards']} narrated guards,", "one dependency rule"]),
@@ -71,7 +71,7 @@ def platform_svg(f, lang="en"):
         out.append(f'<line x1="{L + CW}" y1="{y + h / 2}" x2="{CX}" y2="{y + h / 2}" class="fg-arrow" marker-end="url(#fgarr)"/>')
         for k, line in enumerate(court):
             out.append(T(CX + 12, y + h / 2 - (len(court) - 1) * 7 + k * 14 + 4, line, "fg-txt", 11))
-    # floor 5, the makers: six doors
+    # floor 5, the crafters: six doors
     doors = ["programmer", "analyst", "designer", "decision-maker", "educator", "agent"]
     dw = (CW - 24 - 5 * 6) / 6
     for k, d in enumerate(doors):

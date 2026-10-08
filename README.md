@@ -1,6 +1,6 @@
 # Softanza — the book
 
-*Softanza · The Software Makers Platform of the AI Age · Rethinking programming, languages and intelligence,
+*Softanza · The Software Crafters Platform of the AI Age · Rethinking programming, languages and intelligence,
 from first principles.* By Mansour Ayouni. The second of the AYOUNI books.
 
 This book runs. Every code block is run inside the Softanza library at a named commit and judged against the

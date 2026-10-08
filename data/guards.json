@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 21:42 UTC+01:00",
+ "read": "2026-10-08 22:11 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -350,7 +350,7 @@
    "safeworld_narrated",
    "governance_crossing_narrated"
   ],
-  "en/02-the-software-maker": [
+  "en/02-the-software-crafter": [
    "agentfile_narrated",
    "service_registry_narrated",
    "graphrule_object_narrated",

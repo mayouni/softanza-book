@@ -1,16 +1,16 @@
 ---
-id: the-software-maker
+id: the-software-crafter
 part: 1
 number: 2
-title: The software maker
+title: The software crafter
 spine: true
 narrations: [stz-built-on-real-world-need.md, stz-service-virtualization-code-first-subscribe-later.md, stz-agents-that-cannot-hurt-you-narration.md, stz-rules-as-graph-rules-narration.md, stzOrgChartDoc-BankUseCase.md]
 site: [offering, customers, forged, coding-agents]
 guards: [agentfile_narrated, service_registry_narrated, graphrule_object_narrated, semantic_resolver_narrated, 00_orgchart_narrated]
 stage:
   built: "the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic"
-  designed: "a journey page for each kind of maker, with each step run; the door through which a coding agent asks the library to judge its work"
-  absent: "the three makers' platforms running on the Softanza engine; a maker's own medium, the messaging app on their phone, as a target"
+  designed: "a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work"
+  absent: "the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
 status: draft
 rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
@@ -18,17 +18,17 @@ research: research/ch02.md
 
 ## 1. The concept, as the field holds it
 
-The word "maker" already has an owner. Since the magazine *Make:* in 2005, it has meant the hobbyist with a workshop: a soldering iron, a 3D printer, a fair on a Saturday. That is a fine culture, and it is not what this book is about, which is why the cover says *software* makers.
+The field already has a word for programmers who care about their work: craftsmanship. A book of 2001 gave the idea its name, a manifesto of 2009 gave it its slogan, and since then "software craftsman" has meant a professional who holds their code to a standard higher than the one the job requires. (General knowledge, not a study of the record.) It is a good movement. It is also a movement of programmers, about programmers' standards.
 
-The field has two other answers to "who makes software, if not programmers". The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: a model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The maker is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its model, the maker's work changes with it.
+The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: a model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its model, the person's work changes with it.
 
 ## 2. The first principle
 
-The site gives the definition in two sentences: **a maker turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. Are they your definition, or would you put it differently?]
+The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes?]
 
 ## 3. The Softanza form
 
-I was the first maker of Softanza, and not for a reason I would have chosen. My wife runs a music club where people learn to sing classical Arabic songs. Every Sunday morning she sends me the list of songs to prepare, and I search for their lyrics. The lyrics found online repeat every phrase as the singer performed it, and she reminds me, every time, to remove the duplicates. I wrote `RemoveDuplicates()` to stop doing it by hand, and its family is still in the library:
+I was the first crafter of Softanza, and not for a reason I would have chosen. My wife runs a music club where people learn to sing classical Arabic songs. Every Sunday morning she sends me the list of songs to prepare, and I search for their lyrics. The lyrics found online repeat every phrase as the singer performed it, and she reminds me, every time, to remove the duplicates. I wrote `RemoveDuplicates()` to stop doing it by hand, and its family is still in the library:
 
 ```haro
 o1 = new stzList([ "tea", "rice", "tea", "fish", "rice", "tea" ])
@@ -38,9 +38,9 @@ o1 = new stzList([ "tea", "rice", "tea", "fish", "rice", "tea" ])
 #--> 3
 ```
 
-I write about this in an article on what the library was built on: I introduced its features when a real problem asked for them. The maker comes first, and the feature after.
+I write about this in an article on what the library was built on: I introduced its features when a real problem asked for them. The crafter comes first, and the feature after.
 
-Since 2022, I have presented Softanza not by its anatomy, its modules and classes, but by who you are and what you are trying to do. The 2022 deck had five audiences, each with a recipe of three to five steps. The site today has six doors, one per kind of maker, and each door says what you declare, what you get, and where to start. Here is what each one declares, in a line or two that run.
+Since 2022, I have presented Softanza not by its anatomy, its modules and classes, but by who you are and what you are trying to do. The 2022 deck had five audiences, each with a recipe of three to five steps. The site today has six doors, one per kind of crafter, and each door says what you declare, what you get, and where to start. Here is what each one declares, in a line or two that run.
 
 **The programmer** declares intent in a library that reads like a sentence. You have just seen it.
 
@@ -99,7 +99,7 @@ oD = StzAgentDeclarationQ(cPia)
 #--> arabic
 ```
 
-**The agent** is the sixth maker, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect, and a file that gives it one is refused at construction:
+**The agent** is the sixth crafter, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect, and a file that gives it one is refused at construction:
 
 ```haro
 cLlm = "pia: 1
@@ -127,7 +127,7 @@ oBad = StzAgentDeclarationQ(cLlm)
 #--> [no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).
 ```
 
-Now the three makers this book is for. They are not personas. They are people with documents, and Part VI tells each of them in full. Here, a page each.
+Now the three crafters this book is for. They are not personas. They are people with documents, and Part VI tells each of them in full. Here, a page each.
 
 **A restaurateur in Lyon.** He owns a couscous restaurant, and with a few neighbours he wanted a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery. In July 2026 he reversed the order of the work, and the library's constellation of worlds was redrawn around his order. The first amendment closed on 4 August 2026, with one ergonomic rule: at most two gestures per action. The rules of the interface were forged by eleven iterations with him, phone in hand. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect. [AUTHOR: Chapter 1 says the first demonstration was made by the owner himself, on his own phone, over a messaging app. The record has the demonstration day, 15 August 2026, and his own measurements of 19 August. Who demonstrated what on the 15th?]
 
@@ -156,7 +156,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 #--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
 ```
 
-Three findings, each a rule with a number an auditor can read. [AUTHOR: Who at the bank is the maker in the sense of this chapter, and what did they declare? The record shows the bank as the licensee of a product you built; it is silent on what the bank's own people declared.]
+Three findings, each a rule with a number an auditor can read. [AUTHOR: Who at the bank is the crafter in the sense of this chapter, and what did they declare? The record shows the bank as the licensee of a product you built; it is silent on what the bank's own people declared.]
 
 **An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead, for one reason above the others: ownership. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a developer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model, and the model judges itself:
 
@@ -175,19 +175,19 @@ g.AddRule(oRule)
 #--> 0
 ```
 
-Three makers: a restaurateur who is not a programmer, a bank under a regulator, an organisation that chose ownership over a vendor. None of them waited for the software industry. Each of them owns, or will own, what was built.
+Three crafters: a restaurateur who is not a programmer, a bank under a regulator, an organisation that chose ownership over a vendor. None of them waited for the software industry. Each of them owns, or will own, what was built.
 
 ## 4. The decision, and what I refused
 
 **I kept the programmer first.** The vision of the platform, which I ratified, says it in one line: the first audience stays the programmer in a small team; the agentic era did not replace that person, it multiplied them. I refused the reading that agents make programmers obsolete.
 
-**I added the agent as a maker, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
+**I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
-**I refused the hobbyist word.** The site's headline said "makers". On the cover of this book I wrote "software makers", so that nobody reads it as the workshop and the printer.
+**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work. [AUTHOR: Say in your own words what the cover image carries, and I will put your sentence here.]
 
 **I refused to count a customer without a document.** The site counts a project as a reference only when a document proves it, quotes no number of countries and no number of developers, and names a customer only on my word. A lesson is listed only when a file of the library carries it.
 
-**I refused to present the library by its anatomy.** Since 2022, the front door is who you are and what you want to do, and the anatomy is placed under each step. The site keeps six doors; the journeys behind them, one page per maker with every step run, are designed and not built.
+**I refused to present the library by its anatomy.** Since 2022, the front door is who you are and what you want to do, and the anatomy is placed under each step. The site keeps six doors; the journeys behind them, one page per crafter with every step run, are designed and not built.
 
 ## 5. The court
 
@@ -197,9 +197,9 @@ Three makers: a restaurateur who is not a programmer, a bank under a regulator, 
 
 Coding agents lead in hands. They already read, search, edit and run, on any project, in any language. What they lack, by the site's own account, is a way to know an unfamiliar interface without guessing, to judge their work against rules and promises, and to present a change as an intention a person can review. Softanza's judges are built; the door between them and a coding agent is decided and not built.
 
-Low-code leads in installed base and in everything around it. The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications; the maker's platform sits beside the field's tools, not in place of them.
+Low-code leads in installed base and in everything around it. The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications; the crafter's platform sits beside the field's tools, not in place of them.
 
-The messaging apps lead where the makers already are. The restaurateur's tools before the project were his head, a paper notebook, a spreadsheet and the messaging apps on his phone. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
+The messaging apps lead where the crafters already are. The restaurateur's tools before the project were his head, a paper notebook, a spreadsheet and the messaging apps on his phone. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
 
 And the educator's door is the least proven of the six. The course's editions in French, Arabic and Hausa are drafts that no reviewer has read, and no institution has adopted it.
 
@@ -207,9 +207,9 @@ And the educator's door is the least proven of the six. The course's editions in
 
 What is built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic.
 
-What is designed: a journey page for each kind of maker, with each step run in order and a guard that fails when a step breaks; the door through which a coding agent asks the library to judge its work.
+What is designed: a journey page for each kind of crafter, with each step run in order and a guard that fails when a step breaks; the door through which a coding agent asks the library to judge its work.
 
-What is absent: the three makers' platforms running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And the maker's own medium, the messaging app on their phone, is not yet something a world can be declared to.
+What is absent: the three crafters' platforms running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And the crafter's own medium, the messaging app on their phone, is not yet something a world can be declared to.
 
 ## 8. Six doors
 

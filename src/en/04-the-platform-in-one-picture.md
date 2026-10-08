@@ -133,9 +133,9 @@ oPlan = oDelivery.Plan()
 
 The phone asked for four capabilities and ships two engine groups, because the phone's own system already handles the other two.
 
-**The makers.** At the top are the six doors of chapter 2: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. And one person works across every floor, from the machine to the organisation: the platform architect. The record names that person in three unrelated places, and no other role crosses every band of the Atlas.
+**The crafters.** At the top are the six doors of chapter 2: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. And one person works across every floor, from the machine to the organisation: the platform architect. The record names that person in three unrelated places, and no other role crosses every band of the Atlas.
 
-**The court.** Beside every floor stands its judge. The engine has its tests and the contracts between the floors. The layers have the narrated guards. The areas have a proof line for every lane. The worlds have their bonds and norms, the order of build and deploy, and the refusal of a fake in production. The makers' interfaces have a constitution of verbs and rules that every element must trace to. And above all of it, the platform's threat model lists its guarantees, each tied to the guard that proves it, and its own guard fails when a row names a guard that no longer exists.
+**The court.** Beside every floor stands its judge. The engine has its tests and the contracts between the floors. The layers have the narrated guards. The areas have a proof line for every lane. The worlds have their bonds and norms, the order of build and deploy, and the refusal of a fake in production. The crafters' interfaces have a constitution of verbs and rules that every element must trace to. And above all of it, the platform's threat model lists its guarantees, each tied to the guard that proves it, and its own guard fails when a row names a guard that no longer exists.
 
 Parts II to IV of this book are rethinks, and each of them is a box of this picture. Part V assembles the picture in use.
 

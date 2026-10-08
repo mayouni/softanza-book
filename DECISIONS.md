@@ -26,3 +26,24 @@ repository is not taken here.
 | NAMES-01 | Products of other repositories (the bank's platform, the restaurant's platform, the organisation's hub, the conversational agent, the declared machine, the event store, the studios) | **Not named.** Told by what they are, as chapter 1 does ("a bank in Niamey") | §4.8 forbids naming another repository's product without the author's ruling; "Zin" never | Rule a name, and the chapters take it |
 | CENTRAL-01 | Register the book with Central | **No.** The book stays outside the estate's protocol; its memos follow the protocol's style | Registration edits Central, another repository; the estate's hooks still apply here | Ask Central to install the block |
 | FORMAT-01 | The format verdict the prompt waits for before a third chapter | **Taken as given** by the author's delegation; Phase 1 starts | The author asked to continue | Any change to the format is a builder change; chapters are not affected |
+
+## Ruled by the author, in person
+
+**CRAFTER-01 · 2026-10-08 22:03 UTC+01:00.** The author, in chat: change the hero line and replace "maker" by "crafter",
+which says more of the culture the background image carries and of what the author personally thinks of programming:
+not maker, not builder. This amends the cover ruled on 2026-10-08 01:12 (study 12.30).
+
+| What | Now |
+|---|---|
+| English cover, line 2 | **The Software Crafters Platform of the AI Age** |
+| Chapter 2, Part I and Part VI titles | "The software crafter"; "The age, the crafter, the method"; "Software crafters, forged" |
+| The word in the book | crafter, crafters; "decision-maker" stays: it names a door, not a person's craft |
+| French cover, line 2 (taken on the author's behalf, to confirm) | « La plateforme des artisans du logiciel à l'ère de l'IA ». "Crafter" is not a French word, and "artisan du logiciel" is how French says software craftsmanship; the earlier rule kept the English word "makers" only because French already used it |
+| The definition (chapter 2) | the site's two sentences with the word changed; a question to the author notes that "craft" suggests skill where the sentence denies it |
+| The reason (chapter 2, section 4) | written from the author's message; an open question asks the author to say in his own words what the cover image carries |
+
+**Not changed here, and why.** `drafts/` is the author's: the session prompt and the structure still say "makers". The
+site (`stzsite`) is another repository, untouched: its hero lines say "makers" in six places (study 12.30's table:
+`tools/build.py` lines 99, 127 and 676; `content/en/tour.md:11` and its French twin; `README.md:3`), plus
+`llms.txt:3` and the Offering's "What is a maker?". The book and the site now carry two words until the site is changed;
+that is one line for Central, listed in the memo.

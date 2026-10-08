@@ -81,3 +81,47 @@ sections, in this order:
 
 Be thorough and exact. Short quotes only. Report at the end, in your final message, the path of your file and
 the list of blocks with run status (kept / not).
+
+---
+
+# Phase 2 addendum (read this before the sections above are applied)
+
+**The library the book runs at is `origin/main` (93d7a39bd).** Use the snapshot `.cache/stzlib-93d7a39bd/...`
+(the paths above say so). A guard you name in the front matter must exist in that snapshot's `base/test/` tree, and a
+block you propose must run THERE. Several things measured in the study (written at 93d7a39) are present now, among
+them `base/security/SOFTANZA_THREAT_MODEL.md`, `threat_model_narrated`, `containment_drill_narrated` and
+`base/test/testoor/testoor_promises_narrated.ring`.
+
+**Nine chapters are already drafted: read them first** in `D:\GitHub\ayouni\books\softanza-book\src\en\` (1, 2, 3, 4, 5, 11,
+17, 32, 33). Do not repeat their blocks; build on them. Their voice is the model: first person, the author's, plain
+words, short paragraphs, "you" for the reader, one exclamation per chapter at most, the loss printed beside the win.
+A chapter runs about 2,000 words with 3 to 10 blocks; the shape is the nine elements of §3 of the prompt.
+
+**What the drafts already established, so you can point to it and not re-tell it:** the first principle of the method
+(declare, then govern; ch3); the six doors and the three makers in a page each (ch2); the platform in one picture
+(ch4); the discipline of thinking and writing and the court judging whoever wrote it (ch5); the closed language and the
+model judged by it (ch11); programmatic by default, the model last (ch17); the protocol of many minds (ch32); the one
+line still owed (ch33).
+
+**Known defects of the library at main: do not build a block on them (a request has been filed).** The 2022 slide's
+`CharsQR` does not exist; `ReplaceNth(2, "x", :With = "y")` panics the engine (the positional form runs);
+`ReplaceNextOccurrence` does not exist (`ReplaceNextNthOccurrence` does); a list literal in a natural sentence reaches
+host code; the Hausa pack cannot read the letter ɗ (use plain `dauke`, `maida`); the domain model answers a reworded
+question with the type; `stx*` classes (max) are loaded by no entry file; `stkString` raises; `Some/Most/Few` draw at
+random; `AreGreaterThan` is spelled `AreGreaterThen`; the history narration's promise (it prints the initial value first).
+
+**Names the book does not use** (describe them): Zin and everything of its notation; the bank's, the restaurant's and the
+organisation's product names and their customers' persons; Harobanda, HaroBase, Aïcha, Makeen, Bangalo Studio, Zing,
+Zui (say "the interface constitution"), RingPad, Takamba. The harness may be described, not named. The author's own
+first book, *Refinement-Oriented Programming*, may be named (it is the book this one follows). "Refine" the product is
+another repository's: say "the refinement layer" or "the library verb". Never the word "substrate".
+
+**A block that does not run on main is evidence, not a block**: put it in §8 as a limit with the failure you saw, and
+propose the nearest block that runs. Report requests for the library in your hazards; never edit it.
+
+**Do not run more than one `ring` process at a time, and never any `zig` command.** Put your probe in a folder named for
+your chapter (`_probe_NN`) and remove it when done. If a guard leaves a file beside itself, remove it and say so.
+
+**Be economical**: you have no need to read every file the study cites; read the sections named in your task, the
+narrations and guards you will use, and the sources for the decision and the limit. Write the research file as
+specified. Short quotes only (under 25 words each), always with path. Report your file path and the block table.

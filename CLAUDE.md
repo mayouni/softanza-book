@@ -4,7 +4,7 @@
 
 ```
 Softanza
-The Software Makers Platform of the AI Age
+The Software Crafters Platform of the AI Age
 Rethinking programming, languages and intelligence, from first principles
 ```
 

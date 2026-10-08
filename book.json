@@ -1,10 +1,10 @@
 {
  "title": "Softanza",
- "subtitle": "The Software Makers Platform of the AI Age",
+ "subtitle": "The Software Crafters Platform of the AI Age",
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-08 21:42 UTC+01:00",
+ "built": "2026-10-08 22:11 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -100,23 +100,23 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
   },
   {
    "number": 2,
-   "id": "the-software-maker",
-   "title": "The software maker",
+   "id": "the-software-crafter",
+   "title": "The software crafter",
    "part": 1,
    "law": null,
    "spine": true,
    "status": "draft",
    "stage": {
     "built": "the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic",
-    "designed": "a journey page for each kind of maker, with each step run; the door through which a coding agent asks the library to judge its work",
-    "absent": "the three makers' platforms running on the Softanza engine; a maker's own medium, the messaging app on their phone, as a target"
+    "designed": "a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work",
+    "absent": "the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
    },
    "guards": [
     {
@@ -221,7 +221,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -308,7 +308,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -421,7 +421,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -523,7 +523,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -664,7 +664,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-08 21:39 UTC+01:00",
+    "ran": "2026-10-08 22:09 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -781,7 +781,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-08 21:40 UTC+01:00",
+    "ran": "2026-10-08 22:10 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -854,7 +854,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-08 21:40 UTC+01:00",
+    "ran": "2026-10-08 22:10 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -936,7 +936,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-08 21:40 UTC+01:00",
+    "ran": "2026-10-08 22:10 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
