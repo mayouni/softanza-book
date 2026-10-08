@@ -140,7 +140,7 @@ The stock is low, the skill wants to order, and the agent was never given the pe
 
 Put the pieces in a line and you have the stack the vision of the platform names: perceive, decide, react, learn, without any language model. Perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. A model may sit beside each step as one more faculty, and none of them depends on it.
 
-Chapter 18 tells the five registers of an answer and the conversation that asks. Chapter 19 tells the domain language model, from its first rung, with no neurons, to its second, trained only on what the first can check. Chapter 20 tells the agent that cannot hurt you: it proposes, a workbench rehearses, the court judges, and only a governed actor commits. Chapter 21 tells the court itself. Chapter 22 compares all of it with the field, and prints where the field leads.
+Chapter 18 tells the five registers of an answer and the conversation that asks. Chapter 19 tells the domain language model, from its first rung, with no neurons, to its second, trained on the first one's own facts and nothing else. Chapter 20 tells the agent that cannot hurt you: it proposes, a workbench rehearses, the court judges, and only a governed actor commits. Chapter 21 tells the court itself. Chapter 22 compares all of it with the field, and prints where the field leads.
 
 ## 4. The decision, and what I refused
 
@@ -152,13 +152,13 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 **I refused retrieval as memory.** Memory is a governed graph, not a pile of similar fragments. Derivation replaces retrieval: the system knows what it was told and what follows from it by law, and it can prove both.
 
-**I refused a teacher I cannot see.** The domain language model's second rung is trained only on what its first rung can check, so its training data is correct by construction, and no remote model teaches it. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation, so that any project that supplies a knowledge base can ship its own model free.
+**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else, and no remote model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation, so that any project that supplies a knowledge base can ship its own model free.
 
 **I refused a stub.** The library declares five agents of its own and has wired one. Asking for one that is not wired raises an error; it does not return something that looks like an agent. Pretending would be easier, and it would make every other refusal in this chapter worth less.
 
 ## 5. The court
 
-Each block above stands on a guard. `dlm_narrated` proves the domain language model: answers with their why, refusal outside the domain, completion held to the domain's grammar, a self-contained bundle, and a second rung trained on its own corpus. `wisecoding_narrated` proves the conversation that asks and the refusal to conclude. `knowledge_integration_narrated` proves derivation and the certain "no". `agentgraph_narrated` proves that a model straight to an effect is not sound, that the governed shape is, and that a model actor proposes and never commits. `piagent_narrated` proves the programmatic agent and its refusal at the gate. `ownagentstack_narrated` proves the honest roster of the library's own agents.
+Each block above stands on a guard. `dlm_narrated` proves the domain language model: answers with their why, refusal outside the domain, completion held to the domain's entities and relations, a self-contained bundle, and a second rung trained on its own corpus. `wisecoding_narrated` proves the conversation that asks and the refusal to conclude. `knowledge_integration_narrated` proves derivation and the certain "no". `agentgraph_narrated` proves that a model straight to an effect is not sound, that the governed shape is, and that a model actor proposes and never commits. `piagent_narrated` proves the programmatic agent and its refusal at the gate. `ownagentstack_narrated` proves the honest roster of the library's own agents.
 
 ## 6. The field, and where it leads
 

@@ -1,5 +1,5 @@
 {
- "read": "2026-10-08 22:28 UTC+01:00",
+ "read": "2026-10-08 22:31 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -250,6 +250,46 @@
     "#-->": 4
    },
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/list/495_walking_until_and_until_before.ring",
+   "also_found": []
+  },
+  "00_regex_narrated": {
+   "exists": true,
+   "path": "base/test/regex/00_regex_narrated.ring",
+   "assertions": 28,
+   "by_helper": {
+    "Then": 28
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/regex/00_regex_narrated.ring",
+   "also_found": []
+  },
+  "972_narration_viz-finding_a_recurring_substring": {
+   "exists": true,
+   "path": "base/test/string/972_narration_viz-finding_a_recurring_substring.ring",
+   "assertions": 7,
+   "by_helper": {
+    "Then": 7
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/string/972_narration_viz-finding_a_recurring_substring.ring",
+   "also_found": []
+  },
+  "system_scope_model_narrated": {
+   "exists": true,
+   "path": "base/test/system/system_scope_model_narrated.ring",
+   "assertions": 62,
+   "by_helper": {
+    "chk": 62
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/system_scope_model_narrated.ring",
+   "also_found": []
+  },
+  "delivery_narrated": {
+   "exists": true,
+   "path": "base/test/system/delivery_narrated.ring",
+   "assertions": 34,
+   "by_helper": {
+    "chk": 34
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/delivery_narrated.ring",
    "also_found": []
   },
   "00_overflow_narrated": {
@@ -542,6 +582,13 @@
    "621_perform",
    "483_w_and_wf_forms_in_conditional_code",
    "495_walking_until_and_until_before"
+  ],
+  "en/08-functions-as-linguistic-expressions-and-scope": [
+   "00_regex_narrated",
+   "972_narration_viz-finding_a_recurring_substring",
+   "full_scope_model_narrated",
+   "system_scope_model_narrated",
+   "delivery_narrated"
   ],
   "en/09-patterns-of-thought": [
    "00_overflow_narrated",

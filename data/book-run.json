@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-08 22:27 UTC+01:00",
+  "date": "2026-10-08 22:29 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-08 22:29 UTC+01:00",
+   "seconds": 7.0
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-08 22:29 UTC+01:00",
+   "seconds": 6.9
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-08 22:29 UTC+01:00",
+   "seconds": 7.3
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 7.3
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 7.4
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,124 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 3.6
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 7.6
+  },
+  "en/08-functions-as-linguistic-expressions-and-scope": {
+   "id": "functions-as-linguistic-expressions-and-scope",
+   "blocks": [
+    {
+     "hash": "9a0441b78c09",
+     "promise": "10\nSTAZA",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "10\nSTAZA"
+    },
+    {
+     "hash": "3880a42a1f71",
+     "promise": "[ \"find next\", [ \"case-sensitive\", \"from-position\", \"active\" ] ]\n[ \"remove\", [ \"case-sensitive\", \"plural\", \"active\" ] ]\nRemoveMany -- Remove every occurrence of each given substring (mutating).\n(plural form -- applies the operation to many items at once)\nreads as: remove -- over many values at once",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"find next\", [ \"case-sensitive\", \"from-position\", \"active\" ] ]\n[ \"remove\", [ \"case-sensitive\", \"plural\", \"active\" ] ]\nRemoveMany -- Remove every occurrence of each given substring (mutating).\n  (plural form -- applies the operation to many items at once)\n  reads as: remove -- over many values at once"
+    },
+    {
+     "hash": "6b80cebe013d",
+     "promise": "[ 1, 10, 20 ]\n[ [ 1, 4 ], [ 10, 13 ], [ 20, 23 ] ]\n[ \"SOFT\", 1 ]\n[ \"SOFT\", [ 1, 4 ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 10, 20 ]\n[ [ 1, 4 ], [ 10, 13 ], [ 20, 23 ] ]\n[ \"SOFT\", 1 ]\n[ \"SOFT\", [ 1, 4 ] ]"
+    },
+    {
+     "hash": "7f8d85d3ffb6",
+     "promise": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
+    },
+    {
+     "hash": "7ebd7a501879",
+     "promise": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza"
+    },
+    {
+     "hash": "f0081144333d",
+     "promise": "TRUE\nTRUE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n1"
+    },
+    {
+     "hash": "1dee0cb073a9",
+     "promise": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]"
+    },
+    {
+     "hash": "e6615732414e",
+     "promise": "H A R O\nhaxxrxo",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "H A R O\nhaxxrxo"
+    },
+    {
+     "hash": "4c5805d3ef1b",
+     "promise": "Haro",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Haro"
+    },
+    {
+     "hash": "04ed96a37b52",
+     "promise": "FALSE\nFALSE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n1"
+    },
+    {
+     "hash": "54a6937bcf82",
+     "promise": "TRUE\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "0342b687c59c",
+     "promise": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability."
+    },
+    {
+     "hash": "b71a8edebcb8",
+     "promise": "[ \"filesystem\", \"process\" ]\n[ \"gpio\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"filesystem\", \"process\" ]\n[ \"gpio\" ]"
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 0,
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 15.7
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -484,8 +600,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 7.6
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -566,8 +682,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 7.1
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -664,8 +780,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-08 22:27 UTC+01:00",
-   "seconds": 13.7
+   "ran": "2026-10-08 22:30 UTC+01:00",
+   "seconds": 29.0
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -738,8 +854,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-08 22:28 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-08 22:31 UTC+01:00",
+   "seconds": 7.0
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -795,8 +911,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-08 22:28 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-08 22:31 UTC+01:00",
+   "seconds": 6.7
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -829,8 +945,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-08 22:28 UTC+01:00",
-   "seconds": 4.1
+   "ran": "2026-10-08 22:31 UTC+01:00",
+   "seconds": 6.5
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -870,8 +986,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-08 22:28 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-08 22:31 UTC+01:00",
+   "seconds": 6.7
   }
  }
 }
