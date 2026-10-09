@@ -9,8 +9,8 @@ site: [zui]
 guards: [gui_stzui_narrated, gui_profile_narrated, gui_tier_agreement_narrated, gui_accessibility_narrated, 05_stzapp_live_narrated, emulator_narrated]
 stage:
   built: "l'interface comme texte avec un tribunal qui trouve l'élément ne servant aucun verbe ; deux projections de celle-ci, native et web, avec une table enregistrée des divergences et une page qui peut dire DISAGREE ; l'arbre d'accessibilité émis depuis la déclaration ; une page que le langage sert sur la boucle locale ; un monde qui propose et dont les propositions s'effacent quand on agit dessus ; des écrans déclarés comme intentions ; une surface de navigateur générée"
-  designed: "le kit de shells avec deux shells ; le chrome comme genres fermés (colonne, ruban, rail, barre d'état) ; la facette comme donnée ; un rail lié au focus ; des cellules d'état lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis"
-  absent: "un IDE de cette famille ; une classe nommée pour un ruban, un rail, une colonne ou une barre d'état ; une liste des vingt-deux verbes dans la bibliothèque et un refus d'un verbe inconnu ; une garde qui juge un shell contre les verbes ; un éditeur ; une latence mesurée"
+  designed: "le kit de shells avec deux shells ; le chrome comme genres fermés (colonne, ruban, rail, barre d'état), aucun encore classe de la bibliothèque ; la facette comme donnée ; un rail lié au focus ; des cellules d'état lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis"
+  absent: "un IDE de cette famille ; une liste des vingt-deux verbes dans la bibliothèque et un refus d'un verbe inconnu ; une garde qui juge un shell contre les verbes ; un éditeur ; une latence mesurée"
 status: draft
 rulings: ["12.12", "12.23", "12.24", "12.25"]
 research: research/ch26.md
@@ -20,21 +20,21 @@ research: research/ch26.md
 
 Les environnements du terrain ont fini par prendre une forme. Une barre d'outils et un menu en haut, une barre latérale de fichiers, un éditeur, un terminal en dessous, et une barre d'état en bas. Depuis peu un assistant se tient dans un volet ou un terminal à côté du code, et l'humain approuve ses modifications. (Connaissance générale, signalée.)
 
-Les études de terrain propres du dossier, datées, sont au nombre de trois. Le bloc-notes livré avec l'ancien langage hôte, mesuré le 12 août 2026 à trente-trois fichiers source et environ quatre mille lignes, sept volets ancrables, une configuration de quinze clés et aucun service de langage : il existe, il est livré dans la boîte, et il fonctionne le jour de l'installation. Les éditeurs rapides, dans la spécification d'ergonomie de mars 2026 : de l'entrée à l'écran en moins de seize millisecondes sur tout matériel moderne, sans exception ; un chrome minimal ; pas de barre d'état encombrée, pas de forêts de barres d'outils ; un essai à blanc avant un changement structurel ; et des inspections qui disent pourquoi et proposent une correction. Et la barre d'état, telle que cette spécification l'écrivait : vingt-quatre pixels de haut, ne portant que l'état essentiel, avec cinq états de construction, dont l'un est *non vérifié*, pour un projet où aucune construction n'a encore tourné. L'état de « pas encore jugé » a son propre mot. Une barre verte par défaut serait le mensonge habituel du terrain.
+Les études de terrain propres du dossier, datées, sont au nombre de trois. Le bloc-notes livré avec l'ancien langage hôte, mesuré le 12 août 2026 à trente-trois fichiers source et environ quatre mille lignes, sept volets ancrables, une configuration de quinze clés et aucun service de langage : il existe, il est livré dans la boîte, et il fonctionne le jour de l'installation. Les éditeurs rapides, dans la spécification d'ergonomie de mars 2026, qui fixe pour son propre produit : de l'entrée à l'écran en moins de seize millisecondes sur tout matériel moderne, sans exception ; un chrome minimal ; pas de barre d'état encombrée, pas de forêts de barres d'outils ; un essai à blanc avant un changement structurel ; et des inspections qui disent pourquoi et proposent une correction. Et la barre d'état, telle que cette spécification l'écrivait : vingt-quatre pixels de haut, ne portant que l'état essentiel, avec cinq états de construction, dont l'un est *non vérifié*, pour un projet où aucune construction n'a encore tourné. L'état de « pas encore jugé » a son propre mot. Une barre verte par défaut serait le mensonge habituel du terrain.
 
-Là où le terrain est silencieux, le chapitre répond. Le terrain ordonne ses barres d'outils par les fonctionnalités de l'outil, et non par la vie de la chose qu'on fait. Et il laisse la proposition d'un assistant atterrir comme une modification, l'approbation de l'humain étant une habitude.
+Là où le terrain est silencieux, le chapitre répond. Le terrain ordonne ses barres d'outils par les fonctionnalités de l'outil, et non par la vie de la chose qu'on fait. Et il laisse la proposition d'un assistant atterrir comme une modification, l'approbation de l'humain étant une habitude. (Connaissance générale.)
 
 ## 2. Le premier principe
 
 **Déclarer l'interface une fois. Chaque shell en est une projection, et une projection peut ajouter des rendus, jamais des verbes.**
 
-L'en-tête de la bibliothèque pour son interface rédigée le dit : le fichier est le contrat, et le balisage natif et la page web en sont les projections. L'étude le lit comme une déclaration, deux projections, prouvées d'accord, reposant sur ma décision du 7 octobre 2026 : porter les deux. La phrase compagnon est celle de la constitution de l'interface, sur le site : un nouveau médium ajoute des rendus, jamais des verbes.
+L'en-tête de la bibliothèque pour son interface rédigée le dit : le fichier est le contrat, et le balisage natif et la page web en sont les projections. L'étude du dossier (ses sections 12.23 à 12.25) le lit comme une déclaration, deux projections, prouvées d'accord, reposant sur ma décision du 7 octobre 2026 : porter les deux. La phrase compagnon est celle de la constitution de l'interface, sur le site : un nouveau médium ajoute des rendus, jamais des verbes.
 
 ## 3. La forme Softanza
 
 Ici je dois vous dire quelque chose avant les blocs. À ce commit, **aucun IDE de cette famille n'existe**. Aucune classe de la bibliothèque n'est nommée pour un ruban, un rail, une colonne ou une barre d'état. La ligne d'honnêteté propre de l'étude, proposée pour le site, le dit : aucun IDE de cette famille n'est livré aujourd'hui ; un shell l'est, pour le volet sonore ; la fondation qui ferait du suivant une projection est spécifiée et pas encore construite. Ma lecture est d'accord, avec un ajout : la bibliothèque génère une surface de navigateur, celle de l'émulateur, et je la montre plus bas avec une perte.
 
-Ce que la bibliothèque a, ce sont les pièces sous chaque marque du motif, et elles tournent. Je les prends dans l'ordre.
+Ce que la bibliothèque a, ce sont les pièces sous chacune des cinq marques du motif (un shell, deux projections, un ruban de facettes ordonné par la vie de la solution, un rail qui propose, une barre d'état qui dit la vérité), et elles tournent. Je les prends dans l'ordre.
 
 ### Un shell, déclaré comme texte, jugé par un tribunal
 
@@ -101,7 +101,7 @@ next
 #--> [ "transfer_funds" ]
 ```
 
-`work` était une pure boîte de mise en page, et le tribunal compte aussi les conteneurs. Savoir si un conteneur doit être exempté des verbes appartient à la constitution, et non à la bibliothèque. Les familles, d'après la constitution : orientation, attention, information, sélection, action, et continuité. Et l'interprétation que je donne : la bibliothèque trouve l'étranger, et une liste que la bibliothèque ne détient pas ne peut pas le refuser. Le chapitre 25 a dit que la même liste est appliquée à la main aujourd'hui. Je raconte ce retrait comme le refus qui est au centre de ce chapitre, dans la section 4 : la bibliothèque ne possède pas les verbes, la constitution les possède. Les vingt-deux sont imprimés dans le bloc ci-dessus, saisis d'après la constitution comme l'annexe C les imprime, et le texte de conception de la bibliothèque, qui en dit encore vingt-quatre, n'est pas la liste.
+`work` était une pure boîte de mise en page, et le tribunal compte aussi les conteneurs. Savoir si un conteneur doit être exempté des verbes appartient à la constitution, et non à la bibliothèque. Les familles, d'après la constitution : orientation, attention, information, sélection, action, et continuité. Et l'interprétation que je donne : la bibliothèque trouve l'étranger, et une liste que la bibliothèque ne détient pas ne peut pas le refuser. Le chapitre 25 a dit que la phrase-pont est appliquée à la main aujourd'hui. Je raconte ce retrait comme le refus qui est au centre de ce chapitre, dans la section 4 : la bibliothèque ne possède pas les verbes, la constitution les possède. Les vingt-deux sont imprimés dans le bloc ci-dessus, saisis d'après la constitution comme l'annexe C les imprime, et le texte de conception de la bibliothèque, qui en dit encore vingt-quatre, n'est pas la liste.
 
 ### Deux projections
 
@@ -152,7 +152,7 @@ cAnswer = oClient.AwaitTcp(nJob, 5000)
 oSrv.Stop()
 ```
 
-Le coût de cette forme est nommé dans le dossier. Un port lié localement est une surface et doit être traité comme tel, et l'intention de conception n'a été mesurée sur rien. La bibliothèque refuse déjà de quitter la boucle locale sans authentification, au moment de lier le port :
+Le coût de cette forme est nommé dans le dossier. Un port lié localement est une surface et doit être traité comme tel, et, selon les mots de la charte, l'intention de conception a été mesurée pour un studio de son et non pour un IDE. Le backend de la bibliothèque refuse déjà de quitter la boucle locale sans authentification, au moment de lier le port ; le serveur nu ci-dessus ne vérifie rien :
 
 ```haro
 oT = new stzAppTopology("shell")
@@ -211,7 +211,7 @@ L'en-tête de la bibliothèque dit pourquoi : chaque toolkit garde l'accessibili
 
 ### Un rail qui propose
 
-Un rail est une vue sur ce que le monde propose. Une pulsation propose et ne relie jamais. Seul un acte sur le monde efface une proposition, et la ligne d'état propre du monde compte à partir de la même liste que montre le rail :
+Un rail est une vue sur ce que le monde propose. Une pulsation propose et ne relie jamais. Un acte sur le monde efface une proposition, et la ligne d'état propre du monde compte à partir de la même liste que montre le rail :
 
 ```haro
 oApp = StzAppQ("fieldvisits")
@@ -241,7 +241,7 @@ next
 
 `Live()` imprime sa ligne, et le juge compare ce qui est imprimé. "2 thing(s)" compte les deux choses, Client et Visit, et non les instances. Le chapitre 20 possède la loi sous le rail, la proposition, le plan et le tribunal.
 
-Et un écran est une intention. Le seul endroit où la bibliothèque parle déjà en verbes est celui des écrans du monde. Cinq méthodes existent : `ToDiscover`, `ToUnderstand`, `ToFocus`, `ToSelect` et `ToAct`. Un sixième verbe, `ToCompare`, n'existe pas :
+Et un écran est une intention. Un endroit où le monde parle en verbes est celui de ses écrans. Cinq méthodes existent : `ToDiscover`, `ToUnderstand`, `ToFocus`, `ToSelect` et `ToAct`. Un sixième verbe, `ToCompare`, n'existe pas :
 
 ```haro
 oW = StzAppQ("fieldvisits")
@@ -275,21 +275,21 @@ Le mot d'intention est stocké comme chaîne, et n'est vérifié contre aucune l
 
 **J'ai décidé que la mécanique est celle de la bibliothèque et que l'IDE est celui du produit.** Le document de conception de la bibliothèque : la mécanique du paradigme est plateforme ; le livre, la marque, l'IDE sont produit, et ne fuient jamais. La fondation livre le raffinement comme verbe de bibliothèque disponible à tout programme.
 
-**J'ai retiré le moteur d'interaction.** Le 26 mai 2026 mon commit a retiré vingt-deux modules inventés par une IA qui n'étaient pas dans le Softanza d'origine, parmi lesquels le module d'interaction. Son texte de conception, qui dit vingt-quatre verbes et des lois appliquées par le moteur, est toujours dans l'arbre. La liste de la constitution en compte vingt-deux.
+**J'ai retiré le moteur d'interaction.** Le 26 mai 2026 mon commit a retiré vingt-deux modules inventés par une IA qui n'étaient pas dans le Softanza d'origine, parmi lesquels le module d'interaction. Je lis la date, le compte et la liste dans l'historique git de la bibliothèque, le commit `b70f3ad91`, et non dans l'arbre épinglé. Son texte de conception, qui dit vingt-quatre verbes et des lois appliquées par le moteur, est toujours dans l'arbre. La liste de la constitution en compte vingt-deux.
 
 **J'ai refusé de résoudre des intentions à l'intérieur du langage du panneau.** Le panneau ne déclare aucun sens : il n'y a pas de `:Danger` et il ne peut jamais y en avoir. L'emplacement d'intention a été laissé délibérément non résolu.
 
-**J'ai refusé de rédiger le balisage, et j'ai refusé un moteur de script.** Le balisage natif est émis, jamais rédigé ; il n'y a pas de moteur de script ; flexbox seulement. La raison pour laquelle le chrome est un fichier texte et non une classe.
+**J'ai refusé de rédiger le balisage, et j'ai refusé un moteur de script.** Le balisage natif est émis, jamais rédigé ; il n'y a pas de moteur de script ; flexbox seulement. C'est la raison pour laquelle le chrome est un fichier texte et non une classe.
 
 **J'ai refusé un drapeau qui désactive l'arbre d'accessibilité.**
 
-**J'ai admis une lentille qui ne peut pas capturer.** La charte du domaine de projets pour ses produits : une vérité, dans des fichiers, et deux lentilles. Ce que la charte a refusé, ce sont les cadres qui capturent le travail. Une lentille qui ne peut pas capturer est admissible. L'environnement est une projection de texte brut, et non un magasin.
+**J'ai admis une lentille qui ne peut pas capturer.** La charte du domaine de projets pour ses produits : une vérité, dans des fichiers, et deux lentilles (les deux de la charte sont la paire de studios, et non deux shells). Ce que la charte a refusé, ce sont les cadres qui capturent le travail. Une lentille qui ne peut pas capturer est admissible. L'environnement est une projection de texte brut, et non un magasin.
 
 **Une session a retiré une facette, et je l'ai rétablie.** La conception de référence consigne que la facette Connexions était de première classe dans le prototype de juin 2026, et qu'un agent l'a retirée par un raisonnement circulaire, ce qui s'est propagé en cascade dans cinq documents. Je l'ai rétablie. Celui qui décide du ruban est l'auteur.
 
 **J'ai accepté le shell du navigateur avec son coût, non mesuré.** La charte de l'IDE de la porte d'entrée a choisi un onglet de navigateur, construit avec le moteur, sans étape d'installation, et a nommé la perte.
 
-**Le motif a été appris en le construisant six fois en deux ans**, compte l'étude. Ce compte est celui de l'étude.
+**Le motif a été appris en six efforts sur deux ans, dont un seul construit**, compte l'étude. Ce compte est celui de l'étude.
 
 ## 5. Le tribunal
 
@@ -303,17 +303,17 @@ Il n'y a aucune garde qui juge un shell contre les vingt-deux verbes, aucune qui
 
 Les éditeurs rapides fixent une barre que le dossier écrit comme loi pour son propre produit : de l'entrée à l'écran en moins de seize millisecondes, un démarrage à froid en moins de quatre cents, sans exception. Et il ne l'a mesurée sur rien : aucun des deux shells n'a de chiffre de latence.
 
-Un changement de texte invalide tout le document. Une valeur liée qui change refait la mise en forme de chaque chaîne, là où une couleur n'en refait qu'une. Les éditeurs du terrain appliquent des patchs.
+Un changement de texte invalide tout le document. Une valeur liée qui change refait la mise en forme de chaque chaîne, là où une couleur n'en refait qu'une. Les éditeurs du terrain appliquent des patchs. (Connaissance générale.)
 
-Le navigateur coûte ce qu'il coûte : l'accès aux fichiers par le modèle du navigateur, un port à garder, et une latence non mesurée. Le shell natif coûte un système de fenêtres et un GPU.
+Le navigateur coûte ce qu'il coûte : l'accès aux fichiers par le modèle du navigateur, un port à garder, et une latence non mesurée. Le shell natif coûte un système de fenêtres, et un GPU pour le chemin raster.
 
-Le terrain a un service de langage, et le dossier a un contrat et pas de service. Le modèle de l'explorateur lit le fichier de monde que le service émettrait, et il n'est chargé par aucun fichier d'entrée : un bloc qui l'appelle sans un chargement écrit à la main échoue.
+Le terrain a un service de langage (connaissance générale), et le dossier a un contrat et pas de service. Le modèle de l'explorateur lit le fichier de monde que le service émettrait, et il n'est chargé par aucun fichier d'entrée : un bloc qui l'appelle sans un chargement écrit à la main échoue.
 
 L'éditeur rapide du terrain traite la barre d'état comme de l'encombrement. Le motif en garde une et lui demande d'être vraie. C'est un pari, et le corpus propre du dossier plaide pour le côté du terrain dans le même souffle.
 
 ## 7. La limite
 
-**La projection web ne porte ni rôles, ni étiquettes, ni intentions.** `ToHtml` n'émet qu'un identifiant et un style. L'arbre qui porte les rôles est un artefact séparé, comme le bloc ci-dessus le montre, donc un shell de navigateur devrait déduire à partir de `div` nus ce que le shell natif émet. Le plan lui-même dit que le web n'a pas d'adaptateur.
+**La projection web ne porte ni rôles, ni étiquettes, ni intentions.** `ToHtml` n'émet qu'un identifiant, un style et le texte. L'arbre qui porte les rôles est un artefact séparé, comme le bloc ci-dessus le montre, donc un shell de navigateur devrait déduire à partir de `div` nus ce que le shell natif émet. Le plan lui-même dit que la bibliothèque d'accessibilité qu'il adopte n'a pas d'adaptateur web.
 
 **Le centre de contrôle de la bibliothèque elle-même ne dit pas la vérité.** L'émulateur génère une surface de navigateur, une grille de parties avec des pastilles d'état et des badges de fidélité, une fenêtre d'appareil et une console pour chaque partie. Ses mots d'état sont des constantes de la classe d'appareil et du gabarit, et ils ne sont pas mesurés. Voici un plan avec une partie firmware et une capacité GPIO, et aucune pompe nulle part :
 
@@ -337,7 +337,7 @@ cH = read("_emu/index.html")
 StzDirDeleteAll("_emu")
 ```
 
-La partie reçoit "2 approximated" et, dans le détail de la grille, un texte sur la temporisation de la pompe et le bruit des capteurs : le texte de la démonstration de serre, renvoyé pour n'importe quel microcontrôleur. L'en-tête dit "parts healthy" et la bannière dit "Ready to ship." pour le même plan, à partir de littéraux. Un plan avec seulement un backend imprime "parts healthy" et aucun des autres mots. "Deploy to production" est une alerte. La moitié véridique est réelle : la fidélité est imprimée, et la console refuse un verbe que le sous-ensemble du moteur de la partie n'a pas. C'est de la narration dans la bibliothèque, que je n'ai pas exécutée.
+La partie reçoit "2 approximated" et, dans le détail de la grille, un texte sur la temporisation de la pompe et le bruit des capteurs : le texte de la démonstration de serre, renvoyé pour n'importe quel microcontrôleur. L'en-tête dit "parts healthy" et la bannière dit "Ready to ship." pour le même plan, à partir de littéraux. Un plan avec seulement un backend imprime aussi "parts healthy" et "Ready to ship.", et ni "needs a look" ni "2 approximated" (lu dans la source, non exécuté). "Deploy to production" est une alerte. La moitié véridique est réelle : la fidélité est imprimée, et la console refuse un verbe que le sous-ensemble du moteur de la partie n'a pas. C'est de la narration dans la bibliothèque, que je n'ai pas exécutée.
 
 Voilà la perte contre la page de la bibliothèque elle-même. Elle se tient à côté de « une barre d'état qui dit la vérité » de la section 3 : le motif demande qu'une cellule d'état soit une fonction de ce qu'un tribunal a émis, et la page propre de la bibliothèque imprime ses mots à partir de littéraux. La demande de dériver ces mots du plan n'a pas encore reçu de réponse.
 
@@ -347,9 +347,9 @@ Voilà la perte contre la page de la bibliothèque elle-même. Elle se tient à 
 
 Ce qui est construit : l'interface comme texte avec un tribunal ; quatre genres fermés, une liste fermée de dix-neuf rôles, un ensemble fermé de champs, une justification obligatoire, un aller-retour jusqu'à un point fixe ; deux projections, avec une table enregistrée de trois divergences et une page qui peut dire DISAGREE ; l'arbre d'accessibilité, et un pont qui atteint l'interface d'un vrai lecteur d'écran sous Windows, lu et non exécuté par moi ; une valeur déclarée change et l'écran suit, avec le focus conservé ; une page hébergée sur la boucle locale ; un backend qui refuse de quitter la boucle locale sans signature ; un monde qui propose ; des écrans déclarés comme intentions ; une surface de navigateur générée ; et un shell binaire, le banc d'écoute du volet sonore, en environ sept cents lignes de Zig, que j'ai lues et pas construites.
 
-Ce qui est conçu : le kit de shells avec deux shells ; le chrome comme genres fermés nommés pour la colonne, le ruban, le rail et la barre d'état ; la facette comme donnée, avec son groupe, sa place dans la vie, ses genres d'artefacts, son tribunal et son profil ; le rail lié au focus ; les cellules de gouvernance lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis.
+Ce qui est conçu : le kit de shells avec deux shells ; le chrome comme genres fermés nommés pour la colonne, le ruban, le rail et la barre d'état, aucun encore classe de la bibliothèque ; la facette comme donnée, avec son groupe, sa place dans la vie, ses genres d'artefacts, son tribunal et son profil ; le rail lié au focus ; les cellules de gouvernance lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis.
 
-Ce qui est absent : un IDE de cette famille. Toute classe nommée pour un ruban, un rail, une colonne ou une barre d'état. Une déclaration de facette. Une liste des vingt-deux verbes dans la bibliothèque, et tout refus d'un verbe inconnu : `transfer_funds` passe le tribunal. Une garde qui juge un shell contre les verbes. Un rail qui suit le focus. Des cellules d'état dérivées des tribunaux. Un éditeur. Une latence mesurée. Je raconte le motif comme conçu, avec les pièces qui tournent comme preuve : le tribunal du chrome, les deux projections, l'arbre d'accessibilité, la page hébergée sur la boucle locale. Aucun IDE de cette famille n'est livré aujourd'hui.
+Ce qui est absent : un IDE de cette famille. Une liste des vingt-deux verbes dans la bibliothèque, et tout refus d'un verbe inconnu : `transfer_funds` passe le tribunal. Une garde qui juge un shell contre les verbes. Un éditeur. Une latence mesurée. Je raconte le motif comme conçu, avec les pièces qui tournent comme preuve : le tribunal du chrome, les deux projections, l'arbre d'accessibilité, la page hébergée sur la boucle locale. Aucun IDE de cette famille n'est livré aujourd'hui.
 
 ## 8. Six portes
 
@@ -359,7 +359,7 @@ Ce qui est absent : un IDE de cette famille. Toute classe nommée pour un ruban,
 
 **Le concepteur.** Votre interface a une constitution de vingt-deux verbes et une grammaire fermée qui ajoute des rendus et jamais des verbes. Chaque élément doit dire quel verbe il sert, et la bibliothèque trouve déjà ceux qui n'en disent aucun.
 
-**Le décideur.** Demandez de tout environnement trois choses. Sa barre d'état lit-elle un tribunal ? Son assistant vit-il dans un volet et propose-t-il ? Et qui juge que les deux shells s'accordent ? Ici les réponses sont : conçu ; conçu, avec la loi du rail construite en dessous au chapitre 20 ; et une page qui se vérifie elle-même, dont le premier défaut a été trouvé en une heure.
+**Le décideur.** Demandez de tout environnement trois choses. Sa barre d'état lit-elle un tribunal ? Son assistant vit-il dans un volet et propose-t-il ? Et qui juge que les deux shells s'accordent ? Ici les réponses sont : conçu ; conçu, avec la loi du rail construite en dessous au chapitre 20 ; et une page qui se vérifie elle-même, qui a trouvé un défaut dès sa première exécution, d'après la garde.
 
 **Le formateur.** L'exercice est une prédiction : dites ce que le tribunal répondra avant de l'exécuter. Le mot d'état qui est une constante est une leçon sur la différence entre une étiquette et une vérité.
 
@@ -371,7 +371,7 @@ Un exercice, en trois mouvements.
 
 1. Écrivez un shell à vous en cinq éléments : une barre de titre, un ruban de trois facettes tirées de la vie de votre propre solution, une zone de travail, un rail, une barre d'état. Avant d'exécuter quoi que ce soit, écrivez sur papier quel verbe parmi les vingt-deux chaque élément sert, et laquelle de vos boîtes vous vous attendez à ce que le tribunal appelle orpheline.
 2. Exécutez `IsClean()` et `Orphans()`, et comparez avec votre papier. Puis cassez le fichier de trois façons : un enfant déclaré nulle part, un rôle qui n'est pas dans la liste, et une intention qui n'est pas l'une des vingt-deux. Pour chacune, écrivez ce que votre fonction d'état répondra, et si la bibliothèque, la fonction du livre, ou personne ne l'attrapera.
-3. Émettez la page, ouvrez-la, et écrivez la ligne que la bande de la fixture imprimera pour une version avec une zone de travail vide. Puis regardez.
+3. Émettez la page, ouvrez-la, et écrivez la ligne que la bande de la fixture imprimera pour une version avec une zone de travail vide. Puis regardez. La page vient de `ToFixture`, qui prend la boîte que `BoxOf` rapporte pour chaque nom sur le panneau mis en page par `ToPanel` ; `gui_profile_narrated` a la boucle, et un fichier de police est nécessaire.
 
 ```haro exercise
 oMine = new stzUiDocument('DEFINE PANEL shell ( SIZE [640, 360], DIRECTION column, CHILDREN [bar] ) RATIONALE "Mine."' + nl + 'DEFINE TEXT bar ( CONTENT "mine", SATISFIES understand ) RATIONALE "Mine too."')

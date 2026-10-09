@@ -2,9 +2,9 @@
 
 Source: Chapter 31. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it
+Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 05:33 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 13:47 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -26,13 +26,13 @@ The record gives two sentences, and they are one. The site says: "Nothing is a r
 
 ## 3. The Softanza form
 
-This chapter is the other half of chapters 28 to 30. Those told what three projects taught the library. This one says, project by project, what they did not prove. I did not write it after the fact, to be modest. The site carries the same page, with the same heading, and it was written before any reader asked.
+This chapter is the other half of chapters 28 to 30. Those told what three projects taught the library. This one says, project by project, what they did not prove. I did not write it after the fact, to be modest. The site's forged page carries a section with the same heading.
 
 The shape of the answer is a table of three columns for each project: the claim, the document or file that proves it, and what is absent. I leave a cell empty when I cannot name what fills it. And I will not fill the third column from memory.
 
 Before the tables, five small blocks. Each is a place where the library shows an absence by refusing, instead of passing silently. They are the chapter's sentence, written as code.
 
-**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first unproved thing the restaurant's lesson cannot hide: no live payments service is bound anywhere in the record.
+**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first unproved thing the restaurant's lesson cannot hide: no real payments service is bound anywhere in the record.
 
 ```haro
 oReg = new stzServiceRegistry("shop")
@@ -53,7 +53,7 @@ done
 
 > run: kept
 
-**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host can really do it. *Rehearsed*: the target allows it and the host lacks it, so the run proves only the plan. Reading a pin on a development machine is rehearsed and never native. The word depends on the machine this book was run on: a Windows PC has no such pin, and a board that has one would print `native` for the same line.
+**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host can really do it. *Rehearsed*: the target allows it and the host lacks it, so the run proves only the plan. Reading a pin on a development machine is rehearsed, not native. The word depends on the machine this book was run on: a Windows PC has no such pin, and a board that has one would print `native` for the same line.
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
@@ -76,9 +76,9 @@ oFw.Show()
 
 > run: kept (touches the system)
 
-The library's own comment above this code says the last step, flashing a board, "remains a planned external action".
+The library's own comment, in the class that lowers a rehearsal to a real artifact, says the last step, flashing a board, "remains a PLANNED external action".
 
-**The live payments adapter exists, and refuses to guess.** The code for the live hub exists. It has never been run against the hub's sandbox. Given no credentials, it refuses before any network call and says what is missing. The host in this block does not exist, and nothing reaches it:
+**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. It has never been run against the central bank's sandbox. Given no credentials, it refuses before any network call and says what is missing. The host in this block does not exist, and nothing reaches it:
 
 ```haro
 oAd = new stzPispiHttpAdapter()
@@ -158,12 +158,12 @@ Now the tables. Every cell is from the record, read on 8 October 2026. A line co
 | Claim | Proof | What is absent |
 |---|---|---|
 | The platform exists, and its first delivery was made | the site: an amendment closed on 4 August 2026; the project's commit "iteration 1" of 15 August; a server of 565 lines that I read; the last commit, 25 August 2026, 13:07 | anything after 25 August: production, a real order, the planned go-live gate. The record is silent |
-| The restaurant runs it | a day of field measurements with two phones, 19 August | a sentence that says it runs. Chapters 1 and 33 write "runs" |
-| No growth of scope during a cycle (the Lock) | the pact and the notebook: private documents | the Lock as code. Chapter 28 shows the nearest the library gives |
-| Payments can be tried without a subscription, and a fake never ships | the registry and the delivery gate, with their guards | the live payment adapter for the restaurant: "a later desk" in the library's own design file. Nothing is bound live |
+| The restaurant runs it | a day of field measurements with two phones, 19 August | a sentence that says it runs. Chapter 1 writes "runs" |
+| No growth of scope during a cycle (the Lock, chapter 28) | the pact and the notebook of the Lock: private documents | the Lock as code. Chapter 28 shows the nearest the library gives |
+| Payments can be tried without a subscription, and a fake never ships | the registry and the delivery gate, with their guards | the live payment adapter for the restaurant: "a later desk" in the library's own design file. No real service is bound live |
 | The constellation of worlds | the restaurant's map of its worlds; the library's super-app class, with a guard | the restaurant on the constellation: its worlds are single-file web pages, and the map says it is a map, not an implementation |
-| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's own notebook defers it to the next cycle |
-| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone. The site and chapter 2 conflate two facts |
+| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's own checklist defers it to the next cycle |
+| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone. The study (12.29) conflates two facts |
 
 ### The bank in Niamey
 
@@ -173,13 +173,13 @@ Now the tables. Every cell is from the record, read on 8 October 2026. A line co
 | The product is "built with Softanza" | the author built both | the product does not call the library. It is a Python application with a small web server; I searched its code, and found no regional or Basel check and no call to the library |
 | The regulator's rules judge the chart | the library's validator of three rules and of segregation of duties, with guards | the validators inside the product; an article of the central bank's text for the three rule codes; a finding read by an auditor |
 | A rule file for the bank | a file of two regional rules that loads | it judges nothing: on a chart with no board it reports sound |
-| The product's interface rules came from the bank | the interface constitution's rules 117 to 124 | the evidence line in the constitution says a banking-supervision product of a sibling platform, not this bank's installation. The site attaches them to the bank |
+| The product's interface rules came from the bank | the interface constitution's rules 117 to 121 | the evidence line of rule 117 in the constitution reads "A banking supervision product (April 2026)" and names no bank. The study attaches them to this bank |
 
 ### The organisation in the field
 
 | Claim | Proof | What is absent |
 |---|---|---|
-| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study of 8 October 2026 | the hub: nothing of it is in production, and the study's version 1.2 is submitted for validation. And who chose, against what: the record is silent |
+| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study of 8 October 2026 | the organisation's hub: nothing of it is in production, and the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the study promises; the study's own rule notation is not the library's |
 | An agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
 | Offline by default | the study's word that the browser-side outbox is already in service | in the library: no queue, no outbox, no synchronisation. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
@@ -188,24 +188,24 @@ Now the tables. Every cell is from the record, read on 8 October 2026. A line co
 
 | Claim | Proof | What is absent |
 |---|---|---|
-| The platforms run today on ordinary stacks | the site's own page: single-file web worlds and a small Node server; a Python application; the hub not built | no platform runs on the engine. The site says so, and every repository I opened agrees |
+| The platforms run today on ordinary stacks | the site's own page: single-file web worlds and a small Node server; a Python application; the organisation's hub not built | no platform runs on the engine. The site says so, and every repository I opened agrees |
 | Their declarations "are being written as Softanza's own" | the platforms page and the forged page, as intent | I searched, on 8 October 2026, and did not find them as a file: in the restaurant's repository no code file declares an app, a constellation or a platform; in the bank's delivery, none; in the organisation's study folder, none (its annex uses a notation that is not the library's). The record shows the intent and the maps, not yet the declarations |
 | A change of engine, not of plan | the principle: rewriting was refused | the move itself; who moves first; who perceives it |
 | A solution writes its guarantee sheet in five rows | the vision asks for it | no solution has one; no class, fixture or guard in the library has the sheet |
-| The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro does not run the library. The bridge runtime has passed the library's suite on Windows in a session's notes; the Linux pass is the next step. I print no percentage. This book's blocks run on the former runtime, 1.27 |
+| The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro does not run the library. A session's note of 5 October 2026 reports that the bridge runtime passes every assertion the old runtime passes on the library, though not every program agrees on every stable line; the Linux pass is the next step. I print no percentage. This book's blocks run on the former runtime, 1.27 |
 | A live host verifies a deployment | the deployment design | the verification is infrastructure-gated. Local sites run for real; remote transfer is "a later slice" |
-| The payments plane works against the hub's sandbox | the twin, served over HTTP, with a guard | the sandbox run: unperceived, postponed. Production is never from this plane |
+| The payments plane works against the central bank's sandbox | the twin, served over HTTP, with a guard | the sandbox run: unperceived, postponed. Production is never from this plane |
 | A named person has said what they saw | a drum, and the retuned voice, in another plane | any of the three platforms |
 
 ### What the study of the record did not measure
 
-The comparative study that read the record says, in its own paragraphs headed "Not measured", what it could not support. It did not run what it read: its ruling on the three projects says "Nothing in it was run". It did not measure whether Haro's runtime runs the library. It did not test whether two published speed benchmarks hold today, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of them still says forty-five where the guard now holds more. The gallery's forty-one pictures were judged by a model, and no person has looked at them. The restaurant's speed budget has no real 4G measure. The study applies its own perception law to itself, which is why I trust the paragraph.
+The comparative study that read the record says, in its own paragraphs headed "Not measured", what it could not support. It did not run what it read: its closing assessment of the record says "Nothing in it was run". It did not measure whether Haro's runtime runs the library. It did not test whether two published speed benchmarks hold today, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more. The forty-one pictures of part 1 of the gallery were judged by a model, and no person has looked at them. The restaurant's speed budget has no real 4G measure. The study applies its own perception law to itself, which is why I trust the paragraph.
 
 ## 4. The decision, and what I refused
 
 **I refused the author's memory as evidence.** The site lists nothing that I remember and no file proves. The same rule bound the bank: I know the product, because I built it, and what the bank's own people did with it is not in a file.
 
-**I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, and the order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
+**I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, by the library's log as chapter 28 reads it, and the order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
 
 **I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
 
@@ -215,7 +215,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 ## 5. The court
 
-`service_registry_narrated` proves that a declared service nobody backs is an error finding, that an unbound service raises, and that a sandbox in production is a violation. `full_scope_model_narrated`, scenes 5 to 8, proves the three verdicts: refused, rehearsed, native. `payments_live_adapter_narrated` proves the adapter against a twin served over HTTP, an adapter without credentials that refuses to guess, and the scenario that says stage (b) is unperceived. It starts real server processes, and the book does not run it; it only counts its assertions. `sound_mu5_narrated` proves, in its fifth scene, that while the verdict is unperceived `Sing` returns nothing and says why. `deployment_narrated` proves that an undersized host is not feasible, and that an assistant rehearses and commits nothing; it writes a scratch folder beside itself, so the book does not run it either. `orgrule_narrated` and `governance_narrated` carry the other two lessons.
+`service_registry_narrated` proves that a declared service nobody backs is an error finding, that an unbound service raises, and that a sandbox in production is a violation. `full_scope_model_narrated`, scenes 5 to 8, proves the three verdicts: refused, rehearsed, native. `payments_live_adapter_narrated` proves the adapter against a twin served over HTTP, an adapter without credentials that refuses to guess, and the scenario that says stage (b) is unperceived. It starts real server processes, and the book does not run it; it only counts its assertions. `sound_mu5_narrated` proves, in its fifth scene, that while the verdict is unperceived `Sing` returns nothing and says why. `deployment_narrated` proves that an undersized host is not feasible, and that an assistant rehearses and commits nothing; it writes a scratch folder beside itself, so the book does not run it either. `orgrule_narrated` proves the universal rules of the chart and the separation of duties. `14_bceao_governance`, one assertion, runs the regional rules on a chart with no board and no risk function. `governance_narrated` proves authority against risk, with its lineage.
 
 The court of this chapter's subject is not a guard. It is a line of the record, of the form the estate's law prescribes: a date, a person, and what they said. The library holds one such line in its data, in the sound plane. The estate holds one in its record, and chapter 33 tells it.
 
@@ -227,23 +227,23 @@ The field leads in references at scale. The site prints two references and a des
 
 The field leads in live infrastructure. Provisioning tools drive real providers every day. The library's deployment stops short of a real host, and the fifth block shows where.
 
-The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision says no customer runs on it. Its guarantee text says four of four promised, three kept in the emulator; the fourth, surviving a cut, waits for a watchdog on a real board, and the board is on order.
+The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision says no customer runs on it. Its guarantee text says four of four promised, three kept in the emulator; the fourth, surviving a cut, is not kept in that text, which carries no slot decision. The vision says it waits for the watchdog on the board, and the board is on order.
 
 The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime.
 
-The field leads in pictures judged by people. Forty-one pictures and text sections of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them.
+The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them.
 
-Where I think the record stands apart is that its limit is a page, with a heading, written before any reader asked. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
+Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
 ## 7. The limit
 
 This whole chapter is a limit. Here is its sum in the stage words.
 
-What is built: the three lessons that are proved. *A fake never ships*: the registry and the delivery gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The limit of each is in the tables: a sandbox is bound and no live payment adapter is; the bank's product does not call the chart validator; no hub exists and offline is a gap.
+What is built: the three lessons that are proved. *A fake never ships*: the registry and the delivery gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The limit of each is in the tables: a sandbox is bound and no live payment adapter is; the bank's product does not call the chart validator; the organisation's hub is not built and offline is a gap.
 
 What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it.
+What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it.
 
 The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are absent. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library: the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own, so the chapter's word for them is *absent*, and the stage line at the top says so.
 

@@ -4,7 +4,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 05:33 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 13:47 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

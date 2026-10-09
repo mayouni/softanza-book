@@ -44,7 +44,7 @@ L'étude du dossier a écrit le style en quatorze règles, dans sa décision 12.
 | 4 | Un paramètre est nommé, et le nom se lit comme de l'anglais | s'exécute ; chapitre 5, et ici dans n'importe quel ordre |
 | 5 | Une chaîne reflète l'ordre de la pensée, une étape par ligne | s'exécute ; chapitre 5 |
 | 6 | La forme du verbe dit ce qui arrive | s'exécute ; chapitres 5 et 8 |
-| 7 | Les suffixes et les préfixes sont petits et veulent dire une seule chose chacun | en partie : `CS`, `XT`, `viz` s'exécutent ; les familles `FF`, `dft` et `inf` du diaporama lèvent une erreur |
+| 7 | Les suffixes et les préfixes sont petits et veulent dire une seule chose chacun | en partie : `CS`, `XT`, `viz` s'exécutent ; les familles `FF`, `dft` et `inf` du diaporama ne sont pas définies |
 | 8 | Une fonction a des alternatives pour la façon dont une personne la dit | en partie |
 | 9 | Précision plutôt que généralité, quand cela ne coûte rien | en partie |
 | 10 | Le code voyage à l'intérieur d'un argument comme une petite chaîne | l'emplacement s'exécute ; le `@` sur le nom d'un paramètre est retiré |
@@ -106,7 +106,7 @@ o1.RemoveW('{ Q(@char).IsLowercase() }')
 
 Le diaporama de 2022 écrit le même appel avec un emplacement nommé, `:Where = '...'`, et cette forme lève une erreur sur une chaîne à ce commit. Je ne la montre pas. Le même diaporama met un `@` à la fin du nom d'un paramètre, `:With@`, pour marquer que sa valeur est du code à évaluer. Cette forme est retirée. L'en-tête d'une garde le dit : les formes fondées sur eval sont retirées. Le diaporama lui-même marque la forme « TODO ». Le code voyage maintenant dans l'emplacement comme une chaîne bornée que le moteur évalue, ou comme une fonction.
 
-Règle 8 : le même acte peut se dire en deux ordres de mots, avec le nom du conteneur, ou avec le côté épelé de quatre façons. Chaque paire est une seule méthode. La propre narration de la bibliothèque appelle la première avec deux arguments et elle lève une erreur ; les gardes passent la position de départ, et le bloc aussi :
+Règle 8 : le même acte peut se dire en deux ordres de mots, avec le nom du conteneur, ou avec le côté épelé de quatre façons. Chaque paire est un seul acte, avec deux définitions. La propre narration de la bibliothèque appelle la première avec deux arguments et elle lève une erreur ; les gardes passent la position de départ, et le bloc aussi :
 
 ```haro
 o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
@@ -124,7 +124,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 #--> [ "A", "B", "C" ]
 ```
 
-Le diaporama promettait davantage. Une famille de cinq noms pour retirer des caractères aux deux bouts, dont `LeadingAndTrailingCharsRemoved`, n'est pas définie. Seuls `LeadingCharsRemoved`, `TrailingCharsRemoved` et `RemoveLeadingAndTrailingChars` le sont.
+Le diaporama promettait davantage. Une famille de cinq noms en `CharsRemoved`, pour retirer des caractères aux bouts, est nommée dans le diaporama. Deux sont définis, `LeadingCharsRemoved` et `TrailingCharsRemoved`. Trois ne le sont pas : `LeadingAndTrailingCharsRemoved`, `TrailingAndLeadingCharsRemoved` et `RepeatedCharsRemoved`. `RemoveLeadingAndTrailingChars` est défini, et n'est pas l'un des cinq.
 
 Règle 9 : la précision plutôt que la généralité. Le nom précis dit ce qui est compté. Les caractères d'une chaîne sont comptés par `NumberOfChars`, et `Size()` est la longueur en octets de l'hôte, si bien que les deux réponses diffèrent sur un mot arabe :
 
@@ -157,11 +157,11 @@ o1 = new stzString("fjharoljharodjharog")
 #-->   3     9     15
 ```
 
-La narration et le diaporama écrivent `vizFindAll`. Il n'existe pas à ce commit, et `vizFind` si.
+La narration et le diaporama écrivent `vizFindAll` sur une chaîne. Il n'y existe pas à ce commit, et `vizFind` si. Une liste a son propre `VizFindAll`.
 
 ### Les buts
 
-Sous la grammaire il y a sept buts, écrits dans le diaporama de 2022 comme une matrice de trente-trois fonctionnalités. La décision 12.14 de l'étude les lit comme le squelette architectural de la bibliothèque : une fonctionnalité qui n'en sert aucun est refusée, et un but sans fonctionnalité est un écart. Le titre de l'étude est celui d'une session, et aucun document de la bibliothèque n'énonce la règle en ces mots. Le plus proche est le document de conception du moteur : le moteur doit permettre les sept.
+Sous la grammaire il y a sept buts, écrits dans le diaporama de 2022 comme une matrice de trente-trois fonctionnalités. La décision 12.14 de l'étude les lit comme le squelette architectural de la bibliothèque : une fonctionnalité qui n'en sert aucun est refusée, et un but sans fonctionnalité est un écart. Le résumé de l'étude est la lecture d'une session et non un texte de la bibliothèque, et aucun document de la bibliothèque n'énonce la règle en ces mots. Le plus proche est le document de conception du moteur : le moteur doit permettre les sept.
 
 Je ne listerai pas les sept comme une table de slogans. Voici ce qui s'exécute de trois d'entre eux.
 
@@ -178,7 +178,7 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-Une tension doit être dite avec. La conception de Haro refuse les paramètres à ordre libre comme grammaire, et la bibliothèque les livre. Ce qui est vrai aujourd'hui tient en deux faits. La bibliothèque livre les paramètres à ordre libre, et le bloc ci-dessus les exécute ; elle livre aussi les alternatives sous n'importe quel libellé. La grammaire à laquelle une machine est tenue les laisse de côté, par le principe de Haro. Que la bibliothèque les garde au-delà de cette grammaire ou les retire, c'est une décision que le dossier ne tient pas, et je ne la prends pas ici : ils sont livrés, et ils ne sont pas de la grammaire.
+Une tension doit être dite avec. La conception de Haro refuse les paramètres à ordre libre comme grammaire, et la bibliothèque les garde. Deux faits sont vrais aujourd'hui. Le bloc ci-dessus les exécute, donc ils sont dans la bibliothèque. La grammaire à laquelle une machine est tenue les laisse de côté, par le principe de Haro. Que la bibliothèque les garde au-delà de cette grammaire ou les retire, c'est une décision que le dossier ne tient pas, et je ne la prends pas ici : ils sont gardés, et ils ne sont pas de la grammaire.
 
 **Cohérence : un vocabulaire à travers une chaîne et une liste.** Le même verbe répond sur les deux :
 
@@ -193,11 +193,11 @@ Une tension doit être dite avec. La conception de Haro refuse les paramètres �
 #--> TRUE
 ```
 
-La perte à côté, du même groupe de diapositives : la formule « un élément pour tout énumérable » du diaporama ne tient pas. `NumberOfItems()` sur une chaîne lève une erreur, et sur une liste il répond.
+La perte à côté, du même groupe de diapositives : le conseil du diaporama d'employer le mot-clé Item avec tout type énumérable ne tient pas. `NumberOfItems()` sur une chaîne lève une erreur, et sur une liste il répond.
 
-**Maniabilité : un échec qui dit où, quoi, pourquoi, et que faire.** La bibliothèque lève une erreur en quatre champs. Je n'imprime pas son message, parce que sa première ligne porte un numéro de ligne de la bibliothèque, et un numéro de ligne n'est pas une promesse.
+**Maniabilité : un échec qui dit où, quoi, pourquoi, et que faire.** La bibliothèque lève une erreur en quatre champs. Je n'imprime pas son message, parce que, dans l'exécution de recherche, sa première ligne portait un numéro de ligne de la bibliothèque, et un numéro de ligne n'est pas une promesse.
 
-Les quatre autres buts (la fiabilité, l'expressivité, l'universalité et celui que le diaporama appelle extensibilité) je les laisse aux tables de l'étude. Je ne les ai pas exécutés pour ce chapitre, et je ne décrirai pas d'après le diaporama ce que je n'ai pas exécuté.
+Les quatre autres buts (l'expressivité, la fiabilité, les métaphores humaines et les abstractions pratiques) je les laisse aux tables de l'étude. Je ne les ai pas exécutés pour ce chapitre, et je ne décrirai pas d'après le diaporama ce que je n'ai pas exécuté.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -207,13 +207,13 @@ Les quatre autres buts (la fiabilité, l'expressivité, l'universalité et celui
 
 **J'ai refusé de cacher le coût du style.** L'étude a mesuré des marqueurs par millier de lignes. Les gardes narrées, les fichiers de test écrits pour être lus comme des articles, portent la promesse `#-->` à moins d'une ligne par millier, et un appel à la fonction d'aide d'assertion à quatre-vingt-cinq. Les tests numérotés plus anciens portent la promesse à cinquante-deux. Le code de la bibliothèque porte la promesse à moins de deux. Le style a survécu là où l'auteur écrivait pour un lecteur, et s'est amenuisé là où l'IA écrivait pour d'autres. Un marqueur est une lecture du texte, non un jugement du code ; l'étude le dit elle-même.
 
-**J'ai refusé de recompter les balises comme les miennes.** Les buts sont marqués dans le code par des info-balises, dans des commentaires qui commencent par `#<` et un `@`, appliquées à la main. L'étude en a compté environ six mille. J'ai recompté le 8 octobre 2026, avec la commande du fichier de recherche, et j'en ai trouvé 6 126, avec 89 orthographes. Mais 1 360 d'entre elles se trouvent hors des dossiers d'archive, et 4 766 dans les fichiers monolithiques archivés. Donc la phrase « appliquées à la main en six mille points » est, à ce commit, surtout une phrase sur l'archive. Aucune garde ne les lit : la couche de réflexion lit le nom d'une méthode, avec une grammaire, et non sa balise.
+**J'ai refusé de recompter les balises comme les miennes.** Les formes des fonctions sont marquées dans le code par des info-balises, dans des commentaires qui commencent par `#<` et un `@`, appliquées à la main. L'étude y lit le vocabulaire, au niveau des fonctionnalités, de deux buts, l'expressivité et la flexibilité, et en a compté 6 090. J'ai recompté le 8 octobre 2026, avec la commande du fichier de recherche, et j'en ai trouvé 6 126, avec 89 orthographes. Mais 1 360 d'entre elles se trouvent hors des dossiers d'archive, et 4 766 dans les dossiers d'archive. Donc la phrase « appliquées à la main en 6 090 points » est, à ce commit, surtout une phrase sur l'archive. Aucune garde ne les lit : la couche de réflexion lit le nom d'une méthode, avec une grammaire, et non sa balise.
 
-**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités ont des noms dans le code et lèvent une erreur quand on les appelle : les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, le `Check` sur une liste, et les formes `Yield` et `Perform` du diaporama. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme : le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
+**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part : les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste, le vérificateur du diaporama qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama : `Yield`, qui devrait donner le résultat d'une expression pour chaque élément, et `Perform`, qui devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme : le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
 
 ## 5. Le tribunal
 
-`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code ; que le code planté est trouvé par son nom ; que le code propre passe ; et que la bibliothèque en liste quatorze. `testoor_promises_narrated` prouve que la promesse `#-->` est jugée comme l'affirmation d'un arrêt : tenue, divergente, non atteinte ou non jugée. `602_l_function` et `59_use_of_the_l_small_function` prouvent le langage d'intervalles, en arabe aussi. `527_identifying_lists_inside_a_string` prouve les listes hébergées dans des chaînes. `48_replacebymany` prouve que la palette tourne en cycle. `483_w_and_wf_forms_in_conditional_code` prouve la condition dans une chaîne et dans une fonction. `28_numberofoccurrenceofcharleftside` prouve les noms alternatifs en arabe comme en latin, et porte une note disant que la promesse de l'archive était fausse et que l'implémentation fait autorité. `646_content` prouve les paramètres nommés. `972_narration_viz-finding_a_recurring_substring` prouve la visite viz.
+`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code ; que le code planté est trouvé par son nom ; que le code propre passe ; et que la bibliothèque en liste quatorze. `testoor_promises_narrated` prouve que la promesse `#-->` est jugée comme l'affirmation d'un arrêt : tenue, divergente, non atteinte ou non jugée. `602_l_function` et `59_use_of_the_l_small_function` prouvent le langage d'intervalles. `527_identifying_lists_inside_a_string` prouve les listes hébergées dans des chaînes. `48_replacebymany` prouve que les remplacements se font dans l'ordre. `483_w_and_wf_forms_in_conditional_code` prouve la condition dans une chaîne, en deux écritures du même balayage. `28_numberofoccurrenceofcharleftside` prouve les noms alternatifs en arabe comme en latin, et porte une note disant que la promesse de l'archive était fausse et que l'implémentation fait autorité. `646_content` prouve les paramètres nommés. `972_narration_viz-finding_a_recurring_substring` prouve la visite viz.
 
 Voici le tribunal de la maison lui-même, les quatorze règles de la bibliothèque et non les quatorze du style. La coïncidence numérique est une coïncidence. Une faute d'orthographe plantée est trouvée par son nom et le code reste propre, parce que c'est un avertissement. Une écriture plantée sur une constante est trouvée par son nom, et le code est refusé, parce que c'est une erreur :
 
@@ -261,9 +261,9 @@ Ce qui est conçu :
 Ce qui est absent :
 
 - Toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque.
-- Les règles 12 et 13 comme formes qui s'exécutent. Les exemples quasi naturels du diaporama ne s'exécutaient pas tels qu'écrits, ni une fonction nommée en chinois ou en français.
+- Les règles 12 et 13 comme formes qui s'exécutent. Dans les exécutions de la session de recherche, les exemples quasi naturels du diaporama ne s'exécutaient pas tels qu'écrits, ni une fonction nommée en chinois ou en français.
 - Le `@` sur le nom d'un paramètre comme forme qui fonctionne.
-- La forme à accolades du langage d'intervalles, `L('{ "♥1" : "♥6" }')`, qui lève une erreur, et les intervalles qui changent de largeur, comme `day8 : day11`, qui lèvent aussi une erreur, avec une erreur de variable non initialisée de l'hôte. Le constructeur de liste à partir d'une chaîne en lève une aussi.
+- La forme à accolades du langage d'intervalles, `L('{ "♥1" : "♥6" }')`, qui lève une erreur, et les intervalles qui changent de largeur, comme `day8 : day11`, qui lèvent aussi une erreur, avec une erreur de variable non initialisée de l'hôte. Le constructeur de liste à partir d'une chaîne en lève une aussi. Ces trois constats viennent des exécutions de la session de recherche ; aucun bloc de ce chapitre ne les garde.
 - La pile d'appels visualisée, et les décorateurs de cache et de journal, qui existent comme noms dans des commentaires.
 
 ## 8. Six portes
@@ -274,7 +274,7 @@ Ce qui est absent :
 
 **Le concepteur.** Le préfixe viz dessine la réponse là où l'œil l'attend. Les buts sont les rubriques sous lesquelles une conception est jugée, une fonctionnalité à la fois.
 
-**Le décideur.** Sept buts et trente-trois fonctionnalités sont une grille de lecture. Une fonctionnalité qui n'en sert aucun est refusée, et un but sans fonctionnalité est un écart. Le décompte est imprimé avec ses pertes.
+**Le décideur.** Sept buts et trente-trois fonctionnalités sont une grille de lecture. Selon la lecture de l'étude, une fonctionnalité qui n'en sert aucun est refusée, et un but sans fonctionnalité est un écart. Le décompte est imprimé avec ses pertes.
 
 **Le formateur.** La discipline s'enseigne entière et dans l'ordre. La garde convertie pour les listes dans des chaînes garde en commentaire l'espacement erroné de l'ancienne promesse, ce qui est une leçon sur le coût des réponses tapées à la main.
 

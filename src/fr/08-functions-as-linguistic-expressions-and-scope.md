@@ -8,7 +8,7 @@ narrations: [stz-functions-as-linguistic-expressions.md, stz-function-forms-narr
 site: [craft, innovations]
 guards: [00_regex_narrated, 972_narration_viz-finding_a_recurring_substring, full_scope_model_narrated, system_scope_model_narrated, delivery_narrated]
 stage:
-  built: "quatorze des vingt-deux formes telles que l'article les montre, et trois autres sous une autre forme ; la bibliothèque qui lit un nom comme une phrase ; la portée dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement"
+  built: "quatorze des vingt-deux formes, certaines avec d'autres exemples que ceux de l'article, et trois autres sous une autre forme ; la bibliothèque qui lit un nom comme une phrase ; la portée dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement"
   designed: "les formes déclarées une fois comme données et générées, en Haro ; le paradigme de portée pour le temps, les unités, la mémoire et le style"
   absent: "cinq formes : partielle, future, libre, par défaut et multilingue ; la concurrence comme portée : un plan sans code"
 status: draft
@@ -26,11 +26,11 @@ Et quand le terrain veut qu'une fonction se comporte autrement dans un autre con
 
 ## 2. Le premier principe
 
-**Le nom d'une fonction est une phrase, et ses préfixes, ses suffixes et ses paramètres sont une grammaire que la bibliothèque peut lire.** L'article qui a le premier avancé cette thèse dit qu'elle a été obtenue sans aucun modèle et sans aucun analyseur de langage naturel, seulement par des conventions de nommage qui encodent le sens, un ordre des paramètres qui épouse la parole, des formes souples et des valeurs par défaut intelligentes.
+**Le nom d'une fonction est une phrase, et ses préfixes, ses suffixes et ses paramètres sont une grammaire que la bibliothèque peut lire.** L'article qui a le premier avancé cette thèse dit, dans les mots que cite l'étude de ses racines, qu'elle a été obtenue « without machine learning or NLP systems », seulement par des conventions de nommage qui encodent le sens, un ordre des paramètres qui épouse la parole, des formes souples et des valeurs par défaut intelligentes.
 
 ## 3. La forme Softanza
 
-Regardez un nom comme la bibliothèque le regarde. `FindNextSTCS` : trouver le suivant, à partir d'une position de départ, avec un drapeau de casse. `RemoveManyCS` : retirer, plusieurs choses, un drapeau de casse. Chaque suffixe est petit et ne veut dire qu'une chose, et l'ordre des suffixes est l'ordre des paramètres. Ici le premier nom trouve, et le second retire toutes les occurrences de trois lettres, quelle que soit leur casse :
+Regardez un nom comme la bibliothèque le regarde. `FindNextSTCS` : trouver le suivant, à partir d'une position de départ, avec un drapeau de casse. `RemoveManyCS` : retirer, plusieurs choses, un drapeau de casse. Chaque suffixe est petit et ne veut dire qu'une chose, et, dans ces noms, l'ordre des suffixes est l'ordre des paramètres. Ici le premier nom trouve, et le second retire toutes les occurrences de trois lettres, quelle que soit leur casse :
 
 ```haro
 o1 = new stzString("123456789HARO")
@@ -44,7 +44,7 @@ o2.RemoveManyCS([ "o", "f", "n" ], FALSE)
 
 L'article promettait `SOFTANZA` sur la deuxième ligne. Le code a raison et l'article a tort : un retrait qui ne se soucie pas de la casse retire aussi les majuscules. J'imprime l'exécution.
 
-La bibliothèque ne se contente pas de suivre cette grammaire. Elle la lit. Donnez-lui un nom, elle l'analyse en la phrase qu'il est, et elle peut vous expliquer une méthode dans ces termes :
+La bibliothèque ne se contente pas de suivre cette grammaire. Elle la lit. Son analyseur de noms, `_StzParseName`, est un assistant interne que nulle garde ne couvre ; la voie publique est `ExplainMethod`, qui explique une méthode dans ces termes :
 
 ```haro
 ? @@( _StzParseName("FindNextSTCS") )
@@ -59,7 +59,7 @@ La bibliothèque ne se contente pas de suivre cette grammaire. Elle la lit. Donn
 
 Voilà la thèse rendue mécanique : la grammaire est dans le code et pas seulement dans l'article. L'analyseur décode les préfixes et les suffixes, les mots « except » et « is not », et la voix : un nom qui finit en `ed` est passif.
 
-Je vais maintenant parcourir les formes. Le chapitre 5 en a montré trois : l'active, la passive et la fluide, et le paramètre nommé. Voici les autres, celles qui tournent.
+Je vais maintenant parcourir les formes. Le chapitre 5 en a montré quatre : l'active, la passive, la fluide et le paramètre nommé. Voici les autres, celles qui tournent.
 
 **Z et ZZ** disent si une position arrive comme un nombre ou comme une section. Un suffixe, et la réponse change de forme :
 
@@ -144,7 +144,7 @@ o1 = new stzString("haxxrxo")
 #--> Haro
 ```
 
-L'article dit que la bibliothèque reconnaît et corrige les fautes de frappe mineures, et que l'intelligence réside dans la bibliothèque elle-même. Le code montre quelque chose de plus simple : `WithoutSapces` fonctionne parce que cette orthographe a été écrite à la main comme un alias. Une autre faute, `WithoutSpces`, échoue. La forme est donc réelle, et c'est une liste d'alias déclarés, pas un moteur de correction.
+L'article dit que la bibliothèque reconnaît et corrige les fautes de frappe mineures, et que l'intelligence réside dans la bibliothèque elle-même. Le code montre quelque chose de plus simple : `WithoutSapces` fonctionne parce que cette orthographe a été écrite à la main comme un alias. Une autre faute, `WithoutSpces`, échoue. La forme est donc réelle, et dans ce que j'ai suivi c'est une liste d'alias déclarés, pas un moteur de correction. Je n'ai pas suivi tous les fichiers qui parlent de correction ; un message de la classe objet ne fait que suggérer un nom, avec « Did you mean ».
 
 Voici maintenant la moitié du chapitre qui concerne la portée. Le même mal apparaît partout en programmation : un comportement gouverné par un cadre invisible. Une fonction fait une chose ici et une autre là, et rien dans son nom ne dit dans quel cadre elle se trouve. Le remède, en quatre gestes, est le paradigme que j'appelle la programmation orientée portée. Nommer le cadre caché. En faire un petit ensemble fermé de portées nommées. Choisir la portée à l'endroit de l'appel, dans le verbe, et pas dans un drapeau posé plus tôt. Et donner à la bibliothèque la portée pour raisonner, une prise sémantique et pas un commentaire.
 
@@ -161,7 +161,7 @@ o1 = new stzRegex("^Second:.*$")
 #--> TRUE
 ```
 
-`Match` demande si le motif couvre la valeur entière. `MatchFirst` demande s'il apparaît quelque part, avec les ancres de ligne désactivées. `MatchLine` fait que `^` et `$` s'accrochent à chaque ligne. Le cadre est dans le verbe. Il y a aussi une portée de mot, qui fournit les limites de mot pour que vous ne les écriviez pas :
+`Match` demande si le motif couvre la valeur entière. `MatchFirst` demande s'il apparaît quelque part, avec les ancres de ligne désactivées. `MatchLine` fait que `^` et `$` s'accrochent à chaque ligne. Le cadre est dans le verbe. Il y a aussi une portée de mot, qui fournit les limites de mot pour que vous ne les écriviez pas. Elle réécrit pour de bon le motif de son objet, c'est pourquoi la deuxième instance est un nouvel objet avec le même motif :
 
 ```haro
 o2 = new stzRegex("pre\w+")
@@ -212,31 +212,31 @@ Ce que le portable peut faire et que la carte ne peut pas, et ce dont la carte a
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai fait des formes une grammaire que le langage possède.** En Haro, les formes sont déclarées une fois et le compilateur génère et vérifie chaque famille : la forme passive ne peut pas muter ; un verbe avec Q renvoie l'objet ; l'ordre des suffixes est l'ordre des paramètres ; un W prend un littéral analysé à la compilation. La première mesure de ce travail est la classe chaîne de la bibliothèque : parmi ses orthographes livrées des verbes find, replace et remove, 584 s'accordent avec la déclaration et 11 non. J'ai dit au chapitre 5 ce que Haro a refusé comme grammaire : la forme mal orthographiée, l'ordre libre des paramètres et les noms de méthodes par langue. Voici ce que cela veut dire pour le tableau plus bas : cinq formes ne tournent pas.
+**Dans la conception de Haro, le principe 7 fait des formes une grammaire que le langage possède.** Elle est conçue et non construite : les formes sont déclarées une fois, et le compilateur générerait et vérifierait chaque famille. La forme passive ne peut pas muter ; un verbe avec Q renvoie l'objet ; l'ordre des suffixes est l'ordre des paramètres ; un W prend un littéral analysé à la compilation. Le prototype ne juge que des noms : il ne lit pas les corps et ne juge pas l'ordre des suffixes. Sa première mesure est la classe chaîne de la bibliothèque : parmi ses 595 orthographes livrées des verbes find, replace et remove, 584 s'accordent avec la déclaration et 11 non. J'ai dit au chapitre 5 ce que Haro a refusé comme grammaire : la forme mal orthographiée, l'ordre libre des paramètres et les noms de méthodes par langue. Voici ce que cela veut dire pour ce chapitre : cinq formes ne tournent pas.
 
-**J'ai écourté la forme future exprès.** Le 10 juillet 2026, j'ai retiré du code naturel les suffixes d'exécution différée et leur file d'attente globale, pour une raison écrite dans la conception : le langage naturel exige de bâtir tout le modèle de calcul avant d'exécuter, et le plan de jetons du moteur le fait désormais. L'idée a déménagé. C'est un plan du moteur naturel et plus un suffixe.
+**La forme future a été écourtée exprès.** L'en-tête du fichier de code naturel la date du 10 juillet 2026 : la file globale d'actions différées est partie, et ses enveloppes FQ et FFQ avaient déjà disparu. La raison est écrite dans la conception : le langage naturel exige de bâtir tout le modèle de calcul avant d'exécuter, et le plan de jetons du moteur le fait désormais. L'idée a déménagé. C'est un plan du moteur naturel et plus un suffixe.
 
-**J'ai changé le mécanisme de la forme conditionnelle.** Elle compilait autrefois par évaluation d'une chaîne. Elle passe maintenant par le langage d'expressions du moteur, et l'ancienne forme étendue est retirée.
+**La forme conditionnelle a changé de mécanisme.** La narration dit qu'elle ne passe plus par `eval()` mais par un petit langage textuel que le moteur compile, et que l'ancienne forme étendue, WXT, est maintenant un alias obsolète de W.
 
-**Pour la portée, j'ai refusé le courant flottant.** Le code d'une fonctionnalité n'est jamais écrit contre un « système courant » ambiant. Il nomme sa portée. Et pour la concurrence j'ai refusé deux choses avant qu'il y ait le moindre code : une méthode par opération qui étale le cadre sur une douzaine de verbes, comme `DoubleEachConcurrently`, et un mode posé plus tôt, l'antimodèle même contre lequel ce paradigme a été fondé. J'ai aussi refusé une portée qu'aucun hôte ne peut exécuter. Ma première idée pour la concurrence était un vocabulaire de fils d'exécution, et le langage en dessous n'a pas de fils.
+**Pour la portée, le document de conception refuse le courant flottant.** Le code d'une fonctionnalité n'est jamais écrit contre un « système courant » ambiant. Il nomme sa portée. Et pour la concurrence le document consigne deux refus avant qu'il y ait le moindre code : une méthode par opération qui étale le cadre sur de nombreux verbes, comme `DoubleEachConcurrently`, et un mode posé plus tôt, l'antimodèle même contre lequel ce paradigme a été fondé. Il refuse aussi une portée qu'aucun hôte ne peut exécuter. Sa première idée pour la concurrence était un vocabulaire de fils d'exécution, et le langage en dessous n'a pas de fils.
 
 **J'ai refusé de livrer tout le moteur en périphérie.** La règle de placement est : ne livrer que ce qui est critique et soit propre à Softanza, soit faible sur la cible. Une cible qui excelle déjà dans une chose n'en reçoit rien.
 
 ## 5. Le tribunal
 
-`00_regex_narrated` prouve les portées des verbes de l'expression régulière : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et elle a échoué sous charge lors d'une de mes exécutions, ce que je signale et ne cache pas. `delivery_narrated` prouve le plan de placement.
+`00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et elle a échoué sous charge lors d'une exécution de sonde que `data/` n'enregistre pas ; je le signale et ne le cache pas. `delivery_narrated` prouve le plan de placement.
 
 ## 6. Le terrain, et où il mène
 
 Le terrain mène en convention. Un nom qui est une étiquette est plus facile à enseigner et plus facile à taper ; la grammaire de ce chapitre doit s'apprendre, et certaines de ses formes sont rarement utilisées.
 
-Le terrain mène en garantie. Les arguments nommés de Python et les étiquettes de Swift sont vérifiés par le compilateur, pour chaque fonction, dès le premier jour. Les formes d'ici sont vérifiées en Haro et dans l'analyseur propre de la bibliothèque, et seulement dans les noms qui les suivent.
+Le terrain mène en garantie. Les arguments nommés de Python sont vérifiés à l'appel, et les étiquettes de Swift par le compilateur, pour chaque fonction, dès le premier jour. Les formes d'ici sont jugées par le prototype de Haro, sur les noms et non sur les corps, et par l'analyseur propre de la bibliothèque, et seulement dans les noms qui les suivent.
 
 Sur la portée, le terrain mène en maturité. La pratique la plus proche est le contexte explicite : l'habitude de Go de passer un contexte à chaque appel, un objet de locale qui porte un cadre. Elles sont plus anciennes et plus largement employées. Ce que ce paradigme ajoute, c'est que le cadre fait partie d'un petit ensemble fermé, choisi dans le verbe, et que la bibliothèque peut raisonner avec lui.
 
 ## 7. La limite
 
-Ce qui est construit : quatorze des vingt-deux formes d'un nom tournent comme l'article les montre ; trois autres tournent sous une autre forme ; la bibliothèque lit un nom comme une phrase ; et la portée tourne dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement. L'article compte vingt-trois sections : les vingt-deux formes d'un nom, et « small functions », qui sont des fonctions et non une forme de nom. Le nombre du livre est vingt-deux, les formes d'un nom.
+Ce qui est construit : quatorze des vingt-deux formes d'un nom tournent, certaines avec d'autres exemples que ceux de l'article ; trois autres tournent sous une autre forme ; la bibliothèque lit un nom comme une phrase ; et la portée tourne dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement. L'article compte vingt-trois sections : les vingt-deux formes d'un nom, et « small functions », qui sont des fonctions et non une forme de nom. Le nombre du livre est vingt-deux, les formes d'un nom.
 
 Ce qui est conçu : les formes de Haro comme données, avec des familles générées ; et le paradigme de portée pour le temps, les unités, la mémoire et le style, comme lignes d'un tableau.
 
@@ -246,10 +246,10 @@ Ce qui est absent, et la page doit dire chacune avec son échec :
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.
 - **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive, et l'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
 - **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque appelle la forme informante pas encore construite.
-- **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Leurs héritiers sont les paquets de langue du chapitre 11.
-- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : l'appel permuté termine le programme avec un statut de un et n'imprime rien. Et la forme d'énoncé est à moitié juste : la moitié « All » fonctionne, et la moitié « No » renvoie la mauvaise valeur de vérité ; le propre test classique de la bibliothèque promet vrai, vrai, vrai et l'exécution les imprime faux.
+- **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
+- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. Et la forme d'énoncé est à moitié juste : la moitié « All » fonctionne, et la moitié « No » renvoie la mauvaise valeur de vérité ; le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
 
-Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau de conception en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document : le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée, et sa garde narrée a passé ici 61 assertions sur 62, l'échec étant un échec de temps. Je dis ce que le code fait : la portée du système est construite, avec cet échec imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
+Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau de conception en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document : le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée, et lors d'une exécution de sonde que `data/` n'enregistre pas, 61 des 62 assertions de sa garde narrée ont passé, l'échec étant un échec de temps. Je dis ce que le code fait : la portée du système est construite, avec cet échec imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
 
 ## 8. Six portes
 
@@ -263,7 +263,7 @@ Du côté de la portée : les verbes de l'expression régulière diffèrent du t
 
 **Le formateur.** La bibliothèque analyse un nom en sa phrase, de sorte qu'un apprenant peut lui demander ce que dit une méthode.
 
-**L'agent.** Écrivez la portée dans le verbe. Un appel qui nomme une portée ne peut pas être déplacé dans un autre cadre par un drapeau posé ailleurs.
+**L'agent.** Écrivez la portée dans le verbe. Un appel qui nomme une portée n'est pas déplacé dans un autre cadre par un drapeau posé ailleurs.
 
 ## 9. Exercice
 

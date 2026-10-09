@@ -10,7 +10,7 @@ guards: [wisecoding_narrated, wisecoding_rich_narrated, ownagentstack_narrated, 
 stage:
   built: "le but, l'écart et la question avec sa raison ; une réponse sous forme d'option, de structure de données ou de phrase découpée sur les virgules et sur le mot « and » ; la porte gouvernée avec ses refus ; le point de contrôle avec sa durée de vie ; le but accompli ou révoqué ; un agent câblé qui s'arrête là où il devrait inventer"
   designed: "plusieurs lectures d'une même réponse, énumérées pour que la personne choisisse ; les alternatives les plus proches nommées après un refus ; l'exemple réécrit comme promesse"
-  absent: "le registre de la formule ; le registre de l'exemple ; une conversation dont la question est formulée en arabe, en haoussa ou en français ; une réponse qui contient un espace"
+  absent: "le registre de la formule ; le registre de l'exemple ; une conversation dont la question est formulée en arabe, en haoussa ou en français ; une valeur qui contient un espace"
 status: draft
 rulings: ["12.25", "12.26", "12.27"]
 research: research/ch18.md
@@ -18,13 +18,13 @@ research: research/ch18.md
 
 ## 1. Le concept, tel que le terrain le tient
 
-Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et une troisième se tient derrière son dernier registre.
+Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et une troisième se tient derrière son dernier registre. (Connaissance générale pour toute cette section, non une étude du dossier ; les dates sont à vérifier avant impression.)
 
 La première est le remplissage d'emplacements (slot filling). Un cadre de dialogue demande à l'utilisateur les éléments manquants d'un formulaire jusqu'à ce que le formulaire soit plein. Les frameworks du terrain comprennent le texte libre avec des modèles entraînés, parlent sur de nombreux canaux et livrent des connecteurs, et ils demandent au concepteur d'écrire des intentions et des flux dans leur propre langage. Ils prennent la réponse de l'utilisateur pour la réponse et agissent dessus.
 
 La deuxième est le vibe coding, un nom mis en circulation en 2025 : l'humain soumet un prompt, le modèle produit, l'humain garde ce qui fonctionne.
 
-La troisième est la programmation par l'exemple. Les tableurs remplissent une colonne à partir de deux exemples que vous avez tapés. La recherche appelle cela la synthèse inductive, et l'ère des modèles a fait de l'exemple la façon de piloter un modèle. (Connaissance générale, non une étude du dossier ; les dates sont à vérifier avant impression.)
+La troisième est la programmation par l'exemple. Les tableurs remplissent une colonne à partir de deux exemples que vous avez tapés. La recherche appelle cela la synthèse inductive, et l'ère des modèles a fait de l'exemple la façon de piloter un modèle.
 
 ## 2. Le premier principe
 
@@ -150,7 +150,7 @@ oKP.AskIn("price")
 #--> =12*3
 ```
 
-Le prix du thé est maintenant le texte « =12*3 ». Je l'ai découvert en l'exécutant, et le code est muet sur un registre de formule. Le dossier l'appelle le prochain travail, classé et non acheminé.
+Le prix du thé est maintenant le texte « =12*3 ». Je l'ai découvert en l'exécutant, et le code est muet sur un registre de formule. Le dossier liste le travail de wise coding sur les registres 3 et 5 comme en attente, non acheminé.
 
 **Le cinquième registre, les exemples.** Quand des exemples sont offerts sous forme de paires, ils ne sont ni admis ni refusés. Le but reste ouvert, et aucun point de contrôle n'est écrit. L'agent qui les lirait figure sur la liste, et réservé :
 
@@ -310,7 +310,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 #--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
 ```
 
-Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une réponse qui contient un espace lève une erreur pour le moment, et donc les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et aucun locuteur natif ne les a lues, selon les mots du code. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
+Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve), et donc les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
 
 ### Un modèle est une fluidité, jamais l'esprit
 
@@ -330,7 +330,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé de deviner.** La phrase du dossier est : deviner est remplacé par demander, et les impressions sont remplacées par la gouvernance. Un écart est une question. Une réponse est un candidat.
+**J'ai refusé de deviner.** La phrase du dossier est : deviner est remplacé par demander ; les impressions sont remplacées par la gouvernance. Un écart est une question. Une réponse est un candidat.
 
 **J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance. Les cinq registres aboutissent dans un seul entonnoir.
 
@@ -338,7 +338,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **J'ai refusé un agent qui comble un écart pour finir le travail.** Le wise coder s'arrête, et laisse l'écart à une personne.
 
-**J'ai refusé qu'une conversation possède un monde.** Elle a lieu à l'intérieur d'un espace de connaissances et n'en possède jamais un, et une copie de la connaissance tenue dans une session devient périmée. C'est la raison pour laquelle chaque appel ci-dessus est enchaîné depuis l'espace.
+**J'ai refusé qu'une conversation possède un monde.** Elle a lieu à l'intérieur d'un espace de connaissances et n'en possède jamais un, et une copie de la connaissance tenue dans une session devient périmée.
 
 **J'ai refusé un point de contrôle supprimé.** L'expiration retire un refus de la liste vivante. Le dossier le garde.
 
@@ -346,15 +346,15 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 5. Le tribunal
 
-`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace ; que la question est menée par le système, nomme son sujet et dit pourquoi il demande ; que « X and Y » et une structure de données sont admis ; qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle ; et que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, les options numérotées et le refus d'un numéro que personne n'a offert, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte et ne l'exécute pas ; le dernier bloc ci-dessus ne fait que lire le cours.
+`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace ; que la question est menée par le système, nomme son sujet et dit pourquoi il demande ; que « X and Y » et une structure de données sont admis ; qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle ; et que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, les options numérotées et le refus d'un numéro que personne n'a offert, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte et ne l'exécute pas ; le bloc du tuteur ci-dessus ne fait que lire le cours.
 
-Les gardes se terminent en appelant une fonction qui imprime le total puis arrête l'exécution par une levée d'erreur. C'est la façon qu'a la garde de finir.
+Trois des gardes impriment leur propre total et se terminent en appelant `pf()`, qui imprime le temps et la version du runtime puis arrête l'exécution par une levée d'erreur. C'est leur façon de finir. `tutor_gaps_narrated` se termine par `Summary()`, qui imprime le total et un état, et ne lève pas d'erreur.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en compréhension. Un cadre de dialogue lit le texte libre avec des modèles entraînés, parle sur de nombreux canaux et livre des connecteurs. Le dossier dit ce qui manque à Softanza, dans son propre compte : le mot « WhatsApp » n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque. La conversation demande un emplacement à la fois, sur un graphe que l'utilisateur doit d'abord avoir déclaré, et elle ne comprend pas une réponse ouverte.
+Le terrain mène en compréhension. Un cadre de dialogue, tel que le terrain le tient, lit le texte libre avec des modèles entraînés, parle sur de nombreux canaux et livre des connecteurs. Le dossier dit ce qui manque à Softanza, dans son propre compte : le mot « WhatsApp » n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque. La conversation demande un emplacement à la fois, sur un graphe que l'utilisateur doit d'abord avoir déclaré, et elle ne comprend pas une réponse ouverte.
 
-Le terrain mène sur les exemples. La programmation par l'exemple est livrée dans les tableurs aujourd'hui. Softanza n'a aucune induction, et le dossier le dit : rien n'induit encore. Une recherche de « induce », « from examples » et « infer » dans le répertoire des expressions régulières ne trouve rien.
+Le terrain mène sur les exemples. La programmation par l'exemple est, telle que le terrain la tient, livrée dans les tableurs aujourd'hui. Softanza n'a aucune induction, et le dossier le dit : rien n'induit encore. Une recherche de « induce », « from examples » et « infer » dans le répertoire des expressions régulières ne trouve rien.
 
 Le terrain est honnête sur les coûts, et le dossier aussi. Plusieurs candidats est le cas normal quand on demande une règle à partir d'exemples. Un motif induit de trois exemples les surapprend. Le remède que nomme le dossier est la question qui distingue deux candidats. Et l'index qui porterait les exemples est aussi propre que les étiquettes des méthodes, avec environ quatre-vingt-cinq fautes d'orthographe.
 
@@ -364,9 +364,9 @@ Là où je pense que le dossier se distingue : chaque réponse, sous quelque for
 
 Ce qui est construit : le but, l'écart, la question avec sa raison, le cadre ; le premier registre, le deuxième, et le quatrième sous la forme d'un séparateur ; la porte gouvernée avec ses refus ; le point de contrôle et sa durée de vie ; le but accompli ou révoqué ; la transcription ; un agent câblé ; la phrase d'écart du tuteur en quatre langues.
 
-Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes : les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse ; et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit », et les pages en disent plus que le code. Je le dis carrément : les deux pages promettent plus que le code, pour que la page ou le code soit corrigé. Le code câble trois registres sur cinq. La note qui nomme la formule et les exemples les appelle classés et non acheminés, et pour ce chapitre ils sont absents.
+Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes : les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse ; et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Et l'exemple réécrit comme promesse : la page du site *by example* (lue le 9 octobre 2026) l'appelle une règle de la conception, non construite. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit », et les pages en disent plus que le code. Je le dis carrément : les deux pages promettent plus que le code, pour que la page ou le code soit corrigé. Le code câble trois registres sur cinq. La note qui nomme la formule et les exemples les liste comme en attente, non acheminés, et pour ce chapitre ils sont absents.
 
-Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une réponse avec un espace. Dans la version de la bibliothèque que ce livre exécute, `ReplyIn` lève une erreur, avec une variable non initialisée, sur toute valeur contenant un espace : « tomato sauce », « fromage et tomate », « jibini da tumatir ». L'appel direct à la porte renvoie correctement le refus. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est dans la note comme demande, et l'exercice ci-dessous n'emploie pas de réponse avec un espace.
+Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une valeur avec un espace. Lors de l'exécution de recherche du 8 octobre 2026, sur la version de la bibliothèque que ce livre exécute, `ReplyIn` a levé une erreur, avec une variable non initialisée, sur chaque valeur contenant un espace que j'ai essayée : « tomato sauce », « fromage et tomate », « jibini da tumatir ». Appelée directement, la porte a renvoyé correctement le refus. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, de sorte que l'exécution du livre ne les montre pas. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est dans la note comme demande, et l'exercice ci-dessous n'emploie pas de valeur avec un espace.
 
 ## 8. Six portes
 
@@ -387,12 +387,12 @@ Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'a
 Choisissez un petit monde à vous, une boutique, une classe, une clinique, avec quatre entités d'un même type et un but selon lequel chacune a besoin d'une relation. Avant d'exécuter quoi que ce soit, écrivez sous chacune des réponses ci-dessous le verdict que vous attendez, admis, refusé avec une raison, ou ni l'un ni l'autre :
 
 1. un mot simple ;
-2. un deuxième mot, offert comme un numéro après que le premier est connu ;
+2. un numéro qui choisit une valeur que la première réponse a fait connaître ;
 3. un numéro que personne n'a offert ;
 4. deux valeurs à la fois, pour une relation que vous avez déclarée unique ;
 5. une liste de deux paires d'exemples.
 
-Puis exécutez-le. Si une promesse se brise, ne changez pas la promesse : expliquez d'abord la sortie.
+Puis exécutez-le. Une réponse admise épuise la question : appelez de nouveau `AskIn` avant la réponse suivante. Si une promesse se brise, ne changez pas la promesse : expliquez d'abord la sortie.
 
 ```haro exercise
 oWorld = new stzKnowledgeGraph("my-world")

@@ -9,8 +9,8 @@ site: [platforms, offering, forged]
 guards: [06_stzsuperapp_narrated, 01_platform_narrated, full_scope_model_narrated, 04_stzapp_pursue_narrated, 05_stzapp_live_narrated]
 stage:
   built: "a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes"
-  designed: "the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal"
-  absent: "a world that judges its own truths; a narration for the constellation or the platform envelope; a page for the architect; the five-row guarantee sheet"
+  designed: "the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement"
+  absent: "a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution"
 status: draft
 rulings: ["12.2", "12.12", "12.13", "12.15", "12.19", "12.25", "12.29"]
 research: research/ch23.md
@@ -34,7 +34,7 @@ The shared shape: the field draws the picture, a host, a map, a diagram, and kee
 
 **The solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.**
 
-The sentences of the record: an application is a living world of meaning; worlds, not mini-apps, a governed graph and not a host container; and a Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, each as it stands in its source; the sentence above is the chapter's own principle, in the book's voice.
+The sentences of the record: an application is a living world of meaning; worlds, not mini-apps, a governed graph and not a host container; and a Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, put in my words; the sentence above is the chapter's own principle, in the book's voice.
 
 ## 3. The Softanza form
 
@@ -217,7 +217,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-Chapter 28 used `Retire` and `Revive`, and this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's.
+Chapter 28 used `Retire` and `Revive`, and this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
 
 One trap. A registered world is a copy. The host language copies an object by value when it is stored, so the world you register is not the world you hold. The header of the class says it: world objects are reached through the registry index, the live path. Configure the world fully, register it, and reach it through the constellation from then on. The envelope has the same doctrine: setting a world on the platform harvests its declarations at call time, and setting the governance snapshots the regime.
 
@@ -245,7 +245,7 @@ oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
 #--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
 ```
 
-The class header says what the world lacks: the world models the world, and deliberately lacks the operational envelope. The envelope's duties are generation, the capability seam, the commons runtime, a networked body and a registry with enforcement. Generation is real, and refuses to generate for a world that declares no reach. The success path writes real files, so I do not run it here. I ran it once and removed what it wrote: the web shell is a page of 318 bytes with the world's screens and things as list items, and the desktop shell a launcher of 251 bytes. That is the limit of "per-platform shells": generation is real, and tiny.
+The class header says what the world lacks: the world models the world, and deliberately lacks the operational envelope. The envelope's duties are generation, the capability seam, the commons runtime, a networked body and a registry with enforcement. Generation is real, and refuses to generate for a world that declares no reach. The success path writes real files, so I do not run it here. I ran it once, for a world of one screen and one thing, and removed what it wrote: the web shell is a page of 318 bytes with the world's screens and things as list items, and the desktop shell a launcher of 251 bytes; other worlds give other sizes. That is the limit of "per-platform shells": generation is real, and tiny.
 
 ### The architect, and the three scopes
 
@@ -313,7 +313,7 @@ done
 
 The file form is plain text that the architect owns, and it round-trips from a string. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
 
-Who is the architect? The record names the person three times in three unrelated places: the System Foundation, a private book of the estate on platform modelling, and Central's memo for a school that would certify architects of Softanza, with three levels. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has no page for the architect. I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
+Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels; that memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
 
 ## 4. The decision, and what I refused
 
@@ -323,7 +323,7 @@ Who is the architect? The record names the person three times in three unrelated
 
 **I refused the sandbox as the definition of isolation.** Isolation is a declared, inspectable meaning and not a black-box virtual machine. A world's sovereign body plus norm-gated bonds. A runtime sandbox is only an implementation for untrusted worlds.
 
-**I refused to make governance a fifth facet.** It is the ambient. In code, one governance per constellation, configured through it, so that there is one live governance and never a stale copy held by a caller.
+**I refused to make governance one more facet, beside the design's constellation, bonds, commons, reach and presence.** It is the ambient. In code, one governance per constellation, configured through it, so that there is one live governance and never a stale copy held by a caller.
 
 **I refused to give the world the envelope.** `stzApp` models the world, and deliberately lacks the operational envelope.
 
@@ -345,7 +345,7 @@ The field leads in shells. The design promises a progressive web app, a desktop 
 
 The field leads in what a bounded context carries: a team and a language. A world carries a graph and a narration. The persona a world is for is not a field of the class: a world has the list of surfaces it reaches and nothing else about whom it serves. The site's five things, a shared ground, a world for each person and device, bonds, rules, roles, are true of the commons, the bonds and the governance. The roles are the actors, permissions and authority of the governance. There is no role class, and a world per person and device is a naming convention.
 
-The Atlas does not rate this plane. `stzApp` is named once, in a lane of the area for interfaces, rated solid, with the note that there is no multi-window orchestration, dialogs, menus or tray. The platform in a lane of the area for the system. The constellation in none.
+The Atlas does not rate this plane. `stzApp` is named once, in the lane of the area for interfaces called App shell and windowing; that lane, not the world, is rated solid, with the note that there is no multi-window orchestration, dialogs, menus or tray. The platform in a lane of the area for the system. The constellation in none.
 
 The compiler leads on scopes. It checks against a target in daily use at scale; Softanza's scope is a runtime object that a program asks. What it adds is a verdict at the call site in the target's own words, and a twin that rehearses what the host lacks, which is chapter 24.
 
@@ -406,13 +406,13 @@ done
 #--> Error (R14) : Calling Method without definition: explain
 ```
 
-`Shares`, `Provides`, `Norm`, `Reaches` and `Generate` on a constellation fail in the same way. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings` and the commons calls, and that is all. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part that is not there. The design's own header calls the document a forward design.
+`Shares`, `Provides`, `Norm`, `Reaches` and `Generate` are not defined on a constellation either. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part that is not there. The design's own header calls the document a forward design.
 
 What is built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
 
-What is designed: the near-natural idiom; a call routed into a nested constellation; loading one world without rebuilding a host; shells that embed the engine.
+What is designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and nothing is handed to the target); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
 
-What is absent: a narration for the constellation or the envelope, since none exists. The narration for building a first app uses verbs the class does not have: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. A page on the site for the architect. The five-row guarantee sheet. A lane of the Atlas for the world, the constellation or the envelope.
+What is absent: a narration for the constellation or the envelope, since none exists. The narration for building a first app uses verbs the class does not have: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet: no solution has one. A lane of the Atlas for the world, the constellation or the envelope.
 
 ## 8. Six doors
 
@@ -424,9 +424,9 @@ What is absent: a narration for the constellation or the envelope, since none ex
 
 **The decision-maker.** You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision with the actor, the authority and the risk of its moment. Your architect's file is text you own.
 
-**The educator.** The record is thin. The education plan lists a ladder from practitioner to architect to contributor among six competing level schemes, and I say so. The exercise below is judged by running.
+**The educator.** The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.
 
-**The agent.** A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed whoever calls.
+**The agent.** A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority.
 
 ## 9. Exercise
 

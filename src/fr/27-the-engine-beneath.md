@@ -9,8 +9,8 @@ site: [architecture]
 guards: [engine_is_optimised_narrated, engine_senses_narrated, wasm_narrated, threat_model_narrated]
 stage:
   built: "trois couches choisies par le fichier d'entrée qu'on charge, chacune incluant celle du dessous et aucune celle du dessus ; la règle de dépendance tenue aux chargements ; un moteur de quatre-vingt-neuf bibliothèques, en Zig, construit en mode optimisé sûr, avec le propre décompte du moteur de ce qu'il expose ; Haro comme charte ratifiée et un spike dont les tribunaux tournent sur le nouveau runtime et sur l'ancien"
-  designed: "la couche base héritant de la couche noyau ; la couche max comme couche construite ; un tribunal qui vérifie les couches contre leur contrat ; une couche choisie par une déclaration que le compilateur honore ; les autres faces de Haro sur un même graphe de programme"
-  absent: "une couche noyau légère qui exécute ses chaînes ; un moteur Linux ou macOS en service ; une passe mesurée de la bibliothèque sur le nouveau runtime sous Linux ; un exécutable `haro` ; Haro exécutant la bibliothèque"
+  designed: "la couche base héritant de la couche noyau ; la couche max comme couche construite ; un tribunal qui vérifie les couches contre leur contrat ; une couche choisie par une déclaration que le compilateur honore ; les autres faces de Haro sur un même graphe de programme ; un chargeur pour un domaine de la base ; le dépôt autonome du moteur et sa ligne de commande ; le pont polyglotte du moteur, qui est celui du chapitre 16"
+  absent: "une couche noyau légère qui exécute ses chaînes ; un moteur Linux ou macOS en service ; une passe mesurée de la bibliothèque sur le nouveau runtime sous Linux ; un exécutable `haro` ; Haro exécutant la bibliothèque ; un exécutable unique sans dépendance ; un décompte de tests du moteur que je puisse imprimer"
 status: draft
 rulings: ["12.10", "12.11", "12.15", "12.21", "12.28", "12.29"]
 research: research/ch27.md
@@ -18,11 +18,11 @@ research: research/ch27.md
 
 ## 1. Le concept, tel que le terrain le tient
 
-Une plateforme dans une seule base de code se dessine comme une pile avec une seule règle : une couche interne ne sait rien d'une couche externe. Le pair le plus net, dans les mots propres du dossier, est celui des trois profondeurs d'un même langage de Rust, choisies par la cible. Rust l'impose par son compilateur. Softanza le tient par des fichiers d'entrée, et la section 7 dit ce que cela coûte.
+Une plateforme dans une seule base de code se dessine comme une pile avec une seule règle : une couche interne ne sait rien d'une couche externe. Le pair le plus net, dans les mots de l'étude, est celui des trois crates de Rust pour trois profondeurs d'hôte, choisies par la cible. (Connaissance générale pour le terrain : Rust impose la règle par son compilateur.) Softanza le tient par des fichiers d'entrée, et la section 7 dit ce que cela coûte.
 
-L'habitude du terrain pour un moteur est une bibliothèque native avec une interface C simple, enveloppée finement par chaque langage. SQLite est l'exemple courant : une bibliothèque C, des liaisons dans presque tous les langages. Le dossier énonce la même conception pour son moteur : les clients de langage sont de fins ponts qui ajoutent syntaxe et paradigmes, et jamais de calcul. (Connaissance générale pour le terrain, bien établie. Je ne nomme aucun moteur écrit dans le même langage que celui-ci, sauf si on me le demande.)
+L'habitude du terrain pour un moteur est une bibliothèque native avec une interface C simple, enveloppée finement par chaque langage. SQLite est l'exemple courant : une bibliothèque C, des liaisons dans presque tous les langages. Le dossier énonce la même conception pour son moteur : les clients de langage sont de fins ponts qui ajoutent syntaxe et paradigmes, et jamais de calcul. (Connaissance générale pour le terrain, bien établie.)
 
-Et le terrain a fait, à plusieurs reprises, une troisième chose : un langage garde sa surface et ses bibliothèques et change la machine en dessous. L'exemple propre du dossier est un descendant typé de Lua. Un autre est l'implémentation alternative de Python. Les deux enseignent la même chose que le dossier enseigne : la surface est la promesse, et le runtime est la partie qu'il faut mesurer.
+Et le terrain a fait, à plusieurs reprises, une troisième chose : un langage garde sa surface et ses bibliothèques et change la machine en dessous. L'exemple propre du dossier est un descendant typé de Lua. Un autre est l'implémentation alternative de Python. (Connaissance générale pour le terrain, bien établie.) Les deux enseignent la même chose que le dossier enseigne : la surface est la promesse, et le runtime est la partie qu'il faut mesurer.
 
 ## 2. Le premier principe
 
@@ -30,7 +30,7 @@ Et le terrain a fait, à plusieurs reprises, une troisième chose : un langage g
 
 La première phrase est la règle de conception de l'architecture du moteur, dans un document de session : chaque fonctionnalité est implémentée une fois, dans le moteur, et les clients de langage sont de fins ponts qui ajoutent syntaxe et paradigmes, jamais de calcul. Le chapitre 4 a raconté la décision de l'auteur qui en découle, que j'ai refusé le calcul dans les faces. La seconde phrase est le cahier des charges du runtime en dessous : performance et portabilité, mesurées, jamais affirmées.
 
-Et la définition qui gouverne les dépendances du moteur, que le chapitre 4 énonce déjà : la souveraineté est de n'avoir rien qu'un autre puisse retirer. Elle n'a jamais voulu dire que chaque ligne est de nous.
+Et la définition qui gouverne les dépendances du moteur, que le chapitre 4 énonce déjà : la souveraineté est de n'avoir rien qu'un autre puisse retirer. Dans les mots de la vision, elle n'a jamais voulu dire que chaque ligne est de nous.
 
 ## 3. La forme Softanza
 
@@ -54,7 +54,7 @@ next
 #--> 714 1 1 1
 ```
 
-Le noyau contient 17 classes et aucune classe de base. La base en contient 674 et aucune classe max. Max en contient 714. Chaque couche inclut celle du dessous et aucune celle du dessus : noyau dans base dans max, chargées par le bas. Un chargement du seul fichier d'entrée du noyau prend environ un dixième de seconde sur cette machine, et un chargement de la base prend entre trois et huit secondes, en exécutions uniques le 9 octobre 2026.
+Le noyau contient 17 classes, dix au préfixe `stk` et sept à `stzCore`, et aucune classe de base. La base en contient 674 et aucune classe max. Max en contient 714. Chaque couche inclut celle du dessous et aucune celle du dessus : noyau dans base dans max, chargées par le bas. Un chargement du seul fichier d'entrée du noyau prend environ un dixième de seconde sur cette machine, et un chargement de la base prend entre trois et huit secondes, en exécutions uniques le 9 octobre 2026, que mes notes consignent et qu'aucun bloc ne montre.
 
 Le contrat dit que la base s'appuie sur le noyau, par héritage ou par délégation. Voici ce que disent les classes. `ringvm_classesList()` renvoie, pour chaque classe, son nom, son identifiant et son parent :
 
@@ -131,9 +131,9 @@ next
 
 Deux mille sept cent quatre-vingt-six fonctions distinctes du moteur, la vue propre de la bibliothèque, prise à l'exécution. Le même appel renvoie plus d'entrées, puisque celles de la machine virtuelle elle-même sont incluses, et plusieurs noms apparaissent plus d'une fois ; je n'ai pas cherché pourquoi. J'ai d'abord assigné la liste à une variable, parce que l'appel est réévalué à chaque tour d'une boucle, et j'ai arrêté deux exécutions qui avaient grossi jusqu'à des gigaoctets avant que je l'apprenne. Le décompte bouge avec le moteur construit.
 
-Il y a trois décomptes de trois choses différentes, et le chapitre dit lequel il imprime. Le premier est le décompte vu de la bibliothèque à l'exécution : les 2 786 ci-dessus. Le deuxième est le décompte vu de n'importe quel hôte par l'interface C : par un script à moi qui a lu les tables d'export des quatre-vingt-neuf bibliothèques le 9 octobre 2026, 1 710 symboles nommés, dont quatre-vingt-neuf sont le crochet du chargeur, donc 1 621 fonctions. Le troisième est le décompte dans les sources Zig, comme noms d'enregistrement : 2 703 littéraux distincts. Le site dit 752 et 2 652, à un commit que je nomme, et les constantes typées de la bibliothèque disent 1 513, datées du 16 juin 2026. Je ne peux reproduire 752 par aucune méthode que j'ai essayée. N'imprimez qu'un décompte que la construction lit, avec sa méthode et sa date.
+Il y a trois décomptes de trois choses différentes, et le chapitre dit lequel il imprime. Le premier est le décompte vu de la bibliothèque à l'exécution : les 2 786 ci-dessus. Le deuxième est le décompte vu de n'importe quel hôte par l'interface C : par un script à moi qui a lu les tables d'export des quatre-vingt-neuf bibliothèques le 9 octobre 2026, 1 710 symboles nommés, dont quatre-vingt-neuf sont le crochet du chargeur, donc 1 621 fonctions. Le troisième est le décompte dans les sources Zig, comme noms d'enregistrement : 2 703 littéraux distincts. Le site dit 752 et 2 652, au commit 010743cce tel que la page le lit au 9 octobre 2026, et les constantes typées de la bibliothèque disent 1 513, datées du 16 juin 2026. Je ne peux reproduire 752 par aucune méthode que j'ai essayée. N'imprimez qu'un décompte que la construction lit, avec sa méthode et sa date.
 
-**Le moteur fait le travail.** Le `upper` de l'hôte laisse l'eszett allemand tranquille. La mise en correspondance de casse du moteur, une bibliothèque embarquée, écrit SS. Une seconde bibliothèque embarquée extrait les radicaux des mots. Ce sont deux des dix-neuf :
+**Le moteur fait le travail.** Le `upper` de l'hôte laisse l'eszett allemand tranquille. La mise en correspondance de casse du moteur, sa propre table au-dessus d'une bibliothèque embarquée, écrit SS. Une seconde bibliothèque embarquée extrait les radicaux des mots. Ce sont deux des dix-neuf :
 
 ```haro
 ? upper("Straße")
@@ -146,7 +146,7 @@ Il y a trois décomptes de trois choses différentes, et le chapitre dit lequel 
 
 La première ligne montre le comportement de l'hôte. Si le `upper` de Haro devient du Unicode complet, la promesse change.
 
-Et le moteur est optimisé. Le mode par défaut de la construction est optimisé et sûr, depuis le 26 juillet 2026, date à laquelle un commit l'a fait ainsi. Jusque-là, chaque bibliothèque que la bibliothèque avait jamais chargée était compilée sans aucune optimisation, et cela clôt la question que le chapitre 22 avait laissée ouverte sur le mode de construction. Une garde lit le temps, puisqu'elle ne peut pas lire un drapeau. Vingt sommes sur deux millions de doubles qui vivent dans le moteur doivent finir en moins d'un dixième de seconde, et être justes :
+Et le moteur est optimisé. Le mode par défaut de la construction est optimisé et sûr, depuis le commit 1fdc2eda5, que le journal git de la bibliothèque date du 26 juillet 2026 ; les fichiers épinglés portent le commit et non la date. Jusque-là, chaque bibliothèque que la bibliothèque avait jamais chargée était compilée sans aucune optimisation, et cela clôt la question que le chapitre 22 avait laissée ouverte sur le mode de construction. Une garde lit le temps, puisqu'elle ne peut pas lire un drapeau. Vingt sommes sur deux millions de doubles qui vivent dans le moteur doivent finir en moins d'un dixième de seconde, et être justes :
 
 ```haro
 oBuf = StzNumBufferOfSizeQ(2000000)
@@ -162,7 +162,7 @@ next
 oBuf.Free()
 ```
 
-Le bloc n'imprime que le booléen, parce qu'un temps n'est pas une promesse. Sur trois exécutions les 8 et 9 octobre 2026, les temps écoulés ont été de 0,02, 0,04 et 0,03 seconde, contre la table propre de la garde, 0,14 pour le mode non optimisé et 0,04 pour l'optimisé. La garde elle-même a tourné le 8 octobre : six assertions, six réussies.
+Le bloc n'imprime que le booléen, parce qu'un temps n'est pas une promesse. Sur trois exécutions les 8 et 9 octobre 2026, les temps écoulés ont été de 0,02, 0,04 et 0,03 seconde, tirés de mes notes et absents du relevé d'exécution, contre la table propre de la garde, 0,14 pour le mode non optimisé et 0,04 pour l'optimisé. La garde elle-même a tourné le 8 octobre : sept assertions dans le fichier, six atteintes ici, six réussies ; la septième est sur une branche else qu'on n'atteint pas quand l'analyseur est construit.
 
 ### Ce qui l'exécute
 
@@ -177,7 +177,7 @@ Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai décidé que l'avenir est Haro, et non l'ancien langage hôte.** Mes mots du 7 octobre 2026, dans la citation de l'étude : l'avenir est Haro, pas l'ancien langage, et le site doit être clair là-dessus. La face de Haro pour l'ancien langage ne sera maintenue que pour que le code déjà écrit continue de fonctionner. Ce qui n'est pas porté, c'est le runtime de ce langage et sa gouvernance. La première décision, le 28 août, était qu'il n'est pas porté du tout ; il a été remplacé deux jours après, comme l'amendement de la vision le dit.
+**J'ai décidé que l'avenir est Haro, et non l'ancien langage hôte.** Mes mots du 7 octobre 2026, dans la citation de l'étude, les crochets de moi : l'avenir est Haro, pas [l'ancien langage], et le site doit être clair là-dessus. La face de Haro pour l'ancien langage ne sera maintenue que pour que le code déjà écrit continue de fonctionner. Ce qui n'est pas porté, c'est le runtime de ce langage et sa gouvernance. La première décision, le 28 août, était qu'il n'est pas porté du tout ; il a été remplacé deux jours après, comme l'amendement de la vision le dit.
 
 **J'ai décidé que la réécriture est un renommage.** Le code des articles, au nom de Haro, est le même que la face de l'ancien langage. La charte le mesure de même : les étapes propres de Haro exécutent le même texte, identique à l'octet sur le nouveau compilateur et sur l'oracle.
 
@@ -185,11 +185,11 @@ Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
 
 **J'ai décidé que la surface est conservée.** Sa surface aujourd'hui est celle que le compilateur compile. La bibliothèque est sa spécification de compatibilité. Les autres surfaces sont des faces sur un même graphe de programme : chaque syntaxe est une face, pour qu'un agent à l'aise avec l'ancien langage, avec Python ou avec JavaScript écrive du Haro. Parmi elles seule la première face existe. Une face en forme de Python est une orthographe, pas du Python.
 
-**J'ai retiré l'ancien cadre, sans repli.** Moteur seul : pas de repli, pas de drapeaux de fonctionnalité, pas de dépendance à Qt. Le statut du 12 juin 2026 dit qu'il n'en reste aucun. J'ai vérifié : aucun fichier chargé ne charge une bibliothèque Qt, et la seule extension externe chargée par son nom est une extension de cryptographie dans un répertoire qu'aucun fichier d'entrée ne charge.
+**J'ai retiré l'ancien cadre, sans repli.** Moteur seul : pas de repli, pas de drapeaux de fonctionnalité, pas de dépendance à Qt. Le statut du 12 juin 2026 dit qu'il n'en reste aucun. J'ai vérifié : aucun fichier chargé ne charge une bibliothèque Qt, et deux extensions externes sont chargées par leur nom : une extension zip, que la base charge, et une de cryptographie, dans un répertoire qu'aucun fichier d'entrée ne charge.
 
-**J'ai retiré les extensions propres du langage.** Ma directive du 13 juin 2026 : s'assurer qu'aucune extension externe n'est requise, et que des alternatives du moteur les remplacent.
+**J'ai ordonné le retrait des extensions propres du langage.** Ma directive du 13 juin 2026 : s'assurer qu'aucune extension externe n'est requise, et que des alternatives du moteur les remplacent. La bibliothèque en charge encore une, une extension zip, comme l'entrée ci-dessus le dit.
 
-**J'ai mis le moteur en Zig, sans dépendance à une bibliothèque,** comme l'étude rapporte ma demande. C'est qualifié par la définition de la souveraineté du dossier lui-même : dix-neuf bibliothèques embarquées, chacune avec un verdict.
+**J'ai mis le moteur en Zig, sans dépendance à une bibliothèque,** comme l'étude rapporte ma demande. C'est qualifié par la définition de la souveraineté du dossier lui-même : dix-neuf bibliothèques embarquées, chacune avec un enregistrement.
 
 **J'ai laissé tout aller dans base.** Ma phrase, comme l'étude la rapporte : sous la pression du temps, tout est allé dans base, en attendant le bon moment pour refactoriser à nouveau. D'après mon décompte plus bas, base représente quatre-vingt-treize pour cent des lignes.
 
@@ -203,9 +203,9 @@ Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
 
 ## 5. Le tribunal
 
-`engine_is_optimised_narrated` prouve que le moteur est compilé avec optimisation : vingt sommes sur deux millions de doubles en moins d'un dixième de seconde, et la bonne réponse ; qu'un indice de 99 et un indice de 0 sont refusés et le tampon intact ; et que l'analyseur embarqué que le mode optimisé avait cassé répond maintenant. Je l'ai exécutée : six sur six. `engine_senses_narrated` prouve que le moteur donne au processus cinq sens : la mémoire, son pic, la mémoire du système, le temps du processeur, et une série bornée. Je l'ai exécutée : trente-six sur trente-six, et l'exécution s'arrête ensuite avec "STOPPED!" par conception. `wasm_narrated` prouve que l'entrée du moteur pour le navigateur exporte son interface choisie et que la construction a une cible pour elle, et elle construit un sous-ensemble et affirme qu'il est plus petit. Je ne l'ai pas exécutée, parce qu'elle appelle une construction de la chaîne d'outils. `threat_model_narrated` nomme deux lignes comme celles du moteur : les harnais de fuzzing, et la nomenclature de composants avec ses empreintes.
+`engine_is_optimised_narrated` prouve que le moteur est compilé avec optimisation : vingt sommes sur deux millions de doubles en moins d'un dixième de seconde, et la bonne réponse ; qu'un indice de 99 et un indice de 0 sont refusés et le tampon intact ; et que l'analyseur embarqué que le mode optimisé avait cassé répond maintenant. Je l'ai exécutée : six des sept assertions du fichier ont été atteintes, et six ont réussi. `engine_senses_narrated` prouve que le moteur donne au processus cinq sens : la mémoire, son pic, la mémoire du système, le temps du processeur, et une série bornée. Je l'ai exécutée : trente-six sur trente-six, et l'exécution s'arrête ensuite avec "STOPPED!" par conception. `wasm_narrated` prouve que l'entrée du moteur pour le navigateur exporte son interface choisie et que la construction a une cible pour elle, et elle construit un sous-ensemble et affirme qu'il est plus petit. Je ne l'ai pas exécutée, parce qu'elle appelle une construction de la chaîne d'outils. `threat_model_narrated` lit le modèle de menaces et vérifie que chaque ligne de garantie nomme une preuve et que chaque fichier de garde nommé existe ; les lignes G11, les harnais de fuzzing, et G25, la nomenclature de composants avec ses empreintes, concernent le moteur.
 
-Ce qui n'existe pas : **aucune garde ne juge les couches.** Aucun fichier sous les répertoires de test ne charge le fichier d'entrée d'une couche ni ne lit le contrat. Il y a 532 gardes narrées dans base, et aucune dans noyau ou dans max. L'étude dit 517 à un endroit et 387 à un autre, et le site 501 ; je n'imprime que ce que la construction lit. Et aucune garde ne juge les décomptes du moteur : les nombres qu'imprime la commande d'état en ligne de commande du moteur sont des constantes typées datées du 16 juin 2026.
+Ce qui n'existe pas : **aucune garde ne juge les couches.** Aucun fichier sous les répertoires de test ne charge le fichier d'entrée d'une couche ni ne lit le contrat. Il y a 529 gardes narrées dans base, et aucune dans noyau ou dans max. L'étude dit 517 à un endroit et 387 à un autre, et le site 501 ; je n'imprime que ce que la construction lit. Et aucune garde ne juge les décomptes du moteur : les nombres qu'imprime la commande d'état en ligne de commande du moteur sont des constantes typées datées du 16 juin 2026.
 
 ## 6. Le terrain, et où il mène
 
@@ -222,7 +222,7 @@ Ce qui n'existe pas : **aucune garde ne juge les couches.** Aucun fichier sous l
 
 Les mots du mémo : le pair est en tête sur chaque ligne, fib et binsearch sont des quasi-égalités, et rien n'est pire que 2x. ARM n'est pas mesuré. La victoire que le mémo garde : à moins de 2x sur chaque ligne, ce qu'aucune version de l'ancien runtime n'a jamais été.
 
-**L'affirmation phare est encore vivante dans les notes propres du dépôt.** Comme je l'ai lu le 9 octobre 2026, le cahier des charges du dépôt propre du runtime et ses notes disent encore que le spike bat les pairs sur chaque ligne. La correction est portée dans un autre dépôt du domaine de projets et dans le mémo, et non dans le dossier propre du runtime. Le mémo l'a demandée. Le mémo du 13 septembre 2026 retire l'affirmation, et les six lignes ci-dessus sont les siennes, bien que les notes du dépôt portent encore l'ancienne affirmation. Je ne nomme aucun pair, et je le décris comme le fait le chapitre 22 : un runtime de script rapide du terrain.
+**L'affirmation phare est encore vivante dans les notes propres du dépôt.** Comme je l'ai lu le 9 octobre 2026, le cahier des charges du dépôt propre du runtime et ses notes disent encore que le spike bat les pairs sur chaque ligne. La correction est portée dans un autre dépôt du domaine de projets et dans le mémo, et, dans le dossier propre du runtime, seulement pour sa configuration de version candidate, dans une section des notes. Le mémo l'a demandée. Le mémo du 13 septembre 2026 retire l'affirmation, et les six lignes ci-dessus sont les siennes, bien que les notes du dépôt portent encore l'ancienne affirmation. Je ne nomme aucun pair, et je le décris comme le fait le chapitre 22 : un runtime de script rapide du terrain.
 
 **La mémoire.** Le même jour la note dit : résidente, exécutant la bibliothèque, ce matin 733 mégaoctets, maintenant 149, et l'ancien runtime 139. Une perte de dix contre l'ancien runtime, après une chute de 584. Une victoire et une perte dans une même note.
 
@@ -242,15 +242,15 @@ o = new stkString("abc")
 #--> Error (R3) : Calling Function without definition: stkenginestringfrom
 ```
 
-Dans un processus du noyau seul, la bibliothèque noyau du moteur enregistre cinq cent trente-quatre fonctions sous les noms de la base et aucune sous les noms du noyau, donc `stkString` et `stkChar` ne trouvent rien. L'étude le range comme point ouvert du noyau et du moteur. `stkList` tourne, ce que le chapitre 4 a montré, et le chargement de dix-sept classes en un dixième de seconde est réel.
+Dans un processus du noyau seul, la bibliothèque noyau du moteur enregistre cinq cent trente-quatre fonctions sous les noms de la base et aucune sous les noms du noyau, un décompte de mes notes qu'aucun bloc ne montre, donc `stkString` et `stkChar` ne trouvent rien. L'étude le range comme point ouvert du noyau et du moteur. `stkList` tourne, ce que le chapitre 4 a montré, et le chargement de dix-sept classes en un dixième de seconde est réel.
 
 **La couche légère n'est pas légère au niveau du binaire, pour les chaînes.** Par taille de fichier, sur la construction du 5 octobre 2026, la bibliothèque chaîne du noyau fait 22 355 968 octets et celle de la base 22 362 624. Les données en lecture seule font 20,8 mégaoctets dans les deux ; je n'ai pas diagnostiqué ce qu'elles contiennent. Les quatre bibliothèques noyau totalisent 24,1 mégaoctets sur les 122,4 des quatre-vingt-neuf bibliothèques. Les bibliothèques noyau pour les dates, les fichiers et la locale diffèrent de leurs jumeaux de la base de moins d'un pour cent.
 
-**La règle de dépendance tient aux chargements, avec une exception à un appel.** J'ai analysé chaque chargement de chaque fichier non test, non archive du noyau, de la base et de max, 869 lignes, et résolu chacun : le noyau ne charge, hors de son propre répertoire, que la face du moteur ; la base charge le noyau et le moteur ; aucun fichier sous la base ne charge quoi que ce soit sous max ou future ; max charge la base. Mais `FindMin`, dans la liste de nombres du noyau, appelle une fonction qui n'est définie que dans la base. Dans un processus du noyau seul, `FindMin([4,2,9])` répond 2, et `FindMin("not a list")` lève "Calling Function without definition". Dans un processus de base il lève l'erreur voulue. J'ai trouvé une instance par une recherche de noms de la base dans le noyau, et je n'ai pas cherché d'autres.
+**La règle de dépendance tient aux chargements, avec une exception à un appel.** J'ai analysé chaque chargement de chaque fichier non test, non archive du noyau, de la base et de max, 871 lignes, et résolu chacun : le noyau ne charge, hors de son propre répertoire, que la face du moteur ; la base charge le noyau et le moteur ; aucun fichier sous la base ne charge quoi que ce soit sous max ou future ; max charge la base. Mais `FindMin`, dans la liste de nombres du noyau, appelle une fonction qui n'est définie que dans la base. Dans un processus du noyau seul, `FindMin([4,2,9])` répond 2, et `FindMin("not a list")` lève "Calling Function without definition". Dans un processus de base il lève l'erreur voulue. J'ai trouvé une instance par une recherche de noms de la base dans le noyau, et je n'ai pas cherché d'autres.
 
-**Sur un disque sensible à la casse, le fichier d'entrée du noyau ne charge pas.** Sa deuxième ligne charge un fichier par un nom dans la mauvaise casse. Mon balayage trouve dix-neuf tels chargements dans des fichiers non test à ce commit ; la session du runtime en a compté cinquante-cinq avec les tests, le 8 octobre 2026. Le livre est construit sous Windows, qui le cache.
+**Sur un disque sensible à la casse, le fichier d'entrée du noyau ne charge pas.** Sa deuxième ligne charge un fichier par un nom dans la mauvaise casse. Mon balayage trouve vingt tels chargements dans des fichiers non test à ce commit ; la session du runtime en a compté cinquante-cinq avec les tests, le 8 octobre 2026. Le livre est construit sous Windows, qui le cache.
 
-**La troisième couche est écrite et non câblée.** Ses trente-deux classes sont toutes dans un seul répertoire, et aucun fichier d'entrée ne les charge. Elles fonctionnent chargées à la main ; je l'ai exécuté et je ne le montre pas, une chaîne de onze caractères comptée par la première d'entre elles. Une couche de bibliothèque pour elles dans le moteur n'existe pas.
+**La troisième couche est écrite et non câblée.** Ses trente-deux classes sont toutes dans un seul répertoire, et aucun fichier d'entrée ne les charge. La première d'entre elles fonctionne chargée à la main ; je l'ai exécuté et je ne le montre pas, une chaîne de onze caractères comptée par elle, et je n'ai essayé aucune des trente et une autres. Une couche de bibliothèque pour elles dans le moteur n'existe pas.
 
 Ce qui est construit : une couche est un répertoire, un préfixe et un fichier d'entrée. Compté le 9 octobre 2026 à ce commit, par fichiers avec l'extension, en excluant les répertoires de test et d'archive : noyau, 27 fichiers et 6 366 lignes ; base, 984 fichiers et 519 579 ; max, 115 et 31 292 ; et un répertoire de l'avenir, 51 fichiers et 6 356. La base représente 93,2 pour cent des lignes des trois couches. Le moteur : quatre-vingt-neuf bibliothèques issues des sources Zig, 401 fichiers source, 179 985 lignes, et 2 464 tests déclarés, que je n'ai pas exécutés. La chaîne d'outils est Zig 0.15.2 d'après le propre commentaire du fichier de construction. Dix-neuf bibliothèques embarquées, chacune avec un enregistrement de composant, version, source, licence et empreinte. Les lacunes propres du dossier : une empreinte d'archive est consignée pour neuf des dix-neuf, et trois n'ont pas de version.
 
@@ -276,7 +276,7 @@ Je dis ce qui est construit, ce qui est conçu, et ce qui est absent, tel que le
 
 **L'analyste.** Trois nombres pour « quelle est la taille du moteur », et trois méthodes. Demandez laquelle un fournisseur veut dire. La bibliothèque noyau a la taille de celle de la base pour les chaînes.
 
-**Le concepteur.** Une couche est une décision sur ce que vous livrez, et non sur le goût. La seule couche avec une interface sur le binaire est le sous-ensemble web, que les chapitres 4 et 24 montrent.
+**Le concepteur.** Une couche est une décision sur ce que vous livrez, et non sur le goût. Au niveau du binaire, le noyau et la base ont une bibliothèque par domaine et la troisième couche n'en a aucune ; le sous-ensemble web, que les chapitres 4 et 24 montrent, est un sous-ensemble et non une couche.
 
 **Le décideur.** Les deux questions du chapitre 4, plus deux : ce qui l'exécute, c'est la version 1.27 aujourd'hui, avec le remplaçant en construction ; et ce que le remplaçant a perdu, c'est chaque ligne contre un pair rapide, de 1,04 à 1,88 fois, et dix mégaoctets de mémoire face à l'ancien. Un dossier qui imprime sa perte est le seul genre à croire.
 

@@ -4,7 +4,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 05:29 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 13:44 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

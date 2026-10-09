@@ -2,9 +2,9 @@
 
 Source: Chapter 9. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its three siblings, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
+Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 05:30 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -18,9 +18,9 @@ The definition I gave this paradigm is a single sentence, and everything below i
 
 ## 3. The Softanza form
 
-I think of it as a ladder with four rungs, each adding one thing.
+The architecture draws it as a ladder with four rungs, each adding one thing.
 
-The first rung is the pattern. You have seen it in chapter 11: a shape in a medium, a string, a list, a number, that can say "this matches, and here is how", and do nothing more. The second rung gives a pattern a reaction: the Regexuter, a reflex arc. You bind a pattern to code, process a text, and the code fires on every match. A Regexuter reacts, and it remembers what it did. Here it redacts the secrets in a sentence, and the state it keeps says what it matched, what it computed, where, and which trigger fired:
+The first rung is the pattern. You will see it in chapter 15: a shape in a medium, a string, a list, a number, that can say "this matches, and here is how", and do nothing more. The second rung gives a pattern a reaction: the Regexuter, a reflex arc. You bind a pattern to code, process a text, and the code fires on every match. A Regexuter reacts, and it remembers what it did. Here it redacts the secrets in a sentence, and the state it keeps says what it matched, what it computed, where, and which trigger fired:
 
 ```haro
 rxu() {
@@ -42,7 +42,7 @@ rxu() {
 
 > run: kept
 
-The state is provenance: every reaction keeps its why. The last line is also an honest limit, and I will come back to it: what the Regexuter records as a dependency is today only its own trigger.
+The state is provenance: every reaction that changes a value keeps its why. The last line is also an honest limit, and I will come back to it: what the Regexuter records as a dependency is today only its own trigger.
 
 Now the third rung, the one the definition is about: many Regexuters, over different media, sharing one state, so that what one faculty writes is a medium another faculty can match over. A thought is a state entry with its provenance, and a settled thought is a state in which nothing more fires. That rung is not built, and the block shows how I know. The second trigger below is written for numbers of three digits or more. The first trigger turns the 7 into 700, which is one. If the machine thought in cascades, the second would fire on the first's result:
 
@@ -66,7 +66,7 @@ rxu() {
 
 It did not. Every trigger is matched once against the original text, and what one trigger writes is not offered to the others. That is the whole difference between the second rung and the third.
 
-The cascade runs one rung above, in the agent: a mind made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skills fired and goes on until the world stops changing; asked again, it answers zero. That is a fixpoint:
+The cascade runs one rung above, at the fourth rung, the agent: the thinking machine given a body in a world, and a goal. Its mind is made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skill firings were verified and goes on until the world stops changing, or for twenty rounds at most; asked again, it answers zero. That is a fixpoint:
 
 ```haro
 oAgent = new stzPIAgent("cook")
@@ -89,9 +89,9 @@ oAgent.AddSkill(s2)
 
 > run: kept
 
-The guard that proves it labels the scene in its own words: the cascade to fixpoint, the Softanzuter at agent level. In chapter 17 you saw this same agent refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
+The guard that proves it labels the scene in its own words: the cascade to fixpoint, the Softanzuter at agent level. In chapter 17 you will see this same agent refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
 
-So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name, which is the body of the agent: slots with a state and a bounded mailbox, where a message into a full queue is refused, counted and never dropped quietly. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
+So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for agents: slots with a state and a bounded mailbox, where a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
 
 **Reaxis** is the other half of the chapter's title, and it is a different idea. It is reactive programming with a vocabulary redesigned from the ground. A reactive thing is a Container, a Stream and an Rfunction: a function in waiting, which is not a callback. Data flows through a stream in plain words, a transformation, a filter, what to do with what passes:
 
@@ -114,7 +114,7 @@ Rs {
 
 > run: kept
 
-The 80 becomes 96 and is dropped by the filter; the 90 becomes 108 and passes. Three functions are in waiting, and nothing subscribes to anything.
+The 80 becomes 96 and is dropped by the filter; the 90 becomes 108 and passes. Three functions are in waiting, and nothing here is called a subscriber; the old word `Subscribe` survives as an alias of `OnPassed`.
 
 Reaxis replaced backpressure with overflow, a word you do not need a diagram to understand. And it was audited. A reading of the four strategies the article documented found that three of them lost data and reported none: the default discarded everything past the capacity while the counter read zero. That is fixed, and proved for all four strategies. Here, four items into a buffer of two, and the stream says what happened:
 
@@ -152,7 +152,7 @@ oRs4.Stop()
 
 > run: kept
 
-The third part is the engines, the small paradigms the library rethought one by one. Chapter 3 gave you truth and emptiness. Two more, run here. Time is a workspace, not a number: a timeline holds spans, computes the gaps and the overlaps, and a blocked region refuses a point that would fall into it, with the reason, at insertion:
+The chapter's third subject is the engines, the small paradigms the library rethought one by one. Chapter 3 gave you truth and emptiness. Two more, run here. Time is a workspace, not a number: a timeline holds spans, computes the gaps and the overlaps, and a blocked region refuses a point that would fall into it, with the reason, at insertion:
 
 ```haro
 oTl = new stzTimeLine("2024-01-01 00:00:00", "2024-12-31 23:59:59")
@@ -204,41 +204,41 @@ o.MoveRight()
 
 ## 4. The decision, and what I refused
 
-**I refused to leave regex as a way to read text.** I made it a computational medium: a trigger fires a computation, the computation writes a state, and the state records its why. The Regexuter is a faculty and not a mind, and it holds no goal. I added the goal at the rung above it, in the agent, on purpose.
+**I refused to leave regex as a way to read text.** I made it a computational medium: a trigger fires a computation, the computation writes a state when it changes the value, and the state records its why. The Regexuter is a faculty and not a mind, and it holds no goal. I added the goal two rungs above it, at the fourth rung, in the agent, on purpose.
 
 **I refused the field's vocabulary for reactive programming.** Observables, subscribers, backpressure, hot and cold sources, schedulers: borrowed from plumbing, telephony and publishing, and not from the problem. A function in waiting is an Rfunction. Data flows without a theatre of producers and consumers. Overflow replaces backpressure. Waiting for an attribute to settle replaces debounce. The old spellings still work as aliases: feed, emit, send and receive all call one method, so my change was one of naming and not of removal.
 
-**I refused to build the siblings.** The article that tells the Regexuter describes four more: an analyser, a genetic one where patterns evolve against a fitness, a linguistic one where triggers are grammar rules, and a quantic one where a pattern may be in several states at once. I wrote them in prose and not in code, and the design later found their purpose: answering by example demands pattern induction, and several acceptable answers demand superposed candidates, collapsed by rules or by choice. Chapter 18 tells that. They remain a vision, with their purpose written.
+**I refused to build the siblings.** The article that tells the Regexuter describes four more: an analyser, a genetic one where patterns evolve against a fitness, a linguistic one where triggers are grammar rules, and a quantic one where a pattern may be in several states at once. The article gives each a sample call, and no class stands behind it. The design later found a purpose for two of them: answering by example demands pattern induction, the genetic one's ground, and several acceptable answers demand superposed candidates, collapsed by rules or by choice, the quantic one's. Chapter 18 tells where that stands. They remain a vision; two have their purpose written.
 
 **I refused to claim the cascade.** The library's architecture says it itself: the scaffolding anticipates cascading but does not yet re-fire dependent triggers to a fixpoint. I would rather show you the block that fails to cascade than a block that does.
 
 ## 5. The court
 
-The Regexuter and the Listexuter have classic tests, and no narrated guard. The Regexuter's tests that I ran keep their promises; the Listexuter's first five do not. The agent's cascade is proved by `piagent_narrated`, scene five. Reaxis has many guards: `00_overflow_narrated` proves the four overflow strategies and the case that loses nothing; `60_reaxis_on_reactor_narrated` proves the repeating timer, the settling attribute and the stream on the engine's loop. The timeline has `test_timeline_regression`, the grid `00_grid_narrated`, and deep operations `01_deeplist_narrated`.
+The Regexuter and the Listexuter have classic tests, and no narrated guard. The Regexuter's eight classic tests ran without error in the folder's log; nothing there checks what they print. Five of the Listexuter's seven fail their own expected output, and two promise nothing. The agent's cascade is proved by `piagent_narrated`, scene five. Reaxis has many guards: `00_overflow_narrated` proves the four overflow strategies and the case that loses nothing; `60_reaxis_on_reactor_narrated` proves a one-shot timer, the repeating timer, non-blocking HTTP and the settling attribute on the engine's loop. The timeline has `test_timeline_regression`, which covers construction, duration, adding points and moving the ends, and not gaps, overlaps or blocked spans; the grid has `00_grid_narrated`, and deep operations `01_deeplist_narrated`.
 
 ## 6. The field, and where it leads
 
-The field's rule engines lead. They are older and more mature than the Regexuter, they chain to a fixpoint, and the algorithms behind them are decades old. What I claim is not a rule engine but the condition side: rules that are sentences of the pattern languages over six media, and a state in which every firing keeps its why. The library's own architecture calls the Regexuter a nascent forward-chaining rule engine, and I will not call it more.
+The field's rule engines lead. They are older and more mature than the Regexuter, they chain to a fixpoint, and the algorithms behind them are decades old. What I claim is not a rule engine but the condition side: rules that are sentences of the pattern languages, over the two media that have an Uter built, text and lists, and a state in which every firing that changes a value keeps its why. The library's own architecture calls the Regexuter a nascent forward-chaining rule engine, and I will not call it more.
 
-The field's reactive libraries lead in reach. Rx exists in every mainstream language, with operators by the hundred. Reaxis is one library on one event loop. The engine's own module for it is a small table of substring rules: the Container, Stream and Rfunction model lives in the library, on the event loop of the engine.
+The field's reactive libraries lead in reach. Rx exists in most mainstream languages, with a very large set of operators. (General knowledge.) Reaxis is one library on one event loop. The engine's own module for it is a small table of substring rules: the Container, Stream and Rfunction model lives in the library, on the event loop of the engine.
 
-I will not print the article's comparison with the field's star-rating example. It is undated and unsourced.
+I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries (`softanza-reactive-objects-narration.md`). It is undated and unsourced.
 
 ## 7. The limit
 
 What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills chain.
 
-What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The three siblings are vision. The macroplan marks the engine module as done and the architecture table marks the planned medium as planned: the same name for two things.
+What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point; the universal medium is planned in the engine design document.
 
 What is absent or broken at this commit:
 
 - The dependency chain is not one. Each state entry depends only on its own trigger, so the chain records which trigger was active and never a link between two. Asking for the chain overflows the stack. No test calls it.
-- The Listexuter's classic tests keep none of their promises. Its first block no longer raises the error its log remembers, but it still prints the last section's result three times, and its server pattern never fires.
+- Five of the Listexuter's seven classic tests fail their own expected output, and two promise nothing. The error log of that folder records a missing parenthesis, error C8, in the sixth file.
 - A nested list that matches as a whole is reported twice.
 - The article's repeating timer takes three arguments and the library takes two; the form with units is `RunEveryXT`.
-- The deep-lists article's path verbs live on a subclass, `stzDeepList`, and not on a plain list.
+- Two of the deep-lists article's path verbs, `ItemAtPath` and `ItemsAtPaths`, live on a subclass, `stzDeepList`, and not on a plain list; `Paths()` is on a plain list.
 - The section-merging article presents a comprehensive verb as its point, and that verb does not exist. The two that do exist, merging what overlaps and merging what is included, run. Section merging has no test file of its own.
-- And the dependency of the model on the engine: the Container, Stream and Rfunction model runs in the library, not in a native module.
+- There is no native engine module for the Container, Stream and Rfunction model: it runs in the library, and the engine's own reactive module is a small table of substring rules. The timeline's guard checks no gap, no overlap and no blocked span; in the classic timeline files, seven fail their expected output and eighteen promise nothing; the grid's engine-backed navigator, `stzGridNav`, has no test.
 
 ## 8. Six doors
 
@@ -246,7 +246,7 @@ What is absent or broken at this commit:
 
 **The analyst.** Time is a workspace: gaps, overlaps and blocked regions are computed, and a point that would fall in a blocked region is refused with the reason.
 
-**The designer.** The state of a reaction keeps its why: the match, the computed value, the position, the trigger.
+**The designer.** The state of a reaction that changes a value keeps its why: the match, the computed value, the position, the trigger.
 
 **The decision-maker.** Overflow is a number you can read: kept, dropped. A strategy that lost data and said nothing was found by an audit, and fixed.
 

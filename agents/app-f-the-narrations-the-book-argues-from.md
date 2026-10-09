@@ -6,7 +6,7 @@ A narration is one of the author's articles, under the library's documentation f
 
 Each chapter names its narrations in its source, and the build checks that each is a file of the library at the commit the book runs at. Where a name is not a file of that folder, this appendix says so. A narration's blocks are not the chapter's blocks. Several no longer run at that commit, and each chapter that cites one says which part, and runs its own.
 
-The chapters cite 49 distinct narrations. Every name is a file of the library's narration folder at commit 93d7a39bd. A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.
+The chapters cite 50 distinct narrations. Every name is a file of the library's narration folder at commit 93d7a39bd. A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.
 
 ### 2 · The software crafter
 
@@ -80,6 +80,7 @@ The chapters cite 49 distinct narrations. Every name is a file of the library's 
 | `stzregexuter-regex-as-computational-reactive-medium.md` | yes |
 | `stz-reaxis-reactive-programming-narration.md` | yes |
 | `stz-managing-deep-lists-narration.md` | yes |
+| `softanza-reactive-objects-narration.md` | yes |
 
 ### 10 · Programming becomes refinement
 

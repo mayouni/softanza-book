@@ -20,7 +20,7 @@ research: research/ch10.md
 
 Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites ; Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
 
-Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume.
+Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. (Connaissance générale, non une étude du dossier.) Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume.
 
 ## 2. Le premier principe
 
@@ -74,9 +74,9 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Trois refus, et la ligne de temps n'a pas grandi d'un pas. C'est la troisième loi de la maison appliquée au code : une proposition rejetée ne mute jamais. Chaque refus nomme son étape, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
+Trois refus, et la ligne de temps n'a pas grandi d'un pas. Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme son étape, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
 
-**La cascade** est ce que vous lisez à la place du diff. Avant le changement, demandez ce qu'il atteint. Pour un point, c'est la ligne où il se trouve et les autres points de cette même ligne :
+**La cascade** est ce que vous lisez à la place du diff. Avant le changement, demandez ce qu'il atteint. Il y a deux cascades, et elles sont séparées. Pour un point, c'est la ligne où il se trouve et les autres points de cette même ligne :
 
 ```haro
 cPrice = 'price = <R:PARAM name="vat" value="0.20" min="0" max="0.30"> * <R:PARAM name="margin" value="1.1" min="1" max="2">' + nl +
@@ -119,7 +119,7 @@ g0.BuildGraph()
 #--> [ "Invoice", "Receipt" ]
 ```
 
-Changez le taux du tarif et trois classes sont dans le rayon d'impact ; mais deux d'entre elles héritent de la méthode et la troisième la redéfinit, de sorte qu'elle la possède et ne fait pas que l'hériter. C'est la différence que trace `ImpactOf`, et qu'un diff ne peut pas tracer.
+Changez le taux du tarif et trois classes sont dans le rayon d'impact ; mais deux d'entre elles héritent de la méthode et la troisième la redéfinit, de sorte qu'elle la possède et ne fait pas que l'hériter. C'est la différence que trace `ImpactOf`.
 
 À l'intérieur de la barrière, un changement atteint ses dépendants par une règle qui couvre plusieurs points, jugée sur l'état que le changement produirait. Si la règle échoue, la valeur est remise :
 
@@ -205,7 +205,7 @@ Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôle
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé de gouverner l'intelligence.** L'approche du terrain pour les agents est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation. J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
+**J'ai refusé de gouverner l'intelligence.** Une bonne part de l'approche du terrain pour les agents est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation. (Connaissance générale, comme plus haut.) J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
 
 **J'ai refusé le diff comme unité.** Un diff est un changement de texte. Un raffinement est une proposition typée sur un point déclaré, avec un genre, des bornes et une origine. J'ai gardé le diff comme artefact, et je l'ai refusé comme ce qu'il faut relire.
 
@@ -215,28 +215,28 @@ Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôle
 
 ## 5. Le tribunal
 
-`refinablecode_narrated` prouve le point déclaré, la proposition qui passe, les trois refus qui laissent le source entier, la cascade, le retour en arrière et le fichier sauvegardé. `refine_deepening_narrated` prouve la ligne de temps avec ses points de contrôle et son rétablissement, et le plancher de confiance. `gate_deepening_narrated` prouve la dérivation entre les points avec son annulation, et le refus gouverné avec sa filiation.
+`refinablecode_narrated` prouve le point déclaré, la proposition qui passe, les deux refus qui laissent le source entier (bornes et options), la cascade, le retour en arrière et le fichier sauvegardé. `refine_deepening_narrated` prouve la ligne de temps avec ses points de contrôle et son rétablissement, et le plancher de confiance. `gate_deepening_narrated` prouve le refus d'un point inconnu, la dérivation entre les points avec son annulation, et le refus gouverné avec sa filiation.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de milliers d'équipes et où l'application parle à de vrais fournisseurs. La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
+Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de nombreuses équipes et où l'application parle à de vrais fournisseurs. (Connaissance générale, comme dans la section 1.) La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
 
-Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. La barrière de Softanza ne juge que ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
+Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza ne juge que ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
-Et sur la confiance, l'approche du terrain est celle qui passe à l'échelle de n'importe quel modèle. La mienne repose sur une déclaration par point.
+Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
 
 ## 7. La limite
 
-Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné ; chacun avec une garde qui passe à ce commit.
+Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné ; les gardes de la section 5 les couvrent, avec deux exceptions. La cascade d'une classe n'a pas de garde ici, parce que la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et aucune garde n'affirme les autres points d'une ligne.
 
-Ce qui est conçu, et absent de la bibliothèque par son nom : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, n'a jamais existé. Le raffinement en une ligne du document de conception, un point qui s'explique, un plan qui est appliqué, ne sont pas dans la bibliothèque. La cascade du graphe de code et la cascade de la barrière ne sont pas jointes. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, son propre siège de raffinement n'étant pas construit.
+Ce qui est conçu, et absent de la bibliothèque par son nom : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, n'est pas dans la bibliothèque à ce commit. Le raffinement en une ligne du document de conception, un point qui s'explique, un plan qui est appliqué, ne sont pas dans la bibliothèque. La cascade du graphe de code et la cascade de la barrière ne sont pas jointes. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, son propre siège de raffinement n'étant pas construit.
 
-Ce qui est absent, et la page doit le dire : les limites de la barrière telle qu'elle est.
+Ce qui est construit, et où cela s'arrête : les limites de la barrière telle qu'elle est.
 
 - Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque ; un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle.
-- Une posture de confiance inconnue se classe comme de confiance. Une proposition qui dit venir d'un martien a été admise dans mon exécution contre un plancher de confiance.
+- Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition qui dit venir d'un martien franchit donc un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
-- Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retire ce format au profit de `.rfn`.
+- Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient `.rfn` pour la phrase et laisse `.zrfn` à l'extraction par balises de commentaire de la bibliothèque.
 
 ## 8. Six portes
 
@@ -244,7 +244,7 @@ Ce qui est absent, et la page doit le dire : les limites de la barrière telle q
 
 **L'analyste.** La règle qui couvre plusieurs points, c'est à vous de la déclarer, et la barrière la juge sur l'état que le changement produirait.
 
-**Le concepteur.** La cascade est ce que vous lisez à la place du diff : quelle ligne, quels points sur elle, quelles classes héritent.
+**Le concepteur.** La cascade est ce que vous lisez à la place du diff : pour un point, quelle ligne et quels points sur elle ; pour une classe, quelles classes héritent. Ce sont deux cascades, pas encore une seule.
 
 **Le décideur.** Qui peut tourner quel bouton est une permission et une autorité contre un niveau de risque, et la décision est enregistrée avec son autorité du moment.
 

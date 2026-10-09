@@ -30,7 +30,7 @@ Il y a une seconde habitude, qui ressemble à la première et n'en est pas une. 
 
 **Une facette est une syntaxe d'une grammaire, et jamais un runtime. Une porte est un runtime, et jamais une syntaxe. La porte est une, et elle est la réponse à « et le langage X ? ».**
 
-La phrase propre de la vision, ratifiée en session le 28 août 2026, le dit de la porte : du code étranger dans les langages choisis, gouverné, une porte, sans autres intégrations d'hôtes. L'étude du dossier lit la paire en une ligne que je garde : la facette amène le programmeur, et la porte amène l'écosystème. Les chapitres 1 et 11 ont tous deux promis que ce chapitre dirait la différence. La voici.
+La phrase propre de la vision, ratifiée en session le 28 août 2026, le dit de la porte : du code étranger dans les langages choisis, gouverné, une porte, sans autres intégrations d'hôtes. L'étude du dossier lit la paire en une ligne que je garde : la facette amène le programmeur, et la porte amène l'écosystème. Le chapitre 11 a promis que ce chapitre dirait la différence ; le chapitre 1, qu'il donnerait les sept couches. Voici la différence.
 
 ## 3. La forme Softanza
 
@@ -63,7 +63,7 @@ done
 #--> Language 'cobol' is not supported
 ```
 
-Maintenant la porte exécute un vrai runtime. Une note sur la machine d'abord. La porte écrit un script, démarre le runtime avec lui et relit un fichier de résultat. Ce livre a été construit sur une machine où Python vit à son propre chemin, aussi le chemin est-il donné sous forme de chemin court sans espaces, et Node et R se trouvent aux emplacements par défaut de la bibliothèque. Les blocs qui démarrent un runtime sont marqués, dans le lecteur, comme touchant aux fichiers et au système, et ils montrent la sortie qui a été enregistrée à la date de la construction.
+Maintenant la porte exécute un vrai runtime. Une note sur la machine d'abord. La porte écrit un script, démarre le runtime avec lui et relit un fichier de résultat. Ce livre a été construit sur une machine où Python vit à son propre chemin, aussi le chemin est-il donné sous forme de chemin court sans espaces, et Node et R se trouvent aux emplacements par défaut de la bibliothèque. Les blocs qui démarrent un runtime sont marqués, dans le lecteur, comme touchant au système, et ils montrent la sortie qui a été enregistrée à la date de la construction.
 
 Le résultat de Python revient sous la structure propre de l'hôte, une liste, et l'appel laisse une trace :
 
@@ -113,7 +113,7 @@ oNode.Execute()
 
 Les données entrent en composant la chaîne de code avec l'afficheur de listes propre à l'hôte, puisque les fonctions de conversion de l'article n'existent pas (section 7).
 
-**Lesquels, ces sept ?** Le titre s'engage sur un nombre, et le dossier le compte de quatre façons. L'article sur le plan et l'article sur la performance comptent six runtimes et l'hôte. L'article sur la bibliothèque de domaines et l'étude comptent sept domaines : les six et un modèle de langage, l'hôte étant un huitième qui orchestre. Le registre de la bibliothèque en a six et pas d'hôte. La vision dit « les 7 langages choisis » et ne les énumère jamais. La conception du moteur a encore une autre énumération, de cinq, avec COBOL et sans C, NodeJS ni Prolog. Je ne choisis pas entre ces comptes dans une phrase que le dossier ne tient pas. Les sept que je nomme sont les six runtimes étrangers du registre ci-dessus et l'hôte, comme les compte l'article sur la performance. Le modèle de langage n'en fait pas partie, car il n'est pas du tout une porte de ce plan : les chapitres 17 et 20 font du modèle un proposeur qui ne peut pas valider, alors que les narrations l'exécutent comme un runtime de première classe par une fonction qui n'existe pas, et la section 7 imprime cela comme une limite. Le registre ci-dessus est celui qui s'exécute.
+**Lesquels, ces sept ?** Le titre s'engage sur un nombre, et le dossier le compte de quatre façons. L'article sur le plan et l'article sur la performance comptent six runtimes et l'hôte. L'article sur la bibliothèque de domaines énumère sept modules de domaine, les six et un pour un modèle de langage, avec un module transversal à côté ; l'étude compte sept domaines et appelle l'hôte le huitième, qui orchestre. Le registre de la bibliothèque en a six et pas d'hôte. La vision dit « les 7 langages choisis » et ne les énumère jamais. La conception du moteur a encore une autre énumération, de cinq, avec COBOL et sans C, NodeJS ni Prolog. Je ne choisis pas entre ces comptes dans une phrase que le dossier ne tient pas. Les sept que je nomme sont les six runtimes étrangers du registre ci-dessus et l'hôte, comme les compte l'article sur la performance. Le modèle de langage n'en fait pas partie, car il n'est pas du tout une porte de ce plan : les chapitres 17 et 20 font du modèle un proposeur qui ne peut pas valider, alors que les narrations l'exécutent comme un runtime de première classe par une fonction qui n'existe pas, et la section 7 imprime cela comme une limite. Le registre ci-dessus est celui qui s'exécute.
 
 **Une facette n'est pas une porte.** Lire un langage étranger n'est pas non plus l'exécuter. Les deux langages que l'auteur nomme comme facettes prévues de Haro sont aussi les deux que la bibliothèque sait déjà lire, sans les exécuter ni les écrire, dans un seul graphe de code. Un seul jeu de questions répond sur les deux :
 
@@ -143,7 +143,7 @@ oJG = StzJsCodeGraphFromSourceTS(cJs)
 #--> [ "Animal", "Dog" ]
 ```
 
-C'est un analyseur qui produit un index de classes, de méthodes et d'héritage, et non un graphe de programme capable d'imprimer un programme. C'est une coïncidence de l'ordre du travail, et pas encore une facette. Ce que le dossier tient des facettes, c'est ma déclaration, en session le 8 octobre 2026 : un lien doit être fait avec la future vision de Haro et de ses langages à facettes, où Ring est déjà là et où Python et JavaScript sont prévus. La charte de Haro sur cette machine parle d'une grammaire et d'un texte, et sa note de conception pour une seconde face, qui ne propose ni ne tranche rien, les appelle des faces et recommande des afficheurs lus par des humains avant tout analyseur. Sa propre table énumère les collisions : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le chapitre dit « prévues » seulement avec cette déclaration nommée comme source, et le mot de la note pour la même chose est face.
+C'est un analyseur qui produit un index de classes, de méthodes et d'héritage, et non un graphe de programme capable d'imprimer un programme. C'est une coïncidence de l'ordre du travail, et pas encore une facette. Ce que le dossier tient des facettes, c'est ma déclaration, en session le 8 octobre 2026 : un lien doit être fait avec la future vision de Haro et de ses langages à facettes, où Ring (l'ancien nom de l'hôte) est déjà là et où Python et JavaScript sont prévus. La charte de Haro sur cette machine parle d'une grammaire et d'un texte, et sa note de conception pour une seconde face, qui ne propose ni ne tranche rien, les appelle des faces et recommande des afficheurs lus par des humains avant tout analyseur. Sa propre table énumère les collisions : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le chapitre dit « prévues » seulement avec cette déclaration nommée comme source, et le mot de la note pour la même chose est face.
 
 **Une porte est gouvernée.** La gouvernance a le mot pour le code étranger. Un exécuteur sans posture de confiance déclarée ne procède jamais, et le refus dit pourquoi. `external` est la posture que la bibliothèque définit comme hors processus :
 
@@ -179,11 +179,11 @@ Rien n'y est exécuté. Le script nommé n'existe pas.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai décidé d'une seule porte.** Son nom de vision est la porte des langages étrangers, et la lettre en est x : la famille des lettres de la plateforme en a une qui désigne l'externe. Les noms retirés sont deux plus anciens. La lettre X a été refusée pour l'algorithmique, parce qu'elle se serait tenue à côté de la porte, la collision que le chapitre de l'alphabet a nommée comme la plus aiguë. La porte a pris une lettre et l'a gardée.
+**J'ai décidé d'une seule porte.** Son nom de vision est stzx, la porte des langages étrangers, le x désignant l'externe. Les noms retirés sont deux plus anciens. La lettre X a été refusée pour l'algorithmique, parce qu'elle se serait tenue à côté de la porte, la collision que le fichier propre de la vision sur les lettres de la plateforme a nommée comme la plus aiguë. La porte a pris une lettre et l'a gardée.
 
 **J'ai refusé d'autres intégrations d'hôtes.** La porte est la réponse à « et le langage X ? ». Le chapitre 1 a promis ce chapitre sur ces mots : sept langages ont été choisis pour sept couches d'une solution.
 
-**J'ai refusé d'abandonner les domaines au code généré.** L'article sur la bibliothèque de domaines le pose comme une position : plutôt que de forcer les développeurs à maîtriser chaque domaine, ou à s'abandonner au code généré par l'IA, fournir des abstractions soigneusement conçues. C'est une position de 2025, et son code est absent.
+**J'ai refusé d'abandonner les domaines au code généré.** L'article sur la bibliothèque de domaines le pose comme une position : plutôt que de forcer les développeurs à maîtriser chaque domaine, ou à s'abandonner au code généré par l'IA, fournir des abstractions soigneusement conçues. Le site dit que l'article est dans le dépôt depuis le 23 avril 2025 (lu le 9 octobre 2026). Son code est absent.
 
 **J'ai refusé une facette comme runtime.** Le plan de l'étude le dit en une ligne : une facette est une syntaxe d'une grammaire et jamais un runtime, de sorte que la porte reste le seul chemin vers le code étranger. C'est un plan, proposé. Ce n'est pas tranché.
 
@@ -191,7 +191,7 @@ Rien n'y est exécuté. Le script nommé n'existe pas.
 
 ## 5. Le tribunal
 
-`51_extercode_narrated` prouve que le registre connaît Python, R, Julia, Prolog, C et NodeJS, sans égard à la casse, et rejette un nom inconnu ; que le code posé est le code relu ; et que la fabrique construit et transmet. Son en-tête dit qu'il n'a pas d'`Execute` : pas de véritable entrée ou sortie dans les tests. `governance_narrated`, scène six, prouve qu'une exécution sans posture refuse, qu'une posture déclarée procède et se nomme, et que les postures voyagent par la sauvegarde et le chargement. `virtual_environment_twin_narrated` prouve qu'un lancement mis en file ne s'exécute pas avant la validation, par un fichier témoin ; qu'une portée refuse ; et que le plan narre et signale le lancement. `pycodegraph_narrated` et `jscodegraph_narrated` prouvent les classes, les méthodes, les chaînes d'héritage, les propriétaires, l'impact et la cascade sur des sources Python et sur des sources JavaScript, hors ligne et sans le runtime ; le second est sauté quand le tree-sitter du moteur est absent.
+`51_extercode_narrated` prouve que le registre connaît Python, R, Julia, Prolog, C et NodeJS, et rejette un nom inconnu ; que la recherche ignore la casse (testé pour Python) ; que le code posé est le code relu ; et que la fabrique construit et transmet. Le test de fumée qu'il narre dit dans son en-tête : pas d'`Execute` (la garde L99). `governance_narrated`, scène six, prouve qu'une exécution sans posture refuse et qu'une posture déclarée procède et se nomme ; la scène sept, que les postures voyagent par la sauvegarde et le chargement. `virtual_environment_twin_narrated` prouve qu'un lancement mis en file ne s'exécute pas avant la validation, par un fichier témoin ; qu'une portée refuse ; et que le plan narre et signale le lancement. `pycodegraph_narrated` et `jscodegraph_narrated` prouvent les classes, les méthodes, les chaînes d'héritage, les propriétaires, l'impact et la cascade sur des sources Python et sur des sources JavaScript, hors ligne et sans le runtime ; tous deux sautent leurs scènes d'analyse quand le tree-sitter du moteur est absent, et le premier saute aussi celles de l'AST Python quand Python n'est pas sur le chemin.
 
 Je veux être exact sur le tribunal de la porte. Aucune garde de l'instantané n'exécute un runtime étranger et ne passe. Le tribunal de la porte est un registre et un test de construction. Le propre relevé d'exécution du répertoire, sous une version plus ancienne du runtime, énumère trente-sept échecs ; plusieurs promesses ne peuvent pas correspondre par construction, parce que les noms de fichiers portent un suffixe aléatoire et les appels une durée.
 
@@ -205,7 +205,7 @@ Le terrain mène dans l'écosystème et dans l'usage. La page de comparaison ne 
 
 L'autre perte du terrain est que le processus étranger est hors du tribunal. Le modèle de menace du chapitre 21 met hors de portée le code déjà exécuté dans le processus.
 
-Et le coût honnête d'une facette, dans la table de la note : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un ; la chaîne avec un saut de ligne est une barre oblique inverse et un `n` ; deux lettres de casse différente sont une seule variable. « Tout modèle écrit Haro sous la forme qu'il connaît » n'est vrai que des graphies qui sont la minorité.
+Et le coût honnête d'une facette, dans la table de la note : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un ; le littéral `\n` est une barre oblique inverse et un `n` ; deux lettres de casse différente sont une seule variable. « Tout modèle écrit Haro sous la forme qu'il connaît » n'est vrai que des graphies qui sont la minorité.
 
 ## 7. La limite
 
@@ -259,11 +259,11 @@ done
 
 Le message de R était en français sur cette machine, je ne le promets donc pas. C'est la limite de la porte à ce commit, dans la voix de la liste ouverte du chapitre 11, et les exécutions ci-dessus en sont la preuve : la porte n'est pas gouvernée, et le mot « gouvernée » de la vision reste donc une conception ; elle n'est pas fermée sur le chemin du retour, puisque les données reviennent par un fichier que l'hôte évalue ; et la porte R lève une erreur à chaque appel.
 
-Ce qui est conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu (le macroplan porte une correction qui dit que le module a été marqué fait alors qu'il n'avait aucune source) ; les trois niveaux pour Python, dont seul le sous-processus externe existe ; la bibliothèque de domaines au-dessus de la porte, dont je n'ai trouvé aucune classe dans le code ; et les facettes, une note qui propose et ne tranche rien.
+Ce qui est conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu (un module de même nom dans le macroplan, un registre de chaînes, a été marqué fait alors qu'il n'avait aucune source) ; les trois niveaux pour Python, dont seul le sous-processus externe existe ; la bibliothèque de domaines au-dessus de la porte, dont je n'ai trouvé aucune classe dans le code ; et les facettes, une note qui propose et ne tranche rien.
 
 Ce qui est absent : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, qui ne sont définies dans aucun fichier. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS ne sont atteintes que par la classe. Le modèle n'est pas du tout une porte de ce plan ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre ne l'enseigne pas.
 
-Et une forme de porte que je n'ai pas exécutée : Julia, C et Prolog, pour lesquels aucun runtime n'est installé ici. Et une troisième relation, nommée dans l'étude à côté de la porte, l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu : `range0`, le range de Python comme fonction de l'hôte, s'exécute ; la forme de tranche de Python imprime une liste vide, et le relevé propre de la garde la liste comme un échec.
+Et une forme de porte que je n'ai pas exécutée : Julia, C et Prolog, pour lesquels aucun runtime n'est installé ici. Et une troisième relation, nommée dans l'étude à côté de la porte, l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu : `range0`, le range de Python comme fonction de l'hôte, a une garde, et le relevé propre du dossier lui compte cinq échecs sur des plages qui devraient être vides et un sur la forme de tranche `':5:-1'` ; je n'en ai rien exécuté.
 
 ## 8. Six portes
 
@@ -281,7 +281,7 @@ Et une forme de porte que je n'ai pas exécutée : Julia, C et Prolog, pour lesq
 
 ## 9. Exercice
 
-Vous construisez une petite solution avec trois tâches : trier un million de nombres, décider lequel de deux étudiants réussit, et vérifier dans un arbre généalogique qui est l'ancêtre de qui. Pour chaque tâche, choisissez dans la table de la section 3 le langage qui possède sa couche, et écrivez votre raison en une ligne. Puis, sans rien exécuter, écrivez la promesse pour chaque ligne de ce bloc, et exécutez-le :
+Vous construisez une petite solution avec trois tâches : trier un million de nombres, décider lequel de deux étudiants réussit, et vérifier dans un arbre généalogique qui est l'ancêtre de qui. Pour chaque tâche, choisissez dans la liste des couches de la section 3 le langage qui possède sa couche, et écrivez votre raison en une ligne. Puis, sans rien exécuter, écrivez la promesse pour chaque ligne de ce bloc, et exécutez-le :
 
 ```haro exercise
 oDoor = new stzExterCode(:python)

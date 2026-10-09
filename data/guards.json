@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 05:33 UTC+01:00",
+ "read": "2026-10-09 13:47 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -1373,6 +1373,7 @@
    "sound_mu5_narrated",
    "deployment_narrated",
    "orgrule_narrated",
+   "14_bceao_governance",
    "governance_narrated"
   ],
   "en/32-many-minds-on-one-body-of-work": [
@@ -1622,6 +1623,7 @@
    "sound_mu5_narrated",
    "deployment_narrated",
    "orgrule_narrated",
+   "14_bceao_governance",
    "governance_narrated"
   ],
   "fr/32-many-minds-on-one-body-of-work": [

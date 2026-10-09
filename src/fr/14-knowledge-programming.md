@@ -22,11 +22,11 @@ Trois pratiques du terrain se rencontrent dans cette idée, et aucune n'est la m
 
 La première est la pile sémantique : RDF, OWL et SPARQL. Un fait est un triplet de sujet, de prédicat et d'objet, écrit dans un vocabulaire partagé. Une ontologie dit quelles classes et quelles propriétés existent et ce qui en découle, et un raisonneur en dérive les conséquences. Ce sont des recommandations du W3C, de 2014, 2009 et 2013. Ce que le terrain demande à l'auteur d'une base de connaissance, c'est un langage d'ontologie à lui, un magasin et un langage de requête, d'ordinaire à côté de l'application et non dedans.
 
-La deuxième est la base de données de graphes de propriétés, avec son langage de requête. Le dossier a une comparaison qui la nomme, et c'est un texte de modèle gardé dans la bibliothèque : elle reconnaît au terrain l'échelle, la persistance et les transactions.
+La deuxième est la base de données de graphes de propriétés, avec son langage de requête. Le dossier a une comparaison qui met de telles bases face à cette bibliothèque, et c'est un texte de modèle gardé dans la bibliothèque : elle reconnaît au terrain l'échelle, la persistance et les transactions.
 
-La troisième est les règles sur des faits, en Prolog et en Datalog. Des faits et des règles dans un seul programme, une requête par résolution. Le dossier la connaît comme un langage à rejoindre, et non à reconstruire.
+La troisième est les règles sur des faits, en Prolog et en Datalog. Des faits et des règles dans un seul programme, une requête par résolution. Le dossier ne nomme que Prolog, comme un langage à rejoindre, et non à reconstruire.
 
-Une quatrième pratique se tient derrière le contraste, et le document de conception ne la nomme que pour la refuser : la récupération, un tas de fragments de documents cherchés par similarité. (Connaissance générale, pas une étude du dossier. Vérifier les dates avant l'impression.)
+Une quatrième pratique se tient derrière le contraste, et le document de conception ne la nomme que pour la refuser : la récupération, un tas de fragments de documents cherchés par similarité. (Connaissance générale, pas une étude du dossier.)
 
 Ainsi, sur le terrain, la connaissance vit dans un magasin et sa logique dans un raisonneur, tous deux à côté du programme. Ici la connaissance est un fichier texte brut que le programme charge.
 
@@ -34,7 +34,7 @@ Ainsi, sur le terrain, la connaissance vit dans un magasin et sa logique dans un
 
 **Un système est un fichier. Y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.**
 
-Deux phrases du dossier le portent. La définition, dans le document de conception écrit à partir de ma directive du 13 juillet 2026 : l'intelligence est la capacité de calcul de dériver une connaissance nouvelle à partir d'une connaissance existante. Et ce que la vision de 2026 en garde : ajouter un fait augmente l'intelligence du système, sans changement de code et sans entraînement. Le chapitre 17 s'est ouvert sur la première, et je m'ouvre ici sur la seconde. Le dossier ne tient de moi aucune phrase antérieure à celle-ci sur ce point, et le chapitre garde son ouverture.
+Deux phrases du dossier le portent. La définition, dans le document de conception écrit à partir de ma directive du 13 juillet 2026 : l'intelligence est la capacité de calcul de dériver une connaissance nouvelle à partir d'une connaissance existante. Et ce que la vision de 2026 en garde : ajouter un fait augmente l'intelligence du système, sans changement de code et sans entraînement. Le chapitre 17 s'est ouvert sur la première, et je m'ouvre ici sur la seconde. Le document de conception du 13 juillet 2026 le dit déjà, presque dans les mêmes mots, et le chapitre garde son ouverture.
 
 ## 3. La forme Softanza
 
@@ -65,7 +65,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 #--> not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'
 ```
 
-Un refus est aussi certain qu'une preuve. Le commentaire de la bibliothèque sur `Prove` le dit : un non certain reste certain.
+Un refus est aussi certain qu'une preuve, sur ce qui est enregistré et déclaré : le graphe dit « non dérivable », pas « faux ». Le commentaire de la bibliothèque sur `Prove` le dit : un non certain reste certain.
 
 La même croissance atteint le modèle de domaine du chapitre 19. Rien n'est entraîné. Mais un modèle forgé à partir d'un graphe est un instantané : la seconde réponse ci-dessous est l'ancien modèle qui refuse encore, et seul un modèle forgé de nouveau connaît le fait nouveau :
 
@@ -139,7 +139,7 @@ remove("clinic.zknw")
 #--> 0
 ```
 
-Un fichier de ce genre a été écrit un jour sans sa provenance. Une session l'a trouvé : l'export n'écrivait que les triplets nus, de sorte que la connaissance relue depuis le disque ne disait plus d'où elle venait, et un graphe strict ne pouvait pas charger son propre export. La correction, ce sont les deux sections ci-dessus. La garde qui la prouve est nommée à la section 5.
+Un fichier de ce genre a été écrit un jour sans sa provenance. L'export n'écrivait que les triplets nus, de sorte que la connaissance relue depuis le disque ne disait plus d'où elle venait, et un graphe strict ne pouvait pas charger son propre export. La correction, ce sont les deux sections ci-dessus. La garde qui la prouve est nommée à la section 5.
 
 **Une loi qui se déclenche quand un fait est ajouté.** Sur le monde par défaut de la bibliothèque, celui qui est derrière le sucre syntaxique du langage naturel, une loi symétrique dérive le fait inverse au moment où le premier est ajouté, sans appel à une étape de dérivation. Personne n'a écrit qu'Ibrahim est marié à Amina :
 
@@ -150,7 +150,7 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 #--> 1
 ```
 
-C'est le seul endroit où « ajouter un fait déclenche une règle » s'exécute à ce commit, et cela ne s'exécute que sur le monde par défaut. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
+C'est le seul endroit où une loi déclarée se déclenche à l'ajout qu'une exécution de ce livre montre, et c'est le monde par défaut. La classe de graphe a aussi un interrupteur, `EnableAutoDerive`, qui lance les règles de dérivation après chaque arête ajoutée ; il est éteint par défaut, et je ne l'ai pas exécuté. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
 
 **Un système à l'échelle.** Le programme d'éducation de la bibliothèque est un fichier de connaissance. Son catalogue, `program.zknw`, dit comment s'appelle le programme et quels cours et quelles langues il a :
 
@@ -162,7 +162,7 @@ oP = StzProgramQ("../../education/program")
 #--> [ "en", "fr", "ar", "ha" ]
 ```
 
-Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cours déclaré est un dossier et que chaque dossier est déclaré. Sous ce seul catalogue, l'instantané tient quatre-vingt-dix-neuf fichiers de connaissance, comptés avec `find` le 8 octobre 2026 : des cours, des exercices, des mondes et des compétences, un monde de projet pour un apprenant, et les surcouches qu'une institution pose sur le noyau. La mémoire d'un agent est aussi un graphe de connaissance, sauvegardé par le même format, avec la provenance.
+Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cours déclaré est un dossier et que chaque dossier est déclaré. Dans le module d'éducation, l'instantané tient quatre-vingt-dix-neuf fichiers de connaissance, comptés avec `find` le 8 octobre 2026 : des cours, des exercices, des mondes et des compétences, un monde de projet pour un apprenant, et les surcouches qu'une institution pose sur le noyau. La mémoire d'un agent est aussi un graphe de connaissance, sauvegardé par le même format, avec la provenance.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -170,7 +170,7 @@ Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cou
 
 **J'ai décidé des extensions à quatre lettres.** `.zknw` pour la connaissance, et les autres de la famille ; les anciennes graphies se lisent encore. L'instantané écrit `.zknw` et lit encore `.stzknow`. Le fichier de règles n'a pas été renommé : le graphe écrit et lit toujours `.stzrulz`, bien que la famille lui donne quatre lettres. Je le rapporte comme le dossier l'a.
 
-**J'ai refusé un monde parallèle.** La couche naturelle tenait autrefois ses entités dans des globales, et le document de conception l'a appelé le mauvais foyer, la mauvaise forme et un monde parallèle. La résolution est un graphe par défaut, unique, derrière le sucre syntaxique du langage naturel. La loi qui le sous-tend est que les globales de domaine nues sont interdites ; une forme globale ne peut exister que comme mince sucre sur une instance par défaut. Ainsi le dialogue de la loi symétrique ci-dessus est du sucre sur le même graphe que celui des premiers blocs.
+**J'ai refusé un monde parallèle.** La couche naturelle tenait autrefois ses entités dans des globales, et le document de conception l'a appelé le mauvais foyer, la mauvaise forme et un monde parallèle. La résolution est un graphe par défaut, unique, derrière le sucre syntaxique du langage naturel. Les anciennes globales existent encore, et le graphe grandit à côté : l'en-tête de la bibliothèque appelle cela une double écriture. La loi qui le sous-tend est que les globales de domaine nues sont interdites ; une forme globale ne peut exister que comme mince sucre sur une instance par défaut. Ainsi le dialogue de la loi symétrique ci-dessus est du sucre sur un graphe de la même classe que celui des premiers blocs.
 
 **J'ai refusé de résoudre une contradiction en silence.** Le mode strict, où chaque fait a besoin de sa provenance, est une hygiène de la connaissance, sur option.
 
@@ -178,15 +178,15 @@ Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cou
 
 ## 5. Le tribunal
 
-`knowledge_integration_narrated` prouve que le monde répond à `WhatIs`, que le graphe a grandi à côté, et que la loi vit dans l'ontologie ; que `Prove` narre d'abord la loi puis les maillons de la chaîne, avec une certitude de 1, et refuse ce qu'il ne peut pas prouver ; que le fichier fait l'aller-retour ; qu'une loi symétrique dérive l'arête inverse quand un fait est ajouté par le graphe ; et que le mode strict admet un fait muni de provenance, refuse un fait nu, et refuse et enregistre une contradiction d'unicité. `provenance_survives_save_narrated` prouve que la source et la confiance d'un fait survivent à une sauvegarde ; qu'un graphe strict charge son propre export ; qu'une contradiction refusée survit ; qu'une barre ou un saut de ligne dans une valeur est une donnée ; qu'un ancien fichier sans provenance se charge encore ; et que la mémoire d'un agent enregistre qui a appris un fait, et quand. `program_narrated` prouve que le programme compte ses cours, que chaque cours déclaré est un dossier et chaque dossier est déclaré, et que les textes se lisent de la même façon depuis un checkout avec d'autres fins de ligne.
+`knowledge_integration_narrated` prouve que le monde répond à `WhatIs`, que le graphe a grandi à côté, et que la loi vit dans l'ontologie ; que `Prove` narre d'abord la loi puis les maillons de la chaîne, avec une certitude de 1, et refuse ce qu'il ne peut pas prouver ; que le fichier fait l'aller-retour ; qu'une loi symétrique dérive l'arête inverse quand l'étape de dérivation est appliquée après l'ajout d'un fait par le graphe ; et que le mode strict admet un fait muni de provenance, refuse un fait nu, et refuse et enregistre une contradiction d'unicité. `provenance_survives_save_narrated` prouve que la source et la confiance d'un fait survivent à une sauvegarde ; qu'un graphe strict charge son propre export ; qu'une contradiction refusée survit ; qu'une barre ou un saut de ligne dans une valeur est une donnée ; qu'un ancien fichier sans provenance se charge encore ; et que la mémoire d'un agent enregistre qui a appris un fait, et quand. `program_narrated` prouve que le programme compte ses cours, que chaque cours déclaré est un dossier et chaque dossier est déclaré, et que les textes se lisent de la même façon depuis un checkout avec d'autres fins de ligne.
 
 ## 6. Le terrain, et où il mène
 
 La comparaison de graphes du dossier dit elle-même où les solutions traditionnelles gagnent : les systèmes à grande échelle qui ont besoin de stockage et de traitement distribués, et les applications où la performance est critique. Son tableau place Softanza à l'échelle de l'entreprise, de quelques centaines à quelques milliers de nœuds, dans un seul processus. C'est le résumé honnête de la perte : le terrain mène en échelle, en persistance, en transactions et en outillage. (La ligne de la comparaison sur la persistance est antérieure au fichier ; le graphe de connaissance en écrit un maintenant.)
 
-Le terrain mène en normes et en portée, en connaissance générale. Une base de connaissance en RDF peut être partagée avec n'importe quel outil qui lit les formats du W3C, reliée à des vocabulaires publics et interrogée à travers des magasins. Un fichier de connaissance est lu par cette bibliothèque et par rien d'autre. Un raisonneur pour un langage d'ontologie riche fait ce que trois lois et une déclaration de classe ne font pas. Le terrain mène en expressivité des règles : Prolog et Datalog dérivent des faits nouveaux à partir de règles arbitraires, et ici une seule sorte de loi se déclenche, et seulement sur le monde par défaut. Le terrain mène en requêtes à plusieurs étapes, puisque SPARQL et Cypher joignent des motifs. Et en relations multiples entre deux choses.
+Le terrain mène en normes et en portée, en connaissance générale. Une base de connaissance en RDF peut être partagée avec n'importe quel outil qui lit les formats du W3C, reliée à des vocabulaires publics et interrogée à travers des magasins. D'après le dossier, un fichier de connaissance est lu par cette bibliothèque et par rien d'autre. Un raisonneur pour un langage d'ontologie riche fait ce que trois lois et une déclaration de classe ne font pas. Le terrain mène en expressivité des règles : Prolog et Datalog dérivent des faits nouveaux à partir de règles arbitraires, et ici, dans les exécutions que j'ai gardées, une seule sorte de loi dérive un fait, et seulement sur le monde par défaut. Le terrain mène en requêtes à plusieurs étapes, puisque SPARQL et Cypher joignent des motifs. Et en relations multiples entre deux choses.
 
-Là où je pense que cela se distingue, avec les limites mesurées à côté : la connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même fichier fait tourner un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle ni d'un entraînement.
+Là où je pense que cela se distingue, avec les limites mesurées à côté : la connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même format porte un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle ni d'un entraînement.
 
 ## 7. La limite
 
@@ -217,7 +217,7 @@ oSy.KnowRelation("margherita", "pairs-with", "chianti")
 #--> 0
 ```
 
-L'en-tête de la classe le dit : seules l'unicité et la transitivité sont appliquées ici ; la symétrie est seulement enregistrée. Deux autres limites, chacune avec son exécution.
+L'en-tête de la classe le dit : seules l'unicité et la transitivité sont appliquées ici ; la symétrie est seulement enregistrée. Trois autres limites, chacune avec son exécution.
 
 **Une seule relation entre deux choses.** Le graphe stocke une arête par paire de nœuds. Une seconde relation entre les deux mêmes entités est refusée avec la phrase propre de la bibliothèque :
 
@@ -259,7 +259,7 @@ aBad = oT.ImportKnow(cBad)
 
 Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur ne garde qu'une ligne ayant exactement trois champs.
 
-**Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne ne tourne pas. Le texte, que je montre et ne lance pas, est `@Q("Apple").IsA(:Fruit)`, et il s'arrête sur « Calling Function without definition: @isfruit ». La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde son sens, un nom avec deux significations, toutes deux connues :
+**Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne ne tourne pas. Le texte, que je montre et ne lance pas, est `@Q("Apple").IsA(:Fruit)`, et le 8 octobre 2026 il s'est arrêté sur « Calling Function without definition: @isfruit » ; je n'ai pas gardé cette exécution comme bloc. La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde son sens, un nom avec deux significations, toutes deux connues :
 
 ```haro
 StzKnow(:Apple, :Company)
@@ -270,11 +270,11 @@ StzKnow(:Apple, :Fruit)
 
 L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que le centre s'est déplacé vers le fichier. Le chapitre garde le fichier comme ouverture, et le dialogue de 2022 reste en marge.
 
-Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait, et aucun héritage n'en découle. Le plus proche qui tourne est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, n'a aucune méthode de ce nom.
+Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait, et aucun héritage n'en découle. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, n'a aucune méthode de ce nom.
 
 Ce qui est absent ou cassé : `Explain()` sur un graphe de connaissance, qui appelle une fonction définie nulle part ; et `ValidateOntology()`, qui renvoie 1 quel que soit le contenu de l'ontologie, comme son propre commentaire le dit : un défaut connu.
 
-Une note sur l'histoire du document de conception. Son amendement du 22 août 2026 dit qu'aucun fichier de connaissance n'existe nulle part dans l'arbre, et que c'est de l'hygiène et non un manque. À ce commit ce n'est plus vrai : il y en a quatre-vingt-dix-neuf, tous dans le programme d'éducation.
+Une note sur l'histoire du document de conception. Son amendement du 22 août 2026 dit qu'aucun fichier de connaissance n'existe nulle part dans l'arbre, et que c'est de l'hygiène et non un manque. À ce commit ce n'est plus vrai : il y en a quatre-vingt-dix-neuf, tous dans le module d'éducation.
 
 ## 8. Six portes
 
@@ -284,7 +284,7 @@ Une note sur l'histoire du document de conception. Son amendement du 22 août 20
 
 **Le concepteur.** Le dossier est silencieux. Ni la page de l'offre ni l'étude ne relient le fichier de connaissance à la porte du concepteur, et je n'en invente pas.
 
-**Le décideur.** Le fichier est du texte brut qu'un responsable peut lire. Chaque fait peut porter une source et une confiance. Une affirmation refusée est gardée, nommée et jamais résolue. Une réponse vient avec sa preuve, et un non est certain. Il s'exécute hors ligne, sans rien à souscrire.
+**Le décideur.** Le fichier est du texte brut qu'un responsable peut lire. Chaque fait peut porter une source et une confiance. Une affirmation refusée est gardée, nommée et jamais résolue. Une réponse vient avec sa preuve, et un non est certain. La deuxième loi de la conception dit qu'aucune capacité ne doit exiger rien de payant ni de distant. Je n'ai pas exécuté le fichier hors ligne.
 
 **Le formateur.** Tout le programme d'éducation est fait de fichiers de connaissance. Un apprenant enseigne un monde, puis l'interroge, et la garde du projet vérifie le fichier du monde, le fichier de l'agent et une réponse imprimée. Une institution s'adapte par surcouche, jamais par fourche.
 

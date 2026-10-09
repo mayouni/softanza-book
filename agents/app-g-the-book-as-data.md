@@ -65,6 +65,6 @@ The table below is generated at every build from the same data as `book.json`.
 | 28 | `a-restaurant-in-lyon` | 6 | draft |  | 5 of 5 | 5 | 6 |
 | 29 | `a-bank-in-niamey` | 6 | draft |  | 6 of 6 | 6 | 6 |
 | 30 | `an-organisation-in-the-field` | 6 | draft |  | 7 of 7 | 6 | 6 |
-| 31 | `what-the-projects-did-not-prove` | 6 | draft |  | 5 of 5 | 7 | 6 |
+| 31 | `what-the-projects-did-not-prove` | 6 | draft |  | 5 of 5 | 8 | 6 |
 | 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 | 33 | `the-one-line-still-owed` | 7 | draft | yes | 3 of 3 | 3 | 6 |

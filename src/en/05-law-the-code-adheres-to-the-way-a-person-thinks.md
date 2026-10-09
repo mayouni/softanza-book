@@ -120,7 +120,7 @@ The article that first told this promised four values, without the first, and a 
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print, and in this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, most of them running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass:
+Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, five of the fourteen running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl

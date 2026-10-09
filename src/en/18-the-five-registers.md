@@ -10,7 +10,7 @@ guards: [wisecoding_narrated, wisecoding_rich_narrated, ownagentstack_narrated, 
 stage:
   built: "the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent"
   designed: "several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise"
-  absent: "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a reply with a space in it"
+  absent: "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it"
 status: draft
 rulings: ["12.25", "12.26", "12.27"]
 research: research/ch18.md
@@ -18,13 +18,13 @@ research: research/ch18.md
 
 ## 1. The concept, as the field holds it
 
-Two practices meet in the idea of a conversation that asks, and a third stands behind its last register.
+Two practices meet in the idea of a conversation that asks, and a third stands behind its last register. (General knowledge for this whole section, not a study of the record; the dates are to be checked before print.)
 
 The first is slot filling. A dialogue framework asks the user for the missing pieces of a form until the form is full. The frameworks of the field understand free text with trained models, speak on many channels and ship connectors, and they ask the designer to write intents and flows in their own language. They take the user's reply as the answer and act on it.
 
 The second is vibe coding, a name put into circulation in 2025: the human prompts, the model produces, the human keeps what runs.
 
-The third is programming by example. Spreadsheets fill a column from two examples you typed. Research calls it inductive synthesis, and the model era made the example the way one steers a model. (General knowledge, not a study of the record; the dates are to be checked before print.)
+The third is programming by example. Spreadsheets fill a column from two examples you typed. Research calls it inductive synthesis, and the model era made the example the way one steers a model.
 
 ## 2. The first principle
 
@@ -150,7 +150,7 @@ oKP.AskIn("price")
 #--> =12*3
 ```
 
-The price of the tea is now the text "=12*3". I found this out by running it, and the code is silent about a formula register. The record calls it the next work, filed and not routed.
+The price of the tea is now the text "=12*3". I found this out by running it, and the code is silent about a formula register. The record lists the wise-coding work on registers 3 and 5 as waiting, not routed.
 
 **The fifth register, examples.** When examples are offered as pairs, they are neither admitted nor refused. The goal stays open, and no checkpoint is written. The agent that would read them is on the roster, and reserved:
 
@@ -310,7 +310,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 #--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
 ```
 
-So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A reply that has a space in it raises at the moment, and so the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and no native speaker has read them, in the code's words. I wrote no Arabic or Hausa sentence of my own.
+So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A value with a space in it raises at the moment (section 7 gives the evidence), and so the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and the code calls them a draft awaiting a native reviewer. I wrote no Arabic or Hausa sentence of my own.
 
 ### A model is a fluency, never the mind
 
@@ -330,7 +330,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 4. The decision, and what I refused
 
-**I refused to guess.** The record's phrase is: guessing is replaced by asking, and vibes are replaced by governance. A gap is a question. A reply is a candidate.
+**I refused to guess.** The record's phrase is: guessing is replaced by asking; vibes are replaced by governance. A gap is a question. A reply is a candidate.
 
 **I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust. All five registers land in one funnel.
 
@@ -338,7 +338,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused an agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
 
-**I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one, and a copy of the knowledge held in a session goes stale. That is the reason every call above is chained from the space.
+**I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one, and a copy of the knowledge held in a session goes stale.
 
 **I refused a deleted checkpoint.** Expiry takes a refusal off the live list. The record keeps it.
 
@@ -346,15 +346,15 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 5. The court
 
-`wisecoding_narrated` proves that the gap is computed from the space; that the question is led by the system, names its subject and says why it asks; that "X and Y" and a data structure admit; that a unique law refuses through the conversation and the refusal reaches a checkpoint; and that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, the numbered options and the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it and does not run it; the last block above only reads the course.
+`wisecoding_narrated` proves that the gap is computed from the space; that the question is led by the system, names its subject and says why it asks; that "X and Y" and a data structure admit; that a unique law refuses through the conversation and the refusal reaches a checkpoint; and that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, the numbered options and the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it and does not run it; the tutor block above only reads the course.
 
-The guards end by calling a function that prints the total and then stops the run with a raise. That is the guard's way to end.
+Three of the guards print their own total and end by calling `pf()`, which prints the time and the runtime's version and then stops the run with a raise. That is their way to end. `tutor_gaps_narrated` ends with `Summary()`, which prints the total and a status, and does not raise.
 
 ## 6. The field, and where it leads
 
-The field leads in understanding. A dialogue framework reads free text with trained models, speaks on many channels and ships connectors. The record says what Softanza lacks, in its own count: the word "WhatsApp" appears in no code file and no design document of the library. The conversation asks one slot at a time, over a graph the user must first have declared, and it does not understand an open reply.
+The field leads in understanding. A dialogue framework, as the field holds it, reads free text with trained models, speaks on many channels and ships connectors. The record says what Softanza lacks, in its own count: the word "WhatsApp" appears in no code file and no design document of the library. The conversation asks one slot at a time, over a graph the user must first have declared, and it does not understand an open reply.
 
-The field leads on examples. Programming by example is shipped in spreadsheets today. Softanza has no induction at all, and the record says so: nothing induces yet. A search for "induce", "from examples" and "infer" over the regular-expression folder finds nothing.
+The field leads on examples. Programming by example is, as the field holds it, shipped in spreadsheets today. Softanza has no induction at all, and the record says so: nothing induces yet. A search for "induce", "from examples" and "infer" over the regular-expression folder finds nothing.
 
 The field is honest about costs, and so is the record. Several candidates is the normal case when you ask for a rule from examples. A pattern induced from three examples overfits them. The remedy the record names is the question that tells two candidates apart. And the index that would carry the examples is as clean as the tags of the methods, with about eighty-five misspellings.
 
@@ -364,9 +364,9 @@ Where I think the record stands apart: every reply, in whatever form, is judged 
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals; the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. I say it outright: the two pages promise more than the code does, so that the page or the code is corrected. The code wires three of the five registers. The memo that names the formula and the examples calls them filed and not routed, and for this chapter they are absent.
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example* (read 9 October 2026) calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. I say it outright: the two pages promise more than the code does, so that the page or the code is corrected. The code wires three of the five registers. The memo that names the formula and the examples lists them as waiting, not routed, and for this chapter they are absent.
 
-What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a reply with a space in it. In the version of the library this book runs, `ReplyIn` raises, with an uninitialised variable, on any value containing a space: "tomato sauce", "fromage et tomate", "jibini da tumatir". The direct call to the door returns the refusal properly. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a reply with a space.
+What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In the research run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised, with an uninitialised variable, on each value containing a space that I tried: "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a value with a space.
 
 ## 8. Six doors
 
@@ -387,12 +387,12 @@ What is absent: the formula register; the example register, and the induction ag
 Choose a small world of your own, a shop, a class, a clinic, with four entities of one type and a goal that each needs one relation. Before you run anything, write under each of the replies below the verdict you expect, admitted, refused with a reason, or neither:
 
 1. a plain word;
-2. a second word, offered as a number after the first is known;
+2. a number that picks a value the first reply made known;
 3. a number nobody offered;
 4. two values at once, for a relation you have declared unique;
 5. a list of two pairs of examples.
 
-Then run it. If a promise breaks, do not change the promise: explain the output first.
+Then run it. An admitted reply uses up the question, so call `AskIn` again before the next reply. If a promise breaks, do not change the promise: explain the output first.
 
 ```haro exercise
 oWorld = new stzKnowledgeGraph("my-world")

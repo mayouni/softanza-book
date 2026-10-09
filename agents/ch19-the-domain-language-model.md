@@ -4,7 +4,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 05:31 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 13:46 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,11 +14,11 @@ The field has made this work with three tools. You adapt a general model to a do
 
 ## 2. The first principle
 
-**The next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.** And the gate is the same for every model of this kind: generations are proposals, and the graph and its rules decide admission.
+**The next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.** And in the design the gate is the same for every model of this kind: generations are proposals, and the graph and its rules decide admission.
 
 ## 3. The Softanza form
 
-I call it a domain language model, and it has two rungs. The first has no neurons at all and was shown in chapter 17: it answers from recorded facts, says why, and refuses outside its domain. The second is a small neural model, optional, which gives it fluency. Both end at the same gate.
+I call it a domain language model, and it has two rungs. The first has no neurons at all and was shown in chapter 17: it answers from recorded facts, says why, and refuses outside its domain. The second is a small neural model, optional, which gives it fluency. In the design both rungs end at the same gate; here the gate is the `Admit` of the last block of this section, called by hand.
 
 Begin with where the training text comes from. No one writes it. Each sentence is a fact of the knowledge base, rendered, and the vocabulary is closed: every word the domain holds, with a first entry for the unknown.
 
@@ -43,7 +43,7 @@ oDLM = StzDlmQ(oKB)
 
 Twelve words, and a word outside the domain maps to the first one. "Correct by construction" holds here in the one sense the code gives it: each sentence is a recorded fact. It does not yet hold in the sense the design intended; section 7 says where.
 
-Completion is constrained to the domain: after an entity, only its relations; after a relation, only its objects; a fragment completes to entities; a word that the domain does not hold completes to nothing.
+Completion is constrained to the domain: after an entity that bears facts, its relations; after a relation, only its objects; a fragment completes to entities; a word that the domain does not hold completes to nothing.
 
 ```haro
 ? @@( oDLM.Complete("margherita") )
@@ -98,7 +98,7 @@ cLie  = "subject: tiramisu" + nl + "relation: contains" + nl + "object: mozzarel
 
 > run: kept
 
-Look at the last four lines together. The grammar accepts the sentence that says a tiramisu contains mozzarella, because it has the right shape and every word is in the domain. The model refuses it, because the graph holds no such fact. A grammar is a gate for shape; the truth belongs to the graph.
+Look at the last four lines together. The grammar accepts the sentence that says a tiramisu contains mozzarella, because it has the right shape and every word is in the domain. Asked what a tiramisu contains, the model answers that it holds no such fact. A grammar is a gate for shape; the truth belongs to the graph.
 
 A domain language model is a file that travels. It is saved as plain text, readable and diff-able, with no binary and no weights, and a second model that has never seen the knowledge base can answer from it and run its own tests:
 
@@ -195,9 +195,9 @@ aVerdict = oKB.Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
 
 > run: kept
 
-The false proposal is refused with its reason, and the refusal is kept, with its source: the model's second rung. A new fact is admitted. That is the whole of the principle in seven lines: a proposal, a law, a refusal with its why, and the refusal on the record.
+The false proposal is refused with its reason, and the refusal is kept, with its source: the model's second rung. A new fact is admitted. That is the whole of the principle in six calls: a proposal, a law, a refusal with its why, and the refusal on the record.
 
-The design describes the unit of prediction in three levels. A token is a fragment with no type. An embedding is a vector without a role. And a chunk is a typed node of a graph, with a tag, a payload and edges: a declaration, a relationship, a constraint. A chunk is validated in five stages before it enters the graph: type, pattern, graph integrity, compliance, and constructive contribution. I tell it as design, because there is no chunk in the library. What exists are pieces: the court of chapter 11 checks a text's type and shape; the admission above enforces a law, which is compliance; and adding a fact twice is a harmless no-op, which is a small form of the last stage. Nothing chains them.
+The design describes the unit of prediction in three levels. A token is a fragment with no type. An embedding is a vector without a role. And a chunk is a typed node of a graph, with a tag, a payload and edges: a declaration, a relationship, a constraint. A chunk is validated in five stages before it enters the graph: type, pattern, graph integrity, compliance, and constructive contribution. I tell it as design, because there is no chunk in the library. What exists are pieces: the court of chapter 11 checks a text's type and shape; and the admission above enforces a law, which is compliance. Nothing chains them.
 
 ## 4. The decision, and what I refused
 
@@ -207,21 +207,21 @@ On 13 July 2026, I ruled on this. The concept of a domain language model had bee
 
 **I refused a teacher I cannot see.** The earlier design of the idea used a large commercial model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
 
-**I refused neural first.** The finding the section starts from is that the canonical model is not neural. A review of the earlier product archived a transformer of one to three billion parameters, in favour of rule-based prediction, on the ground that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
+**I refused neural first.** The finding I start from is that the canonical model is not neural. A review of the earlier product archived a transformer of one to three billion parameters, in favour of rule-based prediction, on the ground that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
 
 **I refused to let the shape stand for the truth.** The grammar says structure kills malformedness, not falsehood. The truth belongs to the graph, to its laws, and to a person.
 
 ## 5. The court
 
-`dlm_narrated` proves the model forged from a graph, its answers with their why, its refusal outside the domain, the completion, the plain-text bundle with its goldens, the closed tokenizer and the second rung with its model file. One of its assertions on the second rung checks only that the generated sentence begins with a fixed prefix, so it would also pass the false sentence above. `structuredoutput_narrated`, `schema_grammar_narrated` and `constrained_decoding_narrated` prove the court of chapter 11, the grammar compiler and the sampler; the last of them has two scenes that need a generative model file, which this machine does not hold, so only part of it ran for this page. `knowledge_integration_narrated` proves derivation and the refusal by a law. And I should say that the admission I show in the last block is not called by its name in any guard: it is reached through the conversation, and by the strict form of adding a fact, which the guard does assert.
+`dlm_narrated` proves the model forged from a graph, its answers with their why, its refusal outside the domain, the completion, the plain-text bundle with its goldens, the closed tokenizer and the second rung with its model file. One of its assertions on the second rung checks only that the generated sentence begins with a fixed prefix, so it would also pass the false sentence above. `structuredoutput_narrated`, `schema_grammar_narrated` and `constrained_decoding_narrated` prove the court of chapter 11, the grammar compiler and the sampler; the last of them has two scenes that need a generative model file, which the snapshot does not hold; the record counts 50 assertions in that guard. `knowledge_integration_narrated` proves derivation and the refusal by a law. And I should say that the admission I show in the last block is not called by its name in any guard: it is reached through the conversation, and by the strict form of adding a fact, in which a fact added without its admission is refused, which the guard does assert.
 
 ## 6. The field, and where it leads
 
 The field leads in scale. Training and serving models of every size is a mature practice; this second rung is a single layer over twelve words, and the steps that would make it more, a validated corpus, deduplication, a trained tokenizer, a larger network, quantisation, are not done. I do not compete with large models.
 
-The field leads in fluency, which is the point of a model. A first rung that answers from facts will say "I hold no knowledge about that" where a general model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the table above.
+The field leads in fluency, which is the point of a model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
 
-Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one, and every proposal of the second meets a gate that can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign.
+Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one, and every proposal of the second can be put to a gate that can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign.
 
 ## 7. The limit
 
@@ -240,7 +240,7 @@ What is absent: an end-of-sentence word for the second rung, which is why one of
 
 **The programmer.** A model is a file you can read, diff and test: its facts, its laws and its goldens.
 
-**The analyst.** A fact you add makes the model know more, and a law you add makes it refuse more, with no training.
+**The analyst.** A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; the model's own answers do not read it yet.
 
 **The designer.** The model's refusal is part of its contract: the golden test says what it must decline to answer.
 

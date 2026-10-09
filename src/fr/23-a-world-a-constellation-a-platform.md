@@ -9,8 +9,8 @@ site: [platforms, offering, forged]
 guards: [06_stzsuperapp_narrated, 01_platform_narrated, full_scope_model_narrated, 04_stzapp_pursue_narrated, 05_stzapp_live_narrated]
 stage:
   built: "un monde comme déclaration avec un être, un devenir et une manière d'être rencontré ; un but dont l'écart est mesuré ; une constellation de mondes avec des liens et trois barrières sur chaque traversée ; le socle commun comme plateforme ; la jointure des capacités ; le profil d'une solution comme fichier texte, et les trois portées du système"
-  designed: "l'idiome quasi naturel de la constellation ; un appel acheminé dans une constellation emboîtée ; des coques qui embarquent le moteur ; la certification de l'architecte, qui est une proposition"
-  absent: "un monde qui juge ses propres vérités ; une narration pour la constellation ou pour l'enveloppe de la plateforme ; une page pour l'architecte ; la fiche de garanties de cinq lignes"
+  designed: "l'idiome quasi naturel de la constellation ; un appel acheminé dans une constellation emboîtée ; des coques qui embarquent le moteur ; la certification de l'architecte, qui est une proposition ; la fiche de garanties de cinq lignes, comme exigence"
+  absent: "un monde qui juge ses propres vérités ; une narration pour la constellation ou pour l'enveloppe de la plateforme ; une fiche de garanties de cinq lignes écrite pour une solution"
 status: draft
 rulings: ["12.2", "12.12", "12.13", "12.15", "12.19", "12.25", "12.29"]
 research: research/ch23.md
@@ -34,7 +34,7 @@ La forme partagée : le terrain dessine l'image, un hôte, une carte, un diagram
 
 **La solution est déclarée en mondes, en liens et en une enveloppe avant que rien en soit construit, et chaque traversée entre eux est gouvernée.**
 
-Les phrases du dossier : une application est un monde vivant de sens ; des mondes, non des mini-applis, un graphe gouverné et non un conteneur hôte ; et un architecte Softanza modélise d'abord l'architecture de déploiement, comme artefact déclaratif, avant une ligne de code de fonctionnalité système. La phrase ci-dessus est faite des trois et de la méthode du livre, qui est de déclarer puis de gouverner. Les trois sont celles du dossier, chacune telle qu'elle est dans sa source ; la phrase ci-dessus est le principe propre du chapitre, dans la voix du livre.
+Les phrases du dossier : une application est un monde vivant de sens ; des mondes, non des mini-applis, un graphe gouverné et non un conteneur hôte ; et un architecte Softanza modélise d'abord l'architecture de déploiement, comme artefact déclaratif, avant une ligne de code de fonctionnalité système. La phrase ci-dessus est faite des trois et de la méthode du livre, qui est de déclarer puis de gouverner. Les trois sont celles du dossier, dites avec mes mots ; la phrase ci-dessus est le principe propre du chapitre, dans la voix du livre.
 
 ## 3. La forme Softanza
 
@@ -217,7 +217,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-Le chapitre 28 a utilisé `Retire` et `Revive`, et ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre. Rien dans le code n'achemine un appel dans une constellation emboîtée, donc la récursion de la conception est celle d'un registre et pas encore celle d'un appel.
+Le chapitre 28 a utilisé `Retire` et `Revive`, et ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre. Rien dans le code n'achemine un appel dans une constellation emboîtée, donc la récursion de la conception est celle d'un registre et pas encore celle d'un appel. Une traversée est un verdict : `CallAcross` autorise ou refuse par 1 ou 0, et rien n'est encore remis à la cible.
 
 Un piège. Un monde enregistré est une copie. L'ancien langage hôte copie un objet par valeur quand il est stocké, de sorte que le monde que vous enregistrez n'est pas le monde que vous tenez. L'en-tête de la classe le dit : les objets monde s'atteignent par l'index du registre, le chemin vivant. Configurez le monde entièrement, enregistrez-le, et atteignez-le par la constellation à partir de là. L'enveloppe a la même doctrine : poser un monde sur la plateforme récolte ses déclarations au moment de l'appel, et poser la gouvernance prend un instantané du régime.
 
@@ -245,7 +245,7 @@ oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
 #--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
 ```
 
-L'en-tête de la classe dit ce qui manque au monde : le monde modélise le monde, et manque délibérément de l'enveloppe opérationnelle. Les devoirs de l'enveloppe sont la génération, la jointure des capacités, le runtime du socle commun, un corps en réseau et un registre avec application. La génération est réelle, et refuse de générer pour un monde qui ne déclare aucune atteinte. Le chemin du succès écrit de vrais fichiers, donc je ne l'exécute pas ici. Je l'ai exécuté une fois et j'ai retiré ce qu'il avait écrit : la coque web est une page de 318 octets avec les écrans et les choses du monde comme éléments de liste, et la coque de bureau un lanceur de 251 octets. Telle est la limite des « coques par plateforme » : la génération est réelle, et minuscule.
+L'en-tête de la classe dit ce qui manque au monde : le monde modélise le monde, et manque délibérément de l'enveloppe opérationnelle. Les devoirs de l'enveloppe sont la génération, la jointure des capacités, le runtime du socle commun, un corps en réseau et un registre avec application. La génération est réelle, et refuse de générer pour un monde qui ne déclare aucune atteinte. Le chemin du succès écrit de vrais fichiers, donc je ne l'exécute pas ici. Je l'ai exécuté une fois, pour un monde d'un écran et d'une chose, et j'ai retiré ce qu'il avait écrit : la coque web est une page de 318 octets avec les écrans et les choses du monde comme éléments de liste, et la coque de bureau un lanceur de 251 octets ; d'autres mondes donnent d'autres tailles. Telle est la limite des « coques par plateforme » : la génération est réelle, et minuscule.
 
 ### L'architecte, et les trois portées
 
@@ -313,7 +313,7 @@ done
 
 La forme fichier est un texte simple que l'architecte possède, et elle fait l'aller-retour depuis une chaîne. L'ordre de construction et de déploiement est celui du chapitre 33, et la barrière sur qui déploie est celle du chapitre 24.
 
-Qui est l'architecte ? Le dossier nomme la personne trois fois dans trois endroits sans rapport : la System Foundation, un livre privé du domaine de projets sur la modélisation de plateforme, et la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Le site n'a pas de page pour l'architecte. Je raconte l'architecte comme ce que l'on déclare, et la certification n'est que cette proposition ; aucune école n'est nommée ici.
+Qui est l'architecte ? Le dossier nomme la personne deux fois par son nom : dans la System Foundation, et dans la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux ; cette note est marquée retirée, comme prompt de lancement, le jour même où elle a été écrite. Un troisième endroit, un livre privé du domaine de projets sur la modélisation de plateforme, modélise des plateformes et ne nomme pas l'architecte. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Le site a une page de parcours pour l'architecte de plateforme et une page de certification qui dit que la proposition n'est pas annoncée (lu sur le site, le 9 octobre 2026). Je raconte l'architecte comme ce que l'on déclare, et la certification n'est que cette proposition ; aucune école n'est nommée ici.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -323,7 +323,7 @@ Qui est l'architecte ? Le dossier nomme la personne trois fois dans trois endroi
 
 **J'ai refusé le bac à sable comme définition de l'isolation.** L'isolation est un sens déclaré et inspectable, et non une machine virtuelle en boîte noire. Un corps souverain de monde plus des liens barrés par une norme. Un bac à sable d'exécution n'est qu'une implémentation pour des mondes non dignes de confiance.
 
-**J'ai refusé de faire de la gouvernance une cinquième facette.** Elle est l'ambiant. Dans le code, une gouvernance par constellation, configurée par elle, de sorte qu'il y ait une gouvernance vivante et jamais une copie périmée tenue par un appelant.
+**J'ai refusé de faire de la gouvernance une facette de plus, à côté de la constellation, des liens, du socle commun, de l'atteinte et de la présence de la conception.** Elle est l'ambiant. Dans le code, une gouvernance par constellation, configurée par elle, de sorte qu'il y ait une gouvernance vivante et jamais une copie périmée tenue par un appelant.
 
 **J'ai refusé de donner l'enveloppe au monde.** `stzApp` modélise le monde, et manque délibérément de l'enveloppe opérationnelle.
 
@@ -345,7 +345,7 @@ Le terrain mène en coques. La conception promet une application web progressive
 
 Le terrain mène en ce que porte un contexte borné : une équipe et un langage. Un monde porte un graphe et une narration. Le persona pour lequel est fait un monde n'est pas un champ de la classe : un monde a la liste des surfaces qu'il atteint et rien d'autre sur qui il sert. Les cinq choses du site, un sol partagé, un monde pour chaque personne et appareil, des liens, des règles, des rôles, sont vraies du socle commun, des liens et de la gouvernance. Les rôles sont les acteurs, les permissions et l'autorité de la gouvernance. Il n'y a pas de classe rôle, et un monde par personne et appareil est une convention de nommage.
 
-L'Atlas ne note pas ce volet. `stzApp` y est nommé une fois, dans un couloir du domaine des interfaces, noté solide, avec la note qu'il n'y a ni orchestration multi-fenêtres, ni dialogues, ni menus, ni zone de notification. La plateforme dans un couloir du domaine du système. La constellation dans aucun.
+L'Atlas ne note pas ce volet. `stzApp` y est nommé une fois, dans le couloir du domaine des interfaces intitulé coque d'application et fenêtrage ; c'est ce couloir, non le monde, qui est noté solide, avec la note qu'il n'y a ni orchestration multi-fenêtres, ni dialogues, ni menus, ni zone de notification. La plateforme dans un couloir du domaine du système. La constellation dans aucun.
 
 Le compilateur mène sur les portées. Il vérifie contre une cible en usage quotidien à grande échelle ; la portée de Softanza est un objet d'exécution qu'un programme interroge. Ce qu'elle ajoute est un verdict au site d'appel dans les mots propres de la cible, et un jumeau qui répète ce qui manque à l'hôte, ce qui est le chapitre 24.
 
@@ -406,13 +406,13 @@ done
 #--> Error (R14) : Calling Method without definition: explain
 ```
 
-`Shares`, `Provides`, `Norm`, `Reaches` et `Generate` sur une constellation échouent de la même façon. La classe a `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, la famille `Gov*`, `CallAcross`, `Crossings` et les appels du socle commun, et c'est tout. Les trois aspects de la conception s'atteignent aujourd'hui par `AddWorld`, `Bond` et `OpenCommonsOn`, et la gouvernance par `Gov*` ; l'atteinte et la présence sont la partie qui n'est pas là. L'en-tête de la conception appelle elle-même le document une conception à venir.
+`Shares`, `Provides`, `Norm`, `Reaches` et `Generate` ne sont pas non plus définis sur une constellation. La classe a `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, la famille `Gov*`, `CallAcross`, `Crossings`, les appels du socle commun, et des appels qui regardent : `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` et `LastCallMs`. Les verbes de composition sont ceux-là. Les trois aspects de la conception s'atteignent aujourd'hui par `AddWorld`, `Bond` et `OpenCommonsOn`, et la gouvernance par `Gov*` ; l'atteinte et la présence sont la partie qui n'est pas là. L'en-tête de la conception appelle elle-même le document une conception à venir.
 
 Ce qui est construit : le monde ; la constellation avec ses barrières, son registre de traversées avec les durées, une décision écrite sur une traversée autorisée, et une traversée refusée notée comme preuve ; la jointure des capacités de la plateforme, son socle commun, son registre, ses coques, son profil avec construction puis déploiement ; les trois portées.
 
-Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur.
+Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et rien n'est remis à la cible) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
 
-Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, puisqu'aucune n'existe. La narration pour construire une première appli utilise des verbes que la classe n'a pas : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. Une page du site pour l'architecte. La fiche de garanties de cinq lignes. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
+Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, puisqu'aucune n'existe. La narration pour construire une première appli utilise des verbes que la classe n'a pas : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite : aucune solution n'en a une. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
 
 ## 8. Six portes
 
@@ -424,9 +424,9 @@ Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, pui
 
 **Le décideur.** Vous déclarez qui peut traverser où et à quel risque, en trois barrières, et chaque traversée autorisée laisse une décision avec l'acteur, l'autorité et le risque de son instant. Le fichier de votre architecte est un texte que vous possédez.
 
-**Le formateur.** Le dossier est mince. Le plan d'éducation liste une échelle du praticien à l'architecte puis au contributeur parmi six schémas de niveaux concurrents, et je le dis. L'exercice ci-dessous se juge en l'exécutant.
+**Le formateur.** Le dossier est mince. Le plan d'éducation liste une échelle du praticien à l'architecte puis au contributeur parmi cinq schémas de niveaux concurrents, et je le dis. L'exercice ci-dessous se juge en l'exécutant.
 
-**L'agent.** Un monde peut être enveloppé comme un agent que l'hôte fait avancer d'un tick à la fois. Un déploiement par un acteur modèle de langage est refusé, et rien n'est déployé. La traversée entre les mondes est gouvernée quel que soit l'appelant.
+**L'agent.** Un monde peut être enveloppé comme un agent que l'hôte fait avancer d'un tick à la fois. Un déploiement par un acteur modèle de langage est refusé, et rien n'est déployé. La traversée entre les mondes est gouvernée par le nom et l'autorité du monde appelant.
 
 ## 9. Exercice
 

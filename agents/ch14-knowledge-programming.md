@@ -4,7 +4,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 05:31 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -12,11 +12,11 @@ Three practices of the field meet in this idea, and none of them is the same as 
 
 The first is the semantic stack: RDF, OWL and SPARQL. A fact is a triple of subject, predicate and object, written in a shared vocabulary. An ontology says what classes and properties exist and what follows from them, and a reasoner derives the consequences. These are W3C recommendations, of 2014, 2009 and 2013. What the field asks of the author of a knowledge base is an ontology language of their own, a store and a query language, usually beside the application and not in it.
 
-The second is the property-graph database, with its query language. The record has one comparison that names it, and it is a model's text kept in the library: it credits the field with scale, persistence and transactions.
+The second is the property-graph database, with its query language. The record has one comparison that sets such databases against this library, and it is a model's text kept in the library: it credits the field with scale, persistence and transactions.
 
-The third is rules over facts, in Prolog and in Datalog. Facts and rules in one program, a query by resolution. The record knows it as a language to reach, and not to rebuild.
+The third is rules over facts, in Prolog and in Datalog. Facts and rules in one program, a query by resolution. The record names Prolog only, as a language to reach, and not to rebuild.
 
-A fourth practice stands behind the contrast, and the design document names it only to refuse it: retrieval, a pile of document fragments searched by similarity. (General knowledge, not a study of the record. Check the dates before print.)
+A fourth practice stands behind the contrast, and the design document names it only to refuse it: retrieval, a pile of document fragments searched by similarity. (General knowledge, not a study of the record.)
 
 So in the field the knowledge lives in a store and its logic in a reasoner, both beside the program. Here the knowledge is a plain text file that the program loads.
 
@@ -24,7 +24,7 @@ So in the field the knowledge lives in a store and its logic in a reasoner, both
 
 **A system is a file. Adding a line to it makes the system know more, and nothing is coded or trained.**
 
-Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opened on the first, and I open here on the second. The record holds no earlier sentence of mine on this than the one above, and the chapter keeps its opening.
+Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opened on the first, and I open here on the second. The design document of 13 July 2026 already says it, in nearly the same words, and the chapter keeps its opening.
 
 ## 3. The Softanza form
 
@@ -59,7 +59,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 > run: kept
 
-A refusal is as certain as a proof. The library's comment on `Prove` says it: a certain no is still certain.
+A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: a certain no is still certain.
 
 The same growth reaches the domain model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot: the second answer below is the old model still refusing, and only a model forged again knows the new fact:
 
@@ -139,7 +139,7 @@ remove("clinic.zknw")
 
 > run: kept (touches files)
 
-A file of this kind was once written without its provenance. A session found it: the export wrote only the bare triples, so knowledge read back from the disk no longer said where it came from, and a strict graph could not load its own export. The fix is the two sections above. The guard that proves it is named in section 5.
+A file of this kind was once written without its provenance. The export wrote only the bare triples, so knowledge read back from the disk no longer said where it came from, and a strict graph could not load its own export. The fix is the two sections above. The guard that proves it is named in section 5.
 
 **A law that fires when a fact is added.** On the library's default world, the one behind the natural-language sugar, a symmetric law derives the reverse fact as the first one is added, with no call to a derivation step. Nobody wrote that Ibrahim is married to Amina:
 
@@ -152,7 +152,7 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 
 > run: kept
 
-This is the one place where "adding a fact fires a rule" runs at this commit, and it runs only on the default world. I show the same law on an instance graph in section 7, where it does not.
+This is the only place where a declared law fires on add that a run in this book shows, and it is the default world. The graph class also has a switch, `EnableAutoDerive`, that runs the derivation rules after every edge added; it is off by default, and I did not run it. I show the same law on an instance graph in section 7, where it does not.
 
 **A system at scale.** The education program of the library is a knowledge file. Its catalogue, `program.zknw`, says what the program is called and which courses and languages it has:
 
@@ -166,7 +166,7 @@ oP = StzProgramQ("../../education/program")
 
 > run: kept
 
-Adding a course is adding a line there, and the guard checks that every declared course is a folder and every folder is declared. Under that one catalogue the snapshot holds ninety-nine knowledge files, counted with `find` on 8 October 2026: courses, exercises, worlds and skills, a project world for a learner, and the overlays an institution lays over the core. An agent's memory is also a knowledge graph, saved through the same format, with provenance.
+Adding a course is adding a line there, and the guard checks that every declared course is a folder and every folder is declared. In the education module the snapshot holds ninety-nine knowledge files, counted with `find` on 8 October 2026: courses, exercises, worlds and skills, a project world for a learner, and the overlays an institution lays over the core. An agent's memory is also a knowledge graph, saved through the same format, with provenance.
 
 ## 4. The decision, and what I refused
 
@@ -174,7 +174,7 @@ Adding a course is adding a line there, and the guard checks that every declared
 
 **I decided on four-letter extensions.** `.zknw` for knowledge, and the others of the family; the old spellings still read. The snapshot writes `.zknw` and still reads `.stzknow`. The file of rules was not renamed: the graph still writes and reads `.stzrulz`, though the family names four letters for it. I report it as the record has it.
 
-**I refused a parallel world.** The natural layer once held its entities in globals, and the design document called it the wrong home, the wrong shape and a parallel world. The resolution is one default graph standing behind the natural-language sugar. The law behind it is that naked domain globals are forbidden; a global form may exist only as thin sugar over one default instance. So the dialog of the symmetric law above is sugar over the same graph that the first blocks used.
+**I refused a parallel world.** The natural layer once held its entities in globals, and the design document called it the wrong home, the wrong shape and a parallel world. The resolution is one default graph standing behind the natural-language sugar. The old globals still exist, and the graph grows beside them: the library's header calls it a dual write. The law behind it is that naked domain globals are forbidden; a global form may exist only as thin sugar over one default instance. So the dialog of the symmetric law above is sugar over a graph of the same class as the first blocks used.
 
 **I refused to resolve a contradiction in silence.** Strict mode, where every fact needs its provenance, is opt-in knowledge hygiene.
 
@@ -182,15 +182,15 @@ Adding a course is adding a line there, and the guard checks that every declared
 
 ## 5. The court
 
-`knowledge_integration_narrated` proves that the world answers `WhatIs`, that the graph grew alongside it, and that the law lives in the ontology; that `Prove` narrates the law first and then the links of the chain, with certainty 1, and refuses what it cannot prove; that the file round-trips; that a symmetric law derives the reverse edge when a fact is added through the graph; and that strict mode admits a provenanced fact, refuses a naked one, and refuses and records a unique contradiction. `provenance_survives_save_narrated` proves that a fact's source and confidence survive a save; that a strict graph loads its own export; that a refused contradiction survives; that a bar or a line break in a value is data; that an old file with no provenance still loads; and that an agent's memory records who learned a fact, and when. `program_narrated` proves that the program counts its courses, that every course declared is a folder and every folder is declared, and that the texts read the same from a checkout with other line endings.
+`knowledge_integration_narrated` proves that the world answers `WhatIs`, that the graph grew alongside it, and that the law lives in the ontology; that `Prove` narrates the law first and then the links of the chain, with certainty 1, and refuses what it cannot prove; that the file round-trips; that a symmetric law derives the reverse edge when the derivation step is applied after a fact is added through the graph; and that strict mode admits a provenanced fact, refuses a naked one, and refuses and records a unique contradiction. `provenance_survives_save_narrated` proves that a fact's source and confidence survive a save; that a strict graph loads its own export; that a refused contradiction survives; that a bar or a line break in a value is data; that an old file with no provenance still loads; and that an agent's memory records who learned a fact, and when. `program_narrated` proves that the program counts its courses, that every course declared is a folder and every folder is declared, and that the texts read the same from a checkout with other line endings.
 
 ## 6. The field, and where it leads
 
 The record's own graph comparison says where the traditional solutions win: large-scale systems that need distributed storage and processing, and performance-critical applications. Its table puts Softanza at business scale, in the hundreds to thousands of nodes, in a single process. That is the fair summary of the loss: the field leads in scale, persistence, transactions and tooling. (The comparison's row for persistence predates the file; the knowledge graph now writes one.)
 
-The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. A knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules, and here one law kind fires, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
+The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules, and here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
 
-Where I think this stands apart, with the measured limits beside it: the knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same file runs a course, a learner's project and an agent's memory. None of that needs a store, a server, a model or a training run.
+Where I think this stands apart, with the measured limits beside it: the knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, a model or a training run.
 
 ## 7. The limit
 
@@ -225,7 +225,7 @@ oSy.KnowRelation("margherita", "pairs-with", "chianti")
 
 > run: kept
 
-The class header says it: only unique and transitive are acted on here; symmetric is only recorded. Two more limits, each with its run.
+The class header says it: only unique and transitive are acted on here; symmetric is only recorded. Three more limits, each with its run.
 
 **One relation between two things.** The graph stores one edge per node pair. A second relation between the same two entities is refused with the library's own sentence:
 
@@ -273,7 +273,7 @@ aBad = oT.ImportKnow(cBad)
 
 The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
 
-**The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line does not run. The text, which I show and do not run, is `@Q("Apple").IsA(:Fruit)`, and it stops with "Calling Function without definition: @isfruit". The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps its point, one name with two meanings, both known:
+**The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line does not run. The text, which I show and do not run, is `@Q("Apple").IsA(:Fruit)`, and on 8 October 2026 it stopped with "Calling Function without definition: @isfruit"; I did not keep that run as a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps its point, one name with two meanings, both known:
 
 ```haro
 StzKnow(:Apple, :Company)
@@ -286,11 +286,11 @@ StzKnow(:Apple, :Fruit)
 
 The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. The chapter keeps the file as its opening, and the 2022 dialog stays at the margin.
 
-What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact, and no inheritance follows. The nearest that runs is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, has no method of that name.
+What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact, and no inheritance follows. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, has no method of that name.
 
 What is absent or broken: `Explain()` on a knowledge graph, which calls a function defined nowhere; and `ValidateOntology()`, which returns 1 whatever the ontology holds, as its own comment says: a known defect.
 
-One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education program.
+One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education module.
 
 ## 8. Six doors
 
@@ -300,7 +300,7 @@ One note on the design document's history. Its amendment of 22 August 2026 says 
 
 **The designer.** The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.
 
-**The decision-maker.** The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. It runs offline, with nothing to subscribe to.
+**The decision-maker.** The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote. I did not run the file offline.
 
 **The educator.** The whole education program is knowledge files. A learner teaches a world, then questions it, and the project's guard checks the world file, the agent file and one printed answer. An institution adapts by overlay, never by fork.
 

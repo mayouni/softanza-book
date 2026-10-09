@@ -78,6 +78,8 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
   the release check (`tools/release.py`). Memo: `sessions/2026-10-09-phase-9-answers.md`.
 - Phase 10 done 2026-10-09: the spine verified by fresh readers (513 claims, 124 flagged, fixed in 2, 3, 4, 5, 11, 17, 32, 33; chapter 1 reported to the author), VERIFY-01.
   Memo: `sessions/2026-10-09-phase-10-verification.md`. Chapters outside the spine are not yet verified this way.
+- Phase 11 done 2026-10-09: the preface, chapters 6 to 31 outside the spine and appendices A to C verified and fixed the same way (about 3,180 statements checked in the book, 624 flagged and fixed except chapter 1).
+  Memo: `sessions/2026-10-09-phase-11-verification-rest.md`. Chapter 1 still carries its flagged statements for the author.
 - Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.

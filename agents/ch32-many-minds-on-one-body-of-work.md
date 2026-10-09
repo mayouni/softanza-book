@@ -4,7 +4,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 05:33 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 13:47 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

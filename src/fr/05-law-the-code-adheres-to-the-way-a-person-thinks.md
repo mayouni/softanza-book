@@ -120,7 +120,7 @@ L'article qui a raconté cela le premier promettait quatre valeurs, sans la prem
 
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer, et dans cette maison elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
-Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, la plupart s'exécutant sur le graphe du code, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte :
+Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, dont cinq sur quatorze s'exécutent sur le graphe du code, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte :
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl

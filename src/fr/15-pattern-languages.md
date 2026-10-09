@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 00_numbrex_narrated, tablex_narrated, 00_matrex_narr
 stage:
   built: "des motifs pour le texte, les nombres et les tableaux, chacun avec une garde ; la même petite habitude d'un support à l'autre (un constructeur, un motif dans une chaîne de caractères, Match, Tokens)"
   designed: "un seul moteur de motifs partagé par tous les supports ; le motif comme côté condition de la cascade ; le motif écrit à partir d'exemples"
-  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans trois des supports ; des séquences sur une ligne de temps, dans le temps ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
+  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports ; des séquences sur une ligne de temps, dans le temps ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
 status: draft
 rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
@@ -28,7 +28,7 @@ L'étude de terrain du domaine de projets lui-même, d'août 2026, donne le prof
 
 **Un motif est une règle sur la forme des données, écrite comme des données. La même habitude sert tous les genres de données.**
 
-La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Le dossier de l'étude porte aussi une phrase qu'elle dit de l'auteur, « pour la première fois dans l'histoire de l'informatique ». Je ne l'ai trouvée dans aucun texte de la bibliothèque, et l'étude ne laisse pas le site la revendiquer ; le chapitre l'imprime comme l'attribution de l'étude et n'affirme pas plus que l'étude ne permet. L'affirmation que l'étude permet est la mesurée : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
+La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Le dossier de l'étude, qui n'est pas l'étude de terrain ci-dessus, porte aussi une phrase qu'elle dit de l'auteur, « pour la première fois dans l'histoire de l'informatique ». Je ne l'ai trouvée dans aucun texte de la bibliothèque, et l'étude ne laisse pas le site la revendiquer ; le chapitre l'imprime comme l'attribution de l'étude et n'affirme pas plus que l'étude ne permet. L'affirmation que l'étude permet est la mesurée : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
 
 ## 3. La forme Softanza
 
@@ -198,9 +198,9 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 **J'ai refusé de réinventer la notation pour le texte.** Les correspondances simples sont gardées : une chaîne de motif classique, les groupes nommés et les captures fonctionnent comme écrits. Des noms plus clairs sont posés autour. Le travail plus ancien sur le nommage est gardé comme histoire, pour sa valeur éducative, ce qui est la bonne façon de mettre à la retraite un mécanisme.
 
-**J'ai refusé, pour l'instant, de construire les classes sœurs.** Les articles prévoyaient des classes dans lesquelles les motifs sont génétiques, linguistiques ou quantiques. L'article dit qu'elles sont dans un prototype précoce et non dans la bibliothèque, et une recherche dans le dossier de la regex des mots « induce », « from example » et « infer » ne trouve rien. Le but a été trouvé deux ans plus tard, dans le protocole de réponse : l'induction à partir d'exemples, et les candidats superposés. C'est le terrain du chapitre 18, et le refus du chapitre 9.
+**J'ai refusé, pour l'instant, de construire les classes sœurs.** Les articles prévoyaient des classes dans lesquelles les motifs sont génétiques, linguistiques ou quantiques. L'article dit qu'elles sont dans un prototype précoce et non dans la bibliothèque, et une recherche dans le dossier de la regex des mots « induce », « from example » et « infer » ne trouve rien. L'étude date la découverte de leur but de deux ans plus tard, dans le protocole de réponse (la façon dont une personne peut répondre par des exemples) : l'induction à partir d'exemples, et les candidats superposés. C'est le terrain du chapitre 18, et le refus du chapitre 9.
 
-**J'ai refusé le constructeur déclaratif comme titre phare.** Dix-huit des cinquante et un fichiers du dossier de tests du constructeur sont marqués retirés : l'analyseur d'un motif déclaratif est en attente. L'exemple d'ouverture de l'article, `CanContainAChar(:Between = ...)`, lève une erreur. Ce qui tourne, c'est le constructeur conditionnel, et l'objet de look-around. Je ne bâtis pas le chapitre sur la forme phare du constructeur.
+**J'ai refusé le constructeur déclaratif comme titre phare.** Les constructeurs sont les classes qui écrivent une regex à partir d'étapes nommées dans le code, et non d'une chaîne de caractères. Dix-huit des cinquante et un fichiers du dossier de tests du constructeur sont marqués retirés : l'analyseur d'un motif déclaratif est en attente. L'exemple d'ouverture de l'article, `CanContainAChar(:Between = ...)`, lève une erreur. Ce qui tourne, c'est le constructeur conditionnel, et l'objet de look-around. Je ne bâtis pas le chapitre sur la forme phare du constructeur.
 
 **Je n'ai pas encore refusé un mot que le langage ne connaît pas.** C'est la tension de ce chapitre, et je la garde pour la section 7.
 
@@ -210,7 +210,7 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 Notez l'emplacement : la garde des tableaux vit dans le dossier de la regex, et son nom n'a pas de préfixe `00_`.
 
-Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin : soixante vérifications, dont deux contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
+Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin, et je le consigne dans mes notes de recherche, non dans un bloc : soixante vérifications se sont exécutées, et deux d'entre elles contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
 
 ## 6. Le terrain, et où il mène
 
@@ -220,9 +220,9 @@ Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de 
 
 **Tableaux.** Les bibliothèques de qualité des données mènent en portée et en écosystème. Ici une règle est une phrase que la personne qui possède les données peut lire. La perte est qu'elle ne s'exécute que sur `stzTable`.
 
-**Là où la famille est faible en elle-même.** Les en-têtes de classe impriment leurs défauts comme des avertissements : pour les matrices, les graphes et les tableaux. C'est rare, et je le dis. Graphes : les quantificateurs sont analysés mais pas encore utilisés par la correspondance. Matrices : des manques connus aujourd'hui, chacun porté comme un avertissement sur sa méthode.
+**Là où la famille est faible en elle-même.** Les en-têtes de classe impriment leurs défauts comme des avertissements : pour les matrices et les graphes. C'est rare, et je le dis. Graphes : les quantificateurs sont analysés mais pas encore utilisés par la correspondance. Matrices : des manques connus aujourd'hui, chacun porté comme un avertissement sur sa méthode.
 
-**Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi la raison pour laquelle le temps échoue.
+**Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi une raison probable pour laquelle le temps échoue.
 
 ## 7. La limite
 
@@ -230,9 +230,9 @@ Ce qui est construit : les chaînes de caractères, les nombres et les tableaux,
 
 Ce qui est construit en partie :
 
-- **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Le drapeau d'unicité est ignoré, de sorte que `[@N2-3{1; 2; 3}U]` accepte `[1, 1]`. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
+- **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans mon exécution (notes de recherche, sans bloc), le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
 - **Matrices** : la taille, la forme, l'élément et trois propriétés s'exécutent. L'en-tête de la classe liste les termes qui acceptent toute matrice : `row`, `col`, `pattern`, `determinant` et `sum`. Une matrice de deux par deux est acceptée par `{row(99)}`.
-- **Temps** : les instants et les durées avec un pas s'exécutent. Un intervalle sans pas lève une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet, qui devrait correspondre :
+- **Temps** : les instants et les durées avec un pas s'exécutent. Dans mon exécution (sans bloc), un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet, qui devrait correspondre :
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -251,7 +251,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 
 L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas, et le troisième montre pourquoi : l'étiquette a été lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
 
-- **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs sont lus et ignorés. Le graphe du bloc ci-dessus a trois nœuds ; ici un motif demande un nœud dix entre eux, et il correspond :
+- **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux, et le motif correspond :
 
 ```haro
 ? (new stzGraphex("{@Node(placed) -> @Node(served)}", g)).Match(g)
@@ -275,15 +275,15 @@ Cooking se trouve entre le premier et le dernier, donc la première réponse est
 #--> 0
 ```
 
-Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres. Les jetons sont vides, et rien n'est levé. Le langage des matrices renvoie un jeton ERROR que rien ne lève, et les quatre autres répondent 0. La session de la charte de Haro l'a consigné comme constat le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi.
+Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres. Les jetons sont vides, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi.
 
-Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade est l'échelon deux du chapitre 9, et conçu.
+Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
 
-Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision seulement. L'explication d'un motif sans nom, puisque `rx("[a-z]+").Explain()` lève une erreur parce que la classe d'analyse n'a jamais été construite. Et tout usage des classes de motifs par le reste de la bibliothèque : aucune classe ne prend un motif. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` n'ont pas de `Matches(pattern)`. Seul le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant.
+Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision seulement. L'explication d'un motif sans nom, puisque `rx("[a-z]+").Explain()` lève une erreur parce que la classe d'analyse n'a jamais été construite. Et tout usage des classes de motifs par le reste de la bibliothèque : en dehors du dossier de la regex, des tests et de la documentation, aucune classe ne prend un motif. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` n'ont pas de `Matches(pattern)`. Dans la documentation, le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant, et la galerie a quelques scripts qui les utilisent.
 
 ## 8. Six portes
 
-**Le programmeur.** Une habitude pour sept genres de données : un petit constructeur, un motif dans une chaîne de caractères, `Match`. Le motif est une donnée que vous pouvez lire et composer. Servez-vous des six vérifiés, et ne bâtissez rien sur le cache d'un motif de liste réutilisé.
+**Le programmeur.** Une habitude pour six genres de données, les graphes mis à part : un petit constructeur, un motif dans une chaîne de caractères, `Match`. Le motif est une donnée que vous pouvez lire et composer. Servez-vous de ceux qui ont une garde : le texte, les nombres, les tableaux, les matrices et les graphes, et ne bâtissez rien sur le cache d'un motif de liste réutilisé.
 
 **L'analyste.** Une règle de qualité des données est une phrase du langage des tableaux. La personne qui possède les données peut la lire.
 
@@ -291,9 +291,9 @@ Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les cl
 
 **Le décideur.** Une règle est une ligne et non une procédure. Elle peut être relue, et son verdict est 1 ou 0. Dites à côté qu'un motif avec un mot inconnu n'est pas refusé, et qu'une flèche de graphe signifie *plus tard*.
 
-**Le formateur.** Le cours enseigne les motifs en deux chapitres, en anglais, en français, en arabe et en haoussa. L'échelle est un programme : texte, liste, nombre, tableau.
+**Le formateur.** Le cours enseigne les motifs en deux chapitres, en anglais, en français, en arabe et en haoussa. L'échelle est un programme : texte, liste, nombre.
 
-**L'agent.** Un motif est une petite notation fermée à laquelle un agent peut être tenu et qu'il peut relire. On vous dit que trois des supports ne peuvent pas encore refuser un mot qu'ils ne connaissent pas, et que l'écriture d'un motif à partir d'exemples est réservée.
+**L'agent.** Un motif est une petite notation fermée à laquelle un agent peut être tenu et qu'il peut relire. On vous dit qu'aucun des six supports ne peut encore refuser un mot qu'il ne connaît pas, et que l'écriture d'un motif à partir d'exemples est réservée.
 
 ## 9. Exercice
 

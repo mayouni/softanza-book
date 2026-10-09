@@ -21,7 +21,7 @@ Read the chapter whole. For every checkable statement (a number, a date, a name 
 ## Also report (briefly) what a reader cannot follow
 A sentence that needs a term the book has not yet explained, a paragraph whose point you could not state, a section that repeats another. Three at most, concrete, with the line.
 
-## Report (return it as your final message, under 700 words, no files)
+## Report (under 700 words). Write it to `research/verify/<chapter file stem's number or letter>.md` (for chapter 6: `research/verify/ch06.md`; for the preface `ch00.md`; for Appendix A `appA.md`) — that one file is the only file you may write — and return the same text as your final message.
 1. `chapter · claims checked: N · verified V · wrong W · unsupported U · overclaim O`
 2. Each **wrong / overclaim / unsupported** item, one line each: `line N · "the words" · verdict · evidence (path:line, or "none found, searched X") · the smallest fix`.
 3. At most three reading problems.

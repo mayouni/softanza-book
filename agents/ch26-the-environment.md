@@ -2,29 +2,29 @@
 
 Source: Chapter 26. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar); the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a class named for a ribbon, a rail, a spine or a status bar; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
+Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 05:32 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 13:46 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
 The field's environments have settled on a shape. A toolbar and a menu at the top, a sidebar of files, an editor, a terminal below, and a status bar at the foot. Lately an assistant sits in a pane or a terminal beside the code, and the human approves its edits. (General knowledge, marked.)
 
-The record's own field studies, dated, are three. The notepad that ships with the former host language, measured on 12 August 2026 at thirty-three source files and about four thousand lines, seven dock widgets, a fifteen-key configuration and no language service: it exists, it ships in the box, and it works on the day you install it. The fast editors, in the ergonomics specification of March 2026: input to screen under sixteen milliseconds on any modern hardware, no exceptions; minimal chrome; no status bar clutter, no toolbar forests; a dry run before a structural change; and inspections that say why and offer a fix. And the status bar, as that specification wrote it: twenty-four pixels high, carrying only essential state, with five build states, one of which is *unchecked*, for a project where no build has run yet. The state of "not yet judged" has its own word. A bar that was green by default would be the field's usual lie.
+The record's own field studies, dated, are three. The notepad that ships with the former host language, measured on 12 August 2026 at thirty-three source files and about four thousand lines, seven dock widgets, a fifteen-key configuration and no language service: it exists, it ships in the box, and it works on the day you install it. The fast editors, in the ergonomics specification of March 2026, which sets for its own product: input to screen under sixteen milliseconds on any modern hardware, no exceptions; minimal chrome; no status bar clutter, no toolbar forests; a dry run before a structural change; and inspections that say why and offer a fix. And the status bar, as that specification wrote it: twenty-four pixels high, carrying only essential state, with five build states, one of which is *unchecked*, for a project where no build has run yet. The state of "not yet judged" has its own word. A bar that was green by default would be the field's usual lie.
 
-Where the field is silent, the chapter answers. The field orders its toolbars by the tool's features, and not by the life of the thing being made. And it lets an assistant's proposal land as an edit, with the human's approval as a habit.
+Where the field is silent, the chapter answers. The field orders its toolbars by the tool's features, and not by the life of the thing being made. And it lets an assistant's proposal land as an edit, with the human's approval as a habit. (General knowledge.)
 
 ## 2. The first principle
 
 **Declare the interface once. Every shell is a projection of it, and a projection may add renderings, never verbs.**
 
-The library's header for its authored interface says it: the file is the contract, and the native markup and the web page are its projections. The study reads it as one declaration, two projections, proved to agree, resting on my ruling of 7 October 2026: carry both. The companion sentence is the interface constitution's, on the site: a new medium adds renderings, never verbs.
+The library's header for its authored interface says it: the file is the contract, and the native markup and the web page are its projections. The study of the record (its sections 12.23 to 12.25) reads it as one declaration, two projections, proved to agree, resting on my ruling of 7 October 2026: carry both. The companion sentence is the interface constitution's, on the site: a new medium adds renderings, never verbs.
 
 ## 3. The Softanza form
 
 Here I have to tell you something before the blocks. At this commit, **no IDE of this family exists**. No class in the library is named for a ribbon, a rail, a spine or a status bar. The study's own honesty line, proposed for the site, says it: no IDE of this family ships today; one shell does, for the sound plane; the foundation that would make the next one a projection is specified and not yet built. My reading agrees, with one addition: the library generates one browser surface, the emulator's, and I show it below with a loss.
 
-What the library has are the pieces under each mark of the pattern, and they run. I take them in order.
+What the library has are the pieces under each of the pattern's five marks (one shell, two projections, a facet ribbon ordered by the life of the solution, a rail that proposes, a status bar that tells the truth), and they run. I take them in order.
 
 ### One shell, declared as text, judged by a court
 
@@ -95,7 +95,7 @@ next
 
 > run: kept
 
-`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the same list is applied by hand today. I tell the removal as the refusal at the centre of this chapter, in section 4: the library does not own the verbs, the constitution does. The twenty-two are printed in the block above, typed from the constitution as Appendix C prints them, and the library's own design text, which still says twenty-four, is not the list.
+`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the bridge sentence is applied by hand today. I tell the removal as the refusal at the centre of this chapter, in section 4: the library does not own the verbs, the constitution does. The twenty-two are printed in the block above, typed from the constitution as Appendix C prints them, and the library's own design text, which still says twenty-four, is not the list.
 
 ### Two projections
 
@@ -150,7 +150,7 @@ oSrv.Stop()
 
 > run: kept
 
-The cost of this shape is named in the record. A locally bound port is a surface and must be treated as one, and the design intent has been measured on nothing. The library already refuses to leave the loopback unauthenticated, at bind time:
+The cost of this shape is named in the record. A locally bound port is a surface and must be treated as one, and, in the charter's words, the design intent has been measured for a sound studio and not for an IDE. The library's backend already refuses to leave the loopback unauthenticated, at bind time; the bare server above does not check:
 
 ```haro
 oT = new stzAppTopology("shell")
@@ -215,7 +215,7 @@ The library's header says why: every toolkit gates accessibility behind a perfor
 
 ### A rail that proposes
 
-A rail is a view over what the world proposes. A pulse proposes and never relates. Only an act on the world clears a proposal, and the world's own status line counts from the same list the rail shows:
+A rail is a view over what the world proposes. A pulse proposes and never relates. An act on the world clears a proposal, and the world's own status line counts from the same list the rail shows:
 
 ```haro
 oApp = StzAppQ("fieldvisits")
@@ -247,7 +247,7 @@ next
 
 `Live()` prints its line, and the judge compares what is printed. "2 thing(s)" counts the two things, Client and Visit, and not the instances. Chapter 20 owns the law beneath the rail, the proposal, the plan and the court.
 
-And a screen is an intent. The one place the library already speaks in verbs is the world's screens. Five methods exist: `ToDiscover`, `ToUnderstand`, `ToFocus`, `ToSelect` and `ToAct`. A sixth verb, `ToCompare`, does not exist:
+And a screen is an intent. One place where the world speaks in verbs is its screens. Five methods exist: `ToDiscover`, `ToUnderstand`, `ToFocus`, `ToSelect` and `ToAct`. A sixth verb, `ToCompare`, does not exist:
 
 ```haro
 oW = StzAppQ("fieldvisits")
@@ -283,21 +283,21 @@ The intent word is stored as a string, and is not checked against any list.
 
 **I decided that the mechanics are the library's and the IDE is the product's.** The library's design document: the paradigm mechanics are platform; the book, the brand, the IDE are product, and never leak. The foundation ships refinement as a library verb available to every program.
 
-**I removed the interaction engine.** On 26 May 2026 my commit removed twenty-two modules invented by an AI that were not in the original Softanza, among them the interaction module. Its design text, which says twenty-four verbs and laws enforced by the engine, is still in the tree. The constitution's list is twenty-two.
+**I removed the interaction engine.** On 26 May 2026 my commit removed twenty-two modules invented by an AI that were not in the original Softanza, among them the interaction module. I read the date, the count and the list in the library's git history, commit `b70f3ad91`, and not in the pinned tree. Its design text, which says twenty-four verbs and laws enforced by the engine, is still in the tree. The constitution's list is twenty-two.
 
 **I refused to resolve intents inside the language of the panel.** The panel declares no meanings: there is no `:Danger` and there never may be. The intent slot was left deliberately unresolved.
 
-**I refused to author the markup, and I refused a script engine.** The native markup is emitted, never authored; there is no script engine; flexbox only. The reason that the chrome is a text file and not a class.
+**I refused to author the markup, and I refused a script engine.** The native markup is emitted, never authored; there is no script engine; flexbox only. That is the reason the chrome is a text file and not a class.
 
 **I refused a flag that turns the accessibility tree off.**
 
-**I admitted a lens that cannot capture.** The estate's charter for its products: one truth, in files, and two lenses. What the charter refused was frameworks that capture the work. A lens that cannot capture is admissible. The environment is a projection of plain text, and not a store.
+**I admitted a lens that cannot capture.** The estate's charter for its products: one truth, in files, and two lenses (the charter's two are the pair of studios, and not two shells). What the charter refused was frameworks that capture the work. A lens that cannot capture is admissible. The environment is a projection of plain text, and not a store.
 
 **A session removed a facet, and I restored it.** The reference design records that the Connections facet was first-class in the prototype of June 2026, and was removed by an agent on circular reasoning, which cascaded into five documents. I reinstated it. Who decides the ribbon is the author.
 
 **I accepted the browser shell with its cost, unmeasured.** The charter of the front-door IDE chose a browser tab, built with the engine, with no install step, and named the loss.
 
-**The pattern was learned by building it six times in two years**, the study counts. That count is the study's.
+**The pattern was learned across six efforts in two years, one of them built**, the study counts. That count is the study's.
 
 ## 5. The court
 
@@ -311,17 +311,17 @@ There is no guard that judges a shell against the twenty-two verbs, none that a 
 
 The fast editors set a bar that the record writes down as law for its own product: input to screen under sixteen milliseconds, a cold start under four hundred, no exceptions. And it has measured it on none: neither shell has a latency number.
 
-A text change dirties the whole document. One bound value changed re-shapes every string, where a colour re-shapes one. The field's editors patch.
+A text change dirties the whole document. One bound value changed re-shapes every string, where a colour re-shapes one. The field's editors patch. (General knowledge.)
 
-The browser costs what it costs: file access through the browser's model, a port to guard, and an unmeasured latency. The native shell costs a window system and a GPU.
+The browser costs what it costs: file access through the browser's model, a port to guard, and an unmeasured latency. The native shell costs a window system, and a GPU for the raster path.
 
-The field has a language service, and the record has a contract and no service. The explorer's model reads the world file the service would emit, and it is loaded by no entry file: a block that calls it without a hand-written load fails.
+The field has a language service (general knowledge), and the record has a contract and no service. The explorer's model reads the world file the service would emit, and it is loaded by no entry file: a block that calls it without a hand-written load fails.
 
 The field's fast editor treats the status bar as clutter. The pattern keeps one and asks it to be true. That is a bet, and the record's own corpus argues the field's side in the same breath.
 
 ## 7. The limit
 
-**The web projection carries no roles, no labels and no intents.** `ToHtml` emits an identifier and a style only. The tree that carries roles is a separate artefact, as the block above shows, so a browser shell would infer from bare `div`s what the native shell emits. The plan itself says the web has no adapter.
+**The web projection carries no roles, no labels and no intents.** `ToHtml` emits an identifier, a style and the text only. The tree that carries roles is a separate artefact, as the block above shows, so a browser shell would infer from bare `div`s what the native shell emits. The plan itself says that the accessibility library it adopts has no web adapter.
 
 **The library's own mission control does not tell the truth.** The emulator generates a browser surface, a parts grid with status chips and fidelity badges, a device window and a console for each part. Its status words are constants of the device class and of the template, and they are not measured. Here a plan with one firmware part and one GPIO capability, and no pump anywhere:
 
@@ -347,7 +347,7 @@ StzDirDeleteAll("_emu")
 
 > run: kept (touches files)
 
-The part gets "2 approximated" and, in the grid's detail, a text about pump timing and sensor noise: the greenhouse demo's text, returned for any microcontroller. The header says "parts healthy" and the banner says "Ready to ship." for the same plan, from literals. A backend-only plan prints "parts healthy" and none of the other words. "Deploy to production" is an alert. The truthful half is real: fidelity is printed, and the console refuses a verb that the part's engine subset lacks. That is narration in the library, which I did not run.
+The part gets "2 approximated" and, in the grid's detail, a text about pump timing and sensor noise: the greenhouse demo's text, returned for any microcontroller. The header says "parts healthy" and the banner says "Ready to ship." for the same plan, from literals. A backend-only plan prints "parts healthy" and "Ready to ship." too, and neither "needs a look" nor "2 approximated" (read in the source, not run). "Deploy to production" is an alert. The truthful half is real: fidelity is printed, and the console refuses a verb that the part's engine subset lacks. That is narration in the library, which I did not run.
 
 This is the loss against the library's own page. It stands beside "a status bar that tells the truth" of section 3: the pattern asks a status cell to be a function of what a court emitted, and the library's own page prints its words from literals. The request to derive those words from the plan has not been answered yet.
 
@@ -357,9 +357,9 @@ This is the loss against the library's own page. It stands beside "a status bar 
 
 What is built: the interface as text with a court; four closed kinds, a closed list of nineteen roles, a closed field set, a mandatory rationale, a round trip to a fixpoint; two projections, with a recorded table of three divergences and a page that can say DISAGREE; the accessibility tree, and a bridge that reaches a real screen reader's interface on Windows, read and not run by me; a declared value changes and the screen follows, with focus kept; a page hosted on the loopback; a backend that refuses to leave the loopback unsigned; a world that proposes; screens declared as intents; one generated browser surface; and one binary shell, the sound plane's listening bench, in about seven hundred lines of Zig, which I read and did not build.
 
-What is designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar; the facet as data, with its group, its place in the life, its artefact kinds, its court and its profile; the rail bound to focus; the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
+What is designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar, none yet a class of the library; the facet as data, with its group, its place in the life, its artefact kinds, its court and its profile; the rail bound to focus; the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
 
-What is absent: an IDE of this family. Any class named for a ribbon, a rail, a spine or a status bar. A facet declaration. A list of the twenty-two verbs inside the library, and any refusal of an unknown verb: `transfer_funds` passes the court. A guard judging a shell against the verbs. A rail that follows focus. Status cells derived from courts. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. No IDE of this family ships today.
+What is absent: an IDE of this family. A list of the twenty-two verbs inside the library, and any refusal of an unknown verb: `transfer_funds` passes the court. A guard judging a shell against the verbs. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. No IDE of this family ships today.
 
 ## 8. Six doors
 
@@ -369,7 +369,7 @@ What is absent: an IDE of this family. Any class named for a ribbon, a rail, a s
 
 **The designer.** Your interface has a constitution of twenty-two verbs and a closed grammar that adds renderings and never verbs. Every element must say which verb it serves, and the library already finds the ones that say none.
 
-**The decision-maker.** Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, with its first defect found in an hour.
+**The decision-maker.** Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, which found a defect on its first run, by the guard's account.
 
 **The educator.** The exercise is a prediction: say what the court will answer before you run it. The status word that is a constant is a lesson in the difference between a label and a truth.
 
@@ -381,7 +381,7 @@ One exercise, in three moves.
 
 1. Write a shell of your own in five elements: a title bar, a ribbon of three facets taken from your own solution's life, a work area, a rail, a status bar. Before you run anything, write on paper which of the twenty-two verbs each element serves, and which one of your boxes you expect the court to call an orphan.
 2. Run `IsClean()` and `Orphans()`, and compare with your paper. Then break the file three ways: a child that is declared nowhere, a role that is not on the list, and an intent that is not one of the twenty-two. For each, write what your status function will answer, and whether the library, the book's function, or nobody will catch it.
-3. Emit the page, open it, and write the line the fixture strip will print for a version with an empty work area. Then look.
+3. Emit the page, open it, and write the line the fixture strip will print for a version with an empty work area. Then look. The page comes from `ToFixture`, which takes the box that `BoxOf` reports for each name on the laid-out panel from `ToPanel`; `gui_profile_narrated` has the loop, and a font file is needed.
 
 ```haro exercise
 oMine = new stzUiDocument('DEFINE PANEL shell ( SIZE [640, 360], DIRECTION column, CHILDREN [bar] ) RATIONALE "Mine."' + nl + 'DEFINE TEXT bar ( CONTENT "mine", SATISFIES understand ) RATIONALE "Mine too."')

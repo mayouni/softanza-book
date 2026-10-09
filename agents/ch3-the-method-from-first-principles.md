@@ -4,7 +4,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 05:29 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 13:44 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -111,7 +111,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 The host's answer is unchanged. The extended answer reads your declaration. "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
-So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words: **built** means the code exists and its guards pass; **designed** covers what the site calls in construction, specification and ratified proposal; **absent** covers a name with nothing behind it yet, and what nobody has named. Then six doors, one for each kind of reader, and one exercise.
+So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words: **built** means the code exists, a guard exists, and a block ran; **designed** covers what the site calls in construction, specification and ratified proposal; **absent** covers a name with nothing behind it yet, and what nobody has named. Then six doors, one for each kind of reader, and one exercise.
 
 And the book is judged the way the library is. Every block in it ran inside the library on the night the page was built, at the commit printed at the top of the page, and a page whose promises are not kept does not build.
 

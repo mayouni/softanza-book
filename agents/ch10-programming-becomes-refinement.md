@@ -4,13 +4,13 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 05:30 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
 The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so; Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
 
-What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, the field's answer to a change is still a diff, a patch of text, and a person's review of it. That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume.
+What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume.
 
 ## 2. The first principle
 
@@ -70,9 +70,9 @@ r2 = o.Refine("vat").To("0.99")
 
 > run: kept
 
-Three refusals, and the timeline did not grow by a step. That is the third law of the house applied to code: a rejected proposal never mutates. Each refusal names its stage, so that a person, or an agent, can correct the proposal without reading a diff.
+Three refusals, and the timeline did not grow by a step. The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage, so that a person, or an agent, can correct the proposal without reading a diff.
 
-**The cascade** is what you read instead of the diff. Before the change, ask what it reaches. For a point, it is the line it sits on and the other points on that same line:
+**The cascade** is what you read instead of the diff. Before the change, ask what it reaches. There are two cascades, and they are separate. For a point, it is the line it sits on and the other points on that same line:
 
 ```haro
 cPrice = 'price = <R:PARAM name="vat" value="0.20" min="0" max="0.30"> * <R:PARAM name="margin" value="1.1" min="1" max="2">' + nl +
@@ -119,7 +119,7 @@ g0.BuildGraph()
 
 > run: kept
 
-Change the rate of the tariff and three classes are in the blast radius; but two of them inherit the method and the third redefines it, so it owns the method and does not merely inherit it. That is the difference `ImpactOf` draws, and a diff cannot.
+Change the rate of the tariff and three classes are in the blast radius; but two of them inherit the method and the third redefines it, so it owns the method and does not merely inherit it. That is the difference `ImpactOf` draws.
 
 Inside the gate, a change reaches its dependents by a rule that spans several points, judged on the state the change would produce. If the rule fails, the value is put back:
 
@@ -213,7 +213,7 @@ That is the gate in the form the library has it. Five checks, in the order the c
 
 ## 4. The decision, and what I refused
 
-**I refused to govern the intelligence.** The field's approach to agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
+**I refused to govern the intelligence.** Much of the field's approach to agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
 
 **I refused the diff as the unit.** A diff is a text change. A refinement is a typed proposal about a declared point, with a kind, bounds and an origin. I kept the diff as an artefact, and I refused it as the thing to review.
 
@@ -223,28 +223,28 @@ That is the gate in the form the library has it. Five checks, in the order the c
 
 ## 5. The court
 
-`refinablecode_narrated` proves the point declared, the proposal that passes, the three refusals that leave the source whole, the cascade, the reversal, and the saved file. `refine_deepening_narrated` proves the timeline with its checkpoints and its redo, and the trust floor. `gate_deepening_narrated` proves the derivation across points with its rollback, and the governed refusal with its lineage.
+`refinablecode_narrated` proves the point declared, the proposal that passes, the two refusals that leave the source whole (bounds and options), the cascade, the reversal, and the saved file. `refine_deepening_narrated` proves the timeline with its checkpoints and its redo, and the trust floor. `gate_deepening_narrated` proves the refusal of an unknown point, the derivation across points with its rollback, and the governed refusal with its lineage.
 
 ## 6. The field, and where it leads
 
-The field leads in infrastructure, where plan and apply are the daily practice of thousands of teams and the apply talks to real providers. Softanza's gate is about the change to code, which the field handles with a review.
+The field leads in infrastructure, where plan and apply are the daily practice of many teams and the apply talks to real providers. (General knowledge, as in section 1.) Softanza's gate is about the change to code, which the field handles with a review.
 
-The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. Softanza's gate judges only what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
+The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges only what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
 
-And on trust, the field's approach is the one that scales to any model. Mine rests on one declaration per point.
+And on trust, much of the field's approach is built to scale to any model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
 
 ## 7. The limit
 
-What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining; each with a guard that passes at this commit.
+What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining; the guards of section 5 cover them, with two exceptions. The cascade of a class has no guard here, because the code-graph guard scans a live path of the library's working tree. And no guard asserts the other points on a line.
 
-What is designed, and absent from the library by name: the experience the original article describes. The class that article names, `stzPolyCode`, never existed. The one-line refinement of the design document, a point that explains itself, a plan that is applied, are not in the library. The cascade of the code graph and the cascade of the gate are not joined. And Haro has a gate in a pure-Ring spike, with its own seat for refinement not built.
+What is designed, and absent from the library by name: the experience the original article describes. The class that article names, `stzPolyCode`, is not in the library at this commit. The one-line refinement of the design document, a point that explains itself, a plan that is applied, are not in the library. The cascade of the code graph and the cascade of the gate are not joined. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement not built.
 
-What is absent, and the page should say it: the limits of the gate as it stands.
+What is built, and where it stops: the limits of the gate as it stands.
 
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library; a point of another kind, a block of code for instance, parses and passes unchecked.
-- An unknown trust posture ranks as trusted. A proposal that says it comes from a martian was admitted in my run against a floor of trusted.
+- An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal that says it comes from a martian clears a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
-- The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, retires that format for `.rfn`.
+- The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes `.rfn` for the sentence and leaves `.zrfn` to the library's comment-tag lift.
 
 ## 8. Six doors
 
@@ -252,7 +252,7 @@ What is absent, and the page should say it: the limits of the gate as it stands.
 
 **The analyst.** The rule that spans several points is yours to declare, and the gate judges it on the state the change would produce.
 
-**The designer.** The cascade is what you read instead of the diff: which line, which points on it, which classes inherit.
+**The designer.** The cascade is what you read instead of the diff: for a point, which line and which points on it; for a class, which classes inherit. They are two cascades, not yet one.
 
 **The decision-maker.** Who may turn which knob is a permission and an authority against a risk tier, and the decision is recorded with its authority at the time.
 

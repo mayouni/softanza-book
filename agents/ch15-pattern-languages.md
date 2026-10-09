@@ -2,9 +2,9 @@
 
 Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in three of the media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
+Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 05:31 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -18,7 +18,7 @@ The estate's own field study of August 2026 gives the small languages that survi
 
 **A pattern is a rule about the shape of data, written as data. The same habit serves every kind of data.**
 
-The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record also carries a phrase it calls the author's, "for the first time in computer science history". I found it in no text of the library, and the study does not let the site claim it; the chapter prints it as the study's attribution and claims no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
+The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls the author's, "for the first time in computer science history". I found it in no text of the library, and the study does not let the site claim it; the chapter prints it as the study's attribution and claims no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
 
 ## 3. The Softanza form
 
@@ -208,9 +208,9 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 **I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value, which is the right way to retire a mechanism.
 
-**I refused, for now, to build the siblings.** The articles planned classes in which patterns are genetic, linguistic or quantic. The article says that they are in an early prototype and not in the library, and a search of the regex folder for "induce", "from example" and "infer" finds nothing. The purpose was found two years later, in the answer protocol: induction from examples, and superposed candidates. That is chapter 18's ground, and chapter 9's refusal.
+**I refused, for now, to build the siblings.** The articles planned classes in which patterns are genetic, linguistic or quantic. The article says that they are in an early prototype and not in the library, and a search of the regex folder for "induce", "from example" and "infer" finds nothing. The study dates the finding of their purpose two years later, in the answer protocol (the way a person may answer by examples): induction from examples, and superposed candidates. That is chapter 18's ground, and chapter 9's refusal.
 
-**I refused the declarative builder as a headline.** Eighteen of the fifty-one files in the builder's test folder are marked retired: the parser of a declarative pattern is pending. The article's lead example, `CanContainAChar(:Between = ...)`, raises. What runs is the conditional builder, and the look-around object. I do not build the chapter on the builder's headline form.
+**I refused the declarative builder as a headline.** The builders are the classes that write a regex from named steps in code, not from a string. Eighteen of the fifty-one files in the builder's test folder are marked retired: the parser of a declarative pattern is pending. The article's lead example, `CanContainAChar(:Between = ...)`, raises. What runs is the conditional builder, and the look-around object. I do not build the chapter on the builder's headline form.
 
 **I have not yet refused a word the language does not know.** That is the tension of this chapter, and I keep it for section 7.
 
@@ -220,7 +220,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 Note the placement: the guard for tables lives in the folder for regex, and its stem has no `00_` prefix.
 
-There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end: sixty checks, two of which disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
+There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end, and I note it in my research notes, not in a block: sixty checks ran, and two of them disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
 
 ## 6. The field, and where it leads
 
@@ -230,9 +230,9 @@ There is no narrated guard for lists, time, or the regex builders. The courts of
 
 **Tables.** Data-quality libraries lead in reach and ecosystem. Here a rule is a sentence the person who owns the data can read. The loss is that it runs only on `stzTable`.
 
-**Where the family is weak in itself.** The class headers print their defects as warnings: for matrices, graphs and tables. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
+**Where the family is weak in itself.** The class headers print their defects as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
 
-**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also the reason time fails.
+**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also a likely reason time fails.
 
 ## 7. The limit
 
@@ -240,9 +240,9 @@ What is built: strings, numbers and tables, each with a guard and a small functi
 
 What is built in part:
 
-- **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. The uniqueness flag is ignored, so `[@N2-3{1; 2; 3}U]` accepts `[1, 1]`. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
+- **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In my run (research notes, no block) the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
-- **Time**: instants and durations with a step run. A range without a step raises. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises, which should match:
+- **Time**: instants and durations with a step run. In my run (no block) a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises, which should match:
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -263,7 +263,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 
 The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match, and the third shows why: the label was read with its closing parenthesis. That is the shared bug, still present in time.
 
-- **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers are read and ignored. The graph of the block above has three nodes; here a pattern asks for a node ten between them, and it matches:
+- **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them, and the pattern matches:
 
 ```haro
 ? (new stzGraphex("{@Node(placed) -> @Node(served)}", g)).Match(g)
@@ -291,15 +291,15 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 
 > run: kept
 
-A pattern with a word the language does not know matches every number. The tokens are empty, and nothing is raised. The matrix language returns an ERROR token that nothing raises, and the other four answer 0. The Haro charter session filed this as a finding on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine.
+A pattern with a word the language does not know matches every number. The tokens are empty, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine.
 
-What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade is chapter 9's rung two, and designed.
+What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
-What is absent: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision only. The explanation of an unnamed pattern, since `rx("[a-z]+").Explain()` raises because the analyser class was never built. And any use of the pattern classes by the rest of the library: no class takes a pattern. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` have no `Matches(pattern)`. Only the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program.
+What is absent: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision only. The explanation of an unnamed pattern, since `rx("[a-z]+").Explain()` raises because the analyser class was never built. And any use of the pattern classes by the rest of the library: outside the regex folder, the tests and the docs, no class takes a pattern. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` have no `Matches(pattern)`. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
 
 ## 8. Six doors
 
-**The programmer.** One habit across seven kinds of data: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the six verified ones, and build nothing on the cache of a reused list pattern.
+**The programmer.** One habit across six kinds of data, graphs apart: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, and build nothing on the cache of a reused list pattern.
 
 **The analyst.** A data-quality rule is a sentence of the table language. The person who owns the data can read it.
 
@@ -307,9 +307,9 @@ What is absent: induction from examples, which is reserved. The genetic, linguis
 
 **The decision-maker.** A rule is a line and not a procedure. It can be reviewed, and its verdict is 1 or 0. Say beside it that a pattern with an unknown word is not refused, and that a graph arrow means *later*.
 
-**The educator.** The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number, table.
+**The educator.** The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number.
 
-**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved.
+**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media can yet refuse a word it does not know, and that writing a pattern from examples is reserved.
 
 ## 9. Exercise
 

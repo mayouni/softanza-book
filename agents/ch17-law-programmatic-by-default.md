@@ -4,7 +4,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 05:31 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 13:46 UTC+01:00.
 
 ## What the AI age changes here
 

@@ -9,8 +9,8 @@ site: [zui]
 guards: [sms_port_narrated, wisecoding_rich_narrated, sound_convergence_narrated, sound_listener_narrated, sound_semantics_narrated, payments_webhooks_narrated]
 stage:
   built: "la conversation gouvernée avec sa question comme donnée ; le port SMS et son bac à sable, avec la facture par segment dans deux alphabets ; un vérificateur du corps d'un message entrant ; cinq valeurs sémantiques rendues en couleur, en earcon et en phrase ; une voix qui parle, et qui entend une grammaire fermée ; un ensemble fermé de phrases qu'une entreprise accepte de dire ; un message de trois champs entre identités d'une même plateforme"
-  designed: "le service du socle commun pour la messagerie ; des surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD et la voix, avec une matrice de satisfaisabilité comme tribunal ; des gabarits comme grammaire ; les vingt-deux verbes comme liste que la bibliothèque détient"
-  absent: "une application de messagerie, l'USSD ou une ligne téléphonique, sous quelque forme que ce soit ; une projection conversationnelle d'un monde ; un canal, une session, un gabarit, le consentement ; la question dans une autre langue que l'anglais ; une voix pour le haoussa, le zarma ou le fulfulde ; une réponse contenant un espace"
+  designed: "le service du socle commun pour la messagerie ; des surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD et la voix, avec une matrice de satisfaisabilité comme tribunal ; des gabarits comme grammaire"
+  absent: "une application de messagerie, l'USSD ou une ligne téléphonique, sous quelque forme que ce soit ; une projection conversationnelle d'un monde ; un canal, une session, un gabarit, le consentement ; la question dans une autre langue que l'anglais ; une voix pour le haoussa, le zarma ou le fulfulde ; les vingt-deux verbes comme liste que la bibliothèque détient ; une réponse contenant un espace"
 status: draft
 rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
@@ -18,7 +18,7 @@ research: research/ch25.md
 
 ## 1. Le concept, tel que le terrain le tient
 
-Le commerce conversationnel, ou omnicanal : une entreprise rejoint ses clients dans les canaux qu'ils utilisent déjà, et un moteur de dialogue se tient derrière. Ce sont les pratiques, tirées de la connaissance générale et non d'une étude du dossier. Chaque date et chaque règle de fournisseur est à relire avant l'impression, comme l'étude du dossier le dit dans son propre "Not measured".
+Le commerce conversationnel, ou omnicanal : une entreprise rejoint ses clients dans les canaux qu'ils utilisent déjà, et un moteur de dialogue se tient derrière. Ce sont les pratiques, tirées de la connaissance générale et non d'une étude du dossier. Chaque date et chaque règle de fournisseur est à relire avant l'impression, comme l'étude du dossier le dit dans son propre "Not measured". Cette étude est une longue étude, par un lecteur extérieur, des racines du projet, et sa section 12.25 est celle qui traite de la messagerie.
 
 Les cadres de dialogue possèdent le modèle de dialogue. Le concepteur écrit des intentions et des flux dans la notation du cadre, et le cadre comprend le texte libre avec des modèles entraînés et livre des connecteurs vers les canaux.
 
@@ -34,9 +34,9 @@ Ce qu'ils ont en commun, c'est que le dialogue est écrit une fois par canal ou 
 
 **Un nouveau médium ajoute des rendus, jamais des verbes.**
 
-C'est une phrase de la constitution de l'interface, imprimée sur le site : la grammaire est fermée, un nouveau médium ajoute des rendus et jamais des verbes. Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles, et l'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026, le dépôt non nommé puisqu'il n'est pas encore public.
+C'est une phrase de la constitution de l'interface, imprimée sur le site : « La grammaire est fermée : un nouveau médium ajoute des rendus, jamais des verbes. » Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles, et l'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026, le dépôt non nommé puisqu'il n'est pas encore public.
 
-La même phrase, construite, pour une famille de valeurs et non pour les vingt-deux verbes : la valeur est partagée, et la façon dont elle est rendue est propre à chaque médium. C'est une décision de Central sur ma délégation, du 30 septembre 2026. Il prouve que le principe n'est pas seulement un slogan. C'est la forme de trois faces qui fonctionnent : couleur, earcon, phrase.
+La même phrase, construite, pour une famille de valeurs et non pour les vingt-deux verbes : la valeur est partagée, et la façon dont elle est rendue est propre à chaque médium. C'est une décision de Central, l'entité de coordination du domaine de projets, sur ma délégation, du 30 septembre 2026. Il prouve que le principe n'est pas seulement un slogan. C'est la forme de trois faces qui fonctionnent : couleur, earcon, phrase.
 
 Pour le plancher du dialogue, la phrase propre du code : plancher déterministe, aucun modèle nécessaire. La loi du chapitre 17, appliquée à un médium.
 
@@ -89,7 +89,7 @@ func QuestionAfter(cA, cB)
 	return oW.AskInXT("c")
 ```
 
-La question est une donnée, donc n'importe quel médium la rend. Et la loi propre du médium, ici que le SMS est facturé par segment et que l'alphabet décide, est un test et non une surprise. Le texte anglais fait 93 caractères et un segment. Le même cadre avec deux noms de plats en arabe fait 89 unités, en deux segments, parce que l'encodage change. Le numéro de téléphone est inventé, et seul l'indicatif du pays, qui est celui du Niger, est réel.
+La question est une donnée, donc n'importe quel médium la rend. Et la loi propre du médium, ici que le SMS est facturé par segment et que l'alphabet décide, est un test et non une surprise. Le texte anglais fait 93 caractères selon mon décompte, et le bloc imprime un segment. Le même cadre avec deux noms de plats en arabe fait 89 unités selon mon décompte (les deux noms sont plus courts de quatre lettres), et le bloc imprime deux segments, parce que l'encodage change. Le numéro de téléphone est inventé, et seul l'indicatif du pays, qui est celui du Niger, est réel.
 
 Maintenant toute la conversation, répétée sur le bac à sable SMS avant qu'aucun compte existe. Une conversation est une boucle des verbes de la bibliothèque : le médium porte chaque question vers l'extérieur et chaque réponse vers l'intérieur. Les assertions sont la facture et le refus. Le refus de "7" est celui de la bibliothèque, comme au chapitre 18 ; la différence est qu'il arrive d'un téléphone, et que le bac à sable a compté quatre messages et quatre segments. Rien dans la boucle n'est un modèle :
 
@@ -240,11 +240,13 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 
 ### Le médium du restaurant
 
-Le chapitre 1 dit que le propriétaire du restaurant a fait sa première démonstration sur une application de messagerie, et le chapitre 2 disait, dans son premier jet, qu'une application de messagerie faisait partie de ses outils. Le dossier ne soutient aucune des deux phrases telles qu'elles sont, et je corrige le chapitre 2 et signale le chapitre 1, qui est votre texte. Son propre rapport du 4 juillet 2026 donne comme outil actuel un tableur, et demande une page web ouverte par un code QR ou par un bouton d'un réseau social, sans rien à télécharger. La ligne sur diverses applications, dont une application de messagerie, est l'étiquette d'une option du formulaire de cadrage, et ce n'est pas ce qu'il a coché. "Simple comme une application de messagerie" est simulé dans le projet, comme le chapitre 28 l'a déjà constaté.
+Le chapitre 1 dit que le propriétaire du restaurant a fait sa première démonstration sur une application de messagerie. Le dossier ne soutient pas cette phrase telle qu'elle est, et je la signale à l'auteur. Le chapitre 2 donne déjà son outil comme un tableur. Son propre rapport du 4 juillet 2026 donne comme outil actuel un tableur, et demande une page web ouverte par un code QR ou par un bouton d'un réseau social, sans application lourde à télécharger. La ligne sur diverses applications, dont une application de messagerie, est l'étiquette d'une option du formulaire de cadrage, et ce n'est pas ce qu'il a coché. "Simple comme une application de messagerie" est simulé dans le projet, comme le chapitre 28 l'a déjà constaté.
 
 Le restaurant est donc la première forme de la phrase de ce chapitre, et non un exemple du médium de messagerie. Le client garde son médium : un lien qui s'ouvre dans le navigateur qu'il a déjà. Le médium de messagerie, comme thèse, n'est pas construit. Je raconte cette histoire et ne fais aucune déclaration sur l'usage d'une application de messagerie par le propriétaire, puisque le dossier n'en contient aucune. Le chapitre 1 garde sa propre formulation de cette démonstration, et ce que le dossier montre plus exactement est ce que dit cette section.
 
 ## 4. La décision, et ce que j'ai refusé
+
+Les refus ci-dessous, après le premier, sont ceux du dossier : des décisions d'une session, écrites dans les en-têtes des fichiers de son de la bibliothèque et dans son plan de la voix. Je les rapporte comme tels, et ce ne sont pas des décisions de moi.
 
 **La messagerie, la question.** Le rapport de l'étude sur ma demande : les conversations ont lieu de façon programmatique par défaut, ou avec une configuration minimale, sans obliger les utilisateurs à changer leurs cultures d'usage. La section de l'étude est intitulée « tranché » et non « tranché par l'auteur », et ses propositions pour les surfaces conversationnelles sont celles d'une session. Le dossier ne contient aucune décision de ma part qui les adopte. Je dis *proposé*, pas *décidé*.
 
@@ -270,7 +272,7 @@ Une réserve pour la ligne du tribunal. Les gardes du son ont besoin de la bibli
 
 ## 6. Le terrain, et où il mène
 
-Le décompte propre du dossier, dans l'étude du 12.25 : des unités constitutives de la messagerie, dix-huit en tout, ce qui manque. Sa phrase selon laquelle le mot désignant une application de messagerie n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque, ni l'USSD dans aucun, je l'ai remesurée à ce commit et confirmée. Les seuls résultats sont des fichiers de données de listes de mots.
+Le décompte propre du dossier, dans l'étude du 12.25 : des unités constitutives de la messagerie, dix-huit en tout, ce qui manque. Sa phrase selon laquelle le mot désignant une application de messagerie n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque, ni l'USSD dans aucun, je l'ai remesurée à ce commit et confirmée. Il n'y a aucun résultat dans le code ni dans la conception de base, core ou max. Les correspondances dans le reste de l'instantané sont des fichiers de données de listes de mots et de test, et l'USSD n'en a aucune en texte.
 
 Les cadres sont en tête pour la compréhension et pour les connecteurs. Le chapitre 18 énonce le côté de Softanza à partir du code : la conversation demande un champ à la fois, sur un graphe que l'utilisateur doit d'abord avoir déclaré, et elle ne comprend pas une réponse ouverte.
 
@@ -299,17 +301,17 @@ C'est un expéditeur, un destinataire, un corps et une heure dans une table SQL.
 
 Ce qui est construit : la conversation gouvernée ; le port SMS et son bac à sable ; un vérificateur de signature de corps avec protection contre le rejeu, câblé à aucun fournisseur de messagerie ; la couche sémantique de cinq valeurs rendues en couleur, en earcon et en phrase ; la voix ; un message minimal dans le socle commun ; un ensemble fermé de phrases avec un refus ; et les intentions et portées déclarées du monde.
 
-Ce qui est conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. La conception le dit à deux endroits, et le mot `Provides` n'est dans aucun fichier de code du répertoire de l'application. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont les cinq propositions de l'étude, celles d'une session, et non la conception de la bibliothèque. Une analyse parlée et un transport parlé : des démonstrations et des compositions, et non une unité.
+Ce qui est conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. Un seul fichier de conception le dit, en deux lignes : un schéma qui range la messagerie parmi les communs, et une esquisse qui écrit `Provides(:Messaging)`. Le mot `Provides` n'est dans aucun fichier de code du répertoire de l'application. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont les propositions B46 à B50 de l'étude, celles d'une session, et non la conception de la bibliothèque. Une analyse parlée et un transport parlé : des démonstrations et des compositions, et non une unité.
 
 Ce qui est absent :
 
 - Des ports pour une application de messagerie, Telegram, l'USSD, et l'appel téléphonique : zéro résultat. Une session USSD n'a aucune forme dans la bibliothèque.
 - Une projection conversationnelle d'un monde. La seule projection est `Generate`, qui connaît trois surfaces et en refuse une quatrième. Aucun shell ne rend une question ou un flux.
-- Les unités de messagerie : canal, session avec une fenêtre ou un délai, gabarit, consentement. Le mot *consentement* n'apparaît dans l'instantané que comme la frontière du microphone, dans des commentaires.
-- Les vingt-deux verbes comme liste de la bibliothèque. `stzApp` en tient cinq comme intentions d'écran, sans contrôle, puisque tout mot est accepté. Les dix-sept autres sont dans la constitution et non dans la bibliothèque. La phrase-pont est appliquée à la main aujourd'hui.
-- La question dans une autre langue que l'anglais. `AskIn` est en anglais, et le tuteur montre le motif en quatre langues. `NaturallyIn` demandé pour le zarma lève l'opaque "Unsupported object type!" et non "no pack for this language".
+- Les unités de messagerie : canal, session avec une fenêtre ou un délai, gabarit, consentement. Aucune unité de consentement n'existe pour la messagerie. Le mot *consentement* apparaît dans l'instantané pour la frontière du microphone, dans des commentaires, et dans deux documents de conception en d'autres sens.
+- Les vingt-deux verbes comme liste de la bibliothèque. `stzApp` en tient cinq comme cinq méthodes d'intention d'écran, et l'assistant derrière elles ne contrôle pas le mot qu'on lui donne. Les dix-sept autres sont dans la constitution et non dans la bibliothèque. La phrase-pont est appliquée à la main aujourd'hui.
+- La question dans une autre langue que l'anglais. `AskIn` est en anglais, et le tuteur montre le motif en quatre langues. Dans une exécution de recherche à ce commit, `NaturallyIn` demandé pour le zarma a levé l'opaque "Unsupported object type!" et non "no pack for this language" ; aucun bloc de ce livre n'enregistre cet appel.
 - Une voix pour les langues que les conceptions de produit nomment, le zarma, le haoussa et le fulfulde. Aucune ici ; la bibliothèque refuserait.
-- **Une réponse contenant un espace, venant d'un téléphone.** J'ai exécuté `ReplyIn("c", "grand couscous")` et il a levé une erreur, avec une variable non initialisée. Avec un trait d'union il est admis. C'est la limite connue du chapitre 18, et elle est décisive ici, parce que les gens tapent des espaces dans un SMS. La conversation ci-dessus ne fonctionne que parce que les réponses sont des chiffres et des plats d'un seul mot.
+- **Une réponse contenant un espace, venant d'un téléphone.** Dans une exécution de recherche à ce commit, j'ai exécuté `ReplyIn("c", "grand couscous")` et il a levé une erreur, avec une variable non initialisée. Avec un trait d'union il a été admis. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, comme le chapitre 18 le dit de la même faute. C'est la limite connue du chapitre 18, et elle est décisive ici, parce que les gens tapent des espaces dans un SMS. La conversation ci-dessus ne fonctionne que parce que les réponses sont des chiffres et des plats d'un seul mot.
 - Des adaptateurs réels pour le SMS, pour une application de messagerie et pour une ligne téléphonique ; des accusés de réception de livraison ; des règles d'identifiant d'expéditeur.
 - Rien dans le dossier ne tourne sur un vrai téléphone comme conversation.
 
@@ -317,7 +319,7 @@ Ce qui est absent :
 
 ## 8. Six portes
 
-**Le programmeur.** La question revient comme donnée. Vous écrivez le rendu et le lecteur de votre médium en dix lignes, et chaque réponse passe par la même porte quel que soit ce qui l'a portée.
+**Le programmeur.** La question revient comme donnée. Vous écrivez le rendu et le lecteur de votre médium en une douzaine de lignes, et chaque réponse passe par la même porte quel que soit ce qui l'a portée.
 
 **L'analyste.** Le but est le schéma de la conversation. La transcription dit quel message a produit quel fait. Le bac à sable compte la facture avant qu'un fournisseur existe.
 
@@ -325,7 +327,7 @@ Ce qui est absent :
 
 **Le décideur.** Une conversation par SMS peut être chiffrée dans un test : deux noms de plats en arabe ont fait passer une question de 93 caractères d'un segment à deux. La question à poser à un fournisseur, qu'est-ce qui refuse une phrase que votre entreprise n'a pas approuvée, a ici une réponse : un ensemble fermé.
 
-**Le formateur.** Le tuteur dit déjà l'étape manquante comme une question en quatre langues, dans des gabarits qui ne portent aucun code. Un apprenant sur un téléphone simple est un cas que le dossier nomme et ne sert pas encore.
+**Le formateur.** Le tuteur dit déjà l'étape manquante comme une question en quatre langues, dans des gabarits qui ne portent aucun code. Le dossier ne nomme pas d'apprenant sur un téléphone simple, et rien n'en sert un pour l'instant : il n'y a ni USSD ni application de messagerie.
 
 **L'agent.** Vous pouvez proposer une réponse, et seule une phrase de l'ensemble fermé passe. Une phrase inventée est refusée avec sa raison. Et vous ne pouvez pas donner un sens à une phrase : l'auteur le déclare.
 
@@ -345,4 +347,4 @@ Prenez une question que votre propre monde pose. Le monde à une relation de l'e
 #--> your prediction
 ```
 
-Exécutez-le, avec le bac à sable et jamais un vrai envoi, pour que l'exercice ne touche à rien. La quatrième prédiction lève une erreur aujourd'hui, et c'est la leçon. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie.
+Exécutez-le, avec le bac à sable et jamais un vrai envoi, pour que l'exercice ne touche à rien. La quatrième prédiction a levé une erreur dans mon exécution de recherche, et c'est la leçon. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie.

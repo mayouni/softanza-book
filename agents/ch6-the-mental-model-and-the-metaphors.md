@@ -2,9 +2,9 @@
 
 Source: Chapter 6. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists and strings; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the founding article; the edge table of the walker narration as written
+Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 05:30 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ The field also has a vocabulary of metaphors for programming, but it keeps them 
 
 ## 2. The first principle
 
-**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** The site's Craft page says it, in the words of a session of 2 October 2026: "a loop hides which move it is making; Softanza names the move." That sentence is the site's, not mine; the sentence above is this chapter's principle.
+**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** The site's Craft page says it, in the words of a session of 2 October 2026, as the page reads on 9 October 2026: "A loop hides which move it is making. Softanza names the four moves, and a task is decomposed into them instead." That sentence is the site's, not mine; the sentence above is this chapter's principle.
 
 ## 3. The Softanza form
 
@@ -57,7 +57,7 @@ oWalker = Wk(1, 10, 2)
 
 > run: kept
 
-A loop cannot tell you which positions it will skip until it has skipped them. A walker can, before it moves. And it has a rule for the edge of the road. Beyond the end, it stops in silence. Before the start, it refuses:
+A loop does not hold its route as a value you can ask. A walker does, before it moves. And it has a rule for the edge of the road. Beyond the end, when the walk is underway, it stops in silence. Before the start, it refuses:
 
 ```haro
 oWalker = Wk(1, 10, 3)
@@ -76,7 +76,7 @@ done
 
 > run: kept
 
-Ask for ten steps from a walk that has four and you get the four. The article argues that this mirrors how we walk in the physical world: a path may end, and a step behind the first is not a step.
+Ask for ten steps from a walk that has four and you get the four. The article argues that this mirrors how we walk in the physical world: you stop when you hit a wall behind you, which is an error, and you simply stop when the road ahead ends.
 
 **The Checker asks yes or no.** All of them, any of them, or where:
 
@@ -114,7 +114,7 @@ o2.PerformW('isString(@item)', 'upper(@item)')
 
 > run: kept
 
-Look at the third line from the end and the last one. The yield returned the uppercase words and the list was untouched. The perform changed the list. The verb tells you which, so a design can say "this step only reads" and mean it.
+Look at the two `Content()` outputs, before and after the `PerformW` call. The yield returned the uppercase words and the list was untouched. The perform changed the list. The verb tells you which, so a design can say "this step only reads" and mean it.
 
 Now the thing that all four share, which is the last piece of the title: a condition travels inside an argument. It is a small string, in the same seat of find, of items, of contains, kept in a variable if you want; and it has a twin that takes a real function:
 
@@ -147,13 +147,13 @@ o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 
 Nothing was printed. A W condition can be stored, shown to a person, and approved before it runs, because it cannot escape. The WF twin runs host code, and the library's own table says it is not safe with input you do not trust.
 
-The three models of the founding article, the semantic, the mental and the expression, are one idea in three places. The semantic model is the world of the program as knowledge: an apple is a fruit. The mental model is what you just did: create an object, store data in it, find things inside it, act on the positions. The expression model is the code that says it: select the object, type the name of the action, continue the flow of actions, convert the result into another object, and keep doing so until you have the final answer. I tell them in words because the article's code does not run at this commit, as section 7 says.
+The three models of the article "Bridging Minds and Code", the semantic, the mental and the expression, are one idea in three places. The semantic model is the world of the program as knowledge: an apple is a fruit. The mental model is what you just did: create an object, store data in it, find things inside it, act on the positions. The expression model is the code that says it: select the object, type the name of the action, continue the flow of actions, convert the result into another object, and keep doing so until you have the final answer. I tell them in words because that article's code does not run at this commit, as section 7 says.
 
 ## 4. The decision, and what I refused
 
 **I made the metaphors a design goal.** The 2022 presentation lists "human-centric metaphors" as one of seven design goals, and its four features are these four. A goal is what makes a feature justifiable or refusable, so I did not leave the metaphors as a nicety of the documentation. They are one of the reasons the library has the shape it has.
 
-**I replaced `eval` with a language the engine owns.** The condition seat used to be compiled by evaluating the string as code, with a faster extended form on the side for speed. I removed both. The engine now reads the condition in its own small language, and the library keeps the host-code form as a separate verb, WF, with its warning. I refused arbitrary code from text, and I refused to split speed from expressiveness: the extended form is retired because the plain one does everything it did.
+**I replaced `eval` with a language the engine owns.** The condition seat used to be compiled by evaluating the string as code, with a more expressive but slower extended form on the side. I removed both. The engine now reads the condition in its own small language, and the library keeps the host-code form as a separate verb, WF, with its warning. I refused arbitrary code from text, and I refused to split speed from expressiveness: the extended form is retired because the plain one does everything it did.
 
 **I kept the seven steps as written.** When the course was designed, a reading of the technical core found five steps: select, contains, count, find, apply. The course teaches the seven as the source narration has them. Nobody renumbers the source.
 
@@ -161,13 +161,13 @@ The three models of the founding article, the semantic, the mental and the expre
 
 ## 5. The court
 
-The four metaphors have no single guard. The yielder has a narrated one, `00_yielder_narrated`: four map operations, three filter operations and a sum. The walker has `597_walker_basics`, named walkers and what they walked, and `495_walking_until_and_until_before`, a walk that stops on a condition, including the item that stops it, or not. The checker has `611_checkw`, which says a check is false when one item fails. The performer has `621_perform`, which says it changes the list in place. `483_w_and_wf_forms_in_conditional_code` proves that W with cursor words and with raw index arithmetic give the same positions.
+The four metaphors have no single guard. The yielder has a narrated one, `00_yielder_narrated`: four map operations, three filter operations and a sum. The walker has `597_walker_basics`, named walkers and what they walked, and `495_walking_until_and_until_before`, a walk that stops on a condition, including the item that stops it, or not. The checker has `611_checkw`, which says a check is false when one item fails. The performer has `621_perform`, which says it changes the list in place. `483_w_and_wf_forms_in_conditional_code` proves that a W condition written with cursor words such as `@NextNumber` and the same one written with raw index arithmetic such as `This[@i+1]` give the same positions. `597_walker_basics` and `495_walking_until_and_until_before` test the list's named walkers and walks, through `StzListQ`, not the `Wk` walker of the blocks above. None of the guards named here covers `Walkables`, `WalkNSteps` or `WalkBackward`; those lines rest on the runs kept for this chapter.
 
 ## 6. The field, and where it leads
 
 The field leads in laziness. A generator produces the next item on demand and can be endless. The walker builds a map of its whole journey the moment it is made. That is a win for foresight, you can ask which positions it will skip before it moves, and a loss for a very large or endless traversal.
 
-The field leads in openness. A lambda carries any logic. The W language is bounded on purpose, and the price of the bound is the second path, WF, which has full host power and no safety against untrusted input. There is also a quieter cost I measured once, on one case: a mistyped condition and a condition that matches nothing look the same. Both give an empty list and no error.
+The field leads in openness. A lambda carries any logic. The W language is bounded on purpose, and the price of the bound is the second path, WF, which has full host power and no safety against untrusted input. There is also a quieter cost I measured once, on one case: a condition that calls something the language does not know gives an empty list and no error.
 
 The field leads in reach and in tooling. Iterators and comprehensions are in every mainstream language, with editor support, type checking and a literature. These four metaphors exist in one library.
 
@@ -177,16 +177,16 @@ And I will not print the library's own comparison of walkers with loops and iter
 
 What is built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
 
-What is designed: the metaphors as native engine modules. The engine's design marks the walker, the checker and the performer as planned; only the yielder has a file there. And a walker that is not about lists at all but about any indexed structure.
+What is designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
 
 What is absent or broken at this commit, from my runs:
 
-- The walking-at-the-edge article's table does not hold. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above; the table is a draft. The book states the principle and prints only the cases that run; the table is not printed, and it is a draft.
+- The walking-at-the-edge article's table does not hold. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above. The book states the principle and prints only the cases that run; the table is not printed.
 - The "Beyond Loops" article's code differs in places. The history of a walker is a list of walks; a backward walk takes no argument now; the direction prints as "backward" where the article says "reverse". The site's own run of the article kept ten of eighteen blocks.
-- The founding article's three models: none of its code runs, twelve blocks raised in the site's run. So I told them in words.
-- The mental-model article's dedicated verb for empty strings does not exist; the verb that does is `RemoveEmptyStrings`.
+- The three models of "Bridging Minds and Code": none of its code runs as written; in the site's run twelve blocks raised and one differed. So I told them in words.
+- The mental-model article's getter `EmptyStrings()` does not exist.
 - The dedicated checker class raises when asked `ContainsW`, and the string walker lacks the backward-with-condition walk.
-- And "no eval" has not reached everything. The near-natural resolver, the other direction of chapter 13, still evaluates host code.
+- And "no eval" has not reached everything. The near-natural resolver, the other direction of chapter 13, still evaluates host code. So do `StringsW` and `ItemsWhere` on the list, and `ContainsW` on the dedicated checker class: each still calls `eval` on a condition string. What I said above, that the engine reads a W condition and cannot run it as code, holds for the engine's path and not for these three.
 
 ## 8. Six doors
 
@@ -196,7 +196,7 @@ What is absent or broken at this commit, from my runs:
 
 **The designer.** The yielder never changes the list and the performer does, and the verb tells you which.
 
-**The decision-maker.** A W condition is a string the engine reads and cannot run as code, so it can be stored, shown and approved. The price is a small language and a mistake that stays quiet.
+**The decision-maker.** A W condition is a string the engine reads and cannot run as code, so it can be stored, shown and approved. The price is a small language, and a call it does not know gives an empty list, not an error.
 
 **The educator.** The self-study book already has the order: find, then apply, then walk, ask, produce and act.
 

@@ -4,7 +4,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 05:30 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
 
 ## What the AI age changes here
 
@@ -204,7 +204,7 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 ## 5. The court
 
-`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. It does not pass at this commit: my research for chapter 13 ran it twice on 9 October 2026, and request L45 in the memo of that day records the result: it stops with an error raised from a string-splitting function, before it ends, so the page counts its assertions and does not claim its verdict. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
+`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. It does not pass at this commit: my research for chapter 13 ran it twice on 8 October 2026, and request L45 in the memo of 9 October records the result: it stops with an error raised from a string-splitting function, before it ends, so the page counts its assertions and does not claim its verdict. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
 
 ## 6. The field, and where it leads
 

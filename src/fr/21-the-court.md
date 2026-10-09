@@ -40,7 +40,7 @@ Le chapitre 5 a parlé du tribunal qui juge quiconque a écrit le code. Ce chapi
 
 ### Le tribunal des promesses
 
-Une promesse, dans ce livre, est la ligne `#-->` sous une expression, et c'est une affirmation sur un arrêt du programme. L'outil qui la lit, appelé le voyageur, dit qu'une promesse est tenue, divergente, non atteinte ou non jugée. Une promesse qui se dispute avec elle-même, de la prose après une valeur, n'est jamais accusée. Le code de sortie du lanceur est celui du lanceur, et non celui du langage :
+Une promesse, dans ce livre, est la ligne `#-->` sous une expression, et c'est une affirmation sur un arrêt du programme. L'outil qui la lit, appelé le voyageur (il appartient au volet nommé Testoor), dit qu'une promesse est tenue, divergente, non atteinte ou non jugée. Une promesse qui se dispute avec elle-même, de la prose après une valeur, n'est jamais accusée. Le code de sortie du lanceur est celui du lanceur, et non celui du langage :
 
 ```haro
 write("tour.haro", '? 1 + 1' + nl + '#--> 2' + nl +
@@ -76,7 +76,7 @@ aRun = oRaise.Records()[1][:run]
 remove("raise.haro")
 ```
 
-Chaque règle de ce juge a été apprise en regardant le harnais accuser la bibliothèque à tort. L'en-tête de la garde le dit. Une promesse courte `6` s'est un jour cachée à l'intérieur d'un `[ 6, 28 ]` plus loin, et c'est pourquoi la règle sur les graphies existe. Le juge propre à ce livre est une copie de la même grammaire.
+Chaque règle de ce juge a été apprise en regardant le harnais accuser la bibliothèque à tort. L'en-tête de la garde le dit. Une promesse courte `6` s'est un jour cachée à l'intérieur d'un `[ 6, 28 ]` plus loin, et c'est pourquoi la règle sur les graphies existe. Le juge propre à ce livre est une copie du juge du site, plus lâche que le voyageur.
 
 ### Le tribunal de la perception
 
@@ -99,9 +99,9 @@ next
 #--> HEARD
 ```
 
-Il n'y a pas de compteurs dans ce bloc. L'unique tradition qui a été entendue l'a été par l'auteur le 26 septembre 2026, à travers cinq exemples originaux, et les mots du dossier sont qu'elle est « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, n'est pas encore dit. Ces mots sont ceux du dossier, cités de lui, et ils sont la perception enregistrée la plus claire qui soit un refus.
+Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par l'auteur le 26 septembre 2026, à travers cinq exemples originaux, et les mots du dossier sont qu'elle est « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, n'est pas encore dit. Ces mots sont ceux du dossier, cités de lui, et ils sont l'unique perception enregistrée qui soit un refus.
 
-La loi est celle du domaine de projets, adoptée le 25 septembre 2026 sur instruction de l'auteur, et écrite par une session. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa deuxième ligne est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
+La loi est celle du domaine de projets, c'est-à-dire de l'ensemble des projets de l'auteur, adoptée le 25 septembre 2026 sur instruction de l'auteur. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
 La galerie d'images est l'endroit où elle n'est pas satisfaite. La bibliothèque tient quatre-vingt-quinze jugements d'images et de sections de texte, dans trois fichiers d'index, commités le 5 octobre 2026. Chacun est d'un modèle, lisant l'image ou lisant le texte que le programme a imprimé. Aucun ne porte de nom humain. Le premier index le dit en une phrase : aucun humain n'a regardé ces images. Le registre des constats se termine par une ligne que je répète : un verdict humain sur un échantillon est encore dû. Le dossier ne tient aucun verdict humain sur une image de la galerie. Elle reste non perçue.
 
@@ -109,7 +109,7 @@ La galerie d'images est l'endroit où elle n'est pas satisfaite. La bibliothèqu
 
 Le volet de sécurité part d'une affirmation. Le modèle de menace suppose qu'un modèle de langage détourné passera, et le rend inoffensif. Le modèle ne détient jamais la capacité, et donc un LLM trompé ne peut toujours pas agir. Le document n'essaie pas de détecter chaque invite malveillante.
 
-La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez une ligne, et la chaîne dit quelle entrée s'est rompue. Une mauvaise clé et une ligne modifiée sont deux accusations différentes :
+La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez n'importe quelle ligne après la première, et la chaîne dit quelle entrée s'est rompue. Une mauvaise clé et une ligne modifiée sont deux accusations différentes :
 
 ```haro
 oLed = StzSecurityLedger(256)
@@ -126,7 +126,7 @@ write("evidence.txt", StzReplace(read("evidence.txt"), "actor is not effectful",
 remove("evidence.txt")
 ```
 
-Remarquez ce que j'ai choisi comme raison à modifier. Une raison écrite « bad password » est caviardée quand l'enregistrement est construit, de sorte que la modifier laisse la chaîne intacte. Le caviardage est lui-même une garantie, et il a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
+Remarquez quelle entrée j'ai choisi de modifier : la deuxième. Une modification de la première entrée n'est pas détectée, parce que le vérificateur contrôle le texte de chaque entrée contre l'empreinte de l'entrée qui la précède, et que la première n'en a aucune avant elle. Cela a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
 
 Un secret est la même loi appliquée à une clé. Son seul visage public est son descripteur. Une main qui peut valider peut le lire. Un modèle de langage ne le peut pas, et le refus entre dans le registre sans que personne n'appelle le registre :
 
@@ -153,7 +153,7 @@ C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produ
 
 Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections ; que chaque ligne de garantie contient une preuve, qui est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation ; que chaque chemin de garde dans les lignes existe sur le disque ; et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
 
-À ce commit, la table tient 43 garanties. Le site dit 38, sur trois pages. Les deux sont vrais de leurs dates : le document avait 38 lignes le 30 septembre 2026 à neuf heures du matin, et les lignes de 39 à 43 ont été ajoutées le 5 octobre, la dernière à 16 h 31. Le nombre du site est au site de le mettre à jour.
+À ce commit, la table tient 43 garanties. Le site dit 38, sur trois pages. Les deux sont vrais de leurs dates : le document avait 38 lignes le 30 septembre 2026, et les lignes de 39 à 43 ont été ajoutées le 5 octobre. Le nombre du site est au site de le mettre à jour.
 
 ### Le tribunal de la performance
 
@@ -220,11 +220,11 @@ Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes v
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le mot pour la chose qu'il n'était pas.** La structure de ce livre et le bilan de clôture de l'étude appellent les articles des « narrations qui ne peuvent pas mentir ». Ma propre décision du 7 octobre 2026, le 12.20 de l'étude, dit que « narration » nomme les articles sous le dossier de documentation de la bibliothèque, et non les suites exécutables. Le lanceur du site annote un article et ne décide plus s'il est montré. Le propre dossier du site du 8 octobre 2026, exécuté sur un commit plus tardif que celle de ce livre, dit que sur 135 articles 55 se sont exécutés, et que sur les 423 blocs de ceux-ci, 123 ont tenu leur promesse. Donc les articles peuvent dériver. Ce qui ne peut pas mentir, ce sont les gardes exécutables, et la construction de ce livre, qui échoue quand un bloc ne tient pas sa promesse.
+**J'ai refusé le mot pour la chose qu'il n'était pas.** La structure de ce livre et le bilan de clôture de l'étude appellent les articles des « narrations qui ne peuvent pas mentir ». Ma propre décision du 7 octobre 2026, le 12.20 de l'étude, dit que « narration » nomme les articles sous le dossier de documentation de la bibliothèque, et non les suites exécutables. Le lanceur du site annote un article et ne décide plus s'il est montré. Le propre dossier du site du 8 octobre 2026, exécuté sur un autre commit que celui de ce livre, dit que sur 135 articles 55 se sont exécutés, et que sur les 423 blocs de ceux-ci, 123 ont tenu leur promesse. Donc les articles peuvent dériver. Ce qui ne peut pas mentir, ce sont les gardes exécutables, et la construction de ce livre, qui échoue quand un bloc ne tient pas sa promesse.
 
 **J'ai refusé une seconde bibliothèque d'assertions.** Les décisions du lanceur de promesses refusent une seconde bibliothèque, une réécriture des fichiers de test, un pourcentage de couverture avant qu'il y ait des routes, le mot « vérifié » sur une affirmation perceptive sans un nom et une phrase, et un double écrit pour la production d'une plateforme.
 
-**J'ai refusé de plier non jugé ou non perçu en réussite ou échec.** Un arrêt a cinq états et pas de sixième. Un lanceur qui plie le quatrième ou le cinquième dans l'un des autres a tort.
+**J'ai refusé de plier non jugé ou non perçu en réussite ou échec.** Un arrêt a cinq états et pas de sixième : tenue, divergente, non atteinte, non jugée, non perçue. Un lanceur qui plie non jugé ou non perçu en réussite ou échec a tort.
 
 **J'ai refusé d'analyser une preuve altérée.** Un outil qui vérifie, avertit, puis analyse quand même apprend à ses utilisateurs à ignorer l'avertissement.
 
@@ -238,7 +238,7 @@ Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes v
 
 `testoor_promises_narrated` prouve chaque règle de promesse plantée dans les deux sens : un mensonge est divergent ; deux mensonges sont tous deux attrapés ; un mensonge court ne se cache pas dans une liste plus loin ; les graphies d'une valeur vraie sont toutes tenues ; une levée d'erreur attendue est honorée ; la prose est non jugée ; un programme qui ne compile pas n'est pas divergent ; une levée d'erreur en cours de route laisse les promesses suivantes non atteintes. `threat_model_narrated` prouve la méta-garde décrite plus haut, y compris son pendant négatif. `security_ledger_narrated`, `secretstore_narrated` et `secret_narrated` prouvent la chaîne et le sceau, le magasin et le secret. `security_sentinel_narrated` prouve la sentinelle déclenchée sur les fronts. `stopwatch_narrated` et `tracing_tail_narrated` prouvent l'instrument et le lot. `governed_loop_narrated` prouve le plan, le contrôle préalable, la validation et l'audit.
 
-J'ai exécuté `threat_model_narrated` seule le 8 octobre 2026, et elle a passé toutes ses assertions. Les autres sont comptées par la construction et non exécutées ici. Le volet de performance a douze gardes. Je n'imprime pas leur somme, parce que la construction les compte.
+La construction compte 11 assertions dans `threat_model_narrated`, un compte statique de ses appels d'assertion. Les autres sont aussi comptées par la construction, et non exécutées ici. Le volet de performance a douze gardes. Je n'imprime pas leur somme, parce que la construction les compte.
 
 ## 6. Le terrain, et où il mène
 
@@ -248,9 +248,9 @@ Les sections honnêtes propres du dossier, chaque perte à côté de son gain.
 
 **En sécurité.** Le registre est un anneau borné, et borné veut dire oublier. Il n'y a pas de télémétrie de l'hôte, du noyau ou du réseau. Les détections sont déclarées et non apprises, un écart en partie comblé par une détection de taux le 30 septembre 2026. La propre comparaison du dossier est qu'un corpus de règles au format du terrain est plus grand que huit détections livrées. Il n'y a pas de flux de travail d'un centre d'opérations de sécurité. Le plus grand écart, dans les mots du dossier, est qu'une détection ne peut voir que ce qu'une jointure émet. Le gain est que l'événement est typé à la naissance, là où la porte refuse, de sorte qu'aucun analyseur ne se tient entre ce que le programme savait et ce que le détecteur juge.
 
-**En promesses.** Les doctests du terrain vivent dans la chaîne d'outils de l'hôte et répondent réussite ou échec. Le juge de la maison a cinq états. Là où le terrain mène, c'est en instruments : la note de lancement de Testoor a les instruments de couverture de toute sorte à zéro, et la couverture de routes est planifiée.
+**En promesses.** Les doctests du terrain vivent dans la chaîne d'outils de l'hôte et répondent réussite ou échec (connaissance générale). Le juge de la maison a cinq états. Là où le terrain mène, c'est en instruments : la note de lancement de Testoor, le volet qui tient le voyageur, a les instruments de couverture de toute sorte à zéro, et la couverture de routes est planifiée.
 
-**En perception.** Les services d'instantanés visuels du terrain sont mûrs et automatiques. La maison n'a aucune automatisation du verdict, et dit qu'elle ne devrait pas : elle ne remplace pas un nombre, et aucun nombre ne la remplace.
+**En perception.** Les services d'instantanés visuels du terrain sont mûrs et automatiques (connaissance générale). La loi de la maison dit qu'une perception ne remplace pas un nombre, et qu'aucun nombre ne la remplace.
 
 L'étude du dossier donne le ton que j'essaie de faire résonner. Une grille de deux cent quatre-vingt-six coches contre deux cent soixante-neuf croix est, dans ses mots, la forme d'une brochure.
 
@@ -269,14 +269,14 @@ Ce qui est absent :
 - **Un verdict humain sur une image de la galerie.** Zéro sur quatre-vingt-quinze. La deuxième exigence de la loi, un nom, une date et ce qu'ils ont dit, n'y est pas satisfaite. Le chapitre dit non perçu, et ne dit pas vérifié.
 - Sur les huit traditions musicales, sept non entendues.
 - Un vrai coffre et un vrai bac à sable comme preuves. Le résolveur de coffre est testé contre un remplaçant, sur un vrai HTTP. Il n'y a pas d'adaptateur de gestion de clés dans le nuage.
-- Les chemins sur les systèmes POSIX, non vérifiés ; le fuzzing planifié ; l'intégration continue ; les commits signés. L'auteur les a différés pour la phase de développement.
+- Les chemins sur les systèmes POSIX, non vérifiés, en attendant une machine Linux ; le fuzzing planifié ; l'intégration continue ; les commits signés, que l'auteur a différés pour la phase de développement.
 - Un magasin de séries temporelles. Un pourcentage de couverture, qui est refusé tant qu'il n'y a pas de routes.
 
 Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 
-**Les nombres de l'exercice diffèrent selon la source.** La mesure de réactivité du modèle de menace est une détection en un peu plus de trois cent cinquante millisecondes et un confinement en un peu plus de cinquante, sur trois exécutions le 29 septembre 2026. Le site imprime 395 et 50, d'un rejeu du 1er octobre. Ils diffèrent parce que l'exercice mesure une horloge. Une forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. Quel que soit le nombre que vous imprimez, vous nommez sa source.
+**Les nombres de l'exercice diffèrent selon la source.** La mesure de réactivité du modèle de menace est une détection en un peu plus de trois cent cinquante millisecondes et un confinement en un peu plus de cinquante, sur trois exécutions. Le site imprime 395 et 50, d'un rejeu du 1er octobre. Ils diffèrent parce que l'exercice mesure une horloge. Une forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. Quel que soit le nombre que vous imprimez, vous nommez sa source.
 
-**Un défaut possible dans le juge de promesses, que je signale et sur lequel je n'ai rien construit.** Un fichier dont la première promesse est un mensonge et la dernière une levée d'erreur promise lit le mensonge comme non atteint, la levée d'erreur comme tenue, la tournée comme brisée, avec zéro divergente, et un code de sortie de 1. Je l'ai reproduit deux fois. Chaque règle seule se comporte comme la garde la plante. Savoir si une divergence au-dessus d'une levée d'erreur promise devrait se lire *divergente* est une question pour le volet Testoor.
+**Un défaut possible dans le juge de promesses, que je signale et sur lequel je n'ai rien construit.** Un fichier dont la première promesse est un mensonge et la dernière une levée d'erreur promise lit le mensonge comme non atteint, la levée d'erreur comme tenue, la tournée comme brisée, avec zéro divergente, et un code de sortie de 1. Je l'ai reproduit deux fois. Chaque règle seule se comporte comme la garde la plante. Savoir si une divergence au-dessus d'une levée d'erreur promise devrait se lire *divergente* est une question pour le volet Testoor, qui tient le voyageur.
 
 **Des comptes qui ne s'accordent pas entre les sources.** La clôture de l'étude dit 387 gardes narrées. Mon `find` sur l'instantané épinglé dit 529 fichiers ainsi nommés. Le compte propre de la construction est celui qu'il faut utiliser, et aucun des deux autres.
 
@@ -288,7 +288,7 @@ Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 
 **Le concepteur.** Une image ou un son est une affirmation que seule une personne peut clore. La galerie dit qu'un modèle a regardé et qu'aucun humain ne l'a fait. Votre verdict est une ligne nommée dans le dossier.
 
-**Le décideur.** « Qui a décidé, et qu'est-ce qui est écrit » a une réponse mécanique dans les deux volets : la même action refusée pour le modèle et validée pour l'humain, les deux dans un seul audit, et la preuve scellée de sorte qu'une modification soit nommée.
+**Le décideur.** La question de savoir qui a décidé, et ce qui est écrit, a une réponse mécanique dans les deux volets : la même action refusée pour le modèle et validée pour l'humain, les deux dans un seul audit, et la preuve scellée de sorte qu'une modification soit nommée.
 
 **Le formateur.** La règle du tuteur rencontre le tribunal. Prédisez le verdict d'une promesse avant que le voyageur ne la parcoure.
 

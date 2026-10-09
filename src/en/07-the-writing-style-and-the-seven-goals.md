@@ -44,7 +44,7 @@ The study of the record wrote the style down as fourteen rules, in its ruling 12
 | 4 | A parameter is named, and the name reads as English | runs; chapter 5, and here in any order |
 | 5 | A chain mirrors the order of thought, one step per line | runs; chapter 5 |
 | 6 | The verb's form says what happens | runs; chapters 5 and 8 |
-| 7 | Suffixes and prefixes are small and mean one thing each | in part: `CS`, `XT`, `viz` run; the deck's `FF`, `dft` and `inf` families raise |
+| 7 | Suffixes and prefixes are small and mean one thing each | in part: `CS`, `XT`, `viz` run; the deck's `FF`, `dft` and `inf` families are not defined |
 | 8 | A function has alternatives for the way a person says it | in part |
 | 9 | Precision over generality, when it costs nothing | in part |
 | 10 | Code travels inside an argument as a small string | the seat runs; the `@` on a parameter's name is retired |
@@ -106,7 +106,7 @@ o1.RemoveW('{ Q(@char).IsLowercase() }')
 
 The deck of 2022 writes the same call with a named seat, `:Where = '...'`, and that form raises on a string in this commit. I do not show it. The same deck puts an `@` at the end of a parameter's name, `:With@`, to mark that its value is code to be evaluated. That form is retired. A guard's header says so: the eval-based forms are retired. The deck itself marks the form "TODO". Code now travels in the seat as a bounded string that the engine evaluates, or as a function.
 
-Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways. Each pair is one method. The library's own narration calls the first with two arguments and it raises; the guards pass the starting position, and so does the block:
+Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways. Each pair is one act, with two definitions. The library's own narration calls the first with two arguments and it raises; the guards pass the starting position, and so does the block:
 
 ```haro
 o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
@@ -124,7 +124,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 #--> [ "A", "B", "C" ]
 ```
 
-The deck promised more. A family of five names for removing characters at the two ends, `LeadingAndTrailingCharsRemoved` among them, is not defined. Only `LeadingCharsRemoved`, `TrailingCharsRemoved` and `RemoveLeadingAndTrailingChars` are.
+The deck promised more. A family of five names ending in `CharsRemoved`, for removing characters at the ends, is named in the deck. Two are defined, `LeadingCharsRemoved` and `TrailingCharsRemoved`. Three are not: `LeadingAndTrailingCharsRemoved`, `TrailingAndLeadingCharsRemoved` and `RepeatedCharsRemoved`. `RemoveLeadingAndTrailingChars` is defined, and is not one of the five.
 
 Rule 9: precision over generality. The precise name says what is counted. A string's characters are counted by `NumberOfChars`, and `Size()` is the host's byte length, so the two answers differ on an Arabic word:
 
@@ -157,11 +157,11 @@ o1 = new stzString("fjharoljharodjharog")
 #-->   3     9     15
 ```
 
-The narration and the deck write `vizFindAll`. It does not exist at this commit, and `vizFind` does.
+The narration and the deck write `vizFindAll` on a string. It does not exist there at this commit, and `vizFind` does. A list has its own `VizFindAll`.
 
 ### The goals
 
-Under the grammar there are seven goals, written in the 2022 deck as a matrix of thirty-three features. The study's ruling 12.14 reads them as the library's architectural skeleton: a feature that serves none is refused, and a goal with no feature is a gap. The study's headline is a session's, and no document in the library states the rule in these words. The nearest is the engine's design document: the engine must enable all seven.
+Under the grammar there are seven goals, written in the 2022 deck as a matrix of thirty-three features. The study's ruling 12.14 reads them as the library's architectural skeleton: a feature that serves none is refused, and a goal with no feature is a gap. The study's summary is a session's reading and not a text of the library, and no document in the library states the rule in these words. The nearest is the engine's design document: the engine must enable all seven.
 
 I will not list the seven as a table of slogans. Here is what runs of three of them.
 
@@ -178,7 +178,7 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library ships them. What is true today is two facts. The library ships free-order parameters, and the block above runs them; it also ships alternatives under any wording. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold, and I do not make it here: they are shipped, and they are not grammar.
+A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold, and I do not make it here: they are kept, and they are not grammar.
 
 **Consistency: one vocabulary across a string and a list.** The same verb answers on both:
 
@@ -193,11 +193,11 @@ A tension must be told with it. The design of Haro refuses free-order parameters
 #--> TRUE
 ```
 
-The loss beside it, from the same slide group: the deck's "item for any enumerable" does not hold. `NumberOfItems()` on a string raises, and on a list it answers.
+The loss beside it, from the same slide group: the deck's advice to use the keyword Item with any enumerable type does not hold. `NumberOfItems()` on a string raises, and on a list it answers.
 
-**Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because its first line carries a line number of the library, and a line number is not a promise.
+**Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because in the research run its first line carried a line number of the library, and a line number is not a promise.
 
-The other four goals (reliability, expressiveness, universality and the one the deck calls extensibility) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
+The other four goals (expressiveness, reliability, the human metaphors and the practical abstractions) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
 
 ## 4. The decision, and what I refused
 
@@ -207,13 +207,13 @@ The other four goals (reliability, expressiveness, universality and the one the 
 
 **I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand, and a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style survived where the author wrote for a reader, and thinned where the AI wrote for others. A marker is a reading of the text, not a judgement of the code; the study says so itself.
 
-**I refused to recount the tags as mine.** The goals are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study counted about six thousand. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archived monolithic files. So the sentence "applied by hand at six thousand points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
+**I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features have names in the code and raise when called: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, the `Check` on a list, and the deck's `Yield` and `Perform` forms. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list, the deck's checker that answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples: `Yield`, which should give the result of an expression for each item, and `Perform`, which should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
 
 ## 5. The court
 
-`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language, in Arabic too. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the palette cycles. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string and in a function. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
+`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
 
 Here is the house court itself, the fourteen rules of the library and not the fourteen of the style. The numerical coincidence is a coincidence. A planted misspelling is found by name and the code stays clean, because it is a warning. A planted write to a constant is found by name, and the code is refused, because it is an error:
 
@@ -261,9 +261,9 @@ What is designed:
 What is absent:
 
 - Any machine that judges, today, the style of a program written with the library.
-- Rules 12 and 13 as running forms. The deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
+- Rules 12 and 13 as running forms. In the research session's runs, the deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
 - The `@` on a parameter's name as a working form.
-- The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too.
+- The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too. These three come from the research session's runs; no block of this chapter keeps them.
 - The visualised call stack, and the cache and log decorators, which exist as names in comments.
 
 ## 8. Six doors
@@ -274,7 +274,7 @@ What is absent:
 
 **The designer.** The viz prefix draws the answer where the eye expects it. The goals are the headings under which a design is judged, one feature at a time.
 
-**The decision-maker.** Seven goals and thirty-three features are a reading grid. A feature that serves none is refused, and a goal with no feature is a gap. The tally is printed with its losses.
+**The decision-maker.** Seven goals and thirty-three features are a reading grid. In the study's reading, a feature that serves none is refused, and a goal with no feature is a gap. The tally is printed with its losses.
 
 **The educator.** The discipline is taught whole and in order. The converted guard for lists in strings keeps the old promise's wrong spacing in a comment, which is a lesson on the cost of hand-typed answers.
 
