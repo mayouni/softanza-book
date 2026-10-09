@@ -65,8 +65,9 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 - Phase 3 (the languages and the platform) drafted 2026-10-09: chapters 12 to 16 and 23 to 27, all `status: draft`, all blocks
   kept at 93d7a39bd; the cover (`assets/cover/`, made by `tools/make_cover.py` from the author's two images). Memo, open
   questions and library requests L42 to L68: `sessions/2026-10-09-phase-3-languages-and-platform.md`.
-- Next, only when the author asks: the appendices (A to G), the preface
-  (when `drafts/book-00-preface.md` exists), the French. Method per chapter: a research session writes `research/chNN.md` from the
-  record (brief: `research/BRIEF.md`; its snapshot paths must name the current `.cache/stzlib-<sha>`), runs every
-  block it proposes; then the chapter is drafted in one voice from it, built, and committed.
+- Phase 4 (the appendices) done 2026-10-09: appendices A to G as pages with an `appendix:` letter (E, F, G generated at build),
+  a working preface, the nine-element shape restored in chapters 7, 12, 13 and 25. Memo: `sessions/2026-10-09-phase-4-appendices.md`.
+- Next: the French, which the prompt writes only from English the author has marked `read`; no chapter is marked read yet. Method per chapter
+  for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
+  the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
