@@ -4,7 +4,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows every rethought concept with its proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

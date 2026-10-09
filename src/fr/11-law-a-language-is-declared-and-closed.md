@@ -29,7 +29,7 @@ C'est aussi là que l'ordre du livre se retourne. La couverture va du familier a
 
 ## 1. Le concept, tel que le terrain le tient
 
-Pour un programmeur qui travaille, un langage est un hôte généraliste, Python, JavaScript, Java, et un « langage de domaine » est d'ordinaire une bibliothèque dont les appels se lisent comme des phrases alors que le fichier autour peut contenir n'importe quel code de l'hôte. L'étude que le domaine a faite du terrain, écrite en août 2026, nomme ce qui est arrivé à ces conceptions : les langages internes sont morts d'ouverture, parce qu'un fichier de construction n'est déclaratif que jusqu'au jour où quelqu'un y écrit du code arbitraire ; les ateliers de langage sont morts du poids de leurs outils. Et elle nomme les langages qui ont gagné : SQL, les expressions régulières, Make, HTML et CSS, les langages de configuration. Ils ont gagné parce qu'ils sont fermés.
+Pour un programmeur qui travaille, un langage est un hôte généraliste, Python, JavaScript, Java, et un « langage de domaine » est d'ordinaire une bibliothèque dont les appels se lisent comme des phrases alors que le fichier autour peut contenir n'importe quel code de l'hôte. L'étude que le domaine de projets a faite du terrain, écrite en août 2026, nomme ce qui est arrivé à ces conceptions : les langages internes sont morts d'ouverture, parce qu'un fichier de construction n'est déclaratif que jusqu'au jour où quelqu'un y écrit du code arbitraire ; les ateliers de langage sont morts du poids de leurs outils. Et elle nomme les langages qui ont gagné : SQL, les expressions régulières, Make, HTML et CSS, les langages de configuration. Ils ont gagné parce qu'ils sont fermés.
 
 L'ère des modèles a ajouté une pratique : quand un modèle écrit, ou bien l'on vérifie ce qu'il a écrit, ou bien l'on contraint sa sortie pendant qu'il écrit, avec une grammaire ou un schéma. L'implémentation de référence de l'échantillonnage contraint par une grammaire est un projet ouvert, et le dossier le dit là où il emploie le même algorithme. Et dans le langage commun du terrain aujourd'hui, « programmer en langage naturel » veut dire une seule chose : donner une consigne à un modèle.
 
@@ -185,7 +185,7 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 **J'ai choisi l'acte : déclarer un langage.** Pas « utilisez notre langage ». Déclarez le vôtre : le langage de votre domaine, dans vos mots. C'est le noyau de la plateforme, et c'est la raison d'être de cette partie.
 
-**J'ai refusé l'échappée ouverte.** Le méta-langage qui déclare les langages du domaine refuse, par sa règle fondatrice, de définir toute forme qui laisserait une phrase atteindre le code de l'hôte, appeler une fonction, évaluer une chaîne ou toucher un fichier. Pas interdit : inexprimable. Un langage interne qui ne peut pas refuser le code arbitraire de l'hôte est, selon les mots de l'étude de terrain du domaine, une interface déguisée en langage.
+**J'ai refusé l'échappée ouverte.** Le méta-langage qui déclare les langages du domaine de projets refuse, par sa règle fondatrice, de définir toute forme qui laisserait une phrase atteindre le code de l'hôte, appeler une fonction, évaluer une chaîne ou toucher un fichier. Pas interdit : inexprimable. Un langage interne qui ne peut pas refuser le code arbitraire de l'hôte est, selon les mots de l'étude de terrain du domaine de projets, une interface déguisée en langage.
 
 **J'ai refusé le langage naturel comme façon de déclarer.** Le langage naturel demande ; il ne déclare jamais. Un modèle peut rédiger une déclaration, et le brouillon n'entre dans le monde que comme une proposition : le modèle propose, le tribunal décide, une personne ratifie.
 
@@ -201,7 +201,7 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine a délibérément renoncé : des éditeurs qui comprennent un langage pendant que vous tapez, l'intégration à tous les environnements, la profondeur théorique. L'étude du domaine le dit dans ses propres mots : c'est un pari, et il est nommé comme tel.
+Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine de projets a délibérément renoncé : des éditeurs qui comprennent un langage pendant que vous tapez, l'intégration à tous les environnements, la profondeur théorique. L'étude du domaine de projets le dit dans ses propres mots : c'est un pari, et il est nommé comme tel.
 
 Le terrain a construit le décodage contraint le premier. L'échantillonneur de Softanza suit l'algorithme de l'implémentation de référence et n'embarque rien. Mesurées sur un seul petit modèle de cent trente-cinq millions de paramètres, sur dix consignes, les réponses étaient valides du premier coup deux fois sur dix quand on les vérifiait après coup, et dix fois sur dix quand le modèle était tenu à la grammaire. C'est un seul petit modèle et dix consignes, et rien dans le dossier n'en mesure un grand.
 

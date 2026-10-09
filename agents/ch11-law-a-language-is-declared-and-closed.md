@@ -4,7 +4,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages; designed: the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## What the AI age changes here
 

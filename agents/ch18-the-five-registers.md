@@ -4,7 +4,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a reply with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -362,7 +362,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused a deleted checkpoint.** Expiry takes a refusal off the live list. The record keeps it.
 
-**I refused to let the example look like the answer.** The record's closing law about the fifth register is that an admitted candidate writes its example back as a promise. That law is designed, and not built. [AUTHOR: The code wires three of five registers; the memo that names the formula and the examples calls them filed and not routed. Does the chapter say they are the next work you have filed, or only that they are absent?]
+**I refused to let the example look like the answer.** The record's closing law about the fifth register is that an admitted candidate writes its example back as a promise. That law is designed, and not built.
 
 ## 5. The court
 
@@ -384,7 +384,7 @@ Where I think the record stands apart: every reply, in whatever form, is judged 
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals; the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. [AUTHOR: May the chapter say outright that the two pages promise more than the code, so that the page or the code is corrected?]
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. [AUTHOR: May the chapter say outright that the two pages promise more than the code, so that the page or the code is corrected? And the code wires three of the five registers, while the memo that names the formula and the examples calls them filed and not routed: does the chapter say they are the next work you have filed, or only that they are absent?]
 
 What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a reply with a space in it. In the version of the library this book runs, `ReplyIn` raises, with an uninitialised variable, on any value containing a space: "tomato sauce", "fromage et tomate", "jibini da tumatir". The direct call to the door returns the refusal properly. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a reply with a space.
 

@@ -4,7 +4,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar); the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a class named for a ribbon, a rail, a spine or a status bar; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

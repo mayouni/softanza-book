@@ -77,7 +77,8 @@ Keep the same number of paragraphs, list items, table rows and [AUTHOR] markers.
 | limit | limite | |
 | field (the practice) | terrain | « ce que le terrain fait mieux » |
 | gate | barrière | the registration gate, the production gate; never « porte » |
-| commit (verb, noun) | valider, validation | « un acteur validant », « seul un acteur gouverné valide » |
+| commit, the governed act | valider, validation | « un acteur validant », « seul un acteur gouverné valide » |
+| commit, in git | commit, commité | « à ce commit », « le commit imprimé »; never « validation » for the git object |
 | rehearse | répéter | « répétition » |
 | proposal, propose | proposition, proposer | |
 | candidate | candidat | |
@@ -107,6 +108,9 @@ Keep the same number of paragraphs, list items, table rows and [AUTHOR] markers.
 | the model (language model) | le modèle | |
 | agent | agent | |
 | actor | acteur | |
+| plane (security, performance, sound, payments, agentic, system) | volet | « le volet de sécurité »; never « plan », which is the artefact a machine proposes |
+| estate (the author's body of projects) | domaine de projets | « le domaine de projets », every time; « domaine » alone means a field of knowledge |
+| ledger | registre | « le registre de sécurité », « le registre des décisions »; the same word as registry, the context tells them apart |
 | window of service etc. | — | not in the book |
 
 When a term is not here, take the site's French (`content/fr`), or the plainest French word, and keep it the same on every page you write.

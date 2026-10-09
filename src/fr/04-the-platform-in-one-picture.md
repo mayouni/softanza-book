@@ -149,7 +149,7 @@ Les parties II à IV de ce livre sont des repensées, et chacune est une boîte 
 
 **J'ai refusé un drapeau pour choisir une couche.** La première manière de choisir une couche était un drapeau. Elle ne pouvait jamais fonctionner, parce que le langage sous-jacent charge à la compilation tous les fichiers qu'il voit, si bien que les trois couches se chargeaient à chaque appel et que l'échec de l'une était l'échec de toutes. Le drapeau a été retiré plutôt que gardé comme un interrupteur qui ne fait rien en silence, et la raison a été écrite là où le prochain lecteur se tiendra : une couche se choisit par le fichier que l'on charge.
 
-**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base pendant que le moteur, les plans et les clients avançaient. C'était le choix agile, et il n'est défendable que tant que la dette est visible. Alors la figure dessine la base au plus large, et le chapitre 27 raconte la dette avec ses chiffres.
+**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base pendant que le moteur, les volets et les clients avançaient. C'était le choix agile, et il n'est défendable que tant que la dette est visible. Alors la figure dessine la base au plus large, et le chapitre 27 raconte la dette avec ses chiffres.
 
 **J'ai refusé les mini-applications.** La super-application du terrain est un hôte qui fait tourner de petites applications. Celle de Softanza est un graphe gouverné de mondes : des mondes, pas des mini-applications ; des liens et des normes, pas un conteneur.
 

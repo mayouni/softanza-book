@@ -4,7 +4,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms as the article shows them, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

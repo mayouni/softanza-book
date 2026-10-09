@@ -85,7 +85,7 @@ Ce qui a été refusé fait autant partie de Softanza que ce qui a été constru
 
 Qu'est-ce qui prouve ce chapitre ? Trois choses, et je vous les donne par leur nom pour que vous puissiez les vérifier plutôt que me croire.
 
-Le refus d'un faux en production par le registre de services est une garde, `service_registry_narrated`, dans le plan système. La suite proposer, répéter, juger et valider de l'agent est `safeworld_narrated`, soixante-seize assertions, dans le plan agentique, à côté de `governance_crossing_narrated` pour la traversée elle-même. Le bloc de code ci-dessus a été exécuté par l'exécuteur propre du livre à l'intérieur de la bibliothèque la nuit où cette page a été construite, et sa sortie est montrée telle qu'elle est venue.
+Le refus d'un faux en production par le registre de services est une garde, `service_registry_narrated`, dans le volet système. La suite proposer, répéter, juger et valider de l'agent est `safeworld_narrated`, soixante-seize assertions, dans le volet agentique, à côté de `governance_crossing_narrated` pour la traversée elle-même. Le bloc de code ci-dessus a été exécuté par l'exécuteur propre du livre à l'intérieur de la bibliothèque la nuit où cette page a été construite, et sa sortie est montrée telle qu'elle est venue.
 
 Trois gardes pour un chapitre de philosophie peuvent sembler peu. Ce sont les trois bonnes, parce que ce sont les trois endroits où la philosophie rencontre un verdict.
 

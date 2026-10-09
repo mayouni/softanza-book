@@ -4,7 +4,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons run on both sides, with the other side's version and the date; the four code pairs of the site, re-run; four field studies that end on what the field has and the library lacks; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

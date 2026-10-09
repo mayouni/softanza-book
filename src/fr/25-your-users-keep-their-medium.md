@@ -144,7 +144,7 @@ oPh.FailNextQ()
 #--> 1
 ```
 
-**Un message entrant n'est cru qu'après vérification de sa signature.** Le chemin d'entrée est le motif que le plan des paiements a construit, et le vérificateur est générique, sur le corps. Aucun format d'en-tête ou de corps d'un fournisseur n'est modélisé, et le JSON est inventé. Les heures sont passées en paramètre, donc aucune horloge n'est lue :
+**Un message entrant n'est cru qu'après vérification de sa signature.** Le chemin d'entrée est le motif que le volet des paiements a construit, et le vérificateur est générique, sur le corps. Aucun format d'en-tête ou de corps d'un fournisseur n'est modélisé, et le JSON est inventé. Les heures sont passées en paramètre, donc aucune horloge n'est lue :
 
 ```haro
 oSig = new stzRequestSigner("inbound")

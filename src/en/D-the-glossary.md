@@ -24,7 +24,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **built.** One of the three stage words. The code exists, a guard exists, and a block ran. Chapter 3.
 
-**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapters 17, 18.
+**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapter 18.
 
 **checkpoint.** A refusal kept for a person, with its context and a lifetime. Chapter 18.
 
@@ -92,7 +92,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **scope.** A named frame in which a system act is written: development, deployment, runtime-current. The system acts of a program are always in a scope. Chapters 8, 23.
 
-**spine.** The nine chapters that carry the whole argument and can be read alone. Chapter 1.
+**spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
 **stage word.** One of built, designed, absent, printed at the head of each chapter's limit. Chapter 3.
 

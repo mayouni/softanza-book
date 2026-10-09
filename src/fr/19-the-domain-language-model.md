@@ -197,7 +197,7 @@ La conception décrit l'unité de prédiction en trois niveaux. Un jeton est un 
 
 ## 4. La décision, et ce que j'ai refusé
 
-Le 13 juillet 2026, j'ai tranché sur ce point. Le concept d'un modèle de langage de domaine avait été conçu pour l'un des produits du domaine ; je l'ai donné à la fondation ouverte, pour que tout projet Softanza qui fournit une base de connaissances puisse livrer son propre modèle gratuitement aux utilisateurs de son domaine. Le format est `.zdlm`. Le plancher est le premier échelon, dans chaque modèle ; le second est une fluidité facultative. [AUTHOR: Le dossier tient votre décision qu'un modèle se livre gratuitement, et aucun texte de licence pour le dire. Le livre peut-il dire « gratuit » ainsi : un fichier simple, dans la fondation ouverte, sans redevance de licence ni compteur ?]
+Le 13 juillet 2026, j'ai tranché sur ce point. Le concept d'un modèle de langage de domaine avait été conçu pour l'un des produits du domaine de projets ; je l'ai donné à la fondation ouverte, pour que tout projet Softanza qui fournit une base de connaissances puisse livrer son propre modèle gratuitement aux utilisateurs de son domaine. Le format est `.zdlm`. Le plancher est le premier échelon, dans chaque modèle ; le second est une fluidité facultative. [AUTHOR: Le dossier tient votre décision qu'un modèle se livre gratuitement, et aucun texte de licence pour le dire. Le livre peut-il dire « gratuit » ainsi : un fichier simple, dans la fondation ouverte, sans redevance de licence ni compteur ?]
 
 **J'ai refusé le jeton comme unité.** L'unité est un chunk du monde, qu'un graphe peut admettre ou refuser.
 

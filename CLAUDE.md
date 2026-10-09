@@ -72,6 +72,8 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 - Phase 6 (the French) done 2026-10-09: all 41 pages in `src/fr/`, translated from the English drafts and bannered as such (FRENCH-01); style sheet
   `FRENCH.md`, checker `tools/check_fr.py`. Memo: `sessions/2026-10-09-phase-6-french.md`.
 - Phase 7 (the press edition) done 2026-10-09: `python tools/print_book.py` writes a 6.5 x 8.5 in PDF per language (`print/`, not committed). Memo: `sessions/2026-10-09-phase-7-press-edition.md`.
+- Phase 8 (the editorial audit) done 2026-10-09: `python tools/book_audit.py` (clean), four [AUTHOR] questions merged to three in chapters 2, 18, 31, glossary citations fixed,
+  French terms plane / estate / ledger settled. Memo: `sessions/2026-10-09-phase-8-audit.md`.
 - Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.

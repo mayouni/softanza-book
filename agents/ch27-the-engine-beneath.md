@@ -4,7 +4,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

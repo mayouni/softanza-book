@@ -125,7 +125,7 @@ aVerdicts = StzSoundSingingVerdict()
 #--> the retuned voice is somehow singing, open Sing()
 ```
 
-C'est la forme de la ligne dont le chapitre 33 dit que les exécutions des clients ne l'ont pas encore : une date, une personne, et une phrase. Le dossier porte aussi le nom de la personne à côté, et je ne l'imprime pas ici. (SAPI est l'interface vocale du système d'exploitation.) [AUTHOR: Le bloc doit-il imprimer aussi le nom, comme la forme du dossier pour « nommée » ? C'est à vous de le dire.]
+C'est la forme de la ligne dont le chapitre 33 dit que les exécutions des clients ne l'ont pas encore : une date, une personne, et une phrase. Le dossier porte aussi le nom de la personne à côté, et je ne l'imprime pas ici. (SAPI est l'interface vocale du système d'exploitation.)
 
 **Un contrôle préalable qui dit « faisable » sans toucher un hôte.** Le contrôle préalable du déploiement refuse un hôte trop petit. Pour un hôte dont le fournisseur est un cloud, il dit faisable et « provision on aws », sans aucun compte. Une faisabilité est un plan, pas une vérification. Le fichier de conception le dit simplement : ce qui reste est la vérification contre un vrai hôte ou compte, barrée par l'infrastructure. Les chiffres ci-dessous sont illustratifs.
 
@@ -194,7 +194,7 @@ Voici maintenant les tableaux. Chaque cellule vient du dossier, lu le 8 octobre 
 | Une solution écrit sa fiche de garanties en cinq lignes | la vision la demande | aucune solution n'en a une ; aucune classe, fixture ou garde de la bibliothèque n'a la fiche |
 | Le runtime en dessous est celui du langage lui-même | la charte ratifiée le 1er octobre 2026 ; ses étapes passent sur ses propres fixtures | Haro ne fait pas tourner la bibliothèque. Le runtime de pont a passé la suite de la bibliothèque sous Windows dans les notes d'une session ; le passage sous Linux est l'étape suivante. Je n'imprime aucun pourcentage. Les blocs de ce livre s'exécutent sur l'ancien runtime, 1.27 |
 | Un hôte réel vérifie un déploiement | la conception du déploiement | la vérification est barrée par l'infrastructure. Les sites locaux tournent pour de vrai ; le transfert distant est « a later slice » |
-| Le plan des paiements fonctionne contre le bac à sable du hub | le jumeau, servi par HTTP, avec une garde | l'exécution du bac à sable : non perçue, reportée. La production ne vient jamais de ce plan |
+| Le volet des paiements fonctionne contre le bac à sable du hub | le jumeau, servi par HTTP, avec une garde | l'exécution du bac à sable : non perçue, reportée. La production ne vient jamais de ce plan |
 | Une personne nommée a dit ce qu'elle a vu | un tambour, et la voix réaccordée, dans un autre plan | aucune des trois plateformes |
 
 ### Ce que l'étude du dossier n'a pas mesuré
@@ -207,9 +207,9 @@ L'étude comparative qui a lu le dossier dit, dans ses propres paragraphes intit
 
 **J'ai refusé d'appeler la bibliothèque l'origine de ce qu'elle n'utilise que comme exemple.** La page forgée dit « exemple » là où la bibliothèque tient un projet comme son exemple et non comme son origine. Et je ne répéterai pas une phrase de l'étude du 12.29 qui dit qu'une leçon est « née du besoin du client ». Le registre et le SLA ont été commités pour la première fois après le renversement du 4 juillet, et l'ordre des commits rend « née de » non prouvé. Ce que je peux dire, c'est « avait besoin » et « porte ».
 
-**J'ai refusé deux formulations de moi.** Aux chapitres 1, 2 et 33, j'ai écrit que la banque « fait tourner » un produit « construit avec » Softanza, et que le restaurant « fait tourner » une plateforme. Le dossier montre une application Python qui n'appelle pas la bibliothèque, construite à côté d'elle par la même personne, et pour le restaurant une première livraison et une journée de terrain, puis le silence après le 25 août. La formulation honnête est *construit par moi, sous la discipline que la bibliothèque porte désormais*, et *livré et éprouvé sur le terrain*. [AUTHOR: Puis-je corriger les chapitres 1, 2 et 33 vers ces formulations ? Le chapitre 1 est votre texte, et je n'en ai changé aucun mot.]
+**J'ai refusé deux formulations de moi.** Aux chapitres 1, 2 et 33, j'ai écrit que la banque « fait tourner » un produit « construit avec » Softanza, et que le restaurant « fait tourner » une plateforme. Le dossier montre une application Python qui n'appelle pas la bibliothèque, construite à côté d'elle par la même personne, et pour le restaurant une première livraison et une journée de terrain, puis le silence après le 25 août. La formulation honnête est *construit par moi, sous la discipline que la bibliothèque porte désormais*, et *livré et éprouvé sur le terrain*. [AUTHOR: Puis-je corriger les chapitres 1, 2 et 33 vers ces formulations ? Le chapitre 1 est votre texte, et je n'en ai changé aucun mot. Et le bloc sous « une date, une personne et une phrase » doit-il imprimer aussi le nom de la personne, comme la forme du dossier pour « nommée » ? C'est à vous de le dire.]
 
-**J'ai refusé un mot d'étape que le dépôt ne porte pas.** La page du domaine du site le dit : ne jamais appeler disponible avant que ce ne soit. Un travail qui atteint une personne par un sens est perçu par une personne, et jusque-là il est non perçu, ce qui est un état et non un échec.
+**J'ai refusé un mot d'étape que le dépôt ne porte pas.** La page du domaine de projets du site le dit : ne jamais appeler disponible avant que ce ne soit. Un travail qui atteint une personne par un sens est perçu par une personne, et jusque-là il est non perçu, ce qui est un état et non un échec.
 
 **J'ai refusé d'imprimer un pourcentage.** J'ai dit à voix haute jusqu'où le runtime de pont est arrivé. L'étude a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit. Je suis d'accord.
 
@@ -217,7 +217,7 @@ L'étude comparative qui a lu le dossier dit, dans ses propres paragraphes intit
 
 `service_registry_narrated` prouve qu'un service déclaré que personne ne soutient est un constat d'erreur, qu'un service non lié lève une erreur, et qu'un bac à sable en production est une violation. `full_scope_model_narrated`, scènes 5 à 8, prouve les trois verdicts : refusé, répété, natif. `payments_live_adapter_narrated` prouve l'adaptateur contre un jumeau servi par HTTP, un adaptateur sans identifiants qui refuse de deviner, et le scénario qui dit que l'étape (b) est non perçue. Elle démarre de vrais processus serveur, et le livre ne l'exécute pas ; il ne fait que compter ses assertions. `sound_mu5_narrated` prouve, dans sa cinquième scène, que tant que le verdict est non perçu `Sing` ne retourne rien et dit pourquoi. `deployment_narrated` prouve qu'un hôte sous-dimensionné n'est pas faisable, et qu'un assistant répète et ne valide rien ; elle écrit un dossier temporaire à côté d'elle, donc le livre ne l'exécute pas non plus. `orgrule_narrated` et `governance_narrated` portent les deux autres leçons.
 
-Le tribunal du sujet de ce chapitre n'est pas une garde. C'est une ligne du dossier, de la forme que prescrit la loi du domaine : une date, une personne, et ce qu'elle a dit. La bibliothèque tient une telle ligne dans ses données, dans le plan du son. Le domaine en tient une dans son dossier, et le chapitre 33 la raconte.
+Le tribunal du sujet de ce chapitre n'est pas une garde. C'est une ligne du dossier, de la forme que prescrit la loi du domaine de projets : une date, une personne, et ce qu'elle a dit. La bibliothèque tient une telle ligne dans ses données, dans le plan du son. Le domaine de projets en tient une dans son dossier, et le chapitre 33 la raconte.
 
 ## 6. Le terrain, et où il mène
 

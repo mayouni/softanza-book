@@ -20,11 +20,11 @@ research: research/ch16.md
 
 Pour un programmeur qui travaille, atteindre un autre langage depuis celui dans lequel on écrit signifie l'une de deux choses : une interface de fonctions étrangères, un appel dans une bibliothèque partagée, ou un processus enfant, une exécution d'un interpréteur dont on analyse la sortie. Les carnets et les machines virtuelles polyglottes font le même geste avec plus de confort. (Connaissance générale. Le dossier ne tient aucune étude datée de ces outils, et le dit lui-même.)
 
-L'étude de terrain propre du domaine, d'août 2026, a deux phrases sur ce sujet, et elles tirent en sens opposés. À la sortie : le langage hôte est l'issue de secours, et l'issue de secours est toujours prise. Elle donne deux langages internes morts d'ouverture. À l'entrée : le différenciateur est l'évasion ; un langage que l'on fait doit pouvoir être consommé depuis n'importe quelle pile. Elle donne un langage qui a calé à la frontière de son propre monde.
+L'étude de terrain propre du domaine de projets, d'août 2026, a deux phrases sur ce sujet, et elles tirent en sens opposés. À la sortie : le langage hôte est l'issue de secours, et l'issue de secours est toujours prise. Elle donne deux langages internes morts d'ouverture. À l'entrée : le différenciateur est l'évasion ; un langage que l'on fait doit pouvoir être consommé depuis n'importe quelle pile. Elle donne un langage qui a calé à la frontière de son propre monde.
 
 La leçon du terrain est donc double. Une évasion ouverte détruit un langage fermé. Et un langage sans chemin de sortie meurt à sa propre frontière. Une porte est l'endroit où ces deux leçons se rencontrent.
 
-Il y a une seconde habitude, qui ressemble à la première et n'en est pas une. Les outils qui laissent écrire dans la syntaxe que l'on connaît par-dessus un autre moteur, un transpileur, un second front end pour un seul compilateur, je les appellerai du mot de ce livre, des *facettes*. La note de conception du domaine à leur sujet est franche sur leur coût. La promesse honnête d'une seconde face est la lisibilité pour un humain qui connaît l'autre langage, et non le transfert de comportement.
+Il y a une seconde habitude, qui ressemble à la première et n'en est pas une. Les outils qui laissent écrire dans la syntaxe que l'on connaît par-dessus un autre moteur, un transpileur, un second front end pour un seul compilateur, je les appellerai du mot de ce livre, des *facettes*. La note de conception du domaine de projets à leur sujet est franche sur leur coût. La promesse honnête d'une seconde face est la lisibilité pour un humain qui connaît l'autre langage, et non le transfert de comportement.
 
 ## 2. Le premier principe
 
@@ -87,7 +87,7 @@ oPy.Execute()
 
 Le flottant Python `3.0` est revenu sous la forme `3`. La trace contient aussi une durée. Le bloc imprime seulement que c'est un nombre, car une durée est une horloge, et une horloge ne se promet pas.
 
-Voilà la raison d'être de tout le plan, en une image : chaque couche d'une solution dans le langage qui y est le meilleur, et l'hôte comme chef d'orchestre qui passe les données en texte et relit les données en retour. L'article de la bibliothèque énumère les couches : la performance système en C, les systèmes événementiels en NodeJS, le calcul scientifique en Julia, les statistiques en R, le raisonnement logique en Prolog, l'apprentissage automatique en Python, le raisonnement d'IA dans un modèle de langage, et l'intégration de la solution dans l'hôte. Voici deux d'entre elles dans un pipeline, Python calculant les moyennes de deux étudiants et NodeJS décidant. Les seuils sont de moi ; les données sont celles de l'article :
+Voilà la raison d'être de tout le volet, en une image : chaque couche d'une solution dans le langage qui y est le meilleur, et l'hôte comme chef d'orchestre qui passe les données en texte et relit les données en retour. L'article de la bibliothèque énumère les couches : la performance système en C, les systèmes événementiels en NodeJS, le calcul scientifique en Julia, les statistiques en R, le raisonnement logique en Prolog, l'apprentissage automatique en Python, le raisonnement d'IA dans un modèle de langage, et l'intégration de la solution dans l'hôte. Voici deux d'entre elles dans un pipeline, Python calculant les moyennes de deux étudiants et NodeJS décidant. Les seuils sont de moi ; les données sont celles de l'article :
 
 ```haro
 aStudents = [ [ "Alice", [ 85, 90, 78 ] ], [ "Bob", [ 72, 65, 70 ] ] ]

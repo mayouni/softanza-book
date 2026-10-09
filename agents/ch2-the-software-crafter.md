@@ -4,7 +4,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work; absent: the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ The field's two other answers to "who makes software, if not programmers" define
 
 ## 2. The first principle
 
-The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes?]
+The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes? And in the paragraph that refuses "maker" below, say in your own words what the cover image carries, and I will put your sentence there.]
 
 ## 3. The Softanza form
 
@@ -191,7 +191,7 @@ Three crafters: a restaurateur who is not a programmer, a bank under a regulator
 
 **I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
-**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work. [AUTHOR: Say in your own words what the cover image carries, and I will put your sentence here.]
+**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work.
 
 **I refused to count a customer without a document.** The site counts a project as a reference only when a document proves it, quotes no number of countries and no number of developers, and names a customer only on my word. A lesson is listed only when a file of the library carries it.
 

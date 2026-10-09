@@ -4,7 +4,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in three of the media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

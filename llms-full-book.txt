@@ -1,6 +1,6 @@
 # Softanza · The Software Crafters Platform of the AI Age
 
-Built 2026-10-09 03:28 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-09 04:27 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -37,7 +37,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-09 03:24 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -161,7 +161,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work; absent: the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -171,7 +171,7 @@ The field's two other answers to "who makes software, if not programmers" define
 
 ## 2. The first principle
 
-The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes?]
+The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes? And in the paragraph that refuses "maker" below, say in your own words what the cover image carries, and I will put your sentence there.]
 
 ## 3. The Softanza form
 
@@ -348,7 +348,7 @@ Three crafters: a restaurateur who is not a programmer, a bank under a regulator
 
 **I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
-**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work. [AUTHOR: Say in your own words what the cover image carries, and I will put your sentence here.]
+**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work.
 
 **I refused to count a customer without a document.** The site counts a project as a reference only when a document proves it, quotes no number of countries and no number of developers, and names a customer only on my word. A lesson is listed only when a file of the library carries it.
 
@@ -412,7 +412,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows every rethought concept with its proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -595,7 +595,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships; designed: the max layer loaded by its entry file; the base layer inheriting the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -812,7 +812,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## What the AI age changes here
 
@@ -1007,7 +1007,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists and strings; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the founding article; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -1220,7 +1220,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -1537,7 +1537,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms as the article shows them, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -1827,7 +1827,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its three siblings, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -2092,7 +2092,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -2363,7 +2363,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages; designed: the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## What the AI age changes here
 
@@ -2621,7 +2621,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); a grammar that closes a menu in the forge's output; the projections of a language to an application; absent: a factory in the library; the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -2953,7 +2953,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -3379,7 +3379,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -3709,7 +3709,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in three of the media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -4047,7 +4047,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -4359,7 +4359,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the typed unit of prediction validated in five stages; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## What the AI age changes here
 
@@ -4587,7 +4587,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a reply with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -4945,7 +4945,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused a deleted checkpoint.** Expiry takes a refusal off the live list. The record keeps it.
 
-**I refused to let the example look like the answer.** The record's closing law about the fifth register is that an admitted candidate writes its example back as a promise. That law is designed, and not built. [AUTHOR: The code wires three of five registers; the memo that names the formula and the examples calls them filed and not routed. Does the chapter say they are the next work you have filed, or only that they are absent?]
+**I refused to let the example look like the answer.** The record's closing law about the fifth register is that an admitted candidate writes its example back as a promise. That law is designed, and not built.
 
 ## 5. The court
 
@@ -4967,7 +4967,7 @@ Where I think the record stands apart: every reply, in whatever form, is judged 
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals; the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. [AUTHOR: May the chapter say outright that the two pages promise more than the code, so that the page or the code is corrected?]
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things: the values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. [AUTHOR: May the chapter say outright that the two pages promise more than the code, so that the page or the code is corrected? And the code wires three of the five registers, while the memo that names the formula and the examples calls them filed and not routed: does the chapter say they are the next work you have filed, or only that they are absent?]
 
 What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a reply with a space in it. In the version of the library this book runs, `ReplyIn` raises, with an uninitialised variable, on any value containing a space: "tomato sauce", "fromage et tomate", "jibini da tumatir". The direct call to the door returns the refusal properly. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a reply with a space.
 
@@ -5018,7 +5018,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -5279,7 +5279,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots, inbox and queue; designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -5682,7 +5682,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -6004,7 +6004,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons run on both sides, with the other side's version and the date; the four code pairs of the site, re-run; four field studies that end on what the field has and the library lacks; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:26 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -6187,7 +6187,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a page for the architect; the five-row guarantee sheet
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -6643,7 +6643,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live adapter for payments, a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -7130,7 +7130,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; the twenty-two verbs as a list the library holds; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -7496,7 +7496,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar); the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a class named for a ribbon, a rail, a spine or a status bar; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -7895,7 +7895,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -8205,7 +8205,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the delivery gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; a speed expectation in the owner's own percentile; browser-side timing; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -8441,7 +8441,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -8673,7 +8673,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule written as data on a model, changed and judged again; the governor that names a rule that governs nothing; a refusal that reaches a person with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -8925,7 +8925,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the customers' declarations written as Softanza's own; the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -9044,7 +9044,7 @@ aVerdicts = StzSoundSingingVerdict()
 
 > run: kept
 
-This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.) [AUTHOR: Shall the block print the name too, as the record's form of "named"? It is yours.]
+This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
 
 **A pre-flight that says "feasible" without touching a host.** The deployment's pre-flight refuses a host that is too small. For a host whose provider is a cloud, it says feasible and "provision on aws", without any account. A feasibility is a plan, not a verification. The design file says it plainly: what remains is the verification against a real host or account, gated by infrastructure. The figures below are illustrative.
 
@@ -9128,7 +9128,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 **I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, and the order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
 
-**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. [AUTHOR: May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it.]
+**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. [AUTHOR: May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it. And shall the block under "a date, a person, and a sentence" print the person's name too, as the record's form of "named"? That is yours to say.]
 
 **I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person, and until then it is unperceived, which is a state and not a failure.
 
@@ -9213,7 +9213,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks that refuse wholesale staging and a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -9352,7 +9352,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -9632,7 +9632,7 @@ No code was run to make the register. The evidence column counts files that name
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 The library has a court over its own code. It reads a class as a graph and judges it against rules, each of which was written after the library did something it should not have. This appendix lists the fourteen, and shows three of them firing.
 
@@ -9830,7 +9830,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **built.** One of the three stage words. The code exists, a guard exists, and a block ran. Chapter 3.
 
-**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapters 17, 18.
+**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapter 18.
 
 **checkpoint.** A refusal kept for a person, with its context and a lifetime. Chapter 18.
 
@@ -9898,7 +9898,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **scope.** A named frame in which a system act is written: development, deployment, runtime-current. The system acts of a program are always in a scope. Chapters 8, 23.
 
-**spine.** The nine chapters that carry the whole argument and can be read alone. Chapter 1.
+**spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
 **stage word.** One of built, designed, absent, printed at the head of each chapter's limit. Chapter 3.
 
@@ -9923,7 +9923,7 @@ This appendix is that reading, by chapter. Nothing in it is typed. It is regener
 
 Two things to keep in mind. A figure is the number of assertion calls the file holds, counted in its text; it is not a run. Most of these guards are not run by the book, because they write files, open ports or spawn processes. The few I ran myself are named in the chapters that rely on them, with the date. And the only fixtures the book cites are the ones the guards and the blocks read: the course folder of the library's education program, and the data folders its guards name. The blocks of the book are themselves the other fixtures: each one runs inside the library at the commit named under every chapter's title.
 
-The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-09 03:28 UTC+01:00. A guard cited by two chapters is counted once in this total.
+The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-09 04:27 UTC+01:00. A guard cited by two chapters is counted once in this total.
 
 ### 1 · Change arrives faster than trust
 

@@ -4,7 +4,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

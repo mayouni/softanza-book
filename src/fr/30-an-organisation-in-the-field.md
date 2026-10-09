@@ -201,7 +201,7 @@ Lisez ce bloc comme une limite et non comme une victoire. Rien n'y met quoi que 
 
 **J'ai refusé une règle silencieuse.** Une règle qui ne gouverne rien est signalée. Une règle sans message l'est aussi. C'est le prix de laisser une personne qui ne programme pas toucher à une règle, et je n'ai pas attendu le premier incident pour le payer.
 
-**J'ai refusé d'appeler le hors ligne une leçon.** La page Forged le dit en quatre mots : un manque, pas une leçon. Un restaurant a demandé la même chose. L'étude est claire sur le fait que le hors ligne est l'option par défaut de l'organisation, et la bibliothèque n'en a qu'une permission. [AUTHOR: L'étude de l'organisation dit que sa partie hors ligne « est déjà en service », et la page Forged dit « un manque ». Le dossier d'un paquet frère du domaine, côté navigateur, contient une boîte d'envoi durable sur l'appareil et une relecture ordonnée et idempotente, et je ne l'ai pas exécuté. Le livre peut-il le mentionner, comme extérieur à la bibliothèque et non exécuté ?]
+**J'ai refusé d'appeler le hors ligne une leçon.** La page Forged le dit en quatre mots : un manque, pas une leçon. Un restaurant a demandé la même chose. L'étude est claire sur le fait que le hors ligne est l'option par défaut de l'organisation, et la bibliothèque n'en a qu'une permission. [AUTHOR: L'étude de l'organisation dit que sa partie hors ligne « est déjà en service », et la page Forged dit « un manque ». Le dossier d'un paquet frère du domaine de projets, côté navigateur, contient une boîte d'envoi durable sur l'appareil et une relecture ordonnée et idempotente, et je ne l'ai pas exécuté. Le livre peut-il le mentionner, comme extérieur à la bibliothèque et non exécuté ?]
 
 ## 5. Le tribunal
 

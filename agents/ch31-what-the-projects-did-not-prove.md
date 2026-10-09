@@ -4,7 +4,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the customers' declarations written as Softanza's own; the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -123,7 +123,7 @@ aVerdicts = StzSoundSingingVerdict()
 
 > run: kept
 
-This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.) [AUTHOR: Shall the block print the name too, as the record's form of "named"? It is yours.]
+This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
 
 **A pre-flight that says "feasible" without touching a host.** The deployment's pre-flight refuses a host that is too small. For a host whose provider is a cloud, it says feasible and "provision on aws", without any account. A feasibility is a plan, not a verification. The design file says it plainly: what remains is the verification against a real host or account, gated by infrastructure. The figures below are illustrative.
 
@@ -207,7 +207,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 **I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, and the order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
 
-**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. [AUTHOR: May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it.]
+**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. [AUTHOR: May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it. And shall the block under "a date, a person, and a sentence" print the person's name too, as the record's form of "named"? That is yours to say.]
 
 **I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person, and until then it is unperceived, which is a state and not a failure.
 

@@ -32,7 +32,7 @@ L'en-tête de la bibliothèque pour son interface rédigée le dit : le fichier 
 
 ## 3. La forme Softanza
 
-Ici je dois vous dire quelque chose avant les blocs. À ce commit, **aucun IDE de cette famille n'existe**. Aucune classe de la bibliothèque n'est nommée pour un ruban, un rail, une colonne ou une barre d'état. La ligne d'honnêteté propre de l'étude, proposée pour le site, le dit : aucun IDE de cette famille n'est livré aujourd'hui ; un shell l'est, pour le plan sonore ; la fondation qui ferait du suivant une projection est spécifiée et pas encore construite. Ma lecture est d'accord, avec un ajout : la bibliothèque génère une surface de navigateur, celle de l'émulateur, et je la montre plus bas avec une perte.
+Ici je dois vous dire quelque chose avant les blocs. À ce commit, **aucun IDE de cette famille n'existe**. Aucune classe de la bibliothèque n'est nommée pour un ruban, un rail, une colonne ou une barre d'état. La ligne d'honnêteté propre de l'étude, proposée pour le site, le dit : aucun IDE de cette famille n'est livré aujourd'hui ; un shell l'est, pour le volet sonore ; la fondation qui ferait du suivant une projection est spécifiée et pas encore construite. Ma lecture est d'accord, avec un ajout : la bibliothèque génère une surface de navigateur, celle de l'émulateur, et je la montre plus bas avec une perte.
 
 Ce que la bibliothèque a, ce sont les pièces sous chaque marque du motif, et elles tournent. Je les prends dans l'ordre.
 
@@ -283,7 +283,7 @@ Le mot d'intention est stocké comme chaîne, et n'est vérifié contre aucune l
 
 **J'ai refusé un drapeau qui désactive l'arbre d'accessibilité.**
 
-**J'ai admis une lentille qui ne peut pas capturer.** La charte du domaine pour ses produits : une vérité, dans des fichiers, et deux lentilles. Ce que la charte a refusé, ce sont les cadres qui capturent le travail. Une lentille qui ne peut pas capturer est admissible. L'environnement est une projection de texte brut, et non un magasin.
+**J'ai admis une lentille qui ne peut pas capturer.** La charte du domaine de projets pour ses produits : une vérité, dans des fichiers, et deux lentilles. Ce que la charte a refusé, ce sont les cadres qui capturent le travail. Une lentille qui ne peut pas capturer est admissible. L'environnement est une projection de texte brut, et non un magasin.
 
 **Une session a retiré une facette, et je l'ai rétablie.** La conception de référence consigne que la facette Connexions était de première classe dans le prototype de juin 2026, et qu'un agent l'a retirée par un raisonnement circulaire, ce qui s'est propagé en cascade dans cinq documents. Je l'ai rétablie. Celui qui décide du ruban est l'auteur.
 
@@ -345,7 +345,7 @@ Voilà la perte contre la page de la bibliothèque elle-même. [AUTHOR: Le chapi
 
 **`Orphans()` compte les conteneurs.** Savoir si une boîte de mise en page seule doit un verbe est une règle que la constitution doit énoncer.
 
-Ce qui est construit : l'interface comme texte avec un tribunal ; quatre genres fermés, une liste fermée de dix-neuf rôles, un ensemble fermé de champs, une justification obligatoire, un aller-retour jusqu'à un point fixe ; deux projections, avec une table enregistrée de trois divergences et une page qui peut dire DISAGREE ; l'arbre d'accessibilité, et un pont qui atteint l'interface d'un vrai lecteur d'écran sous Windows, lu et non exécuté par moi ; une valeur déclarée change et l'écran suit, avec le focus conservé ; une page hébergée sur la boucle locale ; un backend qui refuse de quitter la boucle locale sans signature ; un monde qui propose ; des écrans déclarés comme intentions ; une surface de navigateur générée ; et un shell binaire, le banc d'écoute du plan sonore, en environ sept cents lignes de Zig, que j'ai lues et pas construites.
+Ce qui est construit : l'interface comme texte avec un tribunal ; quatre genres fermés, une liste fermée de dix-neuf rôles, un ensemble fermé de champs, une justification obligatoire, un aller-retour jusqu'à un point fixe ; deux projections, avec une table enregistrée de trois divergences et une page qui peut dire DISAGREE ; l'arbre d'accessibilité, et un pont qui atteint l'interface d'un vrai lecteur d'écran sous Windows, lu et non exécuté par moi ; une valeur déclarée change et l'écran suit, avec le focus conservé ; une page hébergée sur la boucle locale ; un backend qui refuse de quitter la boucle locale sans signature ; un monde qui propose ; des écrans déclarés comme intentions ; une surface de navigateur générée ; et un shell binaire, le banc d'écoute du volet sonore, en environ sept cents lignes de Zig, que j'ai lues et pas construites.
 
 Ce qui est conçu : le kit de shells avec deux shells ; le chrome comme genres fermés nommés pour la colonne, le ruban, le rail et la barre d'état ; la facette comme donnée, avec son groupe, sa place dans la vie, ses genres d'artefacts, son tribunal et son profil ; le rail lié au focus ; les cellules de gouvernance lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis.
 

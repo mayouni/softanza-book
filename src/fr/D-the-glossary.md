@@ -24,7 +24,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **construit.** L'un des trois mots d'étape. Le code existe, une garde existe, et un bloc s'est exécuté. Chapitre 3.
 
-**candidat.** Ce qu'est une réponse, la réponse d'un modèle ou un exemple, tant que le tribunal ne l'a pas jugé. Chapitres 17, 18.
+**candidat.** Ce qu'est une réponse, la réponse d'un modèle ou un exemple, tant que le tribunal ne l'a pas jugé. Chapitre 18.
 
 **point de contrôle.** Un refus gardé pour une personne, avec son contexte et une durée de vie. Chapitre 18.
 
@@ -92,7 +92,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **portée.** Un cadre nommé dans lequel s'écrit un acte système : développement, déploiement, runtime courant. Les actes système d'un programme sont toujours dans une portée. Chapitres 8, 23.
 
-**colonne.** Les neuf chapitres qui portent tout l'argument et peuvent se lire seuls. Chapitre 1.
+**colonne.** Les neuf chapitres qui portent tout l'argument et peuvent se lire seuls. La préface.
 
 **mot d'étape.** L'un de construit, conçu, absent, imprimés en tête de la limite de chaque chapitre. Chapitre 3.
 
