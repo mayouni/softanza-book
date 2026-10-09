@@ -57,6 +57,7 @@ UI = {
     "status_link": "Status of the book",
     "src_head": "Where the evidence lives", "src_narration": "Narration", "src_site": "On the site",
     "src_rulings": "Rulings of the study",
+    "appendix": "Appendix", "appendices": "Appendices",
   },
   "fr": {
     "lang": "fr", "other": "en", "part": "Partie", "chapter": "Chapitre", "preface": "Préface",
@@ -87,6 +88,7 @@ UI = {
     "status_link": "État du livre",
     "src_head": "Où sont les preuves", "src_narration": "Narration", "src_site": "Sur le site",
     "src_rulings": "Décisions de l'étude",
+    "appendix": "Annexe", "appendices": "Annexes",
   },
 }
 
@@ -540,7 +542,7 @@ def convert_body(body, meta, ui, run_rec, run_date, guards):
                 out.append(render_table(doors, "book-table doors", ui["doors_h"])); doors = []
             close_section()
             head = s[3:].strip()
-            current = section_number(head)
+            current = None if meta.get("appendix") else section_number(head)
             if current == 4:
                 out.append(f'<section class="decision"><div class="decision-tag">{ui["decision"]}</div>'); decision_open = True
             out.append(f'<h3 class="subsection-h">{inline(head)}</h3>')
@@ -634,6 +636,71 @@ def words_of(body):
     return len(re.findall(r"\b\w+\b", plain(no_code)))
 
 
+# ============================================================================ the appendices that are read from the build
+def _chapters_only(en_src):
+    return [(p, m, b) for p, m, b in en_src if not m.get("appendix")]
+
+
+def generated_body(kind, en_src, guards, runs, st):
+    """Markdown for an appendix that is read from the book itself at build, so that no number in it is typed."""
+    chapters = _chapters_only(en_src)
+    g = guards.get("guards", {})
+    lib = runs.get("run", {}).get("library", {})
+    out = []
+    if kind == "guards":
+        seen, total = {}, 0
+        for path, m, body in chapters:
+            names = m.get("guards") or []
+            if not names:
+                continue
+            out.append(f"### {m['number']} · {m['title']}")
+            out.append("")
+            out.append("| Guard | Assertions | Where in the library's test tree |")
+            out.append("|---|---|---|")
+            for n in names:
+                rec = g.get(n, {})
+                if rec.get("exists"):
+                    out.append(f"| `{n}` | {rec['assertions']} | `{rec['path']}` |")
+                    if n not in seen:
+                        seen[n] = rec["assertions"]
+                else:
+                    out.append(f"| `{n}` | missing | |")
+            out.append("")
+        out.insert(0, f"The chapters cite {len(seen)} distinct guards, holding {sum(seen.values())} assertions between them, "
+                      f"read from the test tree at commit {lib.get('short', 'null')} on {guards.get('read', 'null')}. "
+                      "A guard cited by two chapters is counted once in this total.\n")
+    elif kind == "narrations":
+        short = lib.get("short")
+        nd = ROOT / ".cache" / f"stzlib-{short}" / "libraries" / "stzlib" / "base" / "doc" / "narrations" if short else None
+        seen, absent = set(), []
+        for path, m, body in chapters:
+            names = m.get("narrations") or []
+            if not names:
+                continue
+            out.append(f"### {m['number']} · {m['title']}")
+            out.append("")
+            out.append("| Narration | In the library at the pin |")
+            out.append("|---|---|")
+            for n in names:
+                ok = bool(nd and (nd / n).exists())
+                seen.add(n)
+                if not ok:
+                    absent.append(n)
+                out.append(f"| `{n}` | {'yes' if ok else 'no'} |")
+            out.append("")
+        out.insert(0, f"The chapters cite {len(seen)} distinct narrations. " + (f"{len(absent)} of the names are not files of the library's " if absent else "Every name is a file of the library\'s ") +
+                      f"narration folder at commit {lib.get('short', 'null')}" + (": " + ", ".join(f"`{a}`" for a in absent) if absent else "") + ". "
+                      "A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.\n")
+    elif kind == "agents":
+        out.append("| # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |")
+        out.append("|---|---|---|---|---|---|---|---|")
+        for path, m, body in chapters:
+            r = runs.get("chapters", {}).get(f"en/{path.stem}", {})
+            kept = f"{r['kept']} of {r['runnable']}" if r.get("runnable") else "no code"
+            out.append(f"| {m['number'] or ''} | `{m['id']}` | {m.get('part', '')} | {m.get('status', '')} | {'yes' if m.get('spine') else ''} | {kept} | {len(m.get('guards') or [])} | {len(doors_of(body))} |")
+    return "\n".join(out)
+
+
 # ============================================================================ the cover (typographic, a working cover)
 def cover_svg(st, ui, lang):
     """The author's cover image when assets/cover has one (a flat image, embedded so the reader stays one file);
@@ -695,10 +762,18 @@ def build_pages(lang, st, en_src, src_by_id, runs, guards, ui):
         own = src_by_id.get(meta["id"])
         m, b, p_path = (own[1], own[2], own[0]) if own else (meta, body, path)
         number = m["number"]
-        slug = "preface" if number == 0 else f"ch{number}-{m['id']}"
-        part, _ = chapter_title(st, number)
-        spine = bool(m.get("spine")) or number in st["spine"]
-        eyebrow = ui["preface"] if number == 0 else f'{ui["part"]} {ROMAN[part["number"]]} · {ui["chapter"]} {number}'
+        appendix = m.get("appendix")
+        if appendix:
+            slug = f"app-{str(appendix).lower()}-{m['id']}"
+            eyebrow = f'{ui["appendix"]} {appendix}'
+            spine = False
+            if m.get("generated"):
+                b = b.rstrip() + "\n\n" + generated_body(m["generated"], en_src, guards, runs, st)
+        else:
+            slug = "preface" if number == 0 else f"ch{number}-{m['id']}"
+            part, _ = chapter_title(st, number)
+            spine = bool(m.get("spine")) or number in st["spine"]
+            eyebrow = ui["preface"] if number == 0 else f'{ui["part"]} {ROMAN[part["number"]]} · {ui["chapter"]} {number}'
         key = f"{lang}/{p_path.stem}"
         run_rec = runs.get("chapters", {}).get(key) if own else None
         if own:
@@ -709,7 +784,7 @@ def build_pages(lang, st, en_src, src_by_id, runs, guards, ui):
                          f'<p><a href="../{other}/index.html#{slug}">{ui["read_other"]}</a></p></div>')
         pages.append(dict(key=key, slug=slug, meta=m, number=number, title=m["title"], eyebrow=eyebrow, spine=spine,
                           body_html=body_html, own=bool(own), run=run_rec, words=words_of(b) if own else 0,
-                          preview=preview_of(b) if own else ""))
+                          preview=preview_of(b) if own else "", appendix=appendix))
     for k, p in enumerate(pages):
         p["prev"] = pages[k - 1]["slug"] if k > 0 else ""
         p["next"] = pages[k + 1]["slug"] if k < len(pages) - 1 else ""
@@ -809,6 +884,21 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
                 side.append(f'<span class="sidebar-link is-absent{cls}" title="{ui["not_drafted"]}"><span class="sl-text" data-t="{label}">'
                             f'<span class="sl-spine"></span>{label}</span></span>')
                 rows.append(f'<div class="ce-row is-absent{cls}"><span class="ce-num">{num}</span><span class="ce-title">{html.escape(ctitle)}</span>{spine_mark}<span class="ce-pg">{ui["not_drafted"]}</span></div>')
+    by_letter = {str(p["appendix"]): p for p in pages if p.get("appendix")}
+    if st.get("appendices"):
+        side.append(f'<div class="sb-part">{html.escape(ui["appendices"])}</div>')
+        rows.append(f'<div class="ce-part">{html.escape(ui["appendices"])}</div>')
+        for letter, atitle in st["appendices"]:
+            p = by_letter.get(letter)
+            label = f"{letter} · {html.escape(p['title'] if p else atitle, quote=False)}"
+            if p:
+                side.append(f'<a class="sidebar-link" href="#{p["slug"]}"><span class="sl-text" data-t="{label}">'
+                            f'<span class="sl-spine"></span>{label}</span><span class="sl-leader"></span></a>')
+                rows.append(f'<div class="ce-row"><span class="ce-num">{letter}</span><a class="ce-title" href="#{p["slug"]}">{html.escape(p["title"])}</a></div>')
+            else:
+                side.append(f'<span class="sidebar-link is-absent" title="{ui["not_drafted"]}"><span class="sl-text" data-t="{label}">'
+                            f'<span class="sl-spine"></span>{label}</span></span>')
+                rows.append(f'<div class="ce-row is-absent"><span class="ce-num">{letter}</span><span class="ce-title">{html.escape(atitle)}</span><span class="ce-pg">{ui["not_drafted"]}</span></div>')
     spine_btn = (f'<button class="spine-toggle" aria-pressed="false" data-on="{ui["spine_only"]}" data-off="{ui["all_chapters"]}">'
                  f'{ui["spine_only"]}</button>')
     back = "".join(f"<span>{html.escape(l)}</span><br>" for l in st["back_cover"])
@@ -896,7 +986,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
 # ============================================================================ status, agents
 def render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built):
     rows = []
-    by_number = {m["number"]: (path, m, body) for path, m, body in en_src}
+    by_number = {m["number"]: (path, m, body) for path, m, body in en_src if not m.get("appendix")}
     entries = [(0, "Preface")] + [(n, t) for p in st["parts"] for n, t in p["chapters"]]
     done_count = 0
     for num, title in entries:
@@ -933,6 +1023,30 @@ def render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built):
                     f'<td>{sp}</td><td>{html.escape(m.get("status", ""))}</td><td class="{"" if run_ok else "bad"}">{run_txt}</td>'
                     f'<td>{"<br>".join(gl)}</td><td class="num">{words_of(body)}</td><td class="num">{len(author_questions(body)) or ""}</td><td>{"yes" if fr else "no"}</td>'
                     f'<td>{"<b>done</b>" if done else ""} {marks}</td></tr>')
+    by_letter = {str(m["appendix"]): (path, m, body) for path, m, body in en_src if m.get("appendix")}
+    for letter, atitle in st.get("appendices", []):
+        if letter not in by_letter:
+            rows.append(f'<tr class="absent"><td>{letter}</td><td>{html.escape(atitle)}</td><td></td>'
+                        f'<td>not drafted</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>')
+            continue
+        path, m, body = by_letter[letter]
+        key = f"en/{path.stem}"
+        r = runs.get("chapters", {}).get(key)
+        if key in stale_keys:
+            run_txt, run_ok = "changed since its last run", False
+        elif r and r["runnable"]:
+            run_txt, run_ok = f'{r["kept"]} of {r["runnable"]} kept', r["kept"] == r["runnable"]
+        else:
+            run_txt, run_ok = "no code", True
+        gl = []
+        for g in m.get("guards") or []:
+            rec = guards.get("guards", {}).get(g, {})
+            gl.append(f'<a href="{rec["url"]}"><code>{html.escape(g)}</code></a> {rec["assertions"]}' if rec.get("exists")
+                      else f'<code>{html.escape(g)}</code> <b class="bad">missing</b>')
+        rows.append(f'<tr><td>{letter}</td><td><a href="en/index.html#app-{letter.lower()}-{m["id"]}">{html.escape(m["title"])}</a></td>'
+                    f'<td></td><td>{html.escape(m.get("status", ""))}</td><td class="{"" if run_ok else "bad"}">{run_txt}</td>'
+                    f'<td>{"<br>".join(gl)}</td><td class="num">{words_of(body)}</td><td class="num">{len(author_questions(body)) or ""}</td>'
+                    f'<td>{"yes" if m["id"] in fr_by_id else "no"}</td><td>{"generated at build" if m.get("generated") else ""}</td></tr>')
     lib = runs.get("run", {}).get("library", {})
     eng = lib.get("engine_binaries", {})
     return f"""<!DOCTYPE html>
@@ -993,7 +1107,7 @@ def agents_files(st, en_src, runs, guards, built):
                     for k, b in enumerate(blocks)]
         part = m.get("part")
         chapters.append({
-            "number": m["number"], "id": m["id"], "title": m["title"], "part": part,
+            "number": m["number"], "id": m["id"], "title": m["title"], "part": part, "appendix": m.get("appendix"),
             "law": m.get("law") or (law_by_part.get(part) if m["number"] in (5, 11, 17) else None),
             "spine": bool(m.get("spine")), "status": m.get("status"), "stage": m.get("stage") or {},
             "guards": [{"name": g, **{k: v for k, v in guards.get("guards", {}).get(g, {}).items() if k in ("path", "assertions", "url", "exists")}}
@@ -1015,7 +1129,8 @@ def agents_files(st, en_src, runs, guards, built):
     for c in chapters:
         g = ", ".join(f"{x['name']} ({x.get('assertions', 'missing')})" for x in c["guards"]) or "none"
         run = f"{c['run']['kept']} of {c['run']['runnable']} blocks kept" if c["run"] and c["run"].get("runnable") else "no code"
-        lines.append(f"- {c['number']}. {c['title']} [{c['status']}{', spine' if c['spine'] else ''}] guards: {g}; run: {run}")
+        lead = f"Appendix {c['appendix']}" if c.get("appendix") else f"{c['number']}."
+        lines.append(f"- {lead} {c['title']} [{c['status']}{', spine' if c['spine'] else ''}] guards: {g}; run: {run}")
     (ROOT / "llms-book.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

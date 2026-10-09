@@ -269,13 +269,13 @@ next
 
 The Hausa pack speaks nine of twenty-five meanings. And no model is loaded. The layer has an optional rescue by embedding, when nothing lexical was found and a model is loaded. At this commit none is, and none is needed. So I say "no model is loaded", and not "never touches a model".
 
-## 4. From the 2020 diagram to the three eras
+### From the 2020 diagram to the three eras
 
 The library names three eras, in a design document of 10 July 2026. The first is near-natural language, the first paradigm. The second is natural programming: lower the language toward code, with free text, and one object per block. The third, of 2026, is one lexicon shared by execution and documentation, multilingual packs with morphology, and `Understood()`. I call the third *the shared lexicon*. The vision's own heading for it uses a word this book does not use.
 
 Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks, and all the commits cited are ancestors of the pin.) [AUTHOR: Which date does the chapter print for the first slide? The structure says "the 2020 slide". The record has the diagram of 2020 to 2025 and the deck of 2022; chapter 5 says "the founding slide of 2022".]
 
-## 5. The decision, and what I refused
+## 4. The decision, and what I refused
 
 **I built it without a model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. Its thesis: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
 
@@ -299,7 +299,7 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 
 **I refused natural language as a way to declare.** It asks, and never declares.
 
-## 6. The court
+## 5. The court
 
 `nnl_narrated` proves the flagship sentence, the generated surface of nouns, the degree words, the conditional mood, the ordinal reference, the refusal that accounts for itself, the grammaticality doctrine, context on the chain, and the discourse tense. `multilingual_pack_narrated` proves packs as data, programs in French, Arabic and Turkish that run, verified affix stripping, a language added at runtime, and `Understood()` back in the program's language. `question_narrated` proves the question frames and that a frame with no aspect is refused. `literate_templates_narrated`, the documents and templates. `truthchain_narrated` and `interrogative_narrated`, the folded verdicts.
 
@@ -307,7 +307,7 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 
 The other guards named above were run once each by a researcher on 8 October 2026, and passed all their assertions. The sum of the assertion calls in the eleven narrated guards of this form is 454.
 
-## 7. The field, and where it leads
+## 6. The field, and where it leads
 
 The field leads in breadth of phrasing. A model accepts any phrasing in any language, and the dictionary accepts what the packs name. Measured above: the Hausa pack covers nine of twenty-five meanings, Turkish ten, Arabic sixteen, English twenty-three, French twenty-five. And the sentence layer acts on three classes only: strings, lists and numbers. A customer's domain objects are not among them; the domain goes through the knowledge graph.
 
@@ -319,7 +319,7 @@ And there is a loss on the library's own side. `Understood()` prints verbs and n
 
 Where the win is, with the loss beside it: the same sentence gives the same answer, with a reason, offline, in the user's language. The loss is that the user's language must be in a pack, and a word outside is a literal or a refusal. The record says the winning case is regulated or sovereign work: an instruction that executes locally and can be audited to the word.
 
-## 8. The limit
+## 7. The limit
 
 An ungrammatical chain runs. The second chain below reads "which a length of 4", which is not English, and nothing judges it:
 
@@ -370,7 +370,7 @@ What is designed: the plan of a narration emitted as an executable chain, so tha
 
 What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. [AUTHOR: May the chapter tell your plea to the project of the former host language in your own words? The record has no sentence of yours in that voice, only a private memo of 30 August 2026 that quotes "seductive at first, unusable after".]
 
-## 9. Six doors
+## 8. Six doors
 
 **The programmer.** Write the chain as the sentence and read it aloud. The library refuses what its subject cannot do, and says why. You are the parser, so the sentence is only as grammatical as you are.
 
@@ -384,7 +384,7 @@ What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer c
 
 **The agent.** Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built.
 
-## 10. Exercise
+## 9. Exercise
 
 Take one sentence you say about a word in your own language: that it is lowercase, has a given length, and a given number of vowels. Write it twice before you run anything. First as a near-natural chain, where you are the parser. Second as a `Naturally` sentence, where the library is. Under each, write the line you expect it to print.
 

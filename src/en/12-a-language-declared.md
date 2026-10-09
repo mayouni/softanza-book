@@ -166,7 +166,7 @@ o = new stzList([ 4, 7, 10, 3, 8 ])
 
 What I saw, and the narration does not say: the refusal is silent and whole. A condition with the true left branch and a sine on the right printed `[ ]`. A condition that calls a function of mine never called it. A syntax error also printed `[ ]`. The language is closed, and it refuses without a word. Chapter 11's natural layer says why it refuses, and this one does not.
 
-## 4. The factory, outside the library
+### The factory, outside the library
 
 A language declared once should give its court, its mouth, its voice and its readers. That is the factory, and it is where the study of this book meets its own limit: the factory is not in the library.
 
@@ -205,25 +205,7 @@ Three more observations, each a limit.
 
 **The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The charter's own first morning says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides: the factory has forged courts and grammars for several languages, outside the library; it has not forged the full list the principle promises; and the vision's text has not been updated. [AUTHOR: Shall chapter 12 say "built outside the library, designed for the library", and shall chapter 11's limit sentence be amended to match? I have amended it to say the sketch has since forged.]
 
-## 5. The decision, and what I refused
-
-**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their agents. The charter records a reversal: its first decision, as the family's second language, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
-
-**I decided to declare, and not to write.** The act of the kernel: declare a language. It was extraction and not invention: the first languages were declared after they already ran and had consumers.
-
-**I refused an open escape form.** No clause, operator or operand denotes host code, calls, evaluation or input and output. Unexpressible, not forbidden. Two fixtures pin the refusal, and I re-ran them.
-
-**I refused logic in the declaring surface.** The declaration declares and does not compute. The alphabet is deliberately not Turing-complete, and that is its power and not its poverty.
-
-**I refused natural language as the declaring surface.** Natural language asks, and it never declares. A draft may be proposed, and the court decides, and the human ratifies.
-
-**I refused one text for declaring and for computing.** Programmability and closure never occupy the same surface. Computing code reaches a declared world only through the doors the forge generates, and chapter 16 is about the door.
-
-**I refused to let the grammar half retire the court.** The contract says the court does not retire when constrained decoding lands. And what the grammar cannot express it refuses, and never flattens or approximates.
-
-**I refused a second face as a second meaning.** A face spells the graph; it never gives it Python's or JavaScript's meaning. That is a session's memo, which proposes and rules nothing, and its question of how many faces before the announcement is mine, and unanswered in the record.
-
-## 6. The facets a declared language wears
+### The facets a declared language wears
 
 By facet I mean here a surface of a declared language. The charter lists what the forge produces from a declaration, and I give each a stage word:
 
@@ -241,7 +223,25 @@ By facet I mean here a surface of a declared language. The charter lists what th
 
 The word *facet* has other meanings in this book, and I define mine here: a surface of a declared language. The second sense is a syntax of Haro for a programmer of another language, which is chapter 16's. The third is a tool of the environment's ribbon, which is chapter 26's.
 
-## 7. The court
+## 4. The decision, and what I refused
+
+**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their agents. The charter records a reversal: its first decision, as the family's second language, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
+
+**I decided to declare, and not to write.** The act of the kernel: declare a language. It was extraction and not invention: the first languages were declared after they already ran and had consumers.
+
+**I refused an open escape form.** No clause, operator or operand denotes host code, calls, evaluation or input and output. Unexpressible, not forbidden. Two fixtures pin the refusal, and I re-ran them.
+
+**I refused logic in the declaring surface.** The declaration declares and does not compute. The alphabet is deliberately not Turing-complete, and that is its power and not its poverty.
+
+**I refused natural language as the declaring surface.** Natural language asks, and it never declares. A draft may be proposed, and the court decides, and the human ratifies.
+
+**I refused one text for declaring and for computing.** Programmability and closure never occupy the same surface. Computing code reaches a declared world only through the doors the forge generates, and chapter 16 is about the door.
+
+**I refused to let the grammar half retire the court.** The contract says the court does not retire when constrained decoding lands. And what the grammar cannot express it refuses, and never flattens or approximates.
+
+**I refused a second face as a second meaning.** A face spells the graph; it never gives it Python's or JavaScript's meaning. That is a session's memo, which proposes and rules nothing, and its question of how many faces before the announcement is mine, and unanswered in the record.
+
+## 5. The court
 
 `structuredoutput_narrated` proves that a declaration is judged when declared, with an unknown type, an unknown key and an empty menu refused; that two wire shapes are read and nothing is guessed; that there is no partial credit; that nesting works; that a retry fits in one budget; and, in its tenth scene, that a lie is let through on purpose. `schema_grammar_narrated` proves that the declaration compiles to a grammar, that a closed enumeration becomes a closed alternation, that optional and list arity are handled, that the unenforced constraints are listed by field and operator, and that a nested structure is refused with a named code. `constrained_decoding_narrated` proves that the machine walks a grammar byte by byte, that a prefix is not a whole, that `yesterday` is refused, that the placeholder the model wrote cannot be reached, that refusals are named, that structure is not falsehood, and that a grammar on a streaming session is refused. Its two scenes that need a generative model say so. `483_w_and_wf_forms_in_conditional_code` proves that the two forms of a condition give the same positions. It does not assert the closed language's refusal, and no guard does.
 
@@ -249,7 +249,7 @@ No guard in the library tests a factory, since there is none. The factory's guar
 
 The figure that the first attempt is valid in two cases of ten when checked afterwards, and in ten of ten when constrained, is a number in a comment of these guards. It cannot be re-taken here: the live scenes need a generative model file, and the snapshot holds only a checksum file in its folder for models. Chapter 11 carries the figure, and I point to it.
 
-## 8. The field, and where it leads
+## 6. The field, and where it leads
 
 The workbenches lead on tooling. The field study says it itself: they remain superior on the axes the design deliberately abandons, projectional tooling, editor integration and depth of macros, and the bet that those axes are the wrong ones is named as a bet.
 
@@ -261,7 +261,7 @@ A grammar over-approximates a court. Duplicate names, dangling references and th
 
 The code a factory emits must be read by someone. The family style that every declared language inherits has a success test, that learning the second language should take an evening, because it is the first language wearing different verbs. It is a design requirement and not a measurement. No learner has been timed in the record I read.
 
-## 9. The limit
+## 7. The limit
 
 The library has two closed formula languages, and they behave differently at the edge. A reader who learns "the library's formulas are closed" from chapter 11 and from the condition above will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. The word `sin` that the condition refused runs here:
 
@@ -285,7 +285,7 @@ What is designed: the forge producing from a declaration alone the parser, court
 
 What is absent: the figure of two of ten against ten of ten, re-taken; and any record that the factory runs on the Haro runtime. At the time of the vision's writing the language did not exist; the charter's runs are on the older runtime and on the oracle.
 
-## 10. Six doors
+## 8. Six doors
 
 **The programmer.** You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it.
 
@@ -299,7 +299,7 @@ What is absent: the figure of two of ten against ten of ten, re-taken; and any r
 
 **The agent.** You speak only the grammar you were handed. A sentence you draft is a proposal that the court judges. Your mouth is shape, and your falsehoods are the court's and a person's.
 
-## 11. Exercise
+## 9. Exercise
 
 Write, by hand, a grammar for one line of a lunch order: `dish: ` then one of two dishes of your choice, then a newline. Before you run anything, write your predictions as promises:
 

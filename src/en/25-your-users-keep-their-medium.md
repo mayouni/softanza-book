@@ -238,13 +238,13 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 #--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
 ```
 
-## 4. The restaurant's medium
+### The restaurant's medium
 
 Chapter 1 says that the owner of the restaurant made his first demonstration over a messaging app, and chapter 2 said, in its first draft, that a messaging app was among his tools. The record does not support either sentence as it stands, and I correct chapter 2 and flag chapter 1, which is your text. His own report of 4 July 2026 gives his current tool as a spreadsheet, and asks for a web page opened by a QR code or by a button for a social network, with nothing to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
 
 So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. [AUTHOR: Which restaurant story should the chapter tell: the link as the first form of "the customer keeps their medium", with the messaging medium as an unbuilt thesis, or a statement from you about the owner's use of a messaging app, which the record does not hold? Chapter 1 carries the sentence I have flagged.]
 
-## 5. The decision, and what I refused
+## 4. The decision, and what I refused
 
 **Messaging, the question.** The study's report of my ask: conversations happen programmatically by default, or through minimal configuration, without obliging the users to change their usability cultures. The study's section is titled "ruled" and not "ruled by the author", and its proposals for the conversational surfaces are a session's. The record holds no ruling of mine that adopts them. I say *proposed*, not *decided*.
 
@@ -262,13 +262,13 @@ So the restaurant is the first form of the sentence of this chapter, and not an 
 
 **The screen acknowledges, and the sound is not the acknowledgement.**
 
-## 6. The court
+## 5. The court
 
 `sms_port_narrated` proves the segment law, with its boundaries at 160 and 161, 306 and 307, the emoji cliff at 100 to 102 units, 71 Arabic letters making two segments, and the nine extension characters; E.164; the sink and its bill; the outage against the rejection; and the refusal in production. I ran it once, and 53 of 53 assertions passed. `wisecoding_rich_narrated` is chapter 18's: the frame, the numbered options, the refusal of a number nobody offered, the checkpoints with a lifetime. `payments_webhooks_narrated` proves that an inbound signature is verified before it is believed: unsigned, forged, replayed. `sound_semantics_narrated` proves that the five values are the law's, that four sound and `muted` is silent, and that an invented value is refused. `sound_listener_narrated` proves the closed grammar, that no match is a result, and that the confidence is a separate call; I ran it once, and 21 passed. `sound_convergence_narrated` proves that the loop closes for the four states, that the language is negotiated per direction, that a sixth value is refused at declaration, and that a stranger's phrase gives no meaning.
 
 A caveat for the court line. The sound guards need the engine's sound library, and for the loop, a voice and a recogniser. On a machine without them the voice guards print "skipped" and pass. A pass there proves nothing about speech. The guards for SMS and for the conversation have no such dependency.
 
-## 7. The field, and where it leads
+## 6. The field, and where it leads
 
 The record's own count, in the study of 12.25: of the constituent units of messaging, eighteen in all, what is missing. Its sentence that the word for a messaging app appears in no code file and no design document of the library, and USSD in none, I re-measured at this commit and confirmed. The only hits are word-list data files.
 
@@ -282,7 +282,7 @@ What the field has in cloud dictation and in trained recognisers for many langua
 
 What the record claims instead: the dialogue is a rendering of a declared world judged by a court, deterministic by default. The medium is a port with a sandbox, so the conversation and its bill are rehearsed before an account exists.
 
-## 8. The limit
+## 7. The limit
 
 The study (12.25) has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
 
@@ -315,7 +315,7 @@ What is absent:
 
 [AUTHOR: May the chapter present `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix as what you mean to build, with the limit beside them, or only as what a study proposed?]
 
-## 9. Six doors
+## 8. Six doors
 
 **The programmer.** The question comes back as data. You write the rendering and the reader for your medium in ten lines, and every reply goes through the same door whatever carried it.
 
@@ -329,7 +329,7 @@ What is absent:
 
 **The agent.** You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the author declares it.
 
-## 10. Exercise
+## 9. Exercise
 
 Take a question your own world asks. The one-relation world of chapter 18's exercise will do. Before you run anything, write under each line the output you expect:
 

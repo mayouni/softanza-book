@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 01:04 UTC+01:00",
+ "read": "2026-10-09 02:34 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -1384,6 +1384,15 @@
    "full_scope_model_narrated",
    "virtual_system_twin_narrated",
    "service_delivery_narrated"
-  ]
+  ],
+  "en/A-the-register-of-innovations": [],
+  "en/B-the-fourteen-house-rules": [
+   "coderule_narrated"
+  ],
+  "en/C-the-twenty-two-verbs-and-the-constitution": [],
+  "en/D-the-glossary": [],
+  "en/E-the-guards-and-fixtures-cited": [],
+  "en/F-the-narrations-the-book-argues-from": [],
+  "en/G-the-book-as-data": []
  }
 }

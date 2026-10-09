@@ -159,7 +159,7 @@ o1 = new stzString("fjharoljharodjharog")
 
 The narration and the deck write `vizFindAll`. It does not exist at this commit, and `vizFind` does.
 
-## 4. The goals
+### The goals
 
 Under the grammar there are seven goals, written in the 2022 deck as a matrix of thirty-three features. The study's ruling 12.14 reads them as the library's architectural skeleton: a feature that serves none is refused, and a goal with no feature is a gap. The study's headline is a session's, and no document in the library states the rule in these words. The nearest is the engine's design document: the engine must enable all seven.
 
@@ -199,7 +199,7 @@ The loss beside it, from the same slide group: the deck's "item for any enumerab
 
 The other four goals (reliability, expressiveness, universality and the one the deck calls extensibility) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
 
-## 5. The decision, and what I refused
+## 4. The decision, and what I refused
 
 **I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or agent, is asked to write with Softanza embraces the historic style.
 
@@ -211,7 +211,7 @@ The other four goals (reliability, expressiveness, universality and the one the 
 
 **I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features have names in the code and raise when called: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, the `Check` on a list, and the deck's `Yield` and `Perform` forms. I print the tally, and I print its losses with it. [AUTHOR: The deck says seven goals and thirty-three features and "7 root causes of programming complexity". No slide lists the seven causes. Do you want the chapter to name them, one per goal, and which are they?]
 
-## 6. The court
+## 5. The court
 
 `coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language, in Arabic too. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the palette cycles. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string and in a function. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
 
@@ -236,7 +236,7 @@ A detail of the spelling, for Appendix B: the names list uses hyphens, and the f
 
 What the court does not read is the code of a program written with the library. None of the fourteen rules of the house is a rule of writing.
 
-## 7. The field, and where it leads
+## 6. The field, and where it leads
 
 The field leads in enforcement by default. A formatter runs on every commit. For the code a programmer writes with Softanza, the enforcement today is none, and chapter 5 says so.
 
@@ -246,7 +246,7 @@ The site once showed a reduced dialect: its blocks had no named parameter and no
 
 Where I think the style stands apart is that every rule serves a step of thought, and every step has a written form (study 12.17). The verb's form is a contract on the object. And the promise under the line is the example, the test and the documentation at once. The 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines.
 
-## 8. The limit
+## 7. The limit
 
 What is built: the fourteen house rules of the library as a court over its own code, run in the block above; the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT`, `ZZ`, `viz`, named parameters, the same verb on a string and a list).
 
@@ -266,7 +266,7 @@ What is absent:
 - The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too.
 - The visualised call stack, and the cache and log decorators, which exist as names in comments.
 
-## 9. Six doors
+## 8. Six doors
 
 **The programmer.** Fourteen rules you can hold your own line against. Lift the value, ask in a scene, put the answer under `#-->`, name the parameter, chain one step per line, read the verb's form; and put a range, a condition or a palette in a string.
 
@@ -280,7 +280,7 @@ What is absent:
 
 **The agent.** The rules are given to you as data on the site. For the code you write, the court is still a specification. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string.
 
-## 10. Exercise
+## 9. Exercise
 
 Write, before you run anything, the line each task needs and the promise under it:
 

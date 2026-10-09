@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 01:04 UTC+01:00",
+ "built": "2026-10-09 02:34 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -23,6 +23,7 @@
    "id": "preface",
    "title": "Preface",
    "part": 0,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "missing",
@@ -43,6 +44,7 @@
    "id": "change-arrives-faster-than-trust",
    "title": "Change arrives faster than trust",
    "part": 1,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -100,7 +102,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -110,6 +112,7 @@
    "id": "the-software-crafter",
    "title": "The software crafter",
    "part": 1,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -221,7 +224,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -231,6 +234,7 @@
    "id": "the-method-from-first-principles",
    "title": "The method, from first principles",
    "part": 1,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -308,7 +312,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -318,6 +322,7 @@
    "id": "the-platform-in-one-picture",
    "title": "The platform in one picture",
    "part": 1,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -421,7 +426,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -431,6 +436,7 @@
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
    "title": "Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it",
    "part": 2,
+   "appendix": null,
    "law": "the code adheres to the way a person thinks, and the court judges it whoever wrote it",
    "spine": true,
    "status": "draft",
@@ -523,7 +529,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -533,6 +539,7 @@
    "id": "the-mental-model-and-the-metaphors",
    "title": "The mental model, and the metaphors",
    "part": 2,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -638,7 +645,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:30 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -648,6 +655,7 @@
    "id": "the-writing-style-and-the-seven-goals",
    "title": "The writing style, and the seven goals",
    "part": 2,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -788,9 +796,16 @@
     "12.17",
     "12.21"
    ],
-   "doors": {},
+   "doors": {
+    "programmer": "Fourteen rules you can hold your own line against. Lift the value, ask in a scene, put the answer under `#-->`, name the parameter, chain one step per line, read the verb's form; and put a range, a condition or a palette in a string.",
+    "analyst": "The words of your problem become the names of the steps. A rule written in a string is a rule you can store and read, and not code you must trust.",
+    "designer": "The viz prefix draws the answer where the eye expects it. The goals are the headings under which a design is judged, one feature at a time.",
+    "decision-maker": "Seven goals and thirty-three features are a reading grid. A feature that serves none is refused, and a goal with no feature is a gap. The tally is printed with its losses.",
+    "educator": "The discipline is taught whole and in order. The converted guard for lists in strings keeps the old promise's wrong spacing in a comment, which is a lesson on the cost of hand-typed answers.",
+    "agent": "The rules are given to you as data on the site. For the code you write, the court is still a specification. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string."
+   },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -800,6 +815,7 @@
    "id": "functions-as-linguistic-expressions-and-scope",
    "title": "Functions as linguistic expressions, and scope",
    "part": 2,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -919,7 +935,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 01:00 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -929,6 +945,7 @@
    "id": "patterns-of-thought",
    "title": "Patterns of thought: the Softanzuter, Reaxis and the engines",
    "part": 2,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1034,7 +1051,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 01:01 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1044,6 +1061,7 @@
    "id": "programming-becomes-refinement",
    "title": "Programming becomes refinement",
    "part": 2,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1130,7 +1148,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 01:01 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1140,6 +1158,7 @@
    "id": "law-a-language-is-declared-and-closed",
    "title": "Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it",
    "part": 3,
+   "appendix": null,
    "law": "a language is declared and closed, and whatever speaks it, person or model, is judged by it",
    "spine": true,
    "status": "draft",
@@ -1271,7 +1290,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 01:01 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1281,6 +1300,7 @@
    "id": "a-language-declared",
    "title": "A language, declared",
    "part": 3,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1377,9 +1397,16 @@
     "12.29",
     "12.30"
    ],
-   "doors": {},
+   "doors": {
+    "programmer": "You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it.",
+    "analyst": "The declaration is plain text in the domain's words, and the court answers in those words.",
+    "designer": "The refusal is declared beside the grammar, in the domain's voice, and is not authored per runtime. A designer chooses what a closed menu says when it is broken.",
+    "decision-maker": "One declaration produces the mouth and the court, and the factory itself publishes where they disagree. The factory is outside the library today. Do not buy it as shipped.",
+    "educator": "The reader can predict, byte by byte, what the sampler will allow, and learns that a grammar kills malformedness and not falsehood.",
+    "agent": "You speak only the grammar you were handed. A sentence you draft is a proposal that the court judges. Your mouth is shape, and your falsehoods are the court's and a person's."
+   },
    "run": {
-    "ran": "2026-10-09 01:01 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1389,6 +1416,7 @@
    "id": "natural-and-executable",
    "title": "Natural, and executable: two directions, one discipline",
    "part": 3,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1535,10 +1563,15 @@
     "12.30"
    ],
    "doors": {
-    "old articles have decayed": "The 2020 sentence needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ`, `TheirQ().FirstCharQ()` and `ReplaceLowercaseCharsQ` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. Of the twelve chains of that article that I ran, eight work. The bridging article's paragraph still runs in permissive mode, and prints two nested boxes around \"NOTHING SOFTANZA\" instead of the one it promises. The machine said so, since `UnderstoodAll()` is 0 and the unresolved word is named, but a reader has to ask."
+    "programmer": "Write the chain as the sentence and read it aloud. The library refuses what its subject cannot do, and says why. You are the parser, so the sentence is only as grammatical as you are.",
+    "analyst": "A requirement can be a paragraph that runs, with a paraphrase that comes back. Today it acts on strings, lists and numbers, so the analyst's domain words go in a knowledge file (chapter 14), not here.",
+    "designer": "A designer's tone is in the refusals: a message names the word and the nearest word. The record has no designer-specific evidence for this chapter, and I keep the line short.",
+    "decision-maker": "Ask any \"natural language\" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It runs offline with no key. The no-network claim is not yet measured.",
+    "educator": "A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no reviewer has read the course's other-language editions.",
+    "agent": "Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built."
    },
    "run": {
-    "ran": "2026-10-09 01:01 UTC+01:00",
+    "ran": "2026-10-09 02:31 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -1548,6 +1581,7 @@
    "id": "knowledge-programming",
    "title": "Knowledge programming",
    "part": 3,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1658,7 +1692,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1668,6 +1702,7 @@
    "id": "pattern-languages",
    "title": "Pattern languages",
    "part": 3,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1792,7 +1827,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1802,6 +1837,7 @@
    "id": "seven-languages-one-door",
    "title": "Seven languages, one door",
    "part": 3,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -1916,7 +1952,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1926,6 +1962,7 @@
    "id": "law-programmatic-by-default",
    "title": "Law: programmatic by default, the model last, admission over generation",
    "part": 4,
+   "appendix": null,
    "law": "programmatic by default, the model last, admission over generation",
    "spine": true,
    "status": "draft",
@@ -2033,7 +2070,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2043,6 +2080,7 @@
    "id": "the-five-registers",
    "title": "The five registers, and conversations that ask",
    "part": 4,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2165,7 +2203,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2175,6 +2213,7 @@
    "id": "the-domain-language-model",
    "title": "The domain language model",
    "part": 4,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2268,7 +2307,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:32 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2278,6 +2317,7 @@
    "id": "agents-that-cannot-hurt-you",
    "title": "Agents that cannot hurt you",
    "part": 4,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2385,7 +2425,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 01:02 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2395,6 +2435,7 @@
    "id": "the-court",
    "title": "The court: promises, perception, security and performance",
    "part": 4,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2527,7 +2568,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 01:03 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2537,6 +2578,7 @@
    "id": "compared-honestly",
    "title": "Compared, honestly",
    "part": 4,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2622,7 +2664,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 01:03 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2632,6 +2674,7 @@
    "id": "a-world-a-constellation-a-platform",
    "title": "A world, a constellation, a platform, and the architect",
    "part": 5,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2746,7 +2789,7 @@
     "agent": "A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed whoever calls."
    },
    "run": {
-    "ran": "2026-10-09 01:03 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -2756,6 +2799,7 @@
    "id": "rehearse-then-commit",
    "title": "Rehearse, then commit",
    "part": 5,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -2890,7 +2934,7 @@
     "agent": "You may rehearse the whole integration and plan the whole release, in a world where nothing real can move: a sandbox payment moves no money and a mail sink sends no mail. You may ask whether you may go live and be told why not. You cannot commit. The loss: that guarantee covers the library's own doubles, and a surface bound to something live is outside it."
    },
    "run": {
-    "ran": "2026-10-09 01:03 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2900,6 +2944,7 @@
    "id": "your-users-keep-their-medium",
    "title": "Your users keep their medium",
    "part": 5,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3015,9 +3060,16 @@
     "12.26",
     "12.27"
    ],
-   "doors": {},
+   "doors": {
+    "programmer": "The question comes back as data. You write the rendering and the reader for your medium in ten lines, and every reply goes through the same door whatever carried it.",
+    "analyst": "The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.",
+    "designer": "Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.",
+    "decision-maker": "A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.",
+    "educator": "The tutor already says the missing step as a question in four languages, in templates that carry no code. A learner on a plain phone is a case the record names and does not yet serve.",
+    "agent": "You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the author declares it."
+   },
    "run": {
-    "ran": "2026-10-09 01:03 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -3027,6 +3079,7 @@
    "id": "the-environment",
    "title": "The environment",
    "part": 5,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3145,7 +3198,7 @@
     "agent": "The shell is a text file that you can read and write, and the tree a screen reader reads is the tree you may read. Your proposals appear in a rail and commit nowhere."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3155,6 +3208,7 @@
    "id": "the-engine-beneath",
    "title": "The engine beneath: three layers, one engine, Haro",
    "part": 5,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3258,7 +3312,7 @@
     "agent": "You may count the engine's functions yourself. Do not repeat a count from a page, and do not write a loop over the list of classes directly. Tell the reader which layer a class lives in by its parent chain, and not by its prefix."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -3268,6 +3322,7 @@
    "id": "a-restaurant-in-lyon",
    "title": "A restaurant in Lyon",
    "part": 6,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3360,7 +3415,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3370,6 +3425,7 @@
    "id": "a-bank-in-niamey",
    "title": "A bank in Niamey",
    "part": 6,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3466,7 +3522,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -3476,6 +3532,7 @@
    "id": "an-organisation-in-the-field",
    "title": "An organisation in the field",
    "part": 6,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3575,7 +3632,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -3585,6 +3642,7 @@
    "id": "what-the-projects-did-not-prove",
    "title": "What the projects did not prove",
    "part": 6,
+   "appendix": null,
    "law": null,
    "spine": false,
    "status": "draft",
@@ -3694,7 +3752,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:33 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3704,6 +3762,7 @@
    "id": "many-minds-on-one-body-of-work",
    "title": "Many minds on one body of work",
    "part": 7,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -3767,7 +3826,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:34 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3777,6 +3836,7 @@
    "id": "the-one-line-still-owed",
    "title": "The one line still owed",
    "part": 7,
+   "appendix": null,
    "law": null,
    "spine": true,
    "status": "draft",
@@ -3849,9 +3909,181 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 01:04 UTC+01:00",
+    "ran": "2026-10-09 02:34 UTC+01:00",
     "kept": 3,
     "runnable": 3
+   }
+  },
+  {
+   "number": 101,
+   "id": "the-register-of-innovations",
+   "title": "The register of innovations",
+   "part": null,
+   "appendix": "A",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [
+    "12.19"
+   ],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 102,
+   "id": "the-fourteen-house-rules",
+   "title": "The fourteen house rules",
+   "part": null,
+   "appendix": "B",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [
+    {
+     "name": "coderule_narrated",
+     "exists": true,
+     "path": "base/test/meta/coderule_narrated.ring",
+     "assertions": 77,
+     "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/meta/coderule_narrated.ring"
+    }
+   ],
+   "promises": [
+    {
+     "code": "? len( StzCodeRuleNames() )\n#--> 14\n? StzCodeRuleNames()[2]\n#--> q-returns-object\n? StzCodeRuleNames()[14]\n#--> value-called-as-function",
+     "verdict": "kept"
+    },
+    {
+     "code": "cSay = \"class Door\" + nl + \"def Say()\" + nl + \"\t? 'hello'\" + nl + \"\treturn 1\" + nl\n? StzCheckCode(cSay)[1][:rule]\n#--> library_prints\n? StzCheckCode(cSay)[1][:severity]\n#--> warning\n? StzCodeIsClean(cSay)\n#--> 1\ncBox = \"class Box\" + nl + \"def Size()\" + nl + \"\treturn 1\" + nl + \"def size()\" + nl + \"\treturn 2\" + nl\n? StzCheckCode(cBox)[1][:rule]\n#--> no-case-collision\n? StzCodeIsClean(cBox)\n#--> 0\ncLen = \"class Box\" + nl + \"def Len()\" + nl + \"\treturn 1\" + nl\n? StzCheckCode(cLen)[1][:rule]\n#--> no-len-method\n? StzCodeIsClean(cLen)\n#--> 0",
+     "verdict": "kept"
+    }
+   ],
+   "narrations": [],
+   "rulings": [
+    "12.16"
+   ],
+   "doors": {},
+   "run": {
+    "ran": "2026-10-09 02:34 UTC+01:00",
+    "kept": 2,
+    "runnable": 2
+   }
+  },
+  {
+   "number": 103,
+   "id": "the-twenty-two-verbs-and-the-constitution",
+   "title": "The twenty-two verbs and the constitution",
+   "part": null,
+   "appendix": "C",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [
+    "12.23",
+    "12.24",
+    "12.25"
+   ],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 104,
+   "id": "the-glossary",
+   "title": "The glossary: words name states, never people",
+   "part": null,
+   "appendix": "D",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 105,
+   "id": "the-guards-and-fixtures-cited",
+   "title": "The guards and fixtures cited, by chapter",
+   "part": null,
+   "appendix": "E",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 106,
+   "id": "the-narrations-the-book-argues-from",
+   "title": "The narrations the book argues from",
+   "part": null,
+   "appendix": "F",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
+   }
+  },
+  {
+   "number": 107,
+   "id": "the-book-as-data",
+   "title": "The book as data, for the agent that reads it",
+   "part": null,
+   "appendix": "G",
+   "law": null,
+   "spine": false,
+   "status": "draft",
+   "stage": {},
+   "guards": [],
+   "promises": [],
+   "narrations": [],
+   "rulings": [],
+   "doors": {},
+   "run": {
+    "ran": null,
+    "kept": 0,
+    "runnable": 0
    }
   }
  ],
