@@ -108,10 +108,17 @@ def main():
     started = now()
     result = {"run": {"date": stamp(started), "library": prov, "runtime": runtime()}, "chapters": {}}
     failed = []
+    en_by_id = {}
     for lang in ("en", "fr"):
         for path, meta, body in sources(lang):
             key = f"{lang}/{path.stem}"
             blocks = code_blocks(body)
+            twin = en_by_id.get(meta["id"]) if lang == "fr" else None
+            if twin and [b["hash"] for b in twin["blocks"]] == [block_hash(b["text"]) for b in blocks]:
+                # the French page carries the same code as the English one: it is the same run, not a second one
+                result["chapters"][key] = {**twin}
+                print(f"{key}: the English run, same code ({twin['kept']} of {twin['runnable']} kept)", flush=True)
+                continue
             records, timing = run_chapter(lib, key, blocks)
             runnable = [r for r in records if r["verdict"] != "exercise"]
             kept = sum(1 for r in runnable if r["verdict"] == "kept")
@@ -120,6 +127,8 @@ def main():
             if timing:
                 ch.update(timing)
             result["chapters"][key] = ch
+            if lang == "en":
+                en_by_id[meta["id"]] = ch
             line = f"{key}: {kept} of {len(runnable)} blocks kept their promise"
             if len(runnable) and kept < len(runnable):
                 failed.append(key)

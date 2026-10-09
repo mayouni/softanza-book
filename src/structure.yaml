@@ -25,6 +25,7 @@ site_base: "../../../../stzsite/"
 parts:
   - number: 1
     title: The age, the crafter, the method
+    title_fr: "L'âge, l'artisan, la méthode"
     chapters:
       - [1, Change arrives faster than trust]
       - [2, The software crafter]
@@ -32,7 +33,9 @@ parts:
       - [4, The platform in one picture]
   - number: 2
     title: Programming, rethought
+    title_fr: "La programmation, repensée"
     law: "the code adheres to the way a person thinks, and the court judges it whoever wrote it"
+    law_fr: "le code adhère à la manière de penser d'une personne, et le tribunal le juge, quel que soit son auteur"
     chapters:
       - [5, "Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it"]
       - [6, "The mental model, and the metaphors"]
@@ -42,7 +45,9 @@ parts:
       - [10, Programming becomes refinement]
   - number: 3
     title: Languages, rethought
+    title_fr: "Les langages, repensés"
     law: "a language is declared and closed, and whatever speaks it, person or model, is judged by it"
+    law_fr: "un langage est déclaré et fermé, et tout ce qui le parle, personne ou modèle, est jugé par lui"
     chapters:
       - [11, "Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it"]
       - [12, "A language, declared"]
@@ -52,7 +57,9 @@ parts:
       - [16, "Seven languages, one door"]
   - number: 4
     title: Intelligence, rethought
+    title_fr: "L'intelligence, repensée"
     law: "programmatic by default, the model last, admission over generation"
+    law_fr: "programmatique par défaut, le modèle en dernier, l'admission avant la génération"
     chapters:
       - [17, "Law: programmatic by default, the model last, admission over generation"]
       - [18, "The five registers, and conversations that ask"]
@@ -62,6 +69,7 @@ parts:
       - [22, "Compared, honestly"]
   - number: 5
     title: The platform, assembled
+    title_fr: "La plateforme, assemblée"
     chapters:
       - [23, "A world, a constellation, a platform, and the architect"]
       - [24, "Rehearse, then commit"]
@@ -70,6 +78,7 @@ parts:
       - [27, "The engine beneath: three layers, one engine, Haro"]
   - number: 6
     title: Software crafters, forged
+    title_fr: "Des artisans du logiciel, forgés"
     chapters:
       - [28, A restaurant in Lyon]
       - [29, A bank in Niamey]
@@ -77,6 +86,7 @@ parts:
       - [31, What the projects did not prove]
   - number: 7
     title: What is owed
+    title_fr: "Ce qui reste dû"
     chapters:
       - [32, Many minds on one body of work]
       - [33, The one line still owed]

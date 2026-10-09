@@ -64,7 +64,7 @@ UI = {
     "lang": "fr", "other": "en", "part": "Partie", "chapter": "Chapitre", "preface": "Préface",
     "spine": "Colonne", "spine_title": "Un des neuf chapitres de la colonne : ils portent tout l'argument et se lisent seuls",
     "spine_only": "Lire la colonne seule", "all_chapters": "Montrer tous les chapitres",
-    "draft": "Brouillon · pas encore lu par l'auteur", "read": "Lu par l'auteur", "final": "Final",
+    "draft": "Brouillon · traduit d'un brouillon anglais, pas encore lu par l'auteur", "read": "Lu par l'auteur", "final": "Final",
     "missing": "Manquant · la source n'a pas été reçue",
     "proof": "Exécuté le {d} dans la bibliothèque au commit {sha} : {k} bloc(s) sur {n} ont tenu leur promesse.",
     "proof_none": "Cette page n'a pas de code à exécuter.",
@@ -642,21 +642,23 @@ def _chapters_only(en_src):
     return [(p, m, b) for p, m, b in en_src if not m.get("appendix")]
 
 
-def generated_body(kind, en_src, guards, runs, st):
+def generated_body(kind, en_src, guards, runs, st, lang="en", titles=None):
     """Markdown for an appendix that is read from the book itself at build, so that no number in it is typed."""
     chapters = _chapters_only(en_src)
     g = guards.get("guards", {})
     lib = runs.get("run", {}).get("library", {})
     out = []
+    T = lambda en, fr: fr if lang == "fr" else en
+    title_of = lambda m: (titles or {}).get(m["id"], m["title"])
     if kind == "guards":
         seen, total = {}, 0
         for path, m, body in chapters:
             names = m.get("guards") or []
             if not names:
                 continue
-            out.append(f"### {m['number']} · {m['title']}")
+            out.append(f"### {m['number']} · {title_of(m)}")
             out.append("")
-            out.append("| Guard | Assertions | Where in the library's test tree |")
+            out.append(T("| Guard | Assertions | Where in the library's test tree |", "| Garde | Assertions | Où, dans l'arbre de tests de la bibliothèque |"))
             out.append("|---|---|---|")
             for n in names:
                 rec = g.get(n, {})
@@ -665,11 +667,13 @@ def generated_body(kind, en_src, guards, runs, st):
                     if n not in seen:
                         seen[n] = rec["assertions"]
                 else:
-                    out.append(f"| `{n}` | missing | |")
+                    out.append(f"| `{n}` | {T('missing', 'manquante')} | |")
             out.append("")
-        out.insert(0, f"The chapters cite {len(seen)} distinct guards, holding {sum(seen.values())} assertions between them, "
+        out.insert(0, (f"Les chapitres citent {len(seen)} gardes distinctes, qui contiennent {sum(seen.values())} assertions à elles toutes, "
+                      f"lues dans l'arbre de tests au commit {lib.get('short', 'null')} le {guards.get('read', 'null')}. "
+                      "Une garde citée par deux chapitres n'est comptée qu'une fois dans ce total.\n") if lang == "fr" else (f"The chapters cite {len(seen)} distinct guards, holding {sum(seen.values())} assertions between them, "
                       f"read from the test tree at commit {lib.get('short', 'null')} on {guards.get('read', 'null')}. "
-                      "A guard cited by two chapters is counted once in this total.\n")
+                      "A guard cited by two chapters is counted once in this total.\n"))
     elif kind == "narrations":
         short = lib.get("short")
         nd = ROOT / ".cache" / f"stzlib-{short}" / "libraries" / "stzlib" / "base" / "doc" / "narrations" if short else None
@@ -678,27 +682,35 @@ def generated_body(kind, en_src, guards, runs, st):
             names = m.get("narrations") or []
             if not names:
                 continue
-            out.append(f"### {m['number']} · {m['title']}")
+            out.append(f"### {m['number']} · {title_of(m)}")
             out.append("")
-            out.append("| Narration | In the library at the pin |")
+            out.append(T("| Narration | In the library at the pin |", "| Narration | Dans la bibliothèque au commit |"))
             out.append("|---|---|")
             for n in names:
                 ok = bool(nd and (nd / n).exists())
                 seen.add(n)
                 if not ok:
                     absent.append(n)
-                out.append(f"| `{n}` | {'yes' if ok else 'no'} |")
+                out.append(f"| `{n}` | {('oui' if lang == 'fr' else 'yes') if ok else ('non' if lang == 'fr' else 'no')} |")
             out.append("")
-        out.insert(0, f"The chapters cite {len(seen)} distinct narrations. " + (f"{len(absent)} of the names are not files of the library's " if absent else "Every name is a file of the library\'s ") +
-                      f"narration folder at commit {lib.get('short', 'null')}" + (": " + ", ".join(f"`{a}`" for a in absent) if absent else "") + ". "
-                      "A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.\n")
+        tail = ("Une narration est un article de l'auteur ; son code est l'ancienne surface, et plusieurs de ses blocs ne tournent plus à ce commit, ce que chaque chapitre dit.\n"
+                if lang == "fr" else "A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.\n")
+        if lang == "fr":
+            lead = (f"Les chapitres citent {len(seen)} narrations distinctes. "
+                    + (f"{len(absent)} des noms ne sont pas des fichiers du dossier des narrations de la bibliothèque au commit {lib.get('short', 'null')}" + ": " + ", ".join(f"`{a}`" for a in absent) + ". "
+                       if absent else f"Chaque nom est un fichier du dossier des narrations de la bibliothèque au commit {lib.get('short', 'null')}. "))
+        else:
+            lead = (f"The chapters cite {len(seen)} distinct narrations. "
+                    + (f"{len(absent)} of the names are not files of the library's narration folder at commit {lib.get('short', 'null')}" + ": " + ", ".join(f"`{a}`" for a in absent) + ". "
+                       if absent else f"Every name is a file of the library's narration folder at commit {lib.get('short', 'null')}. "))
+        out.insert(0, lead + tail)
     elif kind == "agents":
-        out.append("| # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |")
+        out.append(T("| # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |", "| # | Id | Partie | Statut | Colonne | Blocs tenus | Gardes | Portes |"))
         out.append("|---|---|---|---|---|---|---|---|")
         for path, m, body in chapters:
             r = runs.get("chapters", {}).get(f"en/{path.stem}", {})
-            kept = f"{r['kept']} of {r['runnable']}" if r.get("runnable") else "no code"
-            out.append(f"| {m['number'] or ''} | `{m['id']}` | {m.get('part', '')} | {m.get('status', '')} | {'yes' if m.get('spine') else ''} | {kept} | {len(m.get('guards') or [])} | {len(doors_of(body))} |")
+            kept = f"{r['kept']} {'sur' if lang == 'fr' else 'of'} {r['runnable']}" if r.get("runnable") else ("pas de code" if lang == "fr" else "no code")
+            out.append(f"| {m['number'] or ''} | `{m['id']}` | {m.get('part', '')} | {m.get('status', '')} | {('oui' if lang == 'fr' else 'yes') if m.get('spine') else ''} | {kept} | {len(m.get('guards') or [])} | {len(doors_of(body))} |")
     return "\n".join(out)
 
 
@@ -769,7 +781,7 @@ def build_pages(lang, st, en_src, src_by_id, runs, guards, ui):
             eyebrow = f'{ui["appendix"]} {appendix}'
             spine = False
             if m.get("generated"):
-                b = b.rstrip() + "\n\n" + generated_body(m["generated"], en_src, guards, runs, st)
+                b = b.rstrip() + "\n\n" + generated_body(m["generated"], en_src, guards, runs, st, lang, {k: v[1]["title"] for k, v in src_by_id.items()})
         else:
             slug = "preface" if number == 0 else f"ch{number}-{m['id']}"
             part, _ = chapter_title(st, number)
@@ -868,7 +880,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
                     f'<span class="sl-spine"></span>{ui["preface"]}</span><span class="sl-leader"></span></a>')
         rows.append(f'<div class="ce-row is-spine"><span class="ce-num"></span><a class="ce-title" href="#preface">{ui["preface"]}</a></div>')
     for part in st["parts"]:
-        ptitle = f'{ui["part"]} {ROMAN[part["number"]]} · {part["title"]}'
+        ptitle = f'{ui["part"]} {ROMAN[part["number"]]} · {part.get("title_fr") if lang == "fr" and part.get("title_fr") else part["title"]}'
         side.append(f'<div class="sb-part">{html.escape(ptitle)}</div>')
         rows.append(f'<div class="ce-part">{html.escape(ptitle)}</div>')
         for num, ctitle in part["chapters"]:

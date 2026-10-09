@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 02:58 UTC+01:00",
+ "read": "2026-10-09 03:28 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -1393,6 +1393,255 @@
   "en/D-the-glossary": [],
   "en/E-the-guards-and-fixtures-cited": [],
   "en/F-the-narrations-the-book-argues-from": [],
-  "en/G-the-book-as-data": []
+  "en/G-the-book-as-data": [],
+  "fr/00-preface": [],
+  "fr/01-change-arrives-faster-than-trust": [
+   "service_registry_narrated",
+   "safeworld_narrated",
+   "governance_crossing_narrated"
+  ],
+  "fr/02-the-software-crafter": [
+   "agentfile_narrated",
+   "service_registry_narrated",
+   "graphrule_object_narrated",
+   "semantic_resolver_narrated",
+   "00_orgchart_narrated"
+  ],
+  "fr/03-the-method-from-first-principles": [
+   "modality_narrated",
+   "wisecoding_narrated",
+   "wisecoding_rich_narrated"
+  ],
+  "fr/04-the-platform-in-one-picture": [
+   "00_stzapp_narrated",
+   "06_stzsuperapp_narrated",
+   "full_scope_model_narrated",
+   "01_platform_narrated",
+   "threat_model_narrated"
+  ],
+  "fr/05-law-the-code-adheres-to-the-way-a-person-thinks": [
+   "coderule_narrated",
+   "testoor_promises_narrated",
+   "05_containsemptystrings",
+   "466_keeping_the_history_of_updates_of_a_softanza_objec"
+  ],
+  "fr/06-the-mental-model-and-the-metaphors": [
+   "00_yielder_narrated",
+   "597_walker_basics",
+   "611_checkw",
+   "621_perform",
+   "483_w_and_wf_forms_in_conditional_code",
+   "495_walking_until_and_until_before"
+  ],
+  "fr/07-the-writing-style-and-the-seven-goals": [
+   "coderule_narrated",
+   "602_l_function",
+   "59_use_of_the_l_small_function",
+   "527_identifying_lists_inside_a_string",
+   "48_replacebymany",
+   "483_w_and_wf_forms_in_conditional_code",
+   "28_numberofoccurrenceofcharleftside",
+   "646_content",
+   "972_narration_viz-finding_a_recurring_substring",
+   "testoor_promises_narrated"
+  ],
+  "fr/08-functions-as-linguistic-expressions-and-scope": [
+   "00_regex_narrated",
+   "972_narration_viz-finding_a_recurring_substring",
+   "full_scope_model_narrated",
+   "system_scope_model_narrated",
+   "delivery_narrated"
+  ],
+  "fr/09-patterns-of-thought": [
+   "00_overflow_narrated",
+   "60_reaxis_on_reactor_narrated",
+   "piagent_narrated",
+   "00_grid_narrated",
+   "test_timeline_regression",
+   "01_deeplist_narrated"
+  ],
+  "fr/10-programming-becomes-refinement": [
+   "refinablecode_narrated",
+   "refine_deepening_narrated",
+   "gate_deepening_narrated"
+  ],
+  "fr/11-law-a-language-is-declared-and-closed": [
+   "multilingual_pack_narrated",
+   "semantic_resolver_narrated",
+   "literate_templates_narrated",
+   "question_narrated",
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "constrained_decoding_narrated"
+  ],
+  "fr/12-a-language-declared": [
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "constrained_decoding_narrated",
+   "483_w_and_wf_forms_in_conditional_code",
+   "calc_column_engine_narrated"
+  ],
+  "fr/13-natural-and-executable": [
+   "nnl_narrated",
+   "multilingual_pack_narrated",
+   "semantic_resolver_narrated",
+   "question_narrated",
+   "literate_templates_narrated",
+   "truthchain_narrated",
+   "interrogative_narrated"
+  ],
+  "fr/14-knowledge-programming": [
+   "knowledge_integration_narrated",
+   "provenance_survives_save_narrated",
+   "program_narrated"
+  ],
+  "fr/15-pattern-languages": [
+   "00_regex_narrated",
+   "00_numbrex_narrated",
+   "tablex_narrated",
+   "00_matrex_narrated",
+   "00_graphex_narrated"
+  ],
+  "fr/16-seven-languages-one-door": [
+   "51_extercode_narrated",
+   "governance_narrated",
+   "virtual_environment_twin_narrated",
+   "pycodegraph_narrated",
+   "jscodegraph_narrated"
+  ],
+  "fr/17-law-programmatic-by-default": [
+   "dlm_narrated",
+   "wisecoding_narrated",
+   "knowledge_integration_narrated",
+   "agentgraph_narrated",
+   "piagent_narrated",
+   "ownagentstack_narrated"
+  ],
+  "fr/18-the-five-registers": [
+   "wisecoding_narrated",
+   "wisecoding_rich_narrated",
+   "ownagentstack_narrated",
+   "tutor_gaps_narrated"
+  ],
+  "fr/19-the-domain-language-model": [
+   "dlm_narrated",
+   "structuredoutput_narrated",
+   "schema_grammar_narrated",
+   "knowledge_integration_narrated",
+   "constrained_decoding_narrated"
+  ],
+  "fr/20-agents-that-cannot-hurt-you": [
+   "safeworld_narrated",
+   "agentfile_narrated",
+   "agentloop_engine_narrated",
+   "containment_drill_narrated",
+   "virtual_system_twin_narrated"
+  ],
+  "fr/21-the-court": [
+   "testoor_promises_narrated",
+   "threat_model_narrated",
+   "security_ledger_narrated",
+   "secretstore_narrated",
+   "secret_narrated",
+   "stopwatch_narrated",
+   "tracing_tail_narrated",
+   "governed_loop_narrated",
+   "security_sentinel_narrated"
+  ],
+  "fr/22-compared-honestly": [
+   "numeric_exactness_narrated",
+   "numeric_no_loss_narrated",
+   "semantic_resolver_narrated",
+   "engine_is_optimised_narrated"
+  ],
+  "fr/23-a-world-a-constellation-a-platform": [
+   "06_stzsuperapp_narrated",
+   "01_platform_narrated",
+   "full_scope_model_narrated",
+   "04_stzapp_pursue_narrated",
+   "05_stzapp_live_narrated"
+  ],
+  "fr/24-rehearse-then-commit": [
+   "service_registry_narrated",
+   "service_delivery_narrated",
+   "virtual_system_twin_narrated",
+   "virtual_environment_twin_narrated",
+   "emulator_narrated",
+   "deployment_narrated",
+   "full_scope_model_narrated"
+  ],
+  "fr/25-your-users-keep-their-medium": [
+   "sms_port_narrated",
+   "wisecoding_rich_narrated",
+   "sound_convergence_narrated",
+   "sound_listener_narrated",
+   "sound_semantics_narrated",
+   "payments_webhooks_narrated"
+  ],
+  "fr/26-the-environment": [
+   "gui_stzui_narrated",
+   "gui_profile_narrated",
+   "gui_tier_agreement_narrated",
+   "gui_accessibility_narrated",
+   "05_stzapp_live_narrated",
+   "emulator_narrated"
+  ],
+  "fr/27-the-engine-beneath": [
+   "engine_is_optimised_narrated",
+   "engine_senses_narrated",
+   "wasm_narrated",
+   "threat_model_narrated"
+  ],
+  "fr/28-a-restaurant-in-lyon": [
+   "06_stzsuperapp_narrated",
+   "service_delivery_narrated",
+   "payments_port_narrated",
+   "judgment_narrated",
+   "graphrule_object_narrated"
+  ],
+  "fr/29-a-bank-in-niamey": [
+   "orgrule_narrated",
+   "14_bceao_governance",
+   "15_multiple_validators",
+   "13_segregation_of_duties",
+   "rulereport_narrated",
+   "36_import_from_stzorg"
+  ],
+  "fr/30-an-organisation-in-the-field": [
+   "graphruleset_narrated",
+   "gg_rule_governance",
+   "wisecoding_narrated",
+   "governance_narrated",
+   "governance_lineage_narrated",
+   "01_platform_narrated"
+  ],
+  "fr/31-what-the-projects-did-not-prove": [
+   "service_registry_narrated",
+   "full_scope_model_narrated",
+   "payments_live_adapter_narrated",
+   "sound_mu5_narrated",
+   "deployment_narrated",
+   "orgrule_narrated",
+   "governance_narrated"
+  ],
+  "fr/32-many-minds-on-one-body-of-work": [
+   "coderule_narrated",
+   "codegraph_narrated",
+   "coderule_project_narrated"
+  ],
+  "fr/33-the-one-line-still-owed": [
+   "full_scope_model_narrated",
+   "virtual_system_twin_narrated",
+   "service_delivery_narrated"
+  ],
+  "fr/A-the-register-of-innovations": [],
+  "fr/B-the-fourteen-house-rules": [
+   "coderule_narrated"
+  ],
+  "fr/C-the-twenty-two-verbs-and-the-constitution": [],
+  "fr/D-the-glossary": [],
+  "fr/E-the-guards-and-fixtures-cited": [],
+  "fr/F-the-narrations-the-book-argues-from": [],
+  "fr/G-the-book-as-data": []
  }
 }

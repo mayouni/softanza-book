@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-09 02:54 UTC+01:00",
+  "date": "2026-10-09 03:24 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -56,8 +56,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 1,
-   "ran": "2026-10-09 02:54 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-09 03:24 UTC+01:00",
+   "seconds": 3.5
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -145,8 +145,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 02:54 UTC+01:00",
-   "seconds": 4.9
+   "ran": "2026-10-09 03:24 UTC+01:00",
+   "seconds": 3.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,8 +202,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 02:54 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.2
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -276,8 +276,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 5.2
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -344,8 +344,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.4
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -410,8 +410,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.6
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -507,8 +507,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.9
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -623,8 +623,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 9.6
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 9.0
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -697,8 +697,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 4.9
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.1
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -779,8 +779,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.8
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -877,8 +877,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 0,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 17.6
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 16.7
   },
   "en/12-a-language-declared": {
    "id": "a-language-declared",
@@ -958,8 +958,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-09 02:55 UTC+01:00",
-   "seconds": 6.1
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.6
   },
   "en/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -1111,8 +1111,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 19.2
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 16.7
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1236,8 +1236,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.9
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1357,8 +1357,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.8
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1464,8 +1464,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 5.0
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.7
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1538,8 +1538,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 4.8
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.6
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1675,8 +1675,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.0
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1745,8 +1745,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.7
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1843,8 +1843,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.6
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -1926,8 +1926,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.4
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -1983,8 +1983,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 02:56 UTC+01:00",
-   "seconds": 17.1
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 13.4
   },
   "en/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
@@ -2082,8 +2082,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 4.0
   },
   "en/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
@@ -2189,8 +2189,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 4.5
   },
   "en/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
@@ -2294,8 +2294,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 14.3
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 13.4
   },
   "en/26-the-environment": {
    "id": "the-environment",
@@ -2397,8 +2397,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.8
   },
   "en/27-the-engine-beneath": {
    "id": "the-engine-beneath",
@@ -2492,8 +2492,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 11.9
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 11.0
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -2549,8 +2549,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.3
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -2607,8 +2607,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 0,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -2673,8 +2673,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-09 02:57 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.9
   },
   "en/31-what-the-projects-did-not-prove": {
    "id": "what-the-projects-did-not-prove",
@@ -2732,8 +2732,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-09 02:58 UTC+01:00",
-   "seconds": 3.6
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.4
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -2766,8 +2766,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-09 02:58 UTC+01:00",
-   "seconds": 4.1
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.4
   },
   "en/33-the-one-line-still-owed": {
    "id": "the-one-line-still-owed",
@@ -2807,8 +2807,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-09 02:58 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
   },
   "en/A-the-register-of-innovations": {
    "id": "the-register-of-innovations",
@@ -2840,8 +2840,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 0,
-   "ran": "2026-10-09 02:58 UTC+01:00",
-   "seconds": 4.2
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
   },
   "en/C-the-twenty-two-verbs-and-the-constitution": {
    "id": "the-twenty-two-verbs-and-the-constitution",
@@ -2872,6 +2872,2857 @@
    "exercises": 0
   },
   "en/G-the-book-as-data": {
+   "id": "the-book-as-data",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/00-preface": {
+   "id": "preface",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/01-change-arrives-faster-than-trust": {
+   "id": "change-arrives-faster-than-trust",
+   "blocks": [
+    {
+     "hash": "fe9b8eb3b97c",
+     "promise": "[ 1, 3, 6 ]\n[ \"tea\", \"rice\", \"fish\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 3, 6 ]\n[ \"tea\", \"rice\", \"fish\" ]"
+    },
+    {
+     "hash": "1b09d5ed369a",
+     "promise": "the line it must print",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 1,
+   "runnable": 1,
+   "exercises": 1,
+   "ran": "2026-10-09 03:24 UTC+01:00",
+   "seconds": 3.5
+  },
+  "fr/02-the-software-crafter": {
+   "id": "the-software-crafter",
+   "blocks": [
+    {
+     "hash": "e8cdd4236252",
+     "promise": "1\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3"
+    },
+    {
+     "hash": "b28fe61b4381",
+     "promise": "╭────────┬────────────╮\n│ Region │ Population │\n├────────┼────────────┤\n│ Agadez │     487620 │\n│ Maradi │    3402094 │\n│ Zinder │    3539764 │\n╰────────┴────────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭────────┬────────────╮\n│ Region │ Population │\n├────────┼────────────┤\n│ Agadez │     487620 │\n│ Maradi │    3402094 │\n│ Zinder │    3539764 │\n╰────────┴────────────╯"
+    },
+    {
+     "hash": "03e69b64d77b",
+     "promise": "╭──────────╮\n│ Softanza │\n╰──────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭──────────╮\n│ Softanza │\n╰──────────╯"
+    },
+    {
+     "hash": "043ec0e67521",
+     "promise": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick."
+    },
+    {
+     "hash": "87ec0a9879c2",
+     "promise": "HELLO\n4\narabic",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "HELLO\n4\narabic"
+    },
+    {
+     "hash": "8e6ca7e58239",
+     "promise": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited)."
+    },
+    {
+     "hash": "c9cdc44a4340",
+     "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
+    },
+    {
+     "hash": "e2570e740079",
+     "promise": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]"
+    },
+    {
+     "hash": "c3044cc86cfc",
+     "promise": "0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0"
+    },
+    {
+     "hash": "d92db1bbc1b5",
+     "promise": "1",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 1,
+   "ran": "2026-10-09 03:24 UTC+01:00",
+   "seconds": 3.6
+  },
+  "fr/03-the-method-from-first-principles": {
+   "id": "the-method-from-first-principles",
+   "blocks": [
+    {
+     "hash": "4bbd367adbd7",
+     "promise": "0\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0"
+    },
+    {
+     "hash": "d82129b27a44",
+     "promise": "TRUE\nFALSE\nno: -4 is not positive (constraint 2 of 'score')",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nno: -4 is not positive (constraint 2 of 'score')"
+    },
+    {
+     "hash": "bd2006c14021",
+     "promise": "TRUE\nhello",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nhello"
+    },
+    {
+     "hash": "6607465b51bc",
+     "promise": "every dish needs 'contains'\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "every dish needs 'contains'\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question."
+    },
+    {
+     "hash": "a37ff375679b",
+     "promise": "TRUE\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "e8f4dd63bb2c",
+     "promise": "what your language prints today\nwhat your declared rule must print",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 1,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.2
+  },
+  "fr/04-the-platform-in-one-picture": {
+   "id": "the-platform-in-one-picture",
+   "blocks": [
+    {
+     "hash": "abea7fc6b940",
+     "promise": "8\n4\narabic",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "8\n4\narabic"
+    },
+    {
+     "hash": "8c1b0bec5aa7",
+     "promise": "100000000000000000000000000000000",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "100000000000000000000000000000000"
+    },
+    {
+     "hash": "ee355e19ac45",
+     "promise": "1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1"
+    },
+    {
+     "hash": "31acd3064244",
+     "promise": "[ 1, 10 ]\n[ 1, 3 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 10 ]\n[ 1, 3 ]"
+    },
+    {
+     "hash": "d28c6c5f35b3",
+     "promise": "WORLD FieldVisits   lives in: memory (not persisted)\nBEING\naccount (number, chapter, balance)\ntrue when balance @ >= 0\nclient (code, name, city)\nRELATIONS\nclient owns account\naccount belongsto client\n[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "WORLD FieldVisits   lives in: memory (not persisted)\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n  RELATIONS\n    client owns account\n    account belongsto client\n[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)"
+    },
+    {
+     "hash": "b9f577ba066d",
+     "promise": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'."
+    },
+    {
+     "hash": "9fa1b7d90b4b",
+     "promise": "[ \"pivottable\", \"constraintsolver\" ]\n[ \"aggregation\", \"solver\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"pivottable\", \"constraintsolver\" ]\n[ \"aggregation\", \"solver\" ]"
+    },
+    {
+     "hash": "ac2cf46e72fc",
+     "promise": "Error (R11) : Error in class name, class not found: stxstring",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Error (R11) : Error in class name, class not found: stxstring"
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 5.2
+  },
+  "fr/05-law-the-code-adheres-to-the-way-a-person-thinks": {
+   "id": "law-the-code-adheres-to-the-way-a-person-thinks",
+   "blocks": [
+    {
+     "hash": "18a26bb437f1",
+     "promise": "S O F T A N Z A\nS O F T A N Z A",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "S O F T A N Z A\nS O F T A N Z A"
+    },
+    {
+     "hash": "b47bad84b1d8",
+     "promise": "TRUE\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]"
+    },
+    {
+     "hash": "b45229cbde5c",
+     "promise": "RING\nRIxxNxG\nRING\nR I N G",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "RING\nRIxxNxG\nRING\nR I N G"
+    },
+    {
+     "hash": "0ed2c04313b1",
+     "promise": "I ♥ Haro\n[ \"fish\", \"rice\", \"tea\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "I ♥ Haro\n[ \"fish\", \"rice\", \"tea\" ]"
+    },
+    {
+     "hash": "aa8f19adbcb6",
+     "promise": "1\n3\n[ 1, 10, 20 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n3\n[ 1, 10, 20 ]"
+    },
+    {
+     "hash": "86a9de70f09d",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
+     "hash": "5e1deb80314f",
+     "promise": "FALSE\nq-returns-object",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nq-returns-object"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.4
+  },
+  "fr/06-the-mental-model-and-the-metaphors": {
+   "id": "the-mental-model-and-the-metaphors",
+   "blocks": [
+    {
+     "hash": "4caddf90b519",
+     "promise": "TRUE\n2\n9\nYou and Me",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n2\n9\nYou and Me"
+    },
+    {
+     "hash": "ff3abee62427",
+     "promise": "[ 1, 3, 5, 7, 9 ]\n[ 2, 4, 6, 8, 10 ]\n[ 1, 3 ]\n3\n[ 5, 7, 9 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 3, 5, 7, 9 ]\n[ 2, 4, 6, 8, 10 ]\n[ 1, 3 ]\n3\n[ 5, 7, 9 ]"
+    },
+    {
+     "hash": "fa0439e1f6f5",
+     "promise": "[ 1, 4, 7, 10 ]\n[ 10 ]\nCan't walk backward! Already at the beginning of walkable positions.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 4, 7, 10 ]\n[ 10 ]\nCan't walk backward! Already at the beginning of walkable positions."
+    },
+    {
+     "hash": "ad73537d82b9",
+     "promise": "FALSE\nTRUE\n[ 2 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n1\n[ 2 ]"
+    },
+    {
+     "hash": "c6a5f992cfe4",
+     "promise": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]"
+    },
+    {
+     "hash": "c2facc728da2",
+     "promise": "[ 2, 4, 6 ]\n[ 8, 12, 9 ]\nTRUE\n[ 2, 4, 6 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 2, 4, 6 ]\n[ 8, 12, 9 ]\n1\n[ 2, 4, 6 ]"
+    },
+    {
+     "hash": "3024ad88e143",
+     "promise": "[ ]\n[ \"where\", \"{ @item > 5 }\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ ]\n[ \"where\", \"{ @item > 5 }\" ]"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.6
+  },
+  "fr/07-the-writing-style-and-the-seven-goals": {
+   "id": "the-writing-style-and-the-seven-goals",
+   "blocks": [
+    {
+     "hash": "aeba0cf60dcf",
+     "promise": "[ 1, 2, 3 ]\n[ 1.02, 1.03, 1.04, 1.05 ]\n[ \"♥1\", \"♥2\", \"♥3\" ]\n[ \"ا\", \"ب\", \"ة\", \"ت\", \"ث\", \"ج\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 2, 3 ]\n[ 1.02, 1.03, 1.04, 1.05 ]\n[ \"♥1\", \"♥2\", \"♥3\" ]\n[ \"ا\", \"ب\", \"ة\", \"ت\", \"ث\", \"ج\" ]"
+    },
+    {
+     "hash": "edc1a5697eff",
+     "promise": "♥1 php ruby ♥2 python ♥3\n♥1 php ruby ♥2 python ♥3 ruby ♥1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "♥1 php ruby ♥2 python ♥3\n♥1 php ruby ♥2 python ♥3 ruby ♥1"
+    },
+    {
+     "hash": "ef4f537a9e93",
+     "promise": "TRUE\n\"1 : 3\"\n[ \"A\", \"B\", \"C\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n\"1 : 3\"\n[ \"A\", \"B\", \"C\" ]"
+    },
+    {
+     "hash": "ac8d2403ee34",
+     "promise": "[ 1, 2, 7, 8, 9, 16, 17, 18 ]\nSOFTANZA",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 2, 7, 8, 9, 16, 17, 18 ]\nSOFTANZA"
+    },
+    {
+     "hash": "a638ef60148a",
+     "promise": "6\n6\n3\n3\n[ \"A\", \"B\", \"C\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "6\n6\n3\n3\n[ \"A\", \"B\", \"C\" ]"
+    },
+    {
+     "hash": "f704c25fb2f6",
+     "promise": "4\n8\n8\nTRUE\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "4\n8\n8\n1\n0"
+    },
+    {
+     "hash": "7f8d85d3ffb6",
+     "promise": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
+    },
+    {
+     "hash": "27f31e084c7b",
+     "promise": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---"
+    },
+    {
+     "hash": "fe80e0aa2f06",
+     "promise": "[ 3, 4 ]\n[ 3, 4 ]\nTRUE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 3, 4 ]\n[ 3, 4 ]\n1\n1"
+    },
+    {
+     "hash": "a79ebea2ff60",
+     "promise": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\n1\nwrites_a_mutable_constant\n0"
+    },
+    {
+     "hash": "cc64db57c40d",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.9
+  },
+  "fr/08-functions-as-linguistic-expressions-and-scope": {
+   "id": "functions-as-linguistic-expressions-and-scope",
+   "blocks": [
+    {
+     "hash": "9a0441b78c09",
+     "promise": "10\nSTAZA",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "10\nSTAZA"
+    },
+    {
+     "hash": "3880a42a1f71",
+     "promise": "[ \"find next\", [ \"case-sensitive\", \"from-position\", \"active\" ] ]\n[ \"remove\", [ \"case-sensitive\", \"plural\", \"active\" ] ]\nRemoveMany -- Remove every occurrence of each given substring (mutating).\n(plural form -- applies the operation to many items at once)\nreads as: remove -- over many values at once",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"find next\", [ \"case-sensitive\", \"from-position\", \"active\" ] ]\n[ \"remove\", [ \"case-sensitive\", \"plural\", \"active\" ] ]\nRemoveMany -- Remove every occurrence of each given substring (mutating).\n  (plural form -- applies the operation to many items at once)\n  reads as: remove -- over many values at once"
+    },
+    {
+     "hash": "6b80cebe013d",
+     "promise": "[ 1, 10, 20 ]\n[ [ 1, 4 ], [ 10, 13 ], [ 20, 23 ] ]\n[ \"SOFT\", 1 ]\n[ \"SOFT\", [ 1, 4 ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 10, 20 ]\n[ [ 1, 4 ], [ 10, 13 ], [ 20, 23 ] ]\n[ \"SOFT\", 1 ]\n[ \"SOFT\", [ 1, 4 ] ]"
+    },
+    {
+     "hash": "7f8d85d3ffb6",
+     "promise": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
+    },
+    {
+     "hash": "7ebd7a501879",
+     "promise": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza"
+    },
+    {
+     "hash": "f0081144333d",
+     "promise": "TRUE\nTRUE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n1"
+    },
+    {
+     "hash": "1dee0cb073a9",
+     "promise": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]"
+    },
+    {
+     "hash": "e6615732414e",
+     "promise": "H A R O\nhaxxrxo",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "H A R O\nhaxxrxo"
+    },
+    {
+     "hash": "4c5805d3ef1b",
+     "promise": "Haro",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Haro"
+    },
+    {
+     "hash": "04ed96a37b52",
+     "promise": "FALSE\nFALSE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n1"
+    },
+    {
+     "hash": "54a6937bcf82",
+     "promise": "TRUE\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "0342b687c59c",
+     "promise": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability."
+    },
+    {
+     "hash": "b71a8edebcb8",
+     "promise": "[ \"filesystem\", \"process\" ]\n[ \"gpio\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"filesystem\", \"process\" ]\n[ \"gpio\" ]"
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 9.0
+  },
+  "fr/09-patterns-of-thought": {
+   "id": "patterns-of-thought",
+   "blocks": [
+    {
+     "hash": "a2b81beff979",
+     "promise": "[ \"REDACTED-16\", \"REDACTED-14\" ]\n[ 19, 36 ]\npassword: abc123\nREDACTED-16\n[ \"sensitivedata\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"REDACTED-16\", \"REDACTED-14\" ]\n[ 19, 36 ]\npassword: abc123\nREDACTED-16\n[ \"sensitivedata\" ]"
+    },
+    {
+     "hash": "0e9775eb593e",
+     "promise": "[ \"7\" ]\n[ 700 ]\n[ \"number\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"7\" ]\n[ 700 ]\n[ \"number\" ]"
+    },
+    {
+     "hash": "6e8fde234256",
+     "promise": "2\nTRUE\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\n1\n0"
+    },
+    {
+     "hash": "96a0687623ea",
+     "promise": "[ 108, 120, 144 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 108, 120, 144 ]"
+    },
+    {
+     "hash": "990647cd5cbb",
+     "promise": "2\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\n2"
+    },
+    {
+     "hash": "91374bafc41b",
+     "promise": "1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1"
+    },
+    {
+     "hash": "e4a814343a88",
+     "promise": "1\nPHASE1\nPHASE2\nFALSE\nTRUE\nPoint 'EVENT2' falls within a blocked span or blocked point",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nPHASE1\nPHASE2\n0\n1\nPoint 'EVENT2' falls within a blocked span or blocked point"
+    },
+    {
+     "hash": "20d3f2d93a10",
+     "promise": "[ 4, 3 ]\n[ 5, 3 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 4, 3 ]\n[ 5, 3 ]"
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 4.1
+  },
+  "fr/10-programming-becomes-refinement": {
+   "id": "programming-becomes-refinement",
+   "blocks": [
+    {
+     "hash": "620c74abe4da",
+     "promise": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam"
+    },
+    {
+     "hash": "618375625499",
+     "promise": "1\n0.22\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0.22\n1"
+    },
+    {
+     "hash": "b51ce801333a",
+     "promise": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1"
+    },
+    {
+     "hash": "c45b3cc53d49",
+     "promise": "1\n[ \"margin\" ]\n2\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ \"margin\" ]\n2\n0"
+    },
+    {
+     "hash": "964708281cff",
+     "promise": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]"
+    },
+    {
+     "hash": "95ab468c871a",
+     "promise": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30"
+    },
+    {
+     "hash": "8636c9c76b51",
+     "promise": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted"
+    },
+    {
+     "hash": "315698812000",
+     "promise": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1"
+    },
+    {
+     "hash": "7f03692993b3",
+     "promise": "0.28\n0.22\n2\n0.20\n0\n0.21",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0.28\n0.22\n2\n0.20\n0\n0.21"
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.8
+  },
+  "fr/11-law-a-language-is-declared-and-closed": {
+   "id": "law-a-language-is-declared-and-closed",
+   "blocks": [
+    {
+     "hash": "06948e338d9f",
+     "promise": "╭───────────────────────╮\n│ H E L L O   N I G E R │\n╰───────────────────────╯",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "╭───────────────────────╮\n│ H E L L O   N I G E R │\n╰───────────────────────╯"
+    },
+    {
+     "hash": "b29581fe39b1",
+     "promise": "HELLO\nHELLO\nHELLO\nHELLO",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "HELLO\nHELLO\nHELLO\nHELLO"
+    },
+    {
+     "hash": "31a6caf3097a",
+     "promise": "[ 5, 3 ]\nأنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 5, 3 ]\nأنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات"
+    },
+    {
+     "hash": "9c9fc778eb06",
+     "promise": "softanza\n[ [ \"Uppercse\", \"uppercase\" ] ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "softanza\n[ [ \"Uppercse\", \"uppercase\" ] ]\n0"
+    },
+    {
+     "hash": "f0ae20e70e9b",
+     "promise": "Strict natural mode: not understood: 'Fooify' (did you mean 'boxify'?)\nOperation not permitted in this world: METHOD_REVERSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Strict natural mode: not understood: 'Fooify' (did you mean 'boxify'?)\n\nOperation not permitted in this world: METHOD_REVERSE"
+    },
+    {
+     "hash": "371afc3870fc",
+     "promise": "0\nno: 8 is not less than 4",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nno: 8 is not less than 4"
+    },
+    {
+     "hash": "55e56f5af5a3",
+     "promise": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure)."
+    },
+    {
+     "hash": "b743b937925a",
+     "promise": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")"
+    },
+    {
+     "hash": "d6b8996b62a5",
+     "promise": "Unfilled template hole! The narration still contains a {#n} slot with no value for it.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Unfilled template hole! The narration still contains a {#n} slot with no value for it."
+    },
+    {
+     "hash": "f3537a7c15a2",
+     "promise": "1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0"
+    },
+    {
+     "hash": "38e3c7ba9c26",
+     "promise": "[ \"X\", 1 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"X\", 1 ]"
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 16.7
+  },
+  "fr/12-a-language-declared": {
+   "id": "a-language-declared",
+   "blocks": [
+    {
+     "hash": "c731c5079d75",
+     "promise": "schema 'output' -- 3 field(s)\ndish : oneof (margherita | tiramisu) [required]\nquantity : number [required], must be at least '1', must be at most '12'\nnote : string [optional]\nAnswer with ONLY this structure, one field per line, nothing before it and nothing after it:\n\ndish: <one of: margherita | tiramisu>\nquantity: <number>\nnote: <text>\n0\nfield 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.\nfield 'quantity' must be at most '12', and the model answered '40'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "schema 'output' -- 3 field(s)\n  dish : oneof (margherita | tiramisu) [required]\n  quantity : number [required], must be at least '1', must be at most '12'\n  note : string [optional]\n\nAnswer with ONLY this structure, one field per line, nothing before it and nothing after it:\n\ndish: <one of: margherita | tiramisu>\nquantity: <number>\nnote: <text>\n\n0\nfield 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.\nfield 'quantity' must be at most '12', and the model answered '40'."
+    },
+    {
+     "hash": "19da61ea1310",
+     "promise": "1\n1\n1\n0\n0\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n1\n0\n0\n0\n1"
+    },
+    {
+     "hash": "3a51a256f0b8",
+     "promise": "1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0"
+    },
+    {
+     "hash": "5eb4df42eaae",
+     "promise": "1\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n0"
+    },
+    {
+     "hash": "f532a65ddc4e",
+     "promise": "GBNF-M7\nGBNF-M4\n1\n0\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "GBNF-M7\nGBNF-M4\n1\n0\n1\n1"
+    },
+    {
+     "hash": "c78b0ea0c1e8",
+     "promise": "stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description)."
+    },
+    {
+     "hash": "7deab060248b",
+     "promise": "[ 1, 2, 4, 5 ]\n[ ]\n[ 1, 2, 3, 4, 5 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 2, 4, 5 ]\n[ ]\n[ 1, 2, 3, 4, 5 ]"
+    },
+    {
+     "hash": "a36bd320dfaa",
+     "promise": "[ 0, 0.84, -0.76 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 0, 0.84, -0.76 ]"
+    },
+    {
+     "hash": "b19cb7b429fa",
+     "promise": "?\n?\n?\n?\n?",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 1,
+   "ran": "2026-10-09 03:25 UTC+01:00",
+   "seconds": 3.6
+  },
+  "fr/13-natural-and-executable": {
+   "id": "natural-and-executable",
+   "blocks": [
+    {
+     "hash": "9391063f427b",
+     "promise": "TRUE\nFALSE\nno: expected exactly 1, found 2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nno: expected exactly 1, found 2"
+    },
+    {
+     "hash": "6808e90a3e4d",
+     "promise": "TRUE\nFALSE\nno: expected atmost 2, found 3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nno: expected atmost 2, found 3"
+    },
+    {
+     "hash": "86f73517c9df",
+     "promise": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\n\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?"
+    },
+    {
+     "hash": "04330a038598",
+     "promise": "HARO\nHELLO\nbrave",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "HARO\nHELLO\nbrave"
+    },
+    {
+     "hash": "66749c909e5e",
+     "promise": "[ \"A\", \"I\", \"E\" ]\n3\n1\nyes: 4 is the same as 4\n0\nno: 4 is not the same as 8\n[ 1, 0 ]\nFALSE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"A\", \"I\", \"E\" ]\n3\n1\nyes: 4 is the same as 4\n0\nno: 4 is not the same as 8\n[ 1, 0 ]\n0\n1"
+    },
+    {
+     "hash": "aa29e767fce5",
+     "promise": "[ 1, 1 ]\nTRUE\ncreate a string with haro -> ask: is lowercase -> ask: contains\nTRUE\nyes: \"haro\" is lowercase and is latin and containing \"r\"\n1\ncertainly",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 1, 1 ]\n1\ncreate a string with haro -> ask: is lowercase -> ask: contains\n1\nyes: \"haro\" is lowercase and is latin and containing \"r\"\n1\ncertainly"
+    },
+    {
+     "hash": "205f040612c6",
+     "promise": "TEST_DATA\noStr = StzStringQ(\"test.data\")\noStr.Replace(\".\", \"_\")\noStr.Uppercase()\n@result = oStr.Content()",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "TEST_DATA\noStr = StzStringQ(\"test.data\")\noStr.Replace(\".\", \"_\")\noStr.Uppercase()\n@result = oStr.Content()"
+    },
+    {
+     "hash": "49b24c9d120b",
+     "promise": "TRUE\nyi rubutu dauke hello niger -> raba -> maida\ncreate a string with hello niger -> spacify -> uppercase",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nyi rubutu dauke hello niger -> raba -> maida\ncreate a string with hello niger -> spacify -> uppercase"
+    },
+    {
+     "hash": "b2867e720b69",
+     "promise": "SOFTANZA\nCAPITALS\na-_-b",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "SOFTANZA\nCAPITALS\na-_-b"
+    },
+    {
+     "hash": "51317c98a3da",
+     "promise": "METHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "METHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES\nMETHOD_REMOVEDUPLICATES"
+    },
+    {
+     "hash": "e9409f015cb4",
+     "promise": "a_b\norah\norah\norah\nأنشئ سلسلة بـ haro -> اعكس\norah",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "a_b\norah\norah\norah\nأنشئ سلسلة بـ haro -> اعكس\norah"
+    },
+    {
+     "hash": "2fc732730c7f",
+     "promise": "TRUE\n[ 9, 4 ]\nunda orodha na [ 9, 4, 9 ] -> ondoa nakala",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ 9, 4 ]\nunda orodha na [ 9, 4, 9 ] -> ondoa nakala"
+    },
+    {
+     "hash": "342fcaf9b263",
+     "promise": "1\n[ 3, 1 ]\n[ 5, 3 ]\n[ 9, 4 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ 3, 1 ]\n[ 5, 3 ]\n[ 9, 4 ]"
+    },
+    {
+     "hash": "7ef6eab72bdc",
+     "promise": "en 23 of 25\nha 9 of 25\nfr 25 of 25\nar 16 of 25\ntr 10 of 25\nFALSE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "en 23 of 25\nha 9 of 25\nfr 25 of 25\nar 16 of 25\ntr 10 of 25\n0"
+    },
+    {
+     "hash": "05aafff63996",
+     "promise": "TRUE\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1"
+    },
+    {
+     "hash": "d15a426d18d4",
+     "promise": "host code ran\nTRUE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "host code ran\n1"
+    },
+    {
+     "hash": "69c9f1123966",
+     "promise": "S O F T A N Z A\nFALSE\n[ [ \"and_\", \"addn\" ] ]\nStrict natural mode: not understood: 'and_' (did you mean 'addn'?)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "S O F T A N Z A\n0\n[ [ \"and_\", \"addn\" ] ]\nStrict natural mode: not understood: 'and_' (did you mean 'addn'?)"
+    },
+    {
+     "hash": "b7938be3c9bd",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 17,
+   "runnable": 17,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 16.7
+  },
+  "fr/14-knowledge-programming": {
+   "id": "knowledge-programming",
+   "blocks": [
+    {
+     "hash": "c62ff787545c",
+     "promise": "not derivable: no recorded fact or lawful chain gives 'couscous' made-from 'millet'\nproved: couscous made-from flour made-from millet",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "not derivable: no recorded fact or lawful chain gives 'couscous' made-from 'millet'\nproved: couscous made-from flour made-from millet"
+    },
+    {
+     "hash": "9743d9fa4353",
+     "promise": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'"
+    },
+    {
+     "hash": "374572229ae7",
+     "promise": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet."
+    },
+    {
+     "hash": "d9fb8c25a90a",
+     "promise": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n0\nknowledge \"clinic\"\n\nfacts\nfatou | treated-by | dr-diallo\n\nprovenance\nfatou | treated-by | dr-diallo | source | text | registry\nfatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\nfatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\ntreated-by | unique",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n\n0\nknowledge \"clinic\"\n\nfacts\n    fatou | treated-by | dr-diallo\n\nprovenance\n    fatou | treated-by | dr-diallo | source | text | registry\n    fatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\n    fatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\n    treated-by | unique"
+    },
+    {
+     "hash": "ef89e8481613",
+     "promise": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0"
+    },
+    {
+     "hash": "c374beb1ff4c",
+     "promise": "1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1"
+    },
+    {
+     "hash": "35faaad5e297",
+     "promise": "softanza-education\n[ \"en\", \"fr\", \"ar\", \"ha\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "softanza-education\n[ \"en\", \"fr\", \"ar\", \"ha\" ]"
+    },
+    {
+     "hash": "8690c0620a6e",
+     "promise": "1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "02e87d27524f",
+     "promise": "1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "8f52b1cfc37a",
+     "promise": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)."
+    },
+    {
+     "hash": "aec432a3d756",
+     "promise": "[ \"couscous\" ]\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"couscous\" ]\n[ ]"
+    },
+    {
+     "hash": "588d5e89df0b",
+     "promise": "1\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n[ ]"
+    },
+    {
+     "hash": "bb8b6d81ea50",
+     "promise": "[ \"company\", \"fruit\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"company\", \"fruit\" ]"
+    },
+    {
+     "hash": "c66fc1dc5340",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.9
+  },
+  "fr/15-pattern-languages": {
+   "id": "pattern-languages",
+   "blocks": [
+    {
+     "hash": "7c47520acd2d",
+     "promise": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file."
+    },
+    {
+     "hash": "3418ef785835",
+     "promise": "1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0"
+    },
+    {
+     "hash": "17aa4f26e3bd",
+     "promise": "1\n0\n1\n0\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0\n1\n0"
+    },
+    {
+     "hash": "6248f2f7971c",
+     "promise": "1\n0\n1\n0\n1\n[ 6, 28, 496 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n0\n1\n[ 6, 28, 496 ]"
+    },
+    {
+     "hash": "a7caa1af8497",
+     "promise": "1\n0\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n1"
+    },
+    {
+     "hash": "0170e87eedaf",
+     "promise": "{cols(4) & rows(4)}\n1\n{@!cols(4)}\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "{cols(4) & rows(4)}\n1\n{@!cols(4)}\n0"
+    },
+    {
+     "hash": "8fa5ef4052e2",
+     "promise": "1\n0\n1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1\n1"
+    },
+    {
+     "hash": "eeb9487a3c3b",
+     "promise": "1\n0\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n0"
+    },
+    {
+     "hash": "a034999fa53e",
+     "promise": "1\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1"
+    },
+    {
+     "hash": "9c456af8b27a",
+     "promise": "2\nstring\nconjunction\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nstring\nconjunction\n2"
+    },
+    {
+     "hash": "34f1776a0791",
+     "promise": "0\n0\n\"Lunch)\"",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n\"Lunch)\""
+    },
+    {
+     "hash": "8fcf2dd1119a",
+     "promise": "1\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1"
+    },
+    {
+     "hash": "6aa0f70a4ebd",
+     "promise": "1\n1\n[ ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n[ ]\n0"
+    },
+    {
+     "hash": "35b5269fbf94",
+     "promise": "1\n0\n0",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.8
+  },
+  "fr/16-seven-languages-one-door": {
+   "id": "seven-languages-one-door",
+   "blocks": [
+    {
+     "hash": "59b52061755c",
+     "promise": "c: 1\nnodejs: 1\njulia: 1\nr: 1\nprolog: 1\npython: 1\nring: 0\ncobol: 0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "c: 1\nnodejs: 1\njulia: 1\nr: 1\nprolog: 1\npython: 1\nring: 0\ncobol: 0"
+    },
+    {
+     "hash": "e4751e6f68bd",
+     "promise": "Language 'cobol' is not supported",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Language 'cobol' is not supported"
+    },
+    {
+     "hash": "2cc3c9576838",
+     "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1"
+    },
+    {
+     "hash": "0e744afec921",
+     "promise": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]"
+    },
+    {
+     "hash": "48e980c00cf5",
+     "promise": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]"
+    },
+    {
+     "hash": "c0aeefd24e7d",
+     "promise": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared"
+    },
+    {
+     "hash": "d8e2cd7f0942",
+     "promise": "1\nUpdate plan (1 of 1 operations to commit):\n* 1. spawn process: python analyse.py\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nUpdate plan (1 of 1 operations to commit):\n  * 1. spawn process: python analyse.py\n\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]"
+    },
+    {
+     "hash": "7393d862a580",
+     "promise": "0\n42",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n42"
+    },
+    {
+     "hash": "7c2217f48ff4",
+     "promise": "xYz",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "xYz"
+    },
+    {
+     "hash": "96d3c3e67570",
+     "promise": "1\n0",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "10cd358d1815",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.7
+  },
+  "fr/17-law-programmatic-by-default": {
+   "id": "law-programmatic-by-default",
+   "blocks": [
+    {
+     "hash": "5f4f2bbbbc61",
+     "promise": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations)."
+    },
+    {
+     "hash": "b360347d517d",
+     "promise": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question."
+    },
+    {
+     "hash": "adfd08cbf9a9",
+     "promise": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'"
+    },
+    {
+     "hash": "e6b4a509f631",
+     "promise": "0\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n3"
+    },
+    {
+     "hash": "940b7efd95f1",
+     "promise": "a greeting\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "a greeting\n0"
+    },
+    {
+     "hash": "c340cac7de55",
+     "promise": "0\nrefused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nrefused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'"
+    },
+    {
+     "hash": "e708028b0c97",
+     "promise": "5\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "5\n1\n0"
+    },
+    {
+     "hash": "546c0563b065",
+     "promise": "Margherita is a dish.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Margherita is a dish."
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.6
+  },
+  "fr/18-the-five-registers": {
+   "id": "the-five-registers",
+   "blocks": [
+    {
+     "hash": "4eca6e1e600d",
+     "promise": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]"
+    },
+    {
+     "hash": "33c893b36796",
+     "promise": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing"
+    },
+    {
+     "hash": "e361bfe19cb9",
+     "promise": "what\nwhich\n[ \"cheese\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "what\nwhich\n[ \"cheese\" ]"
+    },
+    {
+     "hash": "58121915fcd5",
+     "promise": "[ \"mascarpone\", \"espresso\" ]\nfulfilled",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mascarpone\", \"espresso\" ]\nfulfilled"
+    },
+    {
+     "hash": "44737c524fd0",
+     "promise": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n-> admitted: 'margherita' contains 'tomato-sauce'\n-> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n  -> admitted: 'margherita' contains 'tomato-sauce'\n  -> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'"
+    },
+    {
+     "hash": "bba558135e1a",
+     "promise": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1"
+    },
+    {
+     "hash": "4217e97691d9",
+     "promise": "[ \"=12*3\" ]\n=12*3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"=12*3\" ]\n=12*3"
+    },
+    {
+     "hash": "83aa5929b94e",
+     "promise": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents()."
+    },
+    {
+     "hash": "dcfa876f8f59",
+     "promise": "1\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n1"
+    },
+    {
+     "hash": "6fb51b072487",
+     "promise": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0"
+    },
+    {
+     "hash": "126774f01e74",
+     "promise": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human"
+    },
+    {
+     "hash": "34118cc05e0f",
+     "promise": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled"
+    },
+    {
+     "hash": "cd4cef4627ae",
+     "promise": "JIBINI\nadmitted: 'pizza' contains 'jibini'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "JIBINI\nadmitted: 'pizza' contains 'jibini'"
+    },
+    {
+     "hash": "f8bd87cc7249",
+     "promise": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)"
+    },
+    {
+     "hash": "485a01a30065",
+     "promise": "plain\nneural\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "plain\nneural\n0"
+    },
+    {
+     "hash": "8c2def6273d3",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 15,
+   "runnable": 15,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.0
+  },
+  "fr/19-the-domain-language-model": {
+   "id": "the-domain-language-model",
+   "blocks": [
+    {
+     "hash": "928138789a8c",
+     "promise": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]"
+    },
+    {
+     "hash": "bf622f1bf7de",
+     "promise": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]"
+    },
+    {
+     "hash": "3b4d644030d7",
+     "promise": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'."
+    },
+    {
+     "hash": "f3c264dc8a59",
+     "promise": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\nmargherita | dish\ntiramisu | dish\nchianti | wine\nrelations\ncontains\npairs-with\nfacts\nmargherita | contains | tomato-sauce\nmargherita | contains | mozzarella\nmargherita | pairs-with | chianti\nlaws\ngoldens\nwhat is margherita | Margherita is a dish.\nwhat is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\n    margherita | dish\n    tiramisu | dish\n    chianti | wine\nrelations\n    contains\n    pairs-with\nfacts\n    margherita | contains | tomato-sauce\n    margherita | contains | mozzarella\n    margherita | pairs-with | chianti\nlaws\ngoldens\n    what is margherita | Margherita is a dish.\n    what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\n\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0"
+    },
+    {
+     "hash": "7df6db528cb8",
+     "promise": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2"
+    },
+    {
+     "hash": "1874fcbcd841",
+     "promise": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0"
+    },
+    {
+     "hash": "f486682e559c",
+     "promise": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.7
+  },
+  "fr/20-agents-that-cannot-hurt-you": {
+   "id": "agents-that-cannot-hurt-you",
+   "blocks": [
+    {
+     "hash": "a751b6c20180",
+     "promise": "compensable\n0\nAGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.\n0\nAGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "compensable\n0\nAGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.\n0\nAGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.\n1"
+    },
+    {
+     "hash": "22dc6dc78b25",
+     "promise": "trusted: yes yes yes\nexternal: yes yes no\nsandboxed: yes no no\na 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "trusted: yes yes yes\nexternal: yes yes no\nsandboxed: yes no no\na 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)"
+    },
+    {
+     "hash": "d3f9eeb493ec",
+     "promise": "1\n1\n0\n1\nespresso,2.40\nflat-white,3.10",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n0\n1\nespresso,2.40\nflat-white,3.10"
+    },
+    {
+     "hash": "4f1acbdc2a60",
+     "promise": "Update plan (1 of 1 operations to commit):\n* 1. write 29 bytes to '<fixture>/prices.csv'\nactor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\n0\n1\n[ [ 1, \"committed\", \"write_file\", \"shop-committer\" ] ]",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Update plan (1 of 1 operations to commit):\n  * 1. write 29 bytes to '<fixture>/prices.csv'\n\nactor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\n0\n1\n[ [ 1, \"committed\", \"write_file\", \"shop-committer\" ] ]"
+    },
+    {
+     "hash": "86f62f3d54ae",
+     "promise": "0\n[pia-posture-reversibility @ skills.scribble.posture] a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n[pia-posture-reversibility @ skills.scribble.posture] a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)"
+    },
+    {
+     "hash": "83a0bae8f090",
+     "promise": "30\n30\nactor 'helper-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\n30",
+     "effects": [
+      "files",
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "30\n30\nactor 'helper-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)\n30"
+    },
+    {
+     "hash": "74f469597509",
+     "promise": "29\n1\n1",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "29\n1\n1"
+    },
+    {
+     "hash": "55da718d6899",
+     "promise": "-6\nAGENTLOOP-R6: agent 'summarizer' (slot 0) breaks the rule no-llm-effectful -- llm actor holds 'effectful' -- an LLM proposes, only a pi-gate commits. Registration refuses it. Drop the effectful capability, or register it as a pi-gated composition rather than an llm actor.\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "-6\nAGENTLOOP-R6: agent 'summarizer' (slot 0) breaks the rule no-llm-effectful -- llm actor holds 'effectful' -- an LLM proposes, only a pi-gate commits. Registration refuses it. Drop the effectful capability, or register it as a pi-gated composition rather than an llm actor.\n0"
+    },
+    {
+     "hash": "8df126ead12a",
+     "promise": "2\n1\n0\n7\n1\n0\n1",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\n1\n0\n7\n1\n0\n1"
+    },
+    {
+     "hash": "cdcf6c5cdae9",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 3.6
+  },
+  "fr/21-the-court": {
+   "id": "the-court",
+   "blocks": [
+    {
+     "hash": "b69887ec05e9",
+     "promise": "kept\ndiverged\nunjudged\n1",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 3,
+     "verdict": "kept",
+     "out": "kept\ndiverged\nunjudged\n1"
+    },
+    {
+     "hash": "27390b3847d3",
+     "promise": "kept\nfinished\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 2,
+     "verdict": "kept",
+     "out": "kept\nfinished\n0"
+    },
+    {
+     "hash": "44c8923f475e",
+     "promise": "8\n7\nHEARD",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "8\n7\nHEARD"
+    },
+    {
+     "hash": "5212bb1a3d79",
+     "promise": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited"
+    },
+    {
+     "hash": "dcbef8311e43",
+     "promise": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n\n1"
+    },
+    {
+     "hash": "6d419185d7ed",
+     "promise": "1\n1\n0\n1\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n0\n1\n2"
+    },
+    {
+     "hash": "beae8eb61df9",
+     "promise": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n#1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n#1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n  1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n  #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n  #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)"
+    },
+    {
+     "hash": "d664ae8e9424",
+     "promise": "",
+     "effects": [
+      "files"
+     ],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 4.4
+  },
+  "fr/22-compared-honestly": {
+   "id": "compared-honestly",
+   "blocks": [
+    {
+     "hash": "154fb0db97fd",
+     "promise": "1219326311370217952237463801111263526900",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1219326311370217952237463801111263526900"
+    },
+    {
+     "hash": "dc939c47273c",
+     "promise": "0.3\n2.9985",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0.3\n2.9985"
+    },
+    {
+     "hash": "ab6b58998ea2",
+     "promise": "[ \"eau\", \"zoo\", \"zèbre\", \"étoile\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"eau\", \"zoo\", \"zèbre\", \"étoile\" ]"
+    },
+    {
+     "hash": "9abae638df45",
+     "promise": "ISTANBUL",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "ISTANBUL"
+    },
+    {
+     "hash": "0bcf51e44461",
+     "promise": "[ 3, 1 ]\ncreate a list with [ 3, 1, 3 ] -> remove duplicates",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 3, 1 ]\ncreate a list with [ 3, 1, 3 ] -> remove duplicates"
+    },
+    {
+     "hash": "e10b6b596cbe",
+     "promise": "the line your tool prints",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 1,
+   "ran": "2026-10-09 03:26 UTC+01:00",
+   "seconds": 13.4
+  },
+  "fr/23-a-world-a-constellation-a-platform": {
+   "id": "a-world-a-constellation-a-platform",
+   "blocks": [
+    {
+     "hash": "6a547cc32926",
+     "promise": "WORLD FieldVisits   lives in: graphdb + files\nBEING\naccount (number, chapter, balance)\ntrue when balance @ >= 0\nclient (code, name, city)\nvisit (agent, date, subject)\nRELATIONS\nclient owns account\nvisit of client\naccount belongsto client\nBECOMING\nwhen agent records visit require subject\nwhenever client unseen 90 days -> propose visit\nwants everyclientseenthisquarter -> reached by planning\nMET FROM WITHOUT\nscreen clientfile: understand client shows identity, accounts, visits\nrefine balance bounds [0..1000000]\nreaches mobile, desktop, web",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "WORLD FieldVisits   lives in: graphdb + files\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n    visit (agent, date, subject)\n  RELATIONS\n    client owns account\n    visit of client\n    account belongsto client\n  BECOMING\n    when agent records visit require subject\n    whenever client unseen 90 days -> propose visit\n    wants everyclientseenthisquarter -> reached by planning\n  MET FROM WITHOUT\n    screen clientfile: understand client shows identity, accounts, visits\n    refine balance bounds [0..1000000]\n    reaches mobile, desktop, web"
+    },
+    {
+     "hash": "6b36cf1588f0",
+     "promise": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'."
+    },
+    {
+     "hash": "6b6edd759bdb",
+     "promise": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]"
+    },
+    {
+     "hash": "d86059de8f46",
+     "promise": "stzplatform\n1\n0\n1\n1\nEUR",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzplatform\n1\n0\n1\n1\nEUR"
+    },
+    {
+     "hash": "26ad3779f943",
+     "promise": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation."
+    },
+    {
+     "hash": "068c2af00c5f",
+     "promise": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)"
+    },
+    {
+     "hash": "3244caff7e07",
+     "promise": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability."
+    },
+    {
+     "hash": "99aef33a4b72",
+     "promise": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\n\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps"
+    },
+    {
+     "hash": "bfdc37c8c6ba",
+     "promise": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]"
+    },
+    {
+     "hash": "8ca9c66a1ce2",
+     "promise": "Error (R14) : Calling Method without definition: hosts\nError (R14) : Calling Method without definition: admits\nError (R14) : Calling Method without definition: explain",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Error (R14) : Calling Method without definition: hosts\nError (R14) : Calling Method without definition: admits\nError (R14) : Calling Method without definition: explain"
+    },
+    {
+     "hash": "06ef71af5708",
+     "promise": "1",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 4.0
+  },
+  "fr/24-rehearse-then-commit": {
+   "id": "rehearse-then-commit",
+   "blocks": [
+    {
+     "hash": "f59d1b7870b3",
+     "promise": "Update plan (3 of 3 operations to commit):\n* 1. create folder 'config'\n* 2. create file 'config/pump.ini' (12 bytes)\n* 3. move 'old_settings.txt' -> 'config/legacy.ini'\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Update plan (3 of 3 operations to commit):\n  * 1. create folder 'config'\n  * 2. create file 'config/pump.ini' (12 bytes)\n  * 3. move 'old_settings.txt' -> 'config/legacy.ini'\n\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]"
+    },
+    {
+     "hash": "f70ba2a0862e",
+     "promise": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n* 1. set env var 'SHOP_MODE' = 'rehearsal'\n* 2. change directory to '/srv/shop'\n* 3. spawn process: backup-database --all\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n  * 1. set env var 'SHOP_MODE' = 'rehearsal'\n  * 2. change directory to '/srv/shop'\n  * 3. spawn process: backup-database --all\n\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]"
+    },
+    {
+     "hash": "a6e9abec952e",
+     "promise": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\ndigitalRead(34);\ndigitalWrite(26, 1);\n}",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\n  digitalRead(34);\n  digitalWrite(26, 1);\n}"
+    },
+    {
+     "hash": "625dad2b59d9",
+     "promise": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\nPart 'phone' [superapp] -> android (mobile / edge)\nUnicode            [target]    Unicode: the target-platform is strong at it -> use its own\nPivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\nCollection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\nNeural             [server]    Neural: heavy -> runs on the backend, not the edge\n-> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\nSummary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\nBuild() will compile exactly this scope; Deploy() will commit it.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\n\n  Part 'phone' [superapp] -> android (mobile / edge)\n     Unicode            [target]    Unicode: the target-platform is strong at it -> use its own\n     PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\n     Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\n     Neural             [server]    Neural: heavy -> runs on the backend, not the edge\n     -> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\n\n  Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\n  Build() will compile exactly this scope; Deploy() will commit it."
+    },
+    {
+     "hash": "aced2076317e",
+     "promise": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n\"solution\": \"shopfront\",\n\"part\": \"web\",\n\"engine\": \"aggregation\",\n\"artifacts\": \"index.html,stz.js\"\n}",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n  \"solution\": \"shopfront\",\n  \"part\": \"web\",\n  \"engine\": \"aggregation\",\n  \"artifacts\": \"index.html,stz.js\"\n}"
+    },
+    {
+     "hash": "02f3ac0e4630",
+     "promise": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback"
+    },
+    {
+     "hash": "59a4d10f2650",
+     "promise": "authorized\n1\nauthorized\n1\nlive\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "authorized\n1\nauthorized\n1\nlive\n1"
+    },
+    {
+     "hash": "113df73703d2",
+     "promise": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n[ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n[ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n[ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n[ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n[WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n  [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n  [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n  [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n  [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n  [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret"
+    },
+    {
+     "hash": "70bc9ce10ea1",
+     "promise": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment"
+    },
+    {
+     "hash": "635ce048849e",
+     "promise": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]"
+    },
+    {
+     "hash": "a4e90aee4a48",
+     "promise": "live\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "live\n1"
+    },
+    {
+     "hash": "4a47c6464137",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 4.5
+  },
+  "fr/25-your-users-keep-their-medium": {
+   "id": "your-users-keep-their-medium",
+   "blocks": [
+    {
+     "hash": "3af49c04d8a5",
+     "promise": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3"
+    },
+    {
+     "hash": "399af0bf4031",
+     "promise": "fulfilled\n4\n4\nno option (7) was offered -- 2 option(s) on the table\n[ \"brik\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "fulfilled\n4\n4\nno option (7) was offered -- 2 option(s) on the table\n[ \"brik\" ]"
+    },
+    {
+     "hash": "d054d9fb9ac5",
+     "promise": "[ \"2\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"2\" ]"
+    },
+    {
+     "hash": "ac828da97dcd",
+     "promise": "rejected\nrefused\n0\nsent\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rejected\nrefused\n0\nsent\n1"
+    },
+    {
+     "hash": "920b42758a79",
+     "promise": "provider\n[]\nsignature mismatch (tampered body, or a secret this receiver does not hold)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "provider\n[]\nsignature mismatch (tampered body, or a secret this receiver does not hold)"
+    },
+    {
+     "hash": "c0c502b3cbe7",
+     "promise": "[ \"danger\", \"warning\", \"info\", \"success\", \"muted\" ]\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"danger\", \"warning\", \"info\", \"success\", \"muted\" ]\n0\n1"
+    },
+    {
+     "hash": "ca26d86b7480",
+     "promise": "danger\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "danger\n1\n0"
+    },
+    {
+     "hash": "ec11f5d5ee14",
+     "promise": "WORLD stall   lives in: memory (not persisted)\nBEING\ndish (name, price)\nMET FROM WITHOUT\nscreen menu: discover dish shows name, price\nscreen basket: select dish\nreaches web, whatsapp",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "WORLD stall   lives in: memory (not persisted)\n  BEING\n    dish (name, price)\n  MET FROM WITHOUT\n    screen menu: discover dish shows name, price\n    screen basket: select dish\n    reaches web, whatsapp"
+    },
+    {
+     "hash": "d44ca66c6995",
+     "promise": "stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile).",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile)."
+    },
+    {
+     "hash": "c9bfd31b1f14",
+     "promise": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'."
+    },
+    {
+     "hash": "3c4122e3f61e",
+     "promise": "[ [ \"customer\", \"one brik, no egg\" ] ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ [ \"customer\", \"one brik, no egg\" ] ]"
+    },
+    {
+     "hash": "a7cf7cc98cfa",
+     "promise": "your prediction\nyour prediction",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 13.4
+  },
+  "fr/26-the-environment": {
+   "id": "the-environment",
+   "blocks": [
+    {
+     "hash": "b4c90d500cbb",
+     "promise": "1\n12\n[ \"work\" ]",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n12\n[ \"work\" ]"
+    },
+    {
+     "hash": "1f66385e9d01",
+     "promise": "[ ]\n22\n[ ]\n1\n[ \"transfer_funds\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ ]\n22\n[ ]\n1\n[ \"transfer_funds\" ]"
+    },
+    {
+     "hash": "7c974a1a9211",
+     "promise": "11\n11\n1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "11\n11\n1\n0"
+    },
+    {
+     "hash": "75d820d88a6e",
+     "promise": "1\n1\n1\n127.0.0.1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n1\n127.0.0.1"
+    },
+    {
+     "hash": "c9f389122b70",
+     "promise": "1\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0"
+    },
+    {
+     "hash": "60ef521e289e",
+     "promise": "clean\nrefused: DANGLING_REFERENCE\nrefused: UNKNOWN_ROLE",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "clean\nrefused: DANGLING_REFERENCE\nrefused: UNKNOWN_ROLE"
+    },
+    {
+     "hash": "d55e52d65cab",
+     "promise": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]"
+    },
+    {
+     "hash": "a7f0d4cce297",
+     "promise": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta"
+    },
+    {
+     "hash": "0e5a70494c67",
+     "promise": "WORLD fieldvisits   lives in: memory (not persisted)\nBEING\nclient (name)\nMET FROM WITHOUT\nscreen home: discover client\nscreen file: understand client\nscreen pick: select client\nscreen edit: act client\nError (R3) : Calling Function without definition: tocompare",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "WORLD fieldvisits   lives in: memory (not persisted)\n  BEING\n    client (name)\n  MET FROM WITHOUT\n    screen home: discover client\n    screen file: understand client\n    screen pick: select client\n    screen edit: act client\nError (R3) : Calling Function without definition: tocompare"
+    },
+    {
+     "hash": "168fe459f2a4",
+     "promise": "1\n1\n1\n1",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n1\n1\n1"
+    },
+    {
+     "hash": "7ed8009c8a75",
+     "promise": "",
+     "effects": [
+      "the system"
+     ],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.8
+  },
+  "fr/27-the-engine-beneath": {
+   "id": "the-engine-beneath",
+   "blocks": [
+    {
+     "hash": "f09f7e1fe882",
+     "promise": "17 1 0 0\n674 1 1 0\n714 1 1 1",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "17 1 0 0\n674 1 1 0\n714 1 1 1"
+    },
+    {
+     "hash": "d85878533d1a",
+     "promise": "stzcorestring\nstzobject\nstzobject\nstzlist",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzcorestring\nstzobject\nstzobject\nstzlist"
+    },
+    {
+     "hash": "089633831d4e",
+     "promise": "[ 10, 693, 0 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 10, 693, 0 ]"
+    },
+    {
+     "hash": "0b4ae8b7c727",
+     "promise": "4\n85\n0",
+     "effects": [
+      "files"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "4\n85\n0"
+    },
+    {
+     "hash": "f11828cb0026",
+     "promise": "0.8.0\n2786",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0.8.0\n2786"
+    },
+    {
+     "hash": "b8bcc0b1a633",
+     "promise": "STRAßE\nSTRASSE\n[ \"run\", \"run\", \"ran\" ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "STRAßE\nSTRASSE\n[ \"run\", \"run\", \"ran\" ]"
+    },
+    {
+     "hash": "e4d416d9b246",
+     "promise": "1\n2000001000000",
+     "effects": [
+      "the clock"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n2000001000000"
+    },
+    {
+     "hash": "b8d5e0e7ab68",
+     "promise": "1.27",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1.27"
+    },
+    {
+     "hash": "38d882afeddc",
+     "promise": "Error (R3) : Calling Function without definition: stkenginestringfrom",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Error (R3) : Calling Function without definition: stkenginestringfrom"
+    },
+    {
+     "hash": "ab98fe6ad2d0",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 11.0
+  },
+  "fr/28-a-restaurant-in-lyon": {
+   "id": "a-restaurant-in-lyon",
+   "blocks": [
+    {
+     "hash": "802631c020eb",
+     "promise": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[scope] 1 finding(s)\nERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [scope] 1 finding(s)\n    ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1"
+    },
+    {
+     "hash": "c41c74136b2e",
+     "promise": "declined\nrefused\nauthorized\nthis authorization was already captured",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "declined\nrefused\nauthorized\nthis authorization was already captured"
+    },
+    {
+     "hash": "4e279384c706",
+     "promise": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1"
+    },
+    {
+     "hash": "06c7f967a819",
+     "promise": "1\n0\ntarget world 'supplier' is not active.\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\ntarget world 'supplier' is not active.\n1"
+    },
+    {
+     "hash": "0ede9addb656",
+     "promise": "SLA speed-budget -- 3 expectation(s), last check: MET.\n[MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)\n[MET] p95-tap.ms-under-80: measured 40 (must be <= 80)\n[MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)\n0\np95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "SLA speed-budget -- 3 expectation(s), last check: MET.\n  [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)\n  [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)\n  [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)\n0\np95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)"
+    },
+    {
+     "hash": "2e7a9acfab0d",
+     "promise": "1",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.3
+  },
+  "fr/29-a-bank-in-niamey": {
+   "id": "a-bank-in-niamey",
+   "blocks": [
+    {
+     "hash": "67ae32ec172c",
+     "promise": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0"
+    },
+    {
+     "hash": "b2a84000ea51",
+     "promise": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant"
+    },
+    {
+     "hash": "e32fe390128d",
+     "promise": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4"
+    },
+    {
+     "hash": "9807673c6d6a",
+     "promise": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[orgchart] 1 finding(s)\nERROR audit-reports-to-board @ audit -- internal audit must report to the board",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [orgchart] 1 finding(s)\n    ERROR audit-reports-to-board @ audit -- internal audit must report to the board"
+    },
+    {
+     "hash": "cb825c9c5646",
+     "promise": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1"
+    },
+    {
+     "hash": "59d6daf40360",
+     "promise": "1\npass\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\npass\n0"
+    }
+   ],
+   "kept": 6,
+   "runnable": 6,
+   "exercises": 0,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
+  },
+  "fr/30-an-organisation-in-the-field": {
+   "id": "an-organisation-in-the-field",
+   "blocks": [
+    {
+     "hash": "5bb1b33ae1dd",
+     "promise": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 1 finding(s)\nERROR second-approval @ a2 -- two approvals needed\n2",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 1 finding(s)\n    ERROR second-approval @ a2 -- two approvals needed\n2"
+    },
+    {
+     "hash": "de05cb034536",
+     "promise": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 2 finding(s)\nERROR second-approval @ a1 -- two approvals needed\nERROR second-approval @ a2 -- two approvals needed\n3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 2 finding(s)\n    ERROR second-approval @ a1 -- two approvals needed\n    ERROR second-approval @ a2 -- two approvals needed\n3"
+    },
+    {
+     "hash": "561f5196af5b",
+     "promise": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0"
+    },
+    {
+     "hash": "d2f3a9773207",
+     "promise": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique"
+    },
+    {
+     "hash": "a0453c091cc6",
+     "promise": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3"
+    },
+    {
+     "hash": "a72bd3f99758",
+     "promise": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous"
+    },
+    {
+     "hash": "c210ea6a699c",
+     "promise": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1"
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.9
+  },
+  "fr/31-what-the-projects-did-not-prove": {
+   "id": "what-the-projects-did-not-prove",
+   "blocks": [
+    {
+     "hash": "5c1f9b079e95",
+     "promise": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use.",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use."
+    },
+    {
+     "hash": "125794d1ea79",
+     "promise": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\nScope: esp32 (espidf)\n[rehearsed] read pin 4",
+     "effects": [
+      "the system"
+     ],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\n\nScope: esp32 (espidf)\n  [rehearsed] read pin 4"
+    },
+    {
+     "hash": "aa560b37ecb4",
+     "promise": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n\n0"
+    },
+    {
+     "hash": "2073ee3ba3d2",
+     "promise": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()"
+    },
+    {
+     "hash": "42afda7ed916",
+     "promise": "0\nSHORTFALL -- host too small\n1\nprovision on aws",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nSHORTFALL -- host too small\n1\nprovision on aws"
+    },
+    {
+     "hash": "8d5f1f1ccbdd",
+     "promise": "what you expect\nwhat you expect\nwhat you expect",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.4
+  },
+  "fr/32-many-minds-on-one-body-of-work": {
+   "id": "many-minds-on-one-body-of-work",
+   "blocks": [
+    {
+     "hash": "26541a650cb6",
+     "promise": "no-aggressive-verbs\naggressive verb in method 'KillOrder' -- prefer Remove/Delete/Dispose/Clear/Close (Softanza tone)\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "no-aggressive-verbs\naggressive verb in method 'KillOrder' -- prefer Remove/Delete/Dispose/Clear/Close (Softanza tone)\n1"
+    },
+    {
+     "hash": "4efb5ff21b46",
+     "promise": "0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0"
+    },
+    {
+     "hash": "a27b33844581",
+     "promise": "14\nno-aggressive-verbs",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "14\nno-aggressive-verbs"
+    }
+   ],
+   "kept": 3,
+   "runnable": 3,
+   "exercises": 0,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.4
+  },
+  "fr/33-the-one-line-still-owed": {
+   "id": "the-one-line-still-owed",
+   "blocks": [
+    {
+     "hash": "cc43a6b06f66",
+     "promise": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n0\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n\n0\n1"
+    },
+    {
+     "hash": "7b436f4d4a04",
+     "promise": "3 couscous\nvirtual\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "3 couscous\nvirtual\n0"
+    },
+    {
+     "hash": "0e0d2d9e64da",
+     "promise": "0\nsandbox-in-production @ shop/payments",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "0\nsandbox-in-production @ shop/payments"
+    },
+    {
+     "hash": "01d24fcc0d09",
+     "promise": "",
+     "effects": [],
+     "verdict": "exercise",
+     "out": ""
+    }
+   ],
+   "kept": 3,
+   "runnable": 3,
+   "exercises": 1,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
+  },
+  "fr/A-the-register-of-innovations": {
+   "id": "the-register-of-innovations",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/B-the-fourteen-house-rules": {
+   "id": "the-fourteen-house-rules",
+   "blocks": [
+    {
+     "hash": "e35dd8d0a84c",
+     "promise": "14\nq-returns-object\nvalue-called-as-function",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "14\nq-returns-object\nvalue-called-as-function"
+    },
+    {
+     "hash": "d739e2606dbf",
+     "promise": "library_prints\nwarning\n1\nno-case-collision\n0\nno-len-method\n0",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "library_prints\nwarning\n1\nno-case-collision\n0\nno-len-method\n0"
+    }
+   ],
+   "kept": 2,
+   "runnable": 2,
+   "exercises": 0,
+   "ran": "2026-10-09 03:27 UTC+01:00",
+   "seconds": 3.7
+  },
+  "fr/C-the-twenty-two-verbs-and-the-constitution": {
+   "id": "the-twenty-two-verbs-and-the-constitution",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/D-the-glossary": {
+   "id": "the-glossary",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/E-the-guards-and-fixtures-cited": {
+   "id": "the-guards-and-fixtures-cited",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/F-the-narrations-the-book-argues-from": {
+   "id": "the-narrations-the-book-argues-from",
+   "blocks": [],
+   "kept": 0,
+   "runnable": 0,
+   "exercises": 0
+  },
+  "fr/G-the-book-as-data": {
    "id": "the-book-as-data",
    "blocks": [],
    "kept": 0,

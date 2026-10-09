@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the delivery gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; a speed expectation in the owner's own percentile; browser-side timing; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 02:57 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 03:27 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

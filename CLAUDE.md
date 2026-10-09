@@ -69,7 +69,9 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
   a working preface, the nine-element shape restored in chapters 7, 12, 13 and 25. Memo: `sessions/2026-10-09-phase-4-appendices.md`.
 - Phase 5 (the agents' form) done 2026-10-09: `book.json` v2 validated against `book.schema.json` at every build, `llms-full-book.txt`, `agents/<slug>.md`.
   Memo: `sessions/2026-10-09-phase-5-agents-form.md`.
-- Next: the French, which the prompt writes only from English the author has marked `read`; no chapter is marked read yet. Method per chapter
+- Phase 6 (the French) done 2026-10-09: all 41 pages in `src/fr/`, translated from the English drafts and bannered as such (FRENCH-01); style sheet
+  `FRENCH.md`, checker `tools/check_fr.py`. Memo: `sessions/2026-10-09-phase-6-french.md`.
+- Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

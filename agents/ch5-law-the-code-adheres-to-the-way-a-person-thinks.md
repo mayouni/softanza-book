@@ -4,7 +4,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 02:55 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 03:25 UTC+01:00.
 
 ## What the AI age changes here
 

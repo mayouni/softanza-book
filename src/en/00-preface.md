@@ -28,6 +28,6 @@ Every chapter has the same nine elements, in the same order. The concept as the 
 
 **What is owed.** The last chapter is about a line that the record does not yet carry: a solution that ran on Softanza's own engine, and what a named user said of it. Three projects, a restaurant, a bank and an organisation, have taught the library, and none yet runs on it. I wrote the chapter before the line exists, and I will write it again when it does.
 
-The French edition is written from the English that I have marked as read, and from no draft. It will come after.
+The French edition exists as a translation of the English drafts. Each French page says so, and it is read again once I have marked the English page as read.
 
 [AUTHOR: This preface was written last, by the session that drafted the book, from the book that exists. It says nothing about why you wrote it, since the record does not. Keep it as a working page, or replace it with the preface you drafted.]
