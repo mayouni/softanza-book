@@ -19,6 +19,7 @@ a block changed since it was last run; a named guard does not exist; a fence sti
 host language's name. It still writes every page first, so the failure is visible where it happened.
 """
 import html, json, re, subprocess, sys, urllib.parse
+from book_schema import validate
 from book_common import (ROOT, SRC, sources, structure, code_blocks, block_hash, former_name_fences,
                          load_json, now, stamp)
 from book_judge import WORDS
@@ -54,7 +55,7 @@ UI = {
     "cover_alt": "Softanza, book cover",
     "description": "Softanza, the Software Crafters Platform of the AI Age: rethinking programming, languages and intelligence, from first principles. By Mansour Ayouni. Second of the AYOUNI books.",
     "theme": "Light or dark", "langs": "Language",
-    "status_link": "Status of the book",
+    "status_link": "Status of the book", "agents_link": "For agents",
     "src_head": "Where the evidence lives", "src_narration": "Narration", "src_site": "On the site",
     "src_rulings": "Rulings of the study",
     "appendix": "Appendix", "appendices": "Appendices",
@@ -85,7 +86,7 @@ UI = {
     "cover_alt": "Softanza, couverture du livre",
     "description": "Softanza, la plateforme des artisans du logiciel à l'ère de l'IA : repenser la programmation, ses langages et son intelligence depuis les premiers principes. Par Mansour Ayouni. Deuxième des livres AYOUNI.",
     "theme": "Clair ou sombre", "langs": "Langue",
-    "status_link": "État du livre",
+    "status_link": "État du livre", "agents_link": "Pour les agents",
     "src_head": "Où sont les preuves", "src_narration": "Narration", "src_site": "Sur le site",
     "src_rulings": "Décisions de l'étude",
     "appendix": "Annexe", "appendices": "Annexes",
@@ -920,7 +921,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
 <p class="hero-tagline">{html.escape(tag)}</p>
 <p class="hero-author">Mansour Ayouni</p>
 <p class="hero-back"><span class="hb-label">{ui["back_cover"]}</span>{back}</p>
-<p class="hero-status"><a href="../status.html">{ui["status_link"]}</a></p>
+<p class="hero-status"><a href="../status.html">{ui["status_link"]}</a> · <a href="../llms-book.txt">{ui["agents_link"]}</a> · <a href="../book.json">book.json</a></p>
 {spine_btn}
 <div class="view-mode-toggle" role="group" aria-label="View mode">
 <button class="vm-list" id="vmList" aria-label="List view">
@@ -1097,41 +1098,135 @@ def doors_of(body):
     return out
 
 
-def agents_files(st, en_src, runs, guards, built):
-    chapters = []
+AGENT_RULES = [
+    "A draft is a draft: a chapter whose status is draft is not the author's final word, and 'the author read it' is a status that only the author sets.",
+    "You may quote any cell of a table. You may not turn an absent cell into a present one.",
+    "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
+    "Rely on a promise only with its verdict, and only at the library commit named in this file.",
+    "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
+    "The blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.",
+    "Never name the products of other repositories: the book describes them, and says 'the interface constitution' for the one it quotes.",
+]
+
+
+def page_slug(m):
+    if m.get("appendix"):
+        return f"app-{str(m['appendix']).lower()}-{m['id']}"
+    return "preface" if m["number"] == 0 else f"ch{m['number']}-{m['id']}"
+
+
+def sections_of(body):
+    out = []
+    for h in re.findall(r"(?m)^## (.+)$", body):
+        mm = re.match(r"(\d+)\.\s+(.*)", h)
+        out.append({"n": int(mm.group(1)) if mm else None, "title": (mm.group(2) if mm else h).strip()})
+    return out
+
+
+def principle_of(body):
+    m = re.search(r"(?ms)^## 2\..*?$(.*?)(?=^## |\Z)", body)
+    if m:
+        b = re.search(r"\*\*(.+?)\*\*", m.group(1), re.S)
+        if b:
+            return " ".join(b.group(1).split())
+    return None
+
+
+def with_verdicts(body, blocks):
+    """The chapter's Markdown with, under each Haro block, the verdict of the last run, for a reader that has no page."""
+    spans = code_blocks(body)
+    out, last = [], 0
+    for k, b in enumerate(spans):
+        out.append(body[last:b["end"]])
+        rec = blocks[k] if k < len(blocks) else {}
+        v = rec.get("verdict") or "not run"
+        out.append("\n\n> run: " + v + (" (touches " + ", ".join(rec["effects"]) + ")" if rec.get("effects") else ""))
+        last = b["end"]
+    out.append(body[last:])
+    return "".join(out)
+
+
+def agents_files(st, en_src, runs, guards, built, fr_ids):
     law_by_part = {p["number"]: p.get("law") for p in st["parts"]}
+    lib = runs.get("run", {}).get("library", {})
+    rt = runs.get("run", {}).get("runtime")
+    chapters, texts = [], []
+    (ROOT / "agents").mkdir(exist_ok=True)
     for path, m, body in en_src:
         r = runs.get("chapters", {}).get(f"en/{path.stem}", {})
-        blocks = code_blocks(body)
-        promises = [{"code": b["text"], "verdict": (r.get("blocks") or [{}] * len(blocks))[k].get("verdict") if k < len(r.get("blocks", [])) else None}
-                    for k, b in enumerate(blocks)]
+        if m.get("generated"):
+            body = body.rstrip() + "\n\n" + generated_body(m["generated"], en_src, guards, runs, st)
+        spans = code_blocks(body)
+        rb = r.get("blocks") or []
+        promises = []
+        for k, b in enumerate(spans):
+            rec = rb[k] if k < len(rb) else {}
+            promises.append({"code": b["text"], "promised": rec.get("promise", ""), "output": rec.get("out", ""),
+                             "verdict": rec.get("verdict"), "effects": rec.get("effects") or []})
         part = m.get("part")
-        chapters.append({
-            "number": m["number"], "id": m["id"], "title": m["title"], "part": part, "appendix": m.get("appendix"),
+        slug = page_slug(m)
+        kind = "appendix" if m.get("appendix") else ("preface" if m["number"] == 0 else "chapter")
+        doors = doors_of(body)
+        text_path = f"agents/{slug}.md"
+        entry = {
+            "number": m["number"], "id": m["id"], "title": m["title"], "slug": slug, "kind": kind,
+            "part": part, "appendix": m.get("appendix"),
             "law": m.get("law") or (law_by_part.get(part) if m["number"] in (5, 11, 17) else None),
-            "spine": bool(m.get("spine")), "status": m.get("status"), "stage": m.get("stage") or {},
-            "guards": [{"name": g, **{k: v for k, v in guards.get("guards", {}).get(g, {}).items() if k in ("path", "assertions", "url", "exists")}}
+            "principle": principle_of(body),
+            "spine": bool(m.get("spine")) or m["number"] in st["spine"], "status": m.get("status", "draft"),
+            "stage": m.get("stage") or {},
+            "guards": [{"name": g, **{k: v for k, v in guards.get("guards", {}).get(g, {}).items() if k in ("exists", "path", "assertions", "url")}}
                        for g in m.get("guards") or []],
-            "promises": promises, "narrations": m.get("narrations") or [], "rulings": m.get("rulings") or [],
-            "doors": doors_of(body),
+            "promises": promises, "narrations": m.get("narrations") or [], "rulings": [str(x) for x in (m.get("rulings") or [])],
+            "doors": doors, "sections": sections_of(body),
+            "open_questions": [" ".join(q.split()) for q in author_questions(body)],
+            "words": words_of(body), "french": m["id"] in fr_ids, "text": text_path,
             "run": {k: r.get(k) for k in ("ran", "kept", "runnable")} if r else None,
-        })
-    lib = runs.get("run", {}).get("library", {})
-    data = {"title": st["title"], "subtitle": st["subtitle"], "tagline": st["tagline"], "author": st["author"],
+        }
+        chapters.append(entry)
+        lead = "Appendix " + m["appendix"] if m.get("appendix") else ("Preface" if m["number"] == 0 else "Chapter " + str(m["number"]))
+        head = [f"# {m['title']}", "",
+                f"Source: {lead}. Status: {entry['status']}" + (" (a draft, not read by the author)" if entry["status"] == "draft" else "")
+                + f". Library commit {lib.get('short', 'null')}.", ""]
+        if entry["stage"]:
+            head += ["Stage: " + "; ".join(f"{k}: {v}" for k, v in entry["stage"].items()), ""]
+        if entry["run"] and entry["run"].get("runnable"):
+            head += [f"Run: {entry['run']['kept']} of {entry['run']['runnable']} blocks kept their promise, on {entry['run'].get('ran')}.", ""]
+        txt = "\n".join(head) + "\n" + with_verdicts(body, rb).strip() + "\n"
+        (ROOT / text_path).write_text(txt, encoding="utf-8")
+        texts.append(txt)
+    data = {"schema": "softanza-book/2", "title": st["title"], "subtitle": st["subtitle"], "tagline": st["tagline"], "author": st["author"],
             "series": st["series"], "built": built, "library_commit": lib.get("commit"),
-            "spine": st["spine"], "chapters": chapters,
+            "runtime": {"name": "the former host language", "version": (rt or {}).get("version"), "haro_runs_the_library": False},
+            "spine": st["spine"], "rules_for_agents": AGENT_RULES,
+            "files": {"schema": "book.schema.json", "summary": "llms-book.txt", "full_text": "llms-full-book.txt",
+                      "per_page": "agents/<slug>.md", "reader_en": "en/index.html", "reader_fr": "fr/index.html", "status": "status.html"},
+            "chapters": chapters,
             "note": "Drafts are marked status: draft and are not the author's final word."}
+    schema = json.loads((ROOT / "book.schema.json").read_text(encoding="utf-8"))
+    problems = validate(data, schema)
     (ROOT / "book.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline']}. By {st['author']}. {st['series']}.", "",
              "This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.", "",
-             f"Built {built}. Library commit {lib.get('commit', 'null')}.", "",
-             "Machine-readable form: book.json. Reader: en/index.html, fr/index.html. Status: status.html.", "", "## Chapters", ""]
+             f"Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
+             "## Files", "",
+             "- book.json: the whole book as data, one entry per chapter, preface and appendix; book.schema.json describes it",
+             "- llms-full-book.txt: every page as text, with the verdict of the last run under each code block",
+             "- agents/<slug>.md: one page as text (the slug is in book.json)",
+             "- en/index.html, fr/index.html: the reader; status.html: the state of each chapter", "",
+             "## Rules for an agent", ""] + [f"- {x}" for x in AGENT_RULES] + ["", "## Pages", ""]
     for c in chapters:
         g = ", ".join(f"{x['name']} ({x.get('assertions', 'missing')})" for x in c["guards"]) or "none"
         run = f"{c['run']['kept']} of {c['run']['runnable']} blocks kept" if c["run"] and c["run"].get("runnable") else "no code"
         lead = f"Appendix {c['appendix']}" if c.get("appendix") else f"{c['number']}."
-        lines.append(f"- {lead} {c['title']} [{c['status']}{', spine' if c['spine'] else ''}] guards: {g}; run: {run}")
+        lines.append(f"- {lead} {c['title']} [{c['status']}{', spine' if c['spine'] else ''}] {c['text']}; guards: {g}; run: {run}")
+        if c.get("principle"):
+            lines.append(f"  principle: {c['principle']}")
     (ROOT / "llms-book.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (ROOT / "llms-full-book.txt").write_text(
+        f"# {st['title']} · {st['subtitle']}\n\nBuilt {built}. Library commit {lib.get('commit', 'null')}. Every page below is a draft unless it says otherwise.\n\n"
+        + "\n\n=====\n\n".join(texts), encoding="utf-8")
+    return problems
 
 
 # ============================================================================ main
@@ -1193,7 +1288,8 @@ def main():
                                      '<meta http-equiv="refresh" content="0; url=en/index.html"><title>Softanza — AYOUNI</title></head>'
                                      '<body><a href="en/index.html">Softanza</a></body></html>\n', encoding="utf-8")
     (ROOT / "status.html").write_text(render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built), encoding="utf-8")
-    agents_files(st, en_src, runs, guards, built)
+    for pr in agents_files(st, en_src, runs, guards, built, set(fr_by_id)):
+        errors.append(f"book.json does not match book.schema.json: {pr}")
     print(f"built {built}: en/index.html, fr/index.html, status.html, book.json, llms-book.txt")
     if errors:
         print("BUILD FAILED:\n  " + "\n  ".join(errors))

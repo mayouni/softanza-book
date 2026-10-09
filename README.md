@@ -27,10 +27,12 @@ library at `D:/GitHub/stzlib` with its engine built (`tools/book_common.py`, `LI
 |---|---|
 | `drafts/` | the files the author handed over: the session prompt, the structure, chapter drafts. Author-owned |
 | `src/structure.yaml` | the contents: parts, chapters, spine, cover lines |
-| `src/en/NN-slug.md`, `src/fr/NN-slug.md` | one chapter per file, with front matter |
+| `src/en/NN-slug.md`, `src/en/A-slug.md`, `src/fr/...` | one chapter or appendix per file, with front matter (`appendix: A` for an appendix; `generated:` for one read from the build) |
+| `assets/cover/` | the cover, made by `tools/make_cover.py` from the two images in `source/` |
 | `tools/` | the builder, the runner, the guard reader, the judge (copied from the site, lineage in its header) |
 | `reader/shell.refine.html` | the Refine reader's shell, unchanged; see `FORMAT.md` |
 | `data/` | what the runs and the guard reading recorded; pages show outputs from here, never from a source |
-| `en/`, `fr/`, `index.html`, `status.html`, `book.json`, `llms-book.txt` | built; do not edit by hand |
+| `book.schema.json` | the schema of `book.json`; the build validates against it (`tools/book_schema.py`) |
+| `en/`, `fr/`, `index.html`, `status.html`, `book.json`, `llms-book.txt`, `llms-full-book.txt`, `agents/` | built; do not edit by hand |
 
 Open `index.html` from the file system, or serve the folder (`python -m http.server`).

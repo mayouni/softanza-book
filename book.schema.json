@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Softanza, the book as data (book.json)",
+  "description": "What an agent may rely on. A promise is a block of code with the lines it promised and the run's verdict; a stage word says built, designed or absent; a draft is marked draft and is not the author's final word.",
+  "type": "object",
+  "required": ["schema", "title", "subtitle", "author", "built", "library_commit", "spine", "rules_for_agents", "chapters"],
+  "properties": {
+    "schema": {"type": "string"},
+    "title": {"type": "string"},
+    "subtitle": {"type": "string"},
+    "tagline": {"type": "string"},
+    "author": {"type": "string"},
+    "series": {"type": "string"},
+    "built": {"type": "string"},
+    "library_commit": {"type": ["string", "null"]},
+    "runtime": {"type": ["object", "null"]},
+    "spine": {"type": "array", "items": {"type": "integer"}},
+    "rules_for_agents": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "files": {"type": "object"},
+    "note": {"type": "string"},
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["number", "id", "title", "slug", "kind", "status", "spine", "stage", "guards", "promises", "narrations", "rulings", "doors", "sections", "open_questions", "words", "french", "run"],
+        "properties": {
+          "number": {"type": "integer"},
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "slug": {"type": "string"},
+          "kind": {"type": "string", "enum": ["preface", "chapter", "appendix"]},
+          "part": {"type": ["integer", "null"]},
+          "appendix": {"type": ["string", "null"]},
+          "law": {"type": ["string", "null"]},
+          "principle": {"type": ["string", "null"]},
+          "spine": {"type": "boolean"},
+          "status": {"type": "string", "enum": ["draft", "read", "final", "missing"]},
+          "stage": {"type": "object"},
+          "guards": {"type": "array", "items": {"type": "object", "required": ["name", "exists"], "properties": {"name": {"type": "string"}, "exists": {"type": "boolean"}, "path": {"type": "string"}, "assertions": {"type": "integer"}, "url": {"type": "string"}}}},
+          "promises": {"type": "array", "items": {"type": "object", "required": ["code", "verdict"], "properties": {"code": {"type": "string"}, "promised": {"type": "string"}, "output": {"type": "string"}, "verdict": {"type": ["string", "null"], "enum": ["kept", "differs", "raised", "stopped", "exercise", "not-run", "ran", "unprinted", null]}, "effects": {"type": "array", "items": {"type": "string"}}}}},
+          "narrations": {"type": "array", "items": {"type": "string"}},
+          "rulings": {"type": "array", "items": {"type": "string"}},
+          "doors": {"type": "object"},
+          "sections": {"type": "array", "items": {"type": "object", "required": ["title"], "properties": {"n": {"type": ["integer", "null"]}, "title": {"type": "string"}}}},
+          "open_questions": {"type": "array", "items": {"type": "string"}},
+          "words": {"type": "integer"},
+          "french": {"type": "boolean"},
+          "text": {"type": "string"},
+          "run": {"type": ["object", "null"]}
+        }
+      }
+    }
+  }
+}

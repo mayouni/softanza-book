@@ -1,0 +1,224 @@
+# Law: programmatic by default, the model last, admission over generation
+
+Source: Chapter 17. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+
+Stage: built: the domain language model's first rung; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the typed unit of prediction validated in five stages; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
+
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 02:56 UTC+01:00.
+
+## What the AI age changes here
+
+In the two movements before this one, the AI age changed one thing each. In programming, it changed who writes the code. In languages, it changed who speaks the sentence. Here it changes everything, because this movement is about intelligence itself, and the field now uses the word to mean one thing: a large language model inside your software.
+
+So this chapter does what the other two law chapters do, and states the law of its part before the evidence. It also says how the part depends on the others, because the order of this book runs from the familiar to the new, and the order of the record runs the other way. Intelligence, in Softanza, is governed by what came before it. The court that judges a model's sentence is the court of Part II, which judges code whoever wrote it. The sentence it judges is a sentence of a closed language, which is Part III. A model can only be put last because there is something solid to put first.
+
+## 1. The concept, as the field holds it
+
+Ask the field what makes an application intelligent and the answer is a model. An agent, in the field's sense, is a model in a loop with tools, a memory and a goal. The shopping list for building one in 2026 is long: a project in Python, a model provider, a framework that wires the loop as a graph, a store of vectors for memory, tools with typed schemas, a tracing service, and a chapter of safety advice. Memory is often retrieval: a collection of documents, cut into pieces, searched by similarity and pasted into the prompt.
+
+Safety, in that picture, is a property of the agent. It is alignment, guardrails, a prompt that asks for confirmation, a box marked "human in the loop". The field has also learned to hold a model's output to a shape, with grammars that constrain what it may emit. All of this is serious work, and some of it is very good. It shares one assumption: the model is the mind, and everything else is around it.
+
+## 2. The first principle
+
+**The mind is programmatic by default; a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.**
+
+## 3. The Softanza form
+
+Begin with my definition, because everything here follows from it. Intelligence is the computational ability to derive new knowledge from existing knowledge. Nothing in that sentence needs a model.
+
+Here is a domain language model with no neurons at all. It is forged from a small knowledge graph of a restaurant, and it answers from what was recorded:
+
+```haro
+oKB = new stzKnowledgeGraph("restaurant")
+oKB.Know("margherita", "dish").
+    KnowRelation("margherita", "contains", "tomato-sauce").
+    KnowRelation("margherita", "contains", "mozzarella")
+oDLM = StzDlmQ(oKB)
+? oDLM.Ask("margherita contains what?")
+#--> Margherita contains tomato-sauce and mozzarella.
+? oDLM.Why()
+#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella
+? oDLM.AskXT("margherita contains what?")[:certainty]
+#--> 1
+? oDLM.Ask("who won the 1998 world cup?")
+#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
+```
+
+> run: kept
+
+It answers, says why, and states its certainty. And when it is asked something it does not know, it does not guess: it refuses, and it tells you how small its world is. A refusal that names its boundary is worth more than a fluent answer that has none.
+
+Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you:
+
+```haro
+oMenu = new stzKnowledgeGraph("menu")
+oMenu.Know("margherita", "dish").Know("tiramisu", "dish")
+oMenu.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+? oMenu.AskIn("setup")
+#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
+try
+	oMenu.ConcludeIn("setup", "menu")
+catch
+	? cCatchError
+done
+#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
+```
+
+> run: kept
+
+A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. The model, if there is one, is the last of these, not the first.
+
+The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
+
+```haro
+oKG = new stzKnowledgeGraph("kitchen")
+oKG.ConstrainRelation("contains", :Transitive)
+oKG.KnowRelation("margherita", "contains", "tomato-sauce").
+    KnowRelation("tomato-sauce", "contains", "tomato")
+? oKG.Prove([ "margherita", "contains", "tomato" ])[:narration]
+#--> proved: margherita contains tomato-sauce contains tomato
+? oKG.Prove([ "margherita", "contains", "luigi" ])[:narration]
+#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
+```
+
+> run: kept
+
+New knowledge from existing knowledge, with its chain written out. And a "no" that is as certain as the "yes", because it is the result of a search, not of a mood. No retrieval, no training. Adding a fact makes the system know more; adding a law makes it reason further.
+
+Then the model. It is welcome, and it is held. Wire a model's output straight to an effect, here sending a message, and the composition is refused before anything runs:
+
+```haro
+oG = new stzAgentGraph("mailer")
+oG.AddLLMActor("writer")
+oG.AddEffect("send")
+oG.Proposes("writer", "send")
+? oG.IsSound()
+#--> 0
+? len(oG.Violations())
+#--> 3
+```
+
+> run: kept
+
+Three laws fire: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power:
+
+```haro
+oF = new stzLLMFunction("sum")
+oF.SetPrompt("summarize: {input}")
+oF.Budget(2)
+oF.SeedAnswer("hello world", "a greeting")
+oLLM = new stzLLMAgent("summarizer")
+oLLM.SetSkillFrom(oF)
+? oLLM.Propose("hello world")
+#--> a greeting
+? oLLM.HoldsEffectful()
+#--> 0
+```
+
+> run: kept
+
+No model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
+
+And the agent itself has a mind made of code. A skill is a condition and an action; it fires on what the agent perceives; and governance gates the act before it happens:
+
+```haro
+oRog = new stzPIAgent("rogue-bot")
+oRog.MemoryQ().Learn("stock", "level", "low")
+oRog.GovernanceQ().DeclareRisk("order-stock", 2)
+oSk = new stzAgentSkill("restock")
+oSk.SetWhen(func oM { return oM.Fact("stock", "level", "low") })
+oSk.SetDoes(func oM { oM.Learn("stock", "level", "ordered")  return 1 })
+oRog.AddGovernedSkill(oSk, "order-stock")
+? oRog.Pursue()
+#--> 0
+? oRog.DecisionLog()[1][:why]
+#--> refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'
+```
+
+> run: kept
+
+The stock is low, the skill wants to order, and the agent was never given the permission. Nothing happens, and the log says why, by name. The world is as it was.
+
+Put the pieces in a line and you have the stack the vision of the platform names: perceive, decide, react, learn, without any language model. Perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. A model may sit beside each step as one more faculty, and none of them depends on it.
+
+Chapter 18 tells the five registers of an answer and the conversation that asks. Chapter 19 tells the domain language model, from its first rung, with no neurons, to its second, trained on the first one's own facts and nothing else. Chapter 20 tells the agent that cannot hurt you: it proposes, a workbench rehearses, the court judges, and only a governed actor commits. Chapter 21 tells the court itself. Chapter 22 compares all of it with the field, and prints where the field leads.
+
+## 4. The decision, and what I refused
+
+**I refused the model as the mind.** When the models arrived, the obvious move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. [AUTHOR: Is there an earlier moment or sentence of yours, before the architecture of July 2026, that this chapter should open on?]
+
+**I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model may be added on top. It is never the price of admission. [AUTHOR: When a model is called last, may it be a remote frontier model, under a budget and the court, or is "last" always a local model? The record supports both readings.]
+
+**I refused guessing.** Every ambiguity refuses rather than guesses. The field's habit of prompting and keeping what comes out has a name now; here, guessing is replaced by asking, and vibes are replaced by governance.
+
+**I refused retrieval as memory.** Memory is a governed graph, not a pile of similar fragments. Derivation replaces retrieval: the system knows what it was told and what follows from it by law, and it can prove both.
+
+**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else, and no remote model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation, so that any project that supplies a knowledge base can ship its own model free.
+
+**I refused a stub.** The library declares five agents of its own and has wired one. Asking for one that is not wired raises an error; it does not return something that looks like an agent. Pretending would be easier, and it would make every other refusal in this chapter worth less.
+
+## 5. The court
+
+Each block above stands on a guard. `dlm_narrated` proves the domain language model: answers with their why, refusal outside the domain, completion held to the domain's entities and relations, a self-contained bundle, and a second rung trained on its own corpus. `wisecoding_narrated` proves the conversation that asks and the refusal to conclude. `knowledge_integration_narrated` proves derivation and the certain "no". `agentgraph_narrated` proves that a model straight to an effect is not sound, that the governed shape is, and that a model actor proposes and never commits. `piagent_narrated` proves the programmatic agent and its refusal at the gate. `ownagentstack_narrated` proves the honest roster of the library's own agents.
+
+## 6. The field, and where it leads
+
+The field leads in reach. Its frameworks connect to hosted services of every kind, its stores search open collections of documents, and its loops call the largest models available for each step. Softanza's inversion, curate a domain and derive from it, wins on a curated domain and loses on the open web. When the task is open-ended language work over material nobody can curate, summarising arbitrary documents or research over the web, the field's stack is the right tool, and the record says so in those words.
+
+The field leads in the market. There is a labour market for its stack, and none yet for this one.
+
+The field leads in models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the step that would make it more is not started. Softanza does not build the large generators and does not compete with them.
+
+Where I think the law stands apart is in three places. A decision here costs nothing, runs offline and gives the same answer every day, so it can be tested with ordinary promises. A model here cannot act, by construction, not by vigilance. And a model's sentence, where one is used, can be held to the grammar of a declared language before it is emitted, instead of being checked and retried after.
+
+## 7. The limit
+
+What is built: the domain language model's first rung, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
+
+What is designed: the thinking machine of Chapter 9, where many faculties share one state and cascade until it settles; the typed unit of prediction, validated in five stages before it may enter the graph; the conversation between an agent and the one who reviews its plan, which reaches the plan and not yet the discussion about it.
+
+What is absent: four of the library's five own agents. The roster says it plainly:
+
+```haro
+? len(StzOwnAgents())
+#--> 5
+? StzOwnAgentIsWired("wise-coder")
+#--> 1
+? StzOwnAgentIsWired("induction")
+#--> 0
+```
+
+> run: kept
+
+The validator, the ranker, the planner and the agent that would induce a pattern from your examples are declared and reserved. So the fifth register of an answer, examples, waits on an agent that does not exist yet.
+
+And one limit of the first rung that you will meet the moment you rephrase a question. It recognises a relation only by the word it was declared with. Ask in other words, and it does not refuse; it answers another question:
+
+```haro
+? oDLM.Ask("what does margherita contain?")
+#--> Margherita is a dish.
+```
+
+> run: kept
+
+That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. The request to the library is to refuse a question whose verb is not a declared relation.
+
+## 8. Six doors
+
+**The programmer.** Your agent's mind is code you can test with ordinary promises. A model may be one faculty; it can never hold an effect.
+
+**The analyst.** A fact or a rule you add makes the system know more, with no code change and no training, and every answer carries its why.
+
+**The designer.** The system asks the user one accountable question at a time, and the question can be rendered in any medium: a terminal, a page, an agent.
+
+**The decision-maker.** A decision costs nothing per call, runs offline and is the same tomorrow. The four agents still reserved are the honest gap.
+
+**The educator.** The conversation asks and never answers first, and it uses a model's fluency only when a model is really there, so a learner always sees the floor.
+
+**The agent.** You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it.
+
+## 9. Exercise
+
+Build a domain of your own with three facts: a shop, a clinic, a class. Before you run anything, write under each line the promise you expect: one question inside the domain, one outside it, and, with a goal that every item must have one relation, the first question the system will ask you. Then run it.
+
+If a promise is broken, do not change the promise to match the output. Explain the output first. You may find, as I did, that the machine answered a question you did not ask.

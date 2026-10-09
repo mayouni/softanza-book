@@ -11,13 +11,13 @@ This appendix is for an agent that reads the book, and for the person who gives 
 
 ### What there is
 
-Three files sit beside the reader, and each is regenerated at every build.
+Files sit beside the reader, and each is regenerated at every build.
 
-- **`book.json`** holds, for each chapter, its number and identifier; its part; the law it states, if it is a law chapter; whether it is on the spine; its status; its stage words, built, designed and absent; its guards, each with its path and its assertion count; its promises, which are its blocks of code with the verdict of the last run; its narrations; the study's rulings it rests on; its six doors; and the run's date and counts. A chapter that is a draft says so in its status.
-- **`llms-book.txt`** is the same in a short text: one line per chapter, with its status, its guards and the count of blocks that kept their promise.
+- **`book.json`** holds, for each page of the book, a chapter, the preface or an appendix: its number, identifier and slug; its kind; its part; the law it states, if it is a law chapter; the first principle it states, in one sentence; whether it is on the spine; its status; its stage words, built, designed and absent; its guards, each with its path and its assertion count; its promises, which are its blocks of code with the lines they promised, what the last run printed, and the verdict; its narrations; the study's rulings it rests on; its six doors; its sections; its open questions, which are the places the record could not answer; its word count; whether it has a French edition; and where its text is. A chapter that is a draft says so in its status.
+- **`book.schema.json`** describes `book.json`, and the build validates the file against it. A build that produces a `book.json` that does not match its schema fails.
+- **`llms-book.txt`** is a short text: the rules for an agent, then one line per page with its status, its guards and the count of blocks that kept their promise, and its principle.
+- **`llms-full-book.txt`** is every page as text, one after the other, with the verdict of the last run written under each block of code. **`agents/<slug>.md`** is the same, one page per file; the slug is in `book.json`.
 - **`status.html`** is the page for a person: every chapter with its status, its run, its guards, its words, its open questions and whether it has a French edition.
-
-The appendices are in the same files, each with its letter.
 
 ### What a promise is
 
