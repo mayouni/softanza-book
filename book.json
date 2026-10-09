@@ -4,7 +4,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 02:34 UTC+01:00",
+ "built": "2026-10-09 02:38 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "spine": [
   1,
@@ -26,7 +26,7 @@
    "appendix": null,
    "law": null,
    "spine": true,
-   "status": "missing",
+   "status": "draft",
    "stage": {},
    "guards": [],
    "promises": [],
@@ -102,7 +102,7 @@
     "agent": "You are welcome here, and you will be judged. Appendix G is yours."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -224,7 +224,7 @@
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -312,7 +312,7 @@
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -426,7 +426,7 @@
     "agent": "The picture exists as data you can read, the Atlas as a file, and every floor you write to has a court that will read you."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -529,7 +529,7 @@
     "agent": "You will be corrected by the library, not by folklore. Write the question, then the promise under it."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -645,7 +645,7 @@
     "agent": "Write the condition as the string, not as code. When the answer is empty, check the condition's words before you trust the emptiness."
    },
    "run": {
-    "ran": "2026-10-09 02:30 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -805,7 +805,7 @@
     "agent": "The rules are given to you as data on the site. For the code you write, the court is still a specification. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -935,7 +935,7 @@
     "agent": "Write the scope in the verb. A call that names a scope cannot be moved to another frame by a flag set elsewhere."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1051,7 +1051,7 @@
     "agent": "Your mind can be skills that chain on what they perceive, until the world stops changing."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1148,7 +1148,7 @@
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:35 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1290,7 +1290,7 @@
     "agent": "You may speak only the declared language. Strict mode is your posture, and your draft is a proposal the court judges."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -1406,7 +1406,7 @@
     "agent": "You speak only the grammar you were handed. A sentence you draft is a proposal that the court judges. Your mouth is shape, and your falsehoods are the court's and a person's."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1571,7 +1571,7 @@
     "agent": "Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built."
    },
    "run": {
-    "ran": "2026-10-09 02:31 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -1692,7 +1692,7 @@
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1827,7 +1827,7 @@
     "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that three of the media cannot yet refuse a word they do not know, and that writing a pattern from examples is reserved."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1952,7 +1952,7 @@
     "agent": "You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20)."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -2070,7 +2070,7 @@
     "agent": "You may propose. You may not commit. A refusal names its law, and you can learn the platform from the platform and be corrected by it."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2203,7 +2203,7 @@
     "agent": "You can drive the loop yourself with an answer source, and you must stop where you would have to invent. You cannot offer examples and be understood, and you are told by name when you ask for a reserved agent."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -2307,7 +2307,7 @@
     "agent": "What you propose is a fact the graph can admit or refuse, with a reason you can read."
    },
    "run": {
-    "ran": "2026-10-09 02:32 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2425,7 +2425,7 @@
     "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2568,7 +2568,7 @@
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -2664,7 +2664,7 @@
     "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:36 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -2789,7 +2789,7 @@
     "agent": "A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed whoever calls."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -2934,7 +2934,7 @@
     "agent": "You may rehearse the whole integration and plan the whole release, in a world where nothing real can move: a sandbox payment moves no money and a mail sink sends no mail. You may ask whether you may go live and be told why not. You cannot commit. The loss: that guarantee covers the library's own doubles, and a surface bound to something live is outside it."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -3069,7 +3069,7 @@
     "agent": "You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the author declares it."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -3198,7 +3198,7 @@
     "agent": "The shell is a text file that you can read and write, and the tree a screen reader reads is the tree you may read. Your proposals appear in a rail and commit nowhere."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3312,7 +3312,7 @@
     "agent": "You may count the engine's functions yourself. Do not repeat a count from a page, and do not write a loop over the list of classes directly. Tell the reader which layer a class lives in by its parent chain, and not by its prefix."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -3415,7 +3415,7 @@
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3522,7 +3522,7 @@
     "agent": "You may read a chart and a report. A rule you add is data a person can read, and the court judges the chart with it."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -3632,7 +3632,7 @@
     "agent": "You prepare. A person decides. And you will be refused, with the level and the risk tier named."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -3752,7 +3752,7 @@
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
    },
    "run": {
-    "ran": "2026-10-09 02:33 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -3826,7 +3826,7 @@
     "agent": "You are a worker with a record. You write a memo, a cost line and a conclusion; the hooks refuse what has hurt others; your stamps are compared with your commits. None of it assumes you are careless. All of it assumes you are many."
    },
    "run": {
-    "ran": "2026-10-09 02:34 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3909,7 +3909,7 @@
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, and the refusal will be written down."
    },
    "run": {
-    "ran": "2026-10-09 02:34 UTC+01:00",
+    "ran": "2026-10-09 02:37 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -3972,7 +3972,7 @@
    ],
    "doors": {},
    "run": {
-    "ran": "2026-10-09 02:34 UTC+01:00",
+    "ran": "2026-10-09 02:38 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }
