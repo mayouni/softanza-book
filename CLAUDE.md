@@ -67,6 +67,8 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
   questions and library requests L42 to L68: `sessions/2026-10-09-phase-3-languages-and-platform.md`.
 - Phase 4 (the appendices) done 2026-10-09: appendices A to G as pages with an `appendix:` letter (E, F, G generated at build),
   a working preface, the nine-element shape restored in chapters 7, 12, 13 and 25. Memo: `sessions/2026-10-09-phase-4-appendices.md`.
+- Phase 5 (the agents' form) done 2026-10-09: `book.json` v2 validated against `book.schema.json` at every build, `llms-full-book.txt`, `agents/<slug>.md`.
+  Memo: `sessions/2026-10-09-phase-5-agents-form.md`.
 - Next: the French, which the prompt writes only from English the author has marked `read`; no chapter is marked read yet. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
