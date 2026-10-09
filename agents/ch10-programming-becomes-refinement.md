@@ -4,7 +4,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:50 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -244,7 +244,7 @@ What is absent, and the page should say it: the limits of the gate as it stands.
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library; a point of another kind, a block of code for instance, parses and passes unchecked.
 - An unknown trust posture ranks as trusted. A proposal that says it comes from a martian was admitted in my run against a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
-- The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. [AUTHOR: The library still writes the format `.zrfn`, and the Haro charter, ratified on 1 October 2026, retires it for `.rfn`. Do I print `.zrfn` as shipped, with one line on the charter?]
+- The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, retires that format for `.rfn`.
 
 ## 8. Six doors
 

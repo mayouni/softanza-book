@@ -2,9 +2,9 @@
 
 Source: Chapter 33. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it
+Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:52 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ These are reasonable tests, and they all point at the same thing: production. Wh
 
 ## 2. The first principle
 
-**The record carries a solution only when it ran on its own engine and a named person said what they saw.** [AUTHOR: Is this the chapter's principle in your words, or would you write another sentence?]
+**The record carries a solution only when it ran on its own engine and a named person said what they saw.**
 
 ## 3. The Softanza form
 
@@ -82,15 +82,15 @@ The person was allowed to deploy. The deployment still did not run, because a pa
 
 So the floor is there: declare, build, rehearse, refuse the fake, commit through a governed actor. Now the absence.
 
-Softanza has been used. I wrote that in chapter 1 and I hold to it, because the study that first read the record wrote the opposite, that no user outside my own projects had been measured, and I corrected it. A bank in Niamey runs an organisation-assessment product I built, installed on its own network under licence, and the installation guide delivered to the bank attests it. A restaurant in Lyon has been building a platform for neighbourhood commerce with me; the record of that project ends on 25 August 2026, with an amendment closed on 4 August and an owner who took part in the first demonstration and ran a day of field tests with two phones. An organisation in Niger has its hub designed. The site lists, project by project, the lesson each one taught and the file of the library that carries it. Part VI of this book tells their stories.
+Softanza has been used. I wrote that in chapter 1 and I hold to it, because the study that first read the record wrote the opposite, that no user outside my own projects had been measured, and I corrected it. A bank in Niamey has an organisation-assessment product I built beside the library, under the discipline the library now carries, installed on its own network under licence, and the installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce and field-tested it; the record of that project ends on 25 August 2026, with an amendment closed on 4 August and an owner who took part in the first demonstration and ran a day of field tests with two phones. An organisation in Niger has its hub designed. The site lists, project by project, the lesson each one taught and the file of the library that carries it. Part VI of this book tells their stories.
 
-And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken.
+And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is not built. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken.
 
 So the line the record does not yet carry is this one: *the solution ran on Softanza's own engine, and this is what the user said.*
 
 What is between here and that line, read from the record and not composed:
 
-1. **A customer's declarations run on the engine instead of the ordinary stack.** The declarations are being written; the move is not made.
+1. **A customer's declarations run on the engine instead of the ordinary stack.** The site says the declarations are being written; I found no file of them, and chapter 31 says where I looked; the move is not made.
 2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass, on Windows, every assertion the old runtime passes on the library; its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Haro does not run the library yet.
 3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. No solution has written one.
 4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine boots and judges itself in an emulator; of the four promises its hosted profile makes, the emulator can check three, and the fourth waits for a watchdog on a real board. No customer runs a production workload on it.
@@ -108,7 +108,7 @@ The record also holds the opposite, honestly. The pictures the library draws wer
 
 **I refused a reference without a document.** The site counts a project as a reference only when a document proves it, and it quotes no number of countries and no number of developers. A lesson is listed only when a file of the library carries it.
 
-**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are written once, as Softanza's own, and the engine beneath them changes. Rewriting would be faster to announce and slower to trust.
+**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. Rewriting would be faster to announce and slower to trust.
 
 **I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. The study that read the record ruled that the figure should not be printed without the guard that produces it, and I agree. The stage word is "in construction", and the measured rows are the evidence.
 
@@ -140,7 +140,7 @@ What is built: the floor. Declare, build, deploy in order; rehearse on a twin; r
 
 What is designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
 
-What is absent: a customer solution running on the Softanza engine, and a named person's verdict on it. [AUTHOR: Which of the three projects moves to the engine first, and who will be the named person who perceives it?]
+What is absent: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). The record names no project that moves to the engine first, and no person who will perceive it; I leave both unwritten.
 
 ## 8. Six doors
 

@@ -4,7 +4,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar); the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a class named for a ribbon, a rail, a spine or a status bar; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -95,7 +95,7 @@ next
 
 > run: kept
 
-`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the same list is applied by hand today. [AUTHOR: The twenty-two verbs are the interface constitution's, in its own repository, which the site says is not public yet. The library's own design text still lists twenty-four verbs from an interaction engine that your commit of 26 May 2026 removed as invented by an AI. May the chapter tell that removal as the refusal at its centre, that the library does not own the verbs, and print the twenty-two typed from the constitution?]
+`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the same list is applied by hand today. I tell the removal as the refusal at the centre of this chapter, in section 4: the library does not own the verbs, the constitution does. The twenty-two are printed in the block above, typed from the constitution as Appendix C prints them, and the library's own design text, which still says twenty-four, is not the list.
 
 ### Two projections
 
@@ -349,7 +349,7 @@ StzDirDeleteAll("_emu")
 
 The part gets "2 approximated" and, in the grid's detail, a text about pump timing and sensor noise: the greenhouse demo's text, returned for any microcontroller. The header says "parts healthy" and the banner says "Ready to ship." for the same plan, from literals. A backend-only plan prints "parts healthy" and none of the other words. "Deploy to production" is an alert. The truthful half is real: fidelity is printed, and the console refuses a verb that the part's engine subset lacks. That is narration in the library, which I did not run.
 
-This is the loss against the library's own page. [AUTHOR: May the chapter print it beside "a status bar that tells the truth", as the loss against the library's own page, before the request to derive those words from the plan is answered?]
+This is the loss against the library's own page. It stands beside "a status bar that tells the truth" of section 3: the pattern asks a status cell to be a function of what a court emitted, and the library's own page prints its words from literals. The request to derive those words from the plan has not been answered yet.
 
 **`ToPanel` needs a font file and raises without one.** The accessibility tree and the fixture need a laid-out panel, so the blocks that use them depend on a system font.
 
@@ -359,7 +359,7 @@ What is built: the interface as text with a court; four closed kinds, a closed l
 
 What is designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar; the facet as data, with its group, its place in the life, its artefact kinds, its court and its profile; the rail bound to focus; the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
 
-What is absent: an IDE of this family. Any class named for a ribbon, a rail, a spine or a status bar. A facet declaration. A list of the twenty-two verbs inside the library, and any refusal of an unknown verb: `transfer_funds` passes the court. A guard judging a shell against the verbs. A rail that follows focus. Status cells derived from courts. An editor. A measured latency. [AUTHOR: At this commit no IDE of this family exists. Should the chapter tell the pattern as designed, with the running pieces as evidence, ending on "no IDE of this family ships today", or wait for the shell kit?]
+What is absent: an IDE of this family. Any class named for a ribbon, a rail, a spine or a status bar. A facet declaration. A list of the twenty-two verbs inside the library, and any refusal of an unknown verb: `transfer_funds` passes the court. A guard judging a shell against the verbs. A rail that follows focus. Status cells derived from courts. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. No IDE of this family ships today.
 
 ## 8. Six doors
 

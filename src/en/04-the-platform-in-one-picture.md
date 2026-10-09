@@ -182,7 +182,7 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-The base layer does not inherit the core one, as the layer contract says it should; the two share the engine and implement their common domains twice. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification. [AUTHOR: Is the base-inherits-core rule to be realised, or the contract amended to "two implementations sharing one engine"?]
+The base layer does not inherit the core one, as the layer contract says it should; the two share the engine and implement their common domains twice. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification. What is built is two implementations sharing one engine; the contract's rule that base inherits core is designed.
 
 What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
 

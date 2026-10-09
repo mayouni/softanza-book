@@ -236,7 +236,7 @@ On scope, the field leads in maturity. The closest field practice is the explici
 
 ## 7. The limit
 
-What is built: fourteen of the twenty-two forms of a name run as the article shows them; three more run in another shape; the library reads a name as a sentence; and scope runs in the regex verbs, in the system, and in the placement of a deployment. [AUTHOR: The article has twenty-three sections, the twenty-two forms and "small functions". Do I keep twenty-two as the book's number?]
+What is built: fourteen of the twenty-two forms of a name run as the article shows them; three more run in another shape; the library reads a name as a sentence; and scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
 
 What is designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
 
@@ -249,7 +249,7 @@ What is absent, and the page should say each with its failure:
 - **Multilingual**, a method named in French or Arabic: not in the live library. The names exist in the archive. Their heirs are the language packs of chapter 11.
 - The three that run in another shape. The exceptional form exists, but the article's example does not. Free order works for the first order only: the swapped call ends the program with a status of one and prints nothing. And the statement form is half right: the "All" half works, and the "No" half returns the wrong truth value; the library's own classic test promises true, true, true and the run prints them wrong.
 
-On the scope side: the regex verbs differ from the design table in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. [AUTHOR: Is the scope design document your own text, and do you rule the system scope built?] And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
+On the scope side: the regex verbs differ from the design table in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text: the record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented, and its narrated guard ran here 61 assertions out of 62, the one failure being a timing one. I state what the code does: the system scope is built, with that failure printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
 
 ## 8. Six doors
 

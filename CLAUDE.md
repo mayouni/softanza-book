@@ -74,6 +74,8 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 - Phase 7 (the press edition) done 2026-10-09: `python tools/print_book.py` writes a 6.5 x 8.5 in PDF per language (`print/`, not committed). Memo: `sessions/2026-10-09-phase-7-press-edition.md`.
 - Phase 8 (the editorial audit) done 2026-10-09: `python tools/book_audit.py` (clean), four [AUTHOR] questions merged to three in chapters 2, 18, 31, glossary citations fixed,
   French terms plane / estate / ledger settled. Memo: `sessions/2026-10-09-phase-8-audit.md`.
+- Phase 9 done 2026-10-09: the author's 77 questions answered on his behalf by `research/ANSWER-POLICY.md` (DELEGATE-01; no open question left in the pages, all still `draft`), the ePub (`tools/epub_book.py`),
+  the release check (`tools/release.py`). Memo: `sessions/2026-10-09-phase-9-answers.md`.
 - Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.

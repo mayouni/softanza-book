@@ -127,7 +127,7 @@ Il n'existe pas de fiche unique d'une décision appelée « la méthode ». La m
 
 **J'ai refusé la grille seule.** Les documents de la bibliothèque contiennent des dizaines de grilles de comparaison, et dans celles-ci la colonne de Softanza gagne presque chaque ligne. Un lecteur qui ne voit que ces grilles a raison de les escompter. L'honnêteté du dossier est ailleurs : dans les sections des études de terrain intitulées « ce que le terrain a et qui manque à Softanza, honnêtement », et dans des chiffres mesurés. Quand le runtime sous Softanza a été mesuré de nouveau en septembre 2026 contre celui auquel il était comparé, le résultat annoncé auparavant ne s'est pas reproduit, et la perte a été publiée le jour même. C'est la règle que suit ce livre : une perte est imprimée à côté du gain, dans la même section.
 
-**J'ai refusé d'appeler une lecture un recensement.** Les quarante-six concepts sont une lecture du dossier par une session, non une liste que j'ai tranchée ligne par ligne. [AUTHOR: Approuvez-vous le registre de quarante-six lignes comme l'annexe A du livre en l'état, ou le trancherez-vous d'abord ligne par ligne ?]
+**J'ai refusé d'appeler une lecture un recensement.** Les quarante-six concepts sont une lecture du dossier par une session, non une liste que j'ai tranchée ligne par ligne. L'annexe A imprime le registre de quarante-six lignes tel que le dossier le donne, comme annexe de travail : les lignes n'ont pas été tranchées une à une.
 
 ## 5. Le tribunal
 

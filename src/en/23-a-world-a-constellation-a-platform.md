@@ -34,7 +34,7 @@ The shared shape: the field draws the picture, a host, a map, a diagram, and kee
 
 **The solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.**
 
-The sentences of the record: an application is a living world of meaning; worlds, not mini-apps, a governed graph and not a host container; and a Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. [AUTHOR: Is the sentence yours, or do you keep one of the three as it stands?]
+The sentences of the record: an application is a living world of meaning; worlds, not mini-apps, a governed graph and not a host container; and a Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, each as it stands in its source; the sentence above is the chapter's own principle, in the book's voice.
 
 ## 3. The Softanza form
 
@@ -313,7 +313,7 @@ done
 
 The file form is plain text that the architect owns, and it round-trips from a string. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
 
-Who is the architect? The record names the person three times in three unrelated places: the System Foundation, a private book of the estate on platform modelling, and Central's memo for a school that would certify architects of Softanza, with three levels. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has no page for the architect. [AUTHOR: Is the platform architect told as what one declares, with the certification left out, or with one line saying it is proposed? Naming the school needs your word.]
+Who is the architect? The record names the person three times in three unrelated places: the System Foundation, a private book of the estate on platform modelling, and Central's memo for a school that would certify architects of Softanza, with three levels. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has no page for the architect. I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
 
 ## 4. The decision, and what I refused
 
@@ -380,7 +380,7 @@ oB.Live()
 #--> [ [ "propose", "checkup", "for", "bob" ] ]
 ```
 
-The same reading holds for `IsTrue`, which is stored and narrated while instances carry no fields to judge it against; for a flow's `Require` and `Then`, stored and narrated, where I found no executor; and for the bounds of a refinement. A world today declares that a balance must not be negative. It does not judge a balance. What it does judge is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. [AUTHOR: May the chapter say "declared and narrated; judged only for goals, crossings and capabilities", and may the memo request that truths be evaluated on instances?]
+The same reading holds for `IsTrue`, which is stored and narrated while instances carry no fields to judge it against; for a flow's `Require` and `Then`, stored and narrated, where I found no executor; and for the bounds of a refinement. A world today declares that a balance must not be negative. It does not judge a balance. What it does judge is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. So the chapter says it in one line: declared and narrated; judged only for goals, crossings and capabilities.
 
 The design writes more than the class speaks. The design's near-natural idiom for the constellation is not in the class:
 

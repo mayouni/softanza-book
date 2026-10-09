@@ -2,9 +2,9 @@
 
 Source: Chapter 2. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work; absent: the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
+Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:49 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ The field's two other answers to "who makes software, if not programmers" define
 
 ## 2. The first principle
 
-The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** [AUTHOR: These sentences were drafted for the site and have not been ruled by you in the record. And "craft" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes? And in the paragraph that refuses "maker" below, say in your own words what the cover image carries, and I will put your sentence there.]
+The site gives the definition in two sentences, with the word "maker" in them, and this book takes them with the word changed: **a crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** These sentences were drafted for the site by a session, and the record holds no ruling of mine on them: they are the site's sentences, not mine. They define the crafter by ownership alone. The word "craft" suggests skill, where the sentence says the crafter is not defined by it, and the record does not settle that; the page keeps the site's wording.
 
 ## 3. The Softanza form
 
@@ -129,9 +129,9 @@ oBad = StzAgentDeclarationQ(cLlm)
 
 > run: kept
 
-Now the three crafters this book is for. They are not personas. They are people with documents, and Part VI tells each of them in full. Here, a page each.
+Now the three cases this book is for. They are not personas. They are people and organisations with documents, and Part VI tells each of them in full. Here, a page each.
 
-**A restaurateur in Lyon.** He owns a couscous restaurant, and with a few neighbours he wanted a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery. On 4 July 2026 he answered a scoping report in his own words and reversed the order of the work: customer first, restaurateur next, supplier last. The project's architecture was redrawn as a constellation of worlds, using the library's design, and the first amendment closed on 4 August 2026. The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules, and in his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect. [AUTHOR: Chapter 1 says the first demonstration was made by the owner himself, on his own phone, over a messaging app. The record's checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line, and the measurements he took over a messaging app are those of 19 August. May the sentence in chapter 1 stay as written?]
+**A restaurateur in Lyon.** He owns a couscous restaurant, and with a few neighbours he wanted a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery. On 4 July 2026 he answered a scoping report in his own words and reversed the order of the work: customer first, restaurateur next, supplier last. The project's architecture was redrawn as a constellation of worlds, using the library's design, and the first amendment closed on 4 August 2026. The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules, and in his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect. Chapter 1 tells the first demonstration as the owner's own, on his own phone, over a messaging app; the record is more exact: its checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line, and the measurements he took over a messaging app are those of 19 August.
 
 One of his needs is carried by a law of the library: try payments before paying anyone for an account. A fake payments service is welcome while you rehearse, and refused when you go live:
 
@@ -150,7 +150,7 @@ oReg.SetPhase(:production)
 
 > run: kept
 
-**A bank in Niamey.** A commercial bank under the rules of the central bank of the West African monetary union runs an organisation-assessment product I built, under licence, on its own internal network; the installation guide delivered to the bank is the document that attests it. The lesson it left in the library is that an organisation can be judged by its own chart, under a regulator's rules. Declare a chart with a chief executive and an internal audit that reports to him, and the regulator's rules answer:
+**A bank in Niamey.** A commercial bank under the rules of the central bank of the West African monetary union has an organisation-assessment product I built beside the library, under the discipline the library now carries, installed under licence on its own internal network; the installation guide delivered to the bank is the document that attests it. The lesson it left in the library is that an organisation can be judged by its own chart, under a regulator's rules. Declare a chart with a chief executive and an internal audit that reports to him, and the regulator's rules answer:
 
 ```haro
 oOrg = new stzOrgChart("bank")
@@ -162,7 +162,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 > run: kept
 
-Three findings, each a rule with a number an auditor can read. [AUTHOR: Who at the bank is the crafter in the sense of this chapter, and what did they declare? The record shows the bank as the licensee of a product you built; it is silent on what the bank's own people declared.]
+Three findings, each a rule with a number an auditor can read. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
 
 **An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead, for one reason above the others: ownership. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a developer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model, and the model judges itself:
 
@@ -183,7 +183,7 @@ g.AddRule(oRule)
 
 > run: kept
 
-Three crafters: a restaurateur who is not a programmer, a bank under a regulator, an organisation that chose ownership over a vendor. None of them waited for the software industry. Each of them owns, or will own, what was built.
+Three cases: a restaurateur who is not a programmer, a bank under a regulator, an organisation that chose ownership over a vendor. The restaurateur and the organisation are crafters by the record; the bank is the licensee of a product, and the record does not say who there declared anything. The restaurateur and the organisation did not wait for the software industry, and each owns, or will own, what was built.
 
 ## 4. The decision, and what I refused
 
@@ -191,7 +191,7 @@ Three crafters: a restaurateur who is not a programmer, a bank under a regulator
 
 **I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
-**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter, and the word carries the culture of this book's cover image as much as my own view of the work.
+**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, and the site's headline used it for a year. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter. What the cover image carries, the record does not say, and this page does not say it for me.
 
 **I refused to count a customer without a document.** The site counts a project as a reference only when a document proves it, quotes no number of countries and no number of developers, and names a customer only on my word. A lesson is listed only when a file of the library carries it.
 
@@ -217,7 +217,7 @@ What is built: the agent file and its court; the registry that refuses a fake in
 
 What is designed: a journey page for each kind of crafter, with each step run in order and a guard that fails when a step breaks; the door through which a coding agent asks the library to judge its work.
 
-What is absent: the three crafters' platforms running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And the crafter's own medium, the messaging app on their phone, is not yet something a world can be declared to.
+What is absent: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And the crafter's own medium, the messaging app on their phone, is not yet something a world can be declared to.
 
 ## 8. Six doors
 

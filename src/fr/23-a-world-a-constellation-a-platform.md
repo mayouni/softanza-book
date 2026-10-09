@@ -34,7 +34,7 @@ La forme partagée : le terrain dessine l'image, un hôte, une carte, un diagram
 
 **La solution est déclarée en mondes, en liens et en une enveloppe avant que rien en soit construit, et chaque traversée entre eux est gouvernée.**
 
-Les phrases du dossier : une application est un monde vivant de sens ; des mondes, non des mini-applis, un graphe gouverné et non un conteneur hôte ; et un architecte Softanza modélise d'abord l'architecture de déploiement, comme artefact déclaratif, avant une ligne de code de fonctionnalité système. La phrase ci-dessus est faite des trois et de la méthode du livre, qui est de déclarer puis de gouverner. [AUTHOR: La phrase est-elle de vous, ou gardez-vous l'une des trois telle quelle ?]
+Les phrases du dossier : une application est un monde vivant de sens ; des mondes, non des mini-applis, un graphe gouverné et non un conteneur hôte ; et un architecte Softanza modélise d'abord l'architecture de déploiement, comme artefact déclaratif, avant une ligne de code de fonctionnalité système. La phrase ci-dessus est faite des trois et de la méthode du livre, qui est de déclarer puis de gouverner. Les trois sont celles du dossier, chacune telle qu'elle est dans sa source ; la phrase ci-dessus est le principe propre du chapitre, dans la voix du livre.
 
 ## 3. La forme Softanza
 
@@ -313,7 +313,7 @@ done
 
 La forme fichier est un texte simple que l'architecte possède, et elle fait l'aller-retour depuis une chaîne. L'ordre de construction et de déploiement est celui du chapitre 33, et la barrière sur qui déploie est celle du chapitre 24.
 
-Qui est l'architecte ? Le dossier nomme la personne trois fois dans trois endroits sans rapport : la System Foundation, un livre privé du domaine de projets sur la modélisation de plateforme, et la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Le site n'a pas de page pour l'architecte. [AUTHOR: L'architecte de plateforme est-il raconté comme ce que l'on déclare, sans la certification, ou avec une ligne disant qu'elle est proposée ? Nommer l'école demande votre accord.]
+Qui est l'architecte ? Le dossier nomme la personne trois fois dans trois endroits sans rapport : la System Foundation, un livre privé du domaine de projets sur la modélisation de plateforme, et la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Le site n'a pas de page pour l'architecte. Je raconte l'architecte comme ce que l'on déclare, et la certification n'est que cette proposition ; aucune école n'est nommée ici.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -380,7 +380,7 @@ oB.Live()
 #--> [ [ "propose", "checkup", "for", "bob" ] ]
 ```
 
-La même lecture vaut pour `IsTrue`, qui est stocké et narré alors que les instances ne portent pas de champs contre lesquels le juger ; pour le `Require` et le `Then` d'un flux, stockés et narrés, où je n'ai trouvé aucun exécutant ; et pour les bornes d'un raffinement. Un monde déclare aujourd'hui qu'un solde ne doit pas être négatif. Il ne juge pas un solde. Ce qu'il juge, c'est l'écart d'un but, une traversée et une capacité. Donc je dis « un monde qui veut » pour le but, et « narré » pour la vérité. Le `true when balance @ >= 0` du chapitre 4 est une déclaration seulement. [AUTHOR: Le chapitre peut-il dire « déclaré et narré ; jugé seulement pour les buts, les traversées et les capacités », et la note peut-elle demander que les vérités soient évaluées sur les instances ?]
+La même lecture vaut pour `IsTrue`, qui est stocké et narré alors que les instances ne portent pas de champs contre lesquels le juger ; pour le `Require` et le `Then` d'un flux, stockés et narrés, où je n'ai trouvé aucun exécutant ; et pour les bornes d'un raffinement. Un monde déclare aujourd'hui qu'un solde ne doit pas être négatif. Il ne juge pas un solde. Ce qu'il juge, c'est l'écart d'un but, une traversée et une capacité. Donc je dis « un monde qui veut » pour le but, et « narré » pour la vérité. Le `true when balance @ >= 0` du chapitre 4 est une déclaration seulement. Le chapitre le dit donc en une ligne : déclaré et narré ; jugé seulement pour les buts, les traversées et les capacités.
 
 La conception écrit plus que la classe ne parle. L'idiome quasi naturel de la conception pour la constellation n'est pas dans la classe :
 

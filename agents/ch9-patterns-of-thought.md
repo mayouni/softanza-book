@@ -4,7 +4,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its three siblings, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:50 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

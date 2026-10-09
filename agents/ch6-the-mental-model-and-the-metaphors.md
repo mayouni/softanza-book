@@ -4,7 +4,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists and strings; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the founding article; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:49 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ The field also has a vocabulary of metaphors for programming, but it keeps them 
 
 ## 2. The first principle
 
-**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** [AUTHOR: The site's Craft page says "a loop hides which move it is making; Softanza names the move", in a session's words of 2 October 2026. May the book give you that sentence as your principle for the metaphors?]
+**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** The site's Craft page says it, in the words of a session of 2 October 2026: "a loop hides which move it is making; Softanza names the move." That sentence is the site's, not mine; the sentence above is this chapter's principle.
 
 ## 3. The Softanza form
 
@@ -181,7 +181,7 @@ What is designed: the metaphors as native engine modules. The engine's design ma
 
 What is absent or broken at this commit, from my runs:
 
-- The walking-at-the-edge article's table does not hold. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above; the table is a draft. [AUTHOR: Is the principle the law, and the table a draft, so the book may state the principle and print only the cases that run?]
+- The walking-at-the-edge article's table does not hold. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above; the table is a draft. The book states the principle and prints only the cases that run; the table is not printed, and it is a draft.
 - The "Beyond Loops" article's code differs in places. The history of a walker is a list of walks; a backward walk takes no argument now; the direction prints as "backward" where the article says "reverse". The site's own run of the article kept ten of eighteen blocks.
 - The founding article's three models: none of its code runs, twelve blocks raised in the site's run. So I told them in words.
 - The mental-model article's dedicated verb for empty strings does not exist; the verb that does is `RemoveEmptyStrings`.

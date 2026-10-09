@@ -4,7 +4,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); a grammar that closes a menu in the forge's output; the projections of a language to an application; absent: a factory in the library; the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:50 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -199,7 +199,7 @@ QUANTITY 40         ->  order (line 3): 40 portions is not an order: one to twel
 DROP TABLE orders   ->  order (line 1): Unknown verb 'DROP': The dining room speaks only of orders.
 ```
 
-The refusals are the declaration's own words, written beside the grammar. [AUTHOR: May the chapter show this small `order` language, said plainly to be an example written for the book and run once, outside the library? Or do you prefer a declaration from the record, described and not shown?]
+The refusals are the declaration's own words, written beside the grammar. This is the whole of the evidence for the `order` language: it ran once, outside the library, and it is not a declaration of the record.
 
 Three more observations, each a limit.
 
@@ -207,7 +207,7 @@ Three more observations, each a limit.
 
 **The factory's grammar holds shape only.** A menu seat comes out as a general identifier, so the forged grammar lets `pizza` through. The library's own schema compiler, in the blocks above, closes the same menu into an alternation. On the estate's machine language, the forged grammar accepts a dangling reference that the court refuses. The record names a difference between mouth and court, the part that a context-free grammar cannot say: duplicate names, dangling references. I found no record that states the menu gap as a gap.
 
-**The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The charter's own first morning says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides: the factory has forged courts and grammars for several languages, outside the library; it has not forged the full list the principle promises; and the vision's text has not been updated. [AUTHOR: Shall chapter 12 say "built outside the library, designed for the library", and shall chapter 11's limit sentence be amended to match? I have amended it to say the sketch has since forged.]
+**The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The charter's own first morning says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides: the factory has forged courts and grammars for several languages, outside the library; it has not forged the full list the principle promises; and the vision's text has not been updated. In the book's stage words, the factory is built outside the library and designed for the library, and chapter 11's limit says the same.
 
 ### The facets a declared language wears
 

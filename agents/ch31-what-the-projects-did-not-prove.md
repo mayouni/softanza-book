@@ -2,9 +2,9 @@
 
 Source: Chapter 31. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the customers' declarations written as Softanza's own; the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it
+Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:52 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -22,7 +22,7 @@ What the three have in common is that the claim and its proof travel apart. A pa
 
 The record gives two sentences, and they are one. The site says: "Nothing is a reference until a document proves it." And, of what the author remembers: what "no file proves is not listed."
 
-**A project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.** [AUTHOR: Is this the principle in your words, or the site's two sentences as they stand?]
+**A project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.** This is the chapter's own sentence, drawn from the site's two; the site's words are the two quoted above, from its customers page and its forged page.
 
 ## 3. The Softanza form
 
@@ -207,7 +207,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 **I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, and the order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
 
-**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. [AUTHOR: May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it. And shall the block under "a date, a person, and a sentence" print the person's name too, as the record's form of "named"? That is yours to say.]
+**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
 
 **I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person, and until then it is unperceived, which is a state and not a failure.
 
@@ -241,11 +241,11 @@ This whole chapter is a limit. Here is its sum in the stage words.
 
 What is built: the three lessons that are proved. *A fake never ships*: the registry and the delivery gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The limit of each is in the tables: a sandbox is bound and no live payment adapter is; the bank's product does not call the chart validator; no hub exists and offline is a gap.
 
-What is designed: the customers' declarations written as Softanza's own; the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
+What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What is absent: any customer platform on the engine; a word from the bank; the restaurant's use after 25 August; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it.
+What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it.
 
-The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* [AUTHOR: The site says the customers' declarations are being written. I found no declaration file in the three projects' repositories. Do they live in a repository I did not search, or are they still to be written? The chapter's word for them, designed or absent, depends on it.]
+The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are absent. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library: the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own, so the chapter's word for them is *absent*, and the stage line at the top says so.
 
 ## 8. Six doors
 

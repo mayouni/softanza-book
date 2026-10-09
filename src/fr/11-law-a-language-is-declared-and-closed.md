@@ -53,7 +53,7 @@ Naturally("
 #    ╰───────────────────────╯
 ```
 
-Le dictionnaire est fait de données, indexées par des sens, pas par des mots anglais. Le même sens peut donc être dit dans une autre langue en ajoutant un bloc de données, pas de code. Voici une même instruction en anglais, en hausa, en français et en arabe :
+Le dictionnaire est fait de données, indexées par des sens, pas par des mots anglais. Le même sens peut donc être dit dans une autre langue en ajoutant un bloc de données, pas de code. Voici une même instruction en anglais, en hausa, en français et en arabe. Le hausa et l'arabe sont les phrases propres de la bibliothèque, et aucun locuteur natif ne les a lues pour autant que le dossier le montre :
 
 ```haro
 ? Naturally("Create a string with 'hello' and uppercase it").Result()
@@ -211,7 +211,7 @@ Et l'âge coupe dans les deux sens. Le même déluge de code généré rend auss
 
 Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus ; le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur ; les langages de motifs.
 
-Ce qui est conçu : la fabrique qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur et sa grammaire pour un modèle. Une première esquisse en a été construite hors de la bibliothèque en octobre 2026 ; la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la fabrique n'a pas encore forgé ; l'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
+Ce qui est conçu : la fabrique qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur et sa grammaire pour un modèle. La fabrique est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026, et la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la fabrique n'a pas encore forgé ; l'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
 
 Ce qui est absent, et la loi doit le dire. La couche naturelle n'est pas fermée jusqu'au fond. Une forme, une liste écrite entre crochets, est encore remise à l'hôte pour être évaluée, de sorte qu'une fonction de l'hôte à l'intérieur des crochets s'exécute :
 
@@ -222,7 +222,7 @@ Ce qui est absent, et la loi doit le dire. La couche naturelle n'est pas fermée
 
 La fonction `upper` n'est pas un mot du dictionnaire naturel. Elle s'est exécutée quand même. Le dossier connaît déjà cette échappée et a acheminé sa réparation ; tant que la réparation n'est pas arrivée, « la couche naturelle est un langage fermé » est vrai de ses mots et pas de ses listes, et ce livre le dira.
 
-Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe standard du hausa : le paquet l'a stockée dans un encodage cassé, de sorte qu'une phrase écrite correctement échoue sans un mot de plainte. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. [AUTHOR: Un locuteur du hausa a-t-il lu les phrases du paquet ? Le livre ne devrait pas imprimer du hausa qu'aucun locuteur n'a lu.]
+Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe standard du hausa : le paquet l'a stockée dans un encodage cassé, de sorte qu'une phrase écrite correctement échoue sans un mot de plainte. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Le dossier ne tient aucune lecture des phrases du paquet par un locuteur du hausa. Le hausa et les autres phrases en langue étrangère imprimées dans ce chapitre sont les phrases propres de la bibliothèque, non lues par un locuteur natif pour autant que le dossier le montre.
 
 ## 8. Six portes
 

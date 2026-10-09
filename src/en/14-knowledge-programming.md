@@ -34,7 +34,7 @@ So in the field the knowledge lives in a store and its logic in a reasoner, both
 
 **A system is a file. Adding a line to it makes the system know more, and nothing is coded or trained.**
 
-Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opened on the first, and I open here on the second. [AUTHOR: The record holds the sentence and not the story. Is there a moment, before July 2026, when you first wrote that a business could describe itself in one file, and that adding a fact would be enough?]
+Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opened on the first, and I open here on the second. The record holds no earlier sentence of mine on this than the one above, and the chapter keeps its opening.
 
 ## 3. The Softanza form
 
@@ -203,7 +203,7 @@ aM = oRul.ImportKnow(cRules)
 #--> 0
 ```
 
-The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. [AUTHOR: May the chapter say "facts and laws" for what the file holds, or must it promise the single file with rules and print the gap as its limit?]
+The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and section 7 prints the gap as the chapter's limit.
 
 The law is also not derived on an instance graph. The same symmetric law, the same fact as the default world, and the reverse is not there:
 
@@ -268,7 +268,7 @@ StzKnow(:Apple, :Fruit)
 #--> [ "company", "fruit" ]
 ```
 
-The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. [AUTHOR: Should the chapter open on the 2022 dialog as history, with its failure shown beside the runnable form, or on the file? I opened on the file.]
+The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. The chapter keeps the file as its opening, and the 2022 dialog stays at the margin.
 
 What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact, and no inheritance follows. The nearest that runs is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, has no method of that name.
 

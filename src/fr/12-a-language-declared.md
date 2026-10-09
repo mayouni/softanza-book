@@ -195,7 +195,7 @@ QUANTITY 40         ->  order (line 3): 40 portions is not an order: one to twel
 DROP TABLE orders   ->  order (line 1): Unknown verb 'DROP': The dining room speaks only of orders.
 ```
 
-Les refus sont les mots propres de la déclaration, écrits à côté de la grammaire. [AUTHOR: Le chapitre peut-il montrer ce petit langage `order`, dit simplement être un exemple écrit pour le livre et exécuté une fois, hors de la bibliothèque ? Ou préférez-vous une déclaration tirée du dossier, décrite et non montrée ?]
+Les refus sont les mots propres de la déclaration, écrits à côté de la grammaire. C'est toute la preuve du langage `order` : il a été exécuté une fois, hors de la bibliothèque, et ce n'est pas une déclaration du dossier.
 
 Trois observations de plus, chacune une limite.
 
@@ -203,7 +203,7 @@ Trois observations de plus, chacune une limite.
 
 **La grammaire de l'usine ne tient que la forme.** Un siège de menu ressort comme un identifiant général, donc la grammaire forgée laisse passer `pizza`. Le compilateur de schémas de la bibliothèque, dans les blocs ci-dessus, ferme le même menu en une alternance. Sur le langage machine du domaine de projets, la grammaire forgée accepte une référence pendante que le tribunal refuse. Le dossier nomme une différence entre la bouche et le tribunal, la part qu'une grammaire hors contexte ne peut pas dire : les noms en double, les références pendantes. Je n'ai trouvé aucun enregistrement qui énonce le manque du menu comme un manque.
 
-**La vision n'a pas rattrapé.** Le texte de la vision, daté entre le 27 septembre et le 5 octobre 2026, dit que la forge n'a pas forgé. Le premier matin de la charte dit lui-même que la forge n'existe pas. Le même dépôt a construit le spike le même jour et forgé pour plusieurs langages. La phrase vraie a donc deux côtés : l'usine a forgé des tribunaux et des grammaires pour plusieurs langages, hors de la bibliothèque ; elle n'a pas forgé la liste complète que le principe promet ; et le texte de la vision n'a pas été mis à jour. [AUTHOR: Le chapitre 12 doit-il dire « construit hors de la bibliothèque, conçu pour la bibliothèque », et la phrase de limite du chapitre 11 doit-elle être amendée en conséquence ? Je l'ai amendée pour dire que l'esquisse a forgé depuis.]
+**La vision n'a pas rattrapé.** Le texte de la vision, daté entre le 27 septembre et le 5 octobre 2026, dit que la forge n'a pas forgé. Le premier matin de la charte dit lui-même que la forge n'existe pas. Le même dépôt a construit le spike le même jour et forgé pour plusieurs langages. La phrase vraie a donc deux côtés : l'usine a forgé des tribunaux et des grammaires pour plusieurs langages, hors de la bibliothèque ; elle n'a pas forgé la liste complète que le principe promet ; et le texte de la vision n'a pas été mis à jour. Dans les mots d'étape du livre, la fabrique est construite hors de la bibliothèque et conçue pour la bibliothèque, et la limite du chapitre 11 le dit de même.
 
 ### Les facettes que porte un langage déclaré
 

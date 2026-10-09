@@ -127,7 +127,7 @@ There is no single record of a decision called "the method". The method was deci
 
 **I refused the grid alone.** The library's documents hold dozens of comparison grids, and in them Softanza's column wins almost every row. A reader who sees only those grids is right to discount them. The honesty in the record is elsewhere: in the sections of the field studies titled "what the field has that Softanza lacks, honestly", and in measured numbers. When the runtime beneath Softanza was measured again in September 2026 against the one it was compared with, the earlier headline did not reproduce, and the loss was published the same day. That is the rule this book follows: a loss is printed beside the win, in the same section.
 
-**I refused to call a reading a census.** The forty-six concepts are a reading of the record by one session, not a list I ruled row by row. [AUTHOR: Do you endorse the forty-six-row register as the book's Appendix A as it stands, or will you rule it row by row first?]
+**I refused to call a reading a census.** The forty-six concepts are a reading of the record by one session, not a list I ruled row by row. Appendix A prints the register of forty-six rows as the record gives it, as a working appendix: the rows are not ruled one by one.
 
 ## 5. The court
 

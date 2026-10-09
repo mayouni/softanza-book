@@ -14,7 +14,7 @@ Every chapter has the same nine elements, in the same order. The concept as the 
 
 **What the page says about itself.** Under each title a line says when the blocks ran, at which commit of the library, and how many kept their promise. A second line says what ran them: the runtime of the former host language, version 1.27. Haro, the language this book writes in, does not run the library yet, and each page says so. The engine's binaries are copied from a build made at the same commit, and the page says how recent that build is.
 
-**A draft is a draft.** Each chapter carries a banner that says it has not been read by the author. The marks that begin with `[AUTHOR:` are the questions that the record could not answer and that I could not settle by myself. They are in the pages on purpose: you can see where I stopped.
+**A draft is a draft.** Each chapter carries a banner that says it has not been read by the author. The questions that the record could not answer were once marked in the pages. They have been answered on my behalf, by rules that invent nothing: where the record holds nothing, the page says so in one plain sentence and does not fill the gap. These answers are delegated, and I can overrule any of them by editing the page. You can see where the record stops.
 
 **The three media.** The site holds the record, with its proof lines. The course, in the library's education program, teaches the same ground in four languages, and by exercises that are judged by running the learner's program. This book holds the argument. Where they differ, the page says so.
 
@@ -22,4 +22,4 @@ Every chapter has the same nine elements, in the same order. The concept as the 
 
 The French edition exists as a translation of the English drafts. Each French page says so, and it is read again once I have marked the English page as read.
 
-[AUTHOR: This preface was written last, by the session that drafted the book, from the book that exists. It says nothing about why you wrote it, since the record does not. Keep it as a working page, or replace it with the preface you drafted.]
+This preface was written last, by the session that drafted the book, from the book that exists. It says nothing about why the book was written, since the record does not. It stays a working page.

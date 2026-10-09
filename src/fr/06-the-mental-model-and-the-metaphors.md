@@ -24,7 +24,7 @@ Le terrain a aussi un vocabulaire de métaphores pour la programmation, mais il 
 
 ## 2. Le premier principe
 
-**Dites le problème en mots simples, posez les mêmes questions dans le même ordre à n'importe quel objet, et quand vous écririez une boucle, nommez le mouvement que vous faites : marcher, vérifier, produire ou exécuter.** [AUTHOR: La page Craft du site dit « une boucle cache quel mouvement elle fait ; Softanza nomme le mouvement », dans les mots d'une session du 2 octobre 2026. Le livre peut-il vous donner cette phrase comme votre principe pour les métaphores ?]
+**Dites le problème en mots simples, posez les mêmes questions dans le même ordre à n'importe quel objet, et quand vous écririez une boucle, nommez le mouvement que vous faites : marcher, vérifier, produire ou exécuter.** La page Craft du site le dit, dans les mots d'une session du 2 octobre 2026 : « une boucle cache quel mouvement elle fait ; Softanza nomme le mouvement. » Cette phrase est celle du site, non la mienne ; la phrase ci-dessus est le principe de ce chapitre.
 
 ## 3. La forme Softanza
 
@@ -177,7 +177,7 @@ Ce qui est conçu : les métaphores comme modules natifs du moteur. La conceptio
 
 Ce qui est absent ou cassé à ce commit, d'après mes exécutions :
 
-- La table de l'article sur la marche au bord ne tient pas. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut ; la table est un brouillon. [AUTHOR: Le principe est-il la loi, et la table un brouillon, de sorte que le livre puisse énoncer le principe et n'imprimer que les cas qui s'exécutent ?]
+- La table de l'article sur la marche au bord ne tient pas. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut ; la table est un brouillon. Le livre énonce le principe et n'imprime que les cas qui s'exécutent ; la table n'est pas imprimée, et elle est un brouillon.
 - Le code de l'article « Beyond Loops » diffère par endroits. L'historique d'un marcheur est une liste de marches ; une marche en arrière ne prend plus d'argument ; la direction s'imprime « backward » là où l'article dit « reverse ». L'exécution de l'article par le site a gardé dix blocs sur dix-huit.
 - Les trois modèles de l'article fondateur : aucun de ses codes ne s'exécute, douze blocs ont levé une erreur dans l'exécution du site. Alors je les ai racontés en mots.
 - Le verbe dédié aux chaînes vides de l'article du modèle mental n'existe pas ; le verbe qui existe est `RemoveEmptyStrings`.

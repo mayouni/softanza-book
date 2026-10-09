@@ -4,7 +4,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-09 04:52 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -171,9 +171,9 @@ My first book, *Refinement-Oriented Programming*, tells the discipline of govern
 
 **I refused to claim more than the library holds.** The Forged page of the site uses the word "validator" for two different things. The regional regulator has a validator of three rules, and a rule base of four universal ones. Basel III has the rule base only, and so do the others. I printed the count, and the block above shows it.
 
-**I refused to carry a regulator's text in a code I cannot source.** The codes BCEAO-001 to BCEAO-003 are the library's own; the record ties them to no article of the central bank's text. [AUTHOR: Which text of the central bank are BCEAO-001 to BCEAO-003 drawn from? The book should say, or say that they are the library's own.]
+**I refused to carry a regulator's text in a code I cannot source.** The codes BCEAO-001 to BCEAO-003 are the library's own; the record ties them to no article of the central bank's text. They are the library's own rules, named after the regulator's regime; the record does not name a text they are drawn from.
 
-**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, how long the product has been installed, and how many people use it. I will invent none of it. [AUTHOR: Who at the bank declares the chart, the questionnaire or the rules, and in what sense is the delivered product "built with Softanza"? Chapter 1 says it is, and the record shows a Python application that calls nothing of the library.]
+**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, how long the product has been installed, and how many people use it. I will invent none of it. On who at the bank declares the chart, the questionnaire or the rules, the record is silent and the chapter does not fill the gap. On "built with Softanza", the record shows a Python application, a small web server with a database, that calls nothing of the library; the library's validators are separate from it, and they are what this chapter runs. Chapter 1 says the product is built with Softanza and keeps its wording; this chapter says what the record shows.
 
 ## 5. The court
 

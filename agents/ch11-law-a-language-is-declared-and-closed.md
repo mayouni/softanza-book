@@ -4,7 +4,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages; designed: the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:50 UTC+01:00.
 
 ## What the AI age changes here
 
@@ -42,7 +42,7 @@ Naturally("
 
 > run: kept
 
-The dictionary is data, keyed by meanings, not by English words. So the same meaning can be said in another language by adding a block of data, not code. Here is one instruction in English, in Hausa, in French and in Arabic:
+The dictionary is data, keyed by meanings, not by English words. So the same meaning can be said in another language by adding a block of data, not code. Here is one instruction in English, in Hausa, in French and in Arabic. The Hausa and the Arabic are the library's own sentences, and no native speaker has read them as far as the record shows:
 
 ```haro
 ? Naturally("Create a string with 'hello' and uppercase it").Result()
@@ -218,7 +218,7 @@ And the age cuts both ways. The same flood of generated code makes careless lang
 
 What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals; the court of structured output with its grammar compiler and its sampler; the pattern languages.
 
-What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer and its grammar for a model. A first sketch of it was built outside the library in October 2026; the library cannot run it yet. The vision's text says the factory has not yet forged; the sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
+What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer and its grammar for a model. The factory is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026, and the library cannot run it yet. The vision's text says the factory has not yet forged; the sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
 
 What is absent, and the law must say it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate, so a host function inside the brackets runs:
 
@@ -231,7 +231,7 @@ What is absent, and the law must say it. The natural layer is not closed all the
 
 The function `upper` is not a word of the natural dictionary. It ran anyway. The record already knows this escape and has routed its repair; until the repair lands, "the natural layer is a closed language" is true of its words and not of its lists, and this book will say so.
 
-And the Hausa pack does not yet read the letter ɗ, which standard Hausa spelling uses: the pack stored it in a broken encoding, so a sentence written correctly fails without a word of complaint. The Hausa in this chapter is written without the hook, the way the pack reads it today. [AUTHOR: Has a Hausa speaker read the pack's sentences? The book should not print Hausa that no speaker has read.]
+And the Hausa pack does not yet read the letter ɗ, which standard Hausa spelling uses: the pack stored it in a broken encoding, so a sentence written correctly fails without a word of complaint. The Hausa in this chapter is written without the hook, the way the pack reads it today. The record holds no reading of the pack's sentences by a Hausa speaker. The Hausa and the other foreign-language sentences printed in this chapter are the library's own sentences, unread by a native speaker as far as the record shows.
 
 ## 8. Six doors
 

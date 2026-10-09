@@ -144,9 +144,9 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 ## 4. The decision, and what I refused
 
-**I refused the model as the mind.** When the models arrived, the obvious move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. [AUTHOR: Is there an earlier moment or sentence of yours, before the architecture of July 2026, that this chapter should open on?]
+**I refused the model as the mind.** When the models arrived, the obvious move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
 
-**I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model may be added on top. It is never the price of admission. [AUTHOR: When a model is called last, may it be a remote frontier model, under a budget and the court, or is "last" always a local model? The record supports both readings.]
+**I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model may be added on top. It is never the price of admission. "Last" means after the programmatic path, and under the court and a budget, whether the model is local or remote. The record supports both readings, and the chapter does not choose between them.
 
 **I refused guessing.** Every ambiguity refuses rather than guesses. The field's habit of prompting and keeping what comes out has a name now; here, guessing is replaced by asking, and vibes are replaced by governance.
 

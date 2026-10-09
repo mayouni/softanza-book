@@ -9,7 +9,7 @@ rulings: ["12.23", "12.24", "12.25"]
 
 La constitution de l'interface vit dans son propre dépôt, et le site dit que ce dépôt n'est pas encore public. Ce livre l'appelle la constitution de l'interface et ne nomme pas le produit auquel elle appartient. La bibliothèque ne tient que la place de ses verbes et le chercheur des éléments qui ne servent aucun verbe ; la liste elle-même est celle de la constitution. Cette annexe imprime donc ce que j'ai lu dans le fichier même de la constitution le 9 octobre 2026 : sa version est 3.11, mise à jour pour la dernière fois le 16 août 2026, avec sept articles, trente et un ensembles et cent vingt-deux règles. Les nombres sont ceux du fichier, et je n'en ai compté aucun moi-même.
 
-Le chapitre 26 montre comment la bibliothèque trouve un élément qui ne sert aucun verbe. Le chapitre 25 montre ce qu'un nouveau médium ajoute. Le chapitre 20 montre le droit à un humain sous son rail. [AUTHOR: Le livre peut-il imprimer les vingt-deux verbes tant que ce dépôt n'est pas public ? La ligne de structure demande cette annexe, et le chapitre 26 pose la même question dans sa page.]
+Le chapitre 26 montre comment la bibliothèque trouve un élément qui ne sert aucun verbe. Le chapitre 25 montre ce qu'un nouveau médium ajoute. Le chapitre 20 montre le droit à un humain sous son rail. Le dépôt de la constitution n'est pas public, et les vingt-deux verbes ci-dessous sont imprimés tels que lus dans son fichier de règles à la date donnée plus haut.
 
 ### Les quatre axiomes
 

@@ -4,7 +4,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots, inbox and queue; designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -18,7 +18,7 @@ So the field's posture, in a line, is that the agent is a model in a loop, and s
 
 **Do not build safe agents. Build a safe world, and let ordinary agents loose inside it.**
 
-The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more: the only artifact that ever leaves its world is an update plan, and plans are executed by someone else. [AUTHOR: The doctrine document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. Is the sentence yours, may the chapter open on it in the first person, and when was it written?]
+The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more: the only artifact that ever leaves its world is an update plan, and plans are executed by someone else. The document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. The chapter holds the sentence as the document's, dated by that first commit, and gives no date of writing.
 
 ## 3. The Softanza form
 
@@ -197,7 +197,7 @@ next
 
 > run: kept (touches files, the system)
 
-The site shows this with a larger course, in a demo that I did not run for this book, and prints a count of six hundred and ten. I print thirty, because thirty is what this block runs. [AUTHOR: May the chapter quote the site's six hundred and ten, as measured by the education demo on 30 September 2026, or keep only the number the book runs?]
+The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
 **A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason; a named actor under a scope commits the other twenty-nine; one is skipped; and the file the reviewer protected is the one file still on disk:
 
@@ -324,7 +324,7 @@ The count of seven operations is what this run measures. The library's own guard
 
 **I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
-**I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. [AUTHOR: Do you want the chapter to say so in those words and to state the right as the human end of the loop, or to leave a one-line pointer to the interface constitution?]
+**I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop; its row is in Appendix C, read from the rules file.
 
 ## 5. The court
 

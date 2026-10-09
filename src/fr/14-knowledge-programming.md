@@ -34,7 +34,7 @@ Ainsi, sur le terrain, la connaissance vit dans un magasin et sa logique dans un
 
 **Un système est un fichier. Y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.**
 
-Deux phrases du dossier le portent. La définition, dans le document de conception écrit à partir de ma directive du 13 juillet 2026 : l'intelligence est la capacité de calcul de dériver une connaissance nouvelle à partir d'une connaissance existante. Et ce que la vision de 2026 en garde : ajouter un fait augmente l'intelligence du système, sans changement de code et sans entraînement. Le chapitre 17 s'est ouvert sur la première, et je m'ouvre ici sur la seconde. [AUTHOR: Le dossier contient la phrase et non l'histoire. Y a-t-il un moment, avant juillet 2026, où vous avez écrit pour la première fois qu'une entreprise pouvait se décrire dans un seul fichier, et qu'ajouter un fait suffirait ?]
+Deux phrases du dossier le portent. La définition, dans le document de conception écrit à partir de ma directive du 13 juillet 2026 : l'intelligence est la capacité de calcul de dériver une connaissance nouvelle à partir d'une connaissance existante. Et ce que la vision de 2026 en garde : ajouter un fait augmente l'intelligence du système, sans changement de code et sans entraînement. Le chapitre 17 s'est ouvert sur la première, et je m'ouvre ici sur la seconde. Le dossier ne tient de moi aucune phrase antérieure à celle-ci sur ce point, et le chapitre garde son ouverture.
 
 ## 3. La forme Softanza
 
@@ -203,7 +203,7 @@ aM = oRul.ImportKnow(cRules)
 #--> 0
 ```
 
-L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. [AUTHOR: Le chapitre peut-il dire « faits et lois » pour ce que contient le fichier, ou doit-il promettre le fichier unique avec des règles et imprimer le manque comme sa limite ?]
+L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. Le fichier unique qui contient des règles, que promet la conception, n'est pas là, et la section 7 imprime ce manque comme la limite du chapitre.
 
 La loi n'est pas non plus dérivée sur un graphe d'instance. La même loi symétrique, le même fait que sur le monde par défaut, et l'inverse n'y est pas :
 
@@ -268,7 +268,7 @@ StzKnow(:Apple, :Fruit)
 #--> [ "company", "fruit" ]
 ```
 
-L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que le centre s'est déplacé vers le fichier. [AUTHOR: Le chapitre doit-il s'ouvrir sur le dialogue de 2022 comme histoire, avec son échec montré à côté de la forme qui tourne, ou sur le fichier ? Je me suis ouvert sur le fichier.]
+L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que le centre s'est déplacé vers le fichier. Le chapitre garde le fichier comme ouverture, et le dialogue de 2022 reste en marge.
 
 Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait, et aucun héritage n'en découle. Le plus proche qui tourne est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, n'a aucune méthode de ce nom.
 

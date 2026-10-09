@@ -182,7 +182,7 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-La couche base n'hérite pas de la couche noyau, comme le contrat des couches dit qu'elle le devrait ; les deux partagent le moteur et implémentent deux fois leurs domaines communs. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification. [AUTHOR: La règle « la base hérite du noyau » doit-elle être réalisée, ou le contrat amendé en « deux implémentations qui partagent un moteur » ?]
+La couche base n'hérite pas de la couche noyau, comme le contrat des couches dit qu'elle le devrait ; les deux partagent le moteur et implémentent deux fois leurs domaines communs. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la règle du contrat selon laquelle la base hérite du noyau est conçue.
 
 Ce qui est absent : un programme entier et son moteur emballés dans un seul fichier sans aucune dépendance, et une plateforme cliente qui tourne sur le moteur.
 

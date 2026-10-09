@@ -34,7 +34,7 @@ Ce qu'ils ont en commun, c'est que le dialogue est écrit une fois par canal ou 
 
 **Un nouveau médium ajoute des rendus, jamais des verbes.**
 
-C'est une phrase de la constitution de l'interface, imprimée sur le site : la grammaire est fermée, un nouveau médium ajoute des rendus et jamais des verbes. Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. [AUTHOR: La phrase-pont est-elle la vôtre, à raconter à la première personne, ou ne fais-je que la citer comme celle de la constitution ? Et le chapitre peut-il lister les vingt-deux verbes alors que ce dépôt n'est pas encore public ?]
+C'est une phrase de la constitution de l'interface, imprimée sur le site : la grammaire est fermée, un nouveau médium ajoute des rendus et jamais des verbes. Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles, et l'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026, le dépôt non nommé puisqu'il n'est pas encore public.
 
 La même phrase, construite, pour une famille de valeurs et non pour les vingt-deux verbes : la valeur est partagée, et la façon dont elle est rendue est propre à chaque médium. C'est une décision de Central sur ma délégation, du 30 septembre 2026. Il prouve que le principe n'est pas seulement un slogan. C'est la forme de trois faces qui fonctionnent : couleur, earcon, phrase.
 
@@ -242,7 +242,7 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 
 Le chapitre 1 dit que le propriétaire du restaurant a fait sa première démonstration sur une application de messagerie, et le chapitre 2 disait, dans son premier jet, qu'une application de messagerie faisait partie de ses outils. Le dossier ne soutient aucune des deux phrases telles qu'elles sont, et je corrige le chapitre 2 et signale le chapitre 1, qui est votre texte. Son propre rapport du 4 juillet 2026 donne comme outil actuel un tableur, et demande une page web ouverte par un code QR ou par un bouton d'un réseau social, sans rien à télécharger. La ligne sur diverses applications, dont une application de messagerie, est l'étiquette d'une option du formulaire de cadrage, et ce n'est pas ce qu'il a coché. "Simple comme une application de messagerie" est simulé dans le projet, comme le chapitre 28 l'a déjà constaté.
 
-Le restaurant est donc la première forme de la phrase de ce chapitre, et non un exemple du médium de messagerie. Le client garde son médium : un lien qui s'ouvre dans le navigateur qu'il a déjà. Le médium de messagerie, comme thèse, n'est pas construit. [AUTHOR: Quelle histoire de restaurant le chapitre doit-il raconter : le lien comme première forme de « le client garde son médium », avec le médium de messagerie comme thèse non construite, ou une déclaration de vous sur l'usage d'une application de messagerie par le propriétaire, que le dossier ne contient pas ? Le chapitre 1 porte la phrase que j'ai signalée.]
+Le restaurant est donc la première forme de la phrase de ce chapitre, et non un exemple du médium de messagerie. Le client garde son médium : un lien qui s'ouvre dans le navigateur qu'il a déjà. Le médium de messagerie, comme thèse, n'est pas construit. Je raconte cette histoire et ne fais aucune déclaration sur l'usage d'une application de messagerie par le propriétaire, puisque le dossier n'en contient aucune. Le chapitre 1 garde sa propre formulation de cette démonstration, et ce que le dossier montre plus exactement est ce que dit cette section.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -313,7 +313,7 @@ Ce qui est absent :
 - Des adaptateurs réels pour le SMS, pour une application de messagerie et pour une ligne téléphonique ; des accusés de réception de livraison ; des règles d'identifiant d'expéditeur.
 - Rien dans le dossier ne tourne sur un vrai téléphone comme conversation.
 
-[AUTHOR: Le chapitre peut-il présenter `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` et la matrice de satisfaisabilité comme ce que vous comptez construire, avec la limite à côté, ou seulement comme ce qu'une étude a proposé ?]
+`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` et la matrice de satisfaisabilité sont ce qu'une étude a proposé, et je ne les présente pas comme ce que je compte construire : je n'ai trouvé dans le dossier aucune décision de ma part de les construire, et la limite est la liste ci-dessus, où aucun d'eux n'existe.
 
 ## 8. Six portes
 

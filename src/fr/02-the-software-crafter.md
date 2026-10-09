@@ -10,7 +10,7 @@ guards: [agentfile_narrated, service_registry_narrated, graphrule_object_narrate
 stage:
   built: "le fichier d'agent et son tribunal ; le registre qui refuse un faux en production ; des règles comme données sur un modèle ; les règles d'un régulateur qui jugent un organigramme ; la couche naturelle en haoussa et en arabe"
   designed: "une page de parcours pour chaque sorte d'artisan du logiciel, chaque étape exécutée ; la porte par laquelle un agent de code demande à la bibliothèque de juger son travail"
-  absent: "les plateformes des trois artisans du logiciel qui tournent sur le moteur Softanza ; le propre médium d'un artisan du logiciel, l'application de messagerie sur son téléphone, comme cible"
+  absent: "les plateformes des trois clients qui tournent sur le moteur Softanza ; le propre médium d'un artisan du logiciel, l'application de messagerie sur son téléphone, comme cible"
 status: draft
 rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
@@ -24,7 +24,7 @@ Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont p
 
 ## 2. Le premier principe
 
-Le site donne la définition en deux phrases, avec le mot « maker » dedans, et ce livre les prend avec le mot changé : **un artisan du logiciel transforme ce qu'il sait d'un monde en quelque chose qui tourne, sans attendre l'industrie du logiciel ; il n'est pas défini par sa compétence de programmation mais par la possession : l'artefact est à lui, en texte brut, et il n'expire pas.** [AUTHOR: Ces phrases ont été rédigées pour le site et n'ont pas été tranchées par vous dans le dossier. Et « artisanat » suggère la compétence, là où la phrase dit que l'artisan du logiciel n'est pas défini par elle. Gardez-vous la possession seule, ou formuleriez-vous la définition autour du soin qu'un artisan du logiciel prend ? Et, dans le paragraphe plus bas qui refuse « maker », dites avec vos propres mots ce que porte l'image de couverture, et je mettrai votre phrase à cet endroit.]
+Le site donne la définition en deux phrases, avec le mot « maker » dedans, et ce livre les prend avec le mot changé : **un artisan du logiciel transforme ce qu'il sait d'un monde en quelque chose qui tourne, sans attendre l'industrie du logiciel ; il n'est pas défini par sa compétence de programmation mais par la possession : l'artefact est à lui, en texte brut, et il n'expire pas.** Ces phrases ont été rédigées pour le site par une session, et le dossier ne contient aucune décision de moi sur elles : ce sont les phrases du site, non les miennes. Elles définissent l'artisan du logiciel par la possession seule. Le mot « artisanat » suggère la compétence, là où la phrase dit que l'artisan du logiciel n'est pas défini par elle, et le dossier ne tranche pas ; la page garde la formulation du site.
 
 ## 3. La forme Softanza
 
@@ -127,9 +127,9 @@ oBad = StzAgentDeclarationQ(cLlm)
 #--> [no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).
 ```
 
-Voici maintenant les trois artisans du logiciel pour qui ce livre est écrit. Ce ne sont pas des personas. Ce sont des gens avec des documents, et la partie VI raconte chacun en entier. Ici, une page chacun.
+Voici maintenant les trois cas pour lesquels ce livre est écrit. Ce ne sont pas des personas. Ce sont des gens et des organisations avec des documents, et la partie VI raconte chacun en entier. Ici, une page chacun.
 
-**Un restaurateur à Lyon.** Il possède un restaurant de couscous, et avec quelques voisins il voulait une plateforme pour le commerce de quartier. Les notes du projet le disent sans détour : il n'est pas programmeur. Le projet a commencé par une offre en mai 2024 puis deux années de spécification riche qui n'ont rien produit qu'il puisse utiliser. Ce qui est sorti de cet échec est la règle selon laquelle je travaille depuis : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison. Le 4 juillet 2026, il a répondu à un rapport de cadrage dans ses propres mots et a renversé l'ordre du travail : client d'abord, restaurateur ensuite, fournisseur en dernier. L'architecture du projet a été redessinée en constellation de mondes, à partir de la conception de la bibliothèque, et le premier avenant a été clos le 4 août 2026. Le projet compte onze itérations et une campagne de vingt-deux tests simulés derrière ses règles d'interface, et dans son propre rapport la vitesse de commande est sa première priorité, non négociable. Et le 19 août, après une journée de tests sur le terrain avec deux téléphones et une application de messagerie, les notes l'appellent le co-architecte du projet. [AUTHOR: Le chapitre 1 dit que la première démonstration a été faite par le propriétaire lui-même, sur son propre téléphone, par une application de messagerie. La liste de vérification du dossier pour la démonstration du 15 août la prévoit pour le propriétaire seul, avec son propre téléphone et une application de messagerie comme ligne d'assistance, et les mesures qu'il a prises par une application de messagerie sont celles du 19 août. La phrase du chapitre 1 peut-elle rester telle qu'elle est écrite ?]
+**Un restaurateur à Lyon.** Il possède un restaurant de couscous, et avec quelques voisins il voulait une plateforme pour le commerce de quartier. Les notes du projet le disent sans détour : il n'est pas programmeur. Le projet a commencé par une offre en mai 2024 puis deux années de spécification riche qui n'ont rien produit qu'il puisse utiliser. Ce qui est sorti de cet échec est la règle selon laquelle je travaille depuis : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison. Le 4 juillet 2026, il a répondu à un rapport de cadrage dans ses propres mots et a renversé l'ordre du travail : client d'abord, restaurateur ensuite, fournisseur en dernier. L'architecture du projet a été redessinée en constellation de mondes, à partir de la conception de la bibliothèque, et le premier avenant a été clos le 4 août 2026. Le projet compte onze itérations et une campagne de vingt-deux tests simulés derrière ses règles d'interface, et dans son propre rapport la vitesse de commande est sa première priorité, non négociable. Et le 19 août, après une journée de tests sur le terrain avec deux téléphones et une application de messagerie, les notes l'appellent le co-architecte du projet. Le chapitre 1 raconte la première démonstration comme celle du propriétaire lui-même, sur son propre téléphone, par une application de messagerie ; le dossier est plus exact : sa liste de vérification pour la démonstration du 15 août la prévoit pour le propriétaire seul, avec son propre téléphone et une application de messagerie comme ligne d'assistance, et les mesures qu'il a prises par une application de messagerie sont celles du 19 août.
 
 L'un de ses besoins est porté par une loi de la bibliothèque : essayer les paiements avant de payer quiconque pour un compte. Un faux service de paiement est bienvenu pendant que vous répétez, et refusé quand vous passez au réel :
 
@@ -146,7 +146,7 @@ oReg.SetPhase(:production)
 #--> still bound to a SANDBOX in a production phase -- a fake must never ship
 ```
 
-**Une banque à Niamey.** Une banque commerciale soumise aux règles de la banque centrale de l'union monétaire ouest-africaine fait tourner un produit d'évaluation d'organisation que j'ai construit, sous licence, sur son propre réseau interne ; le guide d'installation livré à la banque est le document qui l'atteste. La leçon qu'il a laissée dans la bibliothèque est qu'une organisation peut être jugée par son propre organigramme, selon les règles d'un régulateur. Déclarez un organigramme avec un directeur général et un audit interne qui lui rend compte, et les règles du régulateur répondent :
+**Une banque à Niamey.** Une banque commerciale soumise aux règles de la banque centrale de l'union monétaire ouest-africaine dispose d'un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, sous la discipline que la bibliothèque porte désormais, installé sous licence sur son propre réseau interne ; le guide d'installation livré à la banque est le document qui l'atteste. La leçon qu'il a laissée dans la bibliothèque est qu'une organisation peut être jugée par son propre organigramme, selon les règles d'un régulateur. Déclarez un organigramme avec un directeur général et un audit interne qui lui rend compte, et les règles du régulateur répondent :
 
 ```haro
 oOrg = new stzOrgChart("bank")
@@ -156,7 +156,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 #--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
 ```
 
-Trois constats, chacun une règle avec un numéro qu'un auditeur peut lire. [AUTHOR: Qui, à la banque, est l'artisan du logiciel au sens de ce chapitre, et qu'a-t-il déclaré ? Le dossier montre la banque comme titulaire d'une licence d'un produit que vous avez construit ; il est muet sur ce que les gens de la banque ont eux-mêmes déclaré.]
+Trois constats, chacun une règle avec un numéro qu'un auditeur peut lire. Le dossier montre la banque comme titulaire d'une licence d'un produit que j'ai construit ; il ne dit pas qui, à la banque, a déclaré quoi que ce soit, et cette page ne le dit pas.
 
 **Une organisation sur le terrain.** Une organisation qui travaille au Niger, avec un siège à Niamey et des bases sur le terrain, a demandé un hub. Son propre cahier des charges préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été choisie à la place, pour une raison au-dessus des autres : la possession. L'organisation possède son vocabulaire et ses règles, les change sans programmer, ne paie pas de licence par poste, et peut tout remettre à un développeur de son propre pays. L'étude de conception a été construite avec ses équipes entre le 22 septembre et le 8 octobre 2026. Deux de ses principes sont ceux du livre en petit : par défaut on travaille hors ligne, et l'agent propose tandis qu'une personne décide. Cette règle est une donnée que l'organisation attache à son propre modèle, et le modèle se juge lui-même :
 
@@ -175,7 +175,7 @@ g.AddRule(oRule)
 #--> 0
 ```
 
-Trois artisans du logiciel : un restaurateur qui n'est pas programmeur, une banque sous un régulateur, une organisation qui a choisi la possession plutôt qu'un éditeur. Aucun d'eux n'a attendu l'industrie du logiciel. Chacun possède, ou possédera, ce qui a été construit.
+Trois cas : un restaurateur qui n'est pas programmeur, une banque sous un régulateur, une organisation qui a choisi la possession plutôt qu'un éditeur. Le restaurateur et l'organisation sont des artisans du logiciel selon le dossier ; la banque est titulaire d'une licence d'un produit, et le dossier ne dit pas qui, là-bas, a déclaré quoi que ce soit. Le restaurateur et l'organisation n'ont pas attendu l'industrie du logiciel, et chacun possède, ou possédera, ce qui a été construit.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -183,7 +183,7 @@ Trois artisans du logiciel : un restaurateur qui n'est pas programmeur, une banq
 
 **J'ai ajouté l'agent comme artisan du logiciel, et retenu un pouvoir.** L'agent est le sixième lecteur de chaque langage Softanza : à la fois un constructeur et un utilisateur. Il reçoit un atelier et un tribunal. Il ne reçoit pas la capacité de valider.
 
-**J'ai refusé « maker », et j'ai refusé « builder ».** « Maker » nomme le mouvement des ateliers, le fer à souder et l'imprimante 3D, et l'accroche du site l'a employé pendant un an. « Builder » nomme quelqu'un qui assemble ce qu'un plan dit. Aucun des deux ne dit ce que je crois qu'est la programmation. C'est un travail de la main, fait avec soin, sur quelque chose qui est à vous : c'est de l'artisanat. J'appelle la personne qui le fait un artisan du logiciel, et le mot porte la culture de l'image de couverture de ce livre autant que ma propre vision du travail.
+**J'ai refusé « maker », et j'ai refusé « builder ».** « Maker » nomme le mouvement des ateliers, le fer à souder et l'imprimante 3D, et l'accroche du site l'a employé pendant un an. « Builder » nomme quelqu'un qui assemble ce qu'un plan dit. Aucun des deux ne dit ce que je crois qu'est la programmation. C'est un travail de la main, fait avec soin, sur quelque chose qui est à vous : c'est de l'artisanat. J'appelle la personne qui le fait un artisan du logiciel. Ce que porte l'image de couverture, le dossier ne le dit pas, et cette page ne le dit pas à ma place.
 
 **J'ai refusé de compter un client sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, ne cite aucun nombre de pays ni aucun nombre de développeurs, et ne nomme un client que sur ma parole. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
 
@@ -209,7 +209,7 @@ Ce qui est construit : le fichier d'agent et son tribunal ; le registre qui refu
 
 Ce qui est conçu : une page de parcours pour chaque sorte d'artisan du logiciel, chaque étape exécutée dans l'ordre et une garde qui échoue quand une étape casse ; la porte par laquelle un agent de code demande à la bibliothèque de juger son travail.
 
-Ce qui est absent : les plateformes des trois artisans du logiciel qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et le propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, n'est pas encore quelque chose auquel un monde puisse être déclaré.
+Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et le propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, n'est pas encore quelque chose auquel un monde puisse être déclaré.
 
 ## 8. Six portes
 

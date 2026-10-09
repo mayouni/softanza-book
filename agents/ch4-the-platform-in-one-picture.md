@@ -4,7 +4,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships; designed: the max layer loaded by its entry file; the base layer inheriting the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:24 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-09 04:49 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -188,7 +188,7 @@ done
 
 > run: kept
 
-The base layer does not inherit the core one, as the layer contract says it should; the two share the engine and implement their common domains twice. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification. [AUTHOR: Is the base-inherits-core rule to be realised, or the contract amended to "two implementations sharing one engine"?]
+The base layer does not inherit the core one, as the layer contract says it should; the two share the engine and implement their common domains twice. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification. What is built is two implementations sharing one engine; the contract's rule that base inherits core is designed.
 
 What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
 

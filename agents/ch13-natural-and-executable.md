@@ -4,7 +4,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-09 04:50 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -215,7 +215,7 @@ The languages follow their own grammar, and they are not word-for-word translati
 
 > run: kept
 
-No native reader has read these sentences. They are the guard's, and I do not know that a speaker has read them. [AUTHOR: Chapter 11 asked it of Hausa. Has a speaker read the Arabic, Turkish, French and Swahili sentences of the pack's guard?]
+No native reader has read these sentences. They are the guard's, and I do not know that a speaker has read them. The record holds no reading by a speaker of the Arabic, Turkish, French or Swahili sentences, as it holds none for the Hausa of chapter 11. They are printed as the library's own sentences, unread.
 
 A language is a block of data. Here is Swahili, added at runtime, by the guard's own words:
 
@@ -291,7 +291,7 @@ The Hausa pack speaks nine of twenty-five meanings. And no model is loaded. The 
 
 The library names three eras, in a design document of 10 July 2026. The first is near-natural language, the first paradigm. The second is natural programming: lower the language toward code, with free text, and one object per block. The third, of 2026, is one lexicon shared by execution and documentation, multilingual packs with morphology, and `Understood()`. I call the third *the shared lexicon*. The vision's own heading for it uses a word this book does not use.
 
-Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks, and all the commits cited are ancestors of the pin.) [AUTHOR: Which date does the chapter print for the first slide? The structure says "the 2020 slide". The record has the diagram of 2020 to 2025 and the deck of 2022; chapter 5 says "the founding slide of 2022".]
+Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks, and all the commits cited are ancestors of the pin.) So the first slide this chapter prints is the founding slide of the 2022 deck, exported on 20 September 2022. The year 2020 is the first year of my strategic diagram, which was shared on 13 September 2026; the record holds no slide of 2020.
 
 ## 4. The decision, and what I refused
 
@@ -392,7 +392,7 @@ What is built: both directions; five packs as data and a sixth at runtime; refus
 
 What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that a model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
-What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. [AUTHOR: May the chapter tell your plea to the project of the former host language in your own words? The record has no sentence of yours in that voice, only a private memo of 30 August 2026 that quotes "seductive at first, unusable after".]
+What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. The record also holds no account, and no date, of the author's plea to the project of the former host language that natural programming be made a first concern, and no sentence of his in that voice. All it holds is a private memo of 30 August 2026, which describes the language's shipped natural form as "seductive at first, unusable after". That is the memo's sentence, quoted with its date, and not a sentence of the author's.
 
 ## 8. Six doors
 

@@ -4,7 +4,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -95,11 +95,11 @@ next
 
 > run: kept
 
-There are no counters in this block. The one tradition that was heard was heard by the author on 26 September 2026, through five original examples, and the record's words are that it is "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, is not yet said. [AUTHOR: May the book quote those four words as yours, as the clearest recorded perception that is a refusal?]
+There are no counters in this block. The one tradition that was heard was heard by the author on 26 September 2026, through five original examples, and the record's words are that it is "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, is not yet said. Those words are the record's, quoted from it, and they are the clearest recorded perception that is a refusal.
 
 The law is the estate's, adopted on 25 September 2026 at the author's instruction, and written by a session. It requires that the record names the perceiver and quotes the verdict. Its second line is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
-The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by a model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. [AUTHOR: Is there a human verdict on any gallery picture since 5 October? If so, give the name, the date and your words, and the chapter prints them. If not, it stays "unperceived".]
+The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by a model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
 
 ### The court of security
 
@@ -224,7 +224,7 @@ The fleet here is a rehearsal double, any object that answers the same effectful
 
 ## 4. The decision, and what I refused
 
-**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026, the study's 12.20, says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on a later commit than this book's, says that of 135 articles 55 ran, and of the 423 blocks in those, 123 kept their promise. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise. [AUTHOR: May the chapter say that, or do you want it to defend the older phrase?]
+**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026, the study's 12.20, says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on a later commit than this book's, says that of 135 articles 55 ran, and of the 423 blocks in those, 123 kept their promise. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise.
 
 **I refused a second assertion library.** The promise runner's rulings refuse a second library, a rewrite of the test files, a coverage percentage before there are routes, the word "verified" on a perceptual claim without a name and a sentence, and a mock written for a platform's production.
 

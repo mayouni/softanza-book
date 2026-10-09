@@ -10,7 +10,7 @@ guards: [full_scope_model_narrated, virtual_system_twin_narrated, service_delive
 stage:
   built: "une plateforme déclarée construite, puis déployée, et refusée dans l'autre ordre ; le jumeau qui ne touche rien de réel ; la dernière porte qui refuse un faux service"
   designed: "le runtime propre à la langue, qui fait tourner la bibliothèque ; la fiche de garanties d'une solution en cinq lignes ; des hôtes réels et une vraie carte"
-  absent: "une solution de client qui tourne sur le moteur Softanza, et le verdict d'une personne nommée à son sujet"
+  absent: "une solution de client qui tourne sur le moteur Softanza, et le verdict d'une personne nommée à son sujet ; les déclarations des clients en fichiers"
 status: draft
 rulings: ["12.5", "12.10", "12.13", "12.21", "12.29", "12.30"]
 research: research/ch33.md
@@ -24,7 +24,7 @@ Ce sont des épreuves raisonnables, et elles pointent toutes vers la même chose
 
 ## 2. Le premier principe
 
-**Le dossier ne porte une solution que lorsqu'elle a tourné sur son propre moteur et qu'une personne nommée a dit ce qu'elle a vu.** [AUTHOR: Est-ce le principe du chapitre dans vos mots, ou écririez-vous une autre phrase ?]
+**Le dossier ne porte une solution que lorsqu'elle a tourné sur son propre moteur et qu'une personne nommée a dit ce qu'elle a vu.**
 
 ## 3. La forme Softanza
 
@@ -86,15 +86,15 @@ La personne avait le droit de déployer. Le déploiement ne s'est pourtant pas e
 
 Le plancher est donc là : déclarer, construire, répéter, refuser le faux, valider par un acteur gouverné. Maintenant l'absence.
 
-Softanza a été utilisée. Je l'ai écrit au chapitre 1 et je m'y tiens, parce que l'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré, et je l'ai corrigée. Une banque de Niamey fait tourner un produit d'évaluation d'organisation que j'ai construit, installé sur son propre réseau sous licence, et le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon construit avec moi une plateforme de commerce de quartier ; le dossier de ce projet s'arrête au 25 août 2026, avec un avenant clos le 4 août et un propriétaire qui a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
+Softanza a été utilisée. Je l'ai écrit au chapitre 1 et je m'y tiens, parce que l'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré, et je l'ai corrigée. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, sous la discipline que la bibliothèque porte désormais, installé sur son propre réseau sous licence, et le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier et l'a éprouvée sur le terrain ; le dossier de ce projet s'arrête au 25 août 2026, avec un avenant clos le 4 août et un propriétaire qui a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
 
-Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation n'est pas construit. Leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli.
+Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation n'est pas construit. Le site dit que leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli.
 
 La ligne que le dossier ne porte pas encore est donc celle-ci : *la solution a tourné sur le moteur propre de Softanza, et voici ce que l'utilisateur a dit.*
 
 Ce qui sépare d'ici cette ligne, lu dans le dossier et non composé :
 
-1. **Les déclarations d'un client tournent sur le moteur au lieu de la pile ordinaire.** Les déclarations sont en cours d'écriture ; le passage n'est pas fait.
+1. **Les déclarations d'un client tournent sur le moteur au lieu de la pile ordinaire.** Le site dit que les déclarations sont en cours d'écriture ; je n'en ai trouvé aucun fichier, et le chapitre 31 dit où j'ai cherché ; le passage n'est pas fait.
 2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant, sous Windows, toutes les assertions que l'ancien runtime passe sur la bibliothèque ; son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Haro ne fait pas encore tourner la bibliothèque.
 3. **La solution écrit sa fiche de garanties.** La vision demande à chaque solution cinq lignes, une pour chaque système auquel elle répond, technique, social, écologique, économique et culturel, jugées comme des fixtures, la machine en étant dérivée. Aucune solution n'en a écrit.
 4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée démarre et se juge elle-même dans un émulateur ; des quatre promesses que fait son profil hébergé, l'émulateur peut en vérifier trois, et la quatrième attend un chien de garde sur une vraie carte. Aucun client ne fait tourner sur elle une charge de production.
@@ -112,7 +112,7 @@ Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèq
 
 **J'ai refusé une référence sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, et il ne cite aucun nombre de pays ni aucun nombre de développeurs. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
 
-**J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont écrites une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Réécrire serait plus rapide à annoncer et plus lent à croire.
+**J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont à écrire une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Réécrire serait plus rapide à annoncer et plus lent à croire.
 
 **J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. L'étude qui a lu le dossier a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit, et je suis d'accord. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
 
@@ -144,7 +144,7 @@ Ce qui est construit : le plancher. Déclarer, construire, déployer dans l'ordr
 
 Ce qui est conçu : le runtime propre à la langue, qui fait tourner la bibliothèque ; la fiche de garanties d'une solution en cinq lignes ; la vérification sur des hôtes réels et sur une vraie carte.
 
-Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, et le verdict d'une personne nommée à son sujet. [AUTHOR: Lequel des trois projets passe en premier sur le moteur, et qui sera la personne nommée qui le perçoit ?]
+Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le verdict d'une personne nommée à son sujet, et les déclarations des clients en fichiers (le chapitre 31 dit où j'ai cherché). Le dossier ne nomme aucun projet qui passe en premier sur le moteur, ni aucune personne qui le percevra ; je laisse les deux non écrits.
 
 ## 8. Six portes
 

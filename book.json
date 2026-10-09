@@ -5,7 +5,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-09 04:27 UTC+01:00",
+ "built": "2026-10-09 04:52 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -61,10 +61,8 @@
    "rulings": [],
    "doors": {},
    "sections": [],
-   "open_questions": [
-    "` are the questions that the record could not answer and that I could not settle by myself. They are in the pages on purpose: you can see where I stopped. **The three media.** The site holds the record, with its proof lines. The course, in the library's education program, teaches the same ground in four languages, and by exercises that are judged by running the learner's program. This book holds the argument. Where they differ, the page says so. **What is owed.** The last chapter is about a line that the record does not yet carry: a solution that ran on Softanza's own engine, and what a named user said of it. Three projects, a restaurant, a bank and an organisation, have taught the library, and none yet runs on it. I wrote the chapter before the line exists, and I will write it again when it does. The French edition exists as a translation of the English drafts. Each French page says so, and it is read again once I have marked the English page as read. [AUTHOR: This preface was written last, by the session that drafted the book, from the book that exists. It says nothing about why you wrote it, since the record does not. Keep it as a working page, or replace it with the preface you drafted."
-   ],
-   "words": 731,
+   "open_questions": [],
+   "words": 753,
    "french": true,
    "text": "agents/preface.md",
    "run": {
@@ -187,7 +185,7 @@
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -207,7 +205,7 @@
    "stage": {
     "built": "the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic",
     "designed": "a journey page for each kind of crafter, with each step run; the door through which a coding agent asks the library to judge its work",
-    "absent": "the three crafters' platforms running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
+    "absent": "the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
    },
    "guards": [
     {
@@ -379,16 +377,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "These sentences were drafted for the site and have not been ruled by you in the record. And \"craft\" suggests skill, where the sentence says the crafter is not defined by it. Do you keep ownership alone, or would you word the definition around the care a crafter takes? And in the paragraph that refuses \"maker\" below, say in your own words what the cover image carries, and I will put your sentence there.",
-    "Chapter 1 says the first demonstration was made by the owner himself, on his own phone, over a messaging app. The record's checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line, and the measurements he took over a messaging app are those of 19 August. May the sentence in chapter 1 stay as written?",
-    "Who at the bank is the crafter in the sense of this chapter, and what did they declare? The record shows the bank as the licensee of a product you built; it is silent on what the bank's own people declared."
-   ],
-   "words": 2404,
+   "open_questions": [],
+   "words": 2417,
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -534,14 +528,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Do you endorse the forty-six-row register as the book's Appendix A as it stands, or will you rule it row by row first?"
-   ],
-   "words": 2058,
+   "open_questions": [],
+   "words": 2057,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -719,14 +711,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is the base-inherits-core rule to be realised, or the contract amended to \"two implementations sharing one engine\"?"
-   ],
-   "words": 1917,
+   "open_questions": [],
+   "words": 1916,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -896,16 +886,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is the classic form, a title, the questions and the promises under them, now the one form for new test blocks, with the converted blocks left as they are?",
-    "Is that refusal yours, and may the book present it as a decision of this movement?",
-    "Which name does the discipline carry in this book: \"Programming by heart\", \"What you think is what you write\", or \"The Softanza way\"?"
-   ],
-   "words": 2259,
+   "open_questions": [],
+   "words": 2277,
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1082,15 +1068,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The site's Craft page says \"a loop hides which move it is making; Softanza names the move\", in a session's words of 2 October 2026. May the book give you that sentence as your principle for the metaphors?",
-    "Is the principle the law, and the table a draft, so the book may state the principle and print only the cases that run?"
-   ],
-   "words": 1951,
+   "open_questions": [],
+   "words": 1952,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1323,16 +1306,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The deck counted free-order parameters, alternatives under any wording and names in other languages as features. The Haro principle refuses them as grammar, and the library still ships the first two. Are they features kept in the library and left out of the grammar a machine is held to, or retired?",
-    "The deck says seven goals and thirty-three features and \"7 root causes of programming complexity\". No slide lists the seven causes. Do you want the chapter to name them, one per goal, and which are they?",
-    "Is the classic block, with its narrative header, its questions with `#-->` and its closing time, now the one form for new test blocks, with the converted blocks left as they are?"
-   ],
-   "words": 3083,
+   "open_questions": [],
+   "words": 3113,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1543,15 +1522,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The article has twenty-three sections, the twenty-two forms and \"small functions\". Do I keep twenty-two as the book's number?",
-    "Is the scope design document your own text, and do you rule the system scope built?"
-   ],
-   "words": 2166,
+   "open_questions": [],
+   "words": 2260,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:49 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1736,7 +1712,7 @@
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1900,14 +1876,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The library still writes the format `.zrfn`, and the Haro charter, ratified on 1 October 2026, retires it for `.rfn`. Do I print `.zrfn` as shipped, with one line on the charter?"
-   ],
-   "words": 1752,
+   "open_questions": [],
+   "words": 1743,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
-    "ran": "2026-10-09 04:24 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2126,14 +2100,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Has a Hausa speaker read the pack's sentences? The book should not print Hausa that no speaker has read."
-   ],
-   "words": 2215,
+   "open_questions": [],
+   "words": 2274,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2316,15 +2288,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "May the chapter show this small `order` language, said plainly to be an example written for the book and run once, outside the library? Or do you prefer a declaration from the record, described and not shown?",
-    "Shall chapter 12 say \"built outside the library, designed for the library\", and shall chapter 11's limit sentence be amended to match? I have amended it to say the sketch has since forged."
-   ],
-   "words": 3326,
+   "open_questions": [],
+   "words": 3305,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2583,16 +2552,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Chapter 11 asked it of Hausa. Has a speaker read the Arabic, Turkish, French and Swahili sentences of the pack's guard?",
-    "Which date does the chapter print for the first slide? The structure says \"the 2020 slide\". The record has the diagram of 2020 to 2025 and the deck of 2022; chapter 5 says \"the founding slide of 2022\".",
-    "May the chapter tell your plea to the project of the former host language in your own words? The record has no sentence of yours in that voice, only a private memo of 30 August 2026 that quotes \"seductive at first, unusable after\"."
-   ],
-   "words": 3083,
+   "open_questions": [],
+   "words": 3139,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -2799,16 +2764,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The record holds the sentence and not the story. Is there a moment, before July 2026, when you first wrote that a business could describe itself in one file, and that adding a fact would be enough?",
-    "May the chapter say \"facts and laws\" for what the file holds, or must it promise the single file with rules and print the gap as its limit?",
-    "Should the chapter open on the 2022 dialog as history, with its failure shown beside the runnable form, or on the file? I opened on the file."
-   ],
-   "words": 2673,
+   "open_questions": [],
+   "words": 2638,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3025,16 +2986,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "\"For the first time in computer science history\" is a phrase I could not find in any file. Is it yours, from which text, and may the chapter print it with the study's caution or leave it out?",
-    "Do I print this as my debt, in the first person, or as a finding of the court?",
-    "Do I tell the family as it runs, with the defects printed beside the wins, or only the media that run and name the rest in one paragraph? I have done the first."
-   ],
-   "words": 2570,
+   "open_questions": [],
+   "words": 2524,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3242,16 +3199,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Which seven does the chapter name, and is the language model one of them? Chapters 17 and 20 make the model a proposer that cannot commit, while the narrations run it as a first-class runtime through a function that does not exist.",
-    "May the chapter name Python and JavaScript as Haro's planned facets on your word alone? The book says facet and the memo says face.",
-    "At this commit the door is neither governed nor closed on the way back, and the R door raises. May the chapter print these three as its limit, with the runs, in the voice of chapter 11's open list? I advise yes, and the vision's word \"governed\" then stays a design."
-   ],
-   "words": 2789,
+   "open_questions": [],
+   "words": 2836,
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:50 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3437,15 +3390,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is there an earlier moment or sentence of yours, before the architecture of July 2026, that this chapter should open on?",
-    "When a model is called last, may it be a remote frontier model, under a budget and the court, or is \"last\" always a local model? The record supports both readings."
-   ],
+   "open_questions": [],
    "words": 2252,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -3666,16 +3616,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The record holds this sentence as \"captured from the author's directive\" on 13 July 2026, and no sentence of yours on why these five registers and not four or six, nor on the moment you set wise coding against vibe coding. Is there an earlier sentence or memory the chapter should open on?",
-    "The tutor's French, Arabic and Hausa wording is, in the code's words, a draft awaiting a native reviewer. May the chapter print it as it stands, with that caveat, or will you give the Arabic and the Hausa you want shown?",
-    "May the chapter say outright that the two pages promise more than the code, so that the page or the code is corrected? And the code wires three of the five registers, while the memo that names the formula and the examples calls them filed and not routed: does the chapter say they are the next work you have filed, or only that they are absent?"
-   ],
-   "words": 2746,
+   "open_questions": [],
+   "words": 2712,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -3844,14 +3790,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The record has your ruling that a model is free to ship, and no licence text to say so. May the book tell \"free\" as: a plain file, in the open foundation, with no licence fee or meter?"
-   ],
-   "words": 2143,
+   "open_questions": [],
+   "words": 2141,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
-    "ran": "2026-10-09 04:25 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4048,16 +3992,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The doctrine document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. Is the sentence yours, may the chapter open on it in the first person, and when was it written?",
-    "May the chapter quote the site's six hundred and ten, as measured by the education demo on 30 September 2026, or keep only the number the book runs?",
-    "Do you want the chapter to say so in those words and to state the right as the human end of the loop, or to leave a one-line pointer to the interface constitution?"
-   ],
-   "words": 3030,
+   "open_questions": [],
+   "words": 3003,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -4274,16 +4214,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "May the book quote those four words as yours, as the clearest recorded perception that is a refusal?",
-    "Is there a human verdict on any gallery picture since 5 October? If so, give the name, the date and your words, and the chapter prints them. If not, it stays \"unperceived\".",
-    "May the chapter say that, or do you want it to defend the older phrase?"
-   ],
-   "words": 3011,
+   "open_questions": [],
+   "words": 2976,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4437,16 +4373,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Blocks three and four pin a gap. Do you want them as running blocks, so that the page fails the day it is fixed, or shown as recorded text with their run date and not judged?",
-    "As far as I read on 8 October 2026, the runtime's notes still say that the spike beats the fast runtime on every row, and the suggestion of a dated correction is unanswered. Will the correction be made before the book says the headline was withdrawn, or should the book say \"withdrawn in the estate memo of 13 September 2026\", and no more?",
-    "May the chapter cite the 7 July benchmark as a dated record with that caveat, or do you want it re-run on the present engine first, in a session that can read the build mode?"
-   ],
-   "words": 3303,
+   "open_questions": [],
+   "words": 3200,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -4646,16 +4578,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is the sentence yours, or do you keep one of the three as it stands?",
-    "Is the platform architect told as what one declares, with the certification left out, or with one line saying it is proposed? Naming the school needs your word.",
-    "May the chapter say \"declared and narrated; judged only for goals, crossings and capabilities\", and may the memo request that truths be evaluated on instances?"
-   ],
-   "words": 3058,
+   "open_questions": [],
+   "words": 3052,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -4878,16 +4806,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is the chapter's sentence the first clause, which is a library document without an author line, the second, which is yours, or your own? I have joined them.",
-    "The service plan is headed \"written 2026-07-23 in answer to the user's question\", which asks whether emulation covers databases, business APIs, frontier models and cloud providers, so that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. Was that your question? May the chapter tell it in the first person as the origin of \"code first, subscribe later\"?",
-    "Do you hold a run of that browser proof with a date and a person who saw it? If not, the chapter says: wired, built by the toolchain, not seen in a browser by anyone the record names."
-   ],
-   "words": 3406,
+   "open_questions": [],
+   "words": 3392,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5098,16 +5022,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is the bridge sentence yours, to be told in the first person, or do I only quote it as the constitution's? And may the chapter list the twenty-two verbs while that repository is not public yet?",
-    "Which restaurant story should the chapter tell: the link as the first form of \"the customer keeps their medium\", with the messaging medium as an unbuilt thesis, or a statement from you about the owner's use of a messaging app, which the record does not hold? Chapter 1 carries the sentence I have flagged.",
-    "May the chapter present `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix as what you mean to build, with the limit beside them, or only as what a study proposed?"
-   ],
-   "words": 3177,
+   "open_questions": [],
+   "words": 3195,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5315,16 +5235,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "The twenty-two verbs are the interface constitution's, in its own repository, which the site says is not public yet. The library's own design text still lists twenty-four verbs from an interaction engine that your commit of 26 May 2026 removed as invented by an AI. May the chapter tell that removal as the refusal at its centre, that the library does not own the verbs, and print the twenty-two typed from the constitution?",
-    "May the chapter print it beside \"a status bar that tells the truth\", as the loss against the library's own page, before the request to derive those words from the plan is answered?",
-    "At this commit no IDE of this family exists. Should the chapter tell the pattern as designed, with the running pieces as evidence, ending on \"no IDE of this family ships today\", or wait for the shell kit?"
-   ],
-   "words": 3332,
+   "open_questions": [],
+   "words": 3328,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:51 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5514,16 +5430,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is base inheriting core to be realised, with core repaired first, or is the contract to be amended to \"two implementations sharing one engine\"? And in Haro, is a layer chosen by a declaration the compiler honours, or still by the file you load?",
-    "May the book say \"withdrawn in the estate memo of 13 September 2026\" and print the six rows, although the repository's notes still carry the old claim? And may the chapter name the peer, which the memo names, or describe it as chapter 22 does?",
-    "The wide suite of 5 October 2026 gives guard-produced counts. May the chapter print them, dated, with the stage word \"in construction\", or only the stage word? Chapters 31 and 33 print none."
-   ],
-   "words": 4114,
+   "open_questions": [],
+   "words": 4183,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -5641,7 +5553,7 @@
    "doors": {
     "programmer": "You declare worlds and bonds and run a constellation in which a call to a world that is not yet active is refused with its reason. The restaurant's own code, however, is a web application.",
     "analyst": "Rigour in numbers was the contract of the first application: a due date computed from the invoice date, a date required, a debt with no due date made visible.",
-    "designer": "Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. [AUTHOR: Who held the phone in the eleven iterations, the owner or you? The project's files say the real user, and they say you; the sentence needs one answer.]",
+    "designer": "Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. On who held the phone in the eleven iterations, the project's files say both, the real user and me, and the chapter does not choose.",
     "decision-maker": "The owner accepted the Lock in writing, tightened the speed budget himself, and kept the gate on fixed fees. The library's mirror is a deployment that an entitled person may commit and that is still refused over a fake.",
     "educator": "The record supports only a small thing: the first application taught its user by doing, with guides whose words leave no doubt. There is no educator in this story, and I say so.",
     "agent": "An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding."
@@ -5684,16 +5596,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Did the owner's need give rise to these parts of the library, or were they already in your plan, and the project found them?",
-    "What happened after 25 August 2026? And may the book print the owner's tightened speed thresholds and his measurement protocol, or only say that such a budget exists?",
-    "Who held the phone in the eleven iterations, the owner or you? The project's files say the real user, and they say you; the sentence needs one answer."
-   ],
-   "words": 2983,
+   "open_questions": [],
+   "words": 2986,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
-    "ran": "2026-10-09 04:26 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -5858,15 +5766,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Which text of the central bank are BCEAO-001 to BCEAO-003 drawn from? The book should say, or say that they are the library's own.",
-    "Who at the bank declares the chart, the questionnaire or the rules, and in what sense is the delivered product \"built with Softanza\"? Chapter 1 says it is, and the record shows a Python application that calls nothing of the library."
-   ],
-   "words": 1826,
+   "open_questions": [],
+   "words": 1863,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -6037,15 +5942,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Who chose, and what was weighed against low-code? The record has the outcome and the gains, listed without a ranking, and not the deliberation.",
-    "The organisation's study says its offline part \"is already in service\", and the Forged page says \"a gap\". The record of a sister package of the estate, a browser-side one, holds a durable outbox on the device and an ordered, idempotent replay, and I did not run it. May the book mention it, as outside the library and not run?"
-   ],
-   "words": 1881,
+   "open_questions": [],
+   "words": 1858,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -6064,8 +5966,8 @@
    "status": "draft",
    "stage": {
     "built": "the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it",
-    "designed": "the customers' declarations written as Softanza's own; the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board",
-    "absent": "any customer platform on the engine; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it"
+    "designed": "the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board",
+    "absent": "any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the hub; an offline mechanism in the library; a live payments run against the hub's sandbox; a named person's verdict on any of it"
    },
    "guards": [
     {
@@ -6225,16 +6127,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is this the principle in your words, or the site's two sentences as they stand?",
-    "May I correct chapters 1, 2 and 33 to those wordings? Chapter 1 is your text, and I have changed none of it. And shall the block under \"a date, a person, and a sentence\" print the person's name too, as the record's form of \"named\"? That is yours to say.",
-    "The site says the customers' declarations are being written. I found no declaration file in the three projects' repositories. Do they live in a repository I did not search, or are they still to be written? The chapter's word for them, designed or absent, depends on it."
-   ],
-   "words": 3552,
+   "open_questions": [],
+   "words": 3682,
    "french": true,
    "text": "agents/ch31-what-the-projects-did-not-prove.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6357,15 +6255,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "What did the clocks cost you, in your own words, when you stopped them on 27 August 2026?",
-    "Do you have a reading of the ratio between the work on the protocol and the work on the product? The record holds none."
-   ],
-   "words": 2571,
+   "open_questions": [],
+   "words": 2555,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6385,7 +6280,7 @@
    "stage": {
     "built": "a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the last door that refuses a fake service",
     "designed": "the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board",
-    "absent": "a customer solution running on the Softanza engine, and a named person's verdict on it"
+    "absent": "a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files"
    },
    "guards": [
     {
@@ -6500,15 +6395,12 @@
      "title": "Exercise"
     }
    ],
-   "open_questions": [
-    "Is this the chapter's principle in your words, or would you write another sentence?",
-    "Which of the three projects moves to the engine first, and who will be the named person who perceives it?"
-   ],
-   "words": 2055,
+   "open_questions": [],
+   "words": 2087,
    "french": true,
    "text": "agents/ch33-the-one-line-still-owed.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6593,7 +6485,7 @@
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
-    "ran": "2026-10-09 04:27 UTC+01:00",
+    "ran": "2026-10-09 04:52 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }
@@ -6621,10 +6513,8 @@
    ],
    "doors": {},
    "sections": [],
-   "open_questions": [
-    "May the book print the twenty-two verbs while that repository is not public? The structure line asks for this appendix, and chapter 26 asks the same question in its page."
-   ],
-   "words": 951,
+   "open_questions": [],
+   "words": 945,
    "french": true,
    "text": "agents/app-c-the-twenty-two-verbs-and-the-constitution.md",
    "run": {

@@ -4,7 +4,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks that refuse wholesale staging and a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-09 04:52 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -82,7 +82,7 @@ That tone rule entered the library in July 2026, five weeks before the estate ru
 
 **I refused to let a coordinator grade its legislator.** Authority runs down from me; correction runs up from any session to the central one, and from the central one to me. A coordinator that judged its own rules would be the one part of the system nothing could fix.
 
-**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the uncomfortable part: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number. [AUTHOR: What did the clocks cost you, in your own words, when you stopped them on 27 August 2026?] Since then, a timer may run a script, never a model; a session starts when a file arrives in a watched folder, or when I start it.
+**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the uncomfortable part: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number. What the clocks cost is not in the record: it holds the reason and no figure, and I give none. Since then, a timer may run a script, never a model; a session starts when a file arrives in a watched folder, or when I start it.
 
 **I refused to rule in my absence.** A ruling is written in the record only while I am there. When I asked the central session to settle what was pending on my behalf, on 28 September, the five rulings it took that day are marked as taken on my delegation, so that nobody later mistakes them for mine. The decisions at the front of this book are marked the same way.
 
@@ -112,7 +112,7 @@ What is built: the protocol and its files, the dated memos, the ledger of ruling
 
 What is designed: a watcher that wakes a session when a file arrives, which is the right replacement for the clocks and is not written; a court of style for the code that a programmer or an agent writes with the library, so that the house style is held by a machine and not by a hope.
 
-What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language, which the word law asks for and nothing performs. The study that read the record named one more limit, and I leave it here in its words: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. [AUTHOR: Do you have a reading of the ratio between the work on the protocol and the work on the product? The record holds none.]
+What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language, which the word law asks for and nothing performs. The study that read the record named one more limit, and I leave it here in its words: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. The record holds no reading of that ratio.
 
 ## 8. Six doors
 

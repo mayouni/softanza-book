@@ -195,13 +195,13 @@ Read this block as a limit and not as a win. Nothing in it queues anything. The 
 
 ## 4. The decision, and what I refused
 
-**I refused a per-seat platform as the organisation's ground.** The specification preferred low-code on a vendor's suite. The retained offer proposes Softanza for one reason above the others: the organisation owns its vocabulary and its rules, which it can change without programming, and the whole of the work, programs, configuration and data, is its own, with a handover to a local developer. The vendor's suite stays where it was good, for the user accounts, the documents and the notifications. [AUTHOR: Who chose, and what was weighed against low-code? The record has the outcome and the gains, listed without a ranking, and not the deliberation.]
+**I refused a per-seat platform as the organisation's ground.** The specification preferred low-code on a vendor's suite. The retained offer proposes Softanza for one reason above the others: the organisation owns its vocabulary and its rules, which it can change without programming, and the whole of the work, programs, configuration and data, is its own, with a handover to a local developer. The vendor's suite stays where it was good, for the user accounts, the documents and the notifications. The record holds the outcome and the gains, and not the deliberation: who chose, and what was weighed against low-code, it does not say, and the chapter does not fill the gap.
 
 **I refused to let the assistant decide.** It proposes. Its authority is advisory; a person's covers the risk. The refusal names the level, the risk tier, and the sentence that says the authority does not cover the act.
 
 **I refused a silent rule.** A rule that governs nothing is reported. A rule with no message is reported too. That is the price of letting a non-programmer touch a rule, and I did not wait for the first incident to pay it.
 
-**I refused to call offline a lesson.** The Forged page says it in four words: a gap, not a lesson. A restaurant asked for the same. The study is clear that offline is the organisation's default, and the library has only a permission for it. [AUTHOR: The organisation's study says its offline part "is already in service", and the Forged page says "a gap". The record of a sister package of the estate, a browser-side one, holds a durable outbox on the device and an ordered, idempotent replay, and I did not run it. May the book mention it, as outside the library and not run?]
+**I refused to call offline a lesson.** The Forged page says it in four words: a gap, not a lesson. A restaurant asked for the same. The study is clear that offline is the organisation's default, and the library has only a permission for it. A sister package of the estate, a browser-side one, holds a durable outbox on the device and an ordered, idempotent replay; it is outside the library, and I did not run it.
 
 ## 5. The court
 

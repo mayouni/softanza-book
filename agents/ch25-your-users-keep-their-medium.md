@@ -4,7 +4,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; the twenty-two verbs as a list the library holds; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -24,7 +24,7 @@ What they share is that the dialogue is written once per channel or once per fra
 
 **A new medium adds renderings, never verbs.**
 
-It is a sentence of the interface constitution, printed on the site: the grammar is closed, a new medium adds renderings and never verbs. The record is silent on whether the wording is mine. I quote it as the constitution's. [AUTHOR: Is the bridge sentence yours, to be told in the first person, or do I only quote it as the constitution's? And may the chapter list the twenty-two verbs while that repository is not public yet?]
+It is a sentence of the interface constitution, printed on the site: the grammar is closed, a new medium adds renderings and never verbs. The record is silent on whether the wording is mine. I quote it as the constitution's. I do not tell it as my own sentence. The twenty-two verbs it speaks of are the constitution's, in six families, and Appendix C prints them as I read them from the constitution's own file on 9 October 2026, the repository unnamed since it is not public yet.
 
 The same sentence, built, for one family of values and not for the twenty-two verbs: the value is shared, and how it is rendered is each medium's own. It is a ruling by Central on my delegation, of 30 September 2026. It proves that the principle is not only a slogan. It is the shape of three working faces: colour, earcon, phrase.
 
@@ -252,7 +252,7 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 
 Chapter 1 says that the owner of the restaurant made his first demonstration over a messaging app, and chapter 2 said, in its first draft, that a messaging app was among his tools. The record does not support either sentence as it stands, and I correct chapter 2 and flag chapter 1, which is your text. His own report of 4 July 2026 gives his current tool as a spreadsheet, and asks for a web page opened by a QR code or by a button for a social network, with nothing to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
 
-So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. [AUTHOR: Which restaurant story should the chapter tell: the link as the first form of "the customer keeps their medium", with the messaging medium as an unbuilt thesis, or a statement from you about the owner's use of a messaging app, which the record does not hold? Chapter 1 carries the sentence I have flagged.]
+So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. I tell this story and make no statement about the owner's use of a messaging app, since the record holds none. Chapter 1 keeps its own wording of that demonstration, and what the record shows more exactly is what this section says.
 
 ## 4. The decision, and what I refused
 
@@ -325,7 +325,7 @@ What is absent:
 - Live adapters for SMS, for a messaging app and for a telephone line; delivery receipts; sender-ID rules.
 - Nothing in the record runs on a real phone as a conversation.
 
-[AUTHOR: May the chapter present `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix as what you mean to build, with the limit beside them, or only as what a study proposed?]
+`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what a study proposed, and I do not present them as what I mean to build: I found no decision of mine to build them in the record, and the limit is the list above, in which none of them exists.
 
 ## 8. Six doors
 

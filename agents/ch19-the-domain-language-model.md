@@ -4,7 +4,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:25 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -201,7 +201,7 @@ The design describes the unit of prediction in three levels. A token is a fragme
 
 ## 4. The decision, and what I refused
 
-On 13 July 2026, I ruled on this. The concept of a domain language model had been designed for one of the estate's products; I donated it to the open foundation, so that any Softanza project that supplies a knowledge base can ship its own model free to the users of its domain. The format is `.zdlm`. The floor is the first rung, in every model; the second is optional fluency. [AUTHOR: The record has your ruling that a model is free to ship, and no licence text to say so. May the book tell "free" as: a plain file, in the open foundation, with no licence fee or meter?]
+On 13 July 2026, I ruled on this. The concept of a domain language model had been designed for one of the estate's products; I donated it to the open foundation, so that any Softanza project that supplies a knowledge base can ship its own model free to the users of its domain. The format is `.zdlm`. The floor is the first rung, in every model; the second is optional fluency. The record holds the ruling that a model is free to ship, and no licence text. I tell "free" as the ruling's word: a plain file, in the open foundation, with no licence fee or meter.
 
 **I refused the token as the unit.** The unit is a chunk of the world, which a graph can admit or refuse.
 

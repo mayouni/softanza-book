@@ -28,7 +28,7 @@ Donc la posture du terrain, en une ligne, est que l'agent est un modèle dans un
 
 **Ne construisez pas des agents sûrs. Construisez un monde sûr, et lâchez-y des agents ordinaires.**
 
-La phrase est dans le document de doctrine de la bibliothèque : « We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it. » Le document en donne la moitié structurelle en une phrase de plus : le seul artefact qui quitte jamais son monde est un plan de mise à jour, et les plans sont exécutés par quelqu'un d'autre. [AUTHOR: Le document de doctrine ne porte ni date ni ligne d'auteur dans son en-tête, et git l'enregistre pour la première fois dans un commit du 9 juillet 2026. La phrase est-elle de vous, le chapitre peut-il s'ouvrir sur elle à la première personne, et quand a-t-elle été écrite ?]
+La phrase est dans le document de doctrine de la bibliothèque : « We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it. » Le document en donne la moitié structurelle en une phrase de plus : le seul artefact qui quitte jamais son monde est un plan de mise à jour, et les plans sont exécutés par quelqu'un d'autre. Le document ne porte ni date ni ligne d'auteur dans son en-tête, et git l'enregistre pour la première fois dans un commit du 9 juillet 2026. Le chapitre tient la phrase pour celle du document, datée par ce premier commit, et ne donne pas de date d'écriture.
 
 ## 3. La forme Softanza
 
@@ -195,7 +195,7 @@ next
 #--> 30
 ```
 
-Le site montre cela avec un cours plus grand, dans une démonstration que je n'ai pas exécutée pour ce livre, et il imprime un compte de six cent dix. J'imprime trente, parce que trente est ce que ce bloc exécute. [AUTHOR: Le chapitre peut-il citer les six cent dix du site, tels que mesurés par la démonstration d'éducation le 30 septembre 2026, ou garder seulement le nombre que le livre exécute ?]
+Le site montre cela avec un cours plus grand, dans sa démonstration d'éducation du 30 septembre 2026, que je n'ai pas exécutée pour ce livre, et il imprime un compte de six cent dix. Ce chiffre est celui du site, cité avec sa source et sa date. J'imprime trente, parce que trente est ce que ce bloc exécute.
 
 **Une personne peut discuter avec un plan.** Le plan est un médium. Un relecteur rejette une étape, avec une raison ; un acteur nommé sous une portée valide les vingt-neuf autres ; une est sautée ; et le fichier que le relecteur a protégé est le seul fichier encore sur le disque :
 
@@ -316,7 +316,7 @@ Le compte de sept opérations est ce que cette exécution mesure. La garde de la
 
 **J'ai refusé d'abandonner en silence.** Dans le moteur, un envoi vers une boîte de réception pleine est refusé avec un code et compté. Quand la file d'exécution est pleine, les visites suivantes sont abandonnées et comptées. La boucle dit aussi ce qu'elle ne peut pas voir : l'intérieur d'un rappel, l'horloge, et si une déclaration de couverture est vraie.
 
-**J'ai refusé de laisser une machine être le dernier recours.** La constitution de l'interface du domaine de projets a un droit, le sixième sur six : le Droit à un humain. Partout où une machine sert, une personne est joignable, clairement, et sans pénalité. Il est appliqué par un jugement, celui d'une personne, et non par une garde qui s'exécute ; la bibliothèque ne le mentionne pas. [AUTHOR: Voulez-vous que le chapitre le dise dans ces mots et énonce le droit comme le bout humain de la boucle, ou qu'il laisse un renvoi d'une ligne à la constitution de l'interface ?]
+**J'ai refusé de laisser une machine être le dernier recours.** La constitution de l'interface du domaine de projets a un droit, le sixième sur six : le Droit à un humain. Partout où une machine sert, une personne est joignable, clairement, et sans pénalité. Il est appliqué par un jugement, celui d'une personne, et non par une garde qui s'exécute ; la bibliothèque ne le mentionne pas. La constitution le tient pour le bout humain de la boucle ; sa ligne est dans l'annexe C, lue dans le fichier de règles.
 
 ## 5. Le tribunal
 

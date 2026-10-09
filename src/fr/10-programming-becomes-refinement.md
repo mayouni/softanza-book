@@ -236,7 +236,7 @@ Ce qui est absent, et la page doit le dire : les limites de la barrière telle q
 - Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque ; un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle.
 - Une posture de confiance inconnue se classe comme de confiance. Une proposition qui dit venir d'un martien a été admise dans mon exécution contre un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
-- Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. [AUTHOR: La bibliothèque écrit encore le format `.zrfn`, et la charte de Haro, ratifiée le 1er octobre 2026, le retire au profit de `.rfn`. Dois-je imprimer `.zrfn` comme livré, avec une ligne sur la charte ?]
+- Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retire ce format au profit de `.rfn`.
 
 ## 8. Six portes
 

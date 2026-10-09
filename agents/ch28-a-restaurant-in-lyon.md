@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the delivery gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; a speed expectation in the owner's own percentile; browser-side timing; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:26 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-09 04:52 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -178,7 +178,7 @@ One more thing the project learned, and the library does not carry. The project'
 
 **I refused to credit the owner with what a simulation said.** The project carried a rule for years, that no action on its screens takes more than two gestures, and its documents and the site print it as part of the first amendment. Its earliest source is a line in the file of simulated answers of 3 July, written by me and a session. The project set it for itself, from its own simulation of his answers, and kept it. I tell it that way. What he did say, and what I take as his, is the priority on speed.
 
-**I refused to say the library was born of his need.** The constellation design, the virtualization plan, the registry, the payments port and the performance judgment were all first committed after the reversal of 4 July, and all were asked for in July. The site says carefully that the project needed these things and that the library carries them. I will say no more than that. [AUTHOR: Did the owner's need give rise to these parts of the library, or were they already in your plan, and the project found them?]
+**I refused to say the library was born of his need.** The constellation design, the virtualization plan, the registry, the payments port and the performance judgment were all first committed after the reversal of 4 July, and all were asked for in July. The site says carefully that the project needed these things and that the library carries them. I will say no more than that. The record does not say which came first, his need or the parts: it shows the project finding them in the library, and I leave the order open.
 
 ## 5. The court
 
@@ -200,7 +200,7 @@ What is built: the constellation of worlds with its bonds and norm-gated crossin
 
 What is designed: the Lock as a rule of the library, of which the record has no code; the near-natural idiom of the constellation, with the verbs the design names and the class does not have; the two-gesture rule and the other interface rules as checks; a seventy-fifth percentile expectation; browser-side timing.
 
-What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision; a measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle; and the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. [AUTHOR: What happened after 25 August 2026? And may the book print the owner's tightened speed thresholds and his measurement protocol, or only say that such a budget exists?]
+What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision; a measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle; and the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. The record is silent on what happened after 25 August 2026, and I say so. Of the owner's tightened speed thresholds and of his measurement protocol, I say only that such a budget exists.
 
 And what runs today is ordinary. The worlds are single HTML files, one per world, with a vendored framework, no build step and no content network. The server is a Node program of a few hundred lines that uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. None of it runs on the Softanza engine. The library is the project's design reference and the origin, in the project's own account, of its service, delivery and performance planes. The constellation is, in the site's words, a design the library can run. The restaurant does not.
 
@@ -210,7 +210,7 @@ And what runs today is ordinary. The worlds are single HTML files, one per world
 
 **The analyst.** Rigour in numbers was the contract of the first application: a due date computed from the invoice date, a date required, a debt with no due date made visible.
 
-**The designer.** Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. [AUTHOR: Who held the phone in the eleven iterations, the owner or you? The project's files say the real user, and they say you; the sentence needs one answer.]
+**The designer.** Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. On who held the phone in the eleven iterations, the project's files say both, the real user and me, and the chapter does not choose.
 
 **The decision-maker.** The owner accepted the Lock in writing, tightened the speed budget himself, and kept the gate on fixed fees. The library's mirror is a deployment that an entitled person may commit and that is still refused over a fake.
 

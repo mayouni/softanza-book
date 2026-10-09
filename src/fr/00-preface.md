@@ -22,7 +22,7 @@ Chaque chapitre a les mêmes neuf éléments, dans le même ordre. Le concept te
 
 **Ce que la page dit d'elle-même.** Sous chaque titre, une ligne dit quand les blocs se sont exécutés, à quel commit de la bibliothèque, et combien ont tenu leur promesse. Une deuxième ligne dit ce qui les a exécutés : le runtime de l'ancien langage hôte, version 1.27. Haro, le langage dans lequel ce livre est écrit, n'exécute pas encore la bibliothèque, et chaque page le dit. Les binaires du moteur sont copiés d'une construction faite au même commit, et la page dit à quel point cette construction est récente.
 
-**Un brouillon est un brouillon.** Chaque chapitre porte un bandeau qui dit qu'il n'a pas été lu par l'auteur. Les marques qui commencent par `[AUTHOR:` sont les questions auxquelles le dossier n'a pas pu répondre et que je n'ai pas pu trancher seul. Elles sont dans les pages à dessein : vous voyez où je me suis arrêté.
+**Un brouillon est un brouillon.** Chaque chapitre porte un bandeau qui dit qu'il n'a pas été lu par l'auteur. Les questions auxquelles le dossier n'a pas pu répondre étaient autrefois marquées dans les pages. Il y a été répondu en mon nom, par des règles qui n'inventent rien : là où le dossier ne contient rien, la page le dit en une phrase simple et ne comble pas le vide. Ces réponses sont déléguées, et je peux revenir sur chacune en éditant la page. Vous voyez où le dossier s'arrête.
 
 **Les trois médias.** Le site tient le dossier, avec ses lignes de preuve. Le cours, dans le programme d'éducation de la bibliothèque, enseigne le même terrain en quatre langues, et par des exercices jugés en exécutant le programme de l'apprenant. Ce livre tient l'argument. Là où ils diffèrent, la page le dit.
 
@@ -30,4 +30,4 @@ Chaque chapitre a les mêmes neuf éléments, dans le même ordre. Le concept te
 
 L'édition française existe comme traduction des brouillons anglais. Chaque page française le dit, et elle est relue une fois que j'ai marqué la page anglaise comme lue.
 
-[AUTHOR: Cette préface a été écrite en dernier, par la session qui a rédigé le livre, à partir du livre qui existe. Elle ne dit rien de la raison pour laquelle vous l'avez écrit, puisque le dossier ne la dit pas. Gardez-la comme page de travail, ou remplacez-la par la préface que vous aviez rédigée.]
+Cette préface a été écrite en dernier, par la session qui a rédigé le livre, à partir du livre qui existe. Elle ne dit rien de la raison pour laquelle le livre a été écrit, puisque le dossier ne la dit pas. Elle reste une page de travail.

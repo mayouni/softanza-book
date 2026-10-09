@@ -32,7 +32,7 @@ What the three share is that each is a separate tool, and the program itself kno
 
 **Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.**
 
-The record's first principle for this ground is the first clause, and the library's own label calls it a first principle: reality is reached through exactly one door. The default path for consequential change is to rehearse in a twin, generate a plan, and commit the plan. The plan is the door. The framework's summary is three words: rehearse, plan, commit. The structure line of this book, which is mine, says the last clause: production refuses a fake. [AUTHOR: Is the chapter's sentence the first clause, which is a library document without an author line, the second, which is yours, or your own? I have joined them.]
+The record's first principle for this ground is the first clause, and the library's own label calls it a first principle: reality is reached through exactly one door. The default path for consequential change is to rehearse in a twin, generate a plan, and commit the plan. The plan is the door. The framework's summary is three words: rehearse, plan, commit. The structure line of this book's outline says the last clause: production refuses a fake. The first clause is a library document without an author line, and the second is the outline's; the chapter joins them and attributes each part to its source.
 
 ## 3. The Softanza form
 
@@ -370,7 +370,7 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused to say the restaurant's need was the design's origin.** The site says that the emulation and deployment designs take a solution as an example, and that it is an example, not the origin of the design. The sample solution in the documents carries a customer's product name, and I have renamed it in every block. Chapter 28 told the story, and I do not repeat it.
 
-[AUTHOR: The service plan is headed "written 2026-07-23 in answer to the user's question", which asks whether emulation covers databases, business APIs, frontier models and cloud providers, so that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. Was that your question? May the chapter tell it in the first person as the origin of "code first, subscribe later"?]
+The service plan is headed "written 2026-07-23 in answer to the user's question". The question asks whether emulation covers databases, business APIs, frontier models and cloud providers, so that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. The chapter tells the plan's own heading and date. The record does not say who asked, and the chapter does not claim it was the author's question.
 
 ## 5. The court
 
@@ -428,7 +428,7 @@ The block-above stand-in, `LiveGateway`, is such an object.
 
 **A plan flags, it does not rank.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
-What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm, and it cites an in-browser page with "8/8 checks". That page is not in the pinned tree: I searched for it and found none. And I have not seen the emulator's surface in a browser, and the record names no one who has. By the law of chapter 33, that surface is unperceived. [AUTHOR: Do you hold a run of that browser proof with a date and a person who saw it? If not, the chapter says: wired, built by the toolchain, not seen in a browser by anyone the record names.]
+What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm, and it cites an in-browser page with "8/8 checks". That page is not in the pinned tree: I searched for it and found none. And I have not seen the emulator's surface in a browser, and the record names no one who has. By the law of chapter 33, that surface is unperceived. So the chapter says: wired, built by the toolchain, not seen in a browser by anyone the record names.
 
 Also designed: branches of a twin and the plan's alternatives and feedback, for which no method exists; twins for databases, interfaces and networks; and a drift check for recorded answers.
 

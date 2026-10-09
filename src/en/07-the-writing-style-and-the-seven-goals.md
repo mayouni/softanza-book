@@ -178,7 +178,7 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library ships them. Whether they are "kept in the library and left out of the grammar a machine is held to", or retired, is the author's. [AUTHOR: The deck counted free-order parameters, alternatives under any wording and names in other languages as features. The Haro principle refuses them as grammar, and the library still ships the first two. Are they features kept in the library and left out of the grammar a machine is held to, or retired?]
+A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library ships them. What is true today is two facts. The library ships free-order parameters, and the block above runs them; it also ships alternatives under any wording. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold, and I do not make it here: they are shipped, and they are not grammar.
 
 **Consistency: one vocabulary across a string and a list.** The same verb answers on both:
 
@@ -209,7 +209,7 @@ The other four goals (reliability, expressiveness, universality and the one the 
 
 **I refused to recount the tags as mine.** The goals are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study counted about six thousand. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archived monolithic files. So the sentence "applied by hand at six thousand points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features have names in the code and raise when called: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, the `Check` on a list, and the deck's `Yield` and `Perform` forms. I print the tally, and I print its losses with it. [AUTHOR: The deck says seven goals and thirty-three features and "7 root causes of programming complexity". No slide lists the seven causes. Do you want the chapter to name them, one per goal, and which are they?]
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features have names in the code and raise when called: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, the `Check` on a list, and the deck's `Yield` and `Perform` forms. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
 
 ## 5. The court
 
@@ -254,7 +254,7 @@ What is designed:
 
 - **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph, such as a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and found nothing.
 - **A court that reads the goals.** It would harvest the tags. Not built.
-- **The classic form of the test block as the one form for new blocks.** A decision that awaits the author, and chapter 5 asks it. [AUTHOR: Is the classic block, with its narrative header, its questions with `#-->` and its closing time, now the one form for new test blocks, with the converted blocks left as they are?]
+- **The classic form of the test block as the one form for new blocks.** The study's ruling is that the revival "is not a rewrite" but a decision that the classic form is the one form for new blocks, with the converted blocks left as they are. The test tree's own README still calls the classic form the authoritative test surface. I found no ruling that makes it the one form, so it stays a decision, and chapter 5 names it.
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is not declared.
 - **The discipline declared once.** Partly done on the site, as data, which is the page's source and not a court.
 
