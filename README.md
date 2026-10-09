@@ -32,6 +32,7 @@ library at `D:/GitHub/stzlib` with its engine built (`tools/book_common.py`, `LI
 | `tools/` | the builder, the runner, the guard reader, the judge (copied from the site, lineage in its header) |
 | `reader/shell.refine.html` | the Refine reader's shell, unchanged; see `FORMAT.md` |
 | `data/` | what the runs and the guard reading recorded; pages show outputs from here, never from a source |
+| `tools/print_book.py` | the press edition: `print/softanza-en.pdf`, `print/softanza-fr.pdf` (not committed; `python tools/print_book.py`) |
 | `book.schema.json` | the schema of `book.json`; the build validates against it (`tools/book_schema.py`) |
 | `en/`, `fr/`, `index.html`, `status.html`, `book.json`, `llms-book.txt`, `llms-full-book.txt`, `agents/` | built; do not edit by hand |
 
