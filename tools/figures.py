@@ -61,7 +61,7 @@ def platform_svg(f, lang="en"):
     floors = [  # y, height, title, court lines
         (90, 92, "The crafters", ["the interface constitution:", "every element traces to a verb"]),
         (196, 112, "The worlds", ["bonds and norms between worlds;", "build before deploy;", "no fake in production"]),
-        (322, 150, "The areas", [f"{f['atlas']['lanes']} lanes, each rated", "with its proof line"]),
+        (322, 150, "The areas", [f"{f['atlas']['lanes']} lanes, rated,", "most with a proof line"]),
         (486, 92, "The layers", [f"{f['guards']} narrated guards,", "one dependency rule"]),
         (592, 92, "The engine", ["engine tests; contracts", "between the floors"]),
     ]

@@ -4,7 +4,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a page for the architect; the five-row guarantee sheet
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-09 05:32 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

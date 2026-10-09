@@ -8,7 +8,7 @@ narrations: [stz-rules-as-graph-rules-narration.md, stz-governance-lineage-narra
 site: [estate, principles]
 guards: [coderule_narrated, codegraph_narrated, coderule_project_narrated]
 stage:
-  built: "le protocole, ses mémos et son registre des décisions ; trois hooks qui refusent l'indexation en bloc et une machine inondée ; l'instrument qui mesure les horodatages composés ; les quatorze règles de la maison de la bibliothèque, sur un graphe du code"
+  built: "le protocole, ses mémos et son registre des décisions ; trois hooks : l'un refuse l'indexation en bloc, l'autre refuse une modification de registre faite sur une vue périmée de son système source, le troisième refuse le travail sur une machine inondée ; l'instrument qui mesure les horodatages composés ; les quatorze règles de la maison de la bibliothèque, dont cinq sur un graphe du code"
   designed: "un surveillant qui réveille une session quand un fichier arrive, à la place des horloges ; un tribunal de style pour le code qu'un programmeur ou un agent écrit"
   absent: "des chiffres de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui ait essayé le protocole ; une vérification d'un mot dans la langue du lecteur"
 status: draft
@@ -33,7 +33,7 @@ Quand le terrain parle des règles que ces agents suivent, il pense à un fichie
 
 ## 2. Le premier principe
 
-La phrase à laquelle cette partie du dossier revient sans cesse a été écrite par l'une des sessions, et je la garde parce qu'elle est juste : **chaque loi cite l'incident qui l'a gagnée ; une loi sans un échec daté derrière elle est une préférence.**
+La phrase à laquelle cette partie du dossier revient sans cesse a été écrite par l'une des sessions, et je la garde parce qu'elle est juste : **chaque loi cite l'incident qui l'a gagnée. Une loi nouvelle sans un échec daté derrière elle est une préférence, et sa place est dans un guide de style.**
 
 ## 3. La forme Softanza
 
@@ -43,21 +43,21 @@ Il n'y a pas de cadre logiciel ici. Pas de superviseur, pas de courtier de messa
 
 Ce qui en fait une discipline et non un système de classement, c'est que chaque règle a été payée.
 
-**Indexer par chemin explicite.** Plusieurs sessions écrivent dans le même dépôt en même temps. Deux fois, une session a ajouté d'un coup tous les fichiers modifiés à son commit, et a emporté le travail d'une autre session : une fois elle a détruit net une modification, une fois elle a poussé la moitié du déplacement d'un collègue entre deux dépôts. La seconde fois, rien n'a été perdu, et le dossier dit que c'était de la chance, pas de la méthode. Alors maintenant un hook refuse la commande avant qu'elle ne s'exécute. Il a été testé sur vingt formes de la commande, et dix-huit se sont comportées comme écrit ; les deux autres ont été réparées le jour même. La session qui a créé le dépôt de ce livre a rencontré ce hook dès sa toute premier commit, et on lui a dit pourquoi, dans ces mots, avant qu'elle puisse faire le moindre mal.
+**Indexer par chemin explicite.** Plusieurs sessions écrivent dans le même dépôt en même temps. Deux fois, une session a ajouté d'un coup tous les fichiers modifiés à son commit, et a emporté le travail d'une autre session : une fois elle a détruit net une modification, une fois elle a poussé la moitié du déplacement d'un collègue entre deux dépôts. La seconde fois, rien n'a été perdu, et le dossier dit que c'était de la chance, pas de la méthode. Alors maintenant un hook refuse la commande avant qu'elle ne s'exécute. Il a été testé sur vingt formes de la commande, et dix-huit se sont comportées comme écrit. Des deux autres, `git stage -A` a été réparée le jour même ; l'autre, que le hook refuse aussi un texte qui ne fait que citer la forme, est un coût accepté, rencontré à la section 6.
 
 **Lire l'heure sur l'horloge, ne jamais la composer.** Une session écrit une heure sur chaque message. Les sessions, il s'avère, inventent des heures : elles écrivent une heure qui leur paraît juste après la précédente. Personne ne s'en aperçoit jusqu'à ce qu'une heure inventée passe minuit et qu'un message soit classé sous le mauvais jour. Quand la session centrale s'est mesurée elle-même, cinq de ses vingt-cinq horodatages avaient été composés, le pire de quarante-deux minutes, et quatre des cinq étaient plus anciens que la loi qui les interdisait. Sur les autres bureaux, trente-quatre horodatages sur cent cinquante et un étaient composés, sur treize des dix-sept bureaux mesurés. Les lignes derrière ce chiffre sont publiées, parce que la première fois qu'il l'a été, les lignes avaient été jetées et le chiffre n'a pas pu être défendu trois heures plus tard. Cinq semaines après la loi, la session centrale a de nouveau composé un horodatage. Quatre avertissements écrits ne l'avaient pas arrêtée ; un pair qui lisait un fichier l'a fait. La note qu'elle a laissée est la meilleure phrase du protocole : un rappel n'est pas un mécanisme.
 
 **Les mots nomment des états, jamais des personnes.** Une session a un jour rapporté que mon arbre de travail était « sale ». Un travail qui n'est pas encore commité n'est pas sale, et très souvent il ne contient aucune erreur ; et un mot qui juge le travail juge celui qui l'a fait. Alors le dossier tient une table des mots que le domaine de projets n'emploie pas, avec le mot qu'il emploie à la place.
 
-**Ce qu'aucun compteur ne peut voir.** Le volet sonore de la bibliothèque tenait six cent vingt-deux assertions réussies sur dix-neuf gardes alors qu'il était, pour tout auditeur, cassé. J'ai entendu quatre défauts qu'aucun compteur n'avait signalés : une voix trop rapide pour être comprise, une phrase coupée avant sa fin. La loi qui en est sortie dit qu'une chose que personne n'a perçue est dans un état, pas dans l'échec : non perçu est un état, et la page doit le dire. Cette loi est la raison pour laquelle chaque chapitre de ce livre porte la ligne « pas encore lu par l'auteur » jusqu'à ce que je l'aie lu.
+**Ce qu'aucun compteur ne peut voir.** Le volet sonore de la bibliothèque tenait six cent vingt-deux assertions réussies sur dix-neuf gardes alors qu'il était, pour tout auditeur, cassé. J'ai entendu quatre défauts qu'aucun compteur n'avait signalés : une voix trop rapide pour être comprise, une phrase coupée avant sa fin. La loi qui en est sortie dit qu'une chose que personne n'a perçue est dans un état, pas dans l'échec : non perçu est un état, et la page doit le dire. C'est le même instinct que la ligne « pas encore lu par l'auteur » que porte chaque chapitre de ce livre jusqu'à ce que je l'aie lu.
 
-**La boucle se compte en secondes, pas en minutes.** J'ai arrêté deux sessions sur la même exécution de test de huit minutes. Elle a été mesurée : six secondes sur les huit minutes étaient de la couverture, le reste était trois balayages qui ne testaient rien de nouveau. Elle a été réécrite pour durer vingt secondes. J'avais écrit, de mes propres mots, qu'elle « prend beaucoup de temps et devrait être repensée ». La loi a été écrite par une session ; la phrase était la mienne.
+**La boucle se compte en secondes, pas en minutes.** J'ai arrêté deux sessions sur la même exécution de test de huit minutes. Elle a été mesurée : six secondes sur les huit minutes étaient de la couverture, le reste était trois sections qui refaisaient le rendu du monde pour tester une seule propriété de pixel. Elle a été réécrite pour durer vingt secondes. J'avais écrit, de mes propres mots, qu'elle « prend beaucoup de temps et devrait être repensée ». La loi a été écrite par une session ; la phrase était la mienne.
 
 **Ne jamais demander sans dire comment.** Une session m'a un jour demandé de vérifier si un chiffre était juste, sans me donner aucun moyen de le vérifier. J'ai répondu : s'il vous plaît, ne demandez jamais une chose sans me dire comment l'obtenir. Maintenant chaque demande adressée à une personne porte la commande exacte, le chemin exact, la ligne exacte à lire.
 
 Vous voyez la forme. Un échec, daté. Une règle, écrite là où la session suivante la lira. Puis, quand la règle est enfreinte malgré tout, un mécanisme. Certaines lois sont arrivées à la dernière étape, d'autres sont encore une règle écrite, et le dossier dit lesquelles.
 
-Là où les lois touchent le code, la bibliothèque elle-même peut les tenir. Ses règles de la maison sont des validateurs qui s'exécutent sur un graphe du code, la sixième loi de l'architecture de l'intelligence rendue exécutable : des règles qu'un agent peut lancer avant de commiter, et non du folklore qu'il doit deviner. L'une d'elles porte sur les mots :
+Là où les lois touchent le code, la bibliothèque elle-même peut les tenir. Ses quatorze règles de la maison sont des validateurs, cinq sur un graphe du code et les autres sur le texte, la sixième loi de l'architecture de l'intelligence rendue exécutable : des règles qu'un agent peut lancer avant de commiter, et non du folklore qu'il doit deviner. L'une d'elles porte sur les mots :
 
 ```haro
 cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
@@ -70,7 +70,7 @@ aFindings = StzCheckCode(cCode)
 #--> 1
 ```
 
-Lisez deux fois la dernière ligne. Le code est toujours propre. La règle de ton avertit ; elle ne refuse pas. Une règle de mots conseille, et le dossier le dit dans sa propre doctrine : la loi des mots est tranchée plutôt que vérifiée. Voici le remède que propose le message :
+Lisez deux fois la dernière ligne. Le code est toujours propre. La règle de ton avertit ; elle ne refuse pas. Une règle de mots conseille. La doctrine du domaine de projets dit quelque chose de proche de sa propre loi des mots : aucune session ne peut tester l'effet d'un mot sur son lecteur, si bien que cette loi est tranchée plutôt que vérifiée. Voici le remède que propose le message :
 
 ```haro
 cCode = "class Shop" + nl + "def RemoveOrder()" + nl + "  return" + nl
@@ -87,27 +87,27 @@ Et les règles forment un ensemble fermé, qu'un agent peut lister avant d'écri
 #--> no-aggressive-verbs
 ```
 
-Cette règle de ton est entrée dans la bibliothèque en juillet 2026, cinq semaines avant que le domaine de projets tranche sur ses propres mots. Le dossier ne relie pas les deux, je ne le ferai donc pas non plus. Mais c'est le même instinct à deux altitudes : les mots que nous employons à propos du travail font partie du travail.
+Le dossier ne relie pas la règle de ton de la bibliothèque à la loi des mots du domaine de projets, tranchée le 21 août 2026, je ne le ferai donc pas non plus. Mais c'est le même instinct à deux altitudes : les mots que nous employons à propos du travail font partie du travail.
 
 ## 4. La décision, et ce que j'ai refusé
 
 **J'ai refusé un cadre logiciel.** L'arrangement, ce sont des fichiers, un historique et quelques hooks. Un superviseur qui planifierait les agents serait un programme de plus à qui se fier, et une chose de plus qui décide sans trace. Ici, une session qui ne tourne pas ne laisse que ses fichiers, et les fichiers sont la vérité.
 
-**J'ai refusé qu'un coordinateur note son législateur.** L'autorité descend de moi ; la correction remonte de n'importe quelle session vers la centrale, et de la centrale vers moi. Un coordinateur qui jugerait ses propres règles serait la seule partie du système que rien ne pourrait corriger.
+**J'ai refusé qu'un coordinateur note son législateur.** L'autorité descend de moi ; la correction remonte, et la session centrale est corrigée par l'Observateur et liée par la doctrine. Un coordinateur qui jugerait ses propres règles serait la seule partie du système que rien ne pourrait corriger.
 
-**J'ai refusé d'automatiser au maximum.** À partir du milieu d'août 2026, des sessions ont été ouvertes par des horloges. Le 27 août, je les ai arrêtées. Le dossier garde ma raison telle qu'elle a été écrite alors : les routines consommaient du quota sans valeur ajoutée. Et il garde la partie inconfortable : ce jugement était la seule mesure que quiconque avait, parce que la ligne de coût que chaque session écrit à sa clôture ne porte aucun compte de jetons. Le harnais ne dit pas à une session ce qu'elle a dépensé. Sur les trois cent quatre-vingts lignes de coût écrites jusqu'ici, une seule porte un chiffre. Ce que les horloges ont coûté n'est pas dans le dossier : il garde la raison et aucun chiffre, et je n'en donne aucun. Depuis, une minuterie peut lancer un script, jamais un modèle ; une session démarre quand un fichier arrive dans un dossier surveillé, ou quand je la démarre.
+**J'ai refusé d'automatiser au maximum.** À partir du milieu d'août 2026, des sessions ont été ouvertes par des horloges. Le 27 août, je les ai arrêtées. Le dossier garde ma raison telle qu'elle a été écrite alors : les routines consommaient du quota sans valeur ajoutée. Et il garde la partie inconfortable : ce jugement était la seule mesure que quiconque avait, parce que la ligne de coût que chaque session écrit à sa clôture ne porte aucun compte de jetons. Le harnais ne dit pas à une session ce qu'elle a dépensé. Sur les trois cent quatre-vingts lignes de coût écrites jusqu'ici, une seule porte un chiffre. Ce que les horloges ont coûté n'est pas dans le dossier : il garde la raison et aucun chiffre, et je n'en donne aucun. Depuis, la décision est qu'une minuterie peut lancer un script, jamais un modèle, et toutes sont en pause pour l'instant. La direction est qu'une session démarre quand un fichier arrive dans un dossier surveillé, ou quand je la démarre ; le surveillant n'est pas encore écrit (section 7).
 
 **J'ai refusé de trancher en mon absence.** Une décision n'est écrite dans le dossier que tant que je suis là. Quand j'ai demandé à la session centrale de régler ce qui était en attente à ma place, le 28 septembre, les cinq décisions qu'elle a prises ce jour-là sont marquées comme prises sur ma délégation, pour que personne ne les prenne plus tard pour les miennes. Les décisions placées au début de ce livre sont marquées de la même façon.
 
 **J'ai refusé que le protocole devienne un produit.** La doctrine du harnais est ouverte, et elle ne doit jamais être vendue : sa valeur est dans ce qu'elle refuse. Elle n'a aussi été prouvée qu'en un seul endroit, une personne, une machine, un système de fichiers, une quinzaine de sessions. Elle n'a aucun adoptant hors de ce domaine de projets.
 
-**Et j'ai accepté une perte.** Le code des deux dernières années a été écrit en grande partie par des sessions, et ma main, qui était le style, s'est amincie là où elles ont écrit. Une étude du dossier l'a mesuré : la promesse sous chaque ligne, la manière de la maison d'écrire un exemple, se tient à près de cent pour mille lignes dans les recettes courtes et à soixante-quinze dans mes articles, et à moins de un dans les gardes que les sessions ont écrites, qui affirment sous une autre forme. Les sessions ont même pris le nom de mes articles pour leurs fichiers de test, un nom qu'un modèle a proposé. J'accepte le code d'implémentation qu'elles ont écrit. Je n'accepte pas que le style qu'un programmeur ou un agent écrit avec Softanza soit le leur plutôt que celui de la maison. C'est pourquoi la loi de la partie II existe, et pourquoi ce livre est écrit de ma voix, avec les sessions comme chercheuses et comme tribunal, et pourquoi chaque chapitre attend ma lecture avant de perdre le mot brouillon.
+**Et j'ai accepté une perte.** Le code des deux dernières années a été écrit en grande partie par des sessions, et ma main, qui était le style, s'est amincie là où elles ont écrit. Une étude du dossier l'a mesuré : la promesse sous chaque ligne (la ligne `#-->`), la manière de la maison d'écrire un exemple, se tient à près de cent pour mille lignes dans les recettes courtes (les quickers) et à soixante-quinze dans mes articles, et à moins de un dans les gardes narrées que les sessions ont écrites, qui affirment sous une autre forme. Les sessions ont même pris le nom de mes articles pour leurs fichiers de test, un nom qu'un modèle a proposé. J'accepte le code d'implémentation qu'elles ont écrit. Je n'accepte pas que le style qu'un programmeur ou un agent écrit avec Softanza soit le leur plutôt que celui de la maison. C'est pourquoi la loi de la partie II existe, et pourquoi ce livre est écrit de ma voix, avec les sessions comme chercheuses et comme tribunal, et pourquoi chaque chapitre attend ma lecture avant de perdre le mot brouillon.
 
 ## 5. Le tribunal
 
 Aucune garde de la bibliothèque ne prouve le protocole. Ses tribunaux sont hors de la bibliothèque, et je les nomme par ce qu'ils font : un hook qui refuse l'indexation en bloc ; un hook qui refuse le travail quand la machine n'a plus de mémoire à revendre ; une vérification que les hooks installés sont les hooks écrits ; un instrument qui compare chaque horodatage à son commit et publie les lignes. Ce sont des scripts, pas du Haro, et le lecteur de ce livre ne peut pas compter leurs assertions ; ils sont donc nommés ici et non dans la ligne du tribunal ci-dessous.
 
-Les blocs de ce chapitre reposent sur les gardes de la bibliothèque pour ses règles de la maison : `coderule_narrated` prouve qu'une règle de code est une règle sur le graphe, que les constats de la maison sortent sur une fixture plantée sous une forme figée, que les règles sont au nombre de quatorze, et qu'une définition ou un commentaire n'est pas pris pour un appel. `codegraph_narrated` prouve le graphe en dessous, et `coderule_project_narrated` lance les règles sur toute la bibliothèque.
+Les blocs de ce chapitre reposent sur les gardes de la bibliothèque pour ses règles de la maison : `coderule_narrated` prouve qu'une règle de code est une règle sur le graphe, que les constats de la maison sortent sur une fixture plantée sous une forme figée, que les règles sont au nombre de quatorze, et qu'une définition ou un commentaire n'est pas pris pour un appel. `codegraph_narrated` prouve le graphe en dessous, et `coderule_project_narrated` lance les règles de projet sur un dossier de fixture.
 
 ## 6. Le terrain, et où il mène
 
@@ -117,15 +117,15 @@ Le terrain mène en comptabilité. Une interface payante rapporte les jetons de 
 
 Le terrain mène en outillage pour de nombreux auteurs. Les branches, les files de fusion et les propriétaires de dossiers traitent la concurrence à une échelle que le domaine de projets n'a pas rencontrée ; ici, la réponse est une discipline et un hook, et le hook lit le texte d'une commande, si bien qu'il refuse aussi un message de commit qui ne fait que citer la forme interdite. Ce coût est connu et accepté.
 
-Là où je pense que le dossier se distingue, c'est dans une habitude : chaque loi porte l'échec qui l'a payée, et le dossier publie son propre taux d'infraction à sa propre loi. Le bureau central a enfreint la loi des horodatages plus souvent que le domaine de projets qu'il mesurait, et ce chiffre est imprimé à côté de celui du domaine de projets.
+Là où je pense que le dossier se distingue, c'est dans une habitude : chaque loi porte l'échec qui l'a payée, et le dossier publie son propre taux d'infraction à sa propre loi. Le bureau central a enfreint la loi des horodatages à peu près aussi souvent que le domaine de projets qu'il mesurait, 5 sur 25 contre 34 sur 151, sur une surface différente, et quatre des cinq datent d'avant la loi ; les deux chiffres sont imprimés côte à côte.
 
 ## 7. La limite
 
-Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, l'instrument qui mesure les horodatages, et les quatorze règles de la maison de la bibliothèque sur son graphe de code.
+Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, l'instrument qui mesure les horodatages, et les quatorze règles de la maison de la bibliothèque, dont cinq sur son graphe de code.
 
 Ce qui est conçu : un surveillant qui réveille une session quand un fichier arrive, ce qui est le bon remplacement des horloges et n'est pas écrit ; un tribunal de style pour le code qu'un programmeur ou un agent écrit avec la bibliothèque, pour que le style de la maison soit tenu par une machine et non par un espoir.
 
-Ce qui est absent : un chiffre de jetons dans le dossier des coûts ; toute équipe hors de ce domaine de projets qui ait employé le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur, que la loi des mots demande et que rien n'exécute. L'étude qui a lu le dossier a nommé une limite de plus, et je la laisse ici dans ses mots : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et je devrais surveiller le rapport. Le dossier ne contient aucune lecture de ce rapport.
+Ce qui est absent : un chiffre de jetons dans le dossier des coûts ; toute équipe hors de ce domaine de projets qui ait employé le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur, que la loi des mots demande et que rien n'exécute. L'étude qui a lu le dossier a nommé une limite de plus, et je la laisse ici dans ses mots, « l'auteur » étant moi : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et l'auteur devrait surveiller le rapport. Le dossier ne contient aucune lecture de ce rapport.
 
 ## 8. Six portes
 
@@ -133,7 +133,7 @@ Ce qui est absent : un chiffre de jetons dans le dossier des coûts ; toute équ
 
 **L'analyste.** Le dossier est une donnée que vous pouvez interroger, et il publie ses propres taux d'erreur à côté de ses règles.
 
-**Le concepteur.** Un mot nomme un état, jamais une personne. Un message est une structure fermée qu'un lecteur parcourt d'un coup d'œil, testée sur un lecteur dont la première langue n'est pas l'anglais.
+**Le concepteur.** Un mot nomme un état, jamais une personne. Un message est une structure fermée qu'un lecteur parcourt d'un coup d'œil, écrite pour rester lisible à un lecteur dont la première langue n'est pas l'anglais.
 
 **Le décideur.** Une décision n'est écrite qu'en votre présence. Quand aucun chiffre ne peut répondre à une question, décidez par le jugement et écrivez que c'était un jugement.
 

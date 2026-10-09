@@ -9,8 +9,8 @@ narrations: [stz-agents-that-cannot-hurt-you-narration.md, stz-service-virtualiz
 site: [agentic, wise]
 guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agentgraph_narrated, piagent_narrated, ownagentstack_narrated]
 stage:
-  built: "le premier échelon du modèle de langage de domaine ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle non gouverné"
-  designed: "la cascade de la machine pensante entre les facultés ; l'unité typée de prédiction validée en cinq étapes ; la négociation entre un agent et son relecteur"
+  built: "le premier échelon du modèle de langage de domaine et son second, un petit bigramme ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle non gouverné"
+  designed: "la cascade de la machine pensante entre les facultés ; la pile de décision, ses pièces à côté de l'agent et pas encore dedans ; l'unité typée de prédiction, une conception du domaine de projets avec cinq étapes de validation et aucune chaîne de celles-ci dans la bibliothèque ; la négociation entre un agent et son relecteur"
   absent: "quatre des cinq agents propres de la bibliothèque, dont l'induction à partir d'exemples"
 status: draft
 rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
@@ -19,9 +19,9 @@ research: research/ch17.md
 
 ## Ce que l'âge de l'IA change ici
 
-Dans les deux mouvements qui précèdent celui-ci, l'âge de l'IA a changé une chose chacun. En programmation, il a changé qui écrit le code. Dans les langages, il a changé qui prononce la phrase. Ici il change tout, parce que ce mouvement porte sur l'intelligence elle-même, et que le terrain emploie désormais le mot pour dire une seule chose : un grand modèle de langage à l'intérieur de votre logiciel.
+Dans les deux mouvements qui précèdent celui-ci, l'âge de l'IA a changé une chose chacun. En programmation, il a changé qui écrit le code. Dans les langages, il a changé qui prononce la phrase. Ici il change tout, parce que ce mouvement porte sur l'intelligence elle-même, et que le terrain emploie désormais le mot surtout pour dire une seule chose : un grand modèle de langage à l'intérieur de votre logiciel.
 
-Alors ce chapitre fait ce que font les deux autres chapitres de loi, et énonce la loi de sa partie avant les preuves. Il dit aussi comment la partie dépend des autres, parce que l'ordre de ce livre va du familier au nouveau, et que l'ordre du dossier va dans l'autre sens. L'intelligence, dans Softanza, est gouvernée par ce qui l'a précédée. Le tribunal qui juge la phrase d'un modèle est le tribunal de la Partie II, qui juge le code quel que soit son auteur. La phrase qu'il juge est une phrase d'un langage fermé, qui est la Partie III. On ne peut mettre un modèle en dernier que parce qu'il y a quelque chose de solide à mettre en premier.
+Alors ce chapitre fait ce que font les deux autres chapitres de loi, et énonce la loi de sa partie avant les preuves. Il dit aussi comment la partie dépend des autres, parce que l'ordre de ce livre va du familier au nouveau. L'intelligence, dans Softanza, est gouvernée par ce qui l'a précédée. Le tribunal qui juge la phrase d'un modèle est le tribunal de la Partie II, qui juge le code quel que soit son auteur. La phrase qu'il juge est une phrase d'un langage fermé, qui est la Partie III. On ne peut mettre un modèle en dernier que parce qu'il y a quelque chose de solide à mettre en premier.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -73,7 +73,7 @@ done
 #--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
 ```
 
-Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Le modèle, s'il y en a un, est le dernier de ces moyens, pas le premier.
+Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont absents. Un modèle, s'il y en a un, vient après toutes, pas en premier.
 
 La troisième pièce est la dérivation, ma définition à l'œuvre. Une loi est déclarée, et un fait que personne n'a enregistré est prouvé :
 
@@ -88,7 +88,7 @@ oKG.KnowRelation("margherita", "contains", "tomato-sauce").
 #--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
 ```
 
-De la connaissance nouvelle à partir de la connaissance existante, avec sa chaîne écrite en toutes lettres. Et un « non » aussi certain que le « oui », parce qu'il est le résultat d'une recherche, pas d'une humeur. Pas de récupération, pas d'entraînement. Ajouter un fait fait que le système sait davantage ; ajouter une loi lui fait raisonner plus loin.
+De la connaissance nouvelle à partir de la connaissance existante, avec sa chaîne écrite en toutes lettres. Et un « non » aussi certain que le « oui », parce qu'il est le résultat d'une recherche, pas d'une humeur. Il est certain de ce qui est enregistré et déclaré, pas du monde : il dit « non dérivable », pas « faux ». Pas de récupération, pas d'entraînement. Ajouter un fait fait que le système sait davantage ; ajouter une loi lui fait raisonner plus loin.
 
 Puis le modèle. Il est le bienvenu, et il est tenu. Branchez la sortie d'un modèle directement sur un effet, ici l'envoi d'un message, et la composition est refusée avant que rien ne s'exécute :
 
@@ -138,7 +138,7 @@ oRog.AddGovernedSkill(oSk, "order-stock")
 
 Le stock est bas, la compétence veut commander, et l'agent n'a jamais reçu la permission. Il ne se passe rien, et le journal dit pourquoi, par son nom. Le monde est comme il était.
 
-Mettez les pièces sur une ligne et vous avez la pile que nomme la vision de la plateforme : percevoir, décider, réagir, apprendre, sans aucun modèle de langage. La perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
+Mettez les pièces sur une ligne et vous avez la pile que nomme la vision de la plateforme (son Étoile polaire, ratifiée le 27 septembre 2026) : percevoir, décider, réagir, apprendre, sans aucun modèle de langage. C'est une conception, pas un agent assemblé. Dans cette conception, la perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Les pièces existent dans la bibliothèque à côté de l'agent, pas encore dedans : l'agent ci-dessus n'en appelle aucune. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
 
 Le chapitre 18 raconte les cinq registres d'une réponse et la conversation qui demande. Le chapitre 19 raconte le modèle de langage de domaine, de son premier échelon, sans neurones, à son second, entraîné sur les faits propres du premier et rien d'autre. Le chapitre 20 raconte l'agent qui ne peut pas vous nuire : il propose, un atelier répète, le tribunal juge, et seul un acteur gouverné valide. Le chapitre 21 raconte le tribunal lui-même. Le chapitre 22 compare tout cela au terrain, et imprime où le terrain mène.
 
@@ -166,15 +166,15 @@ Le terrain mène en portée. Ses frameworks se connectent à des services héber
 
 Le terrain mène sur le marché. Il existe un marché du travail pour sa pile, et pas encore pour celle-ci.
 
-Le terrain mène sur les modèles. Le second échelon du modèle de langage de domaine, tel que construit, est un petit modèle neuronal de paires de mots, et l'étape qui ferait de lui davantage n'est pas commencée. Softanza ne construit pas les grands générateurs et ne rivalise pas avec eux.
+Le terrain mène sur les modèles. Le second échelon du modèle de langage de domaine, tel que construit, est un petit modèle neuronal de paires de mots, et la fonderie au-delà du bigramme est conçue (chapitre 19). Softanza ne construit pas les grands générateurs et ne rivalise pas avec eux.
 
 Là où je pense que la loi se distingue, c'est en trois endroits. Une décision ici ne coûte rien, s'exécute hors ligne et donne la même réponse chaque jour, de sorte qu'on peut la tester avec des promesses ordinaires. Un modèle ici ne peut pas agir, par construction, pas par vigilance. Et la phrase d'un modèle, là où l'on en emploie un, peut être tenue à la grammaire d'un langage déclaré avant d'être émise, au lieu d'être vérifiée puis relancée après.
 
 ## 7. La limite
 
-Ce qui est construit : le premier échelon du modèle de langage de domaine, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
+Ce qui est construit : le premier échelon du modèle de langage de domaine et son second, un petit bigramme, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
 
-Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise ; l'unité typée de prédiction, validée en cinq étapes avant de pouvoir entrer dans le graphe ; la conversation entre un agent et celui qui relit son plan, qui atteint le plan et pas encore la discussion à son sujet.
+Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise ; la pile de décision qui perçoit, décide, réagit et apprend, dont les pièces existent à côté de l'agent et pas encore dedans ; l'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque ; la conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet pas encore.
 
 Ce qui est absent : quatre des cinq agents propres de la bibliothèque. La liste le dit simplement :
 
@@ -204,7 +204,7 @@ Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de 
 
 **L'analyste.** Un fait ou une règle que vous ajoutez fait que le système en sait plus, sans changement de code et sans entraînement, et chaque réponse porte son pourquoi.
 
-**Le concepteur.** Le système pose à l'utilisateur une question responsable à la fois, et la question peut être rendue dans n'importe quel médium : un terminal, une page, un agent.
+**Le concepteur.** Le système pose à l'utilisateur une question responsable à la fois, et la question est remise à n'importe quelle porte sous forme de cadre, pour qu'un terminal, une page ou un agent puisse la rendre ; seul le terminal a tourné ici.
 
 **Le décideur.** Une décision ne coûte rien par appel, s'exécute hors ligne et est la même demain. Les quatre agents encore réservés sont l'écart honnête.
 

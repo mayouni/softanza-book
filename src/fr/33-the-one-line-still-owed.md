@@ -86,7 +86,7 @@ La personne avait le droit de déployer. Le déploiement ne s'est pourtant pas e
 
 Le plancher est donc là : déclarer, construire, répéter, refuser le faux, valider par un acteur gouverné. Maintenant l'absence.
 
-Softanza a été utilisée. Je l'ai écrit au chapitre 1 et je m'y tiens, parce que l'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré, et je l'ai corrigée. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, sous la discipline que la bibliothèque porte désormais, installé sur son propre réseau sous licence, et le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier et l'a éprouvée sur le terrain ; le dossier de ce projet s'arrête au 25 août 2026, avec un avenant clos le 4 août et un propriétaire qui a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
+Softanza a été utilisée. Je l'ai écrit au chapitre 1 et je m'y tiens, parce que l'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré, et je l'ai corrigée. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence, et le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier et l'a éprouvée sur le terrain ; le dossier de ce projet s'arrête au 25 août 2026, avec un avenant clos le 4 août et un propriétaire qui a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
 
 Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation n'est pas construit. Le site dit que leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli.
 
@@ -95,16 +95,16 @@ La ligne que le dossier ne porte pas encore est donc celle-ci : *la solution a t
 Ce qui sépare d'ici cette ligne, lu dans le dossier et non composé :
 
 1. **Les déclarations d'un client tournent sur le moteur au lieu de la pile ordinaire.** Le site dit que les déclarations sont en cours d'écriture ; je n'en ai trouvé aucun fichier, et le chapitre 31 dit où j'ai cherché ; le passage n'est pas fait.
-2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant, sous Windows, toutes les assertions que l'ancien runtime passe sur la bibliothèque ; son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Haro ne fait pas encore tourner la bibliothèque.
+2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant toutes les assertions que l'ancien runtime passe sur la bibliothèque, sauf une requête HTTP/2 qui a échoué une fois dans la passe ; sur chaque ligne stable, 3 461 des 5 112 programmes concordent avec l'ancien runtime. Son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Haro ne fait pas encore tourner la bibliothèque.
 3. **La solution écrit sa fiche de garanties.** La vision demande à chaque solution cinq lignes, une pour chaque système auquel elle répond, technique, social, écologique, économique et culturel, jugées comme des fixtures, la machine en étant dérivée. Aucune solution n'en a écrit.
 4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée démarre et se juge elle-même dans un émulateur ; des quatre promesses que fait son profil hébergé, l'émulateur peut en vérifier trois, et la quatrième attend un chien de garde sur une vraie carte. Aucun client ne fait tourner sur elle une charge de production.
 5. **Une personne le perçoit, et le dossier dit qui.** Pas un compteur. Une personne, nommée, avec une date et ce qu'elle a dit.
 
 Le dernier pas est une loi du domaine de projets, et elle a été payée. Le volet sonore de la bibliothèque a un jour tenu des centaines d'assertions réussies alors qu'il était, à mon oreille, cassé. Depuis, un travail qui atteint une personne par un sens doit être perçu par une personne, et le dossier doit dire qui l'a perçu et ce qu'elle a dit. Et quand personne ne l'a fait, la loi le dit simplement : non perçu est un état, pas un échec. Un rapport peut être honnête et rester non perçu.
 
-Le dossier tient déjà la forme de la ligne. Dans un autre plan, le 2 octobre 2026, j'ai écouté un son que la bibliothèque avait fait et j'ai dit, dans les mots écrits : « yes it's real drum!! » (les mots sont écrits en anglais dans le dossier) Ce n'est pas une solution, et ce n'est pas un client. Mais c'est une personne, une date et une phrase, et c'est à cela que ressemblera la ligne unique.
+Le dossier tient déjà la forme de la ligne. Dans un autre plan, le 2 octobre 2026, le dossier dit que le Principal a écouté un son que la bibliothèque avait fait et a dit, dans les mots écrits : « yes it's real drum!! » (les mots sont écrits en anglais dans le dossier) Ce n'est pas une solution, et ce n'est pas un client. Mais c'est une personne, une date et une phrase, et c'est à cela que ressemblera la ligne unique.
 
-Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèque dessine ont été jugées par un modèle, quarante et une, vingt justes, neuf fausses, douze incertaines, et le dossier dit qu'aucun humain ne les a encore regardées. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont dus.
+Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèque dessine ont été jugées par un modèle, quarante et une images ou sections de texte, vingt justes, neuf fausses, douze incertaines, et le dossier dit qu'aucun humain ne les a encore regardées. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont dus.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -114,7 +114,7 @@ Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèq
 
 **J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont à écrire une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Réécrire serait plus rapide à annoncer et plus lent à croire.
 
-**J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. L'étude qui a lu le dossier a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit, et je suis d'accord. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
+**J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. L'étude qui a lu le dossier a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
 
 **J'ai refusé qu'un instrument tienne lieu de preuve d'une perception.** Une phase dont la preuve est entièrement un compteur n'est pas achevée quand la chose elle-même est quelque chose qu'une personne voit ou entend. Le compteur est un résultat. La personne est le verdict.
 
@@ -126,15 +126,15 @@ Le tribunal du sujet de ce chapitre n'est pas une garde. C'est une ligne du doss
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en production. Les piles ordinaires font tourner de vraies charges pour de vrais utilisateurs aujourd'hui, y compris, selon la page même du dossier, les trois plateformes de ce livre.
+Le terrain mène en production. Les piles ordinaires font tourner de vraies charges pour de vrais utilisateurs aujourd'hui, y compris, selon la page même du dossier, l'application Python de la banque ; la première version du restaurant est faite de mondes web d'un seul fichier, et le hub n'est pas construit.
 
 Le terrain mène en infrastructure réelle. Ses outils pilotent de vrais fournisseurs et de vrais hôtes chaque jour ; le déploiement de Softanza ne vérifie contre un hôte réel que lorsque l'infrastructure est là, et répète tout le reste.
 
 Le terrain mène sur le matériel en service. Ses appareils tournent dans des boutiques et des cliniques ; la machine déclarée démarre dans un émulateur, et sa carte n'est pas encore en service.
 
-Le terrain mène en vitesse. Le runtime auquel Softanza s'est mesurée était plus rapide sur chaque ligne, d'un facteur compris entre un et deux, et la perte a été publiée.
+Le terrain mène en vitesse. Le runtime auquel Softanza s'est mesurée était plus rapide sur chaque ligne, d'un facteur compris entre un et deux, et la note du domaine de projets a consigné la perte.
 
-Là où je pense que le dossier se distingue, c'est dans ce qu'il ne se laisse pas dire. Chaque référence a un document. Chaque étape a un mot. La répétition fait tourner le même moteur que celui qui est livré. Un faux ne peut pas être livré et un modèle ne peut pas valider. Et une perception est une ligne nommée, datée, citée, ce qu'un logo sur une page d'accueil ne porte pas.
+Là où je pense que le dossier se distingue, c'est dans ce qu'il ne se laisse pas dire. Chaque référence a un document. Chaque étape a un mot. Selon le document de conception, le déploiement émulé fait tourner le même artefact que celui qui est livré. Un faux ne peut pas être livré et un modèle ne peut pas valider. Et une perception est une ligne nommée, datée, citée, ce qu'un logo sur une page d'accueil ne porte pas.
 
 ## 7. La limite
 
@@ -154,11 +154,11 @@ Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le
 
 **Le concepteur.** Ce que vous concevez est jugé en dernier par le sens d'une personne. L'opinion d'un modèle sur une image est un résultat ; celle d'une personne est le verdict.
 
-**Le décideur.** Lisez le mot d'étape avant la promesse. Aujourd'hui le tribunal est construit, et l'exécution chez un client est absente.
+**Le décideur.** Lisez le mot d'étape avant la promesse. Aujourd'hui le plancher est construit, et l'exécution chez un client est absente.
 
 **Le formateur.** Enseignez que non perçu est un état et non un échec. Un rapport honnête peut être livré dessus, s'il le dit.
 
-**L'agent.** Vous pouvez répéter un déploiement et l'expliquer. Vous serez refusé quand vous essaierez de l'effectuer, et le refus sera consigné.
+**L'agent.** Vous pouvez répéter un déploiement et l'expliquer. Vous serez refusé quand vous essaierez de l'effectuer, et le refus sera consigné (le chapitre 24 le montre).
 
 ## 9. Exercice
 

@@ -4,7 +4,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a reply with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-09 04:51 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-09 05:31 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

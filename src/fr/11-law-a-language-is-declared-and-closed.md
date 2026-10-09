@@ -9,9 +9,9 @@ narrations: [stznatural-vs-ring-naturallib.md, stz-near-natural-language-program
 site: [languages]
 guards: [multilingual_pack_narrated, semantic_resolver_narrated, literate_templates_narrated, question_narrated, structuredoutput_narrated, schema_grammar_narrated, constrained_decoding_narrated]
 stage:
-  built: "le vocabulaire de la couche naturelle comme données en cinq langues, avec ses refus ; le tribunal de la sortie structurée, son compilateur de grammaire et son échantillonneur ; les langages de motifs"
+  built: "le vocabulaire de la couche naturelle comme données en cinq langues, avec ses refus ; le tribunal de la sortie structurée, son compilateur de grammaire et son échantillonneur ; les langages de motifs, qui acceptent un mot qu'ils ne connaissent pas"
   designed: "la fabrique qui produit l'analyseur, le tribunal et la grammaire d'un langage à partir de sa seule déclaration ; une grammaire émise pour chaque langage déclaré ; le style d'écriture comme grammaire déclarée"
-  absent: "une couche naturelle fermée jusqu'au fond : une forme de liste atteint encore le code de l'hôte ; la lettre ɗ du hausa standard dans le paquet hausa"
+  absent: "une couche naturelle fermée jusqu'au fond : une forme de liste atteint encore le code de l'hôte ; des classes de motifs qui refusent un mot qu'elles ne connaissent pas ; la lettre ɗ du hausa standard dans le paquet hausa"
 status: draft
 rulings: ["12.4", "12.10", "12.16", "12.19", "12.21", "12.27", "12.28", "12.29", "12.30"]
 research: research/ch11.md
@@ -23,9 +23,9 @@ figures:
 
 Dans la partie II, l'âge a changé qui écrit le code. Ici, il change qui prononce la phrase. Une phrase d'un langage avait autrefois une personne derrière elle, quelqu'un à qui l'on pouvait demander ce qu'il voulait dire. Aujourd'hui l'auteur d'une phrase peut être un modèle, à qui l'on ne peut rien demander, et qui écrira une phrase fluide qu'elle soit vraie ou non.
 
-La grammaire doit donc être fermée, et le tribunal doit la lire. Un langage dont les phrases peuvent contenir n'importe quoi ne peut rien refuser, et un tribunal ne peut pas juger une phrase qu'il ne peut pas lire. La vision de la plateforme met tout le mouvement en une ligne, que j'ai ratifiée : les humains et les machines se rencontrent dans des langages déclarés, petits, fermés et jugés, pas dans du code généraliste.
+La grammaire doit donc être fermée, et le tribunal, la partie qui accepte ou refuse une phrase selon sa grammaire, doit la lire. Un langage dont les phrases peuvent contenir n'importe quoi ne peut rien refuser, et un tribunal ne peut pas juger une phrase qu'il ne peut pas lire. La vision de la plateforme met tout le mouvement en une ligne, que j'ai ratifiée : les humains et les machines se rencontrent dans des langages déclarés, petits, fermés et jugés, pas dans du code généraliste.
 
-C'est aussi là que l'ordre du livre se retourne. La couverture va du familier au nouveau : la programmation, les langages, l'intelligence. La logique du dossier va dans l'autre sens. Le premier acte est de déclarer un langage. La programmation, la discipline de la partie II, se passe à l'intérieur de langages déclarés : les formes du vocabulaire sont déjà une déclaration en Haro. L'intelligence, partie IV, est gouvernée par les deux : un modèle est tenu à une grammaire déclarée avant de parler, et sa phrase est jugée après. Si vous lisez ce livre dans l'ordre du dossier, ce chapitre vient en premier.
+C'est aussi là que l'ordre du livre se retourne. La couverture va du familier au nouveau : la programmation, les langages, l'intelligence. La logique du dossier va dans l'autre sens. Le premier acte est de déclarer un langage. La programmation, la discipline de la partie II, se passe à l'intérieur de langages déclarés : les formes du vocabulaire sont déjà une déclaration en Haro, dans une esquisse hors de la bibliothèque. L'intelligence, partie IV, est gouvernée par les deux : un modèle est tenu à une grammaire déclarée avant de parler, et sa phrase est jugée après. Le livre garde l'ordre de la couverture, donc ce chapitre est au milieu ; dans l'ordre du dossier, il viendrait en premier.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -53,7 +53,7 @@ Naturally("
 #    ╰───────────────────────╯
 ```
 
-Le dictionnaire est fait de données, indexées par des sens, pas par des mots anglais. Le même sens peut donc être dit dans une autre langue en ajoutant un bloc de données, pas de code. Voici une même instruction en anglais, en hausa, en français et en arabe. Le hausa et l'arabe sont les phrases propres de la bibliothèque, et aucun locuteur natif ne les a lues pour autant que le dossier le montre :
+Le dictionnaire est fait de données, indexées par des sens, pas par des mots anglais. Le même sens peut donc être dit dans une autre langue en ajoutant un bloc de données, pas de code. Voici une même instruction en anglais, en hausa, en français et en arabe. La phrase en hausa est celle de la narration, celle en français vient de la garde de la bibliothèque avec ses données changées, et j'ai composé celle en arabe à partir du vocabulaire de la bibliothèque. Aucun locuteur natif n'a lu le hausa ni l'arabe pour autant que le dossier le montre :
 
 ```haro
 ? Naturally("Create a string with 'hello' and uppercase it").Result()
@@ -76,7 +76,7 @@ o1 = NaturallyIn("ar", "أنشئ قائمة بـ [ 5, 3, 5 ] ثم أزل تكر�
 #--> أنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات
 ```
 
-Voici maintenant ce qu'un modèle ne sait pas faire : dire ce qu'il n'a pas compris. Un verbe mal orthographié n'est pas deviné. Il est signalé, avec le mot que la bibliothèque pense que vous vouliez, et le programme admet qu'il n'a pas tout compris :
+Voici maintenant ce que la bibliothèque fait par règle : dire ce qu'elle n'a pas compris. Un verbe mal orthographié n'est pas deviné. Il est signalé, avec le mot que la bibliothèque pense que vous vouliez, et le programme admet qu'il n'a pas tout compris :
 
 ```haro
 o1 = Naturally("Create a string with 'softanza' Uppercse it")
@@ -88,7 +88,7 @@ o1 = Naturally("Create a string with 'softanza' Uppercse it")
 #--> 0
 ```
 
-C'est le mode permissif, fait pour une personne qui apprend. Un agent reçoit le mode strict, qui refuse, et un monde peut déclarer les seules opérations que ses phrases peuvent accomplir :
+C'est le mode permissif : un mot inconnu est sauté et signalé. Un agent reçoit le mode strict, qui refuse, et un monde, une liste déclarée d'opérations permises, peut limiter ses phrases à cette liste :
 
 ```haro
 try
@@ -105,7 +105,7 @@ done
 #--> Operation not permitted in this world: METHOD_REVERSE
 ```
 
-Dans ce monde, renverser une liste n'est pas interdit. Ce n'est pas du tout une phrase du langage.
+Dans ce monde, une phrase qui renverse une liste est refusée.
 
 Un verdict dit pourquoi. L'autre direction du code naturel dans Softanza est la chaîne quasi naturelle, où la personne est l'analyseur et où la chaîne se lit comme une phrase ; quand elle répond non, elle donne la raison :
 
@@ -153,7 +153,7 @@ oS = StzOutputSchemaQ([
 #    boolean ::= ("yes" | "no" | "true" | "false")
 ```
 
-Regardez la quatrième réponse. Hadiza a quarante et un ans dans la première réponse et soixante-deux dans la quatrième, et le tribunal accepte les deux. Une grammaire tue les phrases mal formées, pas les phrases fausses. Le dossier le dit en six mots, structure tue l'informe, pas le faux, et ce livre aussi : la vérité d'une réponse revient au graphe de connaissances, aux règles et à une personne. Une grammaire est la barrière, pas le juge de tout.
+Regardez la quatrième réponse. Hadiza a quarante et un ans dans la première réponse et soixante-deux dans la quatrième, et le tribunal accepte les deux. Une grammaire tue les phrases mal formées, pas les phrases fausses. Le dossier le dit en cinq mots (dans l'original anglais), structure tue l'informe, pas le faux, et ce livre aussi : la vérité d'une réponse n'est pas l'affaire de la grammaire. Le dossier dit que la vérité demande la réversibilité, un auditeur et un Principal, la personne qui tranche. Une grammaire est la barrière, pas le juge de tout.
 
 Un gabarit est aussi un contrat. Une phrase avec un trou dedans est refusée avant de tourner :
 
@@ -166,7 +166,7 @@ done
 #--> Unfilled template hole! The narration still contains a {#n} slot with no value for it.
 ```
 
-Et les motifs sont de petits langages fermés à part entière. La forme d'une liste est déclarée, pas écrite comme une boucle :
+Et les motifs sont de petits langages à part entière, mais pas encore fermés : le chapitre 15 montre les classes de motifs acceptant sans se plaindre un mot qu'elles ne connaissent pas. La forme d'une liste est déclarée, pas écrite comme une boucle :
 
 ```haro
 ? Lx("[@N, @S]").Match([42, "hello"])
@@ -185,23 +185,23 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 **J'ai choisi l'acte : déclarer un langage.** Pas « utilisez notre langage ». Déclarez le vôtre : le langage de votre domaine, dans vos mots. C'est le noyau de la plateforme, et c'est la raison d'être de cette partie.
 
-**J'ai refusé l'échappée ouverte.** Le méta-langage qui déclare les langages du domaine de projets refuse, par sa règle fondatrice, de définir toute forme qui laisserait une phrase atteindre le code de l'hôte, appeler une fonction, évaluer une chaîne ou toucher un fichier. Pas interdit : inexprimable. Un langage interne qui ne peut pas refuser le code arbitraire de l'hôte est, selon les mots de l'étude de terrain du domaine de projets, une interface déguisée en langage.
+**J'ai refusé l'échappée ouverte.** Le méta-langage qui déclare les langages du domaine de projets, hors de cette bibliothèque, refuse, par sa règle fondatrice, de définir toute forme qui laisserait une phrase atteindre le code de l'hôte, appeler une fonction, évaluer une chaîne ou toucher un fichier. Pas interdit : inexprimable. Un langage interne qui ne peut pas refuser le code arbitraire de l'hôte est, selon les mots de l'étude de terrain du domaine de projets, une API déguisée en langage.
 
-**J'ai refusé le langage naturel comme façon de déclarer.** Le langage naturel demande ; il ne déclare jamais. Un modèle peut rédiger une déclaration, et le brouillon n'entre dans le monde que comme une proposition : le modèle propose, le tribunal décide, une personne ratifie.
+**J'ai refusé le langage naturel comme façon de déclarer.** Le langage naturel demande ; il ne déclare jamais. Un modèle peut rédiger une déclaration, et, par la règle de la vision, qui est conçue et pas encore construite, le brouillon n'entre dans le monde que comme une proposition : le modèle propose, le tribunal décide, une personne ratifie.
 
-**J'ai tenu la promesse de 2020 et changé son mécanisme.** Ma première diapositive promettait un langage naturel exécutable. La vision de 2026 a jugé ce slogan avec justesse : il promettait plus qu'un tribunal ne peut défendre, parce qu'une phrase naturelle peut être ambiguë et qu'un mensonge peut être grammatical. Le naturel reste donc à la porte, là où une phrase demande ou rédige, et l'exécution appartient à des langages fermés qu'un tribunal peut juger. J'ai construit la couche naturelle ainsi bien avant que la vision le nomme : seuls les mots définis dans le dictionnaire sont interprétés, et tout autre mot devient un littéral ou un refus, jamais une supposition.
+**J'ai tenu la promesse de 2020 et changé son mécanisme.** Ma première diapositive promettait un langage naturel exécutable. La vision de 2026 a jugé ce slogan avec justesse : il promettait plus qu'un tribunal ne peut défendre, parce qu'une phrase naturelle peut être ambiguë et qu'un mensonge peut être grammatical. Le naturel reste donc à la porte, là où une phrase demande ou rédige, et l'exécution appartient à des langages fermés qu'un tribunal peut juger. J'ai construit la couche naturelle ainsi bien avant que la vision le nomme : seuls les mots définis dans le dictionnaire sont interprétés, et tout autre mot est sauté et signalé, ou refusé en mode strict, jamais deviné.
 
-**J'ai sorti la gouvernance de la bibliothèque et gardé les refus dedans.** En juillet 2026, un kit pour gouverner les agents a atterri dans la couche naturelle. Je l'ai retiré le jour même : le mode strict, les refus, le pourquoi et le compris appartiennent à la bibliothèque ; un produit pour gouverner les agents, non. Et j'ai retiré un ensemble de marqueurs qui rendaient les chaînes plus faciles à analyser et plus difficiles à lire, parce qu'un langage qu'une personne parle ne marque jamais une référence de cette façon. Une chaîne non grammaticale qui tourne est un bogue.
+**J'ai sorti la gouvernance de la bibliothèque et gardé les refus dedans.** En juillet 2026, un kit pour gouverner les agents a atterri dans la couche naturelle. Je l'ai retiré le jour même : le mode strict, les refus, le pourquoi et le compris appartiennent à la bibliothèque ; un produit pour gouverner les agents, non. Et j'ai retiré un ensemble de marqueurs, parce que leur chiffre de l'ordre des lettres avait été inversé par son propre inventeur, de mémoire, qu'ils répétaient des sens, et qu'un langage qu'une personne parle ne marque jamais une référence de cette façon. Une chaîne non grammaticale qui tourne est un bogue.
 
 **J'ai refusé un second plongement.** Quand quelqu'un demande « et Python, et mon langage », la réponse est une porte, gouvernée, et jamais un autre hôte cousu dans la plateforme. Une porte apporte un runtime étranger ; une surface apporte une syntaxe familière sur la même grammaire. Le chapitre 16 raconte la différence.
 
 ## 5. Le tribunal
 
-`multilingual_pack_narrated` prouve les langues comme données : les paquets, les programmes en français et en arabe, un paquet ajouté à l'exécution, et le programme qui se paraphrase dans sa propre langue. `semantic_resolver_narrated` prouve le mot inconnu avec sa suggestion, le mode strict, et la liste d'autorisation sous laquelle tout ce qui est hors liste est grammaticalement impossible. Elle ne passe pas à ce commit : je l'ai exécutée le 9 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaîne, avant la fin, de sorte que la page compte ses assertions et ne revendique pas son verdict. `literate_templates_narrated` prouve qu'un gabarit est un contrat. `question_narrated` prouve que chaque réponse enregistre son pourquoi. `structuredoutput_narrated` prouve le tribunal de la sortie structurée, y compris le mensonge qu'il laisse passer. `schema_grammar_narrated` prouve le compilateur de grammaire, et `constrained_decoding_narrated` l'échantillonneur qui y tient un modèle.
+`multilingual_pack_narrated` prouve les langues comme données : les paquets, les programmes en français et en arabe, un paquet ajouté à l'exécution, et le programme qui se paraphrase dans sa propre langue. `semantic_resolver_narrated` prouve le mot inconnu avec sa suggestion, le mode strict, et la liste d'autorisation sous laquelle tout ce qui est hors liste est grammaticalement impossible. Elle ne passe pas à ce commit : ma recherche pour le chapitre 13 l'a exécutée deux fois le 9 octobre 2026, et la demande L45 du mémo de ce jour en consigne le résultat : elle s'arrête sur une erreur levée par une fonction de découpage de chaîne, avant la fin, de sorte que la page compte ses assertions et ne revendique pas son verdict. `literate_templates_narrated` prouve qu'un gabarit est un contrat. `question_narrated` prouve qu'un verdict par oui ou non enregistre son pourquoi. `structuredoutput_narrated` prouve le tribunal de la sortie structurée, y compris le mensonge qu'il laisse passer. `schema_grammar_narrated` prouve le compilateur de grammaire, et `constrained_decoding_narrated` l'échantillonneur qui y tient un modèle.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine de projets a délibérément renoncé : des éditeurs qui comprennent un langage pendant que vous tapez, l'intégration à tous les environnements, la profondeur théorique. L'étude du domaine de projets le dit dans ses propres mots : c'est un pari, et il est nommé comme tel.
+Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine de projets a délibérément renoncé : l'outillage projectionnel (des éditeurs qui comprennent un langage pendant que vous tapez), l'intégration aux IDE, la profondeur macro-théorique. L'étude du domaine de projets le dit dans ses propres mots : c'est un pari, et il est nommé comme tel.
 
 Le terrain a construit le décodage contraint le premier. L'échantillonneur de Softanza suit l'algorithme de l'implémentation de référence et n'embarque rien. Mesurées sur un seul petit modèle de cent trente-cinq millions de paramètres, sur dix consignes, les réponses étaient valides du premier coup deux fois sur dix quand on les vérifiait après coup, et dix fois sur dix quand le modèle était tenu à la grammaire. C'est un seul petit modèle et dix consignes, et rien dans le dossier n'en mesure un grand.
 
@@ -209,9 +209,9 @@ Et l'âge coupe dans les deux sens. Le même déluge de code généré rend auss
 
 ## 7. La limite
 
-Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus ; le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur ; les langages de motifs.
+Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus ; le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur ; les langages de motifs, qui acceptent encore un mot qu'ils ne connaissent pas.
 
-Ce qui est conçu : la fabrique qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur et sa grammaire pour un modèle. La fabrique est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026, et la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la fabrique n'a pas encore forgé ; l'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
+Ce qui est conçu : la fabrique qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La fabrique est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026, et la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la fabrique n'a pas encore forgé (fabriqué les parties d'un langage à partir de sa déclaration) ; l'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
 
 Ce qui est absent, et la loi doit le dire. La couche naturelle n'est pas fermée jusqu'au fond. Une forme, une liste écrite entre crochets, est encore remise à l'hôte pour être évaluée, de sorte qu'une fonction de l'hôte à l'intérieur des crochets s'exécute :
 
@@ -222,7 +222,7 @@ Ce qui est absent, et la loi doit le dire. La couche naturelle n'est pas fermée
 
 La fonction `upper` n'est pas un mot du dictionnaire naturel. Elle s'est exécutée quand même. Le dossier connaît déjà cette échappée et a acheminé sa réparation ; tant que la réparation n'est pas arrivée, « la couche naturelle est un langage fermé » est vrai de ses mots et pas de ses listes, et ce livre le dira.
 
-Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe standard du hausa : le paquet l'a stockée dans un encodage cassé, de sorte qu'une phrase écrite correctement échoue sans un mot de plainte. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Le dossier ne tient aucune lecture des phrases du paquet par un locuteur du hausa. Le hausa et les autres phrases en langue étrangère imprimées dans ce chapitre sont les phrases propres de la bibliothèque, non lues par un locuteur natif pour autant que le dossier le montre.
+Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe standard du hausa : le paquet l'a stockée dans un encodage cassé, de sorte que, quand je l'ai sondé le 8 octobre 2026 sur l'instantané précédant ce commit, une phrase écrite correctement échouait sans un mot de plainte. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Le dossier ne tient aucune lecture des phrases du paquet par un locuteur du hausa. Les phrases en langue étrangère imprimées dans ce chapitre viennent de la narration et des gardes de la bibliothèque, ou sont composées à partir de son vocabulaire, et aucun locuteur natif ne les a lues pour autant que le dossier le montre.
 
 ## 8. Six portes
 
@@ -230,13 +230,13 @@ Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe stan
 
 **L'analyste.** Les mots de votre domaine deviennent un paquet de données, et le système les comprend ou les refuse avec la raison.
 
-**Le concepteur.** Les refus font partie du langage : ce qui n'est pas une phrase ne peut pas être dit, donc il n'a jamais besoin d'un avertissement.
+**Le concepteur.** Les refus font partie du langage : ce qui est hors liste est refusé en mode strict, donc il n'a jamais besoin d'un avertissement.
 
 **Le décideur.** Un modèle tenu à une grammaire déclarée répond dans la bonne forme. Il peut encore répondre une fausseté dans la bonne forme, et le dossier imprime cette limite avec le résultat.
 
 **Le formateur.** Une phrase en hausa, en français ou en arabe s'exécute et redit ce qu'elle a compris, de sorte qu'un apprenant lit la lecture que la machine fait de ses propres mots.
 
-**L'agent.** Vous ne pouvez parler que le langage déclaré. Le mode strict est votre posture, et votre brouillon est une proposition que le tribunal juge.
+**L'agent.** Vous ne pouvez parler que le langage déclaré. Le mode strict est votre posture, et votre brouillon est, par la règle de la vision (conçue), une proposition que le tribunal juge.
 
 ## 9. Exercice
 
