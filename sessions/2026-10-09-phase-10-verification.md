@@ -23,7 +23,7 @@ who did not write them and who were given the evidence, not my conclusions (`res
 | 33 | 58 | 49 | 1 | 3 | 5 |
 | **total** | **513** | **389 (76%)** | **22** | **24** | **78** |
 
-124 statements were flagged. In the eight chapters I could edit, the fixers confirmed all but a handful against the evidence (about four items stood as written) and narrowed the claim, corrected it or marked it as general knowledge. Nothing was deleted
+124 statements were flagged. In the eight chapters I could edit, the fixers confirmed all but five against the evidence (three in chapter 2, one each in chapters 4 and 11, which stood as written) and narrowed the claim, corrected it or marked it as general knowledge. Nothing was deleted
 that a narrower sentence could keep. No code fence changed, so no block needed a new run; the build re-ran every block and all 282 kept their promise.
 
 ## What the readers found, by kind

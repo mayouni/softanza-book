@@ -18,8 +18,8 @@
 <rect x="70" y="322" width="500" height="150" rx="8" class="fg-floor"/>
 <text x="82" y="340" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The areas</text>
 <line x1="570" y1="397.0" x2="588" y2="397.0" class="fg-arrow" marker-end="url(#fgarr)"/>
-<text x="600" y="394.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">334 lanes, each rated</text>
-<text x="600" y="408.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">with its proof line</text>
+<text x="600" y="394.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">334 lanes, rated,</text>
+<text x="600" y="408.0" class="fg-txt" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="start">most with a proof line</text>
 <rect x="70" y="486" width="500" height="92" rx="8" class="fg-floor"/>
 <text x="82" y="504" class="fg-accent" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="start">The layers</text>
 <line x1="570" y1="532.0" x2="588" y2="532.0" class="fg-arrow" marker-end="url(#fgarr)"/>

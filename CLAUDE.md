@@ -76,6 +76,8 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
   French terms plane / estate / ledger settled. Memo: `sessions/2026-10-09-phase-8-audit.md`.
 - Phase 9 done 2026-10-09: the author's 77 questions answered on his behalf by `research/ANSWER-POLICY.md` (DELEGATE-01; no open question left in the pages, all still `draft`), the ePub (`tools/epub_book.py`),
   the release check (`tools/release.py`). Memo: `sessions/2026-10-09-phase-9-answers.md`.
+- Phase 10 done 2026-10-09: the spine verified by fresh readers (513 claims, 124 flagged, fixed in 2, 3, 4, 5, 11, 17, 32, 33; chapter 1 reported to the author), VERIFY-01.
+  Memo: `sessions/2026-10-09-phase-10-verification.md`. Chapters outside the spine are not yet verified this way.
 - Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.

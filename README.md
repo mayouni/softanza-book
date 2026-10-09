@@ -34,6 +34,7 @@ library at `D:/GitHub/stzlib` with its engine built (`tools/book_common.py`, `LI
 | `data/` | what the runs and the guard reading recorded; pages show outputs from here, never from a source |
 | `tools/book_audit.py` | the editorial audit: names the book never writes, references, author-question counts, repeated paragraphs, glossary citations, evidence files (`python tools/book_audit.py`) |
 | `tools/epub_book.py`, `tools/release.py` | the ePub per language, and the release check that runs every gate and writes `print/release.json` |
+| `research/verify/` | the fresh-reader verification reports and the fixers' reports (`VERIFY-BRIEF.md`, `VERIFY-FIX-BRIEF.md` are the briefs) |
 | `tools/print_book.py` | the press edition: `print/softanza-en.pdf`, `print/softanza-fr.pdf` (not committed; `python tools/print_book.py`) |
 | `book.schema.json` | the schema of `book.json`; the build validates against it (`tools/book_schema.py`) |
 | `en/`, `fr/`, `index.html`, `status.html`, `book.json`, `llms-book.txt`, `llms-full-book.txt`, `agents/` | built; do not edit by hand |
