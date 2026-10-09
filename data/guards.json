@@ -1,5 +1,5 @@
 {
- "read": "2026-10-09 00:58 UTC+01:00",
+ "read": "2026-10-09 01:04 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -972,6 +972,26 @@
    "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/gui/gui_accessibility_narrated.ring",
    "also_found": []
   },
+  "engine_senses_narrated": {
+   "exists": true,
+   "path": "base/test/perf/engine_senses_narrated.ring",
+   "assertions": 36,
+   "by_helper": {
+    "chk": 36
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/perf/engine_senses_narrated.ring",
+   "also_found": []
+  },
+  "wasm_narrated": {
+   "exists": true,
+   "path": "base/test/system/wasm_narrated.ring",
+   "assertions": 23,
+   "by_helper": {
+    "chk": 23
+   },
+   "url": "https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/test/system/wasm_narrated.ring",
+   "also_found": []
+  },
   "payments_port_narrated": {
    "exists": true,
    "path": "base/test/system/payments_port_narrated.ring",
@@ -1316,6 +1336,12 @@
    "gui_accessibility_narrated",
    "05_stzapp_live_narrated",
    "emulator_narrated"
+  ],
+  "en/27-the-engine-beneath": [
+   "engine_is_optimised_narrated",
+   "engine_senses_narrated",
+   "wasm_narrated",
+   "threat_model_narrated"
   ],
   "en/28-a-restaurant-in-lyon": [
    "06_stzsuperapp_narrated",
