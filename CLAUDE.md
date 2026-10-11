@@ -35,6 +35,14 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
 - **Never background a heavy command here**; a hook refuses it. Stage files by explicit path; a hook refuses
   `git add -A` / `git add .`.
 
+## The voice (the AYOUNI Writing Framework, `../../writing-framework/FRAMEWORK.md`, v0.1)
+
+This book follows the framework's twelve commitments; its own shape is the nine elements. In prose: first person, "you" at the keyboard, the tool as "it";
+a question is a beat answered on the page, an exclamation comes only after a run or a reveal (one or two per thousand words; VOICE-01 replaces the brief's
+"one per chapter"); long sentence then short verdict; the colon, not the dash; no particular (name, date, place, memory, sentence of the author's) that the record
+or the author did not give; one metaphor at a time, the ruling ones mapped once where they first appear (`research/METAPHORS.md`). The lint:
+`python ../../writing-framework/tools/style_lint.py src/en` (and `src/fr --lang fr`); it is a gate of `tools/release.py`.
+
 ## Rules that bind every session (from the brief, §9)
 
 - Outputs are never stored in a source file. Every number is read, never composed. Stamps come from the clock.

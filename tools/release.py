@@ -83,6 +83,12 @@ def main():
     run("tools/build_book.py")
     run("tools/book_audit.py")
     run("tools/check_fr.py", "--all")
+    lint = ROOT.parent.parent / "writing-framework" / "tools" / "style_lint.py"
+    if lint.exists():
+        run(str(lint), "src/en", "--strict")
+        run(str(lint), "src/fr", "--lang", "fr", "--strict")
+    else:
+        print("\n(the writing framework's lint is not beside this repository; gate 4 skipped)")
     run("tools/epub_book.py")
     if "--no-pdf" not in sys.argv:
         run("tools/print_book.py")
