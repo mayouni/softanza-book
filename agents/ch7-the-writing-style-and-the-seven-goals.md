@@ -4,13 +4,15 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+
+In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code, and I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
 ## 1. The concept, as the field holds it
 
 The word *style* means two things in the field, and I have to say which one I mean.
 
-The first is style as layout, enforced by a tool. Python's style guide dates from 2001, Go's formatter from 2009, and every project runs a linter before a commit. They judge the shape of a line: spaces, capitals, length, unused names. They are very good at it, and they run by default. They say nothing about whether a line follows the order in which its writer reasoned.
+The first is style as layout, enforced by a tool. Python's style guide dates from 2001, Go's formatter from 2009, and every project runs a linter before a commit. They judge the shape of a line: spaces, capitals, length, unused names. They are good at it, and they run by default. They say nothing about whether a line follows the order in which its writer reasoned.
 
 The second is the small language inside the language. Programmers already write small languages in strings, and nobody calls that a style: a regular expression, a SQL text, a format string such as `"%5.2f"`. Each is a separate notation, with its own tool, learned apart.
 
@@ -20,7 +22,7 @@ For goals, the field says *quality attributes*. The ISO standard for software qu
 
 **What you think is what you write.** It is chapter 5's sentence, from the diagram of 2020, and I do not argue it again. Chapter 5 took five rules of the style. This chapter takes the rest, as a grammar, and then the goals under which the grammar was designed.
 
-For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is truly goal-oriented is the only way one architect masters a project of this size.
+For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size.
 
 ## 3. The Softanza form
 
@@ -43,7 +45,7 @@ The study of the record wrote the style down as fourteen rules, in its ruling 12
 | 13 | A function may be named in any human language | does not run |
 | 14 | A comment speaks before the code, in the teacher's voice | runs |
 
-Rule 11 first, because it is the strangest. The host language counts in integers and cuts the decimals. Softanza reads a small range language inside a string, and keeps them. It counts numbered words and letters of any script. The comments below speak before the code, in the teacher's voice, which is rule 14:
+Rule 11 first, because it is the strangest. The host language counts in integers and cuts the decimals. What does a range written inside a string keep? The comments below speak before the code, in the teacher's voice, which is rule 14. Run it:
 
 ```haro
 # The host's own range counts in integers: the decimals are cut. Softanza reads
@@ -61,7 +63,7 @@ Rule 11 first, because it is the strangest. The host language counts in integers
 
 > run: kept
 
-The range language is an argument like any other. It gives the replacements for each occurrence, in order, and the extended form wraps the palette when the occurrences outnumber it:
+The host answers `[ 1, 2, 3 ]` to `1.02 : 3.08`. The string answers `[ 1.02, 1.03, 1.04, 1.05 ]`: Softanza reads a small range language inside the string and keeps the decimals, the numbered words and the letters of any script. The range language is an argument like any other. It gives the replacements for each occurrence, in order, and the extended form wraps the palette when the occurrences outnumber it:
 
 ```haro
 o1 = new stzString("haro php ruby haro python haro")
@@ -126,7 +128,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 
 The deck promised more. A family of five names ending in `CharsRemoved`, for removing characters at the ends, is named in the deck. Two are defined, `LeadingCharsRemoved` and `TrailingCharsRemoved`. Three are not: `LeadingAndTrailingCharsRemoved`, `TrailingAndLeadingCharsRemoved` and `RepeatedCharsRemoved`. `RemoveLeadingAndTrailingChars` is defined, and is not one of the five.
 
-Rule 9: precision over generality. The precise name says what is counted. A string's characters are counted by `NumberOfChars`, and `Size()` is the host's byte length, so the two answers differ on an Arabic word:
+Rule 9: precision over generality. The precise name says what is counted. A string's characters are counted by `NumberOfChars`, and `Size()` is the host's byte length. Do the two answers differ on an Arabic word? Run it:
 
 ```haro
 ? Q("سلام").NumberOfChars()
@@ -144,7 +146,7 @@ o1 = new stzList([ "tea", "rice", "fish", "salt" ])
 
 > run: kept
 
-The library's own documentation line for `NumberOfChars` lists *size* among its alternative words. The run shows that `Size()` does not mean it. I list it among the requests.
+The run answers `4` to the one and `8` to the other, on a word of four letters! The library's own documentation line for `NumberOfChars` lists *size* among its alternative words. The run shows that `Size()` does not mean it. I list it among the requests.
 
 Rule 7: a prefix `viz` shows the answer under the word, and the suffix `XT` adds the positions as numbers:
 
@@ -217,13 +219,13 @@ The other four goals (expressiveness, reliability, the human metaphors and the p
 
 **I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside: the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list, the deck's checker that answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples: `Yield`, which should give the result of an expression for each item, and `Perform`, which should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples: `Yield`, which should give the result of an expression for each item, and `Perform`, which should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
 
 ## 5. The court
 
 `coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
 
-Here is the house court itself, the fourteen rules of the library and not the fourteen of the style. The numerical coincidence is a coincidence. A planted misspelling is found by name and the code stays clean, because it is a warning. A planted write to a constant is found by name, and the code is refused, because it is an error:
+Here is the house court itself, the fourteen rules of the library and not the fourteen of the style. The numerical coincidence is a coincidence. What does it answer to a planted misspelling, and to a planted write to a constant? Run it:
 
 ```haro
 ? @@( StzCodeRuleNames() )
@@ -241,6 +243,8 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 ```
 
 > run: kept
+
+The misspelling is found by name, `misspelled_name`, and the code stays clean, `TRUE`, because it is a warning. The write to a constant is found by name, `writes_a_mutable_constant`, and the code is refused, `FALSE`, because it is an error.
 
 A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows what the run printed.
 
@@ -262,9 +266,9 @@ What is built: the fourteen house rules of the library as a court over its own c
 
 What is designed:
 
-- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph, such as a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and found nothing.
-- **A court that reads the goals.** It would harvest the tags. Not built.
-- **The classic form of the test block as the one form for new blocks.** The study's ruling is that the revival "is not a rewrite" but a decision that the classic form is the one form for new blocks, with the converted blocks left as they are. The test tree's own README still calls the classic form the authoritative test surface. I found no ruling that makes it the one form, so it stays a decision, and chapter 5 names it.
+- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and found nothing.
+- **A court that reads the goals.** It would read the tags. Not built.
+- **The classic form of the test block as the one form for new blocks.** The study's ruling is that the revival "is not a rewrite" but a decision. The classic form is the one form for new blocks, and the converted blocks are left as they are. The test tree's own README still calls the classic form the authoritative test surface. I found no ruling that makes it the one form, so it stays a decision, and chapter 5 names it.
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is not declared.
 - **The discipline declared once.** Partly done on the site, as data, which is the page's source and not a court.
 
@@ -311,3 +315,5 @@ Write, before you run anything, the line each task needs and the promise under i
 > run: exercise
 
 Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
+
+Chapter 8 takes a function's name whole, as a linguistic expression, and then scope: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.

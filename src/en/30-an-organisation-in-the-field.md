@@ -16,11 +16,13 @@ rulings: ["12.13", "12.29"]
 research: research/ch30.md
 ---
 
+In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the agent proposes, and a person decides.
+
 ## 1. The concept, as the field holds it
 
 The field has two practices that this project needed, and keeps them in separate places.
 
-The first is the business rule that a business person can change. Rule engines and decision tables have existed for decades; the Decision Model and Notation, a standard of 2015, gives business analysts a table in which an approval ceiling is a number in a cell. The second is the application that keeps working with no network. Offline-first design is a practice of its own, with synchronising databases and, since an essay of 2019, a name for its philosophy, local-first software: the data is on your device, and the network is a convenience.
+The first is the business rule that a business person can change. Rule engines and decision tables have existed for decades; the Decision Model and Notation, a standard of 2015, gives business analysts a table in which an approval ceiling is a number in a cell. The second is the application that keeps working with no network. Offline-first design is a practice of its own, with synchronising databases. Since an essay of 2019 it has a name for its philosophy, local-first software: the data is on your device, and the network is a convenience.
 
 A third practice has come with the agents: a model proposes, and a person approves. In the field it is a button.
 
@@ -30,11 +32,11 @@ The organisation's own study of the project gives it as the title of a section, 
 
 ## 3. The Softanza form
 
-An organisation works in Niger, with a head office in Niamey and bases in the field. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was the one retained. The study lists four gains, and ownership is the first it lists. The organisation owns its vocabulary and its rules; it changes them without programming; it pays no licence per seat for the platform; and it can hand everything to a developer of its own country. We built the design study together, with its teams, from 22 September to 8 October 2026. I say "design study" and not "delivery" every time, because the hub is not built. The study's version 1.2 is submitted to the executive director for validation, and the record does not say it was validated.
+An organisation works in Niger, with a head office in Niamey and bases in the field. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was the one retained. The study lists four gains, and ownership is the first it lists. The organisation owns its vocabulary and its rules; it changes them without programming; it pays no licence per seat for the platform; and it can hand everything to a programmer of its own country. We built the design study together, with its teams, from 22 September to 8 October 2026. I say "design study" and not "delivery" every time, because the hub is not built. The study's version 1.2 is submitted to the executive director for validation, and the record does not say it was validated.
 
 Four things in that study the library carries. I will show them in the order the organisation would meet them, and then the one it asked for that the library does not carry.
 
-**A rule is an object whose numbers can be changed.** An approval ceiling is a sentence with a number in it, attached to the model of the advances it governs. The model judges itself, and says how many subjects the rule looks at. The data below are invented for this chapter, four advances with an amount and a count of approvals; they are not the organisation's figures, and the numbers five hundred and two hundred are mine, not its thresholds.
+**A rule is an object whose numbers can be changed.** An approval ceiling is a sentence with a number in it, attached to the model of the advances it governs. The model judges itself, and says how many subjects the rule looks at. The data below are invented for this chapter, four advances with an amount and a count of approvals. They are not the organisation's figures, and the numbers five hundred and two hundred are mine, not its thresholds.
 
 ```haro
 oG = new stzGraph("advances")
@@ -57,7 +59,7 @@ oG.RulesReport()
 #--> 2
 ```
 
-The ceiling is changed, and the same model is judged again. A change of the rule is a change of its values, and the verdict and its scope follow:
+What happens when the ceiling is changed and the same model is judged again? A change of the rule is a change of its values, and the verdict and its scope follow:
 
 ```haro
 oG.ClearAttachedRules()
@@ -77,9 +79,9 @@ oG.RulesReport()
 #--> 3
 ```
 
-I have to be honest about what this block shows. The "change" is a rule rebuilt in code with another number. That the organisation's own person changes it like filling in a form is the study's promise, and I did not find a file of the library that makes it so; section 7 says what does and does not exist.
+The report now says `2 finding(s), 2 error(s)` where it said one, and the scope is `3` where it was `2`. I have to be honest about what this block shows. The "change" is a rule rebuilt in code with another number. That the organisation's own person changes it like filling in a form is the study's promise, and I did not find a file of the library that makes it so. Section 7 says what does and does not exist.
 
-What the library does carry is the answer to the worst thing that can go wrong when a non-programmer edits a rule: a rule that quietly governs nothing. Misspell a property, and the rule finds nothing, and the model reports that it is sound. A rule governor (the class is `StzRuleGovernance`), which asks rules what they govern and not what they say, names the dead rule:
+What the library does carry is the answer to the worst thing that can go wrong when a non-programmer edits a rule: a rule that quietly governs nothing. Misspell a property, and the rule finds nothing, and the model reports that it is sound. What does a rule governor say of the same rule? The class is `StzRuleGovernance`; it asks rules what they govern and not what they say, and it names the dead rule:
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")
@@ -104,7 +106,7 @@ oWatch2.AddCase("advances", oG)
 #--> 0
 ```
 
-A dead rule and an all-clear produce identical output: silence. The court has to tell "nothing was wrong" from "nothing was looked at". The word "pictures" in the message is the rule governor's origin: it was built for the graph plane's drawings first, and I would say "cases".
+The misspelt rule finds nothing, `0`, and to the model nothing found means sound! The governor answers `scope_empty`, and says why: `governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing`. A dead rule and an all-clear produce identical output: silence. The court has to tell "nothing was wrong" from "nothing was looked at". The word "pictures" in the message is the rule governor's origin: it was built for the graph plane's drawings first, and I would say "cases".
 
 **A person can read the refusal.** When an answer breaks a law the organisation declared, it is refused with its reason, and the refusal is kept as a checkpoint a person can read, with its context. Chapter 17 showed the asking half of this machine. Here is the refusing half: a request needs one approval, the law says a request has one approver, and a second approver is refused:
 
@@ -127,7 +129,9 @@ aCp = oKB.ConversationQ("review").Checkpoints()
 #--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
 ```
 
-**Authority is not permission.** The assistant of this organisation may prepare a file. It may hold the permission to release an advance and still be refused, because its authority does not cover the act's risk. A person with the authority is allowed. The verdict says why, in either case:
+The checkpoint keeps what was attempted, `approver-2`, and the reason, in the refusal's own words: `'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique`.
+
+**Authority is not permission.** The assistant of this organisation may prepare a file. It may hold the permission to release an advance and still be refused, because its authority does not cover the act's risk. A person with the authority is allowed. May the assistant release the advance, and may the approver? The verdict says why, in either case:
 
 ```haro
 oGov = new stzGovernance("hub")
@@ -150,7 +154,7 @@ oGov.SetAuthority("approver-1", :Autonomous)
 #--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
 ```
 
-The class here, `stzGovernance`, judges authority; it is not the rule governor of the dead rule above. The library knows an actor only by a name and an authority level. Whether an actor is a person or an assistant is what its level is declared to be, and binding a level to a signed-in person is the work of the authentication plane, which I have not read for this chapter.
+The class here, `stzGovernance`, judges authority; it is not the rule governor of the dead rule above. The library knows an actor only by a name and an authority level. Whether an actor is a person or an assistant is what its level is declared to be. Binding a level to a signed-in person is the work of the authentication plane, which I have not read for this chapter.
 
 **A decision keeps its authority at the time.** Each decision records its reason, its actor, the act, the authority and the risk of that moment. A new decision supersedes the old one without erasing it, up to a capacity (512 decisions by default), and the governance counts what it dropped:
 
@@ -170,7 +174,7 @@ oGov.RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1
 
 The instant is a fixed number, so the clock is not read. This makes the block repeatable. It is not a version store for the rule itself, and I will not pretend it is.
 
-And the one it asked for that the library does not carry. Its default option is to work offline: bases in the field with no network, entering what they do and sending it later. The library knows offline as a declared, governed capability of a world, asked for and granted or refused like the camera or payments. That is all it knows:
+And the one it asked for that the library does not carry. Its default option is to work offline: bases in the field with no network, entering what they do and sending it later. The library knows offline as a declared, governed capability of a world, asked for and granted or refused like the camera or payments. Is offline granted before the world asks for it, and after? That is all the library knows of it:
 
 ```haro
 oApp = StzAppQ("field-visits")
@@ -195,9 +199,9 @@ Read this block as a limit and not as a win. Nothing in it queues anything. The 
 
 ## 4. The decision, and what I refused
 
-**I refused a per-seat platform as the organisation's ground.** The specification preferred low-code on a vendor's suite. The retained offer proposes Softanza, and among its gains the study lists ownership first: the organisation owns its vocabulary and its rules, which it can change without programming, and the whole of the work, programs, configuration and data, is its own, with a handover to a local developer. The vendor's suite stays where it was good, for the user accounts, the documents and the notifications. The record holds the outcome and the gains, and not the deliberation: who chose, and what was weighed against low-code, it does not say, and the chapter does not fill the gap.
+**I refused a per-seat platform as the organisation's ground.** The specification preferred low-code on a vendor's suite. The retained offer proposes Softanza, and among its gains the study lists ownership first. The organisation owns its vocabulary and its rules, which it can change without programming, and the whole of the work, programs, configuration and data, is its own, with a handover to a local programmer. The vendor's suite stays where it was good, for the user accounts, the documents and the notifications. The record holds the outcome and the gains, and not the deliberation: who chose, and what was weighed against low-code, it does not say, and the chapter does not fill the gap.
 
-**I refused to let the assistant decide.** It proposes. Its authority is advisory; a person's covers the risk. The refusal names the level, the risk tier, and the sentence that says the authority does not cover the act.
+**I refused to let the assistant decide.** It proposes. Its authority is advisory; a person's covers the risk. The refusal names the level, the risk tier, and the sentence that says the authority does not cover the act: `SHOULD does not cover it`.
 
 **I refused a silent rule.** A rule that governs nothing is reported. A rule with no message is reported too. That is the price of letting a non-programmer touch a rule. The rule governor exists because the silent rule already happened in the library.
 
@@ -205,11 +209,11 @@ Read this block as a limit and not as a win. Nothing in it queues anything. The 
 
 ## 5. The court
 
-`graphruleset_narrated` proves a rule with a comparison and a requirement turned into an implication. `gg_rule_governance` proves that a rule that governs nothing is reported. `wisecoding_narrated`, its third scene, proves a refusal that is governed and checkpointed. `governance_narrated` proves that can is not should: permission held and authority lacking is a refusal. `governance_lineage_narrated` proves the decision kept with its authority at the time. `01_platform_narrated` proves the capability seam: the camera granted, payments refused, a capability never asked for refused with an honest reason. The guard does not itself use the capability for offline; the block above does, with the tier the platform declares for it. The refusal of an unknown rule type, of a missing file and of a duplicate name rests on scenes 4 and 5 of `rulz_roundtrip_narrated`, a narrated test of the library that this book does not run as one of its guards.
+`graphruleset_narrated` proves a rule with a comparison and a requirement turned into an implication. `gg_rule_governance` proves that a rule that governs nothing is reported. `wisecoding_narrated`, its third scene, proves a refusal that is governed and checkpointed. `governance_narrated` proves that can is not should: permission held and authority lacking is a refusal. `governance_lineage_narrated` proves the decision kept with its authority at the time. `01_platform_narrated` proves the capability seam: the camera granted, payments refused, a capability never asked for refused with an honest reason. The guard does not itself use the capability for offline; the block above does, with the tier the platform declares for it. The refusal of an unknown rule type, of a missing file and of a duplicate name rests on scenes 4 and 5 of `rulz_roundtrip_narrated`. That is a narrated test of the library, and this book does not run it as one of its guards.
 
 ## 6. The field, and where it leads
 
-The field leads in business rules for business people. Decision tables are a standard; a person edits a cell, not a program. Here the change is a rule rebuilt in code, and the file form that would carry a rule as text, the `.stzrulz` file, reads a rule's name, its type, its severity, its function, its parameters and its message, and does not read the `when` and `then` lines of its own sample.
+The field leads in business rules for business people. Decision tables are a standard; a person edits a cell, not a program. Here the change is a rule rebuilt in code. The file form that would carry a rule as text, the `.stzrulz` file, reads a rule's name, its type, its severity, its function, its parameters and its message. It does not read the `when` and `then` lines of its own sample.
 
 The field leads in offline. Local-first software is a practice with synchronising databases and a decade of experience. The library has a permission.
 
@@ -219,9 +223,9 @@ The field leads in people. A decision table is a thing a trained analyst already
 
 What is built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
 
-What is designed: the hub and its study, whose schedule is in the future; a rule language that a local developer can learn, whose sample in the study is written in a notation that is not the library's; and the study's promises about rules: that they are checked before they apply, that their effect is shown before it is applied, that they can be undone and that their history is kept. The library has the pieces, the rule governor, the refusal of an unknown rule type or a missing file, and the refusal of a duplicate name.
+What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation that is not the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library has the pieces, the rule governor, the refusal of an unknown rule type or a missing file, and the refusal of a duplicate name.
 
-What is absent: a version history of a rule with an undo: the lineage records the decision, and the rule is rebound; I found no store of rule versions, and my search was not exhaustive. The hub, built. Offline as a mechanism: no class in the library keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
+What is absent: a version history of a rule with an undo: the lineage records the decision, and the rule is rebound. I found no store of rule versions, and my search was not exhaustive. The hub, built. Offline as a mechanism: no class in the library keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
 
 ## 8. Six doors
 
@@ -242,3 +246,5 @@ What is absent: a version history of a rule with an undo: the lineage records th
 Pick one rule of an organisation you know that has a number in it, a ceiling, a delay, a count of approvals. Write it as a rule with a condition and a requirement, on four invented cases, two that satisfy it and two that do not. Before you run anything, write the report you expect. Then misspell one property of the condition on purpose, and say what the model reports, and what the governor reports.
 
 Run it. The difference between those two answers is the chapter.
+
+The next chapter asks what the projects did not prove. Its measure is this: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.

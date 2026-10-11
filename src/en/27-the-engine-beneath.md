@@ -16,6 +16,8 @@ rulings: ["12.10", "12.11", "12.15", "12.21", "12.28", "12.29"]
 research: research/ch27.md
 ---
 
+In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
+
 ## 1. The concept, as the field holds it
 
 A platform inside one codebase is drawn as a stack with one rule: an inner layer knows nothing of an outer one. The cleanest peer, in the study's words, is Rust's three crates for three depths of host, chosen by the target. (General knowledge for the field: Rust enforces the rule by its compiler.) Softanza holds it by entry files, and section 7 says what that costs.
@@ -28,17 +30,17 @@ And the field has done, repeatedly, a third thing: a language keeps its surface 
 
 **Every feature is implemented once, in the engine. The surface is the promise, and the runtime is the part you measure, and never assert.**
 
-The first sentence is the engine architecture's design rule, in a session's document: every feature is implemented once, in the engine, and language clients are thin bridges that add syntax and paradigms, never computation. Chapter 4 told the author's ruling that follows from it, that I refused computation in the faces. The second sentence is the brief of the runtime beneath: performance and portability, measured, never asserted.
+The first sentence is the engine architecture's design rule, in a session's document: every feature is implemented once, in the engine. Language clients are thin bridges that add syntax and paradigms, never computation. Chapter 4 told the author's ruling that follows from it, that I refused computation in the faces. The second sentence is the brief of the runtime beneath: performance and portability, measured, never asserted.
 
 And the definition that governs the engine's dependencies, which chapter 4 already states: sovereignty is nothing anyone else can withdraw. In the vision's words, it never meant every line ours.
 
 ## 3. The Softanza form
 
-Three claims, and a block for each of what a block can prove. I tell you first what a block cannot prove, because it matters: the dependency rule of the layers, that no core file loads base and no base file loads max, needs a scan of about eight hundred and seventy load lines. Only a guard could carry that, and none exists. I did the scan with a script of my own, and section 7 gives its result.
+Three claims, and a block for each of what a block can prove. I tell you first what a block cannot prove, because it matters. The dependency rule of the layers, that no core file loads base and no base file loads max, needs a scan of about eight hundred and seventy load lines. Only a guard could carry that, and none exists. I did the scan with a script of my own, and section 7 gives its result.
 
 ### A layer is the file you load
 
-Three entry files, three fresh processes. Each prints how many classes it holds, and whether `stkList`, `stzList` and `stzListXT` exist. The block spawns child processes, because this chapter's own process has already loaded the largest layer, and only a child can show the core alone:
+How many classes does each entry file load? Three entry files, three fresh processes. Each prints how many classes it holds, and whether `stkList`, `stzList` and `stzListXT` exist. The block spawns child processes, because this chapter's own process has already loaded the largest layer, and only a child can show the core alone:
 
 ```haro
 cAsk = 'aC = ringvm_classesList()' + nl +
@@ -54,9 +56,9 @@ next
 #--> 714 1 1 1
 ```
 
-Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. Base holds 674 and no max class. Max holds 714. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine, and a load of base takes between three and eight seconds, in single runs on 9 October 2026, which my notes hold and no block shows.
+Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. Base holds 674 and no max class. Max holds 714. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine, and a load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
 
-The contract says base builds on core, by inheritance or delegation. Here is what the classes say. `ringvm_classesList()` returns, for each class, its name, its identifier, and its parent:
+The contract says base builds on core, by inheritance or delegation. What do the classes say? `ringvm_classesList()` returns, for each class, its name, its identifier, and its parent:
 
 ```haro
 aClasses = ringvm_classesList()
@@ -75,9 +77,9 @@ func ParentOf(cClass)
     return aClasses[n][3]
 ```
 
-`stzString` inherits `stzObject`, and core carries a parallel hierarchy, in which `stkString` inherits `stzCoreString`. Max does build on base: `stzListXT` inherits `stzList`. Exactly two base classes inherit a core class, `stzSciNumber` and `stzPointer`, and one delegates, in a line of `stzPointer`. They are two of about six hundred and seventy-seven. The contract is not met, and it is not met in the way chapter 4 asked about. I print it as a debt.
+`stzString` inherits `stzObject`, and not `stkString`! Core carries a parallel hierarchy, in which `stkString` inherits `stzCoreString`. Max does build on base: `stzListXT` inherits `stzList`. Exactly two base classes inherit a core class, `stzSciNumber` and `stzPointer`, and one delegates, in a line of `stzPointer`. They are two of about six hundred and seventy-seven. The contract is not met, and it is not met in the way chapter 4 asked about. I print it as a debt.
 
-And the third layer by its prefix. In the process of the largest layer, ten classes begin with `stk`, six hundred and ninety-three with `stz`, and none with `stx`:
+And the third layer by its prefix. In the process of the largest layer, how many classes begin with `stk`, how many with `stz`, and how many with `stx`?
 
 ```haro
 nStk = 0  nStz = 0  nStx = 0
@@ -93,7 +95,7 @@ next
 #--> [ 10, 693, 0 ]
 ```
 
-The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
+Ten, six hundred and ninety-three, and none. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
 
 ### One engine
 
@@ -115,7 +117,7 @@ n3 = substr(cBuild, "fn addSpeech")
 
 Four core libraries, eighty-five base libraries, and no library for the third layer: eighty-nine in all. The marker `fn addSpeech` is the first function after the two tables, a boundary in plain text, arbitrary but visible. A court of layers would parse properly, and I list it among the requests. The study says eighty-six base domains at this commit and I read eighty-five.
 
-The engine tells the library what it is. Its version is a constant, and the library can count what the engine registers in the virtual machine once it is loaded:
+The engine tells the library what it is. Its version is a constant. How many distinct functions does it register in the virtual machine once it is loaded?
 
 ```haro
 ? StzEngineEmbedVersionString()
@@ -131,9 +133,9 @@ next
 
 Two thousand seven hundred and eighty-six distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first, because the call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
 
-There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,786 above. The second is the count to any host through the C interface: by a script of mine that read the export tables of the eighty-nine libraries on 9 October 2026, 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
+There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,786 above. The second is the count to any host through the C interface. A script of mine read the export tables of the eighty-nine libraries on 9 October 2026 and found 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
 
-**The engine does the work.** The host's `upper` leaves the German sharp s alone. The engine's case mapping, its own table over a vendored library, writes SS. A second vendored library stems words. These are two of the nineteen:
+**The engine does the work.** What does the host's `upper` make of the German sharp s, and what does the engine's case mapping make of it, its own table over a vendored library? A second vendored library stems words. These are two of the nineteen:
 
 ```haro
 ? upper("Straße")
@@ -144,9 +146,9 @@ There are three counts of three different things, and the chapter says which it 
 #--> [ "run", "run", "ran" ]
 ```
 
-The first line shows the host's behaviour. If Haro's `upper` becomes full Unicode, the promise changes.
+The host leaves the sharp s alone, and the engine writes SS! The first line shows the host's behaviour. If Haro's `upper` becomes full Unicode, the promise changes.
 
-And the engine is optimised. The default mode of the build is optimised and safe, since commit 1fdc2eda5, which the library's git log dates 26 July 2026; the pinned files hold the commit and not the date. Until then every library the library had ever loaded was compiled with no optimisation, and that closes the question chapter 22 left open about the build mode. A guard reads time, since it cannot read a flag. Twenty sums over two million doubles that live in the engine must finish in under a tenth of a second, and be right:
+And the engine is optimised. The default mode of the build is optimised and safe, since commit 1fdc2eda5, which the library's git log dates 26 July 2026. The pinned files hold the commit and not the date. Until then every library the library had ever loaded was compiled with no optimisation, and that closes the question chapter 22 left open about the build mode. A guard reads time, since it cannot read a flag. Twenty sums over two million doubles that live in the engine must finish in under a tenth of a second, and be right:
 
 ```haro
 oBuf = StzNumBufferOfSizeQ(2000000)
@@ -162,7 +164,7 @@ next
 oBuf.Free()
 ```
 
-The block prints only the boolean, because a time is not a promise. In three runs on 8 and 9 October 2026 the elapsed times were 0.02, 0.04 and 0.03 seconds, from my notes and not in the run record, against the guard's own table of 0.14 for the unoptimised mode and 0.04 for the optimised one. The guard itself ran on 8 October: seven assertions in the file, six reached here, six passed; the seventh sits on an else-branch that is not reached when the parser is built.
+The block prints only the boolean, because a time is not a promise. In three runs on 8 and 9 October 2026 the elapsed times were 0.02, 0.04 and 0.03 seconds, from my notes and not in the run record. The guard's own table says 0.14 for the unoptimised mode and 0.04 for the optimised one. The guard itself ran on 8 October: seven assertions in the file, six reached here, six passed; the seventh sits on an else-branch that is not reached when the parser is built.
 
 ### What runs it
 
@@ -199,17 +201,17 @@ Under a future runtime the promise changes, as the proof line says.
 
 **I refused a percentage.** The figure is mine, and it should not be printed without the guard that produces it. Chapters 31 and 33 say so.
 
-**I have no sentence on how a layer is chosen in Haro.** The study only proposes that, in Haro, layer selection should be a declaration the compiler honours. The charter has no text on core, base and max. Base inheriting core is the contract as designed, with the stage word designed: the code does not meet it today, as section 3 prints, and the book's account is what the code does, two implementations over one engine. And in Haro, a layer is chosen by the file you load, today. A declaration the compiler honours is the study's proposal, and is designed.
+**I have no sentence on how a layer is chosen in Haro.** The study only proposes that, in Haro, layer selection should be a declaration the compiler honours. The charter has no text on core, base and max. Base inheriting core is the contract as designed, with the stage word designed. The code does not meet it today, as section 3 prints, and the book's account is what the code does: two implementations over one engine. And in Haro, a layer is chosen by the file you load, today. A declaration the compiler honours is the study's proposal, and is designed.
 
 ## 5. The court
 
-`engine_is_optimised_narrated` proves that the engine is compiled with optimisation: twenty sums over two million doubles under a tenth of a second, and the right answer; that an index of 99 and an index of 0 are refused and the buffer unharmed; and that the vendored parser which the optimised mode once broke now answers. I ran it: six of the seven assertions in the file were reached, and six passed. `engine_senses_narrated` proves that the engine gives the process five senses: memory, its peak, system memory, processor time, and a bounded series. I ran it: thirty-six of thirty-six, and the run then stops with "STOPPED!" by design. `wasm_narrated` proves that the engine's entry for the browser exports its curated interface and that the build has a target for it, and it builds a subset and asserts that it is smaller. I did not run it, because it calls a build of the toolchain. `threat_model_narrated` reads the threat model and checks that each guarantee row names a proof and that each guard file it names exists; rows G11, the fuzz harnesses, and G25, the bill of materials with its digests, concern the engine.
+`engine_is_optimised_narrated` proves that the engine is compiled with optimisation: twenty sums over two million doubles under a tenth of a second, and the right answer. It proves that an index of 99 and an index of 0 are refused and the buffer unharmed, and that the vendored parser which the optimised mode once broke now answers. I ran it: six of the seven assertions in the file were reached, and six passed. `engine_senses_narrated` proves that the engine gives the process five senses: memory, its peak, system memory, processor time, and a bounded series. I ran it: thirty-six of thirty-six, and the run then stops with "STOPPED!" by design. `wasm_narrated` proves that the engine's entry for the browser exports its curated interface and that the build has a target for it, and it builds a subset and asserts that it is smaller. I did not run it, because it calls a build of the toolchain. `threat_model_narrated` reads the threat model and checks that each guarantee row names a proof and that each guard file it names exists. Rows G11, the fuzz harnesses, and G25, the bill of materials with its digests, concern the engine.
 
 What does not exist: **no guard judges the layers.** No file under the test folders loads a layer's entry file or reads the contract. There are 529 narrated guards in base, and none in core or in max. The study says 517 in one place and 387 in another, and the site 501; I print only what the build reads. And no guard judges the engine's counts: the numbers the engine's command-line status prints are typed constants dated 16 June 2026.
 
 ## 6. The field, and where it leads
 
-**Speed.** The runtime beneath against a fast scripting runtime of the field, on 13 September 2026. The method is the memo's own: six pairs of kernels written fresh, identical algorithm and sizes on both sides, each side in its fast idiom, checksums across languages asserted before any number, minima over three inner repeats and two process runs, the new compiler built for speed, the peer interpreter-only with no JIT, on Windows, x64. The peer leads every row:
+**Speed.** The runtime beneath against a fast scripting runtime of the field, on 13 September 2026. The method is the memo's own: six pairs of kernels written fresh, identical algorithm and sizes on both sides, each side in its fast idiom, checksums across languages asserted before any number. The minima are over three inner repeats and two process runs, the new compiler built for speed, the peer interpreter-only with no JIT, on Windows, x64. The peer leads every row:
 
 | row | the runtime beneath (min ms) | the peer (min ms) | the peer leads by |
 |---|---:|---:|---:|
@@ -226,7 +228,7 @@ The memo's words: the peer leads every row, fib and binsearch are near-ties, and
 
 **Memory.** On the same day the note says: resident, running the library, this morning 733 megabytes, now 149, and the former runtime 139. A loss of ten to the former runtime, after a fall of 584. A win and a loss in one note.
 
-**Compatibility, on 5 October 2026.** The wide suite of the library was run on a snapshot, and the note records parity of assertions on every one the former runtime passes, and that most programs agree on every stable line, and that nineteen rows differ in kind. The note does not say Windows in that entry, and the Linux pass is listed as the next step. These are a session's notes from a private branch, and no number of mine. I print them, dated 5 October 2026, with the stage word in construction: 8,540 of 8,540 assertions at parity, 1,253 of 1,253 tests that bear assertions, 3,425 of 5,112 programs identical on every stable line, 1,267 more identical but for the line that prints the elapsed time, and 19 rows that differ in kind (13 print more, 5 are refused or raise, one writes a stderr line). They are the note's counts, and I ran none of them.
+**Compatibility, on 5 October 2026.** The wide suite of the library was run on a snapshot. The note records parity of assertions on every one the former runtime passes, that most programs agree on every stable line, and that nineteen rows differ in kind. The note does not say Windows in that entry, and the Linux pass is listed as the next step. These are a session's notes from a private branch, and no number of mine. I print them, dated 5 October 2026, with the stage word in construction: 8,540 of 8,540 assertions at parity, 1,253 of 1,253 tests that bear assertions, and 3,425 of 5,112 programs identical on every stable line. Another 1,267 are identical but for the line that prints the elapsed time, and 19 rows differ in kind: 13 print more, 5 are refused or raise, one writes a stderr line. They are the note's counts, and I ran none of them.
 
 **The platform.** Built and run on Windows today. A Linux build of eighty-five of the eighty-nine modules exists on a working branch; the site says it is in construction. A whole program with its engine in one file, with no dependency, is absent.
 
@@ -242,17 +244,17 @@ o = new stkString("abc")
 #--> Error (R3) : Calling Function without definition: stkenginestringfrom
 ```
 
-In a process of the core alone, the engine's core library registers five hundred and thirty-four functions under the base names and none under the core names, a count from my notes that no block shows, so `stkString` and `stkChar` find nothing. The study files it as an open item of the core and the engine. `stkList` runs, which chapter 4 showed, and the load of seventeen classes in a tenth of a second is real.
+The runtime answers: `Error (R3) : Calling Function without definition: stkenginestringfrom`. In a process of the core alone, the engine's core library registers five hundred and thirty-four functions under the base names and none under the core names, a count from my notes that no block shows. So `stkString` and `stkChar` find nothing. The study files it as an open item of the core and the engine. `stkList` runs, which chapter 4 showed, and the load of seventeen classes in a tenth of a second is real.
 
 **The lean layer is not lean at the binary, for strings.** By file size, on the build of 5 October 2026, the core string library is 22,355,968 bytes and the base one 22,362,624. The read-only data is 20.8 megabytes in both; I did not diagnose what it holds. The four core libraries total 24.1 megabytes of the eighty-nine libraries' 122.4. The core libraries for dates, files and locale differ from their base twins by under one per cent.
 
-**The dependency rule holds at the loads, with one exception at a call.** I parsed every load of every non-test, non-archive file of core, base and max, 871 lines, and resolved each: core loads, outside its own folder, only the engine face; base loads core and the engine; no file under base loads anything under max or future; max loads base. But `FindMin`, in the core's list of numbers, calls a function that is defined only in base. In a core-only process, `FindMin([4,2,9])` answers 2, and `FindMin("not a list")` raises "Calling Function without definition". In a base process it raises the intended error. I found one instance by a search for base names in core, and I did not look for others.
+**The dependency rule holds at the loads, with one exception at a call.** I parsed every load of every non-test, non-archive file of core, base and max, 871 lines, and resolved each. Core loads, outside its own folder, only the engine face; base loads core and the engine; no file under base loads anything under max or future; max loads base. But `FindMin`, in the core's list of numbers, calls a function that is defined only in base. In a core-only process, `FindMin([4,2,9])` answers 2, and `FindMin("not a list")` raises "Calling Function without definition". In a base process it raises the intended error. I found one instance by a search for base names in core, and I did not look for others.
 
 **On a case-sensitive disk the core entry file does not load.** Its second line loads a file by a name in the wrong case. My scan finds twenty such loads in non-test files at this commit; the runtime's session counted fifty-five with tests, on 8 October 2026. The book is built on Windows, which hides it.
 
 **The third layer is written and not wired.** Its thirty-two classes are all in one folder, and no entry file loads them. The first of them works when loaded by hand; I ran it and do not show it, a string of eleven characters counted by it, and I tried none of the other thirty-one. A library layer for them in the engine does not exist.
 
-What is built: a layer is a folder, a prefix and an entry file. Counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders: core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, which I did not run. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own gaps: an archive digest is recorded for nine of the nineteen, and three have no version.
+What is built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, which I did not run. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own gaps: an archive digest is recorded for nine of the nineteen, and three have no version.
 
 What is designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
 
@@ -264,11 +266,11 @@ I tell what is built, what is designed, and what is absent, as the record has it
 
 **Built, as a charter, a family of grammars and a guard.** The charter, version 0.2, ratified on 1 October 2026. A spike of nineteen rungs, between 1 and 4 October, each a grammar document with fixtures. Its guard reported a pass of the whole run on 5 October, and its courts are programs that run byte-identical on the new compiler and on the official former runtime. The new compiler also formats and dumps the library's files: of about six thousand, nearly all print the reference's bytes, and a few dozen are refused by both. A first slice of a graph of the code was built on 5 October.
 
-**What Haro is today, in one sentence the record supports:** a ratified charter and a spike whose courts run on the new runtime and on the old one, over the surface the library is written in. There is no `haro` executable. The folder of binaries holds the compiler and two others. The forged courts load no library. **Haro does not run the library.** The vision of 27 September said that Haro does not exist and that the new runtime's Linux row is unmeasured: the first half is out of date, since a charter and a spike exist, and the second half is still true of the wide suite on Linux.
+**What Haro is today, in one sentence the record supports:** a ratified charter and a spike whose courts run on the new runtime and on the old one, over the surface the library is written in. There is no `haro` executable. The folder of binaries holds the compiler and two others. The forged courts load no library. **Haro does not run the library.** The vision of 27 September said that Haro does not exist and that the new runtime's Linux row is unmeasured. The first half is out of date, since a charter and a spike exist. The second half is still true of the wide suite on Linux.
 
-**Designed:** the three altitudes, declaring, declared, and computing; the alphabet of six letters, five forged whole in the spike; refinement as the write surface; other faces over one program graph, which arrive as printers before they arrive as parsers, and never as semantics. The verbs `haro forge`, `check`, `refine`, `run`, `project` and `narrate` are a recommendation, and not a program.
+**Designed:** the three altitudes, declaring, declared, and computing; the alphabet of six letters, five forged whole in the spike; refinement as the write surface; other faces over one program graph. Those faces arrive as printers before they arrive as parsers, and never as semantics. The verbs `haro forge`, `check`, `refine`, `run`, `project` and `narrate` are a recommendation, and not a program.
 
-**The runtime beneath, as the record dates it.** Its brief: a register machine and a compiler from the former language's source to its bytecode, running existing programs, with about three hundred thousand lines of Softanza as the compatibility specification. Its public face: the main branch is public and untouched; the work lives on a branch pushed to a private remote only. Its last commit at my reading is of 8 October 2026, at 22:26. The stage word is mine, and it is "in construction".
+**The runtime beneath, as the record dates it.** Its brief: a register machine and a compiler from the former language's source to its bytecode, running existing programs. About three hundred thousand lines of Softanza are its compatibility specification. Its public face: the main branch is public and untouched; the work lives on a branch pushed to a private remote only. Its last commit at my reading is of 8 October 2026, at 22:26. The stage word is mine, and it is "in construction".
 
 ## 8. Six doors
 
@@ -278,7 +280,7 @@ I tell what is built, what is designed, and what is absent, as the record has it
 
 **The designer.** A layer is a decision about what you ship, and not about taste. At the binary, core and base have a library per domain and the third layer has none; the web subset, which chapters 4 and 24 show, is a subset and not a layer.
 
-**The decision-maker.** The two questions of chapter 4, plus two: what runs it, which is version 1.27 today, with the replacement in construction; and what the replacement lost, which is every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. A record that prints its loss is the only kind to trust.
+**The decision-maker.** The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. A record that prints its loss is the only kind to trust.
 
 **The educator.** Teach the dependency rule by making a learner load the core alone and predict, then count. Teach "measured, never asserted" with the memo of 13 September 2026.
 
@@ -294,3 +296,5 @@ Before you run anything, write three numbers: how many classes each entry file w
 ```
 
 Then choose any class of the library, predict its parent, and read it with the parent chain. Write the line your prediction got wrong. A learner who guesses that `stzString` inherits `stkString` is in good company: the contract says so, and the library does not. I do not say which of the 17, 674 or 714 is which.
+
+The next chapter leaves the engine for a restaurant in Lyon, and for the one sentence the project there taught: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.

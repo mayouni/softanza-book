@@ -16,6 +16,8 @@ rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
 ---
 
+Dans ce chapitre, je prends les sept étapes du modèle mental, que le chapitre 5 a exécutées sur une liste, et je les exécute sur une chaîne, dans le même ordre. Puis j'en viens à la boucle, l'endroit où les étapes se répètent, et aux quatre métaphores que la bibliothèque vous donne à la place : le marcheur, le vérificateur, le producteur et l'exécutant. Je montre la condition que les quatre portent à l'intérieur d'un argument, la condition W que le moteur lit comme des données, et son jumeau WF, qui exécute du code hôte. Je dis pourquoi j'ai fait des métaphores un but de conception, pourquoi j'ai remplacé `eval` par un langage que le moteur possède, et où les articles sur lesquels ce chapitre repose ne s'exécutent pas à ce commit. Le principe sous tout cela est celui du chapitre : quand vous écririez une boucle, nommez le mouvement que vous faites, marcher, vérifier, produire ou exécuter.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Le terrain a un seul outil pour répéter une chose, la boucle, et une famille de cousins qui la cachent : l'itérateur, la compréhension, le flux avec son map, filter et reduce, la lambda qui porte une condition. Ce sont de bons outils, et ils partagent tous une habitude. Ils sont écrits dans le langage du mouvement de la machine : un index qui commence à zéro, un compteur qu'on incrémente, une variable qui accumule. Une personne qui lit la boucle doit retrouver la question qu'elle pose.
@@ -47,7 +49,7 @@ Contenir, compter, trouver, agir, et le même suffixe qui dit si la casse compte
 
 Quand les étapes se répètent, la boucle apparaît, et c'est là que la bibliothèque vous donne quatre métaphores à la place. Chacune nomme un mouvement.
 
-**Le Marcheur se déplace le long d'une route.** Un marcheur est une carte de tout son voyage, construite à sa création : les positions qu'il visitera, les positions qu'il sautera, où il se tient, ce qui reste.
+**Le Marcheur se déplace le long d'une route.** Un marcheur est une carte de tout son voyage, construite à sa création : les positions qu'il visitera, les positions qu'il sautera, où il se tient, ce qui reste. Que sait-il avant de faire un pas ? Demandez-le-lui :
 
 ```haro
 oWalker = Wk(1, 10, 2)
@@ -80,7 +82,7 @@ done
 #--> Can't walk backward! Already at the beginning of walkable positions.
 ```
 
-Demandez dix pas à une marche qui en compte quatre et vous obtenez les quatre. L'article soutient que cela reflète notre façon de marcher dans le monde physique : on s'arrête quand on heurte un mur derrière soi, ce qui est une erreur, et on s'arrête simplement quand la route devant finit.
+Demandez dix pas à une marche qui en compte quatre et vous obtenez les quatre : `[ 1, 4, 7, 10 ]`. Demandez-lui de marcher en arrière depuis le début et il refuse, dans ses propres mots : `Can't walk backward! Already at the beginning of walkable positions.` L'article soutient que cela reflète notre façon de marcher dans le monde physique. On s'arrête quand on heurte un mur derrière soi, et c'est une erreur. Quand la route devant finit, on s'arrête en silence.
 
 **Le Vérificateur demande oui ou non.** Tous, n'importe lequel, ou où :
 
@@ -94,7 +96,7 @@ o1 = new stzList([ "A", 5, "B", "C" ])
 #--> [ 2 ]
 ```
 
-**Le Producteur produit des données neuves à partir des anciennes, et laisse les anciennes tranquilles.** **L'Exécutant est son pendant : il change les éléments là où la condition tient.** Mis côte à côte sur la même liste, le contraste est le point :
+**Le Producteur produit des données neuves à partir des anciennes, et laisse les anciennes tranquilles.** **L'Exécutant est son pendant : il change les éléments là où la condition tient.** Lequel des deux touche la liste ? Mettez-les côte à côte sur la même liste et regardez :
 
 ```haro
 o1 = new stzYielder([ 1, -2, 3, -4, 5 ])
@@ -114,7 +116,7 @@ o2.PerformW('isString(@item)', 'upper(@item)')
 #--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
 ```
 
-Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`. Le producteur a rendu les mots en majuscules et la liste n'a pas été touchée. L'exécutant a changé la liste. Le verbe vous dit lequel, si bien qu'une conception peut dire « cette étape ne fait que lire » et le penser.
+Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`. Le producteur a rendu `[ "HARO", "PYTHON", "RUBY" ]` et la liste n'a pas été touchée. L'exécutant a changé la liste : `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. Le verbe vous dit lequel, si bien qu'une conception peut dire « cette étape ne fait que lire » et le penser.
 
 Maintenant ce que les quatre partagent, qui est la dernière pièce du titre : une condition voyage à l'intérieur d'un argument. C'est une petite chaîne, au même emplacement que celui de find, de items, de contains, gardée dans une variable si vous voulez ; et elle a un jumeau qui prend une vraie fonction :
 
@@ -131,7 +133,7 @@ cCond = '{ @item > 5 }'
 #--> [ 2, 4, 6 ]
 ```
 
-La forme en chaîne est la condition W, W pour where ; la forme en fonction est WF. Elles se ressemblent et diffèrent d'une manière qui compte. Le moteur lit une condition W comme des données, dans un petit langage à lui : des littéraux, `@item`, l'arithmétique, les comparaisons, et une courte liste de fonctions. Il ne peut pas appeler votre code. Alors une condition qui essaie n'est pas exécutée :
+La forme en chaîne est la condition W, W pour where ; la forme en fonction est WF. Elles se ressemblent, et la différence compte. Le moteur lit une condition W comme des données, dans un petit langage à lui : des littéraux, `@item`, l'arithmétique, les comparaisons, et une courte liste de fonctions. Il ne peut pas appeler votre code. Alors une condition qui essaie n'est pas exécutée :
 
 ```haro
 o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
@@ -141,9 +143,9 @@ o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 #--> [ "where", "{ @item > 5 }" ]
 ```
 
-Rien n'a été imprimé. Une condition W peut être stockée, montrée à une personne et approuvée avant de s'exécuter, parce qu'elle ne peut pas s'échapper. Le jumeau WF exécute du code hôte, et la table propre de la bibliothèque dit qu'il n'est pas sûr avec une entrée à laquelle vous ne faites pas confiance.
+Rien n'a été imprimé ! Les positions sont revenues vides, `[ ]`, et `W()` montre la condition pour ce qu'elle est, des données : `[ "where", "{ @item > 5 }" ]`. Une condition W peut être stockée, montrée à une personne et approuvée avant de s'exécuter, parce qu'elle ne peut pas s'échapper. Le jumeau WF exécute du code hôte, et la table propre de la bibliothèque dit qu'il n'est pas sûr avec une entrée à laquelle vous ne faites pas confiance.
 
-Les trois modèles de l'article « Bridging Minds and Code », le sémantique, le mental et celui de l'expression, sont une seule idée en trois endroits. Le modèle sémantique est le monde du programme comme connaissance : une pomme est un fruit. Le modèle mental est ce que vous venez de faire : créer un objet, y stocker des données, y trouver des choses, agir sur les positions. Le modèle d'expression est le code qui le dit : choisir l'objet, taper le nom de l'action, continuer le flux d'actions, convertir le résultat en un autre objet, et continuer ainsi jusqu'à la réponse finale. Je les raconte en mots parce que le code de cet article ne s'exécute pas à ce commit, comme le dit la section 7.
+Les trois modèles de l'article « Bridging Minds and Code », le sémantique, le mental et celui de l'expression, sont une seule idée en trois endroits. Le modèle sémantique est le monde du programme comme connaissance : une pomme est un fruit. Le modèle mental est ce que vous venez de faire : créer un objet, y stocker des données, y trouver des choses, agir sur les positions. Le modèle d'expression est le code qui le dit : choisir l'objet, taper le nom de l'action, continuer le flux d'actions, convertir le résultat en un autre objet. Continuer ainsi jusqu'à la réponse finale. Je les raconte en mots parce que le code de cet article ne s'exécute pas à ce commit, comme le dit la section 7.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -161,7 +163,7 @@ Les quatre métaphores n'ont pas de garde unique. Le producteur en a une narrée
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en paresse. Un générateur produit l'élément suivant à la demande et peut être sans fin. Le marcheur construit une carte de tout son voyage à l'instant où il est fait. C'est un gain pour la prévoyance, vous pouvez demander quelles positions il sautera avant qu'il bouge, et une perte pour un parcours très grand ou sans fin.
+Le terrain mène en paresse. Un générateur produit l'élément suivant à la demande et peut être sans fin. Le marcheur construit une carte de tout son voyage à l'instant où il est fait. C'est un gain pour la prévoyance : vous pouvez demander quelles positions il sautera avant qu'il bouge. C'est une perte pour un grand parcours, ou un parcours sans fin.
 
 Le terrain mène en ouverture. Une lambda porte n'importe quelle logique. Le langage W est borné exprès, et le prix de la borne est le second chemin, WF, qui a toute la puissance de l'hôte et aucune sécurité contre une entrée à laquelle on ne fait pas confiance. Il y a aussi un coût plus discret que j'ai mesuré une fois, sur un cas : une condition qui appelle quelque chose que le langage ne connaît pas donne une liste vide et aucune erreur.
 
@@ -175,7 +177,7 @@ Ce qui est construit : le marcheur à une dimension, dans la couche max, et les 
 
 Ce qui est conçu : les métaphores comme modules natifs du moteur. La conception du moteur marque les quatre comme prévus ; seul le producteur a un fichier de moteur. Et un marcheur qui ne porte plus du tout sur les listes mais sur toute structure indexée.
 
-Ce qui est absent ou cassé à ce commit, d'après mes exécutions :
+Six choses sont absentes ou cassées à ce commit, d'après mes exécutions.
 
 - La table de l'article sur la marche au bord ne tient pas. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et n'imprime que les cas qui s'exécutent ; la table n'est pas imprimée.
 - Le code de l'article « Beyond Loops » diffère par endroits. L'historique d'un marcheur est une liste de marches ; une marche en arrière ne prend plus d'argument ; la direction s'imprime « backward » là où l'article dit « reverse ». L'exécution de l'article par le site a gardé dix blocs sur dix-huit.
@@ -203,3 +205,5 @@ Ce qui est absent ou cassé à ce commit, d'après mes exécutions :
 Prenez la liste `[ 4, 9, 12, 7, 20, 3 ]`. Quatre phrases sont données. Une : sont-ils tous au-dessus de 2 ? Deux : donnez-moi, comme une nouvelle liste, ceux au-dessus de 8, doublés. Trois : rendez négatifs ceux au-dessus de 8, dans la liste elle-même. Quatre : quelles positions sont 2, 4 et 6 ?
 
 Pour chacune, dites d'abord quel mouvement c'est, marcher, vérifier, produire ou exécuter, et écrivez sous la ligne que vous allez écrire ce que vous attendez qu'elle imprime. Puis écrivez la ligne, avec la condition comme une chaîne partout où il y a une condition, et exécutez-la. Après la deuxième et la troisième, imprimez de nouveau la liste. Dites, avant de regarder, dans laquelle des deux la liste a changé.
+
+Le chapitre suivant passe au style d'écriture, et aux sept buts. Son principe tient en une phrase : ce que vous pensez est ce que vous écrivez.

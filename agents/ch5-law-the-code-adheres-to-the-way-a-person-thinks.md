@@ -4,19 +4,21 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+
+In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain, with a promise under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
 ## What the AI age changes here
 
-For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was simply the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
+For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
 
-That changes what a style is. A style that lives in one person's habits dies when that person stops writing every line. It has to become something a machine can be held to, and something a machine can check, or it thins away. In this house it did thin, and I will show you where. So this movement of the book, Programming rethought, opens on a law that has two halves, and the second half exists because of the age: the code adheres to the way a person thinks, and the court judges it whoever wrote it. By the court I mean the machine that judges code against the house's rules; today it judges only the library's own classes, and section 5 says how.
+That changes what a style is. A style that lives in one person's habits dies when that person stops writing every line. It has to become something a machine can be held to, and something a machine can check, or it thins away. In this house it did thin, and I will show you where. So this movement of the book, Programming rethought, opens on a law that has two halves. The second half exists because of the age: the code adheres to the way a person thinks, and the court judges it whoever wrote it. By the court I mean the machine that judges code against the house's rules; today it judges only the library's own classes, and section 5 says how.
 
-There is a dependency to say aloud. This book follows the order of its cover, from the familiar to the new: programming, then languages, then intelligence. The record's own logic runs the other way. The first act is to declare a language; programming happens inside a declared language; intelligence is governed by both. The vocabulary's forms are already declared in a spike of Haro (its charter, entry of 3 October 2026), and the usage that this chapter describes, the scene, the chain, the named parameter, the promise under each line, is meant to become one too. So read this law knowing that Part III holds it up.
+There is a dependency to say aloud. This book follows the order of its cover, from the familiar to the new: programming, then languages, then intelligence. The record's own logic runs the other way. The first act is to declare a language; programming happens inside a declared language; intelligence is governed by both. The vocabulary's forms are already declared in a spike of Haro (its charter, entry of 3 October 2026). The usage that this chapter describes, the scene, the chain, the named parameter, the promise under each line, is meant to be declared too. So read this law knowing that Part III holds it up.
 
 ## 1. The concept, as the field holds it
 
-In our industry, "coding style" means two things, and neither is about how a person thinks. The first is layout and naming, enforced by machines: Python's style guide since 2001, Go's formatter since 2009, and the formatters that every modern project runs before a commit. They settle arguments about spaces and capital letters, and they are very good at it. The second is the fluent interface: methods chained so that a line reads more or less like a sentence.
+In our industry, "coding style" means two things, and neither is about how a person thinks. The first is layout and naming, enforced by machines: Python's style guide since 2001, Go's formatter since 2009, and the formatters that every modern project runs before a commit. They settle arguments about spaces and capital letters, and they are good at it. The second is the fluent interface: methods chained so that a line reads almost like a sentence.
 
 The age of generated code added a third practice: check after. A model writes, the tests and the linters read what it wrote, and the model tries again if they complain. The line itself is judged for its shape and its result. Whether it follows the order in which the writer reasoned is a question I know no tool to ask.
 
@@ -28,7 +30,7 @@ My motto for this has not changed since 2020: **what you think is what you write
 
 The founding slide put the whole idea on one page. On the left, a person's four steps of thought: I take the word "softanza"; I turn it to uppercase; I get its characters; I join them with a space. On the right, the same four steps as one line of code, as if the text on the left had been pasted and run.
 
-That exact line no longer runs. Its third link, a method that turned the characters into a list of strings in one step, is not in the library today; it survives only in archived files and in one scratch sample, as `CharsQRT`. I tell you this first because a law chapter that hides its own founding example would not deserve your trust. Here is the nearest form that runs, with the four steps still visible, and then the form the library offers as one dedicated verb:
+That exact line no longer runs. Its third link, a method that turned the characters into a list of strings in one step, is not in the library today. It survives only in archived files and in one scratch sample, as `CharsQRT`. I tell you this first because a law chapter that hides its own founding example would not deserve your trust. Here is the nearest form that runs, with the four steps still visible, and then the form the library offers as one dedicated verb:
 
 ```haro
 ? StzListOfStringsQ( StzStringQ("softanza").UppercaseQ().Chars() ).ConcatenatedUsing(" ")
@@ -41,7 +43,7 @@ That exact line no longer runs. Its third link, a method that turned the charact
 
 The idea is intact; the fluent link was lost. A request goes to the library to restore it.
 
-The mental model is the same idea at the level of a problem. You say the problem in plain words. You select the object that holds the data. Then you ask, in order: does it contain what I care about, how many, where. Then you act on those positions, or you call the verb that does it for you:
+The mental model is the same idea at the level of a problem. You say the problem in plain words. You select the object that holds the data. Then you ask, in order: does it contain what I care about, how many, where? Then you act on those positions, or you call the verb that does it for you. Take a list with empty strings in it. Does it contain them, how many, and where? Run it:
 
 ```haro
 o1 = new stzList([ "A", "", "B", "", "", "C" ])
@@ -58,9 +60,9 @@ o1.ReplaceEmptyStrings(:With = "~")
 
 > run: kept
 
-Contain, count, find, act. Each line is one step of thought, and the names are the words you would use to say it.
+The list answers `TRUE`, then `3`, then `[ 2, 4, 5 ]`. Contain, count, find, act. Each line is one step of thought, and the names are the words you would use to say it.
 
-The verb's form says what happens to the object. By the library's convention, the past participle gives you a changed copy and leaves the object alone; the plain verb acts on the object; the verb with Q acts and hands the object back, so the next step can follow:
+The verb's form says what happens to the object. What does each form do to it? By the library's convention, the past participle gives you a changed copy and leaves the object alone. The plain verb acts on the object. The verb with Q acts and hands the object back, so the next step can follow:
 
 ```haro
 o1 = new stzString("RIxxNxG")
@@ -90,7 +92,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 
 > run: kept
 
-When several questions are asked of one thing, they are asked inside its scene, a block of braces around the object, so that the object is named once and the questions read as a list:
+When several questions are asked of one thing, they are asked inside its scene, a block of braces around the object. The object is named once, and the questions read as a list:
 
 ```haro
 Q("haro php HARO ruby Haro") {
@@ -105,7 +107,7 @@ Q("haro php HARO ruby Haro") {
 
 > run: kept
 
-And the steps of thought can be read back. An object lifted with history keeps the result of each step of its chain:
+Can the steps of thought be read back? An object lifted with history keeps the result of each step of its chain:
 
 ```haro
 ? @@( Qh(12500).AddQ(500).RetrieveQ(1500).DivideByQ(500).MultiplyByQ(2).History() )
@@ -114,11 +116,11 @@ And the steps of thought can be read back. An object lifted with history keeps t
 
 > run: kept
 
-The article that first told this promised four values, without the first, and a final value one unit short, 45 where the chain ends at 46. The guard behind the block states today's rule, on a string chain: the initial value, then each step's result. The book takes the run's answer, not the article's.
+Five values, the starting one included, and the chain ends at 46! The article that first told this promised four values, without the first, and a final value one unit short, 45. The guard behind the block states today's rule, on a string chain: the initial value, then each step's result. The book takes the run's answer, not the article's.
 
-Notice the line under every question. It is not a comment. It is a promise, what the line must print, and in this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
+Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, five of the fourteen running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass:
+Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, five of the fourteen running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -130,7 +132,7 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 
 > run: kept
 
-The rule does not care who wrote the class. That is the whole of the second half. And the promise under each question is read by a machine too: the library's runner judges a promise as a claim about what the line printed, so the house's oldest form of example is also its newest form of test.
+The court answers `FALSE`, and names the rule: `q-returns-object`. It did not ask who wrote the class! That is the whole of the second half. And the promise under each question is read by a machine too: the library's runner judges a promise as a claim about what the line printed. The house's oldest form of example is also its newest form of test.
 
 The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the fourteen house rules of the court below, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline, the grid and deep operations. Chapter 10 tells how programming becomes refinement.
 
@@ -138,13 +140,13 @@ The chapters of this part prove the law, each from one side. Chapter 6 tells the
 
 **I let the library's implementation go.** The code the models wrote inside the library is accepted as good. It does not look like mine. Its local variables carry underscores on both sides, hundreds of times per thousand lines, because the language beneath Softanza lets a library's local variable overwrite a caller's global, and the convention prevents it. I did not ask for the old style there, and I would refuse a campaign to impose it.
 
-**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an agent, writes with the library must take the historic style: the scene, the chain one step per line, the named parameter, the verb's form, the promise under each question. That is the line I drew when I saw what had happened.
+**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
 
-What had happened is measurable. A study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one: they assert in another form, a call that names the expectation, which they adopted because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends that the classic form, a title, the questions and the promises under them, become the one form for new test blocks, with the converted blocks left as they are; the record holds that recommendation, and no ruling of mine on it.
+What had happened is measurable. A study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one. They assert in another form, a call that names the expectation. They adopted it because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends that the classic form, a title, the questions and the promises under them, become the one form for new test blocks, with the converted blocks left as they are. The record holds that recommendation, and no ruling of mine on it.
 
 **I refused to rewrite code when the language changed its name.** When the language beneath became Haro, the code in my articles was renamed and nothing else. The forms are the asset; the name is a label.
 
-**The forms of the vocabulary were made data, and three old features were refused as grammar.** In Haro, the forms a verb can take are declared once and generated, and in the language's spike the library's shipped names are judged against the declaration: its charter reports 584 of the 595 shipped spellings of the string class in agreement (entry of 3 October 2026). The design of that work refuses three things the record counted as features: names that tolerate a misspelling, parameters in any order, and method names in other human languages. The founding deck counted the last two; the narration of the forms counted the first. Misspelling tolerance and free order stay in the library, in part; the multilingual names survive only in an archived file. None of the three is part of the grammar a machine is held to. The refusal is written in the language's principles file, as its seventh principle, marked designed; the book prints it as the design's, and the record does not say it is mine.
+**The forms of the vocabulary were made data, and three old features were refused as grammar.** In Haro, the forms a verb can take are declared once and generated, and in the language's spike the library's shipped names are judged against the declaration. Its charter reports 584 of the 595 shipped spellings of the string class in agreement (entry of 3 October 2026). The design of that work refuses three things the record counted as features: names that tolerate a misspelling, parameters in any order, and method names in other human languages. The founding deck counted the last two; the narration of the forms counted the first. Misspelling tolerance and free order stay in the library, in part; the multilingual names survive only in an archived file. None of the three is part of the grammar a machine is held to. The refusal is written in the language's principles file, as its seventh principle, marked designed; the book prints it as the design's, and the record does not say it is mine.
 
 **I chose goals before laws.** The 2022 design held seven goals, expressiveness, flexibility, reliability, consistency, human metaphors, practical abstractions and manageability, and every feature served one. The operating rules of today are laws paid for by incidents, which say how and not why. Chapter 7 puts the goals back beside the laws.
 
@@ -158,7 +160,7 @@ The field leads in enforcement. Most mainstream languages have a formatter and a
 
 The field leads in reach and in people. There is a labour market for its tools and none yet for this one, and the field's generators are the largest that exist.
 
-The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor; an agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
+The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, the verb's form is a contract about the object, and the promise under the line is the example, the test and the documentation at once.
 
@@ -166,7 +168,7 @@ Where I think Softanza stands apart is in what the style is tied to. A formatter
 
 What is built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
 
-What is designed: a court of style for the code a programmer or an agent writes with the library, which would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps; and the writing grammar declared in Haro, so that a model's output is held to it before it is written.
+What is designed: a court of style for the code a programmer or an agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that a model's output is held to it before it is written.
 
 What is absent: any machine that judges, today, the style of a program written with the library. The founding slide's chain does not run as written. In this book the discipline carries the name of its motto: what you think is what you write.
 
@@ -189,3 +191,5 @@ What is absent: any machine that judges, today, the style of a program written w
 Take the list `[ "tea", "", "rice", "", "fish", "" ]`. Write the questions of the mental model in order, one line each: does it contain empty strings, how many, where. Then one act, with a named parameter. Under every question, write the line it must print, before you run anything.
 
 Run it. Then ask an agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
+
+The next chapter is the mental model, and the metaphors. Where you would write a loop, it asks you to name the move you are making instead: walk, check, yield or perform.

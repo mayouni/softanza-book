@@ -16,6 +16,8 @@ rulings: ["12.25", "12.26", "12.27"]
 research: research/ch18.md
 ---
 
+Dans ce chapitre, je vous montre les cinq formes qu'une réponse peut prendre, une option, une structure de données, une formule, une phrase et des exemples, et ce que la porte gouvernée fait de chacune. Je vous dis quelles sont les trois qui s'exécutent et les deux qui ne s'exécutent pas, et ce que devient un refus une fois écrit : il attend une personne, avec son contexte et une durée de vie. Je laisse s'exécuter la conversation où il n'y a personne, et je montre ce qu'une conversation peut et ne peut pas faire en arabe et en haoussa. Quelle que soit la forme, une réponse n'est qu'un candidat, et ce sont les règles du monde qui décident si elle devient connaissance.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et une troisième se tient derrière son dernier registre. (Connaissance générale pour toute cette section, non une étude du dossier ; les dates sont à vérifier avant impression.)
@@ -30,7 +32,7 @@ La troisième est la programmation par l'exemple. Les tableurs remplissent une c
 
 **Une réponse peut venir sous cinq formes. Quelle que soit la forme, elle n'est qu'un candidat, et ce sont les règles du monde qui décident si elle devient connaissance.**
 
-Le document de conception le dit en une phrase que je garde : l'expression est libre, l'admission est gouvernée. Le dossier tient cette phrase, captée à partir de ma directive du 13 juillet 2026, et aucune phrase de moi sur le pourquoi de ces cinq registres et pas quatre ou six, ni sur le moment où j'ai opposé le wise coding au vibe coding. Le chapitre s'ouvre sur cette phrase.
+Le document de conception le dit en une phrase que je garde : l'expression est libre, l'admission est gouvernée. Le dossier tient cette phrase, captée à partir de ma directive du 13 juillet 2026. Il ne tient aucune phrase de moi sur le pourquoi de ces cinq registres et pas quatre ou six, ni sur le moment où j'ai opposé le wise coding au vibe coding. Le chapitre s'ouvre sur cette phrase.
 
 ## 3. La forme Softanza
 
@@ -52,7 +54,7 @@ oKB.ReplyIn("frame", "olives")
 #--> [ "olives" ]
 ```
 
-Un numéro que personne n'a offert est refusé, avec sa raison. Le refus ne devine jamais une valeur, il arrive à une personne comme un point de contrôle, et le but reste ouvert :
+Que répond la porte à un numéro que personne n'a offert ? Exécutez-le :
 
 ```haro
 ? oKB.AskIn("frame")
@@ -68,7 +70,7 @@ aV = oKB.ReplyIn("frame", 99)
 #--> pursuing
 ```
 
-Regardez ce que dit le refus : une raison, et un compte des options sur la table. Il ne les énumère pas, et la question suivante offre de nouveau les mêmes options. Cela compte pour la section 7.
+Le refus dit `no such option`, et le point de contrôle dit pourquoi : `no option (99) was offered -- 2 option(s) on the table`. Une raison, et un compte des options sur la table. Il ne les énumère pas, et la question suivante offre de nouveau les mêmes options. Le refus ne devine jamais une valeur, il arrive à une personne comme un point de contrôle, et le but reste `pursuing`. Cela compte pour la section 7.
 
 La question est une donnée avant d'être un texte. Elle porte une force, qui est *what* tant que le monde ne sait rien et *which* dès qu'il connaît une valeur, et les options. N'importe quel médium peut la rendre :
 
@@ -100,7 +102,7 @@ aV = oKD.ReplyIn("setup", [ "mascarpone", "espresso" ])
 #--> fulfilled
 ```
 
-**Le quatrième registre : une phrase.** (Je saute le troisième un moment, parce que c'est l'un des deux qui ne s'exécutent pas.) Une expression de la forme « X and Y » ou « X, Y » est lue comme deux valeurs, chacune jugée. La conversation tient une transcription où chaque admission est narrée et où l'accomplissement du but est consigné :
+**Le quatrième registre : une phrase.** Je saute le troisième un moment, parce que c'est l'un des deux qui ne s'exécutent pas. Une expression de la forme « X and Y » ou « X, Y » est lue comme deux valeurs, chacune jugée. La conversation tient une transcription où chaque admission est narrée et où l'accomplissement du but est consigné :
 
 ```haro
 oKM = new stzKnowledgeGraph("menu")
@@ -137,7 +139,7 @@ aV = oKS.ReplyIn("s", "mario and giovanni")
 
 Prenez garde à ce que vous lisez là-dedans. Le choix entre Mario et Giovanni a été fait par l'ordre. Il n'a pas été fait par une personne. La conception promet autre chose, et la section 7 dit quoi.
 
-**Le troisième registre, la formule.** Une formule tapée en réponse n'est pas évaluée. Elle est prise pour une valeur :
+**Le troisième registre, la formule.** Une formule tapée en réponse est-elle évaluée ? Exécutez-le :
 
 ```haro
 oKP = new stzKnowledgeGraph("shop")
@@ -150,9 +152,9 @@ oKP.AskIn("price")
 #--> =12*3
 ```
 
-Le prix du thé est maintenant le texte « =12*3 ». Je l'ai découvert en l'exécutant, et le code est muet sur un registre de formule. Le dossier liste le travail de wise coding sur les registres 3 et 5 comme en attente, non acheminé.
+Elle ne l'est pas. Le prix du thé est maintenant le texte `=12*3` ! Je l'ai découvert en l'exécutant, et le code est muet sur un registre de formule. Le dossier liste le travail de wise coding sur les registres 3 et 5 comme en attente, non acheminé.
 
-**Le cinquième registre, les exemples.** Quand des exemples sont offerts sous forme de paires, ils ne sont ni admis ni refusés. Le but reste ouvert, et aucun point de contrôle n'est écrit. L'agent qui les lirait figure sur la liste, et réservé :
+**Le cinquième registre, les exemples.** Que fait la porte d'exemples offerts sous forme de paires ? L'agent qui les lirait figure sur la liste, et réservé :
 
 ```haro
 oKX = new stzKnowledgeGraph("phones")
@@ -176,7 +178,7 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Ce n'est pas le refus que décrit le protocole. C'est le silence, et le silence est la pire réponse : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute. Les mêmes exemples tapés comme une seule chaîne, jointe par une virgule, sont découpés et admis comme deux valeurs littérales, et le but se lit accompli. Les exemples sont devenus la connaissance. Rien n'a été induit.
+Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence, et le silence est la pire réponse : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute. Les mêmes exemples tapés comme une seule chaîne, jointe par une virgule, sont découpés et admis comme deux valeurs littérales, et le but se lit accompli. Les exemples sont devenus la connaissance. Rien n'a été induit.
 
 Ainsi trois des cinq registres sont câblés, l'un d'eux sous sa forme la plus simple, un séparateur. Deux ne le sont pas. Je préfère que vous le rencontriez ici plutôt que sur une page de moi qui aurait dit cinq.
 
@@ -231,7 +233,7 @@ oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
 
 ### Programmatique par défaut : la conversation où il n'y a personne
 
-La loi du chapitre 17 dit que les conversations ont lieu d'abord dans le code. Voici la conversation sans personne et sans modèle. Un agent de la bibliothèque demande, une source de réponses (une simple fonction) répond, et chaque réponse passe par la même porte. Là où la source n'a pas de réponse, l'agent s'arrête et laisse l'écart à une personne. Il n'invente pas :
+La loi du chapitre 17 dit que les conversations ont lieu d'abord dans le code. Voici la conversation sans personne et sans modèle. Un agent de la bibliothèque demande, une source de réponses (une simple fonction) répond, et chaque réponse passe par la même porte. Là où la source n'a pas de réponse, l'agent invente-t-il ? Exécutez-le :
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
@@ -260,7 +262,7 @@ aR2 = StzOwnAgent("wise-coder").PursueGoal(StzGoalQ().RequireEach("dish", "conta
 #--> stopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human
 ```
 
-Des cinq agents propres de la bibliothèque, c'est celui qui est câblé. Les quatre autres sont réservés, et en demander un lève une erreur. Ce n'est jamais un bouchon.
+Il n'invente pas. Il s'arrête, dit `stopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human`, et laisse l'écart à une personne. Des cinq agents propres de la bibliothèque, c'est celui qui est câblé. Les quatre autres sont réservés, et en demander un lève une erreur, comme l'a imprimé le bloc du cinquième registre : `RESERVED, not wired yet -- refusing rather than returning a stub`. Ce n'est jamais un bouchon.
 
 ### En arabe, et en haoussa
 
@@ -310,11 +312,11 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 #--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
 ```
 
-Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve), et donc les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
+Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve). Les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont donc pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
 
 ### Un modèle est une fluidité, jamais l'esprit
 
-Sans modèle, une conversation reste sur son plancher déterministe et le dit. Le mot « neural » peut être posé, et il n'est revendiqué que lorsqu'un modèle est réellement là :
+Sans modèle, que dit une conversation de sa propre fluidité ? Exécutez-le :
 
 ```haro
 oKF2 = new stzKnowledgeGraph("fluency-space")
@@ -328,13 +330,15 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 #--> 0
 ```
 
+`plain` : elle reste sur son plancher déterministe et le dit. Le mot « neural » peut être posé, et `Fluency()` le répète, mais `IsFluencyNeural()` répond `0`. Le mot n'est revendiqué que lorsqu'un modèle est là.
+
 ## 4. La décision, et ce que j'ai refusé
 
 **J'ai refusé de deviner.** La phrase du dossier est : deviner est remplacé par demander ; les impressions sont remplacées par la gouvernance. Un écart est une question. Une réponse est un candidat.
 
-**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance. Les cinq registres aboutissent dans un seul entonnoir.
+**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance. Les cinq registres passent par une seule porte.
 
-**J'ai refusé un bouchon.** Un agent réservé lève une erreur quand on le demande. Le document de conception le dit simplement : l'erreur levée est la loi qui fonctionne, et il ne faut pas la lire comme un défaut. J'ai refusé de faire semblant que le cinquième registre fonctionne.
+**J'ai refusé un bouchon.** Un agent réservé lève une erreur quand on le demande. Le document de conception le dit sans détour : l'erreur levée est la loi qui fonctionne, et il ne faut pas la lire comme un défaut. J'ai refusé de faire semblant que le cinquième registre fonctionne.
 
 **J'ai refusé un agent qui comble un écart pour finir le travail.** Le wise coder s'arrête, et laisse l'écart à une personne.
 
@@ -346,7 +350,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 5. Le tribunal
 
-`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace ; que la question est menée par le système, nomme son sujet et dit pourquoi il demande ; que « X and Y » et une structure de données sont admis ; qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle ; et que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, les options numérotées et le refus d'un numéro que personne n'a offert, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte et ne l'exécute pas ; le bloc du tuteur ci-dessus ne fait que lire le cours.
+`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace, et que la question est menée par le système, nomme son sujet et dit pourquoi il demande. Elle prouve que « X and Y » et une structure de données sont admis, et qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle. Elle prouve enfin que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, les options numérotées et le refus d'un numéro que personne n'a offert, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte et ne l'exécute pas ; le bloc du tuteur ci-dessus ne fait que lire le cours.
 
 Trois des gardes impriment leur propre total et se terminent en appelant `pf()`, qui imprime le temps et la version du runtime puis arrête l'exécution par une levée d'erreur. C'est leur façon de finir. `tutor_gaps_narrated` se termine par `Summary()`, qui imprime le total et un état, et ne lève pas d'erreur.
 
@@ -358,15 +362,15 @@ Le terrain mène sur les exemples. La programmation par l'exemple est, telle que
 
 Le terrain est honnête sur les coûts, et le dossier aussi. Plusieurs candidats est le cas normal quand on demande une règle à partir d'exemples. Un motif induit de trois exemples les surapprend. Le remède que nomme le dossier est la question qui distingue deux candidats. Et l'index qui porterait les exemples est aussi propre que les étiquettes des méthodes, avec environ quatre-vingt-cinq fautes d'orthographe.
 
-Là où je pense que le dossier se distingue : chaque réponse, sous quelque forme que ce soit, est jugée par les lois du monde avant de compter, avec la raison, et la session garde une transcription et un point de contrôle qu'une personne peut lire. La réponse du terrain est un prompt, et l'humain garde ce qui sort.
+Là où je pense que le dossier se distingue : chaque réponse, sous quelque forme que ce soit, est jugée par les lois du monde avant de compter, avec la raison. La session garde une transcription et un point de contrôle qu'une personne peut lire. La réponse du terrain est un prompt, et l'humain garde ce qui sort.
 
 ## 7. La limite
 
-Ce qui est construit : le but, l'écart, la question avec sa raison, le cadre ; le premier registre, le deuxième, et le quatrième sous la forme d'un séparateur ; la porte gouvernée avec ses refus ; le point de contrôle et sa durée de vie ; le but accompli ou révoqué ; la transcription ; un agent câblé ; la phrase d'écart du tuteur en quatre langues.
+Ce qui est construit : le but, l'écart, la question avec sa raison, le cadre ; le premier registre, le deuxième, et le quatrième sous la forme d'un séparateur ; la porte gouvernée avec ses refus. Et le point de contrôle et sa durée de vie ; le but accompli ou révoqué ; la transcription ; un agent câblé ; la phrase d'écart du tuteur en quatre langues.
 
-Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes : les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse ; et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Et l'exemple réécrit comme promesse : la page du site *by example* (lue le 9 octobre 2026) l'appelle une règle de la conception, non construite. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit », et les pages en disent plus que le code. Je le dis carrément : les deux pages promettent plus que le code, pour que la page ou le code soit corrigé. Le code câble trois registres sur cinq. La note qui nomme la formule et les exemples les liste comme en attente, non acheminés, et pour ce chapitre ils sont absents.
+Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes. Les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse ; et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Et l'exemple réécrit comme promesse : la page du site *by example* (lue le 9 octobre 2026) l'appelle une règle de la conception, non construite. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit », et les pages en disent plus que le code. Je le dis carrément : les deux pages promettent plus que le code, pour que la page ou le code soit corrigé. Le code câble trois registres sur cinq. La note qui nomme la formule et les exemples les liste comme en attente, non acheminés, et pour ce chapitre ils sont absents.
 
-Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une valeur avec un espace. Lors de l'exécution de recherche du 8 octobre 2026, sur la version de la bibliothèque que ce livre exécute, `ReplyIn` a levé une erreur, avec une variable non initialisée, sur chaque valeur contenant un espace que j'ai essayée : « tomato sauce », « fromage et tomate », « jibini da tumatir ». Appelée directement, la porte a renvoyé correctement le refus. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, de sorte que l'exécution du livre ne les montre pas. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est dans la note comme demande, et l'exercice ci-dessous n'emploie pas de valeur avec un espace.
+Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une valeur avec un espace. Lors de l'exécution de recherche du 8 octobre 2026, sur la version de la bibliothèque que ce livre exécute, `ReplyIn` a levé une erreur, avec une variable non initialisée, sur chaque valeur contenant un espace que j'ai essayée. Les trois étaient « tomato sauce », « fromage et tomate », « jibini da tumatir ». Appelée directement, la porte a renvoyé correctement le refus. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, de sorte que l'exécution du livre ne les montre pas. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est dans la note comme demande, et l'exercice ci-dessous n'emploie pas de valeur avec un espace.
 
 ## 8. Six portes
 
@@ -384,7 +388,7 @@ Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'a
 
 ## 9. Exercice
 
-Choisissez un petit monde à vous, une boutique, une classe, une clinique, avec quatre entités d'un même type et un but selon lequel chacune a besoin d'une relation. Avant d'exécuter quoi que ce soit, écrivez sous chacune des réponses ci-dessous le verdict que vous attendez, admis, refusé avec une raison, ou ni l'un ni l'autre :
+Choisissez un petit monde à vous, une boutique, une classe, une clinique, avec quatre entités d'un même type et un but selon lequel chacune a besoin d'une relation. Avant d'exécuter quoi que ce soit, écrivez sous chacune des cinq réponses ci-dessous le verdict que vous attendez : admis, refusé avec une raison, ou ni l'un ni l'autre.
 
 1. un mot simple ;
 2. un numéro qui choisit une valeur que la première réponse a fait connaître ;
@@ -402,4 +406,6 @@ oWorld.AskIn("mine")
 # your five replies here, each with the verdict you expect
 ```
 
-La cinquième réponse produit du silence aujourd'hui, et c'est la leçon de l'exercice. Si la bibliothèque la transforme plus tard en refus, la réponse attendue change. Exécutez-le à la date et à la validation indiquées au pied de la page.
+La cinquième réponse produit du silence aujourd'hui, et c'est la leçon de l'exercice. Si la bibliothèque la transforme plus tard en refus, la réponse attendue change. Exécutez-le à la date et au commit indiqués au pied de la page.
+
+Le chapitre suivant porte sur le modèle de langage de domaine. Là, la prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, et jamais un jeton.

@@ -16,13 +16,15 @@ rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
 ---
 
+Dans ce chapitre, je pars de l'expression régulière, ce qu'un motif est pour un programmeur qui travaille, et je porte son habitude aux données qui ne sont pas du texte : listes, nombres, tableaux, matrices, temps et graphes. Je fais le même petit geste dans chaque support, un constructeur, un motif dans une chaîne de caractères, `Match`, et je vous montre tout de suite que la grammaire n'est pas tout à fait une. Je dis ce que les gardes prouvent et là où la famille est faible en elle-même, et je garde sa seule tension pour la limite : un mot que le langage ne connaît pas n'est pas encore refusé. Le principe est celui-ci : un motif est une règle sur la forme des données, écrite comme des données, et la même habitude sert tous les genres de données.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Pour un programmeur qui travaille, un motif est une expression régulière : une notation compacte de la forme d'une chaîne de caractères, remise à un moteur qui dit si le texte lui correspond, et où. Les moteurs sont anciens et bien connus. Celui qui est sous cette bibliothèque est PCRE2, et le site le mesure contre deux autres.
 
 Pour les données qui ne sont pas du texte, le terrain emploie d'autres outils, un par support et aucun partagé. La mise en correspondance structurelle de motifs dans les langages de la famille ML, en Rust, et depuis Python 3.10 en Python. Les vérifications de schéma pour les listes et les enregistrements. Les bibliothèques de qualité des données pour les tableaux. La reconnaissance de motifs de lignes en SQL, et les moteurs de flux, pour les séquences dans le temps. Et les langages de requête de graphes, dont le cœur est un motif de chemin. (Connaissance générale, bien établie ; le dossier ne contient aucune étude datée d'aucun d'eux, et je n'en invente aucune.)
 
-L'étude de terrain du domaine de projets lui-même, d'août 2026, donne le profil des petits langages qui ont survécu : une grammaire fermée, une question de domaine, du texte brut, une surface minuscule, une spécification avec une suite de conformité, des décennies de stabilité. Un langage de motifs est exactement cela. Une question, ces données correspondent-elles, en quelques caractères. Ce que le terrain n'offre pas, c'est la même notation d'un support à l'autre.
+L'étude de terrain du domaine de projets lui-même, d'août 2026, donne le profil des petits langages qui ont survécu. Ce profil est une grammaire fermée, une question de domaine, du texte brut, une surface minuscule, une spécification avec une suite de conformité, des décennies de stabilité. Un langage de motifs est exactement cela. Une question, ces données correspondent-elles, en quelques caractères. Ce que le terrain n'offre pas, c'est la même notation d'un support à l'autre.
 
 ## 2. Le premier principe
 
@@ -32,7 +34,7 @@ La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque s
 
 ## 3. La forme Softanza
 
-Un motif appelé par son nom est un catalogue fermé. La bibliothèque a un fichier de données de motifs nommés, et demander un nom qu'elle ne tient pas est refusé :
+Un motif appelé par son nom est un catalogue fermé. La bibliothèque a un fichier de données de motifs nommés. Que dit-elle quand vous demandez un nom qu'elle ne tient pas ? Exécutez-le :
 
 ```haro
 ? rx(pat(:isoDate)).Match("2023-12-25")
@@ -48,6 +50,8 @@ catch
 done
 #--> The pattern name you provided does not exist in stzRegexData file.
 ```
+
+Elle refuse, et dit pourquoi : `The pattern name you provided does not exist in stzRegexData file.`
 
 Un motif peut aussi répondre à la valeur à moitié écrite, ce que veut un formulaire pendant que la personne tape :
 
@@ -214,9 +218,9 @@ Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de 
 
 ## 6. Le terrain, et où il mène
 
-**Chaînes de caractères.** Le terrain mène en sûreté et en vitesse, et Softanza mène en nommage. La page du site pour ce domaine le dit elle-même : elle est derrière les moteurs modernes en sûreté et en débit, sans JIT et sans moteur de correspondance en temps linéaire, et le contrôle contre le retour arrière catastrophique n'est pas atteignable depuis Haro, bien que le code pour les deux soit déjà compilé dans le binaire. L'en-tête du moteur confirme que le durcissement existe en dessous : une limite de correspondances, une limite de récursion, des plafonds de longueur.
+**Chaînes de caractères.** Le terrain mène en sûreté et en vitesse, et Softanza mène en nommage. La page du site pour ce domaine le dit elle-même : elle est derrière les moteurs modernes en sûreté et en débit, sans JIT et sans moteur de correspondance en temps linéaire. Le contrôle contre le retour arrière catastrophique n'est pas atteignable depuis Haro, bien que le code pour les deux soit déjà compilé dans le binaire. L'en-tête du moteur confirme que le durcissement existe en dessous : une limite de correspondances, une limite de récursion, des plafonds de longueur.
 
-**Listes, nombres, temps, graphes.** Le terrain a des outils uniques plus anciens et plus forts. L'étude le dit sans les classer : un outil a des motifs de listes, l'unicité et des intervalles à pas ; trois langages ont la mise en correspondance structurelle ; les langages de requête de graphes existent ; le traitement d'événements existe pour le temps. Ce que le terrain n'a pas, et ce que le dossier revendique, c'est l'habitude unique d'un support à l'autre.
+**Listes, nombres, temps, graphes.** Le terrain a des outils uniques plus anciens et plus forts. L'étude le dit sans les classer : un outil a des motifs de listes, l'unicité et des intervalles à pas, et trois langages ont la mise en correspondance structurelle. Les langages de requête de graphes existent, et le traitement d'événements existe pour le temps. Ce que le terrain n'a pas, et ce que le dossier revendique, c'est l'habitude unique d'un support à l'autre.
 
 **Tableaux.** Les bibliothèques de qualité des données mènent en portée et en écosystème. Ici une règle est une phrase que la personne qui possède les données peut lire. La perte est qu'elle ne s'exécute que sur `stzTable`.
 
@@ -228,11 +232,11 @@ Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de 
 
 Ce qui est construit : les chaînes de caractères, les nombres et les tableaux, chacun avec une garde et une petite fonction. L'habitude partagée.
 
-Ce qui est construit en partie :
+Ce qui est construit en partie : les listes, les matrices, le temps et les graphes, dans cet ordre.
 
 - **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans mon exécution (notes de recherche, sans bloc), le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
 - **Matrices** : la taille, la forme, l'élément et trois propriétés s'exécutent. L'en-tête de la classe liste les termes qui acceptent toute matrice : `row`, `col`, `pattern`, `determinant` et `sum`. Une matrice de deux par deux est acceptée par `{row(99)}`.
-- **Temps** : les instants et les durées avec un pas s'exécutent. Dans mon exécution (sans bloc), un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet, qui devrait correspondre :
+- **Temps** : les instants et les durées avec un pas s'exécutent. Dans mon exécution (sans bloc), un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet. Correspond-il ?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -249,9 +253,9 @@ o2 = new stzTimex("{@Event(Lunch)}")
 #--> "Lunch)"
 ```
 
-L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas, et le troisième montre pourquoi : l'étiquette a été lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
+L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas, et le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
 
-- **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux, et le motif correspond :
+- **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux. Le motif correspond-il ?
 
 ```haro
 ? (new stzGraphex("{@Node(placed) -> @Node(served)}", g)).Match(g)
@@ -260,9 +264,9 @@ L'article promet que le premier est TRUE. Le deuxième montre que même un évé
 #--> 1
 ```
 
-Cooking se trouve entre le premier et le dernier, donc la première réponse est le sens de la flèche. La seconde est le quantificateur ignoré. Le cache de cette classe est indexé par les comptes de nœuds et d'arêtes et les identifiants de nœuds, de sorte qu'un second graphe avec les mêmes identifiants et d'autres étiquettes est servi depuis le cache, jusqu'à `ClearCache()`.
+Cooking se trouve entre le premier et le dernier, donc la première réponse est le sens de la flèche. La seconde répond 1 aussi : le quantificateur est ignoré. Le cache de cette classe est indexé par les comptes de nœuds et d'arêtes et les identifiants de nœuds, de sorte qu'un second graphe avec les mêmes identifiants et d'autres étiquettes est servi depuis le cache, jusqu'à `ClearCache()`.
 
-**Le refus que la famille n'a pas encore fait.** La loi du chapitre 11 est qu'un langage est déclaré et fermé, avec des refus. Voici la famille, à qui l'on demande un mot qu'elle ne connaît pas :
+**Le refus que la famille n'a pas encore fait.** La loi du chapitre 11 est qu'un langage est déclaré et fermé, avec des refus. Que répond la famille quand on lui demande un mot qu'elle ne connaît pas ? Exécutez-le :
 
 ```haro
 ? Nx("{@Banana(3)}").Match(7)
@@ -275,7 +279,7 @@ Cooking se trouve entre le premier et le dernier, donc la première réponse est
 #--> 0
 ```
 
-Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres. Les jetons sont vides, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi.
+Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres ! Les jetons sont `[ ]`, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi.
 
 Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
 
@@ -314,3 +318,5 @@ cPattern = "{ ... }"
 ```
 
 Exécutez-le. Une clause rejette le deuxième tableau et une autre rejette le troisième ; laquelle est laquelle ? Et que dirait le motif si l'email était une simple espace ? Je ne réponds pas en premier. Si une promesse se rompt, ne la changez pas : expliquez la sortie.
+
+Le chapitre suivant porte sur sept langages et une porte. Une porte est un runtime et jamais une syntaxe, et la porte est une : elle est la réponse à la question « et le langage X ? ».

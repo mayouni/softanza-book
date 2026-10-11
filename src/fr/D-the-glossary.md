@@ -30,6 +30,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **valider.** Le seul acte qui atteint la réalité. Seul un acteur gouverné valide, sous une portée, et le modèle ne le peut pas. Chapitres 20, 24.
 
+**socle commun.** Le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient : une identité, une session, un magasin. C'est un monde comme les autres, le monde zéro, et non un nœud d'une espèce à part. Chapitres 4, 23.
+
 **constellation.** Un graphe de mondes, avec des liens entre eux et une gouvernance sur chaque passage. Chapitre 23.
 
 **tribunal.** Le juge d'une chose. Un tribunal dit gardé ou refusé, et dit pourquoi dans les mots de la déclaration. Un langage naît avec son tribunal. Chapitres 5, 11, 12, 21.
@@ -48,6 +50,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **faux.** Un double qui dit qu'il en est un : un bac à sable, un puits de courrier, une réponse enregistrée. Un faux ne doit jamais être livré. Un double qui ne dit rien de lui-même est pris pour réel, et passe la barrière. Chapitre 24.
 
+**étage.** Un niveau de l'image de la plateforme, du moteur en bas à l'organisation en haut, chacun avec son juge à côté. Ni une couche de la bibliothèque (noyau, base, max), ni un volet. Chapitre 4.
+
 **écart.** Ce dont un but a besoin et que le monde ne contient pas encore. Une conversation qui demande part de l'écart. Chapitre 17.
 
 **barrière.** Un endroit où quelque chose est refusé avant d'aller plus loin. La barrière d'enregistrement, la barrière de production, la jointure de capacité. Chapitres 20, 24.
@@ -59,6 +63,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 **garde.** Un fichier de l'arbre de tests de la bibliothèque qui contient des assertions, et qui prouve un chapitre. Ce livre compte les assertions d'une garde et n'exécute pas la plupart d'entre elles. Chapitres 5, 21.
 
 **Haro.** Le langage dans lequel ce livre écrit : la surface de l'ancien langage hôte, gardée et rebaptisée, avec une charte et un runtime encore en construction. Haro n'exécute pas encore la bibliothèque. Chapitres 3, 27.
+
+**registre (de sécurité).** Le registre où le volet de sécurité consigne ce qui a été refusé et pourquoi, écrit par le tribunal et jamais par la chose qu'il juge. Chapitres 20, 21.
 
 **lexique.** Le dictionnaire des mots qu'une phrase peut employer, chacun associé à un verbe que la bibliothèque documente. Chapitre 13.
 
@@ -73,6 +79,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 **perception.** Ce qu'une personne a vu ou entendu d'une chose, nommé, daté, et cité. Une comparaison prouve l'identité et jamais la justesse. Chapitres 21, 33.
 
 **plan.** Le seul artefact qui passe d'un jumeau vers la réalité. Il raconte, signale et valide, et il est validé par un acteur gouverné. Chapitres 20, 24.
+
+**volet.** Une aire de la bibliothèque, nommée par ce qu'elle gouverne et prouvée par ses propres gardes : le volet système, le volet agentique, les volets de sécurité et de performance. Ni un étage, ni un plan, qui est l'artefact qu'une machine propose. Chapitres 1, 21.
 
 **plateforme.** L'enveloppe autour d'une solution, et le sol sur lequel se tient une constellation : des capacités, un socle commun, un registre, des coques, un profil. Chapitre 23.
 
@@ -101,5 +109,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 **non perçu.** L'état d'une chose qui atteint une personne par un sens, quand aucune personne ne l'a perçue et ne l'a dit. C'est un état et non un échec. Chapitres 21, 33.
 
 **wise coding.** Softanza demande et le monde juge. L'inversion de la boucle qui consiste à demander à un modèle et à garder ce qui s'exécute. Chapitre 18.
+
+**atelier.** Là où une proposition est répétée. Il tient un jumeau, une copie du système sans aucune référence au vrai ; ce que la proposition écrirait va dans le jumeau, et ce qui en sort est un plan. Celui qu'un programmeur emploie déjà, et non un second pour les machines. Chapitres 1, 20.
 
 **monde.** Une application, comme une déclaration avec un être, un devenir et une façon d'être rencontrée. Chapitre 23.

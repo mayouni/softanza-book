@@ -16,9 +16,11 @@ rulings: ["12.19", "12.29", "12.30"]
 research: research/ch29.md
 ---
 
+Dans ce chapitre, je prends une banque de Niamey, sous la banque centrale de l'union monétaire ouest-africaine, et je dis d'abord où est la leçon : dans la bibliothèque, et non dans le produit que la banque fait tourner. J'écris l'organigramme d'une petite banque comme un texte et je le juge selon la règle régionale et selon la séparation des tâches. J'imprime ce que chacun des sept régimes contient, j'ajoute une règle propre à la banque comme une donnée, et je lis le rapport unique avec son verdict. Je dis les quatre choses que j'ai refusées, la première étant de cacher la structure dans une base de données. Le principe tient en une phrase : l'organigramme dit ce qui est, la règle dit ce qui doit être, et le verdict nomme la règle et le lieu.
+
 ## 1. Le concept, tel que le terrain le tient
 
-Une banque est jugée sur sa structure autant que sur ses chiffres. Un régulateur demande qui rend compte à qui : si la fonction d'audit est indépendante des dirigeants qu'elle audite, s'il y a un conseil, si une fonction de risque existe, si la personne qui exécute un paiement est celle qui l'approuve. Le terrain répond par des documents : un organigramme dessiné dans une diapositive, une politique écrite dans un traitement de texte, un audit qui compare les deux une fois par an.
+Une banque est jugée sur sa structure autant que sur ses chiffres. Un régulateur demande qui rend compte à qui : si la fonction d'audit est indépendante des dirigeants qu'elle audite, s'il y a un conseil, si une fonction de risque existe. Il demande si la personne qui exécute un paiement est celle qui l'approuve. Le terrain répond par des documents : un organigramme dessiné dans une diapositive, une politique écrite dans un traitement de texte, un audit qui compare les deux une fois par an.
 
 Le terrain a aussi une famille d'outils appelés plateformes de gouvernance, de risque et de conformité, qui tiennent des registres de risques et de contrôles et suivent les constats jusqu'à leur clôture. Ils enregistrent qu'un contrôle existe et à qui il appartient. Ils ne lisent en général pas la structure de l'organisation pour vous dire qu'elle est fausse. (Connaissance générale, pas une étude du dossier.)
 
@@ -30,7 +32,7 @@ Le terrain a aussi une famille d'outils appelés plateformes de gouvernance, de 
 
 Une banque commerciale de Niamey, sous les règles de la banque centrale de l'union monétaire ouest-africaine, fait tourner un produit d'évaluation des organisations que j'ai construit. Il est installé sur le réseau interne de la banque, sous licence, et le guide d'installation que j'ai remis à la banque est le document qui atteste la référence. Le produit lui-même est une application Python : un petit serveur web avec une base de données. Je le dis d'abord, parce que la leçon que je vais vous montrer est dans la bibliothèque, et non à l'intérieur de ce produit.
 
-La leçon est qu'un organigramme est une donnée qu'un programme peut juger. Elle commence par un texte qu'une personne peut éditer, sans programmer : des postes, leurs titres, leurs départements, et à qui chacun rend compte. Voici l'organigramme d'une petite banque :
+La leçon est qu'un organigramme est une donnée qu'un programme peut juger. Elle commence par un texte qu'une personne peut éditer, sans programmer : des postes, leurs titres, leurs départements, et à qui chacun rend compte. Voici l'organigramme d'une petite banque. Que dit de lui la règle du régulateur régional ? Lancez-le :
 
 ```haro
 cChart = '
@@ -71,7 +73,7 @@ oOrg.ImportStzOrg(cChart)
 #--> 0
 ```
 
-La règle du régulateur lit l'organigramme. L'audit rend compte au directeur général, et le verdict le dit, avec un code de règle qu'un auditeur peut retrouver. Un organigramme est jugé par plus d'un tribunal à la fois, chaque constat porte son propre code, et le rapport de conformité dit conforme ou non. Voici une seconde règle, la séparation des tâches, qui dit que les opérations ne doivent pas rendre compte à la trésorerie :
+La règle du régulateur lit l'organigramme. L'audit rend compte au directeur général, et le verdict le dit dans ses propres mots, `BCEAO-002: Audit reports to non-board position`, avec un code de règle qu'un auditeur peut retrouver. Un organigramme est jugé par plus d'un tribunal à la fois, chaque constat porte son propre code, et le rapport de conformité dit conforme ou non. Voici une seconde règle, la séparation des tâches, qui dit que les opérations ne doivent pas rendre compte à la trésorerie :
 
 ```haro
 oOrg.AddManagementPositionXT("treasury", "Treasury")
@@ -91,7 +93,9 @@ aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
 #--> non-compliant
 ```
 
-La bibliothèque nomme sept régimes : le régional, Bâle III, SOX, PCI DSS, ISO 27001, le RGPD et HIPAA. Ils partagent un seul mécanisme. J'imprimerai ce que chacun contient, plutôt que d'écrire une phrase qui dit « Bâle III est validé » :
+Deux validateurs échouent, chacun avec son propre code, et le rapport de conformité dit `non-compliant`.
+
+La bibliothèque nomme sept régimes : le régional, Bâle III, SOX, PCI DSS, ISO 27001, le RGPD et HIPAA. Ils partagent un seul mécanisme. Combien de règles chacun contient-il ? Je l'imprime, plutôt que d'écrire une phrase qui dit « Bâle III est validé » :
 
 ```haro
 aBases = [ new stzBCEAORuleBase(), new stzBaselIIIRuleBase(), new stzSOXRuleBase(), new stzPCIDSSRuleBase(),
@@ -110,7 +114,7 @@ next
 
 Quatre règles que chaque base porte : personne ne rend compte à soi-même, aucun cycle de rattachement, aucun poste orphelin, et une étendue de contrôle. SOX en ajoute une qui lui est propre, appelée aussi séparation des tâches mais différente du second tribunal ci-dessus : aucun poste ne tient à la fois le rôle d'approbateur et celui d'exécutant. Le commentaire de la bibliothèque le dit sans détour : les classes de régimes ne diffèrent aujourd'hui que par le nom, et une seule ajoute une règle qui lui est propre. Je reviendrai sur ce que cela veut dire.
 
-La règle propre d'une banque est aussi une donnée. Prenez la règle selon laquelle l'audit interne rend compte au conseil. C'est un objet déclaré par des appels. Elle nomme le département qu'elle gouverne, la ligne qu'elle exige et la phrase qu'elle imprime, et elle s'ajoute à la base de règles d'un régime. Le rapport dit quelle règle a été rompue, et où :
+La règle propre d'une banque est aussi une donnée. Prenez la règle selon laquelle l'audit interne rend compte au conseil. C'est un objet déclaré par des appels. Elle nomme le département qu'elle gouverne, la ligne qu'elle exige et la phrase qu'elle imprime, et elle s'ajoute à la base de règles d'un régime. Quelle règle a été rompue, et où ? Le rapport le dit :
 
 ```haro
 oRule = new stzGraphRule("audit-reports-to-board")
@@ -128,7 +132,7 @@ oRep.Report()
 #        ERROR audit-reports-to-board @ audit -- internal audit must report to the board
 ```
 
-Puis le verdict suit l'organigramme. Deux modifications de deux lignes de rattachement, l'audit rend désormais compte au conseil et les opérations au directeur général, et les tribunaux qui disaient non disent oui :
+Puis le verdict suit l'organigramme. Deux modifications de deux lignes de rattachement, l'audit rend désormais compte au conseil et les opérations au directeur général. Que disent maintenant les tribunaux qui disaient non ? Lancez-le :
 
 ```haro
 oOrg.ReportsTo("audit", "board")
@@ -145,7 +149,7 @@ oRep.Report()
 #--> 1
 ```
 
-C'est le mouvement que raconte la narration d'une banque virtuelle (son propre code ne s'exécute pas au commit épinglé ; les appels ci-dessus, si), d'une structure non conforme à une structure gouvernée, et le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. Laissez vide le département du directeur général, et une fonction d'audit qui lui rend compte passe ; déclarez le département et le constat apparaît :
+Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée (son propre code ne s'exécute pas au commit épinglé ; les appels ci-dessus, si). Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. Que dit-il quand le département du directeur général est laissé vide ? Lancez-le :
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -159,7 +163,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 #--> 0
 ```
 
-Le même bloc montre le validateur bancaire qui passe une fois : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
+Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui passe une fois : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
 
 Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire d'une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
 
@@ -169,13 +173,13 @@ Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui 
 
 **J'ai refusé de prétendre plus que ce que la bibliothèque contient.** Le mot « validateur » peut se lire pour deux choses différentes. Le régulateur régional a un validateur de trois règles, et une base de règles de quatre règles universelles. Bâle III n'a que la base de règles, et les autres aussi. J'ai imprimé le compte, et le bloc ci-dessus le montre.
 
-**J'ai refusé de porter le texte d'un régulateur dans un code dont je ne peux pas citer la source.** Les codes BCEAO-001 à BCEAO-003 sont ceux de la bibliothèque ; le dossier ne les rattache à aucun article du texte de la banque centrale. Ce sont les propres règles de la bibliothèque, nommées d'après le régime du régulateur ; le dossier ne nomme aucun texte dont elles seraient tirées.
+**J'ai refusé de porter le texte d'un régulateur dans un code dont je ne peux pas citer la source.** Les codes BCEAO-001 à BCEAO-003 sont ceux de la bibliothèque. Le dossier ne les rattache à aucun article du texte de la banque centrale. Ce sont les propres règles de la bibliothèque, nommées d'après le régime du régulateur ; le dossier ne nomme aucun texte dont elles seraient tirées.
 
-**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles, depuis combien de temps le produit est installé, et combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque ; les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que le produit est construit avec Softanza et garde sa formulation ; ce chapitre dit ce que le dossier montre.
+**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles, depuis combien de temps le produit est installé, et combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque. Les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que le produit est construit avec Softanza et garde sa formulation ; ce chapitre dit ce que le dossier montre.
 
 ## 5. Le tribunal
 
-`orgrule_narrated` prouve SOX, le RGPD et HIPAA comme bases de règles sur le graphe de l'organigramme, avec les quatre règles universelles et la séparation des tâches que SOX ajoute, et l'organigramme qui rejoint le rapport unique ; le bloc ci-dessus imprime les sept comptes. `14_bceao_governance` prouve deux des trois règles du validateur régional. `15_multiple_validators` prouve le verdict combiné, et `13_segregation_of_duties` le second tribunal. `rulereport_narrated` prouve le rapport unique sur les constats du code, des agents et de la sécurité. `36_import_from_stzorg` prouve la forme texte de l'organigramme.
+`orgrule_narrated` prouve SOX, le RGPD et HIPAA comme bases de règles sur le graphe de l'organigramme, avec les quatre règles universelles et la séparation des tâches que SOX ajoute, et l'organigramme qui rejoint le rapport unique. Le bloc ci-dessus imprime les sept comptes. `14_bceao_governance` prouve deux des trois règles du validateur régional. `15_multiple_validators` prouve le verdict combiné, et `13_segregation_of_duties` le second tribunal. `rulereport_narrated` prouve le rapport unique sur les constats du code, des agents et de la sécurité. `36_import_from_stzorg` prouve la forme texte de l'organigramme.
 
 ## 6. Le terrain, et où il mène
 
@@ -187,16 +191,16 @@ Là où je pense que ceci se distingue, c'est que l'organigramme est la donnée 
 
 ## 7. La limite
 
-Ce qui est construit : l'organigramme comme modèle et comme texte ; les validateurs du régulateur régional et de la séparation des tâches ; les sept régimes comme un seul mécanisme avec l'exemple SOX ; une règle écrite comme une donnée ; le rapport unique avec son verdict.
+Ce qui est construit : l'organigramme comme modèle et comme texte ; les validateurs du régulateur régional et de la séparation des tâches ; les sept régimes comme un seul mécanisme avec l'exemple SOX. Construit aussi : une règle écrite comme une donnée, et le rapport unique avec son verdict.
 
-Ce qui est conçu, ou construit en partie :
+Quatre choses sont conçues, ou construites en partie.
 
 - Le contenu des six régimes autres que le régional. Cinq d'entre eux tiennent les mêmes quatre règles universelles et rien d'autre ; SOX en ajoute une cinquième.
 - Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle, et aucune ligne `when` ni `then`, de sorte qu'une telle règle se charge et ne juge rien. Le format est admis, et la règle n'est pas appliquée.
-- Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste, et il exige que les départements soient déclarés.
+- Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste. Il exige que les départements soient déclarés.
 - Le validateur de succession signale chaque poste pourvu, ce qui est, selon le commentaire de la bibliothèque elle-même, un défaut connu. La simulation de réorganisation lève une erreur quand on lui demande de changer une ligne de rattachement, également un défaut connu. L'article qui raconte la simulation nomme une méthode qui n'existe nulle part dans la bibliothèque.
 
-Ce qui est absent :
+Quatre choses sont absentes.
 
 - Le produit livré tournant sur la bibliothèque. C'est une application Python ; une recherche dans son code n'a trouvé aucun contrôle régional ou de Bâle et aucun appel à la bibliothèque.
 - Un mot de la banque. Le dossier est muet.
@@ -224,3 +228,5 @@ La couche web du produit est née dans son propre dépôt : son premier commit e
 Dessinez l'organigramme d'une organisation que vous connaissez comme un texte de postes, de titres, de départements et de lignes de rattachement. Avant de lancer quoi que ce soit, écrivez ce que vous attendez que la règle régionale, puis la séparation des tâches, en disent. Puis écrivez une règle à vous comme une donnée, qui gouverne un département, et dites ce que le rapport imprimera.
 
 Lancez-la. Puis laissez un département vide et dites quel constat disparaît, et pourquoi c'est dangereux.
+
+Le chapitre suivant quitte la banque pour une organisation sur le terrain, et son principe tient en une phrase : l'agent propose, et une personne décide.

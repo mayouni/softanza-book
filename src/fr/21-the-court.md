@@ -16,6 +16,8 @@ rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
 ---
 
+Dans ce chapitre, je reprends le tribunal du chapitre 5, qui juge quiconque a écrit le code, et j'en montre quatre, chacun par quelque chose qu'il refuse : les promesses, la perception, la sécurité et la performance. Je fais parcourir au voyageur un fichier de trois promesses, et je demande au dossier combien des huit traditions musicales une personne a entendues. Je modifie un registre scellé et je lis quelle entrée la chaîne nomme, et je laisse un modèle proposer un plan de performance qu'il ne peut pas valider. Je dis ce que j'ai refusé : le mot « narration » pour ce qui ne peut pas mentir, une seconde bibliothèque d'assertions, un sixième état pour un arrêt, une garantie sans garde. Le principe tient les quatre tribunaux ensemble : une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et là où aucun tribunal ne voit, le dossier le dit.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Quatre pratiques du terrain sont quatre tribunaux, et on les voit rarement comme un seul.
@@ -40,7 +42,7 @@ Le chapitre 5 a parlé du tribunal qui juge quiconque a écrit le code. Ce chapi
 
 ### Le tribunal des promesses
 
-Une promesse, dans ce livre, est la ligne `#-->` sous une expression, et c'est une affirmation sur un arrêt du programme. L'outil qui la lit, appelé le voyageur (il appartient au volet nommé Testoor), dit qu'une promesse est tenue, divergente, non atteinte ou non jugée. Une promesse qui se dispute avec elle-même, de la prose après une valeur, n'est jamais accusée. Le code de sortie du lanceur est celui du lanceur, et non celui du langage :
+Une promesse, dans ce livre, est la ligne `#-->` sous une expression, et c'est une affirmation sur un arrêt du programme. L'outil qui la lit, appelé le voyageur (il appartient au volet nommé Testoor), dit qu'une promesse est tenue, divergente, non atteinte ou non jugée. Une promesse qui se dispute avec elle-même, de la prose après une valeur, n'est jamais accusée. Que dit le voyageur d'une promesse vraie, d'une promesse fausse et d'une promesse qui se dispute avec elle-même ? Exécutez-le :
 
 ```haro
 write("tour.haro", '? 1 + 1' + nl + '#--> 2' + nl +
@@ -59,7 +61,9 @@ aClaims = oTour.Records()[1][:run][:stops][1][:claims]
 remove("tour.haro")
 ```
 
-Une promesse peut être que la ligne lève une erreur. Cela se lit comme une levée d'erreur promise. Quand elle survient, la promesse est tenue et la tournée a fini comme elle avait dit qu'elle le ferait, même si le processus du langage s'est terminé sur une erreur :
+Il dit `kept`, `diverged` et `unjudged`, et le code de sortie est `1`. Ce code est celui du lanceur, et non celui du langage.
+
+Une promesse peut être que la ligne lève une erreur. Cela se lit comme une levée d'erreur promise. Quand elle survient, comment la tournée finit-elle ? Exécutez-le :
 
 ```haro
 write("raise.haro", '? "before"  #--> before' + nl +
@@ -76,13 +80,15 @@ aRun = oRaise.Records()[1][:run]
 remove("raise.haro")
 ```
 
+La promesse est `kept`, la fin est `finished` et le code de sortie est `0`, alors même que le processus du langage s'est terminé sur une erreur ! La tournée a fini comme elle avait dit qu'elle le ferait.
+
 Chaque règle de ce juge a été apprise en regardant le harnais accuser la bibliothèque à tort. L'en-tête de la garde le dit. Une promesse courte `6` s'est un jour cachée à l'intérieur d'un `[ 6, 28 ]` plus loin, et c'est pourquoi la règle sur les graphies existe. Le juge propre à ce livre est une copie du juge du site, plus lâche que le voyageur.
 
 ### Le tribunal de la perception
 
 La phrase du dossier est qu'une comparaison prouve l'identité, et qu'elle ne prouve jamais la justesse. La bibliothèque tient le cas. Un tracé en barres dessinait des barres verticales pour des données horizontales pendant que tous ses soixante-treize exemples continuaient de passer. C'est pourquoi les tracés comparent désormais l'image exactement. Cela rend l'identité stricte ; cela n'en fait pas la justesse. La justesse est une personne.
 
-Donc un monde déclaré porte son état de perception. Huit traditions musicales sont déclarées comme données dans la bibliothèque. Sept d'entre elles sont non perçues. Une a été entendue, et son dossier porte un nom, une date et un verdict :
+Donc un monde déclaré porte son état de perception. Huit traditions musicales sont déclarées comme données dans la bibliothèque. Combien d'entre elles une personne a-t-elle entendues ? Demandez au dossier :
 
 ```haro
 nUnheard = 0
@@ -99,7 +105,7 @@ next
 #--> HEARD
 ```
 
-Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par l'auteur le 26 septembre 2026, à travers cinq exemples originaux, et les mots du dossier sont qu'elle est « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, n'est pas encore dit. Ces mots sont ceux du dossier, cités de lui, et ils sont l'unique perception enregistrée qui soit un refus.
+Il répond `8`, `7` et `HEARD` : huit déclarées, sept non perçues, une entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par l'auteur le 26 septembre 2026, à travers cinq exemples originaux, et les mots du dossier sont qu'elle est « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, n'est pas encore dit. Ces mots sont ceux du dossier, cités de lui, et ils sont l'unique perception enregistrée qui soit un refus.
 
 La loi est celle du domaine de projets, c'est-à-dire de l'ensemble des projets de l'auteur, adoptée le 25 septembre 2026 sur instruction de l'auteur. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
@@ -126,9 +132,9 @@ write("evidence.txt", StzReplace(read("evidence.txt"), "actor is not effectful",
 remove("evidence.txt")
 ```
 
-Remarquez quelle entrée j'ai choisi de modifier : la deuxième. Une modification de la première entrée n'est pas détectée, parce que le vérificateur contrôle le texte de chaque entrée contre l'empreinte de l'entrée qui la précède, et que la première n'en a aucune avant elle. Cela a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
+Le vérificateur répond `chain intact over 2 entries`, puis `the SEAL does not match this key`, puis `the chain breaks at entry 2`. Remarquez quelle entrée j'ai choisi de modifier : la deuxième. Une modification de la première entrée n'est pas détectée, parce que le vérificateur contrôle le texte de chaque entrée contre l'empreinte de l'entrée qui la précède, et que la première n'en a aucune avant elle. Cela a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
 
-Un secret est la même loi appliquée à une clé. Son seul visage public est son descripteur. Une main qui peut valider peut le lire. Un modèle de langage ne le peut pas, et le refus entre dans le registre sans que personne n'appelle le registre :
+Un secret est la même loi appliquée à une clé. Son seul visage public est son descripteur. Une main qui peut valider peut le lire. Que répond le tribunal quand un modèle de langage demande ? Exécutez-le :
 
 ```haro
 StzOpenSecurityLedger(64)
@@ -149,9 +155,9 @@ done
 StzCloseSecurityLedger()
 ```
 
-C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
+Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`, et le registre compte `1` refus sans que personne n'ait appelé le registre. C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
 
-Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections ; que chaque ligne de garantie contient une preuve, qui est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation ; que chaque chemin de garde dans les lignes existe sur le disque ; et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
+Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections, et que chaque ligne de garantie contient une preuve. Une preuve est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation. Elle vérifie que chaque chemin de garde dans les lignes existe sur le disque, et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
 
 À ce commit, la table tient 43 garanties. Le site dit 38, sur trois pages. Les deux sont vrais de leurs dates : le document avait 38 lignes le 30 septembre 2026, et les lignes de 39 à 43 ont été ajoutées le 5 octobre. Le nombre du site est au site de le mettre à jour.
 
@@ -216,13 +222,13 @@ class FakeFleet
 		return len(aFleetCalls)
 ```
 
-Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes verbes effectifs. La boucle est prouvée contre le double et non contre un vrai parc. Un modèle qui demande à valider est refusé avant toute tentative, et le double compte zéro appel.
+Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes verbes effectifs. La boucle est prouvée contre le double et non contre un vrai parc. Un modèle qui demande à valider est refusé avant toute tentative, et le double compte zéro appel ! L'audit garde les deux jugements : `REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed`, et `COMMITTED scaleup 'nlp' by mansour`.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le mot pour la chose qu'il n'était pas.** La structure de ce livre et le bilan de clôture de l'étude appellent les articles des « narrations qui ne peuvent pas mentir ». Ma propre décision du 7 octobre 2026, le 12.20 de l'étude, dit que « narration » nomme les articles sous le dossier de documentation de la bibliothèque, et non les suites exécutables. Le lanceur du site annote un article et ne décide plus s'il est montré. Le propre dossier du site du 8 octobre 2026, exécuté sur un autre commit que celui de ce livre, dit que sur 135 articles 55 se sont exécutés, et que sur les 423 blocs de ceux-ci, 123 ont tenu leur promesse. Donc les articles peuvent dériver. Ce qui ne peut pas mentir, ce sont les gardes exécutables, et la construction de ce livre, qui échoue quand un bloc ne tient pas sa promesse.
+**J'ai refusé le mot pour la chose qu'il n'était pas.** La structure de ce livre et le bilan de clôture de l'étude appellent les articles des « narrations qui ne peuvent pas mentir ». Ma propre décision du 7 octobre 2026, le 12.20 de l'étude, dit que « narration » nomme les articles sous le dossier de documentation de la bibliothèque, et non les suites exécutables. Le lanceur du site annote un article et ne décide plus s'il est montré. Le propre dossier du site du 8 octobre 2026, exécuté sur un autre commit que celui de ce livre, dit que sur 135 articles 55 se sont exécutés. Sur les 423 blocs de ceux-ci, 123 ont tenu leur promesse. Donc les articles peuvent dériver. Ce qui ne peut pas mentir, ce sont les gardes exécutables, et la construction de ce livre, qui échoue quand un bloc ne tient pas sa promesse.
 
-**J'ai refusé une seconde bibliothèque d'assertions.** Les décisions du lanceur de promesses refusent une seconde bibliothèque, une réécriture des fichiers de test, un pourcentage de couverture avant qu'il y ait des routes, le mot « vérifié » sur une affirmation perceptive sans un nom et une phrase, et un double écrit pour la production d'une plateforme.
+**J'ai refusé une seconde bibliothèque d'assertions.** Les décisions du lanceur de promesses refusent une seconde bibliothèque, une réécriture des fichiers de test, et un pourcentage de couverture avant qu'il y ait des routes. Elles refusent un double écrit pour la production d'une plateforme, et le mot « vérifié » sur une affirmation perceptive sans un nom et une phrase.
 
 **J'ai refusé de plier non jugé ou non perçu en réussite ou échec.** Un arrêt a cinq états et pas de sixième : tenue, divergente, non atteinte, non jugée, non perçue. Un lanceur qui plie non jugé ou non perçu en réussite ou échec a tort.
 
@@ -236,7 +242,7 @@ Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes v
 
 ## 5. Le tribunal
 
-`testoor_promises_narrated` prouve chaque règle de promesse plantée dans les deux sens : un mensonge est divergent ; deux mensonges sont tous deux attrapés ; un mensonge court ne se cache pas dans une liste plus loin ; les graphies d'une valeur vraie sont toutes tenues ; une levée d'erreur attendue est honorée ; la prose est non jugée ; un programme qui ne compile pas n'est pas divergent ; une levée d'erreur en cours de route laisse les promesses suivantes non atteintes. `threat_model_narrated` prouve la méta-garde décrite plus haut, y compris son pendant négatif. `security_ledger_narrated`, `secretstore_narrated` et `secret_narrated` prouvent la chaîne et le sceau, le magasin et le secret. `security_sentinel_narrated` prouve la sentinelle déclenchée sur les fronts. `stopwatch_narrated` et `tracing_tail_narrated` prouvent l'instrument et le lot. `governed_loop_narrated` prouve le plan, le contrôle préalable, la validation et l'audit.
+`testoor_promises_narrated` prouve chaque règle de promesse plantée dans les deux sens. Un mensonge est divergent ; deux mensonges sont tous deux attrapés ; un mensonge court ne se cache pas dans une liste plus loin ; les graphies d'une valeur vraie sont toutes tenues. Une levée d'erreur attendue est honorée ; la prose est non jugée ; un programme qui ne compile pas n'est pas divergent ; une levée d'erreur en cours de route laisse les promesses suivantes non atteintes. `threat_model_narrated` prouve la méta-garde décrite plus haut, y compris son pendant négatif. `security_ledger_narrated`, `secretstore_narrated` et `secret_narrated` prouvent la chaîne et le sceau, le magasin et le secret. `security_sentinel_narrated` prouve la sentinelle déclenchée sur les fronts. `stopwatch_narrated` et `tracing_tail_narrated` prouvent l'instrument et le lot. `governed_loop_narrated` prouve le plan, le contrôle préalable, la validation et l'audit.
 
 La construction compte 11 assertions dans `threat_model_narrated`, un compte statique de ses appels d'assertion. Les autres sont aussi comptées par la construction, et non exécutées ici. Le volet de performance a douze gardes. Je n'imprime pas leur somme, parce que la construction les compte.
 
@@ -256,7 +262,7 @@ L'étude du dossier donne le ton que j'essaie de faire résonner. Une grille de 
 
 ## 7. La limite
 
-Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets, et une table de 43 garanties qui nomment 57 fichiers de garde distincts, aucun ne manquant ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée ; les tables de verdict déclarées pour la voix chantée et les huit univers.
+Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, aucun ne manquant.
 
 Ce qui est conçu :
 
@@ -276,7 +282,7 @@ Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 
 **Les nombres de l'exercice diffèrent selon la source.** La mesure de réactivité du modèle de menace est une détection en un peu plus de trois cent cinquante millisecondes et un confinement en un peu plus de cinquante, sur trois exécutions. Le site imprime 395 et 50, d'un rejeu du 1er octobre. Ils diffèrent parce que l'exercice mesure une horloge. Une forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. Quel que soit le nombre que vous imprimez, vous nommez sa source.
 
-**Un défaut possible dans le juge de promesses, que je signale et sur lequel je n'ai rien construit.** Un fichier dont la première promesse est un mensonge et la dernière une levée d'erreur promise lit le mensonge comme non atteint, la levée d'erreur comme tenue, la tournée comme brisée, avec zéro divergente, et un code de sortie de 1. Je l'ai reproduit deux fois. Chaque règle seule se comporte comme la garde la plante. Savoir si une divergence au-dessus d'une levée d'erreur promise devrait se lire *divergente* est une question pour le volet Testoor, qui tient le voyageur.
+**Un défaut possible dans le juge de promesses, que je signale et sur lequel je n'ai rien construit.** Un fichier dont la première promesse est un mensonge et la dernière une levée d'erreur promise lit le mensonge comme non atteint et la levée d'erreur comme tenue. La tournée est brisée, avec zéro divergente, et le code de sortie est 1. Je l'ai reproduit deux fois. Chaque règle seule se comporte comme la garde la plante. Savoir si une divergence au-dessus d'une levée d'erreur promise devrait se lire *divergente* est une question pour le volet Testoor, qui tient le voyageur.
 
 **Des comptes qui ne s'accordent pas entre les sources.** La clôture de l'étude dit 387 gardes narrées. Mon `find` sur l'instantané épinglé dit 529 fichiers ainsi nommés. Le compte propre de la construction est celui qu'il faut utiliser, et aucun des deux autres.
 
@@ -288,7 +294,7 @@ Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 
 **Le concepteur.** Une image ou un son est une affirmation que seule une personne peut clore. La galerie dit qu'un modèle a regardé et qu'aucun humain ne l'a fait. Votre verdict est une ligne nommée dans le dossier.
 
-**Le décideur.** La question de savoir qui a décidé, et ce qui est écrit, a une réponse mécanique dans les deux volets : la même action refusée pour le modèle et validée pour l'humain, les deux dans un seul audit, et la preuve scellée de sorte qu'une modification soit nommée.
+**Le décideur.** La question de savoir qui a décidé, et ce qui est écrit, a une réponse mécanique dans les deux volets. La même action est refusée pour le modèle et validée pour l'humain, les deux dans un seul audit, et la preuve est scellée de sorte qu'une modification soit nommée.
 
 **Le formateur.** La règle du tuteur rencontre le tribunal. Prédisez le verdict d'une promesse avant que le voyageur ne la parcoure.
 
@@ -310,3 +316,5 @@ remove("mine.haro")
 ```
 
 Exécutez-le. Les états sont tenue, divergente et non jugée. Puis ajoutez une quatrième ligne qui lève une erreur, promettez-la avec `#--> ERROR:`, et prédisez d'abord comment la tournée finira. Ne changez pas votre prédiction pour la faire correspondre à ce que vous voyez. Expliquez d'abord la sortie.
+
+Le chapitre 22 est *Comparé, honnêtement*. Son principe est celui-ci : une comparaison ne vaut rien tant que la version de l'autre côté et la date ne sont pas sur la page, que l'autre côté n'a pas été exécuté, et que la perte n'est pas imprimée à côté du gain.

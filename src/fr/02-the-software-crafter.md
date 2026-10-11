@@ -16,11 +16,13 @@ rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
 ---
 
+Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est la phrase du site : un artisan du logiciel transforme ce qu'il sait d'un monde en quelque chose qui tourne, sans attendre l'industrie du logiciel.
+
 ## 1. Le concept, tel que le terrain le tient
 
-Le terrain a déjà un mot pour les programmeurs qui prennent soin de leur travail : l'artisanat (craftsmanship). Un livre de 2001 a donné son nom à l'idée, un manifeste de 2009 lui a donné son slogan, et depuis, « software craftsman » désigne un professionnel qui tient son code à un niveau plus élevé que celui que le travail exige. (Connaissance générale, non une étude du dossier.) C'est un bon mouvement. C'est aussi un mouvement de programmeurs, sur les standards des programmeurs.
+Le terrain a déjà un mot pour les programmeurs qui prennent soin de leur travail : l'artisanat (craftsmanship). Un livre de 2001 a donné son nom à l'idée, et un manifeste de 2009 lui a donné son slogan. Depuis, « software craftsman » désigne un professionnel qui tient son code à un niveau plus élevé que celui que le travail exige. (Connaissance générale, non une étude du dossier.) C'est un bon mouvement. C'est aussi un mouvement de programmeurs, sur les standards des programmeurs.
 
-Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont pas les programmeurs » définissent la personne par un outil. La première est le low-code : des gens du métier qui construisent des applications sur la plateforme visuelle d'un éditeur, le « développeur citoyen » des analystes. La seconde est l'agent de code : un modèle qui lit des fichiers, les modifie et lance des commandes, piloté en mots simples, avec le « vibe coding » pour nom de la pratique qui consiste à garder tout ce qu'il écrit. Les deux réponses ont la même forme. La personne est définie par un outil, et le travail vit là où vit l'outil. Quand l'éditeur change ses prix ou son modèle, le travail de la personne change avec. (Connaissance générale, non une étude du dossier.)
+Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont pas les programmeurs » définissent la personne par un outil. La première est le low-code : des gens du métier qui construisent des applications sur la plateforme visuelle d'un éditeur, le « développeur citoyen » des analystes. La seconde est l'agent de code : un modèle qui lit des fichiers, les modifie et lance des commandes, piloté en mots simples. Le « vibe coding » est le nom de la pratique qui consiste à garder tout ce qu'il écrit. Les deux réponses ont la même forme. La personne est définie par un outil, et le travail vit là où vit l'outil. Quand l'éditeur change ses prix ou son modèle, le travail de la personne change avec. (Connaissance générale, non une étude du dossier.)
 
 ## 2. Le premier principe
 
@@ -38,9 +40,9 @@ o1 = new stzList([ "tea", "rice", "tea", "fish", "rice", "tea" ])
 #--> 3
 ```
 
-J'en parle dans un article sur ce sur quoi la bibliothèque a été construite : j'ai introduit ses fonctions quand un vrai problème les demandait, ou quand j'anticipais qu'elles répondraient aux besoins des développeurs. Celle-ci est née d'un problème : l'artisan du logiciel vient d'abord, et la fonction après.
+J'en parle dans un article sur ce sur quoi la bibliothèque a été construite : j'ai introduit ses fonctions quand un vrai problème les demandait, ou quand j'anticipais qu'elles répondraient aux besoins des programmeurs. Celle-ci est née d'un problème : l'artisan du logiciel vient d'abord, et la fonction après.
 
-Depuis 2022, je présente Softanza non par son anatomie, ses modules et ses classes, mais par qui vous êtes et ce que vous essayez de faire. La présentation de 2022 avait cinq publics, chacun avec une recette de trois à cinq étapes. Le site d'aujourd'hui a sept portes (lu le 9 octobre 2026), une par sorte d'artisan du logiciel ; la septième, pour une équipe qui livre une application, y a été ajoutée ce jour-là, et ce chapitre garde les six avec lesquelles il a été rédigé. Chaque porte dit ce que vous déclarez, ce que vous obtenez, et par où commencer. Voici ce que chacune des six déclare, en une ou deux lignes qui s'exécutent.
+Depuis 2022, je présente Softanza non par son anatomie, ses modules et ses classes, mais par qui vous êtes et ce que vous essayez de faire. La présentation de 2022 avait cinq publics, chacun avec une recette de trois à cinq étapes. Le site d'aujourd'hui a sept portes (lu le 9 octobre 2026), une par sorte d'artisan du logiciel. La septième, pour une équipe qui livre une application, y a été ajoutée ce jour-là, et ce chapitre garde les six avec lesquelles il a été rédigé. Chaque porte dit ce que vous déclarez, ce que vous obtenez, et par où commencer. Voici ce que chacune des six déclare, en une ou deux lignes qui s'exécutent.
 
 **Le programmeur** déclare l'intention dans une bibliothèque qui se lit comme une phrase. Vous venez de la voir.
 
@@ -68,7 +70,7 @@ o.Show()
 #    ╰──────────╯
 ```
 
-**Le décideur** déclare ce que chaque acteur du monde peut faire, une personne ou un agent, et le tribunal l'impose. Un agent est un petit fichier texte ; celui qui ne dit pas ce qu'il couvre est refusé quand il est chargé, non quand il agit pour la première fois. Dans la réponse, « law 18 » est la règle du moteur selon laquelle un agent sans énoncé de couverture n'est jamais planifié, et `pia` nomme le format du fichier, comme le montre sa première ligne :
+**Le décideur** déclare ce que chaque acteur du monde peut faire, une personne ou un agent, et le tribunal l'impose. Un agent est un petit fichier texte. Que dit le tribunal à celui qui ne dit pas ce qu'il couvre ? Dans la réponse, « law 18 » est la règle du moteur selon laquelle un agent sans énoncé de couverture n'est jamais planifié, et `pia` nomme le format du fichier, comme le montre sa première ligne. Chargez-le :
 
 ```haro
 cPia = "pia: 1
@@ -99,7 +101,7 @@ oD = StzAgentDeclarationQ(cPia)
 #--> arabic
 ```
 
-**L'agent** est le sixième artisan du logiciel, celui que 2020 ne pouvait pas dessiner. Il se déclare dans le même genre de fichier, et il est le bienvenu, avec une seule chose retenue. Un agent dont l'esprit est un modèle de langage peut proposer ; il ne peut pas détenir d'effet, et un fichier qui lui en donne un est refusé à la construction. Un « pi-gate » est la barrière où un acteur gouverné valide :
+**L'agent** est le sixième artisan du logiciel, celui que 2020 ne pouvait pas dessiner. Il se déclare dans le même genre de fichier, et il est le bienvenu, avec une seule chose retenue. Un agent dont l'esprit est un modèle de langage peut proposer ; il ne peut pas détenir d'effet. Qu'arrive-t-il à un fichier qui lui en donne un ? Dans la réponse, un « pi-gate » est la barrière où un acteur gouverné valide :
 
 ```haro
 cLlm = "pia: 1
@@ -127,15 +129,21 @@ oBad = StzAgentDeclarationQ(cLlm)
 #--> [no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited).
 ```
 
+L'acteur llm `rogue` n'obtient pas son effet ! Le tribunal répond `REFUSED`, et dit quand : `enforced at CONSTRUCTION, not merely audited`.
+
 Voici maintenant les trois cas pour lesquels ce livre est écrit. Ce ne sont pas des personas. Ce sont des gens et des organisations avec des documents, et la partie VI raconte chacun en entier. Ici, une page chacun.
 
 **Un restaurateur à Lyon.** Il possède un restaurant de couscous, et le projet est une plateforme pour le commerce de quartier. Les notes du projet le disent sans détour : il n'est pas programmeur. Le projet a commencé par une offre en mai 2024 puis deux années de spécification riche qui n'ont rien produit qu'il puisse utiliser. Ce qui est sorti de cet échec est la règle selon laquelle je travaille depuis : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison.
 
-Le 4 juillet 2026, il a répondu à un rapport de cadrage dans ses propres mots et a renversé l'ordre du travail : client d'abord, restaurateur ensuite, fournisseur en dernier. L'architecture du projet a été redessinée en constellation de mondes, à partir de la conception de la bibliothèque, et le premier avenant a été clos le 4 août 2026. Le projet compte onze itérations et une campagne de vingt-deux tests simulés derrière ses règles d'interface, et dans son propre rapport la vitesse de commande est sa première priorité, non négociable. Et le 19 août, après une journée de tests sur le terrain avec deux téléphones et une application de messagerie, les notes l'appellent le co-architecte du projet.
+Le 4 juillet 2026, il a répondu à un rapport de cadrage dans ses propres mots et a renversé l'ordre du travail : client d'abord, restaurateur ensuite, fournisseur en dernier. L'architecture du projet a été redessinée en constellation de mondes, à partir de la conception de la bibliothèque, et le premier avenant a été clos le 4 août 2026.
 
-Le chapitre 1 raconte la première démonstration comme celle du propriétaire lui-même, sur son propre téléphone, par une application de messagerie ; le dossier est plus exact : sa liste de vérification pour la démonstration du 15 août la prévoit pour le propriétaire seul, avec son propre téléphone et une application de messagerie comme ligne d'assistance, et les mesures qu'il a prises par une application de messagerie sont celles du 19 août.
+Une constellation est un graphe de mondes. Un monde est une application ; un lien est une relation déclarée entre deux mondes, pour un acte nommé, et rien ne passe sans lui. Le chapitre 23 montre les trois à l'exécution ; ici, ce n'est que la forme que le projet a prise.
 
-L'un de ses besoins est porté par une loi de la bibliothèque : essayer les paiements avant de payer quiconque pour un compte. Un faux service de paiement est bienvenu pendant que vous répétez, et refusé quand vous passez au réel :
+Le projet compte onze itérations et une campagne de vingt-deux tests simulés derrière ses règles d'interface, et dans son propre rapport la vitesse de commande est sa première priorité, non négociable. Et le 19 août, après une journée de tests sur le terrain avec deux téléphones et une application de messagerie, les notes l'appellent le co-architecte du projet.
+
+Le chapitre 1 raconte la première démonstration comme celle du propriétaire lui-même, sur son propre téléphone, par une application de messagerie. Le dossier est plus exact. Sa liste de vérification pour la démonstration du 15 août la prévoit pour le propriétaire seul, avec son propre téléphone et une application de messagerie comme ligne d'assistance. Les mesures qu'il a prises par une application de messagerie sont celles du 19 août.
+
+L'un de ses besoins est porté par une loi de la bibliothèque : essayer les paiements avant de payer quiconque pour un compte. Que dit le registre d'un faux service de paiement pendant que vous répétez, et que dit-il quand vous passez au réel ? Exécutez-le :
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
@@ -150,7 +158,9 @@ oReg.SetPhase(:production)
 #--> still bound to a SANDBOX in a production phase -- a fake must never ship
 ```
 
-**Une banque à Niamey.** Une banque commerciale soumise aux règles de la banque centrale de l'union monétaire ouest-africaine dispose d'un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sous licence sur son propre réseau interne ; le guide d'installation livré à la banque est le document qui l'atteste. La leçon qu'il a laissée dans la bibliothèque est qu'une organisation peut être jugée par son propre organigramme, selon les règles d'un régulateur. Déclarez un organigramme avec un directeur général et un audit interne qui lui rend compte, et les règles du régulateur répondent :
+Il répond `1` en phase émulée et `0` en production, et dit pourquoi : `still bound to a SANDBOX in a production phase -- a fake must never ship`.
+
+**Une banque à Niamey.** Une banque commerciale soumise aux règles de la banque centrale de l'union monétaire ouest-africaine dispose d'un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sous licence sur son propre réseau interne. Le guide d'installation livré à la banque est le document qui l'atteste. La leçon qu'il a laissée dans la bibliothèque est qu'une organisation peut être jugée par son propre organigramme, selon les règles d'un régulateur. Déclarez un organigramme avec un directeur général et un audit interne qui lui rend compte, et les règles du régulateur répondent :
 
 ```haro
 oOrg = new stzOrgChart("bank")
@@ -160,9 +170,9 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 #--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
 ```
 
-Trois constats, chacun une règle avec un numéro qu'un auditeur peut lire. Le dossier montre la banque comme titulaire d'une licence d'un produit que j'ai construit ; il ne dit pas qui, à la banque, a déclaré quoi que ce soit, et cette page ne le dit pas.
+Trois constats, chacun une règle avec un numéro qu'un auditeur peut lire : `BCEAO-001: No Board of Directors found` est le premier. Le dossier montre la banque comme titulaire d'une licence d'un produit que j'ai construit ; il ne dit pas qui, à la banque, a déclaré quoi que ce soit, et cette page ne le dit pas.
 
-**Une organisation sur le terrain.** Une organisation qui travaille au Niger, avec un siège à Niamey et des bases sur le terrain, a demandé un hub. Son propre cahier des charges préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été choisie à la place ; l'étude liste quatre gains, la possession en tête. L'organisation possède son vocabulaire et ses règles, les change sans programmer, ne paie pas de licence par poste, et peut tout remettre à un développeur de son propre pays. L'étude de conception a été construite avec ses équipes entre le 22 septembre et le 8 octobre 2026. Deux de ses principes sont ceux du livre en petit : par défaut on travaille hors ligne, et l'agent propose tandis qu'une personne décide. Cette règle est une donnée que l'organisation attache à son propre modèle, et le modèle se juge lui-même :
+**Une organisation sur le terrain.** Une organisation qui travaille au Niger, avec un siège à Niamey et des bases sur le terrain, a demandé un hub. Son propre cahier des charges préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été choisie à la place ; l'étude liste quatre gains, la possession en tête. L'organisation possède son vocabulaire et ses règles, les change sans programmer, ne paie pas de licence par poste, et peut tout remettre à un programmeur de son propre pays. L'étude de conception a été construite avec ses équipes entre le 22 septembre et le 8 octobre 2026. Deux de ses principes sont ceux du livre en petit : par défaut on travaille hors ligne, et l'agent propose tandis qu'une personne décide. Cette règle est une donnée que l'organisation attache à son propre modèle, et le modèle se juge lui-même :
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -189,19 +199,19 @@ Trois cas : un restaurateur qui n'est pas programmeur, une banque sous un régul
 
 **J'ai refusé « maker », et j'ai refusé « builder ».** « Maker » nomme le mouvement des ateliers, le fer à souder et l'imprimante 3D (connaissance générale, non une étude du dossier). L'accroche du site l'a employé jusqu'au 8 octobre 2026. « Builder » nomme quelqu'un qui assemble ce qu'un plan dit. Aucun des deux ne dit ce que je crois qu'est la programmation. C'est un travail de la main, fait avec soin, sur quelque chose qui est à vous : c'est de l'artisanat. J'appelle la personne qui le fait un artisan du logiciel. Ce que porte l'image de couverture de ce livre, le dossier ne le dit pas, et cette page ne le dit pas à ma place.
 
-**J'ai refusé de compter un client sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, ne cite aucun nombre de pays ni aucun nombre de développeurs, et ne nomme un client que sur ma parole. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
+**J'ai refusé de compter un client sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, et ne cite aucun nombre de pays ni aucun nombre de programmeurs. Il ne nomme un client que sur ma parole. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
 
 **J'ai refusé de présenter la bibliothèque par son anatomie.** Depuis 2022, la porte d'entrée est qui vous êtes et ce que vous voulez faire, et l'anatomie est placée sous chaque étape. Le site garde sept portes (lu le 9 octobre 2026), et les parcours derrière elles existent comme pages, neuf ce jour-là, chaque étape portant son mot d'étape. Que chaque étape s'exécute dans l'ordre sous une garde est conçu et non construit.
 
 ## 5. Le tribunal
 
-`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent modèle qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. Elle ne passe pas à ce commit : je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa, de sorte que la page compte ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
+`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent modèle qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. Elle ne passe pas à ce commit : je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa. La page compte donc ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
 
 ## 6. Le terrain, et où il mène
 
 Les agents de code mènent en mains. Ils lisent, cherchent, modifient et exécutent déjà. Ce qui leur manque, selon le site lui-même, c'est un moyen de connaître une interface inconnue sans deviner, de juger leur travail selon des règles et des promesses, et de présenter un changement comme une intention qu'une personne peut relire. Les juges de Softanza sont construits ; la porte entre eux et un agent de code est décidée et non construite.
 
-Le low-code mène en base installée et en tout ce qui l'entoure. (Connaissance générale, non une étude du dossier.) L'organisation sur le terrain garde la suite de son éditeur pour ses comptes, ses documents et ses notifications ; la plateforme de l'artisan du logiciel se place à côté des outils du terrain, non à leur place.
+Le low-code mène en base installée et en tout ce qui l'entoure. (Connaissance générale, non une étude du dossier.) L'organisation sur le terrain garde la suite de son éditeur pour ses comptes, ses documents et ses notifications. La plateforme de l'artisan du logiciel se place à côté des outils du terrain, non à leur place.
 
 Les applications de messagerie mènent là où les artisans du logiciel sont déjà. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cet écart.
 
@@ -225,7 +235,7 @@ Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur
 
 **Le décideur.** Vous déclarez votre monde, votre gouvernance, et ce que chaque acteur peut valider, et vous possédez tout, en texte brut.
 
-**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site ; les éditions en français, en arabe et en haoussa sont encore des brouillons qu'aucun relecteur n'a lus.
+**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site. Les éditions en français, en arabe et en haoussa sont encore des brouillons qu'aucun relecteur n'a lus.
 
 **L'agent.** Vous vous déclarez dans un fichier : ce que vous couvrez, à quel point vos actes sont réversibles. Vous recevez un atelier et un tribunal. Vous ne recevez pas la capacité de valider.
 
@@ -239,3 +249,5 @@ Déclarez un agent pour un monde que vous connaissez : une boutique, une classe,
 ```
 
 Si le tribunal refuse, lisez la règle qu'il cite et changez votre fichier, non le tribunal. Puis faites de votre agent un modèle de langage et donnez-lui un effet, et lisez pourquoi il est refusé. Vous ne trouverez pas le fichier corrigé dans ce livre.
+
+Le chapitre 3 est la méthode, depuis les premiers principes, et la phrase à laquelle sa méthode revient est celle-ci : vous déclarez un monde dans un langage fait pour lui, et vous gouvernez la façon dont ce monde change.

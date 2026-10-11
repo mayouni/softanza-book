@@ -4,7 +4,9 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-09 13:46 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+
+In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
 ## 1. The concept, as the field holds it
 
@@ -18,13 +20,13 @@ So the field's posture, in a line, is that the agent is a model in a loop, and s
 
 **Do not build safe agents. Build a safe world, and let ordinary agents loose inside it.**
 
-The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more: the only artifact that ever leaves its world is an update plan, and plans are executed by someone else. The document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. The chapter holds the sentence as the document's, dated by that first commit, and gives no date of writing.
+The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more sentence. The only artifact that ever leaves its world is an update plan, and plans are executed by someone else. The document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. The chapter holds the sentence as the document's, dated by that first commit, and gives no date of writing.
 
 ## 3. The Softanza form
 
 Four steps, in the form the study of the record gives them: the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. I will show each in code, and then the cases where a step does not hold.
 
-**May this agent exist?** Before an agent runs a single tick, the governance asks the question, and it asks it when the answer is free. An agent that declares no coverage, one sentence saying what it covers, is refused. An agent that declares no reversibility class is refused too: reversible, compensable or irreversible. Both refusals are in the engine's own sentences, and the door of the former host language repeats them.
+**May this agent exist?** Before an agent runs a single tick, the governance asks the question, and it asks it when the answer is free. An agent that declares no coverage, one sentence saying what it covers, is refused. An agent that declares no reversibility class is refused too: reversible, compensable or irreversible. Both refusals are in the engine's own sentences, and the door of the former host language repeats them. What does it say to an agent that declares no coverage, and to one that declares no reversibility class? Run it:
 
 ```haro
 oGov = new stzGovernance("shop")
@@ -114,9 +116,11 @@ func ScribblePrices(poMemory)
 
 > run: kept
 
-Two lines decide who may act. `posture: trusted` is in the file, because a `ring:` clause must carry a posture; `StzAllowAgentFunction` is a line of the platform's code, and not of the agent's file, and it decides which functions a file may call.
+The agent believes it acted, and the disk did not move!
 
-**The only export is a plan, and it narrates itself.** The tick exports toward reality a plan and nothing else. The plan says what it would do before anything is attempted. A language model set as its executor is refused before any attempt, because it lacks the capability to produce an effect. A named actor under a scope that does not cover the path commits nothing: the disk still did not move. The same actor under a scope that covers the path commits once, and the audit trail names the actor. In this block, reality changes here and only here:
+Two lines decide who may act. `posture: trusted` is in the file, because a `ring:` clause must carry a posture. `StzAllowAgentFunction` is a line of the platform's code, and not of the agent's file, and it decides which functions a file may call.
+
+**The only export is a plan, and it narrates itself.** The tick exports toward reality a plan and nothing else. The plan says what it would do before anything is attempted. A language model set as its executor is refused before any attempt: `actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)`. A named actor under a scope that does not cover the path commits nothing: the disk still did not move. The same actor under a scope that covers the path commits once, and the audit trail names the actor. In this block, reality changes here and only here:
 
 ```haro
 oPlan = oAg.GenerateUpdatePlan()
@@ -164,7 +168,9 @@ oD = StzAgentDeclarationQ(cIrrev)
 
 > run: kept
 
-**A proposal gone wrong.** A tidy-up that deletes every file of a folder, driven here by hand through the twin as an agent would drive it, proposes thirty deletions. The plan lists thirty operations and flags thirty as risks. A language model that asks to commit is refused. And when it calls `Execute()` anyway, all thirty files are still there:
+The court answers with the table's own sentence: `a 'sandboxed' posture does not cover 'irreversible' work`. The same rule, at load.
+
+**A proposal gone wrong.** A tidy-up that deletes every file of a folder, driven here by hand through the twin as an agent would drive it, proposes thirty deletions. The plan lists thirty operations and flags thirty as risks. A language model that asks to commit is refused. And when it calls `Execute()` anyway, how many files are left? Count them:
 
 ```haro
 cDir = StzReplace(WorkingDirectory(), "\", "/") + "/_course"
@@ -197,9 +203,11 @@ next
 
 > run: kept (touches files, the system)
 
+Thirty! The model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
+
 The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
-**A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason; a named actor under a scope commits the other twenty-nine; one is skipped; and one file is still on disk, the file of the step the reviewer protected (the block prints the count, not the name):
+**A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason. A named actor under a scope commits the other twenty-nine; one is skipped; and one file is still on disk, the file of the step the reviewer protected (the block prints the count, not the name):
 
 ```haro
 oRev = oBench.GenerateUpdatePlan()
@@ -224,7 +232,7 @@ StzDirDeleteAll(cDir)
 
 > run: kept (touches the system)
 
-**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration, in the sentence of the graph rule, no-llm-effectful. A model with the capability to produce effects is refused. A model without it registers like any other slot, a slot being the place in the loop that one agent takes:
+**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. A model with the capability to produce effects is refused. A model without it registers like any other slot, a slot being the place in the loop that one agent takes:
 
 ```haro
 StzResetEngineAgentLoop()
@@ -241,9 +249,13 @@ StzResetEngineAgentLoop()
 
 > run: kept
 
-The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger, the capability, and what remains: the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
+The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
 
-**An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick, with no plan, no scope and no committing actor. The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path: inside the tick of an agent that holds a workbench it writes into the twin, and outside one, the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; it is not the live roster file, which I did not run. Given a workbench, the agent relocates the file in the twin: two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan; and only the committing actor, under a scope, moves the file:
+**An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick. It had no plan, no scope and no committing actor.
+
+A ledger is a record of what happened, kept in the order it happened. This agent rolls the estate's own ledger. Chapter 21 has the security ledger, which the court writes and never the thing it judged, a hash chain in which an edited line is named. Chapter 23 has the constellation's ledger of crossings, with their timings. A register is something else: a form a reply can take, or Appendix A.
+
+The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path. Inside the tick of an agent that holds a workbench it writes into the twin; outside one, in the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; it is not the live roster file, which I did not run. Given a workbench, the agent relocates the file in the twin. Two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan. And only the committing actor, under a scope, moves the file:
 
 ```haro
 cEstate = StzReplace(WorkingDirectory(), "\", "/") + "/_estate"
@@ -312,7 +324,7 @@ The count of seven operations is what this run measures. The library's own guard
 
 ## 4. The decision, and what I refused
 
-**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board; the doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
+**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
 
 **I refused a permission check as the boundary.** It is not a check that the agent might route around. The powers are separated: creativity without authority, authority without creativity.
 
@@ -322,13 +334,13 @@ The count of seven operations is what this run measures. The library's own guard
 
 **I refused a stub.** Asking for a reserved agent raises. The architecture says that this is the law working, and not a defect.
 
-**I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted; that is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
+**I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
 **I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop; its row is in Appendix C, read from the rules file.
 
 ## 5. The court
 
-`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load; what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In the run I made for my research note on 8 October 2026, which the book's data does not hold, the drill read 443 ms to detect and 61 ms to contain, on this machine. The site prints other numbers from its own run, and the threat model others from its own, and the three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
+`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load. Three more follow: what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In the run I made for my research note on 8 October 2026, which the book's data does not hold, the drill read 443 ms to detect and 61 ms to contain, on this machine. The site prints other numbers from its own run, and the threat model others from its own, and the three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
 
 The guard `roster_narrated` is not in the front matter, because it cannot run from a snapshot of the library: it loads the estate's roster files from a sibling repository. The rehearsal of the roster's agent is proved by `safeworld_narrated`, whose seventh scene is the last block above.
 
@@ -344,19 +356,19 @@ The field leads in frontier reasoning. That stack orchestrates the largest model
 
 The field leads in ecosystem and hiring. There is a labour market for that stack, and none for this one.
 
-When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate, such as summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that, among them "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and a model can sit inside a Softanza system as a proposer.
+When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and a model can sit inside a Softanza system as a proposer.
 
-The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed: after the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn, and did not test whether it blocks the commit.
+The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed. After the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn, and did not test whether it blocks the commit.
 
-And the largest honest loss. The threat model puts *code already running in the process* out of scope: it can do anything the process can, wipe the ledger or read a secret. The workbench contains what is written through the bench. A function that does not ask for the bench is not confined. Reads are free: the workbench's own header says reads are sensing and stay free, and that only writes are confined to the twin. The architecture says that the escape is not a defect to be closed by removing it, and it narrows it with a declared posture, and with code, not the file, deciding which functions an agent may call. I did not run a trusted function that bypasses the bench: I read this limit in the architecture, the threat model and the workbench's header.
+And the largest honest loss. The threat model puts *code already running in the process* out of scope: it can do anything the process can, wipe the ledger or read a secret. The workbench contains what is written through the bench. A function that does not ask for the bench is not confined. Reads are free: the workbench's own header says reads are sensing and stay free, and that only writes are confined to the twin. The architecture says that the escape is not a defect to be closed by removing it. It narrows it with a declared posture, and with code, not the file, deciding which functions an agent may call. I did not run a trusted function that bypasses the bench: I read this limit in the architecture, the threat model and the workbench's header.
 
 ## 7. The limit
 
-What is built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load; the workbench, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; the roster's agent rehearsed and then committed; the drill; the engine's bounded structures, which are 64 agent slots, an inbox of 8 messages (tested in Zig only, not run for this book) and a run queue of 256.
+What is built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load. The workbench is built, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; so is the roster's agent rehearsed and then committed, and so is the drill. The engine's bounded structures are built: 64 agent slots, an inbox of 8 messages (tested in Zig only, not run for this book) and a run queue of 256.
 
 What is designed: the agent's side of the negotiation, in which the plan reaches the agent but the conversation about the plan does not yet. The architecture says so, and the threat model repeats it. I searched the library's code and found no revising of a plan. The examination hall, which would certify an agent for a commit scope the way you certify a driver for a licence class: it occurs in documents and in no code. Branches as parallel minds: snapshots and rollback are built, and I found no branch call. Twins for databases, interfaces and networks: the framework names them. The twin of files is built, and so is the twin of the process environment, with its variables, its working directory and its queued spawn (chapter 24). The other three are not.
 
-What is a gap, found while running and reading:
+Each item below is a gap, found while running and reading.
 
 - **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to a model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
 - **A plan flags; it does not rank.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE. There is no score and no order of severity. The chapter says "flags".
@@ -380,7 +392,7 @@ What is a gap, found while running and reading:
 
 ## 9. Exercise
 
-Choose a folder of ten files you could lose. Write an agent file for a tidy-up job on it: what it covers, how reversible it is, one skill. Before you run anything, write under each line the promise you expect: how many files exist on disk after one cycle; how many operations the plan holds; how many of them the plan flags as risks; and what happens when you set a language model as the executor.
+Choose a folder of ten files you could lose. Write an agent file for a tidy-up job on it: what it covers, how reversible it is, one skill. Before you run anything, write under each line the promise you expect: how many files exist on disk after one cycle, how many operations the plan holds, and how many of them the plan flags as risks. Then write what happens when you set a language model as the executor.
 
 ```haro exercise
 cDirMine = StzReplace(WorkingDirectory(), "\", "/") + "/_mine"
@@ -397,3 +409,5 @@ StzDirDeleteAll(cDirMine)
 > run: exercise
 
 Run it. Then give the plan to a committing actor under a scope that does not cover the folder, and write the promise again. If a promise breaks, do not change the promise: explain the output first. A good learner is surprised once. The plan flags its destructive steps and does not rank them, and a plan with no executor at all is allowed.
+
+Chapter 21 is about the court itself, in four of its forms: promises, perception, security and performance. Its principle is that a claim is only as good as the court that can refuse it, and that where no court can see, the record says so.

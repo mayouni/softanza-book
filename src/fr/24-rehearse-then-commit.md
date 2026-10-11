@@ -16,6 +16,8 @@ rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
 ---
 
+Dans ce chapitre, je prends les trois pratiques que le terrain tient à côté du programme, planifier puis appliquer, le double de test et l'émulateur, et je montre le seul chemin que la bibliothèque met à leur place. Je répète sur un jumeau des fichiers et un jumeau de l'environnement du processus, et je lis le plan de placement. Je construis le bundle de l'émulateur, j'exécute un déploiement qui échoue et revient en arrière, et je code contre des services par leur nom avant de m'abonner à aucun. Puis je demande à la production de refuser, et j'imprime le seul faux qu'elle ne refuse pas : un double qui ne dit rien de lui-même. Le principe vient de trois documents du dossier : on atteint la réalité par exactement une porte, répéter sur ce qui ne touche à rien, valider par un acteur gouverné, et laisser la production refuser tout ce qui est faux.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Trois pratiques du terrain se tiennent à côté du programme, chacune avec sa propre configuration.
@@ -38,7 +40,7 @@ Le premier principe du dossier pour ce terrain est la première clause, et l'ét
 
 ### Le jumeau
 
-Le seul artefact qui traverse vers la réalité est un plan. Il nomme chaque étape. Il signale celle qui retire quelque chose. Et si on lui demande de vérifier, il relit la réalité et dit que la source qu'il allait déplacer n'y est pas. Le chapitre 20 a dit « je l'ai vu avertir » sans montrer les mots. Les voici. Rien n'est exécuté :
+Le seul artefact qui traverse vers la réalité est un plan. Il nomme chaque étape. Il signale celle qui retire quelque chose. Et si on lui demande de vérifier, il relit la réalité. Le chapitre 20 a dit « je l'ai vu avertir » sans montrer les mots. Que dit le plan de la source qu'il allait déplacer ? Voici les mots, et rien n'est exécuté :
 
 ```haro
 oBench = new stzVirtualFileSystem()
@@ -57,9 +59,9 @@ oPlan = oBench.GenerateUpdatePlan()
 #--> [ [ 3, "source absent in reality: old_settings.txt" ] ]
 ```
 
-La narration de la bibliothèque imprime une ligne finale, selon laquelle la réalité reste intacte jusqu'à ce que je choisisse de valider ce plan. L'exécution ne l'imprime pas, donc je ne la montre pas.
+Le plan répond `source absent in reality: old_settings.txt`, et il signale le déplacement : `MOVES (removes source)`. La narration de la bibliothèque imprime une ligne finale, selon laquelle la réalité reste intacte jusqu'à ce que je choisisse de valider ce plan. L'exécution ne l'imprime pas, donc je ne la montre pas.
 
-Le jumeau n'est pas seulement un jumeau de fichiers. Une variable posée, un répertoire changé et un processus enfant mis en file sont enregistrés, narrés et signalés, alors que l'environnement réel n'a pas la variable et qu'aucun processus n'a démarré :
+Le jumeau n'est pas seulement un jumeau de fichiers. Une variable posée, un répertoire changé et un processus enfant mis en file sont enregistrés, narrés et signalés, et aucun processus n'a démarré. L'environnement réel a-t-il la variable ? Demandez-le-lui, après que le jumeau l'a posée :
 
 ```haro
 oEnv = new stzVirtualEnvironment()
@@ -85,7 +87,7 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 
 Le paragraphe de limite du chapitre 20 disait que seuls les fichiers sont construits. C'était faux, et je l'ai corrigé là-bas.
 
-Le jumeau a un second travail. Un développeur sur un portable sans broches écrit du code de broches pour une carte. La portée dit *répété*, comme les chapitres 8 et 31 l'ont montré. Au déploiement, le pont d'abaissement transforme la répétition en source de firmware, et un assistant peut proposer ce déploiement mais pas l'effectuer. `Build()` enregistre la commande de construction et n'exécute pas la chaîne d'outils, et `Deploy` abaisse en mémoire, donc aucun fichier n'est écrit :
+Le jumeau a un second travail. Un programmeur sur un portable sans broches écrit du code de broches pour une carte. La portée dit *répété*, comme les chapitres 8 et 31 l'ont montré. Au déploiement, le pont d'abaissement transforme la répétition en source de firmware. Que se passe-t-il quand un assistant demande à déployer ? `Build()` enregistre la commande de construction et n'exécute pas la chaîne d'outils, et `Deploy` abaisse en mémoire, donc aucun fichier n'est écrit :
 
 ```haro
 oProduct = new stzPlatformProfile("greenhouse")
@@ -117,11 +119,11 @@ oPlatform.DeployAs(HumanActor("me"))
 #--> }
 ```
 
-La limite de ce bloc est à la section 7 : seuls deux verbes sont abaissés.
+L'assistant s'entend dire qu'il `may propose a deploy, not perform it` ; le déploiement de la personne produit le firmware. La limite de ce bloc est à la section 7 : seuls deux verbes sont abaissés.
 
 ### Le plan de placement
 
-Avant qu'un octet soit construit, le planificateur de livraison énonce, pour chaque capacité dont une partie a besoin, si la cible la fournit, si le moteur la fournit, si une construction la fournit, ou si le serveur la fournit, et donne la raison en une phrase. Le chiffre entre parenthèses est l'estimation du catalogue et non une mesure, donc ne le citez pas comme une affirmation. « 1 parts » est la grammaire propre de la bibliothèque :
+Avant qu'un octet soit construit, le planificateur de livraison énonce, pour chaque capacité dont une partie a besoin, si la cible la fournit, si le moteur la fournit, si une construction la fournit, ou si le serveur la fournit. Il donne la raison en une phrase. Le chiffre entre parenthèses est l'estimation du catalogue et non une mesure, donc ne le citez pas comme une affirmation. « 1 parts » est la grammaire propre de la bibliothèque :
 
 ```haro
 oShip = new stzDelivery("shop")
@@ -182,7 +184,7 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-La moitié honnête : aucun fichier du moteur pour la partie web n'est dans le manifeste, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté absent et rien n'a été écrit.
+La moitié honnête : la ligne des artefacts du manifeste dit `index.html,stz.js`, et aucun fichier du moteur pour la partie web n'y figure, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté absent et rien n'a été écrit.
 
 Je n'ai pas exécuté `Deploy(:Emulated)`, parce qu'il construit le sous-ensemble de chaque partie par la chaîne d'outils du moteur, et que la construction de cette chaîne d'outils est une chose que cette machine ne doit pas exécuter. Ce que j'ai exécuté, c'est le bundle sans la compilation, et, dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, sa carte nommait un fichier du moteur qui n'y était pas. La section 7 dit ce que cela signifie pour l'affirmation que le moteur tourne dans un navigateur.
 
@@ -221,11 +223,11 @@ next
 StzDirDeleteAll(cHere + "/_site_cdn")
 ```
 
-Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste absent, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
+Le stockage de la partie api dit `FAILED`, et le site web, dont les trois étapes disent `done`, dit `rolledback`. Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste absent, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
 
 ### Le code d'abord, l'abonnement ensuite
 
-Le code demande un service par son nom et n'apprend jamais quelle implémentation il a reçue. Le bac à sable voit le premier appel et aucun après que j'ai relié le service en réel, le second appel va vers l'adaptateur réel, et la surface est saine dès que chaque liaison réelle nomme un secret que le magasin de secrets détient. La passerelle réelle de ce bloc est une classe de remplacement écrite ici, puisque la bibliothèque ne livre aucun adaptateur réel de passerelle de cartes. Une classe de remplacement nommée `LiveGateway` qui renvoie "authorized" est un faux en tout sauf son nom ; le registre la prend pour réelle parce qu'elle ne déclare rien, et la section 7 dit pourquoi cela compte :
+Le code demande un service par son nom et n'apprend jamais quelle implémentation il a reçue. Le bac à sable voit le premier appel et aucun après que j'ai relié le service en réel ; le second appel va vers l'adaptateur réel. La surface est saine dès que chaque liaison réelle nomme un secret que le magasin de secrets détient. La passerelle réelle de ce bloc est une classe de remplacement écrite ici, puisque la bibliothèque ne livre aucun adaptateur réel de passerelle de cartes. Une classe de remplacement nommée `LiveGateway` qui renvoie "authorized" est un faux en tout sauf son nom ; le registre la prend pour réelle parce qu'elle ne déclare rien, et la section 7 dit pourquoi cela compte :
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -274,7 +276,7 @@ Le jour où vous vous abonnez, vous changez une liaison et pas une ligne. La cl�
 
 ### La production refuse
 
-Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production : un service déclaré jamais lié, un faux, une vraie base de données qui disparaît au redémarrage, un adaptateur réel dont la clé n'est pas dans le magasin de secrets, et, en avertissement, un adaptateur réel qui ne nomme aucun secret. Le chapitre 31 a montré le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
+Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production. Quatre sont des erreurs : un service déclaré jamais lié, un faux, une vraie base de données qui disparaît au redémarrage, et un adaptateur réel dont la clé n'est pas dans le magasin de secrets. La cinquième est un avertissement : un adaptateur réel qui ne nomme aucun secret. Le chapitre 31 a montré le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -296,7 +298,7 @@ oSurf.ReportVia(oStoreSf)
 #-->   [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret
 ```
 
-Deux questions différentes sont posées à la porte. Qui est refusé, et ce qui est refusé. Un assistant est refusé pour ce qu'il est. Une personne est refusée pour ce qu'est la surface. Et poser la question laisse la phase où elle était ; la question est posée dans le cadre de la production même en phase de développement :
+Deux questions différentes sont posées à la porte : qui est refusé, et ce qui est refusé. Pourquoi chacun est-il refusé ? Demandez-le deux fois au registre, une fois avec un assistant et une fois avec une personne, en phase de développement :
 
 ```haro
 oStoreWw = new stzSecretStore("shop")
@@ -316,7 +318,9 @@ oOne.Bind(:payments, new stzPaymentsSandbox())
 #--> development
 ```
 
-Et le registre connaît des services alors que la livraison connaît des parties. Réunis, ils répondent à la question qu'aucun des deux ne peut traiter : quelle partie est sur le point de partir sur un double. Le registre lui-même ne signale rien, puisque la phase est le développement et qu'il n'y a pas de constats. La vérification au niveau des parties répond quand même, par destination, et nomme la partie :
+L'assistant est refusé pour ce qu'il est : `actor 'assistant' is not effectful -- it may propose, not commit`. La personne est refusée pour ce qu'est la surface : `sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship`. Et poser la question laisse la phase où elle était : `development` avant, `development` après, bien que la question soit posée dans le cadre de la production.
+
+Et le registre connaît des services alors que la livraison connaît des parties. Réunis, ils répondent à une question qu'aucun des deux ne peut traiter seul. Quelle partie est sur le point de partir sur un double ? Le registre lui-même ne signale rien, puisque la phase est le développement et qu'il n'y a pas de constats. La vérification au niveau des parties répond quand même, par destination, et nomme la partie :
 
 ```haro
 oS3 = new stzServiceRegistry("shop")
@@ -341,6 +345,8 @@ next
 #--> production-part-uses-ephemeral @ api [error]
 #--> part-uses-undeclared-service @ web [warning]
 ```
+
+Elle nomme `api` deux fois, avec `[error]`, et `web` une fois, avec `[warning]`.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -374,9 +380,9 @@ Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à l
 
 ## 5. Le tribunal
 
-`service_registry_narrated` prouve la surface déclarée ; qu'un service non lié lève une erreur ; que l'application demande par nom ; qu'un bac à sable en production est une violation, avec un constat par faux ; que le justificatif doit être dans le magasin de secrets ; que passer en réel est un franchissement gouverné, avec un assistant refusé et une personne refusée à cause d'un faux ; que poser la question laisse la phase ; les aides d'intégration continue ; la quatrième posture ; et un adaptateur réel qui a besoin d'un certificat. `service_delivery_narrated` prouve la surface externe répétée dans le plan ; le contrôle préalable ; la barrière, qui lors d'un déploiement en production refuse un faux et consigne chaque raison, et s'ouvre quand la surface est réelle ; que le registre est un seul registre quel que soit le nombre de copies faites ; et la question de savoir quelle partie dépend d'un faux. Ma recherche du 8 octobre 2026 a exécuté les deux : 93 sur 93 et 60 sur 60. Le second a laissé à côté de lui un fichier de zéro octet, et je l'ai supprimé.
+`service_registry_narrated` prouve la surface déclarée, qu'un service non lié lève une erreur, et que l'application demande par nom. Il prouve qu'un bac à sable en production est une violation, avec un constat par faux, et que le justificatif doit être dans le magasin de secrets. Il prouve que passer en réel est un franchissement gouverné, avec un assistant refusé et une personne refusée à cause d'un faux, et que poser la question laisse la phase. Il prouve aussi les aides d'intégration continue, la quatrième posture, et un adaptateur réel qui a besoin d'un certificat. `service_delivery_narrated` prouve la surface externe répétée dans le plan, et le contrôle préalable. Il prouve la barrière, qui lors d'un déploiement en production refuse un faux et consigne chaque raison, et s'ouvre quand la surface est réelle. Il prouve que le registre est un seul registre quel que soit le nombre de copies faites, et la question de savoir quelle partie dépend d'un faux. Ma recherche du 8 octobre 2026 a exécuté les deux : 93 sur 93 et 60 sur 60. Le second a laissé à côté de lui un fichier de zéro octet, et je l'ai supprimé.
 
-`virtual_system_twin_narrated` prouve, en douze scènes, que le jumeau ne touche à rien de réel, que le plan narre et signale, que la validation est l'unique porte, qu'une portée refuse, qu'un relecteur rejette une étape, que cent opérations restent en mémoire jusqu'à une seule validation. `virtual_environment_twin_narrated` prouve la même forme pour les variables, un répertoire et des lancements de processus en file. `emulator_narrated` prouve que le bundle se génère, que la carte rend chaque partie par rôle, et que chaque partie ne porte que son sous-ensemble. `deployment_narrated` prouve le site comme configuration, la validation gouvernée, le plan d'étapes, le retour arrière, la faisabilité, et le backend git ; il lance `git`, donc le livre ne l'exécute pas. `full_scope_model_narrated`, scènes 13 à 16, prouve que construire précède déployer, qu'une solution non saine ne peut pas être construite, le pont d'abaissement, et le déploiement gouverné.
+`virtual_system_twin_narrated` prouve, en douze scènes, que le jumeau ne touche à rien de réel, que le plan narre et signale, que la validation est l'unique porte, qu'une portée refuse, et qu'un relecteur rejette une étape. Il prouve aussi que cent opérations restent en mémoire jusqu'à une seule validation. `virtual_environment_twin_narrated` prouve la même forme pour les variables, un répertoire et des lancements de processus en file. `emulator_narrated` prouve que le bundle se génère, que la carte rend chaque partie par rôle, et que chaque partie ne porte que son sous-ensemble. `deployment_narrated` prouve le site comme configuration, la validation gouvernée, le plan d'étapes, le retour arrière, la faisabilité, et le backend git ; il lance `git`, donc le livre ne l'exécute pas. `full_scope_model_narrated`, scènes 13 à 16, prouve que construire précède déployer, qu'une solution non saine ne peut pas être construite, le pont d'abaissement, et le déploiement gouverné.
 
 Le refus que fait la production est prouvé par les deux premières gardes, qui ont tourné. Que le moteur répété tourne dans un navigateur n'est prouvé par aucune garde qui tourne.
 
@@ -388,7 +394,7 @@ Les modèles de pointe sont en tête, et ne peuvent pas être émulés. Le modè
 
 L'infrastructure réelle est en tête. Le déploiement dépend de l'infrastructure : vérification réelle contre un hôte ou un compte réel. Les commandes sont générées, et à un hôte joignable près d'être littérales.
 
-Les outils de déploiement matures sont en tête. La narration le dit simplement : cela ne remplace pas tous les outils de déploiement matures, cela unifie les coutures que ces outils laissent exposées.
+Les outils de déploiement matures sont en tête. La narration le dit clairement : cela ne remplace pas tous les outils de déploiement matures, cela unifie les coutures que ces outils laissent exposées.
 
 La fidélité est limitée, et le dit. L'émulation est fidèle mais pas omnisciente, donc elle dit ce qui est quoi. Ce qu'un double prouve est plus étroit encore : un puits de capture prouve ce que vous auriez envoyé, et un répertoire n'est pas un CDN.
 
@@ -396,7 +402,7 @@ Là où je pense que le dossier se distingue, c'est dans le couplage. Le double,
 
 ## 7. La limite
 
-**Un faux écrit à la main qui ne dit rien de lui-même passe la barrière.** Le registre lit ce que l'objet dit qu'il est. Un double qui ne déclare ni qu'il est un bac à sable ni qu'il est local et réel est pris pour réel : pas d'avis veut dire réel. Donc « la production refuse un faux » est exact pour les doubles propres de la bibliothèque, et pour tout double qui se déclare. Un faux non déclaré passe :
+**Un faux écrit à la main qui ne dit rien de lui-même passe la barrière.** Le registre lit ce que l'objet dit qu'il est. Un double qui ne déclare ni qu'il est un bac à sable ni qu'il est local et réel est pris pour réel : pas d'avis veut dire réel. Donc « la production refuse un faux » est exact pour les doubles propres de la bibliothèque, et pour tout double qui se déclare. Quelle posture le registre donne-t-il à un double qui ne déclare rien, et la surface est-elle saine ? Demandez-le-lui en phase de production :
 
 ```haro
 oUndeclared = new stzServiceRegistry("shop")
@@ -414,7 +420,7 @@ class AlwaysYes
 		return [ :status = "authorized" ]
 ```
 
-La classe de remplacement du bloc précédent, `LiveGateway`, est un tel objet.
+Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est passé ! La classe de remplacement du bloc antérieur, `LiveGateway`, est un tel objet.
 
 **L'abaissement connaît deux verbes.** Seuls `read_pin` et `write_pin` deviennent du code. Toute autre opération répétée devient une ligne de commentaire. Dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, j'ai répété `UseIn(:sensor, :gpio, "blink the status led")` et le firmware a reçu un commentaire. Pour un serveur ou un téléphone, l'artefact est un en-tête sans ligne quand rien n'a été répété. Le « la carte est le dernier pouce » de la narration vaut pour les lectures et écritures de broches seulement.
 
@@ -422,7 +428,7 @@ La classe de remplacement du bloc précédent, `LiveGateway`, est un tel objet.
 
 **Les tailles sont des estimations.** Le plan imprime un chiffre tiré d'un catalogue, et la narration imprime deux chiffres différents pour la même partie. N'imprimez pas une taille comme une affirmation.
 
-**`Deploy(:Emulated)` ne déplace jamais le registre.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre, et la valeur de phase `:emulated` que possède le registre n'est posée par aucun code de la bibliothèque ; seule une garde la pose.
+**`Deploy(:Emulated)` ne déplace jamais le registre.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre. La valeur de phase `:emulated` que possède le registre n'est posée par aucun code de la bibliothèque ; seule une garde la pose.
 
 **Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après mon déploiement refusé (ma recherche du 8 octobre 2026, hors des blocs de ce chapitre), `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement non.
 
@@ -467,3 +473,5 @@ oStoreMine = new stzSecretStore("my-project")
 ```
 
 Ensuite, enregistrez une clé nommée `maps_key` dans le magasin de secrets, et écrivez de nouveau le nombre de constats de production. Puis liez une classe écrite à la main avec une méthode `Authorize` qui dit toujours oui, et demandez quelle posture le registre lui donne. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie. Je ne vous dis pas où vous serez surpris.
+
+Le chapitre suivant passe des services derrière un programme à ses utilisateurs : vos utilisateurs gardent leur médium, et un nouveau médium ajoute des rendus, jamais des verbes.

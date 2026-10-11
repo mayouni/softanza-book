@@ -2,9 +2,11 @@
 
 Source: Chapter 28. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the delivery gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
+Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-09 13:47 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+
+In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
 ## 1. The concept, as the field holds it
 
@@ -16,7 +18,9 @@ All four are good practices, and in all four the program itself knows nothing of
 
 ## 2. The first principle
 
-The project was a paid lesson, and the lesson is one sentence on the site: **deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.** Its companion is this chapter's rule of evidence, taken from the same page: a lesson is listed only when a file of the library carries it.
+The project was a paid lesson, and the lesson is one sentence on the site: **deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.**
+
+Its companion is this chapter's rule of evidence, taken from the same page: a lesson is listed only when a file of the library carries it.
 
 ## 3. The Softanza form
 
@@ -26,13 +30,13 @@ It began with an offer, on 2 May 2024, for a mission of business analysis. What 
 
 On 3 July 2026, two of us rehearsed the project: a scoping of his answers that I wrote with a session, and a campaign of twenty-two simulated tests, run by the sessions playing the owner. I say "simulated" every time, because the answers in that file are not his. The next day, 4 July, he answered a real scoping report in his own words. He reversed the order of the work. We had imagined a line that ran from the supplier to the restaurateur and ended with the customer. He turned it around: customer first, restaurateur next, supplier last. And he wrote that the speed of ordering was his first priority, non-negotiable. His great fear was friction at the first load, and the second fear, in the same report, was the calendar: none of the deadlines until then had been kept.
 
-The project's answer to his fear is a document and a notebook. We called it the Lock. In July, a second scoping proposed it to him, clause by clause: a single amendment; every new idea goes into a notebook, read at the end of the cycle; one entry needs one written exit; a demonstration every two weeks and no date beyond the next cycle; and a definition of done. He accepted four clauses as written and adjusted the fifth by adding a criterion of his own: that other merchants and partners must be able to install the product alone. In the record I am the one who asked for the Lock first, as a rule on myself: that the change of course had to be the only change of course allowed. On 4 August 2026, the first amendment closed. Twelve decisions were sealed; three were asked again in plain words because he himself had flagged that he had not understood them, and the lesson written down is about how to ask: the moment a question speaks of milestones and phasing and cycles, the owner stops following, so the questions moved into his trade's language.
+The project's answer to his fear is a document and a notebook. We called it the Lock. In July, a second scoping proposed it to him, clause by clause. The first three: a single amendment; every new idea goes into a notebook, read at the end of the cycle; one entry needs one written exit. The last two: a demonstration every two weeks and no date beyond the next cycle; and a definition of done. He accepted four clauses as written and adjusted the fifth by adding a criterion of his own: that other merchants and partners must be able to install the product alone. In the record I am the one who asked for the Lock first, as a rule on myself: that the change of course had to be the only change of course allowed. On 4 August 2026, the first amendment closed. Twelve decisions were sealed; three were asked again in plain words, because he himself had flagged that he had not understood them. The lesson written down is about how to ask: the moment a question speaks of milestones and phasing and cycles, the owner stops following. So the questions moved into his trade's language.
 
-On 15 August the first demonstration was designed for him alone. The checklist is titled with his name and "alone": he opens the delivery on his own computer, scans one code with his phone and another with his tablet, places his own order from the phone, and watches it land on the tablet. If he gets stuck, a button prepares a message to paste into a messaging app. The criterion of success reads: he orders from his phone, and it lands on his tablet, without us. The notebook shows it happened: his remarks of that day were entered in it on the 17th. And on 19 August he spent a field day with two phones and photographs sent over a messaging app, measuring on a real phone: a hotspot works with no card in it; the address of the gateway was stable across restarts; a phone is a Wi-Fi client or a hotspot, never both; an iPhone's system does not return by itself to a network with no internet. The project's notes then call him its co-architect. The record ends on 25 August 2026.
+On 15 August the first demonstration was designed for him alone. The checklist is titled with his name and "alone". He opens the delivery on his own computer, scans one code with his phone and another with his tablet, places his own order from the phone, and watches it land on the tablet. If he gets stuck, a button prepares a message to paste into a messaging app. The criterion of success reads: he orders from his phone, and it lands on his tablet, without us. The notebook shows it happened: his remarks of that day were entered in it on the 17th. And on 19 August he spent a field day with two phones and photographs sent over a messaging app, measuring on a real phone. A hotspot works with no card in it; the address of the gateway was stable across restarts. A phone is a Wi-Fi client or a hotspot, never both; an iPhone's system does not return by itself to a network with no internet. The project's notes then call him its co-architect. The record ends on 25 August 2026.
 
 That is the story. Here is what the library carries of it.
 
-**The Lock.** I have to be exact here, because the Forged page of the site holds a rule I made: a lesson is listed only when a file of the library carries it. No file carries the Lock. It was a pact and a notebook, kept in documents. What the library can do is give you the nearest declaration of it: a rule over the worlds of a cycle, that a world without a written admission is a finding. This block is a construction, not the restaurant's code:
+**The Lock.** I have to be exact here, because the Forged page of the site holds a rule I made: a lesson is listed only when a file of the library carries it. No file carries the Lock. It was a pact and a notebook, kept in documents. What the library can do is give you the nearest declaration of it: a rule over the worlds of a cycle, that a world without a written admission is a finding. What does the court say when an idea enters the cycle with no written admission? This block is a construction, not the restaurant's code:
 
 ```haro
 oRule = new stzGraphRule("the-lock")
@@ -60,9 +64,9 @@ g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit
 
 > run: kept
 
-The idea of a loyalty club arrives, and the cycle is no longer sound. It becomes sound again when the idea carries its written admission.
+The idea of a loyalty club arrives, and the cycle is no longer sound! The court answers `UNSOUND (errors present)`, and names the rule and the node: `ERROR the-lock @ loyalty-club`. The cycle is sound again when the idea carries its written admission.
 
-**Try payments without a subscription.** The project's rule was to test without committing: a payment institution's free sandbox, and the library's simulated services, and no subscription before a gate that the notes call the go-live gate. The library's side of it is a payments sandbox that is not agreeable. It behaves like a gateway: a decline is an answer, an outage is not, and a capture cannot be made twice. The amounts are integers in minor units, so 4200 is forty-two euros:
+**Try payments without a subscription.** The project's rule was to test without committing: a payment institution's free sandbox, and the library's simulated services, and no subscription before a gate that the notes call the go-live gate. The library's side of it is a payments sandbox that is not agreeable. It behaves like a gateway: a decline is an answer, an outage is not, and a capture cannot be made twice. The amounts are integers in minor units, so 4200 is forty-two euros. What does it answer to a token it was told to decline, to an outage, and to a second capture? Run it:
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -82,7 +86,9 @@ oPay.Capture(aAuth[:id])
 
 > run: kept
 
-And the last door refuses to open while a fake is still bound, even for an entitled person. It opens when the binding is real. Here the live binding is an HTTP sandbox standing in for an adapter, as the guard does it: the registry holds only the name of the secret.
+Three answers, and none of them is an empty string: `declined`, `refused`, and `this authorization was already captured`.
+
+And the production gate refuses to open while a fake is still bound, even for an entitled person. Here the live binding is an HTTP sandbox standing in for an adapter, as the guard does it: the registry holds only the name of the secret. What does the production gate answer when the owner, entitled, asks for production while the fake is still bound? Run it:
 
 ```haro
 oReg = new stzServiceRegistry("shop")
@@ -106,7 +112,9 @@ oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
 
 > run: kept
 
-**The constellation.** When he reversed the order of the work, the project's architecture was redrawn as a constellation of five worlds on a shared ground: the customer's phone, the kitchen screen, the merchant's workshop, management, which is the first application kept and put to sleep, and the publisher's console. The shared ground is identity, the catalogue, orders, payments and the fleet. In the library, the last world in the order of work can be put to sleep; a call to it is refused with its reason, and it is revived when its turn comes:
+The owner is entitled, and he is refused! Nothing is committed, and the log says why: `REFUSED -- the external surface is not production-ready`; the reason under it is the rule: `a fake must never ship`. It opens when the binding is real.
+
+**The constellation.** When he reversed the order of the work, the project's architecture was redrawn as a constellation of five worlds on a shared ground. The worlds are the customer's phone, the kitchen screen, the merchant's workshop, management, which is the first application kept and put to sleep, and the publisher's console. The shared ground is identity, the catalogue, orders, payments and the fleet. In the library, the last world in the order of work can be put to sleep; a call to it is refused with its reason, and it is revived when its turn comes:
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
@@ -135,7 +143,9 @@ oCon.Revive("supplier")
 
 > run: kept
 
-**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations, judges them against what was measured, and a breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget.
+The call across the bond passes; the call to the sleeping world does not, and the reason is one line: `target world 'supplier' is not active.` Revived, it passes.
+
+**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations, judges them against what was measured, and a breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -164,7 +174,9 @@ oRep.Ingest(oSla.Findings())
 
 > run: kept
 
-One more thing the project learned, and the library does not carry. The project's file of interface rules is experience in a few lines: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden; and a test in which a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check, so by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
+Three expectations met, then one order takes 3100 milliseconds and the gate is no longer sound. The finding says it in the budget's own words: `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
+
+One more thing the project learned, and the library does not carry. The project's file of interface rules is experience in a few lines: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden. And one test: a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check. So by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
 
 ## 4. The decision, and what I refused
 
@@ -176,9 +188,9 @@ One more thing the project learned, and the library does not carry. The project'
 
 **I refused the agreeable fake.** A double that silently answers with an empty string produces a test that passes for the wrong reason. The sandbox declines when a gateway declines, refuses when a gateway is down, and refuses a second capture. And I refused a fixed fee before the go-live gate: no subscription to a payment institution before the owner's written go.
 
-**I refused to credit the owner with what a simulation said.** The project has carried a rule since July 2026, that no action on its screens takes more than two gestures; the site prints it as part of the first amendment, and the project's documents carry it as the owner's constraint. Its earliest source is a line in the file of simulated answers of 3 July, written by me and a session. The project set it for itself, from its own simulation of his answers, and kept it. I tell it that way. What he did say, and what I take as his, is the priority on speed.
+**I refused to credit the owner with what a simulation said.** The project has carried a rule since July 2026, that no action on its screens takes more than two gestures. The site prints it as part of the first amendment, and the project's documents carry it as the owner's constraint. Its earliest source is a line in the file of simulated answers of 3 July, written by me and a session. The project set it for itself, from its own simulation of his answers, and kept it. I tell it that way. What he did say, and what I take as his, is the priority on speed.
 
-**I refused to say the library was born of his need.** The constellation design, the virtualization plan, the registry, the payments port and the performance judgment were all first committed after the reversal of 4 July; the plan is dated 23 July and the performance study 29 July. The site says carefully that the project needed these things and that the library carries them. I will say no more than that. The record does not say which came first, his need or the parts: it shows the project finding them in the library, and I leave the order open.
+**I refused to say the library was born of his need.** The constellation design, the virtualization plan, the registry, the payments port and the performance judgment were all first committed after the reversal of 4 July. The plan is dated 23 July, and the performance study 29 July. The site says carefully that the project needed these things and that the library carries them. I will say no more than that. The record does not say which came first, his need or the parts: it shows the project finding them in the library, and I leave the order open.
 
 ## 5. The court
 
@@ -196,11 +208,11 @@ And the super-app hosts lead in installed base. The design names what the indust
 
 ## 7. The limit
 
-What is built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the delivery gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
+What is built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
 
 What is designed: the Lock as a rule of the library, of which the record has no code; the near-natural idiom of the constellation, with the verbs the design names and the class does not have.
 
-What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision; a measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle; the interface rules, the two-gesture rule among them, as checks, a seventy-fifth percentile expectation and browser-side timing, of which no document of the library holds a design; and the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. The record is silent on what happened after 25 August 2026, and I say so. Of the owner's tightened speed thresholds I print none, and say only that such a budget exists.
+What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle. The interface rules, the two-gesture rule among them, as checks, a seventy-fifth percentile expectation and browser-side timing, of which no document of the library holds a design. And the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. The record is silent on what happened after 25 August 2026, and I say so. Of the owner's tightened speed thresholds I print none, and say only that such a budget exists.
 
 And what runs today is ordinary. The worlds are single HTML files, one per world, with a vendored framework, no build step and no content network. The server is a Node program of a few hundred lines that uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. None of it runs on the Softanza engine. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant does not.
 
@@ -230,3 +242,5 @@ Declare your own Lock for one cycle. Write the worlds of the cycle you are in, t
 > run: exercise
 
 The court will tell you the circumstance and the rule. It will not write the declaration. If you want a harder one, add a rule about the actions of your cycle, and find the action that costs a third gesture.
+
+Chapter 29 is a bank in Niamey, where an organisation is judged by its own chart, under a regulator's rules, by a program that reads the chart as data. The chart says what is, the rule says what must be, and the verdict names the rule and the place.

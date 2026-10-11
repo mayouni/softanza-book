@@ -110,6 +110,9 @@ Keep the same number of paragraphs, list items, table rows and [AUTHOR] markers.
 | actor | acteur | |
 | plane (security, performance, sound, payments, agentic, system) | volet | « le volet de sécurité »; never « plan », which is the artefact a machine proposes |
 | estate (the author's body of projects) | domaine de projets | « le domaine de projets », every time; « domaine » alone means a field of knowledge |
+| workbench | atelier | « l'atelier répète la proposition »; the field's "language workbench" is « l'atelier de langages », and a merchant's workshop « la boutique » or « l'atelier du commerçant », said in full |
+| floor (of the platform's picture) | étage | ch4's storeys; a *floor* as a minimum level ("a floor of trust") is « un plancher »: the French keeps apart what the English runs together |
+| the one line still owed | la ligne qui reste due | the title of chapter 33; « encore due » is not used for it |
 | ledger | registre | « le registre de sécurité », « le registre des décisions »; the same word as registry, the context tells them apart |
 | window of service etc. | — | not in the book |
 

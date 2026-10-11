@@ -16,6 +16,8 @@ rulings: ["12.2", "12.12", "12.13", "12.15", "12.19", "12.25", "12.29"]
 research: research/ch23.md
 ---
 
+In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.
+
 ## 1. The concept, as the field holds it
 
 Three habits of the field have each a home, and I take them from general knowledge, not from a study of the record. The record holds no field study of super-apps, of platform engineering or of context maps. Its only named field is one line of a design document: a famous messaging super-app, and its kin.
@@ -34,7 +36,7 @@ The shared shape: the field draws the picture, a host, a map, a diagram, and kee
 
 **The solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.**
 
-The sentences of the record: an application is a living world of meaning; worlds, not mini-apps, a governed graph and not a host container; and a Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, put in my words; the sentence above is the chapter's own principle, in the book's voice.
+The sentences of the record are three. An application is a living world of meaning. Worlds, not mini-apps: a governed graph and not a host container. A Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, put in my words; the sentence above is the chapter's own principle, in the book's voice.
 
 ## 3. The Softanza form
 
@@ -42,7 +44,7 @@ Three levels, then. A world is one application. A constellation is a graph of wo
 
 ### A world
 
-A world has a being, a becoming, and a way of being met. Chapter 4 showed its being. This is the rest, for an agency that visits clients:
+A world has a being, a becoming, and a way of being met. Chapter 4 showed its being. What does a world answer when it is asked to explain all three? Ask one, for an agency that visits clients:
 
 ```haro
 oApp = new stzApp("FieldVisits")
@@ -115,11 +117,11 @@ done
 #--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
 ```
 
-`Pursue` prints its own first line, and then the `?` prints the list it returns. With a reaction declared, the same gap proposes a *visit* for Bilal, and without one the default act is *attend*.
+`Pursue` prints its own first line, and then the `?` prints the list it returns. One relation later the gap is closed: `0 proposal(s)`, and `GoalSatisfied` answers `1`. The vague goal is refused with its reason: `no 'every :Type' clause in 'make things nice'`. With a reaction declared, the same gap proposes a *visit* for Bilal, and without one the default act is *attend*.
 
 ### A constellation
 
-Nothing crosses between worlds unless it is declared and governed. A bond must exist, and then three gates stand on the crossing: the act must have a declared risk tier, the caller must hold the permission, and the caller's authority must cover the risk. Each refusal names its gate. The bond exists in all four calls below, so the three refusals are the governance's:
+Nothing crosses between worlds unless it is declared and governed. A bond must exist, and then three gates stand on the crossing: the act must have a declared risk tier, the caller must hold the permission, and the caller's authority must cover the risk. Each refusal names its gate. Which gate refuses first? The bond exists in all four calls below, so the three refusals are the governance's:
 
 ```haro
 oResto = StzAppQ("resto")
@@ -155,9 +157,9 @@ oCon.GovSetAuthority("resto", :Delegated)
 #--> [ "rationale", "cross-world call cleared" ]
 ```
 
-The doubled word "refused: refused:" is the library's own text. The cleared crossing wrote a decision by itself. Its record holds the authority and the risk of that moment, and a clock read, so the block prints only the rationale. That is the lineage chapter 30 uses.
+The risk tier refuses first: `'order-produce' has NO declared risk tier`. The doubled word "refused: refused:" is the library's own text. The cleared crossing wrote a decision by itself! Its record holds the authority and the risk of that moment, and a clock read, so the block prints only the rationale. That is the lineage chapter 30 uses.
 
-The shared ground is a world too. Inside a constellation the commons is itself a platform, and it holds an identity, a session and a store. The commons is not a special kind of node; the design's own words are that it is uniform and recursive:
+The shared ground is a world too. Inside a constellation the commons is itself a platform, and it holds an identity, a session and a store. The commons is not a special kind of node; the design's own words are that it is uniform and recursive. What class is the commons? Ask it:
 
 ```haro
 oCon = new stzSuperApp("acme-group")
@@ -179,7 +181,7 @@ oCon.StorePut("currency", "EUR")
 oDb.Close()
 ```
 
-This block uses an in-memory database, so no file and no network. The session token is random, and only its presence is printed. Secrets are stored salted and hashed, with the engine's key-derivation function. The point is the first line: a platform is not only the envelope around a solution. It is what a constellation stands on. In code the commons is not a node of the constellation graph: when I probed it the graph held two nodes for two registered worlds. World zero is a role the platform plays.
+This block uses an in-memory database, so no file and no network. The session token is random, and only its presence is printed. Secrets are stored salted and hashed, with the engine's key-derivation function. The first line answers `stzplatform`, and that is the point: a platform is not only the envelope around a solution. It is what a constellation stands on. In code the commons is not a node of the constellation graph: when I probed it the graph held two nodes for two registered worlds. World zero is a role the platform plays.
 
 A world is swapped live and keeps its bonds. A constellation nests in another. A name is taken once:
 
@@ -217,7 +219,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-Chapter 28 used `Retire` and `Revive`, and this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
+The bond survived the swap: `CallAcross` still answers `1`! Chapter 28 used `Retire` and `Revive`, and this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
 
 One trap. A registered world is a copy. The host language copies an object by value when it is stored, so the world you register is not the world you hold. The header of the class says it: world objects are reached through the registry index, the live path. Configure the world fully, register it, and reach it through the constellation from then on. The envelope has the same doctrine: setting a world on the platform harvests its declarations at call time, and setting the governance snapshots the regime.
 
@@ -245,7 +247,7 @@ oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
 #--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
 ```
 
-The class header says what the world lacks: the world models the world, and deliberately lacks the operational envelope. The envelope's duties are generation, the capability seam, the commons runtime, a networked body and a registry with enforcement. Generation is real, and refuses to generate for a world that declares no reach. The success path writes real files, so I do not run it here. I ran it once, for a world of one screen and one thing, and removed what it wrote: the web shell is a page of 318 bytes with the world's screens and things as list items, and the desktop shell a launcher of 251 bytes; other worlds give other sizes. That is the limit of "per-platform shells": generation is real, and tiny.
+The class header says what the world lacks: the world models the world, and deliberately lacks the operational envelope. The envelope's duties are generation, the capability seam, the commons runtime, a networked body and a registry with enforcement. Generation is real, and refuses to generate for a world that declares no reach. The success path writes real files, so I do not run it here. I ran it once, for a world of one screen and one thing, and removed what it wrote. The web shell is a page of 318 bytes with the world's screens and things as list items, and the desktop shell a launcher of 251 bytes; other worlds give other sizes. That is the limit of "per-platform shells": generation is real, and tiny.
 
 ### The architect, and the three scopes
 
@@ -277,9 +279,9 @@ done
 #--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.
 ```
 
-The development system's name is the declared one, so it does not depend on the machine. The line `native` is host-dependent: it holds only on a host that can spawn a process, as chapter 31 says of its own word. The Android refusal and the capability list of the board are the target's, whatever the host. The three scopes are `new stzDevSystem()` or `DevelopmentSystem()` for development, which is tooling only; `App(:x).System()` for deployment, where feature code is written and checked; and `new stzCurrentSystem()` or `CurrentSystem()` for runtime-current, which is what runs now. The scope object has no `Capabilities()` of its own: the call goes through `.System().System()`. A request.
+The development system's name is the declared one, so it does not depend on the machine. The line `native` is host-dependent: it holds only on a host that can spawn a process, as chapter 31 says of its own word. The Android refusal, `scope 'android' (android) forbids 'process'`, and the capability list of the board are the target's, whatever the host. The three scopes are `new stzDevSystem()` or `DevelopmentSystem()` for development, which is tooling only; `App(:x).System()` for deployment, where feature code is written and checked; and `new stzCurrentSystem()` or `CurrentSystem()` for runtime-current, which is what runs now. The scope object has no `Capabilities()` of its own: the call goes through `.System().System()`. A request.
 
-The architect's artefact is a text file. An unsound solution cannot be built:
+The architect's artefact is a text file. Can it be read back, and what does the platform say of a solution that is not sound? Run it:
 
 ```haro
 oSol = new stzPlatformProfile("greenhouse")
@@ -311,9 +313,9 @@ done
 #--> stzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps
 ```
 
-The file form is plain text that the architect owns, and it round-trips from a string. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
+The file form is plain text that the architect owns, and it round-trips from a string. The unsound one is refused before building, with both faults named: `the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps`. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
 
-Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels; that memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
+Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels. That memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
 
 ## 4. The decision, and what I refused
 
@@ -333,7 +335,7 @@ Who is the architect? The record names the person twice by name: in the System F
 
 ## 5. The court
 
-`06_stzsuperapp_narrated` proves that worlds register as nodes; that the commons holds an identity and a store; that a crossing is refused for an undeclared risk, accepted when governed, and refused when unbonded with the bond named; that a retired world breaks its bonds and revives; that a swap keeps the node and the bond; and that a constellation nests in another. `01_platform_narrated` proves that shells are generated per declared reach and a world without a reach is refused; that a capability is granted only when governance covers its risk tier, and a capability never requested is refused with a reason; that the commons registers identities, opens sessions, posts and reads messages, and stores; that the world is served over a real port; and that the registry refuses a call to an unbonded or retired world. It writes shells beside itself and opens a loopback port. `full_scope_model_narrated`, which the guard calls the architect's common ground, proves that the solution is modelled first, that an unsound one is flagged, that the three scopes are distinct, that the scope refuses what the target forbids and rehearses what the host lacks, that the text file round-trips, that building precedes deploying, and that a deploy by a language-model actor is refused. `04_stzapp_pursue_narrated` and `05_stzapp_live_narrated` carry the goal and the reactions.
+`06_stzsuperapp_narrated` proves that worlds register as nodes; that the commons holds an identity and a store; that a crossing is refused for an undeclared risk, accepted when governed, and refused when unbonded with the bond named; that a retired world breaks its bonds and revives; that a swap keeps the node and the bond; and that a constellation nests in another. `01_platform_narrated` proves that shells are generated per declared reach and a world without a reach is refused; that a capability is granted only when governance covers its risk tier, and a capability never requested is refused with a reason. It proves that the commons registers identities, opens sessions, posts and reads messages, and stores; that the world is served over a real port; and that the registry refuses a call to an unbonded or retired world. It writes shells beside itself and opens a loopback port. `full_scope_model_narrated`, which the guard calls the architect's common ground, proves that the solution is modelled first, that an unsound one is flagged, that the three scopes are distinct, that the scope refuses what the target forbids and rehearses what the host lacks, that the text file round-trips, that building precedes deploying, and that a deploy by a language-model actor is refused. `04_stzapp_pursue_narrated` and `05_stzapp_live_narrated` carry the goal and the reactions.
 
 The guard the chapter does not have: none judges a world's truths, a flow, or the time of a reaction.
 
@@ -353,7 +355,7 @@ Where the field and the record meet: a super-app is a graph of graphs. The field
 
 ## 7. The limit
 
-A world's truths are narrated and not judged. The number in a reaction is the first case. Ninety days and one day give the same proposals: a reaction fires for each instance that lacks a relation named after the thing it proposes. The comment above `Pulse()` says so.
+A world's truths are narrated and not judged. The number in a reaction is the first case. Do ninety days and one day give different proposals? A reaction fires for each instance that lacks a relation named after the thing it proposes, and the comment above `Pulse()` says so. Run two clinics:
 
 ```haro
 oA = StzAppQ("clinic-a")
@@ -380,9 +382,11 @@ oB.Live()
 #--> [ [ "propose", "checkup", "for", "bob" ] ]
 ```
 
-The same reading holds for `IsTrue`, which is stored and narrated while instances carry no fields to judge it against; for a flow's `Require` and `Then`, stored and narrated, where I found no executor; and for the bounds of a refinement. A world today declares that a balance must not be negative. It does not judge a balance. What it does judge is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. So the chapter says it in one line: declared and narrated; judged only for goals, crossings and capabilities.
+Both clinics answer `[ "propose", "checkup", "for", "bob" ]`. Ninety days and one day give the same proposals.
 
-The design writes more than the class speaks. The design's near-natural idiom for the constellation is not in the class:
+The same reading holds for `IsTrue`, which is stored and narrated while instances carry no fields to judge it against. It holds for a flow's `Require` and `Then`, stored and narrated, where I found no executor; and for the bounds of a refinement. A world today declares that a balance must not be negative. It does not judge a balance. What it does judge is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. So the chapter says it in one line: declared and narrated; judged only for goals, crossings and capabilities.
+
+The design writes more than the class speaks. Does the class speak the design's near-natural idiom for the constellation? Ask it for `Hosts`, `Admits` and `Explain`:
 
 ```haro
 oSuper = new stzSuperApp("acme-group")
@@ -406,7 +410,7 @@ done
 #--> Error (R14) : Calling Method without definition: explain
 ```
 
-`Shares`, `Provides`, `Norm`, `Reaches` and `Generate` are not defined on a constellation either. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part that is not there. The design's own header calls the document a forward design.
+Three times the answer is `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` and `Generate` are not defined on a constellation either. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part that is not there. The design's own header calls the document a forward design.
 
 What is built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
 
@@ -438,3 +442,5 @@ Declare two worlds for a place you know: a shop and its supplier, a class and it
 ```
 
 Then ask for the call, read the reason, and repair the declaration, not the court, one gate at a time, until it returns 1. Count the refusals. Which gate would you have forgotten without the court? The court tells you which gate refuses: a missing risk tier, a missing permission, an authority that does not cover the risk. It does not write the declaration. A harder one: retire the second world and predict the new reason before asking; then register a copy of the first, change your original, and predict what the constellation sees.
+
+The next chapter is about how a declared solution reaches reality, through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake. Rehearse, then commit.

@@ -26,6 +26,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **commit.** The one act that reaches reality. Only a governed actor commits, under a scope, and the model cannot. Chapters 20, 24.
 
+**commons.** The shared ground of a constellation, what every world of it stands on: an identity, a session, a store. It is a world like the others, world zero, and not a special kind of node. Chapters 4, 23.
+
 **constellation.** A graph of worlds, with bonds between them and governance over every crossing. Chapter 23.
 
 **court.** The judge of a thing. A court says kept or refused, and says why in the words of the declaration. A language is born with its court. Chapters 5, 11, 12, 21.
@@ -44,6 +46,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **fake.** A double that says it is one: a sandbox, a mail sink, a recorded answer. A fake must never ship. A double that says nothing about itself is taken for live, and passes the gate. Chapter 24.
 
+**floor.** One level of the platform's picture, from the engine at the bottom to the organisation at the top, each with its judge beside it. Not a layer of the library (core, base, max) and not a plane. Chapter 4.
+
 **gap.** What a goal needs and the world does not yet hold. A conversation that asks starts from the gap. Chapter 17.
 
 **gate.** A place where something is refused before it goes on. The registration gate, the production gate, the capability seam. Chapters 20, 24.
@@ -55,6 +59,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 **guard.** A file of the library's test tree that holds assertions, and that proves a chapter. This book counts a guard's assertions and does not run most of them. Chapters 5, 21.
 
 **Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro does not run the library yet. Chapters 3, 27.
+
+**ledger.** The security plane's record of what was refused and why, written by the court and never by the thing it judged. Chapters 20, 21.
 
 **lexicon.** The dictionary of words a sentence may use, each mapped to a verb the library documents. Chapter 13.
 
@@ -69,6 +75,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 **perception.** What a person has seen or heard of a thing, named, dated, and quoted. A comparison proves sameness and never rightness. Chapters 21, 33.
 
 **plan.** The one artifact that crosses from a twin toward reality. It narrates, flags and validates, and is committed by a governed actor. Chapters 20, 24.
+
+**plane.** One area of the library, named by what it governs and proved by its own guards: the system plane, the agentic plane, the planes of security and performance. Not a floor, and not a plan, which is the artefact a machine proposes. Chapters 1, 21.
 
 **platform.** The envelope around a solution, and the ground a constellation stands on: capabilities, a commons, a registry, shells, a profile. Chapter 23.
 
@@ -97,5 +105,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 **unperceived.** The state of a thing that reaches a person through a sense, when no person has perceived it and said so. It is a state and not a failure. Chapters 21, 33.
 
 **wise coding.** Softanza asks and the world judges. The inversion of the loop of prompting and keeping what runs. Chapter 18.
+
+**workbench.** Where a proposal is rehearsed. It holds a twin, a copy of the system with no reference to the real one; what the proposal would write goes into the twin, and what comes out is a plan. The one a programmer already uses, not a second one for machines. Chapters 1, 20.
 
 **world.** One application, as a declaration with a being, a becoming and a way of being met. Chapter 23.

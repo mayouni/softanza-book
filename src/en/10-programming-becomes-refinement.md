@@ -16,9 +16,11 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
+In this chapter I say what I mean by refining rather than programming: a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
+
 ## 1. The concept, as the field holds it
 
-The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so; Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
+The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
 
 What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume.
 
@@ -56,7 +58,7 @@ r = o.Refine("vat").To("0.22")
 #--> 1
 ```
 
-And a proposal that does not clear the gate changes nothing, and says at which stage it was refused and why:
+And what does a proposal that does not clear the gate change, and what does the gate say? Run it:
 
 ```haro
 r2 = o.Refine("vat").To("0.99")
@@ -74,7 +76,7 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Three refusals, and the timeline did not grow by a step. The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage, so that a person, or an agent, can correct the proposal without reading a diff.
+Three refusals, and the timeline did not grow by a step! The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage first, `constraint` twice and `structural` once, so that a person, or an agent, can correct the proposal without reading a diff.
 
 **The cascade** is what you read instead of the diff. Before the change, ask what it reaches. There are two cascades, and they are separate. For a point, it is the line it sits on and the other points on that same line:
 
@@ -139,7 +141,7 @@ r3 = d.Refine("vat").To("0.05")
 #--> 0.30
 ```
 
-Now the question of this age: who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. A proposal that comes from a language model is below a floor that a trusted one clears:
+Now the question of this age: who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. What happens to a proposal from a language model when the floor of the point asks for a trusted origin? Run it:
 
 ```haro
 d.TrustFloor("vat", :trusted)
@@ -201,7 +203,7 @@ t.Redo()
 #--> 0.21
 ```
 
-That is the gate in the form the library has it. Five checks, in the order the code runs them: the structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. The header of the file calls this a four-stage gate in one line and five in another; the code numbers its checks 1, 2, 3, 4 and 4b, because the trust check was added to the four on 16 July 2026 and the design's count was not changed. I report what runs: five checks.
+That is the gate in the form the library has it. Five checks, in the order the code runs them: the structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. The header of the file calls this a four-stage gate in one line and five in another. The code numbers its checks 1, 2, 3, 4 and 4b, because the trust check was added to the four on 16 July 2026 and the design's count was not changed. I report what runs: five checks.
 
 ## 4. The decision, and what I refused
 
@@ -227,14 +229,14 @@ And on trust, much of the field's approach is built to scale to any model. (Gene
 
 ## 7. The limit
 
-What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining; the guards of section 5 cover them, with two exceptions. The cascade of a class has no guard here, because the code-graph guard scans a live path of the library's working tree. And no guard asserts the other points on a line.
+What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions. The cascade of a class has no guard here, because the code-graph guard scans a live path of the library's working tree. And no guard asserts the other points on a line.
 
 What is designed, and absent from the library by name: the experience the original article describes. The class that article names, `stzPolyCode`, is not in the library at this commit. The one-line refinement of the design document, a point that explains itself, a plan that is applied, are not in the library. The cascade of the code graph and the cascade of the gate are not joined. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement not built.
 
 What is built, and where it stops: the limits of the gate as it stands.
 
-- It checks the constraints of three kinds of point, a parameter, an algorithm and a library; a point of another kind, a block of code for instance, parses and passes unchecked.
-- An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal that says it comes from a martian clears a floor of trusted.
+- It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes unchecked.
+- An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
 - The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes `.rfn` for the sentence and leaves `.zrfn` to the library's comment-tag lift.
 
@@ -257,3 +259,5 @@ What is built, and where it stops: the limits of the gate as it stands.
 Take two settings of a program of yours: a rate and a ceiling, say, with a rule that the rate must stay below the ceiling. Declare them as points, with bounds, and declare the rule across them. Before you run anything, write under each proposal whether it is admitted and, if not, at which stage it is refused. Propose a change of the rate above the ceiling, and one from an origin you declare as a model, against a floor you set. Then rewind to zero and go forward one step.
 
 Run it. If you were wrong about the stage, you have found a place where your own gate disagrees with your own expectation.
+
+The next chapter states a law: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it. Here the thing judged was a change; there it is whoever speaks.

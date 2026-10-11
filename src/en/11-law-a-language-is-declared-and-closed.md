@@ -19,9 +19,11 @@ figures:
   - "10 of 10 against 2 of 10, one model of 135 million parameters, ten prompts: SOFTANZA_STRUCTURED_OUTPUT.md (C9) section 2.1"
 ---
 
+In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic, and I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, since the law must say it. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
+
 ## What the AI age changes here
 
-In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence may be a model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
+In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence can be a model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
 
 So the grammar must be closed, and the court, the part that accepts or refuses a sentence by its grammar, must read it. A language whose sentences may contain anything cannot refuse anything, and a court cannot judge a sentence it cannot read. The vision of the platform puts the whole movement in one line, which I ratified: humans and machines meet in declared languages, small, closed and judged, not in general-purpose code.
 
@@ -29,7 +31,7 @@ This is also where the order of the book turns around. The cover goes from the f
 
 ## 1. The concept, as the field holds it
 
-For a working programmer, a language is a general host, Python, JavaScript, Java, and a "domain language" is usually a library whose calls read like sentences while the file around them may contain any code of the host. The estate's own study of the field, written in August 2026, names what happened to those designs: internal languages died of openness, because a build file is declarative only until someone writes arbitrary code in it; language workbenches died of the weight of their tools. And it names the languages that won: SQL, regular expressions, Make, HTML and CSS, the configuration languages. They won because they are closed.
+For a working programmer, a language is a general host, Python, JavaScript, Java. A "domain language" is usually a library whose calls read like sentences, while the file around them may contain any code of the host. The estate's own study of the field, written in August 2026, names what happened to those designs. Internal languages died of openness, because a build file is declarative only until someone writes arbitrary code in it. Language workbenches died of the weight of their tools. And it names the languages that won: SQL, regular expressions, Make, HTML and CSS, the configuration languages. They won because they are closed.
 
 The model era added one practice: when a model writes, either check what it wrote, or constrain its output while it writes, with a grammar or a schema. The reference implementation of grammar-constrained sampling is an open project, and the record says so where it uses the same algorithm. And in the field's common language today, "programming in natural language" means one thing: prompting a model.
 
@@ -76,7 +78,7 @@ o1 = NaturallyIn("ar", "أنشئ قائمة بـ [ 5, 3, 5 ] ثم أزل تكر�
 #--> أنشئ قائمة بـ [ 5, 3, 5 ] -> أزل التكرارات
 ```
 
-Now the part the library does by rule: say what it did not understand. A misspelled verb is not guessed. It is reported, with the word the library thinks you meant, and the program admits that it did not understand everything:
+Now the part the library does by rule: say what it did not understand. What does it do with a verb it does not know? Misspell one and run it:
 
 ```haro
 o1 = Naturally("Create a string with 'softanza' Uppercse it")
@@ -88,7 +90,7 @@ o1 = Naturally("Create a string with 'softanza' Uppercse it")
 #--> 0
 ```
 
-That is the permissive mode: an unknown word is skipped and reported. An agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
+The misspelled verb is not guessed. `Unresolved()` answers `[ [ "Uppercse", "uppercase" ] ]`, the word it met beside the word the library thinks you meant, and `UnderstoodAll()` answers `0`: the program admits that it did not understand everything. That is the permissive mode: an unknown word is skipped and reported. An agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
 
 ```haro
 try
@@ -105,7 +107,7 @@ done
 #--> Operation not permitted in this world: METHOD_REVERSE
 ```
 
-In that world, a sentence that reverses a list is refused.
+Strict mode refuses `'Fooify'` and still names the nearest word: `did you mean 'boxify'?`. In that world, a sentence that reverses a list is refused, and the refusal names the operation: `Operation not permitted in this world: METHOD_REVERSE`.
 
 A verdict says why. The other direction of natural code in Softanza is the near-natural chain, where the person is the parser and the chain reads as a sentence; when it answers no, it gives the reason:
 
@@ -127,7 +129,7 @@ done
 #--> stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure).
 ```
 
-A correct schema is a small closed language. The court judges any answer against it, whoever wrote the answer, and the schema emits its grammar, so that a model can be held to it while it writes:
+The refusal names the unknown type, `'colour'`, and lists the six it accepts. A correct schema is a small closed language. The court judges any answer against it, whoever wrote the answer, and the schema emits its grammar, so that a model can be held to it while it writes:
 
 ```haro
 oS = StzOutputSchemaQ([
@@ -153,9 +155,9 @@ oS = StzOutputSchemaQ([
 #    boolean ::= ("yes" | "no" | "true" | "false")
 ```
 
-Look at the fourth answer. Hadiza is forty-one in the first answer and sixty-two in the fourth, and the court accepts both. A grammar kills malformed sentences, not false ones. The record says it in five words, structure kills malformedness, not falsehood, and so does this book: the truth of an answer is not for the grammar. The record says that truth needs reversibility, an auditor and a Principal, the person who rules. A grammar is the gate, not the judge of everything.
+Look at the fourth answer. Hadiza is forty-one in the first answer and sixty-two in the fourth, and the court accepts both! A grammar kills malformed sentences, not false ones. The record says it in five words, structure kills malformedness, not falsehood, and so does this book: the truth of an answer is not for the grammar. The record says that truth needs reversibility, an auditor and a Principal, the person who rules. A grammar is the gate, not the judge of everything.
 
-A template is a contract too. A sentence with a hole in it is refused before it runs:
+A template is a contract too. A sentence with an unfilled hole is refused before it runs:
 
 ```haro
 try
@@ -179,50 +181,50 @@ And patterns are small languages of their own, though not yet closed ones: chapt
 #--> 0
 ```
 
-The chapters of this part prove the law from five sides. Chapter 12 tells a language declared: the factory, the closed grammar with no escape into the host, the court born with the grammar, the grammar emitted so that a model can only speak valid sentences, and the surfaces a language may wear. Chapter 13 tells the two directions of natural code, the machine as the parser and the person as the parser, in one discipline. Chapter 14 tells knowledge programming, one file that is a system. Chapter 15 tells the pattern languages, regex lifted to lists, numbers, tables, matrices, time and graphs. Chapter 16 tells the seven languages Softanza reaches through one governed door, and why a door is not a surface.
+The chapters of this part prove the law from five sides. Chapter 12 tells a language declared: the factory, the closed grammar with no escape into the host, the court born with the grammar, the grammar emitted so that a model can only speak valid sentences, and its surfaces. Chapter 13 tells the two directions of natural code, the machine as the parser and the person as the parser, in one discipline. Chapter 14 tells knowledge programming, one file that is a system. Chapter 15 tells the pattern languages, regex lifted to lists, numbers, tables, matrices, time and graphs. Chapter 16 tells the seven languages Softanza reaches through one governed door, and why a door is not a surface.
 
 ## 4. The decision, and what I refused
 
 **I chose the act: declare a language.** Not "use our language". Declare yours: the language of your domain, in your words. That is the kernel of the platform, and it is the reason this part exists.
 
-**I refused the open escape.** The meta-language that declares languages in the estate, outside this library, refuses, by its founding rule, to define any form that would let a sentence reach host code, call a function, evaluate a string or touch a file. Not forbidden: unexpressible. An internal language that cannot refuse arbitrary host code is, in the words of the estate's field study, an API wearing a language's costume.
+**I refused the open escape.** The meta-language that declares languages in the estate lives outside this library. Its founding rule refuses to define any form that would let a sentence reach host code, call a function, evaluate a string or touch a file. Not forbidden: unexpressible. An internal language that cannot refuse arbitrary host code is, in the words of the estate's field study, an API wearing a language's costume.
 
 **I refused natural language as a way to declare.** Natural language asks; it never declares. A model may draft a declaration, and by the vision's rule, which is designed and not yet built, the draft enters the world only as a proposal: the model proposes, the court decides, a person ratifies.
 
 **I kept the promise of 2020 and changed its mechanism.** My first slide promised executable natural language. The vision of 2026 judged that slogan fairly: it promised more than a court can defend, because a natural sentence can be ambiguous and a lie can be grammatical. So the naturalness stays at the door, where a sentence asks or drafts, and the execution belongs to closed languages a court can judge. I built the natural layer that way long before the vision named it: only words defined in the dictionary are interpreted, and every other word is skipped and reported, or refused in strict mode, never guessed.
 
-**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers, because their letter-order cipher had been inverted by its own inventor, from memory, they duplicated meanings, and a language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
+**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers: their letter-order cipher had been inverted by its own inventor, from memory, and they duplicated meanings. A language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
 
-**I refused a second embedding.** When someone asks "what about Python, what about my language", the answer is one door, governed, and never another host sewn into the platform. A door brings a foreign runtime; a surface brings a familiar syntax over the same grammar. Chapter 16 tells the difference.
+**I refused a second embedding.** Chapter 1 states that decision; here I add only that a door brings a foreign runtime, a surface brings a familiar syntax over the same grammar, and Chapter 16 tells the difference.
 
 ## 5. The court
 
-`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. It does not pass at this commit: my research for chapter 13 ran it twice on 8 October 2026, and request L45 in the memo of 9 October records the result: it stops with an error raised from a string-splitting function, before it ends, so the page counts its assertions and does not claim its verdict. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
+`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. It does not pass at this commit. My research for chapter 13 ran it twice on 8 October 2026, and request L45 in the memo of 9 October records the result. It stops with an error raised from a string-splitting function, before it ends. So the page counts its assertions and does not claim its verdict. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
 
 ## 6. The field, and where it leads
 
 The field leads in tools. The language workbenches remain ahead on the axes the estate's design deliberately gave up: projectional tooling (editors that understand a language as you type), IDE integration, macro-theoretic depth. The estate's study says it in its own words: that is a bet, and it is named as one.
 
-The field built constrained decoding first. Softanza's sampler follows the reference implementation's algorithm and vendors nothing. Measured against one small model of a hundred and thirty-five million parameters, on ten prompts, the answers were valid at the first attempt two times in ten when checked afterwards, and ten times in ten when the model was held to the grammar. That is one small model and ten prompts, and nothing in the record measures a large one.
+The field built constrained decoding first. Softanza's sampler follows the reference implementation's algorithm and vendors nothing. Measured against one small model of a hundred and thirty-five million parameters, on ten prompts, the answers were valid at the first attempt two times in ten when checked afterwards. Held to the grammar, the model was valid ten times in ten. That is one small model and ten prompts, and nothing in the record measures a large one.
 
-And the age cuts both ways. The same flood of generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core.
+And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core.
 
 ## 7. The limit
 
-What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals; the court of structured output with its grammar compiler and its sampler; the pattern languages, which still accept a word they do not know.
+What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These still accept a word they do not know.
 
-What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The factory is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026, and the library cannot run it yet. The vision's text says the factory has not yet forged (made a language's parts from its declaration); the sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
+What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The factory is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026, and the library cannot run it yet. The vision's text says the factory has not yet forged (made a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
 
-What is absent, and the law must say it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate, so a host function inside the brackets runs:
+What is absent, and the law must say it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )
 #--> [ "X", 1 ]
 ```
 
-The function `upper` is not a word of the natural dictionary. It ran anyway. The record already knows this escape and has routed its repair; until the repair lands, "the natural layer is a closed language" is true of its words and not of its lists, and this book will say so.
+The function `upper` is not a word of the natural dictionary. It ran anyway! The record already knows this escape and has routed its repair. Until the repair lands, "the natural layer is a closed language" is true of its words and not of its lists, and this book will say so.
 
-And the Hausa pack does not yet read the letter ɗ, which standard Hausa spelling uses: the pack stored it in a broken encoding, so, when I probed it on 8 October 2026 on the snapshot before this commit, a sentence written correctly failed without a word of complaint. The Hausa in this chapter is written without the hook, the way the pack reads it today. The record holds no reading of the pack's sentences by a Hausa speaker. The foreign-language sentences printed in this chapter come from the library's narration and guards, or are composed from its vocabulary, and no native speaker has read them as far as the record shows.
+And the Hausa pack does not yet read the letter ɗ, which standard Hausa spelling uses. The pack stored it in a broken encoding, so, when I probed it on 8 October 2026 on the snapshot before this commit, a sentence written correctly failed without a word of complaint. The Hausa in this chapter is written without the hook, the way the pack reads it today. The record holds no reading of the pack's sentences by a Hausa speaker. The foreign-language sentences printed in this chapter come from the library's narration and guards, or are composed from its vocabulary. No native speaker has read them as far as the record shows.
 
 ## 8. Six doors
 
@@ -243,3 +245,5 @@ And the Hausa pack does not yet read the letter ɗ, which standard Hausa spellin
 Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers a model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
 
 Run it. The third answer is the lesson of this chapter. Write down, in one sentence, who in your domain must judge it, since the grammar cannot.
+
+Chapter 12 is *A language, declared*. Its principle: declaring a language is as easy as declaring a variable.

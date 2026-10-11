@@ -16,13 +16,15 @@ rulings: ["12.2", "12.6", "12.27", "12.30"]
 research: research/ch13.md
 ---
 
+Dans ce chapitre, je fais tourner les deux directions du langage naturel dans la bibliothèque : la chaîne, où vous êtes l'analyseur, et la phrase, où c'est la bibliothèque. J'imprime les refus des deux côtés, cinq paquets de langue comme données et un sixième ajouté à l'exécution, et le compte de ce que chaque paquet sait dire. Je dis ce que j'ai refusé, les marqueurs de référence et la chaîne non grammaticale entre autres, et où le tribunal propre du dictionnaire échoue à ce commit. Le principe tient en une phrase : une phrase s'exécute parce que chacun de ses mots est dans un dictionnaire que la bibliothèque possède, et ce que la bibliothèque ne connaît pas, elle le refuse, avec la raison.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Dans le langage courant du terrain, « programmer en langage naturel » veut dire une seule chose : demander du code à un modèle, ou lui demander de faire la tâche, dans un prompt. Les outils sont des assistants de discussion et des compléteurs de code, d'un usage large depuis 2021 environ. Ce sur quoi la phrase s'exécute, c'est la conjecture du modèle. La même phrase peut donner un code différent d'un jour à l'autre, le modèle a besoin d'un réseau ou d'un runtime local, et une personne lit le résultat pour savoir ce qui a été compris. Le chapitre 11 l'a dit, et j'y renvoie.
 
 Des pratiques plus anciennes existent, et le dossier les nomme. Inform 7, un langage dont les programmes sont des phrases anglaises, compilées d'un bloc, avec un modèle du monde et un moyen de dire *il* d'une phrase à l'autre. AppleScript, proche de l'anglais et difficile à écrire, parce que sa naturalité était en surface et non dans un modèle sémantique. Les langages naturels contrôlés, dont le dispositif le plus fort, dit le commentaire de la bibliothèque elle-même, est de montrer ce qui peut être dit ensuite. Une lecture de session du 30 août 2026 est qu'Inform 7 est un compilateur de texte entier avec contexte référentiel, et non un répartiteur de commandes. (Connaissance générale pour les dates, pas une étude du dossier.)
 
-Aucun d'eux n'est ce que le dossier revendique. La revendication est le contraire du prompt : une phrase s'exécute parce que chacun de ses mots est dans un lexique fermé, défini comme données, associé à un verbe que la bibliothèque documente, et que tout le reste est refusé avec la raison. Et elle a deux directions, que la revue de conception de la bibliothèque met en tableau. Dans la première, la machine est l'analyseur. Dans la seconde, c'est l'humain.
+Aucun d'eux n'est ce que le dossier revendique. La revendication est le contraire du prompt : une phrase s'exécute parce que chacun de ses mots est dans un lexique fermé, défini comme données, associé à un verbe que la bibliothèque documente. Tout le reste est refusé avec la raison. Et elle a deux directions, que la revue de conception de la bibliothèque met en tableau. Dans la première, la machine est l'analyseur. Dans la seconde, c'est l'humain.
 
 ## 2. Le premier principe
 
@@ -36,7 +38,7 @@ Je commence par la seconde direction, parce qu'elle est la plus ancienne.
 
 ### L'humain est l'analyseur
 
-Une chaîne quasi naturelle est une phrase dont chaque maillon est un vrai appel. La phrase est « le mot haro est un mot latin en minuscules, d'une longueur de 4 lettres et avec seulement 2 voyelles ». Quand elle est fausse, la chaîne dit pourquoi :
+Une chaîne quasi naturelle est une phrase dont chaque maillon est un vrai appel. La phrase est « le mot haro est un mot latin en minuscules, d'une longueur de 4 lettres et avec seulement 2 voyelles ». Quand elle est fausse, que dit la chaîne ? Exécutez-la :
 
 ```haro
 ? TheWordQ("haro").IsAQ([ :Lowercase, :Latin, :Word ]).WithQ().ALengthQ().OfQ(4).UnitQ(:Letters).AndQ().OnlyQ(2).VowelNB()
@@ -47,7 +49,7 @@ Une chaîne quasi naturelle est une phrase dont chaque maillon est un vrai appel
 #--> no: expected exactly 1, found 2
 ```
 
-Les mots de degré sont des dispositifs, et la raison est conservée. Le bloc la lit avec le `Why()` de la console ; celui de la chaîne est `WhyCheckFailed()` :
+La chaîne répond `no: expected exactly 1, found 2`. Les mots de degré sont des dispositifs, et la raison est conservée. Le bloc la lit avec le `Why()` de la console ; celui de la chaîne est `WhyCheckFailed()` :
 
 ```haro
 ? Q("AnnIE").AtLeast(2).VowelNB()
@@ -114,7 +116,7 @@ ClearAnswers()
 
 ### La machine est l'analyseur
 
-Maintenant l'autre direction. La phrase est une chaîne de caractères, et la bibliothèque la lit. Le même verdict peut venir d'une narration de questions et d'une chaîne de vérité, et la chaîne de vérité dit pourquoi et avec quelle certitude :
+Maintenant l'autre direction. La phrase est une chaîne de caractères, et la bibliothèque la lit. Le même verdict peut venir d'une narration de questions et d'une chaîne de vérité. Avec quelle certitude la chaîne de vérité répond-elle, et pourquoi ? Exécutez-la :
 
 ```haro
 oT = Naturally("Create a string with 'haro' Is it lowercase ? Does it contain 'r' ?")
@@ -134,6 +136,8 @@ oT = Naturally("Create a string with 'haro' Is it lowercase ? Does it contain 'r
 #--> certainly
 ```
 
+Elle répond `certainly`, et dit pourquoi : `yes: "haro" is lowercase and is latin and containing "r"`.
+
 Le paragraphe entier est compilé en code avant que rien ne s'exécute, et le code est lisible. C'est le compte rendu même de la bibliothèque sur la raison d'être de la couche :
 
 ```haro
@@ -147,7 +151,7 @@ o1 = Naturally("Create a string with 'test.data' Replace '.' with '_' Uppercase 
 #    @result = oStr.Content()
 ```
 
-Le même sens en haoussa aboutit au même code, et le programme dit ce qu'il a compris, dans ses propres mots. Le haoussa est écrit ici sans la lettre crochetée, comme le paquet la lit aujourd'hui, pour une raison que donne le chapitre 11 :
+Le même sens en haoussa aboutit-il au même code ? Le haoussa est écrit ici sans la lettre crochetée, comme le paquet la lit aujourd'hui, pour une raison que donne le chapitre 11. Exécutez, et chaque programme redit ce qu'il a compris, dans ses propres mots :
 
 ```haro
 oE = Naturally("Make a string with 'hello niger' inside Spacify it and uppercase it")
@@ -159,6 +163,8 @@ oH = NaturallyIn("hausa", "Yi rubutu da dauke 'hello niger' a ciki Raba shi kuma
 ? oE.Understood()
 #--> create a string with hello niger -> spacify -> uppercase
 ```
+
+La comparaison répond `TRUE` : un seul code pour deux langues !
 
 Le dictionnaire de phrases n'est pas le seul vocabulaire. Un mot qu'il ne tient pas est cherché dans le vocabulaire propre de la bibliothèque, ici les balises de documentation du verbe de mise en majuscules. Une valeur entre guillemets est une donnée, et jamais un verbe. Un mot inconnu en position de valeur reste un littéral :
 
@@ -173,7 +179,7 @@ Le dictionnaire de phrases n'est pas le seul vocabulaire. Un mot qu'il ne tient 
 
 La troisième ligne est aussi une limite. Le mot `sep` n'était dans aucun dictionnaire, et il a servi de texte à remplacer. Un mot qu'elle ne connaît pas est un littéral.
 
-**Cinq langues comme données.** Le dictionnaire est indexé par sens, et le mot de chaque langue aboutit à un seul identifiant. Les mots français, arabes et turcs aboutissent au même :
+**Cinq langues comme données.** Le dictionnaire est indexé par sens, et le mot de chaque langue aboutit à un seul identifiant. Un mot français, un mot arabe et un mot turc aboutissent-ils au même ? Exécutez :
 
 ```haro
 ? StzResolveSemanticInLang("fr", "doublons")
@@ -232,6 +238,8 @@ osw = NaturallyIn("sw", "Unda orodha na [ 9, 4, 9 ] ondoa nakala")
 #--> unda orodha na [ 9, 4, 9 ] -> ondoa nakala
 ```
 
+Quatre correspondances, une locution, et la sixième langue répond `[ 9, 4 ]` !
+
 Le code naturel est aussi une donnée. Les blocs délimités d'un document s'exécutent, et un gabarit se remplit :
 
 ```haro
@@ -267,7 +275,7 @@ next
 #--> FALSE
 ```
 
-Le paquet haoussa parle neuf des vingt-cinq sens. Et aucun modèle n'est chargé. La couche a un secours facultatif par plongement, quand rien de lexical n'a été trouvé et qu'un modèle est chargé. À ce commit aucun ne l'est, et aucun n'est nécessaire. Je dis donc « aucun modèle n'est chargé », et non « ne touche jamais un modèle ».
+Le paquet haoussa parle neuf des vingt-cinq sens : `ha 9 of 25`. Et aucun modèle n'est chargé. La couche a un secours facultatif par plongement, quand rien de lexical n'a été trouvé et qu'un modèle est chargé. À ce commit aucun ne l'est, et aucun n'est nécessaire. Je dis donc « aucun modèle n'est chargé », et non « ne touche jamais un modèle ».
 
 ### Du schéma de 2020 aux trois ères
 
@@ -279,13 +287,13 @@ Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte
 
 **Je l'ai construite sans modèle, comme un dictionnaire.** La conception dit que tout ce qui est dans le dossier naturel attaque un seul mur : l'écart sémantique entre une intention humaine et son exécution. La thèse du langage quasi naturel, dans cette revue : zéro NLP, zéro ML, vitesse native, déterminisme complet, et le programmeur aux commandes. La couche a livré sans bruit une quatrième promesse que les anciens documents n'avaient jamais osé faire : la responsabilité.
 
-**J'ai décidé de deux directions, une seule discipline.** Le tableau de la revue : qui analyse, une machine avec un lexique ou l'humain ; l'ambiguïté, refusée bruyamment ou impossible par construction ; le vocabulaire, borné par les paquets ou non borné ; la compréhension, vérifiée par la machine ou par une lecture humaine ; le public, des experts du domaine et des agents ou des programmeurs. Les deux finissent au même endroit : une suite déterministe d'opérations sémantiques.
+**J'ai décidé de deux directions, une seule discipline.** Le tableau de la revue a cinq lignes. Qui analyse : une machine avec un lexique, ou l'humain. L'ambiguïté : refusée bruyamment, ou impossible par construction. Le vocabulaire : borné par les paquets, ou non borné. La compréhension : vérifiée par la machine, ou par une lecture humaine. Le public : des experts du domaine et des agents, ou des programmeurs. Les deux finissent au même endroit : une suite déterministe d'opérations sémantiques.
 
 **J'ai refusé les marqueurs de référence.** Le 10 juillet 2026, j'ai rejeté la famille de suffixes qui marquaient une référence. Le chiffre a été inversé par son propre inventeur, de mémoire, il dupliquait des sens, et le langage lui-même ne marque jamais la référence ainsi. Plus de deux cent soixante méthodes ont été retirées. Le chapitre 11 le raconte en deux phrases.
 
 **J'ai refusé la chaîne non grammaticale.** La chaîne est la phrase, et une chaîne non grammaticale qui s'exécute est un bogue. La doctrine est tenue par la lecture à voix haute, non par une machine, et j'en montre la preuve plus bas.
 
-**J'ai refusé la négation en préfixe.** La négation vit dans les formes négatives, dans les comparateurs antonymes et dans le fermeur de question `OrNot()`. La question de confirmation ci-dessus est cet décision en train de tourner.
+**J'ai refusé la négation en préfixe.** La négation vit dans les formes négatives, dans les comparateurs antonymes et dans le fermeur de question `OrNot()`. La question de confirmation ci-dessus est cette décision en train de tourner.
 
 **J'ai refusé la tolérance silencieuse.** L'ancienne tolérance aux fautes de frappe a été remplacée par l'explication de tout : le refus avec le mot le plus proche, ci-dessus.
 
@@ -303,7 +311,7 @@ Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte
 
 `nnl_narrated` prouve la phrase phare, la surface générée de noms, les mots de degré, le mode conditionnel, la référence ordinale, le refus qui rend compte de lui-même, la doctrine de grammaticalité, le contexte sur la chaîne, et le temps du discours. `multilingual_pack_narrated` prouve les paquets comme données, des programmes en français, en arabe et en turc qui s'exécutent, le retrait d'affixes vérifié, une langue ajoutée à l'exécution, et `Understood()` rendu dans la langue du programme. `question_narrated` prouve les cadres de question et qu'un cadre sans aspect est refusé. `literate_templates_narrated`, les documents et les gabarits. `truthchain_narrated` et `interrogative_narrated`, les verdicts repliés.
 
-`semantic_resolver_narrated` est la garde qui devrait protéger le dictionnaire, et à ce commit elle échoue. Un chercheur l'a lancée deux fois le 8 octobre 2026 et, chaque fois, elle s'est arrêtée sur une erreur : trois assertions ont échoué, et l'exécution s'est terminée après la vingt-neuvième. Dans cette exécution, le mot « caps », que la garde affirme, s'est résolu en une méthode pour les bornes, et « mirrored » ne s'est résolu en rien. La raison est celle de la conception elle-même : le vocabulaire est lu dans les balises de documentation de la bibliothèque, plus dix-sept opérations écrites à la main, portées par réflexion à environ trois mille, de sorte qu'une modification de la documentation change le sens d'un mot. La bibliothèque refuse honnêtement dans le second cas : dans cette exécution, `Unresolved()` a nommé le mot et `UnderstoodAll()` a imprimé 0. Le tribunal du dictionnaire a échoué sur le dictionnaire, et le chapitre 11, le chapitre 22 et le chapitre 2 nomment cette garde.
+`semantic_resolver_narrated` est la garde qui devrait protéger le dictionnaire, et à ce commit elle échoue. Un chercheur l'a lancée deux fois le 8 octobre 2026 et, chaque fois, elle s'est arrêtée sur une erreur : trois assertions ont échoué, et l'exécution s'est terminée après la vingt-neuvième. Dans cette exécution, le mot « caps », que la garde affirme, s'est résolu en une méthode pour les bornes, et « mirrored » ne s'est résolu en rien. La raison est celle de la conception elle-même : le vocabulaire est lu dans les balises de documentation de la bibliothèque, plus dix-sept opérations écrites à la main, portées par réflexion à environ trois mille. Une modification de la documentation change donc le sens d'un mot. La bibliothèque refuse honnêtement dans le second cas : dans cette exécution, `Unresolved()` a nommé le mot et `UnderstoodAll()` a imprimé 0. Le tribunal du dictionnaire a échoué sur le dictionnaire, et le chapitre 11, le chapitre 22 et le chapitre 2 nomment cette garde.
 
 Un chercheur a lancé une fois chacune les autres gardes nommées ci-dessus le 8 octobre 2026, et dans cette exécution elles ont passé toutes leurs assertions ; les données propres du livre n'en tiennent que les décomptes. Les appels d'assertion écrits dans les sept gardes nommées ci-dessus totalisent 269.
 
@@ -321,7 +329,7 @@ Là où est le gain, avec la perte à côté : la même phrase donne la même r�
 
 ## 7. La limite
 
-Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit « which a length of 4 », ce qui n'est pas de l'anglais, et rien ne la juge :
+Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit « which a length of 4 », ce qui n'est pas de l'anglais. Quelque chose la juge-t-il ? Exécutez les deux :
 
 ```haro
 ? TheWordQ("haro").IsAQ(:Word).WhichQ().HasQ().ALengthQ().Of(4)
@@ -330,7 +338,7 @@ Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit «
 #--> TRUE
 ```
 
-La doctrine est que relire une chaîne, c'est la lire à voix haute comme de l'anglais. C'est le travail de l'humain.
+Les deux répondent `TRUE` : rien n'a jugé la seconde. La doctrine est que relire une chaîne, c'est la lire à voix haute comme de l'anglais. C'est le travail de l'humain.
 
 Le descripteur d'une chaîne atteint le code hôte. `IsAXT` construit une chaîne de caractères et l'évalue, de sorte qu'une fonction définie par le programme et nommée dans la chaîne s'est exécutée. C'est le résidu que l'étude du dossier et le chapitre 6 nomment :
 
@@ -362,13 +370,13 @@ done
 #--> Strict natural mode: not understood: 'and_' (did you mean 'addn'?)
 ```
 
-**Les anciens articles se sont dégradés.** La phrase de l'article sur le pont qui porte `IsAMQ` demande un marqueur que j'ai retiré par ma décision du 10 juillet 2026. Plusieurs chaînes de l'article quasi naturel ne tournent pas à ce commit : `InLowercase()` lève une erreur faute d'objet ; `LettersNB`, `BeforeQ` et `TheirQ().FirstCharQ()` ne sont pas définis ; et la forme à accolades `Naturally() { ... }` lève une erreur pour trop peu de paramètres. La chaîne de l'article sur le pont avec `ReplaceLowercaseCharsQ` n'est pas définie non plus. Un chercheur a lancé douze chaînes de l'article quasi naturel le 8 octobre 2026, et huit fonctionnent. Dans l'exécution de ce chercheur, le paragraphe de l'article sur le pont tournait encore en mode permissif, et imprimait deux boîtes imbriquées autour de « NOTHING SOFTANZA » au lieu de la seule qu'il promet. La machine l'a dit, puisque `UnderstoodAll()` vaut faux et que le mot non résolu est nommé (le bloc ci-dessus montre les deux), mais un lecteur doit le demander.
+**Plusieurs chaînes des anciens articles ne tournent plus.** La phrase de l'article sur le pont qui porte `IsAMQ` demande un marqueur que j'ai retiré par ma décision du 10 juillet 2026. Plusieurs chaînes de l'article quasi naturel ne tournent pas à ce commit : `InLowercase()` lève une erreur faute d'objet ; `LettersNB`, `BeforeQ` et `TheirQ().FirstCharQ()` ne sont pas définis ; et la forme à accolades `Naturally() { ... }` lève une erreur pour trop peu de paramètres. La chaîne de l'article sur le pont avec `ReplaceLowercaseCharsQ` n'est pas définie non plus. Un chercheur a lancé douze chaînes de l'article quasi naturel le 8 octobre 2026, et huit fonctionnent. Dans l'exécution de ce chercheur, le paragraphe de l'article sur le pont tournait encore en mode permissif, et imprimait deux boîtes imbriquées autour de « NOTHING SOFTANZA » au lieu de la seule qu'il promet. La machine l'a dit, puisque `UnderstoodAll()` vaut faux et que le mot non résolu est nommé (le bloc ci-dessus montre les deux), mais un lecteur doit le demander.
 
 Ce qui est construit : les deux directions ; cinq paquets comme données et un sixième à l'exécution ; des refus avec raisons des deux côtés ; les cadres de question, la chaîne de vérité mince, le registre évidentiel ; le code naturel comme données. Le dossier contient treize fichiers et environ douze mille lignes dans douze classes, d'après `wc` et `grep` le 8 octobre 2026.
 
 Ce qui est conçu : le plan d'une narration émis comme une chaîne exécutable, de sorte que les chaînes gagnent `Understood()` gratuitement. Une grammaire émise pour le lexique naturel, de sorte qu'un modèle ne puisse produire que des phrases que la couche exécute : j'ai cherché dans le dossier, et aucun émetteur de grammaire ne le touche. Une garde qui échoue si un socket s'ouvre pendant une exécution naturelle, qui n'existe pas. Un chiffre de couverture par paquet imprimé par une garde. Et les exemples des articles épinglés comme fixtures.
 
-Ce qui est absent : le haoussa en écriture ajami, le zarma et le peul. Une couche naturelle fermée jusqu'en bas : une liste simple dans une phrase naturelle atteint le code hôte, ce que le chapitre 11 imprime, et un descripteur atteint le code hôte, ci-dessus. Toute machine qui juge la grammaire d'une chaîne. La lettre haoussa standard, que le paquet stocke brisée. Un dictionnaire protégé de la dérive. Le dossier ne tient pas non plus de récit, ni de date, du plaidoyer de l'auteur auprès du projet de l'ancien langage hôte pour que la programmation naturelle devienne une préoccupation première, ni aucune phrase de lui sur ce ton dont le livre puisse citer la source. Il ne tient qu'un mémo privé du 30 août 2026, qui donne son jugement sur la forme naturelle livrée par ce langage. Le mémo est marqué privé : le livre ne le cite pas et n'attribue aucune expression à l'auteur.
+Ce qui est absent : le haoussa en écriture ajami, le zarma et le peul. Une couche naturelle fermée jusqu'en bas : une liste simple dans une phrase naturelle atteint le code hôte, ce que le chapitre 11 imprime, et un descripteur atteint le code hôte, ci-dessus. Toute machine qui juge la grammaire d'une chaîne. La lettre haoussa standard, que le paquet stocke brisée. Un dictionnaire protégé de la dérive. Le dossier ne tient pas non plus de récit, ni de date, du plaidoyer de l'auteur auprès du projet de l'ancien langage hôte pour que la programmation naturelle devienne une préoccupation première. Il ne tient pas davantage une phrase de lui sur ce ton dont le livre puisse citer la source. Il ne tient qu'un mémo privé du 30 août 2026, qui donne son jugement sur la forme naturelle livrée par ce langage. Le mémo est marqué privé : le livre ne le cite pas et n'attribue aucune expression à l'auteur.
 
 ## 8. Six portes
 
@@ -394,3 +402,5 @@ Prenez une phrase que vous dites d'un mot de votre propre langue : qu'il est en 
 ```
 
 Exécutez ensuite les deux. Puis changez un mot de la chaîne, et un mot de la phrase, en un mot que le dictionnaire ne tient pas. Quelle direction vous l'a dit ? Laquelle avez-vous dû vous le dire vous-même ? Dans une direction la machine vous le dit, et dans l'autre vous devez vous le dire vous-même. Si une promesse se rompt, ne la changez pas : expliquez d'abord la sortie.
+
+Le chapitre suivant porte sur la programmation de la connaissance, où les mots de domaine de l'analyste ont été envoyés : son principe est qu'un système est un fichier, et qu'y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner. Ici une phrase demande, et ne déclare jamais.

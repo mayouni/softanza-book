@@ -16,6 +16,8 @@ rulings: ["12.19", "12.22", "12.29", "12.30"]
 research: research/ch03.md
 ---
 
+Dans ce chapitre, je montre la méthode que suit chaque chapitre après celui-ci. Je prends « depuis les premiers principes », le slogan du terrain, et je lui donne un sens étroit : un concept, la forme du terrain, une reconception en code qui s'exécute, et un tribunal qui la juge. Je montre le plus petit réexamen que je connaisse, la chaîne vide, puis les deux actes, déclarer et gouverner, chacun en quelques lignes. Je dis ce que j'ai refusé : une fonction sans besoin, le code généraliste comme lieu de rencontre entre les personnes et les machines, un titre qui regardait en arrière, la grille seule, et une lecture appelée recensement. Toute la méthode revient à une phrase : vous déclarez un monde dans un langage fait pour lui, et vous gouvernez la façon dont ce monde change.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Dans notre industrie, « depuis les premiers principes » est un slogan. Cela veut dire : raisonner à partir du bas, non par analogie. Vous l'entendrez dans des conférences et le lirez dans des annonces de lancement, et on vous montrera rarement ce qu'il a produit.
@@ -32,7 +34,7 @@ Deux actes. Tout le reste de ce livre est l'un d'eux, ou les deux ensemble.
 
 « Depuis les premiers principes » peut se vérifier. Dans ce livre, cela a un sens étroit : prendre un concept que tout le monde utilise, écrire comment le terrain le tient, le reconcevoir, et laisser un code qui porte la reconception et un tribunal qui la juge. La page d'histoire du site s'intitule *Depuis les premiers principes*, et la bibliothèque est sur GitHub depuis le 12 mars 2022. L'expression n'est pas ici une décoration. C'est un ordre de travail.
 
-Laissez-moi vous montrer le plus petit réexamen que je connaisse. Demandez à Python combien de fois la chaîne vide apparaît dans le mot « text », et il répond cinq : une avant chaque lettre et une à la fin. Demandez-lui si « text » contient la chaîne vide, et il dit oui ; JavaScript dit la même chose. (Python 3.13 et Node 22, exécutés le 8 octobre 2026.) C'est une convention d'implémenteurs, non un fait que quiconque dirait à voix haute. Softanza énonce une règle à la place, et la règle a un nom dans la narration qui l'argumente : le vide ne se compte pas, et le vide ne se contient pas.
+Laissez-moi vous montrer le plus petit réexamen que je connaisse. Demandez à Python combien de fois la chaîne vide apparaît dans le mot « text », et il répond cinq : une avant chaque lettre et une à la fin. Demandez-lui si « text » contient la chaîne vide, et il dit oui ; JavaScript dit la même chose. (Python 3.13 et Node 22, exécutés le 8 octobre 2026.) C'est une convention d'implémenteurs, non un fait que quiconque dirait à voix haute. Softanza énonce une règle à la place, et la règle a un nom dans la narration qui l'argumente : le vide ne se compte pas, et le vide ne se contient pas. Que répond Softanza aux deux mêmes questions ? Exécutez-le :
 
 ```haro
 ? Q("text").Count("")
@@ -41,9 +43,9 @@ Laissez-moi vous montrer le plus petit réexamen que je connaisse. Demandez à P
 #--> FALSE
 ```
 
-Deux lignes, et une décision avec laquelle vous pouvez être en désaccord. Voilà à quoi ressemble un réexamen quand il est honnête : assez petit pour être lu, assez explicite pour être refusé.
+Il répond `0` et `FALSE`. Deux lignes, et une décision avec laquelle vous pouvez être en désaccord. Voilà à quoi ressemble un réexamen quand il est honnête : assez petit pour être lu, assez explicite pour être refusé.
 
-Une lecture du dossier, faite en octobre 2026, a compté quarante-six concepts de cette sorte, en sept familles : les paradigmes, tels que la programmation orientée portée, la programmation de la connaissance et la programmation réactive reconçus ; les moteurs de paradigme, tels que la vérité, les quantificateurs et le temps ; les patrons et la réaction ; l'expression et la perception ; les données, le temps et le raisonnement ; le système, la livraison et les opérations ; et la bibliothèque qui se connaît elle-même. Quarante-six est une lecture et non un recensement ; la page de registre du site lui-même, lue le 9 octobre 2026, dit quarante-sept. Chaque concept de la liste a son propre article ou document de conception, et c'était le critère pour entrer dans la liste.
+Une lecture du dossier, faite en octobre 2026, a compté quarante-six concepts de cette sorte, en sept familles. Les deux premières sont les paradigmes, tels que la programmation orientée portée, la programmation de la connaissance et la programmation réactive reconçus, et les moteurs de paradigme, tels que la vérité, les quantificateurs et le temps. Les cinq autres sont les patrons et la réaction ; l'expression et la perception ; les données, le temps et le raisonnement ; le système, la livraison et les opérations ; et la bibliothèque qui se connaît elle-même. Quarante-six est une lecture et non un recensement ; la page de registre du site lui-même, lue le 9 octobre 2026, dit quarante-sept. Chaque concept de la liste a son propre article ou document de conception, et c'était le critère pour entrer dans la liste.
 
 Voyons maintenant les deux actes, chacun en quelques lignes.
 
@@ -59,7 +61,7 @@ ConstrainQ("score").ToBeQ(:Number).AndQ().ToBeQ(:Positive).AndQ().ToBeQ(:Even)
 #--> no: -4 is not positive (constraint 2 of 'score')
 ```
 
-Remarquez la dernière ligne. Le verdict nomme la règle qu'il a appliquée, par son numéro. Un verdict sur une sorte déclarée qui ne peut pas dire pourquoi n'est pas admis dans cette maison.
+Remarquez la dernière ligne : `no: -4 is not positive (constraint 2 of 'score')`. Le verdict nomme la règle qu'il a appliquée, par son numéro ! Un verdict sur une sorte déclarée qui ne peut pas dire pourquoi n'est pas admis dans cette maison.
 
 **Gouverner.** Une contrainte déclarée, une fois imposée, refuse un changement avant qu'il atterrisse :
 
@@ -78,9 +80,9 @@ done
 #--> hello
 ```
 
-La mise à jour a été refusée, et l'objet reste comme il était. L'erreur que la bibliothèque lève dit ce qui a été tenté, pourquoi cela a été refusé et que faire : corriger la nouvelle valeur, ou assouplir la contrainte. Déclarer une contrainte et l'imposer sont deux actes, et la garde derrière ce bloc vérifie qu'une contrainte seulement déclarée reste passive.
+La mise à jour a été refusée, et l'objet reste comme il était : il répond encore `hello`. L'erreur que la bibliothèque lève dit ce qui a été tenté, pourquoi cela a été refusé et que faire : corriger la nouvelle valeur, ou assouplir la contrainte. Déclarer une contrainte et l'imposer sont deux actes, et la garde derrière ce bloc vérifie qu'une contrainte seulement déclarée reste passive.
 
-Gouverner a aussi un côté qui fait face à la personne. Le système demande, et il ne vous laisse pas clore un monde qui n'est pas complet :
+Gouverner a aussi un côté qui fait face à la personne. Le système demande, et il ne vous laisse pas clore un monde qui n'est pas complet. Que dit-il quand vous essayez de conclure quand même ?
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
@@ -97,7 +99,7 @@ done
 #--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
 ```
 
-Le but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu génère la question, et la question porte sa raison. Conclure alors que deux écarts demeurent est refusé, et le refus vous dit quoi faire ensuite. Le chapitre 18 parle de cette conversation. Ici il suffit de voir que gouverner n'est pas seulement refuser ; c'est demander.
+Le but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu génère la question, et la question porte sa raison. Conclure alors que deux écarts demeurent est refusé, et le refus vous dit quoi faire ensuite : `Ask the next question.` Le chapitre 18 parle de cette conversation. Ici il suffit de voir que gouverner n'est pas seulement refuser ; c'est demander.
 
 Encore un réexamen, parce que les moteurs de paradigme font aussi partie de la méthode. La vérité, dans le langage sous Softanza, est une affaire de vide et de non-vide, et une liste de mots compte comme vraie. Softanza garde cette vérité par défaut et vous laisse l'étendre par déclaration :
 
@@ -109,35 +111,35 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 #--> FALSE
 ```
 
-La réponse de l'hôte est inchangée. La réponse étendue lit votre déclaration. « La vérité devient une affaire de politique », dit la narration, et la politique est écrite là où vous pouvez la lire.
+La réponse de l'hôte est inchangée : `TRUE`. La réponse étendue lit votre déclaration et dit `FALSE`. « La vérité devient une affaire de politique », dit la narration, et la politique est écrite là où vous pouvez la lire.
 
-Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La limite, en trois mots d'étape : **construit** veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné ; **conçu** couvre ce que le site appelle en construction, spécification et proposition ratifiée ; **absent** couvre un nom sans rien derrière lui pour l'instant, et ce que personne n'a nommé. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
+Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La limite, en trois mots d'étape. Le premier, **construit**, veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné. Le deuxième, **conçu**, couvre ce que le site appelle en construction, spécification et proposition ratifiée. Le troisième, **absent**, couvre un nom sans rien derrière lui pour l'instant, et ce que personne n'a nommé. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
 
-Et le livre est jugé comme la bibliothèque l'est. Chaque bloc qu'il contient s'est exécuté dans la bibliothèque la nuit où la page a été construite, au commit imprimé en haut de la page, et une page dont les promesses ne sont pas tenues ne se construit pas.
+Et le livre est jugé comme la bibliothèque l'est. Chaque bloc qu'il contient s'est exécuté dans la bibliothèque la nuit où la page a été construite, au commit imprimé en haut de la page. Une page dont les promesses ne sont pas tenues ne se construit pas.
 
 ## 4. La décision, et ce que j'ai refusé
 
 Il n'existe pas de fiche unique d'une décision appelée « la méthode ». La méthode a été décidée par morceaux, et les morceaux sont dans le dossier.
 
-**J'ai refusé d'ajouter une fonction sans besoin.** Je l'ai écrit dans un article de la bibliothèque, qui ne porte pas de date : « Je n'introduis de nouvelles fonctions que lorsqu'elles résolvent un problème tangible ou lorsque j'anticipe qu'elles répondront aux besoins des développeurs. » Les premiers principes sans cette règle produisent un musée. Avec elle, un réexamen doit mériter sa place : quelqu'un avait un problème auquel la forme du terrain ne répondait pas.
+**J'ai refusé d'ajouter une fonction sans besoin.** Je l'ai écrit dans un article de la bibliothèque, qui ne porte pas de date. « Je n'introduis de nouvelles fonctions que lorsqu'elles résolvent un problème tangible ou lorsque j'anticipe qu'elles répondront aux besoins des développeurs. » Les premiers principes sans cette règle produisent un musée. Avec elle, un réexamen doit mériter sa place : quelqu'un avait un problème auquel la forme du terrain ne répondait pas.
 
-**J'ai refusé le code généraliste comme lieu de rencontre entre les personnes et les machines.** La vision de la plateforme le dit en une ligne, que j'ai ratifiée : les humains et les IA se rencontrent dans des langages déclarés, petits, clos et jugés, et non dans du code généraliste. Déclarer est le premier acte parce qu'il rend le second possible. Un tribunal ne peut juger que la phrase d'un langage qu'il connaît.
+**J'ai refusé le code généraliste comme lieu de rencontre entre les personnes et les machines.** La vision de la plateforme le dit en une ligne, que j'ai ratifiée. Les humains et les IA se rencontrent dans des langages déclarés, petits, clos et jugés, et non dans du code généraliste. Déclarer est le premier acte parce qu'il rend le second possible. Un tribunal ne peut juger que la phrase d'un langage qu'il connaît.
 
-**J'ai refusé un titre qui regardait en arrière.** Quand ce livre a été proposé pour la première fois, son titre était *Programming by Heart*, le slogan de la présentation de 2020. Je l'ai écarté comme dépassé : il nommait une posture, et le livre devait nommer ce qui était repensé. La proposition suivante était *Declare, Then Govern*. J'ai gardé à la place la propre phrase du site pour la couverture (le 8 octobre 2026, j'en ai changé un mot, pour « artisans du logiciel »), et les deux verbes sont passés en quatrième de couverture, où vous les trouverez. Ils organisent chaque chapitre ; ils n'avaient pas besoin d'en être le nom.
+**J'ai refusé un titre qui regardait en arrière.** Quand ce livre a été proposé pour la première fois, son titre était *Programming by Heart*, le slogan de la présentation de 2020. Je l'ai écarté comme dépassé : il nommait une posture, et le livre devait nommer ce qui était repensé. La proposition suivante était *Declare, Then Govern*. J'ai gardé à la place la propre phrase du site pour la couverture (le 8 octobre 2026, j'en ai changé un mot, pour « artisans du logiciel »). Les deux verbes sont passés en quatrième de couverture, où vous les trouverez. Ils organisent chaque chapitre ; ils n'avaient pas besoin d'en être le nom.
 
-**J'ai refusé la grille seule.** Les documents de la bibliothèque contiennent des dizaines de grilles de comparaison, et dans celles-ci la colonne de Softanza gagne presque chaque ligne. Un lecteur qui ne voit que ces grilles a raison de les escompter. L'honnêteté du dossier est ailleurs : dans les sections des études de terrain intitulées « ce que le terrain a et qui manque à Softanza, honnêtement », et dans des chiffres mesurés. Quand le runtime sous Softanza a été mesuré de nouveau en septembre 2026 contre celui auquel il était comparé, le résultat annoncé auparavant ne s'est pas reproduit, et la perte a été consignée le jour même, dans une note interne. C'est la règle que suit ce livre : une perte est imprimée à côté du gain, dans la même section.
+**J'ai refusé la grille seule.** Les documents de la bibliothèque contiennent des dizaines de grilles de comparaison, et dans celles-ci la colonne de Softanza gagne presque chaque ligne. Un lecteur qui ne voit que ces grilles a raison de les escompter. L'honnêteté du dossier est ailleurs : dans les sections des études de terrain intitulées « ce que le terrain a et qui manque à Softanza, honnêtement », et dans des chiffres mesurés. Quand le runtime sous Softanza a été mesuré de nouveau en septembre 2026 contre celui auquel il était comparé, le résultat annoncé auparavant ne s'est pas reproduit. La perte a été consignée le jour même, dans une note interne. C'est la règle que suit ce livre : une perte est imprimée à côté du gain, dans la même section.
 
 **J'ai refusé d'appeler une lecture un recensement.** Les quarante-six concepts sont une lecture du dossier par une session, non une liste que j'ai tranchée ligne par ligne. L'annexe A imprime le registre de quarante-six lignes tel que l'étude le donne, avec la colonne propre au livre, comme annexe de travail : les lignes n'ont pas été tranchées une à une.
 
 ## 5. Le tribunal
 
-Les trois blocs des deux actes reposent sur deux gardes. `modality_narrated` prouve qu'une sorte déclarée peut être inspectée, qu'un verdict nomme la contrainte qui a échoué, qu'une sorte inconnue n'autorise jamais en silence, et qu'une contrainte imposée refuse une mauvaise mise à jour avant qu'elle atterrisse tandis qu'une contrainte déclarée reste passive. `wisecoding_narrated` prouve la conversation : des écarts calculés à partir du but déclaré, une question qui dit pourquoi elle est posée, des réponses admises, une loi qui refuse à travers la conversation et atteint une personne, et la conclusion avec des écarts ouverts refusée. Sa sœur, `wisecoding_rich_narrated`, porte les cas plus riches de la même boucle.
+Les trois blocs des deux actes reposent sur deux gardes. `modality_narrated` prouve qu'une sorte déclarée peut être inspectée, qu'un verdict nomme la contrainte qui a échoué, et qu'une sorte inconnue n'autorise jamais en silence. Elle prouve aussi qu'une contrainte imposée refuse une mauvaise mise à jour avant qu'elle atterrisse, tandis qu'une contrainte déclarée reste passive. `wisecoding_narrated` prouve la conversation : des écarts calculés à partir du but déclaré, une question qui dit pourquoi elle est posée, des réponses admises, et une loi qui refuse à travers la conversation et atteint une personne. Et elle prouve que conclure avec des écarts ouverts est refusé. Sa sœur, `wisecoding_rich_narrated`, porte les cas plus riches de la même boucle.
 
-Le réexamen du vide repose sur `612_dealing_in_emptiness_in_softanza.ring`, un test de la bibliothèque écrit en scénarios, chaque ligne énonçant le résultat qu'elle attend. Le réexamen de la vérité repose sur sa narration et sur l'exécution de ce livre, et sur aucune garde : le fichier de la bibliothèque qui lui est consacré, `04_truth_in_softanza.ring`, fixe la liste des mots faux par affectation et n'appelle jamais la fonction, de sorte qu'il ne prouve pas le bloc.
+Le réexamen du vide repose sur `612_dealing_in_emptiness_in_softanza.ring`, un test de la bibliothèque écrit en scénarios, chaque ligne énonçant le résultat qu'elle attend. Le réexamen de la vérité repose sur sa narration et sur l'exécution de ce livre, et sur aucune garde. Le fichier de la bibliothèque qui lui est consacré, `04_truth_in_softanza.ring`, fixe la liste des mots faux par affectation et n'appelle jamais la fonction, de sorte qu'il ne prouve pas le bloc.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en adoption. Les fiches de décision sont un standard léger que beaucoup d'équipes utilisent, avec des modèles et des outils autour ; l'élément décision de ce livre existe dans ce livre et dans une étude du dossier, et pas encore comme donnée dans la bibliothèque. Les exemples de la documentation peuvent être exécutés par l'outil standard de Python, et Rust les exécute par défaut ; les promesses de Softanza sont jugées par les exécuteurs propres de la maison, qu'aucun outil extérieur ne lit. Et l'habitude du terrain de comparer par grille n'est pas pire que celle du dossier, qui montre la même faiblesse sur ses propres pages.
+Le terrain mène en adoption. Les fiches de décision sont un standard léger que beaucoup d'équipes utilisent, avec des modèles et des outils autour. L'élément décision de ce livre existe dans ce livre et dans une étude du dossier, et pas encore comme donnée dans la bibliothèque. Les exemples de la documentation peuvent être exécutés par l'outil standard de Python, et Rust les exécute par défaut. Les promesses de Softanza sont jugées par les exécuteurs propres de la maison, qu'aucun outil extérieur ne lit. Et l'habitude du terrain de comparer par grille n'est pas pire que celle du dossier, qui montre la même faiblesse sur ses propres pages.
 
 Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision ne s'exécute pas. Un exemple ne dit pas ce qui a été refusé. Ici, ils sont un seul objet.
 
@@ -145,9 +147,9 @@ Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexa
 
 Ce qui est construit : le tribunal derrière chaque bloc de ce chapitre sauf celui de la vérité, et les cinq mots d'étape que le site imprime sur chaque produit.
 
-Ce qui est conçu : le registre des concepts repensés comme données, une ligne par concept avec son article, son code, sa garde et son étape, et une garde qui échoue quand un nouveau concept arrive sans ligne. C'est aujourd'hui une spécification.
+Ce qui est conçu : le registre des concepts repensés comme données, une ligne par concept avec son article, son code, sa garde et son étape. À côté, une garde qui échoue quand un nouveau concept arrive sans ligne. Les deux sont aujourd'hui une spécification.
 
-Ce qui est absent : une page qui montre chaque concept avec une preuve exécutée (le site a une page de registre, lue le 9 octobre 2026, qui les liste chacun avec ses preuves) ; un fichier de tests pour le module du moteur de l'un des moteurs de paradigme, la fusion de sections, qui n'en a pas en propre, bien que ses méthodes de fusion s'exécutent dans `base/test/string/289_content.ring` et `max/test/stzListOfPairsTest.ring` ; et quelques réexamens qui ne s'exécutent pas comme leur article l'a écrit. L'article sur les quantificateurs demande si toutes vos notes `AreGreaterThan` la moyenne, et cette méthode s'écrit autrement dans la bibliothèque aujourd'hui ; ses quantificateurs plus conviviaux, certains, la plupart et peu, tirent au hasard, de sorte qu'ils ne peuvent pas porter une promesse. Le registre est une lecture, et une lecture peut manquer un concept qui ne vit que dans un seul article.
+Ce qui est absent : une page qui montre chaque concept avec une preuve exécutée (le site a une page de registre, lue le 9 octobre 2026, qui les liste chacun avec ses preuves). Un fichier de tests pour le module du moteur de l'un des moteurs de paradigme, la fusion de sections : il n'en a pas en propre, bien que ses méthodes de fusion s'exécutent dans `base/test/string/289_content.ring` et `max/test/stzListOfPairsTest.ring`. Et quelques réexamens qui ne s'exécutent pas comme leur article l'a écrit. L'article sur les quantificateurs demande si toutes vos notes `AreGreaterThan` la moyenne, et cette méthode s'écrit autrement dans la bibliothèque aujourd'hui. Ses quantificateurs plus conviviaux, certains, la plupart et peu, tirent au hasard, de sorte qu'ils ne peuvent pas porter une promesse. Le registre est une lecture, et une lecture peut manquer un concept qui ne vit que dans un seul article.
 
 ## 8. Six portes
 
@@ -175,3 +177,5 @@ Choisissez un défaut de votre propre langage que vous n'avez jamais questionné
 ```
 
 Exécutez les deux. Je ne vous dirai pas quelle règle est juste. Si votre règle et votre langage divergent, vous avez trouvé une décision que quelqu'un a prise pour vous, et vous pouvez maintenant la prendre vous-même.
+
+Le chapitre 4 dessine la plateforme en une image, sous une seule idée à chaque altitude : rien n'est cru, tout est jugé.

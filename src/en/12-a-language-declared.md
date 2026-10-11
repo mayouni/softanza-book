@@ -16,9 +16,11 @@ rulings: ["12.10", "12.21", "12.27", "12.29", "12.30"]
 research: research/ch12.md
 ---
 
+In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, a model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the factory, a forge that turns a declaration into a court and a grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
+
 ## 1. The concept, as the field holds it
 
-Two families of tools let you declare a language in the field. The first is the language workbench and the parser generator: JetBrains MPS, Xtext, Spoofax, and Racket's `#lang` give you the means to define a language with its grammar, its editor and its checks. The estate's own field study of August 2026 says why they did not win. They died of ecosystem gravity, and Racket's languages live and die inside Racket.
+Two families of tools let you declare a language in the field. The first is the language workbench and the parser generator: JetBrains MPS, Xtext, Spoofax, and Racket's `#lang` give you the means to define a language with its grammar, its editor and its checks. The estate's own field study of August 2026 says why they did not win. They depended on an ecosystem, and Racket's languages live and die inside Racket.
 
 The second is the internal DSL: a library whose calls read like sentences, while the file can still hold any host code. The same study has the sentence I keep: closedness is the product, and an internal DSL that cannot refuse arbitrary host code is an API wearing a language's costume. Its control group is the closed languages that won: SQL, regex, Make, HTML and CSS, HCL, GraphQL, Markdown, CUE.
 
@@ -36,7 +38,7 @@ And the one I must carry beside every win, from the library's contract for struc
 
 ## 3. The Softanza form
 
-Take a declaration of what a restaurant's order must look like. It has three fields: a dish from a closed menu, a quantity between 1 and 12, and an optional note. One text is read by three readers. A person reads a description. A model reads a clause for its prompt. And the court reads the same text and judges an answer:
+Take a declaration of what a restaurant's order must look like. It has three fields: a dish from a closed menu, a quantity between 1 and 12, and an optional note. One text is read by three readers. A person reads a description. A model reads a clause for its prompt. And the court reads the same text and judges an answer. What does it answer to a dish called pizza and forty portions? Run it:
 
 ```haro
 oO = StzOutputSchemaQ([
@@ -64,7 +66,7 @@ aV = oO.Verify([ :dish = "pizza", :quantity = 40 ])
 #--> field 'quantity' must be at most '12', and the model answered '40'.
 ```
 
-Now the same declaration produces a grammar. The court and the grammar are born of one text, and they agree on the shape. They part ways on a value. Forty portions has the right shape, so the grammar lets it through and the court refuses it. The library even lists what the grammar dropped:
+The court answers in the declaration's words: `field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.` Now the same declaration produces a grammar. The court and the grammar are born of one text, and they agree on the shape. They part ways on a value. Forty portions has the right shape: which of the two lets it through, and does the library say what the grammar dropped? Run it:
 
 ```haro
 cG = oO.ToGBNF()
@@ -87,9 +89,9 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 #--> 1
 ```
 
-The second pair is the point of the chapter. I do not print the list of what the grammar dropped, because its text carries the former name of the court in one place. I test that it names the limit of the range.
+The second pair is the point of the chapter: the grammar answers `1` and the court answers `0`. I do not print the list of what the grammar dropped, because its text carries the former name of the court in one place. I test that it names the limit of the range.
 
-A model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. It cannot begin:
+A model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
 
 ```haro
 ? StzGrammarCouldContinue(cG, "dish: t")
@@ -102,7 +104,7 @@ A model is not asked to be careful. The sampler asks the grammar at every candid
 #--> 0
 ```
 
-The last line is a failure the measurement found in a small model: the placeholder `<number>` echoed where a number belongs. And a token is not a byte. A piece may be valid as a prefix and invalid as a completion, and the machine is fed the whole piece:
+It cannot: `dish: p` answers `0`. The last line is a failure the measurement found in a small model: the placeholder `<number>` echoed where a number belongs. And a token is not a byte. A piece may be valid as a prefix and invalid as a completion, and the machine is fed the whole piece:
 
 ```haro
 cY = 'root ::= "yes" "\n"'
@@ -114,7 +116,7 @@ cY = 'root ::= "yes" "\n"'
 #--> 0
 ```
 
-What the machine will not hold, it refuses by name. A closed language refuses what it cannot carry, and never approximates. A left-recursive rule is refused by a code, and so is a rule referred to and never defined. A nested structure is refused, and the court still reads it:
+What the machine will not hold, it refuses by name. A closed language refuses what it cannot carry, and never approximates. A left-recursive rule is refused by a code, and so is a rule referred to and never defined. A nested structure is refused by the grammar. Does the court still read it?
 
 ```haro
 ? left(StzGrammarRefusal('root ::= tail' + nl + 'tail ::= tail "x" | "x"'), 7)
@@ -170,7 +172,7 @@ What I saw, and the narration does not say: the refusal is silent and whole. A c
 
 A language declared once should give its court, its mouth, its voice and its readers. That is the factory, and it is where the study of this book meets its own limit: the factory is not in the library.
 
-I will say what the record holds, and what I observed on 8 October 2026 on the older runtime, the oracle. The record is a charter and a spike in another repository, in pure core code that runs on the oracle. A forge reads a declaration and writes two files, a court program and a grammar. The spike's rungs, between 1 and 4 October 2026, forged courts and grammars for the machine language of the estate, for a fleet language declared over it, for the expression language, and for four more letters of the alphabet. Each was judged against the pre-existing language's own cases: unadapted for the expression language (W) and for Z, re-expressed for F and A, and, for Q, against the older language's own answers, captured. In order: 117 of 120 for the machine language, the three left being the fleet file's kinds, then 32 of 32 for the fleet language, 29 of 29 for W, 16 of 16 for Z, 25 of 25 for Q, 26 of 26 for F and 35 of 35 for A. This is chapter 3's method, declare then govern, applied to the factory itself.
+I will say what the record holds, and what I observed on 8 October 2026 on the older runtime, the oracle. The record is a charter and a spike in another repository, in pure core code that runs on the oracle. A forge reads a declaration and writes two files, a court program and a grammar. The spike's rungs, between 1 and 4 October 2026, forged courts and grammars for the machine language of the estate and for a fleet language declared over it. They did the same for the expression language and for four more letters of the alphabet. Each was judged against the pre-existing language's own cases: unadapted for the expression language (W) and for Z, re-expressed for F and A, and, for Q, against the older language's own answers, captured. In order: 117 of 120 for the machine language, the three left being the fleet file's kinds. Then 32 of 32 for the fleet language, 29 of 29 for W, 16 of 16 for Z, 25 of 25 for Q, 26 of 26 for F and 35 of 35 for A. This is chapter 3's method, declare then govern, applied to the factory itself.
 
 I ran the forge on a small language I wrote for this book, a table's order in the words of the dining room. It is an example, written for the book and run once, outside the library:
 
@@ -203,9 +205,9 @@ Three more observations, each a limit.
 
 **The factory's grammar holds shape only.** A menu seat comes out as a general identifier, so the forged grammar lets `pizza` through. The library's own schema compiler, in the blocks above, closes the same menu into an alternation. On the estate's machine language, the forged grammar accepts a dangling reference that the court refuses. The record names a difference between mouth and court, the part that a context-free grammar cannot say: duplicate names, dangling references. I found no record that states the menu gap as a gap.
 
-**The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The principles file, dated 1 October 2026, says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides: the factory has forged courts and grammars for several languages, outside the library; it has not forged the full list the principle promises; and the vision's text has not been updated. In the book's stage words, the factory is built outside the library and designed for the library, and chapter 11's limit says the same.
+**The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The principles file, dated 1 October 2026, says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides. The factory has forged courts and grammars for several languages, outside the library, and it has not forged the full list the principle promises. And the vision's text has not been updated. In the book's stage words, the factory is built outside the library and designed for the library, and chapter 11's limit says the same.
 
-### The facets a declared language wears
+### The facets of a declared language
 
 By facet I mean here a surface of a declared language. The charter lists what the forge produces from a declaration, and I give each a stage word:
 
@@ -243,7 +245,7 @@ The word *facet* has other meanings in this book, and I define mine here: a surf
 
 ## 5. The court
 
-`structuredoutput_narrated` proves that a declaration is judged when declared, with an unknown type, an unknown key and an empty menu refused; that two wire shapes are read and nothing is guessed; that there is no partial credit; that nesting works; that a retry fits in one budget; and, in its tenth scene, that a lie is let through on purpose. `schema_grammar_narrated` proves that the declaration compiles to a grammar, that a closed enumeration becomes a closed alternation, that optional and list arity are handled, that the unenforced constraints are listed by field and operator, and that a nested structure is refused with a named code. `constrained_decoding_narrated` proves that the machine walks a grammar byte by byte, that a prefix is not a whole, that `yesterday` is refused, that the placeholder the model wrote cannot be reached, that refusals are named, that structure is not falsehood, and that a grammar on a streaming session is refused. Its two scenes that need a generative model say so. `483_w_and_wf_forms_in_conditional_code` proves that the two forms of a condition give the same positions. It does not assert the closed language's refusal, and no guard does.
+`structuredoutput_narrated` proves that a declaration is judged when declared, with an unknown type, an unknown key and an empty menu refused. It proves that two wire shapes are read and nothing is guessed, that there is no partial credit, that nesting works, and that a retry fits in one budget. In its tenth scene, it proves that a lie is let through on purpose. `schema_grammar_narrated` proves that the declaration compiles to a grammar, and that a closed enumeration becomes a closed alternation. It proves that optional and list arity are handled, that the unenforced constraints are listed by field and operator, and that a nested structure is refused with a named code. `constrained_decoding_narrated` proves that the machine walks a grammar byte by byte, that a prefix is not a whole, and that `yesterday` is refused. It proves that the placeholder the model wrote cannot be reached, that refusals are named, that structure is not falsehood, and that a grammar on a streaming session is refused. Its two scenes that need a generative model say so. `483_w_and_wf_forms_in_conditional_code` proves that the two forms of a condition give the same positions. It does not assert the closed language's refusal, and no guard does.
 
 No guard in the library tests a factory, since there is none. The factory's guard is outside: the spike passes twenty-three stages in 367.5 seconds on 4 October 2026, by its own file. I did not run it. And the meta-court's own first run was twenty-eight of twenty-eight on 29 August 2026. The book's guard reader resolves only guards in the library's test tree, so these cannot be named in the front matter.
 
@@ -251,19 +253,19 @@ The figure that the first attempt is valid in two cases of ten when checked afte
 
 ## 6. The field, and where it leads
 
-The workbenches lead on tooling. The field study says it itself: they remain superior on the axes the design deliberately abandons, projectional tooling, editor integration and depth of macros, and the bet that those axes are the wrong ones is named as a bet.
+The workbenches lead on tooling. The field study says it itself: they remain superior on the axes the design deliberately abandons, projectional tooling, editor integration and depth of macros. And the bet that those axes are the wrong ones is named as a bet.
 
-The same flood of generated code cuts both ways: it makes undisciplined language-making cheap too, which is why the court is the core and not an accessory.
+Generated code makes undisciplined language-making cheap too, and that is why the court is the core and not an accessory.
 
 Constrained decoding: the field built it first, and the reference implementation is another library's. What the record adds is the pairing: a grammar and a court from one declaration, and the list of what the grammar dropped.
 
 A grammar over-approximates a court. Duplicate names, dangling references and the coherence of a menu are not context-free. I observed it both ways above: a band the grammar cannot carry, and a reference it cannot carry.
 
-The code a factory emits must be read by someone. The family style that every declared language inherits has a success test, that learning the second language should take an evening, because it is the first language wearing different verbs. It is a design requirement and not a measurement. No learner has been timed in the record I read.
+The code a factory emits must be read by someone. The family style that every declared language inherits has a success test, that learning the second language should take an evening, because it is the first language with different verbs. It is a design requirement and not a measurement. No learner has been timed in the record I read.
 
 ## 7. The limit
 
-The library has two closed formula languages, and they behave differently at the edge. A reader who takes the closed condition language of chapter 11 and of the condition above to cover every formula will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. The word `sin` that the condition refused runs here:
+The library has two closed formula languages, and they behave differently at the edge. A reader who takes the closed condition language of chapter 11 and of the condition above to cover every formula will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. Does the word `sin` that the condition refused run here?
 
 ```haro
 o1 = new stzTableAggregator([
@@ -275,15 +277,15 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 #--> [ 0, 0.84, -0.76 ]
 ```
 
-I also saw, and do not show, that on another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, a formula `@(:A) + HostBonus(@(:B))` with a function of mine that multiplies by a thousand printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. No guard asserts either behaviour.
+The sine the condition refused, the table computed! I also saw, and do not show, a second thing. On another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, I wrote a formula `@(:A) + HostBonus(@(:B))` around a function of mine that multiplies by a thousand. It printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. No guard asserts either behaviour.
 
-What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped; a grammar machine that says it is constrained; a prompt and a description from the same text. 151 assertions in three narrated guards, as the build counts them. Two closed little languages of conditions, with limits. The natural layer's tongues as data.
+What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, with limits. The natural layer's tongues as data.
 
 What is built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
 
 What is designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. I did not find shown a printer for declared sentences, a knowledge graph forged from a declaration, or the one static binary per language. The library having a factory: nothing in it declares or forges a language. A grammar for every declared language shipping in the library: promised in the kernel, not shipped. And the projections: the world rendered to an application, a server, a page, a device.
 
-What is absent: the forge's grammar for a menu word, which I saw above holds shape only; the figure of two of ten against ten of ten, re-taken; and any record that the factory runs on the Haro runtime. At the time of the vision's writing the language did not exist; the charter's runs are on the older runtime and on the oracle.
+What is absent: the forge's grammar for a menu word, which I saw above holds shape only, and the figure of two of ten against ten of ten, re-taken. And any record that the factory runs on the Haro runtime. At the time of the vision's writing the language did not exist; the charter's runs are on the older runtime and on the oracle.
 
 ## 8. Six doors
 
@@ -318,3 +320,5 @@ cG = 'root ::= ...'     # your grammar here
 ```
 
 Then add a number to the line, `quantity: ` and digits, and write a sixth prediction: does your grammar accept `quantity: 4000`? Run it. The lesson is the third, the fourth and the sixth. The machine already knows that a prefix could continue and is not yet a sentence, and it cannot know that the number is too large. Write down, in one sentence, who in your restaurant must refuse forty portions, since the grammar cannot.
+
+The next chapter turns to the natural sentence, in two directions and under one discipline. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.

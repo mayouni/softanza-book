@@ -16,6 +16,8 @@ rulings: ["12.2", "12.6", "12.12", "12.13", "12.19"]
 research: research/ch14.md
 ---
 
+Dans ce chapitre, je prends les trois pratiques du terrain qui se rencontrent dans cette idée : la pile sémantique, la base de données de graphes de propriétés et les règles sur des faits. Je mets à côté d'elles un système qui est un fichier texte brut. J'exécute ce fichier : deux faits, une loi et une preuve avec ses étapes, puis une clinique en mode strict, où une rumeur refusée est gardée et nommée. J'écris le fichier, je le relis et je le montre à l'échelle, d'un catalogue de cours à la mémoire d'un agent. Je dis ce que j'ai décidé, qu'une entreprise se décrit dans un seul fichier et que le fichier est le programme, et ce que j'ai refusé : un monde parallèle, une contradiction résolue en silence, la récupération. J'imprime la limite, un fichier qui à ce commit n'a pas de règles, à côté du principe : un système est un fichier, et y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Trois pratiques du terrain se rencontrent dans cette idée, et aucune n'est la même qu'elle.
@@ -38,7 +40,7 @@ Deux phrases du dossier le portent. La définition, dans le document de concepti
 
 ## 3. La forme Softanza
 
-Voici un système comme un texte. Deux faits : la farine est faite de mil, et le couscous de farine. Quand on demande si le couscous est fait de mil, le graphe dit qu'il ne peut pas le dériver. Puis une ligne est ajoutée au fichier, une loi disant que *fait de* est transitif. Les deux mêmes faits prouvent maintenant la chaîne :
+Voici un système comme un texte. Deux faits : la farine est faite de mil, et le couscous de farine. Le couscous est-il fait de mil ? Demandez-le au graphe, puis ajoutez une ligne au fichier, une loi disant que *fait de* est transitif, et demandez de nouveau :
 
 ```haro
 cFacts = 'knowledge "coop"' + nl + nl + "facts" + nl +
@@ -53,9 +55,9 @@ oB.ImportKnow(cFacts + nl + "ontology" + nl + "    made-from | transitive" + nl)
 #--> proved: couscous made-from flour made-from millet
 ```
 
-Le texte est le programme. Les deux mêmes faits, une ligne en plus, une capacité différente. Le bloc ne touche pas le disque : `ImportKnow` prend un texte, et prend un chemin quand la chaîne de caractères finit par l'extension du fichier.
+Sans la loi, le graphe répond `not derivable` ; avec elle, `proved: couscous made-from flour made-from millet`. Le texte est le programme. Les deux mêmes faits, une ligne en plus, une capacité différente ! Le bloc ne touche pas le disque : `ImportKnow` prend un texte, et prend un chemin quand la chaîne de caractères finit par l'extension du fichier.
 
-Maintenant ajoutons un fait et rien d'autre. La chaîne s'allonge, et la preuve écrit ses étapes. Le graphe sans la loi, qui n'a de plus jamais reçu le fait, dit toujours non, et je veux que vous remarquiez que ce non a deux causes :
+Maintenant ajoutons un fait au graphe qui a la loi, et rien d'autre. Que répondent les deux graphes à la question plus longue ? Exécutez-le :
 
 ```haro
 oB.KnowRelation("porridge", "made-from", "couscous")
@@ -65,9 +67,9 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 #--> not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'
 ```
 
-Un refus est aussi certain qu'une preuve, sur ce qui est enregistré et déclaré : le graphe dit « non dérivable », pas « faux ». Le commentaire de la bibliothèque sur `Prove` le dit : un non certain reste certain.
+Le graphe qui a la loi prouve la chaîne plus longue et en écrit les étapes : `proved: porridge made-from couscous made-from flour made-from millet`. Le graphe sans la loi, qui n'a de plus jamais reçu le fait, répond toujours `not derivable`, et je veux que vous remarquiez que ce non a deux causes. Un refus est aussi certain qu'une preuve, sur ce qui est enregistré et déclaré : le graphe dit « non dérivable », pas « faux ». Le commentaire de la bibliothèque sur `Prove` le dit : un non certain reste certain.
 
-La même croissance atteint le modèle de domaine du chapitre 19. Rien n'est entraîné. Mais un modèle forgé à partir d'un graphe est un instantané : la seconde réponse ci-dessous est l'ancien modèle qui refuse encore, et seul un modèle forgé de nouveau connaît le fait nouveau :
+La même croissance atteint le modèle de domaine du chapitre 19. Rien n'est entraîné. Mais un modèle forgé à partir d'un graphe est un instantané. Le modèle apprend-il le fait nouveau quand le graphe l'apprend ? Exécutez-le :
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -85,7 +87,9 @@ oDLM = StzDlmQ(oKB)
 #--> Couscous contains semolina and millet.
 ```
 
-**Le fichier que la bibliothèque écrit.** Une clinique. Une relation déclarée unique, et un graphe en mode strict, où chaque fait a besoin de sa provenance. Le premier fait est refusé faute d'en avoir une. Puis un fait avec sa source et sa confiance est admis. Un second, qui le contredit, venu d'une rumeur, est refusé, et le refus est gardé :
+Il ne l'apprend pas. La seconde réponse est l'ancien modèle qui refuse encore, `That is outside the 'coop' domain`, et seul le modèle forgé de nouveau répond `Millet is a grain.`
+
+**Le fichier que la bibliothèque écrit.** Une clinique. Une relation déclarée unique, et un graphe en mode strict, où chaque fait a besoin de sa provenance. Que fait-il d'un fait sans source, d'un fait qui en a une, et d'un second, qui le contredit, venu d'une rumeur ? Et qu'écrit-il ensuite sur le disque ? Exécutez-le :
 
 ```haro
 oCl = new stzKnowledgeGraph("clinic")
@@ -118,9 +122,9 @@ oCl.WriteToKnowFile("clinic")
 #        treated-by | unique
 ```
 
-C'est ce que la bibliothèque écrit : un en-tête, puis jusqu'à quatre sections dans cet ordre, les faits, la provenance quand un fait en porte, les contradictions quand l'une a été refusée, et l'ontologie quand une loi a été déclarée. Une ligne par enregistrement, les champs séparés par une barre. Une barre ou un saut de ligne à l'intérieur d'une valeur est échappé. La rumeur refusée est dans le fichier, nommée, et jamais résolue. Le commentaire du code sur la liste des contradictions le dit : nommée, jamais résolue en silence.
+Le fait nu est refusé avec la phrase propre de la bibliothèque, `Strict mode: every fact needs provenance`. Le fait avec sa source et sa confiance est admis. La rumeur est refusée, `0`, et le refus est gardé. C'est ce que la bibliothèque écrit : un en-tête, puis jusqu'à quatre sections dans cet ordre, les faits, la provenance quand un fait en porte, les contradictions quand l'une a été refusée, et l'ontologie quand une loi a été déclarée. Une ligne par enregistrement, les champs séparés par une barre. Une barre ou un saut de ligne à l'intérieur d'une valeur est échappé. La rumeur refusée est dans le fichier, nommée, et jamais résolue. Le commentaire du code sur la liste des contradictions le dit : nommée, jamais résolue en silence.
 
-Le fichier se relit dans un graphe strict. La loi, la source de chaque fait et le refus voyagent à l'intérieur :
+Le fichier se relit-il dans un graphe strict, avec la loi, la source de chaque fait et le refus à l'intérieur ? Chargez-le :
 
 ```haro
 oBack = new stzKnowledgeGraph("clinic")
@@ -139,9 +143,9 @@ remove("clinic.zknw")
 #--> 0
 ```
 
-Un fichier de ce genre a été écrit un jour sans sa provenance. L'export n'écrivait que les triplets nus, de sorte que la connaissance relue depuis le disque ne disait plus d'où elle venait, et un graphe strict ne pouvait pas charger son propre export. La correction, ce sont les deux sections ci-dessus. La garde qui la prouve est nommée à la section 5.
+Oui : un fait fusionné, la source et la confiance revenues, `[ [ "source", "registry" ], [ "confidence", 0.95 ] ]`, une contradiction, et la loi. Un fichier de ce genre a été écrit un jour sans sa provenance. L'export n'écrivait que les triplets nus, de sorte que la connaissance relue depuis le disque ne disait plus d'où elle venait, et un graphe strict ne pouvait pas charger son propre export. La correction, ce sont les deux sections ci-dessus. La garde qui la prouve est nommée à la section 5.
 
-**Une loi qui se déclenche quand un fait est ajouté.** Sur le monde par défaut de la bibliothèque, celui qui est derrière le sucre syntaxique du langage naturel, une loi symétrique dérive le fait inverse au moment où le premier est ajouté, sans appel à une étape de dérivation. Personne n'a écrit qu'Ibrahim est marié à Amina :
+**Une loi qui se déclenche quand un fait est ajouté.** Sur le monde par défaut de la bibliothèque, celui qui est derrière le sucre syntaxique du langage naturel, une loi symétrique dérive le fait inverse au moment où le premier est ajouté, sans appel à une étape de dérivation. Personne n'a écrit qu'Ibrahim est marié à Amina. Le monde par défaut le sait-il ?
 
 ```haro
 StzConstrainRelation("married-to", :Symmetric)
@@ -150,9 +154,9 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 #--> 1
 ```
 
-C'est le seul endroit où une loi déclarée se déclenche à l'ajout qu'une exécution de ce livre montre, et c'est le monde par défaut. La classe de graphe a aussi un interrupteur, `EnableAutoDerive`, qui lance les règles de dérivation après chaque arête ajoutée ; il est éteint par défaut, et je ne l'ai pas exécuté. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
+Il répond `1`. Le fait inverse est là, et personne ne l'a écrit ! C'est le seul endroit où une loi déclarée se déclenche à l'ajout qu'une exécution de ce livre montre, et c'est le monde par défaut. La classe de graphe a aussi un interrupteur, `EnableAutoDerive`, qui lance les règles de dérivation après chaque arête ajoutée ; il est éteint par défaut, et je ne l'ai pas exécuté. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
 
-**Un système à l'échelle.** Le programme d'éducation de la bibliothèque est un fichier de connaissance. Son catalogue, `program.zknw`, dit comment s'appelle le programme et quels cours et quelles langues il a :
+**Un système à l'échelle.** Le programme d'éducation de la bibliothèque est un fichier de connaissance. Son catalogue, `program.zknw`, dit comment s'appelle le programme et quels cours et quelles langues il a. Demandez-lui le nom et les langues :
 
 ```haro
 oP = StzProgramQ("../../education/program")
@@ -162,7 +166,7 @@ oP = StzProgramQ("../../education/program")
 #--> [ "en", "fr", "ar", "ha" ]
 ```
 
-Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cours déclaré est un dossier et que chaque dossier est déclaré. Dans le module d'éducation, l'instantané tient quatre-vingt-dix-neuf fichiers de connaissance, comptés avec `find` le 8 octobre 2026 : des cours, des exercices, des mondes et des compétences, un monde de projet pour un apprenant, et les surcouches qu'une institution pose sur le noyau. La mémoire d'un agent est aussi un graphe de connaissance, sauvegardé par le même format, avec la provenance.
+Il s'appelle `softanza-education`, et il a quatre langues. Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cours déclaré est un dossier et que chaque dossier est déclaré. Dans le module d'éducation, l'instantané tient quatre-vingt-dix-neuf fichiers de connaissance, comptés avec `find` le 8 octobre 2026. Ce sont des cours, des exercices, des mondes et des compétences, un monde de projet pour un apprenant, et les surcouches qu'une institution pose sur le noyau. La mémoire d'un agent est aussi un graphe de connaissance, sauvegardé par le même format, avec la provenance.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -178,19 +182,19 @@ Ajouter un cours, c'est y ajouter une ligne, et la garde vérifie que chaque cou
 
 ## 5. Le tribunal
 
-`knowledge_integration_narrated` prouve que le monde répond à `WhatIs`, que le graphe a grandi à côté, et que la loi vit dans l'ontologie ; que `Prove` narre d'abord la loi puis les maillons de la chaîne, avec une certitude de 1, et refuse ce qu'il ne peut pas prouver ; que le fichier fait l'aller-retour ; qu'une loi symétrique dérive l'arête inverse quand l'étape de dérivation est appliquée après l'ajout d'un fait par le graphe ; et que le mode strict admet un fait muni de provenance, refuse un fait nu, et refuse et enregistre une contradiction d'unicité. `provenance_survives_save_narrated` prouve que la source et la confiance d'un fait survivent à une sauvegarde ; qu'un graphe strict charge son propre export ; qu'une contradiction refusée survit ; qu'une barre ou un saut de ligne dans une valeur est une donnée ; qu'un ancien fichier sans provenance se charge encore ; et que la mémoire d'un agent enregistre qui a appris un fait, et quand. `program_narrated` prouve que le programme compte ses cours, que chaque cours déclaré est un dossier et chaque dossier est déclaré, et que les textes se lisent de la même façon depuis un checkout avec d'autres fins de ligne.
+`knowledge_integration_narrated` prouve que le monde répond à `WhatIs`, que le graphe a grandi à côté, et que la loi vit dans l'ontologie. Elle prouve que `Prove` narre d'abord la loi puis les maillons de la chaîne, avec une certitude de 1, et refuse ce qu'il ne peut pas prouver. Elle prouve que le fichier fait l'aller-retour, et qu'une loi symétrique dérive l'arête inverse quand l'étape de dérivation est appliquée après l'ajout d'un fait par le graphe. Et elle prouve que le mode strict admet un fait muni de provenance, refuse un fait nu, et refuse et enregistre une contradiction d'unicité. `provenance_survives_save_narrated` prouve que la source et la confiance d'un fait survivent à une sauvegarde, qu'un graphe strict charge son propre export, et qu'une contradiction refusée survit. Elle prouve qu'une barre ou un saut de ligne dans une valeur est une donnée, qu'un ancien fichier sans provenance se charge encore, et que la mémoire d'un agent enregistre qui a appris un fait, et quand. `program_narrated` prouve que le programme compte ses cours, que chaque cours déclaré est un dossier et chaque dossier est déclaré, et que les textes se lisent de la même façon depuis un checkout avec d'autres fins de ligne.
 
 ## 6. Le terrain, et où il mène
 
 La comparaison de graphes du dossier dit elle-même où les solutions traditionnelles gagnent : les systèmes à grande échelle qui ont besoin de stockage et de traitement distribués, et les applications où la performance est critique. Son tableau place Softanza à l'échelle de l'entreprise, de quelques centaines à quelques milliers de nœuds, dans un seul processus. C'est le résumé honnête de la perte : le terrain mène en échelle, en persistance, en transactions et en outillage. (La ligne de la comparaison sur la persistance est antérieure au fichier ; le graphe de connaissance en écrit un maintenant.)
 
-Le terrain mène en normes et en portée, en connaissance générale. Une base de connaissance en RDF peut être partagée avec n'importe quel outil qui lit les formats du W3C, reliée à des vocabulaires publics et interrogée à travers des magasins. D'après le dossier, un fichier de connaissance est lu par cette bibliothèque et par rien d'autre. Un raisonneur pour un langage d'ontologie riche fait ce que trois lois et une déclaration de classe ne font pas. Le terrain mène en expressivité des règles : Prolog et Datalog dérivent des faits nouveaux à partir de règles arbitraires, et ici, dans les exécutions que j'ai gardées, une seule sorte de loi dérive un fait, et seulement sur le monde par défaut. Le terrain mène en requêtes à plusieurs étapes, puisque SPARQL et Cypher joignent des motifs. Et en relations multiples entre deux choses.
+Le terrain mène en normes et en portée, en connaissance générale. Une base de connaissance en RDF peut être partagée avec n'importe quel outil qui lit les formats du W3C, reliée à des vocabulaires publics et interrogée à travers des magasins. D'après le dossier, un fichier de connaissance est lu par cette bibliothèque et par rien d'autre. Un raisonneur pour un langage d'ontologie riche fait ce que trois lois et une déclaration de classe ne font pas. Le terrain mène en expressivité des règles : Prolog et Datalog dérivent des faits nouveaux à partir de règles arbitraires. Ici, dans les exécutions que j'ai gardées, une seule sorte de loi dérive un fait, et seulement sur le monde par défaut. Le terrain mène en requêtes à plusieurs étapes, puisque SPARQL et Cypher joignent des motifs. Et en relations multiples entre deux choses.
 
 Là où je pense que cela se distingue, avec les limites mesurées à côté : la connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même format porte un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle ni d'un entraînement.
 
 ## 7. La limite
 
-La limite de ce chapitre est celle que la ligne de structure porte déjà : *entités, relations, une ontologie, règles*. Le fichier à ce commit n'a pas de règles. Voici le fichier avec une section de règles, et ce que le lecteur en fait :
+La limite de ce chapitre est celle que la ligne de structure porte déjà : *entités, relations, une ontologie, règles*. Le fichier à ce commit n'a pas de règles. Voici le fichier avec une section de règles. Qu'en fait le lecteur ?
 
 ```haro
 cRules = 'knowledge "pairs"' + nl + nl + "facts" + nl + "    margherita | pairs-with | chianti" + nl + nl +
@@ -203,7 +207,7 @@ aM = oRul.ImportKnow(cRules)
 #--> 0
 ```
 
-L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. Le fichier unique qui contient des règles, que promet la conception, n'est pas là, et la section 7 imprime ce manque comme la limite du chapitre.
+Le fichier fusionne, `1`, et l'ontologie est vide, `0`. L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. Le fichier unique qui contient des règles, que promet la conception, n'est pas là, et la section 7 imprime ce manque comme la limite du chapitre.
 
 La loi n'est pas non plus dérivée sur un graphe d'instance. La même loi symétrique, le même fait que sur le monde par défaut, et l'inverse n'y est pas :
 
@@ -217,7 +221,7 @@ oSy.KnowRelation("margherita", "pairs-with", "chianti")
 #--> 0
 ```
 
-L'en-tête de la classe le dit : seules l'unicité et la transitivité sont appliquées ici ; la symétrie est seulement enregistrée. Trois autres limites, chacune avec son exécution.
+La loi est enregistrée, `1`, et l'arête inverse n'y est pas, `0`. L'en-tête de la classe le dit : seules l'unicité et la transitivité sont appliquées ici ; la symétrie est seulement enregistrée. Trois autres limites, chacune avec son exécution.
 
 **Une seule relation entre deux choses.** Le graphe stocke une arête par paire de nœuds. Une seconde relation entre les deux mêmes entités est refusée avec la phrase propre de la bibliothèque :
 
@@ -244,7 +248,7 @@ oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-fro
 #--> [ ]
 ```
 
-Et le lecteur est silencieux sur une ligne mal formée. Quatre lignes, dont trois ne sont pas des faits : deux champs, quatre champs, et aucune barre. Les trois disparaissent et rien n'est refusé :
+Le chemin répond `[ "couscous" ]`, la première étape et rien de plus, et le prédicat variable répond `[ ]`. Et le lecteur est silencieux sur une ligne mal formée. Quatre lignes, dont trois ne sont pas des faits : deux champs, quatre champs, et aucune barre. Que refuse le lecteur ?
 
 ```haro
 cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
@@ -257,7 +261,7 @@ aBad = oT.ImportKnow(cBad)
 #--> [ ]
 ```
 
-Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur ne garde qu'une ligne ayant exactement trois champs.
+Rien. Le fichier fusionne, `1`, et la liste des refus est `[ ]` ; les trois lignes disparaissent. Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur ne garde qu'une ligne ayant exactement trois champs.
 
 **Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne ne tourne pas. Le texte, que je montre et ne lance pas, est `@Q("Apple").IsA(:Fruit)`, et le 8 octobre 2026 il s'est arrêté sur « Calling Function without definition: @isfruit » ; je n'ai pas gardé cette exécution comme bloc. La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde son sens, un nom avec deux significations, toutes deux connues :
 
@@ -272,7 +276,7 @@ L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que l
 
 Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait, et aucun héritage n'en découle. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, n'a aucune méthode de ce nom.
 
-Ce qui est absent ou cassé : `Explain()` sur un graphe de connaissance, qui appelle une fonction définie nulle part ; et `ValidateOntology()`, qui renvoie 1 quel que soit le contenu de l'ontologie, comme son propre commentaire le dit : un défaut connu.
+Ce qui est absent ou cassé : `Explain()` sur un graphe de connaissance, qui appelle une fonction définie nulle part. Et `ValidateOntology()`, qui renvoie 1 quel que soit le contenu de l'ontologie, comme son propre commentaire le dit : un défaut connu.
 
 Une note sur l'histoire du document de conception. Son amendement du 22 août 2026 dit qu'aucun fichier de connaissance n'existe nulle part dans l'arbre, et que c'est de l'hygiène et non un manque. À ce commit ce n'est plus vrai : il y en a quatre-vingt-dix-neuf, tous dans le module d'éducation.
 
@@ -305,4 +309,6 @@ oW.ImportKnow(cWorld)
 # with the chain written out. Change the world, not the question.
 ```
 
-Exécutez-le et voyez ce qui s'imprime. Si vous changez la question pour demander au sujet du grade 3, il prouvera quelque chose, et ce ne sera pas la ligne que vous avez promise. Puis posez la question inverse, si le primaire fait partie de la classe 3b, une fois que votre monde a sa loi. La loi ajoute-t-elle un fait dans le mauvais sens ? Je ne vous dis pas la ligne à ajouter.
+Exécutez-le et voyez ce qui s'imprime. Si vous changez la question pour demander au sujet du grade 3, il prouvera quelque chose, et ce ne sera pas la ligne que vous avez promise. Puis posez la question inverse, si le primaire fait partie de la classe 3b, une fois que votre monde a sa loi, et voyez si la loi ajoute un fait dans le mauvais sens. Je ne vous dis pas la ligne à ajouter.
+
+Le chapitre suivant porte sur les langages de motifs : un motif est une règle sur la forme des données, écrite comme des données, et la même habitude sert tous les genres de données. Ici, une loi sur une relation était une ligne dans un fichier ; là, la règle porte sur la forme des données elles-mêmes.

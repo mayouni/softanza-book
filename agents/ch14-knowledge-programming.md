@@ -4,7 +4,9 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+
+In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program, and what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules, beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
 ## 1. The concept, as the field holds it
 
@@ -28,7 +30,7 @@ Two sentences of the record carry it. The definition, in the design document wri
 
 ## 3. The Softanza form
 
-Here is a system as a text. Two facts: flour is made from millet, and couscous from flour. Asked whether couscous is made from millet, the graph says it cannot derive it. Then one line is added to the file, a law saying that *made from* is transitive. The same two facts now prove the chain:
+Here is a system as a text. Two facts: flour is made from millet, and couscous from flour. Is couscous made from millet? Ask the graph, then add one line to the file, a law saying that *made from* is transitive, and ask again:
 
 ```haro
 cFacts = 'knowledge "coop"' + nl + nl + "facts" + nl +
@@ -45,9 +47,9 @@ oB.ImportKnow(cFacts + nl + "ontology" + nl + "    made-from | transitive" + nl)
 
 > run: kept
 
-The text is the program. The same two facts, one extra line, a different capability. The block does not touch the disk: `ImportKnow` takes a text, and takes a path when the string ends in the file's extension.
+Without the law the graph answers `not derivable`; with it, `proved: couscous made-from flour made-from millet`. The text is the program. The same two facts, one extra line, a different capability! The block does not touch the disk: `ImportKnow` takes a text, and takes a path when the string ends in the file's extension.
 
-Now add a fact and nothing else. The chain gets longer, and the proof writes its steps out. The graph without the law, which also never received the fact, still says no, and I want you to notice that this no has two causes:
+Now add a fact to the graph with the law, and nothing else. What do the two graphs answer to the longer question? Run it:
 
 ```haro
 oB.KnowRelation("porridge", "made-from", "couscous")
@@ -59,9 +61,9 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 > run: kept
 
-A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: a certain no is still certain.
+The graph with the law proves the longer chain and writes its steps out: `proved: porridge made-from couscous made-from flour made-from millet`. The graph without the law, which also never received the fact, still answers `not derivable`, and I want you to notice that this no has two causes. A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: a certain no is still certain.
 
-The same growth reaches the domain model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot: the second answer below is the old model still refusing, and only a model forged again knows the new fact:
+The same growth reaches the domain model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -81,7 +83,9 @@ oDLM = StzDlmQ(oKB)
 
 > run: kept
 
-**The file the library writes.** A clinic. A relation declared unique, and a graph in strict mode, where every fact needs its provenance. The first fact is refused for lacking one. Then a fact with its source and confidence is admitted. A second, contradicting one from a rumour, is refused, and the refusal is kept:
+It does not. The second answer is the old model still refusing, `That is outside the 'coop' domain`, and only the model forged again answers `Millet is a grain.`
+
+**The file the library writes.** A clinic. A relation declared unique, and a graph in strict mode, where every fact needs its provenance. What does it do with a fact that has no source, with one that has, and with a second, contradicting one from a rumour? And what does it then write to the disk? Run it:
 
 ```haro
 oCl = new stzKnowledgeGraph("clinic")
@@ -116,9 +120,9 @@ oCl.WriteToKnowFile("clinic")
 
 > run: kept (touches files)
 
-That is what the library writes: a header, then up to four sections in this order, the facts, the provenance when a fact carries any, the contradictions when one was refused, and the ontology when a law was declared. One line per record, fields separated by a bar. A bar or a line break inside a value is escaped. The refused rumour sits in the file, named, and never resolved. The code comment on the contradiction list says it: named, never silently resolved.
+The naked fact is refused with the library's own sentence, `Strict mode: every fact needs provenance`. The fact with its source and confidence is admitted. The rumour is refused, `0`, and the refusal is kept. That is what the library writes: a header, then up to four sections in this order, the facts, the provenance when a fact carries any, the contradictions when one was refused, and the ontology when a law was declared. One line per record, fields separated by a bar. A bar or a line break inside a value is escaped. The refused rumour sits in the file, named, and never resolved. The code comment on the contradiction list says it: named, never silently resolved.
 
-The file reads back into a strict graph. The law, the source of every fact and the refusal travel inside it:
+Does the file read back into a strict graph, with the law, the source of every fact and the refusal inside it? Load it:
 
 ```haro
 oBack = new stzKnowledgeGraph("clinic")
@@ -139,9 +143,9 @@ remove("clinic.zknw")
 
 > run: kept (touches files)
 
-A file of this kind was once written without its provenance. The export wrote only the bare triples, so knowledge read back from the disk no longer said where it came from, and a strict graph could not load its own export. The fix is the two sections above. The guard that proves it is named in section 5.
+It does: one fact merged, the source and the confidence back, `[ [ "source", "registry" ], [ "confidence", 0.95 ] ]`, one contradiction, and the law. A file of this kind was once written without its provenance. The export wrote only the bare triples, so knowledge read back from the disk no longer said where it came from, and a strict graph could not load its own export. The fix is the two sections above. The guard that proves it is named in section 5.
 
-**A law that fires when a fact is added.** On the library's default world, the one behind the natural-language sugar, a symmetric law derives the reverse fact as the first one is added, with no call to a derivation step. Nobody wrote that Ibrahim is married to Amina:
+**A law that fires when a fact is added.** On the library's default world, the one behind the natural-language sugar, a symmetric law derives the reverse fact as the first one is added, with no call to a derivation step. Nobody wrote that Ibrahim is married to Amina. Does the default world know it?
 
 ```haro
 StzConstrainRelation("married-to", :Symmetric)
@@ -152,9 +156,9 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 
 > run: kept
 
-This is the only place where a declared law fires on add that a run in this book shows, and it is the default world. The graph class also has a switch, `EnableAutoDerive`, that runs the derivation rules after every edge added; it is off by default, and I did not run it. I show the same law on an instance graph in section 7, where it does not.
+It answers `1`. The reverse fact is there, and nobody wrote it! This is the only place where a declared law fires on add that a run in this book shows, and it is the default world. The graph class also has a switch, `EnableAutoDerive`, that runs the derivation rules after every edge added; it is off by default, and I did not run it. I show the same law on an instance graph in section 7, where it does not.
 
-**A system at scale.** The education program of the library is a knowledge file. Its catalogue, `program.zknw`, says what the program is called and which courses and languages it has:
+**A system at scale.** The education program of the library is a knowledge file. Its catalogue, `program.zknw`, says what the program is called and which courses and languages it has. Ask it the name and the languages:
 
 ```haro
 oP = StzProgramQ("../../education/program")
@@ -166,7 +170,7 @@ oP = StzProgramQ("../../education/program")
 
 > run: kept
 
-Adding a course is adding a line there, and the guard checks that every declared course is a folder and every folder is declared. In the education module the snapshot holds ninety-nine knowledge files, counted with `find` on 8 October 2026: courses, exercises, worlds and skills, a project world for a learner, and the overlays an institution lays over the core. An agent's memory is also a knowledge graph, saved through the same format, with provenance.
+It is called `softanza-education`, and it has four languages. Adding a course is adding a line there, and the guard checks that every declared course is a folder and every folder is declared. In the education module the snapshot holds ninety-nine knowledge files, counted with `find` on 8 October 2026. They are courses, exercises, worlds and skills, a project world for a learner, and the overlays an institution lays over the core. An agent's memory is also a knowledge graph, saved through the same format, with provenance.
 
 ## 4. The decision, and what I refused
 
@@ -182,19 +186,19 @@ Adding a course is adding a line there, and the guard checks that every declared
 
 ## 5. The court
 
-`knowledge_integration_narrated` proves that the world answers `WhatIs`, that the graph grew alongside it, and that the law lives in the ontology; that `Prove` narrates the law first and then the links of the chain, with certainty 1, and refuses what it cannot prove; that the file round-trips; that a symmetric law derives the reverse edge when the derivation step is applied after a fact is added through the graph; and that strict mode admits a provenanced fact, refuses a naked one, and refuses and records a unique contradiction. `provenance_survives_save_narrated` proves that a fact's source and confidence survive a save; that a strict graph loads its own export; that a refused contradiction survives; that a bar or a line break in a value is data; that an old file with no provenance still loads; and that an agent's memory records who learned a fact, and when. `program_narrated` proves that the program counts its courses, that every course declared is a folder and every folder is declared, and that the texts read the same from a checkout with other line endings.
+`knowledge_integration_narrated` proves that the world answers `WhatIs`, that the graph grew alongside it, and that the law lives in the ontology. It proves that `Prove` narrates the law first and then the links of the chain, with certainty 1, and refuses what it cannot prove. It proves that the file round-trips, and that a symmetric law derives the reverse edge when the derivation step is applied after a fact is added through the graph. And it proves that strict mode admits a provenanced fact, refuses a naked one, and refuses and records a unique contradiction. `provenance_survives_save_narrated` proves that a fact's source and confidence survive a save, that a strict graph loads its own export, and that a refused contradiction survives. It proves that a bar or a line break in a value is data, that an old file with no provenance still loads, and that an agent's memory records who learned a fact, and when. `program_narrated` proves that the program counts its courses, that every course declared is a folder and every folder is declared, and that the texts read the same from a checkout with other line endings.
 
 ## 6. The field, and where it leads
 
 The record's own graph comparison says where the traditional solutions win: large-scale systems that need distributed storage and processing, and performance-critical applications. Its table puts Softanza at business scale, in the hundreds to thousands of nodes, in a single process. That is the fair summary of the loss: the field leads in scale, persistence, transactions and tooling. (The comparison's row for persistence predates the file; the knowledge graph now writes one.)
 
-The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules, and here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
+The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules. Here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
 
 Where I think this stands apart, with the measured limits beside it: the knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, a model or a training run.
 
 ## 7. The limit
 
-The limit of this chapter is the one the structure line already carries: *entities, relations, an ontology, rules*. The file at this commit has no rules. Here is the file with a rules section, and what the reader makes of it:
+The limit of this chapter is the one the structure line already carries: *entities, relations, an ontology, rules*. The file at this commit has no rules. Here is the file with a rules section. What does the reader make of it?
 
 ```haro
 cRules = 'knowledge "pairs"' + nl + nl + "facts" + nl + "    margherita | pairs-with | chianti" + nl + nl +
@@ -209,7 +213,7 @@ aM = oRul.ImportKnow(cRules)
 
 > run: kept
 
-The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and section 7 prints the gap as the chapter's limit.
+The file merges, `1`, and the ontology is empty, `0`. The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and section 7 prints the gap as the chapter's limit.
 
 The law is also not derived on an instance graph. The same symmetric law, the same fact as the default world, and the reverse is not there:
 
@@ -225,7 +229,7 @@ oSy.KnowRelation("margherita", "pairs-with", "chianti")
 
 > run: kept
 
-The class header says it: only unique and transitive are acted on here; symmetric is only recorded. Three more limits, each with its run.
+The law is recorded, `1`, and the reverse edge is not there, `0`. The class header says it: only unique and transitive are acted on here; symmetric is only recorded. Three more limits, each with its run.
 
 **One relation between two things.** The graph stores one edge per node pair. A second relation between the same two entities is refused with the library's own sentence:
 
@@ -256,7 +260,7 @@ oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-fro
 
 > run: kept
 
-And the reader is silent about a malformed line. Four lines, three of them not facts: two fields, four fields, and no bars. All three vanish and nothing is refused:
+The path answers `[ "couscous" ]`, the first step and nothing more, and the variable predicate answers `[ ]`. And the reader is silent about a malformed line. Four lines, three of them not facts: two fields, four fields, and no bars. What does the reader refuse?
 
 ```haro
 cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
@@ -271,7 +275,7 @@ aBad = oT.ImportKnow(cBad)
 
 > run: kept
 
-The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
+Nothing. The file merges, `1`, and the refused list is `[ ]`; the three lines vanish. The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
 
 **The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line does not run. The text, which I show and do not run, is `@Q("Apple").IsA(:Fruit)`, and on 8 October 2026 it stopped with "Calling Function without definition: @isfruit"; I did not keep that run as a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps its point, one name with two meanings, both known:
 
@@ -288,7 +292,7 @@ The study of the record already says the dialog was kept at the margin, and that
 
 What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact, and no inheritance follows. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, has no method of that name.
 
-What is absent or broken: `Explain()` on a knowledge graph, which calls a function defined nowhere; and `ValidateOntology()`, which returns 1 whatever the ontology holds, as its own comment says: a known defect.
+What is absent or broken: `Explain()` on a knowledge graph, which calls a function defined nowhere. And `ValidateOntology()`, which returns 1 whatever the ontology holds, as its own comment says: a known defect.
 
 One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education module.
 
@@ -323,4 +327,6 @@ oW.ImportKnow(cWorld)
 
 > run: exercise
 
-Run it and see what prints. If you change the question to ask about grade 3, it will prove something, and it will not be the line you promised. Then ask the reverse question, whether primary is part of class 3b, once your world has its law. Does the law add a fact in the wrong direction? I do not tell you the line to add.
+Run it and see what prints. If you change the question to ask about grade 3, it will prove something, and it will not be the line you promised. Then ask the reverse question, whether primary is part of class 3b, once your world has its law, and see whether the law adds a fact in the wrong direction. I do not tell you the line to add.
+
+The next chapter is about pattern languages: a pattern is a rule about the shape of data, written as data, and the same habit serves data of every kind. Here a law about a relation was a line in a file; there the rule is about the shape of the data itself.

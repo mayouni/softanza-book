@@ -4,7 +4,9 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-09 13:45 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+
+In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is weak in itself, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
 ## 1. The concept, as the field holds it
 
@@ -22,7 +24,7 @@ The sentence the library's articles return to, in each medium, is the one in the
 
 ## 3. The Softanza form
 
-A pattern called by name is a closed catalogue. The library has a data file of named patterns, and asking for a name it does not hold is refused:
+A pattern called by name is a closed catalogue. The library has a data file of named patterns. What does it say when you ask for a name it does not hold? Run it:
 
 ```haro
 ? rx(pat(:isoDate)).Match("2023-12-25")
@@ -40,6 +42,8 @@ done
 ```
 
 > run: kept
+
+It refuses, and says why: `The pattern name you provided does not exist in stzRegexData file.`
 
 A pattern can also answer the half-written value, which is what a form wants as the person types:
 
@@ -224,7 +228,7 @@ There is no narrated guard for lists, time, or the regex builders. The courts of
 
 ## 6. The field, and where it leads
 
-**Strings.** The field leads on safety and speed, and Softanza leads on naming. The site's page for the area says it itself: it trails the modern engines on safety and throughput, with no JIT and no linear-time matcher, and the control against catastrophic backtracking is not reachable from Haro, although the code for both is already compiled into the binary. The engine's header confirms that the hardening exists underneath: a match limit, a recursion limit, length caps.
+**Strings.** The field leads on safety and speed, and Softanza leads on naming. The site's page for the area says it itself: it trails the modern engines on safety and throughput, with no JIT and no linear-time matcher. The control against catastrophic backtracking is not reachable from Haro, although the code for both is already compiled into the binary. The engine's header confirms that the hardening exists underneath: a match limit, a recursion limit, length caps.
 
 **Lists, numbers, time, graphs.** The field has older, stronger single tools. The study says it without ranking them: one tool has list patterns, uniqueness and stepped ranges; three languages have structural matching; graph query languages exist; event processing exists for time. What the field lacks, and what the record claims, is the one habit across the media.
 
@@ -238,11 +242,11 @@ There is no narrated guard for lists, time, or the regex builders. The courts of
 
 What is built: strings, numbers and tables, each with a guard and a small function. The shared habit.
 
-What is built in part:
+What is built in part: lists, matrices, time and graphs, in that order.
 
 - **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In my run (research notes, no block) the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
-- **Time**: instants and durations with a step run. In my run (no block) a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises, which should match:
+- **Time**: instants and durations with a step run. In my run (no block) a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -261,9 +265,9 @@ o2 = new stzTimex("{@Event(Lunch)}")
 
 > run: kept
 
-The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match, and the third shows why: the label was read with its closing parenthesis. That is the shared bug, still present in time.
+The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match, and the third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug, still present in time.
 
-- **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them, and the pattern matches:
+- **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 
 ```haro
 ? (new stzGraphex("{@Node(placed) -> @Node(served)}", g)).Match(g)
@@ -274,9 +278,9 @@ The article promises that the first is TRUE. The second shows that even a single
 
 > run: kept
 
-Cooking lies between the first and the last, so the first answer is the arrow's meaning. The second is the quantifier being ignored. The cache of this class is keyed by the node and edge counts and the node ids, so a second graph with the same ids and other labels is answered from the cache, until `ClearCache()`.
+Cooking lies between the first and the last, so the first answer is the arrow's meaning. The second answers 1 too: the quantifier is ignored. The cache of this class is keyed by the node and edge counts and the node ids, so a second graph with the same ids and other labels is answered from the cache, until `ClearCache()`.
 
-**The refusal the family has not yet made.** Chapter 11's law is that a language is declared and closed, with refusals. Here is the family, asked a word it does not know:
+**The refusal the family has not yet made.** Chapter 11's law is that a language is declared and closed, with refusals. What does the family answer when it is asked a word it does not know? Run it:
 
 ```haro
 ? Nx("{@Banana(3)}").Match(7)
@@ -291,7 +295,7 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 
 > run: kept
 
-A pattern with a word the language does not know matches every number. The tokens are empty, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine.
+A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine.
 
 What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
@@ -332,3 +336,5 @@ cPattern = "{ ... }"
 > run: exercise
 
 Run it. One clause rejects the second table and another rejects the third; which is which? And what would the pattern say if the email were a single space? I do not answer first. If a promise breaks, do not change it: explain the output.
+
+The next chapter is about seven languages and one door. A door is a runtime and never a syntax, and the door is one: it is the answer to "what about language X".

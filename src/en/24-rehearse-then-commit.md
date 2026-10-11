@@ -16,6 +16,8 @@ rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
 ---
 
+In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle, joined from three documents of the record, is that reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
+
 ## 1. The concept, as the field holds it
 
 Three practices of the field stand beside the program, each with its own configuration.
@@ -38,7 +40,7 @@ The record's first principle for this ground is the first clause, and the librar
 
 ### The twin
 
-The one artifact that crosses toward reality is a plan. It names each step. It flags the one that removes something. And asked to validate, it re-reads reality and says that the source it was going to move is not there. Chapter 20 said "I saw it warn" and did not show the words. Here they are. Nothing is executed:
+The one artifact that crosses toward reality is a plan. It names each step. It flags the one that removes something. And asked to validate, it re-reads reality. Chapter 20 said "I saw it warn" and did not show the words. What does the plan say about the source it was going to move? Here are the words, and nothing is executed:
 
 ```haro
 oBench = new stzVirtualFileSystem()
@@ -57,9 +59,9 @@ oPlan = oBench.GenerateUpdatePlan()
 #--> [ [ 3, "source absent in reality: old_settings.txt" ] ]
 ```
 
-The library's narration prints a closing line, that reality is untouched until I choose to commit this plan. The run does not print it, so I do not show it.
+The plan answers `source absent in reality: old_settings.txt`, and it flags the move: `MOVES (removes source)`. The library's narration prints a closing line, that reality is untouched until I choose to commit this plan. The run does not print it, so I do not show it.
 
-The twin is not only a twin of files. A variable set, a directory changed and a child process queued are recorded, narrated and flagged, while the real environment does not have the variable and no process started:
+The twin is not only a twin of files. A variable set, a directory changed and a child process queued are recorded, narrated and flagged, and no process started. Does the real environment have the variable? Ask it, after the twin has set it:
 
 ```haro
 oEnv = new stzVirtualEnvironment()
@@ -85,7 +87,7 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 
 Chapter 20's limit paragraph said that only files are built. That was wrong, and I have corrected it there.
 
-The twin has a second job. A developer on a laptop with no pins writes pin code for a board. The scope says *rehearsed*, as chapters 8 and 31 showed. At deploy, the lowering bridge turns the rehearsal into the source of firmware, and an assistant may propose that deploy but not perform it. `Build()` records the build command and does not run the toolchain, and `Deploy` lowers in memory, so no file is written:
+The twin has a second job. A programmer on a laptop with no pins writes pin code for a board. The scope says *rehearsed*, as chapters 8 and 31 showed. At deploy, the lowering bridge turns the rehearsal into the source of firmware. What happens when an assistant asks to deploy? `Build()` records the build command and does not run the toolchain, and `Deploy` lowers in memory, so no file is written:
 
 ```haro
 oProduct = new stzPlatformProfile("greenhouse")
@@ -117,11 +119,11 @@ oPlatform.DeployAs(HumanActor("me"))
 #--> }
 ```
 
-The limit of this block is in section 7: only two verbs are lowered.
+The assistant is told that it `may propose a deploy, not perform it`; the person's deploy yields the firmware. The limit of this block is in section 7: only two verbs are lowered.
 
 ### The plan of placement
 
-Before a byte is built, the delivery planner states, for each capability a part needs, whether the target does it, the engine does it, a construct does it, or the server does it, and gives the reason in a sentence. The figure in parentheses is the catalogue's estimate and not a measure, so do not quote it as a claim. "1 parts" is the library's own grammar:
+Before a byte is built, the delivery planner states, for each capability a part needs, whether the target does it, the engine does it, a construct does it, or the server does it. It gives the reason in a sentence. The figure in parentheses is the catalogue's estimate and not a measure, so do not quote it as a claim. "1 parts" is the library's own grammar:
 
 ```haro
 oShip = new stzDelivery("shop")
@@ -182,7 +184,7 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-The honest half: no engine file for the web part is in the manifest, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
+The honest half: the manifest's artifacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
 
 I did not run `Deploy(:Emulated)`, because it builds each part's subset through the engine toolchain, and the toolchain's build is something this machine must not run. What I ran is the bundle without the compile, and in my research run of 8 October 2026, outside this chapter's blocks, its map named an engine file that is not there. Section 7 says what that means for the claim that the engine runs in a browser.
 
@@ -221,11 +223,11 @@ next
 StzDirDeleteAll(cHere + "/_site_cdn")
 ```
 
-With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays absent, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
+The api store reads `FAILED`, and the web site, whose three steps read `done`, reads `rolledback`. With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays absent, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
 
 ### Code first, subscribe later
 
-The code asks for a service by name and never learns which implementation it got. The sandbox sees the first call and none after I rebind the service as live, the second call goes to the live adapter, and the surface is sound once every live binding names a secret that the store holds. The live gateway in this block is a stand-in class written here, since the library ships no live card-gateway adapter. A stand-in named `LiveGateway` that returns "authorized" is a fake in everything but its name; the registry takes it as live because it declares nothing, and section 7 says why that matters:
+The code asks for a service by name and never learns which implementation it got. The sandbox sees the first call and none after I rebind the service as live; the second call goes to the live adapter. The surface is sound once every live binding names a secret that the store holds. The live gateway in this block is a stand-in class written here, since the library ships no live card-gateway adapter. A stand-in named `LiveGateway` that returns "authorized" is a fake in everything but its name; the registry takes it as live because it declares nothing, and section 7 says why that matters:
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -274,7 +276,7 @@ The day you do subscribe, you change a binding and not a line. The key is an inv
 
 ### Production refuses
 
-One report names five of the eight ways a surface is not fit for production: a declared service never bound, a fake, a real database that vanishes on restart, a live adapter whose key is not in the store, and, as a warning, a live adapter that names no secret at all. Chapter 31 showed the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
+One report names five of the eight ways a surface is not fit for production. Four are errors: a declared service never bound, a fake, a real database that vanishes on restart, and a live adapter whose key is not in the store. The fifth is a warning: a live adapter that names no secret at all. Chapter 31 showed the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -296,7 +298,7 @@ oSurf.ReportVia(oStoreSf)
 #-->   [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret
 ```
 
-Two different questions are asked at the door. Who is refused, and what is refused. An assistant is refused for who it is. A person is refused for what the surface is. And asking leaves the phase where it was; the question is asked in the production frame even in the development phase:
+Two different questions are asked at the door: who is refused, and what is refused. Why is each refused? Ask the registry twice, once with an assistant and once with a person, in the development phase:
 
 ```haro
 oStoreWw = new stzSecretStore("shop")
@@ -316,7 +318,9 @@ oOne.Bind(:payments, new stzPaymentsSandbox())
 #--> development
 ```
 
-And the registry knows services while the delivery knows parts. Joined, they answer the question neither can: which part is about to ship on a double. The registry itself reports nothing, since the phase is development and there are no findings. The part-level check answers anyway, by destination, and names the part:
+The assistant is refused for who it is: `actor 'assistant' is not effectful -- it may propose, not commit`. The person is refused for what the surface is: `sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship`. And asking leaves the phase where it was: `development` before, `development` after, though the question is asked in the production frame.
+
+And the registry knows services while the delivery knows parts. Joined, they answer a question neither can alone. Which part is about to ship on a double? The registry itself reports nothing, since the phase is development and there are no findings. The part-level check answers anyway, by destination, and names the part:
 
 ```haro
 oS3 = new stzServiceRegistry("shop")
@@ -341,6 +345,8 @@ next
 #--> production-part-uses-ephemeral @ api [error]
 #--> part-uses-undeclared-service @ web [warning]
 ```
+
+It names `api` twice, with `[error]`, and `web` once, with `[warning]`.
 
 ## 4. The decision, and what I refused
 
@@ -374,9 +380,9 @@ The service plan is headed "written 2026-07-23 in answer to the user's question"
 
 ## 5. The court
 
-`service_registry_narrated` proves the declared surface; that an unbound service raises; that the application asks by name; that a sandbox in production is a violation, with one finding per fake; that the credential must be in the store; that going live is a governed crossing, with an assistant refused and a person refused over a fake; that asking leaves the phase; the CI helpers; the fourth posture; and a live adapter that needs a certificate. `service_delivery_narrated` proves the external surface rehearsed in the plan; the pre-flight; the gate, which in a production deploy refuses a fake and logs every reason, and opens once the surface is real; that the registry is one registry however many copies are made; and the question of which part depends on a fake. My research run of 8 October 2026 ran both: 93 of 93 and 60 of 60. The second left a file of zero bytes beside itself, and I removed it.
+`service_registry_narrated` proves the declared surface, that an unbound service raises, and that the application asks by name. It proves that a sandbox in production is a violation, with one finding per fake, and that the credential must be in the store. It proves that going live is a governed crossing, with an assistant refused and a person refused over a fake, and that asking leaves the phase. It also proves the CI helpers, the fourth posture, and a live adapter that needs a certificate. `service_delivery_narrated` proves the external surface rehearsed in the plan, and the pre-flight. It proves the gate, which in a production deploy refuses a fake and logs every reason, and opens once the surface is real. It proves that the registry is one registry however many copies are made, and the question of which part depends on a fake. My research run of 8 October 2026 ran both: 93 of 93 and 60 of 60. The second left a file of zero bytes beside itself, and I removed it.
 
-`virtual_system_twin_narrated` proves, in twelve scenes, that the twin touches nothing real, that the plan narrates and flags, that commit is the one door, that a scope refuses, that a reviewer rejects a step, that a hundred operations stay in memory until one commit. `virtual_environment_twin_narrated` proves the same shape for variables, a directory and queued spawns. `emulator_narrated` proves that the bundle generates, the map renders every part by role, and each part carries only its subset. `deployment_narrated` proves the site as config, the governed commit, the step plan, the rollback, feasibility, and the git backend; it spawns `git`, so the book does not run it. `full_scope_model_narrated`, scenes 13 to 16, proves that building precedes deploying, that an unsound solution cannot be built, the lowering bridge, and the governed deploy.
+`virtual_system_twin_narrated` proves, in twelve scenes, that the twin touches nothing real, that the plan narrates and flags, that commit is the one door, that a scope refuses, and that a reviewer rejects a step. It proves, too, that a hundred operations stay in memory until one commit. `virtual_environment_twin_narrated` proves the same shape for variables, a directory and queued spawns. `emulator_narrated` proves that the bundle generates, the map renders every part by role, and each part carries only its subset. `deployment_narrated` proves the site as config, the governed commit, the step plan, the rollback, feasibility, and the git backend; it spawns `git`, so the book does not run it. `full_scope_model_narrated`, scenes 13 to 16, proves that building precedes deploying, that an unsound solution cannot be built, the lowering bridge, and the governed deploy.
 
 The refusal that production makes is proved by the first two guards, which ran. That the rehearsed engine runs in a browser is proved by no guard that runs.
 
@@ -396,7 +402,7 @@ Where I think the record stands apart is the coupling. The double, the plan, the
 
 ## 7. The limit
 
-**A hand-written fake that says nothing about itself passes the gate.** The registry reads what the object says it is. A double that declares neither that it is a sandbox nor that it is local and real is taken for live: no opinion means live. So "production refuses a fake" is exact for the library's own doubles, and for any double that declares itself. An undeclared fake passes:
+**A hand-written fake that says nothing about itself passes the gate.** The registry reads what the object says it is. A double that declares neither that it is a sandbox nor that it is local and real is taken for live: no opinion means live. So "production refuses a fake" is exact for the library's own doubles, and for any double that declares itself. What posture does the registry give a double that declares nothing, and is the surface sound? Ask it in the production phase:
 
 ```haro
 oUndeclared = new stzServiceRegistry("shop")
@@ -414,7 +420,7 @@ class AlwaysYes
 		return [ :status = "authorized" ]
 ```
 
-The block-above stand-in, `LiveGateway`, is such an object.
+It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! The stand-in of the earlier block, `LiveGateway`, is such an object.
 
 **The lowering knows two verbs.** Only `read_pin` and `write_pin` become code. Any other rehearsed operation becomes a comment line. In my research run of 8 October 2026, outside this chapter's blocks, I rehearsed `UseIn(:sensor, :gpio, "blink the status led")` and the firmware got a comment. For a server or a phone, the artifact is a header with no lines when nothing was rehearsed. The narration's "the board is the last inch" holds for reads and writes of pins only.
 
@@ -422,7 +428,7 @@ The block-above stand-in, `LiveGateway`, is such an object.
 
 **The sizes are estimates.** The plan prints a figure from a catalogue, and the narration prints two different figures for the same part. Do not print a size as a claim.
 
-**`Deploy(:Emulated)` never moves the registry.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase, and the `:emulated` phase value that the registry has is set by no library code; only a guard sets it.
+**`Deploy(:Emulated)` never moves the registry.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase. The `:emulated` phase value that the registry has is set by no library code; only a guard sets it.
 
 **A refused `Deploy(:Production)` leaves the registry in the production phase.** After my refused deploy (my research run of 8 October 2026, outside this chapter's blocks), `Phase()` printed `production`. The pre-flight restores the phase, and the deploy does not.
 
@@ -467,3 +473,5 @@ oStoreMine = new stzSecretStore("my-project")
 ```
 
 Then register a key named `maps_key` in the store, and write the number of production findings again. Then bind a hand-written class with an `Authorize` method that always says yes, and ask what posture the registry gives it. If a promise breaks, do not change it: explain the output first. I do not tell you where you will be surprised.
+
+The next chapter turns from the services behind a program to its users: your users keep their medium, and a new medium adds renderings, never verbs.

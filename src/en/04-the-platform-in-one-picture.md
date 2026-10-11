@@ -16,6 +16,8 @@ rulings: ["12.2", "12.10", "12.12", "12.13", "12.15", "12.23", "12.29"]
 research: research/ch04.md
 ---
 
+In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
+
 ## 1. The concept, as the field holds it
 
 The field draws a platform as a stack of boxes. The kernel at the bottom, a runtime and its libraries in the middle, applications on top, and sometimes a column at the side for security or tools. Inside one codebase the same picture becomes a rule about dependencies: an inner layer knows nothing of the outer ones, and the arrows only point inward. Rust's three standard crates, one for bare metal, one for memory, one for a full operating system, are the cleanest version I know: three depths of the same language, chosen by what the target offers.
@@ -34,7 +36,7 @@ Here is the whole platform in one picture, read from the bottom up. Each floor s
 
 Let me walk it, floor by floor, with one block at each floor that you can run.
 
-**The engine.** At the bottom is an engine written in Zig: a set of libraries behind a C interface, one per domain, grouped by the layer that loads them. By the engine's design rule, the engine does the computation; the library above it gives it a vocabulary. A small example makes the division visible. The language beneath Softanza, asked for the length of the Arabic word for peace, counts bytes; the engine counts letters, and knows the script:
+**The engine.** At the bottom is an engine written in Zig: a set of libraries behind a C interface, one per domain, grouped by the layer that loads them. By the engine's design rule, the engine does the computation; the library above it gives it a vocabulary. A small example makes the division visible. Ask the language beneath Softanza for the length of the Arabic word for peace, then ask the engine. What does each one count? Run it:
 
 ```haro
 ? len("سلام")
@@ -44,6 +46,8 @@ Let me walk it, floor by floor, with one block at each floor that you can run.
 ? Q("مرحبا بالعالم").Script()
 #--> arabic
 ```
+
+The language counts bytes and answers `8`. The engine counts letters and answers `4`, and it knows the script: `arabic`. Four letters, not eight!
 
 The engine also has its own door, beneath every class. Numbers too large for the machine's arithmetic are added exactly, by the engine itself:
 
@@ -64,7 +68,7 @@ o2 = new stzList([ "one", "and", "one", "makes", "two", "ones" ])
 #--> 1
 ```
 
-**The areas.** Across the layers, the library is mapped by the site's Atlas into areas grouped in bands, and each area into lanes, each lane rated from emerging to strong, most of them with the line that proves it. The Atlas is the platform's anatomy: what exists, and how well. The engine's design rule is that a verb means the same act on every structure that admits it. Here it holds for one pair, a string and a list: on a string it answers character positions; on a list, item positions:
+**The areas.** Across the layers, the library is mapped by the site's Atlas into areas grouped in bands, and each area into lanes. Each lane is rated from emerging to strong, most of them with the line that proves it. The Atlas says what exists, and how well. The engine's design rule is that a verb means the same act on every structure that admits it. Here it holds for one pair, a string and a list: on a string it answers character positions; on a list, item positions:
 
 ```haro
 ? @@( Q("tea rice tea").FindAll("tea") )
@@ -95,7 +99,7 @@ oApp.Live()
 #--> [FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)
 ```
 
-Worlds compose into a constellation. Here a restaurant and its produce supplier are two worlds; a bond between them declares the one crossing that is allowed, and every other crossing is refused with its reason:
+Worlds compose into a constellation. Here a restaurant and its produce supplier are two worlds, and a bond between them declares the one crossing that is allowed. What becomes of a crossing that no bond declares? Run it:
 
 ```haro
 oResto = StzAppQ("resto")
@@ -117,7 +121,11 @@ oCon.GovSetAuthority("resto", :Delegated)
 #--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
 ```
 
-And a platform is the envelope around a solution: its parts, the systems they run on, and the order in which it is built, rehearsed and deployed. You will see it refuse to deploy before it is built in chapter 33. Here is what it does with the layers, for the web: a part of a solution ships only the engine groups it needs, and only those that are Softanza's own:
+The declared crossing answers `1`. The other answers `0`, and the constellation gives its reason in one line: `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Every other crossing is refused with its reason.
+
+The commons is the shared ground of a constellation, what every world of it stands on. It holds an identity, a session and a store. It is a world like the others, world zero, and not a node of a special kind. Chapter 23 shows it and says where the code falls short of that.
+
+And a platform is the envelope around a solution: its parts, the systems they run on, and the order in which it is built, rehearsed and deployed. You will see it refuse to deploy before it is built in chapter 33. Here is what it does with the layers, for the web: a part of a solution ships only the engine groups it needs, and only those that are Softanza's own. The phone below asks for four capabilities. How many engine groups does it ship? Run it:
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
@@ -131,11 +139,11 @@ oPlan = oDelivery.Plan()
 #--> [ "aggregation", "solver" ]
 ```
 
-The phone asked for four capabilities and ships two engine groups, because the phone's own system handles one of the other two, Unicode, and Softanza ships the other, Regex, as a construct in the target's own language.
+Two: `aggregation` and `solver`. The phone's own system handles one of the other two, Unicode, and Softanza ships the other, Regex, as a construct in the target's own language.
 
 **The crafters.** At the top are the six doors of chapter 2: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. And one person works across every floor, from the engine to the organisation: the platform architect. The record names that person in three unrelated places, and no other role crosses every band of the Atlas.
 
-**The court.** Beside every floor stands its judge. The engine has its tests and the contracts between the floors. The layers have the narrated guards. Most lanes in the areas carry a proof line. The worlds have their bonds and norms, the order of build and deploy, and the refusal of a fake in production. The crafters' interfaces have a constitution of verbs and rules that every element must trace to. And above all of it, the platform's threat model lists its guarantees, each tied to the guard that proves it, and its own guard fails when a row names a guard that no longer exists.
+**The court.** Beside every floor stands its judge. The engine has its tests and the contracts between the floors. The layers have the narrated guards. Most lanes in the areas carry a proof line. The worlds have their bonds and norms, the order of build and deploy, and the refusal of a fake in production. The crafters' interfaces have a constitution of verbs and rules that every element must trace to. And above all of it, the platform's threat model lists its guarantees, each tied to the guard that proves it. Its own guard fails when a row names a guard that no longer exists.
 
 Parts II to IV of this book are rethinks, and each of them is a box of this picture. Part V assembles the picture in use.
 
@@ -147,7 +155,7 @@ Parts II to IV of this book are rethinks, and each of them is a box of this pict
 
 **I chose sovereignty as a verdict on each dependency, not as "every line ours".** The engine vendors and pins a set of third-party libraries, the figure counts them. The record defines the word in one line: nothing anyone else can withdraw. That is the test. A library whose source is pinned in the tree passes it.
 
-**I refused a flag to choose a layer.** The first way of choosing a layer was a flag. It could never work, because the language beneath loads every file it sees at compile time, so all three layers loaded on every call and the failure of one was the failure of all. The flag was removed rather than kept as a switch that silently does nothing, and the reason was written where the next reader would stand: a layer is chosen by the file you load.
+**I refused a flag to choose a layer.** The first way of choosing a layer was a flag. It could never work, because the language beneath loads every file it sees at compile time, so all three layers loaded on every call. The failure of one was the failure of all. The flag was removed rather than kept as a switch that silently does nothing, and the reason was written where the next reader would stand: a layer is chosen by the file you load.
 
 **I let everything go into base, and I say so.** Under the pressure of time, the domains landed in base while the engine, the planes such as security and performance, and the customers moved forward. That was the agile choice, and it is defensible only while the debt is visible. So the figure draws base widest, and chapter 27 tells the debt with its numbers.
 
@@ -161,7 +169,7 @@ Parts II to IV of this book are rethinks, and each of them is a box of this pict
 
 Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and broken where base should build on core, as section 7 shows.
 
-The field's text libraries lead on locale: Softanza's own map says that the clear gap of its strings is the international components' locale layer, and that its locale area is a deliberate bet against those components, with no collation, no plural rules and no time zones.
+The field's text libraries lead on locale: Softanza's own map says that the clear gap of its strings is the international components' locale layer. Its locale area is a deliberate bet against those components: no collation, no plural rules and no time zones.
 
 The field's super-app hosts run real users at a scale this platform has never met. The record names them as the model it refused and measures nothing against them, so I will not either.
 
@@ -171,7 +179,7 @@ And the Atlas itself prints where Softanza is weak: the binary area is a plan wi
 
 What is built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
 
-What is designed, or built and not reachable. The max layer's own classes are written and loaded by no entry file:
+What is designed, or built and not reachable. The max layer's own classes are written and loaded by no entry file. What does the runtime answer when you ask for one? Run it:
 
 ```haro
 try
@@ -182,7 +190,9 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is broken against the engine today: its string and character classes call engine names that no engine file registers, as the site study of the book's roots reports, and the block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that site study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
+The runtime answers: `Error in class name, class not found: stxstring`. The class is written, and no entry file loads it.
+
+The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is broken against the engine today: its string and character classes call engine names that no engine file registers, as the site study of the book's roots reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that site study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
 What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
 
@@ -205,3 +215,5 @@ What is absent: a whole program and its engine packed into one file with no depe
 Draw your own solution the way this chapter draws Softanza: floors, and a court beside each. For each box, write the file that declares it and the guard that judges it, and put a stage word on it: built, designed or absent.
 
 Then declare two parts of it with `stzPlatformProfile`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
+
+The next chapter leaves the picture for the code written inside it, and states the first law: the code adheres to the way a person thinks, and the court judges it whoever wrote it. Its principle is one sentence: what you think is what you write.

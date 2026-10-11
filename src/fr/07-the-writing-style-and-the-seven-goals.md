@@ -16,11 +16,13 @@ rulings: ["12.2", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch07.md
 ---
 
+Dans ce chapitre, je prends le reste du style d'écriture, comme une grammaire de quatorze règles. J'imprime l'état où chaque règle se trouve au commit sur lequel ce livre s'exécute, un bloc là où elle s'exécute et une limite là où elle ne s'exécute pas. Sous la grammaire je mets les sept buts, j'en montre trois dans des blocs et je laisse à l'étude les quatre que je n'ai pas exécutés. J'imprime le tribunal de la maison, les quatorze règles que la bibliothèque tient sur son propre code, et je dis ce qu'il ne lit pas : le code d'un programme écrit avec la bibliothèque. Le principe est celui du chapitre 5, et je ne l'argumente pas de nouveau : ce que vous pensez est ce que vous écrivez.
+
 ## 1. Le concept, tel que le terrain le tient
 
 Le mot *style* veut dire deux choses dans le terrain, et je dois dire laquelle j'entends.
 
-Le premier est le style comme mise en page, imposé par un outil. Le guide de style de Python date de 2001, le formateur de Go de 2009, et tout projet exécute un linter avant un commit. Ils jugent la forme d'une ligne : espaces, majuscules, longueur, noms inutilisés. Ils y sont très bons, et ils tournent par défaut. Ils ne disent rien de savoir si une ligne suit l'ordre dans lequel son auteur raisonnait.
+Le premier est le style comme mise en page, imposé par un outil. Le guide de style de Python date de 2001, le formateur de Go de 2009, et tout projet exécute un linter avant un commit. Ils jugent la forme d'une ligne : espaces, majuscules, longueur, noms inutilisés. Ils y sont bons, et ils tournent par défaut. Ils ne disent rien de savoir si une ligne suit l'ordre dans lequel son auteur raisonnait.
 
 Le second est le petit langage à l'intérieur du langage. Les programmeurs écrivent déjà de petits langages dans des chaînes, et personne n'appelle cela un style : une expression régulière, un texte SQL, une chaîne de format telle que `"%5.2f"`. Chacun est une notation séparée, avec son propre outil, apprise à part.
 
@@ -30,7 +32,7 @@ Pour les buts, le terrain dit *attributs de qualité*. La norme ISO de qualité 
 
 **Ce que vous pensez est ce que vous écrivez.** C'est la phrase du chapitre 5, tirée du schéma de 2020, et je ne l'argumente pas de nouveau. Le chapitre 5 a pris cinq règles du style. Ce chapitre prend le reste, comme une grammaire, puis les buts sous lesquels la grammaire a été conçue.
 
-Pour les buts, le point est celui de l'auteur, tel que l'étude le rapporte, et non une citation datée : une architecture logicielle vraiment orientée par les buts est la seule façon pour un architecte de maîtriser un projet de cette taille.
+Pour les buts, le point est celui de l'auteur, tel que l'étude le rapporte, et non une citation datée. Une architecture logicielle orientée par les buts est la seule façon pour un architecte de maîtriser un projet de cette taille.
 
 ## 3. La forme Softanza
 
@@ -53,7 +55,7 @@ L'étude du dossier a écrit le style en quatorze règles, dans sa décision 12.
 | 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | ne s'exécute pas |
 | 14 | Un commentaire parle avant le code, dans la voix du maître | s'exécute |
 
-La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte en entiers et coupe les décimales. Softanza lit un petit langage d'intervalles à l'intérieur d'une chaîne, et les garde. Il compte des mots numérotés et des lettres de n'importe quelle écriture. Les commentaires ci-dessous parlent avant le code, dans la voix du maître, ce qui est la règle 14 :
+La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte en entiers et coupe les décimales. Que garde un intervalle écrit à l'intérieur d'une chaîne ? Les commentaires ci-dessous parlent avant le code, dans la voix du maître, ce qui est la règle 14. Exécutez-le :
 
 ```haro
 # The host's own range counts in integers: the decimals are cut. Softanza reads
@@ -69,7 +71,7 @@ La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte 
 #--> [ "ا", "ب", "ة", "ت", "ث", "ج" ]
 ```
 
-Le langage d'intervalles est un argument comme un autre. Il donne les remplacements pour chaque occurrence, dans l'ordre, et la forme étendue reboucle la palette quand les occurrences la dépassent en nombre :
+L'hôte répond `[ 1, 2, 3 ]` à `1.02 : 3.08`. La chaîne répond `[ 1.02, 1.03, 1.04, 1.05 ]` : Softanza lit un petit langage d'intervalles à l'intérieur de la chaîne et garde les décimales, les mots numérotés et les lettres de n'importe quelle écriture. Le langage d'intervalles est un argument comme un autre. Il donne les remplacements pour chaque occurrence, dans l'ordre, et la forme étendue reboucle la palette quand les occurrences la dépassent en nombre :
 
 ```haro
 o1 = new stzString("haro php ruby haro python haro")
@@ -126,7 +128,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 
 Le diaporama promettait davantage. Une famille de cinq noms en `CharsRemoved`, pour retirer des caractères aux bouts, est nommée dans le diaporama. Deux sont définis, `LeadingCharsRemoved` et `TrailingCharsRemoved`. Trois ne le sont pas : `LeadingAndTrailingCharsRemoved`, `TrailingAndLeadingCharsRemoved` et `RepeatedCharsRemoved`. `RemoveLeadingAndTrailingChars` est défini, et n'est pas l'un des cinq.
 
-Règle 9 : la précision plutôt que la généralité. Le nom précis dit ce qui est compté. Les caractères d'une chaîne sont comptés par `NumberOfChars`, et `Size()` est la longueur en octets de l'hôte, si bien que les deux réponses diffèrent sur un mot arabe :
+Règle 9 : la précision plutôt que la généralité. Le nom précis dit ce qui est compté. Les caractères d'une chaîne sont comptés par `NumberOfChars`, et `Size()` est la longueur en octets de l'hôte. Les deux réponses diffèrent-elles sur un mot arabe ? Exécutez-le :
 
 ```haro
 ? Q("سلام").NumberOfChars()
@@ -142,7 +144,7 @@ o1 = new stzList([ "tea", "rice", "fish", "salt" ])
 #--> FALSE
 ```
 
-La propre ligne de documentation de la bibliothèque pour `NumberOfChars` liste *size* parmi ses mots alternatifs. L'exécution montre que `Size()` ne veut pas dire cela. Je le liste parmi les demandes.
+L'exécution répond `4` à l'un et `8` à l'autre, sur un mot de quatre lettres ! La propre ligne de documentation de la bibliothèque pour `NumberOfChars` liste *size* parmi ses mots alternatifs. L'exécution montre que `Size()` ne veut pas dire cela. Je le liste parmi les demandes.
 
 Règle 7 : un préfixe `viz` montre la réponse sous le mot, et le suffixe `XT` ajoute les positions comme des nombres :
 
@@ -209,13 +211,13 @@ Les quatre autres buts (l'expressivité, la fiabilité, les métaphores humaines
 
 **J'ai refusé de recompter les balises comme les miennes.** Les formes des fonctions sont marquées dans le code par des info-balises, dans des commentaires qui commencent par `#<` et un `@`, appliquées à la main. L'étude y lit le vocabulaire, au niveau des fonctionnalités, de deux buts, l'expressivité et la flexibilité, et en a compté 6 090. J'ai recompté le 8 octobre 2026, avec la commande du fichier de recherche, et j'en ai trouvé 6 126, avec 89 orthographes. Mais 1 360 d'entre elles se trouvent hors des dossiers d'archive, et 4 766 dans les dossiers d'archive. Donc la phrase « appliquées à la main en 6 090 points » est, à ce commit, surtout une phrase sur l'archive. Aucune garde ne les lit : la couche de réflexion lit le nom d'une méthode, avec une grammaire, et non sa balise.
 
-**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part : les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste, le vérificateur du diaporama qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama : `Yield`, qui devrait donner le résultat d'une expression pour chaque élément, et `Perform`, qui devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme : le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
+**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part. Ce sont les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste. Ce dernier est le vérificateur du diaporama, qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama : `Yield`, qui devrait donner le résultat d'une expression pour chaque élément, et `Perform`, qui devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme : le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
 
 ## 5. Le tribunal
 
 `coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code ; que le code planté est trouvé par son nom ; que le code propre passe ; et que la bibliothèque en liste quatorze. `testoor_promises_narrated` prouve que la promesse `#-->` est jugée comme l'affirmation d'un arrêt : tenue, divergente, non atteinte ou non jugée. `602_l_function` et `59_use_of_the_l_small_function` prouvent le langage d'intervalles. `527_identifying_lists_inside_a_string` prouve les listes hébergées dans des chaînes. `48_replacebymany` prouve que les remplacements se font dans l'ordre. `483_w_and_wf_forms_in_conditional_code` prouve la condition dans une chaîne, en deux écritures du même balayage. `28_numberofoccurrenceofcharleftside` prouve les noms alternatifs en arabe comme en latin, et porte une note disant que la promesse de l'archive était fausse et que l'implémentation fait autorité. `646_content` prouve les paramètres nommés. `972_narration_viz-finding_a_recurring_substring` prouve la visite viz.
 
-Voici le tribunal de la maison lui-même, les quatorze règles de la bibliothèque et non les quatorze du style. La coïncidence numérique est une coïncidence. Une faute d'orthographe plantée est trouvée par son nom et le code reste propre, parce que c'est un avertissement. Une écriture plantée sur une constante est trouvée par son nom, et le code est refusé, parce que c'est une erreur :
+Voici le tribunal de la maison lui-même, les quatorze règles de la bibliothèque et non les quatorze du style. La coïncidence numérique est une coïncidence. Que répond-il à une faute d'orthographe plantée, et à une écriture plantée sur une constante ? Exécutez-le :
 
 ```haro
 ? @@( StzCodeRuleNames() )
@@ -231,6 +233,8 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 ? StzCodeIsClean(cTwo)
 #--> FALSE
 ```
+
+La faute d'orthographe est trouvée par son nom, `misspelled_name`, et le code reste propre, `TRUE`, parce que c'est un avertissement. L'écriture sur une constante est trouvée par son nom, `writes_a_mutable_constant`, et le code est refusé, `FALSE`, parce que c'est une erreur.
 
 Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de huit des quatorze revient avec des soulignés. Le bloc montre ce que l'exécution a imprimé.
 
@@ -252,9 +256,9 @@ Ce qui est construit : les quatorze règles de la maison de la bibliothèque com
 
 Ce qui est conçu :
 
-- **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait, comme un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Je l'ai cherché dans la bibliothèque et je n'ai rien trouvé.
-- **Un tribunal qui lit les buts.** Il récolterait les balises. Non construit.
-- **La forme classique du bloc de test comme forme unique des nouveaux blocs.** Le jugement de l'étude est que le retour « n'est pas une réécriture » mais une décision : la forme classique serait la forme unique des nouveaux blocs, les blocs convertis restant tels qu'ils sont. Le README de l'arbre de tests dit encore de la forme classique qu'elle est la surface de test faisant autorité. Je n'ai trouvé aucune décision qui en fasse la forme unique : cela reste une décision, et le chapitre 5 la nomme.
+- **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait. Ses exemples sont un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Je l'ai cherché dans la bibliothèque et je n'ai rien trouvé.
+- **Un tribunal qui lit les buts.** Il lirait les balises. Non construit.
+- **La forme classique du bloc de test comme forme unique des nouveaux blocs.** Le jugement de l'étude est que le retour « n'est pas une réécriture » mais une décision. La forme classique est la forme unique des nouveaux blocs, et les blocs convertis restent tels qu'ils sont. Le README de l'arbre de tests dit encore de la forme classique qu'elle est la surface de test faisant autorité. Je n'ai trouvé aucune décision qui en fasse la forme unique : cela reste une décision, et le chapitre 5 la nomme.
 - **La grammaire d'écriture déclarée en Haro.** La moitié vocabulaire existe : les formes des noms de la bibliothèque sont des données en Haro, et le relevé de la session est de 584 orthographes livrées sur 595 qui concordent. La moitié usage, la scène, la chaîne, l'emplacement du code et la promesse, n'est pas déclarée.
 - **La discipline déclarée une fois.** En partie faite sur le site, comme données, ce qui est la source de la page et non un tribunal.
 
@@ -299,3 +303,5 @@ Ce qui est absent :
 ```
 
 Exécutez-le. Pour la cinquième, vous aviez le droit de vous tromper, et vous vous êtes probablement trompé : l'intervalle change de largeur, alors l'hôte lit `day8` comme une variable, et il lève une erreur. C'est la limite du petit langage, apprise en étant surpris une fois. Ne changez pas votre promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie.
+
+Le chapitre 8 prend le nom d'une fonction en entier, comme une expression linguistique, puis la portée : ce nom est une phrase, et ses préfixes, ses suffixes et ses paramètres sont une grammaire que la bibliothèque peut lire.

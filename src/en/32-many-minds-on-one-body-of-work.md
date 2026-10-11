@@ -25,6 +25,8 @@ figures:
   - "promise density 98.9 and 75.1 against 0.7 per thousand lines: study 12.16"
 ---
 
+In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
+
 ## 1. The concept, as the field holds it
 
 When the field speaks of many agents working on one body of code, it usually means a framework. A program holds several agents, a supervisor routes messages between them, and the coordination is a feature of that program. Microsoft's AutoGen, CrewAI and LangChain's LangGraph are the names you will meet, all from the last three years.
@@ -39,11 +41,11 @@ The one sentence this part of the record returns to was written by one of the se
 
 Softanza was not written by one hand for long. For the last two years, most of its new code has been written by sessions of a model, many at a time, on one machine, in some twenty repositories that depend on each other. I rule; they propose, build, measure and report. The record calls me the Principal. In this chapter I will simply say I.
 
-There is no framework here. No supervisor, no broker, no graph of agents. The arrangement is files and a version history. One repository, the central one, holds the protocol: how a session reports, how it asks, how it closes. Each repository has a mailbox. Each session writes its messages in one fixed form, eight keys in a fixed order, which you have already met if you read the memos at the end of each phase of this book: by whom, about what, why, what was done, the state of named things, what is waiting and on whom, what comes next, and one line of judgement. Every message is also appended to a dated file, so that the day's reasoning is never only in a chat window that closes.
+There is no framework here. No supervisor, no broker, no graph of agents. The arrangement is files and a version history. One repository, the central one, holds the protocol: how a session reports, how it asks, how it closes. Each repository has a mailbox. Each session writes its messages in one fixed form, eight keys in a fixed order. You have already met it if you read the memos at the end of each phase of this book. The eight keys: by whom, about what, why, what was done, the state of named things, what is waiting and on whom, what comes next, and one line of judgement. Every message is also appended to a dated file, so that the day's reasoning is never only in a chat window that closes.
 
 What makes it a discipline and not a filing system is that each rule was paid for.
 
-**Stage by explicit path.** Several sessions write in the same repository at the same time. Twice, a session added every changed file to its commit at once, and swept in another session's work: once it destroyed an edit outright, once it pushed half of a colleague's move between two repositories. Nothing was lost the second time, and the record says that was luck, not method. So now a hook refuses the command before it runs. It was tested on twenty forms of the command, and eighteen behaved as written. Of the other two, `git stage -A` was repaired the same day; the other, that the hook also refuses text which only quotes the form, is an accepted cost, met in section 6.
+**Stage by explicit path.** Several sessions write in the same repository at the same time. Twice, a session added every changed file to its commit at once, and swept in another session's work. Once it destroyed an edit outright, once it pushed half of a colleague's move between two repositories. Nothing was lost the second time, and the record says that was luck, not method. So now a hook refuses the command before it runs. It was tested on twenty forms of the command, and eighteen behaved as written. Of the other two, `git stage -A` was repaired the same day; the other, that the hook also refuses text which only quotes the form, is an accepted cost, met in section 6.
 
 **Read the time from the clock, never compose it.** A session writes a time on every message. Sessions, it turns out, invent times: they write a time that feels right after the last one. Nobody notices until a made-up time crosses midnight and a message is filed under the wrong day. When the central session measured itself, five of its twenty-five stamps had been composed, the worst by forty-two minutes, and four of the five were older than the law that forbade them. Across the other desks, thirty-four of a hundred and fifty-one stamps were composed, on thirteen of the seventeen desks measured. The rows behind that figure are published, because the first time it was published the rows had been thrown away and the number could not be defended three hours later. Five weeks after the law, the central session composed a stamp again. Four written warnings had not stopped it; a peer reading a file did. The note it left is the best sentence in the protocol: a reminder is not a mechanism.
 
@@ -57,7 +59,7 @@ What makes it a discipline and not a filing system is that each rule was paid fo
 
 You can see the shape. A failure, dated. A rule, written where the next session will read it. Then, when the rule is broken anyway, a mechanism. Some laws reached the last step, some are still a written rule, and the record says which.
 
-Where the laws touch code, the library itself can hold them. Its fourteen house rules are validators, five of them over a graph of the code and the rest over text, the sixth law of the intelligence architecture made runnable: rules an agent can run before it commits, not folklore it must guess. One of them is about words:
+Where the laws touch code, the library itself can hold them. Its fourteen house rules are validators, five of them over a graph of the code and the rest over text, the sixth law of the intelligence architecture made runnable. They are rules an agent can run before it commits, not folklore it must guess. One of them is about words. What does it say of a method called `KillOrder`, and is the code still clean? Run it:
 
 ```haro
 cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
@@ -70,7 +72,7 @@ aFindings = StzCheckCode(cCode)
 #--> 1
 ```
 
-Read the last line twice. The code is still clean. The tone rule warns; it does not refuse. A word rule advises. The estate's doctrine says something close about its own word law: no session can test how a word lands on its reader, so that law is ruled rather than checked. Here is the remedy the message proposes:
+Read the last line twice. `StzCodeIsClean` still answers `1`: the code is clean! The tone rule warns; it does not refuse. A word rule advises. The estate's doctrine says something close about its own word law: no session can test how a word lands on its reader, so that law is ruled rather than checked. The message names the remedy, `prefer Remove/Delete/Dispose/Clear/Close`. What does the rule say once the verb is `Remove`? Run it:
 
 ```haro
 cCode = "class Shop" + nl + "def RemoveOrder()" + nl + "  return" + nl
@@ -78,7 +80,7 @@ cCode = "class Shop" + nl + "def RemoveOrder()" + nl + "  return" + nl
 #--> 0
 ```
 
-And the rules are a closed set, which an agent can list before it writes:
+And the rules are a closed set. How many are there, and can an agent list them before it writes?
 
 ```haro
 ? len( StzCodeRuleNames() )
@@ -97,17 +99,17 @@ The record does not link the library's tone rule to the estate's word law, ruled
 
 **I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the uncomfortable part: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number. What the clocks cost is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never a model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is not yet written (section 7).
 
-**I refused to rule in my absence.** A ruling is written in the record only while I am there. When I asked the central session to settle what was pending on my behalf, on 28 September, the five rulings it took that day are marked as taken on my delegation, so that nobody later mistakes them for mine. The decisions at the front of this book are marked the same way.
+**I refused to rule in my absence.** A ruling is written in the record only while I am there. When I asked the central session to settle what was pending on my behalf, on 28 September, the five rulings it took that day are marked as taken on my delegation. The mark is there so that nobody later mistakes them for mine. The decisions at the front of this book are marked the same way.
 
 **I refused to let the protocol become a product.** The doctrine of the harness is open, and it is never to be sold: its value is in what it refuses. It has also been proved in one place only, one person, one machine, one filesystem, about fifteen sessions. It has no adopter outside this estate.
 
-**And I accepted a loss.** The code of the last two years was largely written by sessions, and my hand, which was the style, thinned where they wrote. A study of the record measured it: the promise under each line (the `#-->` line), the house's way of writing an example, stands at nearly a hundred per thousand lines in the short recipes (the quickers) and at seventy-five in my articles, and at under one in the narrated guards the sessions wrote, which assert in another form. The sessions even took the name of my articles for their test files, a name that a model proposed. I accept the implementation code they wrote. I do not accept that the style a programmer or an agent writes with Softanza should be theirs rather than the house's. That is why the law of Part II exists, and why this book is written in my voice, with sessions as researchers and as the court, and why every chapter waits for my reading before it loses the word draft.
+**And I accepted a loss.** The code of the last two years was largely written by sessions, and my hand, which was the style, thinned where they wrote. A study of the record measured it. The promise under each line (the `#-->` line), the house's way of writing an example, stands at nearly a hundred per thousand lines in the short recipes (the quickers) and at seventy-five in my articles. In the narrated guards the sessions wrote, which assert in another form, it stands at under one. The sessions even took the name of my articles for their test files, a name that a model proposed. I accept the implementation code they wrote. I do not accept that the style a programmer or an agent writes with Softanza should be theirs rather than the house's. That is why the law of Part II exists, and why this book is written in my voice, with sessions as researchers and as the court. And it is why every chapter waits for my reading before it loses the word draft.
 
 ## 5. The court
 
-No guard of the library proves the protocol. Its courts are outside the library, and I name them by what they do: a hook that refuses wholesale staging; a hook that refuses work when the machine has no memory to spare; a check that the hooks installed are the hooks written; an instrument that compares every stamp with its commit and publishes the rows. They are scripts, not Haro, and this book's reader cannot count their assertions, so they are named here and not in the court line below.
+No guard of the library proves the protocol. Its courts are outside the library, and I name them by what they do. One hook refuses wholesale staging, and one refuses work when the machine has no memory to spare. A check says whether the hooks installed are the hooks written. An instrument compares every stamp with its commit and publishes the rows. They are scripts, not Haro, and this book's reader cannot count their assertions, so they are named here and not in the court line below.
 
-The blocks of this chapter stand on the library's guards of its house rules: `coderule_narrated` proves that a code rule is a rule over the graph, that the house findings come out on a planted fixture in a frozen shape, that the rules number fourteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
+The blocks of this chapter stand on the library's guards of its house rules. `coderule_narrated` proves that a code rule is a rule over the graph, and that the house findings come out on a planted fixture in a frozen shape. It proves that the rules number fourteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
 
 ## 6. The field, and where it leads
 
@@ -115,17 +117,17 @@ The field leads in scale and in independence. Its frameworks run on many machine
 
 The field leads in accounting. A paid interface reports the tokens of every call. This estate's cost record was built to report them and could not, so the most important economic decision it took was taken by feeling.
 
-The field leads in tooling for many writers. Branches, merge queues and owners of folders handle concurrency at a scale the estate has not met; here, the answer is a discipline and one hook, and the hook reads the text of a command, so it also refuses a commit message that merely quotes the forbidden form. That cost is known and accepted.
+The field leads in tooling for many writers. Branches, merge queues and owners of folders handle concurrency at a scale the estate has not met. Here, the answer is a discipline and one hook. The hook reads the text of a command, so it also refuses a commit message that merely quotes the forbidden form. That cost is known and accepted.
 
-Where I think the record stands apart is in one habit: each law carries the failure that paid for it, and the record publishes its own rate of breaking its own law. The central desk broke the stamp law about as often as the estate it measured, 5 of 25 against 34 of 151, on a different surface, and four of the five came before the law; both numbers are printed side by side.
+Where I think the record stands apart is in one habit: each law carries the failure that paid for it, and the record publishes its own rate of breaking its own law. The central desk broke the stamp law about as often as the estate it measured, 5 of 25 against 34 of 151, on a different surface, and four of the five came before the law. Both numbers are printed side by side.
 
 ## 7. The limit
 
-What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, the instrument that measures stamps, and the library's fourteen house rules, five of them over its code graph.
+What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
 
-What is designed: a watcher that wakes a session when a file arrives, which is the right replacement for the clocks and is not written; a court of style for the code that a programmer or an agent writes with the library, so that the house style is held by a machine and not by a hope.
+What is designed: a watcher that wakes a session when a file arrives, which is the right replacement for the clocks and is not written. And a court of style for the code that a programmer or an agent writes with the library, so that the house style is held by a machine and not by a hope.
 
-What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language, which the word law asks for and nothing performs. The study that read the record named one more limit, and I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
+What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and nothing performs it. The study that read the record named one more limit. I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
 
 ## 8. Six doors
 
@@ -146,3 +148,5 @@ What is absent: a token figure in the cost record; any team outside this estate 
 Take the last ten messages, notes or log lines in which you wrote a time by hand. For each, find the moment the system recorded on its own: the commit, the time the message was sent, the time the file was saved. Before you look, write down how many of your times you expect to be later than the system's by a minute or more. Then count.
 
 Your count is the finding. I will not give you mine.
+
+The last chapter is about the one line still owed. Its principle says when that line may be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.

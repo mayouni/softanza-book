@@ -4,7 +4,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-09 13:44 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

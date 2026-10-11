@@ -16,9 +16,11 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
+Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer : un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture de mon premier livre : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
+
 ## 1. Le concept, tel que le terrain le tient
 
-Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites ; Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
+Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites. Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
 
 Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. (Connaissance générale, non une étude du dossier.) Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume.
 
@@ -56,7 +58,7 @@ r = o.Refine("vat").To("0.22")
 #--> 1
 ```
 
-Et une proposition qui ne franchit pas la barrière ne change rien, et dit à quelle étape elle a été refusée et pourquoi :
+Et que change une proposition qui ne franchit pas la barrière, et que dit la barrière ? Exécutez-le :
 
 ```haro
 r2 = o.Refine("vat").To("0.99")
@@ -74,7 +76,7 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Trois refus, et la ligne de temps n'a pas grandi d'un pas. Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme son étape, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
+Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
 
 **La cascade** est ce que vous lisez à la place du diff. Avant le changement, demandez ce qu'il atteint. Il y a deux cascades, et elles sont séparées. Pour un point, c'est la ligne où il se trouve et les autres points de cette même ligne :
 
@@ -139,7 +141,7 @@ r3 = d.Refine("vat").To("0.05")
 #--> 0.30
 ```
 
-Voici maintenant la question de cet âge : qui l'a proposé ? Chaque proposition porte son origine, et un point peut fixer un plancher de confiance qui refuse une origine inférieure, sans refuser une personne. Une proposition qui vient d'un modèle de langage est sous un plancher qu'une proposition de confiance franchit :
+Voici maintenant la question de cet âge : qui l'a proposé ? Chaque proposition porte son origine, et un point peut fixer un plancher de confiance qui refuse une origine inférieure, sans refuser une personne. Qu'arrive-t-il à une proposition venue d'un modèle de langage quand le plancher du point exige une origine de confiance ? Exécutez-le :
 
 ```haro
 d.TrustFloor("vat", :trusted)
@@ -201,7 +203,7 @@ t.Redo()
 #--> 0.21
 ```
 
-Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute : la structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre ; le code numérote ses contrôles 1, 2, 3, 4 et 4b, parce que le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026 et que le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
+Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute : la structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b, parce que le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026 et que le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -227,14 +229,14 @@ Et sur la confiance, une bonne part de l'approche du terrain est faite pour pass
 
 ## 7. La limite
 
-Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné ; les gardes de la section 5 les couvrent, avec deux exceptions. La cascade d'une classe n'a pas de garde ici, parce que la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et aucune garde n'affirme les autres points d'une ligne.
+Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné. Les gardes de la section 5 les couvrent, avec deux exceptions. La cascade d'une classe n'a pas de garde ici, parce que la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et aucune garde n'affirme les autres points d'une ligne.
 
 Ce qui est conçu, et absent de la bibliothèque par son nom : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, n'est pas dans la bibliothèque à ce commit. Le raffinement en une ligne du document de conception, un point qui s'explique, un plan qui est appliqué, ne sont pas dans la bibliothèque. La cascade du graphe de code et la cascade de la barrière ne sont pas jointes. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, son propre siège de raffinement n'étant pas construit.
 
 Ce qui est construit, et où cela s'arrête : les limites de la barrière telle qu'elle est.
 
-- Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque ; un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle.
-- Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition qui dit venir d'un martien franchit donc un plancher de confiance.
+- Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle.
+- Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition venue d'une origine que le code ne connaît pas franchit donc un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
 - Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient `.rfn` pour la phrase et laisse `.zrfn` à l'extraction par balises de commentaire de la bibliothèque.
 
@@ -257,3 +259,5 @@ Ce qui est construit, et où cela s'arrête : les limites de la barrière telle 
 Prenez deux réglages d'un de vos programmes : un taux et un plafond, par exemple, avec une règle selon laquelle le taux doit rester sous le plafond. Déclarez-les comme des points, avec des bornes, et déclarez la règle qui les couvre. Avant de rien exécuter, écrivez sous chaque proposition si elle est admise et, sinon, à quelle étape elle est refusée. Proposez un changement du taux au-dessus du plafond, et un autre depuis une origine que vous déclarez comme un modèle, contre un plancher que vous fixez. Puis remontez jusqu'à zéro et avancez d'un pas.
 
 Exécutez-le. Si vous vous êtes trompé sur l'étape, vous avez trouvé un endroit où votre propre barrière est en désaccord avec votre propre attente.
+
+Le chapitre suivant énonce une loi : un langage est déclaré et fermé, et ce qui le parle, une personne ou un modèle, est jugé par lui. Ici, la chose jugée était un changement ; là, c'est ce qui parle.
