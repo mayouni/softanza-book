@@ -80,7 +80,9 @@ In that prompt, a path written `book/...` is relative to **this repository's roo
   Memo: `sessions/2026-10-09-phase-10-verification.md`. Chapters outside the spine are not yet verified this way.
 - Phase 11 done 2026-10-09: the preface, chapters 6 to 31 outside the spine and appendices A to C verified and fixed the same way (about 3,180 statements checked in the book, 624 flagged and fixed except chapter 1).
   Memo: `sessions/2026-10-09-phase-11-verification-rest.md`. Chapter 1 still carries its flagged statements for the author.
-- Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
+- The AYOUNI Writing Framework (`../../writing-framework/`, v0.1, 2026-10-11) now governs the voice; this book keeps its discipline (C1, C3, C8, C11, C12) and lacks its warmth
+  (C2, C4, C6, C9, C10). The plan to bring it in line, phase by phase, with the author's three rulings first: `sessions/2026-10-11-writing-framework-plan.md`.
+- Next: the author's three rulings and Phase A of that plan (his own particulars), then the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
