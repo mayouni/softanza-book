@@ -22,6 +22,7 @@ from book_common import ROOT, load_json, now, stamp
 
 OUT = ROOT / "print"
 T = ROOT / "tools"
+LINT_OK = []   # gate 4's verdicts (English, French), written to the manifest
 
 
 def run(*args):
@@ -67,6 +68,7 @@ def manifest():
         "blocks_kept": kept, "blocks_runnable": runnable, "library_commit": lib.get("commit"), "library_short": lib.get("short"),
         "book_commit": git("rev-parse", "HEAD"), "book_tree_has_uncommitted_changes": dirty,
         "files": files,
+        "lint_strict_passed": {"en": LINT_OK[0], "fr": LINT_OK[1]} if len(LINT_OK) == 2 else None,
         "note": "epubcheck, the W3C validator, was not run; the ePub is checked by its own tool for well-formedness, its manifest and its links.",
     }
     OUT.mkdir(exist_ok=True)
@@ -85,8 +87,12 @@ def main():
     run("tools/check_fr.py", "--all")
     lint = ROOT.parent.parent / "writing-framework" / "tools" / "style_lint.py"
     if lint.exists():
-        run(str(lint), "src/en", "--strict")
-        run(str(lint), "src/fr", "--lang", "fr", "--strict")
+        # gate 4 reports and is recorded in the manifest; it does not stop a proof copy, since the author's own
+        # chapter is linted too and only he edits it
+        for args in (("src/en", "--strict"), ("src/fr", "--lang", "fr", "--strict")):
+            print("\n$ python " + str(lint) + " " + " ".join(args), flush=True)
+            r = subprocess.run([sys.executable, str(lint), *args], cwd=ROOT)
+            LINT_OK.append(r.returncode == 0)
     else:
         print("\n(the writing framework's lint is not beside this repository; gate 4 skipped)")
     run("tools/epub_book.py")
