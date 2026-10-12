@@ -4,7 +4,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I show you the floor the last line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I read from the record what stands between that floor and the line the record does not yet carry, in five steps. I say what I refused: a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
@@ -114,11 +114,11 @@ The record also holds the opposite, honestly. The pictures the library draws wer
 
 **I refused a reference without a document.** The site counts a project as a reference only when a document proves it, and it quotes no number of countries and no number of programmers. A lesson is listed only when a file of the library carries it.
 
-**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. Rewriting would be faster to announce and slower to trust.
+**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. I hold this as a view, not a result: rewriting would be faster to announce and slower to trust.
 
 **I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. The study that read the record ruled that the figure should not be printed without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
 
-**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict.
+**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. This is my view, and the sound plane above, with its hundreds of passing assertions and its broken sound, is what stands behind it.
 
 ## 5. The court
 

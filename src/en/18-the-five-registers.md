@@ -178,7 +178,7 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence, and silence is the worse answer: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
+Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence, and I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
 
 So three of the five registers are wired, one of them in its simplest form, a splitter. Two are not. I would rather you meet that here than on a page of mine that said five.
 
@@ -336,7 +336,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused to guess.** The record's phrase is: guessing is replaced by asking; vibes are replaced by governance. A gap is a question. A reply is a candidate.
 
-**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust. All five registers go through one door.
+**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust, and I hold this as a view, not a result. All five registers go through one door.
 
 **I refused a stub.** A reserved agent raises when it is asked for. The design document says it plainly: the raise is the law working, and it should not be read as a defect. I refused to pretend the fifth register works.
 

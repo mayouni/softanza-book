@@ -289,9 +289,9 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 
 **I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
 
-**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
+**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. That is my view of language, not a result. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
 
-**I refused the ungrammatical chain.** The chain is the sentence, and an ungrammatical chain that runs is a bug. The doctrine is held by reading aloud, not by a machine, and I show the proof below.
+**I refused the ungrammatical chain.** The chain is the sentence, and an ungrammatical chain that runs is a bug. I hold this as a view, not a result. The doctrine is held by reading aloud, not by a machine, and I show the proof below.
 
 **I refused negation as a prefix.** Negation lives in negative forms, in antonym comparators and in the tag closer `OrNot()`. The tag question above is that ruling running.
 

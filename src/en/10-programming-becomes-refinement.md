@@ -22,7 +22,7 @@ In this chapter I say what I mean by refining rather than programming: a change 
 
 The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
 
-What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume.
+What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume; I hold this as a view, not a result.
 
 ## 2. The first principle
 
@@ -207,7 +207,7 @@ That is the gate in the form the library has it. Five checks, in the order the c
 
 ## 4. The decision, and what I refused
 
-**I refused to govern the intelligence.** Much of the field's approach to agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
+**I refused to govern the intelligence.** Much of the field's approach to agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world: this is my view. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
 
 **I refused the diff as the unit.** A diff is a text change. A refinement is a typed proposal about a declared point, with a kind, bounds and an origin. I kept the diff as an artefact, and I refused it as the thing to review.
 

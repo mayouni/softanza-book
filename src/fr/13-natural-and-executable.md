@@ -289,9 +289,9 @@ Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte
 
 **J'ai décidé de deux directions, une seule discipline.** Le tableau de la revue a cinq lignes. Qui analyse : une machine avec un lexique, ou l'humain. L'ambiguïté : refusée bruyamment, ou impossible par construction. Le vocabulaire : borné par les paquets, ou non borné. La compréhension : vérifiée par la machine, ou par une lecture humaine. Le public : des experts du domaine et des agents, ou des programmeurs. Les deux finissent au même endroit : une suite déterministe d'opérations sémantiques.
 
-**J'ai refusé les marqueurs de référence.** Le 10 juillet 2026, j'ai rejeté la famille de suffixes qui marquaient une référence. Le chiffre a été inversé par son propre inventeur, de mémoire, il dupliquait des sens, et le langage lui-même ne marque jamais la référence ainsi. Plus de deux cent soixante méthodes ont été retirées. Le chapitre 11 le raconte en deux phrases.
+**J'ai refusé les marqueurs de référence.** Le 10 juillet 2026, j'ai rejeté la famille de suffixes qui marquaient une référence. Le chiffre a été inversé par son propre inventeur, de mémoire, il dupliquait des sens, et le langage lui-même ne marque jamais la référence ainsi. C'est mon point de vue sur le langage, non un résultat. Plus de deux cent soixante méthodes ont été retirées. Le chapitre 11 le raconte en deux phrases.
 
-**J'ai refusé la chaîne non grammaticale.** La chaîne est la phrase, et une chaîne non grammaticale qui s'exécute est un bogue. La doctrine est tenue par la lecture à voix haute, non par une machine, et j'en montre la preuve plus bas.
+**J'ai refusé la chaîne non grammaticale.** La chaîne est la phrase, et une chaîne non grammaticale qui s'exécute est un bogue. Je tiens cela pour une vue, non pour un résultat. La doctrine est tenue par la lecture à voix haute, non par une machine, et j'en montre la preuve plus bas.
 
 **J'ai refusé la négation en préfixe.** La négation vit dans les formes négatives, dans les comparateurs antonymes et dans le fermeur de question `OrNot()`. La question de confirmation ci-dessus est cette décision en train de tourner.
 

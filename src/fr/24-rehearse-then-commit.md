@@ -362,11 +362,11 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé de toucher à la réalité par défaut.** La production ne valide que si l'acteur peut valider. Un `Deploy(:Production)` nu, sans acteur, ne touche à rien.
 
-**J'ai refusé le faux complaisant.** Un faux complaisant est plus dangereux que pas de faux du tout. Le silence est la pire réponse : le mode indulgent répond 501, parce qu'un échec de correspondance ne doit jamais pouvoir passer pour un succès.
+**J'ai refusé le faux complaisant.** Un faux complaisant est plus dangereux que pas de faux du tout. Je tiens cela pour une vue, non pour un résultat. Le silence est la pire réponse : le mode indulgent répond 501, parce qu'un échec de correspondance ne doit jamais pouvoir passer pour un succès.
 
 **J'ai refusé « faux contre réel » comme vérité entière.** C'était trop grossier. Il y a maintenant quatre postures : bac à sable, local, réel et conformité. La posture locale a été ajoutée quand l'exemple de la base de données a montré qu'un fichier SQLite est une vraie base de données dans un fichier qu'on possède.
 
-**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs, si bien que l'attacher à une livraison en prenait un instantané, et la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
+**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs, si bien que l'attacher à une livraison en prenait un instantané, et la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière : c'est mon point de vue. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
 
 **J'ai refusé de virtualiser la qualité d'un modèle.** La qualité d'un modèle de pointe ne peut pas être virtualisée. Ce que le bac à sable vend à la place, c'est le déterminisme, un coût sur lequel on peut faire une assertion, et le travail hors ligne.
 

@@ -4,7 +4,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
@@ -82,7 +82,7 @@ The record does not link the library's tone rule to the estate's word law, ruled
 
 **I refused a framework.** The arrangement is files, a history and a few hooks. A supervisor that schedules agents would be one more program to trust, and one more thing that decides without a record. Here, a session that is not running leaves only its files, and the files are the truth.
 
-**I refused to let a coordinator grade its legislator.** Authority runs down from me; correction runs up, and the central session is corrected by the Observer and bound by the doctrine. A coordinator that judged its own rules would be the one part of the system nothing could fix.
+**I refused to let a coordinator grade its legislator.** Authority runs down from me; correction runs up, and the central session is corrected by the Observer and bound by the doctrine. A coordinator that judged its own rules would be the one part of the system nothing could fix. I hold this as a view, not a result.
 
 **I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the uncomfortable part: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number. What the clocks cost is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never a model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is not yet written (section 7).
 
@@ -112,7 +112,7 @@ Where I think the record stands apart is in one habit: each law carries the fail
 
 What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
 
-What is designed: a watcher that wakes a session when a file arrives, which is the right replacement for the clocks and is not written. And a court of style for the code that a programmer or an agent writes with the library, so that the house style is held by a machine and not by a hope.
+What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is not written. And a court of style for the code that a programmer or an agent writes with the library, so that the house style is held by a machine and not by a hope.
 
 What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and nothing performs it. The study that read the record named one more limit. I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
 

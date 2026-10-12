@@ -10,7 +10,7 @@ site: [languages]
 guards: [multilingual_pack_narrated, semantic_resolver_narrated, literate_templates_narrated, question_narrated, structuredoutput_narrated, schema_grammar_narrated, constrained_decoding_narrated]
 stage:
   built: "le vocabulaire de la couche naturelle comme données en cinq langues, avec ses refus ; le tribunal de la sortie structurée, son compilateur de grammaire et son échantillonneur ; les langages de motifs, qui acceptent un mot qu'ils ne connaissent pas"
-  designed: "la fabrique qui produit l'analyseur, le tribunal et la grammaire d'un langage à partir de sa seule déclaration ; une grammaire émise pour chaque langage déclaré ; le style d'écriture comme grammaire déclarée"
+  designed: "la forge qui produit l'analyseur, le tribunal et la grammaire d'un langage à partir de sa seule déclaration ; une grammaire émise pour chaque langage déclaré ; le style d'écriture comme grammaire déclarée"
   absent: "une couche naturelle fermée jusqu'au fond : une forme de liste atteint encore le code de l'hôte ; des classes de motifs qui refusent un mot qu'elles ne connaissent pas ; la lettre ɗ du hausa standard dans le paquet hausa"
 status: draft
 rulings: ["12.4", "12.10", "12.16", "12.19", "12.21", "12.27", "12.28", "12.29", "12.30"]
@@ -181,7 +181,7 @@ Et les motifs sont de petits langages à part entière, mais pas encore fermés 
 #--> 0
 ```
 
-Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 raconte un langage déclaré : la fabrique, la grammaire fermée sans échappée vers l'hôte, le tribunal né avec la grammaire, la grammaire émise pour qu'un modèle ne puisse dire que des phrases valides, et ses surfaces. Le chapitre 13 raconte les deux directions du code naturel, la machine comme analyseur et la personne comme analyseur, dans une seule discipline. Le chapitre 14 raconte la programmation par la connaissance, un fichier qui est un système. Le chapitre 15 raconte les langages de motifs, l'expression régulière élevée aux listes, aux nombres, aux tables, aux matrices, au temps et aux graphes. Le chapitre 16 raconte les sept langages que Softanza atteint par une seule porte gouvernée, et pourquoi une porte n'est pas une surface.
+Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 raconte un langage déclaré : la forge (la machinerie qui produit l'analyseur, le tribunal, l'imprimeur et la grammaire d'un langage à partir de sa seule déclaration), la grammaire fermée sans échappée vers l'hôte, le tribunal né avec la grammaire, la grammaire émise pour qu'un modèle ne puisse dire que des phrases valides, et ses surfaces. Le chapitre 13 raconte les deux directions du code naturel, la machine comme analyseur et la personne comme analyseur, dans une seule discipline. Le chapitre 14 raconte la programmation par la connaissance, un fichier qui est un système. Le chapitre 15 raconte les langages de motifs, l'expression régulière élevée aux listes, aux nombres, aux tables, aux matrices, au temps et aux graphes. Le chapitre 16 raconte les sept langages que Softanza atteint par une seule porte gouvernée, et pourquoi une porte n'est pas une surface.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -203,17 +203,17 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine de projets a délibérément renoncé : l'outillage projectionnel (des éditeurs qui comprennent un langage pendant que vous tapez), l'intégration aux IDE, la profondeur macro-théorique. L'étude du domaine de projets le dit dans ses propres mots : c'est un pari, et il est nommé comme tel.
+Le terrain mène en outils. Les ateliers de langage restent en avance sur les axes auxquels la conception du domaine de projets a délibérément renoncé : l'outillage projectionnel (des éditeurs qui comprennent un langage pendant que vous tapez), l'intégration aux IDE, la profondeur macro-théorique. L'étude du domaine de projets le dit dans ses propres mots : c'est un pari, et il est nommé comme tel. Je tiens ce pari pour une vue, non pour un résultat.
 
 Le terrain a construit le décodage contraint le premier. L'échantillonneur de Softanza suit l'algorithme de l'implémentation de référence et n'embarque rien. Mesurées sur un seul petit modèle de cent trente-cinq millions de paramètres, sur dix consignes, les réponses étaient valides du premier coup deux fois sur dix quand on les vérifiait après coup. Tenu à la grammaire, le modèle était valide dix fois sur dix. C'est un seul petit modèle et dix consignes, et rien dans le dossier n'en mesure un grand.
 
-Et l'âge coupe dans les deux sens. Le code généré rend aussi bon marché la fabrication négligente de langages. C'est pourquoi le tribunal n'est pas un accessoire d'un langage déclaré. Il en est le cœur.
+Et l'âge coupe dans les deux sens. Le code généré rend aussi bon marché la fabrication négligente de langages. C'est pourquoi le tribunal n'est pas un accessoire d'un langage déclaré. Il en est le cœur. C'est mon point de vue.
 
 ## 7. La limite
 
 Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus. Construits aussi : le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur, et les langages de motifs. Ceux-ci acceptent encore un mot qu'ils ne connaissent pas.
 
-Ce qui est conçu : la fabrique qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La fabrique est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026, et la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la fabrique n'a pas encore forgé (fabriqué les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
+Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026, et la bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la forge n'a pas encore forgé (fabriqué les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est promise et pas livrée.
 
 Ce qui est absent, et la loi doit le dire. La couche naturelle n'est pas fermée jusqu'au fond. Une forme, une liste écrite entre crochets, est encore remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
 

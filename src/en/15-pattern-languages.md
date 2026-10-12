@@ -30,7 +30,7 @@ The estate's own field study of August 2026 gives the small languages that survi
 
 **A pattern is a rule about the shape of data, written as data. The same habit serves every kind of data.**
 
-The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls the author's, "for the first time in computer science history". I found it in no text of the library, and the study does not let the site claim it; the chapter prints it as the study's attribution and claims no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
+The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls mine, "for the first time in computer science history", and it is mine. I found it in no text of the library, and the study does not let the site claim it; I keep the phrase here as what I said, and claim no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
 
 ## 3. The Softanza form
 
@@ -200,7 +200,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 **I decided that a pattern states a meaning and not a procedure.** That decision is in the articles, and the articles are mine. The same ones decided to carry the regex idea to non-text data with one habit: braces, an `@` for a token, `&`, `|`, `@!` for not, `@cs:` for case. Lists keep square brackets. The other five use braces. That is the first honest correction of the phrase "one grammar".
 
-**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value, which is the right way to retire a mechanism.
+**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value, which I hold, as a view and not a result, to be the right way to retire a mechanism.
 
 **I refused, for now, to build the siblings.** The articles planned classes in which patterns are genetic, linguistic or quantic. The article says that they are in an early prototype and not in the library, and a search of the regex folder for "induce", "from example" and "infer" finds nothing. The study dates the finding of their purpose two years later, in the answer protocol (the way a person may answer by examples): induction from examples, and superposed candidates. That is chapter 18's ground, and chapter 9's refusal.
 
@@ -279,7 +279,7 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 #--> 0
 ```
 
-A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine.
+A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine; I hold that as my view, and the run above, on this commit, is what stands behind it.
 
 What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 

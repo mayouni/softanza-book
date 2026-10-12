@@ -4,7 +4,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -154,7 +154,7 @@ o1 = new stzString("haxxrxo")
 
 The article says the library recognises and corrects minor typos, and that the intelligence resides in the library itself. The code shows something plainer: `WithoutSapces` works because that spelling was written by hand as an alias. Another misspelling, `WithoutSpces`, fails. So the form is real, and in what I traced it is a list of declared aliases, not a correction engine. I did not trace every file that mentions correction; one message in the object class only suggests a name, with "Did you mean".
 
-Now the scope half of the chapter. The same fault shows up everywhere in programming: behaviour with an invisible governing frame. A function does one thing here and another there, and nothing in its name says which frame it is in. The answer, in four moves, is the paradigm I call scope-oriented programming. Name the hidden frame. Turn it into a small, closed set of named scopes. Choose the scope at the call site, in the verb, and not in a flag set earlier. And give the library the scope to reason with, a semantic handle and not a comment.
+Now the scope half of the chapter. The same fault shows up everywhere in programming: behaviour with an invisible governing frame. I hold this as a view, not a result; what stands behind it here is three instances: the regex verbs, the system and the placement of a deployment. A function does one thing here and another there, and nothing in its name says which frame it is in. The answer, in four moves, is the paradigm I call scope-oriented programming. Name the hidden frame. Turn it into a small, closed set of named scopes. Choose the scope at the call site, in the verb, and not in a flag set earlier. And give the library the scope to reason with, a semantic handle and not a comment.
 
 It was born in regular expressions, where the frame is how much of the text a pattern must cover. The same pattern, the same text, three verbs: what does each answer?
 

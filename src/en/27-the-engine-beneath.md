@@ -195,7 +195,7 @@ Under a future runtime the promise changes, as the proof line says.
 
 **I let everything go into base.** My sentence, as the study reports it: under the pressure of time, everything went into base, waiting for the right moment to refactor again. By my count below, base is ninety-three per cent of the lines.
 
-**I chose safe optimisation.** Not the fastest mode, and not the unoptimised one: a clean panic beats silent memory corruption, and here it costs nothing.
+**I chose safe optimisation.** Not the fastest mode, and not the unoptimised one. I hold it as a view, not a result, that a clean panic beats silent memory corruption, and that here it costs nothing.
 
 **I refused a headline that does not reproduce.** The memo of 13 September 2026 says the claim to retire is that the runtime beats the fast peer, present tense, on x64. Chapter 22 told the refusal, and section 6 prints the rows.
 
@@ -280,7 +280,7 @@ I tell what is built, what is designed, and what is absent, as the record has it
 
 **The designer.** A layer is a decision about what you ship, and not about taste. At the binary, core and base have a library per domain and the third layer has none; the web subset, which chapters 4 and 24 show, is a subset and not a layer.
 
-**The decision-maker.** The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. A record that prints its loss is the only kind to trust.
+**The decision-maker.** The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. This is my view: a record that prints its loss is the only kind to trust.
 
 **The educator.** Teach the dependency rule by making a learner load the core alone and predict, then count. Teach "measured, never asserted" with the memo of 13 September 2026.
 

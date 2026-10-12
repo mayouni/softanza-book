@@ -32,7 +32,7 @@ For goals, the field says *quality attributes*. The ISO standard for software qu
 
 **What you think is what you write.** It is chapter 5's sentence, from the diagram of 2020, and I do not argue it again. Chapter 5 took five rules of the style. This chapter takes the rest, as a grammar, and then the goals under which the grammar was designed.
 
-For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size.
+For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
 
 ## 3. The Softanza form
 

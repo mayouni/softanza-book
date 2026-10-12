@@ -122,7 +122,7 @@ Cinq valeurs, la valeur de départ comprise, et la chaîne se termine à 46 ! L'
 
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer. Dans cette maison, elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
-Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, dont cinq sur quatorze s'exécutent sur le graphe du code, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
+Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore ; je le tiens pour une vue, non pour un résultat. La bibliothèque transforme ses règles de maison en validateurs, dont cinq sur quatorze s'exécutent sur le graphe du code, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -180,7 +180,7 @@ Ce qui est absent : toute machine qui juge, aujourd'hui, le style d'un programme
 
 **Le concepteur.** La forme du verbe est un contrat d'interface : par convention de la bibliothèque, le participe passé ne touche pas l'objet. Un tribunal pour cette règle est conçu, non construit.
 
-**Le décideur.** Un style auquel une machine peut être tenue peut être relu but par but, non ligne par ligne, ce qui est la seule lecture qu'une personne puisse donner à des centaines de milliers de lignes.
+**Le décideur.** Je tiens cela pour une vue, non pour un résultat : un style auquel une machine peut être tenue peut être relu but par but, non ligne par ligne, ce qui est la seule lecture qu'une personne puisse donner à des centaines de milliers de lignes.
 
 **Le formateur.** Enseignez la discipline entière, et dans l'ordre : formuler, puis exprimer, puis être jugé.
 

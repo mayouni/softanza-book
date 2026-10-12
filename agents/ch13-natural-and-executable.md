@@ -4,7 +4,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence: a sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -307,9 +307,9 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 
 **I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
 
-**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
+**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. That is my view of language, not a result. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
 
-**I refused the ungrammatical chain.** The chain is the sentence, and an ungrammatical chain that runs is a bug. The doctrine is held by reading aloud, not by a machine, and I show the proof below.
+**I refused the ungrammatical chain.** The chain is the sentence, and an ungrammatical chain that runs is a bug. I hold this as a view, not a result. The doctrine is held by reading aloud, not by a machine, and I show the proof below.
 
 **I refused negation as a prefix.** Negation lives in negative forms, in antonym comparators and in the tag closer `OrNot()`. The tag question above is that ruling running.
 

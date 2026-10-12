@@ -173,7 +173,7 @@ Les bibliothèques de texte du terrain mènent sur la locale : la propre carte d
 
 Les hôtes de super-applications du terrain servent de vrais utilisateurs à une échelle que cette plateforme n'a jamais rencontrée. Le dossier les nomme comme le modèle qu'il a refusé et ne mesure rien contre eux, alors je n'en mesurerai pas non plus.
 
-Et l'Atlas lui-même imprime où Softanza est faible : la zone binaire est un plan sans code livré, le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu, la zone du système a peu de voies fortes. Une carte qui imprime ses zones faibles est la seule sorte qui vaille la peine d'être lue.
+Et l'Atlas lui-même imprime où Softanza est faible : la zone binaire est un plan sans code livré, le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu, la zone du système a peu de voies fortes. Je tiens cela pour une vue, non pour un résultat : une carte qui imprime ses zones faibles est la seule sorte qui vaille la peine d'être lue.
 
 ## 7. La limite
 

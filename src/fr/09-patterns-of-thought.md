@@ -22,7 +22,7 @@ Dans ce chapitre, je prends tour à tour les trois sujets du titre : le Softanzu
 
 Le terrain a trois outils pour faire réagir un programme. Les expressions régulières reconnaissent une forme dans un texte, et rien de plus : elles disent « cela correspond », et elles s'arrêtent. La programmation réactive, la famille des observables, des abonnés et des ordonnanceurs que Rx a rendue populaire, laisse les données circuler dans un programme au fil du temps. Son vocabulaire vient de la plomberie, de la téléphonie et de l'édition : tuyaux, contre-pression, sources chaudes et froides. Et les moteurs de règles, les systèmes de production du terrain avec leur chaînage avant, déclenchent des règles quand des faits apparaissent, et continuent de déclencher tant que de nouveaux faits apparaissent. (Connaissance générale ; les moteurs de règles du terrain sont plus anciens et plus mûrs que tout ce qui est dans ce chapitre.)
 
-Chaque outil est séparé. Une expression régulière ne déclenche pas de calcul, un flux réactif ne reconnaît pas de motif, et un moteur de règles n'a pas de vocabulaire qu'une personne emploierait pour dire une pensée.
+Chaque outil est séparé. Une expression régulière ne déclenche pas de calcul, un flux réactif ne reconnaît pas de motif, et un moteur de règles n'a pas de vocabulaire qu'une personne emploierait pour dire une pensée. Je tiens cela pour une vue, non pour un résultat.
 
 ## 2. Le premier principe
 
@@ -186,7 +186,7 @@ done
 
 Le vide est nommé par ce qu'il sépare, `PHASE1` et `PHASE2`, et le refus porte sa raison : `Point 'EVENT2' falls within a blocked span or blocked point`.
 
-Et une grille a un curseur doué de l'intelligence d'un lieu : la position est une colonne et une ligne, et se déplacer au-delà d'un bord reste au bord. Deux pas vers le bas et trois vers la droite, puis trois de plus vers la droite : où est le curseur ?
+Et une grille a un curseur qui sait où il est : la position est une colonne et une ligne, et se déplacer au-delà d'un bord reste au bord. Deux pas vers le bas et trois vers la droite, puis trois de plus vers la droite : où est le curseur ?
 
 ```haro
 o = new stzGrid([ 5, 5 ])
@@ -210,7 +210,7 @@ En `[ 4, 3 ]`, puis en `[ 5, 3 ]` : trois pas de plus vers la droite ont gagné 
 
 **J'ai refusé de laisser l'expression régulière n'être qu'une façon de lire du texte.** J'en ai fait un milieu computationnel : un déclencheur lance un calcul, le calcul écrit un état quand il change la valeur, et l'état enregistre son pourquoi. Le Regexuter est une faculté et pas un esprit, et il ne tient aucun but. J'ai ajouté le but deux échelons plus haut, au quatrième, dans l'agent, exprès.
 
-**J'ai refusé le vocabulaire du terrain pour la programmation réactive.** Observables, abonnés, contre-pression, sources chaudes et froides, ordonnanceurs : empruntés à la plomberie, à la téléphonie et à l'édition, et pas au problème. Une fonction en attente est une Rfunction. Les données circulent, et rien ne s'appelle producteur ou consommateur. Le débordement remplace la contre-pression. Attendre qu'un attribut se stabilise remplace le debounce. Les anciennes orthographes marchent encore comme alias : feed, emit, send et receive appellent tous une même méthode, mon changement était donc un changement de nom et pas un retrait.
+**J'ai refusé le vocabulaire du terrain pour la programmation réactive.** Observables, abonnés, contre-pression, sources chaudes et froides, ordonnanceurs : empruntés à la plomberie, à la téléphonie et à l'édition, et pas au problème. C'est mon point de vue sur ces mots, non un résultat. Une fonction en attente est une Rfunction. Les données circulent, et rien ne s'appelle producteur ou consommateur. Le débordement remplace la contre-pression. Attendre qu'un attribut se stabilise remplace le debounce. Les anciennes orthographes marchent encore comme alias : feed, emit, send et receive appellent tous une même méthode, mon changement était donc un changement de nom et pas un retrait.
 
 **J'ai refusé de construire les frères.** L'article qui raconte le Regexuter en décrit quatre autres : un analyseur, un génétique, un linguistique et un quantique. Dans le génétique les motifs évoluent contre un critère d'adaptation, dans le linguistique les déclencheurs sont des règles de grammaire, et dans le quantique un motif peut être dans plusieurs états à la fois. L'article donne à chacun un exemple d'appel, et aucune classe ne se tient derrière. La conception a trouvé plus tard un but pour deux d'entre eux. Répondre par l'exemple exige l'induction de motifs, le terrain du génétique ; plusieurs réponses acceptables exigent des candidats superposés, réduits par des règles ou par un choix, celui du quantique. Le chapitre 18 dit où cela en est. Ils restent une vision ; deux ont leur but écrit.
 

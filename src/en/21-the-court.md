@@ -105,7 +105,7 @@ next
 #--> HEARD
 ```
 
-It answers `8`, `7` and `HEARD`: eight declared, seven unperceived, one heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by the author on 26 September 2026, through five original examples, and the record's words are that it is "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, is not yet said. Those words are the record's, quoted from it, and they are the one recorded perception that is a refusal.
+It answers `8`, `7` and `HEARD`: eight declared, seven unperceived, one heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
 
 The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
@@ -230,9 +230,9 @@ The fleet here is a rehearsal double, any object that answers the same effectful
 
 **I refused a second assertion library.** The promise runner's rulings refuse a second library, a rewrite of the test files, a coverage percentage before there are routes, and a mock written for a platform's production. They refuse the word "verified" on a perceptual claim without a name and a sentence.
 
-**I refused to fold unjudged or unperceived into pass or fail.** A stop has five states and no sixth: kept, diverged, unreached, unjudged, unperceived. A runner that folds unjudged or unperceived into pass or fail is wrong.
+**I refused to fold unjudged or unperceived into pass or fail.** A stop has five states and no sixth: kept, diverged, unreached, unjudged, unperceived. A runner that folds unjudged or unperceived into pass or fail is wrong. I hold this as a view, not a result.
 
-**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning.
+**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning. This is my view.
 
 **I refused to detect everything.** Detections are declared. The sentinel speaks on transitions only: quiet, one alarm after five wrong passwords, and nothing new after a sixth, since the story did not restart. It does not write its own firings into the ledger, because detections over detection events invite feedback loops.
 

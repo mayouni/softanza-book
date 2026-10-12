@@ -2,9 +2,9 @@
 
 Source: Chapter 11. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the factory that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
+Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic, and I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, since the law must say it. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
@@ -188,7 +188,7 @@ And patterns are small languages of their own, though not yet closed ones: chapt
 
 > run: kept
 
-The chapters of this part prove the law from five sides. Chapter 12 tells a language declared: the factory, the closed grammar with no escape into the host, the court born with the grammar, the grammar emitted so that a model can only speak valid sentences, and its surfaces. Chapter 13 tells the two directions of natural code, the machine as the parser and the person as the parser, in one discipline. Chapter 14 tells knowledge programming, one file that is a system. Chapter 15 tells the pattern languages, regex lifted to lists, numbers, tables, matrices, time and graphs. Chapter 16 tells the seven languages Softanza reaches through one governed door, and why a door is not a surface.
+The chapters of this part prove the law from five sides. Chapter 12 tells a language declared: the forge (the machinery that produces a language's parser, court, printer and grammar from its declaration alone), the closed grammar with no escape into the host, the court born with the grammar, the grammar emitted so that a model can only speak valid sentences, and its surfaces. Chapter 13 tells the two directions of natural code, the machine as the parser and the person as the parser, in one discipline. Chapter 14 tells knowledge programming, one file that is a system. Chapter 15 tells the pattern languages, regex lifted to lists, numbers, tables, matrices, time and graphs. Chapter 16 tells the seven languages Softanza reaches through one governed door, and why a door is not a surface.
 
 ## 4. The decision, and what I refused
 
@@ -210,17 +210,17 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 ## 6. The field, and where it leads
 
-The field leads in tools. The language workbenches remain ahead on the axes the estate's design deliberately gave up: projectional tooling (editors that understand a language as you type), IDE integration, macro-theoretic depth. The estate's study says it in its own words: that is a bet, and it is named as one.
+The field leads in tools. The language workbenches remain ahead on the axes the estate's design deliberately gave up: projectional tooling (editors that understand a language as you type), IDE integration, macro-theoretic depth. The estate's study says it in its own words: that is a bet, and it is named as one. I hold that bet as a view, not a result.
 
 The field built constrained decoding first. Softanza's sampler follows the reference implementation's algorithm and vendors nothing. Measured against one small model of a hundred and thirty-five million parameters, on ten prompts, the answers were valid at the first attempt two times in ten when checked afterwards. Held to the grammar, the model was valid ten times in ten. That is one small model and ten prompts, and nothing in the record measures a large one.
 
-And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core.
+And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core. This is my view.
 
 ## 7. The limit
 
 What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These still accept a word they do not know.
 
-What is designed: the factory that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The factory is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026, and the library cannot run it yet. The vision's text says the factory has not yet forged (made a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
+What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026, and the library cannot run it yet. The vision's text says the forge has not yet forged (made a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is promised and not shipped.
 
 What is absent, and the law must say it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 

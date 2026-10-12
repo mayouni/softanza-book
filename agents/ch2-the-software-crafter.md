@@ -4,9 +4,9 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
-In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is the site's sentence: a software crafter turns what they know about a world into something that runs, without waiting for the software industry.
+In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
 ## 1. The concept, as the field holds it
 
@@ -16,7 +16,7 @@ The field's two other answers to "who makes software, if not programmers" define
 
 ## 2. The first principle
 
-The site gives the definition in two sentences. They say "crafter" today (read on 9 October 2026); until 8 October they said "maker". This book joins them with a semicolon: **a software crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.** These sentences were drafted for the site by a session, and the record holds no ruling of mine on them: they are the site's sentences, not mine. They define the crafter by ownership alone. The word "craft" suggests skill, where the sentence says the crafter is not defined by it, and the record does not settle that; the page keeps the site's wording.
+The site gives the definition in two sentences. They say "crafter" today (read on 9 October 2026); until 8 October they said "maker". The glossary says that a crafter is whoever is declaring, at the moment they declare. The site says that a crafter owns what they make. I ruled on 12 October 2026 that the book keeps both, in one sentence: **a crafter is whoever declares what they know about a world, and owns what they declare: the artefact is theirs, in plain text, and it does not expire.** Skill does not enter the definition. The word "craft" suggests it, and I keep the word: the person is defined by the act and by ownership, not by programming skill. I hold this as a view, not a result.
 
 ## 3. The Softanza form
 
@@ -221,7 +221,7 @@ Coding agents lead in hands. They already read, search, edit and run. What they 
 
 Low-code leads in installed base and in everything around it. (General knowledge, not a study of the record.) The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications. The crafter's platform sits beside the field's tools, not in place of them.
 
-The messaging apps lead where the crafters already are. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
+The messaging apps lead where the crafters already are. This is my view, not a result. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
 
 And the educator's door is not proven. The course's editions in French, Arabic and Hausa are drafts that no reviewer has read, and no institution has adopted it.
 

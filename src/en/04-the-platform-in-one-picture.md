@@ -173,7 +173,7 @@ The field's text libraries lead on locale: Softanza's own map says that the clea
 
 The field's super-app hosts run real users at a scale this platform has never met. The record names them as the model it refused and measures nothing against them, so I will not either.
 
-And the Atlas itself prints where Softanza is weak: the binary area is a plan with no shipped code, the plugin, foreign-function and embed plane of extensibility is mostly planned, the system area has few strong lanes. A map that prints its weak areas is the only kind worth reading.
+And the Atlas itself prints where Softanza is weak: the binary area is a plan with no shipped code, the plugin, foreign-function and embed plane of extensibility is mostly planned, the system area has few strong lanes. I hold this as a view, not a result: a map that prints its weak areas is the only kind worth reading.
 
 ## 7. The limit
 

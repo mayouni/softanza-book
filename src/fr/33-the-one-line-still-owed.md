@@ -118,11 +118,11 @@ Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèq
 
 **J'ai refusé une référence sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, et il ne cite aucun nombre de pays ni aucun nombre de programmeurs. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
 
-**J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont à écrire une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Réécrire serait plus rapide à annoncer et plus lent à croire.
+**J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont à écrire une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Je tiens cela pour une vue, non pour un résultat : réécrire serait plus rapide à annoncer et plus lent à croire.
 
 **J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. L'étude qui a lu le dossier a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
 
-**J'ai refusé qu'un instrument tienne lieu de preuve d'une perception.** Une phase dont la preuve est entièrement un compteur n'est pas achevée quand la chose elle-même est quelque chose qu'une personne voit ou entend. Le compteur est un résultat. La personne est le verdict.
+**J'ai refusé qu'un instrument tienne lieu de preuve d'une perception.** Une phase dont la preuve est entièrement un compteur n'est pas achevée quand la chose elle-même est quelque chose qu'une personne voit ou entend. Le compteur est un résultat. La personne est le verdict. C'est mon point de vue, et le volet sonore plus haut, avec ses centaines d'assertions réussies et son son cassé, en est le fondement.
 
 ## 5. Le tribunal
 

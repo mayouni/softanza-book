@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-11 08:52 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Built 2026-10-12 16:29 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 
@@ -29,7 +29,7 @@ Built 2026-10-11 08:52 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69
 - 1. Change arrives faster than trust [draft, spine] agents/ch1-change-arrives-faster-than-trust.md; guards: service_registry_narrated (93), safeworld_narrated (76), governance_crossing_narrated (31); run: 1 of 1 blocks kept
   principle: change arrives faster than trust.
 - 2. The software crafter [draft, spine] agents/ch2-the-software-crafter.md; guards: agentfile_narrated (88), service_registry_narrated (93), graphrule_object_narrated (34), semantic_resolver_narrated (83), 00_orgchart_narrated (10); run: 9 of 9 blocks kept
-  principle: a software crafter turns what they know about a world into something that runs, without waiting for the software industry; they are not defined by programming skill but by ownership: the artefact is theirs, in plain text, and it does not expire.
+  principle: a crafter is whoever declares what they know about a world, and owns what they declare: the artefact is theirs, in plain text, and it does not expire.
 - 3. The method, from first principles [draft, spine] agents/ch3-the-method-from-first-principles.md; guards: modality_narrated (45), wisecoding_narrated (13), wisecoding_rich_narrated (52); run: 5 of 5 blocks kept
   principle: you declare a world in a language made for it, and you govern how that world changes.
 - 4. The platform in one picture [draft, spine] agents/ch4-the-platform-in-one-picture.md; guards: 00_stzapp_narrated (3), 06_stzsuperapp_narrated (21), full_scope_model_narrated (62), 01_platform_narrated (31), threat_model_narrated (11); run: 8 of 8 blocks kept

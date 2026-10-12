@@ -62,3 +62,15 @@ site (`stzsite`) is another repository, untouched: its hero lines say "makers" i
 `tools/build.py` lines 99, 127 and 676; `content/en/tour.md:11` and its French twin; `README.md:3`), plus
 `llms.txt:3` and the Offering's "What is a maker?". The book and the site now carry two words until the site is changed;
 that is one line for Central, listed in the memo.
+
+**VOICE-01 · 2026-10-12 update.** The author, in chat: "Go ahead with Phase A, I confirm the three rulings". VOICE-01 (the tool stays "it" and the reader "you"; no 2019 flourish added by agents; exclamations by placement; the metaphor register as drafted) is the author's ruling, no longer a delegated one. The register's eight flags (METAPHORS.md) are not covered by it and stay open.
+
+**PHASEA-01 · 2026-10-12.** The author, in chat, ruled on the register's flags and the plan's calls (rulings of record, not delegated):
+(1) the crafter is one sentence joining the site's and the glossary's: *whoever declares what they know about a world, and owns what they declare; skill is not part of it* (chapter 2, Appendix D);
+(2) **"forge" everywhere** for the library's language-producing machinery, "factory" dropped (chapters 11, 12, 16; Appendix D gained *forge*); « forge » in French;
+(3) chapter 16's "seven" = the six runtimes of the registry plus the host, the model is not one of them;
+(4) the Regexuter's "a reflex arc" is kept; "the intelligence of a place" is cut (chapter 9);
+(5) **chapter 1 corrected** with the 14 verified items of `research/verify/ch01.md` (the corrections are listed in `research/voice/PHASE-A-REPORTS-2026-10-12.md`);
+(6) **stakes owned**: where a chapter states a conviction as fact with no proof on the page, one first-person clause owns it ("I hold this as a view, not a result"), 40 in all, no reason added that the page did not hold;
+(7) "for the first time in computer science history" is his phrase and stays, with the study's caution (chapter 15); "far from being qualified" is his own verdict (chapter 21).
+Still open and asked of him: the particulars of Phase A (the interview of 2026-10-12, questions 1 to 15).

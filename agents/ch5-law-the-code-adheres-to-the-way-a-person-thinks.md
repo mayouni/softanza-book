@@ -4,7 +4,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain, with a promise under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -120,7 +120,7 @@ Five values, the starting one included, and the chain ends at 46! The article th
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, five of the fourteen running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, five of the fourteen running over the graph of the code, so that a person or an agent can check a class before it lands. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -180,7 +180,7 @@ What is absent: any machine that judges, today, the style of a program written w
 
 **The designer.** The verb's form is an interface contract: by the library's convention, the past participle does not touch the object. A court for that rule is designed, not built.
 
-**The decision-maker.** A style a machine can be held to can be reviewed goal by goal, not line by line, which is the only reading one person can give to hundreds of thousands of lines.
+**The decision-maker.** I hold this as a view, not a result: a style a machine can be held to can be reviewed goal by goal, not line by line, which is the only reading one person can give to hundreds of thousands of lines.
 
 **The educator.** Teach the discipline whole, and in order: formulate, then express, then be judged.
 

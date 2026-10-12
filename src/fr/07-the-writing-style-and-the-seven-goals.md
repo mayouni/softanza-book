@@ -32,7 +32,7 @@ Pour les buts, le terrain dit *attributs de qualité*. La norme ISO de qualité 
 
 **Ce que vous pensez est ce que vous écrivez.** C'est la phrase du chapitre 5, tirée du schéma de 2020, et je ne l'argumente pas de nouveau. Le chapitre 5 a pris cinq règles du style. Ce chapitre prend le reste, comme une grammaire, puis les buts sous lesquels la grammaire a été conçue.
 
-Pour les buts, le point est celui de l'auteur, tel que l'étude le rapporte, et non une citation datée. Une architecture logicielle orientée par les buts est la seule façon pour un architecte de maîtriser un projet de cette taille.
+Pour les buts, le point est celui de l'auteur, tel que l'étude le rapporte, et non une citation datée. Une architecture logicielle orientée par les buts est la seule façon pour un architecte de maîtriser un projet de cette taille. Je tiens cela pour une vue, non pour un résultat. Ce qui la soutient sur cette page est un seul cas : la matrice de 2022 a servi de squelette à un architecte pour environ trois cent mille lignes écrites à la main (section 6).
 
 ## 3. La forme Softanza
 

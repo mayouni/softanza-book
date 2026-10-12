@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -145,7 +145,7 @@ oCon.Revive("supplier")
 
 The call across the bond passes; the call to the sleeping world does not, and the reason is one line: `target world 'supplier' is not active.` Revived, it passes.
 
-**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations, judges them against what was measured, and a breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
+**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. I hold this as a view, not a result. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations, judges them against what was measured, and a breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -184,7 +184,7 @@ One more thing the project learned, and the library does not carry. The project'
 
 **I refused to throw the first application away.** When the owner reversed the order, the application already built was kept, dormant, until the first version of the new order was in production. The project's own words for it: nothing is thrown away.
 
-**I refused silent drift.** The Lock exists because a project that has failed once drifts without anyone deciding to. A second change of course before the first version runs in production is refused, and so is an idea that enters the cycle without a written exit.
+**I refused silent drift.** The Lock exists because a project that has failed once drifts without anyone deciding to. That is my view. A second change of course before the first version runs in production is refused, and so is an idea that enters the cycle without a written exit.
 
 **I refused the agreeable fake.** A double that silently answers with an empty string produces a test that passes for the wrong reason. The sandbox declines when a gateway declines, refuses when a gateway is down, and refuses a second capture. And I refused a fixed fee before the go-live gate: no subscription to a payment institution before the owner's written go.
 

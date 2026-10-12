@@ -149,7 +149,7 @@ The three models of the article "Bridging Minds and Code", the semantic, the men
 
 ## 4. The decision, and what I refused
 
-**I made the metaphors a design goal.** The 2022 presentation lists "human-centric metaphors" as one of seven design goals, and its four features are these four. A goal is what makes a feature justifiable or refusable, so I did not leave the metaphors as a nicety of the documentation. They are one of the reasons the library has the shape it has.
+**I made the metaphors a design goal.** The 2022 presentation lists "human-centric metaphors" as one of seven design goals, and its four features are these four. A goal is what makes a feature justifiable or refusable. I hold this as a view, not a result. So I did not leave the metaphors as a nicety of the documentation. They are one of the reasons the library has the shape it has.
 
 **I replaced `eval` with a language the engine owns.** The condition seat used to be compiled by evaluating the string as code, with a more expressive but slower extended form on the side. I removed both. The engine now reads the condition in its own small language, and the library keeps the host-code form as a separate verb, WF, with its warning. I refused arbitrary code from text, and I refused to split speed from expressiveness: the extended form is retired because the plain one does everything it did.
 
@@ -169,7 +169,7 @@ The field leads in openness. A lambda carries any logic. The W language is bound
 
 The field leads in reach and in tooling. Iterators and comprehensions are in every mainstream language, with editor support, type checking and a literature. These four metaphors exist in one library.
 
-And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table with no loss on it is the shape of a brochure.
+And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table with no loss on it is the shape of a brochure. This is my view, held on this table: thirteen rows, none with a loss.
 
 ## 7. The limit
 

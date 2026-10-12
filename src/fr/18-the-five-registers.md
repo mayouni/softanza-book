@@ -178,7 +178,7 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence, et le silence est la pire réponse : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute. Les mêmes exemples tapés comme une seule chaîne, jointe par une virgule, sont découpés et admis comme deux valeurs littérales, et le but se lit accompli. Les exemples sont devenus la connaissance. Rien n'a été induit.
+Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence, et je tiens le silence pour la pire réponse, comme une vue et non comme un résultat : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute. Les mêmes exemples tapés comme une seule chaîne, jointe par une virgule, sont découpés et admis comme deux valeurs littérales, et le but se lit accompli. Les exemples sont devenus la connaissance. Rien n'a été induit.
 
 Ainsi trois des cinq registres sont câblés, l'un d'eux sous sa forme la plus simple, un séparateur. Deux ne le sont pas. Je préfère que vous le rencontriez ici plutôt que sur une page de moi qui aurait dit cinq.
 
@@ -336,7 +336,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **J'ai refusé de deviner.** La phrase du dossier est : deviner est remplacé par demander ; les impressions sont remplacées par la gouvernance. Un écart est une question. Une réponse est un candidat.
 
-**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance. Les cinq registres passent par une seule porte.
+**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance, et je tiens cela pour une vue, non pour un résultat. Les cinq registres passent par une seule porte.
 
 **J'ai refusé un bouchon.** Un agent réservé lève une erreur quand on le demande. Le document de conception le dit sans détour : l'erreur levée est la loi qui fonctionne, et il ne faut pas la lire comme un défaut. J'ai refusé de faire semblant que le cinquième registre fonctionne.
 

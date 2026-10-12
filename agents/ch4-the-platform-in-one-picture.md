@@ -4,7 +4,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -177,7 +177,7 @@ The field's text libraries lead on locale: Softanza's own map says that the clea
 
 The field's super-app hosts run real users at a scale this platform has never met. The record names them as the model it refused and measures nothing against them, so I will not either.
 
-And the Atlas itself prints where Softanza is weak: the binary area is a plan with no shipped code, the plugin, foreign-function and embed plane of extensibility is mostly planned, the system area has few strong lanes. A map that prints its weak areas is the only kind worth reading.
+And the Atlas itself prints where Softanza is weak: the binary area is a plan with no shipped code, the plugin, foreign-function and embed plane of extensibility is mostly planned, the system area has few strong lanes. I hold this as a view, not a result: a map that prints its weak areas is the only kind worth reading.
 
 ## 7. The limit
 

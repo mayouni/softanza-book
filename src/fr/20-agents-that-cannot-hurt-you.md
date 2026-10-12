@@ -316,11 +316,11 @@ Le compte de sept opérations est ce que cette exécution mesure. La garde de la
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé les agents sûrs.** La raison de la doctrine est que la sûreté du terrain essaie de rendre digne de confiance un acteur fondamentalement imprévisible. Demander si l'agent pourrait s'échapper, c'est comme demander si un moteur d'échecs pourrait déplacer une pièce sur un échiquier physique. La doctrine dit que la surface d'outils de l'agent ne contient aucune opération qui touche le disque, une base de données ou le réseau. C'est l'affirmation de la doctrine, et la section 6 en donne les limites.
+**J'ai refusé les agents sûrs.** La raison de la doctrine est que la sûreté du terrain essaie de rendre digne de confiance un acteur fondamentalement imprévisible. Je tiens cette raison pour une vue, non pour un résultat. Demander si l'agent pourrait s'échapper, c'est comme demander si un moteur d'échecs pourrait déplacer une pièce sur un échiquier physique. La doctrine dit que la surface d'outils de l'agent ne contient aucune opération qui touche le disque, une base de données ou le réseau. C'est l'affirmation de la doctrine, et la section 6 en donne les limites.
 
 **J'ai refusé un contrôle de permission comme frontière.** Ce n'est pas un contrôle que l'agent ne pourrait pas contourner. Les pouvoirs sont séparés : la créativité sans l'autorité, l'autorité sans la créativité.
 
-**J'ai refusé un second atelier pour les machines.** Le bac à sable est le même atelier que le programmeur humain utilise déjà. Le cadre a été conçu pour des programmeurs humains, et tout ce qui est conçu pour en libérer un est exactement ce qu'il faut pour en contenir un artificiel.
+**J'ai refusé un second atelier pour les machines.** Le bac à sable est le même atelier que le programmeur humain utilise déjà. Le cadre a été conçu pour des programmeurs humains, et tout ce qui est conçu pour en libérer un est exactement ce qu'il faut pour en contenir un artificiel. C'est mon point de vue, non un résultat.
 
 **J'ai refusé de laisser la barrière facultative.** La décision du 22 août 2026 dit que la barrière d'enregistrement est la doctrine, et que l'adhésion volontaire est un état de migration, non le dessin. Le dossier est honnête sur la découverte derrière la décision : là où la doctrine des agents qui ne peuvent pas vous nuire s'imposait ce jour-là, il n'y avait rien. Le monde sûr existait, et le répertoire agentique n'en mentionnait rien. La décision l'a refermé le jour même.
 

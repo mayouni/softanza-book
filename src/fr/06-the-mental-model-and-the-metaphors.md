@@ -149,7 +149,7 @@ Les trois modèles de l'article « Bridging Minds and Code », le sémantique, l
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai fait des métaphores un but de conception.** La présentation de 2022 liste les « métaphores centrées sur l'humain » comme l'un des sept buts de conception, et ses quatre fonctionnalités sont ces quatre. Un but est ce qui rend une fonctionnalité justifiable ou refusable, alors je n'ai pas laissé les métaphores comme une politesse de la documentation. Elles sont l'une des raisons pour lesquelles la bibliothèque a la forme qu'elle a.
+**J'ai fait des métaphores un but de conception.** La présentation de 2022 liste les « métaphores centrées sur l'humain » comme l'un des sept buts de conception, et ses quatre fonctionnalités sont ces quatre. Un but est ce qui rend une fonctionnalité justifiable ou refusable. Je tiens cela pour une vue, non pour un résultat. Alors je n'ai pas laissé les métaphores comme une politesse de la documentation. Elles sont l'une des raisons pour lesquelles la bibliothèque a la forme qu'elle a.
 
 **J'ai remplacé `eval` par un langage que le moteur possède.** L'emplacement de la condition était compilé en évaluant la chaîne comme du code, avec une forme étendue plus expressive mais plus lente à côté. J'ai retiré les deux. Le moteur lit maintenant la condition dans son propre petit langage, et la bibliothèque garde la forme en code hôte comme un verbe séparé, WF, avec son avertissement. J'ai refusé le code arbitraire venu d'un texte, et j'ai refusé de séparer la vitesse de l'expressivité : la forme étendue est retirée parce que la simple fait tout ce qu'elle faisait.
 
@@ -169,7 +169,7 @@ Le terrain mène en ouverture. Une lambda porte n'importe quelle logique. Le lan
 
 Le terrain mène en portée et en outillage. Les itérateurs et les compréhensions sont dans tous les langages courants, avec le soutien des éditeurs, la vérification des types et une littérature. Ces quatre métaphores existent dans une seule bibliothèque.
 
-Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table sans aucune perte est la forme d'une brochure.
+Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table sans aucune perte est la forme d'une brochure. C'est mon point de vue, tenu sur cette table : treize lignes, aucune avec une perte.
 
 ## 7. La limite
 

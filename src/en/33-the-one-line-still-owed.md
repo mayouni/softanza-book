@@ -118,11 +118,11 @@ The record also holds the opposite, honestly. The pictures the library draws wer
 
 **I refused a reference without a document.** The site counts a project as a reference only when a document proves it, and it quotes no number of countries and no number of programmers. A lesson is listed only when a file of the library carries it.
 
-**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. Rewriting would be faster to announce and slower to trust.
+**I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. I hold this as a view, not a result: rewriting would be faster to announce and slower to trust.
 
 **I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. The study that read the record ruled that the figure should not be printed without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
 
-**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict.
+**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. This is my view, and the sound plane above, with its hundreds of passing assertions and its broken sound, is what stands behind it.
 
 ## 5. The court
 

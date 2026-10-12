@@ -259,7 +259,7 @@ The sum of every absent cell is the one line chapter 33 says is still owed: *the
 
 **The analyst.** When you cite a project, write three columns: the claim, the document, and what is absent. Do not fill the third from memory.
 
-**The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology.
+**The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
 
 **The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document, and you can ask for it in writing, with a name beside it.
 

@@ -81,7 +81,7 @@ oG.RulesReport()
 
 The report now says `2 finding(s), 2 error(s)` where it said one, and the scope is `3` where it was `2`. I have to be honest about what this block shows. The "change" is a rule rebuilt in code with another number. That the organisation's own person changes it like filling in a form is the study's promise, and I did not find a file of the library that makes it so. Section 7 says what does and does not exist.
 
-What the library does carry is the answer to the worst thing that can go wrong when a non-programmer edits a rule: a rule that quietly governs nothing. Misspell a property, and the rule finds nothing, and the model reports that it is sound. What does a rule governor say of the same rule? The class is `StzRuleGovernance`; it asks rules what they govern and not what they say, and it names the dead rule:
+What the library does carry is the answer to the worst thing that can go wrong when a non-programmer edits a rule: a rule that quietly governs nothing. I hold that as a view, not a result. Misspell a property, and the rule finds nothing, and the model reports that it is sound. What does a rule governor say of the same rule? The class is `StzRuleGovernance`; it asks rules what they govern and not what they say, and it names the dead rule:
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")

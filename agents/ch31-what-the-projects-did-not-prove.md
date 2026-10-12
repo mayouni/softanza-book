@@ -4,7 +4,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 did not prove. I start with the field's three habits for saying what a piece of work has proved. Then I run five small blocks in which the library shows an absence by refusing, and I lay out the tables: for each project, the claim, the document or file that proves it, and what is absent. I say what I refused, the author's memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -259,7 +259,7 @@ The sum of every absent cell is the one line chapter 33 says is still owed: *the
 
 **The analyst.** When you cite a project, write three columns: the claim, the document, and what is absent. Do not fill the third from memory.
 
-**The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology.
+**The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
 
 **The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document, and you can ask for it in writing, with a name beside it.
 

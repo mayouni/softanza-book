@@ -16,7 +16,7 @@ rulings: ["12.10", "12.21", "12.27", "12.29", "12.30"]
 research: research/ch12.md
 ---
 
-Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour l'usine, une forge qui transforme une déclaration en tribunal et en grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
+Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour la forge, la machinerie qui transforme la seule déclaration d'un langage en son tribunal et sa grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -168,11 +168,11 @@ o = new stzList([ 4, 7, 10, 3, 8 ])
 
 Ce que j'ai vu, et que la narration ne dit pas : le refus est silencieux et entier. Une condition dont la branche gauche est vraie et dont la droite porte un sinus a imprimé `[ ]`. Une condition qui appelle une fonction de moi ne l'a jamais appelée. Une erreur de syntaxe a aussi imprimé `[ ]`. Le langage est fermé, et il refuse sans un mot. La couche naturelle du chapitre 11 dit pourquoi elle refuse, et celle-ci ne le dit pas.
 
-### L'usine, hors de la bibliothèque
+### La forge, hors de la bibliothèque
 
-Un langage déclaré une fois devrait donner son tribunal, sa bouche, sa voix et ses lecteurs. C'est l'usine, et c'est là que l'étude de ce livre rencontre sa propre limite : l'usine n'est pas dans la bibliothèque.
+Un langage déclaré une fois devrait donner son tribunal, sa bouche, sa voix et ses lecteurs. C'est la forge, et c'est là que l'étude de ce livre rencontre sa propre limite : la forge n'est pas dans la bibliothèque.
 
-Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. Une forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet. Chacun a été jugé sur les cas propres du langage préexistant : sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, sur les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à l'usine elle-même.
+Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. La forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet. Chacun a été jugé sur les cas propres du langage préexistant : sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, sur les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à la forge elle-même.
 
 J'ai fait tourner la forge sur un petit langage que j'ai écrit pour ce livre, la commande d'une table dans les mots de la salle à manger. C'est un exemple, écrit pour le livre et exécuté une fois, hors de la bibliothèque :
 
@@ -203,9 +203,9 @@ Trois observations de plus, chacune une limite.
 
 **Le méta-tribunal refuse l'échappatoire.** La déclaration du langage des déclarations liste les opérateurs et les opérandes qu'elle peut employer. Une déclaration qui listait `eval` parmi ses opérateurs, dans une fixture épinglée le 29 août 2026, a été refusée : `eval` n'est pas dans le menu fermé des opérateurs, une échappatoire est inexprimable, non interdite. Un appel hôte parmi les opérandes a été refusé de la même façon.
 
-**La grammaire de l'usine ne tient que la forme.** Un siège de menu ressort comme un identifiant général, donc la grammaire forgée laisse passer `pizza`. Le compilateur de schémas de la bibliothèque, dans les blocs ci-dessus, ferme le même menu en une alternance. Sur le langage machine du domaine de projets, la grammaire forgée accepte une référence pendante que le tribunal refuse. Le dossier nomme une différence entre la bouche et le tribunal, la part qu'une grammaire hors contexte ne peut pas dire : les noms en double, les références pendantes. Je n'ai trouvé aucun enregistrement qui énonce le manque du menu comme un manque.
+**La grammaire de la forge ne tient que la forme.** Un siège de menu ressort comme un identifiant général, donc la grammaire forgée laisse passer `pizza`. Le compilateur de schémas de la bibliothèque, dans les blocs ci-dessus, ferme le même menu en une alternance. Sur le langage machine du domaine de projets, la grammaire forgée accepte une référence pendante que le tribunal refuse. Le dossier nomme une différence entre la bouche et le tribunal, la part qu'une grammaire hors contexte ne peut pas dire : les noms en double, les références pendantes. Je n'ai trouvé aucun enregistrement qui énonce le manque du menu comme un manque.
 
-**La vision n'a pas rattrapé.** Le texte de la vision, daté entre le 27 septembre et le 5 octobre 2026, dit que la forge n'a pas forgé. Le fichier des principes, daté du 1er octobre 2026, dit que la forge n'existe pas. Le même dépôt a construit le spike le même jour et forgé pour plusieurs langages. La phrase vraie a donc deux côtés. L'usine a forgé des tribunaux et des grammaires pour plusieurs langages, hors de la bibliothèque, et elle n'a pas forgé la liste complète que le principe promet. Et le texte de la vision n'a pas été mis à jour. Dans les mots d'étape du livre, l'usine est construite hors de la bibliothèque et conçue pour la bibliothèque, et la limite du chapitre 11 le dit de même.
+**La vision n'a pas rattrapé.** Le texte de la vision, daté entre le 27 septembre et le 5 octobre 2026, dit que la forge n'a pas forgé. Le fichier des principes, daté du 1er octobre 2026, dit que la forge n'existe pas. Le même dépôt a construit le spike le même jour et forgé pour plusieurs langages. La phrase vraie a donc deux côtés. La forge a forgé des tribunaux et des grammaires pour plusieurs langages, hors de la bibliothèque, et elle n'a pas forgé la liste complète que le principe promet. Et le texte de la vision n'a pas été mis à jour. Dans les mots d'étape du livre, la forge est construite hors de la bibliothèque et conçue pour la bibliothèque, et la limite du chapitre 11 le dit de même.
 
 ### Les facettes d'un langage déclaré
 
@@ -233,7 +233,7 @@ Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une
 
 **J'ai refusé une forme d'échappatoire ouverte.** Aucune clause, aucun opérateur ni opérande ne désigne du code hôte, des appels, une évaluation ou des entrées et sorties. Inexprimable, non interdit. Deux fixtures épinglent le refus, et je les ai relancées.
 
-**J'ai refusé la logique dans la surface de déclaration.** La déclaration déclare et ne calcule pas. L'alphabet n'est délibérément pas Turing-complet, et c'est sa puissance et non sa pauvreté.
+**J'ai refusé la logique dans la surface de déclaration.** La déclaration déclare et ne calcule pas. L'alphabet n'est délibérément pas Turing-complet, et c'est sa puissance et non sa pauvreté. C'est mon point de vue.
 
 **J'ai refusé le langage naturel comme surface de déclaration.** Le langage naturel demande, et il ne déclare jamais. Un brouillon peut être proposé, et le tribunal décide, et l'humain ratifie.
 
@@ -247,7 +247,7 @@ Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une
 
 `structuredoutput_narrated` prouve qu'une déclaration est jugée quand elle est déclarée, avec un type inconnu, une clé inconnue et un menu vide refusés. Elle prouve que deux formes de transmission sont lues et que rien n'est deviné, qu'il n'y a pas de crédit partiel, que l'imbrication fonctionne, et qu'une nouvelle tentative tient dans un seul budget. Dans sa dixième scène, elle prouve qu'un mensonge est laissé passer exprès. `schema_grammar_narrated` prouve que la déclaration se compile en grammaire, et qu'une énumération fermée devient une alternance fermée. Elle prouve que l'optionnel et l'arité des listes sont traités, que les contraintes non imposées sont listées par champ et par opérateur, et qu'une structure imbriquée est refusée avec un code nommé. `constrained_decoding_narrated` prouve que la machine parcourt une grammaire octet par octet, qu'un préfixe n'est pas un tout, et que `yesterday` est refusé. Elle prouve que le substitut écrit par le modèle ne peut pas être atteint, que les refus sont nommés, que la structure n'est pas la vérité, et qu'une grammaire sur une session en flux est refusée. Ses deux scènes qui demandent un modèle génératif le disent. `483_w_and_wf_forms_in_conditional_code` prouve que les deux formes d'une condition donnent les mêmes positions. Elle n'affirme pas le refus du langage fermé, et aucune garde ne l'affirme.
 
-Aucune garde de la bibliothèque ne teste une usine, puisqu'il n'y en a pas. La garde de l'usine est à l'extérieur : le spike passe vingt-trois étapes en 367,5 secondes le 4 octobre 2026, d'après son propre fichier. Je ne l'ai pas lancé. Et la première exécution du méta-tribunal lui-même fut de vingt-huit sur vingt-huit le 29 août 2026. Le lecteur de gardes du livre ne résout que les gardes de l'arbre de tests de la bibliothèque, donc celles-ci ne peuvent pas être nommées dans le front matter.
+Aucune garde de la bibliothèque ne teste une forge, puisqu'il n'y en a pas. La garde de la forge est à l'extérieur : le spike passe vingt-trois étapes en 367,5 secondes le 4 octobre 2026, d'après son propre fichier. Je ne l'ai pas lancé. Et la première exécution du méta-tribunal lui-même fut de vingt-huit sur vingt-huit le 29 août 2026. Le lecteur de gardes du livre ne résout que les gardes de l'arbre de tests de la bibliothèque, donc celles-ci ne peuvent pas être nommées dans le front matter.
 
 Le chiffre selon lequel le premier essai est valide dans deux cas sur dix quand on vérifie après coup, et dans dix sur dix quand il est contraint, est un nombre dans un commentaire de ces gardes. On ne peut pas le reprendre ici : les scènes réelles demandent un fichier de modèle génératif, et l'instantané ne contient, dans son dossier des modèles, qu'un fichier de somme de contrôle. Le chapitre 11 porte le chiffre, et j'y renvoie.
 
@@ -255,13 +255,13 @@ Le chiffre selon lequel le premier essai est valide dans deux cas sur dix quand 
 
 Les ateliers de langages mènent sur l'outillage. L'étude de terrain le dit elle-même : ils restent supérieurs sur les axes que la conception abandonne délibérément, l'outillage projectionnel, l'intégration à l'éditeur et la profondeur des macros. Et le pari que ces axes sont les mauvais est nommé comme un pari.
 
-Le code généré rend bon marché aussi la fabrication indisciplinée de langages, et c'est pourquoi le tribunal est le cœur et non un accessoire.
+Le code généré rend bon marché aussi la fabrication indisciplinée de langages, et c'est pourquoi le tribunal est le cœur et non un accessoire. Je tiens cela pour une vue, non pour un résultat.
 
 Le décodage contraint : le terrain l'a construit le premier, et l'implémentation de référence est celle d'une autre bibliothèque. Ce que le dossier ajoute, c'est l'appariement : une grammaire et un tribunal issus d'une seule déclaration, et la liste de ce que la grammaire a laissé tomber.
 
 Une grammaire sur-approxime un tribunal. Les noms en double, les références pendantes et la cohérence d'un menu ne sont pas hors contexte. Je l'ai observé dans les deux sens plus haut : une plage que la grammaire ne peut pas porter, et une référence qu'elle ne peut pas porter.
 
-Le code qu'une usine émet doit être lu par quelqu'un. Le style de famille dont hérite chaque langage déclaré a un test de réussite : apprendre le deuxième langage devrait prendre une soirée, parce que c'est le premier langage avec d'autres verbes. C'est une exigence de conception et non une mesure. Aucun apprenant n'a été chronométré dans le dossier que j'ai lu.
+Le code qu'une forge émet doit être lu par quelqu'un. Le style de famille dont hérite chaque langage déclaré a un test de réussite : apprendre le deuxième langage devrait prendre une soirée, parce que c'est le premier langage avec d'autres verbes. C'est une exigence de conception et non une mesure. Aucun apprenant n'a été chronométré dans le dossier que j'ai lu.
 
 ## 7. La limite
 
@@ -283,9 +283,9 @@ Ce qui est construit : dans la bibliothèque, une déclaration jugée quand elle
 
 Ce qui est construit, mais hors de la bibliothèque : une forge d'une déclaration vers un tribunal et une grammaire, dans le dépôt de la charte de Haro.
 
-Ce qui est conçu : la forge qui produit, à partir d'une seule déclaration, l'analyseur, le tribunal, l'imprimeur, la grammaire, le graphe de connaissance, la grammaire de requête, la porte naturelle, la narration, le runtime et un binaire statique. D'après ma lecture de la charte, le spike a montré le tribunal, la grammaire, un runtime qui parcourt la déclaration, une grammaire de requête, une narration et le tribunal de la lettre naturelle. Je n'ai pas trouvé montré un imprimeur pour les phrases déclarées, un graphe de connaissance forgé à partir d'une déclaration, ni le binaire statique unique par langage. La bibliothèque qui a une usine : rien en elle ne déclare ni ne forge un langage. Une grammaire pour chaque langage déclaré livrée dans la bibliothèque : promise dans le noyau, non livrée. Et les projections : le monde rendu à une application, un serveur, une page, un appareil.
+Ce qui est conçu : la forge qui produit, à partir d'une seule déclaration, l'analyseur, le tribunal, l'imprimeur, la grammaire, le graphe de connaissance, la grammaire de requête, la porte naturelle, la narration, le runtime et un binaire statique. D'après ma lecture de la charte, le spike a montré le tribunal, la grammaire, un runtime qui parcourt la déclaration, une grammaire de requête, une narration et le tribunal de la lettre naturelle. Je n'ai pas trouvé montré un imprimeur pour les phrases déclarées, un graphe de connaissance forgé à partir d'une déclaration, ni le binaire statique unique par langage. La bibliothèque qui a une forge : rien en elle ne déclare ni ne forge un langage. Une grammaire pour chaque langage déclaré livrée dans la bibliothèque : promise dans le noyau, non livrée. Et les projections : le monde rendu à une application, un serveur, une page, un appareil.
 
-Ce qui est absent : la grammaire de la forge pour un mot de menu, que j'ai vue ne tenir que la forme, plus haut, et le chiffre de deux sur dix contre dix sur dix, repris. Et tout enregistrement que l'usine tourne sur le runtime de Haro. Au moment où la vision a été écrite, le langage n'existait pas ; les exécutions de la charte sont sur le runtime plus ancien et sur l'oracle.
+Ce qui est absent : la grammaire de la forge pour un mot de menu, que j'ai vue ne tenir que la forme, plus haut, et le chiffre de deux sur dix contre dix sur dix, repris. Et tout enregistrement que la forge tourne sur le runtime de Haro. Au moment où la vision a été écrite, le langage n'existait pas ; les exécutions de la charte sont sur le runtime plus ancien et sur l'oracle.
 
 ## 8. Six portes
 
@@ -295,7 +295,7 @@ Ce qui est absent : la grammaire de la forge pour un mot de menu, que j'ai vue n
 
 **Le concepteur.** Le refus est déclaré à côté de la grammaire, dans la voix du domaine, et n'est pas rédigé par runtime. Un concepteur choisit ce que dit un menu fermé quand il est rompu.
 
-**Le décideur.** Une seule déclaration produit la bouche et le tribunal, et l'usine elle-même publie où ils sont en désaccord. L'usine est aujourd'hui hors de la bibliothèque. Ne l'achetez pas comme livrée.
+**Le décideur.** Une seule déclaration produit la bouche et le tribunal, et la forge elle-même publie où ils sont en désaccord. La forge est aujourd'hui hors de la bibliothèque. Ne l'achetez pas comme livrée.
 
 **Le formateur.** Le lecteur peut prédire, octet par octet, ce que l'échantillonneur permettra, et apprend qu'une grammaire tue la malformation et non la fausseté.
 

@@ -316,11 +316,11 @@ The count of seven operations is what this run measures. The library's own guard
 
 ## 4. The decision, and what I refused
 
-**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
+**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
 
 **I refused a permission check as the boundary.** It is not a check that the agent might route around. The powers are separated: creativity without authority, authority without creativity.
 
-**I refused a second workbench for machines.** The sandbox is the same workbench that the human programmer already uses. The framework was conceived for human programmers, and everything designed to liberate one is exactly what is needed to contain an artificial one.
+**I refused a second workbench for machines.** The sandbox is the same workbench that the human programmer already uses. The framework was conceived for human programmers, and everything designed to liberate one is exactly what is needed to contain an artificial one. I hold this as a view, not a result.
 
 **I refused to leave the gate optional.** The ruling of 22 August 2026 says the registration gate is doctrine, and that opting in is a migration state, not the design. The record is honest about the finding behind the ruling: where the doctrine of agents that cannot hurt you bound that day was nowhere. The safe world existed, and the agentic folder did not mention any of it. The ruling closed it the same day.
 

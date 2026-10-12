@@ -4,7 +4,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -201,7 +201,7 @@ Under a future runtime the promise changes, as the proof line says.
 
 **I let everything go into base.** My sentence, as the study reports it: under the pressure of time, everything went into base, waiting for the right moment to refactor again. By my count below, base is ninety-three per cent of the lines.
 
-**I chose safe optimisation.** Not the fastest mode, and not the unoptimised one: a clean panic beats silent memory corruption, and here it costs nothing.
+**I chose safe optimisation.** Not the fastest mode, and not the unoptimised one. I hold it as a view, not a result, that a clean panic beats silent memory corruption, and that here it costs nothing.
 
 **I refused a headline that does not reproduce.** The memo of 13 September 2026 says the claim to retire is that the runtime beats the fast peer, present tense, on x64. Chapter 22 told the refusal, and section 6 prints the rows.
 
@@ -288,7 +288,7 @@ I tell what is built, what is designed, and what is absent, as the record has it
 
 **The designer.** A layer is a decision about what you ship, and not about taste. At the binary, core and base have a library per domain and the third layer has none; the web subset, which chapters 4 and 24 show, is a subset and not a layer.
 
-**The decision-maker.** The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. A record that prints its loss is the only kind to trust.
+**The decision-maker.** The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. This is my view: a record that prints its loss is the only kind to trust.
 
 **The educator.** Teach the dependency rule by making a learner load the core alone and predict, then count. Teach "measured, never asserted" with the memo of 13 September 2026.
 

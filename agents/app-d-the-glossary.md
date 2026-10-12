@@ -32,7 +32,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **court.** The judge of a thing. A court says kept or refused, and says why in the words of the declaration. A language is born with its court. Chapters 5, 11, 12, 21.
 
-**crafter.** Whoever is declaring, at the moment they declare. Chapter 2.
+**crafter.** Whoever declares what they know about a world, and owns what they declare. Skill is not part of it. Chapter 2.
 
 **declare.** To say what a thing is before it is built, in a text a court can judge. The act of the kernel. Chapters 3, 12.
 
@@ -47,6 +47,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 **fake.** A double that says it is one: a sandbox, a mail sink, a recorded answer. A fake must never ship. A double that says nothing about itself is taken for live, and passes the gate. Chapter 24.
 
 **floor.** One level of the platform's picture, from the engine at the bottom to the organisation at the top, each with its judge beside it. Not a layer of the library (core, base, max) and not a plane. Chapter 4.
+
+**forge.** The machinery that produces a language's court, mouth, printer and grammar from its declaration alone. Built outside the library, designed for it. Chapters 11, 12.
 
 **gap.** What a goal needs and the world does not yet hold. A conversation that asks starts from the gap. Chapter 17.
 

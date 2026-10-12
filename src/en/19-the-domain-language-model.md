@@ -221,7 +221,7 @@ The field leads in scale. Training and serving models of every size is a mature 
 
 The field leads in fluency, which is the point of a model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
 
-Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one, and every proposal of the second can be put to a gate that can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign.
+Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one, and every proposal of the second can be put to a gate that can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
 
 ## 7. The limit
 

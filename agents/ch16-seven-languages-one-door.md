@@ -4,7 +4,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stops at this commit: it is not governed, its way back is not closed, and the R door raises. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -115,7 +115,7 @@ oNode.Execute()
 
 The data goes in by composing the code string with the host's own list printer, since the article's marshalling functions do not exist (section 7).
 
-**Which seven?** The title commits to a number, and the record counts it four ways. The article on the plane and the article on performance count six runtimes and the host. The article on the domain library lists seven domain modules, the six and one for a language model, with a cross-domain module beside them. The study counts seven domains and calls the host the eighth, which orchestrates. The library's registry has six and no host. The vision says "the 7 selected languages" and never lists them. The engine design has a different enumeration still, five of them, with COBOL and without C, NodeJS and Prolog. I do not choose among those counts in a sentence the record does not hold. The seven I name are the six foreign runtimes of the registry above and the host, which is how the article on performance counts them. The language model is not one of them, because it is not a door of this plane at all. Chapters 17 and 20 make the model a proposer that cannot commit, while the narrations run it as a first-class runtime through a function that does not exist. Section 7 prints that as a limit. The registry above is the one that runs.
+**Which seven?** The title commits to a number, and I ruled on 12 October 2026 which one: the six foreign runtimes of the registry above and the host, as the article on the plane and the article on performance count them. The language model is not one of them, because it is not a door of this plane at all. Chapters 17 and 20 make the model a proposer that cannot commit, while the narrations run it as a first-class runtime through a function that does not exist. Section 7 prints that as a limit. The record counts it differently elsewhere: seven domain modules with one for a language model, seven domains with the host as an eighth, the registry's six without the host, the vision's "7 selected languages" that it never lists, and the engine design's five with COBOL. The registry above is the one that runs.
 
 **A facet is not a door.** Reading a foreign language is also not running it. The two languages that the author names as Haro's planned facets are also the two that the library can already read, and not run or write, into one code graph. One set of questions answers over both:
 
@@ -211,7 +211,7 @@ The field leads in speed, and speed is what the door exists for. The article on 
 
 The field leads in runtimes it can actually run. Of six doors, three ran on this machine: Node, Python, and R, which raised. The other three had no runtime to start. The study says its description of the field's polyglot tools was written from the genre and not re-read, and I claim no measured comparison.
 
-The field leads in the ecosystem and in being used. The compare page speaks of Python only as a rival; to cover its thirty rows in Python you assemble numpy, pandas and others. The door is how a Softanza solution takes them without leaving.
+The field leads in the ecosystem and in being used. The compare page speaks of Python only as a rival; to cover its thirty rows in Python you assemble numpy, pandas and others. The door is how a Softanza solution takes them without leaving. I hold this as a view, not a result: section 3 shows the door carrying two runtimes in one pipeline, and nothing on this page runs numpy or pandas.
 
 The field's other loss is that the foreign process is outside the court. Chapter 21's threat model puts code already running in the process out of scope.
 

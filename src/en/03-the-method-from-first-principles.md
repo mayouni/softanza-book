@@ -121,7 +121,7 @@ And the book is judged the way the library is. Every block in it ran inside the 
 
 There is no single record of a decision called "the method". The method was decided in pieces, and the pieces are in the record.
 
-**I refused to add a feature without a need.** I wrote it in an article of the library, which carries no date. "I introduce new features only when they solve a tangible problem or when I anticipate they'll meet developers' needs." First principles without that rule produce a museum. With it, a rethink has to earn its place: someone had a problem the field's form did not answer.
+**I refused to add a feature without a need.** I wrote it in an article of the library, which carries no date. "I introduce new features only when they solve a tangible problem or when I anticipate they'll meet developers' needs." First principles without that rule produce a museum. That is my view, not a result. With it, a rethink has to earn its place: someone had a problem the field's form did not answer.
 
 **I refused general-purpose code as the meeting ground between people and machines.** The vision of the platform says it in one line, which I ratified. Humans and AIs meet in declared languages, small, closed and judged, and not in general-purpose code. Declaring is the first act because it makes the second possible. A court can only judge a sentence of a language it knows.
 
@@ -141,7 +141,7 @@ The rethink of emptiness stands on `612_dealing_in_emptiness_in_softanza.ring`, 
 
 The field leads in adoption. Decision records are a light standard that many teams use, with templates and tools around them. The decision element of this book exists in this book and in one study of the record, and not yet as data in the library. Examples in documentation can be run by the standard tool of Python, and Rust runs them by default. The promises of Softanza are judged by the house's own runners, which no outside tool reads. And the field's habit of comparing by grid is no worse than the record's, which shows the same weakness on its own pages.
 
-Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record does not run. An example does not say what was refused. Here they are one object.
+Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. I hold this as a view, not a result. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record does not run. An example does not say what was refused. Here they are one object.
 
 ## 7. The limit
 

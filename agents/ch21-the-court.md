@@ -4,7 +4,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code, and show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused: the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -101,7 +101,7 @@ next
 
 > run: kept
 
-It answers `8`, `7` and `HEARD`: eight declared, seven unperceived, one heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by the author on 26 September 2026, through five original examples, and the record's words are that it is "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, is not yet said. Those words are the record's, quoted from it, and they are the one recorded perception that is a refusal.
+It answers `8`, `7` and `HEARD`: eight declared, seven unperceived, one heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
 
 The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
@@ -234,9 +234,9 @@ The fleet here is a rehearsal double, any object that answers the same effectful
 
 **I refused a second assertion library.** The promise runner's rulings refuse a second library, a rewrite of the test files, a coverage percentage before there are routes, and a mock written for a platform's production. They refuse the word "verified" on a perceptual claim without a name and a sentence.
 
-**I refused to fold unjudged or unperceived into pass or fail.** A stop has five states and no sixth: kept, diverged, unreached, unjudged, unperceived. A runner that folds unjudged or unperceived into pass or fail is wrong.
+**I refused to fold unjudged or unperceived into pass or fail.** A stop has five states and no sixth: kept, diverged, unreached, unjudged, unperceived. A runner that folds unjudged or unperceived into pass or fail is wrong. I hold this as a view, not a result.
 
-**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning.
+**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning. This is my view.
 
 **I refused to detect everything.** Detections are declared. The sentinel speaks on transitions only: quiet, one alarm after five wrong passwords, and nothing new after a sixth, since the story did not restart. It does not write its own firings into the ledger, because detections over detection events invite feedback loops.
 

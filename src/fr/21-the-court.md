@@ -105,7 +105,7 @@ next
 #--> HEARD
 ```
 
-Il répond `8`, `7` et `HEARD` : huit déclarées, sept non perçues, une entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par l'auteur le 26 septembre 2026, à travers cinq exemples originaux, et les mots du dossier sont qu'elle est « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, n'est pas encore dit. Ces mots sont ceux du dossier, cités de lui, et ils sont l'unique perception enregistrée qui soit un refus.
+Il répond `8`, `7` et `HEARD` : huit déclarées, sept non perçues, une entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par moi le 26 septembre 2026, à travers cinq exemples originaux, et mon verdict a été « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, je ne l'ai pas encore dit. Ces mots sont les miens, et ils sont l'unique perception enregistrée qui soit un refus.
 
 La loi est celle du domaine de projets, c'est-à-dire de l'ensemble des projets de l'auteur, adoptée le 25 septembre 2026 sur instruction de l'auteur. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
@@ -230,9 +230,9 @@ Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes v
 
 **J'ai refusé une seconde bibliothèque d'assertions.** Les décisions du lanceur de promesses refusent une seconde bibliothèque, une réécriture des fichiers de test, et un pourcentage de couverture avant qu'il y ait des routes. Elles refusent un double écrit pour la production d'une plateforme, et le mot « vérifié » sur une affirmation perceptive sans un nom et une phrase.
 
-**J'ai refusé de plier non jugé ou non perçu en réussite ou échec.** Un arrêt a cinq états et pas de sixième : tenue, divergente, non atteinte, non jugée, non perçue. Un lanceur qui plie non jugé ou non perçu en réussite ou échec a tort.
+**J'ai refusé de plier non jugé ou non perçu en réussite ou échec.** Un arrêt a cinq états et pas de sixième : tenue, divergente, non atteinte, non jugée, non perçue. Un lanceur qui plie non jugé ou non perçu en réussite ou échec a tort. Je tiens cela pour une vue, non pour un résultat.
 
-**J'ai refusé d'analyser une preuve altérée.** Un outil qui vérifie, avertit, puis analyse quand même apprend à ses utilisateurs à ignorer l'avertissement.
+**J'ai refusé d'analyser une preuve altérée.** Un outil qui vérifie, avertit, puis analyse quand même apprend à ses utilisateurs à ignorer l'avertissement. C'est mon point de vue.
 
 **J'ai refusé de tout détecter.** Les détections sont déclarées. La sentinelle ne parle que sur les transitions : silence, une alarme après cinq mauvais mots de passe, et rien de nouveau après un sixième, puisque l'histoire n'a pas redémarré. Elle n'écrit pas ses propres déclenchements dans le registre, parce que des détections sur des événements de détection invitent des boucles de rétroaction.
 

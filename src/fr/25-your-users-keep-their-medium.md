@@ -129,7 +129,7 @@ oKT.AskIn("c")
 #--> [ "2" ]
 ```
 
-Un plat nommé 2 ! Dans le bloc d'avant, mon `ReadReply` a transformé le texte "2" en nombre 2, et l'option a été choisie. C'est la phrase la plus tranchante sur le pont : un médium ajoute des rendus, et il ajoute aussi une lecture. La lecture est l'endroit où vit la culture d'un utilisateur, les chiffres, les mots, un "OUI" local.
+Un plat nommé 2 ! Dans le bloc d'avant, mon `ReadReply` a transformé le texte "2" en nombre 2, et l'option a été choisie. C'est la phrase la plus tranchante sur le pont : un médium ajoute des rendus, et il ajoute aussi une lecture. La lecture est l'endroit où vit la culture d'un utilisateur, les chiffres, les mots, un "OUI" local. Je tiens cela pour une vue, non pour un résultat.
 
 **Une panne n'est pas un rejet.** Le médium refuse dans ses propres termes. Un numéro mal formé, sans `+`, n'est pas un numéro E.164 : corrigez la donnée. Une panne est autre chose : réessayez. Que répond le bac à sable à chacun ?
 
@@ -329,7 +329,7 @@ Ce qui est absent :
 
 **L'analyste.** Le but est le schéma de la conversation. La transcription dit quel message a produit quel fait. Le bac à sable compte la facture avant qu'un fournisseur existe.
 
-**Le concepteur.** Votre utilisateur garde le téléphone qu'il a : une ligne de texte avec des numéros, ou une phrase parlée. Les verbes de la constitution sont la grammaire que vous rendez, et un verbe que le médium ne peut pas rendre devrait être une cellule rouge, et non une omission silencieuse. C'est conçu et non construit, puisque la matrice n'existe pas.
+**Le concepteur.** Votre utilisateur garde le téléphone qu'il a : une ligne de texte avec des numéros, ou une phrase parlée. Les verbes de la constitution sont la grammaire que vous rendez, et un verbe que le médium ne peut pas rendre devrait être une cellule rouge, et non une omission silencieuse. Je tiens cela pour une vue, non pour un résultat. C'est conçu et non construit, puisque la matrice n'existe pas.
 
 **Le décideur.** Une conversation par SMS peut être chiffrée dans un test : deux noms de plats en arabe ont fait passer une question de 93 caractères d'un segment à deux. La question à poser à un fournisseur, qu'est-ce qui refuse une phrase que votre entreprise n'a pas approuvée, a ici une réponse : un ensemble fermé.
 

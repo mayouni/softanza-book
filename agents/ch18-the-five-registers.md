@@ -4,7 +4,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples, and what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -184,7 +184,7 @@ done
 
 > run: kept
 
-Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence, and silence is the worse answer: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
+Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence, and I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
 
 So three of the five registers are wired, one of them in its simplest form, a splitter. Two are not. I would rather you meet that here than on a page of mine that said five.
 
@@ -356,7 +356,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused to guess.** The record's phrase is: guessing is replaced by asking; vibes are replaced by governance. A gap is a question. A reply is a candidate.
 
-**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust. All five registers go through one door.
+**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust, and I hold this as a view, not a result. All five registers go through one door.
 
 **I refused a stub.** A reserved agent raises when it is asked for. The design document says it plainly: the raise is the law working, and it should not be read as a defect. I refused to pretend the fifth register works.
 

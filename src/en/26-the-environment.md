@@ -22,7 +22,7 @@ In this chapter I take the shape the field's environments have settled on, a too
 
 The field's environments have settled on a shape. A toolbar and a menu at the top, a sidebar of files, an editor, a terminal below, and a status bar at the foot. Lately an assistant sits in a pane or a terminal beside the code, and the human approves its edits. (General knowledge, marked.)
 
-The record's own field studies, dated, are three. The notepad that ships with the former host language, measured on 12 August 2026 at thirty-three source files and about four thousand lines, seven dock widgets, a fifteen-key configuration and no language service. It exists, it ships in the box, and it works on the day you install it. The fast editors, in the ergonomics specification of March 2026, which sets for its own product: input to screen under sixteen milliseconds on any modern hardware, no exceptions. It wants minimal chrome, no status bar clutter, no toolbar forests. It asks for a dry run before a structural change, and for inspections that say why and offer a fix. And the status bar, as that specification wrote it: twenty-four pixels high, carrying only essential state, with five build states, one of which is *unchecked*, for a project where no build has run yet. The state of "not yet judged" has its own word. A bar that was green by default would be the field's usual lie.
+The record's own field studies, dated, are three. The notepad that ships with the former host language, measured on 12 August 2026 at thirty-three source files and about four thousand lines, seven dock widgets, a fifteen-key configuration and no language service. It exists, it ships in the box, and it works on the day you install it. The fast editors, in the ergonomics specification of March 2026, which sets for its own product: input to screen under sixteen milliseconds on any modern hardware, no exceptions. It wants minimal chrome, no status bar clutter, no toolbar forests. It asks for a dry run before a structural change, and for inspections that say why and offer a fix. And the status bar, as that specification wrote it: twenty-four pixels high, carrying only essential state, with five build states, one of which is *unchecked*, for a project where no build has run yet. The state of "not yet judged" has its own word. A bar that was green by default would be the field's usual lie. That is my view.
 
 Where the field is silent, the chapter answers. The field orders its toolbars by the tool's features, and not by the life of the thing being made. And it lets an assistant's proposal land as an edit, with the human's approval as a habit. (General knowledge.)
 
@@ -319,7 +319,7 @@ The browser costs what it costs: file access through the browser's model, a port
 
 The field has a language service (general knowledge), and the record has a contract and no service. The explorer's model reads the world file the service would emit, and it is loaded by no entry file: a block that calls it without a hand-written load fails.
 
-The field's fast editor treats the status bar as clutter. The pattern keeps one and asks it to be true. That is a bet, and the record's own corpus argues the field's side in the same breath.
+The field's fast editor treats the status bar as clutter. The pattern keeps one and asks it to be true. That is a bet, and I hold it as a view, not a result; the record's own corpus argues the field's side in the same breath.
 
 ## 7. The limit
 

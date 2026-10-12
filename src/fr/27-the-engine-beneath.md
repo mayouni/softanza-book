@@ -195,7 +195,7 @@ Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
 
 **J'ai laissé tout aller dans base.** Ma phrase, comme l'étude la rapporte : sous la pression du temps, tout est allé dans base, en attendant le bon moment pour refactoriser à nouveau. D'après mon décompte plus bas, base représente quatre-vingt-treize pour cent des lignes.
 
-**J'ai choisi l'optimisation sûre.** Ni le mode le plus rapide, ni le non optimisé : une panique propre vaut mieux qu'une corruption silencieuse de la mémoire, et ici cela ne coûte rien.
+**J'ai choisi l'optimisation sûre.** Ni le mode le plus rapide, ni le non optimisé. Je tiens pour une vue, non pour un résultat, qu'une panique propre vaut mieux qu'une corruption silencieuse de la mémoire, et qu'ici cela ne coûte rien.
 
 **J'ai refusé une affirmation phare qui ne se reproduit pas.** Le mémo du 13 septembre 2026 dit que l'affirmation à retirer est que le runtime bat le pair rapide, au présent, sur x64. Le chapitre 22 a raconté le refus, et la section 6 imprime les lignes.
 
@@ -280,7 +280,7 @@ Je dis ce qui est construit, ce qui est conçu, et ce qui est absent, tel que le
 
 **Le concepteur.** Une couche est une décision sur ce que vous livrez, et non sur le goût. Au niveau du binaire, le noyau et la base ont une bibliothèque par domaine et la troisième couche n'en a aucune ; le sous-ensemble web, que les chapitres 4 et 24 montrent, est un sous-ensemble et non une couche.
 
-**Le décideur.** Les deux questions du chapitre 4, plus deux. Ce qui l'exécute : la version 1.27 aujourd'hui, avec le remplaçant en construction. Ce que le remplaçant a perdu : chaque ligne contre un pair rapide, de 1,04 à 1,88 fois, et dix mégaoctets de mémoire face à l'ancien. Un dossier qui imprime sa perte est le seul genre à croire.
+**Le décideur.** Les deux questions du chapitre 4, plus deux. Ce qui l'exécute : la version 1.27 aujourd'hui, avec le remplaçant en construction. Ce que le remplaçant a perdu : chaque ligne contre un pair rapide, de 1,04 à 1,88 fois, et dix mégaoctets de mémoire face à l'ancien. C'est mon point de vue : un dossier qui imprime sa perte est le seul genre à croire.
 
 **Le formateur.** Enseignez la règle de dépendance en faisant charger le noyau seul à l'apprenant et prédire, puis compter. Enseignez « mesuré, jamais affirmé » avec le mémo du 13 septembre 2026.
 

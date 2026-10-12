@@ -57,7 +57,7 @@ oDLM = StzDlmQ(oKB)
 #--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
 ```
 
-It answers, says why, and states its certainty. And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. A refusal that names its boundary is worth more than a fluent answer that has none.
+It answers, says why, and states its certainty. And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. A refusal that names its boundary is worth more than a fluent answer that has none. This is my view.
 
 Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you. What does it ask, and what happens if you try to conclude before you have answered?
 
@@ -198,7 +198,7 @@ And one limit of the first rung that you will meet the moment you rephrase a que
 #--> Margherita is a dish.
 ```
 
-That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. The request to the library is to refuse a question whose verb is not a declared relation.
+That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. I hold this as a view, not a result. The request to the library is to refuse a question whose verb is not a declared relation.
 
 ## 8. Six doors
 

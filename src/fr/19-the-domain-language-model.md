@@ -221,7 +221,7 @@ Le terrain mène en échelle. Entraîner et servir des modèles de toute taille 
 
 Le terrain mène en fluidité, ce qui est le but d'un modèle. Un premier échelon qui répond à partir des faits dira « I hold no 'contains' knowledge about 'tiramisu'. » là où un modèle général écrirait quelque chose de plausible. Et pour un client la chose plausible est souvent plus utile. La réponse propre du dossier est le second échelon, et son état présent est celui que donne la section 7.
 
-Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un, et chaque proposition du second peut être soumise à une barrière qui peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer.
+Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un, et chaque proposition du second peut être soumise à une barrière qui peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
 
 ## 7. La limite
 

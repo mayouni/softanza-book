@@ -4,7 +4,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle, joined from three documents of the record, is that reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
@@ -372,11 +372,11 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused to touch reality by default.** Production commits only if the actor may commit. A bare `Deploy(:Production)` with no actor touches nothing.
 
-**I refused the agreeable fake.** An agreeable fake is more dangerous than no fake at all. Silence is the worst answer: the lenient mode answers 501, because a miss must never be mistakable for success.
+**I refused the agreeable fake.** An agreeable fake is more dangerous than no fake at all. I hold this as a view, not a result. Silence is the worst answer: the lenient mode answers 501, because a miss must never be mistakable for success.
 
 **I refused "fake versus real" as the whole truth.** It was too coarse. There are four postures now: sandbox, local, live, and conformance. The local posture was added when the database exemplar showed that a SQLite file is a real database in a file you own.
 
-**I refused a gate that fails open.** The registry once kept its state in attributes, so attaching it to a delivery took a snapshot, and the gate would have passed an unsound surface. A gate that fails open is worse than no gate. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
+**I refused a gate that fails open.** The registry once kept its state in attributes, so attaching it to a delivery took a snapshot, and the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
 **I refused to virtualize the quality of a model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 

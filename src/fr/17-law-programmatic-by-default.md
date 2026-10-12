@@ -57,7 +57,7 @@ oDLM = StzDlmQ(oKB)
 #--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
 ```
 
-Il répond, dit pourquoi, et énonce sa certitude. Et quand on lui demande ce qu'il ne sait pas, il ne devine pas. Il refuse, et il vous dit combien son monde est petit : `I know 1 entities and 1 relations`. Un refus qui nomme sa frontière vaut mieux qu'une réponse fluide qui n'en a pas.
+Il répond, dit pourquoi, et énonce sa certitude. Et quand on lui demande ce qu'il ne sait pas, il ne devine pas. Il refuse, et il vous dit combien son monde est petit : `I know 1 entities and 1 relations`. Un refus qui nomme sa frontière vaut mieux qu'une réponse fluide qui n'en a pas. C'est mon point de vue.
 
 Voici maintenant la deuxième pièce, celle qui retourne le dialogue habituel. Sur le terrain, vous soumettez un prompt à la machine et gardez ce qui en sort. Ici le système vous interroge. Que demande-t-il, et que se passe-t-il si vous essayez de conclure avant d'avoir répondu ?
 
@@ -198,7 +198,7 @@ Et une limite du premier échelon que vous rencontrerez dès que vous reformuler
 #--> Margherita is a dish.
 ```
 
-Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, cela aurait dû être un refus. Je la montre ici plutôt que de la cacher, parce qu'une loi ne vaut que ce que vaut la page qui imprime où elle est brisée. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
+Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, cela aurait dû être un refus. Je la montre ici plutôt que de la cacher, parce qu'une loi ne vaut que ce que vaut la page qui imprime où elle est brisée. Je tiens cela pour une vue, non pour un résultat. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
 
 ## 8. Six portes
 

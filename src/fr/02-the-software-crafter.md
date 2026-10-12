@@ -16,7 +16,7 @@ rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
 ---
 
-Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est la phrase du site : un artisan du logiciel transforme ce qu'il sait d'un monde en quelque chose qui tourne, sans attendre l'industrie du logiciel.
+Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est une phrase qui joint celle du site et celle du glossaire : un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -26,7 +26,7 @@ Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont p
 
 ## 2. Le premier principe
 
-Le site donne la définition en deux phrases. Elles disent « crafter » aujourd'hui (lu le 9 octobre 2026) ; jusqu'au 8 octobre, elles disaient « maker ». Ce livre les joint par un point-virgule : **un artisan du logiciel transforme ce qu'il sait d'un monde en quelque chose qui tourne, sans attendre l'industrie du logiciel ; il n'est pas défini par sa compétence de programmation mais par la possession : l'artefact est à lui, en texte brut, et il n'expire pas.** Ces phrases ont été rédigées pour le site par une session, et le dossier ne contient aucune décision de moi sur elles : ce sont les phrases du site, non les miennes. Elles définissent l'artisan du logiciel par la possession seule. Le mot « artisanat » suggère la compétence, là où la phrase dit que l'artisan du logiciel n'est pas défini par elle, et le dossier ne tranche pas ; la page garde la formulation du site.
+Le site donne la définition en deux phrases. Elles disent « crafter » aujourd'hui (lu le 9 octobre 2026) ; jusqu'au 8 octobre, elles disaient « maker ». Le glossaire dit qu'un artisan du logiciel est quiconque déclare, au moment où il déclare. Le site dit qu'il possède ce qu'il fait. J'ai tranché le 12 octobre 2026 que le livre garde les deux, en une phrase : **un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare : l'artefact est à lui, en texte brut, et il n'expire pas.** La compétence n'entre pas dans la définition. Le mot « artisanat » la suggère, et je garde le mot : la personne est définie par l'acte et par la possession, non par sa compétence de programmation. Je tiens cela pour une vue, non pour un résultat.
 
 ## 3. La forme Softanza
 
@@ -213,7 +213,7 @@ Les agents de code mènent en mains. Ils lisent, cherchent, modifient et exécut
 
 Le low-code mène en base installée et en tout ce qui l'entoure. (Connaissance générale, non une étude du dossier.) L'organisation sur le terrain garde la suite de son éditeur pour ses comptes, ses documents et ses notifications. La plateforme de l'artisan du logiciel se place à côté des outils du terrain, non à leur place.
 
-Les applications de messagerie mènent là où les artisans du logiciel sont déjà. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cet écart.
+Les applications de messagerie mènent là où les artisans du logiciel sont déjà. C'est mon point de vue, non un résultat. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cet écart.
 
 Et la porte du formateur n'est pas prouvée. Les éditions du cours en français, en arabe et en haoussa sont des brouillons qu'aucun relecteur n'a lus, et aucune institution ne l'a adopté.
 

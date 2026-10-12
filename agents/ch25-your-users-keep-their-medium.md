@@ -4,7 +4,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-11 08:50 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -125,7 +125,7 @@ oKT.AskIn("c")
 
 > run: kept
 
-A dish named 2! In the block before, my `ReadReply` turned the text "2" into the number 2, and the option was picked. This is the sharpest sentence about the bridge: a medium adds renderings, and it adds a reading too. The reading is where a user's culture lives, the digits, the words, a local "OUI".
+A dish named 2! In the block before, my `ReadReply` turned the text "2" into the number 2, and the option was picked. This is the sharpest sentence about the bridge: a medium adds renderings, and it adds a reading too. The reading is where a user's culture lives, the digits, the words, a local "OUI". I hold this as a view, not a result.
 
 **An outage is not a rejection.** The medium refuses in its own terms. A malformed number, with no `+`, is not an E.164 number: fix the data. An outage is another matter: retry. What does the sandbox answer to each?
 
@@ -341,7 +341,7 @@ What is absent:
 
 **The analyst.** The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.
 
-**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.
+**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. I hold this as a view, not a result. That is designed and not built, since the matrix does not exist.
 
 **The decision-maker.** A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.
 

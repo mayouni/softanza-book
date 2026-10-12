@@ -81,7 +81,7 @@ oG.RulesReport()
 
 Le rapport dit maintenant `2 finding(s), 2 error(s)` là où il en disait un, et la portée est `3` là où elle était `2`. Je dois être honnête sur ce que ce bloc montre. Le « changement » est une règle reconstruite dans le code avec un autre nombre. Que la personne même de l'organisation la change comme on remplit un formulaire est la promesse de l'étude, et je n'ai pas trouvé de fichier de la bibliothèque qui la réalise. La section 7 dit ce qui existe et ce qui n'existe pas.
 
-Ce que la bibliothèque porte, c'est la réponse à la pire chose qui puisse arriver quand une personne qui ne programme pas édite une règle : une règle qui ne gouverne rien, en silence. Faites une faute de frappe sur une propriété, et la règle ne trouve rien, et le modèle déclare qu'il est sain. Que dit un gouverneur de règles de la même règle ? La classe est `StzRuleGovernance` ; elle demande aux règles ce qu'elles gouvernent et non ce qu'elles disent, et elle nomme la règle morte :
+Ce que la bibliothèque porte, c'est la réponse à la pire chose qui puisse arriver quand une personne qui ne programme pas édite une règle : une règle qui ne gouverne rien, en silence. Je tiens cela pour une vue, non pour un résultat. Faites une faute de frappe sur une propriété, et la règle ne trouve rien, et le modèle déclare qu'il est sain. Que dit un gouverneur de règles de la même règle ? La classe est `StzRuleGovernance` ; elle demande aux règles ce qu'elles gouvernent et non ce qu'elles disent, et elle nomme la règle morte :
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")

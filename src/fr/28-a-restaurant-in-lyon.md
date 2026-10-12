@@ -147,7 +147,7 @@ oCon.Revive("supplier")
 
 L'appel à travers le lien passe ; l'appel vers le monde en sommeil, non, et la raison tient en une ligne : `target world 'supplier' is not active.` Réveillé, il passe.
 
-**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes, les juge contre ce qui a été mesuré, et un dépassement fait échouer la même barrière qu'un constat de sécurité. Les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
+**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Je tiens cela pour une vue, non pour un résultat. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes, les juge contre ce qui a été mesuré, et un dépassement fait échouer la même barrière qu'un constat de sécurité. Les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -184,7 +184,7 @@ Une chose de plus que le projet a apprise, et que la bibliothèque ne porte pas.
 
 **J'ai refusé de jeter la première application.** Quand le propriétaire a renversé l'ordre, l'application déjà construite a été gardée, en sommeil, jusqu'à ce que la première version du nouvel ordre soit en production. Les mots du projet lui-même : rien n'est jeté.
 
-**J'ai refusé la dérive silencieuse.** Le Verrou existe parce qu'un projet qui a échoué une fois dérive sans que personne ne l'ait décidé. Un second changement de cap avant que la première version tourne en production est refusé, et une idée qui entre dans le cycle sans sortie écrite l'est aussi.
+**J'ai refusé la dérive silencieuse.** Le Verrou existe parce qu'un projet qui a échoué une fois dérive sans que personne ne l'ait décidé. C'est mon point de vue. Un second changement de cap avant que la première version tourne en production est refusé, et une idée qui entre dans le cycle sans sortie écrite l'est aussi.
 
 **J'ai refusé le faux complaisant.** Un double qui répond en silence par une chaîne vide produit un test qui passe pour la mauvaise raison. Le bac à sable décline quand une passerelle décline, refuse quand une passerelle est en panne, et refuse une seconde capture. Et j'ai refusé un tarif fixe avant la barrière de mise en service : aucun abonnement à un établissement de paiement avant l'accord écrit du propriétaire.
 

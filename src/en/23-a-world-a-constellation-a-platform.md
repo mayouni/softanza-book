@@ -30,7 +30,7 @@ The third is the platform team and the deployment declared as code. A team build
 
 For the scopes, the field's home is the compiler: the target of a build, and the check that flags a call the minimum platform level lacks. Each decides which system the code is for. None lets the program name that system at the call site and refuse the act.
 
-The shared shape: the field draws the picture, a host, a map, a diagram, and keeps the judge outside it. In all three the program knows nothing of its own composition.
+The shared shape: the field draws the picture, a host, a map, a diagram, and keeps the judge outside it. In all three the program knows nothing of its own composition. This is my reading of the three, not a survey of the field.
 
 ## 2. The first principle
 
@@ -315,7 +315,7 @@ done
 
 The file form is plain text that the architect owns, and it round-trips from a string. The unsound one is refused before building, with both faults named: `the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps`. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
 
-Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels. That memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
+Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels. That memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. I hold this as a view, not a result. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
 
 ## 4. The decision, and what I refused
 

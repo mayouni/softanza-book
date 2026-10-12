@@ -4,7 +4,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-11 08:49 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
 
 In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, where the field leads, and the limit I show rather than hide: a question asked in other words, answered instead of refused. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
@@ -48,7 +48,7 @@ oDLM = StzDlmQ(oKB)
 
 > run: kept
 
-It answers, says why, and states its certainty. And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. A refusal that names its boundary is worth more than a fluent answer that has none.
+It answers, says why, and states its certainty. And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. A refusal that names its boundary is worth more than a fluent answer that has none. This is my view.
 
 Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you. What does it ask, and what happens if you try to conclude before you have answered?
 
@@ -203,7 +203,7 @@ And one limit of the first rung that you will meet the moment you rephrase a que
 
 > run: kept
 
-That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. The request to the library is to refuse a question whose verb is not a declared relation.
+That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. I hold this as a view, not a result. The request to the library is to refuse a question whose verb is not a declared relation.
 
 ## 8. Six doors
 

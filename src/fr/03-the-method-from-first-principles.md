@@ -121,7 +121,7 @@ Et le livre est jugé comme la bibliothèque l'est. Chaque bloc qu'il contient s
 
 Il n'existe pas de fiche unique d'une décision appelée « la méthode ». La méthode a été décidée par morceaux, et les morceaux sont dans le dossier.
 
-**J'ai refusé d'ajouter une fonction sans besoin.** Je l'ai écrit dans un article de la bibliothèque, qui ne porte pas de date. « Je n'introduis de nouvelles fonctions que lorsqu'elles résolvent un problème tangible ou lorsque j'anticipe qu'elles répondront aux besoins des développeurs. » Les premiers principes sans cette règle produisent un musée. Avec elle, un réexamen doit mériter sa place : quelqu'un avait un problème auquel la forme du terrain ne répondait pas.
+**J'ai refusé d'ajouter une fonction sans besoin.** Je l'ai écrit dans un article de la bibliothèque, qui ne porte pas de date. « Je n'introduis de nouvelles fonctions que lorsqu'elles résolvent un problème tangible ou lorsque j'anticipe qu'elles répondront aux besoins des développeurs. » Les premiers principes sans cette règle produisent un musée. C'est mon point de vue, non un résultat. Avec elle, un réexamen doit mériter sa place : quelqu'un avait un problème auquel la forme du terrain ne répondait pas.
 
 **J'ai refusé le code généraliste comme lieu de rencontre entre les personnes et les machines.** La vision de la plateforme le dit en une ligne, que j'ai ratifiée. Les humains et les IA se rencontrent dans des langages déclarés, petits, clos et jugés, et non dans du code généraliste. Déclarer est le premier acte parce qu'il rend le second possible. Un tribunal ne peut juger que la phrase d'un langage qu'il connaît.
 
@@ -141,7 +141,7 @@ Le réexamen du vide repose sur `612_dealing_in_emptiness_in_softanza.ring`, un 
 
 Le terrain mène en adoption. Les fiches de décision sont un standard léger que beaucoup d'équipes utilisent, avec des modèles et des outils autour. L'élément décision de ce livre existe dans ce livre et dans une étude du dossier, et pas encore comme donnée dans la bibliothèque. Les exemples de la documentation peuvent être exécutés par l'outil standard de Python, et Rust les exécute par défaut. Les promesses de Softanza sont jugées par les exécuteurs propres de la maison, qu'aucun outil extérieur ne lit. Et l'habitude du terrain de comparer par grille n'est pas pire que celle du dossier, qui montre la même faiblesse sur ses propres pages.
 
-Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision ne s'exécute pas. Un exemple ne dit pas ce qui a été refusé. Ici, ils sont un seul objet.
+Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. Je tiens cela pour une vue, non pour un résultat. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision ne s'exécute pas. Un exemple ne dit pas ce qui a été refusé. Ici, ils sont un seul objet.
 
 ## 7. La limite
 

@@ -4,7 +4,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I take the seven steps of the mental model, which chapter 5 ran on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the articles this chapter rests on do not run at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
@@ -153,7 +153,7 @@ The three models of the article "Bridging Minds and Code", the semantic, the men
 
 ## 4. The decision, and what I refused
 
-**I made the metaphors a design goal.** The 2022 presentation lists "human-centric metaphors" as one of seven design goals, and its four features are these four. A goal is what makes a feature justifiable or refusable, so I did not leave the metaphors as a nicety of the documentation. They are one of the reasons the library has the shape it has.
+**I made the metaphors a design goal.** The 2022 presentation lists "human-centric metaphors" as one of seven design goals, and its four features are these four. A goal is what makes a feature justifiable or refusable. I hold this as a view, not a result. So I did not leave the metaphors as a nicety of the documentation. They are one of the reasons the library has the shape it has.
 
 **I replaced `eval` with a language the engine owns.** The condition seat used to be compiled by evaluating the string as code, with a more expressive but slower extended form on the side. I removed both. The engine now reads the condition in its own small language, and the library keeps the host-code form as a separate verb, WF, with its warning. I refused arbitrary code from text, and I refused to split speed from expressiveness: the extended form is retired because the plain one does everything it did.
 
@@ -173,7 +173,7 @@ The field leads in openness. A lambda carries any logic. The W language is bound
 
 The field leads in reach and in tooling. Iterators and comprehensions are in every mainstream language, with editor support, type checking and a literature. These four metaphors exist in one library.
 
-And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table with no loss on it is the shape of a brochure.
+And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table with no loss on it is the shape of a brochure. This is my view, held on this table: thirteen rows, none with a loss.
 
 ## 7. The limit
 

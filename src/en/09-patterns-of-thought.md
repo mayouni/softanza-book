@@ -22,7 +22,7 @@ In this chapter I take the three subjects of the title in turn: the Softanzuter,
 
 The field has three tools for making a program react. Regular expressions recognise a shape in text, and nothing more: they say "this matches", and they stop. Reactive programming, the family of observables, subscribers and schedulers that Rx made popular, lets data flow through a program over time. Its vocabulary comes from plumbing, telephony and publishing: pipes, backpressure, hot and cold sources. And rule engines, the production systems of the field with their forward chaining, fire rules when facts appear, and keep firing while new facts appear. (General knowledge; the rule engines of the field are older and more mature than anything in this chapter.)
 
-Each tool is separate. A regular expression does not trigger a computation, a reactive stream does not recognise a pattern, and a rule engine does not have a vocabulary that a person would use to say a thought.
+Each tool is separate. A regular expression does not trigger a computation, a reactive stream does not recognise a pattern, and a rule engine does not have a vocabulary that a person would use to say a thought. I hold this as a view, not a result.
 
 ## 2. The first principle
 
@@ -186,7 +186,7 @@ done
 
 The gap is named by what it lies between, `PHASE1` and `PHASE2`, and the refusal carries its reason: `Point 'EVENT2' falls within a blocked span or blocked point`.
 
-And a grid has a cursor with the intelligence of a place: position is column and row, and moving past an edge stays at the edge. Two moves down and three to the right, then three more to the right: where is the cursor?
+And a grid has a cursor that knows where it is: position is column and row, and moving past an edge stays at the edge. Two moves down and three to the right, then three more to the right: where is the cursor?
 
 ```haro
 o = new stzGrid([ 5, 5 ])
@@ -210,7 +210,7 @@ At `[ 4, 3 ]`, then at `[ 5, 3 ]`: three more moves to the right gained one colu
 
 **I refused to leave regex as a way to read text.** I made it a computational medium: a trigger fires a computation, the computation writes a state when it changes the value, and the state records its why. The Regexuter is a faculty and not a mind, and it holds no goal. I added the goal two rungs above it, at the fourth rung, in the agent, on purpose.
 
-**I refused the field's vocabulary for reactive programming.** Observables, subscribers, backpressure, hot and cold sources, schedulers: borrowed from plumbing, telephony and publishing, and not from the problem. A function in waiting is an Rfunction. Data flows, and nothing is called a producer or a consumer. Overflow replaces backpressure. Waiting for an attribute to settle replaces debounce. The old spellings still work as aliases: feed, emit, send and receive all call one method, so my change was one of naming and not of removal.
+**I refused the field's vocabulary for reactive programming.** Observables, subscribers, backpressure, hot and cold sources, schedulers: borrowed from plumbing, telephony and publishing, and not from the problem. This is my view of those words, not a result. A function in waiting is an Rfunction. Data flows, and nothing is called a producer or a consumer. Overflow replaces backpressure. Waiting for an attribute to settle replaces debounce. The old spellings still work as aliases: feed, emit, send and receive all call one method, so my change was one of naming and not of removal.
 
 **I refused to build the siblings.** The article that tells the Regexuter describes four more: an analyser, a genetic one, a linguistic one and a quantic one. In the genetic one patterns evolve against a fitness, in the linguistic one triggers are grammar rules, and in the quantic one a pattern can be in several states at once. The article gives each a sample call, and no class stands behind it. The design later found a purpose for two of them. Answering by example demands pattern induction, the genetic one's ground; several acceptable answers demand superposed candidates, collapsed by rules or by choice, the quantic one's. Chapter 18 tells where that stands. They remain a vision; two have their purpose written.
 

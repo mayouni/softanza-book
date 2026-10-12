@@ -259,7 +259,7 @@ La somme de toutes les cellules absentes est la ligne unique dont le chapitre 33
 
 **L'analyste.** Quand vous citez un projet, écrivez trois colonnes : l'affirmation, le document, et ce qui est absent. Ne remplissez pas la troisième de mémoire.
 
-**Le concepteur.** Une fonction qu'aucune personne n'a vue ni entendue part fermée, et le dit. L'étape est un état de la conception et non une excuse.
+**Le concepteur.** Une fonction qu'aucune personne n'a vue ni entendue part fermée, et le dit. L'étape est un état de la conception et non une excuse. Je tiens cela pour une vue, non pour un résultat. Ce qui la soutient sur cette page, c'est le volet du son, où `Sing` refuse tant qu'une personne n'a pas entendu la voix.
 
 **Le décideur.** Lisez le mot d'étape avant le témoignage. « Construit » est une affirmation sur une garde. « Tourne chez un client » est une affirmation sur un document, et vous pouvez le demander par écrit, avec un nom à côté.
 

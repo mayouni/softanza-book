@@ -36,7 +36,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **tribunal.** Le juge d'une chose. Un tribunal dit gardé ou refusé, et dit pourquoi dans les mots de la déclaration. Un langage naît avec son tribunal. Chapitres 5, 11, 12, 21.
 
-**artisan du logiciel.** Quiconque déclare, au moment où il déclare. Chapitre 2.
+**artisan du logiciel.** Quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare. La compétence n'en fait pas partie. Chapitre 2.
 
 **déclarer.** Dire ce qu'est une chose avant qu'elle soit construite, dans un texte qu'un tribunal peut juger. L'acte du noyau. Chapitres 3, 12.
 
@@ -51,6 +51,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 **faux.** Un double qui dit qu'il en est un : un bac à sable, un puits de courrier, une réponse enregistrée. Un faux ne doit jamais être livré. Un double qui ne dit rien de lui-même est pris pour réel, et passe la barrière. Chapitre 24.
 
 **étage.** Un niveau de l'image de la plateforme, du moteur en bas à l'organisation en haut, chacun avec son juge à côté. Ni une couche de la bibliothèque (noyau, base, max), ni un volet. Chapitre 4.
+
+**forge.** La machinerie qui produit le tribunal, la bouche, l'imprimeur et la grammaire d'un langage à partir de sa seule déclaration. Construite hors de la bibliothèque, conçue pour elle. Chapitres 11, 12.
 
 **écart.** Ce dont un but a besoin et que le monde ne contient pas encore. Une conversation qui demande part de l'écart. Chapitre 17.
 

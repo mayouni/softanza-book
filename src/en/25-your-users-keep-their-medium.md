@@ -129,7 +129,7 @@ oKT.AskIn("c")
 #--> [ "2" ]
 ```
 
-A dish named 2! In the block before, my `ReadReply` turned the text "2" into the number 2, and the option was picked. This is the sharpest sentence about the bridge: a medium adds renderings, and it adds a reading too. The reading is where a user's culture lives, the digits, the words, a local "OUI".
+A dish named 2! In the block before, my `ReadReply` turned the text "2" into the number 2, and the option was picked. This is the sharpest sentence about the bridge: a medium adds renderings, and it adds a reading too. The reading is where a user's culture lives, the digits, the words, a local "OUI". I hold this as a view, not a result.
 
 **An outage is not a rejection.** The medium refuses in its own terms. A malformed number, with no `+`, is not an E.164 number: fix the data. An outage is another matter: retry. What does the sandbox answer to each?
 
@@ -329,7 +329,7 @@ What is absent:
 
 **The analyst.** The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.
 
-**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.
+**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. I hold this as a view, not a result. That is designed and not built, since the matrix does not exist.
 
 **The decision-maker.** A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.
 

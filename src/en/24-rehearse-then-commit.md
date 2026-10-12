@@ -362,11 +362,11 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused to touch reality by default.** Production commits only if the actor may commit. A bare `Deploy(:Production)` with no actor touches nothing.
 
-**I refused the agreeable fake.** An agreeable fake is more dangerous than no fake at all. Silence is the worst answer: the lenient mode answers 501, because a miss must never be mistakable for success.
+**I refused the agreeable fake.** An agreeable fake is more dangerous than no fake at all. I hold this as a view, not a result. Silence is the worst answer: the lenient mode answers 501, because a miss must never be mistakable for success.
 
 **I refused "fake versus real" as the whole truth.** It was too coarse. There are four postures now: sandbox, local, live, and conformance. The local posture was added when the database exemplar showed that a SQLite file is a real database in a file you own.
 
-**I refused a gate that fails open.** The registry once kept its state in attributes, so attaching it to a delivery took a snapshot, and the gate would have passed an unsound surface. A gate that fails open is worse than no gate. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
+**I refused a gate that fails open.** The registry once kept its state in attributes, so attaching it to a delivery took a snapshot, and the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
 **I refused to virtualize the quality of a model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 

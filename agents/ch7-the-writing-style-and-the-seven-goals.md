@@ -4,7 +4,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-11 08:48 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
 
 In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code, and I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
@@ -22,7 +22,7 @@ For goals, the field says *quality attributes*. The ISO standard for software qu
 
 **What you think is what you write.** It is chapter 5's sentence, from the diagram of 2020, and I do not argue it again. Chapter 5 took five rules of the style. This chapter takes the rest, as a grammar, and then the goals under which the grammar was designed.
 
-For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size.
+For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
 
 ## 3. The Softanza form
 
