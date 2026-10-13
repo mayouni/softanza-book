@@ -55,9 +55,11 @@ oGov.DeclareReversibility("restocker", :Compensable)
 #--> 1
 ```
 
+Le premier refus se termine sur sa loi, `Law 18: nothing schedules what nobody has stated the reach of.` Avec les deux déclarées, le troisième appel répond `1`.
+
 La réversibilité est le sixième contrat de la gouvernance, à côté du risque, de l'autorité, de la validation, de la mise hors service et de la filiation. Elle est orthogonale au risque : un acte de faible risque qui ne peut pas être défait mérite plus de cérémonie qu'un acte de grand risque qui peut l'être.
 
-**Plus un acte est difficile à défaire, plus le code qui l'accomplit doit être digne de confiance.** Voici la table entière, la posture du code face à la classe de l'acte, imprimée par une boucle propre au livre :
+**Plus un acte est difficile à défaire, plus le code qui l'accomplit doit être digne de confiance.** Quelles postures peuvent accomplir quelles classes d'acte ? Voici la table entière, imprimée par une boucle propre au livre :
 
 ```haro
 aPostures = [ "trusted", "external", "sandboxed" ]
@@ -80,7 +82,9 @@ next
 #--> a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)
 ```
 
-**L'agent s'exécute, croit avoir agi, et le disque ne bouge pas.** Un agent est un fichier et quelques fonctions. Sa fonction écrit une liste de prix. On lui donne un atelier, et la fonction atteint l'atelier comme un objet ambiant pendant un cycle, sans changement dans sa signature. La compétence vérifie son propre travail ; le fait est appris ; et le vrai fichier n'existe pas, parce que le fichier vit dans le jumeau :
+Lisez les lignes de haut en bas : le code de confiance peut accomplir les trois classes d'acte, le code externe les deux premières, le code en bac à sable seulement la réversible. La dernière ligne demande le refus et imprime sa phrase.
+
+**L'agent s'exécute, croit avoir agi, et le disque ne bouge pas.** Un agent est un fichier et quelques fonctions. Sa fonction écrit une liste de prix. On lui donne un atelier, et la fonction atteint l'atelier comme un objet ambiant pendant un cycle, sans changement dans sa signature. La compétence vérifie son propre travail et le fait est appris. Après un cycle, le vrai fichier existe-t-il ? Interrogez le disque, puis l'atelier :
 
 ```haro
 StzAllowAgentFunction("ScribblePrices", "trusted")
@@ -120,11 +124,11 @@ func ScribblePrices(poMemory)
 	poMemory.Learn("prices", "were", "written")
 ```
 
-L'agent croit avoir agi, et le disque n'a pas bougé !
+Le fichier vit dans le jumeau. L'agent croit avoir agi, et le disque n'a pas bougé !
 
 Deux lignes décident qui peut agir. `posture: trusted` est dans le fichier, parce qu'une clause `ring:` doit porter une posture. `StzAllowAgentFunction` est une ligne du code de la plateforme, et non du fichier de l'agent, et elle décide quelles fonctions un fichier peut appeler.
 
-**Le seul export est un plan, et il se narre lui-même.** Le tick n'exporte vers la réalité qu'un plan, et rien d'autre. Le plan dit ce qu'il ferait avant que quoi que ce soit ne soit tenté. Un modèle de langage désigné comme son exécutant est refusé avant toute tentative : `actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)`. Un acteur nommé sous une portée qui ne couvre pas le chemin ne valide rien : le disque n'a toujours pas bougé. Le même acteur sous une portée qui couvre le chemin valide une fois, et la piste d'audit nomme l'acteur. Dans ce bloc, la réalité change ici, et seulement ici :
+**Le seul export est un plan, et il se narre lui-même.** Le tick n'exporte vers la réalité qu'un plan, et rien d'autre. Le plan dit ce qu'il ferait avant que quoi que ce soit ne soit tenté. Un modèle de langage désigné comme son exécutant est refusé avant toute tentative : `actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)`. Un acteur nommé sous une portée qui ne couvre pas le chemin ne valide rien : le disque n'a toujours pas bougé. Le même acteur sous une portée qui couvre le chemin valide une fois, et la piste d'audit se lit `[ [ 1, "committed", "write_file", "shop-committer" ] ]`. Qui peut valider, et quand le disque bouge-t-il enfin ? Dans ce bloc, la réalité change ici, et seulement ici :
 
 ```haro
 oPlan = oAg.GenerateUpdatePlan()
@@ -157,7 +161,7 @@ StzDirDeleteAll(cFx)
 
 J'ai remplacé le chemin absolu dans la narration pour que la sortie soit stable. Un plan inclut le chemin du fichier qu'il écrirait.
 
-**Le tribunal au chargement.** La composition de la table ci-dessus est appliquée quand le fichier est chargé, avant le premier tick. Prenez le même fichier, rendez l'agent irréversible, et mettez son code en bac à sable :
+**Le tribunal au chargement.** La table ci-dessus est-elle appliquée quand le fichier est chargé, avant le premier tick ? Prenez le même fichier, rendez l'agent irréversible, et mettez son code en bac à sable :
 
 ```haro
 cIrrev = StzReplace(StzReplace(cPia, "reversibility: compensable", "reversibility: irreversible"), "posture: trusted", "posture: sandboxed")
@@ -168,7 +172,7 @@ oD = StzAgentDeclarationQ(cIrrev)
 #--> [pia-posture-reversibility @ skills.scribble.posture] a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)
 ```
 
-Le tribunal répond par la phrase même de la table : `a 'sandboxed' posture does not cover 'irreversible' work`. La même règle, au chargement.
+Le tribunal répond par la phrase même de la table : `a 'sandboxed' posture does not cover 'irreversible' work`. La même règle, au chargement : le fichier est refusé avant son premier tick !
 
 **Une proposition qui tourne mal.** Un rangement qui supprime chaque fichier d'un répertoire, mené ici à la main à travers le jumeau comme le ferait un agent, propose trente suppressions. Le plan liste trente opérations et en signale trente comme des risques. Un modèle de langage qui demande à valider est refusé. Et quand il appelle `Execute()` malgré tout, combien de fichiers reste-t-il ? Comptez-les :
 
@@ -205,7 +209,7 @@ Trente ! Le modèle a demandé, a été refusé, a appelé `Execute()` malgré t
 
 Le site montre cela avec un cours plus grand, dans sa démonstration d'éducation du 30 septembre 2026, que je n'ai pas exécutée pour ce livre, et il imprime un compte de six cent dix. Ce chiffre est celui du site, cité avec sa source et sa date. J'imprime trente, parce que trente est ce que ce bloc exécute.
 
-**Une personne peut discuter avec un plan.** Le plan est un médium. Un relecteur rejette une étape, avec une raison. Un acteur nommé sous une portée valide les vingt-neuf autres ; une est sautée ; et un fichier reste sur le disque, celui de l'étape que le relecteur a protégée (le bloc imprime le compte, non le nom) :
+**Une personne peut discuter avec un plan.** Le plan est un médium. Un relecteur rejette une étape, avec une raison. Que font les vingt-neuf autres étapes, et que reste-t-il sur le disque ? Le bloc imprime les comptes, non le nom du fichier :
 
 ```haro
 oRev = oBench.GenerateUpdatePlan()
@@ -228,6 +232,8 @@ next
 StzDirDeleteAll(cDir)
 ```
 
+Un acteur nommé sous une portée valide les vingt-neuf autres (`29`) ; une est sautée (`1`) ; et un fichier reste sur le disque (`1`), celui de l'étape que le relecteur a protégée.
+
 **Une règle, deux couches, les mêmes mots.** Le refus que le chapitre 17 a montré au graphe, et que le fichier a montré plus haut, est aussi appliqué dans la boucle de ticks propre au moteur, à l'enregistrement. Il l'est dans la phrase de la règle du graphe, no-llm-effectful. Un modèle qui a la capacité de produire des effets est refusé. Un modèle qui ne l'a pas s'enregistre comme tout autre emplacement, un emplacement étant la place que prend un agent dans la boucle :
 
 ```haro
@@ -243,13 +249,13 @@ nL2 = stzenginezutercreate("proposer")
 StzResetEngineAgentLoop()
 ```
 
-Les arguments après l'emplacement sont, dans l'ordre où la garde les donne : le genre (1 est un modèle), la classe de réversibilité, le déclencheur et la capacité. Ce qui reste est la priorité, l'intervalle en millisecondes et la phrase de couverture. Ce sont les noms de bas niveau du moteur, et je les montre pour que vous voyiez le refus venir du moteur, dans les mêmes mots.
+Le moteur a refusé le résumeur, dans les mots de la règle du graphe ! Les arguments après l'emplacement sont, dans l'ordre où la garde les donne : le genre (1 est un modèle), la classe de réversibilité, le déclencheur et la capacité. Ce qui reste est la priorité, l'intervalle en millisecondes et la phrase de couverture. Ce sont les noms de bas niveau du moteur, et je les montre pour que vous voyiez le refus venir du moteur, dans les mêmes mots.
 
 **Un agent de l'effectif propre du domaine de projets, répété.** Jusqu'au 22 août 2026, un agent de l'effectif propre du domaine de projets, celui qui fait tourner le registre, déplaçait directement un vrai fichier de journal, sur un tick. Il n'avait ni plan, ni portée, ni acteur validant.
 
 Un registre, ici, est un relevé de ce qui s'est passé, tenu dans l'ordre où cela s'est passé. Cet agent fait tourner le registre propre du domaine de projets. Le chapitre 21 a le registre de sécurité, que le tribunal écrit et jamais la chose qu'il juge, une chaîne de hachage où une ligne modifiée est nommée. Le chapitre 23 a le registre de traversées de la constellation, avec les durées. Le mot a un autre sens ailleurs : l'une des cinq formes que peut prendre une réponse, ou le registre des innovations de l'annexe A.
 
-La doctrine avait été écrite avant d'être vraie, et le dossier l'a attrapé le jour même. Depuis, la fonction qui écrit pour cet agent a un chemin de répétition. Dans le tick d'un agent qui tient un atelier, elle écrit dans le jumeau ; hors d'un tel tick, dans l'état de migration que le domaine de projets vivant fait encore tourner, c'est toujours l'écriture directe. La déclaration ci-dessous est la mienne, écrite pour ce livre ; ce n'est pas le fichier d'effectif vivant, que je n'ai pas exécuté. Avec un atelier, l'agent déplace le fichier dans le jumeau. Deux compétences se déclenchent et vérifient ; le vrai fichier de journal est là où il était ; aucune archive n'existe ; le tick a exporté un plan. Et seul l'acteur validant, sous une portée, déplace le fichier :
+La doctrine avait été écrite avant d'être vraie, et le dossier l'a attrapé le jour même. Depuis, la fonction qui écrit pour cet agent a un chemin de répétition. Dans le tick d'un agent qui tient un atelier, elle écrit dans le jumeau. Hors d'un tel tick, dans l'état de migration que le domaine de projets vivant fait encore tourner, c'est toujours l'écriture directe. La déclaration ci-dessous est la mienne, écrite pour ce livre ; ce n'est pas le fichier d'effectif vivant, que je n'ai pas exécuté. Avec un atelier, l'agent déplace le fichier dans le jumeau. Deux compétences se déclenchent et vérifient ; le vrai fichier de journal est là où il était ; aucune archive n'existe ; le tick a exporté un plan. Et seul l'acteur validant, sous une portée, déplace le fichier :
 
 ```haro
 cEstate = StzReplace(WorkingDirectory(), "\", "/") + "/_estate"
@@ -314,6 +320,8 @@ StzDirDeleteAll(cEstate)
 
 Le compte de sept opérations est ce que cette exécution mesure. La garde de la bibliothèque ne promet qu'au moins cinq.
 
+Les blocs ont montré ce que fait le monde ; la section 4 dit ce que j'ai refusé de construire à la place.
+
 ## 4. La décision, et ce que j'ai refusé
 
 **J'ai refusé les agents sûrs.** La raison de la doctrine est que la sûreté du terrain essaie de rendre digne de confiance un acteur fondamentalement imprévisible. Je tiens cette raison pour une vue, non pour un résultat. Demander si l'agent pourrait s'échapper, c'est comme demander si un moteur d'échecs pourrait déplacer une pièce sur un échiquier physique. La doctrine dit que la surface d'outils de l'agent ne contient aucune opération qui touche le disque, une base de données ou le réseau. C'est l'affirmation de la doctrine, et la section 6 en donne les limites.
@@ -330,11 +338,15 @@ Le compte de sept opérations est ce que cette exécution mesure. La garde de la
 
 **J'ai refusé de laisser une machine être le dernier recours.** La constitution de l'interface du domaine de projets a un droit, le sixième sur six : le Droit à un humain. Partout où une machine sert, une personne est joignable, clairement, et sans pénalité. Il est appliqué par un jugement, celui d'une personne, et non par une garde qui s'exécute ; la bibliothèque ne le mentionne pas. La constitution le tient pour le bout humain de la boucle ; sa ligne est dans l'annexe C, lue dans le fichier de règles.
 
+La section 5 nomme les gardes qui prouvent ce que les blocs ont montré.
+
 ## 5. Le tribunal
 
-`safeworld_narrated` a sept scènes : la réversibilité comme sixième contrat ; la barrière d'enregistrement dans les phrases du moteur ; la table de la posture face à la réversibilité ; le tribunal du fichier au chargement. Trois autres suivent : ce que le fichier déclare, qui atterrit dans la gouvernance de l'agent ; l'atelier, du disque qui n'a pas bougé jusqu'à la piste d'audit ; et l'agent de l'effectif répété puis validé. `agentfile_narrated` prouve qu'un agent est un fichier jugé au chargement, avec un refus par barrière, et qu'un répertoire est un déploiement. `agentloop_engine_narrated` prouve que la boucle du moteur énonce sa couverture à l'exécution, que l'enregistrement est une barrière, qu'une règle donne les mêmes mots dans deux couches, et qu'une file trop pleine abandonne des visites et les compte. `containment_drill_narrated` prouve un exercice contre une vraie cible en boucle locale : un enquêteur modèle propose le confinement et ne valide rien ; un humain valide, et le confinement tient quand on le vérifie de l'extérieur. Dans l'exécution que j'ai faite pour ma note de recherche le 8 octobre 2026, et que les données du livre ne contiennent pas, l'exercice a lu 443 ms pour détecter et 61 ms pour contenir, sur cette machine. Le site imprime d'autres nombres tirés de sa propre exécution, et le modèle de menace d'autres encore tirés de la sienne, et les trois diffèrent parce que l'exercice mesure une horloge. La limite de l'exercice est une seule forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. `virtual_system_twin_narrated` prouve le jumeau : une répétition ne touche rien de réel ; le plan se narre et signale ses risques ; une portée refuse ; un relecteur rejette une étape ; les instantanés reviennent en arrière.
+`safeworld_narrated` a sept scènes : la réversibilité comme sixième contrat ; la barrière d'enregistrement dans les phrases du moteur ; la table de la posture face à la réversibilité ; le tribunal du fichier au chargement. Trois autres suivent : ce que le fichier déclare, qui atterrit dans la gouvernance de l'agent ; l'atelier, du disque qui n'a pas bougé jusqu'à la piste d'audit ; et l'agent de l'effectif répété puis validé. `agentfile_narrated` prouve qu'un agent est un fichier jugé au chargement, avec un refus par barrière, et qu'un répertoire est un déploiement. `agentloop_engine_narrated` prouve que la boucle du moteur énonce sa couverture à l'exécution, que l'enregistrement est une barrière, qu'une règle donne les mêmes mots dans deux couches, et qu'une file trop pleine abandonne des visites et les compte. `containment_drill_narrated` prouve un exercice contre une vraie cible en boucle locale : un enquêteur modèle propose le confinement et ne valide rien ; un humain valide, et le confinement tient quand on le vérifie de l'extérieur. Dans l'exécution que j'ai faite pour ma note de recherche le 8 octobre 2026, l'exercice a lu 443 ms pour détecter et 61 ms pour contenir, sur cette machine. Les données du livre ne contiennent pas cette exécution. Le site imprime d'autres nombres tirés de sa propre exécution, et le modèle de menace d'autres encore tirés de la sienne. Les trois diffèrent parce que l'exercice mesure une horloge. La limite de l'exercice est une seule forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. `virtual_system_twin_narrated` prouve le jumeau : une répétition ne touche rien de réel ; le plan se narre et signale ses risques ; une portée refuse ; un relecteur rejette une étape ; les instantanés reviennent en arrière.
 
 La garde `roster_narrated` n'est pas dans l'en-tête, parce qu'elle ne peut pas s'exécuter depuis un instantané de la bibliothèque : elle charge les fichiers d'effectif du domaine de projets depuis un dépôt voisin. La répétition de l'agent de l'effectif est prouvée par `safeworld_narrated`, dont la septième scène est le dernier bloc ci-dessus.
+
+La section 6 se tourne vers le terrain, et vers où il mène.
 
 ## 6. Le terrain, et où il mène
 
@@ -367,6 +379,8 @@ Chaque point ci-dessous est un écart, trouvé en exécutant et en lisant.
 - **La barrière est facultative chez l'hôte.** Le défaut bascule quand le dernier hôte de l'arbre déclare. Un hôte neuf fait tourner l'ancienne pompe.
 - **La boucle vérifie qu'une déclaration de couverture existe, non qu'elle est vraie.**
 - **Les limites de l'exercice :** une forme d'attaque, en boucle locale, sur une seule machine.
+
+Six portes suivent, le même chapitre vu de six endroits.
 
 ## 8. Six portes
 

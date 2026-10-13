@@ -69,7 +69,7 @@ oTwin.CreateFile("orders/today.txt", "3 couscous")
 #--> 0
 ```
 
-Il répond `virtual`, et `StzEngineFileExists` répond `0` : le fichier a été écrit, relu, et n'est nulle part sur le disque.
+Il répond `virtual`, et `StzEngineFileExists` répond `0` : le fichier a été écrit, relu, et n'est nulle part sur le disque !
 
 Et à la barrière de production, une solution ne peut pas atteindre la production avec un faux service lié en elle, quel que soit celui qui le demande. Au chapitre 1 vous avez vu le registre refuser ; ici c'est la livraison elle-même qui refuse, avec une personne habilitée pour acteur. Que répond la livraison quand cette personne déploie en production avec un bac à sable lié ? Lancez-le :
 
@@ -88,29 +88,31 @@ oDep = oDel.Deploy(:Production)
 #--> sandbox-in-production @ shop/payments
 ```
 
-La personne avait le droit de déployer. Le déploiement ne s'est pourtant pas exécuté ; `WasCommitted()` répond `0`, et le journal dit pourquoi : `sandbox-in-production @ shop/payments`. Un service de paiement qui est un bac à sable ne peut pas être ce par quoi un vrai client paie. Ce n'est pas une question d'autorité. C'est une question de ce qui est vrai.
+La personne avait le droit de déployer. La livraison l'a refusé ! `WasCommitted()` répond `0`. Pourquoi a-t-elle refusé ? Le journal dit : `sandbox-in-production @ shop/payments`. Un service de paiement qui est un bac à sable ne peut pas être ce par quoi un vrai client paie. Ce n'est pas une question d'autorité. C'est une question de ce qui est vrai.
 
-Le plancher est donc là : déclarer, construire, répéter, refuser le faux, valider par un acteur gouverné. Maintenant l'absence.
+Le plancher est donc là : déclarer, construire, répéter, refuser le faux, valider par un acteur gouverné.
 
-Softanza a été utilisée. Je l'ai écrit au chapitre 1 et je m'y tiens, parce que l'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré. Je l'ai corrigée. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence, et le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier et l'a éprouvée sur le terrain. Le dossier de ce projet s'arrête au 25 août 2026, avec un avenant clos le 4 août et un propriétaire qui a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
+Maintenant l'absence.
+
+Softanza a-t-elle été utilisée ? Oui. Je l'ai écrit au chapitre 1 et je m'y tiens. L'étude qui a lu le dossier la première fois a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré. Je l'ai corrigée. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence. Le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier et l'a éprouvée sur le terrain. Le dossier de ce projet s'arrête au 25 août 2026. Un avenant a été clos le 4 août ; le propriétaire a pris part à la première démonstration et mené une journée d'essais sur le terrain avec deux téléphones. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, la leçon que chacun a enseignée et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
 
 Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation n'est pas construit. Le site dit que leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli.
 
 La ligne que le dossier ne porte pas encore est donc celle-ci : *la solution a tourné sur le moteur propre de Softanza, et voici ce que l'utilisateur a dit.*
 
-Ce qui sépare d'ici cette ligne, lu dans le dossier et non composé :
+Qu'est-ce qui sépare d'ici cette ligne ? Cinq pas, lus dans le dossier et non composés.
 
 1. **Les déclarations d'un client tournent sur le moteur au lieu de la pile ordinaire.** Le site dit que les déclarations sont en cours d'écriture ; je n'en ai trouvé aucun fichier, et le chapitre 31 dit où j'ai cherché. Le passage n'est pas fait.
-2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant toutes les assertions que l'ancien runtime passe sur la bibliothèque, sauf une requête HTTP/2 qui a échoué une fois dans la passe. Sur chaque ligne stable, 3 461 des 5 112 programmes concordent avec l'ancien runtime. Son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Haro ne fait pas encore tourner la bibliothèque.
+2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant toutes les assertions que l'ancien runtime passe sur la bibliothèque, sauf une requête HTTP/2. Cette requête a échoué une fois dans la passe. Sur chaque ligne stable, 3 461 des 5 112 programmes concordent avec l'ancien runtime. Son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Haro ne fait pas encore tourner la bibliothèque.
 3. **La solution écrit sa fiche de garanties.** La vision demande à chaque solution cinq lignes, une pour chaque système auquel elle répond, technique, social, écologique, économique et culturel, jugées comme des fixtures, la machine en étant dérivée. Aucune solution n'en a écrit.
-4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée démarre et se juge elle-même dans un émulateur ; des quatre promesses que fait son profil hébergé, l'émulateur peut en vérifier trois, et la quatrième attend un chien de garde sur une vraie carte. Aucun client ne fait tourner sur elle une charge de production.
+4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée démarre et se juge elle-même dans un émulateur. Des quatre promesses que fait son profil hébergé, l'émulateur peut en vérifier trois. La quatrième attend un chien de garde sur une vraie carte. Aucun client ne fait tourner sur elle une charge de production.
 5. **Une personne le perçoit, et le dossier dit qui.** Pas un compteur. Une personne, nommée, avec une date et ce qu'elle a dit.
 
 Le dernier pas est une loi du domaine de projets, et elle a été payée. Le volet sonore de la bibliothèque a un jour tenu des centaines d'assertions réussies alors qu'il était, à mon oreille, cassé. Depuis, un travail qui atteint une personne par un sens doit être perçu par une personne, et le dossier doit dire qui l'a perçu et ce qu'elle a dit. Et quand personne ne l'a fait, la loi le dit clairement : non perçu est un état, pas un échec. Un rapport peut être honnête et rester non perçu.
 
 Le dossier tient déjà la forme de la ligne. Dans un autre volet, le 2 octobre 2026, le dossier dit que le Principal a écouté un son que la bibliothèque avait fait et a dit, dans les mots écrits : « yes it's real drum!! » (les mots sont écrits en anglais dans le dossier) Ce n'est pas une solution, et ce n'est pas un client. Mais c'est une personne, une date et une phrase, et c'est à cela que ressemblera la ligne unique.
 
-Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèque dessine ont été jugées par un modèle, quarante et une images ou sections de texte, vingt justes, neuf fausses, douze incertaines, et le dossier dit qu'aucun humain ne les a encore regardées. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont dus.
+Le dossier tient aussi le contraire, honnêtement. Les images que la bibliothèque dessine ont été jugées par un modèle, quarante et une images ou sections de texte, vingt justes, neuf fausses, douze incertaines. Le dossier dit qu'aucun humain ne les a encore regardées. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont dus.
 
 ## 4. La décision, et ce que j'ai refusé
 

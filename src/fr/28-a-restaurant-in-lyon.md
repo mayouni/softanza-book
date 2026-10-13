@@ -22,7 +22,7 @@ Dans ce chapitre, je raconte une leçon payée dans l'ordre, avec ses dates : un
 
 Chaque leçon de ce projet a, sur le terrain, un lieu ordinaire, et le terrain la garde en dehors du programme.
 
-Un périmètre fixé pour un cycle vit dans un processus. En Scrum, le but d'un sprint ne change pas pendant qu'il court ; en Shape Up, le temps est fixé et le périmètre varie, et les idées nouvelles attendent hors du cycle. Essayer un service avant de le payer vit dans le mode test d'un fournisseur et dans les outils qui tiennent la place d'un service HTTP. Un budget de performance vit dans un contrôle d'intégration continue du poids et de la vitesse d'une page, et la mesure de la vitesse propre au web est un chiffre pris sur de vrais chargements de pages, au soixante-quinzième percentile. L'image de toute une constellation de petites applications vit dans la super-application : un hôte qui embarque un runtime et fait tourner des mini-applications à l'intérieur. (Tout cela est une connaissance générale, pas une étude du dossier.)
+Un périmètre fixé pour un cycle vit dans un processus. En Scrum, le but d'un sprint ne change pas pendant qu'il court ; en Shape Up, le temps est fixé et le périmètre varie, et les idées nouvelles attendent hors du cycle. Essayer un service avant de le payer vit dans le mode test d'un fournisseur et dans les outils qui tiennent la place d'un service HTTP. Un budget de performance vit dans un contrôle d'intégration continue du poids et de la vitesse d'une page. La mesure de la vitesse propre au web est un chiffre pris sur de vrais chargements de pages, au soixante-quinzième percentile. L'image de toute une constellation de petites applications vit dans la super-application : un hôte qui embarque un runtime et fait tourner des mini-applications à l'intérieur. (Tout cela est une connaissance générale, pas une étude du dossier.)
 
 Les quatre sont de bonnes pratiques, et dans les quatre le programme lui-même n'en sait rien.
 
@@ -44,9 +44,9 @@ La réponse du projet à sa crainte est un document et un carnet. Nous l'avons a
 
 Le 15 août, la première démonstration a été conçue pour lui seul. La liste de contrôle porte son nom et « seul » dans son titre. Il ouvre la livraison sur son propre ordinateur, scanne un code avec son téléphone et un autre avec sa tablette, passe sa propre commande depuis le téléphone, et la regarde arriver sur la tablette. S'il reste bloqué, un bouton prépare un message à coller dans une messagerie. Le critère de réussite se lit : il commande depuis son téléphone, et cela arrive sur sa tablette, sans nous. Le carnet montre que cela s'est produit : ses remarques de ce jour y ont été saisies le 17. Et le 19 août, il a passé une journée de terrain avec deux téléphones et des photographies envoyées par une messagerie, à mesurer sur un vrai téléphone. Un point d'accès fonctionne sans carte dedans ; l'adresse de la passerelle était stable d'un redémarrage à l'autre. Un téléphone est client Wi-Fi ou point d'accès, jamais les deux ; le système d'un iPhone ne revient pas de lui-même sur un réseau sans internet. Les notes du projet l'appellent alors son co-architecte. Le dossier s'arrête le 25 août 2026.
 
-Voilà l'histoire. Voici ce que la bibliothèque en porte.
+Voilà l'histoire. Qu'en porte la bibliothèque ?
 
-**Le Verrou.** Je dois être exact ici, parce que la page Forged du site contient une règle que j'ai faite : une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte. Aucun fichier ne porte le Verrou. C'était un pacte et un carnet, tenus dans des documents. Ce que la bibliothèque peut faire, c'est vous donner la déclaration qui s'en approche le plus : une règle sur les mondes d'un cycle, selon laquelle un monde sans admission écrite est un constat. Que dit le tribunal quand une idée entre dans le cycle sans admission écrite ? Ce bloc est une construction, pas le code du restaurant :
+**Le Verrou.** Je dois être exact ici. La page Forged du site contient une règle que j'ai faite : une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte. Aucun fichier ne porte le Verrou. C'était un pacte et un carnet, tenus dans des documents. Ce que la bibliothèque peut faire, c'est vous donner la déclaration qui s'en approche le plus : une règle sur les mondes d'un cycle, selon laquelle un monde sans admission écrite est un constat. Que dit le tribunal quand une idée entre dans le cycle sans admission écrite ? Ce bloc est une construction, pas le code du restaurant :
 
 ```haro
 oRule = new stzGraphRule("the-lock")
@@ -74,7 +74,7 @@ g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit
 
 L'idée d'un club de fidélité arrive, et le cycle n'est plus sain ! Le tribunal répond `UNSOUND (errors present)`, et nomme la règle et le nœud : `ERROR the-lock @ loyalty-club`. Le cycle redevient sain quand l'idée porte son admission écrite.
 
-**Essayer des paiements sans abonnement.** La règle du projet était de tester sans s'engager : le bac à sable gratuit d'un établissement de paiement, et les services simulés de la bibliothèque. Et aucun abonnement avant une barrière que les notes appellent la barrière de mise en service. Le côté de la bibliothèque est un bac à sable de paiements qui n'est pas complaisant. Il se comporte comme une passerelle : un rejet est une réponse, une panne n'en est pas une, et une capture ne peut pas être faite deux fois. Les montants sont des entiers en unités mineures, donc 4 200 font quarante-deux euros. Que répond-il à un jeton qu'on lui a dit de rejeter, à une panne, et à une seconde capture ? Lancez-le :
+**Essayer des paiements sans abonnement.** La règle du projet était de tester sans s'engager. Cela voulait dire le bac à sable gratuit d'un établissement de paiement et les services simulés de la bibliothèque, et aucun abonnement avant une barrière que les notes appellent la barrière de mise en service. Le côté de la bibliothèque est un bac à sable de paiements qui n'est pas complaisant. Il se comporte comme une passerelle : un rejet est une réponse, une panne n'en est pas une, et une capture ne peut pas être faite deux fois. Les montants sont des entiers en unités mineures, donc 4 200 font quarante-deux euros. Que répond-il à un jeton qu'on lui a dit de rejeter, à une panne, et à une seconde capture ? Lancez-le :
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -118,7 +118,7 @@ oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
 
 Le propriétaire est habilité, et il est refusé ! Rien n'est validé, et le journal dit pourquoi : `REFUSED -- the external surface is not production-ready` ; la raison dessous est la règle : `a fake must never ship`. Elle s'ouvre quand le lien est réel.
 
-**La constellation.** Quand il a renversé l'ordre du travail, l'architecture du projet a été redessinée en une constellation de cinq mondes sur un socle commun. Les mondes sont le téléphone du client, l'écran de la cuisine, l'atelier du commerçant, la gestion, qui est la première application gardée et mise en sommeil, et la console de l'éditeur. Le socle commun est l'identité, le catalogue, les commandes, les paiements et la flotte. Dans la bibliothèque, le dernier monde dans l'ordre du travail peut être mis en sommeil ; un appel vers lui est refusé avec sa raison, et il est réveillé quand son tour vient :
+**La constellation.** Quand il a renversé l'ordre du travail, l'architecture du projet a été redessinée en une constellation de cinq mondes sur un socle commun. Les mondes sont le téléphone du client, l'écran de la cuisine, l'atelier du commerçant, la gestion, qui est la première application gardée et mise en sommeil, et la console de l'éditeur. Le socle commun est l'identité, le catalogue, les commandes, les paiements et la flotte. Dans la bibliothèque, le dernier monde dans l'ordre du travail peut être mis en sommeil, et il est réveillé quand son tour vient. Que répond un appel à travers un lien tant que le monde visé dort, et une fois qu'il est réveillé ? Lancez-le :
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
@@ -145,9 +145,9 @@ oCon.Revive("supplier")
 #--> 1
 ```
 
-L'appel à travers le lien passe ; l'appel vers le monde en sommeil, non, et la raison tient en une ligne : `target world 'supplier' is not active.` Réveillé, il passe.
+L'appel à travers le lien passe. L'appel vers le monde en sommeil est refusé ! La raison tient en une ligne : `target world 'supplier' is not active.` Réveillé, il passe.
 
-**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Je tiens cela pour une vue, non pour un résultat. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes, les juge contre ce qui a été mesuré, et un dépassement fait échouer la même barrière qu'un constat de sécurité. Les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
+**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Je tiens cela pour une vue, non pour un résultat. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes et les juge contre ce qui a été mesuré. Un dépassement fait échouer la même barrière qu'un constat de sécurité. Les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -174,9 +174,11 @@ oRep.Ingest(oSla.Findings())
 #--> p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)
 ```
 
-Trois attentes tenues, puis une commande prend 3 100 millisecondes et la barrière n'est plus saine. Le constat le dit dans les mots du budget : `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
+Le premier contrôle imprime `3 expectation(s), last check: MET.` Puis une commande prend 3 100 millisecondes, et la barrière n'est plus saine ! Le constat le dit dans les mots du budget : `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
 
-Une chose de plus que le projet a apprise, et que la bibliothèque ne porte pas. Le fichier de règles d'interface du projet est de l'expérience en quelques lignes : une action claire par écran ; annuler plutôt que confirmer ; un bouton refusé est désactivé à la vue, jamais caché. Et un test : une première journée simulée sur une base vide a trouvé le trou le plus grave, qu'aucun fournisseur ne pouvait être créé en production. Ces règles ont été forgées, au compte du projet lui-même, par onze itérations et une campagne de vingt-deux tests simulés avec dix-sept corrections. La bibliothèque n'en porte aucune comme contrôle. Donc, selon la règle de ce chapitre, elles sont la leçon du projet et non celle de la bibliothèque, et je les raconte ici sans bloc.
+La bibliothèque porte-t-elle ce que le projet a appris des interfaces ? Non. Le fichier de règles d'interface du projet est de l'expérience en quelques lignes : une action claire par écran ; annuler plutôt que confirmer ; un bouton refusé est désactivé à la vue, jamais caché. Et un test : une première journée simulée sur une base vide a trouvé le trou le plus grave, qu'aucun fournisseur ne pouvait être créé en production. Ces règles ont été forgées, au compte du projet lui-même, par onze itérations et une campagne de vingt-deux tests simulés avec dix-sept corrections. La bibliothèque n'en porte aucune comme contrôle. Donc, selon la règle de ce chapitre, elles sont la leçon du projet et non celle de la bibliothèque, et je les raconte ici sans bloc.
+
+Six refus suivent, chacun avec sa raison.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -192,19 +194,25 @@ Une chose de plus que le projet a apprise, et que la bibliothèque ne porte pas.
 
 **J'ai refusé de dire que la bibliothèque était née de son besoin.** Voici les dates. La conception de la constellation, le plan de virtualisation, le registre, le port des paiements et le jugement de performance ont tous été commités pour la première fois après le renversement du 4 juillet. Le plan est daté du 23 juillet, et l'étude de performance du 29 juillet. Le site dit avec soin que le projet avait besoin de ces choses et que la bibliothèque les porte. Je n'en dirai pas plus. Le dossier ne dit pas ce qui est venu en premier, son besoin ou les parties : il montre le projet les trouvant dans la bibliothèque, et je laisse l'ordre ouvert.
 
+Cinq gardes se tiennent derrière les cinq blocs ci-dessus.
+
 ## 5. Le tribunal
 
 `06_stzsuperapp_narrated` prouve la constellation : des mondes qui se joignent, un appel entre mondes qui exige que les deux soient actifs, un lien et une gouvernance déclarés, et un monde retiré qui rompt ses liens puis se réveille. `service_delivery_narrated` prouve qu'un déploiement en production par un acteur habilité est refusé tant qu'un faux est lié, chaque raison étant consignée, et qu'il s'ouvre une fois le lien réel. `payments_port_narrated` prouve la machine à états du bac à sable : capturer une fois, capturer seulement un débit autorisé, ne pas rembourser plus que ce qui a été capturé. Un rejet est une réponse et une panne n'en est pas une. `judgment_narrated` prouve une attente déclarée dans le vocabulaire opérationnel et jugée contre des nombres mesurés, un dépassement comme un constat qui fait échouer la barrière. Une attente sur un nombre que personne ne mesure y est une erreur, et jamais un passage silencieux. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle, avec les opérateurs qu'utilise la construction du Verrou.
+
+Le tribunal prouve ce que la bibliothèque fait ; il ne dit pas où le terrain fait mieux.
 
 ## 6. Le terrain, et où il mène
 
 Le terrain mène en stockage, en requêtes et en écosystème. L'étude propre de la bibliothèque sur le terrain de la performance, écrite contre les outils du début de 2026, le dit sans l'adoucir. Pas de base de données de séries temporelles, pas de langage de requête pour elle, pas de tableaux de bord, par conception ; l'export à la place. Parmi les cinq propriétés qu'elle revendique contre eux, celle que ce chapitre utilise est la première : rien sur le terrain ne couple un budget au propre système de règles du code.
 
-Le terrain mène dans le navigateur. Les mondes du restaurant tournent dans les navigateurs des clients et de la cuisine, et je n'ai rien trouvé dans la bibliothèque qui y mesure un premier affichage ou un appui. Le moniteur de la bibliothèque observe un serveur, et le SLA juge les nombres qu'on enregistre dans un chronomètre. Le protocole de mesure du propriétaire, au soixante-quinzième percentile sur un téléphone de milieu de gamme, ne peut pas être déclaré exactement dans les termes de la bibliothèque, qui offrent le cinquantième, le quatre-vingt-quinzième et le quatre-vingt-dix-neuvième.
+Le terrain mène dans le navigateur. Les mondes du restaurant tournent dans les navigateurs des clients et de la cuisine, et je n'ai rien trouvé dans la bibliothèque qui y mesure un premier affichage ou un appui. Le moniteur de la bibliothèque observe un serveur, et le SLA juge les nombres qu'on enregistre dans un chronomètre. Le protocole de mesure du propriétaire est au soixante-quinzième percentile sur un téléphone de milieu de gamme. Les termes de la bibliothèque ne peuvent pas le déclarer exactement : ils offrent le cinquantième, le quatre-vingt-quinzième et le quatre-vingt-dix-neuvième.
 
 Le terrain mène sur les services réels. Un double n'est pas le service, et le plan le dit : il faut encore au moins une exécution réelle avant la production, et les réponses enregistrées dérivent. Les vrais fournisseurs mènent dans les cas limites que le bac à sable ne modélise pas.
 
 Et les hôtes de super-applications mènent en base installée. La conception nomme ce que la super-application de l'industrie possède, une boutique, une revue, un pont natif, et le remplace ; elle ne revendique pas d'utilisateurs.
+
+Je dis maintenant où le chapitre s'arrête.
 
 ## 7. La limite
 
@@ -214,7 +222,9 @@ Ce qui est conçu : le Verrou comme règle de la bibliothèque, dont le dossier 
 
 Ce qui est absent : l'adaptateur de paiement réel du restaurant, que la charte de la bibliothèque appelle une tâche ultérieure et la décision du propriétaire. Une mesure du budget sur un vrai réseau mobile, que le tableau de bord du projet du 23 août a reportée au cycle suivant. Les règles d'interface, dont la règle des deux gestes, comme contrôles, une attente au soixante-quinzième percentile et la mesure du temps côté navigateur, dont aucun document de la bibliothèque ne porte la conception. Et l'état de la plateforme après le 25 août 2026, où le dossier s'arrête. Rien n'y dit que la première version soit arrivée en production au restaurant, ait passé la barrière de mise en service, ou ait pris une vraie commande d'un vrai client. Le dossier est muet sur ce qui s'est passé après le 25 août 2026, et je le dis. Des seuils de vitesse resserrés du propriétaire, je n'en imprime aucun, et dis seulement qu'un tel budget existe.
 
-Et ce qui tourne aujourd'hui est ordinaire. Les mondes sont des fichiers HTML uniques, un par monde, avec un cadriciel embarqué, sans étape de construction et sans réseau de contenu. Le serveur est un programme Node de quelques centaines de lignes qui utilise cinq modules propres à Node, sert les mondes sur le réseau local, et ne garde qu'une chose : un journal, chaîné par des empreintes, rejoué au redémarrage. La première application de gestion a une enveloppe de téléphone autour d'une vue web. Rien de tout cela ne tourne sur le moteur Softanza. La bibliothèque est la référence de conception du projet. La constellation est, selon les mots du site, une conception que la bibliothèque sait exécuter. Le restaurant, non.
+Et ce qui tourne aujourd'hui est ordinaire. Les mondes sont des fichiers HTML uniques, un par monde, avec un cadriciel embarqué, sans étape de construction et sans réseau de contenu. Le serveur est un programme Node de quelques centaines de lignes. Il utilise cinq modules propres à Node, sert les mondes sur le réseau local, et ne garde qu'une chose : un journal, chaîné par des empreintes, rejoué au redémarrage. La première application de gestion a une enveloppe de téléphone autour d'une vue web. Rien de tout cela ne tourne sur le moteur Softanza. La bibliothèque est la référence de conception du projet. La constellation est, selon les mots du site, une conception que la bibliothèque sait exécuter. Le restaurant, non.
+
+Six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 

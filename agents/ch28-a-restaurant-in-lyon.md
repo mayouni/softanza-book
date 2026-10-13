@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -12,7 +12,7 @@ In this chapter I tell a paid lesson in order, with its dates: a restaurateur in
 
 Each lesson of this project has an ordinary home in the field, and the field keeps it outside the program.
 
-A fixed scope for a cycle lives in a process. In Scrum the goal of a sprint does not change while it runs; in Shape Up, the time is fixed and the scope varies, and new ideas wait outside the cycle. Trying a service before paying for it lives in a vendor's test mode and in tools that stand in for an HTTP service. A performance budget lives in a continuous-integration check of a page's weight and speed, and the web's own measure of speed is a figure taken over real page loads, at the seventy-fifth percentile. The picture of a whole constellation of small applications lives in the super-app: one host that embeds a runtime and runs mini-applications inside it. (All of this is general knowledge, not a study of the record.)
+A fixed scope for a cycle lives in a process. In Scrum the goal of a sprint does not change while it runs; in Shape Up, the time is fixed and the scope varies, and new ideas wait outside the cycle. Trying a service before paying for it lives in a vendor's test mode and in tools that stand in for an HTTP service. A performance budget lives in a continuous-integration check of a page's weight and speed. The web's own measure of speed is a figure taken over real page loads, at the seventy-fifth percentile. The picture of a whole constellation of small applications lives in the super-app: one host that embeds a runtime and runs mini-applications inside it. (All of this is general knowledge, not a study of the record.)
 
 All four are good practices, and in all four the program itself knows nothing of them.
 
@@ -34,9 +34,9 @@ The project's answer to his fear is a document and a notebook. We called it the 
 
 On 15 August the first demonstration was designed for him alone. The checklist is titled with his name and "alone". He opens the delivery on his own computer, scans one code with his phone and another with his tablet, places his own order from the phone, and watches it land on the tablet. If he gets stuck, a button prepares a message to paste into a messaging app. The criterion of success reads: he orders from his phone, and it lands on his tablet, without us. The notebook shows it happened: his remarks of that day were entered in it on the 17th. And on 19 August he spent a field day with two phones and photographs sent over a messaging app, measuring on a real phone. A hotspot works with no card in it; the address of the gateway was stable across restarts. A phone is a Wi-Fi client or a hotspot, never both; an iPhone's system does not return by itself to a network with no internet. The project's notes then call him its co-architect. The record ends on 25 August 2026.
 
-That is the story. Here is what the library carries of it.
+That is the story. What does the library carry of it?
 
-**The Lock.** I have to be exact here, because the Forged page of the site holds a rule I made: a lesson is listed only when a file of the library carries it. No file carries the Lock. It was a pact and a notebook, kept in documents. What the library can do is give you the nearest declaration of it: a rule over the worlds of a cycle, that a world without a written admission is a finding. What does the court say when an idea enters the cycle with no written admission? This block is a construction, not the restaurant's code:
+**The Lock.** I have to be exact here. The Forged page of the site holds a rule I made: a lesson is listed only when a file of the library carries it. No file carries the Lock. It was a pact and a notebook, kept in documents. What the library can do is give you the nearest declaration of it: a rule over the worlds of a cycle, that a world without a written admission is a finding. What does the court say when an idea enters the cycle with no written admission? This block is a construction, not the restaurant's code:
 
 ```haro
 oRule = new stzGraphRule("the-lock")
@@ -66,7 +66,7 @@ g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit
 
 The idea of a loyalty club arrives, and the cycle is no longer sound! The court answers `UNSOUND (errors present)`, and names the rule and the node: `ERROR the-lock @ loyalty-club`. The cycle is sound again when the idea carries its written admission.
 
-**Try payments without a subscription.** The project's rule was to test without committing: a payment institution's free sandbox, and the library's simulated services, and no subscription before a gate that the notes call the go-live gate. The library's side of it is a payments sandbox that is not agreeable. It behaves like a gateway: a decline is an answer, an outage is not, and a capture cannot be made twice. The amounts are integers in minor units, so 4200 is forty-two euros. What does it answer to a token it was told to decline, to an outage, and to a second capture? Run it:
+**Try payments without a subscription.** The project's rule was to test without committing. That meant a payment institution's free sandbox and the library's simulated services, and no subscription before a gate that the notes call the go-live gate. The library's side of it is a payments sandbox that is not agreeable. It behaves like a gateway: a decline is an answer, an outage is not, and a capture cannot be made twice. The amounts are integers in minor units, so 4200 is forty-two euros. What does it answer to a token it was told to decline, to an outage, and to a second capture? Run it:
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -114,7 +114,7 @@ oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
 
 The owner is entitled, and he is refused! Nothing is committed, and the log says why: `REFUSED -- the external surface is not production-ready`; the reason under it is the rule: `a fake must never ship`. It opens when the binding is real.
 
-**The constellation.** When he reversed the order of the work, the project's architecture was redrawn as a constellation of five worlds on a shared ground. The worlds are the customer's phone, the kitchen screen, the merchant's workshop, management, which is the first application kept and put to sleep, and the publisher's console. The shared ground is identity, the catalogue, orders, payments and the fleet. In the library, the last world in the order of work can be put to sleep; a call to it is refused with its reason, and it is revived when its turn comes:
+**The constellation.** When he reversed the order of the work, the project's architecture was redrawn as a constellation of five worlds on a shared ground. The worlds are the customer's phone, the kitchen screen, the merchant's workshop, management, which is the first application kept and put to sleep, and the publisher's console. The shared ground is identity, the catalogue, orders, payments and the fleet. In the library, the last world in the order of work can be put to sleep, and it is revived when its turn comes. What does a call across a bond answer while the target world sleeps, and after it is revived? Run it:
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
@@ -143,9 +143,9 @@ oCon.Revive("supplier")
 
 > run: kept
 
-The call across the bond passes; the call to the sleeping world does not, and the reason is one line: `target world 'supplier' is not active.` Revived, it passes.
+The call across the bond passes. The call to the sleeping world is refused! The reason is one line: `target world 'supplier' is not active.` Revived, it passes.
 
-**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. I hold this as a view, not a result. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations, judges them against what was measured, and a breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
+**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. I hold this as a view, not a result. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations and judges them against what was measured. A breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -174,9 +174,11 @@ oRep.Ingest(oSla.Findings())
 
 > run: kept
 
-Three expectations met, then one order takes 3100 milliseconds and the gate is no longer sound. The finding says it in the budget's own words: `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
+The first check prints `3 expectation(s), last check: MET.` Then one order takes 3100 milliseconds, and the gate is no longer sound! The finding says it in the budget's own words: `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
 
-One more thing the project learned, and the library does not carry. The project's file of interface rules is experience in a few lines: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden. And one test: a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check. So by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
+Does the library carry what the project learned about interfaces? It does not. The project's file of interface rules is experience in a few lines: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden. And one test: a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check. So by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
+
+Six refusals follow, each with its reason.
 
 ## 4. The decision, and what I refused
 
@@ -192,19 +194,25 @@ One more thing the project learned, and the library does not carry. The project'
 
 **I refused to say the library was born of his need.** The constellation design, the virtualization plan, the registry, the payments port and the performance judgment were all first committed after the reversal of 4 July. The plan is dated 23 July, and the performance study 29 July. The site says carefully that the project needed these things and that the library carries them. I will say no more than that. The record does not say which came first, his need or the parts: it shows the project finding them in the library, and I leave the order open.
 
+Five guards stand behind the five blocks above.
+
 ## 5. The court
 
 `06_stzsuperapp_narrated` proves the constellation: worlds joining, a call across worlds needing both worlds active, a declared bond and governance, and a retired world breaking its bonds and reviving. `service_delivery_narrated` proves that a production deployment by an entitled actor is refused while a fake is bound, with every reason logged, and that it opens once the binding is real. `payments_port_narrated` proves the sandbox's state machine: capture once, capture only an authorised charge, refund no more than captured, a decline is an answer and an outage is not. `judgment_narrated` proves an expectation declared in the operational vocabulary and judged against measured numbers, a breach as a finding that fails the gate, and an expectation on a number nobody measures as an error and never a silent pass. `graphrule_object_narrated` proves the rule as an object attached to a model, with the operators the Lock's construction uses.
+
+The court proves what the library does; it does not say where the field does better.
 
 ## 6. The field, and where it leads
 
 The field leads in storage, in queries and in ecosystem. The library's own study of the performance field, written against the tools of early 2026, says it without softening: no time-series database, no query language for it, no dashboards, by design; export instead. Among the five properties it claims against them, the one this chapter uses is the first: nothing in the field couples a budget to the codebase's own rule system.
 
-The field leads in the browser. The restaurant's worlds run in the browsers of customers and the kitchen, and I found nothing in the library that measures a first display or a tap there. The library's monitor observes a server, and the SLA judges whatever numbers are recorded into a timer. The owner's measurement protocol, at the seventy-fifth percentile on a mid-range phone, cannot be declared exactly in the library's terms, which offer the fiftieth, the ninety-fifth and the ninety-ninth.
+The field leads in the browser. The restaurant's worlds run in the browsers of customers and the kitchen, and I found nothing in the library that measures a first display or a tap there. The library's monitor observes a server, and the SLA judges whatever numbers are recorded into a timer. The owner's measurement protocol is at the seventy-fifth percentile on a mid-range phone. The library's terms cannot declare it exactly: they offer the fiftieth, the ninety-fifth and the ninety-ninth.
 
 The field leads on real services. A double is not the service, and the plan says so: you still need at least one real run before production, and recorded responses drift. The real providers lead in the edge cases the sandbox does not model.
 
 And the super-app hosts lead in installed base. The design names what the industry's super-app has, a store, a review, a native bridge, and replaces it; it does not claim users.
+
+Now I say where the chapter stops.
 
 ## 7. The limit
 
@@ -214,7 +222,9 @@ What is designed: the Lock as a rule of the library, of which the record has no 
 
 What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle. The interface rules, the two-gesture rule among them, as checks, a seventy-fifth percentile expectation and browser-side timing, of which no document of the library holds a design. And the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. The record is silent on what happened after 25 August 2026, and I say so. Of the owner's tightened speed thresholds I print none, and say only that such a budget exists.
 
-And what runs today is ordinary. The worlds are single HTML files, one per world, with a vendored framework, no build step and no content network. The server is a Node program of a few hundred lines that uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. None of it runs on the Softanza engine. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant does not.
+And what runs today is ordinary. The worlds are single HTML files, one per world, with a vendored framework, no build step and no content network. The server is a Node program of a few hundred lines. It uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. None of it runs on the Softanza engine. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant does not.
+
+Six doors follow, one for each reader.
 
 ## 8. Six doors
 

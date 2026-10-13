@@ -16,7 +16,7 @@ rulings: ["12.2", "12.6", "12.27", "12.30"]
 research: research/ch13.md
 ---
 
-Dans ce chapitre, je fais tourner les deux directions du langage naturel dans la bibliothèque : la chaîne, où vous êtes l'analyseur, et la phrase, où c'est la bibliothèque. J'imprime les refus des deux côtés, cinq paquets de langue comme données et un sixième ajouté à l'exécution, et le compte de ce que chaque paquet sait dire. Je dis ce que j'ai refusé, les marqueurs de référence et la chaîne non grammaticale entre autres, et où le tribunal propre du dictionnaire échoue à ce commit. Le principe tient en une phrase : une phrase s'exécute parce que chacun de ses mots est dans un dictionnaire que la bibliothèque possède, et ce que la bibliothèque ne connaît pas, elle le refuse, avec la raison.
+Dans ce chapitre, je fais tourner les deux directions du langage naturel dans la bibliothèque : la chaîne, où vous êtes l'analyseur, et la phrase, où c'est la bibliothèque. J'imprime les refus des deux côtés, cinq paquets de langue comme données et un sixième ajouté à l'exécution, et le compte de ce que chaque paquet sait dire. Je dis ce que j'ai refusé, les marqueurs de référence et la chaîne non grammaticale entre autres, et où le tribunal propre du dictionnaire échoue à ce commit. Le principe tient en une phrase. Une phrase s'exécute parce que chacun de ses mots est dans un dictionnaire que la bibliothèque possède, et ce que la bibliothèque ne connaît pas, elle le refuse, avec la raison.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -90,7 +90,7 @@ Une chaîne se ramifie sur sa propre vérité, et un ordinal est un mot :
 #--> brave
 ```
 
-Les questions fonctionnent de la même manière. Un mot de force ouvre un cadre, un mot et une méthode. Une question de confirmation se termine par « or not ». La session garde chaque réponse et les replie, comme une narration :
+Les questions fonctionnent de la même manière. Un mot de force ouvre un cadre, un mot et une méthode. Une question de confirmation se termine par « or not ». Que garde la session quand l'une répond oui et l'autre non ? Elle garde chaque réponse et les replie, comme une narration :
 
 ```haro
 ? @@( WhatQ().TheQ().VowelsQ().OfQ("AnnIE").Is() )
@@ -113,6 +113,8 @@ ClearAnswers()
 ? AnyYesSoFar()
 #--> TRUE
 ```
+
+La session a gardé `[ 1, 0 ]` et l'a repliée : tout oui vaut `FALSE`, au moins un oui vaut `TRUE`.
 
 ### La machine est l'analyseur
 
@@ -166,7 +168,7 @@ oH = NaturallyIn("hausa", "Yi rubutu da dauke 'hello niger' a ciki Raba shi kuma
 
 La comparaison répond `TRUE` : un seul code pour deux langues !
 
-Le dictionnaire de phrases n'est pas le seul vocabulaire. Un mot qu'il ne tient pas est cherché dans le vocabulaire propre de la bibliothèque, ici les balises de documentation du verbe de mise en majuscules. Une valeur entre guillemets est une donnée, et jamais un verbe. Un mot inconnu en position de valeur reste un littéral :
+Le dictionnaire de phrases n'est pas le seul vocabulaire. Où va un mot qu'il ne tient pas ? Il est cherché dans le vocabulaire propre de la bibliothèque, ici les balises de documentation du verbe de mise en majuscules. Une valeur entre guillemets est une donnée, et jamais un verbe. Un mot inconnu en position de valeur reste un littéral :
 
 ```haro
 ? Naturally("Create a string with 'softanza' Capitals it").Result()
@@ -177,7 +179,7 @@ Le dictionnaire de phrases n'est pas le seul vocabulaire. Un mot qu'il ne tient 
 #--> a-_-b
 ```
 
-La troisième ligne est aussi une limite. Le mot `sep` n'était dans aucun dictionnaire, et il a servi de texte à remplacer. Un mot qu'elle ne connaît pas est un littéral.
+La troisième ligne est aussi une limite : elle a imprimé `a-_-b`. Le mot `sep` n'était dans aucun dictionnaire, et il a servi de texte à remplacer. Un mot qu'elle ne connaît pas est un littéral.
 
 **Cinq langues comme données.** Le dictionnaire est indexé par sens, et le mot de chaque langue aboutit à un seul identifiant. Un mot français, un mot arabe et un mot turc aboutissent-ils au même ? Exécutez :
 
@@ -209,9 +211,11 @@ Les langues suivent leur propre grammaire, et ce ne sont pas des traductions mot
 #--> orah
 ```
 
+Trois langues, trois grammaires, une seule réponse : `orah`. L'arabe redit ce qu'il a compris, dans ses propres mots : `أنشئ سلسلة بـ haro -> اعكس`.
+
 Aucun lecteur natif n'a lu ces phrases. Elles sont calquées sur celles de la garde, avec « haro » à la place du mot d'essai de la garde, et l'inversion turque d'une chaîne de caractères est la variante du livre de l'inversion de liste de la garde. Je ne sais pas qu'un locuteur les ait lues. Le dossier ne tient aucune lecture, par un locuteur, des phrases arabes, turques, françaises ou swahilies, comme il n'en tient aucune pour le haoussa du chapitre 11. Elles sont imprimées comme des phrases calquées sur celles de la bibliothèque, non lues.
 
-Une langue est un bloc de données. Voici le swahili, ajouté à l'exécution, dans les mots propres de la garde :
+Une langue peut-elle être un bloc de données ? Voici le swahili, ajouté à l'exécution, dans les mots propres de la garde :
 
 ```haro
 StzAddNaturalLanguage([
@@ -259,7 +263,7 @@ cT = "Create a list with {#1} and remove its duplicates"
 #--> [ 9, 4 ]
 ```
 
-**Ce que les paquets savent dire.** Les paquets sont honnêtes sur ce qu'ils disent. La bibliothèque a une fonction pour cela, et aucune garde n'imprime ses chiffres. Je compte par rapport à vingt-cinq sens de référence, qui sont les sens structurels et chaque méthode et modificateur que nomme un paquet livré. Ce ne sont pas les milliers de verbes que la bibliothèque a fait croître :
+**Ce que les paquets savent dire.** Combien chaque paquet sait-il dire ? La bibliothèque a une fonction pour cela, et aucune garde n'imprime ses chiffres. Je compte par rapport à vingt-cinq sens de référence, qui sont les sens structurels et chaque méthode et modificateur que nomme un paquet livré. Ce ne sont pas les milliers de verbes que la bibliothèque a fait croître :
 
 ```haro
 for cLang in [ "en", "ha", "fr", "ar", "tr" ]
@@ -275,13 +279,17 @@ next
 #--> FALSE
 ```
 
-Le paquet haoussa parle neuf des vingt-cinq sens : `ha 9 of 25`. Et aucun modèle n'est chargé. La couche a un secours facultatif par plongement, quand rien de lexical n'a été trouvé et qu'un modèle est chargé. À ce commit aucun ne l'est, et aucun n'est nécessaire. Je dis donc « aucun modèle n'est chargé », et non « ne touche jamais un modèle ».
+Le paquet haoussa parle neuf des vingt-cinq sens : `ha 9 of 25` ! Et aucun modèle n'est chargé. La couche a un secours facultatif par plongement, quand rien de lexical n'a été trouvé et qu'un modèle est chargé. À ce commit aucun ne l'est, et aucun n'est nécessaire. Je dis donc « aucun modèle n'est chargé », et non « ne touche jamais un modèle ».
 
 ### Du schéma de 2020 aux trois ères
 
 La bibliothèque nomme trois ères, dans un document de conception du 10 juillet 2026. La première est le langage quasi naturel, le premier paradigme. La deuxième est la programmation naturelle : abaisser le langage vers le code, avec du texte libre, et un objet par bloc. La troisième, de 2026, est un lexique partagé par l'exécution et la documentation, des paquets multilingues avec morphologie, et `Understood()`. J'appelle la troisième *le lexique partagé*. Le titre même de la vision pour elle emploie un mot que ce livre n'emploie pas.
 
-Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte les années 2020 à 2025, partagé le 13 septembre 2026 ; sa bande Narrations se lit « langage naturel exécutable ». Le diaporama de 2022 a été exporté le 20 septembre 2022, et sa diapositive 2 dit d'exprimer la pensée dans un langage naturel exécutable. Le dépôt de la bibliothèque commence le 12 mars 2022, et son historique ne peut pas dater 2020 ni 2021. Les fichiers quasi naturels et le moteur à son chemin actuel ont été commités pour la première fois entre le 16 et le 19 septembre 2025. Le 30 octobre 2025, les langues sont devenues de la configuration. Le 2 novembre 2025, l'entrée par chaîne de caractères a remplacé la capture par accolades. Le 9 juillet 2026, le lexique a été unifié à partir des balises de documentation. Le 10 juillet 2026, les deux documents de conception ont été écrits, et l'audit de quinze exemples canoniques a trouvé que quatre tournaient, et que deux d'entre eux répondaient correctement. La page phare du site est du 8 octobre 2026. (Les dates git viennent du dépôt propre de la bibliothèque, que l'instantané n'a pas. Les dates des commits y ont été vérifiées le 9 octobre 2026, et les commits cités sont des ancêtres de l'épinglage.) La plus ancienne diapositive que le dossier date est donc la diapositive fondatrice du diaporama de 2022, exporté le 20 septembre 2022. L'année 2020 est la première année de mon schéma stratégique, partagé le 13 septembre 2026 ; le dossier ne tient aucune diapositive de 2020.
+Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte les années 2020 à 2025, partagé le 13 septembre 2026 ; sa bande Narrations se lit « langage naturel exécutable ». Le diaporama de 2022 a été exporté le 20 septembre 2022, et sa diapositive 2 dit d'exprimer la pensée dans un langage naturel exécutable. Le dépôt de la bibliothèque commence le 12 mars 2022, et son historique ne peut pas dater 2020 ni 2021. Les fichiers quasi naturels et le moteur à son chemin actuel ont été commités pour la première fois entre le 16 et le 19 septembre 2025. Le 30 octobre 2025, les langues sont devenues de la configuration. Le 2 novembre 2025, l'entrée par chaîne de caractères a remplacé la capture par accolades. Le 9 juillet 2026, le lexique a été unifié à partir des balises de documentation. Le 10 juillet 2026, les deux documents de conception ont été écrits, et l'audit de quinze exemples canoniques a trouvé que quatre tournaient, et que deux d'entre eux répondaient correctement. La page phare du site est du 8 octobre 2026. (Les dates git viennent du dépôt propre de la bibliothèque, que l'instantané n'a pas. Les dates des commits y ont été vérifiées le 9 octobre 2026, et les commits cités sont des ancêtres de l'épinglage.)
+
+La plus ancienne diapositive que le dossier date est donc la diapositive fondatrice du diaporama de 2022, exporté le 20 septembre 2022. L'année 2020 est la première année de mon schéma stratégique, partagé le 13 septembre 2026 ; le dossier ne tient aucune diapositive de 2020.
+
+Vient maintenant la décision, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -297,7 +305,7 @@ Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte
 
 **J'ai refusé la tolérance silencieuse.** L'ancienne tolérance aux fautes de frappe a été remplacée par l'explication de tout : le refus avec le mot le plus proche, ci-dessus.
 
-**J'ai refusé le contexte global.** Deux chaînes entremêlées se contaminaient, et la correction a mis le contexte sur la chaîne. Le `Why()` à l'échelle du processus reste comme commodité pour la console et les tests, et les globales survivent comme adaptateurs de repli : une ancienne méthode hors de la couche naturelle qui construit un nouvel objet y retombe encore.
+**J'ai refusé le contexte global.** Deux chaînes entremêlées se contaminaient, et la correction a mis le contexte sur la chaîne. Le `Why()` à l'échelle du processus reste comme commodité pour la console et les tests. Les globales survivent comme adaptateurs de repli : une ancienne méthode hors de la couche naturelle qui construit un nouvel objet y retombe encore.
 
 **J'ai refusé le langage de balisage.** Les annotations qui donnaient à la machine ce qu'elle ne pouvait pas inférer gouvernaient en obligeant l'humain à annoter. Le système gouverne par le dialogue. Deux graines ont été gardées comme portes minces, et ce sont le document et le gabarit ci-dessus.
 
@@ -306,6 +314,8 @@ Voici les dates, telles que le dossier les donne. Mon schéma stratégique porte
 **J'ai refusé la gouvernance à l'intérieur de la couche naturelle.** J'ai sorti cette portée de la bibliothèque le 12 juillet 2026, et le code a été retiré.
 
 **J'ai refusé le langage naturel comme moyen de déclarer.** Il demande, et ne déclare jamais.
+
+Le tribunal vient ensuite, et l'une de ses gardes échoue.
 
 ## 5. Le tribunal
 
@@ -327,6 +337,8 @@ Et il y a une perte du côté de la bibliothèque elle-même. `Understood()` imp
 
 Là où est le gain, avec la perte à côté : la même phrase donne la même réponse, avec une raison, dans la langue de l'utilisateur, et conçue pour s'exécuter hors ligne, ce qu'aucune garde ne mesure. La perte est que la langue de l'utilisateur doit être dans un paquet, et qu'un mot extérieur est un littéral ou un refus. Le dossier dit que le cas gagnant est le travail réglementé ou souverain : une instruction qui s'exécute localement et peut être auditée au mot près.
 
+La section suivante dit où le chapitre s'arrête.
+
 ## 7. La limite
 
 Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit « which a length of 4 », ce qui n'est pas de l'anglais. Quelque chose la juge-t-il ? Exécutez les deux :
@@ -338,9 +350,9 @@ Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit «
 #--> TRUE
 ```
 
-Les deux répondent `TRUE` : rien n'a jugé la seconde. La doctrine est que relire une chaîne, c'est la lire à voix haute comme de l'anglais. C'est le travail de l'humain.
+Les deux répondent `TRUE` : rien n'a jugé la seconde ! La doctrine est que relire une chaîne, c'est la lire à voix haute comme de l'anglais. C'est le travail de l'humain.
 
-Le descripteur d'une chaîne atteint le code hôte. `IsAXT` construit une chaîne de caractères et l'évalue, de sorte qu'une fonction définie par le programme et nommée dans la chaîne s'est exécutée. C'est le résidu que l'étude du dossier et le chapitre 6 nomment :
+Le descripteur d'une chaîne atteint-il le code hôte ? Oui. `IsAXT` construit une chaîne de caractères et l'évalue, de sorte qu'une fonction définie par le programme et nommée dans la chaîne a imprimé `host code ran`. C'est le résidu que l'étude du dossier et le chapitre 6 nomment :
 
 ```haro
 ? Q("haro").IsAXT([ "String('x') and HostRan() and @isString" ])
@@ -403,4 +415,4 @@ Prenez une phrase que vous dites d'un mot de votre propre langue : qu'il est en 
 
 Exécutez ensuite les deux. Puis changez un mot de la chaîne, et un mot de la phrase, en un mot que le dictionnaire ne tient pas. Quelle direction vous l'a dit ? Laquelle avez-vous dû vous le dire vous-même ? Dans une direction la machine vous le dit, et dans l'autre vous devez vous le dire vous-même. Si une promesse se rompt, ne la changez pas : expliquez d'abord la sortie.
 
-Le chapitre suivant porte sur la programmation de la connaissance, où les mots de domaine de l'analyste ont été envoyés : son principe est qu'un système est un fichier, et qu'y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner. Ici une phrase demande, et ne déclare jamais.
+Le chapitre suivant porte sur la programmation de la connaissance, où les mots de domaine de l'analyste ont été envoyés. Son principe est qu'un système est un fichier, et qu'y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner. Ici une phrase demande, et ne déclare jamais.

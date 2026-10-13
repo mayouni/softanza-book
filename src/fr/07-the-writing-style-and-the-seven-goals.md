@@ -16,7 +16,7 @@ rulings: ["12.2", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch07.md
 ---
 
-Dans ce chapitre, je prends le reste du style d'écriture, comme une grammaire de quatorze règles. J'imprime l'état où chaque règle se trouve au commit sur lequel ce livre s'exécute, un bloc là où elle s'exécute et une limite là où elle ne s'exécute pas. Sous la grammaire je mets les sept buts, j'en montre trois dans des blocs et je laisse à l'étude les quatre que je n'ai pas exécutés. J'imprime le tribunal de la maison, les quatorze règles que la bibliothèque tient sur son propre code, et je dis ce qu'il ne lit pas : le code d'un programme écrit avec la bibliothèque. Le principe est celui du chapitre 5, et je ne l'argumente pas de nouveau : ce que vous pensez est ce que vous écrivez.
+Dans ce chapitre, je prends le reste du style d'écriture, comme une grammaire de quatorze règles. J'imprime l'état où chaque règle se trouve au commit sur lequel ce livre s'exécute, un bloc là où elle s'exécute et une limite là où elle ne s'exécute pas. Sous la grammaire je mets les sept buts, j'en montre trois dans des blocs et je laisse à l'étude les quatre que je n'ai pas exécutés. J'imprime le tribunal de la maison, les quatorze règles que la bibliothèque tient sur son propre code. Je dis ce qu'il ne lit pas : le code d'un programme écrit avec la bibliothèque. Le principe est celui du chapitre 5, et je ne l'argumente pas de nouveau : ce que vous pensez est ce que vous écrivez.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -71,7 +71,7 @@ La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte 
 #--> [ "ا", "ب", "ة", "ت", "ث", "ج" ]
 ```
 
-L'hôte répond `[ 1, 2, 3 ]` à `1.02 : 3.08`. La chaîne répond `[ 1.02, 1.03, 1.04, 1.05 ]` : Softanza lit un petit langage d'intervalles à l'intérieur de la chaîne et garde les décimales, les mots numérotés et les lettres de n'importe quelle écriture. Le langage d'intervalles est un argument comme un autre. Il donne les remplacements pour chaque occurrence, dans l'ordre, et la forme étendue reboucle la palette quand les occurrences la dépassent en nombre :
+L'hôte répond `[ 1, 2, 3 ]` à `1.02 : 3.08` et coupe les décimales. La chaîne répond `[ 1.02, 1.03, 1.04, 1.05 ]`, et les deux bornes arabes donnent six lettres ! Softanza lit un petit langage d'intervalles à l'intérieur de la chaîne et garde les décimales, les mots numérotés et les lettres de n'importe quelle écriture. Le langage d'intervalles est un argument comme un autre. Donne-t-il les remplacements pour chaque occurrence, dans l'ordre, et la forme étendue reboucle-t-elle la palette quand les occurrences la dépassent en nombre ?
 
 ```haro
 o1 = new stzString("haro php ruby haro python haro")
@@ -83,6 +83,8 @@ o2.ReplaceByManyXT("haro", L('"♥1" : "♥3"'))
 ? o2.Content()
 #--> ♥1 php ruby ♥2 python ♥3 ruby ♥1
 ```
+
+La forme étendue a rebouclé la palette, et `♥1` est revenu à la fin !
 
 Une liste peut aussi être portée comme une chaîne dans sa forme courte, reconnue, convertie entre les formes et réévaluée :
 
@@ -108,7 +110,7 @@ o1.RemoveW('{ Q(@char).IsLowercase() }')
 
 Le diaporama de 2022 écrit le même appel avec un emplacement nommé, `:Where = '...'`, et cette forme lève une erreur sur une chaîne à ce commit. Je ne la montre pas. Le même diaporama met un `@` à la fin du nom d'un paramètre, `:With@`, pour marquer que sa valeur est du code à évaluer. Cette forme est retirée. L'en-tête d'une garde le dit : les formes fondées sur eval sont retirées. Le diaporama lui-même marque la forme « TODO ». Le code voyage maintenant dans l'emplacement comme une chaîne bornée que le moteur évalue, ou comme une fonction.
 
-Règle 8 : le même acte peut se dire en deux ordres de mots, avec le nom du conteneur, ou avec le côté épelé de quatre façons. Chaque paire est un seul acte, avec deux définitions. La propre narration de la bibliothèque appelle la première avec deux arguments et elle lève une erreur ; les gardes passent la position de départ, et le bloc aussi :
+Règle 8 : le même acte peut se dire en deux ordres de mots, avec le nom du conteneur, ou avec le côté épelé de quatre façons. Chaque paire est un seul acte, avec deux définitions. La propre narration de la bibliothèque appelle la première avec deux arguments et elle lève `less number of parameters` ; les gardes passent la position de départ, et le bloc aussi :
 
 ```haro
 o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
@@ -144,7 +146,7 @@ o1 = new stzList([ "tea", "rice", "fish", "salt" ])
 #--> FALSE
 ```
 
-L'exécution répond `4` à l'un et `8` à l'autre, sur un mot de quatre lettres ! La propre ligne de documentation de la bibliothèque pour `NumberOfChars` liste *size* parmi ses mots alternatifs. L'exécution montre que `Size()` ne veut pas dire cela. Je le liste parmi les demandes.
+L'exécution répond `4` à l'un et `8` à l'autre. Le mot a quatre lettres ! La propre ligne de documentation de la bibliothèque pour `NumberOfChars` liste *size* parmi ses mots alternatifs. L'exécution montre que `Size()` ne veut pas dire cela. Je le liste parmi les demandes.
 
 Règle 7 : un préfixe `viz` montre la réponse sous le mot, et le suffixe `XT` ajoute les positions comme des nombres :
 
@@ -159,7 +161,7 @@ o1 = new stzString("fjharoljharodjharog")
 #-->   3     9     15
 ```
 
-La narration et le diaporama écrivent `vizFindAll` sur une chaîne. Il n'y existe pas à ce commit, et `vizFind` si. Une liste a son propre `VizFindAll`.
+La narration et le diaporama écrivent `vizFindAll` sur une chaîne. Il n'y existe pas à ce commit : l'exécution de recherche a répondu `Calling Method without definition: vizfindall`. `vizFind` existe. Une liste a son propre `VizFindAll`.
 
 ### Les buts
 
@@ -167,7 +169,7 @@ Sous la grammaire il y a sept buts, écrits dans le diaporama de 2022 comme une 
 
 Je ne listerai pas les sept comme une table de slogans. Voici ce qui s'exécute de trois d'entre eux.
 
-**Flexibilité : l'ordre des paramètres nommés est libre.** Deux appels, avec les paramètres dans deux ordres, sont le même appel :
+**Flexibilité : l'ordre des paramètres nommés est libre.** Deux appels, avec les paramètres dans deux ordres, sont-ils le même appel ?
 
 ```haro
 o1 = new stzString("----@@--@@-------@@----@@---")
@@ -180,9 +182,9 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-Une tension doit être dite avec. La conception de Haro refuse les paramètres à ordre libre comme grammaire, et la bibliothèque les garde. Deux faits sont vrais aujourd'hui. Le bloc ci-dessus les exécute, donc ils sont dans la bibliothèque. La grammaire à laquelle une machine est tenue les laisse de côté, par le principe de Haro. Que la bibliothèque les garde au-delà de cette grammaire ou les retire, c'est une décision que le dossier ne tient pas, et je ne la prends pas ici : ils sont gardés, et ils ne sont pas de la grammaire.
+Les deux ordres impriment `----@@--@@-------@@----##---` ! Une tension doit être dite avec. La conception de Haro refuse les paramètres à ordre libre comme grammaire, et la bibliothèque les garde. Deux faits sont vrais aujourd'hui. Le bloc ci-dessus les exécute, donc ils sont dans la bibliothèque. La grammaire à laquelle une machine est tenue les laisse de côté, par le principe de Haro. Que la bibliothèque les garde au-delà de cette grammaire ou les retire, c'est une décision que le dossier ne tient pas. Je ne la prends pas ici. Ils sont gardés, et ils ne sont pas de la grammaire.
 
-**Cohérence : un vocabulaire à travers une chaîne et une liste.** Le même verbe répond sur les deux :
+**Cohérence : un vocabulaire à travers une chaîne et une liste.** Le même verbe répond-il sur les deux ?
 
 ```haro
 ? @@( StzStringQ("hello").FindAllCS("L", :CaseSensitive = 0) )
@@ -195,11 +197,13 @@ Une tension doit être dite avec. La conception de Haro refuse les paramètres �
 #--> TRUE
 ```
 
-La perte à côté, du même groupe de diapositives : le conseil du diaporama d'employer le mot-clé Item avec tout type énumérable ne tient pas. `NumberOfItems()` sur une chaîne lève une erreur, et sur une liste il répond.
+La perte à côté, du même groupe de diapositives : le conseil du diaporama d'employer le mot-clé Item avec tout type énumérable ne tient pas. `NumberOfItems()` sur une chaîne lève une erreur dans l'exécution de recherche : `Calling Method without definition: numberofitems`. Sur une liste il répond.
 
 **Maniabilité : un échec qui dit où, quoi, pourquoi, et que faire.** La bibliothèque lève une erreur en quatre champs. Je n'imprime pas son message, parce que, dans l'exécution de recherche, sa première ligne portait un numéro de ligne de la bibliothèque, et un numéro de ligne n'est pas une promesse.
 
 Les quatre autres buts (l'expressivité, la fiabilité, les métaphores humaines et les abstractions pratiques) je les laisse aux tables de l'étude. Je ne les ai pas exécutés pour ce chapitre, et je ne décrirai pas d'après le diaporama ce que je n'ai pas exécuté.
+
+Vient ensuite la décision, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -207,11 +211,13 @@ Les quatre autres buts (l'expressivité, la fiabilité, les métaphores humaines
 
 **J'ai refusé un but qui ne vit que dans un document.** Les sept buts sont écrits dans un document de conception et dans des balises qu'aucun tribunal ne lit. La trouvaille de l'étude est qu'il n'y a de tribunal sur aucun des deux.
 
-**J'ai refusé de cacher le coût du style.** L'étude a mesuré des marqueurs par millier de lignes. Les gardes narrées, les fichiers de test écrits pour être lus comme des articles, portent la promesse `#-->` à moins d'une ligne par millier, et un appel à la fonction d'aide d'assertion à quatre-vingt-cinq. Les tests numérotés plus anciens portent la promesse à cinquante-deux. Le code de la bibliothèque porte la promesse à moins de deux. Le style a survécu là où l'auteur écrivait pour un lecteur, et s'est amenuisé là où l'IA écrivait pour d'autres. Un marqueur est une lecture du texte, non un jugement du code ; l'étude le dit elle-même.
+**J'ai refusé de cacher le coût du style.** L'étude a mesuré des marqueurs par millier de lignes. Les gardes narrées, les fichiers de test écrits pour être lus comme des articles, portent la promesse `#-->` à moins d'une ligne par millier. Elles portent un appel à la fonction d'aide d'assertion à quatre-vingt-cinq. Les tests numérotés plus anciens portent la promesse à cinquante-deux. Le code de la bibliothèque porte la promesse à moins de deux. Le style a survécu là où l'auteur écrivait pour un lecteur, et s'est amenuisé là où l'IA écrivait pour d'autres. Un marqueur est une lecture du texte, non un jugement du code ; l'étude le dit elle-même.
 
 **J'ai refusé de recompter les balises comme les miennes.** Les formes des fonctions sont marquées dans le code par des info-balises, dans des commentaires qui commencent par `#<` et un `@`, appliquées à la main. L'étude y lit le vocabulaire, au niveau des fonctionnalités, de deux buts, l'expressivité et la flexibilité, et en a compté 6 090. J'ai recompté le 8 octobre 2026, avec la commande du fichier de recherche, et j'en ai trouvé 6 126, avec 89 orthographes. Mais 1 360 d'entre elles se trouvent hors des dossiers d'archive, et 4 766 dans les dossiers d'archive. Donc la phrase « appliquées à la main en 6 090 points » est, à ce commit, surtout une phrase sur l'archive. Aucune garde ne les lit : la couche de réflexion lit le nom d'une méthode, avec une grammaire, et non sa balise.
 
-**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part. Ce sont les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste. Ce dernier est le vérificateur du diaporama, qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama : `Yield`, qui devrait donner le résultat d'une expression pour chaque élément, et `Perform`, qui devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme : le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
+**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part. Ce sont les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste. Ce dernier est le vérificateur du diaporama, qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama. `Yield` devrait donner le résultat d'une expression pour chaque élément. `Perform` devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme. Le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
+
+Vient ensuite le tribunal, et je l'exécute.
 
 ## 5. Le tribunal
 
@@ -234,9 +240,9 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 #--> FALSE
 ```
 
-La faute d'orthographe est trouvée par son nom, `misspelled_name`, et le code reste propre, `TRUE`, parce que c'est un avertissement. L'écriture sur une constante est trouvée par son nom, `writes_a_mutable_constant`, et le code est refusé, `FALSE`, parce que c'est une erreur.
+La faute d'orthographe est trouvée par son nom, `misspelled_name`, et le code reste propre, `TRUE`, parce que c'est un avertissement. L'écriture sur une constante est trouvée par son nom, `writes_a_mutable_constant`, et le code est refusé, `FALSE`, parce que c'est une erreur. Le tribunal a refusé l'écriture sur une constante !
 
-Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de huit des quatorze revient avec des soulignés. Le bloc montre ce que l'exécution a imprimé.
+Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de huit des quatorze revient avec des soulignés. Le bloc le montre : la liste imprime `misspelled-name`, et le constat imprime `misspelled_name`.
 
 Ce que le tribunal ne lit pas, c'est le code d'un programme écrit avec la bibliothèque. Aucune des quatorze règles de la maison n'est une règle d'écriture.
 
@@ -250,9 +256,11 @@ Le site a montré un jour un dialecte réduit : ses blocs n'avaient ni paramètr
 
 Là où je pense que le style se distingue, c'est que chaque règle sert une étape de pensée, et que chaque étape a une forme écrite (étude 12.17). La forme du verbe est un contrat sur l'objet. Et la promesse sous la ligne est l'exemple, le test et la documentation à la fois. La matrice de 2022 a servi de squelette à un architecte pour environ trois cent mille lignes écrites à la main.
 
+La limite, à la section suivante, dit ce qui est construit, ce qui est conçu et ce qui est absent.
+
 ## 7. La limite
 
-Ce qui est construit : les quatorze règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus ; la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT`, `ZZ`, `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste).
+Ce qui est construit : les quatorze règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT`, `ZZ`, `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste).
 
 Ce qui est conçu :
 
@@ -302,6 +310,6 @@ Ce qui est absent :
 # 5.
 ```
 
-Exécutez-le. Pour la cinquième, vous aviez le droit de vous tromper, et vous vous êtes probablement trompé : l'intervalle change de largeur, alors l'hôte lit `day8` comme une variable, et il lève une erreur. C'est la limite du petit langage, apprise en étant surpris une fois. Ne changez pas votre promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie.
+Exécutez-le. Pour la cinquième, vous aviez le droit de vous tromper, et vous vous êtes probablement trompé : l'intervalle change de largeur, alors l'hôte lit `day8` comme une variable, et il lève une erreur, `Using uninitialized variable: day8`. C'est la limite du petit langage, apprise en étant surpris une fois. Ne changez pas votre promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie.
 
 Le chapitre 8 prend le nom d'une fonction en entier, comme une expression linguistique, puis la portée : ce nom est une phrase, et ses préfixes, ses suffixes et ses paramètres sont une grammaire que la bibliothèque peut lire.

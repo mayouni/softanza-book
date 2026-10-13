@@ -26,11 +26,13 @@ Pour les données qui ne sont pas du texte, le terrain emploie d'autres outils, 
 
 L'étude de terrain du domaine de projets lui-même, d'août 2026, donne le profil des petits langages qui ont survécu. Ce profil est une grammaire fermée, une question de domaine, du texte brut, une surface minuscule, une spécification avec une suite de conformité, des décennies de stabilité. Un langage de motifs est exactement cela. Une question, ces données correspondent-elles, en quelques caractères. Ce que le terrain n'offre pas, c'est la même notation d'un support à l'autre.
 
+Vient ensuite le premier principe.
+
 ## 2. Le premier principe
 
 **Un motif est une règle sur la forme des données, écrite comme des données. La même habitude sert tous les genres de données.**
 
-La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Le dossier de l'étude, qui n'est pas l'étude de terrain ci-dessus, porte aussi une phrase qu'elle dit de moi, « pour la première fois dans l'histoire de l'informatique », et elle est de moi. Je ne l'ai trouvée dans aucun texte de la bibliothèque, et l'étude ne laisse pas le site la revendiquer ; je la garde ici comme ce que j'ai dit, et je n'affirme pas plus que l'étude ne permet. L'affirmation que l'étude permet est la mesurée : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
+La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Le dossier de l'étude, qui n'est pas l'étude de terrain ci-dessus, porte aussi une phrase qu'elle dit de moi, « pour la première fois dans l'histoire de l'informatique », et elle est de moi. Je ne l'ai trouvée dans aucun texte de la bibliothèque. L'étude ne laisse pas le site la revendiquer. Je la garde ici comme ce que j'ai dit, et je n'affirme pas plus que l'étude ne permet. L'affirmation que l'étude permet est la mesurée : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
 
 ## 3. La forme Softanza
 
@@ -67,7 +69,7 @@ o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
 #--> 0
 ```
 
-Voici maintenant le geste qui donne son titre au chapitre. Prenons une liste. Son motif s'écrit entre crochets, et les comptes, l'imbrication et la négation sont écrits, non bouclés. `@N` représente un nombre, `@S` une chaîne de caractères, `+` un ou plus, `@N1-3` un à trois, et `@!` le non :
+Voici maintenant le geste qui donne son titre au chapitre. Prenons une liste. Son motif s'écrit entre crochets, et les comptes, l'imbrication et la négation sont écrits, non bouclés. `@N` représente un nombre, `@S` une chaîne de caractères, `+` un ou plus, `@N1-3` un à trois, et `@!` le non. `[@N1-3, @S]` accepte-t-il quatre nombres avant la chaîne de caractères ? Le deuxième appel répond :
 
 ```haro
 ? Lx("[@N+, @S]").Match([1, 2, 3, "end"])
@@ -84,9 +86,9 @@ Voici maintenant le geste qui donne son titre au chapitre. Prenons une liste. So
 #--> 0
 ```
 
-Chaque appel ici utilise un objet neuf, pour une raison que donne la section 7. Le chapitre 11 a montré quatre appels du même langage, et je ne les répète pas.
+Non : le deuxième appel imprime 0, car quatre nombres sont un de trop. Chaque appel ici utilise un objet neuf, pour une raison que donne la section 7. Le chapitre 11 a montré quatre appels du même langage, et je ne les répète pas.
 
-Les nombres ont des propriétés, et une propriété est du sens, non de la procédure. La dernière ligne fait passer un motif d'un test à une recherche :
+Les nombres ont des propriétés, et une propriété est du sens, non de la procédure. Quels nombres entre 1 et 500 sont parfaits ? La dernière ligne fait passer un motif d'un test à une recherche :
 
 ```haro
 ? Nx("{@Property(Even) & @Property(Prime)}").Match(2)
@@ -102,6 +104,8 @@ Les nombres ont des propriétés, et une propriété est du sens, non de la proc
 ? @@( Nx("{@Property(Perfect)}").MatchingNumbersBetween(1, 500) )
 #--> [ 6, 28, 496 ]
 ```
+
+Trois nombres répondent, et aucune boucle n'a été écrite.
 
 Les tableaux : une règle de qualité des données est une phrase du langage. La personne qui possède les données peut la lire. Niamey apparaît deux fois, donc les villes ne sont pas uniques, et la négation de cela est vraie :
 
@@ -152,7 +156,7 @@ Une matrice : un concept, carrée et symétrique, tient en une ligne.
 #--> 1
 ```
 
-Le temps, dans la part qui s'exécute. Une durée doit satisfaire une règle : quatre-vingt-dix minutes sont dans l'intervalle d'une à deux heures et sur un pas d'un quart d'heure ; quatre-vingts y sont et hors du pas ; trois heures sont dehors.
+Le temps, dans la part qui s'exécute. Une durée doit satisfaire une règle : d'une à deux heures, sur un pas d'un quart d'heure. Laquelle de trois durées convient : quatre-vingt-dix minutes, quatre-vingts minutes ou trois heures ?
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
@@ -164,7 +168,9 @@ oTm = new stzTimex("{@Duration(1h..2h:15min)}")
 #--> 0
 ```
 
-Un graphe : un motif se lit comme le chemin qu'il cherche. Les étiquettes correspondent sans égard à la casse, et le sens compte, comme le montre la deuxième ligne :
+Seules quatre-vingt-dix minutes conviennent : quatre-vingts sont dans l'intervalle et hors du pas, et trois heures sont dehors.
+
+Un graphe : un motif se lit comme le chemin qu'il cherche. Les étiquettes correspondent sans égard à la casse. Le sens compte-t-il ? La deuxième ligne répond :
 
 ```haro
 g = new stzGraph("Order")
@@ -180,6 +186,8 @@ g.AddEdgeXT(:b, :c, "finishes")
 ? (new stzGraphex("{@Node(placed) -> @!Node(refunded)}", g)).Match(g)
 #--> 1
 ```
+
+Oui : le chemin de `served` à `placed` ne trouve rien, et la ligne imprime 0.
 
 Enfin, l'habitude. Le motif est une donnée dans chaque langage, et un langage qui expose ses jetons peut être relu par une personne et par un agent. Cinq des six langages le font :
 
@@ -200,7 +208,7 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 **J'ai décidé qu'un motif énonce un sens et non une procédure.** Cette décision est dans les articles, et les articles sont les miens. Les mêmes ont décidé de porter l'idée de la regex aux données qui ne sont pas du texte avec une seule habitude : des accolades, un `@` pour un jeton, `&`, `|`, `@!` pour le non, `@cs:` pour la casse. Les listes gardent les crochets. Les cinq autres utilisent des accolades. C'est la première correction honnête de l'expression « une seule grammaire ».
 
-**J'ai refusé de réinventer la notation pour le texte.** Les correspondances simples sont gardées : une chaîne de motif classique, les groupes nommés et les captures fonctionnent comme écrits. Des noms plus clairs sont posés autour. Le travail plus ancien sur le nommage est gardé comme histoire, pour sa valeur éducative, ce que je tiens, comme une vue et non comme un résultat, pour la bonne façon de mettre à la retraite un mécanisme.
+**J'ai refusé de réinventer la notation pour le texte.** Les correspondances simples sont gardées : une chaîne de motif classique, les groupes nommés et les captures fonctionnent comme écrits. Des noms plus clairs sont posés autour. Le travail plus ancien sur le nommage est gardé comme histoire, pour sa valeur éducative. Je tiens cela, comme une vue et non comme un résultat, pour la bonne façon de mettre à la retraite un mécanisme.
 
 **J'ai refusé, pour l'instant, de construire les classes sœurs.** Les articles prévoyaient des classes dans lesquelles les motifs sont génétiques, linguistiques ou quantiques. L'article dit qu'elles sont dans un prototype précoce et non dans la bibliothèque, et une recherche dans le dossier de la regex des mots « induce », « from example » et « infer » ne trouve rien. L'étude date la découverte de leur but de deux ans plus tard, dans le protocole de réponse (la façon dont une personne peut répondre par des exemples) : l'induction à partir d'exemples, et les candidats superposés. C'est le terrain du chapitre 18, et le refus du chapitre 9.
 
@@ -210,11 +218,13 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 ## 5. Le tribunal
 
-`00_regex_narrated` prouve les ancres et la recherche, les classes, les quantificateurs exacts, les groupes, les quatre types de correspondance, la correspondance partielle pendant la frappe, et les positions comme données. `00_numbrex_narrated` prouve premier, parfait, Fibonacci, pair et impair, carré et composé, chacun avec un nombre qui correspond et un qui ne correspond pas ; son en-tête consigne une régression où `Match()` renvoyait autrefois TRUE pour toute entrée. `tablex_narrated` prouve l'analyseur, le comptage, l'unicité, le tri, les types, les sommes et les moyennes, les trois connecteurs, les séquences, et la construction de motifs à partir de motifs. Son en-tête nomme la faute qu'il a tuée : l'analyseur découpait avec une position de fin à travers une fonction qui compte, et environ quatre-vingt-dix motifs étaient analysés en un jeton du bon type sans valeur. `00_matrex_narrated` prouve la taille exacte, toute taille et la forme carrée ; son en-tête consigne que `Match()` renvoyait autrefois FALSE pour toute entrée. `00_graphex_narrated` prouve qu'un motif se compile en un graphe, les étiquettes présentes et absentes, une séquence comme sous-suite, les règles de casse, la négation, l'alternance, les propriétés numériques, et le cache par signature de graphe.
+`00_regex_narrated` prouve les ancres et la recherche, les classes, les quantificateurs exacts, les groupes, les quatre types de correspondance, la correspondance partielle pendant la frappe, et les positions comme données. `00_numbrex_narrated` prouve premier, parfait, Fibonacci, pair et impair, carré et composé, chacun avec un nombre qui correspond et un qui ne correspond pas. Son en-tête consigne une régression où `Match()` renvoyait autrefois TRUE pour toute entrée. `tablex_narrated` prouve l'analyseur, le comptage, l'unicité, le tri, les types, les sommes et les moyennes, les trois connecteurs, les séquences, et la construction de motifs à partir de motifs. Son en-tête nomme la faute qu'il a tuée. L'analyseur découpait avec une position de fin à travers une fonction qui compte, et environ quatre-vingt-dix motifs étaient analysés en un jeton du bon type sans valeur. `00_matrex_narrated` prouve la taille exacte, toute taille et la forme carrée. Son en-tête consigne que `Match()` renvoyait autrefois FALSE pour toute entrée. `00_graphex_narrated` prouve qu'un motif se compile en un graphe, les étiquettes présentes et absentes, une séquence comme sous-suite, les règles de casse, la négation, l'alternance, les propriétés numériques, et le cache par signature de graphe.
 
 Notez l'emplacement : la garde des tableaux vit dans le dossier de la regex, et son nom n'a pas de préfixe `00_`.
 
-Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin, et je le consigne dans mes notes de recherche, non dans un bloc : soixante vérifications se sont exécutées, et deux d'entre elles contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
+Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin, et je le consigne dans mes notes de recherche, non dans un bloc. Soixante vérifications se sont exécutées, et deux d'entre elles contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
+
+Vient ensuite le terrain, et où il mène.
 
 ## 6. Le terrain, et où il mène
 
@@ -227,6 +237,8 @@ Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de 
 **Là où la famille est faible en elle-même.** Les en-têtes de classe impriment leurs défauts comme des avertissements : pour les matrices et les graphes. C'est rare, et je le dis. Graphes : les quantificateurs sont analysés mais pas encore utilisés par la correspondance. Matrices : des manques connus aujourd'hui, chacun porté comme un avertissement sur sa méthode.
 
 **Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi une raison probable pour laquelle le temps échoue.
+
+Vient ensuite la limite.
 
 ## 7. La limite
 
@@ -253,7 +265,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 #--> "Lunch)"
 ```
 
-L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas, et le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
+L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas ! Le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
 
 - **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux. Le motif correspond-il ?
 
@@ -264,7 +276,7 @@ L'article promet que le premier est TRUE. Le deuxième montre que même un évé
 #--> 1
 ```
 
-Cooking se trouve entre le premier et le dernier, donc la première réponse est le sens de la flèche. La seconde répond 1 aussi : le quantificateur est ignoré. Le cache de cette classe est indexé par les comptes de nœuds et d'arêtes et les identifiants de nœuds, de sorte qu'un second graphe avec les mêmes identifiants et d'autres étiquettes est servi depuis le cache, jusqu'à `ClearCache()`.
+Cooking se trouve entre le premier et le dernier, donc la première réponse est le sens de la flèche. La seconde répond 1 aussi ! Le quantificateur est ignoré. Le cache de cette classe est indexé par les comptes de nœuds et d'arêtes et les identifiants de nœuds. Un second graphe avec les mêmes identifiants et d'autres étiquettes est servi depuis le cache, jusqu'à `ClearCache()` : la réponse peut être périmée.
 
 **Le refus que la famille n'a pas encore fait.** La loi du chapitre 11 est qu'un langage est déclaré et fermé, avec des refus. Que répond la famille quand on lui demande un mot qu'elle ne connaît pas ? Exécutez-le :
 
@@ -279,7 +291,7 @@ Cooking se trouve entre le premier et le dernier, donc la première réponse est
 #--> 0
 ```
 
-Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres ! Les jetons sont `[ ]`, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi ; je le tiens pour mon point de vue, et l'exécution ci-dessus, à ce commit, est ce qui le soutient.
+Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres ! Les jetons sont `[ ]`, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande n'est pas close. Un langage fermé qui ne peut pas refuser n'est pas encore la loi du chapitre 11. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi. Je le tiens pour mon point de vue. L'exécution ci-dessus, à ce commit, est ce qui le soutient.
 
 Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
 

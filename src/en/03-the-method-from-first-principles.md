@@ -16,13 +16,15 @@ rulings: ["12.19", "12.22", "12.29", "12.30"]
 research: research/ch03.md
 ---
 
-In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused: a feature without a need, general-purpose code as the meeting ground between people and machines, a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
+In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
 ## 1. The concept, as the field holds it
 
-In our industry, "from first principles" is a slogan. It means: reason from the bottom, not by analogy. You will hear it in talks and read it in launch posts, and you will rarely be shown what it produced.
+In our industry, "from first principles" is a slogan. It means to reason from the bottom, not by analogy. You will hear it in talks and read it in launch posts, and you will rarely be shown what it produced.
 
-The field does have a method for the decisions behind software, and it is a good one. A team writes a short record for each decision it takes: the context, the decision, the consequences. Many teams call these architecture decision records, from a blog post Michael Nygard wrote in 2011. The field also has a method for proving what a function does: an example written under the function, which the tools can run as a test. Python has offered this since 2001 with its doctest module, which runs when someone invokes it, and Rust runs the examples in its documentation as tests by default. And when the field compares one tool with another, it draws a grid: rows of features, one column per tool, ticks and crosses.
+The field does have a method for the decisions behind software, and it is a good one. A team writes a short record for each decision it takes, made up of the context, the decision and the consequences. Many teams call these architecture decision records, from a blog post Michael Nygard wrote in 2011. The field also has a method for proving what a function does: an example written under the function, which the tools can run as a test. Python has offered this since 2001 with its doctest module, which runs when someone invokes it, and Rust runs the examples in its documentation as tests by default. And when the field compares one tool with another, it draws a grid: rows of features, one column per tool, ticks and crosses.
+
+The field has three forms; the method returns to one sentence.
 
 ## 2. The first principle
 
@@ -32,7 +34,7 @@ Two acts. Everything else in this book is one of them, or the two together.
 
 ## 3. The Softanza form
 
-"From first principles" can be checked. In this book it has a narrow meaning: take a concept everyone uses, write down how the field holds it, redesign it, and leave code that carries the redesign and a court that judges it. The site's history page is titled *From first principles*, and the library has been on GitHub since 12 March 2022. The phrase is not decoration here. It is a work order.
+"From first principles" can be checked. In this book it has a narrow meaning. Take a concept everyone uses, write down how the field holds it, redesign it, and leave code that carries the redesign and a court that judges it. The site's history page is titled *From first principles*, and the library has been on GitHub since 12 March 2022. The phrase is not decoration here. It is a work order.
 
 Let me show you the smallest rethink I know. Ask Python how many times the empty string occurs in the word "text", and it answers five: one before each letter and one at the end. Ask it whether "text" contains the empty string, and it says yes; JavaScript says the same. (Python 3.13 and Node 22, run on 8 October 2026.) That is a convention of implementers, not a fact anyone would say aloud. Softanza states a rule instead, and the rule has a name in the narration that argues it: emptiness is uncountable, and emptiness is uncontainable. What does Softanza answer to the same two questions? Run it:
 
@@ -49,7 +51,7 @@ A reading of the record, made in October 2026, counted forty-six such concepts, 
 
 Now the two acts, each in a few lines.
 
-**Declare.** A kind of value is declared in a sentence, and every verdict against it is computed and explains itself:
+**Declare.** A kind of value is declared in a sentence, and every verdict against it is computed and explains itself. Why can't -4 be a score?
 
 ```haro
 ConstrainQ("score").ToBeQ(:Number).AndQ().ToBeQ(:Positive).AndQ().ToBeQ(:Even)
@@ -63,7 +65,7 @@ ConstrainQ("score").ToBeQ(:Number).AndQ().ToBeQ(:Positive).AndQ().ToBeQ(:Even)
 
 Notice the last line: `no: -4 is not positive (constraint 2 of 'score')`. The verdict names the rule it applied, by its number! A verdict on a declared kind that cannot say why is not admitted in this house.
 
-**Govern.** A declared constraint, once enforced, refuses a change before it lands:
+**Govern.** A declared constraint, once enforced, refuses a change before it lands. Here the string "hello" must stay lowercase. Does the update to "HELLO" land?
 
 ```haro
 oName = new stzString("hello")
@@ -80,7 +82,7 @@ done
 #--> hello
 ```
 
-The update was refused, and the object stands as it was: it still answers `hello`. The error the library raises says what was tried, why it was refused and what to do: fix the new value, or relax the constraint. Declaring a constraint and enforcing it are two acts, and the guard behind this block checks that a constraint you only declared stays passive.
+The update was refused! The object stands as it was: it still answers `hello`. Declaring a constraint and enforcing it are two acts, and the guard behind this block checks that a constraint you only declared stays passive.
 
 Governing also has a side that faces the person. The system asks, and it does not let you close a world that is not complete. What does it say when you try to conclude anyway?
 
@@ -99,9 +101,9 @@ done
 #--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
 ```
 
-The goal was declared: every dish must say what it contains. The gap between the goal and what is known generates the question, and the question carries its reason. Concluding while two gaps remain is refused, and the refusal tells you what to do next: `Ask the next question.` Chapter 18 is about this conversation. Here it is enough to see that governing is not only refusing; it is asking.
+The goal was declared: every dish must say what it contains. The gap between the goal and what is known generates the question, and the question carries its reason. Concluding while two gaps remain is refused! The printed line is `Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.`, and its last words tell you what to do next. Chapter 18 is about this conversation. Here it is enough to see that governing is not only refusing; it is asking.
 
-One more rethink, because the paradigm engines are part of the method too. Truth, in the language beneath Softanza, is a matter of empty and non-empty, and a list of words counts as true. Softanza keeps that truth by default and lets you extend it by declaration:
+One more rethink, because the paradigm engines are part of the method too. Truth, in the language beneath Softanza, is a matter of empty and non-empty, and a list of words counts as true. Softanza keeps that truth by default and lets you extend it by declaration. Once "wrong" is declared an item that makes a list false, is a list that holds it still true?
 
 ```haro
 SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
@@ -111,7 +113,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 #--> FALSE
 ```
 
-The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`. "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
+The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`! "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
 So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran. The second, **designed**, covers what the site calls in construction, specification and ratified proposal. The third, **absent**, covers a name with nothing behind it yet, and what nobody has named. Then six doors, one for each kind of reader, and one exercise.
 
@@ -131,11 +133,15 @@ There is no single record of a decision called "the method". The method was deci
 
 **I refused to call a reading a census.** The forty-six concepts are a reading of the record by one session, not a list I ruled row by row. Appendix A prints the register of forty-six rows as the study gives it, with the book's own column, as a working appendix: the rows are not ruled one by one.
 
+Those are the five refusals; now the court that judges the blocks above.
+
 ## 5. The court
 
-The three blocks of the two acts stand on two guards. `modality_narrated` proves that a declared kind can be inspected, that a verdict names the constraint that failed, and that an unknown kind never silently allows. It also proves that an enforced constraint refuses a bad update before it lands, while a declared one stays passive. `wisecoding_narrated` proves the conversation: gaps computed from the declared goal, a question that says why it is asked, answers admitted, and a law refusing through the conversation and reaching a person. And it proves that concluding with open gaps is refused. Its sister, `wisecoding_rich_narrated`, carries the richer cases of the same loop.
+The three blocks of the two acts stand on two guards. `modality_narrated` proves that a declared kind can be inspected, that a verdict names the constraint that failed, and that an unknown kind never silently allows. It also proves that an enforced constraint refuses a bad update before it lands, while a declared one stays passive. `wisecoding_narrated` proves the conversation. It proves gaps computed from the declared goal, a question that says why it is asked, answers admitted, and a law refusing through the conversation and reaching a person. And it proves that concluding with open gaps is refused. Its sister, `wisecoding_rich_narrated`, carries the richer cases of the same loop.
 
 The rethink of emptiness stands on `612_dealing_in_emptiness_in_softanza.ring`, a library test written as scenarios, each line stating the result it expects. The rethink of truth stands on its narration and on this book's run, and on no guard. The library's file for it, `04_truth_in_softanza.ring`, sets the list of false words by assignment and never calls the function, so it does not prove the block.
+
+The court has been named; next, the field, and where it leads.
 
 ## 6. The field, and where it leads
 
@@ -151,9 +157,11 @@ What is designed: the register of rethought concepts as data, one row per concep
 
 What is absent: a page that shows each concept with a run proof (the site has a register page, read on 9 October 2026, that lists each with its evidence). A test file for the engine module of one paradigm engine, section merging: it has none of its own, though its merge methods run in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks that do not run as their article wrote them. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today. Its friendlier quantifiers, some, most and few, draw at random, so they cannot carry a promise. The register is a reading, and a reading can miss a concept that lives in only one article.
 
+That is where this chapter stops; six doors follow, one for each kind of reader.
+
 ## 8. Six doors
 
-**The programmer.** Every claim you make can carry its promise, and an enforced constraint refuses a bad update at the object's update point (`Update()` for a string or a number, `_SetContent()` for a list).
+**The programmer.** Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's update point (`Update()` for a string or a number, `_SetContent()` for a list).
 
 **The analyst.** Your rule is a declaration, and its verdict names the rule that failed, by number.
 

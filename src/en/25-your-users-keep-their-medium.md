@@ -36,7 +36,7 @@ What they share is that the dialogue is written once per channel or once per fra
 
 **A new medium adds renderings, never verbs.**
 
-It is a sentence of the interface constitution, printed on the site: "The grammar is closed: a new medium adds renderings, never verbs." The record is silent on whether the wording is mine. I quote it as the constitution's. I do not tell it as my own sentence. The twenty-two verbs it speaks of are the constitution's, in six families, and Appendix C prints them as I read them from the constitution's own file on 9 October 2026. The repository is unnamed, since it is not public yet.
+It is a sentence of the interface constitution, printed on the site: "The grammar is closed: a new medium adds renderings, never verbs." The record is silent on whether the wording is mine. I quote it as the constitution's. I do not tell it as my own sentence. The twenty-two verbs it speaks of are the constitution's, in six families. Appendix C prints them as I read them from the constitution's own file on 9 October 2026. The repository is unnamed, since it is not public yet.
 
 The same sentence, built, for one family of values and not for the twenty-two verbs: the value is shared, and how it is rendered is each medium's own. It is a ruling by Central, the estate's coordination entity, on my delegation, of 30 September 2026. It proves that the principle is not only a slogan. It is the shape of three working faces: colour, earcon, phrase.
 
@@ -91,7 +91,7 @@ func QuestionAfter(cA, cB)
 	return oW.AskInXT("c")
 ```
 
-The question is data, so any medium renders it. And the medium's own law, here that SMS is billed per segment and the alphabet decides, is a test and not a surprise. The English text is 93 characters by my count, and the block prints one segment. The same frame with two Arabic dish names is 89 units by my count (the two names are four letters shorter), and the block prints `ucs2` and two segments, because the encoding changes. Four letters shorter, and one segment more! The telephone number is invented, and only the country code, which is Niger's, is real.
+The question is data, so any medium renders it. And the medium's own law, here that SMS is billed per segment and the alphabet decides, is a test and not a surprise. The English text is 93 characters by my count, and the block prints one segment. The same frame with two Arabic dish names is 89 units by my count (the two names are four letters shorter). The block prints `ucs2` and two segments, because the encoding changes. Four letters shorter, and one segment more! The telephone number is invented, and only the country code, which is Niger's, is real.
 
 Now the whole conversation, rehearsed over the SMS sandbox before any account exists. A conversation is a loop of the library's verbs: the medium carries each question out and each reply in. The assertions are the bill and the refusal. What does the sandbox count, and what does the court say to "7"? Nothing in the loop is a model:
 
@@ -150,7 +150,7 @@ oPh.FailNextQ()
 
 `rejected` for the number, `refused` for the outage, and nothing counted. The retry is `sent`, and the count is one.
 
-**An inbound message is believed only after its signature is verified.** The way in is the pattern the payments plane built, and the verifier is generic, over the body. No provider's header or body format is modelled, and the JSON is invented. Times are passed in, so no clock is read:
+**An inbound message is believed only after its signature is verified.** The way in is the pattern the payments plane built, and the verifier is generic, over the body. No provider's header or body format is modelled, and the JSON is invented. Times are passed in, so no clock is read. What does the verifier name when one character of the body has changed since it was signed?
 
 ```haro
 oSig = new stzRequestSigner("inbound")
@@ -165,7 +165,7 @@ cSig = oSig.SignBody("provider", cBody)
 #--> signature mismatch (tampered body, or a secret this receiver does not hold)
 ```
 
-A replayed body inside the window gave "replay detected" in my probe.
+The first body gave `provider`. The altered one gave `[]`, and the reason is `signature mismatch (tampered body, or a secret this receiver does not hold)`. One character changed, and no provider was named! A replayed body inside the window gave "replay detected" in my probe.
 
 **One value, many renderings.** The bridge's shape, built for the five semantic values of the interface constitution. Colour, earcon and phrase render one value. `muted` is silence in sound and a treatment in colour. A value the law does not know is refused:
 
@@ -179,7 +179,7 @@ oE = new stzEarcons()
 #--> 1
 ```
 
-**The voice: spoken, heard, meant.** Text to sound, sound to text, text to meaning. The medium called voice renders and reads with a closed grammar, and the meaning is my declaration. This block needs a French voice and a French recogniser. This machine speaks two languages and hears one, and a machine without them would give another answer, so the output shown is the one recorded on this machine. No microphone, no file, no network: the recogniser is the in-process one:
+**The voice: spoken, heard, meant.** Text to sound, sound to text, text to meaning. The medium called voice renders and reads with a closed grammar, and the meaning is my declaration. This block needs a French voice and a French recogniser. This machine speaks two languages and hears one, and a machine without them would give another answer, so the output shown is the one recorded on this machine. No microphone, no file, no network: the recogniser is the in-process one. What does it make of a phrase it was taught, and of one it was not?
 
 ```haro
 oV = StzVoiceQ()
@@ -196,7 +196,7 @@ oL.HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
 #--> 0
 ```
 
-The refusal's reason says that `catastrophe` is not one of the five semantic values. I do not print the recogniser's confidence, which varies by machine.
+The taught phrase gave `danger`, the phrase it was not taught gave no match (`1`), and `Catastrophe` was refused (`0`). The refusal's reason says that `catastrophe` is not one of the five semantic values. I do not print the recogniser's confidence, which varies by machine.
 
 **The world declares its verbs and its reach, and its code names no medium.** A world holds screens declared by intent, five of the twenty-two verbs, and a list of what it reaches. Nothing refuses `:whatsapp` when it is declared:
 
@@ -216,7 +216,7 @@ oApp.Explain()
 #        reaches web, whatsapp
 ```
 
-`Acts(...)` is stored and not narrated. And the stage as a run: the platform refuses a surface it cannot generate, and the refusal names the three surfaces it has. This block creates an empty folder in the working directory:
+`Acts(...)` is stored and not narrated. And the stage as a run: what does the platform say when it is asked to generate the surface the world declared? This block creates an empty folder in the working directory:
 
 ```haro
 oPlat = StzPlatformQ("stall-platform")
@@ -229,9 +229,9 @@ done
 #--> stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile).
 ```
 
-`unknown reach surface 'whatsapp' (web/desktop/mobile)`: the same refusal answers `:ussd`.
+`unknown reach surface 'whatsapp' (web/desktop/mobile)`: the platform refused it! It names the three surfaces it has, and the same refusal answers `:ussd`.
 
-**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for a model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
+**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for a model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. What does the court say to a sentence the business never approved? Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
@@ -244,11 +244,15 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 #--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
 ```
 
+The approved sentence passed (`1`), the invented one was refused (`0`), and the court's reason begins `[oneof @ reply] field 'reply' is a closed enumeration`.
+
 ### The restaurant's medium
 
-Chapter 1 says that the owner of the restaurant made his first demonstration over a messaging app. The record does not support that sentence as it stands, and I flag it for the author. Chapter 2 already gives his tool as a spreadsheet. His own report of 4 July 2026 gives his current tool as a spreadsheet, and asks for a web page opened by a QR code or by a button for a social network. Nothing heavy to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
+Chapter 1 says that the owner of the restaurant made his first demonstration over a messaging app. The record does not support that sentence as it stands, and I flag it for the author. Chapter 2 already gives his tool as a spreadsheet. His own report of 4 July 2026 gives his current tool as a spreadsheet. It asks for a web page opened by a QR code or by a button for a social network. Nothing heavy to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
 
 So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. I tell this story and make no statement about the owner's use of a messaging app, since the record holds none. Chapter 1 keeps its own wording of that demonstration, and what the record shows more exactly is what this section says.
+
+That is the form, built and run; next come what I decided, and what I refused.
 
 ## 4. The decision, and what I refused
 
@@ -270,6 +274,8 @@ The refusals below, after the first, are the record's: a session's decisions, wr
 
 **The screen acknowledges, and the sound is not the acknowledgement.**
 
+The next section names the guards that stand behind these runs.
+
 ## 5. The court
 
 `sms_port_narrated` proves the segment law, with its boundaries at 160 and 161, 306 and 307, the emoji cliff at 100 to 102 units, 71 Arabic letters making two segments, and the nine extension characters. It proves E.164, the sink and its bill, the outage against the rejection, and the refusal in production. I ran it once, and 53 of 53 assertions passed. `wisecoding_rich_narrated` is chapter 18's: the frame, the numbered options, the refusal of a number nobody offered, the checkpoints with a lifetime. `payments_webhooks_narrated` proves that an inbound signature is verified before it is believed: unsigned, forged, replayed. `sound_semantics_narrated` proves that the five values are the law's, that four sound and `muted` is silent, and that an invented value is refused. `sound_listener_narrated` proves the closed grammar, that no match is a result, and that the confidence is a separate call; I ran it once, and 21 passed. `sound_convergence_narrated` proves that the loop closes for the four states, that the language is negotiated per direction, that a sixth value is refused at declaration, and that a stranger's phrase gives no meaning.
@@ -278,9 +284,9 @@ A caveat for the court line. The sound guards need the engine's sound library, a
 
 ## 6. The field, and where it leads
 
-The record's own count, in the study of 12.25: of the constituent units of messaging, eighteen in all, what is missing. Its sentence that the word for a messaging app appears in no code file and no design document of the library, and USSD in none, I re-measured at this commit and confirmed. There is no hit in the code or the design of base, core or max. The matches in the rest of the snapshot are word-list and test data files, and USSD has none in text.
+The record's own count, in the study of 12.25: of the constituent units of messaging, eighteen in all, what is missing. The study's sentence is that the word for a messaging app appears in no code file and no design document of the library, and USSD in none. I re-measured it at this commit and confirmed it. There is no hit in the code or the design of base, core or max. The matches in the rest of the snapshot are word-list and test data files, and USSD has none in text.
 
-The frameworks lead in understanding and in connectors. Chapter 18 states Softanza's side from the code: the conversation asks one slot at a time, over a graph the user must first have declared, and it does not understand an open reply.
+The frameworks lead in understanding and in connectors. Chapter 18 states Softanza's side from the code: the conversation asks one slot at a time, over a graph the user must first have declared. It does not understand an open reply.
 
 The field leads in channel coverage and in delivery truth, receipts and provider-approved templates. The SMS port says it itself: a sink proves what you would have sent, not that a carrier would accept it, and the live adapter is infrastructure-gated. No live client for SMS ships.
 
@@ -289,6 +295,8 @@ The voice plan: a declaration is portable, and a voice is not. A browser's voice
 What the field has in cloud dictation and in trained recognisers for many languages, the record chose not to ship. Free dictation reached 66.7 per cent on the plane's own clean synthetic audio.
 
 What the record claims instead: the dialogue is a rendering of a declared world judged by a court, deterministic by default. The medium is a port with a sandbox, so the conversation and its bill are rehearsed before an account exists.
+
+The field leads in places, and the limit comes next, printed whole.
 
 ## 7. The limit
 
@@ -322,6 +330,8 @@ What is absent:
 - Nothing in the record runs on a real phone as a conversation.
 
 `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what a study proposed, and I do not present them as what I mean to build. I found no decision of mine to build them in the record, and the limit is the list above, in which none of them exists.
+
+That is the limit, printed whole; the six doors follow.
 
 ## 8. Six doors
 

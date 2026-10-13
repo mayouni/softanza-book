@@ -16,7 +16,7 @@ rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
 ---
 
-Dans ce chapitre, je prends les trois pratiques que le terrain tient à côté du programme, planifier puis appliquer, le double de test et l'émulateur, et je montre le seul chemin que la bibliothèque met à leur place. Je répète sur un jumeau des fichiers et un jumeau de l'environnement du processus, et je lis le plan de placement. Je construis le bundle de l'émulateur, j'exécute un déploiement qui échoue et revient en arrière, et je code contre des services par leur nom avant de m'abonner à aucun. Puis je demande à la production de refuser, et j'imprime le seul faux qu'elle ne refuse pas : un double qui ne dit rien de lui-même. Le principe vient de trois documents du dossier : on atteint la réalité par exactement une porte, répéter sur ce qui ne touche à rien, valider par un acteur gouverné, et laisser la production refuser tout ce qui est faux.
+Dans ce chapitre, je prends les trois pratiques que le terrain tient à côté du programme, planifier puis appliquer, le double de test et l'émulateur, et je montre le seul chemin que la bibliothèque met à leur place. Je répète sur un jumeau des fichiers et un jumeau de l'environnement du processus, et je lis le plan de placement. Je construis le bundle de l'émulateur, j'exécute un déploiement qui échoue et revient en arrière, et je code contre des services par leur nom avant de m'abonner à aucun. Puis je demande à la production de refuser, et j'imprime le seul faux qu'elle ne refuse pas : un double qui ne dit rien de lui-même. Le principe vient de trois documents du dossier. On atteint la réalité par exactement une porte : répéter sur ce qui ne touche à rien, valider par un acteur gouverné, et laisser la production refuser tout ce qui est faux.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -85,7 +85,7 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 #--> [ [ 3, "RUNS an external command (side effects): spawn process: backup-database --all" ] ]
 ```
 
-Le paragraphe de limite du chapitre 20 disait que seuls les fichiers sont construits. C'était faux, et je l'ai corrigé là-bas.
+Le jumeau détient `rehearsal` et un processus en attente, et l'environnement réel répond `0` ! Le paragraphe de limite du chapitre 20 disait que seuls les fichiers sont construits. C'était faux, et je l'ai corrigé là-bas.
 
 Le jumeau a un second travail. Un programmeur sur un portable sans broches écrit du code de broches pour une carte. La portée dit *répété*, comme les chapitres 8 et 31 l'ont montré. Au déploiement, le pont d'abaissement transforme la répétition en source de firmware. Que se passe-t-il quand un assistant demande à déployer ? `Build()` enregistre la commande de construction et n'exécute pas la chaîne d'outils, et `Deploy` abaisse en mémoire, donc aucun fichier n'est écrit :
 
@@ -119,7 +119,9 @@ oPlatform.DeployAs(HumanActor("me"))
 #--> }
 ```
 
-L'assistant s'entend dire qu'il `may propose a deploy, not perform it` ; le déploiement de la personne produit le firmware. La limite de ce bloc est à la section 7 : seuls deux verbes sont abaissés.
+L'assistant est refusé, et on lui dit qu'il `may propose a deploy, not perform it` ! Le déploiement de la personne produit le firmware. La limite de ce bloc est à la section 7 : seuls deux verbes sont abaissés.
+
+Le jumeau répète ; ensuite, le plan dit où irait chaque partie.
 
 ### Le plan de placement
 
@@ -146,9 +148,11 @@ oShip.Plan().Show()
 
 La règle derrière le plan, dans la conception de l'émulation : la périphérie ne porte une capacité que si elle est critique, et soit propre à Softanza, soit faible ou absente sur la plateforme cible. Une expression régulière est une construction posée sur celle de la plateforme, et jamais le module de correspondance du moteur compilé pour le navigateur.
 
+Le plan dit où ; l'émulateur construit ce que dit le plan.
+
 ### L'émulation
 
-L'émulateur transforme le plan en un bundle, et le bundle est ce qui est livré. Dans le bloc suivant, le bundle généré pour la répétition est câblé directement au rattachement de production, et c'est l'acteur qui décide. Un assistant qui appelle `Deploy(:Production)` laisse le site `absent`. Une personne qui l'appelle rend le site `launched`. Le manifeste qui arrive nomme le groupe du moteur que la partie porte. La cible ici est un répertoire local, le genre de site qui n'a besoin d'aucun outil hors des opérations sur fichiers :
+L'émulateur transforme le plan en un bundle, et le bundle est ce qui est livré. Dans le bloc suivant, le bundle généré pour la répétition est câblé directement au rattachement de production, et c'est l'acteur qui décide. Que devient le site quand un assistant appelle `Deploy(:Production)`, et que devient-il quand une personne le fait ? Le manifeste qui arrive nomme le groupe du moteur que la partie porte. La cible ici est un répertoire local, le genre de site qui n'a besoin d'aucun outil hors des opérations sur fichiers :
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -184,13 +188,13 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-La moitié honnête : la ligne des artefacts du manifeste dit `index.html,stz.js`, et aucun fichier du moteur pour la partie web n'y figure, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté absent et rien n'a été écrit.
+L'assistant a laissé le site `absent`, et la personne l'a rendu `launched`. La moitié honnête : la ligne des artefacts du manifeste dit `index.html,stz.js`, et aucun fichier du moteur pour la partie web n'y figure, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté absent et rien n'a été écrit.
 
-Je n'ai pas exécuté `Deploy(:Emulated)`, parce qu'il construit le sous-ensemble de chaque partie par la chaîne d'outils du moteur, et que la construction de cette chaîne d'outils est une chose que cette machine ne doit pas exécuter. Ce que j'ai exécuté, c'est le bundle sans la compilation, et, dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, sa carte nommait un fichier du moteur qui n'y était pas. La section 7 dit ce que cela signifie pour l'affirmation que le moteur tourne dans un navigateur.
+Je n'ai pas exécuté `Deploy(:Emulated)`, parce qu'il construit le sous-ensemble de chaque partie par la chaîne d'outils du moteur, et que la construction de cette chaîne d'outils est une chose que cette machine ne doit pas exécuter. Ce que j'ai exécuté, c'est le bundle sans la compilation. Dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, sa carte nommait un fichier du moteur qui n'y était pas. La section 7 dit ce que cela signifie pour l'affirmation que le moteur tourne dans un navigateur.
 
 ### Le déploiement
 
-Pour un site local, un déploiement qui échoue défait ce qu'il avait fait ; les autres genres de site essaient seulement, au mieux. La partie web se déploie et passe sa barrière. Le stockage de la partie api échoue. Les étapes restantes sont sautées, le déploiement ne valide pas, et le site web, déjà en ligne, est ramené en arrière. Le site qui échoue est un serveur sans emplacement de stockage, ce qui échoue sans lancer quoi que ce soit :
+Pour un site local, un déploiement qui échoue défait ce qu'il avait fait ; les autres genres de site essaient seulement, au mieux. La partie web se déploie et passe sa barrière. Le stockage de la partie api échoue. Les étapes restantes sont sautées et le déploiement ne valide pas. Que devient le site web, déjà en ligne ? Le site qui échoue est un serveur sans emplacement de stockage, ce qui échoue sans lancer quoi que ce soit :
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -223,11 +227,13 @@ next
 StzDirDeleteAll(cHere + "/_site_cdn")
 ```
 
-Le stockage de la partie api dit `FAILED`, et le site web, dont les trois étapes disent `done`, dit `rolledback`. Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste absent, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
+Le stockage de la partie api dit `FAILED`. Le site web, dont les trois étapes disent `done`, dit `rolledback` ! Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste absent, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
+
+Le déploiement échoue sans danger ; les services viennent ensuite.
 
 ### Le code d'abord, l'abonnement ensuite
 
-Le code demande un service par son nom et n'apprend jamais quelle implémentation il a reçue. Le bac à sable voit le premier appel et aucun après que j'ai relié le service en réel ; le second appel va vers l'adaptateur réel. La surface est saine dès que chaque liaison réelle nomme un secret que le magasin de secrets détient. La passerelle réelle de ce bloc est une classe de remplacement écrite ici, puisque la bibliothèque ne livre aucun adaptateur réel de passerelle de cartes. Une classe de remplacement nommée `LiveGateway` qui renvoie "authorized" est un faux en tout sauf son nom ; le registre la prend pour réelle parce qu'elle ne déclare rien, et la section 7 dit pourquoi cela compte :
+Le code demande un service par son nom et n'apprend jamais quelle implémentation il a reçue. Le bac à sable voit le premier appel et aucun après que j'ai relié le service en réel ; le second appel va vers l'adaptateur réel. La surface est saine dès que chaque liaison réelle nomme un secret que le magasin de secrets détient. La passerelle réelle de ce bloc est une classe de remplacement écrite ici, puisque la bibliothèque ne livre aucun adaptateur réel de passerelle de cartes. Une classe de remplacement nommée `LiveGateway` qui renvoie "authorized" est un faux en tout sauf son nom. Le registre la prend pour réelle parce qu'elle ne déclare rien, et la section 7 dit pourquoi cela compte :
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -276,7 +282,7 @@ Le jour où vous vous abonnez, vous changez une liaison et pas une ligne. La cl�
 
 ### La production refuse
 
-Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production. Quatre sont des erreurs : un service déclaré jamais lié, un faux, une vraie base de données qui disparaît au redémarrage, et un adaptateur réel dont la clé n'est pas dans le magasin de secrets. La cinquième est un avertissement : un adaptateur réel qui ne nomme aucun secret. Le chapitre 31 a montré le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
+Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production. Quatre sont des erreurs : un service déclaré jamais lié (`unbound-service`), un faux (`sandbox-in-production`), une vraie base de données qui disparaît au redémarrage (`ephemeral-in-production`), et un adaptateur réel dont la clé n'est pas dans le magasin de secrets (`live-without-secret`). La cinquième est un avertissement : un adaptateur réel qui ne nomme aucun secret (`inline-credential`). Le chapitre 31 a montré le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -346,7 +352,9 @@ next
 #--> part-uses-undeclared-service @ web [warning]
 ```
 
-Elle nomme `api` deux fois, avec `[error]`, et `web` une fois, avec `[warning]`.
+Elle nomme `api` deux fois, avec `[error]`, et `web` une fois, avec `[warning]`, là où le registre n'avait rien signalé !
+
+Voilà ce que l'exécution a montré ; les décisions derrière elle viennent ensuite.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -366,7 +374,7 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé « faux contre réel » comme vérité entière.** C'était trop grossier. Il y a maintenant quatre postures : bac à sable, local, réel et conformité. La posture locale a été ajoutée quand l'exemple de la base de données a montré qu'un fichier SQLite est une vraie base de données dans un fichier qu'on possède.
 
-**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs, si bien que l'attacher à une livraison en prenait un instantané, et la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière : c'est mon point de vue. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
+**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs. L'attacher à une livraison en prenait un instantané, si bien que la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière : c'est mon point de vue. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
 
 **J'ai refusé de virtualiser la qualité d'un modèle.** La qualité d'un modèle de pointe ne peut pas être virtualisée. Ce que le bac à sable vend à la place, c'est le déterminisme, un coût sur lequel on peut faire une assertion, et le travail hors ligne.
 
@@ -374,9 +382,9 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé de poser une question dans le mauvais cadre.** `MayGoLive` interrogeait autrefois sur la santé dans la phase courante, si bien qu'avec un faux lié il répondait oui. Maintenant il est interrogé dans le cadre de la production quelle que soit la phase.
 
-**J'ai refusé de dire que le besoin du restaurant était l'origine de la conception.** Le site dit que les conceptions de l'émulation et du déploiement prennent une solution comme exemple, et que c'est un exemple, pas l'origine de la conception. La solution d'exemple des documents porte le nom de produit d'un client, et je l'ai renommée dans chaque bloc. Le chapitre 28 a raconté l'histoire, et je ne la répète pas.
+**J'ai refusé de dire que le besoin du restaurant était l'origine de la conception.** Le site dit que les conceptions de l'émulation et du déploiement prennent une solution comme exemple. C'est un exemple, pas l'origine de la conception. La solution d'exemple des documents porte le nom de produit d'un client, et je l'ai renommée dans chaque bloc. Le chapitre 28 a raconté l'histoire, et je ne la répète pas.
 
-Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à la question de l'utilisateur ». La question demande si l'émulation couvre les bases de données, les API métier, les modèles de pointe et les fournisseurs de nuage, afin qu'un programmeur puisse coder un programme entier sans abonnements ni frais et obtenir quand même une solution fonctionnelle prête à déployer. Le chapitre rapporte le titre du plan et sa date. Le dossier ne dit pas qui a posé la question, et le chapitre ne prétend pas que c'était celle de l'auteur.
+Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à la question de l'utilisateur ». La question demande si l'émulation couvre les bases de données, les API métier, les modèles de pointe et les fournisseurs de nuage. Le but est qu'un programmeur puisse coder un programme entier sans abonnements ni frais et obtenir quand même une solution fonctionnelle prête à déployer. Le chapitre rapporte le titre du plan et sa date. Le dossier ne dit pas qui a posé la question, et le chapitre ne prétend pas que c'était celle de l'auteur.
 
 ## 5. Le tribunal
 
@@ -399,6 +407,8 @@ Les outils de déploiement matures sont en tête. La narration le dit clairement
 La fidélité est limitée, et le dit. L'émulation est fidèle mais pas omnisciente, donc elle dit ce qui est quoi. Ce qu'un double prouve est plus étroit encore : un puits de capture prouve ce que vous auriez envoyé, et un répertoire n'est pas un CDN.
 
 Là où je pense que le dossier se distingue, c'est dans le couplage. Le double, le plan, les noms de justificatifs, la barrière et l'acteur sont déclarés dans le même programme que celui qui est livré, et une seule barrière les juge.
+
+Voilà le terrain ; la limite est l'endroit où je m'arrête.
 
 ## 7. La limite
 
@@ -434,7 +444,7 @@ Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est pass�
 
 **Un plan signale, il ne classe pas.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
 
-Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent que le `solve 2 -8` du téléphone renvoie `x = 4` dans une page. La garde qui le vérifie, `wasm_narrated`, dit dans son propre en-tête qu'elle vérifie le câblage et la construction, puisque l'ancien langage hôte ne peut pas exécuter wasm, et elle cite une page dans le navigateur avec "8/8 checks". Cette page n'est pas dans l'arbre épinglé : je l'ai cherchée et n'en ai trouvé aucune. Et je n'ai pas vu la surface de l'émulateur dans un navigateur, et le dossier ne nomme personne qui l'ait vue. Par la loi du chapitre 33, cette surface est non perçue. Le chapitre dit donc : câblé, sa construction vérifiée par une garde que je n'ai pas exécutée, non vu dans un navigateur par quiconque le dossier nomme.
+Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent que le `solve 2 -8` du téléphone renvoie `x = 4` dans une page. La garde qui le vérifie, `wasm_narrated`, dit dans son propre en-tête qu'elle vérifie le câblage et la construction, puisque l'ancien langage hôte ne peut pas exécuter wasm. Elle cite une page dans le navigateur avec "8/8 checks". Cette page n'est pas dans l'arbre épinglé : je l'ai cherchée et n'en ai trouvé aucune. Et je n'ai pas vu la surface de l'émulateur dans un navigateur, et le dossier ne nomme personne qui l'ait vue. Par la loi du chapitre 33, cette surface est non perçue. Le chapitre dit donc : câblé, sa construction vérifiée par une garde que je n'ai pas exécutée, non vu dans un navigateur par quiconque le dossier nomme.
 
 Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan, pour lesquels aucune méthode n'existe ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
 

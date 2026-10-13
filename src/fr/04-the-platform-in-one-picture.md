@@ -24,13 +24,15 @@ Le terrain dessine une plateforme comme une pile de boîtes. Le noyau en bas, un
 
 Pour les applications, l'image du terrain est un hôte. Une grande application embarque un runtime et fait tourner de petites applications à l'intérieur, qui partagent ses services et son magasin. Dans les deux images, le juge est à l'extérieur : une suite de tests à côté du code, une revue à côté du magasin. Dans les images que je connais, aucune ne dessine le tribunal comme une colonne debout à chaque étage.
 
+Softanza dessine cette colonne, et une seule idée tient toute l'image.
+
 ## 2. Le premier principe
 
 La pile de la plateforme se résume, dans la vision que j'ai ratifiée, en une seule idée à chaque altitude : **rien n'est cru, tout est jugé.**
 
 ## 3. La forme Softanza
 
-Voici toute la plateforme en une image, lue de bas en haut. Chaque étage repose sur celui qui est dessous, et chaque étage est jugé par un tribunal à côté de lui. Les chiffres qu'elle porte ne sont pas tapés par moi : le build les lit, la nuit où cette page est faite, dans la bibliothèque et dans la carte des zones du site.
+Voici toute la plateforme en une image, lue de bas en haut. Chaque étage repose sur celui qui est dessous, et chaque étage est jugé par un tribunal à côté de lui. Les chiffres qu'elle porte ne sont pas tapés par moi. Le build les lit, quand cette page est faite, dans la bibliothèque et dans la carte des zones du site.
 
 {{fig:platform-one-picture|La plateforme en une image. Chaque étage repose sur celui qui est dessous ; chacun est jugé par le tribunal à côté de lui ; l'architecte travaille à travers tous. Les chiffres sont lus au build dans le moteur de la bibliothèque, dans son arbre de tests et dans l'Atlas du site.}}
 
@@ -57,7 +59,9 @@ a = StzEngineBigIntFromString("99999999999999999999999999999999")
 #--> 100000000000000000000000000000000
 ```
 
-**Les couches.** Au-dessus du moteur, la bibliothèque est découpée en trois couches, selon la profondeur de capacité. Le noyau, avec le préfixe `stk`, est léger et parle directement au moteur, pour les petits appareils et les petits binaires. La base, `stz`, est la couche riche, où vivent le vocabulaire et ses formes, assez pour la plupart des solutions. Le max, `stx`, est destiné aux innovations les plus fortes. Une couche se choisit par le fichier qu'un programme charge, et le même verbe veut dire le même acte au noyau et à la base :
+Le moteur répond `100000000000000000000000000000000`, la somme exacte.
+
+**Les couches.** Au-dessus du moteur, la bibliothèque est découpée en trois couches, selon la profondeur de capacité. Le noyau, avec le préfixe `stk`, est léger et parle directement au moteur, pour les petits appareils et les petits binaires. La base, `stz`, est la couche riche, où vivent le vocabulaire et ses formes, assez pour la plupart des solutions. Le max, `stx`, est destiné aux innovations les plus fortes. Une couche se choisit par le fichier qu'un programme charge. Le même verbe veut-il dire le même acte au noyau et à la base ? Exécutez-le :
 
 ```haro
 o1 = new stkList([ "one", "and", "one", "makes", "two", "ones" ])
@@ -68,7 +72,9 @@ o2 = new stzList([ "one", "and", "one", "makes", "two", "ones" ])
 #--> 1
 ```
 
-**Les zones.** À travers les couches, la bibliothèque est cartographiée par l'Atlas du site en zones regroupées en bandes, et chaque zone en voies. Chaque voie est notée d'émergente à forte, la plupart avec la ligne qui le prouve. L'Atlas dit ce qui existe, et à quel point c'est bien. La règle de conception du moteur est qu'un verbe veut dire le même acte sur toute structure qui l'admet. Ici elle tient pour une paire, une chaîne et une liste : sur une chaîne, il répond des positions de caractères ; sur une liste, des positions d'éléments :
+Les deux répondent `1` : le même verbe, le même acte, à deux profondeurs.
+
+**Les zones.** À travers les couches, la bibliothèque est cartographiée par l'Atlas du site en zones regroupées en bandes, et chaque zone en voies. Chaque voie est notée d'émergente à forte, la plupart avec la ligne qui le prouve. L'Atlas dit ce qui existe, et à quel point c'est bien. La règle de conception du moteur est qu'un verbe veut dire le même acte sur toute structure qui l'admet. Tient-elle pour une paire, une chaîne et une liste ? Exécutez-le :
 
 ```haro
 ? @@( Q("tea rice tea").FindAll("tea") )
@@ -77,7 +83,9 @@ o2 = new stzList([ "one", "and", "one", "makes", "two", "ones" ])
 #--> [ 1, 3 ]
 ```
 
-**Les mondes.** Au-dessus de la bibliothèque, l'unité n'est pas un module mais un monde : une application est un monde vivant de sens, avec ses choses, ses relations et ses règles. Un monde se déclare, et il peut s'expliquer lui-même :
+Sur la chaîne, `FindAll` répond des positions de caractères : `[ 1, 10 ]`. Sur la liste, il répond des positions d'éléments : `[ 1, 3 ]`. Le même acte, sur deux structures.
+
+**Les mondes.** Au-dessus de la bibliothèque, l'unité n'est pas un module mais un monde : une application est un monde vivant de sens, avec ses choses, ses relations et ses règles. Un monde se déclare. Que dit-il de lui-même quand on lui demande de s'expliquer ? Exécutez-le :
 
 ```haro
 oApp = new stzApp("FieldVisits")
@@ -98,6 +106,8 @@ oApp.Explain()
 oApp.Live()
 #--> [FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)
 ```
+
+Il répond `WORLD FieldVisits   lives in: memory (not persisted)`, puis liste son être et ses relations. `Live()` répond `[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)`. Deux choses, et ni flux, ni réaction, ni but. Le monde dit ce qui a été déclaré, et rien de plus.
 
 Les mondes se composent en constellation. Ici un restaurant et son fournisseur de produits sont deux mondes, et un lien entre eux déclare l'unique traversée permise. Que devient une traversée qu'aucun lien ne déclare ? Exécutez-le :
 
@@ -121,7 +131,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 #--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
 ```
 
-La traversée déclarée répond `1`. L'autre répond `0`, et la constellation donne sa raison en une ligne : `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Toute autre traversée est refusée avec sa raison.
+La traversée déclarée répond `1`. L'autre répond `0`, refusée ! La constellation donne sa raison en une ligne : `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Toute autre traversée est refusée avec sa raison.
 
 Le socle commun est le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient. Il tient une identité, une session et un magasin. C'est un monde comme les autres, le monde zéro, et non un genre particulier de nœud. Le chapitre 23 le montre et dit où le code reste en deçà.
 
@@ -139,7 +149,7 @@ oPlan = oDelivery.Plan()
 #--> [ "aggregation", "solver" ]
 ```
 
-Deux : `aggregation` et `solver`. Le système propre du téléphone gère l'une des deux autres, Unicode, et Softanza livre l'autre, Regex, comme une construction dans le langage propre de la cible.
+Deux, pas quatre : `aggregation` et `solver` ! Le système propre du téléphone gère l'une des deux autres, Unicode, et Softanza livre l'autre, Regex, comme une construction dans le langage propre de la cible.
 
 **Les artisans du logiciel.** En haut se trouvent les six portes du chapitre 2 : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent. Et une personne travaille à travers chaque étage, du moteur à l'organisation : l'architecte de plateforme. Le dossier nomme cette personne en trois endroits sans lien entre eux, et aucun autre rôle ne traverse toutes les bandes de l'Atlas.
 
@@ -149,7 +159,7 @@ Les parties II à IV de ce livre sont des repensées, et chacune est une boîte 
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le calcul dans les faces.** Le moteur est le produit. Le langage au-dessus ajoute de la beauté, pas du calcul : des milliers de méthodes qui se lisent comme des phrases, et les algorithmes en dessous, en un seul endroit. La règle est que chaque fonctionnalité est implémentée une fois, dans le moteur. La migration n'est pas terminée, et le contrat des couches liste le nombre, la liste, l'objet, le graphe, les statistiques et le naturel comme encore en Ring.
+**J'ai refusé le calcul dans les faces.** Le moteur est le produit. Le langage au-dessus ajoute de la beauté, pas du calcul : des milliers de méthodes qui se lisent comme des phrases, et les algorithmes en dessous, en un seul endroit. La règle est que chaque fonctionnalité est implémentée une fois, dans le moteur. La migration n'est pas terminée. Le contrat des couches liste le nombre, la liste, l'objet, le graphe, les statistiques et le naturel comme encore en Ring.
 
 **J'ai retiré l'ancien framework, sans repli.** La bibliothèque reposait sur un grand framework C++ pour son texte, ses dates et ses fichiers. Quand le moteur l'a remplacé, tous les chemins passant par le framework ont été retirés : pas de repli, pas de drapeau de fonctionnalité gardé au cas où.
 
@@ -157,9 +167,11 @@ Les parties II à IV de ce livre sont des repensées, et chacune est une boîte 
 
 **J'ai refusé un drapeau pour choisir une couche.** La première manière de choisir une couche était un drapeau. Elle ne pouvait jamais fonctionner, parce que le langage sous-jacent charge à la compilation tous les fichiers qu'il voit, si bien que les trois couches se chargeaient à chaque appel. L'échec de l'une était l'échec de toutes. Le drapeau a été retiré plutôt que gardé comme un interrupteur qui ne fait rien en silence. La raison a été écrite là où le prochain lecteur se tiendra : une couche se choisit par le fichier que l'on charge.
 
-**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base pendant que le moteur, les volets comme la sécurité et la performance, et les clients avançaient. C'était le choix agile, et il n'est défendable que tant que la dette est visible. Alors la figure dessine la base au plus large, et le chapitre 27 raconte la dette avec ses chiffres.
+**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base. Le moteur, les volets comme la sécurité et la performance, et les clients avançaient pendant ce temps. C'était le choix agile, et il n'est défendable que tant que la dette est visible. Alors la figure dessine la base au plus large, et le chapitre 27 raconte la dette avec ses chiffres.
 
 **J'ai refusé les mini-applications.** La super-application du terrain est un hôte qui fait tourner de petites applications. Celle de Softanza est un graphe gouverné de mondes : des mondes, pas des mini-applications ; des liens et des normes, pas un conteneur.
+
+Cinq gardes se tiennent à côté des étages ; la section suivante dit ce que chacune prouve.
 
 ## 5. Le tribunal
 
@@ -173,9 +185,11 @@ Les bibliothèques de texte du terrain mènent sur la locale : la propre carte d
 
 Les hôtes de super-applications du terrain servent de vrais utilisateurs à une échelle que cette plateforme n'a jamais rencontrée. Le dossier les nomme comme le modèle qu'il a refusé et ne mesure rien contre eux, alors je n'en mesurerai pas non plus.
 
-Et l'Atlas lui-même imprime où Softanza est faible : la zone binaire est un plan sans code livré, le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu, la zone du système a peu de voies fortes. Je tiens cela pour une vue, non pour un résultat : une carte qui imprime ses zones faibles est la seule sorte qui vaille la peine d'être lue.
+Et l'Atlas lui-même imprime où Softanza est faible. La zone binaire est un plan sans code livré, le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu, la zone du système a peu de voies fortes. Je tiens cela pour une vue, non pour un résultat. Une carte qui imprime ses zones faibles est la seule sorte qui vaille la peine d'être lue.
 
 ## 7. La limite
+
+Je mets maintenant sur l'image les trois mots d'étape, construit, conçu et absent.
 
 Ce qui est construit : le moteur et ses bibliothèques, la couche base, les mondes, les constellations et les plateformes avec leurs gardes, et, pour le web, le sous-ensemble du moteur qu'une partie livre.
 
@@ -190,13 +204,15 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et aucun fichier d'entrée ne la charge.
+Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et aucun fichier d'entrée ne la charge !
 
-Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est cassée contre le moteur aujourd'hui : ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte l'étude du site sur les racines du livre. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude du site. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
+Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est cassée contre le moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte l'étude du site sur les racines du livre. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude du site. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
 
 Ce qui est absent : un programme entier et son moteur emballés dans un seul fichier sans aucune dépendance, et une plateforme cliente qui tourne sur le moteur.
 
 ## 8. Six portes
+
+Chacune des six portes lit cette image depuis l'endroit où elle se tient.
 
 **Le programmeur.** Vous choisissez votre profondeur par le fichier que vous chargez, et un verbe veut dire le même acte sur une chaîne et sur une liste.
 

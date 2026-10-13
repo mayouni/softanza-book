@@ -73,7 +73,7 @@ oOrg.ImportStzOrg(cChart)
 #--> 0
 ```
 
-La règle du régulateur lit l'organigramme. L'audit rend compte au directeur général, et le verdict le dit dans ses propres mots, `BCEAO-002: Audit reports to non-board position`, avec un code de règle qu'un auditeur peut retrouver. Un organigramme est jugé par plus d'un tribunal à la fois, chaque constat porte son propre code, et le rapport de conformité dit conforme ou non. Voici une seconde règle, la séparation des tâches, qui dit que les opérations ne doivent pas rendre compte à la trésorerie :
+La règle du régulateur lit l'organigramme et le refuse ! L'audit rend compte au directeur général, et le verdict le dit dans ses propres mots, `BCEAO-002: Audit reports to non-board position`, avec un code de règle qu'un auditeur peut retrouver. Un organigramme est jugé par plus d'un tribunal à la fois, chaque constat porte son propre code, et le rapport de conformité dit conforme ou non. Que dit un second tribunal, la séparation des tâches, qui veut que les opérations ne rendent pas compte à la trésorerie ? J'ajoute la trésorerie et les opérations, les opérations sous la trésorerie, et je lance les deux tribunaux :
 
 ```haro
 oOrg.AddManagementPositionXT("treasury", "Treasury")
@@ -112,7 +112,7 @@ next
 #--> HIPAA : 4
 ```
 
-Quatre règles que chaque base porte : personne ne rend compte à soi-même, aucun cycle de rattachement, aucun poste orphelin, et une étendue de contrôle. SOX en ajoute une qui lui est propre, appelée aussi séparation des tâches mais différente du second tribunal ci-dessus : aucun poste ne tient à la fois le rôle d'approbateur et celui d'exécutant. Le commentaire de la bibliothèque le dit sans détour : les classes de régimes ne diffèrent aujourd'hui que par le nom, et une seule ajoute une règle qui lui est propre. Je reviendrai sur ce que cela veut dire.
+Six régimes portent quatre règles, et un en porte cinq ! Quatre règles que chaque base porte : personne ne rend compte à soi-même, aucun cycle de rattachement, aucun poste orphelin, et une étendue de contrôle. SOX en ajoute une qui lui est propre : aucun poste ne tient à la fois le rôle d'approbateur et celui d'exécutant. Elle est appelée aussi séparation des tâches, mais c'est une règle différente du second tribunal ci-dessus. Le commentaire de la bibliothèque le dit sans détour : les classes de régimes ne diffèrent aujourd'hui que par le nom, et une seule ajoute une règle qui lui est propre. Je reviendrai sur ce que cela veut dire.
 
 La règle propre d'une banque est aussi une donnée. Prenez la règle selon laquelle l'audit interne rend compte au conseil. C'est un objet déclaré par des appels. Elle nomme le département qu'elle gouverne, la ligne qu'elle exige et la phrase qu'elle imprime, et elle s'ajoute à la base de règles d'un régime. Quelle règle a été rompue, et où ? Le rapport le dit :
 
@@ -132,6 +132,8 @@ oRep.Report()
 #        ERROR audit-reports-to-board @ audit -- internal audit must report to the board
 ```
 
+Le rapport dit `UNSOUND` et nomme la règle et le lieu : `ERROR audit-reports-to-board @ audit -- internal audit must report to the board`.
+
 Puis le verdict suit l'organigramme. Deux modifications de deux lignes de rattachement, l'audit rend désormais compte au conseil et les opérations au directeur général. Que disent maintenant les tribunaux qui disaient non ? Lancez-le :
 
 ```haro
@@ -149,7 +151,7 @@ oRep.Report()
 #--> 1
 ```
 
-Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée (son propre code ne s'exécute pas au commit épinglé ; les appels ci-dessus, si). Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. Que dit-il quand le département du directeur général est laissé vide ? Lancez-le :
+Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Son propre code ne s'exécute pas au commit épinglé ; les appels ci-dessus, si. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. Que dit-il quand le département du directeur général est laissé vide ? Lancez-le :
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -163,7 +165,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 #--> 0
 ```
 
-Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui passe une fois : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
+Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
 
 Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire d'une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
 
@@ -175,7 +177,9 @@ Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui 
 
 **J'ai refusé de porter le texte d'un régulateur dans un code dont je ne peux pas citer la source.** Les codes BCEAO-001 à BCEAO-003 sont ceux de la bibliothèque. Le dossier ne les rattache à aucun article du texte de la banque centrale. Ce sont les propres règles de la bibliothèque, nommées d'après le régime du régulateur ; le dossier ne nomme aucun texte dont elles seraient tirées.
 
-**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles, depuis combien de temps le produit est installé, et combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque. Les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que le produit est construit avec Softanza et garde sa formulation ; ce chapitre dit ce que le dossier montre.
+**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles. Il est muet sur depuis combien de temps le produit est installé, et sur combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque. Les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que le produit est construit avec Softanza et garde sa formulation ; ce chapitre dit ce que le dossier montre.
+
+Six gardes se tiennent derrière les blocs.
 
 ## 5. Le tribunal
 
@@ -189,6 +193,8 @@ Le terrain mène en usage réel : une telle plateforme est souvent une que les a
 
 Là où je pense que ceci se distingue, c'est que l'organigramme est la donnée et que le tribunal est une règle sur elle. Un organigramme est un texte, une règle est une donnée, un constat nomme la règle et le poste, et le rapport est un seul verdict. Le tableau de comparaison propre de la bibliothèque pour cette fonction n'est que victoires, sans dates, avec des chiffres de coût qui ne citent rien, et je ne l'imprimerai pas.
 
+Voici la limite, dans les mots d'étape.
+
 ## 7. La limite
 
 Ce qui est construit : l'organigramme comme modèle et comme texte ; les validateurs du régulateur régional et de la séparation des tâches ; les sept régimes comme un seul mécanisme avec l'exemple SOX. Construit aussi : une règle écrite comme une donnée, et le rapport unique avec son verdict.
@@ -196,7 +202,7 @@ Ce qui est construit : l'organigramme comme modèle et comme texte ; les validat
 Quatre choses sont conçues, ou construites en partie.
 
 - Le contenu des six régimes autres que le régional. Cinq d'entre eux tiennent les mêmes quatre règles universelles et rien d'autre ; SOX en ajoute une cinquième.
-- Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle, et aucune ligne `when` ni `then`, de sorte qu'une telle règle se charge et ne juge rien. Le format est admis, et la règle n'est pas appliquée.
+- Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle, et aucune ligne `when` ni `then`. Une telle règle se charge et ne juge rien. Le format est admis, et la règle n'est pas appliquée.
 - Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste. Il exige que les départements soient déclarés.
 - Le validateur de succession signale chaque poste pourvu, ce qui est, selon le commentaire de la bibliothèque elle-même, un défaut connu. La simulation de réorganisation lève une erreur quand on lui demande de changer une ligne de rattachement, également un défaut connu. L'article qui raconte la simulation nomme une méthode qui n'existe nulle part dans la bibliothèque.
 
@@ -207,7 +213,9 @@ Quatre choses sont absentes.
 - Un verdict perçu. Aucun document ne dit qu'un auditeur ou un superviseur ait lu un constat que la bibliothèque a produit.
 - Une date de livraison. Les fichiers livrés portent des horodatages du système de fichiers, et ce ne sont pas une date de livraison.
 
-La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que ses règles 117 à 121 ont été récoltées sur un produit de supervision bancaire, et le dossier ne dit pas que ce produit soit l'installation de la banque. Je ne dirai pas qu'il l'est.
+La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que ses règles 117 à 121 ont été récoltées sur un produit de supervision bancaire. Le dossier ne dit pas que ce produit soit l'installation de la banque. Je ne dirai pas qu'il l'est.
+
+Six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 

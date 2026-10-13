@@ -16,7 +16,7 @@ rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
 ---
 
-Dans ce chapitre, je reprends le tribunal du chapitre 5, qui juge quiconque a écrit le code, et j'en montre quatre, chacun par quelque chose qu'il refuse : les promesses, la perception, la sécurité et la performance. Je fais parcourir au voyageur un fichier de trois promesses, et je demande au dossier combien des huit traditions musicales une personne a entendues. Je modifie un registre scellé et je lis quelle entrée la chaîne nomme, et je laisse un modèle proposer un plan de performance qu'il ne peut pas valider. Je dis ce que j'ai refusé : le mot « narration » pour ce qui ne peut pas mentir, une seconde bibliothèque d'assertions, un sixième état pour un arrêt, une garantie sans garde. Le principe tient les quatre tribunaux ensemble : une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et là où aucun tribunal ne voit, le dossier le dit.
+Dans ce chapitre, je reprends le tribunal du chapitre 5, qui juge quiconque a écrit le code. J'en montre quatre, chacun par quelque chose qu'il refuse : les promesses, la perception, la sécurité et la performance. Je fais parcourir au voyageur un fichier de trois promesses, et je demande au dossier combien des huit traditions musicales une personne a entendues. Je modifie un registre scellé et je lis quelle entrée la chaîne nomme, et je laisse un modèle proposer un plan de performance qu'il ne peut pas valider. Je dis ce que j'ai refusé, sept choses en tout, dont le mot « narration » pour ce qui ne peut pas mentir, une seconde bibliothèque d'assertions, un sixième état pour un arrêt, une garantie sans garde. Le principe tient les quatre tribunaux ensemble : une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et là où aucun tribunal ne voit, le dossier le dit.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -80,7 +80,7 @@ aRun = oRaise.Records()[1][:run]
 remove("raise.haro")
 ```
 
-La promesse est `kept`, la fin est `finished` et le code de sortie est `0`, alors même que le processus du langage s'est terminé sur une erreur ! La tournée a fini comme elle avait dit qu'elle le ferait.
+La promesse est `kept`, la fin est `finished` et le code de sortie est `0` ! Le processus du langage s'est terminé sur une erreur, et la tournée a fini comme elle avait dit qu'elle le ferait.
 
 Chaque règle de ce juge a été apprise en regardant le harnais accuser la bibliothèque à tort. L'en-tête de la garde le dit. Une promesse courte `6` s'est un jour cachée à l'intérieur d'un `[ 6, 28 ]` plus loin, et c'est pourquoi la règle sur les graphies existe. Le juge propre à ce livre est une copie du juge du site, plus lâche que le voyageur.
 
@@ -105,7 +105,7 @@ next
 #--> HEARD
 ```
 
-Il répond `8`, `7` et `HEARD` : huit déclarées, sept non perçues, une entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par moi le 26 septembre 2026, à travers cinq exemples originaux, et mon verdict a été « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, je ne l'ai pas encore dit. Ces mots sont les miens, et ils sont l'unique perception enregistrée qui soit un refus.
+Il répond `8`, `7` et `HEARD` : huit déclarées, et sept d'entre elles non perçues ! Une seule est entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par moi le 26 septembre 2026, à travers cinq exemples originaux, et mon verdict a été « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, je ne l'ai pas encore dit. Ces mots sont les miens, et ils sont l'unique perception enregistrée qui soit un refus.
 
 La loi est celle du domaine de projets, c'est-à-dire de l'ensemble des projets de l'auteur, adoptée le 25 septembre 2026 sur instruction de l'auteur. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
@@ -115,7 +115,7 @@ La galerie d'images est l'endroit où elle n'est pas satisfaite. La bibliothèqu
 
 Le volet de sécurité part d'une affirmation. Le modèle de menace suppose qu'un modèle de langage détourné passera, et le rend inoffensif. Le modèle ne détient jamais la capacité, et donc un LLM trompé ne peut toujours pas agir. Le document n'essaie pas de détecter chaque invite malveillante.
 
-La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez n'importe quelle ligne après la première, et la chaîne dit quelle entrée s'est rompue. Une mauvaise clé et une ligne modifiée sont deux accusations différentes :
+La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez n'importe quelle ligne après la première, et la chaîne dit quelle entrée s'est rompue. Si j'en modifie une, quelle entrée nomme-t-elle, et une mauvaise clé déclenche-t-elle la même accusation ? Exécutez-le :
 
 ```haro
 oLed = StzSecurityLedger(256)
@@ -132,7 +132,7 @@ write("evidence.txt", StzReplace(read("evidence.txt"), "actor is not effectful",
 remove("evidence.txt")
 ```
 
-Le vérificateur répond `chain intact over 2 entries`, puis `the SEAL does not match this key`, puis `the chain breaks at entry 2`. Remarquez quelle entrée j'ai choisi de modifier : la deuxième. Une modification de la première entrée n'est pas détectée, parce que le vérificateur contrôle le texte de chaque entrée contre l'empreinte de l'entrée qui la précède, et que la première n'en a aucune avant elle. Cela a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
+Le vérificateur répond `chain intact over 2 entries`, puis `the SEAL does not match this key`, puis `the chain breaks at entry 2`. La chaîne a nommé la rupture ! Une mauvaise clé et une ligne modifiée sont deux accusations différentes. Remarquez quelle entrée j'ai choisi de modifier : la deuxième. Une modification de la première entrée n'est pas détectée. Le vérificateur contrôle le texte de chaque entrée contre l'empreinte de l'entrée qui la précède, et la première n'en a aucune avant elle. Cela a caché ma première tentative. La narration énonce la limite dans ses propres mots : ce n'est pas une protection contre un attaquant qui exécute déjà du code dans le processus.
 
 Un secret est la même loi appliquée à une clé. Son seul visage public est son descripteur. Une main qui peut valider peut le lire. Que répond le tribunal quand un modèle de langage demande ? Exécutez-le :
 
@@ -155,7 +155,7 @@ done
 StzCloseSecurityLedger()
 ```
 
-Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`, et le registre compte `1` refus sans que personne n'ait appelé le registre. C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
+Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. Le tribunal a refusé le modèle, et le registre compte `1` refus sans que personne n'ait appelé le registre ! C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
 
 Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections, et que chaque ligne de garantie contient une preuve. Une preuve est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation. Elle vérifie que chaque chemin de garde dans les lignes existe sur le disque, et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
 
@@ -163,7 +163,7 @@ Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle
 
 ### Le tribunal de la performance
 
-Un instrument doit un nombre. Le chronomètre honnête donne un nombre issu d'une horloge qui ne va que vers l'avant, exclut une pause, et expédie deux spans d'une même trace dans un seul lot pour un collecteur d'observabilité :
+Un instrument doit un nombre. Le chronomètre honnête donne un nombre issu d'une horloge qui ne va que vers l'avant. Il exclut une pause, et il expédie deux spans d'une même trace dans un seul lot pour un collecteur d'observabilité. Si je le mets en pause 200 millisecondes, la pause compte-t-elle dans le temps écoulé ? Exécutez-le :
 
 ```haro
 w = StzStopwatchXT("import-orders")
@@ -189,9 +189,11 @@ oBatch.AddSpan(w).AddSpan(w2)
 #--> 2
 ```
 
-Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace et le même identifiant de span. La phrase tient pour l'écho du serveur, que je n'ai pas exécuté, et non pour le chronomètre. Je la range parmi les demandes.
+La pause n'a pas compté : `w.ElapsedMs() < 200` a imprimé `1`, et `w.Record()[:running]` a imprimé `0`, parce que le chronomètre s'était arrêté. Le second chronomètre a rejoint la trace du premier : `w2.TraceId() = w.TraceId()` a imprimé `1`, et le JSON du lot contient l'identifiant de trace `2` fois, pour deux spans.
 
-L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'intérieur du programme. Un plan de performance est proposé par une machine, et seul un acteur effectif le valide. La même action est jugée deux fois, et les deux jugements restent dans l'audit :
+Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace, comme le montre le `1` ci-dessus, et le même identifiant de span, que ce bloc n'imprime pas. La phrase tient pour l'écho du serveur, que je n'ai pas exécuté, et non pour le chronomètre. Je la range parmi les demandes.
+
+L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'intérieur du programme. Un plan de performance est proposé par une machine, et seul un acteur effectif le valide. Que se passe-t-il quand un modèle demande à le valider, puis quand une personne le fait ? Exécutez-le :
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
@@ -222,7 +224,9 @@ class FakeFleet
 		return len(aFleetCalls)
 ```
 
-Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes verbes effectifs. La boucle est prouvée contre le double et non contre un vrai parc. Un modèle qui demande à valider est refusé avant toute tentative, et le double compte zéro appel ! L'audit garde les deux jugements : `REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed`, et `COMMITTED scaleup 'nlp' by mansour`.
+Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes verbes effectifs. La boucle est prouvée contre le double et non contre un vrai parc. Un modèle qui demande à valider est refusé avant toute tentative : `ExecuteOn` a imprimé `0` et `CallCount` a imprimé `0`, donc le double a compté zéro appel ! Pour la personne, `ExecuteOn` a imprimé `1` et `CallCount` a suivi avec `1`. La même action est jugée deux fois, et l'audit garde les deux jugements : `REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed`, et `COMMITTED scaleup 'nlp' by mansour`.
+
+Les quatre tribunaux ont parlé, et maintenant je dis ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -239,6 +243,8 @@ Le parc, ici, est un double de répétition, tout objet qui répond aux mêmes v
 **J'ai refusé de concurrencer l'écosystème du terrain.** L'étude de performance du 29 juillet 2026 dit que le volet ne concurrence pas Grafana, Datadog ni l'écosystème d'OpenTelemetry, et ne devrait pas feindre de le faire. Il exporte.
 
 **J'ai refusé une garantie sans garde.** La dernière règle du modèle de menace est qu'une garantie n'est ajoutée qu'avec sa garde.
+
+Voyons maintenant les gardes qui prouvent ce qui s'est exécuté.
 
 ## 5. Le tribunal
 
@@ -260,6 +266,8 @@ Les sections honnêtes propres du dossier, chaque perte à côté de son gain.
 
 L'étude du dossier donne le ton que j'essaie de faire résonner. Une grille de deux cent quatre-vingt-six coches contre deux cent soixante-neuf croix est, dans ses mots, la forme d'une brochure.
 
+Voyons maintenant où le chapitre s'arrête.
+
 ## 7. La limite
 
 Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, aucun ne manquant.
@@ -280,11 +288,13 @@ Ce qui est absent :
 
 Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 
-**Les nombres de l'exercice diffèrent selon la source.** La mesure de réactivité du modèle de menace est une détection en un peu plus de trois cent cinquante millisecondes et un confinement en un peu plus de cinquante, sur trois exécutions. Le site imprime 395 et 50, d'un rejeu du 1er octobre. Ils diffèrent parce que l'exercice mesure une horloge. Une forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. Quel que soit le nombre que vous imprimez, vous nommez sa source.
+**Les nombres de l'exercice diffèrent selon la source.** La mesure de réactivité du modèle de menace vient de trois exécutions. C'est une détection en un peu plus de trois cent cinquante millisecondes, et un confinement en un peu plus de cinquante. Le site imprime 395 et 50, d'un rejeu du 1er octobre. Ils diffèrent parce que l'exercice mesure une horloge. Une forme d'attaque, en boucle locale, sur une seule machine, lancée à la demande. Quel que soit le nombre que vous imprimez, vous nommez sa source.
 
 **Un défaut possible dans le juge de promesses, que je signale et sur lequel je n'ai rien construit.** Un fichier dont la première promesse est un mensonge et la dernière une levée d'erreur promise lit le mensonge comme non atteint et la levée d'erreur comme tenue. La tournée est brisée, avec zéro divergente, et le code de sortie est 1. Je l'ai reproduit deux fois. Chaque règle seule se comporte comme la garde la plante. Savoir si une divergence au-dessus d'une levée d'erreur promise devrait se lire *divergente* est une question pour le volet Testoor, qui tient le voyageur.
 
 **Des comptes qui ne s'accordent pas entre les sources.** La clôture de l'étude dit 387 gardes narrées. Mon `find` sur l'instantané épinglé dit 529 fichiers ainsi nommés. Le compte propre de la construction est celui qu'il faut utiliser, et aucun des deux autres.
+
+Six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 

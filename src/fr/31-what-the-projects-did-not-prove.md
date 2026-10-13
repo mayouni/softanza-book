@@ -34,7 +34,7 @@ Ce que les trois ont en commun, c'est que l'affirmation et sa preuve voyagent s�
 
 Le dossier donne deux phrases, et elles n'en font qu'une. Le site dit : « Rien n'est une référence tant qu'un document ne le prouve pas. » Et, de ce dont l'auteur se souvient : ce qu'« aucun fichier ne prouve n'est pas listé ».
 
-**Un projet prouve exactement ce qu'un document, un fichier, une exécution et une personne nommée atteignent, et la page dit où ils s'arrêtent.** C'est la phrase propre du chapitre, tirée des deux phrases du site ; les mots du site sont les deux cités plus haut, de sa page des clients et de sa page forgée.
+**Un projet prouve exactement ce qu'un document, un fichier, une exécution et une personne nommée atteignent, et la page dit où ils s'arrêtent.** C'est la phrase propre du chapitre, tirée des deux phrases du site. Les mots du site sont les deux cités plus haut, de sa page des clients et de sa page forgée.
 
 ## 3. La forme Softanza
 
@@ -65,7 +65,7 @@ done
 
 Deux services déclarés, aucun lié, et le registre le dit lui-même : `nothing is bound for service 'payments'` !
 
-**Ce qu'une répétition peut affirmer, et ce que seule la cible peut affirmer.** Le modèle de plateforme donne trois verdicts pour la même opération. *Refusé* : la cible l'interdit. *Natif* : l'hôte lui-même peut le faire. *Répété* : la cible le permet et l'hôte ne l'a pas, de sorte que l'exécution ne prouve que le plan. Lire une broche sur une machine de développement est répété, pas natif. Le mot dépend de la machine sur laquelle ce livre a été exécuté : un PC Windows n'a pas une telle broche, et une carte qui en a une imprimerait `native` pour la même ligne.
+**Ce qu'une répétition peut affirmer, et ce que seule la cible peut affirmer.** Le modèle de plateforme donne trois verdicts pour la même opération. *Refusé* : la cible l'interdit. *Natif* : l'hôte lui-même peut le faire. *Répété* : la cible le permet et l'hôte ne l'a pas, de sorte que l'exécution ne prouve que le plan. Lire une broche sur une machine de développement est répété, pas natif. Le mot dépend de la machine sur laquelle ce livre a été exécuté. Un PC Windows n'a pas une telle broche, et une carte qui en a une imprimerait `native` pour la même ligne. Que répond la portée de la carte à une lecture de broche, et à une demande de lancer un processus ? Lancez-le :
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
@@ -85,6 +85,8 @@ oFw.Show()
 #--> Scope: esp32 (espidf)
 #      [rehearsed] read pin 4
 ```
+
+La lecture de la broche répond `rehearsed`, et la portée refuse le processus avec `forbids 'process'` !
 
 Le commentaire de la bibliothèque, dans la classe qui abaisse une répétition en artefact réel, dit que la dernière étape, flasher une carte, « remains a PLANNED external action ».
 
@@ -111,7 +113,7 @@ L'adaptateur répond `no credentials`, nomme ce qui comblerait le manque, `WithS
 
 La bibliothèque a un script qui tente l'exécution réelle. Je l'ai lancé une fois, sans aucune de ses variables définie, pour ce chapitre. Il a imprimé le mot UNPERCEIVED, nommé les quatre variables qui manquent, et dit que rien de l'adaptateur réel n'est perçu tant qu'une personne nommée n'a pas vu un paiement arriver. Il s'est terminé sans échec. L'exécution a été reportée, par moi, pour une raison qui n'est pas celle de la bibliothèque : elle exige l'implication de l'organisation. Une exécution qui n'a pas pu avoir lieu est rapportée comme non perçue. Elle n'est rapportée ni comme un passage ni comme un échec.
 
-**Une fonction qui attend une personne nommée.** Dans le volet du son, la bibliothèque tient comme donnée le verdict d'une personne sur une chose que seule une personne peut juger. Tant que le verdict est UNPERCEIVED, le verbe qui revendiquerait le résultat refuse et dit pourquoi. Là où une personne a dit oui, le verdict porte la date et ses mots :
+**Une fonction qui attend une personne nommée.** Dans le volet du son, la bibliothèque tient comme donnée le verdict d'une personne sur une chose que seule une personne peut juger. Tant que le verdict est UNPERCEIVED, le verbe qui revendiquerait le résultat refuse et dit pourquoi. Là où une personne a dit oui, le verdict porte la date et ses mots. Que répond la voix à formants quand on lui demande de chanter, et que contient le verdict de la voix réaccordée ? Lancez-le :
 
 ```haro
 oVoice = StzSoundFormantVoiceQ()
@@ -131,7 +133,7 @@ aVerdicts = StzSoundSingingVerdict()
 #--> the retuned voice is somehow singing, open Sing()
 ```
 
-Le verdict de la voix réaccordée se lit `SINGING`, avec la date `2026-09-27` et les mots `the retuned voice is somehow singing, open Sing()`. C'est la forme de la ligne dont le chapitre 33 dit que les exécutions des clients ne l'ont pas encore : une date, une personne, et une phrase. Le dossier porte aussi le nom de la personne à côté, et je ne l'imprime pas ici. (SAPI est l'interface vocale du système d'exploitation.)
+La voix à formants a refusé de chanter : `Refusals()` vaut `1`, et le message commence par `Sing is not available YET` ! Le verdict de la voix à formants reste `UNPERCEIVED`. Le verdict de la voix réaccordée se lit `SINGING`, avec la date `2026-09-27` et les mots `the retuned voice is somehow singing, open Sing()`. C'est la forme de la ligne dont le chapitre 33 dit que les exécutions des clients ne l'ont pas encore : une date, une personne, et une phrase. Le dossier porte aussi le nom de la personne à côté, et je ne l'imprime pas ici. (SAPI est l'interface vocale du système d'exploitation.)
 
 **Un contrôle préalable qui dit « faisable » sans toucher un hôte.** Le contrôle préalable du déploiement refuse un hôte trop petit. Pour un hôte dont le fournisseur est un cloud, il dit faisable et « provision on aws », sans aucun compte. Une faisabilité est un plan, pas une vérification. Le fichier de conception le dit clairement : ce qui reste est la vérification contre un vrai hôte ou compte, barrée par l'infrastructure. Les chiffres ci-dessous sont illustratifs. Que répond le contrôle préalable à un hôte trop petit, et à un fournisseur cloud sans aucun compte ? Lancez le bloc :
 
@@ -156,6 +158,8 @@ oPool.SetTarget(:api, oCloud)
 ? oPool.Feasibility()[1][5]
 #--> provision on aws
 ```
+
+Le petit hôte reçoit `SHORTFALL -- host too small`, et le cloud sans compte est faisable, avec `provision on aws` !
 
 Voici maintenant les tableaux. Chaque cellule vient du dossier, lu le 8 octobre 2026. Un compte de lignes ou une date de fichier que j'ai lus moi-même sont étiquetés comme miens.
 
@@ -215,7 +219,7 @@ L'étude comparative qui a lu le dossier dit, dans ses propres paragraphes intit
 
 **J'ai refusé deux formulations de moi.** Aux chapitres 1, 2 et 33, j'ai écrit que la banque « fait tourner » un produit « construit avec » Softanza, et que le restaurant « fait tourner » une plateforme. Le dossier montre une application Python qui n'appelle pas la bibliothèque, construite à côté d'elle par la même personne, et pour le restaurant une première livraison et une journée de terrain, puis le silence après le 25 août. La formulation honnête est *construit par moi, sous la discipline que la bibliothèque porte désormais*, et *livré et éprouvé sur le terrain*. Les chapitres 2 et 33 portent désormais ces formulations. Le chapitre 1 garde la sienne, et ce paragraphe est l'endroit où se tient la formulation plus exacte du dossier.
 
-**J'ai refusé un mot d'étape que le dépôt ne porte pas.** La page du domaine de projets du site le dit : ne jamais appeler disponible avant que ce ne soit. Un travail qui atteint une personne par un sens est perçu par une personne, et jusque-là il est non perçu, ce qui est un état et non un échec.
+**J'ai refusé un mot d'étape que le dépôt ne porte pas.** La page du domaine de projets du site le dit : ne jamais appeler disponible avant que ce ne soit. Un travail qui atteint une personne par un sens est perçu par une personne. Jusque-là il est non perçu, ce qui est un état et non un échec.
 
 **J'ai refusé d'imprimer un pourcentage.** J'ai dit à voix haute jusqu'où le runtime de pont est arrivé. L'étude a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit. Je suis d'accord.
 
@@ -251,7 +255,7 @@ Ce qui est conçu : la fiche de garanties en cinq lignes ; le runtime qui est ce
 
 Ce qui est absent : toute plateforme client sur le moteur ; les déclarations des clients écrites comme celles de Softanza elle-même, en fichiers ; un mot de la banque ; l'usage du restaurant après le 25 août ; le hub de l'organisation ; un mécanisme hors ligne dans la bibliothèque ; une exécution réelle des paiements contre le bac à sable de la banque centrale ; le verdict d'une personne nommée sur tout cela.
 
-La somme de toutes les cellules absentes est la ligne unique dont le chapitre 33 dit qu'elle reste due : *la solution a tourné sur le moteur propre de Softanza, et voici ce que l'utilisateur a dit.* Les déclarations des clients sont absentes. Le site dit qu'elles sont en cours d'écriture comme celles de Softanza elle-même. Le 8 octobre 2026, j'ai cherché un fichier de ces déclarations dans le dépôt du restaurant, dans la livraison de la banque et dans le dossier d'étude de l'organisation, et je n'en ai trouvé aucun. Le 9 octobre 2026, j'ai cherché de nouveau, en lecture seule, dans treize dépôts voisins de la bibliothèque. Ce sont celui du restaurant, le dépôt web du produit de la banque avec ses copies plus anciennes, celui de l'organisation, le dépôt central, celui du moteur, celui du site, et quatre autres projets du domaine de projets. J'ai cherché dans leur texte les classes propres de la bibliothèque pour une plateforme, un organigramme et une constellation, et, dans les noms de fichiers de cinq d'entre eux, des fichiers de déclaration. Les résultats sont les notes et les mémos de la bibliothèque, les données du site et, dans les copies plus anciennes du dépôt web du produit de la banque, une classe JavaScript d'organigramme qui est le code propre de cette application. Aucun fichier ne déclare la plateforme d'un client comme celle de Softanza elle-même ; le mot du chapitre pour ces déclarations est donc *absent*, et la ligne d'étape en tête le dit.
+La somme de toutes les cellules absentes est la ligne unique dont le chapitre 33 dit qu'elle reste due : *la solution a tourné sur le moteur propre de Softanza, et voici ce que l'utilisateur a dit.* Les déclarations des clients sont absentes. Le site dit qu'elles sont en cours d'écriture comme celles de Softanza elle-même. Le 8 octobre 2026, j'ai cherché un fichier de ces déclarations dans le dépôt du restaurant, dans la livraison de la banque et dans le dossier d'étude de l'organisation, et je n'en ai trouvé aucun. Le 9 octobre 2026, j'ai cherché de nouveau, en lecture seule, dans treize dépôts voisins de la bibliothèque. Ce sont celui du restaurant, le dépôt web du produit de la banque avec ses copies plus anciennes, celui de l'organisation, le dépôt central, celui du moteur, celui du site, et quatre autres projets du domaine de projets. J'ai cherché dans leur texte les classes propres de la bibliothèque pour une plateforme, un organigramme et une constellation, et, dans les noms de fichiers de cinq d'entre eux, des fichiers de déclaration. Les résultats sont les notes et les mémos de la bibliothèque, les données du site et, dans les copies plus anciennes du dépôt web du produit de la banque, une classe JavaScript d'organigramme qui est le code propre de cette application. Aucun fichier ne déclare la plateforme d'un client comme celle de Softanza elle-même. Le mot du chapitre pour ces déclarations est donc *absent*, et la ligne d'étape en tête le dit.
 
 ## 8. Six portes
 
@@ -261,7 +265,7 @@ La somme de toutes les cellules absentes est la ligne unique dont le chapitre 33
 
 **Le concepteur.** Une fonction qu'aucune personne n'a vue ni entendue part fermée, et le dit. L'étape est un état de la conception et non une excuse. Je tiens cela pour une vue, non pour un résultat. Ce qui la soutient sur cette page, c'est le volet du son, où `Sing` refuse tant qu'une personne n'a pas entendu la voix.
 
-**Le décideur.** Lisez le mot d'étape avant le témoignage. « Construit » est une affirmation sur une garde. « Tourne chez un client » est une affirmation sur un document, et vous pouvez le demander par écrit, avec un nom à côté.
+**Le décideur.** Lisez le mot d'étape avant le témoignage. « Construit » est une affirmation sur une garde. « Tourne chez un client » est une affirmation sur un document. Vous pouvez le demander par écrit, avec un nom à côté.
 
 **Le formateur.** Enseignez la différence entre un projet qui a instruit la bibliothèque et un projet qui tourne dessus. Le premier est prouvé ici, et le second est la ligne qui reste due. Non perçu est un état, pas un échec.
 

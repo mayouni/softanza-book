@@ -4,9 +4,9 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
 
-In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code, and I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
+In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
 ## 1. The concept, as the field holds it
 
@@ -22,7 +22,7 @@ For goals, the field says *quality attributes*. The ISO standard for software qu
 
 **What you think is what you write.** It is chapter 5's sentence, from the diagram of 2020, and I do not argue it again. Chapter 5 took five rules of the style. This chapter takes the rest, as a grammar, and then the goals under which the grammar was designed.
 
-For the goals, the point is the author's, as the study reports it, and not a dated quotation: a software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
+For the goals, the point is the author's, as the study reports it, and not a dated quotation. A software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
 
 ## 3. The Softanza form
 
@@ -63,7 +63,7 @@ Rule 11 first, because it is the strangest. The host language counts in integers
 
 > run: kept
 
-The host answers `[ 1, 2, 3 ]` to `1.02 : 3.08`. The string answers `[ 1.02, 1.03, 1.04, 1.05 ]`: Softanza reads a small range language inside the string and keeps the decimals, the numbered words and the letters of any script. The range language is an argument like any other. It gives the replacements for each occurrence, in order, and the extended form wraps the palette when the occurrences outnumber it:
+The host answers `[ 1, 2, 3 ]` to `1.02 : 3.08` and cuts the decimals. The string answers `[ 1.02, 1.03, 1.04, 1.05 ]`, and the two Arabic bounds give six letters! Softanza reads a small range language inside the string and keeps the decimals, the numbered words and the letters of any script. The range language is an argument like any other. Does it give the replacements for each occurrence, in order, and does the extended form wrap the palette when the occurrences outnumber it?
 
 ```haro
 o1 = new stzString("haro php ruby haro python haro")
@@ -77,6 +77,8 @@ o2.ReplaceByManyXT("haro", L('"♥1" : "♥3"'))
 ```
 
 > run: kept
+
+The extended form wrapped the palette, and `♥1` came back at the end!
 
 A list can also be carried as a string in its short form, recognised, converted between forms and evaluated back:
 
@@ -106,7 +108,7 @@ o1.RemoveW('{ Q(@char).IsLowercase() }')
 
 The deck of 2022 writes the same call with a named seat, `:Where = '...'`, and that form raises on a string in this commit. I do not show it. The same deck puts an `@` at the end of a parameter's name, `:With@`, to mark that its value is code to be evaluated. That form is retired. A guard's header says so: the eval-based forms are retired. The deck itself marks the form "TODO". Code now travels in the seat as a bounded string that the engine evaluates, or as a function.
 
-Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways. Each pair is one act, with two definitions. The library's own narration calls the first with two arguments and it raises; the guards pass the starting position, and so does the block:
+Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways. Each pair is one act, with two definitions. The library's own narration calls the first with two arguments and it raises `less number of parameters`; the guards pass the starting position, and so does the block:
 
 ```haro
 o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
@@ -146,7 +148,7 @@ o1 = new stzList([ "tea", "rice", "fish", "salt" ])
 
 > run: kept
 
-The run answers `4` to the one and `8` to the other, on a word of four letters! The library's own documentation line for `NumberOfChars` lists *size* among its alternative words. The run shows that `Size()` does not mean it. I list it among the requests.
+The run answers `4` to the one and `8` to the other. The word has four letters! The library's own documentation line for `NumberOfChars` lists *size* among its alternative words. The run shows that `Size()` does not mean it. I list it among the requests.
 
 Rule 7: a prefix `viz` shows the answer under the word, and the suffix `XT` adds the positions as numbers:
 
@@ -163,7 +165,7 @@ o1 = new stzString("fjharoljharodjharog")
 
 > run: kept
 
-The narration and the deck write `vizFindAll` on a string. It does not exist there at this commit, and `vizFind` does. A list has its own `VizFindAll`.
+The narration and the deck write `vizFindAll` on a string. It does not exist there at this commit: the research run answered `Calling Method without definition: vizfindall`. `vizFind` does exist. A list has its own `VizFindAll`.
 
 ### The goals
 
@@ -171,7 +173,7 @@ Under the grammar there are seven goals, written in the 2022 deck as a matrix of
 
 I will not list the seven as a table of slogans. Here is what runs of three of them.
 
-**Flexibility: the order of named parameters is free.** Two calls, with the parameters in two orders, are the same call:
+**Flexibility: the order of named parameters is free.** Are two calls, with the parameters in two orders, the same call?
 
 ```haro
 o1 = new stzString("----@@--@@-------@@----@@---")
@@ -186,9 +188,9 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 
 > run: kept
 
-A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold, and I do not make it here: they are kept, and they are not grammar.
+Both orders print `----@@--@@-------@@----##---`! A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold. I do not make it here. They are kept, and they are not grammar.
 
-**Consistency: one vocabulary across a string and a list.** The same verb answers on both:
+**Consistency: one vocabulary across a string and a list.** Does the same verb answer on both?
 
 ```haro
 ? @@( StzStringQ("hello").FindAllCS("L", :CaseSensitive = 0) )
@@ -203,11 +205,13 @@ A tension must be told with it. The design of Haro refuses free-order parameters
 
 > run: kept
 
-The loss beside it, from the same slide group: the deck's advice to use the keyword Item with any enumerable type does not hold. `NumberOfItems()` on a string raises, and on a list it answers.
+The loss beside it, from the same slide group: the deck's advice to use the keyword Item with any enumerable type does not hold. `NumberOfItems()` on a string raises in the research run: `Calling Method without definition: numberofitems`. On a list it answers.
 
 **Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because in the research run its first line carried a line number of the library, and a line number is not a promise.
 
 The other four goals (expressiveness, reliability, the human metaphors and the practical abstractions) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
+
+Next comes the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
@@ -215,11 +219,13 @@ The other four goals (expressiveness, reliability, the human metaphors and the p
 
 **I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. The study's finding is that there is no court over either.
 
-**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand, and a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style survived where the author wrote for a reader, and thinned where the AI wrote for others. A marker is a reading of the text, not a judgement of the code; the study says so itself.
+**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand. They carry a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style survived where the author wrote for a reader, and thinned where the AI wrote for others. A marker is a reading of the text, not a judgement of the code; the study says so itself.
 
 **I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples: `Yield`, which should give the result of an expression for each item, and `Perform`, which should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them, so the chapter names none and does not match them to the goals one by one.
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
+
+The court comes next, and I run it.
 
 ## 5. The court
 
@@ -244,9 +250,9 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 
 > run: kept
 
-The misspelling is found by name, `misspelled_name`, and the code stays clean, `TRUE`, because it is a warning. The write to a constant is found by name, `writes_a_mutable_constant`, and the code is refused, `FALSE`, because it is an error.
+The misspelling is found by name, `misspelled_name`, and the code stays clean, `TRUE`, because it is a warning. The write to a constant is found by name, `writes_a_mutable_constant`, and the code is refused, `FALSE`, because it is an error. The court refused the write to a constant!
 
-A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows what the run printed.
+A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
 
 What the court does not read is the code of a program written with the library. None of the fourteen rules of the house is a rule of writing.
 
@@ -260,9 +266,11 @@ The site once showed a reduced dialect: its blocks had no named parameter and no
 
 Where I think the style stands apart is that every rule serves a step of thought, and every step has a written form (study 12.17). The verb's form is a contract on the object. And the promise under the line is the example, the test and the documentation at once. The 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines.
 
+The limit, in the next section, says what is built, what is designed and what is absent.
+
 ## 7. The limit
 
-What is built: the fourteen house rules of the library as a court over its own code, run in the block above; the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT`, `ZZ`, `viz`, named parameters, the same verb on a string and a list).
+What is built: the fourteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT`, `ZZ`, `viz`, named parameters, the same verb on a string and a list).
 
 What is designed:
 
@@ -314,6 +322,6 @@ Write, before you run anything, the line each task needs and the promise under i
 
 > run: exercise
 
-Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
+Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises with `Using uninitialized variable: day8`. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
 
 Chapter 8 takes a function's name whole, as a linguistic expression, and then scope: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.

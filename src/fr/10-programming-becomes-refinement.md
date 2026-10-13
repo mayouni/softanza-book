@@ -16,7 +16,7 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
-Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer : un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture de mon premier livre : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
+Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C'est un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture de mon premier livre : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -24,9 +24,13 @@ Le terrain a un nom pour changer une infrastructure avec une répétition : plan
 
 Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. (Connaissance générale, non une étude du dossier.) Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume ; je tiens cela pour une vue, non pour un résultat.
 
+À cet instrument faible, j'oppose une seule phrase.
+
 ## 2. Le premier principe
 
 J'ai écrit la phrase sur la quatrième de couverture de mon premier livre, et je n'en ai pas trouvé de meilleure : **cessez de vouloir gouverner l'intelligence, et gouvernez le changement.** L'en-tête de la bibliothèque dit la même chose sous la forme d'un type : un changement est une proposition typée, pas un diff.
+
+Le reste du chapitre exécute cette phrase.
 
 ## 3. La forme Softanza
 
@@ -76,7 +80,7 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
+Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, comme dans `structural: no refinement point 'ghost'`, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
 
 **La cascade** est ce que vous lisez à la place du diff. Avant le changement, demandez ce qu'il atteint. Il y a deux cascades, et elles sont séparées. Pour un point, c'est la ligne où il se trouve et les autres points de cette même ligne :
 
@@ -94,6 +98,8 @@ aC = oc.Cascade("vat")
 ? len(oc.Cascade("floor")[:alsoTouches])
 #--> 0
 ```
+
+`vat` se trouve ligne 1 et touche aussi `[ "margin" ]` ; `floor` se trouve ligne 2, seul.
 
 Pour une classe, la cascade est une propriété de la structure du code : qui en descend et qui hérite d'une méthode. La bibliothèque la calcule à partir du graphe de code, et elle peut analyser un texte sans toucher un fichier :
 
@@ -121,9 +127,9 @@ g0.BuildGraph()
 #--> [ "Invoice", "Receipt" ]
 ```
 
-Changez le taux du tarif et trois classes sont dans le rayon d'impact ; mais deux d'entre elles héritent de la méthode et la troisième la redéfinit, de sorte qu'elle la possède et ne fait pas que l'hériter. C'est la différence que trace `ImpactOf`.
+Changez le taux du tarif et trois classes sont dans le rayon d'impact. Deux d'entre elles héritent de la méthode, et `ImpactOf` les nomme : `[ "Invoice", "Receipt" ]`. La troisième, `Quote`, la redéfinit, de sorte qu'elle la possède et ne fait pas que l'hériter. C'est la différence que trace `ImpactOf`.
 
-À l'intérieur de la barrière, un changement atteint ses dépendants par une règle qui couvre plusieurs points, jugée sur l'état que le changement produirait. Si la règle échoue, la valeur est remise :
+Comment un changement atteint-il ses dépendants ? Par une règle qui couvre plusieurs points, jugée sur l'état que le changement produirait. Si la règle échoue, la valeur est remise :
 
 ```haro
 d = new stzRefinableCode(cPrice)
@@ -141,7 +147,9 @@ r3 = d.Refine("vat").To("0.05")
 #--> 0.30
 ```
 
-Voici maintenant la question de cet âge : qui l'a proposé ? Chaque proposition porte son origine, et un point peut fixer un plancher de confiance qui refuse une origine inférieure, sans refuser une personne. Qu'arrive-t-il à une proposition venue d'un modèle de langage quand le plancher du point exige une origine de confiance ? Exécutez-le :
+La règle a refusé le changement et s'est nommée : `derivation: rule 'vat-above-floor' violated -- vat must not drop below floor`. La valeur est toujours `0.30`.
+
+Et qui l'a proposé ? Chaque proposition porte son origine, et un point peut fixer un plancher de confiance qui refuse une origine inférieure, sans refuser une personne. Qu'arrive-t-il à une proposition venue d'un modèle de langage quand le plancher du point exige une origine de confiance ? Exécutez-le :
 
 ```haro
 d.TrustFloor("vat", :trusted)
@@ -158,7 +166,9 @@ r4 = d.Refine("vat").As(:llm).To("0.25")
 #--> trusted
 ```
 
-Et qui peut tourner quel bouton est déclaré lui aussi : une permission, et un niveau d'autorité contre un niveau de risque. Un acteur délégué ne peut pas tourner un bouton du troisième niveau. Une fois escaladé, il le peut, et la décision est enregistrée :
+La proposition du modèle a été refusée : `trust: posture :llm below the required floor for 'vat'`. Le point a gardé `0.30` ! La même proposition, venue d'une origine de confiance, a été admise, et le pas enregistre `trusted`.
+
+Et qui peut tourner quel bouton ? C'est déclaré lui aussi : une permission, et un niveau d'autorité contre un niveau de risque. Prenez un acteur délégué et un bouton du troisième niveau. Exécutez-le :
 
 ```haro
 gv = new stzRefinableCode(cPrice)
@@ -178,7 +188,9 @@ gv.SetAuthorityLevel(:Autonomous)
 #--> 1
 ```
 
-Enfin, la réversibilité fait partie du modèle de données. Chaque pas admis garde sa valeur antérieure, de sorte qu'une personne peut reculer d'un pas, remonter jusqu'à un point de contrôle nommé, remonter jusqu'à zéro, et avancer de nouveau :
+L'acteur délégué a été refusé, `'release-bot' holds 'delegated' authority (level 2)`, et la valeur est restée `0.20`. La même proposition a été admise une fois l'acteur escaladé ! La décision est enregistrée : `NumberOfDecisions()` a imprimé `1`.
+
+Enfin, un pas peut-il être repris ? La réversibilité fait partie du modèle de données : chaque pas admis garde sa valeur antérieure. Remontez jusqu'à un point de contrôle nommé, remontez jusqu'à zéro, avancez de nouveau :
 
 ```haro
 t = new stzRefinableCode(cPrice)
@@ -203,7 +215,11 @@ t.Redo()
 #--> 0.21
 ```
 
-Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute : la structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b, parce que le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026 et que le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
+À zéro, `CanRevert()` a imprimé `0`. Un seul `Redo()`, et la valeur est `0.21`, le premier pas de nouveau.
+
+Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute. La structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b. Le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026, et le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
+
+Derrière la barrière se tiennent des décisions, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -211,13 +227,15 @@ Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôle
 
 **J'ai refusé le diff comme unité.** Un diff est un changement de texte. Un raffinement est une proposition typée sur un point déclaré, avec un genre, des bornes et une origine. J'ai gardé le diff comme artefact, et je l'ai refusé comme ce qu'il faut relire.
 
-**J'ai fait porter le verbe à la bibliothèque, et laissé l'environnement ailleurs.** Le raffinement comme verbe de bibliothèque, le point, la barrière, la cascade et le retour en arrière, appartient au socle commun ouvert. L'environnement dans lequel une équipe vit avec lui au jour le jour, les écrans, le mode réel, le livre, est un produit, et ne déborde pas dans la bibliothèque.
+**J'ai fait porter le verbe à la bibliothèque, et laissé l'environnement ailleurs.** Le raffinement comme verbe de bibliothèque, le point, la barrière, la cascade et le retour en arrière, appartient au socle commun ouvert. L'environnement dans lequel une équipe vit avec lui au jour le jour, les écrans, le mode réel, le livre, est un produit. Il ne déborde pas dans la bibliothèque.
 
 **J'ai imprimé la barrière telle qu'elle est.** J'avais écrit la conception avec quatre étapes, et le code a cinq contrôles. Une page qui citerait ma conception et pas mon code aurait tort, et c'est le code qui tourne.
 
 ## 5. Le tribunal
 
 `refinablecode_narrated` prouve le point déclaré, la proposition qui passe, les deux refus qui laissent le source entier (bornes et options), la cascade, le retour en arrière et le fichier sauvegardé. `refine_deepening_narrated` prouve la ligne de temps avec ses points de contrôle et son rétablissement, et le plancher de confiance. `gate_deepening_narrated` prouve le refus d'un point inconnu, la dérivation entre les points avec son annulation, et le refus gouverné avec sa filiation.
+
+Vient ensuite le terrain, et où il mène.
 
 ## 6. Le terrain, et où il mène
 
@@ -226,6 +244,8 @@ Le terrain mène en infrastructure, où planifier et appliquer sont la pratique 
 Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza ne juge que ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
 Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
+
+Voyons maintenant où la barrière s'arrête.
 
 ## 7. La limite
 

@@ -55,9 +55,11 @@ oGov.DeclareReversibility("restocker", :Compensable)
 #--> 1
 ```
 
+The first refusal ends on its law, `Law 18: nothing schedules what nobody has stated the reach of.` With both stated, the third call answers `1`.
+
 Reversibility is the sixth contract of the governance, beside risk, authority, commitment, decommission and lineage. It is orthogonal to risk: an act of small risk that cannot be undone deserves more ceremony than a large one that can.
 
-**The harder an act is to undo, the more trusted the code that does it must be.** Here is the whole table, the posture of the code against the class of the act, printed by a loop of the book's own:
+**The harder an act is to undo, the more trusted the code that does it must be.** Which postures may perform which classes of act? Here is the whole table, printed by a loop of the book's own:
 
 ```haro
 aPostures = [ "trusted", "external", "sandboxed" ]
@@ -80,7 +82,9 @@ next
 #--> a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)
 ```
 
-**The agent runs, believes it acted, and the disk does not move.** An agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work; the fact is learned; and the real file does not exist, because the file lives in the twin:
+Read down the rows: trusted code may do all three classes of act, external code the first two, sandboxed code only the reversible. The last line asks for the refusal and prints its sentence.
+
+**The agent runs, believes it acted, and the disk does not move.** An agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work and the fact is learned. After one cycle, does the real file exist? Ask the disk, then the bench:
 
 ```haro
 StzAllowAgentFunction("ScribblePrices", "trusted")
@@ -120,11 +124,11 @@ func ScribblePrices(poMemory)
 	poMemory.Learn("prices", "were", "written")
 ```
 
-The agent believes it acted, and the disk did not move!
+The file lives in the twin. The agent believes it acted, and the disk did not move!
 
 Two lines decide who may act. `posture: trusted` is in the file, because a `ring:` clause must carry a posture. `StzAllowAgentFunction` is a line of the platform's code, and not of the agent's file, and it decides which functions a file may call.
 
-**The only export is a plan, and it narrates itself.** The tick exports toward reality a plan and nothing else. The plan says what it would do before anything is attempted. A language model set as its executor is refused before any attempt: `actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)`. A named actor under a scope that does not cover the path commits nothing: the disk still did not move. The same actor under a scope that covers the path commits once, and the audit trail names the actor. In this block, reality changes here and only here:
+**The only export is a plan, and it narrates itself.** The tick exports toward reality a plan and nothing else. The plan says what it would do before anything is attempted. A language model set as its executor is refused before any attempt: `actor 'eager-llm' cannot commit -- it lacks the 'effectful' capability (required by operation 1)`. A named actor under a scope that does not cover the path commits nothing: the disk still did not move. The same actor under a scope that covers the path commits once, and the audit trail reads `[ [ 1, "committed", "write_file", "shop-committer" ] ]`. Who may commit, and when does the disk finally move? In this block, reality changes here and only here:
 
 ```haro
 oPlan = oAg.GenerateUpdatePlan()
@@ -157,7 +161,7 @@ StzDirDeleteAll(cFx)
 
 I replaced the absolute path in the narration so the output is stable. A plan embeds the path of the file it would write.
 
-**The court at load.** The composition of the table above is enforced when the file is loaded, before the first tick. Take the same file, make the agent irreversible, and make its code sandboxed:
+**The court at load.** Is the table above enforced when the file is loaded, before the first tick? Take the same file, make the agent irreversible, and make its code sandboxed:
 
 ```haro
 cIrrev = StzReplace(StzReplace(cPia, "reversibility: compensable", "reversibility: irreversible"), "posture: trusted", "posture: sandboxed")
@@ -168,7 +172,7 @@ oD = StzAgentDeclarationQ(cIrrev)
 #--> [pia-posture-reversibility @ skills.scribble.posture] a 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)
 ```
 
-The court answers with the table's own sentence: `a 'sandboxed' posture does not cover 'irreversible' work`. The same rule, at load.
+The court answers with the table's own sentence: `a 'sandboxed' posture does not cover 'irreversible' work`. The same rule, at load: the file is refused before its first tick!
 
 **A proposal gone wrong.** A tidy-up that deletes every file of a folder, driven here by hand through the twin as an agent would drive it, proposes thirty deletions. The plan lists thirty operations and flags thirty as risks. A language model that asks to commit is refused. And when it calls `Execute()` anyway, how many files are left? Count them:
 
@@ -205,7 +209,7 @@ Thirty! The model asked, was refused, called `Execute()` anyway, and nothing on 
 
 The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
-**A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason. A named actor under a scope commits the other twenty-nine; one is skipped; and one file is still on disk, the file of the step the reviewer protected (the block prints the count, not the name):
+**A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason. What do the other twenty-nine steps do, and what is left on the disk? The block prints the counts, not the name of the file:
 
 ```haro
 oRev = oBench.GenerateUpdatePlan()
@@ -228,6 +232,8 @@ next
 StzDirDeleteAll(cDir)
 ```
 
+A named actor under a scope commits the other twenty-nine (`29`); one is skipped (`1`); and one file is still on disk (`1`), the file of the step the reviewer protected.
+
 **One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. A model with the capability to produce effects is refused. A model without it registers like any other slot, a slot being the place in the loop that one agent takes:
 
 ```haro
@@ -243,13 +249,13 @@ nL2 = stzenginezutercreate("proposer")
 StzResetEngineAgentLoop()
 ```
 
-The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
+The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
 
 **An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick. It had no plan, no scope and no committing actor.
 
 A ledger is a record of what happened, kept in the order it happened. This agent rolls the estate's own ledger. Chapter 21 has the security ledger, which the court writes and never the thing it judged, a hash chain in which an edited line is named. Chapter 23 has the constellation's ledger of crossings, with their timings. A register is something else: a form a reply can take, or Appendix A.
 
-The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path. Inside the tick of an agent that holds a workbench it writes into the twin; outside one, in the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; it is not the live roster file, which I did not run. Given a workbench, the agent relocates the file in the twin. Two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan. And only the committing actor, under a scope, moves the file:
+The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path. Inside the tick of an agent that holds a workbench it writes into the twin. Outside one, in the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; it is not the live roster file, which I did not run. Given a workbench, the agent relocates the file in the twin. Two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan. And only the committing actor, under a scope, moves the file:
 
 ```haro
 cEstate = StzReplace(WorkingDirectory(), "\", "/") + "/_estate"
@@ -314,6 +320,8 @@ StzDirDeleteAll(cEstate)
 
 The count of seven operations is what this run measures. The library's own guard only promises at least five.
 
+The blocks have shown what the world does; section 4 says what I refused to build instead.
+
 ## 4. The decision, and what I refused
 
 **I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
@@ -330,11 +338,15 @@ The count of seven operations is what this run measures. The library's own guard
 
 **I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop; its row is in Appendix C, read from the rules file.
 
+Section 5 names the guards that prove what the blocks showed.
+
 ## 5. The court
 
-`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load. Three more follow: what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In the run I made for my research note on 8 October 2026, which the book's data does not hold, the drill read 443 ms to detect and 61 ms to contain, on this machine. The site prints other numbers from its own run, and the threat model others from its own, and the three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
+`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load. Three more follow: what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In the run I made for my research note on 8 October 2026, the drill read 443 ms to detect and 61 ms to contain, on this machine. The book's data does not hold that run. The site prints other numbers from its own run, and the threat model others from its own. The three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
 
 The guard `roster_narrated` is not in the front matter, because it cannot run from a snapshot of the library: it loads the estate's roster files from a sibling repository. The rehearsal of the roster's agent is proved by `safeworld_narrated`, whose seventh scene is the last block above.
+
+Section 6 turns to the field, and to where it leads.
 
 ## 6. The field, and where it leads
 
@@ -367,6 +379,8 @@ Each item below is a gap, found while running and reading.
 - **The gate is opt-in at the host.** The default flips when the last host in the tree declares. A fresh host runs the older pump.
 - **The loop checks that a coverage statement exists, not that it is true.**
 - **The drill's limits:** one shape of attack, on loopback, on one machine.
+
+Six doors follow, the same chapter seen from six places.
 
 ## 8. Six doors
 

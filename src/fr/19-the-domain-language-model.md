@@ -16,7 +16,7 @@ rulings: ["12.19", "12.29", "12.30"]
 research: research/ch19.md
 ---
 
-Dans ce chapitre, je forge un modèle de langage de domaine à partir d'une base de connaissances, et personne n'écrit son texte d'entraînement : chaque phrase est un fait enregistré. Il a deux échelons, un premier qui répond à partir de ces faits et n'a aucun neurone, et un second, un petit modèle neuronal, fluide dans la grammaire du domaine et qui se trompe sur les faits. Je montre la grammaire qui refuse une phrase malformée et le graphe qui refuse une phrase fausse, et je dis quelles pièces la bibliothèque contient et lesquelles le lecteur doit encore composer. Le principe est celui-ci : la prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, jamais un jeton.
+Dans ce chapitre, je forge un modèle de langage de domaine à partir d'une base de connaissances, et personne n'écrit son texte d'entraînement : chaque phrase est un fait enregistré. Il a deux échelons. Le premier répond à partir de ces faits et n'a aucun neurone. Le second, un petit modèle neuronal, est fluide dans la grammaire du domaine et se trompe sur les faits. Je montre la grammaire qui refuse une phrase malformée et le graphe qui refuse une phrase fausse. Je dis quelles pièces la bibliothèque contient et lesquelles le lecteur doit encore composer. Le principe est celui-ci : la prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, jamais un jeton.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -24,17 +24,21 @@ Un modèle de langage prédit le jeton suivant. Un jeton est un fragment de text
 
 Le terrain a fait fonctionner cela avec trois outils. On adapte un modèle général à un domaine en l'entraînant davantage sur les documents du domaine. On lui donne les documents pertinents au moment de la question, récupérés par similarité. Et on contraint son décodage avec une grammaire, de sorte qu'il ne puisse pas produire une phrase malformée, comme l'a montré le chapitre 11. Tous trois gardent la même unité : le jeton.
 
+La section suivante nomme la seule chose que je change : l'unité.
+
 ## 2. Le premier principe
 
 **La prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, jamais un jeton.**
 
 Dans la conception la barrière est la même pour tous les modèles de ce genre : les générations sont des propositions, et le graphe et ses règles décident de l'admission.
 
+La section 3 montre la forme qu'il prend, et l'exécute.
+
 ## 3. La forme Softanza
 
 Je l'appelle un modèle de langage de domaine, et il a deux échelons. Le premier n'a aucun neurone et a été montré au chapitre 17 : il répond à partir de faits enregistrés, dit pourquoi, et refuse hors de son domaine. Le second est un petit modèle neuronal, facultatif, qui lui donne de la fluidité. Dans la conception, les deux échelons aboutissent à la même barrière ; ici, la barrière est l'`Admit` du dernier bloc de cette section, appelé à la main.
 
-Commençons par l'origine du texte d'entraînement. Personne ne l'écrit. Chaque phrase est un fait de la base de connaissances, rendu, et le vocabulaire est fermé : chaque mot que le domaine contient, avec une première entrée pour l'inconnu.
+D'où vient le texte d'entraînement ? Construisez une petite base de connaissances, rendez-la, et lisez le corpus et le vocabulaire qu'elle donne.
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
@@ -53,7 +57,7 @@ oDLM = StzDlmQ(oKB)
 #--> [ 2, 7, 1 ]
 ```
 
-Douze mots, et `something-new`, un mot hors du domaine, est envoyé sur le premier : `[ 2, 7, 1 ]`. « Correct par construction » vaut ici dans le seul sens que le code lui donne : chaque phrase est un fait enregistré. Cela ne vaut pas encore dans le sens que la conception visait ; la section 7 dit où.
+Personne n'a écrit ce corpus : chacune de ses six phrases est un fait de la base de connaissances, rendu. Le vocabulaire est fermé, chaque mot que le domaine contient avec une première entrée pour l'inconnu. Douze entrées, et `something-new`, un mot hors du domaine, est envoyé sur la première : `[ 2, 7, 1 ]`. « Correct par construction » vaut ici dans le seul sens que le code lui donne : chaque phrase est un fait enregistré. Cela ne vaut pas encore dans le sens que la conception visait ; la section 7 dit où.
 
 La complétion est contrainte au domaine. Qu'offre le modèle après une entité qui porte des faits, après une relation, après un fragment, et après un mot que le domaine ne contient pas ? Exécutez-le :
 
@@ -68,7 +72,7 @@ La complétion est contrainte au domaine. Qu'offre le modèle après une entité
 #--> [ ]
 ```
 
-Après une entité qui porte des faits, ses relations ; après une relation, seulement ses objets ; un fragment se complète en entités ; un mot que le domaine ne contient pas se complète en rien. Je dois dire ce que c'est, parce que la garde qui le prouve l'appelle « the grammar spirit ». C'est une consultation dans les faits, non un décodage sous une grammaire compilée. Et elle voit un mot, pas la phrase jusque-là : `Complete("contains")` renvoie les objets de chaque fait `contains`, quel que soit son sujet.
+Après une entité qui porte des faits, ses relations : `[ "contains", "pairs-with" ]`. Après une relation, seulement ses objets : `[ "tomato-sauce", "mozzarella" ]`. Un fragment se complète en entités, et un mot que le domaine ne contient pas se complète en rien : `[ ]`. La garde qui le prouve l'appelle « the grammar spirit ». C'est une consultation dans les faits, non un décodage sous une grammaire compilée. Et elle voit un mot, pas la phrase jusque-là : `Complete("contains")` renvoie les objets de chaque fait `contains`, quel que soit son sujet.
 
 La grammaire elle-même peut être dérivée de la base de connaissances, et ici le lecteur de ce livre doit écrire la dérivation. Il n'y a dans la bibliothèque aucun appel qui transforme une base de connaissances en grammaire, et la conception en fait la tâche du premier échelon. Mais les pièces se composent. Le vocabulaire du domaine devient les choix d'un schéma du chapitre 11, le schéma se compile en grammaire, et la grammaire n'a aucun chemin pour un mot hors du domaine :
 
@@ -147,7 +151,7 @@ remove(cFile)
 
 Le second modèle répond : `Tiramisu is a dish.` Le refus voyage avec le lot comme test golden, et le modèle qui n'a jamais lu le graphe le passe aussi ! La section des lois est vide parce qu'aucune loi n'a été déclarée avant que le modèle soit forgé ; déclarez qu'une relation est unique, forgez de nouveau, et la ligne apparaît.
 
-Maintenant le second échelon. C'est un petit modèle neuronal entraîné sur le corpus que vous avez vu, sans enseignant, et il peut être exporté comme fichier de modèle. J'en dirai la taille dans le même souffle que son résultat, parce qu'il est petit : une seule couche qui apprend à prédire le mot suivant à partir du précédent, sur douze mots, entraînée sur quinze paires.
+Maintenant le second échelon. C'est un petit modèle neuronal entraîné sur le corpus que vous avez vu, sans enseignant, et il peut être exporté comme fichier de modèle. Quelle est sa taille, et apprend-il ?
 
 ```haro
 oDLM.TrainNeuralRung(500)
@@ -165,7 +169,7 @@ cGguf = oDLM.ExportNeuralGguf("probe_bigram")
 remove(cGguf)
 ```
 
-Le fichier contient deux tenseurs, un poids et un biais, et la bibliothèque sait le relire. Je ne prétends pas qu'un autre runtime le charge comme générateur de texte. Il s'entraîne en une fraction de seconde, hors ligne, et donne les mêmes nombres à chaque exécution.
+Il est petit : une seule couche qui prédit le mot suivant à partir du précédent, `15 pairs over a 12-word vocab`. Et il apprend : `loss 2.57 -> 0.70`. La bibliothèque inspecte le fichier exporté et imprime `2`, les deux tenseurs qu'il contient, un poids et un biais. Je ne prétends pas qu'un autre runtime le charge comme générateur de texte. Il s'entraîne en une fraction de seconde, hors ligne, et donne les mêmes nombres à chaque exécution.
 
 Que dit un modèle comme celui-ci ? Il est fluide dans la grammaire du domaine, et il se trompe sur les faits. C'est la raison de la barrière :
 
@@ -195,7 +199,7 @@ aVerdict = oKB.Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
 #--> admitted: 'pizza' is-a 'dish'
 ```
 
-La fausse proposition est refusée, et le graphe dit pourquoi : `'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique`. Le refus est gardé, avec sa source : le second échelon du modèle. Un fait nouveau est admis. C'est tout le principe en six appels : une proposition, une loi, un refus avec son pourquoi, et le refus au dossier.
+Le graphe a refusé la fausse proposition ! Il dit pourquoi : `'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique`. Le refus est gardé, avec sa source : le second échelon du modèle. Un fait nouveau est admis. C'est tout le principe en six appels : une proposition, une loi, un refus avec son pourquoi, et le refus au dossier.
 
 La conception décrit l'unité de prédiction en trois niveaux. Un jeton est un fragment sans type. Un plongement est un vecteur sans rôle. Et un chunk est un nœud typé d'un graphe, avec une étiquette, une charge utile et des arêtes : une déclaration, une relation, une contrainte. Un chunk est validé en cinq étapes avant d'entrer dans le graphe : type, motif, intégrité du graphe, conformité, et contribution constructive. Je le raconte comme conception, parce qu'il n'y a pas de chunk dans la bibliothèque. Ce qui existe, ce sont des pièces : le tribunal du chapitre 11 vérifie le type et la forme d'un texte ; et l'admission ci-dessus impose une loi, ce qui est la conformité. Rien ne les enchaîne.
 
@@ -207,13 +211,17 @@ Le 13 juillet 2026, j'ai tranché sur ce point. Le concept d'un modèle de langa
 
 **J'ai refusé un enseignant que je ne peux pas voir.** La conception antérieure de l'idée employait un grand modèle commercial pour écrire son corpus d'entraînement. J'ai posé une loi contre cela, et le corpus de ce modèle est rendu à partir des faits propres du domaine : la deuxième loi de la bibliothèque dit qu'une capacité n'exige jamais rien de payant ni de distant.
 
-**J'ai refusé le neuronal d'abord.** La découverte dont je pars est que le modèle canonique n'est pas neuronal. Une revue du produit antérieur a archivé un transformeur de un à trois milliards de paramètres, au profit d'une prédiction à base de règles. Le motif : l'hallucination est impossible quand le modèle ne peut pas générer de texte presque valide. Le premier échelon a donc zéro entraînement et zéro coût, et l'échelon neuronal vient en second.
+**J'ai refusé le neuronal d'abord.** La découverte dont je pars est que le modèle canonique n'est pas neuronal. Une revue du produit antérieur a archivé un transformeur de un à trois milliards de paramètres, au profit d'une prédiction à base de règles. Son motif était que l'hallucination est impossible quand le modèle ne peut pas générer de texte presque valide. Le premier échelon a donc zéro entraînement et zéro coût, et l'échelon neuronal vient en second.
 
 **J'ai refusé que la forme tienne lieu de vérité.** La grammaire dit que la structure tue la malformation, pas la fausseté. La vérité appartient au graphe, à ses lois, et à une personne.
 
+La section 5 dit ce que le tribunal en prouve.
+
 ## 5. Le tribunal
 
-`dlm_narrated` prouve le modèle forgé à partir d'un graphe, ses réponses avec leur pourquoi, son refus hors du domaine et la complétion. Il prouve aussi le lot en texte simple avec ses goldens, le tokeniseur fermé et le second échelon avec son fichier de modèle. Une de ses assertions sur le second échelon vérifie seulement que la phrase générée commence par un préfixe fixe, de sorte qu'elle passerait aussi sur la fausse phrase ci-dessus. `structuredoutput_narrated`, `schema_grammar_narrated` et `constrained_decoding_narrated` prouvent le tribunal du chapitre 11, le compilateur de grammaire et l'échantillonneur. La dernière a deux scènes qui exigent un fichier de modèle génératif, que l'instantané ne détient pas ; le dossier compte 50 assertions dans cette garde. `knowledge_integration_narrated` prouve la dérivation et le refus par une loi. Et je dois dire que l'admission que je montre dans le dernier bloc n'est appelée par son nom dans aucune garde. On l'atteint par la conversation, et par la forme stricte d'ajout d'un fait, où un fait ajouté sans son admission est refusé. Cela, la garde l'affirme bien.
+`dlm_narrated` prouve le modèle forgé à partir d'un graphe, ses réponses avec leur pourquoi, son refus hors du domaine et la complétion. Il prouve aussi le lot en texte simple avec ses goldens, le tokeniseur fermé et le second échelon avec son fichier de modèle. Une de ses assertions sur le second échelon vérifie seulement que la phrase générée commence par un préfixe fixe, de sorte qu'elle passerait aussi sur la fausse phrase ci-dessus. `structuredoutput_narrated`, `schema_grammar_narrated` et `constrained_decoding_narrated` prouvent le tribunal du chapitre 11, le compilateur de grammaire et l'échantillonneur. La dernière a deux scènes qui exigent un fichier de modèle génératif, que l'instantané ne détient pas ; le dossier compte 50 assertions dans cette garde. `knowledge_integration_narrated` prouve la dérivation et le refus par une loi. L'admission que je montre dans le dernier bloc n'est appelée par son nom dans aucune garde. On l'atteint par la conversation, et par la forme stricte d'ajout d'un fait, où un fait ajouté sans son admission est refusé. Cela, la garde l'affirme bien.
+
+La section 6 demande où le terrain mène, et où ce modèle se situe.
 
 ## 6. Le terrain, et où il mène
 
@@ -221,13 +229,15 @@ Le terrain mène en échelle. Entraîner et servir des modèles de toute taille 
 
 Le terrain mène en fluidité, ce qui est le but d'un modèle. Un premier échelon qui répond à partir des faits dira « I hold no 'contains' knowledge about 'tiramisu'. » là où un modèle général écrirait quelque chose de plausible. Et pour un client la chose plausible est souvent plus utile. La réponse propre du dossier est le second échelon, et son état présent est celui que donne la section 7.
 
-Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un, et chaque proposition du second peut être soumise à une barrière qui peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
+Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un. Chaque proposition du second peut être soumise à une barrière, et la barrière peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
+
+La section 7 dit ce qui est construit, ce qui est conçu et ce qui est absent.
 
 ## 7. La limite
 
 Ce qui est construit : le premier échelon et ses réponses ; les faits rendus comme corpus, avec un vocabulaire fermé ; la complétion par consultation ; et le lot qui voyage avec ses tests. Construit aussi : un second échelon qui s'entraîne en une fraction de seconde et exporte un petit fichier de modèle, et l'admission d'un fait par une loi.
 
-Ce qui est conçu, et la page doit dire chaque point :
+Ce qui est conçu tient en quatre points, et la page doit dire chaque point.
 
 - La grammaire dérivée d'une base de connaissances par un seul appel. La composition du chapitre 19 est celle du lecteur, pas celle de la bibliothèque.
 - Le corpus du second échelon validé par la grammaire du premier avant d'être admis. La conception le dit ; le code rend les faits directement, sans une telle vérification. Ainsi « correct par construction » vaut pour le texte d'entraînement, et non pour ce que dit le modèle.
@@ -252,7 +262,7 @@ Ce qui est absent : un mot de fin de phrase pour le second échelon, ce qui expl
 
 ## 9. Exercice
 
-Forgez un domaine à vous avec trois entités et deux relations. Avant d'exécuter quoi que ce soit, écrivez ce que vous attendez de trois appels : la complétion d'une entité, la complétion d'une relation, et la réponse à une question sur une chose que le domaine ne contient pas. Puis déclarez qu'une relation est unique et proposez, sous forme de fait, quelque chose qui la contredit.
+Forgez un domaine à vous avec trois entités et deux relations. Avant d'exécuter quoi que ce soit, écrivez ce que vous attendez de trois appels. Ce sont la complétion d'une entité, la complétion d'une relation, et la réponse à une question sur une chose que le domaine ne contient pas. Puis déclarez qu'une relation est unique et proposez, sous forme de fait, quelque chose qui la contredit.
 
 Exécutez-le. Puis écrivez une phrase de la bonne forme et de la mauvaise vérité, et dites lequel de la grammaire et du graphe la refuse, et lequel ne la refuse pas.
 

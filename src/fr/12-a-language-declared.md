@@ -16,7 +16,7 @@ rulings: ["12.10", "12.21", "12.27", "12.29", "12.30"]
 research: research/ch12.md
 ---
 
-Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour la forge, la machinerie qui transforme la seule déclaration d'un langage en son tribunal et sa grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
+Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour la forge. C'est la machinerie qui transforme la seule déclaration d'un langage en son tribunal et sa grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -32,7 +32,7 @@ Le chapitre 11 a dit ce qu'est un langage fermé, et ce qui a été perdu quand 
 
 **Déclarer un langage est aussi facile que déclarer une variable.**
 
-C'est l'intitulé d'une règle de Haro, tranchée le 1er octobre 2026, et le noyau de la vision dit la même chose : l'époque rend la déclaration d'un langage aussi facile que celle d'une variable. La phrase de l'autre moitié du chapitre, tirée de la doctrine de totalité de l'alphabet, ratifiée le 27 septembre : la malformation meurt à l'échantillonneur, la fausseté meurt au tribunal, et la non-terminaison est inexprimable.
+C'est l'intitulé d'une règle de Haro, tranchée le 1er octobre 2026, et le noyau de la vision dit la même chose : l'époque rend la déclaration d'un langage aussi facile que celle d'une variable. L'autre moitié du chapitre a sa phrase, tirée de la doctrine de totalité de l'alphabet, ratifiée le 27 septembre : la malformation meurt à l'échantillonneur, la fausseté meurt au tribunal, et la non-terminaison est inexprimable.
 
 Et celle que je dois porter à côté de chaque gain, tirée du contrat de la bibliothèque pour la sortie structurée : la structure tue la malformation, et non la fausseté.
 
@@ -89,7 +89,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 #--> 1
 ```
 
-La deuxième paire est l'enjeu du chapitre : la grammaire répond `1` et le tribunal répond `0`. Je n'imprime pas la liste de ce que la grammaire a laissé tomber, parce que son texte porte, à un endroit, l'ancien nom du tribunal. Je vérifie qu'elle nomme la borne de l'intervalle.
+La deuxième paire est l'enjeu du chapitre : la grammaire répond `1` et le tribunal répond `0` ! Je n'imprime pas la liste de ce que la grammaire a laissé tomber, parce que son texte porte, à un endroit, l'ancien nom du tribunal. Je vérifie qu'elle nomme la borne de l'intervalle.
 
 On ne demande pas au modèle d'être prudent. L'échantillonneur demande à la grammaire, à chaque jeton candidat, si elle pourrait continuer. Ainsi un mot qui n'est pas au menu n'est pas refusé après avoir été dit. Peut-il seulement commencer ?
 
@@ -104,7 +104,7 @@ On ne demande pas au modèle d'être prudent. L'échantillonneur demande à la g
 #--> 0
 ```
 
-Il ne le peut pas : `dish: p` répond `0`. La dernière ligne est un échec que la mesure a trouvé dans un petit modèle : le substitut `<number>` répété là où doit se trouver un nombre. Et un jeton n'est pas un octet. Un morceau peut être valide comme préfixe et invalide comme complétion, et la machine reçoit le morceau entier :
+Il ne le peut pas : `dish: p` répond `0`. La dernière ligne est un échec que la mesure a trouvé dans un petit modèle : le substitut `<number>` répété là où doit se trouver un nombre. Et un jeton n'est pas un octet. Un morceau peut être valide comme préfixe et invalide comme complétion, et la machine reçoit le morceau entier. Que répond-elle à `yesterday`, qui commence comme `yes` ?
 
 ```haro
 cY = 'root ::= "yes" "\n"'
@@ -115,6 +115,8 @@ cY = 'root ::= "yes" "\n"'
 ? StzGrammarCouldContinue(cY, "yesterday")
 #--> 0
 ```
+
+`y` et `ye` répondent `1`, et `yesterday` répond `0` !
 
 Ce que la machine ne tiendra pas, elle le refuse en le nommant. Un langage fermé refuse ce qu'il ne peut pas porter, et n'approxime jamais. Une règle récursive à gauche est refusée par un code, de même qu'une règle citée et jamais définie. Une structure imbriquée est refusée par la grammaire. Le tribunal la lit-il quand même ?
 
@@ -143,7 +145,7 @@ done
 
 Le texte du refus de la structure imbriquée porte l'ancien nom du tribunal, donc je n'imprime que les codes. La dernière ligne est l'enjeu : le tribunal lit ce que la grammaire refuse d'écrire.
 
-Le langage de déclaration est lui-même fermé. Une faute de frappe dans la loi est refusée au moment où la loi est déclarée. Le contrat de la bibliothèque dit pourquoi : une clé comme `:requird = 0`, qui laisserait sans bruit un champ obligatoire, est exactement la classe de faute de frappe qu'un tribunal ne doit pas tolérer dans sa propre loi :
+Le langage de déclaration est lui-même fermé. Une faute de frappe dans la loi est refusée au moment où la loi est déclarée. Le contrat de la bibliothèque dit pourquoi. Une clé comme `:requird = 0` laisserait un champ obligatoire sans un mot, et c'est la classe de faute de frappe qu'un tribunal ne doit pas tolérer dans sa propre loi. Que répond le tribunal à une telle clé ?
 
 ```haro
 try
@@ -154,7 +156,9 @@ done
 #--> stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description).
 ```
 
-Et une fonction hôte n'est pas un mot du langage fermé des conditions. Il y a deux façons de dire une condition, le langage fermé et la porte d'une fonction. Une racine carrée est un mot du langage d'expressions du moteur, et un sinus n'en est pas un. La forme textuelle ne répond rien, et la forme fonction exécute du code hôte et répond tout :
+La faute de frappe a été refusée sur-le-champ, et le message liste les clés permises !
+
+Et une fonction hôte n'est pas un mot du langage fermé des conditions. Il y a deux façons de dire une condition, le langage fermé et la porte d'une fonction. Une racine carrée est un mot du langage d'expressions du moteur, et un sinus n'en est pas un. Que répond la forme textuelle au sinus, et que répond la forme fonction, qui exécute du code hôte ?
 
 ```haro
 o = new stzList([ 4, 7, 10, 3, 8 ])
@@ -166,13 +170,13 @@ o = new stzList([ 4, 7, 10, 3, 8 ])
 #--> [ 1, 2, 3, 4, 5 ]
 ```
 
-Ce que j'ai vu, et que la narration ne dit pas : le refus est silencieux et entier. Une condition dont la branche gauche est vraie et dont la droite porte un sinus a imprimé `[ ]`. Une condition qui appelle une fonction de moi ne l'a jamais appelée. Une erreur de syntaxe a aussi imprimé `[ ]`. Le langage est fermé, et il refuse sans un mot. La couche naturelle du chapitre 11 dit pourquoi elle refuse, et celle-ci ne le dit pas.
+Ce que j'ai vu, et que la narration ne dit pas : le refus est silencieux et entier. La forme textuelle a imprimé `[ ]` et la forme fonction a imprimé `[ 1, 2, 3, 4, 5 ]` : rien de l'une, tout de l'autre. Une condition dont la branche gauche est vraie et dont la droite porte un sinus a imprimé `[ ]`. Une condition qui appelle une fonction de moi ne l'a jamais appelée. Une erreur de syntaxe a aussi imprimé `[ ]`. Le langage est fermé, et il refuse sans un mot. La couche naturelle du chapitre 11 dit pourquoi elle refuse, et celle-ci ne le dit pas.
 
 ### La forge, hors de la bibliothèque
 
 Un langage déclaré une fois devrait donner son tribunal, sa bouche, sa voix et ses lecteurs. C'est la forge, et c'est là que l'étude de ce livre rencontre sa propre limite : la forge n'est pas dans la bibliothèque.
 
-Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. La forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet. Chacun a été jugé sur les cas propres du langage préexistant : sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, sur les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à la forge elle-même.
+Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. La forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet. Chacun a été jugé sur les cas propres du langage préexistant. Ces cas étaient sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à la forge elle-même.
 
 J'ai fait tourner la forge sur un petit langage que j'ai écrit pour ce livre, la commande d'une table dans les mots de la salle à manger. C'est un exemple, écrit pour le livre et exécuté une fois, hors de la bibliothèque :
 
@@ -189,7 +193,7 @@ DEFINE REFUSAL unknown_verb AS ( MESSAGE "The dining room speaks only of orders.
   RATIONALE "The closure speaks when an alien verb arrives"
 ```
 
-La forge a imprimé qu'elle avait forgé une sorte et un refus, en une fraction de seconde d'horloge, et a écrit un tribunal d'environ 2,6 kilooctets. Le tribunal a refusé trois phrases dans les mots propres de la déclaration :
+La forge a imprimé qu'elle avait forgé une sorte et un refus, en une fraction de seconde d'horloge, et a écrit un tribunal d'environ 2,6 kilooctets. Que répond ce tribunal à un plat hors du menu, à quarante portions et à un verbe étranger ? Il a refusé les trois, dans les mots propres de la déclaration :
 
 ```text
 DISH pizza          ->  order (line 2): the kitchen cooks margherita, tiramisu or chianti, not 'pizza'
@@ -197,7 +201,7 @@ QUANTITY 40         ->  order (line 3): 40 portions is not an order: one to twel
 DROP TABLE orders   ->  order (line 1): Unknown verb 'DROP': The dining room speaks only of orders.
 ```
 
-Les refus sont les mots propres de la déclaration, écrits à côté de la grammaire. C'est toute la preuve du langage `order` : il a été exécuté une fois, hors de la bibliothèque, et ce n'est pas une déclaration du dossier.
+Les refus sont les mots propres de la déclaration, écrits à côté de la grammaire. Même `DROP TABLE orders` a été refusé dans les mots de la salle à manger ! C'est toute la preuve du langage `order` : il a été exécuté une fois, hors de la bibliothèque, et ce n'est pas une déclaration du dossier.
 
 Trois observations de plus, chacune une limite.
 
@@ -243,13 +247,15 @@ Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une
 
 **J'ai refusé une seconde face comme un second sens.** Une face épelle le graphe ; elle ne lui donne jamais le sens de Python ou de JavaScript. C'est le mémo d'une session, qui propose et ne tranche rien, et sa question de savoir combien de faces avant l'annonce est la mienne, et sans réponse dans le dossier.
 
+Vient ensuite le tribunal, et les gardes qui sont derrière lui.
+
 ## 5. Le tribunal
 
 `structuredoutput_narrated` prouve qu'une déclaration est jugée quand elle est déclarée, avec un type inconnu, une clé inconnue et un menu vide refusés. Elle prouve que deux formes de transmission sont lues et que rien n'est deviné, qu'il n'y a pas de crédit partiel, que l'imbrication fonctionne, et qu'une nouvelle tentative tient dans un seul budget. Dans sa dixième scène, elle prouve qu'un mensonge est laissé passer exprès. `schema_grammar_narrated` prouve que la déclaration se compile en grammaire, et qu'une énumération fermée devient une alternance fermée. Elle prouve que l'optionnel et l'arité des listes sont traités, que les contraintes non imposées sont listées par champ et par opérateur, et qu'une structure imbriquée est refusée avec un code nommé. `constrained_decoding_narrated` prouve que la machine parcourt une grammaire octet par octet, qu'un préfixe n'est pas un tout, et que `yesterday` est refusé. Elle prouve que le substitut écrit par le modèle ne peut pas être atteint, que les refus sont nommés, que la structure n'est pas la vérité, et qu'une grammaire sur une session en flux est refusée. Ses deux scènes qui demandent un modèle génératif le disent. `483_w_and_wf_forms_in_conditional_code` prouve que les deux formes d'une condition donnent les mêmes positions. Elle n'affirme pas le refus du langage fermé, et aucune garde ne l'affirme.
 
 Aucune garde de la bibliothèque ne teste une forge, puisqu'il n'y en a pas. La garde de la forge est à l'extérieur : le spike passe vingt-trois étapes en 367,5 secondes le 4 octobre 2026, d'après son propre fichier. Je ne l'ai pas lancé. Et la première exécution du méta-tribunal lui-même fut de vingt-huit sur vingt-huit le 29 août 2026. Le lecteur de gardes du livre ne résout que les gardes de l'arbre de tests de la bibliothèque, donc celles-ci ne peuvent pas être nommées dans le front matter.
 
-Le chiffre selon lequel le premier essai est valide dans deux cas sur dix quand on vérifie après coup, et dans dix sur dix quand il est contraint, est un nombre dans un commentaire de ces gardes. On ne peut pas le reprendre ici : les scènes réelles demandent un fichier de modèle génératif, et l'instantané ne contient, dans son dossier des modèles, qu'un fichier de somme de contrôle. Le chapitre 11 porte le chiffre, et j'y renvoie.
+Le premier essai est valide dans deux cas sur dix quand on vérifie après coup, et dans dix sur dix quand il est contraint. Ce chiffre est un nombre dans un commentaire de ces gardes. On ne peut pas le reprendre ici : les scènes réelles demandent un fichier de modèle génératif, et l'instantané ne contient, dans son dossier des modèles, qu'un fichier de somme de contrôle. Le chapitre 11 porte le chiffre, et j'y renvoie.
 
 ## 6. Le terrain, et où il mène
 
@@ -262,6 +268,8 @@ Le décodage contraint : le terrain l'a construit le premier, et l'implémentati
 Une grammaire sur-approxime un tribunal. Les noms en double, les références pendantes et la cohérence d'un menu ne sont pas hors contexte. Je l'ai observé dans les deux sens plus haut : une plage que la grammaire ne peut pas porter, et une référence qu'elle ne peut pas porter.
 
 Le code qu'une forge émet doit être lu par quelqu'un. Le style de famille dont hérite chaque langage déclaré a un test de réussite : apprendre le deuxième langage devrait prendre une soirée, parce que c'est le premier langage avec d'autres verbes. C'est une exigence de conception et non une mesure. Aucun apprenant n'a été chronométré dans le dossier que j'ai lu.
+
+La limite vient ensuite, au bord d'un second langage fermé.
 
 ## 7. La limite
 
@@ -277,7 +285,7 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 #--> [ 0, 0.84, -0.76 ]
 ```
 
-Le sinus que la condition a refusé, le tableau l'a calculé ! J'ai aussi vu, et je ne le montre pas, une seconde chose. Sur une autre table d'essai, avec A égal à 1, 3 et 10 et B égal à 2, 4 et 20, j'ai écrit une formule `@(:A) + HostBonus(@(:B))` autour d'une fonction de moi qui multiplie par mille. Elle a imprimé `[ 2001, 4003, 20010 ]` : une fonction hôte définie par l'utilisateur s'est exécutée de l'intérieur d'une chaîne de formule. Et une formule qui nomme une fonction qui n'existe pas a levé l'erreur propre de l'hôte. Le second langage fermé est donc ouvert à son bord. Aucune garde n'affirme l'un ou l'autre comportement.
+Le sinus que la condition a refusé, le tableau l'a calculé, et il a imprimé `[ 0, 0.84, -0.76 ]` ! J'ai aussi vu, et je ne le montre pas, une seconde chose. Sur une autre table d'essai, avec A égal à 1, 3 et 10 et B égal à 2, 4 et 20, j'ai écrit une formule `@(:A) + HostBonus(@(:B))`. La fonction de moi qui s'y trouve multiplie par mille. La formule a imprimé `[ 2001, 4003, 20010 ]` : une fonction hôte définie par l'utilisateur s'est exécutée de l'intérieur d'une chaîne de formule. Et une formule qui nomme une fonction qui n'existe pas a levé l'erreur propre de l'hôte. Le second langage fermé est donc ouvert à son bord. Aucune garde n'affirme l'un ou l'autre comportement.
 
 Ce qui est construit : dans la bibliothèque, une déclaration jugée quand elle est déclarée ; un tribunal et une grammaire issus d'elle ; la liste de ce que la grammaire a laissé tomber. Une machine à grammaire qui dit qu'elle est contrainte ; un prompt et une description issus du même texte. Le build compte 151 assertions dans trois gardes narrées. Deux petits langages fermés de conditions, avec des limites. Les langues de la couche naturelle comme données.
 
@@ -286,6 +294,8 @@ Ce qui est construit, mais hors de la bibliothèque : une forge d'une déclarati
 Ce qui est conçu : la forge qui produit, à partir d'une seule déclaration, l'analyseur, le tribunal, l'imprimeur, la grammaire, le graphe de connaissance, la grammaire de requête, la porte naturelle, la narration, le runtime et un binaire statique. D'après ma lecture de la charte, le spike a montré le tribunal, la grammaire, un runtime qui parcourt la déclaration, une grammaire de requête, une narration et le tribunal de la lettre naturelle. Je n'ai pas trouvé montré un imprimeur pour les phrases déclarées, un graphe de connaissance forgé à partir d'une déclaration, ni le binaire statique unique par langage. La bibliothèque qui a une forge : rien en elle ne déclare ni ne forge un langage. Une grammaire pour chaque langage déclaré livrée dans la bibliothèque : promise dans le noyau, non livrée. Et les projections : le monde rendu à une application, un serveur, une page, un appareil.
 
 Ce qui est absent : la grammaire de la forge pour un mot de menu, que j'ai vue ne tenir que la forme, plus haut, et le chiffre de deux sur dix contre dix sur dix, repris. Et tout enregistrement que la forge tourne sur le runtime de Haro. Au moment où la vision a été écrite, le langage n'existait pas ; les exécutions de la charte sont sur le runtime plus ancien et sur l'oracle.
+
+Les six portes suivent, du programmeur à l'agent.
 
 ## 8. Six portes
 

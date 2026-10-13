@@ -24,7 +24,7 @@ Dans ce chapitre, je lis le nom d'une fonction comme la bibliothèque le lit : u
 
 Sur le terrain, le nom d'une fonction est une étiquette. Il suit une convention, camel case ou snake case, et il vous dit à peu près ce que fait la fonction ; les détails sont dans la signature et la documentation. Un nom ne porte pas de grammaire. Les outils voisins ne parlent que de structure. Python et Swift offrent l'argument nommé, pour qu'un appel puisse dire quel paramètre est lequel. L'interface fluide enchaîne les appels pour qu'une ligne se lise comme une phrase, et la surcharge donne à un seul nom plusieurs signatures.
 
-Et quand le terrain veut qu'une fonction se comporte autrement dans un autre contexte, il change son sens par un drapeau posé ailleurs : un mode, une locale, une variable d'environnement. Le nom de la fonction ne vous dit pas dans quel cadre elle va s'exécuter.
+Et quand le terrain veut qu'une fonction se comporte autrement dans un autre contexte, il change son sens par un drapeau posé ailleurs. Le drapeau est un mode, une locale, une variable d'environnement. Le nom de la fonction ne vous dit pas dans quel cadre elle va s'exécuter.
 
 ## 2. Le premier principe
 
@@ -46,7 +46,7 @@ o2.RemoveManyCS([ "o", "f", "n" ], FALSE)
 
 L'article promettait `SOFTANZA` sur la deuxième ligne. L'exécution imprime `STAZA` ! Le code a raison et l'article a tort : un retrait qui ne se soucie pas de la casse retire aussi les majuscules. J'imprime l'exécution.
 
-La bibliothèque ne se contente pas de suivre cette grammaire. Elle la lit. Son analyseur de noms, `_StzParseName`, est un assistant interne que nulle garde ne couvre ; la voie publique est `ExplainMethod`, qui explique une méthode dans ces termes :
+La bibliothèque se contente-t-elle de suivre cette grammaire, ou la lit-elle ? Son analyseur de noms, `_StzParseName`, est un assistant interne que nulle garde ne couvre. La voie publique est `ExplainMethod`, qui explique une méthode dans ces termes :
 
 ```haro
 ? @@( _StzParseName("FindNextSTCS") )
@@ -59,7 +59,7 @@ La bibliothèque ne se contente pas de suivre cette grammaire. Elle la lit. Son 
 #-->   reads as: remove -- over many values at once
 ```
 
-Voilà la thèse rendue mécanique : la grammaire est dans le code et pas seulement dans l'article. L'analyseur décode les préfixes et les suffixes, les mots « except » et « is not », et la voix : un nom qui finit en `ed` est passif.
+Elle la lit. Voilà la thèse rendue mécanique : la grammaire est dans le code et pas seulement dans l'article. La ligne imprimée `reads as: remove -- over many values at once` est la lecture que l'analyseur fait de `RemoveMany`. L'analyseur décode les préfixes et les suffixes, les mots « except » et « is not », et la voix : un nom qui finit en `ed` est passif.
 
 Je vais maintenant parcourir les formes. Le chapitre 5 en a montré quatre : l'active, la passive, la fluide et le paramètre nommé. Voici les autres, celles qui tournent.
 
@@ -91,7 +91,7 @@ o1 = new stzString("fjharoljharodjharog")
 #-->   3     9     15
 ```
 
-**Le pluriel** étend un verbe à plusieurs choses sans boucle, et **la forme d'exception** ne garde que ce que vous nommez. L'exemple de l'article pour la seconde, `RemoveNonLettersExcept`, n'existe pas, mais la forme existe, sous d'autres noms :
+**Le pluriel** étend un verbe à plusieurs choses sans boucle, et **la forme d'exception** ne garde que ce que vous nommez. L'exemple de l'article pour la seconde, `RemoveNonLettersExcept`, n'existe pas. La forme existe, sous d'autres noms :
 
 ```haro
 o1 = new stzString("__H~~~AR***O__")
@@ -129,7 +129,7 @@ o1.DeepReplace("you", :By = "♥")
 #--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
 ```
 
-**La forme immuable**, QC, exécute toute la chaîne sur une copie et laisse l'original tranquille :
+**La forme immuable**, QC, exécute toute la chaîne sur une copie. Après cette chaîne, que contient l'original ?
 
 ```haro
 o1 = new stzString("haxxrxo")
@@ -138,6 +138,8 @@ o1 = new stzString("haxxrxo")
 ? o1.Content()
 #--> haxxrxo
 ```
+
+La chaîne a imprimé `H A R O`, et l'original contient encore `haxxrxo` !
 
 **La forme mal orthographiée** est acceptée, avec une note que je vous dois. Une faute d'orthographe dans un nom fonctionne :
 
@@ -163,7 +165,7 @@ o1 = new stzRegex("^Second:.*$")
 #--> TRUE
 ```
 
-`Match` répond `FALSE` : il demande si le motif couvre la valeur entière. `MatchFirst` répond `FALSE` aussi : il demande si le motif apparaît quelque part, avec les ancres de ligne désactivées. `MatchLine` répond `TRUE` : il fait que `^` et `$` s'accrochent à chaque ligne. Le cadre est dans le verbe. Il y a aussi une portée de mot, qui fournit les limites de mot pour que vous ne les écriviez pas. Elle réécrit pour de bon le motif de son objet, c'est pourquoi la deuxième instance est un nouvel objet avec le même motif :
+`Match` répond `FALSE` : il demande si le motif couvre la valeur entière. `MatchFirst` répond `FALSE` aussi : il demande si le motif apparaît quelque part, avec les ancres de ligne désactivées. `MatchLine` répond `TRUE` : il fait que `^` et `$` s'accrochent à chaque ligne. Le cadre est dans le verbe. Il y a aussi une portée de mot, qui fournit les limites de mot pour que vous ne les écriviez pas. Elle réécrit pour de bon le motif de son objet, c'est pourquoi la deuxième instance est un nouvel objet avec le même motif. Le même motif répond-il pareil sous `MatchFirst` et sous `MatchWord` ?
 
 ```haro
 o2 = new stzRegex("pre\w+")
@@ -173,6 +175,8 @@ o3 = new stzRegex("pre\w+")
 ? o3.MatchWord("compress")
 #--> FALSE
 ```
+
+Le même motif répond `TRUE` sous `MatchFirst` et `FALSE` sous `MatchWord` !
 
 La deuxième instance est le système. Le code d'une fonctionnalité s'écrit dans une portée nommée, et le même verbe reçoit un verdict différent dans chacune. La portée peut faire se comporter un portable comme un appareil qu'il n'a pas, ou refuser ce que la cible interdit. Ici, une solution avec un backend sur un serveur Linux et un firmware sur une petite carte. Que répond chaque système quand on lui demande le même verbe, `Spawn` ? Exécutez-le :
 
@@ -210,7 +214,9 @@ oBox.SetCapabilityList([ :filesystem, :process, :network, :clock, :threads ])
 #--> [ "gpio" ]
 ```
 
-Ce que le portable peut faire et que la carte ne peut pas, `filesystem` et `process` ; ce dont la carte a besoin et que le portable n'a pas, `gpio`. C'est la deuxième instance. La troisième est le déploiement : la cible est le cadre, et la portée décide de ne pas livrer ce que la cible fait déjà bien ; le chapitre 4 en a montré le plan. La quatrième est la concurrence, et c'est un plan.
+L'exécution a imprimé `[ "filesystem", "process" ]` pour ce que le portable peut faire et que la carte ne peut pas, et `[ "gpio" ]` pour ce dont la carte a besoin et que le portable n'a pas. C'est la deuxième instance. La troisième est le déploiement : la cible est le cadre, et la portée décide de ne pas livrer ce que la cible fait déjà bien ; le chapitre 4 en a montré le plan. La quatrième est la concurrence, et c'est un plan.
+
+La conception vient ensuite, avec ce que Haro garde de ces formes et ce qu'il refuse.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -220,21 +226,27 @@ Ce que le portable peut faire et que la carte ne peut pas, `filesystem` et `proc
 
 **La forme conditionnelle a changé de mécanisme.** La narration dit qu'elle ne passe plus par `eval()` mais par un petit langage textuel que le moteur compile, et que l'ancienne forme étendue, WXT, est maintenant un alias obsolète de W.
 
-**Pour la portée, le document de conception refuse le courant flottant.** Le code d'une fonctionnalité n'est jamais écrit contre un « système courant » ambiant. Il nomme sa portée. Et pour la concurrence le document consigne deux refus avant qu'il y ait le moindre code : une méthode par opération qui étale le cadre sur de nombreux verbes, comme `DoubleEachConcurrently`, et un mode posé plus tôt. Ce mode est l'antimodèle contre lequel ce paradigme a été fondé. Il refuse aussi une portée qu'aucun hôte ne peut exécuter. Sa première idée pour la concurrence était un vocabulaire de fils d'exécution, et le langage en dessous n'a pas de fils.
+**Pour la portée, le document de conception refuse le courant flottant.** Le code d'une fonctionnalité n'est jamais écrit contre un « système courant » ambiant. Il nomme sa portée. Et pour la concurrence le document consigne deux refus avant qu'il y ait le moindre code. L'un est une méthode par opération qui étale le cadre sur de nombreux verbes, comme `DoubleEachConcurrently`. L'autre est un mode posé plus tôt. Ce mode est l'antimodèle contre lequel ce paradigme a été fondé. Il refuse aussi une portée qu'aucun hôte ne peut exécuter. Sa première idée pour la concurrence était un vocabulaire de fils d'exécution, et le langage en dessous n'a pas de fils.
 
 **J'ai refusé de livrer tout le moteur en périphérie.** La règle de placement est : ne livrer que ce qui est critique et soit propre à Softanza, soit faible sur la cible. Une cible qui excelle déjà dans une chose n'en reçoit rien.
+
+Voici maintenant le tribunal, et les gardes qui prouvent chacune de ces affirmations.
 
 ## 5. Le tribunal
 
 `00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et elle a échoué sous charge lors d'une exécution de sonde que `data/` n'enregistre pas. Je le signale et ne le cache pas. `delivery_narrated` prouve le plan de placement.
 
+Où le terrain fait mieux vient ensuite.
+
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en convention. Un nom qui est une étiquette est plus facile à enseigner et plus facile à taper ; la grammaire de ce chapitre doit s'apprendre, et certaines de ses formes sont rarement utilisées.
+Le terrain mène en convention. Un nom qui est une étiquette est plus facile à enseigner et plus facile à taper. La grammaire de ce chapitre doit s'apprendre, et certaines de ses formes sont rarement utilisées.
 
 Le terrain mène en garantie. Les arguments nommés de Python sont vérifiés à l'appel, et les étiquettes de Swift par le compilateur, pour chaque fonction, dès le premier jour. Les formes d'ici sont jugées par le prototype de Haro, sur les noms et non sur les corps, et par l'analyseur propre de la bibliothèque, et seulement dans les noms qui les suivent.
 
 Sur la portée, le terrain mène en maturité. La pratique la plus proche est le contexte explicite : l'habitude de Go de passer un contexte à chaque appel, un objet de locale qui porte un cadre. Elles sont plus anciennes et plus largement employées. Ce que ce paradigme ajoute, c'est que le cadre fait partie d'un petit ensemble fermé, choisi dans le verbe, et que la bibliothèque peut raisonner avec lui.
+
+Enfin, la limite, avec ce qui est construit, ce qui est conçu et ce qui est absent.
 
 ## 7. La limite
 
@@ -246,7 +258,7 @@ Ce qui est absent, et la page doit dire chacune avec son échec :
 
 - **Partielle**, `@Removed`, n'est que dans l'archive : l'appel n'est pas défini.
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.
-- **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive, et l'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
+- **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
 - **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque appelle la forme informante pas encore construite.
 - **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
 - Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. Et la forme d'énoncé est à moitié juste : la moitié « All » fonctionne, et la moitié « No » renvoie la mauvaise valeur de vérité. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
@@ -273,4 +285,4 @@ Prenez un verbe d'une bibliothèque que vous utilisez et qui se comporte autreme
 
 Exécutez-le. Si vos deux noms ne diffèrent que par un drapeau, vous n'avez pas encore déplacé le cadre dans le verbe.
 
-Le chapitre 9 passe aux motifs de pensée. Il présente le Softanzuter, une représentation computationnelle d'une machine pensante, fondée sur un ou plusieurs Regexuters, qui reconnaît des motifs de pensée et y réagit, et avec lui Reaxis et les moteurs.
+Le chapitre 9 passe aux motifs de pensée. Il présente le Softanzuter, une représentation computationnelle d'une machine pensante. Il est fondé sur un ou plusieurs Regexuters, qui reconnaissent des motifs de pensée et y réagissent. Avec lui viennent Reaxis et les moteurs.

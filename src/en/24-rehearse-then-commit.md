@@ -16,7 +16,7 @@ rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
 ---
 
-In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle, joined from three documents of the record, is that reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
+In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
 ## 1. The concept, as the field holds it
 
@@ -85,7 +85,7 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 #--> [ [ 3, "RUNS an external command (side effects): spawn process: backup-database --all" ] ]
 ```
 
-Chapter 20's limit paragraph said that only files are built. That was wrong, and I have corrected it there.
+The twin holds `rehearsal` and one pending spawn, and the real environment answers `0`! Chapter 20's limit paragraph said that only files are built. That was wrong, and I have corrected it there.
 
 The twin has a second job. A programmer on a laptop with no pins writes pin code for a board. The scope says *rehearsed*, as chapters 8 and 31 showed. At deploy, the lowering bridge turns the rehearsal into the source of firmware. What happens when an assistant asks to deploy? `Build()` records the build command and does not run the toolchain, and `Deploy` lowers in memory, so no file is written:
 
@@ -119,7 +119,9 @@ oPlatform.DeployAs(HumanActor("me"))
 #--> }
 ```
 
-The assistant is told that it `may propose a deploy, not perform it`; the person's deploy yields the firmware. The limit of this block is in section 7: only two verbs are lowered.
+The assistant is refused, and told that it `may propose a deploy, not perform it`! The person's deploy yields the firmware. The limit of this block is in section 7: only two verbs are lowered.
+
+The twin rehearses; next, the plan says where each part would go.
 
 ### The plan of placement
 
@@ -146,9 +148,11 @@ oShip.Plan().Show()
 
 The rule behind the plan, in the emulation design: the edge carries a capability only if it is critical, and either unique to Softanza or weak or absent on the target platform. A regular expression is a construct over the platform's own, and never the engine's matcher compiled for the browser.
 
+The plan says where; the emulator builds what the plan says.
+
 ### The emulation
 
-The emulator turns the plan into a bundle, and the bundle is what ships. In the next block the bundle generated for the rehearsal is wired straight into the production attach, and the actor decides. An assistant calling `Deploy(:Production)` leaves the site `absent`. A person calling it makes the site `launched`. The manifest that lands names the engine group the part carries. The target here is a local folder, the kind of site that needs no tool but file operations:
+The emulator turns the plan into a bundle, and the bundle is what ships. In the next block the bundle generated for the rehearsal is wired straight into the production attach, and the actor decides. What does the site become when an assistant calls `Deploy(:Production)`, and what when a person does? The manifest that lands names the engine group the part carries. The target here is a local folder, the kind of site that needs no tool but file operations:
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -184,13 +188,13 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-The honest half: the manifest's artifacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
+The assistant left the site `absent`, and the person made it `launched`. The honest half: the manifest's artifacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
 
-I did not run `Deploy(:Emulated)`, because it builds each part's subset through the engine toolchain, and the toolchain's build is something this machine must not run. What I ran is the bundle without the compile, and in my research run of 8 October 2026, outside this chapter's blocks, its map named an engine file that is not there. Section 7 says what that means for the claim that the engine runs in a browser.
+I did not run `Deploy(:Emulated)`, because it builds each part's subset through the engine toolchain, and the toolchain's build is something this machine must not run. What I ran is the bundle without the compile. In my research run of 8 October 2026, outside this chapter's blocks, its map named an engine file that is not there. Section 7 says what that means for the claim that the engine runs in a browser.
 
 ### The deployment
 
-For a local site, a rollout that fails undoes what it had done; the other kinds of site only try, as a best effort. The web part deploys and passes its gate. The api part's store fails. The remaining steps are skipped, the deployment does not commit, and the web site, already live, is rolled back. The failing site is a server with no storage location, which fails without spawning anything:
+For a local site, a rollout that fails undoes what it had done; the other kinds of site only try, as a best effort. The web part deploys and passes its gate. The api part's store fails. The remaining steps are skipped and the deployment does not commit. What becomes of the web site, already live? The failing site is a server with no storage location, which fails without spawning anything:
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -223,11 +227,13 @@ next
 StzDirDeleteAll(cHere + "/_site_cdn")
 ```
 
-The api store reads `FAILED`, and the web site, whose three steps read `done`, reads `rolledback`. With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays absent, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
+The api store reads `FAILED`. The web site, whose three steps read `done`, reads `rolledback`! With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays absent, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
+
+The deployment fails safely; the services come next.
 
 ### Code first, subscribe later
 
-The code asks for a service by name and never learns which implementation it got. The sandbox sees the first call and none after I rebind the service as live; the second call goes to the live adapter. The surface is sound once every live binding names a secret that the store holds. The live gateway in this block is a stand-in class written here, since the library ships no live card-gateway adapter. A stand-in named `LiveGateway` that returns "authorized" is a fake in everything but its name; the registry takes it as live because it declares nothing, and section 7 says why that matters:
+The code asks for a service by name and never learns which implementation it got. The sandbox sees the first call and none after I rebind the service as live; the second call goes to the live adapter. The surface is sound once every live binding names a secret that the store holds. The live gateway in this block is a stand-in class written here, since the library ships no live card-gateway adapter. A stand-in named `LiveGateway` that returns "authorized" is a fake in everything but its name. The registry takes it as live because it declares nothing, and section 7 says why that matters:
 
 ```haro
 oPay = new stzPaymentsSandbox()
@@ -276,7 +282,7 @@ The day you do subscribe, you change a binding and not a line. The key is an inv
 
 ### Production refuses
 
-One report names five of the eight ways a surface is not fit for production. Four are errors: a declared service never bound, a fake, a real database that vanishes on restart, and a live adapter whose key is not in the store. The fifth is a warning: a live adapter that names no secret at all. Chapter 31 showed the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
+One report names five of the eight ways a surface is not fit for production. Four are errors: a declared service never bound (`unbound-service`), a fake (`sandbox-in-production`), a real database that vanishes on restart (`ephemeral-in-production`), and a live adapter whose key is not in the store (`live-without-secret`). The fifth is a warning: a live adapter that names no secret at all (`inline-credential`). Chapter 31 showed the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -346,7 +352,9 @@ next
 #--> part-uses-undeclared-service @ web [warning]
 ```
 
-It names `api` twice, with `[error]`, and `web` once, with `[warning]`.
+It names `api` twice, with `[error]`, and `web` once, with `[warning]`, where the registry reported nothing!
+
+That is what the run showed; the decisions behind it come next.
 
 ## 4. The decision, and what I refused
 
@@ -366,7 +374,7 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused "fake versus real" as the whole truth.** It was too coarse. There are four postures now: sandbox, local, live, and conformance. The local posture was added when the database exemplar showed that a SQLite file is a real database in a file you own.
 
-**I refused a gate that fails open.** The registry once kept its state in attributes, so attaching it to a delivery took a snapshot, and the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
+**I refused a gate that fails open.** The registry once kept its state in attributes. Attaching it to a delivery took a snapshot, so the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
 **I refused to virtualize the quality of a model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 
@@ -374,9 +382,9 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused to ask a question in the wrong frame.** `MayGoLive` once asked about soundness in the current phase, so with a fake bound it answered yes. Now it is asked in the production frame whatever the phase.
 
-**I refused to say the restaurant's need was the design's origin.** The site says that the emulation and deployment designs take a solution as an example, and that it is an example, not the origin of the design. The sample solution in the documents carries a customer's product name, and I have renamed it in every block. Chapter 28 told the story, and I do not repeat it.
+**I refused to say the restaurant's need was the design's origin.** The site says that the emulation and deployment designs take a solution as an example. It is an example, not the origin of the design. The sample solution in the documents carries a customer's product name, and I have renamed it in every block. Chapter 28 told the story, and I do not repeat it.
 
-The service plan is headed "written 2026-07-23 in answer to the user's question". The question asks whether emulation covers databases, business APIs, frontier models and cloud providers, so that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. The chapter tells the plan's own heading and date. The record does not say who asked, and the chapter does not claim it was the author's question.
+The service plan is headed "written 2026-07-23 in answer to the user's question". The question asks whether emulation covers databases, business APIs, frontier models and cloud providers. The aim is that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. The chapter tells the plan's own heading and date. The record does not say who asked, and the chapter does not claim it was the author's question.
 
 ## 5. The court
 
@@ -399,6 +407,8 @@ The mature deploy tools lead. The narration says it plainly: this does not repla
 Fidelity is limited, and says so. Emulation is faithful but not omniscient, so it says which is which. What a double proves is narrower still: a capture sink proves what you would have sent, and a directory is not a CDN.
 
 Where I think the record stands apart is the coupling. The double, the plan, the credential names, the gate and the actor are declared in the same program that ships, and one gate judges them.
+
+That is the field; the limit is where I stop.
 
 ## 7. The limit
 
@@ -434,7 +444,7 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **A plan flags, it does not rank.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
-What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm, and it cites an in-browser page with "8/8 checks". That page is not in the pinned tree: I searched for it and found none. And I have not seen the emulator's surface in a browser, and the record names no one who has. By the law of chapter 33, that surface is unperceived. So the chapter says: wired, its build checked by a guard that I did not run, not seen in a browser by anyone the record names.
+What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks". That page is not in the pinned tree: I searched for it and found none. And I have not seen the emulator's surface in a browser, and the record names no one who has. By the law of chapter 33, that surface is unperceived. So the chapter says: wired, its build checked by a guard that I did not run, not seen in a browser by anyone the record names.
 
 Also designed: branches of a twin and the plan's alternatives and feedback, for which no method exists; twins for databases, interfaces and networks; and a drift check for recorded answers.
 

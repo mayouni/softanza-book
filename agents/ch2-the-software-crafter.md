@@ -4,7 +4,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-12 16:26 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
@@ -14,13 +14,15 @@ The field already has a word for programmers who care about their work: craftsma
 
 The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: a model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its model, the person's work changes with it. (General knowledge, not a study of the record.)
 
+The next section says what the site means by the word.
+
 ## 2. The first principle
 
 The site gives the definition in two sentences. They say "crafter" today (read on 9 October 2026); until 8 October they said "maker". The glossary says that a crafter is whoever is declaring, at the moment they declare. The site says that a crafter owns what they make. I ruled on 12 October 2026 that the book keeps both, in one sentence: **a crafter is whoever declares what they know about a world, and owns what they declare: the artefact is theirs, in plain text, and it does not expire.** Skill does not enter the definition. The word "craft" suggests it, and I keep the word: the person is defined by the act and by ownership, not by programming skill. I hold this as a view, not a result.
 
 ## 3. The Softanza form
 
-I was the first crafter of Softanza, and not for a reason I would have chosen. My wife runs a music club where people learn to sing classical Arabic songs. Every Sunday morning she sends me the list of songs to prepare, and I search for their lyrics. The lyrics found online repeat every phrase as the singer performed it, and she reminds me, every time, to remove the duplicates. I wrote `RemoveDuplicates()` to stop doing it by hand, and its family is still in the library:
+I was the first crafter of Softanza, and not for a reason I would have chosen. My wife runs a music club where people learn to sing classical Arabic songs. Every Sunday morning she sends me the list of songs to prepare, and I search for their lyrics. The lyrics found online repeat every phrase as the singer performed it, and she reminds me, every time, to remove the duplicates. I wrote `RemoveDuplicates()` to stop doing it by hand. Is its family still in the library, and what does it say of a list with three teas in it?
 
 ```haro
 o1 = new stzList([ "tea", "rice", "tea", "fish", "rice", "tea" ])
@@ -31,6 +33,8 @@ o1 = new stzList([ "tea", "rice", "tea", "fish", "rice", "tea" ])
 ```
 
 > run: kept
+
+The family answers: the list holds duplicates (`1`), and `tea` occurs `3` times.
 
 I write about this in an article on what the library was built on: I introduced its features when a real problem asked for them, or when I anticipated they would meet programmers' needs. This one came from a problem: the crafter comes first, and the feature after.
 
@@ -55,6 +59,8 @@ o.Show()
 
 > run: kept
 
+The engine drew the view from the data alone: `Maradi │ 3402094` is one of its rows.
+
 **The designer** declares a picture as a program, and gets the same picture every time:
 
 ```haro
@@ -66,7 +72,9 @@ o.Show()
 
 > run: kept
 
-**The decision-maker** declares what each actor in the world may do, a person or an agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? In the answer, "law 18" is the engine's rule that an agent with no coverage statement is never scheduled, and `pia` names the format of the file, as its first line shows. Load it:
+The picture is the program's output: a boxed `Softanza` with round corners.
+
+**The decision-maker** declares what each actor in the world may do, a person or an agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? Load it:
 
 ```haro
 cPia = "pia: 1
@@ -88,7 +96,9 @@ oD = StzAgentDeclarationQ(cPia)
 
 > run: kept
 
-**The educator** declares in the learner's own language. A sentence in Hausa runs; the engine counts the letters of an Arabic word, not its bytes, and knows its script:
+The court refused it! Its reason is printed: `[pia-coverage @ coverage] an agent must say WHAT IT COVERS`. Here "law 18" is the engine's rule that an agent with no coverage statement is never scheduled, and `pia` names the format of the file, as its first line shows.
+
+**The educator** declares in the learner's own language. A sentence in Hausa runs. Does the engine count the letters of an Arabic word rather than its bytes, and does it know its script?
 
 ```haro
 ? NaturallyIn("ha", "Yi rubutu dauke 'hello' Maida shi").Result()
@@ -101,7 +111,9 @@ oD = StzAgentDeclarationQ(cPia)
 
 > run: kept
 
-**The agent** is the sixth crafter, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one? In the answer, a "pi-gate" is the gate where a governed actor commits:
+The Hausa sentence came back as `HELLO`. The Arabic word counts `4`, its letters and not its bytes, and its script is `arabic`.
+
+**The agent** is the sixth crafter, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
 
 ```haro
 cLlm = "pia: 1
@@ -131,17 +143,17 @@ oBad = StzAgentDeclarationQ(cLlm)
 
 > run: kept
 
-The llm actor `rogue` does not get its effect! The court answers `REFUSED`, and says when: `enforced at CONSTRUCTION, not merely audited`.
+The llm actor `rogue` does not get its effect! The court answers `REFUSED`, and says when: `enforced at CONSTRUCTION, not merely audited`. A "pi-gate" is the gate where a governed actor commits.
 
 Now the three cases this book is for. They are not personas. They are people and organisations with documents, and Part VI tells each of them in full. Here, a page each.
 
-**A restaurateur in Lyon.** He owns a couscous restaurant, and the project is a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
+**A restaurateur in Lyon.** He owns a couscous restaurant, and the project is a platform for neighbourhood commerce. The project's notes say it plainly: he is not a programmer. The project began with an offer in May 2024 and then two years of rich specification that produced nothing he could use. What came out of that failure is the rule I have worked by since. Deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
 On 4 July 2026 he answered a scoping report in his own words and reversed the order of the work: customer first, restaurateur next, supplier last. The project's architecture was redrawn as a constellation of worlds, using the library's design, and the first amendment closed on 4 August 2026.
 
 A constellation is a graph of worlds. A world is one application; a bond is a declared relation between two worlds, for one named act, and nothing crosses without one. Chapter 23 shows all three run; here it is only the shape the project took.
 
-The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules, and in his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect.
+The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules. In his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect.
 
 Chapter 1 tells the first demonstration as the owner's own, on his own phone, over a messaging app. The record is more exact. Its checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line. The measurements he took over a messaging app are those of 19 August.
 
@@ -162,9 +174,9 @@ oReg.SetPhase(:production)
 
 > run: kept
 
-It answers `1` in the emulated phase and `0` in production, and says why: `still bound to a SANDBOX in a production phase -- a fake must never ship`.
+It answers `1` in the emulated phase and `0` in production, and says why: `still bound to a SANDBOX in a production phase -- a fake must never ship`. A fake in production is refused!
 
-**A bank in Niamey.** A commercial bank under the rules of the central bank of the West African monetary union has an organisation-assessment product I built beside the library, installed under licence on its own internal network. The installation guide delivered to the bank is the document that attests it. The lesson it left in the library is that an organisation can be judged by its own chart, under a regulator's rules. Declare a chart with a chief executive and an internal audit that reports to him, and the regulator's rules answer:
+**A bank in Niamey.** A commercial bank under the rules of the central bank of the West African monetary union is the licensee of an organisation-assessment product I built beside the library. It is installed on its own internal network, under that licence. The installation guide delivered to the bank is the document that attests it. The lesson it left in the library is that an organisation can be judged by its own chart, under a regulator's rules. Declare a chart with a chief executive and an internal audit that reports to him. What do the regulator's rules say of it?
 
 ```haro
 oOrg = new stzOrgChart("bank")
@@ -176,9 +188,9 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 > run: kept
 
-Three findings, each a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
+The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
 
-**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead; the study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model, and the model judges itself:
+**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model. Does the model judge itself, with an LLM actor in it that holds an effect?
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -197,7 +209,9 @@ g.AddRule(oRule)
 
 > run: kept
 
-Three cases: a restaurateur who is not a programmer, a bank under a regulator, an organisation that chose ownership over a vendor. The restaurateur and the organisation are crafters by the record; the bank is the licensee of a product, and the record does not say who there declared anything. The restaurateur and the organisation did not wait for the software industry, and each is offered ownership of what is built for them.
+`RulesAreSound()` answers `0`: the model finds its own `writer`, an LLM actor holding `effectful`, in violation of the rule.
+
+The three cases are a restaurateur who is not a programmer, a bank under a regulator and an organisation that chose ownership over a vendor. The restaurateur and the organisation are crafters by the record; the bank is the licensee of a product, and the record does not say who there declared anything. The restaurateur and the organisation did not wait for the software industry, and each is offered ownership of what is built for them.
 
 ## 4. The decision, and what I refused
 
@@ -211,9 +225,11 @@ Three cases: a restaurateur who is not a programmer, a bank under a regulator, a
 
 **I refused to present the library by its anatomy.** Since 2022, the front door is who you are and what you want to do, and the anatomy is placed under each step. The site keeps seven doors (read on 9 October 2026), and the journeys behind them exist as pages, nine on that day, each step carrying its stage word. That every step runs in order under a guard is designed and not built.
 
+The guards that prove these claims, and the one that does not pass, are in the next section.
+
 ## 5. The court
 
-`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. It does not pass at this commit: I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
+`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. It does not pass at this commit. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
 
 ## 6. The field, and where it leads
 
@@ -224,6 +240,8 @@ Low-code leads in installed base and in everything around it. (General knowledge
 The messaging apps lead where the crafters already are. This is my view, not a result. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that gap.
 
 And the educator's door is not proven. The course's editions in French, Arabic and Hausa are drafts that no reviewer has read, and no institution has adopted it.
+
+The next section says what is built, what is designed and what is absent.
 
 ## 7. The limit
 

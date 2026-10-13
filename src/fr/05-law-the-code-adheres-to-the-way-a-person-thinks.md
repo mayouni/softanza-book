@@ -20,7 +20,7 @@ figures:
   - "fourteen house rules: StzCodeRuleNames(), run in chapter 32"
 ---
 
-Dans ce chapitre, je prends les deux choses que le terrain appelle style de code et je pose la question qu'il ne pose pas : si une ligne suit l'ordre dans lequel celui qui l'a écrite a raisonné. J'exécute l'exemple fondateur dans la forme la plus proche qui s'exécute encore, puis le modèle mental sur une liste, les formes du verbe, le paramètre nommé, la scène et l'historique d'une chaîne, avec une promesse sous chaque question. Je dis ce que j'ai laissé aller, l'implémentation propre de la bibliothèque, et ce que j'ai refusé de laisser aller, le style du code écrit avec elle. Je montre le tribunal qui existe aujourd'hui, sur les propres classes de la bibliothèque, et celui qui n'est que conçu. La devise n'a pas changé depuis 2020 : ce que vous pensez est ce que vous écrivez.
+Dans ce chapitre, je prends les deux choses que le terrain appelle style de code et je pose la question qu'il ne pose pas : si une ligne suit l'ordre dans lequel celui qui l'a écrite a raisonné. J'exécute l'exemple fondateur dans la forme la plus proche qui s'exécute encore, puis le modèle mental sur une liste, les formes du verbe, le paramètre nommé, la scène et l'historique d'une chaîne. Une promesse se tient sous chaque question. Je dis ce que j'ai laissé aller, l'implémentation propre de la bibliothèque, et ce que j'ai refusé de laisser aller, le style du code écrit avec elle. Je montre le tribunal qui existe aujourd'hui, sur les propres classes de la bibliothèque, et celui qui n'est que conçu. La devise n'a pas changé depuis 2020 : ce que vous pensez est ce que vous écrivez.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -40,11 +40,13 @@ L'âge du code généré a ajouté une troisième pratique : vérifier après. U
 
 Ma devise pour cela n'a pas changé depuis 2020 : **ce que vous pensez est ce que vous écrivez.**
 
+La section 3 montre la devise à l'œuvre.
+
 ## 3. La forme Softanza
 
 La diapositive fondatrice mettait toute l'idée sur une page. Sur la gauche, les quatre étapes de la pensée d'une personne : je prends le mot « softanza » ; je le mets en majuscules ; j'obtiens ses caractères ; je les joins avec une espace. Sur la droite, les mêmes quatre étapes en une ligne de code, comme si le texte de gauche avait été collé et exécuté.
 
-Cette ligne exacte ne s'exécute plus. Son troisième maillon, une méthode qui transformait les caractères en une liste de chaînes en une seule étape, n'est pas dans la bibliothèque aujourd'hui. Il ne survit que dans des fichiers archivés et dans un échantillon de travail, sous la forme `CharsQRT`. Je vous le dis d'abord parce qu'un chapitre de loi qui cache son propre exemple fondateur ne mériterait pas votre confiance. Voici la forme la plus proche qui s'exécute, avec les quatre étapes toujours visibles, puis la forme que la bibliothèque offre comme un verbe dédié :
+Cette ligne exacte ne s'exécute plus. Son troisième maillon, une méthode qui transformait les caractères en une liste de chaînes en une seule étape, n'est pas dans la bibliothèque aujourd'hui. Il ne survit que dans des fichiers archivés et dans un échantillon de travail, sous la forme `CharsQRT`. Je vous le dis d'abord parce qu'un chapitre de loi qui cache son propre exemple fondateur ne mériterait pas votre confiance. Quelle est la forme la plus proche qui s'exécute, avec les quatre étapes toujours visibles, et qu'offre la bibliothèque comme verbe dédié ? Exécutez les deux :
 
 ```haro
 ? StzListOfStringsQ( StzStringQ("softanza").UppercaseQ().Chars() ).ConcatenatedUsing(" ")
@@ -53,7 +55,7 @@ Cette ligne exacte ne s'exécute plus. Son troisième maillon, une méthode qui 
 #--> S O F T A N Z A
 ```
 
-L'idée est intacte ; le maillon fluide a été perdu. Une demande part vers la bibliothèque pour le rétablir.
+Les deux formes impriment `S O F T A N Z A`. L'idée est intacte ; le maillon fluide a été perdu. Une demande part vers la bibliothèque pour le rétablir.
 
 Le modèle mental est la même idée au niveau d'un problème. Vous dites le problème en mots simples. Vous choisissez l'objet qui tient les données. Puis vous demandez, dans l'ordre : contient-il ce qui m'importe, combien, où ? Ensuite vous agissez sur ces positions, ou vous appelez le verbe qui le fait pour vous. Prenez une liste qui contient des chaînes vides. En contient-elle, combien, et où ? Exécutez :
 
@@ -70,9 +72,9 @@ o1.ReplaceEmptyStrings(:With = "~")
 #--> [ "A", "~", "B", "~", "~", "C" ]
 ```
 
-La liste répond `TRUE`, puis `3`, puis `[ 2, 4, 5 ]`. Contenir, compter, trouver, agir. Chaque ligne est une étape de pensée, et les noms sont les mots que vous emploieriez pour la dire.
+La liste répond `TRUE`, puis `3`, puis `[ 2, 4, 5 ]`, et après l'acte elle se lit `[ "A", "~", "B", "~", "~", "C" ]`. Contenir, compter, trouver, agir. Chaque ligne est une étape de pensée, et les noms sont les mots que vous emploieriez pour la dire.
 
-La forme du verbe dit ce qui arrive à l'objet. Que fait chaque forme à l'objet ? Par convention de la bibliothèque, le participe passé vous donne une copie changée et laisse l'objet tranquille. Le verbe simple agit sur l'objet. Le verbe avec Q agit et rend l'objet, pour que l'étape suivante puisse suivre :
+La forme du verbe dit ce qui arrive à l'objet. Que fait chaque forme à l'objet ? Exécutez-les sur une même chaîne :
 
 ```haro
 o1 = new stzString("RIxxNxG")
@@ -87,7 +89,9 @@ o1.Remove("x")
 #--> R I N G
 ```
 
-Un paramètre est nommé, et le nom se lit comme de l'anglais. Vous n'avez pas besoin de retenir quel argument vient en second :
+`Removed` a imprimé `RING`, et l'objet se lisait encore `RIxxNxG` ! `Remove` a ensuite agi sur lui, et `Content()` a lu `RING`. La chaîne avec Q s'est terminée sur `R I N G`. Par convention de la bibliothèque, le participe passé vous donne une copie changée et laisse l'objet tranquille. Le verbe simple agit sur l'objet. Le verbe avec Q agit et rend l'objet, pour que l'étape suivante puisse suivre.
+
+Faut-il retenir quel argument vient en second ? Un paramètre peut être nommé, et le nom se lit comme de l'anglais :
 
 ```haro
 ? Q("I love Haro").Replaced("love", :With = "♥")
@@ -98,7 +102,9 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 #--> [ "fish", "rice", "tea" ]
 ```
 
-Quand plusieurs questions sont posées à une même chose, elles sont posées à l'intérieur de sa scène, un bloc d'accolades autour de l'objet. L'objet est nommé une seule fois, et les questions se lisent comme une liste :
+Le texte imprime `I ♥ Haro` et la liste `[ "fish", "rice", "tea" ]`. Les noms `:With`, `:AtPositions` et `:And` disent quel argument est lequel.
+
+Comment plusieurs questions sur une même chose se lisent-elles comme une liste ? Elles sont posées à l'intérieur de sa scène, un bloc d'accolades autour de l'objet. L'objet est nommé une seule fois :
 
 ```haro
 Q("haro php HARO ruby Haro") {
@@ -111,6 +117,8 @@ Q("haro php HARO ruby Haro") {
 }
 ```
 
+La scène répond `1`, puis `3`, puis `[ 1, 10, 20 ]`. Le même mot a compté `1`, puis `3` dès que `:CS = FALSE` a été dit ! L'objet a été nommé une seule fois, et les trois questions se lisent comme une liste.
+
 Les étapes de la pensée peuvent-elles être relues ? Un objet élevé avec son historique garde le résultat de chaque étape de sa chaîne :
 
 ```haro
@@ -118,11 +126,11 @@ Les étapes de la pensée peuvent-elles être relues ? Un objet élevé avec son
 #--> [ 12500, 13000, 11500, 23, 46 ]
 ```
 
-Cinq valeurs, la valeur de départ comprise, et la chaîne se termine à 46 ! L'article qui a raconté cela le premier promettait quatre valeurs, sans la première, et une valeur finale courte d'une unité, 45. La garde derrière le bloc énonce la règle d'aujourd'hui, sur une chaîne de texte : la valeur initiale, puis le résultat de chaque étape. Le livre prend la réponse de l'exécution, pas celle de l'article.
+L'exécution a imprimé `[ 12500, 13000, 11500, 23, 46 ]`. Cinq valeurs, la valeur de départ comprise, et la chaîne se termine à `46` ! L'article qui a raconté cela le premier promettait quatre valeurs, sans la première, et une valeur finale courte d'une unité, 45. La garde derrière le bloc énonce la règle d'aujourd'hui, sur une chaîne de texte : la valeur initiale, puis le résultat de chaque étape. Le livre prend la réponse de l'exécution, pas celle de l'article.
 
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer. Dans cette maison, elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
-Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore ; je le tiens pour une vue, non pour un résultat. La bibliothèque transforme ses règles de maison en validateurs, dont cinq sur quatorze s'exécutent sur le graphe du code, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
+Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore ; je le tiens pour une vue, non pour un résultat. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Cinq sur quatorze s'exécutent sur le graphe du code. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -138,21 +146,23 @@ Les chapitres de cette partie prouvent la loi, chacun d'un côté. Le chapitre 6
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai laissé aller l'implémentation de la bibliothèque.** Le code que les modèles ont écrit à l'intérieur de la bibliothèque est accepté comme bon. Il ne ressemble pas au mien. Ses variables locales portent des soulignés des deux côtés, des centaines de fois par millier de lignes, parce que le langage sous-jacent à Softanza laisse la variable locale d'une bibliothèque écraser la globale d'un appelant, et que la convention l'empêche. Je n'ai pas demandé l'ancien style là, et je refuserais une campagne pour l'imposer.
+**J'ai laissé aller l'implémentation de la bibliothèque.** Le code que les modèles ont écrit à l'intérieur de la bibliothèque est accepté comme bon. Il ne ressemble pas au mien. Ses variables locales portent des soulignés des deux côtés, des centaines de fois par millier de lignes. Ce sont une protection. Le langage sous-jacent à Softanza laisse la variable locale d'une bibliothèque écraser la globale d'un appelant, et la convention l'empêche. Je n'ai pas demandé l'ancien style là, et je refuserais une campagne pour l'imposer.
 
 **J'ai refusé de laisser aller le style du code écrit avec Softanza.** Chaque ligne qu'un programmeur, une personne ou un agent, écrit avec la bibliothèque doit prendre le style historique. Ce style, c'est la scène, la chaîne une étape par ligne, le paramètre nommé, la forme du verbe, et la promesse sous chaque question. C'est la ligne que j'ai tracée quand j'ai vu ce qui s'était passé.
 
-Ce qui s'est passé est mesurable. Une étude du dossier a compté la promesse sous chaque ligne, par millier de lignes. Dans les courtes recettes que la maison garde, il y en a près de cent. Dans mes articles, soixante-quinze. Dans les tests classiques, cinquante-deux. Dans les gardes que les sessions ont écrites, moins d'une. Elles affirment sous une autre forme, un appel qui nomme l'attente. Elles l'ont adoptée parce que les comparaisons nues des anciennes suites imprimaient 0 ou 1, ce qui ne distingue pas un bloc qui a échoué d'un bloc qui n'a jamais tourné. Cet écart est comblé maintenant ; l'exécuteur lit la promesse comme une affirmation. L'étude qui les a comptées recommande que la forme classique, un titre, les questions et les promesses dessous, devienne la forme unique pour les nouveaux blocs de test, les blocs convertis restant tels qu'ils sont. Le dossier contient cette recommandation, et aucune décision de moi à ce sujet.
+Ce qui s'est passé est mesurable. Une étude du dossier a compté la promesse sous chaque ligne, par millier de lignes. Dans les courtes recettes que la maison garde, il y en a près de cent. Dans mes articles, soixante-quinze. Dans les tests classiques, cinquante-deux. Dans les gardes que les sessions ont écrites, moins d'une. Elles affirment sous une autre forme, un appel qui nomme l'attente. Elles l'ont adoptée parce que les comparaisons nues des anciennes suites imprimaient 0 ou 1, ce qui ne distingue pas un bloc qui a échoué d'un bloc qui n'a jamais tourné. Cet écart est comblé maintenant ; l'exécuteur lit la promesse comme une affirmation. L'étude qui les a comptées recommande une forme unique pour les nouveaux blocs de test : la forme classique, un titre, les questions et les promesses dessous. Les blocs convertis restent tels qu'ils sont. Le dossier contient cette recommandation, et aucune décision de moi à ce sujet.
 
 **J'ai refusé de réécrire le code quand le langage a changé de nom.** Quand le langage sous-jacent est devenu Haro, le code de mes articles a été renommé et rien d'autre. Les formes sont l'atout ; le nom est une étiquette.
 
-**Les formes du vocabulaire sont devenues des données, et trois anciennes fonctionnalités ont été refusées comme grammaire.** En Haro, les formes que peut prendre un verbe sont déclarées une fois et générées, et dans le prototype du langage les noms livrés de la bibliothèque sont jugés contre la déclaration. Sa charte rapporte 584 des 595 orthographes livrées de la classe de chaînes en accord (entrée du 3 octobre 2026). La conception de ce travail refuse trois choses que le dossier comptait comme des fonctionnalités : des noms qui tolèrent une faute d'orthographe, des paramètres dans n'importe quel ordre, et des noms de méthodes dans d'autres langues humaines. Le diaporama fondateur comptait les deux dernières ; la narration des formes comptait la première. La tolérance aux fautes et l'ordre libre restent dans la bibliothèque, en partie ; les noms multilingues ne survivent que dans un fichier archivé. Aucune des trois ne fait partie de la grammaire à laquelle une machine est tenue. Le refus est écrit dans le fichier des principes du langage, comme son septième principe, marqué conçu ; le livre l'imprime comme celui de la conception, et le dossier ne dit pas qu'il est le mien.
+**Les formes du vocabulaire sont devenues des données, et trois anciennes fonctionnalités ont été refusées comme grammaire.** En Haro, les formes que peut prendre un verbe sont déclarées une fois et générées. Dans le prototype du langage, les noms livrés de la bibliothèque sont jugés contre cette déclaration. Sa charte rapporte 584 des 595 orthographes livrées de la classe de chaînes en accord (entrée du 3 octobre 2026). La conception de ce travail refuse trois choses que le dossier comptait comme des fonctionnalités : des noms qui tolèrent une faute d'orthographe, des paramètres dans n'importe quel ordre, et des noms de méthodes dans d'autres langues humaines. Le diaporama fondateur comptait les deux dernières ; la narration des formes comptait la première. La tolérance aux fautes et l'ordre libre restent dans la bibliothèque, en partie ; les noms multilingues ne survivent que dans un fichier archivé. Aucune des trois ne fait partie de la grammaire à laquelle une machine est tenue. Le refus est écrit dans le fichier des principes du langage, comme son septième principe, marqué conçu. Le livre l'imprime comme celui de la conception, et le dossier ne dit pas qu'il est le mien.
 
 **J'ai choisi les buts avant les lois.** La conception de 2022 tenait sept buts, l'expressivité, la flexibilité, la fiabilité, la cohérence, les métaphores humaines, les abstractions pratiques et la maniabilité, et chaque fonctionnalité en servait un. Les règles de fonctionnement d'aujourd'hui sont des lois payées par des incidents, qui disent comment et non pourquoi. Le chapitre 7 remet les buts à côté des lois.
 
 ## 5. Le tribunal
 
-`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code, que les constats sortent sur du code planté, que le code propre passe, et que les règles de la maison de la bibliothèque sont quatorze. `testoor_promises_narrated` prouve que la promesse est jugée par une machine dans la forme propre à la maison, chaque règle plantée dans les deux sens : le mensonge qu'elle doit attraper, et la vérité qu'elle ne doit pas accuser. `05_containsemptystrings` est les étapes du modèle mental sur la même liste, un bloc classique gardé comme une garde. `466_keeping_the_history_of_updates_of_a_softanza_objec` prouve l'historique d'une chaîne.
+`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code et que les constats sortent sur du code planté. Elle prouve que le code propre passe, et que les règles de la maison de la bibliothèque sont quatorze. `testoor_promises_narrated` prouve que la promesse est jugée par une machine dans la forme propre à la maison. Chaque règle est plantée dans les deux sens : le mensonge qu'elle doit attraper, et la vérité qu'elle ne doit pas accuser. `05_containsemptystrings` est les étapes du modèle mental sur la même liste, un bloc classique gardé comme une garde. `466_keeping_the_history_of_updates_of_a_softanza_objec` prouve l'historique d'une chaîne.
+
+La section 6 met le tribunal à côté du terrain.
 
 ## 6. Le terrain, et où il mène
 
@@ -162,7 +172,7 @@ Le terrain mène en portée et en gens. Il y a un marché du travail pour ses ou
 
 Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude qui a mesuré le dossier a trouvé que les blocs de code du site ne portent ni paramètre nommé ni scène : un dialecte réduit de la bibliothèque, montré à chaque visiteur. Un agent qui apprendrait du site apprendrait ce dialecte. Je n'ai pas mesuré de nouveau les blocs du site. Un style qui n'est pas montré n'est pas appris.
 
-Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, la forme du verbe est un contrat sur l'objet, et la promesse sous la ligne est l'exemple, le test et la documentation à la fois.
+Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, et la forme du verbe est un contrat sur l'objet. La promesse sous la ligne est l'exemple, le test et la documentation à la fois.
 
 ## 7. La limite
 
@@ -180,7 +190,7 @@ Ce qui est absent : toute machine qui juge, aujourd'hui, le style d'un programme
 
 **Le concepteur.** La forme du verbe est un contrat d'interface : par convention de la bibliothèque, le participe passé ne touche pas l'objet. Un tribunal pour cette règle est conçu, non construit.
 
-**Le décideur.** Je tiens cela pour une vue, non pour un résultat : un style auquel une machine peut être tenue peut être relu but par but, non ligne par ligne, ce qui est la seule lecture qu'une personne puisse donner à des centaines de milliers de lignes.
+**Le décideur.** Je tiens cela pour une vue, non pour un résultat : un style auquel une machine peut être tenue peut être relu but par but, non ligne par ligne. C'est la seule lecture qu'une personne puisse donner à des centaines de milliers de lignes.
 
 **Le formateur.** Enseignez la discipline entière, et dans l'ordre : formuler, puis exprimer, puis être jugé.
 

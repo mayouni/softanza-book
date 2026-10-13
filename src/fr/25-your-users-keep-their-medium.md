@@ -36,7 +36,7 @@ Ce qu'ils ont en commun, c'est que le dialogue est écrit une fois par canal ou 
 
 **Un nouveau médium ajoute des rendus, jamais des verbes.**
 
-C'est une phrase de la constitution de l'interface, imprimée sur le site : « La grammaire est fermée : un nouveau médium ajoute des rendus, jamais des verbes. » Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles, et l'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026. Le dépôt n'est pas nommé, puisqu'il n'est pas encore public.
+C'est une phrase de la constitution de l'interface, imprimée sur le site : « La grammaire est fermée : un nouveau médium ajoute des rendus, jamais des verbes. » Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles. L'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026. Le dépôt n'est pas nommé, puisqu'il n'est pas encore public.
 
 La même phrase, construite, pour une famille de valeurs et non pour les vingt-deux verbes : la valeur est partagée, et la façon dont elle est rendue est propre à chaque médium. C'est une décision de Central, l'entité de coordination du domaine de projets, sur ma délégation, du 30 septembre 2026. Il prouve que le principe n'est pas seulement un slogan. C'est la forme de trois faces qui fonctionnent : couleur, earcon, phrase.
 
@@ -91,7 +91,7 @@ func QuestionAfter(cA, cB)
 	return oW.AskInXT("c")
 ```
 
-La question est une donnée, donc n'importe quel médium la rend. Et la loi propre du médium, ici que le SMS est facturé par segment et que l'alphabet décide, est un test et non une surprise. Le texte anglais fait 93 caractères selon mon décompte, et le bloc imprime un segment. Le même cadre avec deux noms de plats en arabe fait 89 unités selon mon décompte (les deux noms sont plus courts de quatre lettres), et le bloc imprime `ucs2` et deux segments, parce que l'encodage change. Quatre lettres de moins, et un segment de plus ! Le numéro de téléphone est inventé, et seul l'indicatif du pays, qui est celui du Niger, est réel.
+La question est une donnée, donc n'importe quel médium la rend. Et la loi propre du médium, ici que le SMS est facturé par segment et que l'alphabet décide, est un test et non une surprise. Le texte anglais fait 93 caractères selon mon décompte, et le bloc imprime un segment. Le même cadre avec deux noms de plats en arabe fait 89 unités selon mon décompte (les deux noms sont plus courts de quatre lettres). Le bloc imprime `ucs2` et deux segments, parce que l'encodage change. Quatre lettres de moins, et un segment de plus ! Le numéro de téléphone est inventé, et seul l'indicatif du pays, qui est celui du Niger, est réel.
 
 Maintenant toute la conversation, répétée sur le bac à sable SMS avant qu'aucun compte existe. Une conversation est une boucle des verbes de la bibliothèque : le médium porte chaque question vers l'extérieur et chaque réponse vers l'intérieur. Les assertions sont la facture et le refus. Que compte le bac à sable, et que dit le tribunal à "7" ? Rien dans la boucle n'est un modèle :
 
@@ -150,7 +150,7 @@ oPh.FailNextQ()
 
 `rejected` pour le numéro, `refused` pour la panne, et rien de compté. La reprise est `sent`, et le compte est de un.
 
-**Un message entrant n'est cru qu'après vérification de sa signature.** Le chemin d'entrée est le motif que le volet des paiements a construit, et le vérificateur est générique, sur le corps. Aucun format d'en-tête ou de corps d'un fournisseur n'est modélisé, et le JSON est inventé. Les heures sont passées en paramètre, donc aucune horloge n'est lue :
+**Un message entrant n'est cru qu'après vérification de sa signature.** Le chemin d'entrée est le motif que le volet des paiements a construit, et le vérificateur est générique, sur le corps. Aucun format d'en-tête ou de corps d'un fournisseur n'est modélisé, et le JSON est inventé. Les heures sont passées en paramètre, donc aucune horloge n'est lue. Que nomme le vérificateur quand un caractère du corps a changé depuis la signature ?
 
 ```haro
 oSig = new stzRequestSigner("inbound")
@@ -165,7 +165,7 @@ cSig = oSig.SignBody("provider", cBody)
 #--> signature mismatch (tampered body, or a secret this receiver does not hold)
 ```
 
-Un corps rejoué à l'intérieur de la fenêtre a donné "replay detected" dans ma sonde.
+Le premier corps a donné `provider`. Le corps modifié a donné `[]`, et la raison est `signature mismatch (tampered body, or a secret this receiver does not hold)`. Un caractère a changé, et aucun fournisseur n'a été nommé ! Un corps rejoué à l'intérieur de la fenêtre a donné "replay detected" dans ma sonde.
 
 **Une valeur, plusieurs rendus.** La forme du pont, construite pour les cinq valeurs sémantiques de la constitution de l'interface. La couleur, l'earcon et la phrase rendent une valeur. `muted` est le silence dans le son et un traitement dans la couleur. Une valeur que la loi ne connaît pas est refusée :
 
@@ -179,7 +179,7 @@ oE = new stzEarcons()
 #--> 1
 ```
 
-**La voix : dite, entendue, signifiée.** Texte vers son, son vers texte, texte vers sens. Le médium appelé voix rend et lit avec une grammaire fermée, et le sens est ma déclaration. Ce bloc a besoin d'une voix française et d'un module de reconnaissance français. Cette machine parle deux langues et en entend une, et une machine sans elles donnerait une autre réponse, donc la sortie montrée est celle enregistrée sur cette machine. Pas de micro, pas de fichier, pas de réseau : le module de reconnaissance est celui qui tourne dans le processus :
+**La voix : dite, entendue, signifiée.** Texte vers son, son vers texte, texte vers sens. Le médium appelé voix rend et lit avec une grammaire fermée, et le sens est ma déclaration. Ce bloc a besoin d'une voix française et d'un module de reconnaissance français. Cette machine parle deux langues et en entend une, et une machine sans elles donnerait une autre réponse, donc la sortie montrée est celle enregistrée sur cette machine. Pas de micro, pas de fichier, pas de réseau : le module de reconnaissance est celui qui tourne dans le processus. Que fait-il d'une phrase qu'on lui a apprise, et d'une phrase qu'on ne lui a pas apprise ?
 
 ```haro
 oV = StzVoiceQ()
@@ -196,7 +196,7 @@ oL.HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
 #--> 0
 ```
 
-La raison du refus dit que `catastrophe` n'est pas l'une des cinq valeurs sémantiques. Je n'imprime pas la confiance du module de reconnaissance, qui varie selon la machine.
+La phrase apprise a donné `danger`, la phrase non apprise n'a donné aucune correspondance (`1`), et `Catastrophe` a été refusée (`0`). La raison du refus dit que `catastrophe` n'est pas l'une des cinq valeurs sémantiques. Je n'imprime pas la confiance du module de reconnaissance, qui varie selon la machine.
 
 **Le monde déclare ses verbes et sa portée, et son code ne nomme aucun médium.** Un monde contient des écrans déclarés par intention, cinq des vingt-deux verbes, et une liste de ce qu'il atteint. Rien ne refuse `:whatsapp` quand il est déclaré :
 
@@ -216,7 +216,7 @@ oApp.Explain()
 #        reaches web, whatsapp
 ```
 
-`Acts(...)` est stocké et non narré. Et la scène en exécution : la plateforme refuse une surface qu'elle ne peut pas générer, et le refus nomme les trois surfaces qu'elle a. Ce bloc crée un répertoire vide dans le répertoire de travail :
+`Acts(...)` est stocké et non narré. Et la scène en exécution : que dit la plateforme quand on lui demande de générer la surface que le monde a déclarée ? Ce bloc crée un répertoire vide dans le répertoire de travail :
 
 ```haro
 oPlat = StzPlatformQ("stall-platform")
@@ -229,9 +229,9 @@ done
 #--> stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile).
 ```
 
-`unknown reach surface 'whatsapp' (web/desktop/mobile)` : le même refus répond à `:ussd`.
+`unknown reach surface 'whatsapp' (web/desktop/mobile)` : la plateforme l'a refusée ! Elle nomme les trois surfaces qu'elle a, et le même refus répond à `:ussd`.
 
-**Ce qu'on peut dire à un client est un ensemble fermé.** Le tribunal de ce qui est dit a aujourd'hui un mécanisme : une énumération fermée compilée en grammaire. Les chapitres 11 et 19 l'utilisent pour un langage et pour la sortie d'un modèle. Ici elle contient les réponses qu'une entreprise accepte d'envoyer. Ce n'est pas une unité de gabarit de messagerie, et il n'y en a aucune. Deux choses à imprimer avec elle : le message dit "the model answered" quel que soit le locuteur, et l'énumération est insensible à la casse :
+**Ce qu'on peut dire à un client est un ensemble fermé.** Le tribunal de ce qui est dit a aujourd'hui un mécanisme : une énumération fermée compilée en grammaire. Les chapitres 11 et 19 l'utilisent pour un langage et pour la sortie d'un modèle. Ici elle contient les réponses qu'une entreprise accepte d'envoyer. Ce n'est pas une unité de gabarit de messagerie, et il n'y en a aucune. Que dit le tribunal d'une phrase que l'entreprise n'a jamais approuvée ? Deux choses à imprimer avec elle : le message dit "the model answered" quel que soit le locuteur, et l'énumération est insensible à la casse :
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
@@ -244,11 +244,15 @@ aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
 #--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
 ```
 
+La phrase approuvée est passée (`1`), la phrase inventée a été refusée (`0`), et la raison du tribunal commence par `[oneof @ reply] field 'reply' is a closed enumeration`.
+
 ### Le médium du restaurant
 
-Le chapitre 1 dit que le propriétaire du restaurant a fait sa première démonstration sur une application de messagerie. Le dossier ne soutient pas cette phrase telle qu'elle est, et je la signale à l'auteur. Le chapitre 2 donne déjà son outil comme un tableur. Son propre rapport du 4 juillet 2026 donne comme outil actuel un tableur, et demande une page web ouverte par un code QR ou par un bouton d'un réseau social. Rien de lourd à télécharger. La ligne sur diverses applications, dont une application de messagerie, est l'étiquette d'une option du formulaire de cadrage, et ce n'est pas ce qu'il a coché. "Simple comme une application de messagerie" est simulé dans le projet, comme le chapitre 28 l'a déjà constaté.
+Le chapitre 1 dit que le propriétaire du restaurant a fait sa première démonstration sur une application de messagerie. Le dossier ne soutient pas cette phrase telle qu'elle est, et je la signale à l'auteur. Le chapitre 2 donne déjà son outil comme un tableur. Son propre rapport du 4 juillet 2026 donne comme outil actuel un tableur. Il demande une page web ouverte par un code QR ou par un bouton d'un réseau social. Rien de lourd à télécharger. La ligne sur diverses applications, dont une application de messagerie, est l'étiquette d'une option du formulaire de cadrage, et ce n'est pas ce qu'il a coché. "Simple comme une application de messagerie" est simulé dans le projet, comme le chapitre 28 l'a déjà constaté.
 
 Le restaurant est donc la première forme de la phrase de ce chapitre, et non un exemple du médium de messagerie. Le client garde son médium : un lien qui s'ouvre dans le navigateur qu'il a déjà. Le médium de messagerie, comme thèse, n'est pas construit. Je raconte cette histoire et ne fais aucune déclaration sur l'usage d'une application de messagerie par le propriétaire, puisque le dossier n'en contient aucune. Le chapitre 1 garde sa propre formulation de cette démonstration, et ce que le dossier montre plus exactement est ce que dit cette section.
+
+Voilà la forme, construite et exécutée ; viennent ensuite ce que j'ai décidé et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -270,6 +274,8 @@ Les refus ci-dessous, après le premier, sont ceux du dossier : des décisions d
 
 **L'écran acquitte, et le son n'est pas l'acquittement.**
 
+La section suivante nomme les gardes qui se tiennent derrière ces exécutions.
+
 ## 5. Le tribunal
 
 `sms_port_narrated` prouve la loi des segments, avec ses frontières à 160 et 161, 306 et 307, la falaise des émojis de 100 à 102 unités, 71 lettres arabes faisant deux segments, et les neuf caractères d'extension. Elle prouve l'E.164, le puits et sa facture, la panne contre le rejet, et le refus en production. Je l'ai exécutée une fois, et 53 assertions sur 53 ont passé. `wisecoding_rich_narrated` est celle du chapitre 18 : le cadre, les options numérotées, le refus d'un nombre que personne n'a offert, les points de contrôle avec une durée de vie. `payments_webhooks_narrated` prouve qu'une signature entrante est vérifiée avant d'être crue : non signée, falsifiée, rejouée. `sound_semantics_narrated` prouve que les cinq valeurs sont celles de la loi, que quatre sonnent et que `muted` est silencieuse, et qu'une valeur inventée est refusée. `sound_listener_narrated` prouve la grammaire fermée, que l'absence de correspondance est un résultat, et que la confiance est un appel séparé ; je l'ai exécutée une fois, et 21 ont passé. `sound_convergence_narrated` prouve que la boucle se ferme pour les quatre états, que la langue est négociée par direction, qu'une sixième valeur est refusée à la déclaration, et que la phrase d'un inconnu ne donne aucun sens.
@@ -278,9 +284,9 @@ Une réserve pour la ligne du tribunal. Les gardes du son ont besoin de la bibli
 
 ## 6. Le terrain, et où il mène
 
-Le décompte propre du dossier, dans l'étude du 12.25 : des unités constitutives de la messagerie, dix-huit en tout, ce qui manque. Sa phrase selon laquelle le mot désignant une application de messagerie n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque, ni l'USSD dans aucun, je l'ai remesurée à ce commit et confirmée. Il n'y a aucun résultat dans le code ni dans la conception de base, core ou max. Les correspondances dans le reste de l'instantané sont des fichiers de données de listes de mots et de test, et l'USSD n'en a aucune en texte.
+Le décompte propre du dossier, dans l'étude du 12.25 : des unités constitutives de la messagerie, dix-huit en tout, ce qui manque. La phrase de l'étude dit que le mot désignant une application de messagerie n'apparaît dans aucun fichier de code ni aucun document de conception de la bibliothèque, et l'USSD dans aucun. Je l'ai remesurée à ce commit et confirmée. Il n'y a aucun résultat dans le code ni dans la conception de base, core ou max. Les correspondances dans le reste de l'instantané sont des fichiers de données de listes de mots et de test, et l'USSD n'en a aucune en texte.
 
-Les cadres sont en tête pour la compréhension et pour les connecteurs. Le chapitre 18 énonce le côté de Softanza à partir du code : la conversation demande un champ à la fois, sur un graphe que l'utilisateur doit d'abord avoir déclaré, et elle ne comprend pas une réponse ouverte.
+Les cadres sont en tête pour la compréhension et pour les connecteurs. Le chapitre 18 énonce le côté de Softanza à partir du code : la conversation demande un champ à la fois, sur un graphe que l'utilisateur doit d'abord avoir déclaré. Elle ne comprend pas une réponse ouverte.
 
 Le terrain est en tête pour la couverture des canaux et pour la vérité de la livraison, les accusés de réception et les gabarits approuvés par le fournisseur. Le port SMS le dit lui-même : un puits prouve ce que vous auriez envoyé, pas qu'un opérateur l'accepterait, et l'adaptateur réel dépend de l'infrastructure. Aucun client réel de SMS n'est livré.
 
@@ -289,6 +295,8 @@ Le plan de la voix : une déclaration est portable, et une voix ne l'est pas. La
 Ce que le terrain a en dictée dans le nuage et en modules de reconnaissance entraînés pour beaucoup de langues, le dossier a choisi de ne pas le livrer. La dictée libre a atteint 66,7 pour cent sur l'audio synthétique propre du volet lui-même.
 
 Ce que le dossier affirme à la place : le dialogue est un rendu d'un monde déclaré jugé par un tribunal, déterministe par défaut. Le médium est un port avec un bac à sable, donc la conversation et sa facture sont répétées avant qu'aucun compte existe.
+
+Le terrain est en tête sur certains points, et la limite vient ensuite, imprimée entière.
 
 ## 7. La limite
 
@@ -322,6 +330,8 @@ Ce qui est absent :
 - Rien dans le dossier ne tourne sur un vrai téléphone comme conversation.
 
 `On(:whatsapp)`, `On(:ussd)`, `On(:voice)` et la matrice de satisfaisabilité sont ce qu'une étude a proposé, et je ne les présente pas comme ce que je compte construire. Je n'ai trouvé dans le dossier aucune décision de ma part de les construire, et la limite est la liste ci-dessus, où aucun d'eux n'existe.
+
+Voilà la limite, imprimée entière ; les six portes suivent.
 
 ## 8. Six portes
 

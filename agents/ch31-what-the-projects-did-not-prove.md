@@ -4,7 +4,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 did not prove. I start with the field's three habits for saying what a piece of work has proved. Then I run five small blocks in which the library shows an absence by refusing, and I lay out the tables: for each project, the claim, the document or file that proves it, and what is absent. I say what I refused, the author's memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -24,7 +24,7 @@ What the three have in common is that the claim and its proof travel apart. A pa
 
 The record gives two sentences, and they are one. The site says: "Nothing is a reference until a document proves it." And, of what the author remembers: what "no file proves is not listed."
 
-**A project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.** This is the chapter's own sentence, drawn from the site's two; the site's words are the two quoted above, from its customers page and its forged page.
+**A project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.** This is the chapter's own sentence, drawn from the site's two. The site's words are the two quoted above, from its customers page and its forged page.
 
 ## 3. The Softanza form
 
@@ -57,7 +57,7 @@ done
 
 Two services declared, none bound, and the registry says so itself: `nothing is bound for service 'payments'`!
 
-**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host itself can do it. *Rehearsed*: the target allows it and the host lacks it, so the run proves only the plan. Reading a pin on a development machine is rehearsed, not native. The word depends on the machine this book was run on: a Windows PC has no such pin, and a board that has one would print `native` for the same line.
+**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host itself can do it. *Rehearsed*: the target allows it and the host lacks it, so the run proves only the plan. Reading a pin on a development machine is rehearsed, not native. The word depends on the machine this book was run on. A Windows PC has no such pin, and a board that has one would print `native` for the same line. What does the board's scope answer to a pin read, and to a request to spawn a process? Run it:
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
@@ -79,6 +79,8 @@ oFw.Show()
 ```
 
 > run: kept (touches the system)
+
+The pin read answers `rehearsed`, and the scope refuses the process with `forbids 'process'`!
 
 The library's own comment, in the class that lowers a rehearsal to a real artifact, says the last step, flashing a board, "remains a PLANNED external action".
 
@@ -107,7 +109,7 @@ The adapter answers `no credentials`, names what would fill the gap, `WithSecret
 
 The library has a script that tries the live run. I ran it once, with none of its variables set, for this chapter. It printed the word UNPERCEIVED, named the four variables that are missing, and said that nothing about the live adapter is perceived until a named person has watched a payment land. It ended without failure. The run was postponed, by me, for a reason that is not the library's: it needs the organisation's involvement. A run that could not happen is reported as unperceived. It is not reported as a pass or a failure.
 
-**A feature that waits for a named person.** In the sound plane, the library holds as data the verdict of a person on a thing only a person can judge. While the verdict is UNPERCEIVED, the verb that would claim the result refuses and says why. Where a person has said yes, the verdict carries the date and their words:
+**A feature that waits for a named person.** In the sound plane, the library holds as data the verdict of a person on a thing only a person can judge. While the verdict is UNPERCEIVED, the verb that would claim the result refuses and says why. Where a person has said yes, the verdict carries the date and their words. What does the formant voice answer when it is asked to sing, and what does the retuned voice's verdict hold? Run it:
 
 ```haro
 oVoice = StzSoundFormantVoiceQ()
@@ -129,7 +131,7 @@ aVerdicts = StzSoundSingingVerdict()
 
 > run: kept
 
-The verdict of the retuned voice reads `SINGING`, with the date `2026-09-27` and the words `the retuned voice is somehow singing, open Sing()`. This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
+The formant voice refused to sing: `Refusals()` reads `1`, and the message begins `Sing is not available YET`! The verdict of the formant voice stays `UNPERCEIVED`. The verdict of the retuned voice reads `SINGING`, with the date `2026-09-27` and the words `the retuned voice is somehow singing, open Sing()`. This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
 
 **A pre-flight that says "feasible" without touching a host.** The deployment's pre-flight refuses a host that is too small. For a host whose provider is a cloud, it says feasible and "provision on aws", without any account. A feasibility is a plan, not a verification. The design file says it plainly: what remains is the verification against a real host or account, gated by infrastructure. The figures below are illustrative. What does the pre-flight answer to a host that is too small, and to a cloud provider with no account? Run the block:
 
@@ -156,6 +158,8 @@ oPool.SetTarget(:api, oCloud)
 ```
 
 > run: kept
+
+The tiny host gets `SHORTFALL -- host too small`, and the cloud with no account is feasible, with `provision on aws`!
 
 Now the tables. Every cell is from the record, read on 8 October 2026. A line count or a file date I read myself is labelled as mine.
 
@@ -215,7 +219,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 **I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
 
-**I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person, and until then it is unperceived, which is a state and not a failure.
+**I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person. Until then it is unperceived, which is a state and not a failure.
 
 **I refused to print a percentage.** I have said aloud how far the bridge runtime has come. The study ruled that the figure should not be printed without the guard that produces it. I agree.
 
@@ -251,7 +255,7 @@ What is designed: the five-row guarantee sheet; the runtime that is the language
 
 What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it.
 
-The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are absent. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library. They are the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own, so the chapter's word for them is *absent*, and the stage line at the top says so.
+The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are absent. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library. They are the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
 
 ## 8. Six doors
 
@@ -261,7 +265,7 @@ The sum of every absent cell is the one line chapter 33 says is still owed: *the
 
 **The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
 
-**The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document, and you can ask for it in writing, with a name beside it.
+**The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document. You can ask for it in writing, with a name beside it.
 
 **The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is proved here, and the second is the line still owed. Unperceived is a state, not a failure.
 

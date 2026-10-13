@@ -26,11 +26,13 @@ La première est la super-appli et le mini-programme. Une grande application emb
 
 La deuxième est le contexte borné et la carte de contextes de la conception pilotée par le domaine, de 2003. Un grand système est découpé en modèles, chacun avec ses mots, et une carte montre comment ils se relient. C'est l'idée du terrain la plus proche d'un monde et d'un lien. Elle vit dans des diagrammes et en revue, et non dans un registre vivant qui refuse un appel.
 
-La troisième est l'équipe de plateforme et le déploiement déclaré comme code. Une équipe construit la base interne sur laquelle les autres déploient, et des outils déclarent des machines avant qu'elles existent. La personne qui travaille à travers les étages est, sur le terrain, un architecte logiciel, un architecte de solutions ou un ingénieur de plateforme : un titre tenu par une personne, dont les artefacts sont des diagrammes et des manifestes.
+La troisième est l'équipe de plateforme et le déploiement déclaré comme code. Une équipe construit la base interne sur laquelle les autres déploient, et des outils déclarent des machines avant qu'elles existent. La personne qui travaille à travers les étages est, sur le terrain, un architecte logiciel, un architecte de solutions ou un ingénieur de plateforme. C'est un titre tenu par une personne, dont les artefacts sont des diagrammes et des manifestes.
 
 Pour les portées, le foyer du terrain est le compilateur : la cible d'une construction, et la vérification qui signale un appel que le niveau minimal de plateforme n'a pas. Chacun décide pour quel système le code est fait. Aucun ne laisse le programme nommer ce système au site d'appel et refuser l'acte.
 
 La forme partagée : le terrain dessine l'image, un hôte, une carte, un diagramme, et garde le juge à l'extérieur. Dans les trois, le programme ne sait rien de sa propre composition. C'est ma lecture des trois, non une enquête sur le terrain.
+
+À cette forme, j'oppose un principe.
 
 ## 2. Le premier principe
 
@@ -85,7 +87,7 @@ oApp.Explain()
 #        reaches mobile, desktop, web
 ```
 
-`SetBody` ne fait que déclarer. Aucun fichier n'a été écrit par ce bloc.
+Il a répondu sous trois titres, `BEING`, `BECOMING` et `MET FROM WITHOUT`. `SetBody` ne fait que déclarer. Aucun fichier n'a été écrit par ce bloc.
 
 Un monde tend vers quelque chose. Un but est un état voulu du graphe, et l'écart est mesuré. Un but sans motif à évaluer est refusé, et jamais simulé :
 
@@ -117,7 +119,7 @@ done
 #--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
 ```
 
-`Pursue` imprime sa propre première ligne, puis le `?` imprime la liste qu'il renvoie. Une relation plus tard, l'écart est comblé : `0 proposal(s)`, et `GoalSatisfied` répond `1`. Le but vague est refusé avec sa raison : `no 'every :Type' clause in 'make things nice'`. Avec une réaction déclarée, le même écart propose une *visit* pour Bilal, et sans elle l'acte par défaut est *attend*.
+`Pursue` imprime sa propre première ligne, puis le `?` imprime la liste qu'il renvoie. Une relation plus tard, l'écart est comblé : `0 proposal(s)`, et `GoalSatisfied` répond `1`. Le but vague est refusé avec sa raison : `no 'every :Type' clause in 'make things nice'`. Avec une réaction déclarée, le même écart propose une *visit* pour Bilal, et sans elle, comme dans l'exécution ci-dessus, l'acte par défaut est *attend* : `[ "attend", "client", "for", "bilal" ]`.
 
 ### Une constellation
 
@@ -157,7 +159,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 #--> [ "rationale", "cross-world call cleared" ]
 ```
 
-Le niveau de risque refuse le premier : `'order-produce' has NO declared risk tier`. Le mot doublé « refused: refused: » est le texte propre de la bibliothèque. La traversée autorisée a écrit une décision d'elle-même ! Son enregistrement tient l'autorité et le risque de cet instant, et une lecture d'horloge, de sorte que le bloc n'imprime que la justification. C'est la filiation qu'utilise le chapitre 30.
+Le niveau de risque refuse le premier : `'order-produce' has NO declared risk tier`. Le mot doublé « refused: refused: » est le texte propre de la bibliothèque. La traversée autorisée a écrit une décision d'elle-même ! Son enregistrement tient l'autorité et le risque de cet instant, et une lecture d'horloge, de sorte que le bloc n'imprime que la justification : `cross-world call cleared`. C'est la filiation qu'utilise le chapitre 30.
 
 Le sol partagé est un monde aussi. Dans une constellation, le socle commun est lui-même une plateforme, et il tient une identité, une session et un magasin. Le socle commun n'est pas un genre particulier de nœud ; les mots propres de la conception sont qu'il est uniforme et récursif. De quelle classe est le socle commun ? Demandez-le-lui :
 
@@ -183,7 +185,7 @@ oDb.Close()
 
 Ce bloc utilise une base de données en mémoire, donc ni fichier ni réseau. Le jeton de session est aléatoire, et seule sa présence est imprimée. Les secrets sont stockés salés et hachés, avec la fonction de dérivation de clé du moteur. La première ligne répond `stzplatform`, et c'est là le point : une plateforme n'est pas seulement l'enveloppe autour d'une solution. C'est ce sur quoi se tient une constellation. Dans le code, le socle commun n'est pas un nœud du graphe de la constellation : quand je l'ai sondé, le graphe tenait deux nœuds pour deux mondes enregistrés. Le monde zéro est un rôle que joue la plateforme.
 
-Un monde est échangé à chaud et garde ses liens. Une constellation s'emboîte dans une autre. Un nom ne se prend qu'une fois :
+Un monde échangé à chaud garde-t-il ses liens ? Une constellation s'emboîte aussi dans une autre, et un nom ne se prend qu'une fois :
 
 ```haro
 oResto = StzAppQ("resto")
@@ -225,7 +227,7 @@ Un piège. Un monde enregistré est une copie. L'ancien langage hôte copie un o
 
 ### L'enveloppe, et la jointure
 
-Une plateforme n'accorde une capacité d'un appareil que si la gouvernance en autorise le risque. Une permission est détenue et le monde est refusé quand même. Les niveaux de risque, deux pour la caméra et quatre pour les paiements, sont ceux que la bibliothèque a déclarés :
+Une plateforme n'accorde une capacité d'un appareil que si la gouvernance en autorise le risque. Une permission détenue suffit-elle ? Les niveaux de risque, deux pour la caméra et quatre pour les paiements, sont ceux que la bibliothèque a déclarés :
 
 ```haro
 oGov = new stzGovernance("resto-regime")
@@ -247,7 +249,9 @@ oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
 #--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
 ```
 
-L'en-tête de la classe dit ce qui manque au monde : le monde modélise le monde, et manque délibérément de l'enveloppe opérationnelle. Les devoirs de l'enveloppe sont la génération, la jointure des capacités, le runtime du socle commun, un corps en réseau et un registre avec application. La génération est réelle, et refuse de générer pour un monde qui ne déclare aucune atteinte. Le chemin du succès écrit de vrais fichiers, donc je ne l'exécute pas ici. Je l'ai exécuté une fois, pour un monde d'un écran et d'une chose, et j'ai retiré ce qu'il avait écrit. La coque web est une page de 318 octets avec les écrans et les choses du monde comme éléments de liste, et la coque de bureau un lanceur de 251 octets ; d'autres mondes donnent d'autres tailles. Telle est la limite des « coques par plateforme » : la génération est réelle, et minuscule.
+La permission était détenue pour les deux, et les paiements ont été refusés quand même ! La raison : `'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4`.
+
+L'en-tête de la classe dit ce qui manque au monde : le monde modélise le monde, et manque délibérément de l'enveloppe opérationnelle. Les devoirs de l'enveloppe sont la génération, la jointure des capacités, le runtime du socle commun, un corps en réseau et un registre avec application. La génération est réelle, et refuse de générer pour un monde qui ne déclare aucune atteinte. Le chemin du succès écrit de vrais fichiers, donc je ne l'exécute pas ici. Je l'ai exécuté une fois, pour un monde d'un écran et d'une chose, et j'ai retiré ce qu'il avait écrit. La coque web est une page de 318 octets avec les écrans et les choses du monde comme éléments de liste, et la coque de bureau un lanceur de 251 octets. D'autres mondes donnent d'autres tailles. Telle est la limite des « coques par plateforme » : la génération est réelle, et minuscule.
 
 ### L'architecte, et les trois portées
 
@@ -317,6 +321,8 @@ La forme fichier est un texte simple que l'architecte possède, et elle fait l'a
 
 Qui est l'architecte ? Le dossier nomme la personne deux fois par son nom : dans la System Foundation, et dans la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux. Cette note est marquée retirée, comme prompt de lancement, le jour même où elle a été écrite. Un troisième endroit, un livre privé du domaine de projets sur la modélisation de plateforme, modélise des plateformes et ne nomme pas l'architecte. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Je tiens cela pour une vue, non pour un résultat. Le site a une page de parcours pour l'architecte de plateforme et une page de certification qui dit que la proposition n'est pas annoncée (lu sur le site, le 9 octobre 2026). Je raconte l'architecte comme ce que l'on déclare, et la certification n'est que cette proposition ; aucune école n'est nommée ici.
 
+Sept refus se tiennent derrière cette forme.
+
 ## 4. La décision, et ce que j'ai refusé
 
 **J'ai refusé l'hôte et la mini-appli.** Des mondes, non des mini-applis ; un graphe gouverné, non un conteneur hôte. Le chapitre 4 l'a raconté, et je renvoie à lui.
@@ -333,11 +339,15 @@ Qui est l'architecte ? Le dossier nomme la personne deux fois par son nom : dans
 
 **J'ai refusé de déployer un profil.** Nous ne déployons pas un profil ; nous déployons une plateforme et ses parties. Le profil ne fait que décrire. La plateforme le possède et conduit la construction puis le déploiement.
 
+Le tribunal dit maintenant ce qui, de tout cela, tourne.
+
 ## 5. Le tribunal
 
 `06_stzsuperapp_narrated` prouve que les mondes s'enregistrent comme nœuds ; que le socle commun tient une identité et un magasin ; qu'une traversée est refusée pour un risque non déclaré, acceptée quand elle est gouvernée, et refusée quand elle n'est pas liée, avec le lien nommé ; qu'un monde retiré rompt ses liens et revit ; qu'un échange garde le nœud et le lien ; et qu'une constellation s'emboîte dans une autre. `01_platform_narrated` prouve que des coques sont générées selon l'atteinte déclarée et qu'un monde sans atteinte est refusé ; qu'une capacité n'est accordée que lorsque la gouvernance couvre son niveau de risque, et qu'une capacité jamais demandée est refusée avec une raison. Elle prouve que le socle commun enregistre des identités, ouvre des sessions, poste et lit des messages, et stocke. Elle prouve que le monde est servi sur un vrai port, et que le registre refuse un appel vers un monde non lié ou retiré. Elle écrit des coques à côté d'elle et ouvre un port de boucle locale. `full_scope_model_narrated`, que la garde appelle le socle commun de l'architecte, prouve que la solution est modélisée d'abord, qu'une solution malsaine est signalée, que les trois portées sont distinctes, que la portée refuse ce que la cible interdit et répète ce qui manque à l'hôte, que le fichier texte fait l'aller-retour, que la construction précède le déploiement, et qu'un déploiement par un acteur modèle de langage est refusé. `04_stzapp_pursue_narrated` et `05_stzapp_live_narrated` portent le but et les réactions.
 
 La garde que le chapitre n'a pas : aucune ne juge les vérités d'un monde, un flux, ou le moment d'une réaction.
+
+Je place maintenant le dossier à côté du terrain.
 
 ## 6. Le terrain, et où il mène
 
@@ -347,7 +357,7 @@ Le terrain mène en coques. La conception promet une application web progressive
 
 Le terrain mène en ce que porte un contexte borné : une équipe et un langage. Un monde porte un graphe et une narration. Le persona pour lequel est fait un monde n'est pas un champ de la classe : un monde a la liste des surfaces qu'il atteint et rien d'autre sur qui il sert. Les cinq choses du site, un sol partagé, un monde pour chaque personne et appareil, des liens, des règles, des rôles, sont vraies du socle commun, des liens et de la gouvernance. Les rôles sont les acteurs, les permissions et l'autorité de la gouvernance. Il n'y a pas de classe rôle, et un monde par personne et appareil est une convention de nommage.
 
-L'Atlas ne note pas ce volet. `stzApp` y est nommé une fois, dans le couloir du domaine des interfaces intitulé coque d'application et fenêtrage ; c'est ce couloir, non le monde, qui est noté solide, avec la note qu'il n'y a ni orchestration multi-fenêtres, ni dialogues, ni menus, ni zone de notification. La plateforme dans un couloir du domaine du système. La constellation dans aucun.
+L'Atlas ne note pas ce volet. `stzApp` y est nommé une fois, dans le couloir du domaine des interfaces intitulé coque d'application et fenêtrage. C'est ce couloir, non le monde, qui est noté solide, avec la note qu'il n'y a ni orchestration multi-fenêtres, ni dialogues, ni menus, ni zone de notification. La plateforme dans un couloir du domaine du système. La constellation dans aucun.
 
 Le compilateur mène sur les portées. Il vérifie contre une cible en usage quotidien à grande échelle ; la portée de Softanza est un objet d'exécution qu'un programme interroge. Ce qu'elle ajoute est un verdict au site d'appel dans les mots propres de la cible, et un jumeau qui répète ce qui manque à l'hôte, ce qui est le chapitre 24.
 
@@ -382,7 +392,7 @@ oB.Live()
 #--> [ [ "propose", "checkup", "for", "bob" ] ]
 ```
 
-Les deux cliniques répondent `[ "propose", "checkup", "for", "bob" ]`. Quatre-vingt-dix jours et un jour donnent les mêmes propositions.
+Les deux cliniques répondent `[ "propose", "checkup", "for", "bob" ]`. Quatre-vingt-dix jours et un jour donnent les mêmes propositions !
 
 La même lecture vaut pour `IsTrue`, qui est stocké et narré alors que les instances ne portent pas de champs contre lesquels le juger. Elle vaut pour le `Require` et le `Then` d'un flux, stockés et narrés, où je n'ai trouvé aucun exécutant ; et pour les bornes d'un raffinement. Un monde déclare aujourd'hui qu'un solde ne doit pas être négatif. Il ne juge pas un solde. Ce qu'il juge, c'est l'écart d'un but, une traversée et une capacité. Donc je dis « un monde qui veut » pour le but, et « narré » pour la vérité. Le `true when balance @ >= 0` du chapitre 4 est une déclaration seulement. Le chapitre le dit donc en une ligne : déclaré et narré ; jugé seulement pour les buts, les traversées et les capacités.
 
@@ -416,7 +426,9 @@ Ce qui est construit : le monde ; la constellation avec ses barrières, son regi
 
 Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et rien n'est remis à la cible) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
 
-Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, puisqu'aucune n'existe. La narration pour construire une première appli utilise des verbes que la classe n'a pas : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite : aucune solution n'en a une. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
+Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, puisqu'aucune n'existe. La narration pour construire une première appli utilise des verbes que la classe n'a pas. Sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite : aucune solution n'en a une. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
+
+Les six portes viennent ensuite.
 
 ## 8. Six portes
 

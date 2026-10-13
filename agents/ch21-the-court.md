@@ -4,9 +4,9 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
 
-In this chapter I take the court of chapter 5, which judges whoever wrote the code, and show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused: the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
+In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
 ## 1. The concept, as the field holds it
 
@@ -74,7 +74,7 @@ remove("raise.haro")
 
 > run: kept (touches files)
 
-The promise is `kept`, the end is `finished` and the exit code is `0`, though the language process ended with an error! The tour has finished as it said it would.
+The promise is `kept`, the end is `finished` and the exit code is `0`! The language process ended with an error, and the tour has finished as it said it would.
 
 Every rule of this judge was learned by watching the harness accuse the library falsely. The guard's header says it. A short promise `6` once hid inside a later `[ 6, 28 ]`, and that is why the rule on spellings exists. This book's own judge is a copy of the site's judge, which is looser than the traveller.
 
@@ -101,7 +101,7 @@ next
 
 > run: kept
 
-It answers `8`, `7` and `HEARD`: eight declared, seven unperceived, one heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
+It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! Only one is heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
 
 The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
@@ -111,7 +111,7 @@ The gallery of pictures is where it is unmet. The library holds ninety-five judg
 
 The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
 
-The evidence of what happened is a hash chain. Edit any line after the first, and the chain says which entry broke. A wrong key and an edited line are two different accusations:
+The evidence of what happened is a hash chain. Edit any line after the first, and the chain says which entry broke. If I edit one, which entry does it name, and does a wrong key draw the same accusation? Run it:
 
 ```haro
 oLed = StzSecurityLedger(256)
@@ -130,7 +130,7 @@ remove("evidence.txt")
 
 > run: kept (touches files)
 
-The verifier answers `chain intact over 2 entries`, then `the SEAL does not match this key`, then `the chain breaks at entry 2`. Notice which entry I chose to edit: the second. An edit to the first entry is not caught, because the verifier checks each entry's text against the digest of the entry before it, and the first has none before it. That hid my first attempt. The narration states the limit in its own words: this is not protection against an attacker already running code in the process.
+The verifier answers `chain intact over 2 entries`, then `the SEAL does not match this key`, then `the chain breaks at entry 2`. The chain named the break! A wrong key and an edited line are two different accusations. Notice which entry I chose to edit: the second. An edit to the first entry is not caught. The verifier checks each entry's text against the digest of the entry before it, and the first has none before it. That hid my first attempt. The narration states the limit in its own words: this is not protection against an attacker already running code in the process.
 
 A secret is the same law applied to a key. Its only public face is its descriptor. A hand that may commit can read it. What does the court answer when a language model asks? Run it:
 
@@ -155,15 +155,15 @@ StzCloseSecurityLedger()
 
 > run: kept
 
-It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`, and the ledger counts `1` refusal without anyone having called the ledger. This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
+It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
 
-What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof: a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
+What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
 
 At this commit the table holds 43 guarantees. The site says 38, on three pages. Both are true of their dates: the document had 38 rows on 30 September 2026, and the rows from 39 to 43 were added on 5 October. The site's number is the site's to update.
 
 ### The court of performance
 
-An instrument owes a number. The honest stopwatch gives a number from a clock that only moves forward, excludes a pause, and ships two spans of one trace in one batch for an observability collector:
+An instrument owes a number. The honest stopwatch gives a number from a clock that only moves forward. It excludes a pause, and it ships two spans of one trace in one batch for an observability collector. If I pause it for 200 milliseconds, does the pause count in the elapsed time? Run it:
 
 ```haro
 w = StzStopwatchXT("import-orders")
@@ -191,9 +191,11 @@ oBatch.AddSpan(w).AddSpan(w2)
 
 > run: kept
 
-Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace and the same span identifier. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. I list it among the requests.
+The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
 
-The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. The same action is judged twice, and both judgments stay in the audit:
+Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. I list it among the requests.
+
+The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when a model asks to commit it, and then a person does? Run it:
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
@@ -226,11 +228,13 @@ class FakeFleet
 
 > run: kept (touches the system)
 
-The fleet here is a rehearsal double, any object that answers the same effectful verbs. The loop is proved against the double and not against a real fleet. A model asking to commit is refused before any attempt, and the double counts zero calls! The audit keeps both judgments: `REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed`, and `COMMITTED scaleup 'nlp' by mansour`.
+The fleet here is a rehearsal double, any object that answers the same effectful verbs. The loop is proved against the double and not against a real fleet. A model asking to commit is refused before any attempt: `ExecuteOn` printed `0` and `CallCount` printed `0`, so the double counted zero calls! For the person, `ExecuteOn` printed `1` and `CallCount` followed with `1`. The same action is judged twice, and the audit keeps both judgments: `REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed`, and `COMMITTED scaleup 'nlp' by mansour`.
+
+The four courts have spoken, and now I say what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026, the study's 12.20, says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on another commit than this book's, says that of 135 articles 55 ran, and of the 423 blocks in those, 123 kept their promise. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise.
+**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026, the study's 12.20, says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on another commit than this book's, says that of 135 articles 55 ran. Of the 423 blocks in those, 123 kept their promise. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise.
 
 **I refused a second assertion library.** The promise runner's rulings refuse a second library, a rewrite of the test files, a coverage percentage before there are routes, and a mock written for a platform's production. They refuse the word "verified" on a perceptual claim without a name and a sentence.
 
@@ -243,6 +247,8 @@ The fleet here is a rehearsal double, any object that answers the same effectful
 **I refused to compete with the field's ecosystem.** The performance study of 29 July 2026 says the plane does not compete with Grafana, Datadog or the ecosystem of OpenTelemetry, and should not pretend to. It exports.
 
 **I refused a guarantee without a guard.** The threat model's last rule is that a guarantee is added only together with its guard.
+
+Now the guards that prove what ran.
 
 ## 5. The court
 
@@ -264,6 +270,8 @@ The record's own honest sections, each loss beside its win.
 
 The study of the record puts the tone I try to echo. A grid of two hundred and eighty-six ticks against two hundred and sixty-nine crosses is, in its words, the shape of a brochure.
 
+Now to where the chapter stops.
+
 ## 7. The limit
 
 What is built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, none missing.
@@ -284,11 +292,13 @@ What is absent:
 
 Three more things belong here, found while running the court.
 
-**The drill's numbers differ by source.** The threat model's measure of responsiveness is a detection in a little over three hundred and fifty milliseconds and a containment in a little over fifty, in three runs. The site prints 395 and 50, from a replay of 1 October. They differ because the drill measures a clock. One attack shape, on loopback, on one machine, run on demand. Whichever number you print, you name its source.
+**The drill's numbers differ by source.** The threat model's measure of responsiveness comes from three runs. It is a detection in a little over three hundred and fifty milliseconds, and a containment in a little over fifty. The site prints 395 and 50, from a replay of 1 October. They differ because the drill measures a clock. One attack shape, on loopback, on one machine, run on demand. Whichever number you print, you name its source.
 
 **A possible defect in the promise judge, which I report and have built nothing on.** A file whose first promise is a lie and whose last is a promised raise reads the lie as unreached and the raise as kept. The tour is broken, with zero diverged, and the exit code is 1. I reproduced it twice. Each rule alone behaves as the guard plants it. Whether a divergence above a promised raise should read *diverged* is a question for the Testoor plane, which holds the traveller.
 
 **Counts that disagree between sources.** The study's closing says 387 narrated guards. My `find` on the pinned snapshot says 529 files named so. The build's own count of guards is the one to use, and neither of the two.
+
+Six doors follow, one for each reader.
 
 ## 8. Six doors
 

@@ -26,11 +26,13 @@ For data that is not text, the field uses other tools, one per medium and none s
 
 The estate's own field study of August 2026 gives the small languages that survived a profile: a closed grammar, one domain question, plain text, a tiny surface, a specification with a conformance suite, decades of stability. A pattern language is exactly that. One question, does this data fit, in a few characters. What the field does not offer is the same notation across the media.
 
+Next, the first principle.
+
 ## 2. The first principle
 
 **A pattern is a rule about the shape of data, written as data. The same habit serves every kind of data.**
 
-The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls mine, "for the first time in computer science history", and it is mine. I found it in no text of the library, and the study does not let the site claim it; I keep the phrase here as what I said, and claim no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
+The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls mine, "for the first time in computer science history", and it is mine. I found it in no text of the library. The study does not let the site claim it. I keep the phrase here as what I said, and I claim no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
 
 ## 3. The Softanza form
 
@@ -67,7 +69,7 @@ o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
 #--> 0
 ```
 
-Now the move that gives the chapter its title. Take a list. Its pattern is written in square brackets, and counts, nesting and negation are written, not looped. `@N` stands for a number, `@S` for a string, `+` for one or more, `@N1-3` for one to three, and `@!` for not:
+Now the move that gives the chapter its title. Take a list. Its pattern is written in square brackets, and counts, nesting and negation are written, not looped. `@N` stands for a number, `@S` for a string, `+` for one or more, `@N1-3` for one to three, and `@!` for not. Does `[@N1-3, @S]` accept four numbers before the string? The second call answers:
 
 ```haro
 ? Lx("[@N+, @S]").Match([1, 2, 3, "end"])
@@ -84,9 +86,9 @@ Now the move that gives the chapter its title. Take a list. Its pattern is writt
 #--> 0
 ```
 
-Every call here uses a fresh object, for a reason that section 7 gives. Chapter 11 showed four calls of the same language, and I do not repeat them.
+No: the second call prints 0, because four numbers are one too many. Every call here uses a fresh object, for a reason that section 7 gives. Chapter 11 showed four calls of the same language, and I do not repeat them.
 
-The numbers have properties, and a property is meaning, not procedure. The last line turns a pattern from a test into a search:
+The numbers have properties, and a property is meaning, not procedure. Which numbers between 1 and 500 are perfect? The last line turns a pattern from a test into a search:
 
 ```haro
 ? Nx("{@Property(Even) & @Property(Prime)}").Match(2)
@@ -102,6 +104,8 @@ The numbers have properties, and a property is meaning, not procedure. The last 
 ? @@( Nx("{@Property(Perfect)}").MatchingNumbersBetween(1, 500) )
 #--> [ 6, 28, 496 ]
 ```
+
+Three numbers answer, and no loop was written.
 
 Tables: a data-quality rule is a sentence of the language. The person who owns the data can read it. Niamey appears twice, so the cities are not unique, and the negation of that is true:
 
@@ -152,7 +156,7 @@ A matrix: a concept, square and symmetric, is one line.
 #--> 1
 ```
 
-Time, in the part of it that runs. A duration must fit a rule: ninety minutes is inside one to two hours and on a step of a quarter of an hour; eighty is inside and off the step; three hours is outside.
+Time, in the part of it that runs. A duration must fit a rule: one to two hours, on a step of a quarter of an hour. Which of three durations fits: ninety minutes, eighty minutes or three hours?
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
@@ -164,7 +168,9 @@ oTm = new stzTimex("{@Duration(1h..2h:15min)}")
 #--> 0
 ```
 
-A graph: a pattern reads like the path it looks for. The labels match without regard to case, and direction matters, as the second line shows:
+Only ninety minutes fits: eighty is inside the range and off the step, and three hours is outside.
+
+A graph: a pattern reads like the path it looks for. The labels match without regard to case. Does direction matter? The second line answers:
 
 ```haro
 g = new stzGraph("Order")
@@ -180,6 +186,8 @@ g.AddEdgeXT(:b, :c, "finishes")
 ? (new stzGraphex("{@Node(placed) -> @!Node(refunded)}", g)).Match(g)
 #--> 1
 ```
+
+Yes: the path from `served` to `placed` finds nothing, and the line prints 0.
 
 Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an agent. Five of the six languages do:
 
@@ -200,7 +208,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 **I decided that a pattern states a meaning and not a procedure.** That decision is in the articles, and the articles are mine. The same ones decided to carry the regex idea to non-text data with one habit: braces, an `@` for a token, `&`, `|`, `@!` for not, `@cs:` for case. Lists keep square brackets. The other five use braces. That is the first honest correction of the phrase "one grammar".
 
-**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value, which I hold, as a view and not a result, to be the right way to retire a mechanism.
+**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value. I hold that, as a view and not a result, to be the right way to retire a mechanism.
 
 **I refused, for now, to build the siblings.** The articles planned classes in which patterns are genetic, linguistic or quantic. The article says that they are in an early prototype and not in the library, and a search of the regex folder for "induce", "from example" and "infer" finds nothing. The study dates the finding of their purpose two years later, in the answer protocol (the way a person may answer by examples): induction from examples, and superposed candidates. That is chapter 18's ground, and chapter 9's refusal.
 
@@ -210,11 +218,13 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 ## 5. The court
 
-`00_regex_narrated` proves the anchors and the search, the classes, the exact quantifiers, the groups, the four match types, partial matching as you type, and positions as data. `00_numbrex_narrated` proves prime, perfect, Fibonacci, even and odd, square and composite, each with a number that matches and one that does not; its header records a regression in which `Match()` once returned TRUE for every input. `tablex_narrated` proves the parser, counting, uniqueness, sorting, types, sums and averages, the three connectives, sequences, and building patterns from patterns. Its header names the fault it killed: the parser sliced with an end position through a function that counts, and about ninety patterns parsed into a token of the right type with no value. `00_matrex_narrated` proves exact size, any size and the square shape; its header records that `Match()` once returned FALSE for every input. `00_graphex_narrated` proves that a pattern compiles to a graph, present and absent labels, a sequence as a subsequence, the case rules, negation, alternation, numeric properties, and the cache by graph signature.
+`00_regex_narrated` proves the anchors and the search, the classes, the exact quantifiers, the groups, the four match types, partial matching as you type, and positions as data. `00_numbrex_narrated` proves prime, perfect, Fibonacci, even and odd, square and composite, each with a number that matches and one that does not. Its header records a regression in which `Match()` once returned TRUE for every input. `tablex_narrated` proves the parser, counting, uniqueness, sorting, types, sums and averages, the three connectives, sequences, and building patterns from patterns. Its header names the fault it killed. The parser sliced with an end position through a function that counts, and about ninety patterns parsed into a token of the right type with no value. `00_matrex_narrated` proves exact size, any size and the square shape. Its header records that `Match()` once returned FALSE for every input. `00_graphex_narrated` proves that a pattern compiles to a graph, present and absent labels, a sequence as a subsequence, the case rules, negation, alternation, numeric properties, and the cache by graph signature.
 
 Note the placement: the guard for tables lives in the folder for regex, and its stem has no `00_` prefix.
 
-There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end, and I note it in my research notes, not in a block: sixty checks ran, and two of them disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
+There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end, and I note it in my research notes, not in a block. Sixty checks ran, and two of them disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
+
+Next, the field, and where it leads.
 
 ## 6. The field, and where it leads
 
@@ -227,6 +237,8 @@ There is no narrated guard for lists, time, or the regex builders. The courts of
 **Where the family is weak in itself.** The class headers print their defects as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
 
 **A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also a likely reason time fails.
+
+Next, the limit.
 
 ## 7. The limit
 
@@ -253,7 +265,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 #--> "Lunch)"
 ```
 
-The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match, and the third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug, still present in time.
+The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug, still present in time.
 
 - **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 
@@ -264,7 +276,7 @@ The article promises that the first is TRUE. The second shows that even a single
 #--> 1
 ```
 
-Cooking lies between the first and the last, so the first answer is the arrow's meaning. The second answers 1 too: the quantifier is ignored. The cache of this class is keyed by the node and edge counts and the node ids, so a second graph with the same ids and other labels is answered from the cache, until `ClearCache()`.
+Cooking lies between the first and the last, so the first answer is the arrow's meaning. The second answers 1 too! The quantifier is ignored. The cache of this class is keyed by the node and edge counts and the node ids. A second graph with the same ids and other labels is answered from the cache, until `ClearCache()`: the answer can be stale.
 
 **The refusal the family has not yet made.** Chapter 11's law is that a language is declared and closed, with refusals. What does the family answer when it is asked a word it does not know? Run it:
 
@@ -279,7 +291,7 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 #--> 0
 ```
 
-A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine; I hold that as my view, and the run above, on this commit, is what stands behind it.
+A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine. I hold that as my view. The run above, on this commit, is what stands behind it.
 
 What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 

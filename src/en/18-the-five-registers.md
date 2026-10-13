@@ -16,7 +16,7 @@ rulings: ["12.25", "12.26", "12.27"]
 research: research/ch18.md
 ---
 
-In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples, and what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
+In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
 ## 1. The concept, as the field holds it
 
@@ -38,7 +38,7 @@ The design document says it in one sentence I keep: expression is free, admissio
 
 Chapter 17 showed a conversation asking, and refusing to conclude while a gap is open. This chapter is about the answer. The five registers are five forms a reply can take: an option picked by its number, a data structure, a formula, a sentence, and examples. I will show you each, and I will tell you the ones that do not run.
 
-**The first register: an option.** When the world already knows values, the question offers them as numbers, and a number picks one.
+**The first register: an option.** When the world already knows values, how does the question offer them? Run it:
 
 ```haro
 oKB = new stzKnowledgeGraph("pizzeria")
@@ -53,6 +53,8 @@ oKB.ReplyIn("frame", "olives")
 ? @@(oKB.ReplyIn("frame", 2)[:admitted])
 #--> [ "olives" ]
 ```
+
+The question offers the known values as numbers, and `2` picked `olives`.
 
 What does the door answer to a number nobody offered? Run it:
 
@@ -70,7 +72,7 @@ aV = oKB.ReplyIn("frame", 99)
 #--> pursuing
 ```
 
-The refusal says `no such option`, and the checkpoint says why: `no option (99) was offered -- 2 option(s) on the table`. A reason, and a count of the options on the table. It does not list them, and the next question offers the same options again. The refusal never guesses a value, it reaches a person as a checkpoint, and the goal stays `pursuing`. That matters for section 7.
+The door refused it, and said `no such option`! The checkpoint says why: `no option (99) was offered -- 2 option(s) on the table`. A reason, and a count of the options on the table. It does not list them, and the next question offers the same options again: `(1) cheese  (2) olives`. The refusal never guesses a value, it reaches a person as a checkpoint, and the goal stays `pursuing`. That matters for section 7.
 
 The question is data before it is text. It carries a force, which is *what* while the world knows nothing and *which* once it knows a value, and the options. Any medium can render it:
 
@@ -88,7 +90,7 @@ aQ = oKF.AskInXT("f")
 #--> [ "cheese" ]
 ```
 
-**The second register: a data structure.** A list of values is taken as the values, and each one goes through the same door.
+**The second register: a data structure.** What becomes of a list of two values sent as one reply? Run it:
 
 ```haro
 oKD = new stzKnowledgeGraph("desserts")
@@ -102,7 +104,9 @@ aV = oKD.ReplyIn("setup", [ "mascarpone", "espresso" ])
 #--> fulfilled
 ```
 
-**The fourth register: a sentence.** I skip the third for a moment, because it is one of the two that do not run. A phrase of the form "X and Y" or "X, Y" is read as two values, each one judged. The conversation keeps a transcript in which every admission is narrated and the fulfilment of the goal is recorded:
+A list of values is taken as the values, and each one goes through the same door.
+
+**The fourth register: a sentence.** I skip the third for a moment, because it is one of the two that do not run. How is a phrase of the form "X and Y" or "X, Y" read? The conversation keeps a transcript in which every admission is narrated and the fulfilment of the goal is recorded:
 
 ```haro
 oKM = new stzKnowledgeGraph("menu")
@@ -119,9 +123,9 @@ oKM.ReplyIn("setup", "tomato-sauce and mozzarella")
 #--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'
 ```
 
-"Natural" here means a splitter on commas and on the English word "and". The natural layer of the library, which I will use in a moment, is not called by the conversation.
+It is read as two values, each one judged: the transcript holds `admitted: 'margherita' contains 'tomato-sauce'` and `admitted: 'margherita' contains 'mozzarella'`. "Natural" here means a splitter on commas and on the English word "and". The natural layer of the library, which I will use in a moment, is not called by the conversation.
 
-**When a reply carries several values, and the world allows one.** A relation declared unique takes the first value and refuses the others, each with the law's reason. The refusal reaches a person:
+**When a reply carries several values, and the world allows one.** What does a relation declared unique do with a reply that carries two values? Run it:
 
 ```haro
 oKS = new stzKnowledgeGraph("staffing")
@@ -137,7 +141,7 @@ aV = oKS.ReplyIn("s", "mario and giovanni")
 #--> 1
 ```
 
-Be careful what you read in this. The choice between Mario and Giovanni was made by order. It was not made by a person. The design promises something else, and section 7 says what.
+The first value was admitted, and the second was refused with the law's reason: `'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique`. The refusal reaches a person, as one checkpoint. Be careful what you read in this. The choice between Mario and Giovanni was made by order. It was not made by a person. The design promises something else, and section 7 says what.
 
 **The third register, the formula.** Is a formula typed as a reply evaluated? Run it:
 
@@ -178,9 +182,11 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence, and I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
+Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence. I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
 
 So three of the five registers are wired, one of them in its simplest form, a splitter. Two are not. I would rather you meet that here than on a page of mine that said five.
+
+That leaves the refusal itself, and what becomes of it.
 
 ### What happens to a refusal
 
@@ -283,7 +289,9 @@ aV = oKA.ReplyIn("c", [ "جبن", "طماطم" ])
 #--> fulfilled
 ```
 
-Second, the candidate. A Hausa sentence can produce a value in the natural layer, and the value, sent as a reply, goes through the same door. The two steps are the caller's: the conversation does not call the natural layer itself. This is the principle of the chapter in a small space, since the expression is free and the admission is governed. The graph folds the case of the value, so the capitals become 'jibini':
+The Arabic values passed the gate, and the goal reads `fulfilled`.
+
+Second, the candidate. A Hausa sentence can produce a value in the natural layer, and the value, sent as a reply, goes through the same door. The two steps are the caller's: the conversation does not call the natural layer itself. This is the principle of the chapter in a small space, since the expression is free and the admission is governed. The graph folds the case of the value, so the printed `JIBINI` is admitted as 'jibini':
 
 ```haro
 oKH = new stzKnowledgeGraph("menu")
@@ -298,7 +306,7 @@ aV = oKH.ReplyIn("c", cCandidate)
 #--> admitted: 'pizza' contains 'jibini'
 ```
 
-Third, the question in the learner's language. The tutor is a consumer of the conversation: it uses the gap the conversation names, and it chooses the words to say it in four languages. The sentences are templates. The code's own comment says that the French, Arabic and Hausa wording is a draft awaiting a native reviewer, so read the three below as drafts, and not as reviewed text:
+Third, the question in the learner's language. The tutor is a consumer of the conversation: it uses the gap the conversation names, and it chooses the words to say it in four languages. The sentences are templates. The code's own comment says that the French, Arabic and Hausa wording is a draft awaiting a native reviewer. Read the three below as drafts, and not as reviewed text:
 
 ```haro
 oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").ExerciseQ("ex-01-01")
@@ -330,7 +338,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 #--> 0
 ```
 
-`plain`: it stays on its deterministic floor and says so. The word "neural" can be set, and `Fluency()` repeats it, but `IsFluencyNeural()` answers `0`. The word is claimed only when a model is there.
+`plain`: it stays on its deterministic floor and says so. The word "neural" can be set, and `Fluency()` repeats it, but `IsFluencyNeural()` answers `0`! The word is claimed only when a model is there.
 
 ## 4. The decision, and what I refused
 
@@ -338,11 +346,11 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust, and I hold this as a view, not a result. All five registers go through one door.
 
-**I refused a stub.** A reserved agent raises when it is asked for. The design document says it plainly: the raise is the law working, and it should not be read as a defect. I refused to pretend the fifth register works.
+**I refused a stub.** A reserved agent raises when it is asked for. The design document calls the raise the law working, and says it should not be read as a defect. I refused to pretend the fifth register works.
 
 **I refused an agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
 
-**I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one, and a copy of the knowledge held in a session goes stale.
+**I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one. A copy of the knowledge held in a session goes stale.
 
 **I refused a deleted checkpoint.** Expiry takes a refusal off the live list. The record keeps it.
 
@@ -350,9 +358,11 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 ## 5. The court
 
-`wisecoding_narrated` proves that the gap is computed from the space, and that the question is led by the system, names its subject and says why it asks. It proves that "X and Y" and a data structure admit; that a unique law refuses through the conversation and the refusal reaches a checkpoint; and that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, the numbered options and the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it and does not run it; the tutor block above only reads the course.
+`wisecoding_narrated` proves that the gap is computed from the space, and that the question is led by the system, names its subject and says why it asks. It proves that "X and Y" and a data structure admit. It proves that a unique law refuses through the conversation and the refusal reaches a checkpoint. It proves that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, and the numbered options. It proves the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it and does not run it; the tutor block above only reads the course.
 
 Three of the guards print their own total and end by calling `pf()`, which prints the time and the runtime's version and then stops the run with a raise. That is their way to end. `tutor_gaps_narrated` ends with `Summary()`, which prints the total and a status, and does not raise.
+
+What the field does better, and where the record stands apart, comes next.
 
 ## 6. The field, and where it leads
 
@@ -362,15 +372,17 @@ The field leads on examples. Programming by example is, as the field holds it, s
 
 The field is honest about costs, and so is the record. Several candidates is the normal case when you ask for a rule from examples. A pattern induced from three examples overfits them. The remedy the record names is the question that tells two candidates apart. And the index that would carry the examples is as clean as the tags of the methods, with about eighty-five misspellings.
 
-Where I think the record stands apart: every reply, in whatever form, is judged by the world's laws before it counts, with the reason. The session keeps a transcript and a checkpoint that a person can read. The field's reply is a prompt, and the human keeps what comes out.
+Here is where I think the record stands apart. Every reply, in whatever form, is judged by the world's laws before it counts, with the reason. The session keeps a transcript and a checkpoint that a person can read. The field's reply is a prompt, and the human keeps what comes out.
+
+The limit comes next, and it names what is built, what is designed and what is absent.
 
 ## 7. The limit
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals. And the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply; and a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example* (read 9 October 2026) calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses", and the pages say more than the code does. I say it outright: the two pages promise more than the code does, so that the page or the code is corrected. The code wires three of the five registers. The memo that names the formula and the examples lists them as waiting, not routed, and for this chapter they are absent.
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example* (read 9 October 2026) calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages promise more than the code does. I say it so that the page or the code is corrected. The code wires three of the five registers. The memo that names the formula and the examples lists them as waiting, not routed, and for this chapter they are absent.
 
-What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In the research run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised, with an uninitialised variable, on each value containing a space that I tried. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a value with a space.
+What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In the research run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a value with a space.
 
 ## 8. Six doors
 

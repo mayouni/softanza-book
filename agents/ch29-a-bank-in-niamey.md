@@ -4,7 +4,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-12 16:28 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
 
 In this chapter I take a bank in Niamey, under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -65,7 +65,7 @@ oOrg.ImportStzOrg(cChart)
 
 > run: kept
 
-The regulator's rule reads the chart. Audit reports to the chief executive, and the verdict says so in its own words, `BCEAO-002: Audit reports to non-board position`, with a rule code an auditor can look up. A chart is judged by more than one court at a time, each finding carries its own code, and the compliance report says compliant or not. Here is a second rule, the segregation of duties, which says operations must not report to treasury:
+The regulator's rule reads the chart and refuses it! Audit reports to the chief executive, and the verdict says so in its own words, `BCEAO-002: Audit reports to non-board position`, with a rule code an auditor can look up. A chart is judged by more than one court at a time, each finding carries its own code, and the compliance report says compliant or not. What does a second court say, the segregation of duties, which holds that operations must not report to treasury? I add treasury and operations, operations under treasury, and run both courts:
 
 ```haro
 oOrg.AddManagementPositionXT("treasury", "Treasury")
@@ -108,7 +108,7 @@ next
 
 > run: kept
 
-Four rules every base carries: nobody reports to themselves, no reporting cycle, no orphan position, and a span of control. SOX adds one of its own, also called the separation of duties but a different rule from the second court above: no position holds both the approver and the executor role. The library's comment says it plainly: the regime classes differ by name today, and only one adds a rule of its own. I will come back to what that means.
+Six regimes carry four rules, and one carries five! Four rules every base carries: nobody reports to themselves, no reporting cycle, no orphan position, and a span of control. SOX adds one of its own: no position holds both the approver and the executor role. It is also called the separation of duties, but it is a different rule from the second court above. The library's comment says it plainly: the regime classes differ by name today, and only one adds a rule of its own. I will come back to what that means.
 
 A bank's own rule is data too. Take the rule that internal audit reports to the board. It is an object declared by calls. It names the department it governs, the line it requires and the sentence it prints, and it is added to a regime's rule base. Which rule broke, and where? The report says:
 
@@ -130,6 +130,8 @@ oRep.Report()
 
 > run: kept
 
+The report says `UNSOUND` and names the rule and the place: `ERROR audit-reports-to-board @ audit -- internal audit must report to the board`.
+
 Then the verdict follows the chart. Two edits to two reporting lines, audit now to the board and operations to the chief executive. What do the courts that said no say now? Run it:
 
 ```haro
@@ -149,7 +151,7 @@ oRep.Report()
 
 > run: kept
 
-They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one (its own code does not run at the pinned commit; the calls above do). The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. What does it say when the chief executive's department is left blank? Run it:
+They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one. Its own code does not run at the pinned commit; the calls above do. The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. What does it say when the chief executive's department is left blank? Run it:
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -165,7 +167,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 > run: kept
 
-It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator passing once: the library's own comment says it passes every time, a placeholder for rules not written yet.
+It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for rules not written yet.
 
 My first book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
 
@@ -177,7 +179,9 @@ My first book, *Refinement-Oriented Programming*, tells the discipline of govern
 
 **I refused to carry a regulator's text in a code I cannot source.** The codes BCEAO-001 to BCEAO-003 are the library's own. The record ties them to no article of the central bank's text. They are the library's own rules, named after the regulator's regime; the record does not name a text they are drawn from.
 
-**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, the questionnaire or the rules, how long the product has been installed, and how many people use it. I will invent none of it, and the chapter does not fill the gap. On "built with Softanza", the record shows a Python application, a small web server with a database, that calls nothing of the library. The library's validators are separate from it, and they are what this chapter runs. Chapter 1 says the product is built with Softanza and keeps its wording; this chapter says what the record shows.
+**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, the questionnaire or the rules. It is silent on how long the product has been installed, and on how many people use it. I will invent none of it, and the chapter does not fill the gap. On "built with Softanza", the record shows a Python application, a small web server with a database, that calls nothing of the library. The library's validators are separate from it, and they are what this chapter runs. Chapter 1 says the product is built with Softanza and keeps its wording; this chapter says what the record shows.
+
+Six guards stand behind the blocks.
 
 ## 5. The court
 
@@ -191,6 +195,8 @@ The field leads in actual use: such a platform is often one that a bank's audito
 
 Where I think this stands apart is that the chart is the data and the court is a rule over it. A chart is a text, a rule is data, a finding names the rule and the position, and the report is one verdict. The library's own comparison table for this feature is all wins, undated, with cost figures that cite nothing, and I will not print it.
 
+Now the limit, in the stage words.
+
 ## 7. The limit
 
 What is built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
@@ -198,7 +204,7 @@ What is built: the organisation chart as a model and as text; the validators of 
 Four things are designed, or built in part.
 
 - The content of the six regimes other than the regional one. Five of them hold the same four universal rules and nothing else; SOX adds a fifth.
-- A rule file that judges. The library can load a file of rules in a `when` and `then` text, and the one in its test data loads two rules. The loader reads a rule's name, type, severity, function, params and message, and no `when` or `then` line, so such a rule loads and judges nothing. The format is admitted, and the rule is not enforced.
+- A rule file that judges. The library can load a file of rules in a `when` and `then` text, and the one in its test data loads two rules. The loader reads a rule's name, type, severity, function, params and message, and no `when` or `then` line. Such a rule loads and judges nothing. The format is admitted, and the rule is not enforced.
 - A validator reads declared properties. It finds the board by the word "board" in a position title. It needs the departments to be declared.
 - The succession validator flags every filled position, by the library's own comment a known defect. The reorganisation simulation raises when it is asked to change a reporting line, also a known defect. The article that tells the simulation names a method that exists nowhere in the library.
 
@@ -209,7 +215,9 @@ Four things are absent.
 - A perceived verdict. No document says that an auditor or a supervisor read a finding that the library produced.
 - A delivery date. The delivered files carry file-system times, and those are not a delivery date.
 
-The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that its rules 117 to 121 were harvested from a banking-supervision product, and the record does not say that product is the bank's installation. I will not say that it is.
+The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that its rules 117 to 121 were harvested from a banking-supervision product. The record does not say that product is the bank's installation. I will not say that it is.
+
+Six doors follow, one for each reader.
 
 ## 8. Six doors
 

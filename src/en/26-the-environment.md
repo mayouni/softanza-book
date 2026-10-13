@@ -36,7 +36,7 @@ The library's header for its authored interface says it: the file is the contrac
 
 Here I have to tell you something before the blocks. At this commit, **no IDE of this family exists**. No class in the library is named for a ribbon, a rail, a spine or a status bar. The study's own honesty line, proposed for the site, says it: no IDE of this family ships today; one shell does, for the sound plane. The foundation that would make the next one a projection is specified and not yet built. My reading agrees, with one addition: the library generates one browser surface, the emulator's, and I show it below with a loss.
 
-What the library has are the pieces under each of the pattern's five marks: one shell, two projections, a facet ribbon ordered by the life of the solution, a rail that proposes, a status bar that tells the truth. They run, and I take them in order.
+What the library has are the pieces under each of the pattern's five marks. The five are one shell, two projections, a facet ribbon ordered by the life of the solution, a rail that proposes and a status bar that tells the truth. They run, and I take them in order.
 
 ### One shell, declared as text, judged by a court
 
@@ -68,7 +68,7 @@ oShell = new stzUiDocument(cShell)
 #--> [ "work" ]
 ```
 
-The court answers `[ "work" ]`, and the twelve declarations are clean.
+`Orphans()` answers `[ "work" ]`, and `IsClean()` answers `1` over the `12` declarations.
 
 The generating loop is the book's own, and the roles are from the closed list in the library: `tablist`, `tab`, `group` and `status` are on it.
 
@@ -105,9 +105,9 @@ next
 #--> [ "transfer_funds" ]
 ```
 
-Asked about `transfer_funds`, `IsClean()` answers `1`! The loop over the book's list answers `[ "transfer_funds" ]`.
+With `SATISFIES focus` on `work`, `Orphans()` answers `[ ]`, and so does the loop over the book's list. Asked about `transfer_funds`, `IsClean()` answers `1`! The loop over the book's list answers `[ "transfer_funds" ]`.
 
-`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the bridge sentence is applied by hand today. I tell the removal as the refusal at the centre of this chapter, in section 4: the library does not own the verbs, the constitution does. The twenty-two are printed in the block above, typed from the constitution as Appendix C prints them, and the library's own design text, which still says twenty-four, is not the list.
+`work` was a pure layout box, and the court counts containers too. Whether a container should be exempt from the verbs is the constitution's to say, and not the library's. The families, from the constitution: orienting, attention, information, selection, action, and continuity. And the interpretation I give: the library finds the stranger, and a list the library does not hold cannot refuse it. Chapter 25 said that the bridge sentence is applied by hand today. I tell the removal as the refusal at the centre of this chapter, in section 4: the library does not own the verbs, the constitution does. The library's own design text still says twenty-four; it is not the list. The twenty-two are printed in the block above, typed from the constitution as Appendix C prints them.
 
 ### Two projections
 
@@ -132,7 +132,7 @@ next
 #--> 0
 ```
 
-Eleven elements and not twelve: the panel is the page itself, and not a `div`. The native tier lays out through the engine's layout library, vendored, and draws through the graphics plane. I did not open a window.
+Eleven elements and not twelve: the panel is the page itself, and not a `div`. The last two lines show where the two differ. The native markup holds `--rmlui-direction` (`1`), and the web page does not (`0`). The native tier lays out through the engine's layout library, vendored, and draws through the graphics plane. I did not open a window.
 
 ### The browser shell
 
@@ -158,7 +158,7 @@ cAnswer = oClient.AwaitTcp(nJob, 5000)
 oSrv.Stop()
 ```
 
-`Host()` answers `127.0.0.1`. The cost of this shape is named in the record. A locally bound port is a surface and must be treated as one, and, in the charter's words, the design intent has been measured for a sound studio and not for an IDE. The library's backend already refuses to leave the loopback unauthenticated, at bind time; the bare server above does not check. What does the backend do with `0.0.0.0`? Try it:
+`Host()` answers `127.0.0.1`. The cost of this shape is named in the record. A locally bound port is a surface and must be treated as one. In the charter's words, the design intent has been measured for a sound studio and not for an IDE. The library's backend already refuses to leave the loopback unauthenticated, at bind time; the bare server above does not check. What does the backend do with `0.0.0.0`? Try it:
 
 ```haro
 oT = new stzAppTopology("shell")
@@ -177,7 +177,7 @@ done
 #--> 0
 ```
 
-It raises, and `IsLive()` answers `0`.
+It raises! `bRaised` answers `1`, and `IsLive()` answers `0`.
 
 ### A status bar that tells the truth
 
@@ -217,7 +217,7 @@ oT = new stzAccessibilityTree(oShell, oP)
 #--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
 ```
 
-The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word. The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an agent can operate.
+The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word! The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an agent can operate.
 
 ### A rail that proposes
 
@@ -249,7 +249,7 @@ next
 #--> propose visit for binta
 ```
 
-`Live()` prints its line, `2 proposal(s)` at its end, and the judge compares what is printed. After the act, one line remains: `propose visit for binta`. "2 thing(s)" counts the two things, Client and Visit, and not the instances. Chapter 20 owns the law beneath the rail, the proposal, the plan and the court.
+`Live()` prints its line, `2 proposal(s)` at its end, and the judge compares what is printed. Before the act, `Pulse()` answers `0` and the rail still holds `2` proposals. After the act, one line remains: `propose visit for binta`. "2 thing(s)" counts the two things, Client and Visit, and not the instances. Chapter 20 owns the law beneath the rail, the proposal, the plan and the court.
 
 And a screen is an intent. One place where the world speaks in verbs is its screens. Five methods exist: `ToDiscover`, `ToUnderstand`, `ToFocus`, `ToSelect` and `ToAct`. A sixth verb, `ToCompare`, does not exist. What answers when a screen asks for it? Run it:
 
@@ -279,6 +279,8 @@ done
 
 The runtime answers, `Error (R3) : Calling Function without definition: tocompare`, and no court does: the intent word is stored as a string, and is not checked against any list.
 
+That is what runs; now I say what I decided with it, and what I refused.
+
 ## 4. The decision, and what I refused
 
 **I decided to carry both shells.** On 7 October 2026 I was asked whether the foundation takes the native shell or the browser shell, and I answered: carry both. The consequence the study states is that one chrome is declared once, and two shells project it.
@@ -287,11 +289,11 @@ The runtime answers, `Error (R3) : Calling Function without definition: tocompar
 
 **I removed the interaction engine.** On 26 May 2026 my commit removed twenty-two modules invented by an AI that were not in the original Softanza, among them the interaction module. I read the date, the count and the list in the library's git history, commit `b70f3ad91`, and not in the pinned tree. Its design text, which says twenty-four verbs and laws enforced by the engine, is still in the tree. The constitution's list is twenty-two.
 
-**I refused to resolve intents inside the language of the panel.** The panel declares no meanings: there is no `:Danger` and there never may be. The intent slot was left deliberately unresolved.
+**I refused to resolve intents inside the language of the panel.** The panel declares no meanings: there is no `:Danger` and there never may be. The intent slot was left deliberately unresolved. Above, `IsClean()` answered `1` for `transfer_funds`: the panel judges no meaning.
 
 **I refused to author the markup, and I refused a script engine.** The native markup is emitted, never authored; there is no script engine; flexbox only. That is the reason the chrome is a text file and not a class.
 
-**I refused a flag that turns the accessibility tree off.**
+**I refused a flag that turns the accessibility tree off.** The tree block above printed `status` and `The truth of the build.` without a flag to set.
 
 **I admitted a lens that cannot capture.** The estate's charter for its products: one truth, in files, and two lenses (the charter's two are the pair of studios, and not two shells). What the charter refused was frameworks that capture the work. A lens that cannot capture is admissible. The environment is a projection of plain text, and not a store.
 
@@ -301,13 +303,17 @@ The runtime answers, `Error (R3) : Calling Function without definition: tocompar
 
 **The pattern was learned across six efforts in two years, one of them built**, the study counts. That count is the study's.
 
+Next comes the court, with the guards behind these pieces and the ones that are missing.
+
 ## 5. The court
 
-`gui_stzui_narrated` proves the closure of the panel court, a dangling reference, a duplicate, an orphan box, a missing panel, the mandatory rationale and a round trip. In scene 13 it proves the intent slot: `SATISFIES`, `Orphans()`, and that an intent nobody has defined is not an error. `gui_profile_narrated` proves that the profile is data, with three recorded divergences; that one document has two projections and every declared element is in both; and that the fixture emits a self-checking page. The browser half of that guard is a procedure to reproduce. `gui_tier_agreement_narrated` proves that one display list rendered as vector and as pixels agrees to the pixel. It is not HTML against native. `gui_accessibility_narrated` proves the tree emitted from the declaration. `05_stzapp_live_narrated` proves that a live world proposes and acting clears. `emulator_narrated` proves the generated surface of the emulator.
+`gui_stzui_narrated` proves the closure of the panel court, a dangling reference, a duplicate, an orphan box, a missing panel, the mandatory rationale and a round trip. In scene 13 it proves the intent slot: `SATISFIES`, `Orphans()`, and that an intent nobody has defined is not an error. `gui_profile_narrated` proves that the profile is data, with three recorded divergences. It proves that one document has two projections and every declared element is in both, and that the fixture emits a self-checking page. The browser half of that guard is a procedure to reproduce. `gui_tier_agreement_narrated` proves that one display list rendered as vector and as pixels agrees to the pixel. It is not HTML against native. `gui_accessibility_narrated` proves the tree emitted from the declaration. `05_stzapp_live_narrated` proves that a live world proposes and acting clears. `emulator_narrated` proves the generated surface of the emulator.
 
 There is no guard that judges a shell against the twenty-two verbs, none that a status cell shows only what a court emitted. None says that the two projections of a chrome agree in the browser. The study says so, and I found nothing to the contrary.
 
-**The two-projections check can fail, and it did.** The library's fixture is a page and not an assertion: it carries the web projection and the boxes the native layout produced. A script compares them and prints a verdict strip. A runner cannot judge it, so I read it by hand on 8 October 2026. On the chrome of the first block, eleven boxes with text in each region, the strip read "AGREE on every declared box of 11". Its note said that four boxes of automatic width differ, which is two shapers and not the profile. On the same three-band chrome with empty regions, the strip read "DISAGREE on 1 declared boxes of 3". The cause is in the web projection: an empty box is emitted as `<div id="body"/>`, which an HTML parser reads as an open tag, so the siblings that follow nest inside it. The native tier is unaffected. The fixture catches it, and the library's guards do not, since their own showcase has no empty box. An empty workspace is the pattern's first state. So the strip tells the truth both ways, which is the chapter's fifth mark in one picture, and the library has a defect on the exact case.
+**The two-projections check can fail, and it did.** The library's fixture is a page and not an assertion: it carries the web projection and the boxes the native layout produced. A script compares them and prints a verdict strip. A runner cannot judge it, so I read it by hand on 8 October 2026. On the chrome of the first block, eleven boxes with text in each region, the strip read "AGREE on every declared box of 11". Its note said that four boxes of automatic width differ, which is two shapers and not the profile. On the same three-band chrome with empty regions, the strip read "DISAGREE on 1 declared boxes of 3". The cause is in the web projection: an empty box is emitted as `<div id="body"/>`. An HTML parser reads that as an open tag, so the siblings that follow nest inside it. The native tier is unaffected. The fixture catches it! The library's guards do not, since their own showcase has no empty box. An empty workspace is the pattern's first state. So the strip tells the truth both ways, which is the chapter's fifth mark in one picture, and the library has a defect on the exact case.
+
+From the court I turn back to the field, and to where it leads.
 
 ## 6. The field, and where it leads
 
@@ -320,6 +326,8 @@ The browser costs what it costs: file access through the browser's model, a port
 The field has a language service (general knowledge), and the record has a contract and no service. The explorer's model reads the world file the service would emit, and it is loaded by no entry file: a block that calls it without a hand-written load fails.
 
 The field's fast editor treats the status bar as clutter. The pattern keeps one and asks it to be true. That is a bet, and I hold it as a view, not a result; the record's own corpus argues the field's side in the same breath.
+
+That leaves the limit.
 
 ## 7. The limit
 

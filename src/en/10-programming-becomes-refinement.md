@@ -16,7 +16,7 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
-In this chapter I say what I mean by refining rather than programming: a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
+In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
 
 ## 1. The concept, as the field holds it
 
@@ -24,9 +24,13 @@ The field has a name for changing infrastructure with a rehearsal: plan, then ap
 
 What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume; I hold this as a view, not a result.
 
+Against that weak instrument I set one sentence.
+
 ## 2. The first principle
 
 I wrote the sentence on the back cover of my first book, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
+
+The rest of the chapter runs that sentence.
 
 ## 3. The Softanza form
 
@@ -76,7 +80,7 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Three refusals, and the timeline did not grow by a step! The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage first, `constraint` twice and `structural` once, so that a person, or an agent, can correct the proposal without reading a diff.
+Three refusals, and the timeline did not grow by a step! The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage first, `constraint` twice and `structural` once, as in `structural: no refinement point 'ghost'`, so that a person, or an agent, can correct the proposal without reading a diff.
 
 **The cascade** is what you read instead of the diff. Before the change, ask what it reaches. There are two cascades, and they are separate. For a point, it is the line it sits on and the other points on that same line:
 
@@ -94,6 +98,8 @@ aC = oc.Cascade("vat")
 ? len(oc.Cascade("floor")[:alsoTouches])
 #--> 0
 ```
+
+`vat` sits on line 1 and also touches `[ "margin" ]`; `floor` sits on line 2, alone.
 
 For a class, the cascade is a property of the structure of the code: who descends from it and who inherits a method. The library computes it from the code graph, and it can scan a text without touching a file:
 
@@ -121,9 +127,9 @@ g0.BuildGraph()
 #--> [ "Invoice", "Receipt" ]
 ```
 
-Change the rate of the tariff and three classes are in the blast radius; but two of them inherit the method and the third redefines it, so it owns the method and does not merely inherit it. That is the difference `ImpactOf` draws.
+Change the rate of the tariff and three classes are in the blast radius. Two of them inherit the method, and `ImpactOf` names them: `[ "Invoice", "Receipt" ]`. The third, `Quote`, redefines it, so it owns the method and does not merely inherit it. That is the difference `ImpactOf` draws.
 
-Inside the gate, a change reaches its dependents by a rule that spans several points, judged on the state the change would produce. If the rule fails, the value is put back:
+How does a change reach its dependents? By a rule that spans several points, judged on the state the change would produce. If the rule fails, the value is put back:
 
 ```haro
 d = new stzRefinableCode(cPrice)
@@ -141,7 +147,9 @@ r3 = d.Refine("vat").To("0.05")
 #--> 0.30
 ```
 
-Now the question of this age: who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. What happens to a proposal from a language model when the floor of the point asks for a trusted origin? Run it:
+The rule refused the change and named itself: `derivation: rule 'vat-above-floor' violated -- vat must not drop below floor`. The value is still `0.30`.
+
+And who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. What happens to a proposal from a language model when the floor of the point asks for a trusted origin? Run it:
 
 ```haro
 d.TrustFloor("vat", :trusted)
@@ -158,7 +166,9 @@ r4 = d.Refine("vat").As(:llm).To("0.25")
 #--> trusted
 ```
 
-And who may turn which knob is declared, too: a permission, and an authority level against a risk tier. A delegated actor cannot turn a knob of the third tier. Escalated, it can, and the decision is recorded:
+The model's proposal was refused: `trust: posture :llm below the required floor for 'vat'`. The point kept `0.30`! The same proposal from a trusted origin was admitted, and the step records `trusted`.
+
+And who may turn which knob? That is declared, too: a permission, and an authority level against a risk tier. Take a delegated actor and a knob of the third tier. Run it:
 
 ```haro
 gv = new stzRefinableCode(cPrice)
@@ -178,7 +188,9 @@ gv.SetAuthorityLevel(:Autonomous)
 #--> 1
 ```
 
-Last, reversibility is part of the data model. Every admitted step keeps its prior value, so a person can step back one, rewind to a named checkpoint, rewind to zero, and go forward again:
+The delegated actor was refused, `'release-bot' holds 'delegated' authority (level 2)`, and the value stayed `0.20`. The same proposal was admitted once the actor was escalated! The decision is recorded: `NumberOfDecisions()` printed `1`.
+
+Last, can a step be taken back? Reversibility is part of the data model: every admitted step keeps its prior value. Rewind to a named checkpoint, rewind to zero, go forward again:
 
 ```haro
 t = new stzRefinableCode(cPrice)
@@ -203,7 +215,11 @@ t.Redo()
 #--> 0.21
 ```
 
-That is the gate in the form the library has it. Five checks, in the order the code runs them: the structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. The header of the file calls this a four-stage gate in one line and five in another. The code numbers its checks 1, 2, 3, 4 and 4b, because the trust check was added to the four on 16 July 2026 and the design's count was not changed. I report what runs: five checks.
+At zero, `CanRevert()` printed `0`. One `Redo()`, and the value is `0.21`, the first step again.
+
+That is the gate in the form the library has it. Five checks, in the order the code runs them. The structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. The header of the file calls this a four-stage gate in one line and five in another. The code numbers its checks 1, 2, 3, 4 and 4b. The trust check was added to the four on 16 July 2026, and the design's count was not changed. I report what runs: five checks.
+
+Behind the gate stand decisions, and what I refused.
 
 ## 4. The decision, and what I refused
 
@@ -211,13 +227,15 @@ That is the gate in the form the library has it. Five checks, in the order the c
 
 **I refused the diff as the unit.** A diff is a text change. A refinement is a typed proposal about a declared point, with a kind, bounds and an origin. I kept the diff as an artefact, and I refused it as the thing to review.
 
-**I made the library carry the verb, and left the environment elsewhere.** The refinement as a library verb, the point, the gate, the cascade and the reversal, belongs to the open foundation. The environment in which a team lives with it day to day, the screens, the live mode, the book, is a product, and does not leak into the library.
+**I made the library carry the verb, and left the environment elsewhere.** The refinement as a library verb, the point, the gate, the cascade and the reversal, belongs to the open foundation. The environment in which a team lives with it day to day, the screens, the live mode, the book, is a product. It does not leak into the library.
 
 **I printed the gate as it is.** I wrote the design with four stages, and the code has five checks. A page that quotes my design and not my code would be wrong, and it is the code that runs.
 
 ## 5. The court
 
 `refinablecode_narrated` proves the point declared, the proposal that passes, the two refusals that leave the source whole (bounds and options), the cascade, the reversal, and the saved file. `refine_deepening_narrated` proves the timeline with its checkpoints and its redo, and the trust floor. `gate_deepening_narrated` proves the refusal of an unknown point, the derivation across points with its rollback, and the governed refusal with its lineage.
+
+Next comes the field, and where it leads.
 
 ## 6. The field, and where it leads
 
@@ -226,6 +244,8 @@ The field leads in infrastructure, where plan and apply are the daily practice o
 The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges only what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
 
 And on trust, much of the field's approach is built to scale to any model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
+
+Now, where the gate stops.
 
 ## 7. The limit
 

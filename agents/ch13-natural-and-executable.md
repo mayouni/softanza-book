@@ -4,9 +4,9 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-12 16:27 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
 
-In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence: a sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
+In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
 ## 1. The concept, as the field holds it
 
@@ -88,7 +88,7 @@ A chain branches on its own truth, and an ordinal is a word:
 
 > run: kept
 
-Questions work the same way. A force word opens a frame, one word and one method. A tag question ends in "or not". The session keeps every answer and folds them, like a narration:
+Questions work the same way. A force word opens a frame, one word and one method. A tag question ends in "or not". What does the session keep when one answers yes and the other no? It keeps every answer and folds them, like a narration:
 
 ```haro
 ? @@( WhatQ().TheQ().VowelsQ().OfQ("AnnIE").Is() )
@@ -113,6 +113,8 @@ ClearAnswers()
 ```
 
 > run: kept
+
+The session kept `[ 1, 0 ]` and folded it: all yes is `FALSE`, any yes is `TRUE`.
 
 ### The machine is the parser
 
@@ -172,7 +174,7 @@ oH = NaturallyIn("hausa", "Yi rubutu da dauke 'hello niger' a ciki Raba shi kuma
 
 The comparison answers `TRUE`: one code for two languages!
 
-The sentence-dictionary is not the only vocabulary. A word it does not hold is looked up in the library's own vocabulary, here the documentation tags of the uppercase verb. A value in quotes is data, and never a verb. An unknown word in a value position stays a literal:
+The sentence-dictionary is not the only vocabulary. Where does a word go that it does not hold? It is looked up in the library's own vocabulary, here the documentation tags of the uppercase verb. A value in quotes is data, and never a verb. An unknown word in a value position stays a literal:
 
 ```haro
 ? Naturally("Create a string with 'softanza' Capitals it").Result()
@@ -185,7 +187,7 @@ The sentence-dictionary is not the only vocabulary. A word it does not hold is l
 
 > run: kept
 
-The third line is also a limit. The word `sep` was in no dictionary, and was used as the text to replace. A word it does not know is a literal.
+The third line is also a limit: it printed `a-_-b`. The word `sep` was in no dictionary, and was used as the text to replace. A word it does not know is a literal.
 
 **Five languages as data.** The dictionary is keyed by meaning, and each language's word lands on one id. Do a French, an Arabic and a Turkish word land on the same one? Run it:
 
@@ -221,9 +223,11 @@ The languages follow their own grammar, and they are not word-for-word translati
 
 > run: kept
 
+Three languages, three grammars, one answer: `orah`. Arabic says back what it understood, in its own words: `أنشئ سلسلة بـ haro -> اعكس`.
+
 No native reader has read these sentences. They are modelled on the guard's, with 'haro' in place of the guard's own test word, and the Turkish string reversal is the book's variant of the guard's list reversal. I do not know that a speaker has read them. The record holds no reading by a speaker of the Arabic, Turkish, French or Swahili sentences, as it holds none for the Hausa of chapter 11. They are printed as sentences modelled on the library's own, unread.
 
-A language is a block of data. Here is Swahili, added at runtime, by the guard's own words:
+Can a language be a block of data? Here is Swahili, added at runtime, by the guard's own words:
 
 ```haro
 StzAddNaturalLanguage([
@@ -275,7 +279,7 @@ cT = "Create a list with {#1} and remove its duplicates"
 
 > run: kept
 
-**What the packs can say.** The packs are honest about how much they say. The library has a function for it, and no guard prints its figures. I count against twenty-five reference meanings, which are the structural ones and every method and modifier any shipped pack names. They are not the thousands of verbs the library grew:
+**What the packs can say.** How much does each pack say? The library has a function for it, and no guard prints its figures. I count against twenty-five reference meanings, which are the structural ones and every method and modifier any shipped pack names. They are not the thousands of verbs the library grew:
 
 ```haro
 for cLang in [ "en", "ha", "fr", "ar", "tr" ]
@@ -293,13 +297,17 @@ next
 
 > run: kept
 
-The Hausa pack speaks nine of twenty-five meanings: `ha 9 of 25`. And no model is loaded. The layer has an optional rescue by embedding, when nothing lexical was found and a model is loaded. At this commit none is, and none is needed. So I say "no model is loaded", and not "never touches a model".
+The Hausa pack speaks nine of twenty-five meanings: `ha 9 of 25`! And no model is loaded. The layer has an optional rescue by embedding, when nothing lexical was found and a model is loaded. At this commit none is, and none is needed. So I say "no model is loaded", and not "never touches a model".
 
 ### From the 2020 diagram to the three eras
 
 The library names three eras, in a design document of 10 July 2026. The first is near-natural language, the first paradigm. The second is natural programming: lower the language toward code, with free text, and one object per block. The third, of 2026, is one lexicon shared by execution and documentation, multilingual packs with morphology, and `Understood()`. I call the third *the shared lexicon*. The vision's own heading for it uses a word this book does not use.
 
-Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks. The commit dates were checked there on 9 October 2026, and the commits cited are ancestors of the pin.) So the earliest slide the record dates is the founding slide of the 2022 deck, exported on 20 September 2022. The year 2020 is the first year of my strategic diagram, which was shared on 13 September 2026; the record holds no slide of 2020.
+Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks. The commit dates were checked there on 9 October 2026, and the commits cited are ancestors of the pin.)
+
+So the earliest slide the record dates is the founding slide of the 2022 deck, exported on 20 September 2022. The year 2020 is the first year of my strategic diagram, which was shared on 13 September 2026; the record holds no slide of 2020.
+
+Now the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
@@ -315,7 +323,7 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 
 **I refused silent tolerance.** The old typo tolerance was replaced by explaining everything: the refusal with the nearest word, above.
 
-**I refused global context.** Two chains interleaved contaminated each other, and the fix put the context on the chain. The process-wide `Why()` remains as a convenience for the console and the tests, and the globals survive as fallback shims: a legacy method outside the natural layer that builds a new object still falls back to them.
+**I refused global context.** Two chains interleaved contaminated each other, and the fix put the context on the chain. The process-wide `Why()` remains as a convenience for the console and the tests. The globals survive as fallback shims: a legacy method outside the natural layer that builds a new object still falls back to them.
 
 **I refused the markup language.** Annotations that handed the machine what it could not infer governed by making the human annotate. The system governs by dialogue. Two seeds were kept as thin doors, and they are the document and the template above.
 
@@ -324,6 +332,8 @@ Here are the dates, as the record gives them. My strategic diagram carries the y
 **I refused governance inside the natural layer.** I ruled that scope out of the library on 12 July 2026, and the code was removed.
 
 **I refused natural language as a way to declare.** It asks, and never declares.
+
+The court comes next, and one guard in it fails.
 
 ## 5. The court
 
@@ -345,6 +355,8 @@ And there is a loss on the library's own side. `Understood()` prints verbs and n
 
 Where the win is, with the loss beside it: the same sentence gives the same answer, with a reason, in the user's language, and designed to run offline, which no guard measures. The loss is that the user's language must be in a pack, and a word outside is a literal or a refusal. The record says the winning case is regulated or sovereign work: an instruction that executes locally and can be audited to the word.
 
+The next section says where the chapter stops.
+
 ## 7. The limit
 
 An ungrammatical chain runs. The second chain below reads "which a length of 4", which is not English. Does anything judge it? Run both:
@@ -358,9 +370,9 @@ An ungrammatical chain runs. The second chain below reads "which a length of 4",
 
 > run: kept
 
-Both answer `TRUE`: nothing judged the second. The doctrine is that reviewing a chain is reading it aloud as English. It is the human's job.
+Both answer `TRUE`: nothing judged the second! The doctrine is that reviewing a chain is reading it aloud as English. It is the human's job.
 
-A chain's descriptor reaches host code. `IsAXT` builds a string and evaluates it, so a function defined by the program and named in the string ran. This is the residue that the study of the record and chapter 6 name:
+Does a chain's descriptor reach host code? Yes. `IsAXT` builds a string and evaluates it, so a function defined by the program and named in the string printed `host code ran`. This is the residue that the study of the record and chapter 6 name:
 
 ```haro
 ? Q("haro").IsAXT([ "String('x') and HostRan() and @isString" ])
@@ -429,4 +441,4 @@ Take one sentence you say about a word in your own language: that it is lowercas
 
 Then run both. Then change one word of the chain, and one word of the sentence, to a word the dictionary does not hold. Which direction told you? Which did you have to tell yourself? In one direction the machine tells you, and in the other you must tell yourself. If a promise breaks, do not change it: explain the output first.
 
-The next chapter is about knowledge programming, where the analyst's domain words were sent: its principle is that a system is a file, and that adding a line to it makes the system know more, with nothing coded or trained. Here a sentence asks, and never declares.
+The next chapter is about knowledge programming, where the analyst's domain words were sent. Its principle is that a system is a file, and that adding a line to it makes the system know more, with nothing coded or trained. Here a sentence asks, and never declares.
