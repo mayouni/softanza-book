@@ -455,4 +455,29 @@ Déclarez deux mondes pour un lieu que vous connaissez : une boutique et son fou
 
 Puis demandez l'appel, lisez la raison, et réparez la déclaration, non le tribunal, une barrière à la fois, jusqu'à ce qu'il renvoie 1. Comptez les refus. Quelle barrière auriez-vous oubliée sans le tribunal ? Le tribunal vous dit quelle barrière refuse : un niveau de risque manquant, une permission manquante, une autorité qui ne couvre pas le risque. Il n'écrit pas la déclaration. Un exercice plus dur : retirez le second monde et prédisez la nouvelle raison avant de la demander ; puis enregistrez une copie du premier, changez votre original, et prédisez ce que voit la constellation.
 
+Je vous laisse celui-ci. Prenez le bloc des barrières de la section 3 et supprimez une ligne : `oCon.GovSetAuthority("resto", :Delegated)`. Arrêtez le bloc à son dernier `Why()`, comme ici, et je n'imprime rien dessous :
+
+```haro exercise
+oResto = StzAppQ("resto")
+oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
+oSupplier = StzAppQ("supplier")
+oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
+oCon = new stzSuperApp("acme-group")
+oCon.AddWorld("resto", oResto)
+oCon.AddWorld("supplier", oSupplier)
+oCon.Bond("resto", "supplier", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovDeclareRisk("order-produce", 2)
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovGrant("resto", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+```
+
+Exécutez-le et lisez le dernier `Why()`. Nommez la barrière qui refuse, et dites ce que le bloc devrait dire pour que la traversée soit autorisée. La section 3 dit ce que demande chacune des trois barrières, et que chaque refus nomme sa barrière. Quand vous l'aurez résolu, vous saurez que le tribunal nomme la barrière qui refuse et n'écrit pas la déclaration.
+
 Le chapitre suivant dit comment une solution déclarée atteint la réalité, par exactement une porte : répéter sur ce qui ne touche à rien, valider par un acteur gouverné, et laisser la production refuser tout ce qui est faux. Répéter, puis valider.

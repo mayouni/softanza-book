@@ -4,7 +4,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 10:18 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the agent proposes, and a person decides.
 
@@ -264,5 +264,26 @@ What is absent: a version history of a rule with an undo. The lineage records th
 Pick one rule of an organisation you know that has a number in it, a ceiling, a delay, a count of approvals. Write it as a rule with a condition and a requirement, on four invented cases, two that satisfy it and two that do not. Before you run anything, write the report you expect. Then misspell one property of the condition on purpose, and say what the model reports, and what the governor reports.
 
 Run it. The difference between those two answers is the chapter.
+
+I left this one in your hands. The block below is the second block of section 3 followed by the last lines of the governor block, with one change: the rule has no `SetMessageQ` line, so it carries no message.
+
+```haro exercise
+oG.ClearAttachedRules()
+oRule = new stzGraphRule("second-approval")
+oRule.SetDomainQ("advances")
+oRule.WhenQ("amount", "greaterthan", 200)
+oRule.ThenQ("approvals", "greaterthan", 1)
+oRule.ThenViolationQ("two approvals needed")
+oG.AddRule(oRule)
+oG.RulesReport()
+oWatch2 = StzRuleGovernance("hub")
+oWatch2.AddRule(oRule)
+oWatch2.AddCase("advances", oG)
+? len(oWatch2.CheckRules())
+```
+
+> run: exercise
+
+Run it on the model of section 3. Compare what the model reports with what it reported when the rule had its message, and read what the governor returns. Under "I refused a silent rule", section 4 says what the governor does with such a rule, and why. I do not give the answer here. When you have solved it, you will know why the governor reports a rule that has no message.
 
 The next chapter asks what the projects did not prove. Its measure is this: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.

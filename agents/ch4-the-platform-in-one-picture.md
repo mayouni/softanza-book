@@ -4,7 +4,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-13 10:15 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -237,5 +237,19 @@ Each of the six doors reads this picture from where it stands.
 Draw your own solution the way this chapter draws Softanza: floors, and a court beside each. For each box, write the file that declares it and the guard that judges it, and put a stage word on it: built, designed or absent.
 
 Then declare two parts of it with `stzPlatformProfile`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
+
+I left this one in your hands. Section 7 says the core layer's string classes are broken against the engine, and the block of section 3 shows you lists only. Take the block of section 7 and change one word: `stxString` becomes `stkString`.
+
+```haro exercise
+try
+	o3 = new stkString("one and one")
+catch
+	? cCatchError
+done
+```
+
+> run: exercise
+
+Run it, and read what the runtime answers. Then go back to section 7 and find which name is called, and who should have registered it. When you have solved it, you will know why the layer contract's line that base builds on core is called designed, and not built.
 
 The next chapter leaves the picture for the code written inside it, and states the first law: the code adheres to the way a person thinks, and the court judges it whoever wrote it. Its principle is one sentence: what you think is what you write.

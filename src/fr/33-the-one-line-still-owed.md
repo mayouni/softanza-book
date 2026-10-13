@@ -183,4 +183,21 @@ oP.SetProfile(oSol)
 
 Lancez-le. Puis écrivez une ligne de plus, celle que votre propre projet doit encore, dans la forme du dossier : qui l'a perçu, à quelle date, et ce qu'il a dit. Si personne ne l'a fait, écrivez « non perçu », et dites pourquoi. Cette ligne est la fin de ce livre, et le début du suivant.
 
+Je vous laisse celui-ci. Voici le bloc de la barrière de production de la section 3, avec une seule ligne changée : l'acteur n'est plus la personne mais l'assistant, `LLMActor("assistant")`, comme au chapitre 24. Je n'ai pas lancé cette version, et je n'imprime aucune réponse pour elle.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.BindSandbox(:payments, new stzPaymentsSandbox())
+oDel = new stzDelivery("shop")
+oDel.AddBackend("api", "linux")
+oDel.UseServicesQ(oReg)
+oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
+oDel.SetActor(LLMActor("assistant"))
+oDep = oDel.Deploy(:Production)
+? oDep.WasCommitted()
+? oDel.Log().EntriesOfLevel(:error)[2][:message]
+```
+
+Lancez celui-là aussi. Lisez ce que répond `WasCommitted()`, et lisez le journal : le bloc de la section 3 imprimait sa deuxième entrée d'erreur pour la personne, et je ne dis rien de celle de l'assistant. La section 5 dit ce que prouvent les deux gardes, et la section 8 ce qu'on refuse à un agent. Quand la barrière répondra, vous saurez ce qu'elle refuse pour ce qui est vrai et ce qu'elle refuse pour qui demande.
+
 La préface a nommé ce que ce livre doit, et c'est cette ligne : une solution qui a tourné sur le moteur propre de Softanza, et ce qu'une personne nommée en a dit. Quand la ligne existera, ce chapitre sera écrit de nouveau.

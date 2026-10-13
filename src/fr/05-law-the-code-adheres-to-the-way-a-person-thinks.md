@@ -202,4 +202,13 @@ Prenez la liste `[ "tea", "", "rice", "", "fish", "" ]`. Écrivez dans l'ordre l
 
 Exécutez. Puis demandez à un agent de résoudre le même problème, et jugez sa réponse avec deux questions seulement : chaque ligne suit-elle une étape de pensée, et chaque question porte-t-elle sa promesse.
 
+Je vous laisse celui-ci, exprès. La classe Basket de la section 3 échoue devant le tribunal parce que `AddQ` renvoie `42`. Changez cette seule valeur en `This` et exécutez de nouveau la question :
+
+```haro exercise
+cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return This" + nl
+? StzCodeIsClean(cCode)
+```
+
+Ne vous arrêtez pas à la réponse du tribunal. Demandez-vous si la classe, telle qu'elle est, suit la façon dont une personne pense, et ce que le tribunal a lu pour vous répondre. Je ne vous donne pas le verdict : la section 6 dit quel tribunal existe, et la section 7 dit ce qu'il ne lit pas. Quand vous aurez tranché, vous saurez pourquoi un tribunal qui laisse passer une classe n'a pas encore jugé le style d'un programme écrit avec la bibliothèque.
+
 Le chapitre suivant est le modèle mental, et les métaphores. Là où vous écririez une boucle, il vous demande de nommer plutôt le mouvement que vous faites : marcher, vérifier, produire ou exécuter.

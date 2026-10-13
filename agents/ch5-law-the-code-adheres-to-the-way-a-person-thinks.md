@@ -4,7 +4,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 10:15 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -201,5 +201,16 @@ What is absent: any machine that judges, today, the style of a program written w
 Take the list `[ "tea", "", "rice", "", "fish", "" ]`. Write the questions of the mental model in order, one line each: does it contain empty strings, how many, where. Then one act, with a named parameter. Under every question, write the line it must print, before you run anything.
 
 Run it. Then ask an agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
+
+I left this one in your hands, on purpose. The Basket class of section 3 fails the court because `AddQ` returns `42`. Change that one value to `This` and run the question again:
+
+```haro exercise
+cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return This" + nl
+? StzCodeIsClean(cCode)
+```
+
+> run: exercise
+
+Do not stop at the court's answer. Ask whether the class, as it stands, follows the way a person thinks, and what the court read to answer you. I do not give you the verdict: section 6 says which court exists, and section 7 says what it does not read. When you have settled it, you will know why a court that passes a class has not yet judged the style of a program written with the library.
 
 The next chapter is the mental model, and the metaphors. Where you would write a loop, it asks you to name the move you are making instead: walk, check, yield or perform.

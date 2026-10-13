@@ -188,4 +188,12 @@ Sous elle, écrivez comme texte : le nom et la version de l'autre outil, la date
 
 Une variante qu'une machine peut juger : prenez les cinq lignes de l'autre côté du bloc trois et prédisez, avant d'exécuter, l'ordre que chacune imprime. Je ne vous dirai pas quel ordre est le bon.
 
+Je vous laisse celui-ci. Voici le bloc trois, sa promesse retirée :
+
+```haro exercise
+? @@( Q([ "zèbre", "étoile", "eau", "zoo" ]).SortedInAscending() )
+```
+
+Sous lui, écrivez la promesse qu'attendrait un lecteur français, l'ordre que donne le tri conscient de la locale du terrain à la section 3, comme une ligne `#-->`, et exécutez-le. Je n'imprime pas le verdict. Lisez-le, puis lisez les sections 3 et 7 pour apprendre pourquoi ce bloc est un écart épinglé et non une faute du tri. Quand vous aurez résolu cela, vous saurez pourquoi le bloc trois promet la réponse actuelle de la bibliothèque et non celle du terrain.
+
 Le chapitre 23 se tourne vers l'architecte, et vers un monde, une constellation et une plateforme. Là, la solution est déclarée en mondes, en liens et en une enveloppe avant que rien en soit construit, et chaque traversée entre eux est gouvernée.

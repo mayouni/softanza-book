@@ -329,4 +329,20 @@ oW.ImportKnow(cWorld)
 
 Exécutez-le et voyez ce qui s'imprime. Si vous changez la question pour demander au sujet du grade 3, il prouvera quelque chose, et ce ne sera pas la ligne que vous avez promise. Puis posez la question inverse, si le primaire fait partie de la classe 3b, une fois que votre monde a sa loi, et voyez si la loi ajoute un fait dans le mauvais sens. Je ne vous dis pas la ligne à ajouter.
 
+Je vous laisse celui-ci. La section 7 lance un fichier de quatre lignes, dont trois ne sont pas des faits, et imprime ce que le lecteur en dit. Voici ce fichier de nouveau, avec un seul changement : il interroge aussi le graphe sur trois des lignes, et je n'imprime aucune des réponses.
+
+```haro exercise
+cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
+       "    d | likes | e | f" + nl + "    g likes h" + nl
+oT = new stzKnowledgeGraph("t")
+aBad = oT.ImportKnow(cBad)
+? aBad[:merged]
+? @@(aBad[:refused])
+? oT.Query([ "a", "likes", "b" ])
+? oT.Query([ "d", "likes", "e" ])
+? oT.Query([ "g", "likes", "h" ])
+```
+
+Lancez-le. Lisez `merged`, lisez `refused`, lisez les trois requêtes, et trouvez quelles lignes le graphe détient et ce que le lecteur vous a dit des autres. Posez la promesse du document de conception, un fichier « validé au chargement », section 4, à côté de ce que vous trouvez ; la section 7 dit ce que l'analyseur garde. Je ne vous donne pas la réponse, et je n'ai pas corrigé le lecteur. Quand vous l'aurez, vous saurez pourquoi un fichier qui fusionne n'est pas un fichier qui a été validé.
+
 Le chapitre suivant porte sur les langages de motifs : un motif est une règle sur la forme des données, écrite comme des données, et la même habitude sert tous les genres de données. Ici, une loi sur une relation était une ligne dans un fichier ; là, la règle porte sur la forme des données elles-mêmes.

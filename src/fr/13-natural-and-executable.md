@@ -415,4 +415,14 @@ Prenez une phrase que vous dites d'un mot de votre propre langue : qu'il est en 
 
 Exécutez ensuite les deux. Puis changez un mot de la chaîne, et un mot de la phrase, en un mot que le dictionnaire ne tient pas. Quelle direction vous l'a dit ? Laquelle avez-vous dû vous le dire vous-même ? Dans une direction la machine vous le dit, et dans l'autre vous devez vous le dire vous-même. Si une promesse se rompt, ne la changez pas : expliquez d'abord la sortie.
 
+Je vous laisse celui-ci. La section 7 montre une chaîne qui se lit « which a length of 4 », et rien ne l'a refusée. Exécutez-la, lisez-la à voix haute comme de l'anglais, et écrivez dessous la ligne que vous voudriez voir la bibliothèque imprimer pour la refuser, avec la raison qu'elle donnerait.
+
+```haro exercise
+# the chain of section 7 that nothing judged:
+? TheWordQ("haro").IsAQ(:Word).WhichQ().ALengthQ().Of(4)
+# the line you would have the library print to refuse it, with its reason:
+```
+
+Quand vous aurez écrit cette ligne, vous saurez pourquoi je tiens la chaîne non grammaticale pour une vue et non pour un résultat, et qui la page dit qu'il faut pour la juger (sections 4 et 7).
+
 Le chapitre suivant porte sur la programmation de la connaissance, où les mots de domaine de l'analyste ont été envoyés. Son principe est qu'un système est un fichier, et qu'y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner. Ici une phrase demande, et ne déclare jamais.

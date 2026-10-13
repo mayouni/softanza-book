@@ -272,4 +272,21 @@ Write a Regexuter with two triggers, one for numbers and one for numbers of thre
 
 Then say in one sentence what would have to change in the machine for it to fire, and which rung of the ladder that change belongs to.
 
+I left this one in your hands. Take the second block of section 3 and write its two `Trigger` lines in the other order, the three-digit one first:
+
+```haro exercise
+rxu() {
+	Trigger(:Big = "\d{3,}")
+	Trigger(:Number = "\d+")
+	@C(:When = :Number, :Do = '{ @value = @number(@value) * 100 }')
+	@C(:When = :Big, :Do = '{ @value = "BIG" }')
+	Process("Found 7 items")
+	? @@( Matches() )
+	? @@( Results() )
+	? @@( Triggers() )
+}
+```
+
+Before you run it, write down whether the order changes what `Results()` and `Triggers()` hold. I do not print the output of this version, and I do not tell you the answer: section 3 says what each trigger is matched against, and section 4 says what I refused to claim. When you can say why, you will know what separates the second rung from the third.
+
 Chapter 10 turns from the machine that thinks to the code that changes. Its title is *Programming becomes refinement*, and it holds to one principle: stop trying to govern the intelligence, and govern the change.

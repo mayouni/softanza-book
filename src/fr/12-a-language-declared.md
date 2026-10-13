@@ -331,4 +331,14 @@ cG = 'root ::= ...'     # your grammar here
 
 Ajoutez ensuite un nombre à la ligne, `quantity: ` et des chiffres, et écrivez une sixième prédiction : votre grammaire accepte-t-elle `quantity: 4000` ? Exécutez-la. La leçon est la troisième, la quatrième et la sixième. La machine sait déjà qu'un préfixe pourrait continuer et n'est pas encore une phrase, et elle ne peut pas savoir que le nombre est trop grand. Notez, en une phrase, qui dans votre restaurant doit refuser quarante portions, puisque la grammaire ne le peut pas.
 
+Je vous laisse celui-ci. La section 3 termine sa série de conditions sur un refus sans un mot, et la section 4 dit pourquoi le calcul reste hors de la surface qui déclare. Prenez les deux lignes qui posent à la liste la même question sous les deux formes, et changez une seule chose : écrivez un autre nombre à la place du 2, le même dans les deux lignes. Je n'imprime rien dessous.
+
+```haro exercise
+o = new stzList([ 4, 7, 10, 3, 8 ])
+? @@( o.FindW('{ sin(@item) < 2 }') )
+? @@( o.FindWF( func x { return sin(x) < 2 } ) )
+```
+
+Exécutez-les pour plusieurs nombres. Cherchez un nombre pour lequel les deux formes impriment la même chose, et dites si l'impression seule vous apprend laquelle des deux a refusé et laquelle a répondu. Quand vous l'aurez fait, vous saurez ce que coûte un langage fermé qui refuse sans un mot.
+
 Le chapitre suivant passe à la phrase naturelle, dans deux directions et sous une seule discipline. Une phrase s'exécute parce que chacun de ses mots est dans un dictionnaire que la bibliothèque possède, et ce que la bibliothèque ne connaît pas, elle le refuse, avec la raison.

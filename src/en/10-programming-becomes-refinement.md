@@ -280,4 +280,14 @@ Take two settings of a program of yours: a rate and a ceiling, say, with a rule 
 
 Run it. If you were wrong about the stage, you have found a place where your own gate disagrees with your own expectation.
 
+I left this one in your hands. Section 7 says what the gate does with an origin the code does not know, and the trust block of section 3 is the block to run. Its first lines are below; change one thing, and replace `:llm` with a name of your own, one the code was never told about.
+
+```haro exercise
+d.TrustFloor("vat", :trusted)
+r4 = d.Refine("vat").As(:yourorigin).To("0.25")
+? r4[:admitted]
+```
+
+Run it, and read what the gate does against what section 7 says it does. I will not tell you whether the gate is right. When you have decided, you will know what the trust floor does with an origin it has never met.
+
 The next chapter states a law: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it. Here the thing judged was a change; there it is whoever speaks.

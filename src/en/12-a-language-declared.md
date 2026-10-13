@@ -331,4 +331,14 @@ cG = 'root ::= ...'     # your grammar here
 
 Then add a number to the line, `quantity: ` and digits, and write a sixth prediction: does your grammar accept `quantity: 4000`? Run it. The lesson is the third, the fourth and the sixth. The machine already knows that a prefix could continue and is not yet a sentence, and it cannot know that the number is too large. Write down, in one sentence, who in your restaurant must refuse forty portions, since the grammar cannot.
 
+I left this one in your hands. Section 3 ends its run of conditions on a refusal without a word, and section 4 says why computing stays off the declaring surface. Take the two lines that put the same question to the list in the two forms, and change one thing: write another number in place of the 2, the same in both lines. I print nothing under them.
+
+```haro exercise
+o = new stzList([ 4, 7, 10, 3, 8 ])
+? @@( o.FindW('{ sin(@item) < 2 }') )
+? @@( o.FindWF( func x { return sin(x) < 2 } ) )
+```
+
+Run them for several numbers. Look for a number at which the two forms print the same thing, and say whether the printout alone tells you which of the two refused and which answered. When you have, you will know what it costs that a closed language refuses without a word.
+
 The next chapter turns to the natural sentence, in two directions and under one discipline. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.

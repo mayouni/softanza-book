@@ -329,4 +329,20 @@ oW.ImportKnow(cWorld)
 
 Run it and see what prints. If you change the question to ask about grade 3, it will prove something, and it will not be the line you promised. Then ask the reverse question, whether primary is part of class 3b, once your world has its law, and see whether the law adds a fact in the wrong direction. I do not tell you the line to add.
 
+I left this one in your hands. Section 7 runs a file of four lines, three of them not facts, and prints what the reader says about them. Here is that file again with one change: it also asks the graph about three of the lines, and I print none of the answers.
+
+```haro exercise
+cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
+       "    d | likes | e | f" + nl + "    g likes h" + nl
+oT = new stzKnowledgeGraph("t")
+aBad = oT.ImportKnow(cBad)
+? aBad[:merged]
+? @@(aBad[:refused])
+? oT.Query([ "a", "likes", "b" ])
+? oT.Query([ "d", "likes", "e" ])
+? oT.Query([ "g", "likes", "h" ])
+```
+
+Run it. Read `merged`, read `refused`, read the three queries, and find which lines the graph holds and what the reader told you about the others. Set the design document's promise of a file "validated on load", in section 4, beside what you find; section 7 says what the parser keeps. I do not give you the answer, and I did not fix the reader. When you have it, you will know why a file that merges is not a file that was validated.
+
 The next chapter is about pattern languages: a pattern is a rule about the shape of data, written as data, and the same habit serves data of every kind. Here a law about a relation was a line in a file; there the rule is about the shape of the data itself.

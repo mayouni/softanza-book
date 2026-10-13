@@ -4,7 +4,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -298,5 +298,17 @@ On the scope side: the regex verbs differ from the design table in two places. `
 Take one verb from a library you use that behaves differently in two frames: a mode, a locale, a target. Say in one sentence what the hidden frame is. Then write, as you would like it to be, two names for the same act in the two frames, with the frame in the verb. Before you run anything in Softanza, take `Match` and `MatchLine` on a text of three lines and write what each prints for a pattern that anchors at the start.
 
 Run it. If your two names differ only by a flag, you have not yet moved the frame into the verb.
+
+I left this one in your hands, on purpose. In section 3 the article promised `SOFTANZA` from a removal, and the run printed `STAZA`. Here is that block with one change, the last argument of the call:
+
+```haro exercise
+o2 = new stzString("SOOooooFFfffTANNnnnZA")
+o2.RemoveManyCS([ "o", "f", "n" ], TRUE)
+? o2.Content()
+```
+
+> run: exercise
+
+Run it. Set what it prints beside what the article promised and beside what the first run printed. Section 3 says why the first run did not give the article's line; I do not print what this one gives. When you have solved it, you will know what the case flag decides in a removal, and whether it alone can keep the article's promise.
 
 Chapter 9 turns to patterns of thought. It presents the Softanzuter, a computational representation of a thinking machine. It is based on one or many Regexuters, which identify and react to patterns of thought. With it come Reaxis and the engines.

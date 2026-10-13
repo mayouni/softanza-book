@@ -4,7 +4,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -441,5 +441,21 @@ oWorld.AskIn("mine")
 > run: exercise
 
 The fifth reply produces silence today, and that is the lesson of the exercise. If the library later turns it into a refusal, the expected answer changes. Run it on the date and commit shown at the foot of the page.
+
+I left this one in your hands. Take the fifth-register block of section 3 and change one thing: send the two phone numbers as one string, joined by a comma, and not as two pairs.
+
+```haro exercise
+oKX = new stzKnowledgeGraph("phones")
+oKX.Know("contact1", "contact")
+oKX.AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
+oKX.AskIn("fmt")
+aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
+? @@(aV[:admitted])
+? aV[:goalState]
+```
+
+> run: exercise
+
+Run it, then read what was admitted and what the goal says, and decide whether that is what you wanted to hand to the door as examples. Section 4, in its last refusal, and section 7, in the absent example register, say why I call it a fault. When you can say why, you will know what the door did with your examples, and why that is not induction.
 
 The next chapter is about the domain language model. There the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, and never a token.

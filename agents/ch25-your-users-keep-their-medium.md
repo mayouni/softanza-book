@@ -4,7 +4,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -377,6 +377,20 @@ Take a question your own world asks. The one-relation world of chapter 18's exer
 
 > run: exercise
 
-Run it, with the sandbox and never a real send, so that the exercise touches nothing. The fourth prediction raised in my research run, and that is the lesson. If a promise breaks, do not change it: explain the output first.
+Run it, with the sandbox and never a real send, so that the exercise touches nothing. If a promise breaks, do not change it: explain the output first.
+
+I left this one in your hands. The fourth prediction is a defect I did not fix, and section 7 lists it in bold: a reply with a space in it, chapter 18's known limit. Take the block of section 3 that sends a reply to a question with no options on the table, change the reply "2" to a text with a space in it, and run it:
+
+```haro exercise
+oKT = new stzKnowledgeGraph("trap")
+oKT.Know("order1", "order")
+oKT.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+oKT.AskIn("c")
+? @@(oKT.ReplyIn("c", "grand couscous")[:admitted])
+```
+
+> run: exercise
+
+Look at what the call does, and do not repair it. Section 7 says why it matters on a phone. When you have explained the output, you will know why the conversation above works only because its replies are digits and one-word dishes.
 
 The next chapter is the environment. It declares the interface once, and every shell is a projection of it; a projection, like a medium, may add renderings, never verbs.

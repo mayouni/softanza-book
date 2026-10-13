@@ -312,4 +312,13 @@ Ce qui est absent :
 
 Exécutez-le. Pour la cinquième, vous aviez le droit de vous tromper, et vous vous êtes probablement trompé : l'intervalle change de largeur, alors l'hôte lit `day8` comme une variable, et il lève une erreur, `Using uninitialized variable: day8`. C'est la limite du petit langage, apprise en étant surpris une fois. Ne changez pas votre promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie.
 
+Je vous laisse celui-ci. Le premier appel du bloc de la règle 8, son départ nommé retiré, a deux arguments. Rien d'autre ne change :
+
+```haro exercise
+o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
+? o1.FindNthNext(2, "♥")
+```
+
+Exécutez celui-ci et lisez ce qui revient. Puis réparez l'appel. La section 3 dit d'où vient cette forme d'appel et ce que font les gardes à la place. Quand il sera réparé, vous saurez pourquoi un appel que la narration même de la bibliothèque écrit lève une erreur, et ce que les gardes passent qu'il ne passe pas.
+
 Le chapitre 8 prend le nom d'une fonction en entier, comme une expression linguistique, puis la portée : ce nom est une phrase, et ses préfixes, ses suffixes et ses paramètres sont une grammaire que la bibliothèque peut lire.

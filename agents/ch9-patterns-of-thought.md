@@ -4,7 +4,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
@@ -277,5 +277,24 @@ What is absent or broken at this commit:
 Write a Regexuter with two triggers, one for numbers and one for numbers of three digits or more, with code that turns a number into its triple. Before you run it, write under each question what you expect: what the matches are, what the results are, and whether the second trigger fires on the first one's result. Run it. If the second trigger fires, you have found something I did not.
 
 Then say in one sentence what would have to change in the machine for it to fire, and which rung of the ladder that change belongs to.
+
+I left this one in your hands. Take the second block of section 3 and write its two `Trigger` lines in the other order, the three-digit one first:
+
+```haro exercise
+rxu() {
+	Trigger(:Big = "\d{3,}")
+	Trigger(:Number = "\d+")
+	@C(:When = :Number, :Do = '{ @value = @number(@value) * 100 }')
+	@C(:When = :Big, :Do = '{ @value = "BIG" }')
+	Process("Found 7 items")
+	? @@( Matches() )
+	? @@( Results() )
+	? @@( Triggers() )
+}
+```
+
+> run: exercise
+
+Before you run it, write down whether the order changes what `Results()` and `Triggers()` hold. I do not print the output of this version, and I do not tell you the answer: section 3 says what each trigger is matched against, and section 4 says what I refused to claim. When you can say why, you will know what separates the second rung from the third.
 
 Chapter 10 turns from the machine that thinks to the code that changes. Its title is *Programming becomes refinement*, and it holds to one principle: stop trying to govern the intelligence, and govern the change.

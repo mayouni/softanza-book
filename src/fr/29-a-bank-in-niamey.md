@@ -237,4 +237,17 @@ Dessinez l'organigramme d'une organisation que vous connaissez comme un texte de
 
 Lancez-la. Puis laissez un département vide et dites quel constat disparaît, et pourquoi c'est dangereux.
 
+Je vous laisse celui-ci, exprès. Prenez le bloc de la limite de la section 3 et changez une ligne : l'import prend l'organigramme entier, avec le département du directeur général déclaré.
+
+```haro exercise
+oOrg2 = new stzOrgChart("bank")
+oOrg2.ImportStzOrg(cChart)
+? oOrg2.IsValidXT(:BCEAO)
+? oOrg2.ValidateXT(:Banking)[:status]
+oOrg2.SetPositionDepartment("ceo", "executive")
+? oOrg2.IsValidXT(:BCEAO)
+```
+
+Lancez-le et mettez les trois réponses côte à côte. Le tribunal régional a déjà refusé cet organigramme, à la section 3 ; lisez maintenant ce que le second validateur en dit, et pourquoi ce n'est pas la même chose que ce que le tribunal a dit. Les sections 3 et 4 disent pourquoi. Je ne vous donne pas la réponse ici. Quand vous l'aurez, vous saurez pourquoi un validateur qui répond `pass` n'a pas jugé l'organigramme.
+
 Le chapitre suivant quitte la banque pour une organisation sur le terrain, et son principe tient en une phrase : l'agent propose, et une personne décide.

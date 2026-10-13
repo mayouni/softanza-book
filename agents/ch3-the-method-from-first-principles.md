@@ -4,7 +4,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 10:15 UTC+01:00.
 
 In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -187,5 +187,24 @@ Choose one default of your own language that you never questioned: what the empt
 > run: exercise
 
 Run both. I will not tell you which rule is right. If your rule and your language disagree, you have found a decision that someone took for you, and you can now take it yourself.
+
+I left this one in your hands, on purpose. Take the block of section 3 that governs a string, change one word, `EnforceConstraint` for `AddConstraint`, and run it as it stands below. I print no output for it.
+
+```haro exercise
+oName = new stzString("hello")
+oName.AddConstraint("keep-lowercase", :Lowercase)
+bRefused = FALSE
+try
+	oName.UpdateWith("HELLO")
+catch
+	bRefused = TRUE
+done
+? bRefused
+? oName.Content()
+```
+
+> run: exercise
+
+Look at what it prints: whether the update was refused, and what the object holds. Then read section 3, just after the block, and section 5, on the guard that checks it: the page says why. When you have both lines, you will know why a declared constraint is not an enforced one.
 
 Chapter 4 draws the platform in one picture, under one idea at every altitude: nothing is believed, everything is judged.

@@ -95,7 +95,8 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
   the places that need the author: `research/voice/CANDIDATES.md`.
 - Phase A's rulings (PHASEA-01: the crafter, forge, the seven, chapter 1 corrected, stakes owned; VOICE-01 confirmed by the author on 2026-10-12) and Phase B, the beats
   (`sessions/2026-10-13-phase-b-beats.md`), are done; the 15 particulars of Phase A are answered "the record holds none" (PHASEA-02) and stay open.
-- Next: phase C (one defect per chapter, `research/voice/CANDIDATES.md`), a fresh voice read of the whole book, any particular he gives, then the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
+- Phase C (a defect per chapter, picked on his behalf, CDEFECT-01) is done: `sessions/2026-10-13-phase-c-defects.md`.
+- Next: a fresh voice read of the whole book, any particular he gives (the 15 of Phase A), then the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

@@ -188,4 +188,12 @@ Under it, write as text: the other tool's name and version, the date, the exact 
 
 A variant that a machine can judge: take the five lines of block three's other side and predict, before running, the order each one prints. I will not tell you which order is right.
 
+I left this one in your hands. Here is block three with its promise taken off:
+
+```haro exercise
+? @@( Q([ "zèbre", "étoile", "eau", "zoo" ]).SortedInAscending() )
+```
+
+Under it, write the promise a French reader would expect, the order the field's locale-aware sort gives in section 3, as a `#-->` line, and run it. I do not print the verdict. Read it, then read sections 3 and 7 to learn why this block is a pinned gap and not a fault of the sort. When you have solved it, you will know why block three promises the library's present answer and not the field's.
+
 Chapter 23 turns to the architect, and to a world, a constellation and a platform. There the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.

@@ -484,4 +484,45 @@ oStoreMine = new stzSecretStore("my-project")
 
 Then register a key named `maps_key` in the store, and write the number of production findings again. Then bind a hand-written class with an `Authorize` method that always says yes, and ask what posture the registry gives it. If a promise breaks, do not change it: explain the output first. I do not tell you where you will be surprised.
 
+I left this one in your hands. The block below is the one from section 3, "Code first, subscribe later", with one name changed. I changed it on purpose, and I do not say what it does:
+
+```haro exercise
+oPay = new stzPaymentsSandbox()
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :payments, :mail ])
+oReg.Bind(:payments, oPay)
+oReg.Bind(:mail, new stzMailSandbox())
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+oStoreCf = new stzSecretStore("shop")
+oStoreCf.Register( (new stzApiKey("stripe-key")).FromLiteralQ("sk-test-123") )
+oStoreCf.Register( (new stzApiKey("mail-key")).FromLiteralQ("mk-test-123") )
+oReg.BindLive(:payments, new LiveGateway, "stripe-live")
+oReg.BindLive(:mail, new LiveMailer, "mail-key")
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+? oReg.PostureOf(:payments)
+oReg.SetPhase(:production)
+? oReg.IsSoundVia(oStoreCf)
+
+func Checkout poReg, nCents
+	aRes = poReg.Service(:payments).Authorize(nCents, "tok_visa")
+	poReg.Service(:mail).Send("dana@example.com", "Receipt", "Thank you.")
+	return aRes[:status]
+
+class LiveGateway
+	def init
+		return
+	def Authorize nAmount, cToken
+		return [ :status = "authorized" ]
+
+class LiveMailer
+	def init
+		return
+	def Send cTo, cSubject, cBody
+		return 1
+```
+
+Run it. Compare the answer of its last line with the one section 3 gave, and explain any difference before you touch the name; section 3, "Production refuses", shows how to ask the registry for its report. When you have solved it, you will know what makes a live binding sound: a secret that the store holds, and not only a name.
+
 The next chapter turns from the services behind a program to its users: your users keep their medium, and a new medium adds renderings, never verbs.

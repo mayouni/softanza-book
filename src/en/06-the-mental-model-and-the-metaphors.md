@@ -224,4 +224,13 @@ Take the list `[ 4, 9, 12, 7, 20, 3 ]`. Four sentences are given. One: are all o
 
 For each, say first which move it is, walk, check, yield or perform, and write under the line you will write what you expect it to print. Then write the line, with the condition as a string wherever there is a condition, and run it. After the second and the third, print the list again. Say, before you look, in which of the two the list has changed.
 
+I left this one in your hands, on purpose. Here is the block of section 3 with one change: the list is the exercise's list, and I print nothing under it.
+
+```haro exercise
+o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
+? @@( o1.FindW('{ @item > 5 and print("hacked") }') )
+```
+
+Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
+
 The next chapter turns to the writing style, and to the seven goals. Its principle is one sentence: what you think is what you write.

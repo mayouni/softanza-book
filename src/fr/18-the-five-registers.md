@@ -420,4 +420,18 @@ oWorld.AskIn("mine")
 
 La cinquième réponse produit du silence aujourd'hui, et c'est la leçon de l'exercice. Si la bibliothèque la transforme plus tard en refus, la réponse attendue change. Exécutez-le à la date et au commit indiqués au pied de la page.
 
+Je vous laisse celui-ci. Prenez le bloc du cinquième registre de la section 3 et changez une seule chose : envoyez les deux numéros de téléphone comme une seule chaîne, jointe par une virgule, et non comme deux paires.
+
+```haro exercise
+oKX = new stzKnowledgeGraph("phones")
+oKX.Know("contact1", "contact")
+oKX.AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
+oKX.AskIn("fmt")
+aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
+? @@(aV[:admitted])
+? aV[:goalState]
+```
+
+Exécutez-le, puis lisez ce qui a été admis et ce que dit le but, et décidez si c'est ce que vous vouliez remettre à la porte en fait d'exemples. La section 4, dans son dernier refus, et la section 7, dans le registre des exemples absent, disent pourquoi j'y vois une faute. Quand vous saurez dire pourquoi, vous saurez ce que la porte a fait de vos exemples, et pourquoi ce n'est pas de l'induction.
+
 Le chapitre suivant porte sur le modèle de langage de domaine. Là, la prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, et jamais un jeton.

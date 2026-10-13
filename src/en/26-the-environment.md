@@ -400,4 +400,13 @@ oMine = new stzUiDocument('DEFINE PANEL shell ( SIZE [640, 360], DIRECTION colum
 
 If a promise breaks, do not change it: explain the output first.
 
+I left this one in your hands. The `ShellStatus` of section 3 is the book's own function, and I did not guard it against the case below: the one section 3 ran through `IsClean()`, and section 7 lists as absent. Run the line and read the word the cell gives. Then make the cell refuse a stranger to the twenty-two, as the book's loop does, with the loop over the list that section 3 already holds, and without asking the library for a list it does not own (section 4 says why).
+
+```haro exercise
+# the book's own call, with the one change of the second block of section 3
+? ShellStatus(StzReplace(cShell, "SATISFIES preview", "SATISFIES transfer_funds"))
+```
+
+When the cell is right, you will know what the library finds, and what only a list it does not hold can refuse.
+
 Every shell of this chapter is a projection, and chapter 27 goes beneath them all: three layers, one engine, Haro. There every feature is implemented once, the surface is the promise, and the runtime is the part you measure, and never assert.

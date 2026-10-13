@@ -309,4 +309,6 @@ Avant d'exécuter quoi que ce soit, écrivez trois nombres : combien de classes 
 
 Puis choisissez n'importe quelle classe de la bibliothèque, prédisez son parent, et lisez-le avec la chaîne de parents. Écrivez la ligne que votre prédiction a ratée. Un apprenant qui devine que `stzString` hérite de `stkString` est en bonne compagnie : le contrat le dit, et la bibliothèque non. Je ne dis pas lequel des 17, 674 ou 714 est lequel.
 
+Je vous laisse celui-ci. Le décompte par préfixe de la section 3, `[ 10, 693, 0 ]`, est juste, et il ne dit rien des couches. Écrivez ce décompte à nouveau pour qu'il interroge la chaîne de parents de chaque classe, lue avec `ParentOf`, et non ses trois premières lettres, et regardez ce que vous obtenez. La section 3 dit ce que le préfixe cache, et la section 8, la porte de l'agent, dit pourquoi je le refuse. Quand votre décompte répondra, vous saurez pourquoi la couche d'une classe se lit dans ce qu'elle hérite, et non dans le nom qu'elle porte.
+
 Le chapitre suivant quitte le moteur pour un restaurant à Lyon, et pour la phrase que le projet y a enseignée : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison.

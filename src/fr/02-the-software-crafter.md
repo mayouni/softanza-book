@@ -268,4 +268,22 @@ Déclarez un agent pour un monde que vous connaissez : une boutique, une classe,
 
 Si le tribunal refuse, lisez la règle qu'il cite et changez votre fichier, non le tribunal. Puis faites de votre agent un modèle de langage et donnez-lui un effet, et lisez pourquoi il est refusé. Vous ne trouverez pas le fichier corrigé dans ce livre.
 
+Je vous laisse celui-ci. Prenez le bloc de la règle de graphe de la section 3, celui de l'organisation sur le terrain, et changez une ligne : les capacités de `writer` deviennent `[ "inference" ]`, sans `"effectful"`. Exécutez-le et lisez la dernière réponse.
+
+```haro exercise
+oRule = new stzGraphRule("no-llm-effectful")
+oRule.SetDomainQ("agentic")
+oRule.WhenQ("kind", "equals", "llm_actor")
+oRule.WhenQ("capabilities", "contains", "effectful")
+oRule.ThenViolationQ("an LLM proposes, only a pi-gate commits")
+g = new stzGraph("agents")
+g.AddNode("writer")
+g.SetNodeProperty("writer", "kind", "llm_actor")
+g.SetNodeProperty("writer", "capabilities", [ "inference" ])
+g.AddRule(oRule)
+? g.RulesAreSound()
+```
+
+Comparez-la ensuite à la réponse imprimée dans la section 3, et dites ce que la règle a lu pour donner chacune. La section 3 montre ses deux conditions. Quand vous saurez le dire, vous saurez quelle ligne du modèle la règle lit.
+
 Le chapitre 3 est la méthode, depuis les premiers principes, et la phrase à laquelle sa méthode revient est celle-ci : vous déclarez un monde dans un langage fait pour lui, et vous gouvernez la façon dont ce monde change.

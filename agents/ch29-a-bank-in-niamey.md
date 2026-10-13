@@ -4,7 +4,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-13 10:18 UTC+01:00.
 
 In this chapter I take a bank in Niamey, under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -238,5 +238,20 @@ Six doors follow, one for each reader.
 Draw the chart of an organisation you know as a text of positions, titles, departments and reporting lines. Before you run anything, write what you expect the regional rule, then segregation of duties, to say of it. Then write a rule of your own as data, one that governs one department, and say what the report will print.
 
 Run it. Then leave one department blank and say which finding disappears, and why that is dangerous.
+
+I left this one in your hands, on purpose. Take the limit block of section 3 and change one line: the import takes the chart whole, with the chief executive's department declared.
+
+```haro exercise
+oOrg2 = new stzOrgChart("bank")
+oOrg2.ImportStzOrg(cChart)
+? oOrg2.IsValidXT(:BCEAO)
+? oOrg2.ValidateXT(:Banking)[:status]
+oOrg2.SetPositionDepartment("ceo", "executive")
+? oOrg2.IsValidXT(:BCEAO)
+```
+
+> run: exercise
+
+Run it and put the three answers side by side. The regional court has already refused this chart, in section 3; now read what the second validator says of it, and why it is not the same as what the court said. Section 3 and section 4 say why. I do not give you the answer here. When you have it, you will know why a validator that answers `pass` has not judged the chart.
 
 The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the agent proposes, and a person decides.

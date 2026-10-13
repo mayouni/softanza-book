@@ -291,4 +291,15 @@ Puis, sur papier, faites le tableau de trois colonnes pour le projet que vous co
 
 L'exercice n'a pas de réponse à vérifier d'abord. La question que pose le tuteur est : quelle cellule avez-vous remplie de mémoire ?
 
+Je vous laisse celui-ci, exprès. Ci-dessous, le premier bloc de ce chapitre avec une ligne de plus : elle lie le service de paiements au bac à sable de la bibliothèque avant que l'on demande au registre s'il est sain.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :mail, :payments ])
+oReg.Bind(:payments, new stzPaymentsSandbox())
+? oReg.IsSound()
+```
+
+Lancez-le et lisez ce que répond `IsSound()`. Demandez-vous ensuite si un registre sain est un registre prêt à livrer, et ce que dit la garde de la section 5 d'un faux encore lié en production. Je ne donne pas la réponse : la section 5 nomme la garde qui la tient, et la section 7 dit ce que le projet a lié et ce qu'il n'a pas lié. Quand vous aurez résolu cela, vous saurez ce qu'un registre sain ne dit pas du service qui se tient derrière lui.
+
 Le chapitre 32 se tourne vers la manière dont beaucoup d'esprits ont travaillé sur ce seul ouvrage, et vers la règle qu'ils gardent. Chaque loi cite l'incident qui l'a gagnée, et une loi nouvelle sans un échec daté derrière elle est une préférence.

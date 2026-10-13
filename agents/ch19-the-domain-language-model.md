@@ -4,7 +4,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.
 
@@ -269,5 +269,9 @@ What is absent: an end-of-sentence word for the second rung, which is why one of
 Forge a domain of your own with three entities and two relations. Before you run anything, write what you expect from three calls. They are the completion of an entity, the completion of a relation, and the answer to a question about a thing the domain does not hold. Then declare that one relation is unique and propose, in the form of a fact, something that contradicts it.
 
 Run it. Then write a sentence of the right shape and the wrong truth, and say which of the grammar and the graph refuses it, and which does not.
+
+I left this one in your hands. Section 3 says that completion sees one word and not the sentence so far, and section 7 lists it as absent. In your domain, give two entities the same relation with different objects, ask for the completion of that relation, and read the list against the sentence you had in mind. The library does not repair it, and I have not repaired it for you. Then compose, from what section 3 shows (the facts of a knowledge base, read one by one), a completion that sees the subject as well as the relation.
+
+When you have solved it, you will know why a completion that sees one word lists the objects of every fact of that relation.
 
 Chapter 20 turns from what a model says to what an agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.

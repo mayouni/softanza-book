@@ -4,7 +4,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, a model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
@@ -338,5 +338,17 @@ cG = 'root ::= ...'     # your grammar here
 > run: exercise
 
 Then add a number to the line, `quantity: ` and digits, and write a sixth prediction: does your grammar accept `quantity: 4000`? Run it. The lesson is the third, the fourth and the sixth. The machine already knows that a prefix could continue and is not yet a sentence, and it cannot know that the number is too large. Write down, in one sentence, who in your restaurant must refuse forty portions, since the grammar cannot.
+
+I left this one in your hands. Section 3 ends its run of conditions on a refusal without a word, and section 4 says why computing stays off the declaring surface. Take the two lines that put the same question to the list in the two forms, and change one thing: write another number in place of the 2, the same in both lines. I print nothing under them.
+
+```haro exercise
+o = new stzList([ 4, 7, 10, 3, 8 ])
+? @@( o.FindW('{ sin(@item) < 2 }') )
+? @@( o.FindWF( func x { return sin(x) < 2 } ) )
+```
+
+> run: exercise
+
+Run them for several numbers. Look for a number at which the two forms print the same thing, and say whether the printout alone tells you which of the two refused and which answered. When you have, you will know what it costs that a closed language refuses without a word.
 
 The next chapter turns to the natural sentence, in two directions and under one discipline. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.

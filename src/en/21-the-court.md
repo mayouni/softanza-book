@@ -327,4 +327,22 @@ remove("mine.haro")
 
 Run it. The states are kept, diverged and unjudged. Then add a fourth line that raises, promise it with `#--> ERROR:`, and predict first how the tour will end. Do not change your prediction to match what you see. Explain the output first.
 
+I left this one in your hands. Here is the raise block of section 3 with one change: its first promise is now a lie.
+
+```haro exercise
+write("raise.haro", '? "before"  #--> after' + nl +
+	'? Boom()  #--> ERROR: boom happened' + nl +
+	'func Boom()' + nl + char(9) + 'raise("boom happened")' + nl)
+oRaise = TravellerQ().Silent().Walk("raise.haro")
+aRun = oRaise.Records()[1][:run]
+# what does the tour say of each promise, how does it end, what is the exit code?
+? aRun[:stops][1][:claims][1][:state]
+? aRun[:stops][1][:claims][2][:state]
+? aRun[:end]
+? oRaise.ExitCode()
+remove("raise.haro")
+```
+
+Run it. Read what the traveller says of the lie, what it says of the raise, how the tour ends and what the exit code is, then compare with what each of the two promises gave alone in section 3. Section 7 says why I cannot tell you: it is a possible defect in the promise judge, which I reported and built nothing on, and I left it unfixed on purpose. When you can say what the court answers here, you will know the question that section 7 hands to the Testoor plane.
+
 Chapter 22 is *Compared, honestly*. Its principle is this: a comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.

@@ -4,7 +4,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 10:18 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 did not prove. I start with the field's three habits for saying what a piece of work has proved. Then I run five small blocks in which the library shows an absence by refusing, and I lay out the tables: for each project, the claim, the document or file that proves it, and what is absent. I say what I refused, the author's memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -292,5 +292,18 @@ oReg.Bind(:mail, new stzMailSandbox())
 Then, on paper, make the table of three columns for the project you know best. Leave empty what you cannot name. On the last line write who perceived it, on what date, and what they said, or the word "unperceived" and why.
 
 The exercise has no answer to be checked first. The question the tutor asks is: which cell did you fill from memory?
+
+I left this one in your hands, on purpose. Below is the first block of this chapter with one line added: it binds the payments service to the library's sandbox before the registry is asked whether it is sound.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :mail, :payments ])
+oReg.Bind(:payments, new stzPaymentsSandbox())
+? oReg.IsSound()
+```
+
+> run: exercise
+
+Run it and read what `IsSound()` answers. Then ask whether a sound registry is a registry ready to ship, and what the guard of section 5 says about a fake still bound in production. I do not give the answer: section 5 names the guard that holds it, and section 7 says what the project has bound and what it has not. When you have solved it, you will know what a sound registry does not say about the service behind it.
 
 Chapter 32 turns to how many minds worked on this one body of work, and to the rule they keep. Every law cites the incident that earned it, and a new law without a dated failure behind it is a preference.

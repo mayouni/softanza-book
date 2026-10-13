@@ -309,4 +309,18 @@ oGov = new stzGovernance("mine")
 
 The last promise is the one that matters. If you now call the door for Prolog, will the governance have been asked? Write yes or no, and why. Then read section 7. If a promise breaks, do not change it: explain the output first.
 
+I left this one in your hands. Section 7 says that a plain apostrophe in data makes the way back write a string the host cannot read, and I printed no output for it. Here is the block of section 7 with one change, `it's fine` as the foreign string:
+
+```haro exercise
+oPy4 = new stzExterCode(:python)
+oPy4.SetRuntimePath(cPython)
+oPy4.SetCode(`
+res = "it's fine"
+`)
+oPy4.Execute()
+? oPy4.Result()
+```
+
+Run it. Read what the method prints and what it returns, and explain both before you touch the block; the page says why in section 7, where the way back is not closed. When you can, you will know why a way back that evaluates its data is not a closed one.
+
 Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. A model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.

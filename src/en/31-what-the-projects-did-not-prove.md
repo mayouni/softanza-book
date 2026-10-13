@@ -291,4 +291,15 @@ Then, on paper, make the table of three columns for the project you know best. L
 
 The exercise has no answer to be checked first. The question the tutor asks is: which cell did you fill from memory?
 
+I left this one in your hands, on purpose. Below is the first block of this chapter with one line added: it binds the payments service to the library's sandbox before the registry is asked whether it is sound.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :mail, :payments ])
+oReg.Bind(:payments, new stzPaymentsSandbox())
+? oReg.IsSound()
+```
+
+Run it and read what `IsSound()` answers. Then ask whether a sound registry is a registry ready to ship, and what the guard of section 5 says about a fake still bound in production. I do not give the answer: section 5 names the guard that holds it, and section 7 says what the project has bound and what it has not. When you have solved it, you will know what a sound registry does not say about the service behind it.
+
 Chapter 32 turns to how many minds worked on this one body of work, and to the rule they keep. Every law cites the incident that earned it, and a new law without a dated failure behind it is a preference.

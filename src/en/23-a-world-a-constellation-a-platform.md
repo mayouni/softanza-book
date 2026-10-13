@@ -455,4 +455,29 @@ Declare two worlds for a place you know: a shop and its supplier, a class and it
 
 Then ask for the call, read the reason, and repair the declaration, not the court, one gate at a time, until it returns 1. Count the refusals. Which gate would you have forgotten without the court? The court tells you which gate refuses: a missing risk tier, a missing permission, an authority that does not cover the risk. It does not write the declaration. A harder one: retire the second world and predict the new reason before asking; then register a copy of the first, change your original, and predict what the constellation sees.
 
+I left this one in your hands. Take the gates block of section 3 and delete one line: `oCon.GovSetAuthority("resto", :Delegated)`. Stop the block at its last `Why()`, as here, and I print nothing under it:
+
+```haro exercise
+oResto = StzAppQ("resto")
+oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
+oSupplier = StzAppQ("supplier")
+oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
+oCon = new stzSuperApp("acme-group")
+oCon.AddWorld("resto", oResto)
+oCon.AddWorld("supplier", oSupplier)
+oCon.Bond("resto", "supplier", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovDeclareRisk("order-produce", 2)
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovGrant("resto", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+```
+
+Run it and read the last `Why()`. Name the gate that refuses, and say what the block would have to say for the crossing to clear. Section 3 says what each of the three gates asks, and that each refusal names its gate. When you have solved it, you will know that the court names the gate that refuses and does not write the declaration.
+
 The next chapter is about how a declared solution reaches reality, through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake. Rehearse, then commit.

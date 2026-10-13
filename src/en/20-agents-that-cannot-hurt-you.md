@@ -414,4 +414,14 @@ StzDirDeleteAll(cDirMine)
 
 Run it. Then give the plan to a committing actor under a scope that does not cover the folder, and write the promise again. If a promise breaks, do not change the promise: explain the output first. A good learner is surprised once. The plan flags its destructive steps and does not rank them, and a plan with no executor at all is allowed.
 
+I left this one in your hands, on purpose. Take the block that committed the price list. The six lines that built `oScope3` and committed under it become these three, and the lines after them stay:
+
+```haro exercise
+oPlan3 = oAg.GenerateUpdatePlan()
+oPlan3.SetExecutor(PIActor("shop-committer"))
+oPlan3.Execute()
+```
+
+Run it, and ask the disk what the plan did, then ask the audit trail. I do not tell you what you will find. The page says why in section 7, in the first item of its list of gaps; read it after you have looked, not before. When you can say why "only a governed actor commits" holds for this plan or does not, you will know what that sentence depends on.
+
 Chapter 21 is about the court itself, in four of its forms: promises, perception, security and performance. Its principle is that a claim is only as good as the court that can refuse it, and that where no court can see, the record says so.

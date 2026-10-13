@@ -159,4 +159,16 @@ Take the last ten messages, notes or log lines in which you wrote a time by hand
 
 Your count is the finding. I will not give you mine.
 
+I left this one in your hands. Take the first block of section 3, the one that asks the library to check `KillOrder`, and strip its promises: the block below is that one with no `#-->` line. Before you run it, write under each question the line you expect. Then run it and compare. Section 3 says why the last answer is what it is; whether it is the answer a function with that name should give, I leave to you.
+
+```haro exercise
+cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
+aFindings = StzCheckCode(cCode)
+? aFindings[1][:rule]
+? aFindings[1][:message]
+? StzCodeIsClean(cCode)
+```
+
+When you have settled it, you will know why a word rule advises and does not refuse.
+
 The last chapter is about the one line still owed. Its principle says when that line may be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.

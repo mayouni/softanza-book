@@ -272,4 +272,21 @@ Ce qui est absent ou cassé à ce commit :
 
 Puis dites en une phrase ce qu'il faudrait changer dans la machine pour qu'il se déclenche, et à quel échelon de l'échelle ce changement appartient.
 
+Je vous laisse celui-ci. Reprenez le deuxième bloc de la section 3 et écrivez ses deux lignes `Trigger` dans l'autre ordre, celui des trois chiffres d'abord :
+
+```haro exercise
+rxu() {
+	Trigger(:Big = "\d{3,}")
+	Trigger(:Number = "\d+")
+	@C(:When = :Number, :Do = '{ @value = @number(@value) * 100 }')
+	@C(:When = :Big, :Do = '{ @value = "BIG" }')
+	Process("Found 7 items")
+	? @@( Matches() )
+	? @@( Results() )
+	? @@( Triggers() )
+}
+```
+
+Avant de l'exécuter, écrivez si l'ordre change ce que contiennent `Results()` et `Triggers()`. Je n'imprime pas la sortie de cette version et je ne vous donne pas la réponse : la section 3 dit contre quoi chaque déclencheur est comparé, et la section 4 dit ce que j'ai refusé d'affirmer. Quand vous saurez dire pourquoi, vous saurez ce qui sépare le deuxième échelon du troisième.
+
 Le chapitre 10 passe de la machine qui pense au code qui change. Son titre est *La programmation devient raffinement*, et il tient à un seul principe : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.

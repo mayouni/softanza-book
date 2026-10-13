@@ -4,7 +4,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-13 09:45 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-13 10:18 UTC+01:00.
 
 In this chapter I show you the floor the last line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I read from the record what stands between that floor and the line the record does not yet carry, in five steps. I say what I refused: a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
@@ -180,5 +180,24 @@ oP.SetProfile(oSol)
 > run: exercise
 
 Run it. Then write one more line, the one your own project still owes, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
+
+I left this one in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.BindSandbox(:payments, new stzPaymentsSandbox())
+oDel = new stzDelivery("shop")
+oDel.AddBackend("api", "linux")
+oDel.UseServicesQ(oReg)
+oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
+oDel.SetActor(LLMActor("assistant"))
+oDep = oDel.Deploy(:Production)
+? oDep.WasCommitted()
+? oDel.Log().EntriesOfLevel(:error)[2][:message]
+```
+
+> run: exercise
+
+Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the two guards prove, and section 8 what an agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
 The preface named what this book owes, and it is this line: a solution that ran on Softanza's own engine, and what a named person said of it. When the line exists, this chapter will be written again.

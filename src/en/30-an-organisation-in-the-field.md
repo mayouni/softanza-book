@@ -261,4 +261,23 @@ Pick one rule of an organisation you know that has a number in it, a ceiling, a 
 
 Run it. The difference between those two answers is the chapter.
 
+I left this one in your hands. The block below is the second block of section 3 followed by the last lines of the governor block, with one change: the rule has no `SetMessageQ` line, so it carries no message.
+
+```haro exercise
+oG.ClearAttachedRules()
+oRule = new stzGraphRule("second-approval")
+oRule.SetDomainQ("advances")
+oRule.WhenQ("amount", "greaterthan", 200)
+oRule.ThenQ("approvals", "greaterthan", 1)
+oRule.ThenViolationQ("two approvals needed")
+oG.AddRule(oRule)
+oG.RulesReport()
+oWatch2 = StzRuleGovernance("hub")
+oWatch2.AddRule(oRule)
+oWatch2.AddCase("advances", oG)
+? len(oWatch2.CheckRules())
+```
+
+Run it on the model of section 3. Compare what the model reports with what it reported when the rule had its message, and read what the governor returns. Under "I refused a silent rule", section 4 says what the governor does with such a rule, and why. I do not give the answer here. When you have solved it, you will know why the governor reports a rule that has no message.
+
 The next chapter asks what the projects did not prove. Its measure is this: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.

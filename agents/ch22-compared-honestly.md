@@ -4,7 +4,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.
 
@@ -189,5 +189,15 @@ Pick one task where you believe your own tool is ahead, and one where you believ
 Under it, write as text: the other tool's name and version, the date, the exact line it prints, and one line of the form "here the other leads because...". A reader checks the three text lines, since a runner cannot.
 
 A variant that a machine can judge: take the five lines of block three's other side and predict, before running, the order each one prints. I will not tell you which order is right.
+
+I left this one in your hands. Here is block three with its promise taken off:
+
+```haro exercise
+? @@( Q([ "zèbre", "étoile", "eau", "zoo" ]).SortedInAscending() )
+```
+
+> run: exercise
+
+Under it, write the promise a French reader would expect, the order the field's locale-aware sort gives in section 3, as a `#-->` line, and run it. I do not print the verdict. Read it, then read sections 3 and 7 to learn why this block is a pinned gap and not a fault of the sort. When you have solved it, you will know why block three promises the library's present answer and not the field's.
 
 Chapter 23 turns to the architect, and to a world, a constellation and a platform. There the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.

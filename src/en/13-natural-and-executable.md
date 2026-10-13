@@ -415,4 +415,14 @@ Take one sentence you say about a word in your own language: that it is lowercas
 
 Then run both. Then change one word of the chain, and one word of the sentence, to a word the dictionary does not hold. Which direction told you? Which did you have to tell yourself? In one direction the machine tells you, and in the other you must tell yourself. If a promise breaks, do not change it: explain the output first.
 
+I left this one in your hands. Section 7 shows a chain that reads "which a length of 4", and nothing refused it. Run it, read it aloud as English, and write under it the line you would have the library print to refuse it, with the reason it would give.
+
+```haro exercise
+# the chain of section 7 that nothing judged:
+? TheWordQ("haro").IsAQ(:Word).WhichQ().ALengthQ().Of(4)
+# the line you would have the library print to refuse it, with its reason:
+```
+
+When you have written that line, you will know why I hold the ungrammatical chain as a view and not as a result, and who the page says must judge it (sections 4 and 7).
+
 The next chapter is about knowledge programming, where the analyst's domain words were sent. Its principle is that a system is a file, and that adding a line to it makes the system know more, with nothing coded or trained. Here a sentence asks, and never declares.

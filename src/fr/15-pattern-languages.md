@@ -331,4 +331,12 @@ cPattern = "{ ... }"
 
 Exécutez-le. Une clause rejette le deuxième tableau et une autre rejette le troisième ; laquelle est laquelle ? Et que dirait le motif si l'email était une simple espace ? Je ne réponds pas en premier. Si une promesse se rompt, ne la changez pas : expliquez la sortie.
 
+Je vous laisse celui-ci, exprès, et je le nomme un défaut. Reprenez le bloc des matrices de la section 3 et changez une seule chose dans sa dernière ligne : mettez `{row(99)}` là où se trouve `{property(identity)}`, et gardez la matrice.
+
+```haro exercise
+? Mx("{row(99)}").Match([ [1,0], [0,1] ])
+```
+
+Dites ce que vous attendez avant de l'exécuter, puis exécutez-le. Ne changez pas le motif pour que la sortie vous donne raison : la section 7 dit où la bibliothèque imprime ce défaut, et pourquoi. Quand vous l'aurez trouvé, vous saurez quels termes du langage des matrices acceptent toute matrice.
+
 Le chapitre suivant porte sur sept langages et une porte. Une porte est un runtime et jamais une syntaxe, et la porte est une : elle est la réponse à la question « et le langage X ? ».

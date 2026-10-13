@@ -4,7 +4,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit I show rather than hide: a question asked in other words, answered instead of refused. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
@@ -231,6 +231,10 @@ Now the exercise: your own domain, and the promises you expect.
 
 Build a domain of your own with three facts: a shop, a clinic, a class. Before you run anything, write under each line the promise you expect: one question inside the domain, one outside it. Add a goal that every item must have one relation, and write the first question the system will ask you. Then run it.
 
-If a promise is broken, do not change the promise to match the output. Explain the output first. You may find, as I did, that the machine answered a question you did not ask.
+If a promise is broken, do not change the promise to match the output. Explain the output first.
+
+I left this one in your hands, on purpose. Section 7 shows a question that the first rung answered when the law says it should have refused, and I did not fix it. Take your own domain and ask one of your promised questions again in other words, with a verb you did not declare as a relation. Look at what comes back and compare it with what you asked. Then say in one sentence why it answered, and which lines of section 7 tell you so.
+
+When you have solved it, you will know why a first rung that recognises a relation only by the word it was declared with can answer a question you did not ask.
 
 Chapter 18 is *The five registers, and conversations that ask*. Its principle: a reply may come in any of five forms, and whatever the form, it is only a candidate, and the world's rules decide whether it becomes knowledge.

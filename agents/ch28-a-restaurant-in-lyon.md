@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -252,5 +252,9 @@ Declare your own Lock for one cycle. Write the worlds of the cycle you are in, t
 > run: exercise
 
 The court will tell you the circumstance and the rule. It will not write the declaration. If you want a harder one, add a rule about the actions of your cycle, and find the action that costs a third gesture.
+
+I left this one in your hands, on purpose. The owner's speed protocol is at the seventy-fifth percentile, and the budget of section 3 is judged at the ninety-fifth. Take that block, change the percentile of one expectation to another that the library offers, keep every other line, and run it. Read what the court judges against what he asked for. Section 6 says what the library's terms offer, and section 7 lists his expectation among the things absent. I give you neither the verdict nor the answer.
+
+When you have solved it, you will know why a promise the court can judge is not yet the promise the owner asked for.
 
 Chapter 29 is a bank in Niamey, where an organisation is judged by its own chart, under a regulator's rules, by a program that reads the chart as data. The chart says what is, the rule says what must be, and the verdict names the rule and the place.

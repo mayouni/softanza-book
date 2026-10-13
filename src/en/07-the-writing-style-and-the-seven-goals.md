@@ -312,4 +312,13 @@ Write, before you run anything, the line each task needs and the promise under i
 
 Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises with `Using uninitialized variable: day8`. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
 
+I left this one in your hands. The first call of the rule 8 block, with its named start taken out, has two arguments. Nothing else changes:
+
+```haro exercise
+o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
+? o1.FindNthNext(2, "♥")
+```
+
+Run this one and read what comes back. Then repair the call. Section 3 says where this form of the call comes from and what the guards do instead. When it is repaired, you will know why a call that the library's own narration writes raises, and what the guards pass that it does not.
+
 Chapter 8 takes a function's name whole, as a linguistic expression, and then scope: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.

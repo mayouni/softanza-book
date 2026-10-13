@@ -285,4 +285,14 @@ Prenez un verbe d'une bibliothèque que vous utilisez et qui se comporte autreme
 
 Exécutez-le. Si vos deux noms ne diffèrent que par un drapeau, vous n'avez pas encore déplacé le cadre dans le verbe.
 
+Je vous laisse celui-ci, exprès. À la section 3, l'article promettait `SOFTANZA` à partir d'un retrait, et l'exécution a imprimé `STAZA`. Voici ce bloc avec un seul changement, le dernier argument de l'appel :
+
+```haro exercise
+o2 = new stzString("SOOooooFFfffTANNnnnZA")
+o2.RemoveManyCS([ "o", "f", "n" ], TRUE)
+? o2.Content()
+```
+
+Exécutez-le. Mettez ce qu'il imprime à côté de ce que l'article promettait et à côté de ce que la première exécution a imprimé. La section 3 dit pourquoi la première exécution n'a pas donné la ligne de l'article ; je n'imprime pas ce que celui-ci donne. Quand vous l'aurez résolu, vous saurez ce que le drapeau de casse décide dans un retrait, et s'il suffit à lui seul à tenir la promesse de l'article.
+
 Le chapitre 9 passe aux motifs de pensée. Il présente le Softanzuter, une représentation computationnelle d'une machine pensante. Il est fondé sur un ou plusieurs Regexuters, qui reconnaissent des motifs de pensée et y réagissent. Avec lui viennent Reaxis et les moteurs.

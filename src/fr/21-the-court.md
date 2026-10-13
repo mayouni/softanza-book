@@ -327,4 +327,22 @@ remove("mine.haro")
 
 Exécutez-le. Les états sont tenue, divergente et non jugée. Puis ajoutez une quatrième ligne qui lève une erreur, promettez-la avec `#--> ERROR:`, et prédisez d'abord comment la tournée finira. Ne changez pas votre prédiction pour la faire correspondre à ce que vous voyez. Expliquez d'abord la sortie.
 
+Je vous laisse celui-ci. Voici le bloc de la levée d'erreur de la section 3 avec un seul changement : sa première promesse est maintenant un mensonge.
+
+```haro exercise
+write("raise.haro", '? "before"  #--> after' + nl +
+	'? Boom()  #--> ERROR: boom happened' + nl +
+	'func Boom()' + nl + char(9) + 'raise("boom happened")' + nl)
+oRaise = TravellerQ().Silent().Walk("raise.haro")
+aRun = oRaise.Records()[1][:run]
+# what does the tour say of each promise, how does it end, what is the exit code?
+? aRun[:stops][1][:claims][1][:state]
+? aRun[:stops][1][:claims][2][:state]
+? aRun[:end]
+? oRaise.ExitCode()
+remove("raise.haro")
+```
+
+Exécutez-le. Lisez ce que le voyageur dit du mensonge, ce qu'il dit de la levée d'erreur, comment la tournée finit et quel est le code de sortie, puis comparez avec ce que chacune des deux promesses a donné seule à la section 3. La section 7 dit pourquoi je ne peux pas vous le dire : c'est un défaut possible du juge de promesses, que j'ai signalé sans rien construire dessus, et que j'ai laissé non corrigé exprès. Quand vous saurez dire ce que le tribunal répond ici, vous connaîtrez la question que la section 7 confie au volet Testoor.
+
 Le chapitre 22 est *Comparé, honnêtement*. Son principe est celui-ci : une comparaison ne vaut rien tant que la version de l'autre côté et la date ne sont pas sur la page, que l'autre côté n'a pas été exécuté, et que la perte n'est pas imprimée à côté du gain.

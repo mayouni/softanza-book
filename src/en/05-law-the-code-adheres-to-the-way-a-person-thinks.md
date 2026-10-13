@@ -202,4 +202,13 @@ Take the list `[ "tea", "", "rice", "", "fish", "" ]`. Write the questions of th
 
 Run it. Then ask an agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
 
+I left this one in your hands, on purpose. The Basket class of section 3 fails the court because `AddQ` returns `42`. Change that one value to `This` and run the question again:
+
+```haro exercise
+cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return This" + nl
+? StzCodeIsClean(cCode)
+```
+
+Do not stop at the court's answer. Ask whether the class, as it stands, follows the way a person thinks, and what the court read to answer you. I do not give you the verdict: section 6 says which court exists, and section 7 says what it does not read. When you have settled it, you will know why a court that passes a class has not yet judged the style of a program written with the library.
+
 The next chapter is the mental model, and the metaphors. Where you would write a loop, it asks you to name the move you are making instead: walk, check, yield or perform.

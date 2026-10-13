@@ -4,7 +4,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -332,5 +332,25 @@ remove("mine.haro")
 > run: exercise (touches files)
 
 Run it. The states are kept, diverged and unjudged. Then add a fourth line that raises, promise it with `#--> ERROR:`, and predict first how the tour will end. Do not change your prediction to match what you see. Explain the output first.
+
+I left this one in your hands. Here is the raise block of section 3 with one change: its first promise is now a lie.
+
+```haro exercise
+write("raise.haro", '? "before"  #--> after' + nl +
+	'? Boom()  #--> ERROR: boom happened' + nl +
+	'func Boom()' + nl + char(9) + 'raise("boom happened")' + nl)
+oRaise = TravellerQ().Silent().Walk("raise.haro")
+aRun = oRaise.Records()[1][:run]
+# what does the tour say of each promise, how does it end, what is the exit code?
+? aRun[:stops][1][:claims][1][:state]
+? aRun[:stops][1][:claims][2][:state]
+? aRun[:end]
+? oRaise.ExitCode()
+remove("raise.haro")
+```
+
+> run: exercise (touches files)
+
+Run it. Read what the traveller says of the lie, what it says of the raise, how the tour ends and what the exit code is, then compare with what each of the two promises gave alone in section 3. Section 7 says why I cannot tell you: it is a possible defect in the promise judge, which I reported and built nothing on, and I left it unfixed on purpose. When you can say what the court answers here, you will know the question that section 7 hands to the Testoor plane.
 
 Chapter 22 is *Compared, honestly*. Its principle is this: a comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.

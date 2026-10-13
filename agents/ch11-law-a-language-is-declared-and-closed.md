@@ -4,7 +4,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, since the law must say it. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
@@ -268,5 +268,15 @@ These are the limits; the next section opens six doors on them.
 Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers a model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
 
 Run it. The third answer is the lesson of this chapter. Write down, in one sentence, who in your domain must judge it, since the grammar cannot.
+
+I left this one in your hands. Section 7 admits that a list written inside brackets is still handed to the host, and section 4 says why a language must refuse any form that reaches host code. Run the section 7 block with one change, a different host function inside the brackets:
+
+```haro exercise
+? @@( Naturally("Create a list with [ lower('X'), 1 ] and remove its duplicates").Result() )
+```
+
+> run: exercise
+
+Look at what the library does with the function, and say in one sentence what a closed natural layer would have done instead. When you have, you will know why "the natural layer is a closed language" is true of its words and not yet of its lists.
 
 Chapter 12 is *A language, declared*. Its principle: declaring a language is as easy as declaring a variable.

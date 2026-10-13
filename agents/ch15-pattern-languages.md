@@ -4,7 +4,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is weak in itself, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -348,5 +348,15 @@ cPattern = "{ ... }"
 > run: exercise
 
 Run it. One clause rejects the second table and another rejects the third; which is which? And what would the pattern say if the email were a single space? I do not answer first. If a promise breaks, do not change it: explain the output.
+
+I left this one in your hands, on purpose, and I name it a defect. Take the matrix block of section 3 and change one thing in its last line: put `{row(99)}` where `{property(identity)}` stands, and keep the matrix.
+
+```haro exercise
+? Mx("{row(99)}").Match([ [1,0], [0,1] ])
+```
+
+> run: exercise
+
+Say what you expect before you run it, then run it. Do not change the pattern to make the output agree with you: section 7 says where the library prints this defect, and why. When you have found it, you will know which terms of the matrix language accept every matrix.
 
 The next chapter is about seven languages and one door. A door is a runtime and never a syntax, and the door is one: it is the answer to "what about language X".

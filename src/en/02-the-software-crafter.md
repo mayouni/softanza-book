@@ -268,4 +268,22 @@ Declare one agent for a world you know: a shop, a class, an office. Write its fi
 
 If the court refuses, read the rule it cites and change your file, not the court. Then make your agent a language model and give it an effect, and read why it is refused. You will not find the corrected file in this book.
 
+I left this one in your hands. Take the graph-rule block of section 3, the one for the organisation in the field, and change one line: the writer's capabilities become `[ "inference" ]`, without `"effectful"`. Run it and read the last answer.
+
+```haro exercise
+oRule = new stzGraphRule("no-llm-effectful")
+oRule.SetDomainQ("agentic")
+oRule.WhenQ("kind", "equals", "llm_actor")
+oRule.WhenQ("capabilities", "contains", "effectful")
+oRule.ThenViolationQ("an LLM proposes, only a pi-gate commits")
+g = new stzGraph("agents")
+g.AddNode("writer")
+g.SetNodeProperty("writer", "kind", "llm_actor")
+g.SetNodeProperty("writer", "capabilities", [ "inference" ])
+g.AddRule(oRule)
+? g.RulesAreSound()
+```
+
+Then compare it with the answer printed in section 3, and say what the rule read to give each. Section 3 shows its two conditions. When you can say it, you will know which line of the model the rule reads.
+
 Chapter 3 is the method, from first principles, and the sentence its method returns to is this: you declare a world in a language made for it, and you govern how that world changes.

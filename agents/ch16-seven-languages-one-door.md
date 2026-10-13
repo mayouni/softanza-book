@@ -4,7 +4,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stops at this commit: it is not governed, its way back is not closed, and the R door raises. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -320,5 +320,21 @@ oGov = new stzGovernance("mine")
 > run: exercise
 
 The last promise is the one that matters. If you now call the door for Prolog, will the governance have been asked? Write yes or no, and why. Then read section 7. If a promise breaks, do not change it: explain the output first.
+
+I left this one in your hands. Section 7 says that a plain apostrophe in data makes the way back write a string the host cannot read, and I printed no output for it. Here is the block of section 7 with one change, `it's fine` as the foreign string:
+
+```haro exercise
+oPy4 = new stzExterCode(:python)
+oPy4.SetRuntimePath(cPython)
+oPy4.SetCode(`
+res = "it's fine"
+`)
+oPy4.Execute()
+? oPy4.Result()
+```
+
+> run: exercise (touches the system)
+
+Run it. Read what the method prints and what it returns, and explain both before you touch the block; the page says why in section 7, where the way back is not closed. When you can, you will know why a way back that evaluates its data is not a closed one.
 
 Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. A model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.

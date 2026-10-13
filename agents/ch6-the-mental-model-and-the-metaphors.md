@@ -4,7 +4,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-13 10:15 UTC+01:00.
 
 In this chapter I take the seven steps of the mental model, which chapter 5 ran on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the articles this chapter rests on do not run at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
@@ -227,5 +227,16 @@ Next come the six doors, from the programmer to the agent.
 Take the list `[ 4, 9, 12, 7, 20, 3 ]`. Four sentences are given. One: are all of them above 2? Two: give me, as a new list, those above 8, doubled. Three: make the ones above 8 negative, in the list itself. Four: which positions are 2, 4 and 6?
 
 For each, say first which move it is, walk, check, yield or perform, and write under the line you will write what you expect it to print. Then write the line, with the condition as a string wherever there is a condition, and run it. After the second and the third, print the list again. Say, before you look, in which of the two the list has changed.
+
+I left this one in your hands, on purpose. Here is the block of section 3 with one change: the list is the exercise's list, and I print nothing under it.
+
+```haro exercise
+o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
+? @@( o1.FindW('{ @item > 5 and print("hacked") }') )
+```
+
+> run: exercise
+
+Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
 
 The next chapter turns to the writing style, and to the seven goals. Its principle is one sentence: what you think is what you write.

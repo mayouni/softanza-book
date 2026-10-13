@@ -260,4 +260,12 @@ Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you kno
 
 Run it. The third answer is the lesson of this chapter. Write down, in one sentence, who in your domain must judge it, since the grammar cannot.
 
+I left this one in your hands. Section 7 admits that a list written inside brackets is still handed to the host, and section 4 says why a language must refuse any form that reaches host code. Run the section 7 block with one change, a different host function inside the brackets:
+
+```haro exercise
+? @@( Naturally("Create a list with [ lower('X'), 1 ] and remove its duplicates").Result() )
+```
+
+Look at what the library does with the function, and say in one sentence what a closed natural layer would have done instead. When you have, you will know why "the natural layer is a closed language" is true of its words and not yet of its lists.
+
 Chapter 12 is *A language, declared*. Its principle: declaring a language is as easy as declaring a variable.

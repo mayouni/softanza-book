@@ -363,6 +363,18 @@ Prenez une question que votre propre monde pose. Le monde à une relation de l'e
 #--> your prediction
 ```
 
-Exécutez-le, avec le bac à sable et jamais un vrai envoi, pour que l'exercice ne touche à rien. La quatrième prédiction a levé une erreur dans mon exécution de recherche, et c'est la leçon. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie.
+Exécutez-le, avec le bac à sable et jamais un vrai envoi, pour que l'exercice ne touche à rien. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie.
+
+Je vous laisse celui-ci. La quatrième prédiction est un défaut que je n'ai pas corrigé, et la section 7 le liste en gras : une réponse contenant un espace, limite connue du chapitre 18. Reprenez le bloc de la section 3 qui envoie une réponse à une question sans option sur la table, remplacez la réponse "2" par un texte contenant un espace, et exécutez-le :
+
+```haro exercise
+oKT = new stzKnowledgeGraph("trap")
+oKT.Know("order1", "order")
+oKT.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+oKT.AskIn("c")
+? @@(oKT.ReplyIn("c", "grand couscous")[:admitted])
+```
+
+Regardez ce que fait l'appel, et ne le réparez pas. La section 7 dit pourquoi cela compte sur un téléphone. Quand vous aurez expliqué la sortie, vous saurez pourquoi la conversation ci-dessus ne fonctionne que parce que ses réponses sont des chiffres et des plats d'un seul mot.
 
 Le chapitre suivant est l'environnement. Il déclare l'interface une fois, et chaque shell en est une projection ; une projection, comme un médium, peut ajouter des rendus, jamais des verbes.

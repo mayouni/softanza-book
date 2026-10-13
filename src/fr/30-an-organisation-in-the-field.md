@@ -261,4 +261,23 @@ Choisissez une règle d'une organisation que vous connaissez qui contient un nom
 
 Lancez-la. La différence entre ces deux réponses est le chapitre.
 
+Je vous laisse celui-ci. Le bloc ci-dessous est le deuxième bloc de la section 3 suivi des dernières lignes du bloc du gouverneur, avec un seul changement : la règle n'a pas de ligne `SetMessageQ`, donc elle ne porte aucun message.
+
+```haro exercise
+oG.ClearAttachedRules()
+oRule = new stzGraphRule("second-approval")
+oRule.SetDomainQ("advances")
+oRule.WhenQ("amount", "greaterthan", 200)
+oRule.ThenQ("approvals", "greaterthan", 1)
+oRule.ThenViolationQ("two approvals needed")
+oG.AddRule(oRule)
+oG.RulesReport()
+oWatch2 = StzRuleGovernance("hub")
+oWatch2.AddRule(oRule)
+oWatch2.AddCase("advances", oG)
+? len(oWatch2.CheckRules())
+```
+
+Lancez-le sur le modèle de la section 3. Comparez ce que le modèle rapporte avec ce qu'il rapportait quand la règle avait son message, et lisez ce que le gouverneur renvoie. Sous « J'ai refusé une règle silencieuse », la section 4 dit ce que le gouverneur fait d'une telle règle, et pourquoi. Je ne donne pas la réponse ici. Quand vous l'aurez résolu, vous saurez pourquoi le gouverneur signale une règle qui n'a pas de message.
+
 Le chapitre suivant demande ce que les projets n'ont pas prouvé. Sa mesure est celle-ci : un projet prouve exactement ce qu'un document, un fichier, une exécution et une personne nommée atteignent, et la page dit où ils s'arrêtent.

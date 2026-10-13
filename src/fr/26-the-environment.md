@@ -400,4 +400,13 @@ oMine = new stzUiDocument('DEFINE PANEL shell ( SIZE [640, 360], DIRECTION colum
 
 Si une promesse casse, ne la changez pas : expliquez d'abord la sortie.
 
+Je vous laisse celui-ci. Le `ShellStatus` de la section 3 est la fonction du livre, et je ne l'ai pas gardée contre le cas ci-dessous : celui que la section 3 a passé par `IsClean()`, et que la section 7 range parmi les absents. Exécutez la ligne et lisez le mot que la cellule donne. Puis faites refuser par la cellule un étranger aux vingt-deux, comme le fait la boucle du livre, avec la boucle sur la liste que la section 3 contient déjà, et sans demander à la bibliothèque une liste qu'elle ne possède pas (la section 4 dit pourquoi).
+
+```haro exercise
+# the book's own call, with the one change of the second block of section 3
+? ShellStatus(StzReplace(cShell, "SATISFIES preview", "SATISFIES transfer_funds"))
+```
+
+Quand la cellule sera juste, vous saurez ce que la bibliothèque trouve, et ce que seule une liste qu'elle ne tient pas peut refuser.
+
 Chaque shell de ce chapitre est une projection, et le chapitre 27 descend sous elles toutes : trois couches, un moteur, Haro. Là, chaque fonctionnalité est implémentée une fois, la surface est la promesse, et le runtime est la partie qu'on mesure, et qu'on n'affirme jamais.

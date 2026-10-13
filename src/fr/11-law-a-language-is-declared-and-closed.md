@@ -260,4 +260,12 @@ Déclarez, avec `StzOutputSchemaQ`, un enregistrement de trois champs tiré d'un
 
 Exécutez-le. La troisième réponse est la leçon de ce chapitre. Écrivez, en une phrase, qui dans votre domaine doit la juger, puisque la grammaire ne le peut pas.
 
+Je vous laisse celui-ci. La section 7 avoue qu'une liste écrite entre crochets est encore remise à l'hôte, et la section 4 dit pourquoi un langage doit refuser toute forme qui atteint le code de l'hôte. Exécutez le bloc de la section 7 avec un seul changement, une autre fonction de l'hôte à l'intérieur des crochets :
+
+```haro exercise
+? @@( Naturally("Create a list with [ lower('X'), 1 ] and remove its duplicates").Result() )
+```
+
+Regardez ce que la bibliothèque fait de la fonction, et dites en une phrase ce qu'aurait fait une couche naturelle fermée. Quand vous l'aurez fait, vous saurez pourquoi « la couche naturelle est un langage fermé » est vrai de ses mots et pas encore de ses listes.
+
 Le chapitre 12 est *Un langage, déclaré*. Son principe : déclarer un langage est aussi facile que déclarer une variable.

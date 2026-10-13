@@ -232,4 +232,16 @@ Dessinez votre propre solution comme ce chapitre dessine Softanza : des étages,
 
 Puis déclarez-en deux parties avec `stzPlatformProfile`, et avant d'exécuter quoi que ce soit, écrivez la ligne que vous attendez quand vous lui demandez de déployer avant de construire. Exécutez-le. Une boîte sans tribunal à côté est votre première trouvaille.
 
+Je vous laisse celui-ci. La section 7 dit que les classes de chaîne de la couche noyau sont cassées contre le moteur, et le bloc de la section 3 ne vous montre que des listes. Prenez le bloc de la section 7 et changez un mot : `stxString` devient `stkString`.
+
+```haro exercise
+try
+	o3 = new stkString("one and one")
+catch
+	? cCatchError
+done
+```
+
+Exécutez-le, et lisez ce que répond le runtime. Puis retournez à la section 7 et trouvez quel nom est appelé, et qui aurait dû l'enregistrer. Quand vous l'aurez résolu, vous saurez pourquoi la ligne du contrat des couches selon laquelle la base s'appuie sur le noyau est dite conçue, et non construite.
+
 Le chapitre suivant quitte l'image pour le code écrit à l'intérieur d'elle, et énonce la première loi : le code adhère à la façon dont une personne pense, et le tribunal le juge quel que soit celui qui l'a écrit. Son principe tient en une phrase : ce que vous pensez est ce que vous écrivez.

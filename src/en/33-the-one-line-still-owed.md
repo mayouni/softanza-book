@@ -183,4 +183,21 @@ oP.SetProfile(oSol)
 
 Run it. Then write one more line, the one your own project still owes, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
 
+I left this one in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
+
+```haro exercise
+oReg = new stzServiceRegistry("shop")
+oReg.BindSandbox(:payments, new stzPaymentsSandbox())
+oDel = new stzDelivery("shop")
+oDel.AddBackend("api", "linux")
+oDel.UseServicesQ(oReg)
+oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
+oDel.SetActor(LLMActor("assistant"))
+oDep = oDel.Deploy(:Production)
+? oDep.WasCommitted()
+? oDel.Log().EntriesOfLevel(:error)[2][:message]
+```
+
+Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the two guards prove, and section 8 what an agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
+
 The preface named what this book owes, and it is this line: a solution that ran on Softanza's own engine, and what a named person said of it. When the line exists, this chapter will be written again.

@@ -331,4 +331,12 @@ cPattern = "{ ... }"
 
 Run it. One clause rejects the second table and another rejects the third; which is which? And what would the pattern say if the email were a single space? I do not answer first. If a promise breaks, do not change it: explain the output.
 
+I left this one in your hands, on purpose, and I name it a defect. Take the matrix block of section 3 and change one thing in its last line: put `{row(99)}` where `{property(identity)}` stands, and keep the matrix.
+
+```haro exercise
+? Mx("{row(99)}").Match([ [1,0], [0,1] ])
+```
+
+Say what you expect before you run it, then run it. Do not change the pattern to make the output agree with you: section 7 says where the library prints this defect, and why. When you have found it, you will know which terms of the matrix language accept every matrix.
+
 The next chapter is about seven languages and one door. A door is a runtime and never a syntax, and the door is one: it is the answer to "what about language X".

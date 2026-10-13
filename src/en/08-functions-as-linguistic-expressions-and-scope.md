@@ -285,4 +285,14 @@ Take one verb from a library you use that behaves differently in two frames: a m
 
 Run it. If your two names differ only by a flag, you have not yet moved the frame into the verb.
 
+I left this one in your hands, on purpose. In section 3 the article promised `SOFTANZA` from a removal, and the run printed `STAZA`. Here is that block with one change, the last argument of the call:
+
+```haro exercise
+o2 = new stzString("SOOooooFFfffTANNnnnZA")
+o2.RemoveManyCS([ "o", "f", "n" ], TRUE)
+? o2.Content()
+```
+
+Run it. Set what it prints beside what the article promised and beside what the first run printed. Section 3 says why the first run did not give the article's line; I do not print what this one gives. When you have solved it, you will know what the case flag decides in a removal, and whether it alone can keep the article's promise.
+
 Chapter 9 turns to patterns of thought. It presents the Softanzuter, a computational representation of a thinking machine. It is based on one or many Regexuters, which identify and react to patterns of thought. With it come Reaxis and the engines.

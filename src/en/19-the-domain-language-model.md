@@ -266,4 +266,8 @@ Forge a domain of your own with three entities and two relations. Before you run
 
 Run it. Then write a sentence of the right shape and the wrong truth, and say which of the grammar and the graph refuses it, and which does not.
 
+I left this one in your hands. Section 3 says that completion sees one word and not the sentence so far, and section 7 lists it as absent. In your domain, give two entities the same relation with different objects, ask for the completion of that relation, and read the list against the sentence you had in mind. The library does not repair it, and I have not repaired it for you. Then compose, from what section 3 shows (the facts of a knowledge base, read one by one), a completion that sees the subject as well as the relation.
+
+When you have solved it, you will know why a completion that sees one word lists the objects of every fact of that relation.
+
 Chapter 20 turns from what a model says to what an agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.

@@ -4,7 +4,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
@@ -346,5 +346,23 @@ oW.ImportKnow(cWorld)
 > run: exercise
 
 Run it and see what prints. If you change the question to ask about grade 3, it will prove something, and it will not be the line you promised. Then ask the reverse question, whether primary is part of class 3b, once your world has its law, and see whether the law adds a fact in the wrong direction. I do not tell you the line to add.
+
+I left this one in your hands. Section 7 runs a file of four lines, three of them not facts, and prints what the reader says about them. Here is that file again with one change: it also asks the graph about three of the lines, and I print none of the answers.
+
+```haro exercise
+cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
+       "    d | likes | e | f" + nl + "    g likes h" + nl
+oT = new stzKnowledgeGraph("t")
+aBad = oT.ImportKnow(cBad)
+? aBad[:merged]
+? @@(aBad[:refused])
+? oT.Query([ "a", "likes", "b" ])
+? oT.Query([ "d", "likes", "e" ])
+? oT.Query([ "g", "likes", "h" ])
+```
+
+> run: exercise
+
+Run it. Read `merged`, read `refused`, read the three queries, and find which lines the graph holds and what the reader told you about the others. Set the design document's promise of a file "validated on load", in section 4, beside what you find; section 7 says what the parser keeps. I do not give you the answer, and I did not fix the reader. When you have it, you will know why a file that merges is not a file that was validated.
 
 The next chapter is about pattern languages: a pattern is a rule about the shape of data, written as data, and the same habit serves data of every kind. Here a law about a relation was a line in a file; there the rule is about the shape of the data itself.

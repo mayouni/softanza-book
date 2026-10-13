@@ -226,6 +226,10 @@ Voici maintenant l'exercice : un domaine à vous, et les promesses que vous atte
 
 Construisez un domaine à vous avec trois faits : une boutique, une clinique, une classe. Avant d'exécuter quoi que ce soit, écrivez sous chaque ligne la promesse que vous attendez : une question dans le domaine, une hors du domaine. Ajoutez un but selon lequel chaque élément doit avoir une relation, et écrivez la première question que le système vous posera. Puis exécutez-le.
 
-Si une promesse est brisée, ne changez pas la promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie. Vous découvrirez peut-être, comme moi, que la machine a répondu à une question que vous n'aviez pas posée.
+Si une promesse est brisée, ne changez pas la promesse pour qu'elle corresponde à la sortie. Expliquez d'abord la sortie.
+
+Je vous laisse celui-ci, volontairement. La section 7 montre une question à laquelle le premier échelon a répondu alors que la loi veut un refus, et je ne l'ai pas corrigé. Reprenez votre propre domaine et posez de nouveau l'une de vos questions promises avec d'autres mots, et un verbe que vous n'avez pas déclaré comme relation. Regardez ce qui revient et comparez-le à ce que vous avez demandé. Puis dites en une phrase pourquoi il a répondu, et quelles lignes de la section 7 vous le disent.
+
+Quand vous l'aurez résolu, vous saurez pourquoi un premier échelon qui ne reconnaît une relation que par le mot avec lequel elle a été déclarée peut répondre à une question que vous n'avez pas posée.
 
 Le chapitre 18 est *Les cinq registres, et les conversations qui demandent*. Son principe : une réponse peut venir sous cinq formes, et quelle que soit la forme, elle n'est qu'un candidat, et ce sont les règles du monde qui décident si elle devient connaissance.

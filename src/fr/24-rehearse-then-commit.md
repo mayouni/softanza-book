@@ -484,4 +484,45 @@ oStoreMine = new stzSecretStore("my-project")
 
 Ensuite, enregistrez une clé nommée `maps_key` dans le magasin de secrets, et écrivez de nouveau le nombre de constats de production. Puis liez une classe écrite à la main avec une méthode `Authorize` qui dit toujours oui, et demandez quelle posture le registre lui donne. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie. Je ne vous dis pas où vous serez surpris.
 
+Je vous laisse celui-ci. Le bloc ci-dessous est celui de la section 3, « Le code d'abord, l'abonnement ensuite », avec un nom changé. Je l'ai changé exprès, et je ne dis pas ce que cela produit :
+
+```haro exercise
+oPay = new stzPaymentsSandbox()
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :payments, :mail ])
+oReg.Bind(:payments, oPay)
+oReg.Bind(:mail, new stzMailSandbox())
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+oStoreCf = new stzSecretStore("shop")
+oStoreCf.Register( (new stzApiKey("stripe-key")).FromLiteralQ("sk-test-123") )
+oStoreCf.Register( (new stzApiKey("mail-key")).FromLiteralQ("mk-test-123") )
+oReg.BindLive(:payments, new LiveGateway, "stripe-live")
+oReg.BindLive(:mail, new LiveMailer, "mail-key")
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+? oReg.PostureOf(:payments)
+oReg.SetPhase(:production)
+? oReg.IsSoundVia(oStoreCf)
+
+func Checkout poReg, nCents
+	aRes = poReg.Service(:payments).Authorize(nCents, "tok_visa")
+	poReg.Service(:mail).Send("dana@example.com", "Receipt", "Thank you.")
+	return aRes[:status]
+
+class LiveGateway
+	def init
+		return
+	def Authorize nAmount, cToken
+		return [ :status = "authorized" ]
+
+class LiveMailer
+	def init
+		return
+	def Send cTo, cSubject, cBody
+		return 1
+```
+
+Exécutez-le. Comparez la réponse de sa dernière ligne à celle que la section 3 a donnée, et expliquez toute différence avant de toucher au nom ; la section 3, « La production refuse », montre comment demander son rapport au registre. Quand vous l'aurez résolu, vous saurez ce qui rend saine une liaison réelle : un secret que le magasin de secrets détient, et pas seulement un nom.
+
 Le chapitre suivant passe des services derrière un programme à ses utilisateurs : vos utilisateurs gardent leur médium, et un nouveau médium ajoute des rendus, jamais des verbes.

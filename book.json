@@ -5,7 +5,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-13 09:45 UTC+01:00",
+ "built": "2026-10-13 10:18 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -185,7 +185,7 @@
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
-    "ran": "2026-10-13 09:41 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -314,6 +314,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oRule = new stzGraphRule(\"no-llm-effectful\")\noRule.SetDomainQ(\"agentic\")\noRule.WhenQ(\"kind\", \"equals\", \"llm_actor\")\noRule.WhenQ(\"capabilities\", \"contains\", \"effectful\")\noRule.ThenViolationQ(\"an LLM proposes, only a pi-gate commits\")\ng = new stzGraph(\"agents\")\ng.AddNode(\"writer\")\ng.SetNodeProperty(\"writer\", \"kind\", \"llm_actor\")\ng.SetNodeProperty(\"writer\", \"capabilities\", [ \"inference\" ])\ng.AddRule(oRule)\n? g.RulesAreSound()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -378,11 +385,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3043,
+   "words": 3126,
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -469,6 +476,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oName = new stzString(\"hello\")\noName.AddConstraint(\"keep-lowercase\", :Lowercase)\nbRefused = FALSE\ntry\n\toName.UpdateWith(\"HELLO\")\ncatch\n\tbRefused = TRUE\ndone\n? bRefused\n? oName.Content()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -529,11 +543,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2544,
+   "words": 2635,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -648,6 +662,13 @@
      "output": "Error (R11) : Error in class name, class not found: stxstring",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "try\n\to3 = new stkString(\"one and one\")\ncatch\n\t? cCatchError\ndone",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -712,11 +733,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2469,
+   "words": 2564,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -819,6 +840,13 @@
      "output": "0\nq-returns-object",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "cCode = \"class Basket\" + nl + \"def Add(x)\" + nl + \"\treturn x\" + nl + \"def AddQ(x)\" + nl + \"\treturn This\" + nl\n? StzCodeIsClean(cCode)",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -887,11 +915,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2839,
+   "words": 2951,
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1006,6 +1034,13 @@
      "output": "[ ]\n[ \"where\", \"{ @item > 5 }\" ]",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])\n? @@( o1.FindW('{ @item > 5 and print(\"hacked\") }') )",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -1069,11 +1104,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2479,
+   "words": 2594,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1244,6 +1279,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "o1 = new stzList([ 1, 2, \"♥\", 4, 5, \"♥\", \"♥\" ])\n? o1.FindNthNext(2, \"♥\")",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -1307,11 +1349,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3621,
+   "words": 3704,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:15 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1463,6 +1505,13 @@
      "output": "[ \"filesystem\", \"process\" ]\n[ \"gpio\" ]",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "o2 = new stzString(\"SOOooooFFfffTANNnnnZA\")\no2.RemoveManyCS([ \"o\", \"f\", \"n\" ], TRUE)\n? o2.Content()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -1523,11 +1572,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2771,
+   "words": 2874,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1649,6 +1698,13 @@
      "output": "[ 4, 3 ]\n[ 5, 3 ]",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "rxu() {\n\tTrigger(:Big = \"\\d{3,}\")\n\tTrigger(:Number = \"\\d+\")\n\t@C(:When = :Number, :Do = '{ @value = @number(@value) * 100 }')\n\t@C(:When = :Big, :Do = '{ @value = \"BIG\" }')\n\tProcess(\"Found 7 items\")\n\t? @@( Matches() )\n\t? @@( Results() )\n\t? @@( Triggers() )\n}",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -1709,11 +1765,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2641,
+   "words": 2736,
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1821,6 +1877,13 @@
      "output": "0.28\n0.22\n2\n0.20\n0\n0.21",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "d.TrustFloor(\"vat\", :trusted)\nr4 = d.Refine(\"vat\").As(:yourorigin).To(\"0.25\")\n? r4[:admitted]",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -1878,11 +1941,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2198,
+   "words": 2300,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2032,6 +2095,13 @@
      "output": "[ \"X\", 1 ]",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "? @@( Naturally(\"Create a list with [ lower('X'), 1 ] and remove its duplicates\").Result() )",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -2102,11 +2172,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2824,
+   "words": 2924,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
-    "ran": "2026-10-13 09:42 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2228,6 +2298,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "o = new stzList([ 4, 7, 10, 3, 8 ])\n? @@( o.FindW('{ sin(@item) < 2 }') )\n? @@( o.FindWF( func x { return sin(x) < 2 } ) )",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -2290,11 +2367,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3805,
+   "words": 3925,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2493,6 +2570,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "# the chain of section 7 that nothing judged:\n? TheWordQ(\"haro\").IsAQ(:Word).WhichQ().ALengthQ().Of(4)\n# the line you would have the library print to refuse it, with its reason:",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -2554,11 +2638,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3660,
+   "words": 3746,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -2705,6 +2789,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "cBad = 'knowledge \"t\"' + nl + nl + \"facts\" + nl + \"    a | likes | b\" + nl + \"    c | likes\" + nl +\n       \"    d | likes | e | f\" + nl + \"    g likes h\" + nl\noT = new stzKnowledgeGraph(\"t\")\naBad = oT.ImportKnow(cBad)\n? aBad[:merged]\n? @@(aBad[:refused])\n? oT.Query([ \"a\", \"likes\", \"b\" ])\n? oT.Query([ \"d\", \"likes\", \"e\" ])\n? oT.Query([ \"g\", \"likes\", \"h\" ])",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -2766,11 +2857,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3342,
+   "words": 3480,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -2927,6 +3018,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "? Mx(\"{row(99)}\").Match([ [1,0], [0,1] ])",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -2988,11 +3086,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2969,
+   "words": 3061,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3138,6 +3236,15 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oPy4 = new stzExterCode(:python)\noPy4.SetRuntimePath(cPython)\noPy4.SetCode(`\nres = \"it's fine\"\n`)\noPy4.Execute()\n? oPy4.Result()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": [
+      "the system"
+     ]
     }
    ],
    "narrations": [
@@ -3201,11 +3308,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3202,
+   "words": 3305,
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:16 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3392,11 +3499,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2753,
+   "words": 2856,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -3560,6 +3667,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oKX = new stzKnowledgeGraph(\"phones\")\noKX.Know(\"contact1\", \"contact\")\noKX.AddConversationQ(\"fmt\").SetGoal(StzGoalQ().RequireEach(\"contact\", \"number-pattern\"))\noKX.AskIn(\"fmt\")\naV = oKX.ReplyIn(\"fmt\", \"+216-21-298-374,+33-6-12-34-56-78\")\n? @@(aV[:admitted])\n? aV[:goalState]",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -3618,11 +3732,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3180,
+   "words": 3285,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -3792,11 +3906,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2501,
+   "words": 2625,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -3934,6 +4048,15 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oPlan3 = oAg.GenerateUpdatePlan()\noPlan3.SetExecutor(PIActor(\"shop-committer\"))\noPlan3.Execute()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": [
+      "the system"
+     ]
     }
    ],
    "narrations": [
@@ -3994,11 +4117,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3800,
+   "words": 3909,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -4151,6 +4274,15 @@
      "effects": [
       "files"
      ]
+    },
+    {
+     "code": "write(\"raise.haro\", '? \"before\"  #--> after' + nl +\n\t'? Boom()  #--> ERROR: boom happened' + nl +\n\t'func Boom()' + nl + char(9) + 'raise(\"boom happened\")' + nl)\noRaise = TravellerQ().Silent().Walk(\"raise.haro\")\naRun = oRaise.Records()[1][:run]\n# what does the tour say of each promise, how does it end, what is the exit code?\n? aRun[:stops][1][:claims][1][:state]\n? aRun[:stops][1][:claims][2][:state]\n? aRun[:end]\n? oRaise.ExitCode()\nremove(\"raise.haro\")",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": [
+      "files"
+     ]
     }
    ],
    "narrations": [
@@ -4216,11 +4348,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3517,
+   "words": 3635,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
-    "ran": "2026-10-13 09:43 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4314,6 +4446,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "? @@( Q([ \"zèbre\", \"étoile\", \"eau\", \"zoo\" ]).SortedInAscending() )",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -4375,11 +4514,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3853,
+   "words": 3949,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -4517,6 +4656,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oResto = StzAppQ(\"resto\")\noResto.AddThingQ(:dish) { Has([ :name, :price ]) }\noSupplier = StzAppQ(\"supplier\")\noSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }\noCon = new stzSuperApp(\"acme-group\")\noCon.AddWorld(\"resto\", oResto)\noCon.AddWorld(\"supplier\", oSupplier)\noCon.Bond(\"resto\", \"supplier\", \"order-produce\")\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n? oCon.Why()\noCon.GovDeclareRisk(\"order-produce\", 2)\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n? oCon.Why()\noCon.GovGrant(\"resto\", \"order-produce\")\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n? oCon.Why()\n? oCon.CallAcross(\"resto\", \"supplier\", \"order-produce\")\n? oCon.Why()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -4580,11 +4726,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3654,
+   "words": 3756,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -4743,6 +4889,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oPay = new stzPaymentsSandbox()\noReg = new stzServiceRegistry(\"shop\")\noReg.DeclareMany([ :payments, :mail ])\noReg.Bind(:payments, oPay)\noReg.Bind(:mail, new stzMailSandbox())\n? Checkout(oReg, 4200)\n? oPay.NumberOfAuthorizations()\noStoreCf = new stzSecretStore(\"shop\")\noStoreCf.Register( (new stzApiKey(\"stripe-key\")).FromLiteralQ(\"sk-test-123\") )\noStoreCf.Register( (new stzApiKey(\"mail-key\")).FromLiteralQ(\"mk-test-123\") )\noReg.BindLive(:payments, new LiveGateway, \"stripe-live\")\noReg.BindLive(:mail, new LiveMailer, \"mail-key\")\n? Checkout(oReg, 4200)\n? oPay.NumberOfAuthorizations()\n? oReg.PostureOf(:payments)\noReg.SetPhase(:production)\n? oReg.IsSoundVia(oStoreCf)\n\nfunc Checkout poReg, nCents\n\taRes = poReg.Service(:payments).Authorize(nCents, \"tok_visa\")\n\tpoReg.Service(:mail).Send(\"dana@example.com\", \"Receipt\", \"Thank you.\")\n\treturn aRes[:status]\n\nclass LiveGateway\n\tdef init\n\t\treturn\n\tdef Authorize nAmount, cToken\n\t\treturn [ :status = \"authorized\" ]\n\nclass LiveMailer\n\tdef init\n\t\treturn\n\tdef Send cTo, cSubject, cBody\n\t\treturn 1",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -4808,11 +4961,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4006,
+   "words": 4105,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -4962,6 +5115,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oKT = new stzKnowledgeGraph(\"trap\")\noKT.Know(\"order1\", \"order\")\noKT.AddConversationQ(\"c\").SetGoal(StzGoalQ().RequireEach(\"order\", \"dish\"))\noKT.AskIn(\"c\")\n? @@(oKT.ReplyIn(\"c\", \"grand couscous\")[:admitted])",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -5024,11 +5184,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3827,
+   "words": 3928,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5177,6 +5337,13 @@
      "effects": [
       "the system"
      ]
+    },
+    {
+     "code": "# the book's own call, with the one change of the second block of section 3\n? ShellStatus(StzReplace(cShell, \"SATISFIES preview\", \"SATISFIES transfer_funds\"))",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -5237,11 +5404,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4015,
+   "words": 4133,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5432,11 +5599,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4745,
+   "words": 4842,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -5598,11 +5765,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3451,
+   "words": 3567,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:17 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -5710,6 +5877,13 @@
      "output": "1\npass\n0",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "oOrg2 = new stzOrgChart(\"bank\")\noOrg2.ImportStzOrg(cChart)\n? oOrg2.IsValidXT(:BCEAO)\n? oOrg2.ValidateXT(:Banking)[:status]\noOrg2.SetPositionDepartment(\"ceo\", \"executive\")\n? oOrg2.IsValidXT(:BCEAO)",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -5768,11 +5942,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2268,
+   "words": 2376,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -5887,6 +6061,13 @@
      "output": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "oG.ClearAttachedRules()\noRule = new stzGraphRule(\"second-approval\")\noRule.SetDomainQ(\"advances\")\noRule.WhenQ(\"amount\", \"greaterthan\", 200)\noRule.ThenQ(\"approvals\", \"greaterthan\", 1)\noRule.ThenViolationQ(\"two approvals needed\")\noG.AddRule(oRule)\noG.RulesReport()\noWatch2 = StzRuleGovernance(\"hub\")\noWatch2.AddRule(oRule)\noWatch2.AddCase(\"advances\", oG)\n? len(oWatch2.CheckRules())",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -5944,11 +6125,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2559,
+   "words": 2672,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -6072,6 +6253,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"shop\")\noReg.DeclareMany([ :mail, :payments ])\noReg.Bind(:payments, new stzPaymentsSandbox())\n? oReg.IsSound()",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -6136,11 +6324,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4198,
+   "words": 4320,
    "french": true,
    "text": "agents/ch31-what-the-projects-did-not-prove.md",
    "run": {
-    "ran": "2026-10-13 09:44 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6206,6 +6394,13 @@
      "output": "14\nno-aggressive-verbs",
      "verdict": "kept",
      "effects": []
+    },
+    {
+     "code": "cCode = \"class Shop\" + nl + \"def KillOrder()\" + nl + \"  return\" + nl\naFindings = StzCheckCode(cCode)\n? aFindings[1][:rule]\n? aFindings[1][:message]\n? StzCodeIsClean(cCode)",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -6264,11 +6459,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2958,
+   "words": 3055,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
-    "ran": "2026-10-13 09:45 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6341,6 +6536,13 @@
      "output": "",
      "verdict": "exercise",
      "effects": []
+    },
+    {
+     "code": "oReg = new stzServiceRegistry(\"shop\")\noReg.BindSandbox(:payments, new stzPaymentsSandbox())\noDel = new stzDelivery(\"shop\")\noDel.AddBackend(\"api\", \"linux\")\noDel.UseServicesQ(oReg)\noDel.DeployTo(StzDeploymentSiteQ(\"host1\"), \"api\")\noDel.SetActor(LLMActor(\"assistant\"))\noDep = oDel.Deploy(:Production)\n? oDep.WasCommitted()\n? oDel.Log().EntriesOfLevel(:error)[2][:message]",
+     "promised": "",
+     "output": "",
+     "verdict": "exercise",
+     "effects": []
     }
    ],
    "narrations": [
@@ -6404,11 +6606,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2385,
+   "words": 2506,
    "french": true,
    "text": "agents/ch33-the-one-line-still-owed.md",
    "run": {
-    "ran": "2026-10-13 09:45 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6493,7 +6695,7 @@
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
-    "ran": "2026-10-13 09:45 UTC+01:00",
+    "ran": "2026-10-13 10:18 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }

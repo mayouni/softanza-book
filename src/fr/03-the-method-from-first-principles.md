@@ -186,4 +186,21 @@ Choisissez un défaut de votre propre langage que vous n'avez jamais questionné
 
 Exécutez les deux. Je ne vous dirai pas quelle règle est juste. Si votre règle et votre langage divergent, vous avez trouvé une décision que quelqu'un a prise pour vous, et vous pouvez maintenant la prendre vous-même.
 
+Je vous laisse celui-ci, volontairement. Reprenez le bloc de la section 3 qui gouverne une chaîne, changez un seul mot, `EnforceConstraint` pour `AddConstraint`, et exécutez-le tel qu'il est donné ci-dessous. Je n'en imprime aucune sortie.
+
+```haro exercise
+oName = new stzString("hello")
+oName.AddConstraint("keep-lowercase", :Lowercase)
+bRefused = FALSE
+try
+	oName.UpdateWith("HELLO")
+catch
+	bRefused = TRUE
+done
+? bRefused
+? oName.Content()
+```
+
+Regardez ce qu'il imprime : si la mise à jour a été refusée, et ce que l'objet contient. Lisez ensuite la section 3, juste après le bloc, et la section 5, sur la garde qui le vérifie : la page dit pourquoi. Quand vous aurez les deux lignes, vous saurez pourquoi une contrainte déclarée n'est pas une contrainte imposée.
+
 Le chapitre 4 dessine la plateforme en une image, sous une seule idée à chaque altitude : rien n'est cru, tout est jugé.

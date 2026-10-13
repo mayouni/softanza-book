@@ -159,4 +159,16 @@ Prenez les dix derniers messages, notes ou lignes de journal où vous avez écri
 
 Votre compte est le constat. Je ne vous donnerai pas le mien.
 
+Je vous laisse celui-ci. Prenez le premier bloc de la section 3, celui qui demande à la bibliothèque de vérifier `KillOrder`, et retirez ses promesses : le bloc ci-dessous est celui-là, sans aucune ligne `#-->`. Avant de le lancer, écrivez sous chaque question la ligne que vous attendez. Puis lancez-le et comparez. La section 3 dit pourquoi la dernière réponse est ce qu'elle est ; si c'est la réponse que devrait donner une fonction de ce nom, je vous le laisse.
+
+```haro exercise
+cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
+aFindings = StzCheckCode(cCode)
+? aFindings[1][:rule]
+? aFindings[1][:message]
+? StzCodeIsClean(cCode)
+```
+
+Quand vous aurez tranché, vous saurez pourquoi une règle de mots conseille et ne refuse pas.
+
 Le dernier chapitre porte sur la ligne qui reste due. Son principe dit quand cette ligne pourra être écrite : le dossier ne porte une solution que lorsqu'elle a tourné sur son propre moteur et qu'une personne nommée a dit ce qu'elle a vu.

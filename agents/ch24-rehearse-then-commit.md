@@ -4,7 +4,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
@@ -497,5 +497,48 @@ oStoreMine = new stzSecretStore("my-project")
 > run: exercise
 
 Then register a key named `maps_key` in the store, and write the number of production findings again. Then bind a hand-written class with an `Authorize` method that always says yes, and ask what posture the registry gives it. If a promise breaks, do not change it: explain the output first. I do not tell you where you will be surprised.
+
+I left this one in your hands. The block below is the one from section 3, "Code first, subscribe later", with one name changed. I changed it on purpose, and I do not say what it does:
+
+```haro exercise
+oPay = new stzPaymentsSandbox()
+oReg = new stzServiceRegistry("shop")
+oReg.DeclareMany([ :payments, :mail ])
+oReg.Bind(:payments, oPay)
+oReg.Bind(:mail, new stzMailSandbox())
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+oStoreCf = new stzSecretStore("shop")
+oStoreCf.Register( (new stzApiKey("stripe-key")).FromLiteralQ("sk-test-123") )
+oStoreCf.Register( (new stzApiKey("mail-key")).FromLiteralQ("mk-test-123") )
+oReg.BindLive(:payments, new LiveGateway, "stripe-live")
+oReg.BindLive(:mail, new LiveMailer, "mail-key")
+? Checkout(oReg, 4200)
+? oPay.NumberOfAuthorizations()
+? oReg.PostureOf(:payments)
+oReg.SetPhase(:production)
+? oReg.IsSoundVia(oStoreCf)
+
+func Checkout poReg, nCents
+	aRes = poReg.Service(:payments).Authorize(nCents, "tok_visa")
+	poReg.Service(:mail).Send("dana@example.com", "Receipt", "Thank you.")
+	return aRes[:status]
+
+class LiveGateway
+	def init
+		return
+	def Authorize nAmount, cToken
+		return [ :status = "authorized" ]
+
+class LiveMailer
+	def init
+		return
+	def Send cTo, cSubject, cBody
+		return 1
+```
+
+> run: exercise
+
+Run it. Compare the answer of its last line with the one section 3 gave, and explain any difference before you touch the name; section 3, "Production refuses", shows how to ask the registry for its report. When you have solved it, you will know what makes a live binding sound: a secret that the store holds, and not only a name.
 
 The next chapter turns from the services behind a program to its users: your users keep their medium, and a new medium adds renderings, never verbs.

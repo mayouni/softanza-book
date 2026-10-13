@@ -4,7 +4,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-13 10:15 UTC+01:00.
 
 In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
@@ -323,5 +323,16 @@ Write, before you run anything, the line each task needs and the promise under i
 > run: exercise
 
 Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises with `Using uninitialized variable: day8`. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
+
+I left this one in your hands. The first call of the rule 8 block, with its named start taken out, has two arguments. Nothing else changes:
+
+```haro exercise
+o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
+? o1.FindNthNext(2, "♥")
+```
+
+> run: exercise
+
+Run this one and read what comes back. Then repair the call. Section 3 says where this form of the call comes from and what the guards do instead. When it is repaired, you will know why a call that the library's own narration writes raises, and what the guards pass that it does not.
 
 Chapter 8 takes a function's name whole, as a linguistic expression, and then scope: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.

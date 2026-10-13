@@ -266,4 +266,8 @@ Forgez un domaine à vous avec trois entités et deux relations. Avant d'exécut
 
 Exécutez-le. Puis écrivez une phrase de la bonne forme et de la mauvaise vérité, et dites lequel de la grammaire et du graphe la refuse, et lequel ne la refuse pas.
 
+Je vous laisse celui-ci. La section 3 dit que la complétion voit un mot et non la phrase jusque-là, et la section 7 la range parmi ce qui est absent. Dans votre domaine, donnez à deux entités la même relation avec des objets différents, demandez la complétion de cette relation, et lisez la liste contre la phrase que vous aviez en tête. La bibliothèque ne le répare pas, et je ne l'ai pas réparé pour vous. Puis composez, avec ce que la section 3 montre (les faits d'une base de connaissances, lus un par un), une complétion qui voit le sujet en plus de la relation.
+
+Quand vous l'aurez résolu, vous saurez pourquoi une complétion qui voit un mot énumère les objets de chaque fait de cette relation.
+
 Le chapitre 20 passe de ce qu'un modèle dit à ce qu'un agent fait. Son titre est *Des agents qui ne peuvent pas vous nuire*, et son principe est celui-ci : ne construisez pas des agents sûrs ; construisez un monde sûr, et lâchez-y des agents ordinaires.

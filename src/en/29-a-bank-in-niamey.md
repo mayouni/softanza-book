@@ -237,4 +237,17 @@ Draw the chart of an organisation you know as a text of positions, titles, depar
 
 Run it. Then leave one department blank and say which finding disappears, and why that is dangerous.
 
+I left this one in your hands, on purpose. Take the limit block of section 3 and change one line: the import takes the chart whole, with the chief executive's department declared.
+
+```haro exercise
+oOrg2 = new stzOrgChart("bank")
+oOrg2.ImportStzOrg(cChart)
+? oOrg2.IsValidXT(:BCEAO)
+? oOrg2.ValidateXT(:Banking)[:status]
+oOrg2.SetPositionDepartment("ceo", "executive")
+? oOrg2.IsValidXT(:BCEAO)
+```
+
+Run it and put the three answers side by side. The regional court has already refused this chart, in section 3; now read what the second validator says of it, and why it is not the same as what the court said. Section 3 and section 4 say why. I do not give you the answer here. When you have it, you will know why a validator that answers `pass` has not judged the chart.
+
 The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the agent proposes, and a person decides.

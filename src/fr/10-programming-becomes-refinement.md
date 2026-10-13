@@ -280,4 +280,14 @@ Prenez deux réglages d'un de vos programmes : un taux et un plafond, par exempl
 
 Exécutez-le. Si vous vous êtes trompé sur l'étape, vous avez trouvé un endroit où votre propre barrière est en désaccord avec votre propre attente.
 
+Je vous laisse celui-ci. La section 7 dit ce que la barrière fait d'une origine que le code ne connaît pas, et le bloc de confiance de la section 3 est celui à exécuter. Ses premières lignes sont ci-dessous ; changez une seule chose, et remplacez `:llm` par un nom de votre choix, que le code n'a jamais appris.
+
+```haro exercise
+d.TrustFloor("vat", :trusted)
+r4 = d.Refine("vat").As(:yourorigin).To("0.25")
+? r4[:admitted]
+```
+
+Exécutez-le, et lisez ce que fait la barrière en regard de ce que dit la section 7. Je ne vous dirai pas si la barrière a raison. Quand vous aurez tranché, vous saurez ce que le plancher de confiance fait d'une origine qu'il n'a jamais rencontrée.
+
 Le chapitre suivant énonce une loi : un langage est déclaré et fermé, et ce qui le parle, une personne ou un modèle, est jugé par lui. Ici, la chose jugée était un changement ; là, c'est ce qui parle.

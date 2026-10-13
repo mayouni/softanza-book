@@ -414,4 +414,14 @@ StzDirDeleteAll(cDirMine)
 
 Exécutez-le. Puis donnez le plan à un acteur validant sous une portée qui ne couvre pas le répertoire, et écrivez la promesse de nouveau. Si une promesse se rompt, ne changez pas la promesse : expliquez d'abord la sortie. Un bon apprenant est surpris une fois. Le plan signale ses étapes destructrices et ne les classe pas, et un plan sans aucun exécutant est permis.
 
+Je vous laisse celui-ci, exprès. Prenez le bloc qui a validé la liste de prix. Les six lignes qui ont construit `oScope3` et validé sous elle deviennent ces trois-ci, et les lignes qui les suivent restent :
+
+```haro exercise
+oPlan3 = oAg.GenerateUpdatePlan()
+oPlan3.SetExecutor(PIActor("shop-committer"))
+oPlan3.Execute()
+```
+
+Exécutez-le, et demandez au disque ce que le plan a fait, puis demandez-le à la piste d'audit. Je ne vous dis pas ce que vous trouverez. La page dit pourquoi à la section 7, dans le premier point de sa liste d'écarts ; lisez-le après avoir regardé, non avant. Quand vous saurez dire pourquoi « seul un acteur gouverné valide » tient pour ce plan ou ne tient pas, vous saurez de quoi cette phrase dépend.
+
 Le chapitre 21 porte sur le tribunal lui-même, sous quatre de ses formes : promesses, perception, sécurité et performance. Son principe est qu'une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et que là où aucun tribunal ne voit, le dossier le dit.

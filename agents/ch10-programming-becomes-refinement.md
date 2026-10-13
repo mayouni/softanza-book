@@ -4,7 +4,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-13 09:42 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
 
@@ -287,5 +287,17 @@ What is built, and where it stops: the limits of the gate as it stands.
 Take two settings of a program of yours: a rate and a ceiling, say, with a rule that the rate must stay below the ceiling. Declare them as points, with bounds, and declare the rule across them. Before you run anything, write under each proposal whether it is admitted and, if not, at which stage it is refused. Propose a change of the rate above the ceiling, and one from an origin you declare as a model, against a floor you set. Then rewind to zero and go forward one step.
 
 Run it. If you were wrong about the stage, you have found a place where your own gate disagrees with your own expectation.
+
+I left this one in your hands. Section 7 says what the gate does with an origin the code does not know, and the trust block of section 3 is the block to run. Its first lines are below; change one thing, and replace `:llm` with a name of your own, one the code was never told about.
+
+```haro exercise
+d.TrustFloor("vat", :trusted)
+r4 = d.Refine("vat").As(:yourorigin).To("0.25")
+? r4[:admitted]
+```
+
+> run: exercise
+
+Run it, and read what the gate does against what section 7 says it does. I will not tell you whether the gate is right. When you have decided, you will know what the trust floor does with an origin it has never met.
 
 The next chapter states a law: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it. Here the thing judged was a change; there it is whoever speaks.

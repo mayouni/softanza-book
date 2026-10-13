@@ -363,6 +363,18 @@ Take a question your own world asks. The one-relation world of chapter 18's exer
 #--> your prediction
 ```
 
-Run it, with the sandbox and never a real send, so that the exercise touches nothing. The fourth prediction raised in my research run, and that is the lesson. If a promise breaks, do not change it: explain the output first.
+Run it, with the sandbox and never a real send, so that the exercise touches nothing. If a promise breaks, do not change it: explain the output first.
+
+I left this one in your hands. The fourth prediction is a defect I did not fix, and section 7 lists it in bold: a reply with a space in it, chapter 18's known limit. Take the block of section 3 that sends a reply to a question with no options on the table, change the reply "2" to a text with a space in it, and run it:
+
+```haro exercise
+oKT = new stzKnowledgeGraph("trap")
+oKT.Know("order1", "order")
+oKT.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+oKT.AskIn("c")
+? @@(oKT.ReplyIn("c", "grand couscous")[:admitted])
+```
+
+Look at what the call does, and do not repair it. Section 7 says why it matters on a phone. When you have explained the output, you will know why the conversation above works only because its replies are digits and one-word dishes.
 
 The next chapter is the environment. It declares the interface once, and every shell is a projection of it; a projection, like a medium, may add renderings, never verbs.

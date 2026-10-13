@@ -420,4 +420,18 @@ oWorld.AskIn("mine")
 
 The fifth reply produces silence today, and that is the lesson of the exercise. If the library later turns it into a refusal, the expected answer changes. Run it on the date and commit shown at the foot of the page.
 
+I left this one in your hands. Take the fifth-register block of section 3 and change one thing: send the two phone numbers as one string, joined by a comma, and not as two pairs.
+
+```haro exercise
+oKX = new stzKnowledgeGraph("phones")
+oKX.Know("contact1", "contact")
+oKX.AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
+oKX.AskIn("fmt")
+aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
+? @@(aV[:admitted])
+? aV[:goalState]
+```
+
+Run it, then read what was admitted and what the goal says, and decide whether that is what you wanted to hand to the door as examples. Section 4, in its last refusal, and section 7, in the absent example register, say why I call it a fault. When you can say why, you will know what the door did with your examples, and why that is not induction.
+
 The next chapter is about the domain language model. There the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, and never a token.

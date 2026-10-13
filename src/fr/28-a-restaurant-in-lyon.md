@@ -251,4 +251,8 @@ Déclarez votre propre Verrou pour un cycle. Puis écrivez les mondes du cycle o
 
 Le tribunal vous dira la circonstance et la règle. Il n'écrira pas la déclaration. Si vous voulez une épreuve plus dure, ajoutez une règle sur les actions de votre cycle, et trouvez l'action qui coûte un troisième geste.
 
+Je vous laisse celui-ci, volontairement. Le protocole de vitesse du propriétaire est au soixante-quinzième percentile, et le budget de la section 3 est jugé au quatre-vingt-quinzième. Prenez ce bloc, changez le percentile d'une attente pour un autre que la bibliothèque offre, gardez toutes les autres lignes, et lancez-le. Lisez ce que le tribunal juge contre ce qu'il a demandé. La section 6 dit ce que les termes de la bibliothèque offrent, et la section 7 range son attente parmi les choses absentes. Je ne vous donne ni le verdict ni la réponse.
+
+Quand vous l'aurez résolu, vous saurez pourquoi une promesse que le tribunal sait juger n'est pas encore la promesse que le propriétaire a demandée.
+
 Le chapitre 29 est une banque à Niamey, où une organisation est jugée par son propre organigramme, selon les règles d'un régulateur, par un programme qui lit l'organigramme comme une donnée. L'organigramme dit ce qui est, la règle dit ce qui doit être, et le verdict nomme la règle et le lieu.

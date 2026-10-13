@@ -4,7 +4,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.
 
@@ -466,5 +466,32 @@ Declare two worlds for a place you know: a shop and its supplier, a class and it
 > run: exercise
 
 Then ask for the call, read the reason, and repair the declaration, not the court, one gate at a time, until it returns 1. Count the refusals. Which gate would you have forgotten without the court? The court tells you which gate refuses: a missing risk tier, a missing permission, an authority that does not cover the risk. It does not write the declaration. A harder one: retire the second world and predict the new reason before asking; then register a copy of the first, change your original, and predict what the constellation sees.
+
+I left this one in your hands. Take the gates block of section 3 and delete one line: `oCon.GovSetAuthority("resto", :Delegated)`. Stop the block at its last `Why()`, as here, and I print nothing under it:
+
+```haro exercise
+oResto = StzAppQ("resto")
+oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
+oSupplier = StzAppQ("supplier")
+oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
+oCon = new stzSuperApp("acme-group")
+oCon.AddWorld("resto", oResto)
+oCon.AddWorld("supplier", oSupplier)
+oCon.Bond("resto", "supplier", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovDeclareRisk("order-produce", 2)
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+oCon.GovGrant("resto", "order-produce")
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+? oCon.CallAcross("resto", "supplier", "order-produce")
+? oCon.Why()
+```
+
+> run: exercise
+
+Run it and read the last `Why()`. Name the gate that refuses, and say what the block would have to say for the crossing to clear. Section 3 says what each of the three gates asks, and that each refusal names its gate. When you have solved it, you will know that the court names the gate that refuses and does not write the declaration.
 
 The next chapter is about how a declared solution reaches reality, through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake. Rehearse, then commit.

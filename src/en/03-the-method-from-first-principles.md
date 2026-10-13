@@ -186,4 +186,21 @@ Choose one default of your own language that you never questioned: what the empt
 
 Run both. I will not tell you which rule is right. If your rule and your language disagree, you have found a decision that someone took for you, and you can now take it yourself.
 
+I left this one in your hands, on purpose. Take the block of section 3 that governs a string, change one word, `EnforceConstraint` for `AddConstraint`, and run it as it stands below. I print no output for it.
+
+```haro exercise
+oName = new stzString("hello")
+oName.AddConstraint("keep-lowercase", :Lowercase)
+bRefused = FALSE
+try
+	oName.UpdateWith("HELLO")
+catch
+	bRefused = TRUE
+done
+? bRefused
+? oName.Content()
+```
+
+Look at what it prints: whether the update was refused, and what the object holds. Then read section 3, just after the block, and section 5, on the guard that checks it: the page says why. When you have both lines, you will know why a declared constraint is not an enforced one.
+
 Chapter 4 draws the platform in one picture, under one idea at every altitude: nothing is believed, everything is judged.

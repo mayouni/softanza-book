@@ -309,4 +309,18 @@ oGov = new stzGovernance("mine")
 
 La dernière promesse est celle qui compte. Si vous appelez maintenant la porte pour Prolog, la gouvernance aura-t-elle été interrogée ? Écrivez oui ou non, et pourquoi. Puis lisez la section 7. Si une promesse se brise, ne la changez pas : expliquez d'abord la sortie.
 
+Je vous laisse celui-ci. La section 7 dit qu'une simple apostrophe dans des données fait écrire au chemin du retour une chaîne que l'hôte ne peut pas lire, et je n'ai imprimé aucune sortie pour elle. Voici le bloc de la section 7 avec un seul changement, `it's fine` comme chaîne étrangère :
+
+```haro exercise
+oPy4 = new stzExterCode(:python)
+oPy4.SetRuntimePath(cPython)
+oPy4.SetCode(`
+res = "it's fine"
+`)
+oPy4.Execute()
+? oPy4.Result()
+```
+
+Exécutez-le. Lisez ce que la méthode imprime et ce qu'elle renvoie, et expliquez les deux avant de toucher au bloc ; la page dit pourquoi dans la section 7, là où le chemin du retour n'est pas fermé. Quand vous le pourrez, vous saurez pourquoi un chemin du retour qui évalue ses données n'est pas fermé.
+
 Le chapitre 17 ouvre la partie sur l'intelligence par sa loi : programmatique par défaut, le modèle en dernier, l'admission plutôt que la génération. Un modèle y est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.

@@ -4,7 +4,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-13 09:43 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-13 10:16 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -440,5 +440,17 @@ Take one sentence you say about a word in your own language: that it is lowercas
 > run: exercise
 
 Then run both. Then change one word of the chain, and one word of the sentence, to a word the dictionary does not hold. Which direction told you? Which did you have to tell yourself? In one direction the machine tells you, and in the other you must tell yourself. If a promise breaks, do not change it: explain the output first.
+
+I left this one in your hands. Section 7 shows a chain that reads "which a length of 4", and nothing refused it. Run it, read it aloud as English, and write under it the line you would have the library print to refuse it, with the reason it would give.
+
+```haro exercise
+# the chain of section 7 that nothing judged:
+? TheWordQ("haro").IsAQ(:Word).WhichQ().ALengthQ().Of(4)
+# the line you would have the library print to refuse it, with its reason:
+```
+
+> run: exercise
+
+When you have written that line, you will know why I hold the ungrammatical chain as a view and not as a result, and who the page says must judge it (sections 4 and 7).
 
 The next chapter is about knowledge programming, where the analyst's domain words were sent. Its principle is that a system is a file, and that adding a line to it makes the system know more, with nothing coded or trained. Here a sentence asks, and never declares.

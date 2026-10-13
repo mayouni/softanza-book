@@ -232,4 +232,16 @@ Draw your own solution the way this chapter draws Softanza: floors, and a court 
 
 Then declare two parts of it with `stzPlatformProfile`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
 
+I left this one in your hands. Section 7 says the core layer's string classes are broken against the engine, and the block of section 3 shows you lists only. Take the block of section 7 and change one word: `stxString` becomes `stkString`.
+
+```haro exercise
+try
+	o3 = new stkString("one and one")
+catch
+	? cCatchError
+done
+```
+
+Run it, and read what the runtime answers. Then go back to section 7 and find which name is called, and who should have registered it. When you have solved it, you will know why the layer contract's line that base builds on core is called designed, and not built.
+
 The next chapter leaves the picture for the code written inside it, and states the first law: the code adheres to the way a person thinks, and the court judges it whoever wrote it. Its principle is one sentence: what you think is what you write.

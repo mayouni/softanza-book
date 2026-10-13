@@ -4,7 +4,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-13 09:44 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-13 10:17 UTC+01:00.
 
 In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stops: at this commit, no IDE of this family exists. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.
 
@@ -411,5 +411,16 @@ oMine = new stzUiDocument('DEFINE PANEL shell ( SIZE [640, 360], DIRECTION colum
 > run: exercise (touches the system)
 
 If a promise breaks, do not change it: explain the output first.
+
+I left this one in your hands. The `ShellStatus` of section 3 is the book's own function, and I did not guard it against the case below: the one section 3 ran through `IsClean()`, and section 7 lists as absent. Run the line and read the word the cell gives. Then make the cell refuse a stranger to the twenty-two, as the book's loop does, with the loop over the list that section 3 already holds, and without asking the library for a list it does not own (section 4 says why).
+
+```haro exercise
+# the book's own call, with the one change of the second block of section 3
+? ShellStatus(StzReplace(cShell, "SATISFIES preview", "SATISFIES transfer_funds"))
+```
+
+> run: exercise
+
+When the cell is right, you will know what the library finds, and what only a list it does not hold can refuse.
 
 Every shell of this chapter is a projection, and chapter 27 goes beneath them all: three layers, one engine, Haro. There every feature is implemented once, the surface is the promise, and the runtime is the part you measure, and never assert.
