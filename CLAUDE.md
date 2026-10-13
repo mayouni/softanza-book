@@ -93,7 +93,9 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 - The voice pass of 2026-10-11 (plan phases G, E, B, D) is done: roadmaps, bridges, beats, the metaphor register (`research/METAPHORS.md`) and its mappings,
   the noise, in both languages, chapters 2 to 33 and the preface; chapter 1 untouched. Memo: `sessions/2026-10-11-voice-pass.md`; the phase C candidates and
   the places that need the author: `research/voice/CANDIDATES.md`.
-- Next: the author confirms VOICE-01's three rulings and does Phase A of the plan (his own particulars), then the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
+- Phase A's rulings (PHASEA-01: the crafter, forge, the seven, chapter 1 corrected, stakes owned; VOICE-01 confirmed by the author on 2026-10-12) and Phase B, the beats
+  (`sessions/2026-10-13-phase-b-beats.md`), are done; the 15 particulars of Phase A are answered "the record holds none" (PHASEA-02) and stay open.
+- Next: phase C (one defect per chapter, `research/voice/CANDIDATES.md`), a fresh voice read of the whole book, any particular he gives, then the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
