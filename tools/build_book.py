@@ -357,13 +357,20 @@ pre .c-promise{color:var(--code-promise);}
 .untranslated a{color:var(--bookmark);font-weight:600;}
 
 /* navigation: parts, the spine, the chapters not yet drafted */
-.sb-part{font-family:var(--sans);font-size:10.5px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;color:var(--soft);margin:22px 0 4px;line-height:1.5;}
+.sb-part{font-family:var(--sans);font-size:13px;letter-spacing:1.6px;font-weight:700;text-transform:uppercase;color:var(--ink-soft);margin:26px 0 6px;line-height:1.5;}
+/* the menu is the way through the book: large enough to read at a glance (the reader's own size was 16px and 10.5px) */
+.chapter-sidebar{padding:34px 28px 60px;}
+.sidebar-book-title{font-size:24px;margin-bottom:22px;}
+.sidebar-link{font-size:18.5px;line-height:1.32;padding:11px 0;}
+.sidebar-link .sl-spine{width:9px;height:9px;margin-right:10px;vertical-align:1px;}
+.sidebar-link.is-absent{font-size:18.5px;}
+@media (max-width: 900px){.sidebar-link{font-size:18px;}.sb-part{font-size:12.5px;}}
 .sidebar-link .sl-spine{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);margin-right:8px;vertical-align:2px;}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
-.spine-toggle{font-family:var(--sans);font-size:12px;font-weight:600;border:1px solid var(--rule);border-radius:16px;background:var(--paper);color:var(--ink-soft);padding:6px 14px;margin:0 0 6px;}
+.spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
 .spine-toggle:hover{border-color:var(--ink);color:var(--ink);}
 .spine-toggle[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
 body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.is-spine),body.spine-only .ce-row:not(.is-spine){display:none;}
