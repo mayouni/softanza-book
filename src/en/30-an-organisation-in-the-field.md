@@ -16,7 +16,7 @@ rulings: ["12.13", "12.29"]
 research: research/ch30.md
 ---
 
-In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the agent proposes, and a person decides.
+In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
 ## 1. The concept, as the field holds it
 
@@ -24,13 +24,13 @@ The field has two practices that this project needed, and keeps them in separate
 
 The first is the business rule that a business person can change. Rule engines and decision tables have existed for decades; the Decision Model and Notation, a standard of 2015, gives business analysts a table in which an approval ceiling is a number in a cell. The second is the application that keeps working with no network. Offline-first design is a practice of its own, with synchronising databases. Since an essay of 2019 it has a name for its philosophy, local-first software: the data is on your device, and the network is a convenience.
 
-A third practice has come with the agents: a model proposes, and a person approves. In the field it is a button.
+A third practice has come with AI agents: an AI model proposes, and a person approves. In the field it is a button.
 
 The organisation's study turns that third practice into a principle.
 
 ## 2. The first principle
 
-The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter (my translation of the French title): **the agent proposes, and a person decides.**
+The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter (my translation of the French title): **the AI agent proposes, and a person decides.**
 
 ## 3. The Softanza form
 

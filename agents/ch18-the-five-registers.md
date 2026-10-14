@@ -2,7 +2,7 @@
 
 Source: Chapter 18. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
+Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
 Run: 15 of 15 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -14,7 +14,7 @@ Two practices meet in the idea of a conversation that asks, and a third stands b
 
 The first is slot filling. A dialogue framework asks the user for the missing pieces of a form until the form is full. The frameworks of the field understand free text with trained models, speak on many channels and ship connectors, and they ask the designer to write intents and flows in their own language. They take the user's reply as the answer and act on it.
 
-The second is vibe coding, a name put into circulation in 2025: the human prompts, the model produces, the human keeps what runs.
+The second is vibe coding, a name put into circulation in 2025: the human prompts, the AI model produces, the human keeps what runs.
 
 The third is programming by example. Spreadsheets fill a column from two examples you typed. Research calls it inductive synthesis, and the model era made the example the way one steers a model.
 
@@ -249,7 +249,7 @@ oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
 
 ### Programmatic by default: the conversation with no one in it
 
-Chapter 17's law says conversations happen in code first. Here is the conversation with no person and no model. An agent of the library asks, an answer source (a plain function) replies, and every reply passes the same door. Where the source has no answer, does the agent invent? Run it:
+Chapter 17's law says conversations happen in code first. Here is the conversation with no person and no model. An AI agent of the library asks, an answer source (a plain function) replies, and every reply passes the same door. Where the source has no answer, does the agent invent? Run it:
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
@@ -340,7 +340,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 
 So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A value with a space in it raises at the moment (section 7 gives the evidence). So the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and the code calls them a draft awaiting a native reviewer. I wrote no Arabic or Hausa sentence of my own.
 
-### A model is a fluency, never the mind
+### An AI model is a fluency, never the mind
 
 Without a model, what does a conversation say of its own fluency? Run it:
 
@@ -368,7 +368,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused a stub.** A reserved agent raises when it is asked for. The design document calls the raise the law working, and says it should not be read as a defect. I refused to pretend the fifth register works.
 
-**I refused an agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
+**I refused an AI agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
 
 **I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one. A copy of the knowledge held in a session goes stale.
 

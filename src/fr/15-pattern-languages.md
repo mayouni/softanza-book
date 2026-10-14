@@ -189,7 +189,7 @@ g.AddEdgeXT(:b, :c, "finishes")
 
 Oui : le chemin de `served` à `placed` ne trouve rien, et la ligne imprime 0.
 
-Enfin, l'habitude. Le motif est une donnée dans chaque langage, et un langage qui expose ses jetons peut être relu par une personne et par un agent. Cinq des six langages le font :
+Enfin, l'habitude. Le motif est une donnée dans chaque langage, et un langage qui expose ses jetons peut être relu par une personne et par un agent d'IA. Cinq des six langages le font :
 
 ```haro
 ? len( Lx("[@N, @S]").Tokens() )

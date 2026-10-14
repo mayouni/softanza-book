@@ -18,7 +18,7 @@ Sur les quarante-six, huit ne sont pas racontées dans ce livre : le moteur des 
 | # | Innovation | La ligne du dossier | Dans ce livre | Les preuves de l'étude (7 octobre 2026) |
 |---|---|---|---|---|
 | 1 | La programmation orientée portée | un comportement avec un cadre invisible qui le gouverne, soigné en quatre gestes ; quatre instances | 8, 23 | une conception de 450 lignes ; des instances dans regex, système, livraison |
-| 2 | L'échelle du Softanzuter | motif, Xuter, Softanzuter, agent | 9, 17 | deux moteurs, quinze blocs, un esprit d'agent |
+| 2 | L'échelle du Softanzuter | motif, Xuter, Softanzuter, agent d'IA | 9, 17 | deux moteurs, quinze blocs, un esprit d'agent |
 | 3 | Reaxis | la programmation réactive repensée en Container, Stream, Rfunction | 9 | dix fichiers de code, cinquante-neuf fichiers de test, deux modules du moteur |
 | 4 | La programmation presque naturelle, NNL et `stzNatural` | assez proche du langage naturel pour être lisible, assez structurée pour s'exécuter | 13 | trois narrations, deux documents de conception, un dossier de treize fichiers |
 | 5 | La programmation par la connaissance, `.zknw` | la sémantique de la pensée : un fichier de connaissance, un système opérationnel | 14 | une narration qui s'exécute ; le graphe de connaissance en soixante et onze fichiers |

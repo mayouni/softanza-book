@@ -14,7 +14,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **admission.** L'acte par lequel un candidat devient connaissance : il est jugé par les règles du monde, et refusé avec une raison s'il échoue. L'expression est libre, et l'admission est gouvernée. Chapitres 17, 18.
 
-**agent.** Un programme qui propose et ne peut pas valider. Dans la bibliothèque, un agent est un fichier, jugé au chargement, dont le modèle, s'il en a un, ne détient aucune capacité de produire des effets. Il nomme un acteur et jamais une personne. Chapitres 17, 20.
+**agent.** Un programme qui propose et ne peut pas valider. Dans la bibliothèque, un agent d'IA est un fichier, jugé au chargement, dont le modèle d'IA, s'il en a un, ne détient aucune capacité de produire des effets. Il nomme un acteur et jamais une personne. Chapitres 17, 20.
 
 **architecte.** Ce que l'on tient dans la portée d'une solution : le profil, les mondes et la gouvernance. Pas un rang. Chapitre 23.
 
@@ -24,11 +24,11 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **construit.** L'un des trois mots d'étape. Le code existe, une garde existe, et un bloc s'est exécuté. Chapitre 3.
 
-**candidat.** Ce qu'est une réponse, la réponse d'un modèle ou un exemple, tant que le tribunal ne l'a pas jugé. Chapitre 18.
+**candidat.** Ce qu'est une réponse, la réponse d'un modèle d'IA ou un exemple, tant que le tribunal ne l'a pas jugé. Chapitre 18.
 
 **point de contrôle.** Un refus gardé pour une personne, avec son contexte et une durée de vie. Chapitre 18.
 
-**valider.** Le seul acte qui atteint la réalité. Seul un acteur gouverné valide, sous une portée, et le modèle ne le peut pas. Chapitres 20, 24.
+**valider.** Le seul acte qui atteint la réalité. Seul un acteur gouverné valide, sous une portée, et le modèle d'IA ne le peut pas. Chapitres 20, 24.
 
 **socle commun.** Le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient : une identité, une session, un magasin. C'est un monde comme les autres, le monde zéro, et non un nœud d'une espèce à part. Chapitres 4, 23.
 
@@ -90,7 +90,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **promesse.** La ligne `#-->` sous une expression, qui dit ce qu'elle imprime. Une affirmation sur un arrêt du programme, jugée tenue, divergente, non atteinte ou non jugée. Chapitres 1, 21.
 
-**proposition.** Ce qu'offre un modèle, une réaction ou un agent. Elle ne valide rien. Chapitres 17, 20, 26.
+**proposition.** Ce qu'offre un modèle d'IA, une réaction ou un agent d'IA. Elle ne valide rien. Chapitres 17, 20, 26.
 
 **raffinement.** La surface d'écriture : un changement déclaré avec ses points et jugé par une barrière à quatre étapes. Chapitre 10.
 

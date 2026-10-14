@@ -238,7 +238,7 @@ Six doors follow, one for each reader.
 
 **The educator.** The record supports only a small thing: the first application taught its user by doing, with guides whose words leave no doubt. There is no educator in this story, and I say so.
 
-**The agent.** An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding.
+**The agent.** An AI agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the AI agent is the session working beside me under the Lock, with a person deciding.
 
 ## 9. Exercise
 

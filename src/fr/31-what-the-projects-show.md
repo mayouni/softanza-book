@@ -191,7 +191,7 @@ Voici maintenant les tableaux. Chacun s'ouvre sur ce que le projet a livré ou f
 |---|---|---|
 | L'organisation a choisi mon offre | l'offre du 5 août 2026 a été retenue ; l'étude de conception, construite avec ses équipes du 22 septembre au 8 octobre 2026 | le hub de l'organisation, pas encore construit ; la version 1.2 de l'étude est soumise à validation. Et qui a choisi : le dossier est muet |
 | Les règles sont des données qu'une personne change sans programmeur | les clauses de règles de la bibliothèque et le gouverneur qui nomme une règle morte | une forme texte pour les règles à clauses ; un historique des versions avec retour en arrière, que l'étude promet ; la notation de règles de l'étude n'est pas celle de la bibliothèque |
-| Un agent prépare, une personne décide, avec l'autorité du moment | l'objet de gouvernance et sa filiation, avec leurs gardes | une personne liée à un compte connecté ; un hub où le faire |
+| Un agent d'IA prépare, une personne décide, avec l'autorité du moment | l'objet de gouvernance et sa filiation, avec leurs gardes | une personne liée à un compte connecté ; un hub où le faire |
 | Hors ligne par défaut | le mot de l'étude selon lequel la boîte d'envoi côté navigateur est déjà en service | le mécanisme dans la bibliothèque est à venir : ni file, ni boîte d'envoi, ni synchronisation pour l'instant. Le site l'appelle « un manque, pas une leçon apprise ». Le dernier bloc du chapitre 30 en est le tout |
 
 ### Sur les trois
@@ -209,7 +209,7 @@ Voici maintenant les tableaux. Chacun s'ouvre sur ce que le projet a livré ou f
 
 ### Ce que l'étude du dossier marque pour mesure
 
-L'étude comparative qui a lu le dossier dit, dans ses propres paragraphes intitulés « Non mesuré », ce qu'elle laisse à mesurer ensuite. Elle a lu le dossier et ne l'a pas exécuté : son évaluation de clôture du dossier dit « Rien n'en a été exécuté ». Savoir si le runtime de Haro fait tourner la bibliothèque est la première mesure à venir. Savoir si deux mesures de vitesse publiées tiennent encore aujourd'hui est la deuxième, et les deux ont été faites sur l'ancien runtime. Certaines gardes du dossier système ont pris leurs totaux dans des documents de conception, et l'un de ces documents dit encore quarante-cinq là où sa garde en tient maintenant davantage ; le document est le prochain à mettre à jour. Les quarante et une images de la première partie de la galerie ont été jugées par un modèle, et qu'une personne les regarde est l'étape suivante. Le budget de vitesse du restaurant attend sa mesure sur un vrai réseau 4G. L'étude s'applique à elle-même sa propre loi de la perception, et c'est pourquoi je fais confiance au paragraphe.
+L'étude comparative qui a lu le dossier dit, dans ses propres paragraphes intitulés « Non mesuré », ce qu'elle laisse à mesurer ensuite. Elle a lu le dossier et ne l'a pas exécuté : son évaluation de clôture du dossier dit « Rien n'en a été exécuté ». Savoir si le runtime de Haro fait tourner la bibliothèque est la première mesure à venir. Savoir si deux mesures de vitesse publiées tiennent encore aujourd'hui est la deuxième, et les deux ont été faites sur l'ancien runtime. Certaines gardes du dossier système ont pris leurs totaux dans des documents de conception, et l'un de ces documents dit encore quarante-cinq là où sa garde en tient maintenant davantage ; le document est le prochain à mettre à jour. Les quarante et une images de la première partie de la galerie ont été jugées par un modèle d'IA, et qu'une personne les regarde est l'étape suivante. Le budget de vitesse du restaurant attend sa mesure sur un vrai réseau 4G. L'étude s'applique à elle-même sa propre loi de la perception, et c'est pourquoi je fais confiance au paragraphe.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -241,7 +241,7 @@ Le terrain mène en matériel sur le terrain. La machine déclarée démarre et 
 
 Le terrain mène en vitesse. Le runtime contre lequel Softanza s'est mesurée était plus rapide sur chaque ligne, d'un facteur entre un et deux, et les deux mesures ont été faites sur l'ancien runtime ; la vitesse propre de Haro est la mesure encore à venir.
 
-Le terrain mène en images jugées par des personnes. Quarante et une images et sections de texte de la première partie de la galerie ont été jugées par un modèle : vingt justes, neuf fausses, douze incertaines. Le dossier dit qu'aucune personne ne les a encore regardées, et ce regard est l'étape suivante.
+Le terrain mène en images jugées par des personnes. Quarante et une images et sections de texte de la première partie de la galerie ont été jugées par un modèle d'IA : vingt justes, neuf fausses, douze incertaines. Le dossier dit qu'aucune personne ne les a encore regardées, et ce regard est l'étape suivante.
 
 Là où je pense que le dossier se distingue, c'est que sa limite est une section d'une page, avec un titre. Chaque étape a un mot. Une fonction peut être construite et refuser encore jusqu'à ce qu'une personne nommée ait parlé. Et une exécution réelle qui n'a pas pu avoir lieu est rapportée non perçue, jamais comme un échec et jamais comme un passage.
 

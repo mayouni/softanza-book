@@ -16,15 +16,15 @@ rulings: ["12.18", "12.19", "12.22", "12.23", "12.29"]
 research: research/ch20.md
 ---
 
-Dans ce chapitre, je prends la moitié de l'action de ce que le chapitre 17 a dit de l'esprit entier : ce qui se passe quand la proposition rencontre le monde. Je montre quatre étapes en code, l'agent propose, l'atelier répète, le tribunal juge, et seul un acteur gouverné valide, puis les cas où une étape ne tient pas. Je dis ce que j'ai refusé : les agents sûrs, un contrôle de permission comme frontière, un second atelier pour les machines, une barrière facultative. Et je dis où cela s'arrête : un plan sans aucun exécutant est permis, et la boucle vérifie qu'une déclaration de couverture existe, non qu'elle est vraie. Le principe est celui de la doctrine : ne construisez pas des agents sûrs ; construisez un monde sûr, et lâchez-y des agents ordinaires.
+Dans ce chapitre, je prends la moitié de l'action de ce que le chapitre 17 a dit de l'esprit entier : ce qui se passe quand la proposition rencontre le monde. Je montre quatre étapes en code, l'agent d'IA propose, l'atelier répète, le tribunal juge, et seul un acteur gouverné valide, puis les cas où une étape ne tient pas. Je dis ce que j'ai refusé : les agents sûrs, un contrôle de permission comme frontière, un second atelier pour les machines, une barrière facultative. Et je dis où cela s'arrête : un plan sans aucun exécutant est permis, et la boucle vérifie qu'une déclaration de couverture existe, non qu'elle est vraie. Le principe est celui de la doctrine : ne construisez pas des agents sûrs ; construisez un monde sûr, et lâchez-y des agents ordinaires.
 
 ## 1. Le concept, tel que le terrain le tient
 
-Sur le terrain, la sûreté est une propriété de l'agent. Le document de doctrine de la bibliothèque énumère ce que le terrain offre : l'alignement, les garde-fous, les invites de confirmation, une case à cocher qui dit qu'un humain est dans la boucle. Les agents à outils, et les agents autonomes qui en descendent, laissent les appels d'outils du modèle toucher la réalité immédiatement, avec une invite de confirmation. Les agents d'usage de l'ordinateur tournent dans une machine virtuelle en bac à sable, qui contient un processus, et qui ne distingue pas un fichier déplacé d'octets aléatoires remués.
+Sur le terrain, la sûreté est une propriété de l'agent d'IA. Le document de doctrine de la bibliothèque énumère ce que le terrain offre : l'alignement, les garde-fous, les invites de confirmation, une case à cocher qui dit qu'un humain est dans la boucle. Les agents à outils, et les agents autonomes qui en descendent, laissent les appels d'outils du modèle toucher la réalité immédiatement, avec une invite de confirmation. Les agents d'usage de l'ordinateur tournent dans une machine virtuelle en bac à sable, qui contient un processus, et qui ne distingue pas un fichier déplacé d'octets aléatoires remués.
 
 Le meilleur conseil du terrain, que, selon la narration, tout guide sérieux de 2026 donne (elle paraphrase une feuille de route), est de séparer la planification de l'exécution et de placer entre les deux une approbation humaine. C'est un bon conseil, et c'est un conseil : un patron que vous implémentez, et que vous pouvez oublier. Les listes de menaces du terrain, dont la liste de risques de l'OWASP pour les applications agentiques, sont des lentilles, et le dossier s'en sert ainsi.
 
-Donc la posture du terrain, en une ligne, est que l'agent est un modèle dans une boucle, et que la sûreté est de la vigilance autour de lui. (Connaissance générale, et non étude du dossier, sauf là où je nomme le document.) Le chapitre 17 l'a dit de l'esprit entier. Ce chapitre prend la moitié de l'action : ce qui se passe quand la proposition rencontre le monde.
+Donc la posture du terrain, en une ligne, est que l'agent est un modèle d'IA dans une boucle, et que la sûreté est de la vigilance autour de lui. (Connaissance générale, et non étude du dossier, sauf là où je nomme le document.) Le chapitre 17 l'a dit de l'esprit entier. Ce chapitre prend la moitié de l'action : ce qui se passe quand la proposition rencontre le monde.
 
 ## 2. Le premier principe
 
@@ -34,7 +34,7 @@ La phrase est dans le document de doctrine de la bibliothèque : « We will not 
 
 ## 3. La forme Softanza
 
-Quatre étapes, dans la forme que l'étude du dossier leur donne : l'agent propose, l'atelier répète, le tribunal juge, et seul un acteur gouverné valide. Je montrerai chacune en code, puis les cas où une étape ne tient pas.
+Quatre étapes, dans la forme que l'étude du dossier leur donne : l'agent d'IA propose, l'atelier répète, le tribunal juge, et seul un acteur gouverné valide. Je montrerai chacune en code, puis les cas où une étape ne tient pas.
 
 **Cet agent peut-il exister ?** Avant qu'un agent ne fasse un seul tick, la gouvernance pose la question, et elle la pose quand la réponse est gratuite. Un agent qui ne déclare aucune couverture, une phrase disant ce qu'il couvre, est refusé. Un agent qui ne déclare aucune classe de réversibilité est refusé aussi : réversible, compensable ou irréversible. Les deux refus sont dans les phrases du moteur lui-même, et la porte de l'ancien langage hôte les répète. Que dit-elle à un agent qui ne déclare aucune couverture, et à un agent qui ne déclare aucune classe de réversibilité ? Exécutez-le :
 
@@ -84,7 +84,7 @@ next
 
 Lisez les lignes de haut en bas : le code de confiance peut accomplir les trois classes d'acte, le code externe les deux premières, le code en bac à sable seulement la réversible. La dernière ligne demande le refus et imprime sa phrase.
 
-**L'agent s'exécute, croit avoir agi, et le disque ne bouge pas.** Un agent est un fichier et quelques fonctions. Sa fonction écrit une liste de prix. On lui donne un atelier, et la fonction atteint l'atelier comme un objet ambiant pendant un cycle, sans changement dans sa signature. La compétence vérifie son propre travail et le fait est appris. Après un cycle, le vrai fichier existe-t-il ? Interrogez le disque, puis l'atelier :
+**L'agent s'exécute, croit avoir agi, et le disque ne bouge pas.** Un agent d'IA est un fichier et quelques fonctions. Sa fonction écrit une liste de prix. On lui donne un atelier, et la fonction atteint l'atelier comme un objet ambiant pendant un cycle, sans changement dans sa signature. La compétence vérifie son propre travail et le fait est appris. Après un cycle, le vrai fichier existe-t-il ? Interrogez le disque, puis l'atelier :
 
 ```haro
 StzAllowAgentFunction("ScribblePrices", "trusted")
@@ -205,7 +205,7 @@ next
 #--> 30
 ```
 
-Trente ! Le modèle a demandé, a été refusé, a appelé `Execute()` malgré tout, et rien n'a changé sur le disque.
+Trente ! Le modèle d'IA a demandé, a été refusé, a appelé `Execute()` malgré tout, et rien n'a changé sur le disque.
 
 Le site montre cela avec un cours plus grand, dans sa démonstration d'éducation du 30 septembre 2026, que je n'ai pas exécutée pour ce livre, et il imprime un compte de six cent dix. Ce chiffre est celui du site, cité avec sa source et sa date. J'imprime trente, parce que trente est ce que ce bloc exécute.
 
@@ -234,7 +234,7 @@ StzDirDeleteAll(cDir)
 
 Un acteur nommé sous une portée valide les vingt-neuf autres (`29`) ; une est sautée (`1`) ; et un fichier reste sur le disque (`1`), celui de l'étape que le relecteur a protégée.
 
-**Une règle, deux couches, les mêmes mots.** Le refus que le chapitre 17 a montré au graphe, et que le fichier a montré plus haut, est aussi appliqué dans la boucle de ticks propre au moteur, à l'enregistrement. Il l'est dans la phrase de la règle du graphe, no-llm-effectful. Un modèle qui a la capacité de produire des effets est refusé. Un modèle qui ne l'a pas s'enregistre comme tout autre emplacement, un emplacement étant la place que prend un agent dans la boucle :
+**Une règle, deux couches, les mêmes mots.** Le refus que le chapitre 17 a montré au graphe, et que le fichier a montré plus haut, est aussi appliqué dans la boucle de ticks propre au moteur, à l'enregistrement. Il l'est dans la phrase de la règle du graphe, no-llm-effectful. Un modèle d'IA qui a la capacité de produire des effets est refusé. Un modèle qui ne l'a pas s'enregistre comme tout autre emplacement, un emplacement étant la place que prend un agent dans la boucle :
 
 ```haro
 StzResetEngineAgentLoop()
@@ -249,7 +249,7 @@ nL2 = stzenginezutercreate("proposer")
 StzResetEngineAgentLoop()
 ```
 
-Le moteur a refusé le résumeur, dans les mots de la règle du graphe ! Les arguments après l'emplacement sont, dans l'ordre où la garde les donne : le genre (1 est un modèle), la classe de réversibilité, le déclencheur et la capacité. Ce qui reste est la priorité, l'intervalle en millisecondes et la phrase de couverture. Ce sont les noms de bas niveau du moteur, et je les montre pour que vous voyiez le refus venir du moteur, dans les mêmes mots.
+Le moteur a refusé le résumeur, dans les mots de la règle du graphe ! Les arguments après l'emplacement sont, dans l'ordre où la garde les donne : le genre (1 est un modèle d'IA), la classe de réversibilité, le déclencheur et la capacité. Ce qui reste est la priorité, l'intervalle en millisecondes et la phrase de couverture. Ce sont les noms de bas niveau du moteur, et je les montre pour que vous voyiez le refus venir du moteur, dans les mêmes mots.
 
 **Un agent de l'effectif propre du domaine de projets, répété.** Jusqu'au 22 août 2026, un agent de l'effectif propre du domaine de projets, celui qui fait tourner le registre, déplaçait directement un vrai fichier de journal, sur un tick. Il n'avait ni plan, ni portée, ni acteur validant.
 
@@ -324,7 +324,7 @@ Les blocs ont montré ce que fait le monde ; la section 4 dit ce que j'ai refus�
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé les agents sûrs.** La raison de la doctrine est que la sûreté du terrain essaie de rendre digne de confiance un acteur fondamentalement imprévisible. Je tiens cette raison pour une vue, non pour un résultat. Demander si l'agent pourrait s'échapper, c'est comme demander si un moteur d'échecs pourrait déplacer une pièce sur un échiquier physique. La doctrine dit que la surface d'outils de l'agent ne contient aucune opération qui touche le disque, une base de données ou le réseau. C'est l'affirmation de la doctrine, et la section 6 en donne les limites.
+**J'ai refusé les agents sûrs.** La raison de la doctrine est que la sûreté du terrain essaie de rendre digne de confiance un acteur fondamentalement imprévisible. Je tiens cette raison pour une vue, non pour un résultat. Demander si l'agent d'IA pourrait s'échapper, c'est comme demander si un moteur d'échecs pourrait déplacer une pièce sur un échiquier physique. La doctrine dit que la surface d'outils de l'agent ne contient aucune opération qui touche le disque, une base de données ou le réseau. C'est l'affirmation de la doctrine, et la section 6 en donne les limites.
 
 **J'ai refusé un contrôle de permission comme frontière.** Ce n'est pas un contrôle que l'agent ne pourrait pas contourner. Les pouvoirs sont séparés : la créativité sans l'autorité, l'autorité sans la créativité.
 
@@ -332,7 +332,7 @@ Les blocs ont montré ce que fait le monde ; la section 4 dit ce que j'ai refus�
 
 **J'ai refusé de laisser la barrière facultative.** La décision du 22 août 2026 dit que la barrière d'enregistrement est la doctrine, et que l'adhésion volontaire est un état de migration, non le dessin. Le dossier est honnête sur la découverte derrière la décision : là où la doctrine des agents qui ne peuvent pas vous nuire s'imposait ce jour-là, il n'y avait rien. Le monde sûr existait, et le répertoire agentique n'en mentionnait rien. La décision l'a refermé le jour même.
 
-**J'ai refusé un bouchon.** Demander un agent réservé lève une erreur. L'architecture dit que c'est la loi qui travaille, et non un défaut.
+**J'ai refusé un bouchon.** Demander un agent d'IA réservé lève une erreur. L'architecture dit que c'est la loi qui travaille, et non un défaut.
 
 **J'ai refusé d'abandonner en silence.** Dans le moteur, un envoi vers une boîte de réception pleine est refusé avec un code et compté. C'est testé dans le code Zig du moteur, par un test que je n'ai pas exécuté, et aucun bloc ici ni aucune garde narrée ne le montre. Quand la file d'exécution est pleine, les visites suivantes sont abandonnées et comptées. La boucle dit aussi ce qu'elle ne peut pas voir : l'intérieur d'un rappel, l'horloge, et si une déclaration de couverture est vraie.
 
@@ -360,7 +360,7 @@ Le terrain mène en raisonnement de frontière. Cette pile orchestre les plus gr
 
 Le terrain mène en écosystème et en recrutement. Il y a un marché du travail pour cette pile, et aucun pour celle-ci.
 
-Quand choisir laquelle, d'après la narration : la pile courante, quand la tâche est un travail de langage ouvert sur une matière que vous ne pouvez pas sélectionner. Ses exemples sont résumer des documents arbitraires, des produits conversationnels, de la recherche sur le web ouvert. La couche Softanza, quand les actions ont des conséquences et que quelqu'un finira par demander pourquoi elle a fait cela. Parmi ces cas, dans les mots de la narration : le travail réglementé ou audité, tout ce qui tourne sans surveillance, et tout ce qui doit continuer à fonctionner hors ligne à coût marginal nul. Les deux ne s'excluent pas, et un modèle peut siéger dans un système Softanza comme proposeur.
+Quand choisir laquelle, d'après la narration : la pile courante, quand la tâche est un travail de langage ouvert sur une matière que vous ne pouvez pas sélectionner. Ses exemples sont résumer des documents arbitraires, des produits conversationnels, de la recherche sur le web ouvert. La couche Softanza, quand les actions ont des conséquences et que quelqu'un finira par demander pourquoi elle a fait cela. Parmi ces cas, dans les mots de la narration : le travail réglementé ou audité, tout ce qui tourne sans surveillance, et tout ce qui doit continuer à fonctionner hors ligne à coût marginal nul. Les deux ne s'excluent pas, et un modèle d'IA peut siéger dans un système Softanza comme proposeur.
 
 Le jumeau est un modèle de la réalité, non la réalité. Le cadre demande de la fidélité et de l'honnêteté, et le plan se revalide contre la réalité avant d'être validé. Une fois le vrai fichier supprimé dans le dos du jumeau, la vérification dit que la cible est absente dans la réalité. Je l'ai vue avertir, et je n'ai pas testé si elle bloque la validation.
 
@@ -374,7 +374,7 @@ Ce qui est conçu : le côté de l'agent dans la négociation, où le plan parvi
 
 Chaque point ci-dessous est un écart, trouvé en exécutant et en lisant.
 
-- **Un exécutant non défini et une portée non définie ne sont pas gardés.** Un plan sans exécutant répond qu'aucun exécutant n'est défini, qu'un humain au clavier n'est pas gardé, et `Execute()` est permis. Le refus du bloc ci-dessus s'applique à un modèle désigné comme exécutant. De même, le contrôle de portée ne s'exécute que lorsqu'une portée est définie : un plan avec un exécutant et sans portée est validé sans aucun contrôle des chemins qu'il touche. Donc « seul un acteur gouverné valide » est exact quand un exécutant et une portée sont définis, et une personne au clavier peut valider un plan qui n'en nomme aucun.
+- **Un exécutant non défini et une portée non définie ne sont pas gardés.** Un plan sans exécutant répond qu'aucun exécutant n'est défini, qu'un humain au clavier n'est pas gardé, et `Execute()` est permis. Le refus du bloc ci-dessus s'applique à un modèle d'IA désigné comme exécutant. De même, le contrôle de portée ne s'exécute que lorsqu'une portée est définie : un plan avec un exécutant et sans portée est validé sans aucun contrôle des chemins qu'il touche. Donc « seul un acteur gouverné valide » est exact quand un exécutant et une portée sont définis, et une personne au clavier peut valider un plan qui n'en nomme aucun.
 - **Un plan signale ; il ne classe pas.** La narration dit qu'un plan classe ses propres risques. Le code renvoie un signal par étape destructrice, dans l'ordre des opérations, avec une étiquette comme DESTRUCTIVE. Il n'y a pas de score ni d'ordre de gravité. Le chapitre dit « signale ».
 - **La barrière est facultative chez l'hôte.** Le défaut bascule quand le dernier hôte de l'arbre déclare. Un hôte neuf fait tourner l'ancienne pompe.
 - **La boucle vérifie qu'une déclaration de couverture existe, non qu'elle est vraie.**
@@ -390,7 +390,7 @@ Six portes suivent, le même chapitre vu de six endroits.
 
 **Le concepteur.** Le plan est l'unique artefact qui passe de l'agent à la personne, et une personne peut rejeter une étape. Le Droit à un humain dit qu'une personne est joignable partout où une machine sert, et le droit est tenu par un jugement.
 
-**Le décideur.** Vous déclarez ce que chaque agent couvre et à quel point il est réversible avant qu'il puisse exister, et vous décidez la portée et l'acteur qui valide. Un modèle est structurellement incapable de valider, même trompé ; le modèle de menace suppose qu'il le sera. La partie la plus difficile est celle que le dessin vous laisse : quelles fonctions le code permet à un agent d'appeler.
+**Le décideur.** Vous déclarez ce que chaque agent couvre et à quel point il est réversible avant qu'il puisse exister, et vous décidez la portée et l'acteur qui valide. Un modèle d'IA est structurellement incapable de valider, même trompé ; le modèle de menace suppose qu'il le sera. La partie la plus difficile est celle que le dessin vous laisse : quelles fonctions le code permet à un agent d'appeler.
 
 **Le formateur.** L'agent d'un apprenant qui range un répertoire de cours en supprimant tout est une leçon sur ce qu'est un plan. Elle voit ce qu'il aurait fait, et les fichiers sont toujours là.
 

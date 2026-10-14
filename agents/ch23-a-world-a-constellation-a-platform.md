@@ -452,7 +452,7 @@ The six doors come next.
 
 **The educator.** The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.
 
-**The agent.** A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority.
+**The agent.** A world can be wrapped as an AI agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority.
 
 ## 9. Exercise
 

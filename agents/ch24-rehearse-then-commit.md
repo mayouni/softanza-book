@@ -2,7 +2,7 @@
 
 Source: Chapter 24. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
+Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
@@ -386,7 +386,7 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused a gate that fails open.** The registry once kept its state in attributes. Attaching it to a delivery took a snapshot, so the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
-**I refused to virtualize the quality of a model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
+**I refused to virtualize the quality of an AI model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 
 **I refused to ship the live adapters.** The service plan says the live Stripe, PayPal and Adyen adapter is deliberately not shipped, since an account, a key and a network are infrastructure-gated. A hub adapter is built, and chapter 31 shows it. The contract is defined, and the registry refuses to let the fake ship in its place.
 

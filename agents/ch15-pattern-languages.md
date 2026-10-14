@@ -197,7 +197,7 @@ g.AddEdgeXT(:b, :c, "finishes")
 
 Yes: the path from `served` to `placed` finds nothing, and the line prints 0.
 
-Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an agent. Five of the six languages do:
+Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an AI agent. Five of the six languages do:
 
 ```haro
 ? len( Lx("[@N, @S]").Tokens() )

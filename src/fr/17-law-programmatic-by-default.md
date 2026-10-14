@@ -9,7 +9,7 @@ narrations: [stz-agents-that-cannot-hurt-you-narration.md, stz-service-virtualiz
 site: [agentic, wise]
 guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agentgraph_narrated, piagent_narrated, ownagentstack_narrated]
 stage:
-  built: "le premier échelon du modèle de langage de domaine et son second, un petit bigramme ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle non gouverné"
+  built: "le premier échelon du modèle de langage de domaine et son second, un petit bigramme ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle d'IA non gouverné"
   designed: "la cascade de la machine pensante entre les facultés ; la pile de décision, ses pièces à côté de l'agent et pas encore dedans ; l'unité typée de prédiction, une conception du domaine de projets avec cinq étapes de validation et aucune chaîne de celles-ci dans la bibliothèque ; la négociation entre un agent et son relecteur"
   absent: "quatre des cinq agents propres de la bibliothèque, dont l'induction à partir d'exemples"
 status: draft
@@ -17,7 +17,7 @@ rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait que personne n'a enregistré prouvé à partir d'une seule loi déclarée, un modèle tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait que personne n'a enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -27,7 +27,7 @@ Alors ce chapitre fait ce que font les deux autres chapitres de loi, et énonce 
 
 ## 1. Le concept, tel que le terrain le tient
 
-Demandez au terrain ce qui rend une application intelligente et la réponse est un modèle. Un agent, au sens du terrain, est un modèle dans une boucle avec des outils, une mémoire et un but. La liste de courses pour en construire un en 2026 est longue. Il faut un projet en Python, un fournisseur de modèle, un framework qui câble la boucle comme un graphe, un magasin de vecteurs pour la mémoire, des outils avec des schémas typés, un service de traçage, et un chapitre de conseils de sécurité. La mémoire est souvent de la récupération : une collection de documents, découpés en morceaux, cherchés par similarité et collés dans le prompt.
+Demandez au terrain ce qui rend une application intelligente et la réponse est un modèle d'IA. Un agent d'IA, au sens du terrain, est un modèle dans une boucle avec des outils, une mémoire et un but. La liste de courses pour en construire un en 2026 est longue. Il faut un projet en Python, un fournisseur de modèle, un framework qui câble la boucle comme un graphe, un magasin de vecteurs pour la mémoire, des outils avec des schémas typés, un service de traçage, et un chapitre de conseils de sécurité. La mémoire est souvent de la récupération : une collection de documents, découpés en morceaux, cherchés par similarité et collés dans le prompt.
 
 La sécurité, dans ce tableau, est une propriété de l'agent. C'est l'alignement, les garde-fous, un prompt qui demande confirmation, une case marquée « humain dans la boucle ». Le terrain a aussi appris à tenir la sortie d'un modèle dans une forme, avec des grammaires qui contraignent ce qu'il peut émettre. Tout cela est un travail sérieux, et une partie est bonne. Tout cela partage une hypothèse : le modèle est l'esprit, et tout le reste est autour de lui.
 
@@ -75,7 +75,7 @@ done
 #--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
 ```
 
-Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet : `Can't conclude: 2 gap(s) remain`. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont absents. Un modèle, s'il y en a un, vient après toutes, pas en premier.
+Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet : `Can't conclude: 2 gap(s) remain`. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont absents. Un modèle d'IA, s'il y en a un, vient après toutes, pas en premier.
 
 La troisième pièce est la dérivation, ma définition à l'œuvre. Une loi est déclarée, et un fait que personne n'a enregistré est prouvé :
 
@@ -92,7 +92,7 @@ oKG.KnowRelation("margherita", "contains", "tomato-sauce").
 
 De la connaissance nouvelle à partir de la connaissance existante, avec sa chaîne écrite en toutes lettres ! Et un « non » aussi certain que le « oui », parce qu'il est le résultat d'une recherche, pas d'une humeur. La page l'a imprimé ainsi : `not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'`. Il est certain de ce qui est enregistré et déclaré, pas du monde : il dit `not derivable`, pas « faux ». Pas de récupération, pas d'entraînement. Ajouter un fait fait que le système sait davantage ; ajouter une loi lui fait raisonner plus loin.
 
-Puis le modèle. Il est le bienvenu, et il est tenu. Branchez la sortie d'un modèle directement sur un effet, ici l'envoi d'un message. La composition est-elle saine ?
+Puis le modèle d'IA. Il est le bienvenu, et il est tenu. Branchez la sortie d'un modèle directement sur un effet, ici l'envoi d'un message. La composition est-elle saine ?
 
 ```haro
 oG = new stzAgentGraph("mailer")
@@ -120,9 +120,9 @@ oLLM.SetSkillFrom(oF)
 #--> 0
 ```
 
-Rien. Un acteur modèle ne détient aucune capacité à effet ; il propose, et c'est tout son pouvoir. `HoldsEffectful()` a imprimé `0`. Aucun modèle n'est chargé dans ce bloc : la réponse est fixée d'avance, comme un test fixe une réponse golden, afin que la page s'exécute de la même façon chaque nuit. Ce que le bloc prouve ne dépend pas du modèle : quoi qu'il dise, il ne détient rien qui puisse agir.
+Rien. Un acteur modèle ne détient aucune capacité à effet ; il propose, et c'est tout son pouvoir. `HoldsEffectful()` a imprimé `0`. Aucun modèle d'IA n'est chargé dans ce bloc : la réponse est fixée d'avance, comme un test fixe une réponse golden, afin que la page s'exécute de la même façon chaque nuit. Ce que le bloc prouve ne dépend pas du modèle : quoi qu'il dise, il ne détient rien qui puisse agir.
 
-Et l'agent lui-même a un esprit fait de code. Une compétence est une condition et une action, et elle se déclenche sur ce que l'agent perçoit. La gouvernance soumet l'acte à la barrière avant qu'il ait lieu. Quand le stock est bas et que la compétence veut commander, l'acte passe-t-il ?
+Et l'agent programmatique lui-même a un esprit fait de code. Une compétence est une condition et une action, et elle se déclenche sur ce que l'agent perçoit. La gouvernance soumet l'acte à la barrière avant qu'il ait lieu. Quand le stock est bas et que la compétence veut commander, l'acte passe-t-il ?
 
 ```haro
 oRog = new stzPIAgent("rogue-bot")
@@ -146,7 +146,7 @@ Le chapitre 18 raconte les cinq registres d'une réponse et la conversation qui 
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le modèle comme esprit.** Quand les modèles sont arrivés, le geste était d'en mettre un au centre et de l'enclore. J'ai écrit le contraire dans l'architecture : l'esprit est programmatique par défaut, et un modèle est une faculté enfichable, l'une parmi plusieurs, jamais la définition de l'esprit. La boucle de l'industrie est un cas particulier de cette conception, avec une seule faculté et aucune gouvernance. Le dossier ne tient de moi aucune phrase antérieure à l'architecture de juillet 2026, et le chapitre s'ouvre comme il le fait.
+**J'ai refusé le modèle d'IA comme esprit.** Quand les modèles sont arrivés, le geste était d'en mettre un au centre et de l'enclore. J'ai écrit le contraire dans l'architecture : l'esprit est programmatique par défaut, et un modèle est une faculté enfichable, l'une parmi plusieurs, jamais la définition de l'esprit. La boucle de l'industrie est un cas particulier de cette conception, avec une seule faculté et aucune gouvernance. Le dossier ne tient de moi aucune phrase antérieure à l'architecture de juillet 2026, et le chapitre s'ouvre comme il le fait.
 
 **J'ai refusé tout ce qui est payant ou distant comme exigence.** Chaque capacité a un plancher qui n'exige ni installation, ni abonnement, ni réseau. Un modèle peut être ajouté par-dessus. Il n'est jamais le prix d'entrée. « En dernier » veut dire après le chemin programmatique, et sous le tribunal et un budget, que le modèle soit local ou distant. Le dossier soutient les deux lectures, et le chapitre ne choisit pas entre elles.
 
@@ -154,7 +154,7 @@ Le chapitre 18 raconte les cinq registres d'une réponse et la conversation qui 
 
 **J'ai refusé la récupération comme mémoire.** La mémoire est un graphe gouverné, non un tas de fragments semblables. La dérivation remplace la récupération : le système sait ce qu'on lui a dit et ce qui en découle par la loi, et il peut prouver les deux.
 
-**J'ai refusé un enseignant que je ne peux pas voir.** Le second échelon du modèle de langage de domaine est entraîné sur les faits de la base de connaissances du premier échelon et sur rien d'autre. Aucun modèle distant ne l'enseigne. La conception va plus loin et dit que le texte d'entraînement du second échelon est validé par la grammaire du premier avant d'être admis, de sorte qu'il est correct par construction. Dans la bibliothèque, les faits sont rendus directement en texte, sans encore une telle vérification ; le chapitre 19 dit où cela en est. J'ai donné le concept d'un modèle de langage de domaine, conçu d'abord pour l'un des produits du domaine de projets, à la fondation ouverte. Tout projet qui fournit une base de connaissances peut livrer gratuitement son propre modèle.
+**J'ai refusé un enseignant que je ne peux pas voir.** Le second échelon du modèle de langage de domaine est entraîné sur les faits de la base de connaissances du premier échelon et sur rien d'autre. Aucun modèle d'IA distant ne l'enseigne. La conception va plus loin et dit que le texte d'entraînement du second échelon est validé par la grammaire du premier avant d'être admis, de sorte qu'il est correct par construction. Dans la bibliothèque, les faits sont rendus directement en texte, sans encore une telle vérification ; le chapitre 19 dit où cela en est. J'ai donné le concept d'un modèle de langage de domaine, conçu d'abord pour l'un des produits du domaine de projets, à la fondation ouverte. Tout projet qui fournit une base de connaissances peut livrer gratuitement son propre modèle.
 
 **J'ai refusé un bouchon.** La bibliothèque déclare cinq agents propres et en a câblé un. En demander un qui n'est pas câblé lève une erreur ; elle ne renvoie pas quelque chose qui ressemble à un agent. Faire semblant serait plus facile, et cela ferait valoir moins tous les autres refus de ce chapitre.
 
@@ -172,9 +172,9 @@ Le terrain mène en portée. Ses frameworks se connectent à des services héber
 
 Le terrain mène sur le marché. Il existe aujourd'hui un marché du travail pour sa pile ; celui de cette pile est à venir.
 
-Le terrain mène sur les modèles. Le second échelon du modèle de langage de domaine, tel que construit, est un petit modèle neuronal de paires de mots, et la fonderie au-delà du bigramme est conçue (chapitre 19). Softanza ne construit pas les grands générateurs et ne rivalise pas avec eux.
+Le terrain mène sur les modèles d'IA. Le second échelon du modèle de langage de domaine, tel que construit, est un petit modèle neuronal de paires de mots, et la fonderie au-delà du bigramme est conçue (chapitre 19). Softanza ne construit pas les grands générateurs et ne rivalise pas avec eux.
 
-Là où je pense que la loi se distingue, c'est en trois endroits. Une décision ici ne coûte rien, s'exécute hors ligne et donne la même réponse chaque jour, de sorte qu'on peut la tester avec des promesses ordinaires. Un modèle ici ne peut pas agir, par construction, pas par vigilance. Et la phrase d'un modèle, là où l'on en emploie un, peut être tenue à la grammaire d'un langage déclaré avant d'être émise, au lieu d'être vérifiée puis relancée après.
+Là où je pense que la loi se distingue, c'est en trois endroits. Une décision ici ne coûte rien, s'exécute hors ligne et donne la même réponse chaque jour, de sorte qu'on peut la tester avec des promesses ordinaires. Un modèle d'IA ici ne peut pas agir, par construction, pas par vigilance. Et la phrase d'un modèle, là où l'on en emploie un, peut être tenue à la grammaire d'un langage déclaré avant d'être émise, au lieu d'être vérifiée puis relancée après.
 
 La section suivante dit où la loi s'arrête.
 
@@ -208,7 +208,7 @@ Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vr
 
 ## 8. Six portes
 
-**Le programmeur.** L'esprit de votre agent est du code que vous pouvez tester avec des promesses ordinaires. Un modèle peut être une faculté ; il ne peut jamais détenir un effet.
+**Le programmeur.** L'esprit de votre agent est du code que vous pouvez tester avec des promesses ordinaires. Un modèle d'IA peut être une faculté ; il ne peut jamais détenir un effet.
 
 **L'analyste.** Un fait ou une règle que vous ajoutez fait que le système en sait plus, sans changement de code et sans entraînement, et chaque réponse porte son pourquoi.
 

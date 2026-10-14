@@ -22,7 +22,7 @@ Dans ce chapitre, je forge un modèle de langage de domaine à partir d'une base
 
 Un modèle de langage prédit le jeton suivant. Un jeton est un fragment de texte sans type, sans rôle et sans contrainte : il peut être la fin d'un mot, un espace, un crochet. Tout ce qu'un modèle dit est construit en choisissant des jetons l'un après l'autre. Tout ce qui rend le résultat utile, que ce soit une phrase valide, qu'elle soit vraie, qu'elle respecte un schéma, est vérifié après coup ou imposé de l'extérieur.
 
-Le terrain a fait fonctionner cela avec trois outils. On adapte un modèle général à un domaine en l'entraînant davantage sur les documents du domaine. On lui donne les documents pertinents au moment de la question, récupérés par similarité. Et on contraint son décodage avec une grammaire, de sorte qu'il ne puisse pas produire une phrase malformée, comme l'a montré le chapitre 11. Tous trois gardent la même unité : le jeton.
+Le terrain a fait fonctionner cela avec trois outils. On adapte un modèle d'IA général à un domaine en l'entraînant davantage sur les documents du domaine. On lui donne les documents pertinents au moment de la question, récupérés par similarité. Et on contraint son décodage avec une grammaire, de sorte qu'il ne puisse pas produire une phrase malformée, comme l'a montré le chapitre 11. Tous trois gardent la même unité : le jeton.
 
 La section suivante nomme la seule chose que je change : l'unité.
 
@@ -171,7 +171,7 @@ remove(cGguf)
 
 Il est petit : une seule couche qui prédit le mot suivant à partir du précédent, `15 pairs over a 12-word vocab`. Et il apprend : `loss 2.57 -> 0.70`. La bibliothèque inspecte le fichier exporté et imprime `2`, les deux tenseurs qu'il contient, un poids et un biais. Je ne prétends pas qu'un autre runtime le charge comme générateur de texte. Il s'entraîne en une fraction de seconde, hors ligne, et donne les mêmes nombres à chaque exécution.
 
-Que dit un modèle comme celui-ci ? Il est fluide dans la grammaire du domaine, et il se trompe sur les faits. C'est la raison de la barrière :
+Que dit un modèle neuronal comme celui-ci ? Il est fluide dans la grammaire du domaine, et il se trompe sur les faits. C'est la raison de la barrière :
 
 ```haro
 aCorpus = oDLM.GenerateCorpus()
@@ -209,7 +209,7 @@ Le 13 juillet 2026, j'ai tranché sur ce point. Le concept d'un modèle de langa
 
 **J'ai refusé le jeton comme unité.** L'unité est un chunk du monde, qu'un graphe peut admettre ou refuser.
 
-**J'ai refusé un enseignant que je ne peux pas voir.** La conception antérieure de l'idée employait un grand modèle commercial pour écrire son corpus d'entraînement. J'ai posé une loi contre cela, et le corpus de ce modèle est rendu à partir des faits propres du domaine : la deuxième loi de la bibliothèque dit qu'une capacité n'exige jamais rien de payant ni de distant.
+**J'ai refusé un enseignant que je ne peux pas voir.** La conception antérieure de l'idée employait un grand modèle d'IA commercial pour écrire son corpus d'entraînement. J'ai posé une loi contre cela, et le corpus de ce modèle est rendu à partir des faits propres du domaine : la deuxième loi de la bibliothèque dit qu'une capacité n'exige jamais rien de payant ni de distant.
 
 **J'ai refusé le neuronal d'abord.** La découverte dont je pars est que le modèle canonique n'est pas neuronal. Une revue du produit antérieur a archivé un transformeur de un à trois milliards de paramètres, au profit d'une prédiction à base de règles. Son motif était que l'hallucination est impossible quand le modèle ne peut pas générer de texte presque valide. Le premier échelon a donc zéro entraînement et zéro coût, et l'échelon neuronal vient en second.
 
@@ -225,11 +225,11 @@ La section 6 demande où le terrain mène, et où ce modèle se situe.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en échelle. Entraîner et servir des modèles de toute taille est une pratique mûre. Ce second échelon est une seule couche sur douze mots, et les étapes qui le feraient devenir plus, un corpus validé, la déduplication, un tokeniseur entraîné, un réseau plus grand, la quantification, ne sont pas faites. Je ne rivalise pas avec les grands modèles.
+Le terrain mène en échelle. Entraîner et servir des modèles d'IA de toute taille est une pratique mûre. Ce second échelon est une seule couche sur douze mots, et les étapes qui le feraient devenir plus, un corpus validé, la déduplication, un tokeniseur entraîné, un réseau plus grand, la quantification, ne sont pas faites. Je ne rivalise pas avec les grands modèles d'IA.
 
-Le terrain mène en fluidité, ce qui est le but d'un modèle. Un premier échelon qui répond à partir des faits dira « I hold no 'contains' knowledge about 'tiramisu'. » là où un modèle général écrirait quelque chose de plausible. Et pour un client la chose plausible est souvent plus utile. La réponse propre du dossier est le second échelon, et son état présent est celui que donne la section 7.
+Le terrain mène en fluidité, ce qui est le but d'un modèle d'IA. Un premier échelon qui répond à partir des faits dira « I hold no 'contains' knowledge about 'tiramisu'. » là où un modèle d'IA général écrirait quelque chose de plausible. Et pour un client la chose plausible est souvent plus utile. La réponse propre du dossier est le second échelon, et son état présent est celui que donne la section 7.
 
-Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un. Chaque proposition du second peut être soumise à une barrière, et la barrière peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
+Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle d'IA général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un. Chaque proposition du second peut être soumise à une barrière, et la barrière peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
 
 La section 7 dit ce qui est construit, ce qui est conçu et ce qui est absent.
 
@@ -248,7 +248,7 @@ Ce qui est absent : un mot de fin de phrase pour le second échelon, ce qui expl
 
 ## 8. Six portes
 
-**Le programmeur.** Un modèle est un fichier que vous pouvez lire, comparer par diff et tester : ses faits, ses lois et ses goldens.
+**Le programmeur.** Un modèle de langage de domaine est un fichier que vous pouvez lire, comparer par diff et tester : ses faits, ses lois et ses goldens.
 
 **L'analyste.** Un fait que vous ajoutez fait que le modèle en sait plus, et une loi que vous ajoutez fait refuser davantage le graphe, sans entraînement ; les réponses propres du modèle ne la lisent pas encore.
 
@@ -270,4 +270,4 @@ Je vous laisse celui-ci. La section 3 dit que la complétion voit un mot et non 
 
 Quand vous l'aurez résolu, vous saurez pourquoi une complétion qui voit un mot énumère les objets de chaque fait de cette relation.
 
-Le chapitre 20 passe de ce qu'un modèle dit à ce qu'un agent fait. Son titre est *Des agents qui ne peuvent pas vous nuire*, et son principe est celui-ci : ne construisez pas des agents sûrs ; construisez un monde sûr, et lâchez-y des agents ordinaires.
+Le chapitre 20 passe de ce qu'un modèle d'IA dit à ce qu'un agent d'IA fait. Son titre est *Des agents qui ne peuvent pas vous nuire*, et son principe est celui-ci : ne construisez pas des agents sûrs ; construisez un monde sûr, et lâchez-y des agents ordinaires.

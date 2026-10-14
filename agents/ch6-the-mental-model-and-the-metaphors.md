@@ -237,6 +237,6 @@ o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
 
 > run: exercise
 
-Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
+Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an AI agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
 
 The next chapter turns to the writing style, and to the seven goals. Its principle is one sentence: what you think is what you write.

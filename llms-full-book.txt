@@ -1,6 +1,6 @@
 # Softanza · The Software Crafters Platform of the AI Age
 
-Built 2026-10-14 13:13 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-14 13:20 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -48,7 +48,7 @@ oD = StzAgentDeclarationQ(cPia)
 
 Read it in three parts. The text between the quotes is the declaration. The next line loads it. Then `?` prints an answer, and the line after `#-->` is what the block printed when I ran it. The court answers `0`: refused. It names the rule and gives the reason: an agent must say what it covers, because the engine will not schedule an agent that does not, so the file is refused now and not at its first run. A few words of the file: `pia` names the file format, `compensable` means its effects can be undone by a compensating action, and law 18 is the engine's rule that an agent with no coverage is never scheduled.
 
-You could write this check in your own CI. Here nobody had to. The court for agents ships with the library, so the rule is the library's, and the facts are yours, in the declaration. A one-off assert in a start-up script judges one fact. A declaration holds all the facts about the agent in one text, and the same court judges it whether a person, a script or a model wrote it. The rule can be yours too: chapter 2 has a rule you write in a few lines over two facts, that an actor is a language model and that it holds an effect, and the court finds the violation in your own graph of agents. This example is small on purpose, and a schema can check it too. The book does not argue that a court checks more than a schema. It argues that one court, built from your declaration, stands in front of every actor and gives its reason. It does not read a thousand generated lines and call them good: it checks that a change fits what you declared, and chapter 24 shows a change tried out on a copy of your system before anything is committed. For a thing of your own, such as a language you invent, chapter 12 shows how you make the court, and says how far that is built. Chapter 1 tells a second scene, with a mail service, and chapter 2 runs this block again.
+You could write this check in your own CI. Here nobody had to. The court for agents ships with the library, so the rule is the library's, and the facts are yours, in the declaration. A one-off assert in a start-up script judges one fact. A declaration holds all the facts about the agent in one text, and the same court judges it whether a person, a script or an AI model wrote it. The rule can be yours too: chapter 2 has a rule you write in a few lines over two facts, that an actor is a language model and that it holds an effect, and the court finds the violation in your own graph of agents. This example is small on purpose, and a schema can check it too. The book does not argue that a court checks more than a schema. It argues that one court, built from your declaration, stands in front of every actor and gives its reason. It does not read a thousand generated lines and call them good: it checks that a change fits what you declared, and chapter 24 shows a change tried out on a copy of your system before anything is committed. For a thing of your own, such as a language you invent, chapter 12 shows how you make the court, and says how far that is built. Chapter 1 tells a second scene, with a mail service, and chapter 2 runs this block again.
 
 You will say that you already have tests, schemas and policy checks in your CI. You do. Today those rules live in many places: tests here, a schema there, a policy file elsewhere, each written by hand after the code. Here you state them once, in the declaration, and the court comes from it. Chapter 22 compares the two honestly, and where the field does better, it says so. A court judges what you declared. It cannot judge what you left out, and each chapter's limit says where that stops.
 
@@ -76,7 +76,7 @@ Each chapter ends with six short doors. A door is a way in for one kind of reade
 
 ## How to read it
 
-Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
+Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the AI model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
 
 Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. The limit. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
 
@@ -157,7 +157,7 @@ Every chapter of this book carries this section, and I promised in the preface t
 
 **I refused to put the model at the centre.** When the models arrived, that was the obvious move, and I had the pieces to make it: a natural layer, a knowledge graph, an agent class. I could have wired a model into each and shipped a Softanza that "talks". I did not, and I wrote the refusal into the architecture as a law: the mind is programmatic by default, and a model may only propose. I gave up some fashion by that choice. I think I kept the platform.
 
-**I retired the language I was born on.** Softanza was written for years on a small, warm scripting language that I love and that I pleaded with, long before the models, to make executable natural language its first concern. It did not, and that is its right. In 2026 I ruled that the language would not be carried forward: the runtime beneath Softanza is being replaced by one we own, written in Zig, a charter and a spike so far, wearing the old surface so that every line I wrote can keep running, under a new name, **Haro**. The old surface stays because the code is the asset; the old runtime goes because sovereignty over the runtime is one of the commitments I made. That decision was not free. It is in Chapter 27 with its numbers, including the one I did not want: our runtime is slower than the one we measured against, by a factor between one and two, on every row. I recorded the loss in the estate memo of 13 September. A book that hides that is not worth your trust, and neither is a platform.
+**I retired the language I was born on.** Softanza was written for years on a small, warm scripting language that I love and that I pleaded with, long before the LLM era, to make executable natural language its first concern. It did not, and that is its right. In 2026 I ruled that the language would not be carried forward: the runtime beneath Softanza is being replaced by one we own, written in Zig, a charter and a spike so far, wearing the old surface so that every line I wrote can keep running, under a new name, **Haro**. The old surface stays because the code is the asset; the old runtime goes because sovereignty over the runtime is one of the commitments I made. That decision was not free. It is in Chapter 27 with its numbers, including the one I did not want: our runtime is slower than the one we measured against, by a factor between one and two, on every row. I recorded the loss in the estate memo of 13 September. A book that hides that is not worth your trust, and neither is a platform.
 
 **I refused to let anything into BASE without a court, and I failed.** The three layers of the library, CORE, BASE and MAX, were meant to keep the foundation small and the innovations above it. Under the pressure of time I let everything go into BASE: ninety-three percent of the code sits there today, and the dependency rule is held at the engine and broken at the inheritance. I say this on the first chapter, not the last, because the discipline I am about to preach for thirty-two chapters is one I have broken, and the study of the record caught me. That is what a court is for, and the court for the layers is still only proposed.
 
@@ -227,13 +227,13 @@ Stage: built: the agent file and its court; the registry that refuses a fake in 
 
 Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:13 UTC+01:00.
 
-In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
+In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
 ## 1. The concept, as the field holds it
 
 The field already has a word for programmers who care about their work: craftsmanship. A book of 2001 gave the idea its name, and a manifesto of 2009 gave it its slogan. Since then "software craftsman" has meant a professional who holds their code to a standard higher than the one the job requires. (General knowledge, not a study of the record.) It is a good movement. It is also a movement of programmers, about programmers' standards.
 
-The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: a model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its model, the person's work changes with it. (General knowledge, not a study of the record.)
+The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: an AI model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its AI model, the person's work changes with it. (General knowledge, not a study of the record.)
 
 The next section says what the site means by the word.
 
@@ -295,7 +295,7 @@ The engine drew the view from the data alone: `Maradi │ 3402094` is one of its
 
 The picture is the program's output: a boxed `Softanza` with round corners.
 
-**The decision-maker** declares what each actor in the world may do, a person or an agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? Load it:
+**The decision-maker** declares what each actor in the world may do, a person or an AI agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? Load it:
 
 ```haro
 cPia = "pia: 1
@@ -334,7 +334,7 @@ The court refused it! Its reason is printed: `[pia-coverage @ coverage] an agent
 
 The Hausa sentence came back as `HELLO`. The Arabic word counts `4`, its letters and not its bytes, and its script is `arabic`.
 
-**The agent** is the sixth crafter, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
+**The agent** is the sixth crafter, the one 2020 could not draw. An AI agent declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
 
 ```haro
 cLlm = "pia: 1
@@ -411,7 +411,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
 
-**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model. Does the model judge itself, with an LLM actor in it that holds an effect?
+**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the AI agent proposes while a person decides. That rule is data the organisation attaches to its own domain model. Does that model judge itself, with an LLM actor in it that holds an effect?
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -430,15 +430,15 @@ g.AddRule(oRule)
 
 > run: kept
 
-`RulesAreSound()` answers `0`: the model finds its own `writer`, an LLM actor holding `effectful`, in violation of the rule.
+`RulesAreSound()` answers `0`: the domain model finds its own `writer`, an LLM actor holding `effectful`, in violation of the rule.
 
 The three cases are a restaurateur who is not a programmer, a bank under a regulator and an organisation that chose ownership over a vendor. The restaurateur and the organisation are crafters by the record; the bank is the licensee of a product, and the record does not say who there declared anything. The restaurateur and the organisation did not wait for the software industry, and each is offered ownership of what is built for them.
 
 ## 4. The decision, and what I refused
 
-**I kept the programmer first.** The vision of the platform, which I ratified, says it in one line: the first audience stays the programmer in a small team; the agentic era did not replace that person, it multiplied them. I held that agents do not make programmers obsolete.
+**I kept the programmer first.** The vision of the platform, which I ratified, says it in one line: the first audience stays the programmer in a small team; the agentic era did not replace that person, it multiplied them. I held that AI agents do not make programmers obsolete.
 
-**I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
+**I added the AI agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
 **I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer (general knowledge, not a study of the record). The site's headline used it until 8 October 2026. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter. What this book's cover image carries, the record does not say, and this page does not say it for me.
 
@@ -450,7 +450,7 @@ The guards that prove these claims, and the one still in development, are in the
 
 ## 5. The court
 
-`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones; finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
+`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the agent whose mind is a language model, holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones; finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
 
 ## 6. The field, and where it leads
 
@@ -488,7 +488,7 @@ What is absent: the platforms of the three customers running on the Softanza eng
 
 ## 9. Exercise
 
-Declare one agent for a world you know: a shop, a class, an office. Write its file: what it covers, how reversible its acts are, when it runs, one skill. Before you run it, write the promise you expect under the question below. Then run it.
+Declare one AI agent for a world you know: a shop, a class, an office. Write its file: what it covers, how reversible its acts are, when it runs, one skill. Before you run it, write the promise you expect under the question below. Then run it.
 
 ```haro exercise
 ? StzAgentDeclarationQ(cYourAgent).IsValid()
@@ -517,7 +517,7 @@ g.AddRule(oRule)
 
 > run: exercise
 
-Then compare it with the answer printed in section 3, and say what the rule read to give each. Section 3 shows its two conditions. When you can say it, you will know which line of the model the rule reads.
+Then compare it with the answer printed in section 3, and say what the rule read to give each. Section 3 shows its two conditions. When you can say it, you will know which line of the domain model the rule reads.
 
 Chapter 3 is the method, from first principles, and the sentence its method returns to is this: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -1001,7 +1001,7 @@ The next chapter leaves the picture for the code written inside it, and states t
 
 Source: Chapter 5. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
+Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:13 UTC+01:00.
 
@@ -1009,7 +1009,7 @@ In this chapter I take the two things the field calls coding style and ask the q
 
 ## What the AI age changes here
 
-For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
+For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by AI models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
 
 That changes what a style is. A style that lives in one person's habits dies when that person stops writing every line. It has to become something a machine can be held to, and something a machine can check, or it thins away. In this house it did thin, and I will show you where. So this movement of the book, Programming rethought, opens on a law that has two halves. The second half exists because of the age: the code adheres to the way a person thinks, and the court judges it whoever wrote it. By the court I mean the machine that judges code against the house's rules; today it judges only the library's own classes, and section 5 says how.
 
@@ -1127,7 +1127,7 @@ The run printed `[ 12500, 13000, 11500, 23, 46 ]`. Five values, the starting one
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, so that a person or an agent can check a class before it lands. Five of the fourteen run over the graph of the code. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. Five of the fourteen run over the graph of the code. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -1147,7 +1147,7 @@ The chapters of this part prove the law, each from one side. Chapter 6 tells the
 
 **I let the library's implementation go.** The code the models wrote inside the library is accepted as good. It does not look like mine. Its local variables carry underscores on both sides, hundreds of times per thousand lines. They are a safeguard. The language beneath Softanza lets a library's local variable overwrite a caller's global, and the convention prevents it. I did not ask for the old style there, and I would refuse a campaign to impose it.
 
-**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
+**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an AI agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
 
 What had happened is measurable. A study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one. They assert in another form, a call that names the expectation. They adopted it because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends one form for new test blocks: the classic form, a title, the questions and the promises under them. The converted blocks are left as they are. The record holds that recommendation, and no ruling of mine on it.
 
@@ -1169,7 +1169,7 @@ The field leads in enforcement. Most mainstream languages have a formatter and a
 
 The field leads in reach and in people. There is a labour market for its tools and none yet for this one, and the field's generators are the largest that exist.
 
-The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
+The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An AI agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, and the verb's form is a contract about the object. The promise under the line is the example, the test and the documentation at once.
 
@@ -1177,13 +1177,13 @@ Where I think Softanza stands apart is in what the style is tied to. A formatter
 
 What is built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
 
-What is designed: a court of style for the code a programmer or an agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that a model's output is held to it before it is written.
+What is designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
 
 What is absent: any machine that judges, today, the style of a program written with the library. The founding slide's chain does not run as written. In this book the discipline carries the name of its motto: what you think is what you write.
 
 ## 8. Six doors
 
-**The programmer.** Your lines follow your reasoning: select, contain, count, find, act. Each question carries its promise, and a court reads it whether you wrote it or an agent did.
+**The programmer.** Your lines follow your reasoning: select, contain, count, find, act. Each question carries its promise, and a court reads it whether you wrote it or an AI agent did.
 
 **The analyst.** The method starts from your problem in plain words. The keywords you use become the names of the steps.
 
@@ -1199,7 +1199,7 @@ What is absent: any machine that judges, today, the style of a program written w
 
 Take the list `[ "tea", "", "rice", "", "fish", "" ]`. Write the questions of the mental model in order, one line each: does it contain empty strings, how many, where. Then one act, with a named parameter. Under every question, write the line it must print, before you run anything.
 
-Run it. Then ask an agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
+Run it. Then ask an AI agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
 
 I left this one in your hands, on purpose. The Basket class of section 3 fails the court because `AddQ` returns `42`. Change that one value to `This` and run the question again:
 
@@ -1456,7 +1456,7 @@ o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
 
 > run: exercise
 
-Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
+Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an AI agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
 
 The next chapter turns to the writing style, and to the seven goals. Its principle is one sentence: what you think is what you write.
 
@@ -1680,7 +1680,7 @@ Next comes the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or agent, is asked to write with Softanza embraces the historic style.
+**I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or AI agent, is asked to write with Softanza embraces the historic style.
 
 **I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. The study's finding is that there is no court over either.
 
@@ -2127,7 +2127,7 @@ Chapter 9 turns to patterns of thought. It presents the Softanzuter, a computati
 
 Source: Chapter 9. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
+Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -2197,7 +2197,7 @@ rxu() {
 
 It did not: the results read `[ 700 ]`, the triggers that fired read `[ "number" ]`. `BIG` is nowhere! Every trigger is matched once against the original text, and what one trigger writes is not offered to the others. That is the whole difference between the second rung and the third.
 
-The cascade runs one rung above, at the fourth rung, the agent: the thinking machine given a body in a world, and a goal. Its mind is made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skill firings were verified, and goes on until the world stops changing, or for twenty rounds at most. What does it answer when asked again?
+The cascade runs one rung above, at the fourth rung, the AI agent: the thinking machine given a body in a world, and a goal. Its mind is made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skill firings were verified, and goes on until the world stops changing, or for twenty rounds at most. What does it answer when asked again?
 
 ```haro
 oAgent = new stzPIAgent("cook")
@@ -2222,7 +2222,7 @@ oAgent.AddSkill(s2)
 
 It answers `2`, then `0`, and between the two the fact `served` reads `TRUE`. That is a fixpoint. The guard that proves it labels the scene in its own words: `the cascade to fixpoint (Softanzuter at agent level)`. In chapter 17 you will see this same agent refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
 
-So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
+So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for AI agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
 
 **Reaxis** is the other half of the chapter's title, and it is a different idea. It is reactive programming with a vocabulary redesigned from the ground. A reactive thing is a Container, a Stream and an Rfunction: a function in waiting, which is not a callback. Data flows through a stream in plain words, a transformation, a filter, what to do with what passes. Four prices go in, 80, 90, 100 and 120: which ones come out, and at what value?
 
@@ -2369,7 +2369,7 @@ The next section says where all of this stops.
 
 ## 7. The limit
 
-What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills chain.
+What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
 
 What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
 
@@ -2439,7 +2439,7 @@ In this chapter I say what I mean by refining rather than programming. It is a c
 
 ## 1. The concept, as the field holds it
 
-The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
+The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing AI agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
 
 What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume; I hold this as a view, not a result.
 
@@ -2660,7 +2660,7 @@ Behind the gate stand decisions, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused to govern the intelligence.** Much of the field's approach to agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world: this is my view. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
+**I refused to govern the intelligence.** Much of the field's approach to AI agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world: this is my view. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
 
 **I refused the diff as the unit.** A diff is a text change. A refinement is a typed proposal about a declared point, with a kind, bounds and an origin. I kept the diff as an artefact, and I refused it as the thing to review.
 
@@ -2680,7 +2680,7 @@ The field leads in infrastructure, where plan and apply are the daily practice o
 
 The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
 
-And on trust, much of the field's approach is built to scale to any model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
+And on trust, much of the field's approach is built to scale to any AI model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
 
 Now, where the gate stops.
 
@@ -2713,7 +2713,7 @@ What is built, and where it stops: the limits of the gate as it stands.
 
 ## 9. Exercise
 
-Take two settings of a program of yours: a rate and a ceiling, say, with a rule that the rate must stay below the ceiling. Declare them as points, with bounds, and declare the rule across them. Before you run anything, write under each proposal whether it is admitted and, if not, at which stage it is refused. Propose a change of the rate above the ceiling, and one from an origin you declare as a model, against a floor you set. Then rewind to zero and go forward one step.
+Take two settings of a program of yours: a rate and a ceiling, say, with a rule that the rate must stay below the ceiling. Declare them as points, with bounds, and declare the rule across them. Before you run anything, write under each proposal whether it is admitted and, if not, at which stage it is refused. Propose a change of the rate above the ceiling, and one from an origin you declare as an AI model, against a floor you set. Then rewind to zero and go forward one step.
 
 Run it. If you were wrong about the stage, you have found a place where your own gate disagrees with your own expectation.
 
@@ -2746,7 +2746,7 @@ In this chapter I state the law of Part III and run it. I begin with a sentence 
 
 ## What the AI age changes here
 
-In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence can be a model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
+In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence can be an AI model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
 
 So the grammar must be closed, and the court, the part that accepts or refuses a sentence by its grammar, must read it. A language whose sentences may contain anything cannot refuse anything, and a court cannot judge a sentence it cannot read. The vision of the platform puts the whole movement in one line, which I ratified: humans and machines meet in declared languages, small, closed and judged, not in general-purpose code.
 
@@ -2756,7 +2756,7 @@ This is also where the order of the book turns around. The cover goes from the f
 
 For a working programmer, a language is a general host, Python, JavaScript, Java. A "domain language" is usually a library whose calls read like sentences, while the file around them may contain any code of the host. The estate's own study of the field, written in August 2026, names what happened to those designs. Internal languages died of openness, because a build file is declarative only until someone writes arbitrary code in it. Language workbenches died of the weight of their tools. And it names the languages that won: SQL, regular expressions, Make, HTML and CSS, the configuration languages. They won because they are closed.
 
-The model era added one practice: when a model writes, either check what it wrote, or constrain its output while it writes, with a grammar or a schema. The reference implementation of grammar-constrained sampling is an open project, and the record says so where it uses the same algorithm. And in the field's common language today, "programming in natural language" means one thing: prompting a model.
+The model era added one practice: when an AI model writes, either check what it wrote, or constrain its output while it writes, with a grammar or a schema. The reference implementation of grammar-constrained sampling is an open project, and the record says so where it uses the same algorithm. And in the field's common language today, "programming in natural language" means one thing: prompting a model.
 
 ## 2. The first principle
 
@@ -2764,7 +2764,7 @@ The model era added one practice: when a model writes, either check what it wrot
 
 ## 3. The Softanza form
 
-Can a sentence run without a model guessing what it means? It can, when every word of it is in a dictionary the library owns:
+Can a sentence run without an AI model guessing what it means? It can, when every word of it is in a dictionary the library owns:
 
 ```haro
 Naturally("
@@ -2827,7 +2827,7 @@ o1 = Naturally("Create a string with 'softanza' Uppercse it")
 
 > run: kept
 
-The misspelled verb is not guessed. `Unresolved()` answers `[ [ "Uppercse", "uppercase" ] ]`, the word it met beside the word the library thinks you meant, and `UnderstoodAll()` answers `0`: the program admits that it did not understand everything. That is the permissive mode: an unknown word is skipped and reported. An agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
+The misspelled verb is not guessed. `Unresolved()` answers `[ [ "Uppercse", "uppercase" ] ]`, the word it met beside the word the library thinks you meant, and `UnderstoodAll()` answers `0`: the program admits that it did not understand everything. That is the permissive mode: an unknown word is skipped and reported. An AI agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
 
 ```haro
 try
@@ -2861,7 +2861,7 @@ The other direction of natural code in Softanza is the near-natural chain, where
 
 The chain answered `0`, and `Why()` gave the reason: `no: 8 is not less than 4`. A verdict says why.
 
-Now the law at its sharpest: a model. The library declares the shape of an answer as a schema. What happens to a schema that names a type the library does not have? It is judged when it is declared, before any model is called:
+Now the law at its sharpest: an AI model. The library declares the shape of an answer as a schema. What happens to a schema that names a type the library does not have? It is judged when it is declared, before any model is called:
 
 ```haro
 try
@@ -2946,7 +2946,7 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 **I kept the promise of 2020 and changed its mechanism.** My first slide promised executable natural language. The vision of 2026 judged that slogan: it promised more than a court can defend, because a natural sentence can be ambiguous and a lie can be grammatical. So the naturalness stays at the door, where a sentence asks or drafts, and the execution belongs to closed languages a court can judge. I built the natural layer that way long before the vision named it. Only words defined in the dictionary are interpreted. Every other word is skipped and reported, or refused in strict mode, never guessed.
 
-**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers: their letter-order cipher had been inverted by its own inventor, from memory, and they duplicated meanings. A language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
+**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing AI agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers: their letter-order cipher had been inverted by its own inventor, from memory, and they duplicated meanings. A language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
 
 **I refused a second embedding.** Chapter 1 states that decision; here I add only that a door brings a foreign runtime, a surface brings a familiar syntax over the same grammar, and Chapter 16 tells the difference.
 
@@ -2987,13 +2987,13 @@ These are the limits; the next section opens six doors on them.
 
 ## 8. Six doors
 
-**The programmer.** You keep writing code. What you declare is a closed grammar, and the court judges your sentence and an agent's by the same rules.
+**The programmer.** You keep writing code. What you declare is a closed grammar, and the court judges your sentence and an AI agent's by the same rules.
 
 **The analyst.** Your domain's words become a data pack, and the system understands them or refuses them with the reason.
 
 **The designer.** The refusals are part of the language: what is off the list is refused in strict mode, so it never needs a warning.
 
-**The decision-maker.** A model held to a declared grammar answers in the right shape. It can still answer a falsehood in the right shape, and the record prints that limit with the result.
+**The decision-maker.** An AI model held to a declared grammar answers in the right shape. It can still answer a falsehood in the right shape, and the record prints that limit with the result.
 
 **The educator.** A sentence in Hausa, French or Arabic runs and says back what it understood, so a learner reads the machine's reading of their own words.
 
@@ -3001,7 +3001,7 @@ These are the limits; the next section opens six doors on them.
 
 ## 9. Exercise
 
-Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers a model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
+Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers an AI model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
 
 Run it. The third answer is the lesson of this chapter. Write down, in one sentence, who in your domain must judge it, since the grammar cannot.
 
@@ -3024,11 +3024,11 @@ Chapter 12 is *A language, declared*. Its principle: declaring a language is as 
 
 Source: Chapter 12. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
+Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, a model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
+In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
 ## 1. The concept, as the field holds it
 
@@ -3107,7 +3107,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 
 The second pair is the point of the chapter: the grammar answers `1` and the court answers `0`! I do not print the list of what the grammar dropped, because its text carries the former name of the court in one place. I test that it names the limit of the range.
 
-A model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
+An AI model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
 
 ```haro
 ? StzGrammarCouldContinue(cG, "dish: t")
@@ -3245,8 +3245,8 @@ By facet I mean here a surface of a declared language. The charter lists what th
 |---|---|---|
 | the text | the declaration, plain and closed, with a rationale required on every declaration | built outside; the library's analogue is the schema declaration |
 | the court | the judge generated for the language, speaking in the declaration's own words | built outside; the library's analogue is `Verify` and `Accepts` |
-| the mouth | the grammar for a constrained model | built in the library for schemas; built outside for declared languages, shape only |
-| the prompt | the instruction a model reads, tuned by measurement | built in the library; not known for declared languages |
+| the mouth | the grammar for a constrained AI model | built in the library for schemas; built outside for declared languages, shape only |
+| the prompt | the instruction an AI model reads, tuned by measurement | built in the library; not known for declared languages |
 | the person's reading | a description for a human | built in the library (`Describe`) |
 | the voice | the language narrating a run, a sentence, a refusal; never stored and never parsed back | built outside; the library's analogue is `Understood()` |
 | the tongues | a human language as a data file | built outside for two tongues; built in the library for five packs (chapter 11) |
@@ -3257,7 +3257,7 @@ The word *facet* has other meanings in this book, and I define mine here: a surf
 
 ## 4. The decision, and what I refused
 
-**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their agents. The charter records a reversal: its first decision, as the general-purpose floor under the family of declared languages, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
+**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their AI agents. The charter records a reversal: its first decision, as the general-purpose floor under the family of declared languages, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
 
 **I decided to declare, and not to write.** The act of the kernel: declare a language. It was extraction and not invention: the first languages were declared after they already ran and had consumers.
 
@@ -3382,7 +3382,7 @@ The next chapter turns to the natural sentence, in two directions and under one 
 
 Source: Chapter 13. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
+Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
 Run: 17 of 17 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -3390,7 +3390,7 @@ In this chapter I run the two directions of natural language in the library: the
 
 ## 1. The concept, as the field holds it
 
-In the field's common language, "programming in natural language" means one thing: asking a model for code, or asking it to do the task, in a prompt. The tools are chat assistants and code completers, in wide use since about 2021. What the sentence runs on is the model's guess. The same sentence may give different code on different days, the model needs a network or a local runtime, and a person reads the result to know what was understood. Chapter 11 said it, and I point back.
+In the field's common language, "programming in natural language" means one thing: asking an AI model for code, or asking it to do the task, in a prompt. The tools are chat assistants and code completers, in wide use since about 2021. What the sentence runs on is the model's guess. The same sentence may give different code on different days, the model needs a network or a local runtime, and a person reads the result to know what was understood. Chapter 11 said it, and I point back.
 
 Older practices exist, and the record names them. Inform 7, a language whose programs are English sentences, compiled whole, with a world model and a way to say *it* across sentences. AppleScript, English-like and hard to write, because its naturalness was on the surface and not in a semantic model. Controlled natural languages, whose strongest device, the library's own comment says, is showing what can be said next. A session's reading of 30 August 2026 is that Inform 7 is a whole-text compiler with referential context, and not a command dispatcher. (General knowledge for the dates, not a study of the record.)
 
@@ -3691,9 +3691,9 @@ Now the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I built it without a model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
+**I built it without an AI model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
 
-**I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
+**I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and AI agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
 
 **I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. That is my view of language, not a result. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
 
@@ -3725,7 +3725,7 @@ A researcher ran the other guards named above once each on 8 October 2026, and i
 
 ## 6. The field, and where it leads
 
-The field leads in breadth of phrasing. A model accepts any phrasing in any language, and the dictionary accepts what the packs name. Measured above: the Hausa pack covers nine of twenty-five meanings, Turkish ten, Arabic sixteen, English twenty-three (the two it lacks, English reaches through the grown vocabulary), French twenty-five. And the sentence layer acts on three classes only: strings, lists and numbers. A customer's domain objects are not among them; the domain goes through the knowledge graph.
+The field leads in breadth of phrasing. An AI model accepts any phrasing in any language, and the dictionary accepts what the packs name. Measured above: the Hausa pack covers nine of twenty-five meanings, Turkish ten, Arabic sixteen, English twenty-three (the two it lacks, English reaches through the grown vocabulary), French twenty-five. And the sentence layer acts on three classes only: strings, lists and numbers. A customer's domain objects are not among them; the domain goes through the knowledge graph.
 
 The field leads in whole-program semantics. Inform 7 compiles a whole world. Here a program is a sequence of operations on a live object.
 
@@ -3790,7 +3790,7 @@ done
 
 What is built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
 
-What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that a model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
+What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
 What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. The record also holds no account, and no date, of the author's plea to the project of the former host language that natural programming be made a first concern. Nor does it hold a sentence of his in that voice that the book can source. All it holds is a private memo of 30 August 2026, which gives his judgement of the language's shipped natural form. The memo is marked private, so the book does not quote it and does not source any phrase to him.
 
@@ -3842,11 +3842,11 @@ The next chapter is about knowledge programming, where the analyst's domain word
 
 Source: Chapter 14. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
+Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
 Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
+In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
 ## 1. The concept, as the field holds it
 
@@ -3905,7 +3905,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 The graph with the law proves the longer chain and writes its steps out: `proved: porridge made-from couscous made-from flour made-from millet`. The graph without the law, which also never received the fact, still answers `not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'`, and I want you to notice that this no has two causes, named in its own line: no recorded fact, and no lawful chain. A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: `a certain no is still certain`.
 
-The same growth reaches the domain model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
+The same growth reaches the domain language model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -4044,7 +4044,7 @@ The record's own graph comparison says where the traditional solutions win: larg
 
 The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules. Here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
 
-Here is where I think this stands apart, with the measured limits beside it. The knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, a model or a training run.
+Here is where I think this stands apart, with the measured limits beside it. The knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, an AI model or a training run.
 
 The losses are printed. The limit of the chapter comes next, with its runs.
 
@@ -4409,7 +4409,7 @@ g.AddEdgeXT(:b, :c, "finishes")
 
 Yes: the path from `served` to `placed` finds nothing, and the line prints 0.
 
-Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an agent. Five of the six languages do:
+Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an AI agent. Five of the six languages do:
 
 ```haro
 ? len( Lx("[@N, @S]").Tokens() )
@@ -4580,7 +4580,7 @@ The next chapter is about seven languages and one door. A door is a runtime and 
 
 Source: Chapter 16. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door
+Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door
 
 Run: 10 of 10 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -4861,7 +4861,7 @@ The call raised, and the trace still holds `0`! R's message was in French on thi
 
 What else is designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done with no source. Then the three tiers for Python, of which only the external subprocess exists. Then the domain library on top of the door, none of whose classes I found in code. And the facets, a memo that proposes and rules nothing.
 
-What is absent: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, which are defined in no file. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached only by the class. The model is not a door of this plane at all; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book does not teach it.
+What is absent: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, which are defined in no file. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached only by the class. The AI model is not a door of this plane at all; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book does not teach it.
 
 And a door shape I did not run: Julia, C and Prolog, for which no runtime is installed here. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. I ran none of it.
 
@@ -4879,7 +4879,7 @@ Six readings of the door follow, one for each person who meets it.
 
 **The educator.** A learner sees which layer belongs to which language and runs a two-door pipeline. The lesson is the difference between reading a language, running it, and writing in its syntax.
 
-**The agent.** You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20).
+**The agent.** You never reach the door by yourself. A function in an AI agent's file must carry a posture, and `external` fits a foreign runtime; and an AI model has no capability to produce effects (chapter 20).
 
 ## 9. Exercise
 
@@ -4915,7 +4915,7 @@ oPy4.Execute()
 
 Run it. Read what the method prints and what it returns, and explain both before you touch the block; the page says why in section 7, where the way back is not closed. When you can, you will know why a way back that evaluates its data is not a closed one.
 
-Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. A model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. An AI model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 
 =====
@@ -4924,11 +4924,11 @@ Chapter 17 opens the part on intelligence with its law: programmatic by default,
 
 Source: Chapter 17. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
+Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -4938,7 +4938,7 @@ So this chapter does what the other two law chapters do, and states the law of i
 
 ## 1. The concept, as the field holds it
 
-Ask the field what makes an application intelligent and the answer is a model. An agent, in the field's sense, is a model in a loop with tools, a memory and a goal. The shopping list for building one in 2026 is long. It takes a project in Python, a model provider, a framework that wires the loop as a graph, a store of vectors for memory, tools with typed schemas, a tracing service, and a chapter of safety advice. Memory is often retrieval: a collection of documents, cut into pieces, searched by similarity and pasted into the prompt.
+Ask the field what makes an application intelligent and the answer is an AI model. An AI agent, in the field's sense, is a model in a loop with tools, a memory and a goal. The shopping list for building one in 2026 is long. It takes a project in Python, a model provider, a framework that wires the loop as a graph, a store of vectors for memory, tools with typed schemas, a tracing service, and a chapter of safety advice. Memory is often retrieval: a collection of documents, cut into pieces, searched by similarity and pasted into the prompt.
 
 Safety, in that picture, is a property of the agent. It is alignment, guardrails, a prompt that asks for confirmation, a box marked "human in the loop". The field has also learned to hold a model's output to a shape, with grammars that constrain what it may emit. All of this is serious work, and some of it is good. It shares one assumption: the model is the mind, and everything else is around it.
 
@@ -4990,7 +4990,7 @@ done
 
 > run: kept
 
-A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. A model, where there is one, comes after all of them, not first.
+A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. An AI model, where there is one, comes after all of them, not first.
 
 The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
 
@@ -5009,7 +5009,7 @@ oKG.KnowRelation("margherita", "contains", "tomato-sauce").
 
 New knowledge from existing knowledge, with its chain written out! And a "no" that is as certain as the "yes", because it is the result of a search, not of a mood. The page printed it as `not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'`. It is certain about what is recorded and declared, not about the world: it says `not derivable`, not "false". No retrieval, no training. Adding a fact makes the system know more; adding a law makes it reason further.
 
-Then the model. It is welcome, and it is held. Wire a model's output straight to an effect, here sending a message. Is the composition sound?
+Then the AI model. It is welcome, and it is held. Wire a model's output straight to an effect, here sending a message. Is the composition sound?
 
 ```haro
 oG = new stzAgentGraph("mailer")
@@ -5041,9 +5041,9 @@ oLLM.SetSkillFrom(oF)
 
 > run: kept
 
-Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. No model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
+Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. No AI model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
 
-And the agent itself has a mind made of code. A skill is a condition and an action, and it fires on what the agent perceives. Governance gates the act before it happens. When the stock is low and the skill wants to order, does the act go through?
+And the programmatic agent itself has a mind made of code. A skill is a condition and an action, and it fires on what the agent perceives. Governance gates the act before it happens. When the stock is low and the skill wants to order, does the act go through?
 
 ```haro
 oRog = new stzPIAgent("rogue-bot")
@@ -5069,7 +5069,7 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 ## 4. The decision, and what I refused
 
-**I refused the model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
+**I refused the AI model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
 
 **I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model can be added on top. It is never the price of admission. "Last" means after the programmatic path, and under the court and a budget, whether the model is local or remote. The record supports both readings, and the chapter does not choose between them.
 
@@ -5077,7 +5077,7 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 **I refused retrieval as memory.** Memory is a governed graph, not a pile of similar fragments. Derivation replaces retrieval: the system knows what it was told and what follows from it by law, and it can prove both.
 
-**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else. No remote model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation. Any project that supplies a knowledge base can ship its own model free.
+**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else. No remote AI model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation. Any project that supplies a knowledge base can ship its own model free.
 
 **I refused a stub.** The library declares five agents of its own and has wired one. Asking for one that is not wired raises an error; it does not return something that looks like an agent. Pretending would be easier, and it would make every other refusal in this chapter worth less.
 
@@ -5095,9 +5095,9 @@ The field leads in reach. Its frameworks connect to hosted services of every kin
 
 The field leads in the market. There is a labour market for its stack today; the one for this stack is still to come.
 
-The field leads in models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the foundry beyond the bigram is designed (chapter 19). Softanza does not build the large generators and does not compete with them.
+The field leads in AI models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the foundry beyond the bigram is designed (chapter 19). Softanza does not build the large generators and does not compete with them.
 
-Where I think the law stands apart is in three places. A decision here costs nothing, runs offline and gives the same answer every day, so it can be tested with ordinary promises. A model here cannot act, by construction, not by vigilance. And a model's sentence, where one is used, can be held to the grammar of a declared language before it is emitted, instead of being checked and retried after.
+Where I think the law stands apart is in three places. A decision here costs nothing, runs offline and gives the same answer every day, so it can be tested with ordinary promises. An AI model here cannot act, by construction, not by vigilance. And a model's sentence, where one is used, can be held to the grammar of a declared language before it is emitted, instead of being checked and retried after.
 
 The next section says where the law stops.
 
@@ -5135,7 +5135,7 @@ It did not refuse! It printed `Margherita is a dish.` That answer is true, and i
 
 ## 8. Six doors
 
-**The programmer.** Your agent's mind is code you can test with ordinary promises. A model may serve as one faculty; it can never hold an effect.
+**The programmer.** Your agent's mind is code you can test with ordinary promises. An AI model may serve as one faculty; it can never hold an effect.
 
 **The analyst.** A fact or a rule you add makes the system know more, with no code change and no training, and every answer carries its why.
 
@@ -5168,7 +5168,7 @@ Chapter 18 is *The five registers, and conversations that ask*. Its principle: a
 
 Source: Chapter 18. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
+Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
 Run: 15 of 15 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -5180,7 +5180,7 @@ Two practices meet in the idea of a conversation that asks, and a third stands b
 
 The first is slot filling. A dialogue framework asks the user for the missing pieces of a form until the form is full. The frameworks of the field understand free text with trained models, speak on many channels and ship connectors, and they ask the designer to write intents and flows in their own language. They take the user's reply as the answer and act on it.
 
-The second is vibe coding, a name put into circulation in 2025: the human prompts, the model produces, the human keeps what runs.
+The second is vibe coding, a name put into circulation in 2025: the human prompts, the AI model produces, the human keeps what runs.
 
 The third is programming by example. Spreadsheets fill a column from two examples you typed. Research calls it inductive synthesis, and the model era made the example the way one steers a model.
 
@@ -5415,7 +5415,7 @@ oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
 
 ### Programmatic by default: the conversation with no one in it
 
-Chapter 17's law says conversations happen in code first. Here is the conversation with no person and no model. An agent of the library asks, an answer source (a plain function) replies, and every reply passes the same door. Where the source has no answer, does the agent invent? Run it:
+Chapter 17's law says conversations happen in code first. Here is the conversation with no person and no model. An AI agent of the library asks, an answer source (a plain function) replies, and every reply passes the same door. Where the source has no answer, does the agent invent? Run it:
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
@@ -5506,7 +5506,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 
 So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A value with a space in it raises at the moment (section 7 gives the evidence). So the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and the code calls them a draft awaiting a native reviewer. I wrote no Arabic or Hausa sentence of my own.
 
-### A model is a fluency, never the mind
+### An AI model is a fluency, never the mind
 
 Without a model, what does a conversation say of its own fluency? Run it:
 
@@ -5534,7 +5534,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused a stub.** A reserved agent raises when it is asked for. The design document calls the raise the law working, and says it should not be read as a defect. I refused to pretend the fifth register works.
 
-**I refused an agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
+**I refused an AI agent that fills a gap to finish the job.** The wise coder stops, and leaves the gap for a person.
 
 **I refused to let a conversation own a world.** It happens inside a knowledge space and never owns one. A copy of the knowledge held in a session goes stale.
 
@@ -5643,7 +5643,7 @@ In this chapter I forge a domain language model from a knowledge base, and no on
 
 A language model predicts the next token. A token is a fragment of text with no type, no role and no constraint: it can be the end of a word, a space, a bracket. Everything a model says is built by choosing tokens one after another. Everything that makes the result useful, that it is a valid sentence, that it is true, that it fits a schema, is checked afterwards or enforced from outside.
 
-The field has made this work with three tools. You adapt a general model to a domain by training it further on the domain's documents. You give it the relevant documents at the moment of the question, retrieved by similarity. And you constrain its decoding with a grammar, so that it cannot produce a malformed sentence, as chapter 11 showed. All three keep the unit the same: the token.
+The field has made this work with three tools. You adapt a general AI model to a domain by training it further on the domain's documents. You give it the relevant documents at the moment of the question, retrieved by similarity. And you constrain its decoding with a grammar, so that it cannot produce a malformed sentence, as chapter 11 showed. All three keep the unit the same: the token.
 
 The next section names the one thing I change: the unit.
 
@@ -5802,7 +5802,7 @@ remove(cGguf)
 
 It is small: a single layer that predicts the next word from the previous one, `15 pairs over a 12-word vocab`. And it learns: `loss 2.57 -> 0.70`. The library inspects the exported file and prints `2`, the two tensors it holds, a weight and a bias. I do not claim another runtime loads it as a text generator. It trains in a fraction of a second, offline, and gives the same numbers on every run.
 
-What does a model like this say? It is fluent in the grammar of the domain, and it is wrong about facts. That is the reason for the gate:
+What does a neural model like this say? It is fluent in the grammar of the domain, and it is wrong about facts. That is the reason for the gate:
 
 ```haro
 aCorpus = oDLM.GenerateCorpus()
@@ -5844,7 +5844,7 @@ On 13 July 2026, I ruled on this. The concept of a domain language model had bee
 
 **I refused the token as the unit.** The unit is a chunk of the world, which a graph can admit or refuse.
 
-**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
+**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial AI model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
 
 **I refused neural first.** The finding I start from is that the canonical model is not neural. A review of the earlier product archived a transformer of one to three billion parameters, in favour of rule-based prediction. Its ground was that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
 
@@ -5860,11 +5860,11 @@ Section 6 asks where the field leads, and where this model stands.
 
 ## 6. The field, and where it leads
 
-The field leads in scale. Training and serving models of every size is a mature practice. This second rung is a single layer over twelve words, and the steps that would make it more, a validated corpus, deduplication, a trained tokenizer, a larger network, quantisation, are not done. I do not compete with large models.
+The field leads in scale. Training and serving AI models of every size is a mature practice. This second rung is a single layer over twelve words, and the steps that would make it more, a validated corpus, deduplication, a trained tokenizer, a larger network, quantisation, are not done. I do not compete with large AI models.
 
-The field leads in fluency, which is the point of a model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
+The field leads in fluency, which is the point of an AI model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general AI model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
 
-Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
+Where I think this stands apart is in what the output is. A general AI model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
 
 Section 7 says what is built, what is designed and what is absent.
 
@@ -5883,7 +5883,7 @@ What is absent: an end-of-sentence word for the second rung, which is why one of
 
 ## 8. Six doors
 
-**The programmer.** A model is a file you can read, diff and test: its facts, its laws and its goldens.
+**The programmer.** A domain language model is a file you can read, diff and test: its facts, its laws and its goldens.
 
 **The analyst.** A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; the model's own answers do not read it yet.
 
@@ -5905,7 +5905,7 @@ I left this one in your hands. Section 3 says that completion sees one word and 
 
 When you have solved it, you will know why a completion that sees one word lists the objects of every fact of that relation.
 
-Chapter 20 turns from what a model says to what an agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
+Chapter 20 turns from what an AI model says to what an AI agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
 
 =====
@@ -5918,15 +5918,15 @@ Stage: built: reversibility as a declared contract and a registration gate; post
 
 Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
+In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
 ## 1. The concept, as the field holds it
 
-In the field, safety is a property of the agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process, and does not tell a file moved from random bytes churning.
+In the field, safety is a property of the AI agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process, and does not tell a file moved from random bytes churning.
 
 The best advice of the field, which the narration says every serious guide of 2026 gives (it paraphrases one roadmap), is to separate planning from execution and put a human approval between them. It is good advice, and it is advice: a pattern you implement, and can forget. The threat lists of the field, the OWASP list of risks for agentic applications among them, are lenses, and the record uses them so.
 
-So the field's posture, in a line, is that the agent is a model in a loop, and safety is vigilance around it. (General knowledge, not a study of the record, except where I name the document.) Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
+So the field's posture, in a line, is that the agent is an AI model in a loop, and safety is vigilance around it. (General knowledge, not a study of the record, except where I name the document.) Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
 
 ## 2. The first principle
 
@@ -5936,7 +5936,7 @@ The sentence is in the library's doctrine document: "We will not build safe agen
 
 ## 3. The Softanza form
 
-Four steps, in the form the study of the record gives them: the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. I will show each in code, and then the cases where a step does not hold.
+Four steps, in the form the study of the record gives them: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. I will show each in code, and then the cases where a step does not hold.
 
 **May this agent exist?** Before an agent runs a single tick, the governance asks the question, and it asks it when the answer is free. An agent that declares no coverage, one sentence saying what it covers, is refused. An agent that declares no reversibility class is refused too: reversible, compensable or irreversible. Both refusals are in the engine's own sentences, and the door of the former host language repeats them. What does it say to an agent that declares no coverage, and to one that declares no reversibility class? Run it:
 
@@ -5990,7 +5990,7 @@ next
 
 Read down the rows: trusted code may do all three classes of act, external code the first two, sandboxed code only the reversible. The last line asks for the refusal and prints its sentence.
 
-**The agent runs, believes it acted, and the disk does not move.** An agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work and the fact is learned. After one cycle, does the real file exist? Ask the disk, then the bench:
+**The agent runs, believes it acted, and the disk does not move.** An AI agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work and the fact is learned. After one cycle, does the real file exist? Ask the disk, then the bench:
 
 ```haro
 StzAllowAgentFunction("ScribblePrices", "trusted")
@@ -6119,7 +6119,7 @@ next
 
 > run: kept (touches files, the system)
 
-Thirty! The model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
+Thirty! The AI model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
 
 The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
@@ -6150,7 +6150,7 @@ StzDirDeleteAll(cDir)
 
 A named actor under a scope commits the other twenty-nine (`29`); one is skipped (`1`); and one file is still on disk (`1`), the file of the step the reviewer protected.
 
-**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. A model with the capability to produce effects is refused. A model without it registers like any other slot, a slot being the place in the loop that one agent takes:
+**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. An AI model with the capability to produce effects is refused. One without it registers like any other slot, a slot being the place in the loop that one agent takes:
 
 ```haro
 StzResetEngineAgentLoop()
@@ -6167,7 +6167,7 @@ StzResetEngineAgentLoop()
 
 > run: kept
 
-The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
+The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is an AI model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
 
 **An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick. It had no plan, no scope and no committing actor.
 
@@ -6244,7 +6244,7 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 ## 4. The decision, and what I refused
 
-**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
+**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the AI agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
 
 **I refused a permission check as the boundary.** It is not a check that the agent might route around. The powers are separated: creativity without authority, authority without creativity.
 
@@ -6252,7 +6252,7 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 **I refused to leave the gate optional.** The ruling of 22 August 2026 says the registration gate is doctrine, and that opting in is a migration state, not the design. The record is honest about the finding behind the ruling: where the doctrine of agents that cannot hurt you bound that day was nowhere. The safe world existed, and the agentic folder did not mention any of it. The ruling closed it the same day.
 
-**I refused a stub.** Asking for a reserved agent raises. The architecture says that this is the law working, and not a defect.
+**I refused a stub.** Asking for a reserved AI agent raises. The architecture says that this is the law working, and not a defect.
 
 **I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
@@ -6280,7 +6280,7 @@ The field leads in frontier reasoning. That stack orchestrates the largest model
 
 The field leads in ecosystem and hiring. There is a labour market for that stack, and none for this one.
 
-When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and a model can sit inside a Softanza system as a proposer.
+When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and an AI model can sit inside a Softanza system as a proposer.
 
 The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed. After the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn, and did not test whether it blocks the commit.
 
@@ -6294,7 +6294,7 @@ What is designed: the agent's side of the negotiation, in which the plan reaches
 
 Each item below is a gap, found while running and reading.
 
-- **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to a model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
+- **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to an AI model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
 - **A plan flags; it does not rank.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE. There is no score and no order of severity. The chapter says "flags".
 - **The gate is opt-in at the host.** The default flips when the last host in the tree declares. A fresh host runs the older pump.
 - **The loop checks that a coverage statement exists, not that it is true.**
@@ -6310,7 +6310,7 @@ Six doors follow, the same chapter seen from six places.
 
 **The designer.** The plan is the one artefact that crosses from the agent to the person, and a person can reject one step. The Right to a Human says a person is reachable wherever a machine serves, and the right is held by judgment.
 
-**The decision-maker.** You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. A model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.
+**The decision-maker.** You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. An AI model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.
 
 **The educator.** A learner's agent that tidies a course folder by deleting everything is a lesson in what a plan is. She sees what it would have done, and the files are still there.
 
@@ -6361,7 +6361,7 @@ Stage: built: the promise judged as a claim about a stop; the security plane wit
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
+In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
 ## 1. The concept, as the field holds it
 
@@ -6460,11 +6460,11 @@ It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! 
 
 The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
-The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by a model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
+The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by an AI model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
 
 ### The court of security
 
-The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
+The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The AI model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
 
 The evidence of what happened is a hash chain. Edit any line after the first, and the chain says which entry broke. If I edit one, which entry does it name, and does a wrong key draw the same accusation? Run it:
 
@@ -6510,7 +6510,7 @@ StzCloseSecurityLedger()
 
 > run: kept
 
-It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
+It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the AI model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
 
 What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
 
@@ -6550,7 +6550,7 @@ The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:run
 
 Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. I list it among the requests.
 
-The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when a model asks to commit it, and then a person does? Run it:
+The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when an AI model asks to commit it, and then a person does? Run it:
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
@@ -6661,9 +6661,9 @@ Six doors follow, one for each reader.
 
 **The analyst.** The threat model is a table you can read: each row with the guard that proves it and its honest limit. The performance judgment is declared before the code runs.
 
-**The designer.** A picture or a sound is a claim only a person can close. The gallery says a model looked and no human has. Your verdict is a named line in the record.
+**The designer.** A picture or a sound is a claim only a person can close. The gallery says an AI model looked and no human has. Your verdict is a named line in the record.
 
-**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.
+**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.
 
 **The educator.** The tutor's rule meets the court. Predict the verdict of a promise before the traveller walks it.
 
@@ -6790,7 +6790,7 @@ This block is a pinned gap. Its promise records the library's present answer, so
 
 It answers `ISTANBUL`: the locale was accepted and ignored! Python prints `ISTANBUL`: level, since the standard library has no locale casing. Node, with `toLocaleUpperCase('tr')`, prints `İSTANBUL`. Turkish needs the dotted capital. This is the loss most worth printing, and it is not that the engine lacks Turkish. It is that the method takes a locale and, today, answers with plain uppercase without saying so; honouring the locale, or refusing, is the next step. The source comment says: plain uppercase when it has no rule. The culture plan measured the same on 18 August 2026 and called it the code equivalent of the fake progress bar. Its law is the reason for this chapter: no facades. An operation either honours the culture it was given, or refuses. I hold this as a view, not a result, and the culture plan's law says the same.
 
-**Five: an instruction in your language.** A natural-language instruction is dictionary-driven and local: no network, no model, no key. What does it do with the sentence, and what did it understand? Run it:
+**Five: an instruction in your language.** A natural-language instruction is dictionary-driven and local: no network, no AI model, no key. What does it do with the sentence, and what did it understand? Run it:
 
 ```haro
 o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
@@ -6802,7 +6802,7 @@ o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
 
 > run: kept
 
-It answers `[ 3, 1 ]`, and says what it understood: `create a list with [ 3, 1, 3 ] -> remove duplicates`. I did not run the other side. The field's equivalent of "take this sentence and do it" is a model call. What it needs is a model. A hosted one needs a network, an account, a key and a per-token cost; a local one needs a downloaded model and a GPU or a patient CPU. It needs a prompt, and a check that the answer is what was asked, and the answer is not guaranteed to be the same twice. The site's own pair of this kind writes the other side as a comment, which says that there is no counterpart without an external language model.
+It answers `[ 3, 1 ]`, and says what it understood: `create a list with [ 3, 1, 3 ] -> remove duplicates`. I did not run the other side. The field's equivalent of "take this sentence and do it" is an AI model call. What it needs is a model. A hosted one needs a network, an account, a key and a per-token cost; a local one needs a downloaded model and a GPU or a patient CPU. It needs a prompt, and a check that the answer is what was asked, and the answer is not guaranteed to be the same twice. The site's own pair of this kind writes the other side as a comment, which says that there is no counterpart without an external language model.
 
 One more loss, which is not a block. A string of a family emoji, five code points, joined by joiners, shows where the public string does not yet expose what the engine knows. The counter class answers `1` for the grapheme count; `NumberOfChars` answers `5` and `NumberOfBytes` answers `18`; and `GraphemeCount()` on the string itself raises, because the method is not defined. The engine knows, and the string does not say. Python's `len` gives `5`, and Node's `.length` gives `8`.
 
@@ -6856,7 +6856,7 @@ The record already keeps the list of what the field has and Softanza lacks. I pr
 
 **The coverage matrix.** Thirty domains in seven groups, against four other platforms, read on 17 September 2026. Softanza's tally is seven deep, fourteen solid, seven partial, two absent, present in twenty-eight of thirty. I recounted it from the rows and it matches. The two absent rows are symbolic mathematics ("no computer algebra") and package, build and deploy ("a library, not a registry"). Among the seven partial rows is internationalisation, "a deliberate bet against ICU", and the neural row is "inference only; no training foundry". The stored tallies of two of the other platforms do not match their own rows, by one in two places. I print Softanza's tally only. The matrix cites a compass file as the source of the ratings. I could not locate the file in the snapshot, in the live checkout or in the estate's repository.
 
-**The graph comparison, a narration dated 26 December 2025.** A model wrote it, and says so in its byline. Its column for Softanza rates itself with a cross on scalability and on transactions and with a warning on performance, and its conclusion lists where traditional solutions win.
+**The graph comparison, a narration dated 26 December 2025.** An AI model wrote it, and says so in its byline. Its column for Softanza rates itself with a cross on scalability and on transactions and with a warning on performance, and its conclusion lists where traditional solutions win.
 
 Where Softanza stands apart, by the record, without a number: the SLA; the governed act; the typed event; the matrix's one row of governance and safe execution. Two more: exact numbers by default, against two floats; an instruction that resolves locally. And a method that prints each of them beside a loss.
 
@@ -6888,7 +6888,7 @@ Six doors follow, one for each reader of this page.
 
 **The educator.** A code pair is a lesson in what a line costs. The learner writes the other side's output before running it.
 
-**The agent.** When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built.
+**The agent.** When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an AI agent is proposed and not built.
 
 ## 9. Exercise
 
@@ -7374,7 +7374,7 @@ The six doors come next.
 
 **The educator.** The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.
 
-**The agent.** A world can be wrapped as an agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority.
+**The agent.** A world can be wrapped as an AI agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority.
 
 ## 9. Exercise
 
@@ -7425,7 +7425,7 @@ The next chapter is about how a declared solution reaches reality, through exact
 
 Source: Chapter 24. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
+Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
@@ -7809,7 +7809,7 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused a gate that fails open.** The registry once kept its state in attributes. Attaching it to a delivery took a snapshot, so the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
-**I refused to virtualize the quality of a model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
+**I refused to virtualize the quality of an AI model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 
 **I refused to ship the live adapters.** The service plan says the live Stripe, PayPal and Adyen adapter is deliberately not shipped, since an account, a key and a network are infrastructure-gated. A hub adapter is built, and chapter 31 shows it. The contract is defined, and the registry refuses to let the fake ship in its place.
 
@@ -7977,13 +7977,13 @@ Stage: built: the governed conversation with its question as data; the SMS port 
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
+In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
 ## 1. The concept, as the field holds it
 
 Conversational commerce, or omnichannel: a business reaches its customers in the channels they already use, and a dialogue engine sits behind them. These are the practices, from general knowledge and not from a study of the record. Every date and every provider rule is to be re-read before print, as the study of the record says in its own "Not measured". That study is an outside reader's long study of the project's roots, and its section 12.25 is the one about messaging.
 
-The dialogue frameworks own the dialogue model. The designer writes intents and flows in the framework's notation, and the framework understands free text with trained models and ships connectors to channels.
+The dialogue frameworks own the dialogue model. The designer writes intents and flows in the framework's notation, and the framework understands free text with trained AI models and ships connectors to channels.
 
 The business platform of a messaging app: messages arrive by a webhook, and the business may answer freely inside a service window that the customer opened. Outside it, only approved templates, through a verified business account.
 
@@ -8056,7 +8056,7 @@ func QuestionAfter(cA, cB)
 
 The question is data, so any medium renders it. And the medium's own law, here that SMS is billed per segment and the alphabet decides, is a test and not a surprise. The English text is 93 characters by my count, and the block prints one segment. The same frame with two Arabic dish names is 89 units by my count (the two names are four letters shorter). The block prints `ucs2` and two segments, because the encoding changes. Four letters shorter, and one segment more! The telephone number is invented, and only the country code, which is Niger's, is real.
 
-Now the whole conversation, rehearsed over the SMS sandbox before any account exists. A conversation is a loop of the library's verbs: the medium carries each question out and each reply in. The assertions are the bill and the refusal. What does the sandbox count, and what does the court say to "7"? Nothing in the loop is a model:
+Now the whole conversation, rehearsed over the SMS sandbox before any account exists. A conversation is a loop of the library's verbs: the medium carries each question out and each reply in. The assertions are the bill and the refusal. What does the sandbox count, and what does the court say to "7"? Nothing in the loop is an AI model:
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
@@ -8210,7 +8210,7 @@ done
 
 `unknown reach surface 'whatsapp' (web/desktop/mobile)`: the platform refused it! It names the three surfaces it has, and the same refusal answers `:ussd`.
 
-**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for a model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. What does the court say to a sentence the business never approved? Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
+**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for an AI model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. What does the court say to a sentence the business never approved? Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
@@ -8241,7 +8241,7 @@ The refusals below, after the first, are the record's: a session's decisions, wr
 
 **Messaging, the question.** The study's report of my ask: conversations happen programmatically by default, or through minimal configuration, without obliging the users to change their usability cultures. The study's section is titled "ruled" and not "ruled by the author", and its proposals for the conversational surfaces are a session's. The record holds no ruling of mine that adopts them. I say *proposed*, not *decided*.
 
-**A conversation needs no model.** The floor is deterministic. A model can upgrade the fluency behind the same surface.
+**A conversation needs no AI model.** The floor is deterministic. A model can upgrade the fluency behind the same surface.
 
 **Voice is not a paradigm.** The plan of record says out until asked in writing: all of dialogue management, wake words, intent parsing and barge-in.
 
@@ -8592,7 +8592,7 @@ oT = new stzAccessibilityTree(oShell, oP)
 
 > run: kept
 
-The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word! The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an agent can operate.
+The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word! The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an AI agent can operate.
 
 ### A rail that proposes
 
@@ -8676,7 +8676,7 @@ That is what runs; now I say what I decided with it, and what I refused.
 
 **I admitted a lens that cannot capture.** The estate's charter for its products: one truth, in files, and two lenses (the charter's two are the pair of studios, and not two shells). What the charter refused was frameworks that capture the work. A lens that cannot capture is admissible. The environment is a projection of plain text, and not a store.
 
-**A session removed a facet, and I restored it.** The reference design records that the Connections facet was first-class in the prototype of June 2026, and was removed by an agent on circular reasoning. The removal cascaded into five documents. I reinstated it. Who decides the ribbon is the author.
+**A session removed a facet, and I restored it.** The reference design records that the Connections facet was first-class in the prototype of June 2026, and was removed by an AI agent on circular reasoning. The removal cascaded into five documents. I reinstated it. Who decides the ribbon is the author.
 
 **I accepted the browser shell with its cost, unmeasured.** The charter of the front-door IDE chose a browser tab, built with the engine, with no install step, and named the loss.
 
@@ -8996,7 +8996,7 @@ The decisions come next, and the first of them is about that future.
 
 **I decided that Haro is the language of languages.** The charter's header quotes my note of 1 October 2026. The charter was ratified that day, with my "go with your recommendations" on seven decisions. Its amendments of 4 October answer nineteen of the compass's questions, and the version stays ratified until I have read its section 15.
 
-**I decided that the surface is kept.** Its surface today is the one the compiler compiles. The library is its compatibility specification. Other surfaces are faces over one program graph: every syntax a face, so that an agent fluent in the former language, in Python or in JavaScript writes Haro. Of these only the first face exists. A Python-shaped face is a spelling, not Python.
+**I decided that the surface is kept.** Its surface today is the one the compiler compiles. The library is its compatibility specification. Other surfaces are faces over one program graph: every syntax a face, so that an AI agent fluent in the former language, in Python or in JavaScript writes Haro. Of these only the first face exists. A Python-shaped face is a spelling, not Python.
 
 **I removed the old framework, with no fallback.** Engine-only: no fallback, no feature flags, no Qt dependency. The status of 12 June 2026 says zero of them remain. I checked. No loaded file loads a Qt library. Two external extensions are loaded by name: a zip one, which base loads, and a cryptography one, in a folder that no entry file loads.
 
@@ -9367,7 +9367,7 @@ Six doors follow, one for each reader.
 
 **The educator.** The record supports only a small thing: the first application taught its user by doing, with guides whose words leave no doubt. There is no educator in this story, and I say so.
 
-**The agent.** An agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the agent is the session working beside me under the Lock, with a person deciding.
+**The agent.** An AI agent can drive a production deployment and change nothing: the gate passes the services, nothing is committed, and the reason given is the actor and not the services. In the project, the AI agent is the session working beside me under the Lock, with a person deciding.
 
 ## 9. Exercise
 
@@ -9578,7 +9578,7 @@ Six guards stand behind the blocks.
 
 ## 5. The court
 
-`orgrule_narrated` proves SOX, GDPR and HIPAA as rule bases over the chart's graph, with the four universal rules and the separation of duties that SOX adds, and the chart joining the one report. The block above prints the seven counts. `14_bceao_governance` proves two of the three rules of the regional validator. `15_multiple_validators` proves the combined verdict, and `13_segregation_of_duties` the second court. `rulereport_narrated` proves the one report over findings from code, agents and security. `36_import_from_stzorg` proves the text form of the chart.
+`orgrule_narrated` proves SOX, GDPR and HIPAA as rule bases over the chart's graph, with the four universal rules and the separation of duties that SOX adds, and the chart joining the one report. The block above prints the seven counts. `14_bceao_governance` proves two of the three rules of the regional validator. `15_multiple_validators` proves the combined verdict, and `13_segregation_of_duties` the second court. `rulereport_narrated` proves the one report over findings from code, AI agents and security. `36_import_from_stzorg` proves the text form of the chart.
 
 ## 6. The field, and where it leads
 
@@ -9647,7 +9647,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 Run it and put the three answers side by side. The regional court has already refused this chart, in section 3; now read what the second validator says of it, and why it is not the same as what the court said. Section 3 and section 4 say why. I do not give you the answer here. When you have it, you will know why a validator that answers `pass` has not judged the chart.
 
-The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the agent proposes, and a person decides.
+The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the AI agent proposes, and a person decides.
 
 
 =====
@@ -9660,7 +9660,7 @@ Stage: built: a rule built as an object on a model, its number changed and the m
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the agent proposes, and a person decides.
+In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
 ## 1. The concept, as the field holds it
 
@@ -9668,13 +9668,13 @@ The field has two practices that this project needed, and keeps them in separate
 
 The first is the business rule that a business person can change. Rule engines and decision tables have existed for decades; the Decision Model and Notation, a standard of 2015, gives business analysts a table in which an approval ceiling is a number in a cell. The second is the application that keeps working with no network. Offline-first design is a practice of its own, with synchronising databases. Since an essay of 2019 it has a name for its philosophy, local-first software: the data is on your device, and the network is a convenience.
 
-A third practice has come with the agents: a model proposes, and a person approves. In the field it is a button.
+A third practice has come with AI agents: an AI model proposes, and a person approves. In the field it is a button.
 
 The organisation's study turns that third practice into a principle.
 
 ## 2. The first principle
 
-The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter (my translation of the French title): **the agent proposes, and a person decides.**
+The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter (my translation of the French title): **the AI agent proposes, and a person decides.**
 
 ## 3. The Softanza form
 
@@ -10138,7 +10138,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 |---|---|---|
 | The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the study promises; the study's own rule notation is not the library's |
-| An agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
+| An AI agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
 | Offline by default | the study's word that the browser-side outbox is already in service | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
 
 ### Across the three
@@ -10156,7 +10156,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 ### What the study of the record marks for measurement
 
-The comparative study that read the record says, in its own paragraphs headed "Not measured", what it leaves to measure next. It read the record and did not run it: its closing assessment of the record says "Nothing in it was run". Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by a model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. The study applies its own perception law to itself, which is why I trust the paragraph.
+The comparative study that read the record says, in its own paragraphs headed "Not measured", what it leaves to measure next. It read the record and did not run it: its closing assessment of the record says "Nothing in it was run". Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by an AI model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. The study applies its own perception law to itself, which is why I trust the paragraph.
 
 ## 4. The decision, and what I refused
 
@@ -10188,7 +10188,7 @@ The field leads in hardware in the field. The declared machine boots and judges 
 
 The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime; Haro's own speed is the measure still to come.
 
-The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
+The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
 
 Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
@@ -10262,15 +10262,15 @@ Chapter 32 turns first to how many minds worked on this one body of work, and to
 
 Source: Chapter 32. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
+Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
 Run: 3 of 3 blocks kept their promise, on 2026-10-14 12:16 UTC+01:00.
 
-In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
+In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
 ## 1. The concept, as the field holds it
 
-When the field speaks of many agents working on one body of code, it usually means a framework. A program holds several agents, a supervisor routes messages between them, and the coordination is a feature of that program. Microsoft's AutoGen, CrewAI and LangChain's LangGraph are the names you will meet, all from the last three years.
+When the field speaks of many AI agents working on one body of code, it usually means a framework. A program holds several agents, a supervisor routes messages between them, and the coordination is a feature of that program. Microsoft's AutoGen, CrewAI and LangChain's LangGraph are the names you will meet, all from the last three years.
 
 When the field speaks of the rules those agents follow, it means a file the agent reads when it starts, a page of instructions in the repository. And when it speaks of many writers on one repository, it means what teams have always used: branches, review, hooks that run before a commit, a list of who owns which folder. These are good tools, and I use them every day.
 
@@ -10282,7 +10282,7 @@ The one sentence this part of the record returns to was written by one of the se
 
 ## 3. The Softanza form
 
-Softanza was not written by one hand for long. For the last two years, most of its new code has been written by sessions of a model, many at a time, on one machine. That work spans some twenty repositories that depend on each other. I rule; they propose, build, measure and report. The record calls me the Principal. In this chapter I will say I.
+Softanza was not written by one hand for long. For the last two years, most of its new code has been written by sessions of an AI model, many at a time, on one machine. That work spans some twenty repositories that depend on each other. I rule; they propose, build, measure and report. The record calls me the Principal. In this chapter I will say I.
 
 There is no framework here. No supervisor, no broker, no graph of agents. The arrangement is files and a version history. One repository, the central one, holds the protocol: how a session reports, how it asks, how it closes. Each repository has a mailbox. Each session writes its messages in one fixed form, eight keys in a fixed order. You have already met it if you read the memos at the end of each phase of this book. The eight keys: by whom, about what, why, what was done, the state of named things, what is waiting and on whom, what comes next, and one line of judgement. Every message is also appended to a dated file, so that the day's reasoning is never only in a chat window that closes.
 
@@ -10346,17 +10346,17 @@ Those are the laws. Now for what I refused, and the loss I accepted.
 
 ## 4. The decision, and what I refused
 
-**I refused a framework.** The arrangement is files, a history and a few hooks. A supervisor that schedules agents would be one more program to trust, and one more thing that decides without a record. Here, a session that is not running leaves only its files, and the files are the truth.
+**I refused a framework.** The arrangement is files, a history and a few hooks. A supervisor that schedules AI agents would be one more program to trust, and one more thing that decides without a record. Here, a session that is not running leaves only its files, and the files are the truth.
 
 **I refused to let a coordinator grade its legislator.** Authority runs down from me; correction runs up, and the central session is corrected by the Observer and bound by the doctrine. A coordinator that judged its own rules would be the one part of the system nothing could fix. I hold this as a view, not a result.
 
-**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the part still open: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number! What did the clocks cost? It is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never a model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is designed and still to come (section 7).
+**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the part still open: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number! What did the clocks cost? It is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never an AI model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is designed and still to come (section 7).
 
 **I refused to rule in my absence.** A ruling is written in the record only while I am there. On 28 September I asked the central session to settle what was pending on my behalf. The five rulings it took that day are marked as taken on my delegation. The mark is there so that nobody later mistakes them for mine. The decisions at the front of this book are marked the same way.
 
 **I refused to let the protocol become a product.** The doctrine of the harness is open, and it is never to be sold: its value is in what it refuses. So far it has been proved in one place: one person, one machine, one filesystem, about fifteen sessions. The first adopter outside this estate is the next step.
 
-**And I accepted a loss.** The code of the last two years was largely written by sessions, and my hand, which was the style, thinned where they wrote. A study of the record measured it. The promise under each line (the `#-->` line) is the house's way of writing an example. It stands at nearly a hundred per thousand lines in the short recipes (the quickers) and at seventy-five in my articles. In the narrated guards the sessions wrote, which assert in another form, it stands at under one. The sessions even took the name of my articles for their test files, a name that a model proposed. I accept the implementation code they wrote. I do not accept that the style a programmer or an agent writes with Softanza should be theirs rather than the house's. That is why the law of Part II exists, and why this book is written in my voice, with sessions as researchers and as the court. And it is why every chapter waits for my reading before it loses the word draft.
+**And I accepted a loss.** The code of the last two years was largely written by sessions, and my hand, which was the style, thinned where they wrote. A study of the record measured it. The promise under each line (the `#-->` line) is the house's way of writing an example. It stands at nearly a hundred per thousand lines in the short recipes (the quickers) and at seventy-five in my articles. In the narrated guards the sessions wrote, which assert in another form, it stands at under one. The sessions even took the name of my articles for their test files, a name that a model proposed. I accept the implementation code they wrote. I do not accept that the style a programmer or an AI agent writes with Softanza should be theirs rather than the house's. That is why the law of Part II exists, and why this book is written in my voice, with sessions as researchers and as the court. And it is why every chapter waits for my reading before it loses the word draft.
 
 Next, the court, and what it cannot prove.
 
@@ -10382,7 +10382,7 @@ Now the limit, in the stage words.
 
 What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
 
-What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an agent writes with the library. The house style would then be held by a machine as well as by my reading.
+What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
 
 What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and no tool performs it yet; that check is the next step. The study that read the record named one more limit. I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
 
@@ -10517,7 +10517,7 @@ So the floor is there: declare, build, rehearse, refuse the fake, commit through
 
 Now what the projects show, and the step after them.
 
-Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record, a reading made by a session of a model, wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
+Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record, a reading made by a session of an AI model, wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
 
 And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is designed, and its build is to come. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken. That step is the next one.
 
@@ -10535,7 +10535,7 @@ The last step is a law of the estate, and it was earned. The sound plane of the 
 
 The record already holds the form of the line. In another plane, on 2 October 2026, the record says the Principal, its name for me (chapter 32 says so), listened to a sound the library made and said, in the words written down: "yes it's real drum!!" It is not a solution, and it is not a customer. But it is a person, a date, and a sentence, and it is what the next line will look like.
 
-The record also holds two verdicts still to come. The pictures the library draws were judged by a model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet; that look is the next verdict. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are next.
+The record also holds two verdicts still to come. The pictures the library draws were judged by an AI model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet; that look is the next verdict. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are next.
 
 ## 4. The decision, and what I refused
 
@@ -10551,7 +10551,7 @@ The record also holds two verdicts still to come. The pictures the library draws
 
 ## 5. The court
 
-The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that a model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
+The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that an AI model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
 
 The court of this chapter's subject is not a guard. It is a line in the record: who, when, and what they said. That line is the next one to be written.
 
@@ -10565,7 +10565,7 @@ The field leads on hardware in the field. Its devices run in shops and clinics; 
 
 The field leads on speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and the estate's note recorded the measure.
 
-Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and a model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
+Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
 ## 7. The limit
 
@@ -10583,7 +10583,7 @@ What is absent: a customer solution running on the Softanza engine, a named pers
 
 **The analyst.** Ask for two things before you count a project as proof: a document, and a named verdict.
 
-**The designer.** What you design is judged last by a person's sense. A model's opinion of a picture is a result; a person's is the verdict.
+**The designer.** What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.
 
 **The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is absent.
 
@@ -10625,7 +10625,7 @@ oDep = oDel.Deploy(:Production)
 
 > run: exercise
 
-Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
+Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an AI agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
 The book ends here, and every block in it is yours to run again. It ends on the next milestone: a solution on Softanza's own engine, and what a named person who used it says.
 
@@ -10647,7 +10647,7 @@ Of the forty-six, eight are not told in this book: the adverb engine, named vari
 | # | Innovation | The record's one line | In this book | The study's evidence (7 October 2026) |
 |---|---|---|---|---|
 | 1 | Scope-Oriented Programming | behaviour with an invisible governing frame, cured in four moves; four instances | 8, 23 | a design of 450 lines; instances in regex, system, delivery |
-| 2 | The Softanzuter ladder | pattern, Xuter, Softanzuter, agent | 9, 17 | two engines, fifteen blocks, an agent mind |
+| 2 | The Softanzuter ladder | pattern, Xuter, Softanzuter, AI agent | 9, 17 | two engines, fifteen blocks, an agent mind |
 | 3 | Reaxis | reactive programming redesigned as Container, Stream, Rfunction | 9 | ten code files, fifty-nine test files, two engine modules |
 | 4 | Near-natural programming, NNL and `stzNatural` | close enough to natural language to be readable, structured enough to execute | 13 | three narrations, two design documents, a folder of thirteen files |
 | 5 | Knowledge programming, `.zknw` | the semantics of thought: one knowledge file, an operational system | 14 | a narration that runs; the knowledge graph in seventy-one files |
@@ -10890,7 +10890,7 @@ The last right is enforced by a single rule, and that rule is marked as a matter
 
 ### Intelligence under law
 
-Set 31 is the constitution's answer to the agent, and it is where chapter 20 meets it. Its ten rules, with how each is enforced, as the file records it:
+Set 31 is the constitution's answer to the AI agent, and it is where chapter 20 meets it. Its ten rules, with how each is enforced, as the file records it:
 
 | Rule | Title | Enforcement |
 |---|---|---|
@@ -10905,7 +10905,7 @@ Set 31 is the constitution's answer to the agent, and it is where chapter 20 mee
 | 121 | The Assistant Never Masks the Work | judgment |
 | 124 | The Generator Ships a Working Thing | judgment |
 
-Rule 98 is the law of chapter 20's plan, written for an interface: a proposal is not a commit. Rule 99 asks for the mark on machine-made content; chapter 14's provenance is the nearest thing the library builds. Rule 104 asks for machine legibility; chapter 26's accessibility tree is the nearest thing the library builds: what a screen reader can operate, an agent can operate. Seven of the ten are enforced by judgment, and three by a machine that is to come.
+Rule 98 is the law of chapter 20's plan, written for an interface: a proposal is not a commit. Rule 99 asks for the mark on machine-made content; chapter 14's provenance is the nearest thing the library builds. Rule 104 asks for machine legibility; chapter 26's accessibility tree is the nearest thing the library builds: what a screen reader can operate, an AI agent can operate. Seven of the ten are enforced by judgment, and three by a machine that is to come.
 
 ### What the constitution forbids
 
@@ -10913,7 +10913,7 @@ The constitution lists seventeen forbidden patterns, each tied to the rules it v
 
 ### What this book takes from it, and what it does not
 
-It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for agents, and Rule 118 on the five values of status. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.
+It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for AI agents, and Rule 118 on the five values of status. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.
 
 
 =====
@@ -10930,7 +10930,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **admission.** The act by which a candidate becomes knowledge: it is judged by the world's rules, and refused with a reason if it fails. Expression is free, and admission is governed. Chapters 17, 18.
 
-**agent.** A program that proposes and cannot commit. In the library an agent is a file, judged at load, whose model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
+**agent.** A program that proposes and cannot commit. In the library an AI agent is a file, judged at load, whose AI model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
 
 **architect.** What one holds in the scope of a solution: the profile, the worlds and the governance. Not a rank. Chapter 23.
 
@@ -10940,11 +10940,11 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **built.** One of the three stage words. The code exists, a guard exists, and a block ran. Chapter 3.
 
-**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapter 18.
+**candidate.** What a reply, an AI model's answer or an example is, until the court has judged it. Chapter 18.
 
 **checkpoint.** A refusal kept for a person, with its context and a lifetime. Chapter 18.
 
-**commit.** The one act that reaches reality. Only a governed actor commits, under a scope, and the model cannot. Chapters 20, 24.
+**commit.** The one act that reaches reality. Only a governed actor commits, under a scope, and the AI model cannot. Chapters 20, 24.
 
 **commons.** The shared ground of a constellation, what every world of it stands on: an identity, a session, a store. It is a world like the others, world zero, and not a special kind of node. Chapters 4, 23.
 
@@ -11006,7 +11006,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **promise.** The line `#-->` under an expression, which says what it prints. A claim about a stop of the program, judged kept, diverged, unreached or unjudged. Chapters 1, 21.
 
-**proposal.** What a model, a reaction or an agent offers. It commits nothing. Chapters 17, 20, 26.
+**proposal.** What an AI model, a reaction or an AI agent offers. It commits nothing. Chapters 17, 20, 26.
 
 **refinement.** The write surface: a change declared with its points and judged by a four-stage gate. Chapter 10.
 
@@ -11679,7 +11679,7 @@ The chapters cite 50 distinct narrations. Every name is a file of the library's 
 
 Source: Appendix G. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-This appendix is for an agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.
+This appendix is for an AI agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.
 
 ### What there is
 
@@ -11697,7 +11697,7 @@ A block of code that begins with the tag `haro` is run inside the library at the
 
 An agent that quotes a promise should quote its verdict with it.
 
-### What an agent may do, and may not
+### What an AI agent may do, and may not
 
 - **You may quote any cell.** A table of this book is data. A row that says "absent" is a row you may repeat as absent.
 - **You may not turn an absent cell into a present one.** The record will find your sentence and the missing file side by side, and the book says so in chapter 31.

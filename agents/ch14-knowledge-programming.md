@@ -2,11 +2,11 @@
 
 Source: Chapter 14. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
+Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
 Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
+In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
 ## 1. The concept, as the field holds it
 
@@ -65,7 +65,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 The graph with the law proves the longer chain and writes its steps out: `proved: porridge made-from couscous made-from flour made-from millet`. The graph without the law, which also never received the fact, still answers `not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'`, and I want you to notice that this no has two causes, named in its own line: no recorded fact, and no lawful chain. A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: `a certain no is still certain`.
 
-The same growth reaches the domain model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
+The same growth reaches the domain language model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -204,7 +204,7 @@ The record's own graph comparison says where the traditional solutions win: larg
 
 The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules. Here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
 
-Here is where I think this stands apart, with the measured limits beside it. The knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, a model or a training run.
+Here is where I think this stands apart, with the measured limits beside it. The knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, an AI model or a training run.
 
 The losses are printed. The limit of the chapter comes next, with its runs.
 

@@ -90,7 +90,7 @@ So the floor is there: declare, build, rehearse, refuse the fake, commit through
 
 Now what the projects show, and the step after them.
 
-Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record, a reading made by a session of a model, wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
+Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record, a reading made by a session of an AI model, wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
 
 And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is designed, and its build is to come. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken. That step is the next one.
 
@@ -108,7 +108,7 @@ The last step is a law of the estate, and it was earned. The sound plane of the 
 
 The record already holds the form of the line. In another plane, on 2 October 2026, the record says the Principal, its name for me (chapter 32 says so), listened to a sound the library made and said, in the words written down: "yes it's real drum!!" It is not a solution, and it is not a customer. But it is a person, a date, and a sentence, and it is what the next line will look like.
 
-The record also holds two verdicts still to come. The pictures the library draws were judged by a model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet; that look is the next verdict. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are next.
+The record also holds two verdicts still to come. The pictures the library draws were judged by an AI model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet; that look is the next verdict. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are next.
 
 ## 4. The decision, and what I refused
 
@@ -124,7 +124,7 @@ The record also holds two verdicts still to come. The pictures the library draws
 
 ## 5. The court
 
-The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that a model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
+The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that an AI model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
 
 The court of this chapter's subject is not a guard. It is a line in the record: who, when, and what they said. That line is the next one to be written.
 
@@ -138,7 +138,7 @@ The field leads on hardware in the field. Its devices run in shops and clinics; 
 
 The field leads on speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and the estate's note recorded the measure.
 
-Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and a model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
+Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
 ## 7. The limit
 
@@ -156,7 +156,7 @@ What is absent: a customer solution running on the Softanza engine, a named pers
 
 **The analyst.** Ask for two things before you count a project as proof: a document, and a named verdict.
 
-**The designer.** What you design is judged last by a person's sense. A model's opinion of a picture is a result; a person's is the verdict.
+**The designer.** What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.
 
 **The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is absent.
 
@@ -198,6 +198,6 @@ oDep = oDel.Deploy(:Production)
 
 > run: exercise
 
-Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
+Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an AI agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
 The book ends here, and every block in it is yours to run again. It ends on the next milestone: a solution on Softanza's own engine, and what a named person who used it says.

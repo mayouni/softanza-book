@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-14 13:13 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Built 2026-10-14 13:20 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 
@@ -85,7 +85,7 @@ Built 2026-10-14 13:13 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69
 - 29. A bank in Niamey [draft] agents/ch29-a-bank-in-niamey.md; guards: orgrule_narrated (22), 14_bceao_governance (1), 15_multiple_validators (1), 13_segregation_of_duties (1), rulereport_narrated (23), 36_import_from_stzorg (3); run: 6 of 6 blocks kept
   principle: An organisation can be judged by its own chart, under a regulator's rules, by a program that reads the chart as data: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 - 30. An organisation in the field [draft] agents/ch30-an-organisation-in-the-field.md; guards: graphruleset_narrated (25), gg_rule_governance (29), wisecoding_narrated (13), governance_narrated (19), governance_lineage_narrated (37), 01_platform_narrated (31); run: 7 of 7 blocks kept
-  principle: the agent proposes, and a person decides.
+  principle: the AI agent proposes, and a person decides.
 - 31. What the projects show, and what comes next [draft] agents/ch31-what-the-projects-show.md; guards: service_registry_narrated (93), full_scope_model_narrated (62), payments_live_adapter_narrated (125), sound_mu5_narrated (20), deployment_narrated (63), orgrule_narrated (22), 14_bceao_governance (1), governance_narrated (19); run: 5 of 5 blocks kept
   principle: A project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 - 32. Many minds on one body of work [draft, spine] agents/ch32-many-minds-on-one-body-of-work.md; guards: coderule_narrated (77), codegraph_narrated (28), coderule_project_narrated (13); run: 3 of 3 blocks kept

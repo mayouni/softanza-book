@@ -2,11 +2,11 @@
 
 Source: Chapter 17. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
+Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -16,7 +16,7 @@ So this chapter does what the other two law chapters do, and states the law of i
 
 ## 1. The concept, as the field holds it
 
-Ask the field what makes an application intelligent and the answer is a model. An agent, in the field's sense, is a model in a loop with tools, a memory and a goal. The shopping list for building one in 2026 is long. It takes a project in Python, a model provider, a framework that wires the loop as a graph, a store of vectors for memory, tools with typed schemas, a tracing service, and a chapter of safety advice. Memory is often retrieval: a collection of documents, cut into pieces, searched by similarity and pasted into the prompt.
+Ask the field what makes an application intelligent and the answer is an AI model. An AI agent, in the field's sense, is a model in a loop with tools, a memory and a goal. The shopping list for building one in 2026 is long. It takes a project in Python, a model provider, a framework that wires the loop as a graph, a store of vectors for memory, tools with typed schemas, a tracing service, and a chapter of safety advice. Memory is often retrieval: a collection of documents, cut into pieces, searched by similarity and pasted into the prompt.
 
 Safety, in that picture, is a property of the agent. It is alignment, guardrails, a prompt that asks for confirmation, a box marked "human in the loop". The field has also learned to hold a model's output to a shape, with grammars that constrain what it may emit. All of this is serious work, and some of it is good. It shares one assumption: the model is the mind, and everything else is around it.
 
@@ -68,7 +68,7 @@ done
 
 > run: kept
 
-A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. A model, where there is one, comes after all of them, not first.
+A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. An AI model, where there is one, comes after all of them, not first.
 
 The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
 
@@ -87,7 +87,7 @@ oKG.KnowRelation("margherita", "contains", "tomato-sauce").
 
 New knowledge from existing knowledge, with its chain written out! And a "no" that is as certain as the "yes", because it is the result of a search, not of a mood. The page printed it as `not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'`. It is certain about what is recorded and declared, not about the world: it says `not derivable`, not "false". No retrieval, no training. Adding a fact makes the system know more; adding a law makes it reason further.
 
-Then the model. It is welcome, and it is held. Wire a model's output straight to an effect, here sending a message. Is the composition sound?
+Then the AI model. It is welcome, and it is held. Wire a model's output straight to an effect, here sending a message. Is the composition sound?
 
 ```haro
 oG = new stzAgentGraph("mailer")
@@ -119,9 +119,9 @@ oLLM.SetSkillFrom(oF)
 
 > run: kept
 
-Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. No model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
+Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. No AI model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
 
-And the agent itself has a mind made of code. A skill is a condition and an action, and it fires on what the agent perceives. Governance gates the act before it happens. When the stock is low and the skill wants to order, does the act go through?
+And the programmatic agent itself has a mind made of code. A skill is a condition and an action, and it fires on what the agent perceives. Governance gates the act before it happens. When the stock is low and the skill wants to order, does the act go through?
 
 ```haro
 oRog = new stzPIAgent("rogue-bot")
@@ -147,7 +147,7 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 ## 4. The decision, and what I refused
 
-**I refused the model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
+**I refused the AI model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
 
 **I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model can be added on top. It is never the price of admission. "Last" means after the programmatic path, and under the court and a budget, whether the model is local or remote. The record supports both readings, and the chapter does not choose between them.
 
@@ -155,7 +155,7 @@ Chapter 18 tells the five registers of an answer and the conversation that asks.
 
 **I refused retrieval as memory.** Memory is a governed graph, not a pile of similar fragments. Derivation replaces retrieval: the system knows what it was told and what follows from it by law, and it can prove both.
 
-**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else. No remote model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation. Any project that supplies a knowledge base can ship its own model free.
+**I refused a teacher I cannot see.** The domain language model's second rung is trained on the facts of the first rung's own knowledge base and on nothing else. No remote AI model teaches it. The design goes further and says the second rung's training text is validated by the first rung's grammar before it is admitted, so that it is correct by construction. In the library the facts are rendered directly into text, with no such check yet; chapter 19 says where that stands. I gave the concept of a domain language model, first designed for one of the estate's products, to the open foundation. Any project that supplies a knowledge base can ship its own model free.
 
 **I refused a stub.** The library declares five agents of its own and has wired one. Asking for one that is not wired raises an error; it does not return something that looks like an agent. Pretending would be easier, and it would make every other refusal in this chapter worth less.
 
@@ -173,9 +173,9 @@ The field leads in reach. Its frameworks connect to hosted services of every kin
 
 The field leads in the market. There is a labour market for its stack today; the one for this stack is still to come.
 
-The field leads in models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the foundry beyond the bigram is designed (chapter 19). Softanza does not build the large generators and does not compete with them.
+The field leads in AI models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the foundry beyond the bigram is designed (chapter 19). Softanza does not build the large generators and does not compete with them.
 
-Where I think the law stands apart is in three places. A decision here costs nothing, runs offline and gives the same answer every day, so it can be tested with ordinary promises. A model here cannot act, by construction, not by vigilance. And a model's sentence, where one is used, can be held to the grammar of a declared language before it is emitted, instead of being checked and retried after.
+Where I think the law stands apart is in three places. A decision here costs nothing, runs offline and gives the same answer every day, so it can be tested with ordinary promises. An AI model here cannot act, by construction, not by vigilance. And a model's sentence, where one is used, can be held to the grammar of a declared language before it is emitted, instead of being checked and retried after.
 
 The next section says where the law stops.
 
@@ -213,7 +213,7 @@ It did not refuse! It printed `Margherita is a dish.` That answer is true, and i
 
 ## 8. Six doors
 
-**The programmer.** Your agent's mind is code you can test with ordinary promises. A model may serve as one faculty; it can never hold an effect.
+**The programmer.** Your agent's mind is code you can test with ordinary promises. An AI model may serve as one faculty; it can never hold an effect.
 
 **The analyst.** A fact or a rule you add makes the system know more, with no code change and no training, and every answer carries its why.
 

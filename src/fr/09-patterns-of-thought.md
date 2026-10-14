@@ -8,7 +8,7 @@ narrations: [stzregexuter-regex-as-computational-reactive-medium.md, stz-reaxis-
 site: [softanzuter, craft]
 guards: [00_overflow_narrated, 60_reaxis_on_reactor_narrated, piagent_narrated, 00_grid_narrated, test_timeline_regression, 01_deeplist_narrated]
 stage:
-  built: "le Regexuter et le Listexuter, qui réagissent avec un état qui se souvient ; Reaxis, la programmation réactive en mots simples, sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent dont les compétences s'enchaînent jusqu'à un point fixe"
+  built: "le Regexuter et le Listexuter, qui réagissent avec un état qui se souvient ; Reaxis, la programmation réactive en mots simples, sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent jusqu'à un point fixe"
   designed: "le Softanzuter proprement dit, plusieurs facultés partageant un seul état et s'enchaînant jusqu'à ce qu'il se stabilise ; le moteur universel derrière lui ; ses quatre frères, analyseur, génétique, linguistique et quantique"
   absent: "une chaîne de dépendance qui relie un déclencheur à un autre ; un verbe de fusion de sections que l'article présente comme son point central"
 status: draft
@@ -78,7 +78,7 @@ rxu() {
 
 Il ne l'a pas fait : les résultats disent `[ 700 ]`, les déclencheurs qui se sont déclenchés disent `[ "number" ]`. `BIG` n'apparaît nulle part ! Chaque déclencheur est confronté une seule fois au texte d'origine, et ce qu'un déclencheur écrit n'est pas offert aux autres. C'est toute la différence entre le deuxième échelon et le troisième.
 
-La cascade tourne un échelon plus haut, au quatrième, l'agent : la machine pensante dotée d'un corps dans un monde, et d'un but. Son esprit est fait de compétences, chacune avec une condition et une action, qui s'enchaînent. La deuxième compétence se déclenche sur le fait que la première a écrit. `Pursue()` renvoie combien de déclenchements de compétences ont été vérifiés, et continue jusqu'à ce que le monde cesse de changer, ou vingt tours au plus. Que répond-il quand on le redemande ?
+La cascade tourne un échelon plus haut, au quatrième, l'agent d'IA : la machine pensante dotée d'un corps dans un monde, et d'un but. Son esprit est fait de compétences, chacune avec une condition et une action, qui s'enchaînent. La deuxième compétence se déclenche sur le fait que la première a écrit. `Pursue()` renvoie combien de déclenchements de compétences ont été vérifiés, et continue jusqu'à ce que le monde cesse de changer, ou vingt tours au plus. Que répond-il quand on le redemande ?
 
 ```haro
 oAgent = new stzPIAgent("cook")
@@ -101,7 +101,7 @@ oAgent.AddSkill(s2)
 
 Il répond `2`, puis `0`, et entre les deux le fait `served` dit `TRUE`. C'est un point fixe. La garde qui le prouve étiquette la scène dans ses propres mots : `the cascade to fixpoint (Softanzuter at agent level)`, soit la cascade jusqu'au point fixe, le Softanzuter au niveau de l'agent. Au chapitre 17, vous verrez ce même agent refusé à une barrière. Voici son autre face : l'agent qui enchaîne, parce que son esprit est programmatique.
 
-Le mot a donc trois sens dans le dossier, et le lecteur mérite qu'on lui dise lequel est lequel. Dans ce chapitre, « Softanzuter » est le troisième échelon, la machine pensante de la définition : conçu, pas construit. Le moteur a un module du même nom. Le macroplan le présente comme le socle des agents. Ses emplacements ont un état et une boîte aux lettres bornée, et un message envoyé dans une file pleine est refusé, compté et jamais jeté en silence. L'agent du bloc ci-dessus, `stzPIAgent`, ne l'appelle jamais. Et la conception d'un moteur universel derrière tout cela, un milieu où n'importe quel langage de motifs devient un calcul, est planifiée.
+Le mot a donc trois sens dans le dossier, et le lecteur mérite qu'on lui dise lequel est lequel. Dans ce chapitre, « Softanzuter » est le troisième échelon, la machine pensante de la définition : conçu, pas construit. Le moteur a un module du même nom. Le macroplan le présente comme le socle des agents d'IA. Ses emplacements ont un état et une boîte aux lettres bornée, et un message envoyé dans une file pleine est refusé, compté et jamais jeté en silence. L'agent du bloc ci-dessus, `stzPIAgent`, ne l'appelle jamais. Et la conception d'un moteur universel derrière tout cela, un milieu où n'importe quel langage de motifs devient un calcul, est planifiée.
 
 **Reaxis** est l'autre moitié du titre du chapitre, et c'est une idée différente. C'est de la programmation réactive avec un vocabulaire repensé depuis la base. Une chose réactive est un Container, un Stream et une Rfunction : une fonction en attente, qui n'est pas un rappel. Les données circulent dans un flux en mots simples, une transformation, un filtre, ce qu'il faut faire de ce qui passe. Quatre prix entrent, 80, 90, 100 et 120 : lesquels ressortent, et à quelle valeur ?
 
@@ -238,7 +238,7 @@ La section suivante dit où tout cela s'arrête.
 
 ## 7. La limite
 
-Ce qui est construit : le Regexuter et le Listexuter ; Reaxis sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent dont les compétences s'enchaînent.
+Ce qui est construit : le Regexuter et le Listexuter ; Reaxis sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent.
 
 Ce qui est conçu : le troisième échelon, plusieurs facultés sur un état partagé, s'enchaînant jusqu'à ce qu'il se stabilise. Le moteur universel pour cela est planifié. Les quatre frères sont une vision. Le macroplan marque le module du moteur comme fait, et le tableau d'architecture le marque comme planifié : le même nom pour deux choses. Ce tableau marque comme planifié tout module de sa cinquième couche, y compris ceux qui ont du code source, et il est donc périmé sur ce point. Le milieu universel est planifié dans le document de conception du moteur.
 

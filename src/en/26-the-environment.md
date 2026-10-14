@@ -217,7 +217,7 @@ oT = new stzAccessibilityTree(oShell, oP)
 #--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
 ```
 
-The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word! The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an agent can operate.
+The tree answers `status`, and for its description `The truth of the build.`, the rationale word for word! The library's header says why: every toolkit gates accessibility behind a performance flag, which is where users silently get nothing. So here there is nothing to gate and nothing to forget to switch on. The same file says what a screen reader can operate, an AI agent can operate.
 
 ### A rail that proposes
 
@@ -297,7 +297,7 @@ That is what runs; now I say what I decided with it, and what I refused.
 
 **I admitted a lens that cannot capture.** The estate's charter for its products: one truth, in files, and two lenses (the charter's two are the pair of studios, and not two shells). What the charter refused was frameworks that capture the work. A lens that cannot capture is admissible. The environment is a projection of plain text, and not a store.
 
-**A session removed a facet, and I restored it.** The reference design records that the Connections facet was first-class in the prototype of June 2026, and was removed by an agent on circular reasoning. The removal cascaded into five documents. I reinstated it. Who decides the ribbon is the author.
+**A session removed a facet, and I restored it.** The reference design records that the Connections facet was first-class in the prototype of June 2026, and was removed by an AI agent on circular reasoning. The removal cascaded into five documents. I reinstated it. Who decides the ribbon is the author.
 
 **I accepted the browser shell with its cost, unmeasured.** The charter of the front-door IDE chose a browser tab, built with the engine, with no install step, and named the loss.
 

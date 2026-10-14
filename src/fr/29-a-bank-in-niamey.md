@@ -183,7 +183,7 @@ Six gardes se tiennent derrière les blocs.
 
 ## 5. Le tribunal
 
-`orgrule_narrated` prouve SOX, le RGPD et HIPAA comme bases de règles sur le graphe de l'organigramme, avec les quatre règles universelles et la séparation des tâches que SOX ajoute, et l'organigramme qui rejoint le rapport unique. Le bloc ci-dessus imprime les sept comptes. `14_bceao_governance` prouve deux des trois règles du validateur régional. `15_multiple_validators` prouve le verdict combiné, et `13_segregation_of_duties` le second tribunal. `rulereport_narrated` prouve le rapport unique sur les constats du code, des agents et de la sécurité. `36_import_from_stzorg` prouve la forme texte de l'organigramme.
+`orgrule_narrated` prouve SOX, le RGPD et HIPAA comme bases de règles sur le graphe de l'organigramme, avec les quatre règles universelles et la séparation des tâches que SOX ajoute, et l'organigramme qui rejoint le rapport unique. Le bloc ci-dessus imprime les sept comptes. `14_bceao_governance` prouve deux des trois règles du validateur régional. `15_multiple_validators` prouve le verdict combiné, et `13_segregation_of_duties` le second tribunal. `rulereport_narrated` prouve le rapport unique sur les constats du code, des agents d'IA et de la sécurité. `36_import_from_stzorg` prouve la forme texte de l'organigramme.
 
 ## 6. Le terrain, et où il mène
 
@@ -250,4 +250,4 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 Lancez-le et mettez les trois réponses côte à côte. Le tribunal régional a déjà refusé cet organigramme, à la section 3 ; lisez maintenant ce que le second validateur en dit, et pourquoi ce n'est pas la même chose que ce que le tribunal a dit. Les sections 3 et 4 disent pourquoi. Je ne vous donne pas la réponse ici. Quand vous l'aurez, vous saurez pourquoi un validateur qui répond `pass` n'a pas jugé l'organigramme.
 
-Le chapitre suivant quitte la banque pour une organisation sur le terrain, et son principe tient en une phrase : l'agent propose, et une personne décide.
+Le chapitre suivant quitte la banque pour une organisation sur le terrain, et son principe tient en une phrase : l'agent d'IA propose, et une personne décide.

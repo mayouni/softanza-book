@@ -101,9 +101,10 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
 
-## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01, TYPE-01)
+## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01, TYPE-01, VOICE-05)
 
 - **Never undersell Softanza** in the name of transparency or balance. It is not a research project; parts are in production and parts in development; it is a professional foundation for professional decision-makers. Say stage and direction, never "weak", "falls short", "nothing runs in production".
 - **Ring is named only in Appendix H** (the project's history). The language is Haro (for now it uses the syntax of its first facet); the former runtime is "the former host language". The audit enforces it.
 - **No horizontal scrollbar in a code block**: long lines wrap.
+- **"AI model" and "AI agent" where the bare word is ambiguous** (VOICE-05): first use in a page and wherever another sense of model/agent is near; never in every sentence; Softanza's own terms (domain language model, programmatic agent) keep their names. French: modèle d'IA, agent d'IA.
 - **Type size follows semantic level** (TYPE-01): book > part > chapter > section > body; a heading is larger than the text it heads; no label under 12px. One scale, `TYPE` in `tools/build_book.py`, checked at build. Never give a new component a size of its own.

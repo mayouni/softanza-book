@@ -77,7 +77,7 @@ Ce bloc est un écart épinglé. Sa promesse enregistre la réponse actuelle de 
 
 Elle répond `ISTANBUL` : la locale a été acceptée et ignorée ! Python imprime `ISTANBUL` : à égalité, puisque la bibliothèque standard n'a pas de casse selon la locale. Node, avec `toLocaleUpperCase('tr')`, imprime `İSTANBUL`. Le turc a besoin de la majuscule pointée. C'est la perte la plus digne d'être imprimée, et ce n'est pas que le moteur manque de turc. C'est que la méthode prend une locale et, aujourd'hui, répond en majuscule simple sans le dire ; honorer la locale, ou refuser, est l'étape suivante. Le commentaire de la source dit : majuscule simple quand elle n'a pas de règle. Le plan de culture a mesuré la même chose le 18 août 2026 et l'a appelée l'équivalent en code de la fausse barre de progression. Sa loi est la raison de ce chapitre : pas de façades. Une opération honore la culture qu'on lui a donnée, ou elle refuse. Je tiens cela pour une vue, non pour un résultat, et la loi du plan de culture dit la même chose.
 
-**Cinq : une instruction dans votre langue.** Une instruction en langage naturel est guidée par un dictionnaire et locale : pas de réseau, pas de modèle, pas de clé. Que fait-elle de la phrase, et qu'a-t-elle compris ? Exécutez-le :
+**Cinq : une instruction dans votre langue.** Une instruction en langage naturel est guidée par un dictionnaire et locale : pas de réseau, pas de modèle d'IA, pas de clé. Que fait-elle de la phrase, et qu'a-t-elle compris ? Exécutez-le :
 
 ```haro
 o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
@@ -87,7 +87,7 @@ o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
 #--> create a list with [ 3, 1, 3 ] -> remove duplicates
 ```
 
-Elle répond `[ 3, 1 ]`, et dit ce qu'elle a compris : `create a list with [ 3, 1, 3 ] -> remove duplicates`. Je n'ai pas exécuté l'autre côté. L'équivalent du terrain de « prends cette phrase et fais-le » est un appel de modèle. Ce qu'il lui faut, c'est un modèle. Un modèle hébergé demande un réseau, un compte, une clé et un coût par jeton ; un modèle local demande un modèle téléchargé et un GPU ou un processeur patient. Il lui faut une invite, et une vérification que la réponse est ce qui a été demandé, et la réponse n'est pas garantie d'être la même deux fois. La propre paire du site de ce genre écrit l'autre côté comme un commentaire, qui dit qu'il n'y a pas de pendant sans un modèle de langage externe.
+Elle répond `[ 3, 1 ]`, et dit ce qu'elle a compris : `create a list with [ 3, 1, 3 ] -> remove duplicates`. Je n'ai pas exécuté l'autre côté. L'équivalent du terrain de « prends cette phrase et fais-le » est un appel de modèle d'IA. Ce qu'il lui faut, c'est un modèle. Un modèle hébergé demande un réseau, un compte, une clé et un coût par jeton ; un modèle local demande un modèle téléchargé et un GPU ou un processeur patient. Il lui faut une invite, et une vérification que la réponse est ce qui a été demandé, et la réponse n'est pas garantie d'être la même deux fois. La propre paire du site de ce genre écrit l'autre côté comme un commentaire, qui dit qu'il n'y a pas de pendant sans un modèle de langage externe.
 
 Une perte de plus, qui n'est pas un bloc. Une chaîne d'un emoji de famille, cinq points de code, reliés par des liants, montre où la chaîne publique n'expose pas encore ce que le moteur sait. La classe compteur répond `1` pour le comptage de graphèmes ; `NumberOfChars` répond `5` et `NumberOfBytes` répond `18` ; et `GraphemeCount()` sur la chaîne elle-même lève une erreur, parce que la méthode n'est pas définie. Le moteur sait, et la chaîne ne le dit pas. Le `len` de Python donne `5`, et le `.length` de Node donne `8`.
 
@@ -141,7 +141,7 @@ Le dossier tient déjà la liste de ce que le terrain a et de ce qui manque à S
 
 **La matrice de couverture.** Trente domaines en sept groupes, face à quatre autres plateformes, lue le 17 septembre 2026. Le bilan de Softanza est sept profonds, quatorze solides, sept partiels, deux absents, présent dans vingt-huit sur trente. Je l'ai recompté à partir des lignes et il correspond. Les deux lignes absentes sont les mathématiques symboliques (« no computer algebra ») et le paquet, la construction et le déploiement (« a library, not a registry »). Parmi les sept lignes partielles se trouve l'internationalisation, « a deliberate bet against ICU », et la ligne neuronale est « inference only; no training foundry ». Les bilans stockés de deux des autres plateformes ne correspondent pas à leurs propres lignes, d'un en deux endroits. Je n'imprime que le bilan de Softanza. La matrice cite un fichier boussole comme source des notes. Je n'ai pas pu localiser le fichier dans l'instantané, dans la copie de travail ni dans le dépôt du domaine de projets.
 
-**La comparaison de graphes, une narration datée du 26 décembre 2025.** Un modèle l'a écrite, et le dit dans sa signature. Sa colonne pour Softanza se note elle-même d'une croix sur le passage à l'échelle et sur les transactions et d'un avertissement sur la performance, et sa conclusion énumère où les solutions traditionnelles gagnent.
+**La comparaison de graphes, une narration datée du 26 décembre 2025.** Un modèle d'IA l'a écrite, et le dit dans sa signature. Sa colonne pour Softanza se note elle-même d'une croix sur le passage à l'échelle et sur les transactions et d'un avertissement sur la performance, et sa conclusion énumère où les solutions traditionnelles gagnent.
 
 Là où Softanza se distingue, selon le dossier, sans un nombre : le SLA ; l'acte gouverné ; l'événement typé ; la seule ligne de la matrice sur la gouvernance et l'exécution sûre. Deux de plus : des nombres exacts par défaut, face à deux flottants ; une instruction qui se résout localement. Et une méthode qui imprime chacun d'eux à côté d'une perte.
 
@@ -173,7 +173,7 @@ Six portes suivent, une pour chaque lecteur de cette page.
 
 **Le formateur.** Une paire de code est une leçon sur ce que coûte une ligne. L'apprenant écrit la sortie de l'autre côté avant de l'exécuter.
 
-**L'agent.** Quand vous répétez une affirmation sur un autre outil, portez sa version et sa date, et dites si vous ne l'avez pas exécutée. Le registre qui rendrait cela vérifiable par un agent est proposé et non construit.
+**L'agent.** Quand vous répétez une affirmation sur un autre outil, portez sa version et sa date, et dites si vous ne l'avez pas exécutée. Le registre qui rendrait cela vérifiable par un agent d'IA est proposé et non construit.
 
 ## 9. Exercice
 

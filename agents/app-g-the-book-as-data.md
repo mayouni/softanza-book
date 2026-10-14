@@ -2,7 +2,7 @@
 
 Source: Appendix G. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-This appendix is for an agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.
+This appendix is for an AI agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.
 
 ### What there is
 
@@ -20,7 +20,7 @@ A block of code that begins with the tag `haro` is run inside the library at the
 
 An agent that quotes a promise should quote its verdict with it.
 
-### What an agent may do, and may not
+### What an AI agent may do, and may not
 
 - **You may quote any cell.** A table of this book is data. A row that says "absent" is a row you may repeat as absent.
 - **You may not turn an absent cell into a present one.** The record will find your sentence and the missing file side by side, and the book says so in chapter 31.

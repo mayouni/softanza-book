@@ -23,7 +23,7 @@ Dans ce chapitre, j'énonce la loi de la partie III et je la fais tourner. Je co
 
 ## Ce que l'âge de l'IA change ici
 
-Dans la partie II, l'âge a changé qui écrit le code. Ici, il change qui prononce la phrase. Une phrase d'un langage avait autrefois une personne derrière elle, quelqu'un à qui l'on pouvait demander ce qu'il voulait dire. Aujourd'hui l'auteur d'une phrase peut être un modèle, à qui l'on ne peut rien demander, et qui écrira une phrase fluide qu'elle soit vraie ou non.
+Dans la partie II, l'âge a changé qui écrit le code. Ici, il change qui prononce la phrase. Une phrase d'un langage avait autrefois une personne derrière elle, quelqu'un à qui l'on pouvait demander ce qu'il voulait dire. Aujourd'hui l'auteur d'une phrase peut être un modèle d'IA, à qui l'on ne peut rien demander, et qui écrira une phrase fluide qu'elle soit vraie ou non.
 
 La grammaire doit donc être fermée, et le tribunal, la partie qui accepte ou refuse une phrase selon sa grammaire, doit la lire. Un langage dont les phrases peuvent contenir n'importe quoi ne peut rien refuser, et un tribunal ne peut pas juger une phrase qu'il ne peut pas lire. La vision de la plateforme met tout le mouvement en une ligne, que j'ai ratifiée : les humains et les machines se rencontrent dans des langages déclarés, petits, fermés et jugés, pas dans du code généraliste.
 
@@ -33,7 +33,7 @@ C'est aussi là que l'ordre du livre se retourne. La couverture va du familier a
 
 Pour un programmeur qui travaille, un langage est un hôte généraliste, Python, JavaScript, Java. Un « langage de domaine » est d'ordinaire une bibliothèque dont les appels se lisent comme des phrases, alors que le fichier autour peut contenir n'importe quel code de l'hôte. L'étude que le domaine de projets a faite du terrain, écrite en août 2026, nomme ce qui est arrivé à ces conceptions. Les langages internes sont morts d'ouverture, parce qu'un fichier de construction n'est déclaratif que jusqu'au jour où quelqu'un y écrit du code arbitraire. Les ateliers de langage sont morts du poids de leurs outils. Et elle nomme les langages qui ont gagné : SQL, les expressions régulières, Make, HTML et CSS, les langages de configuration. Ils ont gagné parce qu'ils sont fermés.
 
-L'ère des modèles a ajouté une pratique : quand un modèle écrit, ou bien l'on vérifie ce qu'il a écrit, ou bien l'on contraint sa sortie pendant qu'il écrit, avec une grammaire ou un schéma. L'implémentation de référence de l'échantillonnage contraint par une grammaire est un projet ouvert, et le dossier le dit là où il emploie le même algorithme. Et dans le langage commun du terrain aujourd'hui, « programmer en langage naturel » veut dire une seule chose : donner une consigne à un modèle.
+L'ère des modèles a ajouté une pratique : quand un modèle d'IA écrit, ou bien l'on vérifie ce qu'il a écrit, ou bien l'on contraint sa sortie pendant qu'il écrit, avec une grammaire ou un schéma. L'implémentation de référence de l'échantillonnage contraint par une grammaire est un projet ouvert, et le dossier le dit là où il emploie le même algorithme. Et dans le langage commun du terrain aujourd'hui, « programmer en langage naturel » veut dire une seule chose : donner une consigne à un modèle.
 
 ## 2. Le premier principe
 
@@ -41,7 +41,7 @@ L'ère des modèles a ajouté une pratique : quand un modèle écrit, ou bien l'
 
 ## 3. La forme Softanza
 
-Une phrase peut-elle tourner sans qu'un modèle devine ce qu'elle veut dire ? Elle le peut, quand chaque mot est dans un dictionnaire que la bibliothèque possède :
+Une phrase peut-elle tourner sans qu'un modèle d'IA devine ce qu'elle veut dire ? Elle le peut, quand chaque mot est dans un dictionnaire que la bibliothèque possède :
 
 ```haro
 Naturally("
@@ -96,7 +96,7 @@ o1 = Naturally("Create a string with 'softanza' Uppercse it")
 #--> 0
 ```
 
-Le verbe mal orthographié n'est pas deviné. `Unresolved()` répond `[ [ "Uppercse", "uppercase" ] ]`, le mot rencontré à côté du mot que la bibliothèque pense que vous vouliez, et `UnderstoodAll()` répond `0` : le programme admet qu'il n'a pas tout compris. C'est le mode permissif : un mot inconnu est sauté et signalé. Un agent reçoit le mode strict, qui refuse, et un monde, une liste déclarée d'opérations permises, peut limiter ses phrases à cette liste :
+Le verbe mal orthographié n'est pas deviné. `Unresolved()` répond `[ [ "Uppercse", "uppercase" ] ]`, le mot rencontré à côté du mot que la bibliothèque pense que vous vouliez, et `UnderstoodAll()` répond `0` : le programme admet qu'il n'a pas tout compris. C'est le mode permissif : un mot inconnu est sauté et signalé. Un agent d'IA reçoit le mode strict, qui refuse, et un monde, une liste déclarée d'opérations permises, peut limiter ses phrases à cette liste :
 
 ```haro
 try
@@ -126,7 +126,7 @@ L'autre direction du code naturel dans Softanza est la chaîne quasi naturelle, 
 
 La chaîne a répondu `0`, et `Why()` a donné la raison : `no: 8 is not less than 4`. Un verdict dit pourquoi.
 
-Voici maintenant la loi à son plus tranchant : un modèle. La bibliothèque déclare la forme d'une réponse comme un schéma. Que devient un schéma qui nomme un type que la bibliothèque n'a pas ? Il est jugé quand il est déclaré, avant qu'aucun modèle soit appelé :
+Voici maintenant la loi à son plus tranchant : un modèle d'IA. La bibliothèque déclare la forme d'une réponse comme un schéma. Que devient un schéma qui nomme un type que la bibliothèque n'a pas ? Il est jugé quand il est déclaré, avant qu'aucun modèle soit appelé :
 
 ```haro
 try
@@ -203,7 +203,7 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 **J'ai tenu la promesse de 2020 et changé son mécanisme.** Ma première diapositive promettait un langage naturel exécutable. La vision de 2026 a jugé ce slogan : il promettait plus qu'un tribunal ne peut défendre, parce qu'une phrase naturelle peut être ambiguë et qu'un mensonge peut être grammatical. Le naturel reste donc à la porte, là où une phrase demande ou rédige, et l'exécution appartient à des langages fermés qu'un tribunal peut juger. J'ai construit la couche naturelle ainsi bien avant que la vision le nomme. Seuls les mots définis dans le dictionnaire sont interprétés. Tout autre mot est sauté et signalé, ou refusé en mode strict, jamais deviné.
 
-**J'ai sorti la gouvernance de la bibliothèque et gardé les refus dedans.** En juillet 2026, un kit pour gouverner les agents a atterri dans la couche naturelle. Je l'ai retiré le jour même : le mode strict, les refus, le pourquoi et le compris appartiennent à la bibliothèque ; un produit pour gouverner les agents, non. Et j'ai retiré un ensemble de marqueurs : leur chiffre de l'ordre des lettres avait été inversé par son propre inventeur, de mémoire, et ils répétaient des sens. Un langage qu'une personne parle ne marque jamais une référence de cette façon. Une chaîne non grammaticale qui tourne est un bogue.
+**J'ai sorti la gouvernance de la bibliothèque et gardé les refus dedans.** En juillet 2026, un kit pour gouverner les agents d'IA a atterri dans la couche naturelle. Je l'ai retiré le jour même : le mode strict, les refus, le pourquoi et le compris appartiennent à la bibliothèque ; un produit pour gouverner les agents, non. Et j'ai retiré un ensemble de marqueurs : leur chiffre de l'ordre des lettres avait été inversé par son propre inventeur, de mémoire, et ils répétaient des sens. Un langage qu'une personne parle ne marque jamais une référence de cette façon. Une chaîne non grammaticale qui tourne est un bogue.
 
 **J'ai refusé un second plongement.** Le chapitre 1 énonce cette décision ; j'ajoute seulement ici qu'une porte apporte un runtime étranger, qu'une surface apporte une syntaxe familière sur la même grammaire, et que le chapitre 16 raconte la différence.
 
@@ -242,13 +242,13 @@ Voilà les limites ; la section suivante ouvre six portes sur elles.
 
 ## 8. Six portes
 
-**Le programmeur.** Vous continuez d'écrire du code. Ce que vous déclarez est une grammaire fermée, et le tribunal juge votre phrase et celle d'un agent par les mêmes règles.
+**Le programmeur.** Vous continuez d'écrire du code. Ce que vous déclarez est une grammaire fermée, et le tribunal juge votre phrase et celle d'un agent d'IA par les mêmes règles.
 
 **L'analyste.** Les mots de votre domaine deviennent un paquet de données, et le système les comprend ou les refuse avec la raison.
 
 **Le concepteur.** Les refus font partie du langage : ce qui est hors liste est refusé en mode strict, donc il n'a jamais besoin d'un avertissement.
 
-**Le décideur.** Un modèle tenu à une grammaire déclarée répond dans la bonne forme. Il peut encore répondre une fausseté dans la bonne forme, et le dossier imprime cette limite avec le résultat.
+**Le décideur.** Un modèle d'IA tenu à une grammaire déclarée répond dans la bonne forme. Il peut encore répondre une fausseté dans la bonne forme, et le dossier imprime cette limite avec le résultat.
 
 **Le formateur.** Une phrase en hausa, en français ou en arabe s'exécute et redit ce qu'elle a compris, de sorte qu'un apprenant lit la lecture que la machine fait de ses propres mots.
 
@@ -256,7 +256,7 @@ Voilà les limites ; la section suivante ouvre six portes sur elles.
 
 ## 9. Exercice
 
-Déclarez, avec `StzOutputSchemaQ`, un enregistrement de trois champs tiré d'un domaine que vous connaissez : une demande de prêt, par exemple, avec un montant dans une fourchette, une devise tirée d'une liste fermée, et un objet en texte libre. Avant de rien exécuter, écrivez trois réponses qu'un modèle pourrait donner : une que le tribunal doit accepter, une qu'il doit refuser à cause de sa forme, et une qu'il acceptera bien qu'elle soit fausse. Sous chacune, écrivez votre prédiction comme une promesse.
+Déclarez, avec `StzOutputSchemaQ`, un enregistrement de trois champs tiré d'un domaine que vous connaissez : une demande de prêt, par exemple, avec un montant dans une fourchette, une devise tirée d'une liste fermée, et un objet en texte libre. Avant de rien exécuter, écrivez trois réponses qu'un modèle d'IA pourrait donner : une que le tribunal doit accepter, une qu'il doit refuser à cause de sa forme, et une qu'il acceptera bien qu'elle soit fausse. Sous chacune, écrivez votre prédiction comme une promesse.
 
 Exécutez-le. La troisième réponse est la leçon de ce chapitre. Écrivez, en une phrase, qui dans votre domaine doit la juger, puisque la grammaire ne le peut pas.
 

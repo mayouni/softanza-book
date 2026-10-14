@@ -75,7 +75,7 @@ This block is a pinned gap. Its promise records the library's present answer, so
 
 It answers `ISTANBUL`: the locale was accepted and ignored! Python prints `ISTANBUL`: level, since the standard library has no locale casing. Node, with `toLocaleUpperCase('tr')`, prints `İSTANBUL`. Turkish needs the dotted capital. This is the loss most worth printing, and it is not that the engine lacks Turkish. It is that the method takes a locale and, today, answers with plain uppercase without saying so; honouring the locale, or refusing, is the next step. The source comment says: plain uppercase when it has no rule. The culture plan measured the same on 18 August 2026 and called it the code equivalent of the fake progress bar. Its law is the reason for this chapter: no facades. An operation either honours the culture it was given, or refuses. I hold this as a view, not a result, and the culture plan's law says the same.
 
-**Five: an instruction in your language.** A natural-language instruction is dictionary-driven and local: no network, no model, no key. What does it do with the sentence, and what did it understand? Run it:
+**Five: an instruction in your language.** A natural-language instruction is dictionary-driven and local: no network, no AI model, no key. What does it do with the sentence, and what did it understand? Run it:
 
 ```haro
 o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
@@ -87,7 +87,7 @@ o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
 
 > run: kept
 
-It answers `[ 3, 1 ]`, and says what it understood: `create a list with [ 3, 1, 3 ] -> remove duplicates`. I did not run the other side. The field's equivalent of "take this sentence and do it" is a model call. What it needs is a model. A hosted one needs a network, an account, a key and a per-token cost; a local one needs a downloaded model and a GPU or a patient CPU. It needs a prompt, and a check that the answer is what was asked, and the answer is not guaranteed to be the same twice. The site's own pair of this kind writes the other side as a comment, which says that there is no counterpart without an external language model.
+It answers `[ 3, 1 ]`, and says what it understood: `create a list with [ 3, 1, 3 ] -> remove duplicates`. I did not run the other side. The field's equivalent of "take this sentence and do it" is an AI model call. What it needs is a model. A hosted one needs a network, an account, a key and a per-token cost; a local one needs a downloaded model and a GPU or a patient CPU. It needs a prompt, and a check that the answer is what was asked, and the answer is not guaranteed to be the same twice. The site's own pair of this kind writes the other side as a comment, which says that there is no counterpart without an external language model.
 
 One more loss, which is not a block. A string of a family emoji, five code points, joined by joiners, shows where the public string does not yet expose what the engine knows. The counter class answers `1` for the grapheme count; `NumberOfChars` answers `5` and `NumberOfBytes` answers `18`; and `GraphemeCount()` on the string itself raises, because the method is not defined. The engine knows, and the string does not say. Python's `len` gives `5`, and Node's `.length` gives `8`.
 
@@ -141,7 +141,7 @@ The record already keeps the list of what the field has and Softanza lacks. I pr
 
 **The coverage matrix.** Thirty domains in seven groups, against four other platforms, read on 17 September 2026. Softanza's tally is seven deep, fourteen solid, seven partial, two absent, present in twenty-eight of thirty. I recounted it from the rows and it matches. The two absent rows are symbolic mathematics ("no computer algebra") and package, build and deploy ("a library, not a registry"). Among the seven partial rows is internationalisation, "a deliberate bet against ICU", and the neural row is "inference only; no training foundry". The stored tallies of two of the other platforms do not match their own rows, by one in two places. I print Softanza's tally only. The matrix cites a compass file as the source of the ratings. I could not locate the file in the snapshot, in the live checkout or in the estate's repository.
 
-**The graph comparison, a narration dated 26 December 2025.** A model wrote it, and says so in its byline. Its column for Softanza rates itself with a cross on scalability and on transactions and with a warning on performance, and its conclusion lists where traditional solutions win.
+**The graph comparison, a narration dated 26 December 2025.** An AI model wrote it, and says so in its byline. Its column for Softanza rates itself with a cross on scalability and on transactions and with a warning on performance, and its conclusion lists where traditional solutions win.
 
 Where Softanza stands apart, by the record, without a number: the SLA; the governed act; the typed event; the matrix's one row of governance and safe execution. Two more: exact numbers by default, against two floats; an instruction that resolves locally. And a method that prints each of them beside a loss.
 
@@ -173,7 +173,7 @@ Six doors follow, one for each reader of this page.
 
 **The educator.** A code pair is a lesson in what a line costs. The learner writes the other side's output before running it.
 
-**The agent.** When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an agent is proposed and not built.
+**The agent.** When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an AI agent is proposed and not built.
 
 ## 9. Exercise
 

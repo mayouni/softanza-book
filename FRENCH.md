@@ -107,6 +107,8 @@ Keep the same number of paragraphs, list items, table rows and [AUTHOR] markers.
 | oracle | oracle | |
 | the model (language model) | le modèle | |
 | agent | agent | |
+| AI model (where the bare word is ambiguous, VOICE-05) | modèle d'IA | « modèle de langage » stays for "language model" |
+| AI agent (same) | agent d'IA | a person's agent stays « agent » / « mandataire » by context |
 | actor | acteur | |
 | plane (security, performance, sound, payments, agentic, system) | volet | « le volet de sécurité »; never « plan », which is the artefact a machine proposes |
 | estate (the author's body of projects) | domaine de projets | « le domaine de projets », every time; « domaine » alone means a field of knowledge |

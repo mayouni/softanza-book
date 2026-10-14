@@ -8,7 +8,7 @@ narrations: [stz-knowledge-programming-narration.md, stz-bridging-minds-and-code
 site: [offering]
 guards: [knowledge_integration_narrated, provenance_survives_save_narrated, program_narrated]
 stage:
-  built: "un système comme un fichier texte brut de faits, avec des lois (unique, transitive, symétrique) et la source de chaque fait ; Prove avec ses étapes, un non aussi certain qu'un oui ; le mode strict ; le fichier écrit, relu et livré, d'un catalogue de cours à la mémoire d'un agent"
+  built: "un système comme un fichier texte brut de faits, avec des lois (unique, transitive, symétrique) et la source de chaque fait ; Prove avec ses étapes, un non aussi certain qu'un oui ; le mode strict ; le fichier écrit, relu et livré, d'un catalogue de cours à la mémoire d'un agent d'IA"
   designed: "des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête qui joint ; plusieurs relations entre deux choses ; l'héritage de classes ; la validation au chargement"
   absent: "le dialogue fondateur de 2022, qui ne tourne pas ; Explain sur un graphe de connaissance ; la section des règles du fichier, que le lecteur saute"
 status: draft
@@ -16,7 +16,7 @@ rulings: ["12.2", "12.6", "12.12", "12.13", "12.19"]
 research: research/ch14.md
 ---
 
-Dans ce chapitre, je prends les trois pratiques du terrain qui se rencontrent dans cette idée : la pile sémantique, la base de données de graphes de propriétés et les règles sur des faits. Je mets à côté d'elles un système qui est un fichier texte brut. J'exécute ce fichier : deux faits, une loi et une preuve avec ses étapes, puis une clinique en mode strict, où une rumeur refusée est gardée et nommée. J'écris le fichier, je le relis et je le montre à l'échelle, d'un catalogue de cours à la mémoire d'un agent. Je dis ce que j'ai décidé, qu'une entreprise se décrit dans un seul fichier et que le fichier est le programme. Je dis ce que j'ai refusé : un monde parallèle, une contradiction résolue en silence, la récupération. J'imprime la limite, un fichier qui à ce commit n'a pas de règles. Elle se tient à côté du principe : un système est un fichier, et y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.
+Dans ce chapitre, je prends les trois pratiques du terrain qui se rencontrent dans cette idée : la pile sémantique, la base de données de graphes de propriétés et les règles sur des faits. Je mets à côté d'elles un système qui est un fichier texte brut. J'exécute ce fichier : deux faits, une loi et une preuve avec ses étapes, puis une clinique en mode strict, où une rumeur refusée est gardée et nommée. J'écris le fichier, je le relis et je le montre à l'échelle, d'un catalogue de cours à la mémoire d'un agent d'IA. Je dis ce que j'ai décidé, qu'une entreprise se décrit dans un seul fichier et que le fichier est le programme. Je dis ce que j'ai refusé : un monde parallèle, une contradiction résolue en silence, la récupération. J'imprime la limite, un fichier qui à ce commit n'a pas de règles. Elle se tient à côté du principe : un système est un fichier, et y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -71,7 +71,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 Le graphe qui a la loi prouve la chaîne plus longue et en écrit les étapes : `proved: porridge made-from couscous made-from flour made-from millet`. Le graphe sans la loi, qui n'a de plus jamais reçu le fait, répond toujours `not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'`, et je veux que vous remarquiez que ce non a deux causes, nommées dans sa propre ligne : aucun fait enregistré, et aucune chaîne que la loi permette. Un refus est aussi certain qu'une preuve, sur ce qui est enregistré et déclaré : le graphe dit « non dérivable », pas « faux ». Le commentaire de la bibliothèque sur `Prove` le dit : `a certain no is still certain`.
 
-La même croissance atteint le modèle de domaine du chapitre 19. Rien n'est entraîné. Mais un modèle forgé à partir d'un graphe est un instantané. Le modèle apprend-il le fait nouveau quand le graphe l'apprend ? Exécutez-le :
+La même croissance atteint le modèle de langage de domaine du chapitre 19. Rien n'est entraîné. Mais un modèle forgé à partir d'un graphe est un instantané. Le modèle apprend-il le fait nouveau quand le graphe l'apprend ? Exécutez-le :
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -200,7 +200,7 @@ La comparaison de graphes du dossier dit elle-même où les solutions traditionn
 
 Le terrain mène en normes et en portée, en connaissance générale. Une base de connaissance en RDF peut être partagée avec n'importe quel outil qui lit les formats du W3C, reliée à des vocabulaires publics et interrogée à travers des magasins. D'après le dossier, un fichier de connaissance est lu par cette bibliothèque et par rien d'autre. Un raisonneur pour un langage d'ontologie riche fait ce que trois lois et une déclaration de classe ne font pas. Le terrain mène en expressivité des règles : Prolog et Datalog dérivent des faits nouveaux à partir de règles arbitraires. Ici, dans les exécutions que j'ai gardées, une seule sorte de loi dérive un fait, et seulement sur le monde par défaut. Le terrain mène en requêtes à plusieurs étapes, puisque SPARQL et Cypher joignent des motifs. Et en relations multiples entre deux choses.
 
-Voici où je pense que cela se distingue, avec les limites mesurées à côté. La connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même format porte un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle ni d'un entraînement.
+Voici où je pense que cela se distingue, avec les limites mesurées à côté. La connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même format porte un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle d'IA ni d'un entraînement.
 
 Les pertes sont imprimées. La limite du chapitre vient ensuite, avec ses exécutions.
 

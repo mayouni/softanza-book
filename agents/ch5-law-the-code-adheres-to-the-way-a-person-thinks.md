@@ -2,7 +2,7 @@
 
 Source: Chapter 5. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
+Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:13 UTC+01:00.
 
@@ -10,7 +10,7 @@ In this chapter I take the two things the field calls coding style and ask the q
 
 ## What the AI age changes here
 
-For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
+For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by AI models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
 
 That changes what a style is. A style that lives in one person's habits dies when that person stops writing every line. It has to become something a machine can be held to, and something a machine can check, or it thins away. In this house it did thin, and I will show you where. So this movement of the book, Programming rethought, opens on a law that has two halves. The second half exists because of the age: the code adheres to the way a person thinks, and the court judges it whoever wrote it. By the court I mean the machine that judges code against the house's rules; today it judges only the library's own classes, and section 5 says how.
 
@@ -128,7 +128,7 @@ The run printed `[ 12500, 13000, 11500, 23, 46 ]`. Five values, the starting one
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, so that a person or an agent can check a class before it lands. Five of the fourteen run over the graph of the code. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. Five of the fourteen run over the graph of the code. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -148,7 +148,7 @@ The chapters of this part prove the law, each from one side. Chapter 6 tells the
 
 **I let the library's implementation go.** The code the models wrote inside the library is accepted as good. It does not look like mine. Its local variables carry underscores on both sides, hundreds of times per thousand lines. They are a safeguard. The language beneath Softanza lets a library's local variable overwrite a caller's global, and the convention prevents it. I did not ask for the old style there, and I would refuse a campaign to impose it.
 
-**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
+**I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an AI agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
 
 What had happened is measurable. A study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one. They assert in another form, a call that names the expectation. They adopted it because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends one form for new test blocks: the classic form, a title, the questions and the promises under them. The converted blocks are left as they are. The record holds that recommendation, and no ruling of mine on it.
 
@@ -170,7 +170,7 @@ The field leads in enforcement. Most mainstream languages have a formatter and a
 
 The field leads in reach and in people. There is a labour market for its tools and none yet for this one, and the field's generators are the largest that exist.
 
-The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
+The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An AI agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, and the verb's form is a contract about the object. The promise under the line is the example, the test and the documentation at once.
 
@@ -178,13 +178,13 @@ Where I think Softanza stands apart is in what the style is tied to. A formatter
 
 What is built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
 
-What is designed: a court of style for the code a programmer or an agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that a model's output is held to it before it is written.
+What is designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
 
 What is absent: any machine that judges, today, the style of a program written with the library. The founding slide's chain does not run as written. In this book the discipline carries the name of its motto: what you think is what you write.
 
 ## 8. Six doors
 
-**The programmer.** Your lines follow your reasoning: select, contain, count, find, act. Each question carries its promise, and a court reads it whether you wrote it or an agent did.
+**The programmer.** Your lines follow your reasoning: select, contain, count, find, act. Each question carries its promise, and a court reads it whether you wrote it or an AI agent did.
 
 **The analyst.** The method starts from your problem in plain words. The keywords you use become the names of the steps.
 
@@ -200,7 +200,7 @@ What is absent: any machine that judges, today, the style of a program written w
 
 Take the list `[ "tea", "", "rice", "", "fish", "" ]`. Write the questions of the mental model in order, one line each: does it contain empty strings, how many, where. Then one act, with a named parameter. Under every question, write the line it must print, before you run anything.
 
-Run it. Then ask an agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
+Run it. Then ask an AI agent to solve the same problem, and judge its answer with two questions only: does each line follow a step of thought, and does each question carry its promise.
 
 I left this one in your hands, on purpose. The Basket class of section 3 fails the court because `AddQ` returns `42`. Change that one value to `This` and run the question again:
 

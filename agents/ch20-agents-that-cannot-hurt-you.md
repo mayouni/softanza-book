@@ -6,15 +6,15 @@ Stage: built: reversibility as a declared contract and a registration gate; post
 
 Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
+In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
 ## 1. The concept, as the field holds it
 
-In the field, safety is a property of the agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process, and does not tell a file moved from random bytes churning.
+In the field, safety is a property of the AI agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process, and does not tell a file moved from random bytes churning.
 
 The best advice of the field, which the narration says every serious guide of 2026 gives (it paraphrases one roadmap), is to separate planning from execution and put a human approval between them. It is good advice, and it is advice: a pattern you implement, and can forget. The threat lists of the field, the OWASP list of risks for agentic applications among them, are lenses, and the record uses them so.
 
-So the field's posture, in a line, is that the agent is a model in a loop, and safety is vigilance around it. (General knowledge, not a study of the record, except where I name the document.) Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
+So the field's posture, in a line, is that the agent is an AI model in a loop, and safety is vigilance around it. (General knowledge, not a study of the record, except where I name the document.) Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
 
 ## 2. The first principle
 
@@ -24,7 +24,7 @@ The sentence is in the library's doctrine document: "We will not build safe agen
 
 ## 3. The Softanza form
 
-Four steps, in the form the study of the record gives them: the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. I will show each in code, and then the cases where a step does not hold.
+Four steps, in the form the study of the record gives them: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. I will show each in code, and then the cases where a step does not hold.
 
 **May this agent exist?** Before an agent runs a single tick, the governance asks the question, and it asks it when the answer is free. An agent that declares no coverage, one sentence saying what it covers, is refused. An agent that declares no reversibility class is refused too: reversible, compensable or irreversible. Both refusals are in the engine's own sentences, and the door of the former host language repeats them. What does it say to an agent that declares no coverage, and to one that declares no reversibility class? Run it:
 
@@ -78,7 +78,7 @@ next
 
 Read down the rows: trusted code may do all three classes of act, external code the first two, sandboxed code only the reversible. The last line asks for the refusal and prints its sentence.
 
-**The agent runs, believes it acted, and the disk does not move.** An agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work and the fact is learned. After one cycle, does the real file exist? Ask the disk, then the bench:
+**The agent runs, believes it acted, and the disk does not move.** An AI agent is a file and a few functions. Its function writes a price list. It is given a workbench, and the function reaches the bench as an ambient object during one cycle, with no change in its signature. The skill verifies its own work and the fact is learned. After one cycle, does the real file exist? Ask the disk, then the bench:
 
 ```haro
 StzAllowAgentFunction("ScribblePrices", "trusted")
@@ -207,7 +207,7 @@ next
 
 > run: kept (touches files, the system)
 
-Thirty! The model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
+Thirty! The AI model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
 
 The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
@@ -238,7 +238,7 @@ StzDirDeleteAll(cDir)
 
 A named actor under a scope commits the other twenty-nine (`29`); one is skipped (`1`); and one file is still on disk (`1`), the file of the step the reviewer protected.
 
-**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. A model with the capability to produce effects is refused. A model without it registers like any other slot, a slot being the place in the loop that one agent takes:
+**One rule, two layers, the same words.** The refusal that chapter 17 showed at the graph, and that the file showed above, is also enforced in the engine's own tick loop, at registration. It is enforced in the sentence of the graph rule, no-llm-effectful. An AI model with the capability to produce effects is refused. One without it registers like any other slot, a slot being the place in the loop that one agent takes:
 
 ```haro
 StzResetEngineAgentLoop()
@@ -255,7 +255,7 @@ StzResetEngineAgentLoop()
 
 > run: kept
 
-The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is a model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
+The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is an AI model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
 
 **An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick. It had no plan, no scope and no committing actor.
 
@@ -332,7 +332,7 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 ## 4. The decision, and what I refused
 
-**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
+**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the AI agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
 
 **I refused a permission check as the boundary.** It is not a check that the agent might route around. The powers are separated: creativity without authority, authority without creativity.
 
@@ -340,7 +340,7 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 **I refused to leave the gate optional.** The ruling of 22 August 2026 says the registration gate is doctrine, and that opting in is a migration state, not the design. The record is honest about the finding behind the ruling: where the doctrine of agents that cannot hurt you bound that day was nowhere. The safe world existed, and the agentic folder did not mention any of it. The ruling closed it the same day.
 
-**I refused a stub.** Asking for a reserved agent raises. The architecture says that this is the law working, and not a defect.
+**I refused a stub.** Asking for a reserved AI agent raises. The architecture says that this is the law working, and not a defect.
 
 **I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
@@ -368,7 +368,7 @@ The field leads in frontier reasoning. That stack orchestrates the largest model
 
 The field leads in ecosystem and hiring. There is a labour market for that stack, and none for this one.
 
-When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and a model can sit inside a Softanza system as a proposer.
+When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and an AI model can sit inside a Softanza system as a proposer.
 
 The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed. After the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn, and did not test whether it blocks the commit.
 
@@ -382,7 +382,7 @@ What is designed: the agent's side of the negotiation, in which the plan reaches
 
 Each item below is a gap, found while running and reading.
 
-- **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to a model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
+- **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to an AI model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
 - **A plan flags; it does not rank.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE. There is no score and no order of severity. The chapter says "flags".
 - **The gate is opt-in at the host.** The default flips when the last host in the tree declares. A fresh host runs the older pump.
 - **The loop checks that a coverage statement exists, not that it is true.**
@@ -398,7 +398,7 @@ Six doors follow, the same chapter seen from six places.
 
 **The designer.** The plan is the one artefact that crosses from the agent to the person, and a person can reject one step. The Right to a Human says a person is reachable wherever a machine serves, and the right is held by judgment.
 
-**The decision-maker.** You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. A model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.
+**The decision-maker.** You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. An AI model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.
 
 **The educator.** A learner's agent that tidies a course folder by deleting everything is a lesson in what a plan is. She sees what it would have done, and the files are still there.
 

@@ -16,13 +16,13 @@ rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
 ---
 
-Dans ce chapitre, je prends une phrase de la constitution de l'interface, un nouveau médium ajoute des rendus, jamais des verbes, et je l'exécute sur le médium que je peux mesurer. Une question devient une ligne de texte, part sur un bac à sable SMS, et est facturée par segment dans deux alphabets. Je montre ce que la bibliothèque livre, la question comme donnée et le tribunal, et ce que vous écrivez, le rendu et le lecteur. Je rapporte les refus du dossier comme ceux du dossier : une conversation qui n'a pas besoin de modèle, et une voix qui entend des commandes et non de la dictée. Et j'imprime la limite entière : pas d'application de messagerie, pas d'USSD, pas de ligne téléphonique, et une réponse contenant un espace, que la conversation ne peut pas encore prendre.
+Dans ce chapitre, je prends une phrase de la constitution de l'interface, un nouveau médium ajoute des rendus, jamais des verbes, et je l'exécute sur le médium que je peux mesurer. Une question devient une ligne de texte, part sur un bac à sable SMS, et est facturée par segment dans deux alphabets. Je montre ce que la bibliothèque livre, la question comme donnée et le tribunal, et ce que vous écrivez, le rendu et le lecteur. Je rapporte les refus du dossier comme ceux du dossier : une conversation qui n'a pas besoin de modèle d'IA, et une voix qui entend des commandes et non de la dictée. Et j'imprime la limite entière : pas d'application de messagerie, pas d'USSD, pas de ligne téléphonique, et une réponse contenant un espace, que la conversation ne peut pas encore prendre.
 
 ## 1. Le concept, tel que le terrain le tient
 
 Le commerce conversationnel, ou omnicanal : une entreprise rejoint ses clients dans les canaux qu'ils utilisent déjà, et un moteur de dialogue se tient derrière. Ce sont les pratiques, tirées de la connaissance générale et non d'une étude du dossier. Chaque date et chaque règle de fournisseur est à relire avant l'impression, comme l'étude du dossier le dit dans son propre "Not measured". Cette étude est une longue étude, par un lecteur extérieur, des racines du projet, et sa section 12.25 est celle qui traite de la messagerie.
 
-Les cadres de dialogue possèdent le modèle de dialogue. Le concepteur écrit des intentions et des flux dans la notation du cadre, et le cadre comprend le texte libre avec des modèles entraînés et livre des connecteurs vers les canaux.
+Les cadres de dialogue possèdent le modèle de dialogue. Le concepteur écrit des intentions et des flux dans la notation du cadre, et le cadre comprend le texte libre avec des modèles d'IA entraînés et livre des connecteurs vers les canaux.
 
 La plateforme d'entreprise d'une application de messagerie : les messages arrivent par un webhook, et l'entreprise peut répondre librement à l'intérieur d'une fenêtre de service que le client a ouverte. En dehors, seulement des gabarits approuvés, par un compte d'entreprise vérifié.
 
@@ -93,7 +93,7 @@ func QuestionAfter(cA, cB)
 
 La question est une donnée, donc n'importe quel médium la rend. Et la loi propre du médium, ici que le SMS est facturé par segment et que l'alphabet décide, est un test et non une surprise. Le texte anglais fait 93 caractères selon mon décompte, et le bloc imprime un segment. Le même cadre avec deux noms de plats en arabe fait 89 unités selon mon décompte (les deux noms sont plus courts de quatre lettres). Le bloc imprime `ucs2` et deux segments, parce que l'encodage change. Quatre lettres de moins, et un segment de plus ! Le numéro de téléphone est inventé, et seul l'indicatif du pays, qui est celui du Niger, est réel.
 
-Maintenant toute la conversation, répétée sur le bac à sable SMS avant qu'aucun compte existe. Une conversation est une boucle des verbes de la bibliothèque : le médium porte chaque question vers l'extérieur et chaque réponse vers l'intérieur. Les assertions sont la facture et le refus. Que compte le bac à sable, et que dit le tribunal à "7" ? Rien dans la boucle n'est un modèle :
+Maintenant toute la conversation, répétée sur le bac à sable SMS avant qu'aucun compte existe. Une conversation est une boucle des verbes de la bibliothèque : le médium porte chaque question vers l'extérieur et chaque réponse vers l'intérieur. Les assertions sont la facture et le refus. Que compte le bac à sable, et que dit le tribunal à "7" ? Rien dans la boucle n'est un modèle d'IA :
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
@@ -231,7 +231,7 @@ done
 
 `unknown reach surface 'whatsapp' (web/desktop/mobile)` : la plateforme l'a refusée ! Elle nomme les trois surfaces qu'elle a, et le même refus répond à `:ussd`.
 
-**Ce qu'on peut dire à un client est un ensemble fermé.** Le tribunal de ce qui est dit a aujourd'hui un mécanisme : une énumération fermée compilée en grammaire. Les chapitres 11 et 19 l'utilisent pour un langage et pour la sortie d'un modèle. Ici elle contient les réponses qu'une entreprise accepte d'envoyer. Ce n'est pas une unité de gabarit de messagerie, et il n'y en a aucune. Que dit le tribunal d'une phrase que l'entreprise n'a jamais approuvée ? Deux choses à imprimer avec elle : le message dit "the model answered" quel que soit le locuteur, et l'énumération est insensible à la casse :
+**Ce qu'on peut dire à un client est un ensemble fermé.** Le tribunal de ce qui est dit a aujourd'hui un mécanisme : une énumération fermée compilée en grammaire. Les chapitres 11 et 19 l'utilisent pour un langage et pour la sortie d'un modèle d'IA. Ici elle contient les réponses qu'une entreprise accepte d'envoyer. Ce n'est pas une unité de gabarit de messagerie, et il n'y en a aucune. Que dit le tribunal d'une phrase que l'entreprise n'a jamais approuvée ? Deux choses à imprimer avec elle : le message dit "the model answered" quel que soit le locuteur, et l'énumération est insensible à la casse :
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
@@ -260,7 +260,7 @@ Les refus ci-dessous, après le premier, sont ceux du dossier : des décisions d
 
 **La messagerie, la question.** Le rapport de l'étude sur ma demande : les conversations ont lieu de façon programmatique par défaut, ou avec une configuration minimale, sans obliger les utilisateurs à changer leurs cultures d'usage. La section de l'étude est intitulée « tranché » et non « tranché par l'auteur », et ses propositions pour les surfaces conversationnelles sont celles d'une session. Le dossier ne contient aucune décision de ma part qui les adopte. Je dis *proposé*, pas *décidé*.
 
-**Une conversation n'a pas besoin de modèle.** Le plancher est déterministe. Un modèle peut améliorer la fluidité derrière la même surface.
+**Une conversation n'a pas besoin de modèle d'IA.** Le plancher est déterministe. Un modèle peut améliorer la fluidité derrière la même surface.
 
 **La voix n'est pas un paradigme.** Le plan du dossier dit hors de portée jusqu'à demande écrite : toute la gestion du dialogue, les mots d'éveil, l'analyse d'intentions et l'interruption par l'utilisateur.
 

@@ -16,7 +16,7 @@ rulings: ["12.13", "12.29"]
 research: research/ch30.md
 ---
 
-Dans ce chapitre, je prends l'étude de conception d'une organisation et je montre les quatre choses qu'elle contient et que la bibliothèque porte. Ce sont une règle comme un objet dont les nombres peuvent être changés, un refus qu'une personne peut lire, l'autorité mise face au risque, et une décision gardée avec son autorité du moment. Puis je montre la chose que l'organisation a demandée et que la bibliothèque ne porte pas, le hors ligne, et je lis ce bloc comme une limite et non comme une victoire. Je dis « étude de conception » et non « livraison » chaque fois, parce que le hub n'est pas construit. Le principe est celui de l'organisation : l'agent propose, et une personne décide.
+Dans ce chapitre, je prends l'étude de conception d'une organisation et je montre les quatre choses qu'elle contient et que la bibliothèque porte. Ce sont une règle comme un objet dont les nombres peuvent être changés, un refus qu'une personne peut lire, l'autorité mise face au risque, et une décision gardée avec son autorité du moment. Puis je montre la chose que l'organisation a demandée et que la bibliothèque ne porte pas, le hors ligne, et je lis ce bloc comme une limite et non comme une victoire. Je dis « étude de conception » et non « livraison » chaque fois, parce que le hub n'est pas construit. Le principe est celui de l'organisation : l'agent d'IA propose, et une personne décide.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -24,13 +24,13 @@ Le terrain a deux pratiques dont ce projet avait besoin, et il les garde en des 
 
 La première est la règle métier qu'une personne du métier peut changer. Les moteurs de règles et les tables de décision existent depuis des décennies ; le Decision Model and Notation, une norme de 2015, donne aux analystes métier une table où un plafond d'approbation est un nombre dans une cellule. La seconde est l'application qui continue de marcher sans réseau. La conception hors ligne d'abord est une pratique à part entière, avec des bases de données qui se synchronisent. Depuis un essai de 2019, elle a un nom pour sa philosophie, le logiciel local d'abord (local-first software) : les données sont sur votre appareil, et le réseau est une commodité.
 
-Une troisième pratique est venue avec les agents : un modèle propose, et une personne approuve. Sur le terrain, c'est un bouton.
+Une troisième pratique est venue avec les agents d'IA : un modèle d'IA propose, et une personne approuve. Sur le terrain, c'est un bouton.
 
 L'étude de l'organisation fait de cette troisième pratique un principe.
 
 ## 2. Le premier principe
 
-L'étude de l'organisation sur son propre projet en fait un titre de section, « L'agent IA propose, une personne décide », et je le prends comme le principe de ce chapitre : **l'agent propose, et une personne décide.**
+L'étude de l'organisation sur son propre projet en fait un titre de section, « L'agent IA propose, une personne décide », et je le prends comme le principe de ce chapitre : **l'agent d'IA propose, et une personne décide.**
 
 ## 3. La forme Softanza
 

@@ -2,11 +2,11 @@
 
 Source: Chapter 12. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
+Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
-In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, a model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
+In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
 ## 1. The concept, as the field holds it
 
@@ -85,7 +85,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 
 The second pair is the point of the chapter: the grammar answers `1` and the court answers `0`! I do not print the list of what the grammar dropped, because its text carries the former name of the court in one place. I test that it names the limit of the range.
 
-A model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
+An AI model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
 
 ```haro
 ? StzGrammarCouldContinue(cG, "dish: t")
@@ -223,8 +223,8 @@ By facet I mean here a surface of a declared language. The charter lists what th
 |---|---|---|
 | the text | the declaration, plain and closed, with a rationale required on every declaration | built outside; the library's analogue is the schema declaration |
 | the court | the judge generated for the language, speaking in the declaration's own words | built outside; the library's analogue is `Verify` and `Accepts` |
-| the mouth | the grammar for a constrained model | built in the library for schemas; built outside for declared languages, shape only |
-| the prompt | the instruction a model reads, tuned by measurement | built in the library; not known for declared languages |
+| the mouth | the grammar for a constrained AI model | built in the library for schemas; built outside for declared languages, shape only |
+| the prompt | the instruction an AI model reads, tuned by measurement | built in the library; not known for declared languages |
 | the person's reading | a description for a human | built in the library (`Describe`) |
 | the voice | the language narrating a run, a sentence, a refusal; never stored and never parsed back | built outside; the library's analogue is `Understood()` |
 | the tongues | a human language as a data file | built outside for two tongues; built in the library for five packs (chapter 11) |
@@ -235,7 +235,7 @@ The word *facet* has other meanings in this book, and I define mine here: a surf
 
 ## 4. The decision, and what I refused
 
-**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their agents. The charter records a reversal: its first decision, as the general-purpose floor under the family of declared languages, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
+**I decided that Haro is the language of languages.** The charter's header quotes me, from 1 October 2026: Haro is a language of languages, in which the crafters define a language for their domain and program in it, or let their AI agents. The charter records a reversal: its first decision, as the general-purpose floor under the family of declared languages, was reversed. The rest of that ratification was my "go with your recommendations" on seven decisions, and those are rulings by delegation.
 
 **I decided to declare, and not to write.** The act of the kernel: declare a language. It was extraction and not invention: the first languages were declared after they already ran and had consumers.
 

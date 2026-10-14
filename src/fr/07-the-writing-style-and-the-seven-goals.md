@@ -207,7 +207,7 @@ Vient ensuite la décision, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé un style qu'on aurait changé quand l'IA est devenue l'outil d'écriture principal.** L'étude rapporte la déception de l'auteur en ces termes, et le chapitre 5 la raconte. Le code d'implémentation que l'IA a écrit est accepté comme bon. Ce qui est exigé, c'est que chaque ligne qu'un programmeur, humain ou agent, est prié d'écrire avec Softanza embrasse le style historique.
+**J'ai refusé un style qu'on aurait changé quand l'IA est devenue l'outil d'écriture principal.** L'étude rapporte la déception de l'auteur en ces termes, et le chapitre 5 la raconte. Le code d'implémentation que l'IA a écrit est accepté comme bon. Ce qui est exigé, c'est que chaque ligne qu'un programmeur, humain ou agent d'IA, est prié d'écrire avec Softanza embrasse le style historique.
 
 **J'ai refusé un but qui ne vit que dans un document.** Les sept buts sont écrits dans un document de conception et dans des balises qu'aucun tribunal ne lit. La trouvaille de l'étude est qu'il n'y a de tribunal sur aucun des deux.
 

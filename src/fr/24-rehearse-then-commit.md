@@ -10,7 +10,7 @@ guards: [service_registry_narrated, service_delivery_narrated, virtual_system_tw
 stage:
   built: "un jumeau des fichiers et un jumeau de l'environnement du processus, chacun avec son historique, ses instantanés, un plan narré, ses risques et, pour le jumeau des fichiers, une vérification contre la réalité ; le plan de placement ; le bundle de l'émulateur, câblé au rattachement de production ; un déploiement comme graphe d'étapes avec un retour arrière ; le registre des services avec ses postures et la barrière qui refuse un faux en production"
   designed: "le moteur vu tournant dans un navigateur ; une vérification de dérive pour les réponses enregistrées ; des branches d'un jumeau ; des jumeaux pour les bases de données, les interfaces et les réseaux ; la phase émulée posée par le déploiement émulé"
-  absent: "tout adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle, le courrier, les SMS ou un magasin d'objets ; la vérification réelle d'un hôte distant ; le regard d'une personne sur la surface de l'émulateur ; une solution client émulée et déployée par ce chemin"
+  absent: "tout adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle d'IA, le courrier, les SMS ou un magasin d'objets ; la vérification réelle d'un hôte distant ; le regard d'une personne sur la surface de l'émulateur ; une solution client émulée et déployée par ce chemin"
 status: draft
 rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
@@ -376,7 +376,7 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs. L'attacher à une livraison en prenait un instantané, si bien que la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière : c'est mon point de vue. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
 
-**J'ai refusé de virtualiser la qualité d'un modèle.** La qualité d'un modèle de pointe ne peut pas être virtualisée. Ce que le bac à sable vend à la place, c'est le déterminisme, un coût sur lequel on peut faire une assertion, et le travail hors ligne.
+**J'ai refusé de virtualiser la qualité d'un modèle d'IA.** La qualité d'un modèle de pointe ne peut pas être virtualisée. Ce que le bac à sable vend à la place, c'est le déterminisme, un coût sur lequel on peut faire une assertion, et le travail hors ligne.
 
 **J'ai refusé de livrer les adaptateurs réels.** Le plan des services dit que l'adaptateur réel de Stripe, PayPal et Adyen n'est délibérément pas livré, puisqu'un compte, une clé et un réseau dépendent de l'infrastructure. Un adaptateur du hub est construit, et le chapitre 31 le montre. Le contrat est défini, et le registre refuse de laisser le faux partir à sa place.
 

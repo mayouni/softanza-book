@@ -238,7 +238,7 @@ Six portes suivent, une pour chaque lecteur.
 
 **Le formateur.** Le dossier ne soutient qu'une petite chose : la première application enseignait son utilisateur en faisant, avec des guides dont les mots ne laissent aucun doute. Il n'y a pas de formateur dans cette histoire, et je le dis.
 
-**L'agent.** Un agent peut conduire un déploiement en production sans rien changer : la barrière laisse passer les services, rien n'est validé, et la raison donnée est l'acteur et non les services. Dans le projet, l'agent est la session qui travaille à mes côtés sous le Verrou, avec une personne qui décide.
+**L'agent.** Un agent d'IA peut conduire un déploiement en production sans rien changer : la barrière laisse passer les services, rien n'est validé, et la raison donnée est l'acteur et non les services. Dans le projet, l'agent d'IA est la session qui travaille à mes côtés sous le Verrou, avec une personne qui décide.
 
 ## 9. Exercice
 

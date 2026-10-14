@@ -16,7 +16,7 @@ rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
 ---
 
-Dans ce chapitre, je reprends le tribunal du chapitre 5, qui juge quiconque a écrit le code. J'en montre quatre, chacun par quelque chose qu'il refuse : les promesses, la perception, la sécurité et la performance. Je fais parcourir au voyageur un fichier de trois promesses, et je demande au dossier combien des huit traditions musicales une personne a entendues. Je modifie un registre scellé et je lis quelle entrée la chaîne nomme, et je laisse un modèle proposer un plan de performance qu'il ne peut pas valider. Je dis ce que j'ai refusé, sept choses en tout, dont le mot « narration » pour ce qui ne peut pas mentir, une seconde bibliothèque d'assertions, un sixième état pour un arrêt, une garantie sans garde. Le principe tient les quatre tribunaux ensemble : une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et là où aucun tribunal ne voit, le dossier le dit.
+Dans ce chapitre, je reprends le tribunal du chapitre 5, qui juge quiconque a écrit le code. J'en montre quatre, chacun par quelque chose qu'il refuse : les promesses, la perception, la sécurité et la performance. Je fais parcourir au voyageur un fichier de trois promesses, et je demande au dossier combien des huit traditions musicales une personne a entendues. Je modifie un registre scellé et je lis quelle entrée la chaîne nomme, et je laisse un modèle d'IA proposer un plan de performance qu'il ne peut pas valider. Je dis ce que j'ai refusé, sept choses en tout, dont le mot « narration » pour ce qui ne peut pas mentir, une seconde bibliothèque d'assertions, un sixième état pour un arrêt, une garantie sans garde. Le principe tient les quatre tribunaux ensemble : une affirmation ne vaut que ce que vaut le tribunal qui peut la refuser, et là où aucun tribunal ne voit, le dossier le dit.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -109,11 +109,11 @@ Il répond `8`, `7` et `HEARD` : huit déclarées, et sept d'entre elles non per
 
 La loi est celle du domaine de projets, c'est-à-dire de l'ensemble des projets de l'auteur, adoptée le 25 septembre 2026 sur instruction de l'auteur. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
-La galerie d'images est l'endroit où elle n'est pas satisfaite. La bibliothèque tient quatre-vingt-quinze jugements d'images et de sections de texte, dans trois fichiers d'index, commités le 5 octobre 2026. Chacun est d'un modèle, lisant l'image ou lisant le texte que le programme a imprimé. Aucun ne porte de nom humain. Le premier index le dit en une phrase : aucun humain n'a regardé ces images. Le registre des constats se termine par une ligne que je répète : un verdict humain sur un échantillon est encore dû. Le dossier ne tient aucun verdict humain sur une image de la galerie. Elle reste non perçue.
+La galerie d'images est l'endroit où elle n'est pas satisfaite. La bibliothèque tient quatre-vingt-quinze jugements d'images et de sections de texte, dans trois fichiers d'index, commités le 5 octobre 2026. Chacun est d'un modèle d'IA, lisant l'image ou lisant le texte que le programme a imprimé. Aucun ne porte de nom humain. Le premier index le dit en une phrase : aucun humain n'a regardé ces images. Le registre des constats se termine par une ligne que je répète : un verdict humain sur un échantillon est encore dû. Le dossier ne tient aucun verdict humain sur une image de la galerie. Elle reste non perçue.
 
 ### Le tribunal de la sécurité
 
-Le volet de sécurité part d'une affirmation. Le modèle de menace suppose qu'un modèle de langage détourné passera, et le rend inoffensif. Le modèle ne détient jamais la capacité, et donc un LLM trompé ne peut toujours pas agir. Le document n'essaie pas de détecter chaque invite malveillante.
+Le volet de sécurité part d'une affirmation. Le modèle de menace suppose qu'un modèle de langage détourné passera, et le rend inoffensif. Le modèle d'IA ne détient jamais la capacité, et donc un LLM trompé ne peut toujours pas agir. Le document n'essaie pas de détecter chaque invite malveillante.
 
 La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez n'importe quelle ligne après la première, et la chaîne dit quelle entrée s'est rompue. Si j'en modifie une, quelle entrée nomme-t-elle, et une mauvaise clé déclenche-t-elle la même accusation ? Exécutez-le :
 
@@ -155,7 +155,7 @@ done
 StzCloseSecurityLedger()
 ```
 
-Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. Le tribunal a refusé le modèle, et le registre compte `1` refus sans que personne n'ait appelé le registre ! C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
+Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. Le tribunal a refusé le modèle d'IA, et le registre compte `1` refus sans que personne n'ait appelé le registre ! C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
 
 Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections, et que chaque ligne de garantie contient une preuve. Une preuve est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation. Elle vérifie que chaque chemin de garde dans les lignes existe sur le disque, et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
 
@@ -193,7 +193,7 @@ La pause n'a pas compté : `w.ElapsedMs() < 200` a imprimé `1`, et `w.Record()[
 
 Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace, comme le montre le `1` ci-dessus, et le même identifiant de span, que ce bloc n'imprime pas. La phrase tient pour l'écho du serveur, que je n'ai pas exécuté, et non pour le chronomètre. Je la range parmi les demandes.
 
-L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'intérieur du programme. Un plan de performance est proposé par une machine, et seul un acteur effectif le valide. Que se passe-t-il quand un modèle demande à le valider, puis quand une personne le fait ? Exécutez-le :
+L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'intérieur du programme. Un plan de performance est proposé par une machine, et seul un acteur effectif le valide. Que se passe-t-il quand un modèle d'IA demande à le valider, puis quand une personne le fait ? Exécutez-le :
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
@@ -302,9 +302,9 @@ Six portes suivent, une pour chaque lecteur.
 
 **L'analyste.** Le modèle de menace est une table que vous pouvez lire : chaque ligne avec la garde qui la prouve et sa limite honnête. Le jugement de performance est déclaré avant que le code ne s'exécute.
 
-**Le concepteur.** Une image ou un son est une affirmation que seule une personne peut clore. La galerie dit qu'un modèle a regardé et qu'aucun humain ne l'a fait. Votre verdict est une ligne nommée dans le dossier.
+**Le concepteur.** Une image ou un son est une affirmation que seule une personne peut clore. La galerie dit qu'un modèle d'IA a regardé et qu'aucun humain ne l'a fait. Votre verdict est une ligne nommée dans le dossier.
 
-**Le décideur.** La question de savoir qui a décidé, et ce qui est écrit, a une réponse mécanique dans les deux volets. La même action est refusée pour le modèle et validée pour l'humain, les deux dans un seul audit, et la preuve est scellée de sorte qu'une modification soit nommée.
+**Le décideur.** La question de savoir qui a décidé, et ce qui est écrit, a une réponse mécanique dans les deux volets. La même action est refusée pour le modèle d'IA et validée pour l'humain, les deux dans un seul audit, et la preuve est scellée de sorte qu'une modification soit nommée.
 
 **Le formateur.** La règle du tuteur rencontre le tribunal. Prédisez le verdict d'une promesse avant que le voyageur ne la parcoure.
 

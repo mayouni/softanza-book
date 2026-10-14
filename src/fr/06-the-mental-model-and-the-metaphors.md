@@ -231,6 +231,6 @@ o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
 ? @@( o1.FindW('{ @item > 5 and print("hacked") }') )
 ```
 
-Exécutez-le. La condition commence par demander si un élément est au-dessus de 5. Regardez ce qui revient, et ce qui ne revient pas, et dites pourquoi avant de retourner aux sections. La section 3 dit ce que le moteur fait d'une condition qui appelle du code ; la section 6 dit ce que cela coûte, et la section 8 dit ce qu'un agent doit en faire. Quand vous l'aurez résolu, vous saurez pourquoi une réponse vide n'est pas encore la preuve que rien n'a correspondu.
+Exécutez-le. La condition commence par demander si un élément est au-dessus de 5. Regardez ce qui revient, et ce qui ne revient pas, et dites pourquoi avant de retourner aux sections. La section 3 dit ce que le moteur fait d'une condition qui appelle du code ; la section 6 dit ce que cela coûte, et la section 8 dit ce qu'un agent d'IA doit en faire. Quand vous l'aurez résolu, vous saurez pourquoi une réponse vide n'est pas encore la preuve que rien n'a correspondu.
 
 Le chapitre suivant passe au style d'écriture, et aux sept buts. Son principe tient en une phrase : ce que vous pensez est ce que vous écrivez.

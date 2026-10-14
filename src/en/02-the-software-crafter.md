@@ -16,13 +16,13 @@ rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
 ---
 
-In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
+In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
 ## 1. The concept, as the field holds it
 
 The field already has a word for programmers who care about their work: craftsmanship. A book of 2001 gave the idea its name, and a manifesto of 2009 gave it its slogan. Since then "software craftsman" has meant a professional who holds their code to a standard higher than the one the job requires. (General knowledge, not a study of the record.) It is a good movement. It is also a movement of programmers, about programmers' standards.
 
-The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: a model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its model, the person's work changes with it. (General knowledge, not a study of the record.)
+The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: an AI model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its AI model, the person's work changes with it. (General knowledge, not a study of the record.)
 
 The next section says what the site means by the word.
 
@@ -78,7 +78,7 @@ The engine drew the view from the data alone: `Maradi │ 3402094` is one of its
 
 The picture is the program's output: a boxed `Softanza` with round corners.
 
-**The decision-maker** declares what each actor in the world may do, a person or an agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? Load it:
+**The decision-maker** declares what each actor in the world may do, a person or an AI agent, and the court enforces it. An agent is a small text file. What does the court say to one that does not say what it covers? Load it:
 
 ```haro
 cPia = "pia: 1
@@ -113,7 +113,7 @@ The court refused it! Its reason is printed: `[pia-coverage @ coverage] an agent
 
 The Hausa sentence came back as `HELLO`. The Arabic word counts `4`, its letters and not its bytes, and its script is `arabic`.
 
-**The agent** is the sixth crafter, the one 2020 could not draw. It declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
+**The agent** is the sixth crafter, the one 2020 could not draw. An AI agent declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
 
 ```haro
 cLlm = "pia: 1
@@ -184,7 +184,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
 
-**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the agent proposes while a person decides. That rule is data the organisation attaches to its own model. Does the model judge itself, with an LLM actor in it that holds an effect?
+**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the AI agent proposes while a person decides. That rule is data the organisation attaches to its own domain model. Does that model judge itself, with an LLM actor in it that holds an effect?
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -201,15 +201,15 @@ g.AddRule(oRule)
 #--> 0
 ```
 
-`RulesAreSound()` answers `0`: the model finds its own `writer`, an LLM actor holding `effectful`, in violation of the rule.
+`RulesAreSound()` answers `0`: the domain model finds its own `writer`, an LLM actor holding `effectful`, in violation of the rule.
 
 The three cases are a restaurateur who is not a programmer, a bank under a regulator and an organisation that chose ownership over a vendor. The restaurateur and the organisation are crafters by the record; the bank is the licensee of a product, and the record does not say who there declared anything. The restaurateur and the organisation did not wait for the software industry, and each is offered ownership of what is built for them.
 
 ## 4. The decision, and what I refused
 
-**I kept the programmer first.** The vision of the platform, which I ratified, says it in one line: the first audience stays the programmer in a small team; the agentic era did not replace that person, it multiplied them. I held that agents do not make programmers obsolete.
+**I kept the programmer first.** The vision of the platform, which I ratified, says it in one line: the first audience stays the programmer in a small team; the agentic era did not replace that person, it multiplied them. I held that AI agents do not make programmers obsolete.
 
-**I added the agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
+**I added the AI agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
 **I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer (general knowledge, not a study of the record). The site's headline used it until 8 October 2026. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter. What this book's cover image carries, the record does not say, and this page does not say it for me.
 
@@ -221,7 +221,7 @@ The guards that prove these claims, and the one still in development, are in the
 
 ## 5. The court
 
-`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the model agent holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones; finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
+`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the agent whose mind is a language model, holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones; finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
 
 ## 6. The field, and where it leads
 
@@ -259,7 +259,7 @@ What is absent: the platforms of the three customers running on the Softanza eng
 
 ## 9. Exercise
 
-Declare one agent for a world you know: a shop, a class, an office. Write its file: what it covers, how reversible its acts are, when it runs, one skill. Before you run it, write the promise you expect under the question below. Then run it.
+Declare one AI agent for a world you know: a shop, a class, an office. Write its file: what it covers, how reversible its acts are, when it runs, one skill. Before you run it, write the promise you expect under the question below. Then run it.
 
 ```haro exercise
 ? StzAgentDeclarationQ(cYourAgent).IsValid()
@@ -284,6 +284,6 @@ g.AddRule(oRule)
 ? g.RulesAreSound()
 ```
 
-Then compare it with the answer printed in section 3, and say what the rule read to give each. Section 3 shows its two conditions. When you can say it, you will know which line of the model the rule reads.
+Then compare it with the answer printed in section 3, and say what the rule read to give each. Section 3 shows its two conditions. When you can say it, you will know which line of the domain model the rule reads.
 
 Chapter 3 is the method, from first principles, and the sentence its method returns to is this: you declare a world in a language made for it, and you govern how that world changes.

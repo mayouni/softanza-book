@@ -10,7 +10,7 @@ site: [learn, craft, principles]
 guards: [coderule_narrated, testoor_promises_narrated, 05_containsemptystrings, 466_keeping_the_history_of_updates_of_a_softanza_objec]
 stage:
   built: "les formes du vocabulaire dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse lue par une machine dans la forme propre à la maison"
-  designed: "un tribunal du style pour le code qu'un programmeur ou un agent écrit ; la grammaire d'écriture déclarée en Haro, pour qu'un modèle ne puisse écrire que dans elle"
+  designed: "un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit ; la grammaire d'écriture déclarée en Haro, pour qu'un modèle d'IA ne puisse écrire que dans elle"
   absent: "toute machine qui juge aujourd'hui le style d'un programme écrit avec la bibliothèque"
 status: draft
 rulings: ["12.2", "12.3", "12.14", "12.16", "12.17", "12.21"]
@@ -24,7 +24,7 @@ Dans ce chapitre, je prends les deux choses que le terrain appelle style de code
 
 ## Ce que l'âge de l'IA change ici
 
-Pendant des années, la plupart du code écrit avec Softanza l'a été d'une seule main, et cette main était la mienne. Le style de la bibliothèque était ma façon d'écrire. Puis les machines sont arrivées, et aujourd'hui la plupart du code, ici comme partout, est écrit par des modèles. La conception du volet de l'intelligence le dit en une phrase : la plupart de la programmation d'aujourd'hui est faite par des agents et des modèles de langage, pas par des humains.
+Pendant des années, la plupart du code écrit avec Softanza l'a été d'une seule main, et cette main était la mienne. Le style de la bibliothèque était ma façon d'écrire. Puis les machines sont arrivées, et aujourd'hui la plupart du code, ici comme partout, est écrit par des modèles d'IA. La conception du volet de l'intelligence le dit en une phrase : la plupart de la programmation d'aujourd'hui est faite par des agents et des modèles de langage, pas par des humains.
 
 Cela change ce qu'est un style. Un style qui vit dans les habitudes d'une seule personne meurt quand cette personne cesse d'écrire chaque ligne. Il doit devenir quelque chose à quoi l'on peut tenir une machine, et quelque chose qu'une machine peut vérifier, sinon il s'amenuise. Dans cette maison, il s'est amenuisé, et je vous montrerai où. Alors ce mouvement du livre, La programmation repensée, s'ouvre sur une loi qui a deux moitiés. La seconde existe à cause de l'âge : le code adhère à la façon dont une personne pense, et le tribunal le juge quel que soit celui qui l'a écrit. Par le tribunal, j'entends la machine qui juge un code selon les règles de la maison ; aujourd'hui elle ne juge que les propres classes de la bibliothèque, et la section 5 dit comment.
 
@@ -130,7 +130,7 @@ L'exécution a imprimé `[ 12500, 13000, 11500, 23, 46 ]`. Cinq valeurs, la vale
 
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer. Dans cette maison, elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
-Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore ; je le tiens pour une vue, non pour un résultat. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent puisse vérifier une classe avant qu'elle n'atterrisse. Cinq sur quatorze s'exécutent sur le graphe du code. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
+Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore ; je le tiens pour une vue, non pour un résultat. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent d'IA puisse vérifier une classe avant qu'elle n'atterrisse. Cinq sur quatorze s'exécutent sur le graphe du code. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -148,7 +148,7 @@ Les chapitres de cette partie prouvent la loi, chacun d'un côté. Le chapitre 6
 
 **J'ai laissé aller l'implémentation de la bibliothèque.** Le code que les modèles ont écrit à l'intérieur de la bibliothèque est accepté comme bon. Il ne ressemble pas au mien. Ses variables locales portent des soulignés des deux côtés, des centaines de fois par millier de lignes. Ce sont une protection. Le langage sous-jacent à Softanza laisse la variable locale d'une bibliothèque écraser la globale d'un appelant, et la convention l'empêche. Je n'ai pas demandé l'ancien style là, et je refuserais une campagne pour l'imposer.
 
-**J'ai refusé de laisser aller le style du code écrit avec Softanza.** Chaque ligne qu'un programmeur, une personne ou un agent, écrit avec la bibliothèque doit prendre le style historique. Ce style, c'est la scène, la chaîne une étape par ligne, le paramètre nommé, la forme du verbe, et la promesse sous chaque question. C'est la ligne que j'ai tracée quand j'ai vu ce qui s'était passé.
+**J'ai refusé de laisser aller le style du code écrit avec Softanza.** Chaque ligne qu'un programmeur, une personne ou un agent d'IA, écrit avec la bibliothèque doit prendre le style historique. Ce style, c'est la scène, la chaîne une étape par ligne, le paramètre nommé, la forme du verbe, et la promesse sous chaque question. C'est la ligne que j'ai tracée quand j'ai vu ce qui s'était passé.
 
 Ce qui s'est passé est mesurable. Une étude du dossier a compté la promesse sous chaque ligne, par millier de lignes. Dans les courtes recettes que la maison garde, il y en a près de cent. Dans mes articles, soixante-quinze. Dans les tests classiques, cinquante-deux. Dans les gardes que les sessions ont écrites, moins d'une. Elles affirment sous une autre forme, un appel qui nomme l'attente. Elles l'ont adoptée parce que les comparaisons nues des anciennes suites imprimaient 0 ou 1, ce qui ne distingue pas un bloc qui a échoué d'un bloc qui n'a jamais tourné. Cet écart est comblé maintenant ; l'exécuteur lit la promesse comme une affirmation. L'étude qui les a comptées recommande une forme unique pour les nouveaux blocs de test : la forme classique, un titre, les questions et les promesses dessous. Les blocs convertis restent tels qu'ils sont. Le dossier contient cette recommandation, et aucune décision de moi à ce sujet.
 
@@ -170,7 +170,7 @@ Le terrain mène sur l'application des règles. La plupart des langages courants
 
 Le terrain mène en portée et en gens. Il y a un marché du travail pour ses outils et aucun encore pour celui-ci, et les générateurs du terrain sont les plus grands qui existent.
 
-Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude qui a mesuré le dossier a trouvé que les blocs de code du site ne portent ni paramètre nommé ni scène : un dialecte réduit de la bibliothèque, montré à chaque visiteur. Un agent qui apprendrait du site apprendrait ce dialecte. Je n'ai pas mesuré de nouveau les blocs du site. Un style qui n'est pas montré n'est pas appris.
+Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude qui a mesuré le dossier a trouvé que les blocs de code du site ne portent ni paramètre nommé ni scène : un dialecte réduit de la bibliothèque, montré à chaque visiteur. Un agent d'IA qui apprendrait du site apprendrait ce dialecte. Je n'ai pas mesuré de nouveau les blocs du site. Un style qui n'est pas montré n'est pas appris.
 
 Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, et la forme du verbe est un contrat sur l'objet. La promesse sous la ligne est l'exemple, le test et la documentation à la fois.
 
@@ -178,13 +178,13 @@ Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est l
 
 Ce qui est construit : les formes du vocabulaire, dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse jugée par une machine.
 
-Ce qui est conçu : un tribunal du style pour le code qu'un programmeur ou un agent écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle y soit tenue avant d'être écrite.
+Ce qui est conçu : un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle d'IA y soit tenue avant d'être écrite.
 
 Ce qui est absent : toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque. La chaîne de la diapositive fondatrice ne s'exécute pas telle qu'écrite. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
 
 ## 8. Six portes
 
-**Le programmeur.** Vos lignes suivent votre raisonnement : sélectionner, contenir, compter, trouver, agir. Chaque question porte sa promesse, et un tribunal la lit que vous l'ayez écrite ou qu'un agent l'ait fait.
+**Le programmeur.** Vos lignes suivent votre raisonnement : sélectionner, contenir, compter, trouver, agir. Chaque question porte sa promesse, et un tribunal la lit que vous l'ayez écrite ou qu'un agent d'IA l'ait fait.
 
 **L'analyste.** La méthode part de votre problème en mots simples. Les mots-clés que vous employez deviennent les noms des étapes.
 
@@ -200,7 +200,7 @@ Ce qui est absent : toute machine qui juge, aujourd'hui, le style d'un programme
 
 Prenez la liste `[ "tea", "", "rice", "", "fish", "" ]`. Écrivez dans l'ordre les questions du modèle mental, une ligne chacune : contient-elle des chaînes vides, combien, où. Puis un acte, avec un paramètre nommé. Sous chaque question, écrivez la ligne qu'elle doit imprimer, avant d'exécuter quoi que ce soit.
 
-Exécutez. Puis demandez à un agent de résoudre le même problème, et jugez sa réponse avec deux questions seulement : chaque ligne suit-elle une étape de pensée, et chaque question porte-t-elle sa promesse.
+Exécutez. Puis demandez à un agent d'IA de résoudre le même problème, et jugez sa réponse avec deux questions seulement : chaque ligne suit-elle une étape de pensée, et chaque question porte-t-elle sa promesse.
 
 Je vous laisse celui-ci, exprès. La classe Basket de la section 3 échoue devant le tribunal parce que `AddQ` renvoie `42`. Changez cette seule valeur en `This` et exécutez de nouveau la question :
 

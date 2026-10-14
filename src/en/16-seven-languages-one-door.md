@@ -10,7 +10,7 @@ guards: [51_extercode_narrated, governance_narrated, virtual_environment_twin_na
 stage:
   built: "a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph"
   designed: "the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one"
-  absent: "a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door"
+  absent: "a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door"
 status: draft
 rulings: ["12.19", "12.20", "12.21", "12.22", "12.28", "12.29"]
 research: research/ch16.md
@@ -273,7 +273,7 @@ The call raised, and the trace still holds `0`! R's message was in French on thi
 
 What else is designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done with no source. Then the three tiers for Python, of which only the external subprocess exists. Then the domain library on top of the door, none of whose classes I found in code. And the facets, a memo that proposes and rules nothing.
 
-What is absent: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, which are defined in no file. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached only by the class. The model is not a door of this plane at all; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book does not teach it.
+What is absent: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, which are defined in no file. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached only by the class. The AI model is not a door of this plane at all; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book does not teach it.
 
 And a door shape I did not run: Julia, C and Prolog, for which no runtime is installed here. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. I ran none of it.
 
@@ -291,7 +291,7 @@ Six readings of the door follow, one for each person who meets it.
 
 **The educator.** A learner sees which layer belongs to which language and runs a two-door pipeline. The lesson is the difference between reading a language, running it, and writing in its syntax.
 
-**The agent.** You never reach the door by yourself. A function in an agent's file must carry a posture, and `external` fits a foreign runtime; and a model has no capability to produce effects (chapter 20).
+**The agent.** You never reach the door by yourself. A function in an AI agent's file must carry a posture, and `external` fits a foreign runtime; and an AI model has no capability to produce effects (chapter 20).
 
 ## 9. Exercise
 
@@ -323,4 +323,4 @@ oPy4.Execute()
 
 Run it. Read what the method prints and what it returns, and explain both before you touch the block; the page says why in section 7, where the way back is not closed. When you can, you will know why a way back that evaluates its data is not a closed one.
 
-Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. A model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+Chapter 17 opens the part on intelligence with its law: programmatic by default, the model last, admission over generation. An AI model there is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.

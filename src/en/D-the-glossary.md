@@ -14,7 +14,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **admission.** The act by which a candidate becomes knowledge: it is judged by the world's rules, and refused with a reason if it fails. Expression is free, and admission is governed. Chapters 17, 18.
 
-**agent.** A program that proposes and cannot commit. In the library an agent is a file, judged at load, whose model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
+**agent.** A program that proposes and cannot commit. In the library an AI agent is a file, judged at load, whose AI model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
 
 **architect.** What one holds in the scope of a solution: the profile, the worlds and the governance. Not a rank. Chapter 23.
 
@@ -24,11 +24,11 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **built.** One of the three stage words. The code exists, a guard exists, and a block ran. Chapter 3.
 
-**candidate.** What a reply, a model's answer or an example is, until the court has judged it. Chapter 18.
+**candidate.** What a reply, an AI model's answer or an example is, until the court has judged it. Chapter 18.
 
 **checkpoint.** A refusal kept for a person, with its context and a lifetime. Chapter 18.
 
-**commit.** The one act that reaches reality. Only a governed actor commits, under a scope, and the model cannot. Chapters 20, 24.
+**commit.** The one act that reaches reality. Only a governed actor commits, under a scope, and the AI model cannot. Chapters 20, 24.
 
 **commons.** The shared ground of a constellation, what every world of it stands on: an identity, a session, a store. It is a world like the others, world zero, and not a special kind of node. Chapters 4, 23.
 
@@ -90,7 +90,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **promise.** The line `#-->` under an expression, which says what it prints. A claim about a stop of the program, judged kept, diverged, unreached or unjudged. Chapters 1, 21.
 
-**proposal.** What a model, a reaction or an agent offers. It commits nothing. Chapters 17, 20, 26.
+**proposal.** What an AI model, a reaction or an AI agent offers. It commits nothing. Chapters 17, 20, 26.
 
 **refinement.** The write surface: a change declared with its points and judged by a four-stage gate. Chapter 10.
 

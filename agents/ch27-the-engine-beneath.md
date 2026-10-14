@@ -195,7 +195,7 @@ The decisions come next, and the first of them is about that future.
 
 **I decided that Haro is the language of languages.** The charter's header quotes my note of 1 October 2026. The charter was ratified that day, with my "go with your recommendations" on seven decisions. Its amendments of 4 October answer nineteen of the compass's questions, and the version stays ratified until I have read its section 15.
 
-**I decided that the surface is kept.** Its surface today is the one the compiler compiles. The library is its compatibility specification. Other surfaces are faces over one program graph: every syntax a face, so that an agent fluent in the former language, in Python or in JavaScript writes Haro. Of these only the first face exists. A Python-shaped face is a spelling, not Python.
+**I decided that the surface is kept.** Its surface today is the one the compiler compiles. The library is its compatibility specification. Other surfaces are faces over one program graph: every syntax a face, so that an AI agent fluent in the former language, in Python or in JavaScript writes Haro. Of these only the first face exists. A Python-shaped face is a spelling, not Python.
 
 **I removed the old framework, with no fallback.** Engine-only: no fallback, no feature flags, no Qt dependency. The status of 12 June 2026 says zero of them remain. I checked. No loaded file loads a Qt library. Two external extensions are loaded by name: a zip one, which base loads, and a cryptography one, in a folder that no entry file loads.
 

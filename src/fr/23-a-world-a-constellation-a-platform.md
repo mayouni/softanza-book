@@ -442,7 +442,7 @@ Les six portes viennent ensuite.
 
 **Le formateur.** Le dossier est mince. Le plan d'éducation liste une échelle du praticien à l'architecte puis au contributeur parmi cinq schémas de niveaux concurrents, et je le dis. L'exercice ci-dessous se juge en l'exécutant.
 
-**L'agent.** Un monde peut être enveloppé comme un agent que l'hôte fait avancer d'un tick à la fois. Un déploiement par un acteur modèle de langage est refusé, et rien n'est déployé. La traversée entre les mondes est gouvernée par le nom et l'autorité du monde appelant.
+**L'agent.** Un monde peut être enveloppé comme un agent d'IA que l'hôte fait avancer d'un tick à la fois. Un déploiement par un acteur modèle de langage est refusé, et rien n'est déployé. La traversée entre les mondes est gouvernée par le nom et l'autorité du monde appelant.
 
 ## 9. Exercice
 

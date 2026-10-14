@@ -2,7 +2,7 @@
 
 Source: Chapter 13. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
+Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
 Run: 17 of 17 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -10,7 +10,7 @@ In this chapter I run the two directions of natural language in the library: the
 
 ## 1. The concept, as the field holds it
 
-In the field's common language, "programming in natural language" means one thing: asking a model for code, or asking it to do the task, in a prompt. The tools are chat assistants and code completers, in wide use since about 2021. What the sentence runs on is the model's guess. The same sentence may give different code on different days, the model needs a network or a local runtime, and a person reads the result to know what was understood. Chapter 11 said it, and I point back.
+In the field's common language, "programming in natural language" means one thing: asking an AI model for code, or asking it to do the task, in a prompt. The tools are chat assistants and code completers, in wide use since about 2021. What the sentence runs on is the model's guess. The same sentence may give different code on different days, the model needs a network or a local runtime, and a person reads the result to know what was understood. Chapter 11 said it, and I point back.
 
 Older practices exist, and the record names them. Inform 7, a language whose programs are English sentences, compiled whole, with a world model and a way to say *it* across sentences. AppleScript, English-like and hard to write, because its naturalness was on the surface and not in a semantic model. Controlled natural languages, whose strongest device, the library's own comment says, is showing what can be said next. A session's reading of 30 August 2026 is that Inform 7 is a whole-text compiler with referential context, and not a command dispatcher. (General knowledge for the dates, not a study of the record.)
 
@@ -311,9 +311,9 @@ Now the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I built it without a model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
+**I built it without an AI model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
 
-**I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
+**I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and AI agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
 
 **I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. That is my view of language, not a result. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
 
@@ -345,7 +345,7 @@ A researcher ran the other guards named above once each on 8 October 2026, and i
 
 ## 6. The field, and where it leads
 
-The field leads in breadth of phrasing. A model accepts any phrasing in any language, and the dictionary accepts what the packs name. Measured above: the Hausa pack covers nine of twenty-five meanings, Turkish ten, Arabic sixteen, English twenty-three (the two it lacks, English reaches through the grown vocabulary), French twenty-five. And the sentence layer acts on three classes only: strings, lists and numbers. A customer's domain objects are not among them; the domain goes through the knowledge graph.
+The field leads in breadth of phrasing. An AI model accepts any phrasing in any language, and the dictionary accepts what the packs name. Measured above: the Hausa pack covers nine of twenty-five meanings, Turkish ten, Arabic sixteen, English twenty-three (the two it lacks, English reaches through the grown vocabulary), French twenty-five. And the sentence layer acts on three classes only: strings, lists and numbers. A customer's domain objects are not among them; the domain goes through the knowledge graph.
 
 The field leads in whole-program semantics. Inform 7 compiles a whole world. Here a program is a sequence of operations on a live object.
 
@@ -410,7 +410,7 @@ done
 
 What is built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
 
-What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that a model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
+What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
 What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. The record also holds no account, and no date, of the author's plea to the project of the former host language that natural programming be made a first concern. Nor does it hold a sentence of his in that voice that the book can source. All it holds is a private memo of 30 August 2026, which gives his judgement of the language's shipped natural form. The memo is marked private, so the book does not quote it and does not source any phrase to him.
 

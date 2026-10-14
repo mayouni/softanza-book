@@ -183,7 +183,7 @@ Six guards stand behind the blocks.
 
 ## 5. The court
 
-`orgrule_narrated` proves SOX, GDPR and HIPAA as rule bases over the chart's graph, with the four universal rules and the separation of duties that SOX adds, and the chart joining the one report. The block above prints the seven counts. `14_bceao_governance` proves two of the three rules of the regional validator. `15_multiple_validators` proves the combined verdict, and `13_segregation_of_duties` the second court. `rulereport_narrated` proves the one report over findings from code, agents and security. `36_import_from_stzorg` proves the text form of the chart.
+`orgrule_narrated` proves SOX, GDPR and HIPAA as rule bases over the chart's graph, with the four universal rules and the separation of duties that SOX adds, and the chart joining the one report. The block above prints the seven counts. `14_bceao_governance` proves two of the three rules of the regional validator. `15_multiple_validators` proves the combined verdict, and `13_segregation_of_duties` the second court. `rulereport_narrated` proves the one report over findings from code, AI agents and security. `36_import_from_stzorg` proves the text form of the chart.
 
 ## 6. The field, and where it leads
 
@@ -250,4 +250,4 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 Run it and put the three answers side by side. The regional court has already refused this chart, in section 3; now read what the second validator says of it, and why it is not the same as what the court said. Section 3 and section 4 say why. I do not give you the answer here. When you have it, you will know why a validator that answers `pass` has not judged the chart.
 
-The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the agent proposes, and a person decides.
+The next chapter leaves the bank for an organisation in the field, and its principle is one sentence: the AI agent proposes, and a person decides.

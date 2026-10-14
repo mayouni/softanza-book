@@ -57,7 +57,7 @@ Le dernier droit est appliqué par une seule règle, et cette règle est marqué
 
 ### L'intelligence sous la loi
 
-L'ensemble 31 est la réponse de la constitution à l'agent, et c'est là que le chapitre 20 la rencontre. Ses dix règles, avec la façon dont chacune est appliquée, telles que le fichier les consigne :
+L'ensemble 31 est la réponse de la constitution à l'agent d'IA, et c'est là que le chapitre 20 la rencontre. Ses dix règles, avec la façon dont chacune est appliquée, telles que le fichier les consigne :
 
 | Règle | Titre | Application |
 |---|---|---|
@@ -72,7 +72,7 @@ L'ensemble 31 est la réponse de la constitution à l'agent, et c'est là que le
 | 121 | L'assistant ne masque jamais le travail | jugement |
 | 124 | Le générateur livre une chose qui marche | jugement |
 
-La règle 98 est la loi du plan du chapitre 20, écrite pour une interface : une proposition n'est pas une validation. La règle 99 demande la marque sur le contenu fait par une machine ; la provenance du chapitre 14 est ce que la bibliothèque construit de plus proche. La règle 104 demande la lisibilité par la machine ; l'arbre d'accessibilité du chapitre 26 est ce que la bibliothèque construit de plus proche : ce qu'un lecteur d'écran peut manœuvrer, un agent peut le manœuvrer. Sept des dix sont appliquées par le jugement, et trois par une machine à venir.
+La règle 98 est la loi du plan du chapitre 20, écrite pour une interface : une proposition n'est pas une validation. La règle 99 demande la marque sur le contenu fait par une machine ; la provenance du chapitre 14 est ce que la bibliothèque construit de plus proche. La règle 104 demande la lisibilité par la machine ; l'arbre d'accessibilité du chapitre 26 est ce que la bibliothèque construit de plus proche : ce qu'un lecteur d'écran peut manœuvrer, un agent d'IA peut le manœuvrer. Sept des dix sont appliquées par le jugement, et trois par une machine à venir.
 
 ### Ce que la constitution interdit
 
@@ -80,4 +80,4 @@ La constitution dresse la liste de dix-sept motifs interdits, chacun lié aux r�
 
 ### Ce que ce livre en prend, et ce qu'il n'en prend pas
 
-Il en prend la grammaire fermée, qu'il utilise aux chapitres 25 et 26 ; les six droits, dont il en utilise un ; et les ensembles, dont il utilise celui des agents, et la règle 118 sur les cinq valeurs d'état. Il ne prend pas le reste. Aucune garde de la bibliothèque ne juge une coque contre les verbes, et le texte de conception de la bibliothèque liste encore vingt-quatre verbes issus d'un moteur d'interaction que j'ai retiré le 26 mai 2026. La liste de la constitution en compte vingt-deux.
+Il en prend la grammaire fermée, qu'il utilise aux chapitres 25 et 26 ; les six droits, dont il en utilise un ; et les ensembles, dont il utilise celui des agents d'IA, et la règle 118 sur les cinq valeurs d'état. Il ne prend pas le reste. Aucune garde de la bibliothèque ne juge une coque contre les verbes, et le texte de conception de la bibliothèque liste encore vingt-quatre verbes issus d'un moteur d'interaction que j'ai retiré le 26 mai 2026. La liste de la constitution en compte vingt-deux.

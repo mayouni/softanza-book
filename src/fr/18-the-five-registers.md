@@ -8,7 +8,7 @@ narrations: [stz-knowledge-programming-narration.md, stznatural-narration.md]
 site: [wise, byexample]
 guards: [wisecoding_narrated, wisecoding_rich_narrated, ownagentstack_narrated, tutor_gaps_narrated]
 stage:
-  built: "le but, l'écart et la question avec sa raison ; une réponse sous forme d'option, de structure de données ou de phrase découpée sur les virgules et sur le mot « and » ; la porte gouvernée avec ses refus ; le point de contrôle avec sa durée de vie ; le but accompli ou révoqué ; un agent câblé qui s'arrête là où il devrait inventer"
+  built: "le but, l'écart et la question avec sa raison ; une réponse sous forme d'option, de structure de données ou de phrase découpée sur les virgules et sur le mot « and » ; la porte gouvernée avec ses refus ; le point de contrôle avec sa durée de vie ; le but accompli ou révoqué ; un agent d'IA câblé qui s'arrête là où il devrait inventer"
   designed: "plusieurs lectures d'une même réponse, énumérées pour que la personne choisisse ; les alternatives les plus proches nommées après un refus ; l'exemple réécrit comme promesse"
   absent: "le registre de la formule ; le registre de l'exemple ; une conversation dont la question est formulée en arabe, en haoussa ou en français ; une valeur qui contient un espace"
 status: draft
@@ -24,7 +24,7 @@ Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et un
 
 La première est le remplissage d'emplacements (slot filling). Un cadre de dialogue demande à l'utilisateur les éléments manquants d'un formulaire jusqu'à ce que le formulaire soit plein. Les frameworks du terrain comprennent le texte libre avec des modèles entraînés, parlent sur de nombreux canaux et livrent des connecteurs, et ils demandent au concepteur d'écrire des intentions et des flux dans leur propre langage. Ils prennent la réponse de l'utilisateur pour la réponse et agissent dessus.
 
-La deuxième est le vibe coding, un nom mis en circulation en 2025 : l'humain soumet un prompt, le modèle produit, l'humain garde ce qui fonctionne.
+La deuxième est le vibe coding, un nom mis en circulation en 2025 : l'humain soumet un prompt, le modèle d'IA produit, l'humain garde ce qui fonctionne.
 
 La troisième est la programmation par l'exemple. Les tableurs remplissent une colonne à partir de deux exemples que vous avez tapés. La recherche appelle cela la synthèse inductive, et l'ère des modèles a fait de l'exemple la façon de piloter un modèle.
 
@@ -239,7 +239,7 @@ oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
 
 ### Programmatique par défaut : la conversation où il n'y a personne
 
-La loi du chapitre 17 dit que les conversations ont lieu d'abord dans le code. Voici la conversation sans personne et sans modèle. Un agent de la bibliothèque demande, une source de réponses (une simple fonction) répond, et chaque réponse passe par la même porte. Là où la source n'a pas de réponse, l'agent invente-t-il ? Exécutez-le :
+La loi du chapitre 17 dit que les conversations ont lieu d'abord dans le code. Voici la conversation sans personne et sans modèle. Un agent d'IA de la bibliothèque demande, une source de réponses (une simple fonction) répond, et chaque réponse passe par la même porte. Là où la source n'a pas de réponse, l'agent invente-t-il ? Exécutez-le :
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
@@ -322,7 +322,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 
 Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve). Les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont donc pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
 
-### Un modèle est une fluidité, jamais l'esprit
+### Un modèle d'IA est une fluidité, jamais l'esprit
 
 Sans modèle, que dit une conversation de sa propre fluidité ? Exécutez-le :
 
@@ -348,7 +348,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **J'ai refusé un bouchon.** Un agent réservé lève une erreur quand on le demande. Le document de conception appelle l'erreur levée la loi qui fonctionne, et dit qu'il ne faut pas la lire comme un défaut. J'ai refusé de faire semblant que le cinquième registre fonctionne.
 
-**J'ai refusé un agent qui comble un écart pour finir le travail.** Le wise coder s'arrête, et laisse l'écart à une personne.
+**J'ai refusé un agent d'IA qui comble un écart pour finir le travail.** Le wise coder s'arrête, et laisse l'écart à une personne.
 
 **J'ai refusé qu'une conversation possède un monde.** Elle a lieu à l'intérieur d'un espace de connaissances et n'en possède jamais un. Une copie de la connaissance tenue dans une session devient périmée.
 

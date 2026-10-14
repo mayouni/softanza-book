@@ -7,7 +7,7 @@ status: draft
 generated: agents
 ---
 
-Cette annexe s'adresse à un agent qui lit le livre, et à la personne qui lui donne le livre à lire. Elle dit ce que le livre offre sous une forme qu'une machine peut prendre, et ce qu'un agent peut en faire.
+Cette annexe s'adresse à un agent d'IA qui lit le livre, et à la personne qui lui donne le livre à lire. Elle dit ce que le livre offre sous une forme qu'une machine peut prendre, et ce qu'un agent peut en faire.
 
 ### Ce qu'il y a
 
@@ -25,7 +25,7 @@ Un bloc de code qui commence par la balise `haro` est exécuté dans la biblioth
 
 Un agent qui cite une promesse doit citer son verdict avec elle.
 
-### Ce qu'un agent peut faire, et ne peut pas faire
+### Ce qu'un agent d'IA peut faire, et ne peut pas faire
 
 - **Vous pouvez citer n'importe quelle cellule.** Un tableau de ce livre est une donnée. Une ligne qui dit « absent » est une ligne que vous pouvez répéter comme absente.
 - **Vous ne pouvez pas faire d'une cellule absente une cellule présente.** Le dossier retrouvera votre phrase et le fichier manquant côte à côte, et le livre le dit au chapitre 31.

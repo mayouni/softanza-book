@@ -217,7 +217,7 @@ oT = new stzAccessibilityTree(oShell, oP)
 #--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
 ```
 
-L'arbre répond `status`, et pour sa description `The truth of the build.`, la justification mot pour mot ! L'en-tête de la bibliothèque dit pourquoi : chaque toolkit garde l'accessibilité derrière un drapeau de performance, et c'est là que les utilisateurs n'obtiennent silencieusement rien. Donc ici il n'y a rien à garder derrière un drapeau et rien à oublier d'activer. Le même fichier dit ce qu'un lecteur d'écran peut manipuler, un agent peut le manipuler.
+L'arbre répond `status`, et pour sa description `The truth of the build.`, la justification mot pour mot ! L'en-tête de la bibliothèque dit pourquoi : chaque toolkit garde l'accessibilité derrière un drapeau de performance, et c'est là que les utilisateurs n'obtiennent silencieusement rien. Donc ici il n'y a rien à garder derrière un drapeau et rien à oublier d'activer. Le même fichier dit ce qu'un lecteur d'écran peut manipuler, un agent d'IA peut le manipuler.
 
 ### Un rail qui propose
 
@@ -297,7 +297,7 @@ Voilà ce qui tourne ; je dis maintenant ce que j'en ai décidé, et ce que j'ai
 
 **J'ai admis une lentille qui ne peut pas capturer.** La charte du domaine de projets pour ses produits : une vérité, dans des fichiers, et deux lentilles (les deux de la charte sont la paire de studios, et non deux shells). Ce que la charte a refusé, ce sont les cadres qui capturent le travail. Une lentille qui ne peut pas capturer est admissible. L'environnement est une projection de texte brut, et non un magasin.
 
-**Une session a retiré une facette, et je l'ai rétablie.** La conception de référence consigne que la facette Connexions était de première classe dans le prototype de juin 2026, et qu'un agent l'a retirée par un raisonnement circulaire. Le retrait s'est propagé en cascade dans cinq documents. Je l'ai rétablie. Celui qui décide du ruban est l'auteur.
+**Une session a retiré une facette, et je l'ai rétablie.** La conception de référence consigne que la facette Connexions était de première classe dans le prototype de juin 2026, et qu'un agent d'IA l'a retirée par un raisonnement circulaire. Le retrait s'est propagé en cascade dans cinq documents. Je l'ai rétablie. Celui qui décide du ruban est l'auteur.
 
 **J'ai accepté le shell du navigateur avec son coût, non mesuré.** La charte de l'IDE de la porte d'entrée a choisi un onglet de navigateur, construit avec le moteur, sans étape d'installation, et a nommé la perte.
 

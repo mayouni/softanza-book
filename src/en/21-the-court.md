@@ -16,7 +16,7 @@ rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
 ---
 
-In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
+In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
 ## 1. The concept, as the field holds it
 
@@ -109,11 +109,11 @@ It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! 
 
 The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
-The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by a model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
+The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by an AI model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
 
 ### The court of security
 
-The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
+The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The AI model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
 
 The evidence of what happened is a hash chain. Edit any line after the first, and the chain says which entry broke. If I edit one, which entry does it name, and does a wrong key draw the same accusation? Run it:
 
@@ -155,7 +155,7 @@ done
 StzCloseSecurityLedger()
 ```
 
-It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
+It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the AI model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
 
 What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
 
@@ -193,7 +193,7 @@ The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:run
 
 Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. I list it among the requests.
 
-The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when a model asks to commit it, and then a person does? Run it:
+The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when an AI model asks to commit it, and then a person does? Run it:
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
@@ -302,9 +302,9 @@ Six doors follow, one for each reader.
 
 **The analyst.** The threat model is a table you can read: each row with the guard that proves it and its honest limit. The performance judgment is declared before the code runs.
 
-**The designer.** A picture or a sound is a claim only a person can close. The gallery says a model looked and no human has. Your verdict is a named line in the record.
+**The designer.** A picture or a sound is a claim only a person can close. The gallery says an AI model looked and no human has. Your verdict is a named line in the record.
 
-**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.
+**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.
 
 **The educator.** The tutor's rule meets the court. Predict the verdict of a promise before the traveller walks it.
 

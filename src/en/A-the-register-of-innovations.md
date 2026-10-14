@@ -18,7 +18,7 @@ Of the forty-six, eight are not told in this book: the adverb engine, named vari
 | # | Innovation | The record's one line | In this book | The study's evidence (7 October 2026) |
 |---|---|---|---|---|
 | 1 | Scope-Oriented Programming | behaviour with an invisible governing frame, cured in four moves; four instances | 8, 23 | a design of 450 lines; instances in regex, system, delivery |
-| 2 | The Softanzuter ladder | pattern, Xuter, Softanzuter, agent | 9, 17 | two engines, fifteen blocks, an agent mind |
+| 2 | The Softanzuter ladder | pattern, Xuter, Softanzuter, AI agent | 9, 17 | two engines, fifteen blocks, an agent mind |
 | 3 | Reaxis | reactive programming redesigned as Container, Stream, Rfunction | 9 | ten code files, fifty-nine test files, two engine modules |
 | 4 | Near-natural programming, NNL and `stzNatural` | close enough to natural language to be readable, structured enough to execute | 13 | three narrations, two design documents, a folder of thirteen files |
 | 5 | Knowledge programming, `.zknw` | the semantics of thought: one knowledge file, an operational system | 14 | a narration that runs; the knowledge graph in seventy-one files |

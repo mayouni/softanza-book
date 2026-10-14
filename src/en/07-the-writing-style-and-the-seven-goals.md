@@ -207,7 +207,7 @@ Next comes the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or agent, is asked to write with Softanza embraces the historic style.
+**I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or AI agent, is asked to write with Softanza embraces the historic style.
 
 **I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. The study's finding is that there is no court over either.
 

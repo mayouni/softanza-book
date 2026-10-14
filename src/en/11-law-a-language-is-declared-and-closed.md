@@ -23,7 +23,7 @@ In this chapter I state the law of Part III and run it. I begin with a sentence 
 
 ## What the AI age changes here
 
-In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence can be a model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
+In Part II, the age changed who writes the code. Here it changes who speaks the sentence. A sentence of a language used to have a person behind it, someone who could be asked what they meant. Today the writer of a sentence can be an AI model, which cannot be asked, and which will write a fluent sentence whether or not it is true.
 
 So the grammar must be closed, and the court, the part that accepts or refuses a sentence by its grammar, must read it. A language whose sentences may contain anything cannot refuse anything, and a court cannot judge a sentence it cannot read. The vision of the platform puts the whole movement in one line, which I ratified: humans and machines meet in declared languages, small, closed and judged, not in general-purpose code.
 
@@ -33,7 +33,7 @@ This is also where the order of the book turns around. The cover goes from the f
 
 For a working programmer, a language is a general host, Python, JavaScript, Java. A "domain language" is usually a library whose calls read like sentences, while the file around them may contain any code of the host. The estate's own study of the field, written in August 2026, names what happened to those designs. Internal languages died of openness, because a build file is declarative only until someone writes arbitrary code in it. Language workbenches died of the weight of their tools. And it names the languages that won: SQL, regular expressions, Make, HTML and CSS, the configuration languages. They won because they are closed.
 
-The model era added one practice: when a model writes, either check what it wrote, or constrain its output while it writes, with a grammar or a schema. The reference implementation of grammar-constrained sampling is an open project, and the record says so where it uses the same algorithm. And in the field's common language today, "programming in natural language" means one thing: prompting a model.
+The model era added one practice: when an AI model writes, either check what it wrote, or constrain its output while it writes, with a grammar or a schema. The reference implementation of grammar-constrained sampling is an open project, and the record says so where it uses the same algorithm. And in the field's common language today, "programming in natural language" means one thing: prompting a model.
 
 ## 2. The first principle
 
@@ -41,7 +41,7 @@ The model era added one practice: when a model writes, either check what it wrot
 
 ## 3. The Softanza form
 
-Can a sentence run without a model guessing what it means? It can, when every word of it is in a dictionary the library owns:
+Can a sentence run without an AI model guessing what it means? It can, when every word of it is in a dictionary the library owns:
 
 ```haro
 Naturally("
@@ -96,7 +96,7 @@ o1 = Naturally("Create a string with 'softanza' Uppercse it")
 #--> 0
 ```
 
-The misspelled verb is not guessed. `Unresolved()` answers `[ [ "Uppercse", "uppercase" ] ]`, the word it met beside the word the library thinks you meant, and `UnderstoodAll()` answers `0`: the program admits that it did not understand everything. That is the permissive mode: an unknown word is skipped and reported. An agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
+The misspelled verb is not guessed. `Unresolved()` answers `[ [ "Uppercse", "uppercase" ] ]`, the word it met beside the word the library thinks you meant, and `UnderstoodAll()` answers `0`: the program admits that it did not understand everything. That is the permissive mode: an unknown word is skipped and reported. An AI agent gets the strict mode, which refuses, and a world, a declared list of allowed operations, can limit its sentences to that list:
 
 ```haro
 try
@@ -126,7 +126,7 @@ The other direction of natural code in Softanza is the near-natural chain, where
 
 The chain answered `0`, and `Why()` gave the reason: `no: 8 is not less than 4`. A verdict says why.
 
-Now the law at its sharpest: a model. The library declares the shape of an answer as a schema. What happens to a schema that names a type the library does not have? It is judged when it is declared, before any model is called:
+Now the law at its sharpest: an AI model. The library declares the shape of an answer as a schema. What happens to a schema that names a type the library does not have? It is judged when it is declared, before any model is called:
 
 ```haro
 try
@@ -203,7 +203,7 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 **I kept the promise of 2020 and changed its mechanism.** My first slide promised executable natural language. The vision of 2026 judged that slogan: it promised more than a court can defend, because a natural sentence can be ambiguous and a lie can be grammatical. So the naturalness stays at the door, where a sentence asks or drafts, and the execution belongs to closed languages a court can judge. I built the natural layer that way long before the vision named it. Only words defined in the dictionary are interpreted. Every other word is skipped and reported, or refused in strict mode, never guessed.
 
-**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers: their letter-order cipher had been inverted by its own inventor, from memory, and they duplicated meanings. A language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
+**I took governance out of the library and kept the refusals in it.** In July 2026, a kit for governing AI agents landed inside the natural layer. I removed it the same day: the strict mode, the refusals, the why and the understood belong to the library; a product for governing agents does not. And I removed a set of markers: their letter-order cipher had been inverted by its own inventor, from memory, and they duplicated meanings. A language a person speaks never marks a reference that way. An ungrammatical chain that runs is a bug.
 
 **I refused a second embedding.** Chapter 1 states that decision; here I add only that a door brings a foreign runtime, a surface brings a familiar syntax over the same grammar, and Chapter 16 tells the difference.
 
@@ -242,13 +242,13 @@ These are the limits; the next section opens six doors on them.
 
 ## 8. Six doors
 
-**The programmer.** You keep writing code. What you declare is a closed grammar, and the court judges your sentence and an agent's by the same rules.
+**The programmer.** You keep writing code. What you declare is a closed grammar, and the court judges your sentence and an AI agent's by the same rules.
 
 **The analyst.** Your domain's words become a data pack, and the system understands them or refuses them with the reason.
 
 **The designer.** The refusals are part of the language: what is off the list is refused in strict mode, so it never needs a warning.
 
-**The decision-maker.** A model held to a declared grammar answers in the right shape. It can still answer a falsehood in the right shape, and the record prints that limit with the result.
+**The decision-maker.** An AI model held to a declared grammar answers in the right shape. It can still answer a falsehood in the right shape, and the record prints that limit with the result.
 
 **The educator.** A sentence in Hausa, French or Arabic runs and says back what it understood, so a learner reads the machine's reading of their own words.
 
@@ -256,7 +256,7 @@ These are the limits; the next section opens six doors on them.
 
 ## 9. Exercise
 
-Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers a model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
+Declare, with `StzOutputSchemaQ`, a record of three fields from a domain you know: a loan request, for instance, with an amount inside a band, a currency from a closed list, and a purpose in free text. Before you run anything, write three answers an AI model might give: one the court must accept, one it must refuse because of its shape, and one it will accept although it is false. Under each, write your prediction as a promise.
 
 Run it. The third answer is the lesson of this chapter. Write down, in one sentence, who in your domain must judge it, since the grammar cannot.
 

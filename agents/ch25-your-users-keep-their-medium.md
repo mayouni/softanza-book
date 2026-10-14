@@ -6,13 +6,13 @@ Stage: built: the governed conversation with its question as data; the SMS port 
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
 
-In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
+In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
 ## 1. The concept, as the field holds it
 
 Conversational commerce, or omnichannel: a business reaches its customers in the channels they already use, and a dialogue engine sits behind them. These are the practices, from general knowledge and not from a study of the record. Every date and every provider rule is to be re-read before print, as the study of the record says in its own "Not measured". That study is an outside reader's long study of the project's roots, and its section 12.25 is the one about messaging.
 
-The dialogue frameworks own the dialogue model. The designer writes intents and flows in the framework's notation, and the framework understands free text with trained models and ships connectors to channels.
+The dialogue frameworks own the dialogue model. The designer writes intents and flows in the framework's notation, and the framework understands free text with trained AI models and ships connectors to channels.
 
 The business platform of a messaging app: messages arrive by a webhook, and the business may answer freely inside a service window that the customer opened. Outside it, only approved templates, through a verified business account.
 
@@ -85,7 +85,7 @@ func QuestionAfter(cA, cB)
 
 The question is data, so any medium renders it. And the medium's own law, here that SMS is billed per segment and the alphabet decides, is a test and not a surprise. The English text is 93 characters by my count, and the block prints one segment. The same frame with two Arabic dish names is 89 units by my count (the two names are four letters shorter). The block prints `ucs2` and two segments, because the encoding changes. Four letters shorter, and one segment more! The telephone number is invented, and only the country code, which is Niger's, is real.
 
-Now the whole conversation, rehearsed over the SMS sandbox before any account exists. A conversation is a loop of the library's verbs: the medium carries each question out and each reply in. The assertions are the bill and the refusal. What does the sandbox count, and what does the court say to "7"? Nothing in the loop is a model:
+Now the whole conversation, rehearsed over the SMS sandbox before any account exists. A conversation is a loop of the library's verbs: the medium carries each question out and each reply in. The assertions are the bill and the refusal. What does the sandbox count, and what does the court say to "7"? Nothing in the loop is an AI model:
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
@@ -239,7 +239,7 @@ done
 
 `unknown reach surface 'whatsapp' (web/desktop/mobile)`: the platform refused it! It names the three surfaces it has, and the same refusal answers `:ussd`.
 
-**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for a model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. What does the court say to a sentence the business never approved? Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
+**What may be said to a customer is a closed set.** The court of what is said has a mechanism today: a closed enumeration compiled to a grammar. Chapters 11 and 19 use it for a language and for an AI model's output. Here it holds the replies that a business is willing to send. It is not a messaging-template unit, and there is none. What does the court say to a sentence the business never approved? Two things to print with it: the message says "the model answered" whoever the speaker is, and the enumeration is case-folded:
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
@@ -270,7 +270,7 @@ The refusals below, after the first, are the record's: a session's decisions, wr
 
 **Messaging, the question.** The study's report of my ask: conversations happen programmatically by default, or through minimal configuration, without obliging the users to change their usability cultures. The study's section is titled "ruled" and not "ruled by the author", and its proposals for the conversational surfaces are a session's. The record holds no ruling of mine that adopts them. I say *proposed*, not *decided*.
 
-**A conversation needs no model.** The floor is deterministic. A model can upgrade the fluency behind the same surface.
+**A conversation needs no AI model.** The floor is deterministic. A model can upgrade the fluency behind the same surface.
 
 **Voice is not a paradigm.** The plan of record says out until asked in writing: all of dialogue management, wake words, intent parsing and barge-in.
 

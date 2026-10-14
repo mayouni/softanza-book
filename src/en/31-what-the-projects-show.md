@@ -191,7 +191,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 |---|---|---|
 | The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the study promises; the study's own rule notation is not the library's |
-| An agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
+| An AI agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
 | Offline by default | the study's word that the browser-side outbox is already in service | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
 
 ### Across the three
@@ -209,7 +209,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 ### What the study of the record marks for measurement
 
-The comparative study that read the record says, in its own paragraphs headed "Not measured", what it leaves to measure next. It read the record and did not run it: its closing assessment of the record says "Nothing in it was run". Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by a model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. The study applies its own perception law to itself, which is why I trust the paragraph.
+The comparative study that read the record says, in its own paragraphs headed "Not measured", what it leaves to measure next. It read the record and did not run it: its closing assessment of the record says "Nothing in it was run". Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by an AI model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. The study applies its own perception law to itself, which is why I trust the paragraph.
 
 ## 4. The decision, and what I refused
 
@@ -241,7 +241,7 @@ The field leads in hardware in the field. The declared machine boots and judges 
 
 The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime; Haro's own speed is the measure still to come.
 
-The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
+The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
 
 Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 

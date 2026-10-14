@@ -8,7 +8,7 @@ narrations: [stz-conditional-code-narration.md, stznatural-vs-ring-naturallib.md
 site: [languages]
 guards: [structuredoutput_narrated, schema_grammar_narrated, constrained_decoding_narrated, 483_w_and_wf_forms_in_conditional_code, calc_column_engine_narrated]
 stage:
-  built: "dans la bibliothèque : une déclaration jugée au moment où elle est déclarée ; un tribunal et une grammaire issus d'une seule déclaration, avec la liste de ce que la grammaire a laissé tomber ; une machine à grammaire qui parcourt les octets et refuse en nommant ; une description pour une personne et un prompt pour un modèle à partir du même texte. Hors de la bibliothèque : une forge qui transforme une déclaration en tribunal et en grammaire, exécutée sur les propres langages du domaine de projets"
+  built: "dans la bibliothèque : une déclaration jugée au moment où elle est déclarée ; un tribunal et une grammaire issus d'une seule déclaration, avec la liste de ce que la grammaire a laissé tomber ; une machine à grammaire qui parcourt les octets et refuse en nommant ; une description pour une personne et un prompt pour un modèle d'IA à partir du même texte. Hors de la bibliothèque : une forge qui transforme une déclaration en tribunal et en grammaire, exécutée sur les propres langages du domaine de projets"
   designed: "la forge à l'intérieur de la bibliothèque ; sa liste complète de produits issus d'une seule déclaration (imprimeur, graphe de connaissance, porte naturelle, narration, runtime, un seul binaire statique) ; les projections d'un langage vers une application"
   absent: "la grammaire de la forge pour un mot de menu ; une garde qui affirme le refus d'une fonction hôte dans une condition ; le chiffre deux sur dix contre dix sur dix, qui demande un fichier de modèle que l'instantané ne contient pas"
 status: draft
@@ -16,7 +16,7 @@ rulings: ["12.10", "12.21", "12.27", "12.29", "12.30"]
 research: research/ch12.md
 ---
 
-Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour la forge. C'est la machinerie qui transforme la seule déclaration d'un langage en son tribunal et sa grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
+Dans ce chapitre, je prends une seule déclaration de la commande d'un restaurant et je la donne à trois lecteurs : une personne, un modèle d'IA et le tribunal. Je laisse la même déclaration produire une grammaire, et je montre où la grammaire et le tribunal s'accordent et où ils se séparent. Puis je quitte la bibliothèque pour la forge. C'est la machinerie qui transforme la seule déclaration d'un langage en son tribunal et sa grammaire, et je dis ce qu'elle a forgé et ce qu'elle n'a pas forgé. J'ai décidé que Haro est la langue des langues, et j'ai refusé une forme d'échappatoire ouverte. Le principe est une règle de Haro : déclarer un langage est aussi facile que déclarer une variable.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -91,7 +91,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 
 La deuxième paire est l'enjeu du chapitre : la grammaire répond `1` et le tribunal répond `0` ! Je n'imprime pas la liste de ce que la grammaire a laissé tomber, parce que son texte porte, à un endroit, l'ancien nom du tribunal. Je vérifie qu'elle nomme la borne de l'intervalle.
 
-On ne demande pas au modèle d'être prudent. L'échantillonneur demande à la grammaire, à chaque jeton candidat, si elle pourrait continuer. Ainsi un mot qui n'est pas au menu n'est pas refusé après avoir été dit. Peut-il seulement commencer ?
+On ne demande pas au modèle d'IA d'être prudent. L'échantillonneur demande à la grammaire, à chaque jeton candidat, si elle pourrait continuer. Ainsi un mot qui n'est pas au menu n'est pas refusé après avoir été dit. Peut-il seulement commencer ?
 
 ```haro
 ? StzGrammarCouldContinue(cG, "dish: t")
@@ -219,8 +219,8 @@ Par facette, j'entends ici une surface d'un langage déclaré. La charte liste c
 |---|---|---|
 | le texte | la déclaration, simple et fermée, avec une justification exigée sur chaque déclaration | construit à l'extérieur ; l'analogue de la bibliothèque est la déclaration de schéma |
 | le tribunal | le juge généré pour le langage, qui parle dans les mots propres de la déclaration | construit à l'extérieur ; l'analogue de la bibliothèque est `Verify` et `Accepts` |
-| la bouche | la grammaire pour un modèle contraint | construit dans la bibliothèque pour les schémas ; construit à l'extérieur pour les langages déclarés, la forme seulement |
-| le prompt | l'instruction qu'un modèle lit, réglée par la mesure | construit dans la bibliothèque ; inconnu pour les langages déclarés |
+| la bouche | la grammaire pour un modèle d'IA contraint | construit dans la bibliothèque pour les schémas ; construit à l'extérieur pour les langages déclarés, la forme seulement |
+| le prompt | l'instruction qu'un modèle d'IA lit, réglée par la mesure | construit dans la bibliothèque ; inconnu pour les langages déclarés |
 | la lecture de la personne | une description pour un humain | construit dans la bibliothèque (`Describe`) |
 | la voix | le langage qui narre une exécution, une phrase, un refus ; jamais stocké et jamais relu par l'analyse | construit à l'extérieur ; l'analogue de la bibliothèque est `Understood()` |
 | les langues | une langue humaine comme fichier de données | construit à l'extérieur pour deux langues ; construit dans la bibliothèque pour cinq paquets (chapitre 11) |
@@ -231,7 +231,7 @@ Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai décidé que Haro est la langue des langues.** L'en-tête de la charte me cite, du 1er octobre 2026 : Haro est une langue des langues, dans laquelle les artisans du logiciel définissent un langage pour leur domaine et programment avec lui, ou laissent leurs agents le faire. La charte enregistre un renversement : sa première décision, en tant que socle généraliste sous la famille des langages déclarés, a été renversée. Le reste de cette ratification était mon « suivez vos recommandations » sur sept décisions, et ce sont des décisions par délégation.
+**J'ai décidé que Haro est la langue des langues.** L'en-tête de la charte me cite, du 1er octobre 2026 : Haro est une langue des langues, dans laquelle les artisans du logiciel définissent un langage pour leur domaine et programment avec lui, ou laissent leurs agents d'IA le faire. La charte enregistre un renversement : sa première décision, en tant que socle généraliste sous la famille des langages déclarés, a été renversée. Le reste de cette ratification était mon « suivez vos recommandations » sur sept décisions, et ce sont des décisions par délégation.
 
 **J'ai décidé de déclarer, et non d'écrire.** L'acte du noyau : déclarer un langage. Ce fut une extraction et non une invention : les premiers langages ont été déclarés après qu'ils tournaient déjà et avaient des consommateurs.
 

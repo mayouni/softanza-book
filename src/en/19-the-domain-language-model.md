@@ -22,7 +22,7 @@ In this chapter I forge a domain language model from a knowledge base, and no on
 
 A language model predicts the next token. A token is a fragment of text with no type, no role and no constraint: it can be the end of a word, a space, a bracket. Everything a model says is built by choosing tokens one after another. Everything that makes the result useful, that it is a valid sentence, that it is true, that it fits a schema, is checked afterwards or enforced from outside.
 
-The field has made this work with three tools. You adapt a general model to a domain by training it further on the domain's documents. You give it the relevant documents at the moment of the question, retrieved by similarity. And you constrain its decoding with a grammar, so that it cannot produce a malformed sentence, as chapter 11 showed. All three keep the unit the same: the token.
+The field has made this work with three tools. You adapt a general AI model to a domain by training it further on the domain's documents. You give it the relevant documents at the moment of the question, retrieved by similarity. And you constrain its decoding with a grammar, so that it cannot produce a malformed sentence, as chapter 11 showed. All three keep the unit the same: the token.
 
 The next section names the one thing I change: the unit.
 
@@ -171,7 +171,7 @@ remove(cGguf)
 
 It is small: a single layer that predicts the next word from the previous one, `15 pairs over a 12-word vocab`. And it learns: `loss 2.57 -> 0.70`. The library inspects the exported file and prints `2`, the two tensors it holds, a weight and a bias. I do not claim another runtime loads it as a text generator. It trains in a fraction of a second, offline, and gives the same numbers on every run.
 
-What does a model like this say? It is fluent in the grammar of the domain, and it is wrong about facts. That is the reason for the gate:
+What does a neural model like this say? It is fluent in the grammar of the domain, and it is wrong about facts. That is the reason for the gate:
 
 ```haro
 aCorpus = oDLM.GenerateCorpus()
@@ -209,7 +209,7 @@ On 13 July 2026, I ruled on this. The concept of a domain language model had bee
 
 **I refused the token as the unit.** The unit is a chunk of the world, which a graph can admit or refuse.
 
-**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
+**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial AI model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
 
 **I refused neural first.** The finding I start from is that the canonical model is not neural. A review of the earlier product archived a transformer of one to three billion parameters, in favour of rule-based prediction. Its ground was that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
 
@@ -225,11 +225,11 @@ Section 6 asks where the field leads, and where this model stands.
 
 ## 6. The field, and where it leads
 
-The field leads in scale. Training and serving models of every size is a mature practice. This second rung is a single layer over twelve words, and the steps that would make it more, a validated corpus, deduplication, a trained tokenizer, a larger network, quantisation, are not done. I do not compete with large models.
+The field leads in scale. Training and serving AI models of every size is a mature practice. This second rung is a single layer over twelve words, and the steps that would make it more, a validated corpus, deduplication, a trained tokenizer, a larger network, quantisation, are not done. I do not compete with large AI models.
 
-The field leads in fluency, which is the point of a model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
+The field leads in fluency, which is the point of an AI model. A first rung that answers from facts will say "I hold no 'contains' knowledge about 'tiramisu'." where a general AI model would write something plausible, and for a customer the plausible thing is often more useful. The record's own answer is the second rung, and its present state is the one section 7 gives.
 
-Where I think this stands apart is in what the output is. A general model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
+Where I think this stands apart is in what the output is. A general AI model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
 
 Section 7 says what is built, what is designed and what is absent.
 
@@ -248,7 +248,7 @@ What is absent: an end-of-sentence word for the second rung, which is why one of
 
 ## 8. Six doors
 
-**The programmer.** A model is a file you can read, diff and test: its facts, its laws and its goldens.
+**The programmer.** A domain language model is a file you can read, diff and test: its facts, its laws and its goldens.
 
 **The analyst.** A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; the model's own answers do not read it yet.
 
@@ -270,4 +270,4 @@ I left this one in your hands. Section 3 says that completion sees one word and 
 
 When you have solved it, you will know why a completion that sees one word lists the objects of every fact of that relation.
 
-Chapter 20 turns from what a model says to what an agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
+Chapter 20 turns from what an AI model says to what an AI agent does. Its title is *Agents that cannot hurt you*, and its principle is this: do not build safe agents; build a safe world, and let ordinary agents loose inside it.

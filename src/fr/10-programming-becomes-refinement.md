@@ -20,7 +20,7 @@ Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C
 
 ## 1. Le concept, tel que le terrain le tient
 
-Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites. Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
+Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites. Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents d'IA qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
 
 Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. (Connaissance générale, non une étude du dossier.) Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume ; je tiens cela pour une vue, non pour un résultat.
 
@@ -223,7 +223,7 @@ Derrière la barrière se tiennent des décisions, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé de gouverner l'intelligence.** Une bonne part de l'approche du terrain pour les agents est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation. (Connaissance générale, comme plus haut.) J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde : c'est mon point de vue. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
+**J'ai refusé de gouverner l'intelligence.** Une bonne part de l'approche du terrain pour les agents d'IA est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation. (Connaissance générale, comme plus haut.) J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde : c'est mon point de vue. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
 
 **J'ai refusé le diff comme unité.** Un diff est un changement de texte. Un raffinement est une proposition typée sur un point déclaré, avec un genre, des bornes et une origine. J'ai gardé le diff comme artefact, et je l'ai refusé comme ce qu'il faut relire.
 
@@ -243,7 +243,7 @@ Le terrain mène en infrastructure, où planifier et appliquer sont la pratique 
 
 Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
-Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
+Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle d'IA. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
 
 Voyons maintenant où la barrière s'arrête.
 
@@ -276,7 +276,7 @@ Ce qui est construit, et où cela s'arrête : les limites de la barrière telle 
 
 ## 9. Exercice
 
-Prenez deux réglages d'un de vos programmes : un taux et un plafond, par exemple, avec une règle selon laquelle le taux doit rester sous le plafond. Déclarez-les comme des points, avec des bornes, et déclarez la règle qui les couvre. Avant de rien exécuter, écrivez sous chaque proposition si elle est admise et, sinon, à quelle étape elle est refusée. Proposez un changement du taux au-dessus du plafond, et un autre depuis une origine que vous déclarez comme un modèle, contre un plancher que vous fixez. Puis remontez jusqu'à zéro et avancez d'un pas.
+Prenez deux réglages d'un de vos programmes : un taux et un plafond, par exemple, avec une règle selon laquelle le taux doit rester sous le plafond. Déclarez-les comme des points, avec des bornes, et déclarez la règle qui les couvre. Avant de rien exécuter, écrivez sous chaque proposition si elle est admise et, sinon, à quelle étape elle est refusée. Proposez un changement du taux au-dessus du plafond, et un autre depuis une origine que vous déclarez comme un modèle d'IA, contre un plancher que vous fixez. Puis remontez jusqu'à zéro et avancez d'un pas.
 
 Exécutez-le. Si vous vous êtes trompé sur l'étape, vous avez trouvé un endroit où votre propre barrière est en désaccord avec votre propre attente.
 

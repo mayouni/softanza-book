@@ -10,7 +10,7 @@ guards: [51_extercode_narrated, governance_narrated, virtual_environment_twin_na
 stage:
   built: "un registre fermé de six runtimes étrangers et un appel par processus qui rapporte sous forme de listes les résultats de Python et de NodeJS ; les postures de confiance ; la répétition d'un lancement par le jumeau ; un lecteur de Python et de JavaScript vers un seul graphe de code"
   designed: "la porte gouvernée, avec une posture demandée à l'appel ; le pont du moteur et ses trois niveaux ; la bibliothèque de domaines au-dessus de la porte ; Haro portant une syntaxe Python et une syntaxe JavaScript"
-  absent: "une porte dont le chemin du retour est fermé ; une porte pour R qui s'exécute ; une exécution réussie d'un runtime étranger dans le tribunal de la bibliothèque ; le modèle comme porte"
+  absent: "une porte dont le chemin du retour est fermé ; une porte pour R qui s'exécute ; une exécution réussie d'un runtime étranger dans le tribunal de la bibliothèque ; le modèle d'IA comme porte"
 status: draft
 rulings: ["12.19", "12.20", "12.21", "12.22", "12.28", "12.29"]
 research: research/ch16.md
@@ -273,7 +273,7 @@ L'appel a levé une erreur, et la trace garde pourtant `0` ! Le message de R ét
 
 Ce qui est conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu. Un module de même nom dans le macroplan, un registre de chaînes, a été marqué fait alors qu'il n'avait aucune source. Puis les trois niveaux pour Python, dont seul le sous-processus externe existe. Puis la bibliothèque de domaines au-dessus de la porte, dont je n'ai trouvé aucune classe dans le code. Et les facettes, une note qui propose et ne tranche rien.
 
-Ce qui est absent : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, qui ne sont définies dans aucun fichier. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS ne sont atteintes que par la classe. Le modèle n'est pas du tout une porte de ce volet ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre ne l'enseigne pas.
+Ce qui est absent : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, qui ne sont définies dans aucun fichier. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS ne sont atteintes que par la classe. Le modèle d'IA n'est pas du tout une porte de ce volet ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre ne l'enseigne pas.
 
 Et une forme de porte que je n'ai pas exécutée : Julia, C et Prolog, pour lesquels aucun runtime n'est installé ici. Et une troisième relation, nommée dans l'étude à côté de la porte : l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu. `range0`, le range de Python comme fonction de l'hôte, a une garde. Le relevé propre du dossier lui compte cinq échecs sur des plages qui devraient être vides et un sur la forme de tranche `':5:-1'`. Je n'en ai rien exécuté.
 
@@ -291,7 +291,7 @@ Six lectures de la porte suivent, une pour chacun de ceux qui la rencontrent.
 
 **Le formateur.** Un apprenant voit quelle couche appartient à quel langage et exécute un pipeline à deux portes. La leçon est la différence entre lire un langage, l'exécuter, et écrire dans sa syntaxe.
 
-**L'agent.** Vous n'atteignez jamais la porte par vous-même. Une fonction dans le fichier d'un agent doit porter une posture, et `external` convient à un runtime étranger ; et un modèle n'a aucune capacité de produire des effets (chapitre 20).
+**L'agent.** Vous n'atteignez jamais la porte par vous-même. Une fonction dans le fichier d'un agent d'IA doit porter une posture, et `external` convient à un runtime étranger ; et un modèle d'IA n'a aucune capacité de produire des effets (chapitre 20).
 
 ## 9. Exercice
 
@@ -323,4 +323,4 @@ oPy4.Execute()
 
 Exécutez-le. Lisez ce que la méthode imprime et ce qu'elle renvoie, et expliquez les deux avant de toucher au bloc ; la page dit pourquoi dans la section 7, là où le chemin du retour n'est pas fermé. Quand vous le pourrez, vous saurez pourquoi un chemin du retour qui évalue ses données n'est pas fermé.
 
-Le chapitre 17 ouvre la partie sur l'intelligence par sa loi : programmatique par défaut, le modèle en dernier, l'admission plutôt que la génération. Un modèle y est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Le chapitre 17 ouvre la partie sur l'intelligence par sa loi : programmatique par défaut, le modèle en dernier, l'admission plutôt que la génération. Un modèle d'IA y est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.

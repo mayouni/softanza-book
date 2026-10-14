@@ -94,7 +94,7 @@ Le plancher est donc là : déclarer, construire, répéter, refuser le faux, va
 
 Maintenant ce que les projets montrent, et l'étape qui les suit.
 
-Softanza a-t-elle été utilisée ? Oui. Je l'ai écrit au chapitre 1 et je m'y tiens. Des parties de Softanza sont en production, et d'autres sont en développement. L'étude qui a lu le dossier la première fois, une lecture faite par une session d'un modèle, a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré. Je l'ai corrigée. Trois projets, et leur retour, ont façonné sa conception. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence. Le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier. Un avenant a été clos le 4 août ; le carnet montre que le propriétaire a pris part à la première démonstration, et le 19 août il a fait une journée de mesures sur le terrain avec deux téléphones. Le dernier enregistrement daté de ce projet est du 25 août 2026, et le prochain sera celui que la phase suivante écrira. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, chaque leçon qu'il nomme et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
+Softanza a-t-elle été utilisée ? Oui. Je l'ai écrit au chapitre 1 et je m'y tiens. Des parties de Softanza sont en production, et d'autres sont en développement. L'étude qui a lu le dossier la première fois, une lecture faite par une session d'un modèle d'IA, a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré. Je l'ai corrigée. Trois projets, et leur retour, ont façonné sa conception. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence. Le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier. Un avenant a été clos le 4 août ; le carnet montre que le propriétaire a pris part à la première démonstration, et le 19 août il a fait une journée de mesures sur le terrain avec deux téléphones. Le dernier enregistrement daté de ce projet est du 25 août 2026, et le prochain sera celui que la phase suivante écrira. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, chaque leçon qu'il nomme et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
 
 Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation est conçu, et sa construction est à venir. Le site dit que leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli. Ce pas est le prochain.
 
@@ -112,7 +112,7 @@ Le dernier pas est une loi du domaine de projets, et elle a été gagnée. Le vo
 
 Le dossier tient déjà la forme de la ligne. Dans un autre volet, le 2 octobre 2026, le dossier dit que le Principal, son nom pour moi (le chapitre 32 le dit), a écouté un son que la bibliothèque avait fait et a dit, dans les mots écrits : « yes it's real drum!! » (les mots sont écrits en anglais dans le dossier) Ce n'est pas une solution, et ce n'est pas un client. Mais c'est une personne, une date et une phrase, et c'est à cela que ressemblera la ligne suivante.
 
-Le dossier tient aussi deux verdicts à venir. Les images que la bibliothèque dessine ont été jugées par un modèle, quarante et une images ou sections de texte, vingt justes, neuf fausses, douze incertaines. Le dossier dit qu'aucun humain ne les a encore regardées ; ce regard est le prochain verdict. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont la suite.
+Le dossier tient aussi deux verdicts à venir. Les images que la bibliothèque dessine ont été jugées par un modèle d'IA, quarante et une images ou sections de texte, vingt justes, neuf fausses, douze incertaines. Le dossier dit qu'aucun humain ne les a encore regardées ; ce regard est le prochain verdict. L'exécution en réel du volet des paiements avec le compte de test de l'organisation a été reportée, par moi, et rapportée comme non perçue. Ni l'un ni l'autre n'est un échec. Les deux sont la suite.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -128,7 +128,7 @@ Le dossier tient aussi deux verdicts à venir. Les images que la bibliothèque d
 
 ## 5. Le tribunal
 
-Le plancher de ce chapitre repose sur trois gardes. `full_scope_model_narrated`, le socle commun de l'architecte, prouve qu'une solution est d'abord modélisée, qu'un déploiement avant une construction est refusé et consigné comme une erreur, et qu'un modèle ne peut pas effectuer le déploiement. `virtual_system_twin_narrated` prouve que la répétition ne touche rien de réel, que le plan se narre lui-même, et que valider est l'unique porte. `service_delivery_narrated` prouve qu'un déploiement en production avec un faux lié ne s'exécute pas du tout, avec chaque raison nommée, et que la barrière s'ouvre une fois le service réel.
+Le plancher de ce chapitre repose sur trois gardes. `full_scope_model_narrated`, le socle commun de l'architecte, prouve qu'une solution est d'abord modélisée, qu'un déploiement avant une construction est refusé et consigné comme une erreur, et qu'un modèle d'IA ne peut pas effectuer le déploiement. `virtual_system_twin_narrated` prouve que la répétition ne touche rien de réel, que le plan se narre lui-même, et que valider est l'unique porte. `service_delivery_narrated` prouve qu'un déploiement en production avec un faux lié ne s'exécute pas du tout, avec chaque raison nommée, et que la barrière s'ouvre une fois le service réel.
 
 Le tribunal du sujet de ce chapitre n'est pas une garde. C'est une ligne du dossier : qui, quand, et ce qu'il a dit. Cette ligne est la prochaine à écrire.
 
@@ -142,7 +142,7 @@ Le terrain mène sur le matériel en service. Ses appareils tournent dans des bo
 
 Le terrain mène en vitesse. Le runtime auquel Softanza s'est mesurée était plus rapide sur chaque ligne, d'un facteur compris entre un et deux, et la note du domaine de projets a consigné la mesure.
 
-Là où je pense que le dossier se distingue, c'est dans ce à quoi il se tient. Chaque référence a un document. Chaque étape a un mot. Selon le document de conception, le déploiement émulé fait tourner le même artefact que celui qui est livré. Un faux ne peut pas être livré et un modèle ne peut pas valider. Et une perception est une ligne nommée, datée, citée, ce qu'un logo sur une page d'accueil ne porte pas.
+Là où je pense que le dossier se distingue, c'est dans ce à quoi il se tient. Chaque référence a un document. Chaque étape a un mot. Selon le document de conception, le déploiement émulé fait tourner le même artefact que celui qui est livré. Un faux ne peut pas être livré et un modèle d'IA ne peut pas valider. Et une perception est une ligne nommée, datée, citée, ce qu'un logo sur une page d'accueil ne porte pas.
 
 ## 7. La limite
 
@@ -160,7 +160,7 @@ Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le
 
 **L'analyste.** Demandez deux choses avant de compter un projet comme preuve : un document, et un verdict nommé.
 
-**Le concepteur.** Ce que vous concevez est jugé en dernier par le sens d'une personne. L'opinion d'un modèle sur une image est un résultat ; celle d'une personne est le verdict.
+**Le concepteur.** Ce que vous concevez est jugé en dernier par le sens d'une personne. L'opinion d'un modèle d'IA sur une image est un résultat ; celle d'une personne est le verdict.
 
 **Le décideur.** Lisez le mot d'étape avant la promesse. Aujourd'hui le plancher est construit ; l'exécution chez un client sur le moteur est le prochain jalon, et son mot d'étape est absent.
 
@@ -198,6 +198,6 @@ oDep = oDel.Deploy(:Production)
 ? oDel.Log().EntriesOfLevel(:error)[2][:message]
 ```
 
-Lancez celui-là aussi. Lisez ce que répond `WasCommitted()`, et lisez le journal : le bloc de la section 3 imprimait sa deuxième entrée d'erreur pour la personne, et je ne dis rien de celle de l'assistant. La section 5 dit ce que prouvent les trois gardes, et la section 8 ce qu'on refuse à un agent. Quand la barrière répondra, vous saurez ce qu'elle refuse pour ce qui est vrai et ce qu'elle refuse pour qui demande.
+Lancez celui-là aussi. Lisez ce que répond `WasCommitted()`, et lisez le journal : le bloc de la section 3 imprimait sa deuxième entrée d'erreur pour la personne, et je ne dis rien de celle de l'assistant. La section 5 dit ce que prouvent les trois gardes, et la section 8 ce qu'on refuse à un agent d'IA. Quand la barrière répondra, vous saurez ce qu'elle refuse pour ce qui est vrai et ce qu'elle refuse pour qui demande.
 
 Le livre s'arrête ici, et chaque bloc qu'il contient est à vous pour le relancer. Il s'arrête sur le prochain jalon : une solution sur le moteur propre de Softanza, et ce que dit une personne nommée qui l'a utilisée.

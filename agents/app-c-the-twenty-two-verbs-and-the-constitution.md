@@ -52,7 +52,7 @@ The last right is enforced by a single rule, and that rule is marked as a matter
 
 ### Intelligence under law
 
-Set 31 is the constitution's answer to the agent, and it is where chapter 20 meets it. Its ten rules, with how each is enforced, as the file records it:
+Set 31 is the constitution's answer to the AI agent, and it is where chapter 20 meets it. Its ten rules, with how each is enforced, as the file records it:
 
 | Rule | Title | Enforcement |
 |---|---|---|
@@ -67,7 +67,7 @@ Set 31 is the constitution's answer to the agent, and it is where chapter 20 mee
 | 121 | The Assistant Never Masks the Work | judgment |
 | 124 | The Generator Ships a Working Thing | judgment |
 
-Rule 98 is the law of chapter 20's plan, written for an interface: a proposal is not a commit. Rule 99 asks for the mark on machine-made content; chapter 14's provenance is the nearest thing the library builds. Rule 104 asks for machine legibility; chapter 26's accessibility tree is the nearest thing the library builds: what a screen reader can operate, an agent can operate. Seven of the ten are enforced by judgment, and three by a machine that is to come.
+Rule 98 is the law of chapter 20's plan, written for an interface: a proposal is not a commit. Rule 99 asks for the mark on machine-made content; chapter 14's provenance is the nearest thing the library builds. Rule 104 asks for machine legibility; chapter 26's accessibility tree is the nearest thing the library builds: what a screen reader can operate, an AI agent can operate. Seven of the ten are enforced by judgment, and three by a machine that is to come.
 
 ### What the constitution forbids
 
@@ -75,4 +75,4 @@ The constitution lists seventeen forbidden patterns, each tied to the rules it v
 
 ### What this book takes from it, and what it does not
 
-It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for agents, and Rule 118 on the five values of status. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.
+It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for AI agents, and Rule 118 on the five values of status. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.

@@ -16,13 +16,13 @@ rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
 ---
 
-Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est une phrase qui joint celle du site et celle du glossaire : un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare.
+Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent d'IA, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est une phrase qui joint celle du site et celle du glossaire : un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare.
 
 ## 1. Le concept, tel que le terrain le tient
 
 Le terrain a déjà un mot pour les programmeurs qui prennent soin de leur travail : l'artisanat (craftsmanship). Un livre de 2001 a donné son nom à l'idée, et un manifeste de 2009 lui a donné son slogan. Depuis, « software craftsman » désigne un professionnel qui tient son code à un niveau plus élevé que celui que le travail exige. (Connaissance générale, non une étude du dossier.) C'est un bon mouvement. C'est aussi un mouvement de programmeurs, sur les standards des programmeurs.
 
-Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont pas les programmeurs » définissent la personne par un outil. La première est le low-code : des gens du métier qui construisent des applications sur la plateforme visuelle d'un éditeur, le « développeur citoyen » des analystes. La seconde est l'agent de code : un modèle qui lit des fichiers, les modifie et lance des commandes, piloté en mots simples. Le « vibe coding » est le nom de la pratique qui consiste à garder tout ce qu'il écrit. Les deux réponses ont la même forme. La personne est définie par un outil, et le travail vit là où vit l'outil. Quand l'éditeur change ses prix ou son modèle, le travail de la personne change avec. (Connaissance générale, non une étude du dossier.)
+Les deux autres réponses du terrain à « qui fait le logiciel, si ce ne sont pas les programmeurs » définissent la personne par un outil. La première est le low-code : des gens du métier qui construisent des applications sur la plateforme visuelle d'un éditeur, le « développeur citoyen » des analystes. La seconde est l'agent de code : un modèle d'IA qui lit des fichiers, les modifie et lance des commandes, piloté en mots simples. Le « vibe coding » est le nom de la pratique qui consiste à garder tout ce qu'il écrit. Les deux réponses ont la même forme. La personne est définie par un outil, et le travail vit là où vit l'outil. Quand l'éditeur change ses prix ou son modèle d'IA, le travail de la personne change avec. (Connaissance générale, non une étude du dossier.)
 
 La section suivante dit ce que le site entend par ce mot.
 
@@ -78,7 +78,7 @@ Le moteur a dessiné la vue à partir des seules données : `Maradi │ 3402094`
 
 L'image est la sortie du programme : un `Softanza` encadré, aux coins arrondis.
 
-**Le décideur** déclare ce que chaque acteur du monde peut faire, une personne ou un agent, et le tribunal l'impose. Un agent est un petit fichier texte. Que dit le tribunal à celui qui ne dit pas ce qu'il couvre ? Chargez-le :
+**Le décideur** déclare ce que chaque acteur du monde peut faire, une personne ou un agent d'IA, et le tribunal l'impose. Un agent est un petit fichier texte. Que dit le tribunal à celui qui ne dit pas ce qu'il couvre ? Chargez-le :
 
 ```haro
 cPia = "pia: 1
@@ -113,7 +113,7 @@ Le tribunal l'a refusé ! Sa raison est imprimée : `[pia-coverage @ coverage] a
 
 La phrase en haoussa est revenue en `HELLO`. Le mot arabe compte `4`, ses lettres et non ses octets, et son écriture est `arabic`.
 
-**L'agent** est le sixième artisan du logiciel, celui que 2020 ne pouvait pas dessiner. Il se déclare dans le même genre de fichier, et il est le bienvenu, avec une seule chose retenue. Un agent dont l'esprit est un modèle de langage peut proposer ; il ne peut pas détenir d'effet. Qu'arrive-t-il à un fichier qui lui en donne un ?
+**L'agent** est le sixième artisan du logiciel, celui que 2020 ne pouvait pas dessiner. Un agent d'IA se déclare dans le même genre de fichier, et il est le bienvenu, avec une seule chose retenue. Un agent dont l'esprit est un modèle de langage peut proposer ; il ne peut pas détenir d'effet. Qu'arrive-t-il à un fichier qui lui en donne un ?
 
 ```haro
 cLlm = "pia: 1
@@ -184,7 +184,7 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 L'organigramme échoue, avec `"issuecount", 3` : trois constats pour un organigramme de deux postes ! Chacun est une règle avec un numéro qu'un auditeur peut lire : `BCEAO-001: No Board of Directors found` est le premier. Le dossier montre la banque comme titulaire d'une licence d'un produit que j'ai construit ; il ne dit pas qui, à la banque, a déclaré quoi que ce soit, et cette page ne le dit pas.
 
-**Une organisation sur le terrain.** Une organisation qui travaille au Niger, avec un siège à Niamey et des bases sur le terrain, a demandé un hub. Son propre cahier des charges préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été choisie à la place. L'étude liste quatre gains, la possession en tête. L'organisation possède son vocabulaire et ses règles, les change sans programmer, ne paie pas de licence par poste, et peut tout remettre à un programmeur de son propre pays. L'étude de conception a été construite avec ses équipes entre le 22 septembre et le 8 octobre 2026. Deux de ses principes sont ceux du livre en petit : par défaut on travaille hors ligne, et l'agent propose tandis qu'une personne décide. Cette règle est une donnée que l'organisation attache à son propre modèle. Le modèle se juge-t-il lui-même, avec en lui un acteur LLM qui détient un effet ?
+**Une organisation sur le terrain.** Une organisation qui travaille au Niger, avec un siège à Niamey et des bases sur le terrain, a demandé un hub. Son propre cahier des charges préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été choisie à la place. L'étude liste quatre gains, la possession en tête. L'organisation possède son vocabulaire et ses règles, les change sans programmer, ne paie pas de licence par poste, et peut tout remettre à un programmeur de son propre pays. L'étude de conception a été construite avec ses équipes entre le 22 septembre et le 8 octobre 2026. Deux de ses principes sont ceux du livre en petit : par défaut on travaille hors ligne, et l'agent d'IA propose tandis qu'une personne décide. Cette règle est une donnée que l'organisation attache à son propre modèle de domaine. Ce modèle se juge-t-il lui-même, avec en lui un acteur LLM qui détient un effet ?
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -201,15 +201,15 @@ g.AddRule(oRule)
 #--> 0
 ```
 
-`RulesAreSound()` répond `0` : le modèle trouve son propre `writer`, un acteur LLM qui détient `effectful`, en violation de la règle.
+`RulesAreSound()` répond `0` : le modèle de domaine trouve son propre `writer`, un acteur LLM qui détient `effectful`, en violation de la règle.
 
 Les trois cas sont un restaurateur qui n'est pas programmeur, une banque sous un régulateur et une organisation qui a choisi la possession plutôt qu'un éditeur. Le restaurateur et l'organisation sont des artisans du logiciel selon le dossier ; la banque est titulaire d'une licence d'un produit, et le dossier ne dit pas qui, là-bas, a déclaré quoi que ce soit. Le restaurateur et l'organisation n'ont pas attendu l'industrie du logiciel, et chacun se voit offrir la possession de ce qui est construit pour lui.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai gardé le programmeur en premier.** La vision de la plateforme, que j'ai ratifiée, le dit en une ligne : le premier public reste le programmeur d'une petite équipe ; l'ère agentique ne l'a pas remplacé, elle l'a multiplié. J'ai tenu que les agents ne rendent pas les programmeurs obsolètes.
+**J'ai gardé le programmeur en premier.** La vision de la plateforme, que j'ai ratifiée, le dit en une ligne : le premier public reste le programmeur d'une petite équipe ; l'ère agentique ne l'a pas remplacé, elle l'a multiplié. J'ai tenu que les agents d'IA ne rendent pas les programmeurs obsolètes.
 
-**J'ai ajouté l'agent comme artisan du logiciel, et retenu un pouvoir.** L'agent est le sixième lecteur de chaque langage Softanza : à la fois un constructeur et un utilisateur. Il reçoit un atelier et un tribunal. Il ne reçoit pas la capacité de valider.
+**J'ai ajouté l'agent d'IA comme artisan du logiciel, et retenu un pouvoir.** L'agent est le sixième lecteur de chaque langage Softanza : à la fois un constructeur et un utilisateur. Il reçoit un atelier et un tribunal. Il ne reçoit pas la capacité de valider.
 
 **J'ai refusé « maker », et j'ai refusé « builder ».** « Maker » nomme le mouvement des ateliers, le fer à souder et l'imprimante 3D (connaissance générale, non une étude du dossier). L'accroche du site l'a employé jusqu'au 8 octobre 2026. « Builder » nomme quelqu'un qui assemble ce qu'un plan dit. Aucun des deux ne dit ce que je crois qu'est la programmation. C'est un travail de la main, fait avec soin, sur quelque chose qui est à vous : c'est de l'artisanat. J'appelle la personne qui le fait un artisan du logiciel. Ce que porte l'image de couverture de ce livre, le dossier ne le dit pas, et cette page ne le dit pas à ma place.
 
@@ -221,7 +221,7 @@ Les gardes qui prouvent ces affirmations, et celle qui est en développement, so
 
 ## 5. Le tribunal
 
-`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent modèle qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. À ce commit, elle est en développement. Je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa ; terminer cette exécution est l'étape suivante. La page compte donc ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
+`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent dont l'esprit est un modèle de langage, qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. À ce commit, elle est en développement. Je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa ; terminer cette exécution est l'étape suivante. La page compte donc ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
 
 ## 6. Le terrain, et où il mène
 
@@ -259,7 +259,7 @@ Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur
 
 ## 9. Exercice
 
-Déclarez un agent pour un monde que vous connaissez : une boutique, une classe, un bureau. Écrivez son fichier : ce qu'il couvre, à quel point ses actes sont réversibles, quand il s'exécute, une compétence. Avant de l'exécuter, écrivez la promesse que vous attendez sous la question ci-dessous. Puis exécutez-le.
+Déclarez un agent d'IA pour un monde que vous connaissez : une boutique, une classe, un bureau. Écrivez son fichier : ce qu'il couvre, à quel point ses actes sont réversibles, quand il s'exécute, une compétence. Avant de l'exécuter, écrivez la promesse que vous attendez sous la question ci-dessous. Puis exécutez-le.
 
 ```haro exercise
 ? StzAgentDeclarationQ(cYourAgent).IsValid()
@@ -284,6 +284,6 @@ g.AddRule(oRule)
 ? g.RulesAreSound()
 ```
 
-Comparez-la ensuite à la réponse imprimée dans la section 3, et dites ce que la règle a lu pour donner chacune. La section 3 montre ses deux conditions. Quand vous saurez le dire, vous saurez quelle ligne du modèle la règle lit.
+Comparez-la ensuite à la réponse imprimée dans la section 3, et dites ce que la règle a lu pour donner chacune. La section 3 montre ses deux conditions. Quand vous saurez le dire, vous saurez quelle ligne du modèle de domaine la règle lit.
 
 Le chapitre 3 est la méthode, depuis les premiers principes, et la phrase à laquelle sa méthode revient est celle-ci : vous déclarez un monde dans un langage fait pour lui, et vous gouvernez la façon dont ce monde change.

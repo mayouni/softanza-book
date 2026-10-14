@@ -2,7 +2,7 @@
 
 Source: Chapter 9. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
+Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
 
@@ -72,7 +72,7 @@ rxu() {
 
 It did not: the results read `[ 700 ]`, the triggers that fired read `[ "number" ]`. `BIG` is nowhere! Every trigger is matched once against the original text, and what one trigger writes is not offered to the others. That is the whole difference between the second rung and the third.
 
-The cascade runs one rung above, at the fourth rung, the agent: the thinking machine given a body in a world, and a goal. Its mind is made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skill firings were verified, and goes on until the world stops changing, or for twenty rounds at most. What does it answer when asked again?
+The cascade runs one rung above, at the fourth rung, the AI agent: the thinking machine given a body in a world, and a goal. Its mind is made of skills, each with a condition and an action, which chain. The second skill fires on the fact the first one wrote. `Pursue()` returns how many skill firings were verified, and goes on until the world stops changing, or for twenty rounds at most. What does it answer when asked again?
 
 ```haro
 oAgent = new stzPIAgent("cook")
@@ -97,7 +97,7 @@ oAgent.AddSkill(s2)
 
 It answers `2`, then `0`, and between the two the fact `served` reads `TRUE`. That is a fixpoint. The guard that proves it labels the scene in its own words: `the cascade to fixpoint (Softanzuter at agent level)`. In chapter 17 you will see this same agent refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
 
-So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
+So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for AI agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
 
 **Reaxis** is the other half of the chapter's title, and it is a different idea. It is reactive programming with a vocabulary redesigned from the ground. A reactive thing is a Container, a Stream and an Rfunction: a function in waiting, which is not a callback. Data flows through a stream in plain words, a transformation, a filter, what to do with what passes. Four prices go in, 80, 90, 100 and 120: which ones come out, and at what value?
 
@@ -244,7 +244,7 @@ The next section says where all of this stops.
 
 ## 7. The limit
 
-What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills chain.
+What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
 
 What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
 
