@@ -98,7 +98,7 @@ LIGHT = {
   "--ink": "#1a1612", "--ink-soft": "#3a3326", "--soft": "#6b6358", "--soft-2": "#9a9078",
   "--paper": "#ffffff", "--bg": "#fbfaf6", "--rule": "#e3ddc9", "--rule-strong": "#1a1612",
   "--hover-bg": "#f3eedf", "--hover-bg-soft": "#fcfaf5", "--card-bg": "#ffffff", "--sidebar-bg": "#f5f0e2",
-  "--bookmark": "#E96A1A",
+  "--bookmark": "#E96A1A", "--bookmark-text": "#b3480a",
   "--shadow-cover": "rgba(40, 30, 18, 0.16)", "--shadow-soft": "rgba(40, 30, 18, 0.08)",
   "--shadow-side": "rgba(0, 0, 0, 0.12)", "--scrim": "rgba(26, 22, 18, 0.45)", "--scrim-search": "rgba(26, 22, 18, 0.42)",
   "--shadow-panel": "rgba(26, 22, 18, 0.28)", "--shadow-pill": "rgba(26, 22, 18, 0.18)",
@@ -116,7 +116,7 @@ DARK = {
   "--ink": "#ece6da", "--ink-soft": "#cfc6b4", "--soft": "#a39a88", "--soft-2": "#7d7565",
   "--paper": "#1d1a16", "--bg": "#14120f", "--rule": "#3a342b", "--rule-strong": "#ece6da",
   "--hover-bg": "#2a251e", "--hover-bg-soft": "#221e19", "--card-bg": "#1d1a16", "--sidebar-bg": "#191612",
-  "--bookmark": "#ef7a2e",
+  "--bookmark": "#ef7a2e", "--bookmark-text": "#f4a066",
   "--shadow-cover": "rgba(0, 0, 0, 0.55)", "--shadow-soft": "rgba(0, 0, 0, 0.35)",
   "--shadow-side": "rgba(0, 0, 0, 0.5)", "--scrim": "rgba(0, 0, 0, 0.6)", "--scrim-search": "rgba(0, 0, 0, 0.58)",
   "--shadow-panel": "rgba(0, 0, 0, 0.6)", "--shadow-pill": "rgba(0, 0, 0, 0.5)",
@@ -281,7 +281,7 @@ pre .c-promise{color:var(--code-promise);}
 .lang-toggle a:not(.active):hover{background:var(--hover-bg);color:var(--ink);}
 
 .status-banner{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;border-radius:4px;margin:0 0 14px;border:1px solid var(--rule);color:var(--soft);background:var(--sidebar-bg);}
-.status-banner.st-draft{border-color:var(--bookmark);color:var(--bookmark);background:transparent;}
+.status-banner.st-draft{border-color:var(--bookmark);color:var(--bookmark-text);background:transparent;}
 .status-banner.st-missing{border-color:var(--bad);color:var(--bad);background:transparent;}
 .spine-badge{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:2px 7px;margin-left:10px;vertical-align:2px;}
 
@@ -315,7 +315,7 @@ pre .c-promise{color:var(--code-promise);}
 
 .decision{background:var(--decision-bg);border-left:4px solid var(--ink);border-radius:0 6px 6px 0;padding:6px 26px 22px;margin:44px -26px 36px -30px;}
 .decision > .subsection-h{margin-top:26px;}
-.decision-tag{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--bookmark);margin-top:18px;}
+.decision-tag{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--bookmark-text);margin-top:18px;}
 
 .court{border:1px solid var(--rule);border-radius:6px;padding:14px 18px;margin:1.4em 0;background:var(--card-bg);font-family:var(--sans);}
 .chapter-page .court p.court-head{font-size:12px;line-height:1.5;color:var(--soft);margin:0 0 10px;font-family:var(--sans);}
@@ -334,7 +334,7 @@ pre .c-promise{color:var(--code-promise);}
 .doors td{font-family:var(--serif);font-size:1.12em;line-height:1.5;}
 .doors td:first-child{font-family:var(--sans);font-size:1em;}
 
-.author-q{font-family:var(--sans);font-size:0.72em;font-weight:600;color:var(--bookmark);border:1px dashed var(--bookmark);border-radius:4px;padding:1px 6px;}
+.author-q{font-family:var(--sans);font-size:0.72em;font-weight:600;color:var(--bookmark-text);border:1px dashed var(--bookmark);border-radius:4px;padding:1px 6px;}
 .sources{background:var(--sidebar-bg);border-left:3px solid var(--rule-strong);border-radius:0 4px 4px 0;padding:14px 20px;margin:48px 0 0;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);}
 .sources ul{list-style:none;margin:6px 0 0 !important;padding:0;}
 .chapter-page .sources li{margin:4px 0;line-height:1.5;}
@@ -354,7 +354,7 @@ pre .c-promise{color:var(--code-promise);}
 .book-fig .fg-head-strong{fill:var(--bookmark);}
 .book-fig svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .untranslated{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);border:1px dashed var(--rule);border-radius:6px;padding:18px 20px;}
-.untranslated a{color:var(--bookmark);font-weight:600;}
+.untranslated a{color:var(--bookmark-text);font-weight:600;}
 
 /* navigation: parts, the spine, the chapters not yet drafted */
 .sb-part{font-family:var(--sans);font-weight:700;text-transform:uppercase;color:var(--ink);}
@@ -402,16 +402,16 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 
 # ============================================================================ the type scale
 # One scale, and a check (the author's rule, repeated: the size of a text follows its level. A part is above a chapter,
-# a chapter above a section, a section above the body text it heads; a label is never smaller than 12px).
+# a chapter above a section, a section above the body text it heads; a label is never smaller than 13px).
 TYPE = {
     # the reader's navigation, in px
     "sidebar_book": 24, "sidebar_part": 20, "sidebar_link": 18.5,
-    "contents_h2": 36, "contents_part": 27, "contents_row": 22, "contents_num": 16, "contents_pg": 15, "contents_badge": 12,
+    "contents_h2": 36, "contents_part": 27, "contents_row": 22, "contents_num": 16, "contents_pg": 15, "contents_badge": 13,
     "card_title": 21, "card_words": 15,
     # inside a chapter page, in em of the reading size (so it follows the font control)
     "section_h3": 1.3, "subsection_h4": 1.12, "body": 1.0, "stage_li": 0.92,
     # labels and notes, in px
-    "eyebrow": 13, "decision_tag": 13, "proof": 14, "proof_engine": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
+    "eyebrow": 13, "decision_tag": 13, "proof": 15, "proof_engine": 14.5, "ran": 15, "effects": 14.5, "banner": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
 }
 
 
@@ -423,10 +423,10 @@ def check_type_scale():
     above("sidebar_book", "sidebar_part"); above("sidebar_part", "sidebar_link")
     above("contents_h2", "contents_part"); above("contents_part", "contents_row"); above("contents_row", "contents_num")
     above("section_h3", "subsection_h4"); above("subsection_h4", "body")
-    for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "eyebrow", "decision_tag", "proof", "proof_engine",
+    for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "eyebrow", "decision_tag", "proof", "proof_engine", "ran", "effects", "banner",
               "court_li", "court_head", "court_path", "sources"):
-        if T[k] < 12:
-            bad.append(f"the type scale: {k} ({T[k]}px) is below the 12px floor for any label or note")
+        if T[k] < 13:
+            bad.append(f"the type scale: {k} ({T[k]}px) is below the 13px floor for any label or note")
     if T["stage_li"] < 0.85:
         bad.append("the type scale: the stage list is below 0.85 of the body text")
     return bad
@@ -453,7 +453,10 @@ def type_css():
         f".chapter-page .ch-eyebrow{{font-size:{T['eyebrow']}px;}}\n"
         f".decision-tag{{font-size:{T['decision_tag']}px;}}\n"
         f".chapter-page p.proof{{font-size:{T['proof']}px;}}\n"
-        f".chapter-page p.proof-engine{{font-size:{T['proof_engine']}px;}}\n"
+        f".chapter-page p.proof-engine{{font-size:{T['proof_engine']}px;color:var(--soft);}}\n"
+        f".chapter-page .code-cell p.ran{{font-size:{T['ran']}px;line-height:1.5;}}\n"
+        f".chapter-page .code-cell p.effects{{font-size:{T['effects']}px;line-height:1.5;}}\n"
+        f".status-banner{{font-size:{T['banner']}px;}}\n"
         f".stage-list li{{font-size:{T['stage_li']}em;}}\n"
         f".court li{{font-size:{T['court_li']}px;}}\n"
         f".chapter-page .court p.court-head{{font-size:{T['court_head']}px;}}\n"
