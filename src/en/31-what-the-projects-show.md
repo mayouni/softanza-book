@@ -8,9 +8,9 @@ narrations: [stz-built-on-real-world-need.md, stz-service-virtualization-code-fi
 site: [customers, forged, platforms, estate]
 guards: [service_registry_narrated, full_scope_model_narrated, payments_live_adapter_narrated, sound_mu5_narrated, deployment_narrated, orgrule_narrated, 14_bceao_governance, governance_narrated]
 stage:
-  built: "what the three projects delivered, each with a document (a first delivery, field-tested; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it"
+  built: "what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it"
   designed: "the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board"
-  absent: "any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it"
+  absent: "any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it"
 status: draft
 rulings: ["12.5", "12.10", "12.13", "12.21", "12.22", "12.29", "12.30"]
 research: research/ch31.md
@@ -90,7 +90,7 @@ The pin read answers `rehearsed`, and the scope refuses the process with `forbid
 
 The library's own comment, in the class that lowers a rehearsal to a real artifact, names the next step: the last one, flashing a board, "remains a PLANNED external action".
 
-**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. Its run against the central bank's sandbox has not happened yet, and it is the next step. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
+**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. Its run against the organisation's sandbox has not happened yet, and it is the next step. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
 
 ```haro
 oAd = new stzPispiHttpAdapter()
@@ -168,12 +168,12 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 | Claim | Proof | What comes next |
 |---|---|---|
 | The platform exists, and its first delivery was made | the site: an amendment closed on 4 August 2026; the project's commit "iteration 1" of 15 August; a server of 565 lines that I read; the last commit, 25 August 2026, 13:07 | 25 August 2026 is the last dated record; the next record is the one the next phase writes: production, a real order, the planned go-live gate |
-| The first version was field-tested with the restaurant's owner | a day of field measurements with two phones, 19 August | the owner's own sentence on how he uses it is the next record to gather; chapter 1 writes "runs", and the record's wording is "delivered and field-tested" |
+| The first iteration was delivered, and a field day followed | the site: "first iteration delivered"; the project's article: a day of field measurements with two phones, 19 August | the owner's own sentence on how he uses it is the next record to gather; chapter 1 writes "runs", and the record's words are "first iteration delivered" (the site) and "a day of field-testing" (the project's article) |
 | No growth of scope during a cycle (the Lock, chapter 28) | the pact and the notebook of the Lock: private documents | the Lock as code; chapter 28 shows the nearest the library gives |
-| Payments can be tried without a subscription, and a fake never ships | the registry and the production gate, with their guards | the live payment adapter for the restaurant, "a later desk" in the library's own design file; the sandbox is bound today, and the live binding is the step after it |
+| Payments can be tried without a subscription, and a fake never ships | the registry and the production gate, with their guards | the live payment adapter for the restaurant, "a later desk" in the library's own design file; in the library's registry guard a sandbox is bound, and the live binding is the step after it; the restaurant's own solution does not call the registry |
 | The constellation of worlds | the restaurant's map of its worlds; the library's super-app class, with a guard | the restaurant on the constellation: its worlds are single-file web pages today, and the map says it is a map, not an implementation |
-| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's own checklist moves it to the next cycle |
-| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone: the record does not hold it. The study (12.29) conflates two facts |
+| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's dashboard of 23 August moves it to the next cycle |
+| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone: the record does not hold it. The comparative study of the record (its section 12.29) conflates two facts |
 
 ### The bank in Niamey
 
@@ -189,7 +189,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 | Claim | Proof | What comes next |
 |---|---|---|
-| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, designed and not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
+| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the study promises; the study's own rule notation is not the library's |
 | An agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
 | Offline by default | the study's word that the browser-side outbox is already in service | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
@@ -198,13 +198,13 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 | Claim | Proof | What comes next |
 |---|---|---|
-| The platforms run today on ordinary stacks | the site's own page: single-file web worlds and a small Node server; a Python application; the organisation's hub not built | the first platform on the engine. The site says so, and every repository I opened agrees |
+| The platforms run today on ordinary stacks | the site's own page: single-file web worlds, a Python application, the organisation's hub not built; and a small Node server that I read | the first platform on the engine. The site says so, and every repository I opened agrees |
 | Their declarations "are being written as Softanza's own" | the platforms page and the forged page, as intent | the declarations as files are the next piece to write. I searched, on 8 October 2026, and did not find them as a file: in the restaurant's repository no code file declares an app, a constellation or a platform; in the bank's delivery, none; in the organisation's study folder, none (its annex uses a notation that is not the library's). The record shows the intent and the maps; the declarations are the step that follows |
 | A change of engine, not of plan | the principle: rewriting was refused | the move itself; the record does not yet say who moves first or who perceives it |
 | A solution writes its guarantee sheet in five rows | the vision asks for it | the first sheet is to come: no solution has one yet, and no class, fixture or guard in the library holds the sheet |
 | The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro running the library is the next step. A session's note of 5 October 2026 reports that the bridge runtime passes every assertion the old runtime passes on the library, though not every program agrees on every stable line; the Linux pass is the step after that. I print no percentage. This book's blocks run on the former runtime, 1.27 |
 | A live host verifies a deployment | the deployment design | the verification waits on infrastructure and is the next step. Local sites run for real; remote transfer is "a later slice" |
-| The payments plane works against the central bank's sandbox | the twin, served over HTTP, with a guard | the sandbox run: postponed, unperceived so far. Production is never from this plane |
+| The payments plane works against the organisation's sandbox | the twin, served over HTTP, with a guard | the sandbox run: postponed, unperceived so far. Production is never from this plane |
 | A named person has said what they saw | a drum, and the retuned voice, in another plane | the same line for any of the three platforms, which is the next milestone |
 
 ### What the study of the record marks for measurement
@@ -217,7 +217,7 @@ The comparative study that read the record says, in its own paragraphs headed "N
 
 **I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, by the library's log as chapter 28 reads it. The order of the commits does not support "born of". What I can say is "needed" and "carries".
 
-**I replaced two wordings of my own with the record's.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application, installed at the bank under licence and built beside the library by the same person, and for the restaurant a first delivery and a field day, with the record ending on 25 August. The wording that the record bears out is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
+**I replaced two wordings of my own with the record's.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application, installed at the bank under licence and built beside the library by the same person, and for the restaurant a first delivery and a field day, with the record ending on 25 August. The wording that the record bears out is *built by me, under the discipline the library now carries*, for the bank, and, for the restaurant, *first iteration delivered* (the site) and *a day of field-testing* (the project's article). Chapters 2 and 33 now carry wordings of that kind. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
 
 **I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person. Until then it is unperceived, which is a state and not a failure.
 
@@ -231,13 +231,13 @@ The court of this chapter's subject is not a guard. It is a line of the record, 
 
 ## 6. The field, and where it leads
 
-The field leads in production. Ordinary stacks run real workloads for real users, including, on the site's own page, the platforms of this part; moving their declarations onto Softanza's own engine is the next step.
+The field leads in production. Ordinary stacks run real workloads for real users. (General knowledge, not a study of the record.) The site's own page places the platforms of this part on ordinary stacks today, with the hub not built; moving their declarations onto Softanza's own engine is the next step.
 
 The field leads in references at scale. The site prints two references and a design study, and quotes no number of countries and no number of programmers. A buyer reading a logo wall sees more.
 
-The field leads in live infrastructure. Provisioning tools drive real providers every day. The library's deployment reaches local sites for real today, and the real host is the next step; the fifth block shows where the line runs.
+The field leads in live infrastructure. Provisioning tools drive real providers every day. (General knowledge.) The library's deployment reaches local sites for real today, and the real host is the next step; the fifth block shows where the line runs.
 
-The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision records that no customer is on it yet. Its guarantee text says four of four promised, three kept in the emulator; the fourth, surviving a cut, waits for the watchdog on the board, and that text carries no slot decision yet. The board is on order.
+The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision records that no customer is on it yet. Its guarantee text says four of four promised, three kept in the emulator, and carries no slot decision; the vision adds that the fourth, surviving a cut, waits for the watchdog on the board. The board is on order.
 
 The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime; Haro's own speed is the measure still to come.
 
@@ -249,13 +249,13 @@ Where I think the record stands apart is that its limit is a section of a page, 
 
 This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: what the three projects delivered, each with a document (a first delivery, field-tested at the restaurant; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. A sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator yet. The organisation's hub is designed, and its offline mechanism is to come.
+What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator. The organisation's hub is not yet built, and its offline mechanism is to come.
 
 What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it.
+What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it.
 
-The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are absent today. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library. They are the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
+The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are absent today. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library, and found no file that declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
 
 ## 8. Six doors
 
