@@ -437,10 +437,10 @@ def type_css():
     return (
         "\n/* ---- the type scale (TYPE in build_book.py): generated, checked at build ---- */\n"
         f".sidebar-book-title{{font-size:{T['sidebar_book']}px;margin-bottom:22px;}}\n"
-        f".sb-part{{font-size:{T['sidebar_part']}px;letter-spacing:1px;font-weight:800;margin:30px 0 6px;line-height:1.3;}}\n"
+        f".sb-part{{font-size:{T['sidebar_part']}px;letter-spacing:0;font-weight:600;text-transform:none;margin:30px 0 6px;line-height:1.3;}}\n"
         f".sidebar-link,.sidebar-link.is-absent{{font-size:{T['sidebar_link']}px;line-height:1.32;padding:11px 0;}}\n"
         ".sidebar-link .sl-spine{width:9px;height:9px;margin-right:10px;vertical-align:1px;}\n"
-        f".contents-listing .ce-part{{font-size:{T['contents_part']}px;font-weight:800;letter-spacing:1px;line-height:1.25;margin:44px 0 12px;}}\n"
+        f".contents-listing .ce-part{{font-size:{T['contents_part']}px;font-weight:600;text-transform:none;letter-spacing:0;line-height:1.25;margin:44px 0 12px;}}\n"
         f".contents-listing .ce-row{{font-size:{T['contents_row']}px;padding:11px 0;}}\n"
         f".contents-listing .ce-num{{font-size:{T['contents_num']}px;width:46px;}}\n"
         f".contents-listing .ce-pg{{font-size:{T['contents_pg']}px;}}\n"
