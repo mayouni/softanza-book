@@ -20,13 +20,13 @@ In this chapter I take the field's two lessons about reaching another language, 
 
 ## 1. The concept, as the field holds it
 
-For a working programmer, reaching another language from the one you write means one of two things. The first is a foreign function interface, a call into a shared library. The second is a child process, a run of an interpreter whose output you parse. Notebooks and polyglot virtual machines make the same move with more comfort. (General knowledge. The record holds no dated study of these tools, and says so itself.)
+For a working programmer, reaching another language from the one you write means one of two things. The first is a foreign function interface, a call into a shared library. The second is a child process, a run of an interpreter whose output you parse. Notebooks and polyglot virtual machines make the same move with more comfort. That is general knowledge; the record holds no dated study of these tools, and says so itself.
 
 The estate's own field study of August 2026 has two sentences on this, and they pull in opposite directions. On the way out, the host language is the escape hatch, and the escape hatch is always taken. It gives two internal languages that died of openness. On the way in, the differentiator is escape; a language you make must be consumable from any stack. It gives one language that stalled at the border of its own world.
 
 So the lesson of the field is double. An escape that is open destroys a closed language. And a language with no way out dies at its own border. A door is where those two lessons meet.
 
-There is a second habit, which looks like the first and is not. Tools that let you write in the syntax you know over another engine, a transpiler, a second front end for one compiler, I will call by the word of this book, *facets*. The estate's design memo for them is blunt about their cost. The promise of a second face is readability for a human who knows the other language, and not behavioural transfer.
+There is a second habit, which looks like the first and is not. Tools that let you write in the syntax you know over another engine, a transpiler, a second front end for one compiler, I will call by the word of this book, *facets*, which chapter 12 defines. The estate's design memo for them is blunt about their cost. The promise of a second facet is readability for a human who knows the other language, and not behavioural transfer.
 
 ## 2. The first principle
 
@@ -36,7 +36,7 @@ The vision's own sentence, ratified in session on 28 August 2026, says it of the
 
 ## 3. The Softanza form
 
-The door's list is closed. The foreign languages are a registry, and the host is not on it. Which languages does the door know? Ask it about six, then about the host, then about one that was never on the list:
+The door's list is closed. The foreign languages are a registry, and the host is not on it. Which languages does the door know? Ask it about six, then about the host, under the name the library's own data still gives it, the former host language's, then about one that was never on the list:
 
 ```haro
 oDoor = new stzExterCode(:python)
@@ -67,12 +67,12 @@ done
 
 The door refused it by name: `Language 'cobol' is not supported`!
 
-Now the door runs a real runtime. A short note on the machine first. The door writes a script, starts the runtime by it, and reads a result file back. This book was built on a machine where Python lives at its own path, so the path is given as a short path without spaces. Node and R are at the library's default places. The blocks that start a runtime are marked, in the reader, as touching the system, and they show the output that was recorded on the date of the build.
+Now the door runs a real runtime. A short note on the machine first. The door writes a script, starts the runtime by it, and reads a result file back. The library's default place for Python is not where this machine keeps it, so the door is given the bare command `python`, which the machine resolves on its path. Node and R are at the library's default places. The blocks that start a runtime are marked, in the reader, as touching the system, and they show the output that was recorded on the date of the build.
 
 What comes home from a Python call? The result arrives as the host's own structure, a list, and the call leaves a trace:
 
 ```haro
-cPython = "C:/Users/ASUSV3~1/AppData/Local/Programs/Python/Python313/python.exe"
+cPython = "python"
 oPy = new stzExterCode(:python)
 oPy.SetRuntimePath(cPython)
 oPy.SetCode("
@@ -119,7 +119,7 @@ The data goes in by composing the code string with the host's own list printer, 
 
 **Which seven?** The title commits to a number, and I ruled on 12 October 2026 which one: the six foreign runtimes of the registry above and the host, as the article on the plane and the article on performance count them. The language model is not one of them, because it is not a door of this plane at all. Chapters 17 and 20 make the model a proposer that cannot commit, while the narrations run it as a first-class runtime through a function that is absent. Section 7 prints that as a limit. The record counts it differently elsewhere: seven domain modules with one for a language model, seven domains with the host as an eighth, the registry's six without the host, the vision's "7 selected languages" that it never lists, and the engine design's five with COBOL. The registry above is the one that runs.
 
-**A facet is not a door.** Reading a foreign language is also not running it. The two languages that the author names as Haro's planned facets are also the two that the library can already read into one code graph. It does not run them and does not write them. One set of questions answers over both:
+**A facet is not a door.** Reading a foreign language is also not running it. The two languages that I name as Haro's planned facets are also the two that the library can already read into one code graph. It does not run them and does not write them. One set of questions answers over both:
 
 ```haro
 cPy = "class Animal:" + nl +
@@ -147,7 +147,7 @@ oJG = StzJsCodeGraphFromSourceTS(cJs)
 #--> [ "Animal", "Dog" ]
 ```
 
-This is a parser into an index of classes, methods and inheritance, and not a program graph that can print a program. It is a coincidence of the order of work, and not yet a facet. The record has one statement of mine on facets. I made it in session on 8 October 2026, and it says that a link should be made with the future vision of Haro and its facet languages. In that vision the former host language is already there, and Python and JavaScript are planned. The charter of Haro on this machine speaks of one grammar and one text. Its design memo for a second face, which proposes and rules nothing, calls them faces and recommends printers read by humans before any parser. Its own table lists the collisions: a Python reader expects zero-based indexing and Haro's is one-based. The chapter says "planned" only with that statement named as its source, and the memo's word for the same thing is face.
+This is a parser into an index of classes, methods and inheritance, and not a program graph that can print a program. It is a coincidence of the order of work, and not yet a facet. The record has one statement of mine on facets. I made it in session on 8 October 2026, and it says that a link should be made with the future vision of Haro and its facet languages. In that vision the former host language is already there, and Python and JavaScript are planned. The charter of Haro on this machine speaks of one grammar and one text. Its design memo for a second facet, which proposes and rules nothing, recommends printers read by humans before any parser. Its own table lists the collisions: a Python reader expects zero-based indexing and Haro's is one-based. The chapter says "planned" only with that statement named as its source.
 
 **A door is governed.** The governance has the word for foreign code. `external` is the posture the library defines as out-of-process. What does the governance answer before that posture is declared, and after? Ask it:
 
@@ -191,17 +191,17 @@ Next, what I decided about the door, and what I refused.
 
 **I refused further host embeddings.** The door is the answer to "what about language X". Chapter 1 promised this chapter on those words: seven languages were chosen for seven layers of a solution.
 
-**I refused to surrender the domains to generated code.** The article on the domain library puts it as a stance. Rather than forcing programmers to master each domain, or to surrender to AI-generated code, provide carefully crafted abstractions. The site says the article has been in the repository since 23 April 2025 (read 9 October 2026). Its code is absent.
+**I refused to surrender the domains to generated code.** The article on the domain library puts it as a stance. Rather than forcing programmers to master each domain, or to surrender to AI-generated code, provide carefully crafted abstractions. The site, as I read it on 9 October 2026, says the article has been in the repository since 23 April 2025. Its code is absent.
 
 **I refused a facet as a runtime.** The study's plan says it in a line: a facet is a syntax of one grammar and never a runtime. So the door stays the only way to foreign code. It is a plan, proposed. It is not ruled.
 
-**I refused an approximating printer.** The design memo's rule for faces: a printer refuses before it approximates. A face spells the graph and never gives it the meaning of Python or JavaScript.
+**I refused an approximating printer.** The design memo's rule for facets: a printer refuses before it approximates. A facet spells the graph and never gives it the meaning of Python or JavaScript.
 
 Now the court, and what it proves of the door.
 
 ## 5. The court
 
-`51_extercode_narrated` proves that the registry knows Python, R, Julia, Prolog, C and NodeJS, and rejects an unknown name. It proves that the lookup ignores case (tested for Python); that the code set is the code read back; and that the factory constructs and forwards. The smoke test it narrates says in its header: no `Execute` (the L99 guardrail). `governance_narrated`, scene six, proves that an execution without a posture refuses and that a declared posture proceeds and names itself; scene seven, that postures travel through save and load. `virtual_environment_twin_narrated` proves that a queued spawn does not run until commit, by a marker file; that a scope refuses; and that the plan narrates and flags the spawn. `pycodegraph_narrated` and `jscodegraph_narrated` prove classes, methods, inheritance chains, owners, impact and cascade over Python and over JavaScript sources, offline and without the runtime. Both skip their parser scenarios when the engine's tree-sitter is absent, and the first also skips its Python-AST ones when Python is not on the path.
+`51_extercode_narrated` proves that the registry knows Python, R, Julia, Prolog, C and NodeJS, and rejects an unknown name. It proves that the lookup ignores case (tested for Python); that the code set is the code read back; and that the factory constructs and forwards. The smoke test it narrates says in its header: no `Execute`, by its own guardrail. `governance_narrated`, scene six, proves that an execution without a posture refuses and that a declared posture proceeds and names itself; scene seven, that postures travel through save and load. `virtual_environment_twin_narrated` proves that a queued spawn does not run until commit, by a marker file; that a scope refuses; and that the plan narrates and flags the spawn. `pycodegraph_narrated` and `jscodegraph_narrated` prove classes, methods, inheritance chains, owners, impact and cascade over Python and over JavaScript sources, offline and without the runtime. Both skip their parser scenarios when the engine's tree-sitter is absent, and the first also skips its Python-AST ones when Python is not on the path.
 
 I want to be exact about the court of the door. A guard that runs a foreign runtime and passes is absent from the snapshot; what the door's court holds today is a registry and a construction test. The folder's own run record, under an older runtime version, lists thirty-seven failures. Several promises cannot match by construction, because the file names carry a random suffix and the calls a duration.
 
@@ -209,9 +209,9 @@ The field comes next, and where it leads.
 
 ## 6. The field, and where it leads
 
-The field leads in speed, and speed is what the door exists for. The article on performance measures seven runtimes on three tasks, and the host comes last in two of them. I carry its caveats from chapter 22: it has no versions and no dates inside its text, and it says that its times are relative to a specific computer environment. Sorting a million elements takes the host about thirty seconds and Python about four, in the article's table. I print no more of it.
+The field leads in speed, and speed is what the door exists for. The article on performance measures seven runtimes on three tasks, and the host comes last in two of them. I carry its caveats, which chapter 22 states too: it has no versions and no dates inside its text, and it says that its times are relative to a specific computer environment. Sorting a million elements takes the host about thirty seconds and Python about four, in the article's table. I print no more of it.
 
-The field leads in runtimes it can actually run. Of six doors, three ran on this machine: Node, Python, and R, which raised. The other three had no runtime to start. The study says its description of the field's polyglot tools was written from the genre and not re-read, and I claim no measured comparison.
+The field leads in runtimes it can actually run. Of six doors, two ran on this machine, Node and Python; the R door started its runtime and raised; the other three had no runtime to start. The study says its description of the field's polyglot tools was written from the genre and not re-read, and I claim no measured comparison.
 
 The field leads in the ecosystem and in being used. The compare page speaks of Python only as a rival; to cover its thirty rows in Python you assemble numpy, pandas and others. The door is how a Softanza solution takes them without leaving. I hold this as a view, not a result: section 3 shows the door carrying two runtimes in one pipeline, and nothing on this page runs numpy or pandas.
 

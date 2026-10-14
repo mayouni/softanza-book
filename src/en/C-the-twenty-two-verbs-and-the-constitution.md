@@ -80,4 +80,4 @@ The constitution lists seventeen forbidden patterns, each tied to the rules it v
 
 ### What this book takes from it, and what it does not
 
-It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for AI agents, and Rule 118 on the five values of status. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.
+It takes the closed grammar, which it uses in chapters 25 and 26; the six rights, of which it uses one; and the sets, of which it uses the one for AI agents. It takes also the rule on the five values of status, which chapter 25 renders as colour, earcon and phrase. It does not take the rest. No guard of the library judges a shell against the verbs, and the library's own design text still lists twenty-four verbs from an interaction engine that I removed on 26 May 2026. The constitution's list is twenty-two.

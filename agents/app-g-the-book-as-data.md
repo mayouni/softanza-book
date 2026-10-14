@@ -24,7 +24,7 @@ An agent that quotes a promise should quote its verdict with it.
 
 - **You may quote any cell.** A table of this book is data. A row that says "absent" is a row you may repeat as absent.
 - **You may not turn an absent cell into a present one.** The record will find your sentence and the missing file side by side, and the book says so in chapter 31.
-- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Absent means that I looked, and say how far.
+- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Absent means that I looked, and that the chapter says how far.
 - **You may rely on a promise only with its verdict, and only at the commit it names.** A number that the book prints is a number read from a file or a run, at the date the page gives.
 - **A draft is a draft.** A chapter marked as a draft is not the author's final word, and "the author read it" is a status that only the author sets.
 
@@ -35,13 +35,13 @@ The table below is generated at every build from the same data as `book.json`.
 | # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |
 |---|---|---|---|---|---|---|---|
 |  | `preface` | 0 | draft | yes | 1 of 1 | 0 | 0 |
-| 1 | `change-arrives-faster-than-trust` | 1 | draft | yes | 1 of 1 | 3 | 6 |
+| 1 | `change-arrives-faster-than-trust` | 1 | draft | yes | 2 of 2 | 3 | 6 |
 | 2 | `the-software-crafter` | 1 | draft | yes | 9 of 9 | 5 | 6 |
 | 3 | `the-method-from-first-principles` | 1 | draft | yes | 5 of 5 | 3 | 6 |
 | 4 | `the-platform-in-one-picture` | 1 | draft | yes | 8 of 8 | 5 | 6 |
 | 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 7 of 7 | 4 | 6 |
 | 6 | `the-mental-model-and-the-metaphors` | 2 | draft |  | 7 of 7 | 6 | 6 |
-| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 10 of 10 | 10 | 6 |
+| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 9 of 9 | 10 | 6 |
 | 8 | `functions-as-linguistic-expressions-and-scope` | 2 | draft |  | 13 of 13 | 5 | 6 |
 | 9 | `patterns-of-thought` | 2 | draft |  | 8 of 8 | 6 | 6 |
 | 10 | `programming-becomes-refinement` | 2 | draft |  | 9 of 9 | 3 | 6 |
@@ -68,3 +68,11 @@ The table below is generated at every build from the same data as `book.json`.
 | 31 | `what-the-projects-show` | 6 | draft |  | 5 of 5 | 8 | 6 |
 | 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 | 33 | `the-next-line` | 7 | draft | yes | 3 of 3 | 3 | 6 |
+| A | `the-register-of-innovations` |  | draft |  | no code | 0 | 0 |
+| B | `the-fourteen-house-rules` |  | draft |  | 2 of 2 | 1 | 0 |
+| C | `the-twenty-two-verbs-and-the-constitution` |  | draft |  | no code | 0 | 0 |
+| D | `the-glossary` |  | draft |  | no code | 0 | 0 |
+| E | `the-guards-and-fixtures-cited` |  | draft |  | no code | 0 | 0 |
+| F | `the-narrations-the-book-argues-from` |  | draft |  | no code | 0 | 0 |
+| G | `the-book-as-data` |  | draft |  | no code | 0 | 0 |
+| H | `the-projects-history` |  | draft |  | no code | 0 | 0 |

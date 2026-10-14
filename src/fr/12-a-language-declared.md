@@ -24,7 +24,7 @@ Deux familles d'outils permettent de déclarer un langage sur le terrain. La pre
 
 La seconde est le DSL interne : une bibliothèque dont les appels se lisent comme des phrases, alors que le fichier peut encore contenir n'importe quel code hôte. La même étude a la phrase que je retiens : la fermeture est le produit, et un DSL interne qui ne peut pas refuser du code hôte arbitraire est une API qui porte le costume d'un langage. Son groupe témoin, ce sont les langages fermés qui ont gagné : SQL, regex, Make, HTML et CSS, HCL, GraphQL, Markdown, CUE.
 
-Pour la grammaire qu'un modèle doit respecter, le dossier nomme un seul outil : l'échantillonneur de grammaire d'une bibliothèque d'inférence locale bien connue, que la machine de la bibliothèque suit pour son encodage des éléments et son algorithme. Rien n'en est repris. (Connaissance générale, pas une étude du dossier : les fournisseurs de modèles proposent des modes de sortie structurée qui prennent un schéma JSON. Des bibliothèques ouvertes transforment un schéma ou une expression régulière en masque sur les jetons du modèle.)
+Pour la grammaire qu'un modèle doit respecter, le dossier nomme un seul outil : l'échantillonneur de grammaire d'une bibliothèque d'inférence locale bien connue, que la machine de la bibliothèque suit pour son encodage des éléments et son algorithme. Rien n'en est repris. C'est une connaissance générale, pas une étude du dossier, que les fournisseurs de modèles proposent des modes de sortie structurée qui prennent un schéma JSON, et que des bibliothèques ouvertes transforment un schéma ou une expression régulière en masque sur les jetons du modèle.
 
 Le chapitre 11 a dit ce qu'est un langage fermé, et ce qui a été perdu quand le terrain l'a laissé ouvert. Je le tiens pour acquis. Ce chapitre dit ce qui est nouveau : ce qui *produit* un langage fermé.
 
@@ -89,7 +89,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 #--> 1
 ```
 
-La deuxième paire est l'enjeu du chapitre : la grammaire répond `1` et le tribunal répond `0` ! Je n'imprime pas la liste de ce que la grammaire a laissé tomber, parce que son texte porte, à un endroit, l'ancien nom du tribunal. Je vérifie qu'elle nomme la borne de l'intervalle.
+La deuxième paire est l'enjeu du chapitre : la grammaire répond `1` et le tribunal répond `0` ! Je n'imprime pas la liste de ce que la grammaire a laissé tomber : son texte porte, à un endroit, l'ancien nom du tribunal, et ce nom appartient à l'histoire de l'annexe H. Je vérifie que la liste nomme la borne de l'intervalle.
 
 On ne demande pas au modèle d'IA d'être prudent. L'échantillonneur demande à la grammaire, à chaque jeton candidat, si elle pourrait continuer. Ainsi un mot qui n'est pas au menu n'est pas refusé après avoir été dit. Peut-il seulement commencer ?
 
@@ -104,7 +104,7 @@ On ne demande pas au modèle d'IA d'être prudent. L'échantillonneur demande à
 #--> 0
 ```
 
-Il ne le peut pas : `dish: p` répond `0`. La dernière ligne est un échec que la mesure a trouvé dans un petit modèle : le substitut `<number>` répété là où doit se trouver un nombre. Et un jeton n'est pas un octet. Un morceau peut être valide comme préfixe et invalide comme complétion, et la machine reçoit le morceau entier. Que répond-elle à `yesterday`, qui commence comme `yes` ?
+Il ne le peut pas : `dish: p` répond `0`. La dernière ligne est un échec que la mesure de la section 5 a trouvé dans un petit modèle : le substitut `<number>` répété là où doit se trouver un nombre. Et un jeton n'est pas un octet. Un morceau peut être valide comme préfixe et invalide comme complétion, et la machine reçoit le morceau entier. Que répond-elle à `yesterday`, qui commence comme `yes` ?
 
 ```haro
 cY = 'root ::= "yes" "\n"'
@@ -143,7 +143,7 @@ done
 #--> 1
 ```
 
-Le texte du refus de la structure imbriquée porte l'ancien nom du tribunal, donc je n'imprime que les codes. La dernière ligne est l'enjeu : le tribunal lit ce que la grammaire refuse d'écrire.
+Le texte du refus de la structure imbriquée porte lui aussi l'ancien nom du tribunal, donc je n'imprime que les codes. La dernière ligne est l'enjeu : le tribunal lit ce que la grammaire refuse d'écrire.
 
 Le langage de déclaration est lui-même fermé. Une faute de frappe dans la loi est refusée au moment où la loi est déclarée. Le contrat de la bibliothèque dit pourquoi. Une clé comme `:requird = 0` laisserait un champ obligatoire sans un mot, et c'est la classe de faute de frappe qu'un tribunal ne doit pas tolérer dans sa propre loi. Que répond le tribunal à une telle clé ?
 
@@ -176,7 +176,7 @@ Ce que j'ai vu, et que la narration ne dit pas : le refus est silencieux et enti
 
 Un langage déclaré une fois devrait donner son tribunal, sa bouche, sa voix et ses lecteurs. C'est la forge, et c'est là que l'étude de ce livre rencontre sa propre limite : la forge n'est pas dans la bibliothèque.
 
-Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. La forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet. Chacun a été jugé sur les cas propres du langage préexistant. Ces cas étaient sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à la forge elle-même.
+Je dirai ce que le dossier contient, et ce que j'ai observé le 8 octobre 2026 sur le runtime plus ancien, l'oracle. Le dossier est une charte et un spike dans un autre dépôt, en pur code du noyau qui tourne sur l'oracle. La forge lit une déclaration et écrit deux fichiers, un programme de tribunal et une grammaire. Les échelons du spike, entre le 1er et le 4 octobre 2026, ont forgé des tribunaux et des grammaires pour le langage machine du domaine de projets et pour un langage de flotte déclaré par-dessus. Ils ont fait de même pour le langage d'expressions et pour quatre lettres de plus de l'alphabet, la famille de langages déclarés de la vision, chacun connu par une lettre. Chacun a été jugé sur les cas propres du langage préexistant. Ces cas étaient sans adaptation pour le langage d'expressions (W) et pour Z, réexprimés pour F et A, et, pour Q, les réponses propres de l'ancien langage, relevées. Dans l'ordre : 117 sur 120 pour le langage machine, les trois restants étant les sortes du fichier de flotte. Puis 32 sur 32 pour le langage de flotte, 29 sur 29 pour W, 16 sur 16 pour Z, 25 sur 25 pour Q, 26 sur 26 pour F et 35 sur 35 pour A. C'est la méthode du chapitre 3, déclarer puis gouverner, appliquée à la forge elle-même.
 
 J'ai fait tourner la forge sur un petit langage que j'ai écrit pour ce livre, la commande d'une table dans les mots de la salle à manger. C'est un exemple, écrit pour le livre et exécuté une fois, hors de la bibliothèque :
 
@@ -211,11 +211,11 @@ Trois observations de plus, chacune une limite.
 
 **La vision n'a pas rattrapé.** Le texte de la vision, daté entre le 27 septembre et le 5 octobre 2026, dit que la forge n'a pas forgé. Le fichier des principes, daté du 1er octobre 2026, dit que la forge n'existe pas. Le même dépôt a construit le spike le même jour et forgé pour plusieurs langages. La phrase vraie a donc deux côtés. La forge a forgé des tribunaux et des grammaires pour plusieurs langages, hors de la bibliothèque, et elle n'a pas forgé la liste complète que le principe promet. Et le texte de la vision n'a pas été mis à jour. Dans les mots d'étape du livre, la forge est construite hors de la bibliothèque et conçue pour la bibliothèque, et la limite du chapitre 11 le dit de même.
 
-### Les facettes d'un langage déclaré
+### Les parties d'un langage déclaré
 
-Par facette, j'entends ici une surface d'un langage déclaré. La charte liste ce que la forge produit à partir d'une déclaration, et je donne à chacune un mot d'étape :
+La charte liste ce que la forge produit à partir d'une déclaration, ses parties, et je donne à chacune un mot d'étape :
 
-| facette | ce que c'est | étape |
+| partie | ce que c'est | étape |
 |---|---|---|
 | le texte | la déclaration, simple et fermée, avec une justification exigée sur chaque déclaration | construit à l'extérieur ; l'analogue de la bibliothèque est la déclaration de schéma |
 | le tribunal | le juge généré pour le langage, qui parle dans les mots propres de la déclaration | construit à l'extérieur ; l'analogue de la bibliothèque est `Verify` et `Accepts` |
@@ -225,9 +225,9 @@ Par facette, j'entends ici une surface d'un langage déclaré. La charte liste c
 | la voix | le langage qui narre une exécution, une phrase, un refus ; jamais stocké et jamais relu par l'analyse | construit à l'extérieur ; l'analogue de la bibliothèque est `Understood()` |
 | les langues | une langue humaine comme fichier de données | construit à l'extérieur pour deux langues ; construit dans la bibliothèque pour cinq paquets (chapitre 11) |
 | les projections | le monde rendu à une application, un serveur, une page, un appareil | conçu |
-| les faces | une seconde syntaxe de Haro | conçu ; le chapitre 16 la raconte |
+| les facettes | une seconde syntaxe de Haro | conçu ; le chapitre 16 la raconte |
 
-Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une surface d'un langage déclaré. Le deuxième sens est une syntaxe de Haro pour un programmeur d'un autre langage : le tableau l'appelle une *face*, et le chapitre 16 la raconte. Le troisième est un onglet du ruban de l'environnement, une phase d'une vie, celui du chapitre 26.
+Le mot *facette* a deux sens dans ce livre, et je définis ici celui de cette partie. Une facette est une seconde syntaxe de Haro, pour un programmeur d'un autre langage : une autre graphie de la grammaire unique, et jamais un runtime. C'est la dernière ligne du tableau, et le chapitre 16 la raconte. L'autre sens est un onglet du ruban de l'environnement, une phase d'une vie, celui du chapitre 26.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -245,7 +245,7 @@ Le mot *facette* a d'autres sens dans ce livre, et je définis le mien ici : une
 
 **J'ai refusé de laisser la moitié grammaire mettre le tribunal à la retraite.** Le contrat dit que le tribunal ne part pas à la retraite quand le décodage contraint arrive. Et ce que la grammaire ne peut pas exprimer, elle le refuse, et ne l'aplatit ni ne l'approxime jamais.
 
-**J'ai refusé une seconde face comme un second sens.** Une face épelle le graphe ; elle ne lui donne jamais le sens de Python ou de JavaScript. C'est le mémo d'une session, qui propose et ne tranche rien, et sa question de savoir combien de faces avant l'annonce est la mienne, et sans réponse dans le dossier.
+**J'ai refusé une seconde facette comme un second sens.** Une facette épelle le graphe ; elle ne lui donne jamais le sens de Python ou de JavaScript. C'est le mémo d'une session, qui propose et ne tranche rien, et sa question de savoir combien de facettes avant l'annonce est la mienne, et sans réponse dans le dossier.
 
 Vient ensuite le tribunal, et les gardes qui sont derrière lui.
 
@@ -261,7 +261,7 @@ Le premier essai est valide dans deux cas sur dix quand on vérifie après coup,
 
 Les ateliers de langages mènent sur l'outillage. L'étude de terrain le dit elle-même : ils restent supérieurs sur les axes que la conception abandonne délibérément, l'outillage projectionnel, l'intégration à l'éditeur et la profondeur des macros. Et le pari que ces axes sont les mauvais est nommé comme un pari.
 
-Le code généré rend bon marché aussi la fabrication indisciplinée de langages, et c'est pourquoi le tribunal est le cœur et non un accessoire. Je tiens cela pour une vue, non pour un résultat.
+Le code généré rend bon marché aussi la fabrication indisciplinée de langages, et c'est pourquoi le tribunal est le cœur et non un accessoire.
 
 Le décodage contraint : le terrain l'a construit le premier, et l'implémentation de référence est celle d'une autre bibliothèque. Ce que le dossier ajoute, c'est l'appariement : une grammaire et un tribunal issus d'une seule déclaration, et la liste de ce que la grammaire a laissé tomber.
 
@@ -299,7 +299,7 @@ Les six portes suivent, du programmeur à l'agent.
 
 ## 8. Six portes
 
-**Le programmeur.** Vous déclarez la forme en quelques lignes et vous en tirez son tribunal, sa grammaire et son prompt. Ce que vous n'obtenez pas, c'est un moyen d'exécuter une fonction hôte depuis la déclaration : le langage n'a pas de mot pour cela.
+**Le programmeur.** Vous déclarez la forme en quelques lignes et vous en tirez son tribunal, sa grammaire et son prompt. Ce que vous n'obtenez pas, c'est un moyen d'exécuter une fonction hôte depuis la déclaration : le langage n'a pas de mot pour cela. Le langage de formules du tableau, à la section 7, est un autre langage, et ouvert à son bord.
 
 **L'analyste.** La déclaration est du texte brut dans les mots du domaine, et le tribunal répond dans ces mots.
 

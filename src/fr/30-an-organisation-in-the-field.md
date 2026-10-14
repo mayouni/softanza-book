@@ -9,7 +9,7 @@ site: [forged, customers]
 guards: [graphruleset_narrated, gg_rule_governance, wisecoding_narrated, governance_narrated, governance_lineage_narrated, 01_platform_narrated]
 stage:
   built: "une règle construite comme un objet sur un modèle, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle qui ne gouverne rien ; un refus gardé comme un point de contrôle qu'une personne peut lire, avec son contexte ; l'autorité mise face au risque ; une décision gardée avec son autorité du moment ; le hors ligne comme une capacité qu'un monde doit demander"
-  designed: "le hub et son étude ; un langage de règles qu'un développeur local peut apprendre ; les promesses de l'étude : qu'une règle est vérifiée avant de s'appliquer et peut être défaite"
+  designed: "le hub et son étude ; un langage de règles qu'un programmeur local peut apprendre ; les promesses de l'étude : qu'une règle est vérifiée avant de s'appliquer et peut être défaite"
   absent: "le hub, construit ; un mécanisme pour le travail fait hors ligne, gardé et envoyé plus tard ; un historique des versions d'une règle ; une plateforme client sur le moteur"
 status: draft
 rulings: ["12.13", "12.29"]
@@ -34,7 +34,7 @@ L'étude de l'organisation sur son propre projet en fait un titre de section, «
 
 ## 3. La forme Softanza
 
-Une organisation travaille au Niger, avec un siège à Niamey et des bases sur le terrain. Sa propre spécification préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été celle retenue. L'étude liste quatre gains, et la propriété est le premier qu'elle liste. L'organisation possède son vocabulaire et ses règles ; elle les change sans programmer ; elle ne paie aucune licence par poste pour la plateforme ; et elle peut tout confier à un programmeur de son propre pays. Nous avons construit l'étude de conception ensemble, avec ses équipes, du 22 septembre au 8 octobre 2026. Je dis « étude de conception » et non « livraison » chaque fois, parce que le hub n'est pas construit. La version 1.2 de l'étude est soumise au directeur exécutif pour validation, et le dossier ne dit pas qu'elle l'ait été.
+Une organisation travaille au Niger, avec un siège à Niamey et des bases sur le terrain. Sa propre spécification préférait une plateforme low-code construite sur la suite bureautique d'un grand éditeur. Mon offre du 5 août 2026 a été celle retenue. L'étude liste quatre gains, et la propriété est le premier qu'elle liste. L'organisation possède son vocabulaire et ses règles ; elle les change sans programmer ; elle ne paie aucune licence par poste pour la plateforme ; et elle peut tout confier à un programmeur de son propre pays. Nous avons construit l'étude de conception ensemble, avec ses équipes, du 22 septembre au 8 octobre 2026. Le hub n'est pas construit. La version 1.2 de l'étude est soumise au directeur exécutif pour validation, et le dossier ne dit pas qu'elle l'ait été.
 
 Quatre choses de cette étude, la bibliothèque les porte. Je les montrerai dans l'ordre où l'organisation les rencontrerait, puis celle qu'elle a demandée et que la bibliothèque ne porte pas.
 
@@ -63,7 +63,7 @@ oG.RulesReport()
 
 Le rapport nomme une avance, `a2`, à 600 avec une seule approbation, et la règle en regarde `2` sur les quatre, `a2` et `a3`.
 
-Que se passe-t-il quand le plafond est changé et que le même modèle est jugé de nouveau ? Un changement de la règle est un changement de ses valeurs, et le verdict et sa portée suivent :
+Que se passe-t-il quand le plafond est changé et que le même modèle est jugé de nouveau ? Ici le changement est la règle reconstruite dans le code avec un autre nombre, et le verdict et sa portée suivent :
 
 ```haro
 oG.ClearAttachedRules()
@@ -83,7 +83,7 @@ oG.RulesReport()
 #--> 3
 ```
 
-Le rapport dit maintenant `2 finding(s), 2 error(s)` là où il en disait un, et la portée est `3` là où elle était `2` ! Je dois être honnête sur ce que ce bloc montre. Le « changement » est une règle reconstruite dans le code avec un autre nombre. Que la personne même de l'organisation la change comme on remplit un formulaire est la promesse de l'étude. Je n'ai pas trouvé de fichier de la bibliothèque qui la réalise. La section 7 dit ce qui existe et ce qui n'existe pas.
+Le rapport dit maintenant `2 finding(s), 2 error(s)` là où il en disait un, et la portée est `3` là où elle était `2` ! Je dois être honnête sur ce que ce bloc montre. Qu'un changement de la règle soit un changement de ses valeurs, que la personne même de l'organisation fait comme on remplit un formulaire, est la promesse de l'étude. Je n'ai pas trouvé de fichier de la bibliothèque qui la réalise. La section 7 dit ce qui existe et ce qui n'existe pas.
 
 Ce que la bibliothèque porte, c'est la réponse à la pire chose qui puisse arriver quand une personne qui ne programme pas édite une règle : une règle qui ne gouverne rien, en silence. Je tiens cela pour une vue, non pour un résultat. Faites une faute de frappe sur une propriété, et la règle ne trouve rien, et le modèle déclare qu'il est sain. Que dit un gouverneur de règles de la même règle ? La classe est `StzRuleGovernance` ; elle demande aux règles ce qu'elles gouvernent et non ce qu'elles disent, et elle nomme la règle morte :
 
@@ -158,7 +158,7 @@ oGov.SetAuthority("approver-1", :Autonomous)
 #--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
 ```
 
-L'assistant détient la permission de `release-advance`, et la réponse est `0` ! Le verdict dit `refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)`. Pour l'approbateur, il dit `allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3`.
+L'assistant détient la permission de `release-advance`, et la réponse est `0` ! Le verdict dit `refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)`. Pour l'approbateur, il dit `allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3`. Dans le message, SHOULD est le mot de la bibliothèque pour ce qu'un niveau d'autorité couvre, face à CAN, la permission détenue ; la garde derrière ce bloc le dit ainsi : « pouvoir n'est pas devoir ».
 
 La classe d'ici, `stzGovernance`, juge l'autorité ; ce n'est pas le gouverneur de règles de la règle morte plus haut. La bibliothèque ne connaît un acteur que par un nom et un niveau d'autorité. Qu'un acteur soit une personne ou un assistant, c'est ce que son niveau est déclaré être. Lier un niveau à une personne connectée est le travail du volet d'authentification, que je n'ai pas lu pour ce chapitre.
 
@@ -213,9 +213,11 @@ La section suivante pose la décision, et ce que j'ai refusé.
 
 **J'ai refusé de laisser l'assistant décider.** Il propose. Son autorité est consultative ; celle d'une personne couvre le risque. Le refus nomme le niveau, le niveau de risque, et la phrase qui dit que l'autorité ne couvre pas l'acte : `SHOULD does not cover it`.
 
-**J'ai refusé une règle silencieuse.** Une règle qui ne gouverne rien est signalée. Une règle sans message l'est aussi. C'est le prix de laisser une personne qui ne programme pas toucher à une règle. Le gouverneur de règles existe parce que la règle silencieuse s'est déjà produite dans la bibliothèque.
+**J'ai refusé une règle silencieuse.** Une règle qui ne gouverne rien est signalée. Une règle sans message l'est aussi. C'est le prix de laisser une personne qui ne programme pas toucher à une règle. Le gouverneur de règles existe pour ce cas, et le commentaire de la bibliothèque dit pourquoi : une règle morte et un prédicat mal orthographié produisent la même sortie, le silence.
 
 **J'ai refusé d'appeler le hors ligne une leçon.** La page Forged, lue le 9 octobre 2026, dit : « C'est un manque, pas une leçon apprise. » Un restaurant a demandé la même chose. L'étude est claire sur le fait que le hors ligne est l'option par défaut de l'organisation, et la bibliothèque n'en a qu'une permission. Un paquet frère du domaine de projets, côté navigateur, contient une boîte d'envoi durable sur l'appareil et une relecture ordonnée et idempotente ; il est extérieur à la bibliothèque. Je ne l'ai pas exécuté.
+
+Six gardes se tiennent derrière les blocs.
 
 ## 5. Le tribunal
 
@@ -237,9 +239,11 @@ La section suivante liste ce qui est construit, ce qui est conçu et ce qui est 
 
 Ce qui est construit : une règle comme objet, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle morte ; le point de contrôle ; l'autorité face au risque ; la filiation ; le hors ligne comme capacité.
 
-Ce qui est conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation qui n'est pas celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque n'a que les pièces. Ce sont le gouverneur de règles, le refus d'un type de règle inconnu ou d'un fichier manquant, et le refus d'un nom en double.
+Ce qui est conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation qui n'est pas celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque n'a que les pièces. Ce sont le gouverneur de règles, montré plus haut, et les refus d'un type de règle inconnu, d'un fichier manquant et d'un nom en double, qu'un test narré de la bibliothèque prouve et que ce chapitre ne montre pas.
 
 Ce qui est absent : un historique des versions d'une règle avec un retour en arrière. La filiation enregistre la décision, et la règle est reliée de nouveau. Je n'ai trouvé aucun magasin de versions de règles, et ma recherche n'était pas exhaustive. Le hub, construit. Le hors ligne comme mécanisme : aucune classe de la bibliothèque ne garde des entrées sur un appareil et ne les envoie quand le réseau revient. Et une plateforme client sur le moteur Softanza.
+
+Six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 

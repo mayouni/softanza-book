@@ -24,7 +24,7 @@ Two families of tools let you declare a language in the field. The first is the 
 
 The second is the internal DSL: a library whose calls read like sentences, while the file can still hold any host code. The same study has the sentence I keep: closedness is the product, and an internal DSL that cannot refuse arbitrary host code is an API wearing a language's costume. Its control group is the closed languages that won: SQL, regex, Make, HTML and CSS, HCL, GraphQL, Markdown, CUE.
 
-For the grammar a model must obey, the record names one tool: the grammar sampler of a well-known local inference library, which the library's machine follows for its element encoding and its algorithm. Nothing of it is vendored. (General knowledge, not a study of the record: model vendors offer structured-output modes that take a JSON schema, and open libraries turn a schema or a regular expression into a mask on the model's tokens.)
+For the grammar a model must obey, the record names one tool: the grammar sampler of a well-known local inference library, which the library's machine follows for its element encoding and its algorithm. Nothing of it is vendored. It is general knowledge, not a study of the record, that model vendors offer structured-output modes that take a JSON schema, and that open libraries turn a schema or a regular expression into a mask on the model's tokens.
 
 Chapter 11 told what a closed language is, and what was lost when the field left it open. I take that as read. This chapter says what is new: what *produces* a closed language.
 
@@ -89,7 +89,7 @@ cShape = "dish: margherita" + nl + "quantity: many" + nl + "note: no basil" + nl
 #--> 1
 ```
 
-The second pair is the point of the chapter: the grammar answers `1` and the court answers `0`! I do not print the list of what the grammar dropped, because its text carries the former name of the court in one place. I test that it names the limit of the range.
+The second pair is the point of the chapter: the grammar answers `1` and the court answers `0`! I do not print the list of what the grammar dropped: its text carries, in one place, the court's former name, and that name belongs to the history in Appendix H. I test that the list names the limit of the range.
 
 An AI model is not asked to be careful. The sampler asks the grammar at every candidate token whether it could continue. So a word that is not on the menu is not refused after it is said. Can it begin at all?
 
@@ -104,7 +104,7 @@ An AI model is not asked to be careful. The sampler asks the grammar at every ca
 #--> 0
 ```
 
-It cannot: `dish: p` answers `0`. The last line is a failure the measurement found in a small model: the placeholder `<number>` echoed where a number belongs. And a token is not a byte. A piece may be valid as a prefix and invalid as a completion, and the machine is fed the whole piece. What does it answer to `yesterday`, which begins like `yes`?
+It cannot: `dish: p` answers `0`. The last line is a failure the measurement of section 5 found in a small model: the placeholder `<number>` echoed where a number belongs. And a token is not a byte. A piece may be valid as a prefix and invalid as a completion, and the machine is fed the whole piece. What does it answer to `yesterday`, which begins like `yes`?
 
 ```haro
 cY = 'root ::= "yes" "\n"'
@@ -143,7 +143,7 @@ done
 #--> 1
 ```
 
-The text of the nested-structure refusal carries the former name of the court, so I print only the codes. The last line is the point: the court reads what the grammar refuses to write.
+The text of the nested-structure refusal carries the court's former name too, so I print only the codes. The last line is the point: the court reads what the grammar refuses to write.
 
 The declaration language is itself closed. A typo in the law is refused when the law is declared. The library's contract says why. A key such as `:requird = 0` would leave a field required without a word, and that is the class of typo a court must not tolerate in its own law. What does the court answer to one?
 
@@ -176,7 +176,7 @@ What I saw, and the narration does not say: the refusal is silent and whole. The
 
 A language declared once should give its court, its mouth, its voice and its readers. That is the forge, and it is where the study of this book meets its own limit: the forge is not in the library.
 
-I will say what the record holds, and what I observed on 8 October 2026 on the older runtime, the oracle. The record is a charter and a spike in another repository, in pure core code that runs on the oracle. The forge reads a declaration and writes two files, a court program and a grammar. The spike's rungs, between 1 and 4 October 2026, forged courts and grammars for the machine language of the estate and for a fleet language declared over it. They did the same for the expression language and for four more letters of the alphabet. Each was judged against the pre-existing language's own cases. Those cases were unadapted for the expression language (W) and for Z, re-expressed for F and A, and, for Q, the older language's own answers, captured. In order: 117 of 120 for the machine language, the three left being the fleet file's kinds. Then 32 of 32 for the fleet language, 29 of 29 for W, 16 of 16 for Z, 25 of 25 for Q, 26 of 26 for F and 35 of 35 for A. This is chapter 3's method, declare then govern, applied to the forge itself.
+I will say what the record holds, and what I observed on 8 October 2026 on the older runtime, the oracle. The record is a charter and a spike in another repository, in pure core code that runs on the oracle. The forge reads a declaration and writes two files, a court program and a grammar. The spike's rungs, between 1 and 4 October 2026, forged courts and grammars for the machine language of the estate and for a fleet language declared over it. They did the same for the expression language and for four more letters of the alphabet, the vision's family of declared languages, each known by a letter. Each was judged against the pre-existing language's own cases. Those cases were unadapted for the expression language (W) and for Z, re-expressed for F and A, and, for Q, the older language's own answers, captured. In order: 117 of 120 for the machine language, the three left being the fleet file's kinds. Then 32 of 32 for the fleet language, 29 of 29 for W, 16 of 16 for Z, 25 of 25 for Q, 26 of 26 for F and 35 of 35 for A. This is chapter 3's method, declare then govern, applied to the forge itself.
 
 I ran the forge on a small language I wrote for this book, a table's order in the words of the dining room. It is an example, written for the book and run once, outside the library:
 
@@ -211,11 +211,11 @@ Three more observations, each a limit.
 
 **The vision has not caught up.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The principles file, dated 1 October 2026, says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides. The forge has forged courts and grammars for several languages, outside the library, and it has not forged the full list the principle promises. And the vision's text has not been updated. In the book's stage words, the forge is built outside the library and designed for the library, and chapter 11's limit says the same.
 
-### The facets of a declared language
+### The parts of a declared language
 
-By facet I mean here a surface of a declared language. The charter lists what the forge produces from a declaration, and I give each a stage word:
+The charter lists what the forge produces from a declaration, its parts, and I give each a stage word:
 
-| facet | what it is | stage |
+| part | what it is | stage |
 |---|---|---|
 | the text | the declaration, plain and closed, with a rationale required on every declaration | built outside; the library's analogue is the schema declaration |
 | the court | the judge generated for the language, speaking in the declaration's own words | built outside; the library's analogue is `Verify` and `Accepts` |
@@ -225,9 +225,9 @@ By facet I mean here a surface of a declared language. The charter lists what th
 | the voice | the language narrating a run, a sentence, a refusal; never stored and never parsed back | built outside; the library's analogue is `Understood()` |
 | the tongues | a human language as a data file | built outside for two tongues; built in the library for five packs (chapter 11) |
 | the projections | the world rendered to an application, a server, a page, a device | designed |
-| the faces | a second syntax of Haro | designed; chapter 16 tells it |
+| the facets | a second syntax of Haro | designed; chapter 16 tells it |
 
-The word *facet* has other meanings in this book, and I define mine here: a surface of a declared language. The second sense is a syntax of Haro for a programmer of another language: the table calls it a *face*, and chapter 16 tells it. The third is a tab of the environment's ribbon, one phase of a life, which is chapter 26's.
+The word *facet* has two meanings in this book, and I define the one of this part here. A facet is a second syntax of Haro, for a programmer of another language: another spelling of the one grammar, and never a runtime. It is the last row of the table, and chapter 16 tells it. The other sense is a tab of the environment's ribbon, one phase of a life, which is chapter 26's.
 
 ## 4. The decision, and what I refused
 
@@ -245,7 +245,7 @@ The word *facet* has other meanings in this book, and I define mine here: a surf
 
 **I refused to let the grammar half retire the court.** The contract says the court does not retire when constrained decoding lands. And what the grammar cannot express it refuses, and never flattens or approximates.
 
-**I refused a second face as a second meaning.** A face spells the graph; it never gives it Python's or JavaScript's meaning. That is a session's memo, which proposes and rules nothing, and its question of how many faces before the announcement is mine, and unanswered in the record.
+**I refused a second facet as a second meaning.** A facet spells the graph; it never gives it Python's or JavaScript's meaning. That is a session's memo, which proposes and rules nothing, and its question of how many facets before the announcement is mine, and unanswered in the record.
 
 Next is the court, and the guards that stand behind it.
 
@@ -261,7 +261,7 @@ The first attempt is valid in two cases of ten when checked afterwards, and in t
 
 The workbenches lead on tooling. The field study says it itself: they remain superior on the axes the design deliberately abandons, projectional tooling, editor integration and depth of macros. And the bet that those axes are the wrong ones is named as a bet.
 
-Generated code makes undisciplined language-making cheap too, and that is why the court is the core and not an accessory. I hold this as a view, not a result.
+Generated code makes undisciplined language-making cheap too, and that is why the court is the core and not an accessory.
 
 Constrained decoding: the field built it first, and the reference implementation is another library's. What the record adds is the pairing: a grammar and a court from one declaration, and the list of what the grammar dropped.
 
@@ -299,7 +299,7 @@ The six doors follow, from the programmer to the agent.
 
 ## 8. Six doors
 
-**The programmer.** You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it.
+**The programmer.** You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it. The table's formula language of section 7 is another language, and open at its edge.
 
 **The analyst.** The declaration is plain text in the domain's words, and the court answers in those words.
 

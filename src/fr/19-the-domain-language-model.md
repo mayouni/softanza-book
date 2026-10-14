@@ -74,7 +74,7 @@ La complétion est contrainte au domaine. Qu'offre le modèle après une entité
 
 Après une entité qui porte des faits, ses relations : `[ "contains", "pairs-with" ]`. Après une relation, seulement ses objets : `[ "tomato-sauce", "mozzarella" ]`. Un fragment se complète en entités, et un mot que le domaine ne contient pas se complète en rien : `[ ]`. La garde qui le prouve l'appelle « the grammar spirit ». C'est une consultation dans les faits, non un décodage sous une grammaire compilée. Et elle voit un mot, pas la phrase jusque-là : `Complete("contains")` renvoie les objets de chaque fait `contains`, quel que soit son sujet.
 
-La grammaire elle-même peut être dérivée de la base de connaissances, et ici le lecteur de ce livre doit écrire la dérivation. Il n'y a dans la bibliothèque aucun appel qui transforme une base de connaissances en grammaire, et la conception en fait la tâche du premier échelon. Mais les pièces se composent. Le vocabulaire du domaine devient les choix d'un schéma du chapitre 11, le schéma se compile en grammaire, et la grammaire n'a aucun chemin pour un mot hors du domaine :
+La grammaire elle-même peut être dérivée de la base de connaissances, et ici le lecteur de ce livre doit écrire la dérivation. Il n'y a dans la bibliothèque aucun appel qui transforme une base de connaissances en grammaire, et la conception en fait la tâche du premier échelon. Mais les pièces se composent. Le vocabulaire du domaine devient les choix d'un schéma du chapitre 11, le schéma se compile en grammaire, et la grammaire n'a aucun chemin pour un mot hors du domaine. Les trois règles qu'elle imprime en dernier, pour le texte, le nombre et le booléen, sont celles que le compilateur émet toujours, et aucun champ ici ne les emploie :
 
 ```haro
 aLex = oDLM.Lexicon()
@@ -209,9 +209,9 @@ Le 13 juillet 2026, j'ai tranché sur ce point. Le concept d'un modèle de langa
 
 **J'ai refusé le jeton comme unité.** L'unité est un chunk du monde, qu'un graphe peut admettre ou refuser.
 
-**J'ai refusé un enseignant que je ne peux pas voir.** La conception antérieure de l'idée employait un grand modèle d'IA commercial pour écrire son corpus d'entraînement. J'ai posé une loi contre cela, et le corpus de ce modèle est rendu à partir des faits propres du domaine : la deuxième loi de la bibliothèque dit qu'une capacité n'exige jamais rien de payant ni de distant.
+**J'ai refusé un enseignant que je ne peux pas voir.** La conception antérieure de l'idée employait un grand modèle d'IA commercial pour écrire son corpus d'entraînement. J'ai posé une loi contre cela, et le corpus de ce modèle est rendu à partir des faits propres du domaine : une loi de la bibliothèque dit qu'une capacité n'exige jamais rien de payant ni de distant.
 
-**J'ai refusé le neuronal d'abord.** La découverte dont je pars est que le modèle canonique n'est pas neuronal. Une revue du produit antérieur a archivé un transformeur de un à trois milliards de paramètres, au profit d'une prédiction à base de règles. Son motif était que l'hallucination est impossible quand le modèle ne peut pas générer de texte presque valide. Le premier échelon a donc zéro entraînement et zéro coût, et l'échelon neuronal vient en second.
+**J'ai refusé le neuronal d'abord.** La découverte dont je pars est que le modèle canonique n'est pas neuronal. Une revue du produit antérieur, consignée dans la conception que le domaine de projets en fait, a archivé un transformeur de un à trois milliards de paramètres au profit d'une prédiction à base de règles. Son motif était que l'hallucination est impossible quand le modèle ne peut pas générer de texte presque valide. Le premier échelon a donc zéro entraînement et zéro coût, et l'échelon neuronal vient en second.
 
 **J'ai refusé que la forme tienne lieu de vérité.** La grammaire dit que la structure tue la malformation, pas la fausseté. La vérité appartient au graphe, à ses lois, et à une personne.
 
@@ -237,9 +237,9 @@ La section 7 dit ce qui est construit, ce qui est conçu et ce qui est absent.
 
 Ce qui est construit : le premier échelon et ses réponses ; les faits rendus comme corpus, avec un vocabulaire fermé ; la complétion par consultation ; et le lot qui voyage avec ses tests. Construit aussi : un second échelon qui s'entraîne en une fraction de seconde et exporte un petit fichier de modèle, et l'admission d'un fait par une loi.
 
-Ce qui est conçu tient en quatre points, et la page doit dire chaque point.
+Ce qui est conçu tient en quatre points.
 
-- La grammaire dérivée d'une base de connaissances par un seul appel. La composition du chapitre 19 est celle du lecteur, pas celle de la bibliothèque.
+- La grammaire dérivée d'une base de connaissances par un seul appel. La composition de ce chapitre est celle du lecteur, pas celle de la bibliothèque.
 - Le corpus du second échelon validé par la grammaire du premier avant d'être admis. La conception le dit ; le code rend les faits directement, sans une telle vérification. Ainsi « correct par construction » vaut pour le texte d'entraînement, et non pour ce que dit le modèle.
 - La validation en cinq étapes d'un chunk. Aucune n'existe comme pipeline.
 - Les étapes de la fonderie au-delà du bigramme.

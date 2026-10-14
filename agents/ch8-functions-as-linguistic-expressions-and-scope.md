@@ -4,7 +4,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -36,7 +36,7 @@ o2.RemoveManyCS([ "o", "f", "n" ], FALSE)
 
 The article promised `SOFTANZA` on the second line. The run prints `STAZA`! The code is right and the article is wrong: a removal that does not care about case removes the capitals too. I print the run.
 
-Does the library only follow this grammar, or does it read it? Its name parser, `_StzParseName`, is an internal helper that no guard covers. The public way in is `ExplainMethod`, which explains a method in those terms:
+Does the library only follow this grammar, or does it read it? Its name parser, `_StzParseName`, is an internal helper that no guard covers; I call it first below, for the raw reading. The public way in is `ExplainMethod`, which explains a method in those terms:
 
 ```haro
 ? @@( _StzParseName("FindNextSTCS") )
@@ -109,7 +109,7 @@ o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ```haro
 ? Q("*").IsNotLetter()
 #--> TRUE
-o3 = new stzList([ "R", "I", "N", "G" ])
+o3 = new stzList([ "H", "A", "R", "O" ])
 ? o3.IsNotAString()
 #--> TRUE
 ? o3.DoesNotContain("♥")
@@ -118,7 +118,7 @@ o3 = new stzList([ "R", "I", "N", "G" ])
 
 > run: kept
 
-**The deep form** answers a path, a list of indices that goes as deep as the data does, and the same family replaces and removes at that depth:
+**The deep form** answers a path, a list of indices that goes as deep as the data does, and the same family replaces and removes at that depth, with `:By` as its named seat where chapter 5's `Replaced` said `:With`; the deep verbs accept both:
 
 ```haro
 o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
@@ -156,7 +156,7 @@ The chain printed `H A R O`, and the original still holds `haxxrxo`!
 
 The article says the library recognises and corrects minor typos, and that the intelligence resides in the library itself. The code shows how the form works: `WithoutSapces` works because that spelling was written by hand as an alias. Another misspelling, `WithoutSpces`, fails. So the form is real, and in what I traced it is a list of declared aliases; the correction engine the article describes is not among what I traced. I did not trace every file that mentions correction; one message in the object class only suggests a name, with "Did you mean".
 
-Now the scope half of the chapter. The same fault shows up everywhere in programming: behaviour with an invisible governing frame. I hold this as a view, not a result; what stands behind it here is three instances: the regex verbs, the system and the placement of a deployment. A function does one thing here and another there, and nothing in its name says which frame it is in. The answer, in four moves, is the paradigm I call scope-oriented programming. Name the hidden frame. Turn it into a small, closed set of named scopes. Choose the scope at the call site, in the verb, and not in a flag set earlier. And give the library the scope to reason with, a semantic handle and not a comment.
+Now the scope half of the chapter. The same fault shows up everywhere in programming: behaviour with an invisible governing frame. I hold this as a view, not a result; what stands behind it here is three instances: the regex verbs, the system and the placement of a deployment. A function does one thing here and another there, and nothing in its name says which frame it is in. The answer, in five moves, is the paradigm I call scope-oriented programming. Four come first. Name the hidden frame. Turn it into a small, closed set of named scopes. Choose the scope at the call site, in the verb, and not in a flag set earlier. And give the library the scope to reason with, a semantic handle and not a comment.
 
 It was born in regular expressions, where the frame is how much of the text a pattern must cover. The same pattern, the same text, three verbs: what does each answer?
 
@@ -248,7 +248,7 @@ Now the court, and which guards prove which of these claims.
 
 ## 5. The court
 
-`00_regex_narrated` proves the verbs `Match` and `MatchFirst`: `Match` anchors, `MatchFirst` searches, Z hands back positions and does not print them. It asserts nothing for `MatchLine` and `MatchWord`: the blocks above show them, and only classic blocks, which are not guards, cover them. `972_narration_viz-finding_a_recurring_substring` proves the drawn answer. `full_scope_model_narrated` proves the system scope, with its three verdicts. `system_scope_model_narrated` proves the closed set of capabilities; one of its assertions is a timing limit, and in one probe run under load it did not hold, a run `data/` does not record. I print it beside the proof. `delivery_narrated` proves the placement plan.
+`00_regex_narrated` proves the verbs `Match` and `MatchFirst`: `Match` anchors, `MatchFirst` searches, Z hands back positions and does not print them. It asserts nothing for `MatchLine` and `MatchWord`: the blocks above show them, and only classic blocks, which are not guards, cover them. `972_narration_viz-finding_a_recurring_substring` proves the drawn answer. `full_scope_model_narrated` proves the system scope, with its three verdicts. `system_scope_model_narrated` proves the closed set of capabilities; one of its assertions is a timing limit, and section 7 says what one probe showed of it. `delivery_narrated` proves the placement plan.
 
 Where the field does better comes next.
 
@@ -275,9 +275,9 @@ What is absent, and the page should say each with what exists beside it:
 - **Free**, the suffix that lets a call give its parameters in any order and any subset: there is no definition of it outside the archive. The library's own parser knows the name `FX` and not `FF`. The two narrations that tell it use two names, and the code has neither.
 - **Default**, `dftRange` and `infRange`: not defined; the library's comment calls the informing form not yet built.
 - **Multilingual**, a method named in French or Arabic: not in the live library. The names exist in the archive. The nearest thing today is the language packs of chapter 11.
-- The three that run in another shape. The exceptional form exists, but the article's example does not. Free order works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
+- The three that run in another shape. The exceptional form exists, but the article's example does not. Free order, as the article means it, a number and a string swapped in their positions, works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. The free order of named parameters is another thing, and chapter 7 runs it. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
 
-On the scope side: the regex verbs differ from the design table in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run, which `data/` does not record, 61 of the 62 assertions of its narrated guard passed, and the one assertion that did not hold was a timing limit. I state what the code does: the system scope is built, with that result printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
+On the scope side: the regex verbs differ from the table of the scope design document in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run under load, which the book's data does not keep, 61 of the 62 assertions of its narrated guard passed, and the one assertion that did not hold was a timing limit. I state what the code does: the system scope is built, with that result printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
 
 ## 8. Six doors
 

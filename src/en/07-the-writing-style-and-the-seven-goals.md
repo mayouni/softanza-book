@@ -26,17 +26,17 @@ The first is style as layout, enforced by a tool. Python's style guide dates fro
 
 The second is the small language inside the language. Programmers already write small languages in strings, and nobody calls that a style: a regular expression, a SQL text, a format string such as `"%5.2f"`. Each is a separate notation, with its own tool, learned apart.
 
-For goals, the field says *quality attributes*. The ISO standard for software quality, of 2011, lists eight of them, and architecture methods rank them before a system is drawn. (General knowledge, not a study of the record.) The seven goals of this chapter are a different list, chosen for a different purpose. They do not say what a product promises its users. They say what a feature must serve to be admitted into one library.
+For goals, the field says *quality attributes*. The ISO standard for software quality, of 2011, lists eight of them, and architecture methods rank them before a system is drawn; that is general knowledge, not a study of the record. The seven goals of this chapter are a different list, chosen for a different purpose. They do not say what a product promises its users. They say what a feature must serve to be admitted into one library.
 
 ## 2. The first principle
 
 **What you think is what you write.** It is chapter 5's sentence, from the diagram of 2020, and I do not argue it again. Chapter 5 took five rules of the style. This chapter takes the rest, as a grammar, and then the goals under which the grammar was designed.
 
-For the goals, the point is the author's, as the study reports it, and not a dated quotation. A software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
+For the goals, the point is mine, and not a dated quotation. A software architecture that is goal-oriented is the only way one architect masters a project of this size. I hold this as a view, not a result. What stands behind it on this page is one case: the 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines (section 6).
 
 ## 3. The Softanza form
 
-The study of the record wrote the style down as fourteen rules, in its ruling 12.16, from reading the code. They are readings of the code, stated as rules, and not a standard anyone signed. Here they are with the state each is in at the commit this book runs. I put the table first because it shows which rules carry a block and which carry a limit.
+My study of the record wrote the style down as fourteen rules, from reading the code. They are readings of the code, stated as rules, and not a standard anyone signed. Here they are with the state each is in at the commit this book runs. I put the table first because it shows which rules carry a block and which carry a limit.
 
 | # | Rule | State at this commit |
 |---|---|---|
@@ -110,7 +110,7 @@ o1.RemoveW('{ Q(@char).IsLowercase() }')
 
 The deck of 2022 writes the same call with a named seat, `:Where = '...'`, and that form raises on a string in this commit. I do not show it. The same deck puts an `@` at the end of a parameter's name, `:With@`, to mark that its value is code to be evaluated. That form is retired. A guard's header says so: the eval-based forms are retired. The deck itself marks the form "TODO". Code now travels in the seat as a bounded string that the engine evaluates, or as a function.
 
-Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways. Each pair is one act, with two definitions. The library's own narration calls the first with two arguments and it raises `less number of parameters`; the guards pass the starting position, and so does the block:
+Rule 8: the same act may be said in two orders of words, with the container's name, or with the side spelled four ways, left or start, right or end; two of the four run below. Each pair is one act, with two definitions. The library's own narration calls the first with two arguments and it raises `less number of parameters`; the guards pass the starting position, and so does the block:
 
 ```haro
 o1 = new stzList([ 1, 2, "♥", 4, 5, "♥", "♥" ])
@@ -130,7 +130,7 @@ o2.SwapItems(:AtPositions = 1, :And = 3)
 
 The deck promised more. A family of five names ending in `CharsRemoved`, for removing characters at the ends, is named in the deck. Two are defined, `LeadingCharsRemoved` and `TrailingCharsRemoved`. Three are not: `LeadingAndTrailingCharsRemoved`, `TrailingAndLeadingCharsRemoved` and `RepeatedCharsRemoved`. `RemoveLeadingAndTrailingChars` is defined, and is not one of the five.
 
-Rule 9: precision over generality. The precise name says what is counted. A string's characters are counted by `NumberOfChars`, and `Size()` is the host's byte length. Do the two answers differ on an Arabic word? Run it:
+Rule 9: precision over generality. The precise name says what is counted. A string's characters are counted by `NumberOfChars`, and `Size()` is the host's byte length. The two list verbs in the same block show the rule on a list: the precise name, `ContainsBoth` or `ContainsAll`, says what is asked. Do the two answers differ on an Arabic word? Run it:
 
 ```haro
 ? Q("سلام").NumberOfChars()
@@ -148,24 +148,13 @@ o1 = new stzList([ "tea", "rice", "fish", "salt" ])
 
 The run answers `4` to the one and `8` to the other. The word has four letters! The library's own documentation line for `NumberOfChars` lists *size* among its alternative words. The run shows that `Size()` does not mean it. I list it among the requests.
 
-Rule 7: a prefix `viz` shows the answer under the word, and the suffix `XT` adds the positions as numbers:
+Rule 7: a prefix `viz` shows the answer under the word, and the suffix `XT` adds the positions as numbers; chapter 8 runs the block, among the forms of a name.
 
-```haro
-o1 = new stzString("fjharoljharodjharog")
-? o1.vizFind("haro")
-#--> fjharoljharodjharog
-#--> --^-----^-----^----
-? o1.vizFindXT("haro", [ :Numbered = TRUE ])
-#--> fjharoljharodjharog
-#--> --^-----^-----^----
-#-->   3     9     15
-```
-
-The narration and the deck write `vizFindAll` on a string. It does not exist there at this commit: the research run answered `Calling Method without definition: vizfindall`. `vizFind` does exist. A list has its own `VizFindAll`.
+The narration and the deck write `vizFindAll` on a string. It does not exist there at this commit: my run answered `Calling Method without definition: vizfindall`. `vizFind` does exist. A list has its own `VizFindAll`.
 
 ### The goals
 
-Under the grammar there are seven goals, written in the 2022 deck as a matrix of thirty-three features. The study's ruling 12.14 reads them as the library's architectural skeleton: a feature that serves none is refused, and a goal with no feature is a gap. The study's summary is a session's reading and not a text of the library, and no document in the library states the rule in these words. The nearest is the engine's design document: the engine must enable all seven.
+Under the grammar there are seven goals, written in the 2022 deck as a matrix of thirty-three features, which section 4 counts. My study reads them as the library's architectural skeleton: a feature that serves none is refused, and a goal with no feature is a gap. The study's summary is a session's reading and not a text of the library, and no document in the library states the rule in these words. The nearest is the engine's design document: the engine must enable all seven.
 
 I will not list the seven as a table of slogans. Here is what runs of three of them.
 
@@ -182,7 +171,7 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-Both orders print `----@@--@@-------@@----##---`! A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold. I do not make it here. They are kept, and they are not grammar.
+Both orders print `----@@--@@-------@@----##---`! This is the free order of named parameters; the deck's other free order, a number and a string swapped in their positions, is chapter 8's, and it does not run. A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold. I do not make it here. They are kept, and they are not grammar.
 
 **Consistency: one vocabulary across a string and a list.** Does the same verb answer on both?
 
@@ -197,9 +186,9 @@ Both orders print `----@@--@@-------@@----##---`! A tension must be told with it
 #--> TRUE
 ```
 
-The loss beside it, from the same slide group: the deck's advice to use the keyword Item with any enumerable type does not hold. `NumberOfItems()` on a string raises in the research run: `Calling Method without definition: numberofitems`. On a list it answers.
+The loss beside it, from the same slide group: the deck's advice to use the keyword Item with any enumerable type does not hold. `NumberOfItems()` on a string raises in my run: `Calling Method without definition: numberofitems`. On a list it answers.
 
-**Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because in the research run its first line carried a line number of the library, and a line number is not a promise.
+**Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because in my run its first line carried a line number of the library, and a line number is not a promise.
 
 The other four goals (expressiveness, reliability, the human metaphors and the practical abstractions) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
 
@@ -207,13 +196,13 @@ Next comes the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused a style that was changed when AI became the main writing tool.** The study reports the author's disappointment in these terms, and chapter 5 tells it. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or AI agent, is asked to write with Softanza embraces the historic style.
+**I refused a style that was changed when AI became the main writing tool.** Chapter 5 tells what I found, and what I let go. The implementation code that the AI wrote is accepted as good. What is demanded is that every line a programmer, human or AI agent, is asked to write with Softanza embraces the historic style.
 
-**I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. The study's finding is that there is no court over either.
+**I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. I found no court over either.
 
-**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand. They carry a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style is densest where the author wrote for a reader, and thinner where the AI wrote for others; carrying it there is the next step. A marker is a reading of the text, not a judgement of the code; the study says so itself.
+**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand. They carry a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style is densest where I wrote for a reader, and thinner where the AI wrote for others; carrying it there is the next step. A marker is a reading of the text, not a judgement of the code; the study says so itself.
 
-**I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
+**I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026 and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
 **I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and do not yet match some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
 
@@ -254,13 +243,13 @@ The field leads in having its goals somewhere a reader looks first. The seven go
 
 The site once showed a reduced dialect: its blocks had no named parameter and no scene. It has since put the fourteen rules on its Craft page and the rules as data. I did not re-measure the site's blocks after that.
 
-Where I think the style stands apart is that every rule serves a step of thought, and every step has a written form (study 12.17). The verb's form is a contract on the object. And the promise under the line is the example, the test and the documentation at once. The 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines.
+Where I think the style stands apart is that every rule serves a step of thought, and every step has a written form. The verb's form is a contract on the object. And the promise under the line is the example, the test and the documentation at once. The 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines, by my study's count.
 
 The limit, in the next section, says what is built, what is designed and what is absent.
 
 ## 7. The limit
 
-What is built: the fourteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT`, `ZZ`, `viz`, named parameters, the same verb on a string and a list).
+What is built: the fourteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
 
 What is designed:
 
@@ -273,9 +262,9 @@ What is designed:
 What is absent:
 
 - Any machine that judges, today, the style of a program written with the library; beside it, the house court judges the library's own code.
-- Rules 12 and 13 as running forms. In the research session's runs, the deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
+- Rules 12 and 13 as running forms. In my runs, the deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
 - The `@` on a parameter's name as a working form.
-- The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too. These three come from the research session's runs; no block of this chapter keeps them.
+- The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too. These three come from my runs; no block of this chapter keeps them.
 - The visualised call stack, and the cache and log decorators, which exist as names in comments.
 
 ## 8. Six doors
@@ -310,7 +299,7 @@ Write, before you run anything, the line each task needs and the promise under i
 # 5.
 ```
 
-Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so the host reads `day8` as a variable, and it raises with `Using uninitialized variable: day8`. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
+Run it. For the fifth, you were allowed to be wrong, and you were probably wrong: the range changes width, so `L` hands its text to the host to evaluate, the host reads `day8` as a variable, and it raises with `Using uninitialized variable: day8`. That is the limit of the small language, learned by being surprised once. Do not change your promise to match the output. Explain the output first.
 
 I left this one in your hands. The first call of the rule 8 block, with its named start taken out, has two arguments. Nothing else changes:
 

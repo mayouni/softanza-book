@@ -74,7 +74,7 @@ o2 = new stzList([ "one", "and", "one", "makes", "two", "ones" ])
 
 Les deux répondent `1` : le même verbe, le même acte, à deux profondeurs.
 
-**Les zones.** À travers les couches, la bibliothèque est cartographiée par l'Atlas du site en zones regroupées en bandes, et chaque zone en voies. Chaque voie est notée d'émergente à forte, la plupart avec la ligne qui le prouve. L'Atlas dit ce qui existe, et à quel point c'est bien. La règle de conception du moteur est qu'un verbe veut dire le même acte sur toute structure qui l'admet. Tient-elle pour une paire, une chaîne et une liste ? Exécutez-le :
+**Les zones.** À travers les couches, la bibliothèque est cartographiée par l'Atlas du site en zones regroupées en bandes, et chaque zone en voies. Chaque voie est notée d'émergente à forte, la plupart avec la ligne qui le prouve. L'Atlas dit ce qui existe, et à quel point c'est bien. Un autre principe de la conception du moteur est qu'un verbe veut dire le même acte sur toute structure qui l'admet. Tient-elle pour une paire, une chaîne et une liste ? Exécutez-le :
 
 ```haro
 ? @@( Q("tea rice tea").FindAll("tea") )
@@ -109,7 +109,7 @@ oApp.Live()
 
 Il répond `WORLD FieldVisits   lives in: memory (not persisted)`, puis liste son être et ses relations. `Live()` répond `[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)`. Deux choses, et ni flux, ni réaction, ni but. Le monde dit ce qui a été déclaré, et rien de plus.
 
-Les mondes se composent en constellation. Ici un restaurant et son fournisseur de produits sont deux mondes, et un lien entre eux déclare l'unique traversée permise. Que devient une traversée qu'aucun lien ne déclare ? Exécutez-le :
+Les mondes se composent en constellation. Ici un restaurant et son fournisseur de produits sont deux mondes, et un lien entre eux déclare l'unique traversée permise. Les trois lignes `Gov` déclarent le risque de la traversée, l'accordent au restaurant et fixent l'autorité du restaurant ; la garde derrière ce bloc montre que sans elles, même la traversée déclarée est refusée. Que devient une traversée qu'aucun lien ne déclare ? Exécutez-le :
 
 ```haro
 oResto = StzAppQ("resto")
@@ -135,7 +135,7 @@ La traversée déclarée répond `1`. L'autre répond `0`, refusée ! La constel
 
 Le socle commun est le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient. Il tient une identité, une session et un magasin. C'est un monde comme les autres, le monde zéro, et non un genre particulier de nœud. Le chapitre 23 le montre et dit jusqu'où le code est allé dans cette direction.
 
-Et une plateforme est l'enveloppe autour d'une solution : ses parties, les systèmes sur lesquels elles tournent, et l'ordre dans lequel elle est construite, répétée et déployée. Vous la verrez refuser de déployer avant d'être construite au chapitre 33. Voici ce qu'elle fait des couches, pour le web : une partie d'une solution ne livre que les groupes du moteur dont elle a besoin, et seulement ceux qui appartiennent à Softanza. Le téléphone ci-dessous demande quatre capacités. Combien de groupes du moteur livre-t-il ? Exécutez-le :
+Et une plateforme, `stzPlatform` dans la figure, est l'enveloppe autour d'une solution : ses parties, les systèmes sur lesquels elles tournent, et l'ordre dans lequel elle est construite, répétée et déployée. Vous déclarez la solution qu'elle porte comme un `stzPlatformProfile`, et vous la verrez refuser de déployer avant d'être construite au chapitre 33. Voici ce que son planificateur de livraison, `stzDelivery`, fait des couches, pour le web : une partie d'une solution ne livre que les groupes du moteur dont elle a besoin, et seulement ceux qui appartiennent à Softanza. Le téléphone ci-dessous demande quatre capacités. Combien de groupes du moteur livre-t-il ? Exécutez-le :
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
@@ -151,7 +151,7 @@ oPlan = oDelivery.Plan()
 
 Deux, pas quatre : `aggregation` et `solver` ! Le système propre du téléphone gère l'une des deux autres, Unicode, et Softanza livre l'autre, Regex, comme une construction dans le langage propre de la cible.
 
-**Les artisans du logiciel.** En haut se trouvent les six portes du chapitre 2 : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent. Et une personne travaille à travers chaque étage, du moteur à l'organisation : l'architecte de plateforme. Le dossier nomme cette personne en trois endroits sans lien entre eux, et aucun autre rôle ne traverse toutes les bandes de l'Atlas.
+**Les artisans du logiciel.** En haut se trouvent les six portes du chapitre 2 : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent. Et une personne travaille à travers chaque étage, du moteur à l'organisation : l'architecte de plateforme. Le dossier nomme ce rôle dans trois de ses documents, et aucun autre rôle ne traverse toutes les bandes de l'Atlas.
 
 **Le tribunal.** À côté de chaque étage se tient son juge. Le moteur a ses tests et les contrats entre les étages. Les couches ont les gardes narrées. La plupart des voies des zones portent une ligne de preuve. Les mondes ont leurs liens et leurs normes, l'ordre de construction et de déploiement, et le refus d'un faux en production. Les interfaces des artisans du logiciel ont une constitution de verbes et de règles à laquelle chaque élément doit remonter. Et au-dessus de tout cela, le modèle de menaces de la plateforme énumère ses garanties, chacune liée à la garde qui la prouve. Sa propre garde échoue quand une ligne nomme une garde qui n'existe plus.
 
@@ -181,7 +181,7 @@ Cinq gardes se tiennent à côté des étages ; la section suivante dit ce que c
 
 Les trois profondeurs de Rust sont imposées par son compilateur et employées chaque jour sur le métal nu. La règle de Softanza est tenue au moteur et aux fichiers d'entrée, et pas encore portée là où la base devrait s'appuyer sur le noyau, comme le montre la section 7.
 
-Les bibliothèques de texte du terrain mènent sur la locale : la propre carte de Softanza dit que l'écart net de ses chaînes est la couche de locale des composants internationaux. Sa zone de locale est un pari délibéré contre ces composants : sans collation, sans règles de pluriel et sans fuseaux horaires.
+Les bibliothèques de texte du terrain mènent sur la locale : la propre carte de Softanza nomme la couche de locale des composants internationaux comme l'écart net de ses chaînes, et nomme le pari derrière lui : sa zone de locale laisse ces composants dehors à dessein, sans collation, sans règles de pluriel et sans fuseaux horaires.
 
 À l'échelle de vrais utilisateurs, les hôtes de super-applications du terrain mènent aujourd'hui. Le dossier les nomme comme le modèle qu'il a refusé et ne mesure rien contre eux, alors je n'en mesurerai pas non plus.
 
@@ -206,7 +206,7 @@ done
 
 Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et aucun fichier d'entrée ne la charge !
 
-Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte l'étude du site sur les racines du livre. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude du site. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
+Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte mon étude du dossier. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
 
 Ce qui est absent : un programme entier et son moteur emballés dans un seul fichier sans aucune dépendance, et une plateforme cliente qui tourne sur le moteur.
 
@@ -230,7 +230,7 @@ Chacune des six portes lit cette image depuis l'endroit où elle se tient.
 
 Dessinez votre propre solution comme ce chapitre dessine Softanza : des étages, et un tribunal à côté de chacun. Pour chaque boîte, écrivez le fichier qui la déclare et la garde qui la juge, et mettez dessus un mot d'étape : construit, conçu ou absent.
 
-Puis déclarez-en deux parties avec `stzPlatformProfile`, et avant d'exécuter quoi que ce soit, écrivez la ligne que vous attendez quand vous lui demandez de déployer avant de construire. Exécutez-le. Une boîte sans tribunal à côté est votre première trouvaille.
+Puis déclarez-en deux parties avec `stzPlatformProfile`, donnez le profil à un `stzPlatform`, et avant d'exécuter quoi que ce soit, écrivez la ligne que vous attendez quand vous lui demandez de déployer avant de construire. Exécutez-le. Une boîte sans tribunal à côté est votre première trouvaille.
 
 Je vous laisse celui-ci. La section 7 dit que les classes de chaîne de la couche noyau sont encore en développement face au moteur, et le bloc de la section 3 ne vous montre que des listes. Prenez le bloc de la section 7 et changez un mot : `stxString` devient `stkString`.
 

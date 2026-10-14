@@ -74,7 +74,7 @@ o2 = new stzList([ "one", "and", "one", "makes", "two", "ones" ])
 
 Both answer `1`: the same verb, the same act, at two depths.
 
-**The areas.** Across the layers, the library is mapped by the site's Atlas into areas grouped in bands, and each area into lanes. Each lane is rated from emerging to strong, most of them with the line that proves it. The Atlas says what exists, and how well. The engine's design rule is that a verb means the same act on every structure that admits it. Does it hold for one pair, a string and a list? Run it:
+**The areas.** Across the layers, the library is mapped by the site's Atlas into areas grouped in bands, and each area into lanes. Each lane is rated from emerging to strong, most of them with the line that proves it. The Atlas says what exists, and how well. Another principle of the engine's design is that a verb means the same act on every structure that admits it. Does it hold for one pair, a string and a list? Run it:
 
 ```haro
 ? @@( Q("tea rice tea").FindAll("tea") )
@@ -109,7 +109,7 @@ oApp.Live()
 
 It answers `WORLD FieldVisits   lives in: memory (not persisted)`, then lists its being and its relations. `Live()` answers `[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)`. Two things, and no flow, no reaction, no goal. The world says what was declared, and no more.
 
-Worlds compose into a constellation. Here a restaurant and its produce supplier are two worlds, and a bond between them declares the one crossing that is allowed. What becomes of a crossing that no bond declares? Run it:
+Worlds compose into a constellation. Here a restaurant and its produce supplier are two worlds, and a bond between them declares the one crossing that is allowed. The three `Gov` lines declare the crossing's risk, grant it to the restaurant and set the restaurant's authority; the guard behind this block shows that without them even the declared crossing is refused. What becomes of a crossing that no bond declares? Run it:
 
 ```haro
 oResto = StzAppQ("resto")
@@ -135,7 +135,7 @@ The declared crossing answers `1`. The other answers `0`, refused! The constella
 
 The commons is the shared ground of a constellation, what every world of it stands on. It holds an identity, a session and a store. It is a world like the others, world zero, and not a node of a special kind. Chapter 23 shows it and says how far the code has come in that direction.
 
-And a platform is the envelope around a solution: its parts, the systems they run on, and the order in which it is built, rehearsed and deployed. You will see it refuse to deploy before it is built in chapter 33. Here is what it does with the layers, for the web: a part of a solution ships only the engine groups it needs, and only those that are Softanza's own. The phone below asks for four capabilities. How many engine groups does it ship? Run it:
+And a platform, `stzPlatform` in the figure, is the envelope around a solution: its parts, the systems they run on, and the order in which it is built, rehearsed and deployed. You declare the solution it carries as a `stzPlatformProfile`, and you will see it refuse to deploy before it is built in chapter 33. Here is what its delivery planner, `stzDelivery`, does with the layers, for the web: a part of a solution ships only the engine groups it needs, and only those that are Softanza's own. The phone below asks for four capabilities. How many engine groups does it ship? Run it:
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
@@ -151,7 +151,7 @@ oPlan = oDelivery.Plan()
 
 Two, not four: `aggregation` and `solver`! The phone's own system handles one of the other two, Unicode, and Softanza ships the other, Regex, as a construct in the target's own language.
 
-**The crafters.** At the top are the six doors of chapter 2: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. And one person works across every floor, from the engine to the organisation: the platform architect. The record names that person in three unrelated places, and no other role crosses every band of the Atlas.
+**The crafters.** At the top are the six doors of chapter 2: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. And one person works across every floor, from the engine to the organisation: the platform architect. The record names that role in three of its documents, and no other role crosses every band of the Atlas.
 
 **The court.** Beside every floor stands its judge. The engine has its tests and the contracts between the floors. The layers have the narrated guards. Most lanes in the areas carry a proof line. The worlds have their bonds and norms, the order of build and deploy, and the refusal of a fake in production. The crafters' interfaces have a constitution of verbs and rules that every element must trace to. And above all of it, the platform's threat model lists its guarantees, each tied to the guard that proves it. Its own guard fails when a row names a guard that no longer exists.
 
@@ -181,7 +181,7 @@ Five guards stand beside the floors; the next section names what each proves.
 
 Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and not yet carried to where base should build on core, as section 7 shows.
 
-The field's text libraries lead on locale: Softanza's own map says that the clear gap of its strings is the international components' locale layer. Its locale area is a deliberate bet against those components: no collation, no plural rules and no time zones.
+The field's text libraries lead on locale: Softanza's own map names the international components' locale layer as the clear gap of its strings, and names the bet behind it: its locale area leaves those components out on purpose, with no collation, no plural rules and no time zones.
 
 At the scale of real users, the field's super-app hosts lead today. The record names them as the model it refused and measures nothing against them, so I will not either.
 
@@ -206,7 +206,7 @@ done
 
 The runtime answers: `Error in class name, class not found: stxstring`. The class is written, and no entry file loads it!
 
-The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names that no engine file registers, as the site study of the book's roots reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that site study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
+The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names that no engine file registers, as my study of the record reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
 What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
 
@@ -230,7 +230,7 @@ Each of the six doors reads this picture from where it stands.
 
 Draw your own solution the way this chapter draws Softanza: floors, and a court beside each. For each box, write the file that declares it and the guard that judges it, and put a stage word on it: built, designed or absent.
 
-Then declare two parts of it with `stzPlatformProfile`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
+Then declare two parts of it with `stzPlatformProfile`, give the profile to a `stzPlatform`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
 
 I left this one in your hands. Section 7 says the core layer's string classes are still in development against the engine, and the block of section 3 shows you lists only. Take the block of section 7 and change one word: `stxString` becomes `stkString`.
 

@@ -161,7 +161,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 
 Le niveau de risque refuse le premier : `'order-produce' has NO declared risk tier`. Le mot doublé « refused: refused: » est le texte propre de la bibliothèque. La traversée autorisée a écrit une décision d'elle-même ! Son enregistrement tient l'autorité et le risque de cet instant, et une lecture d'horloge, de sorte que le bloc n'imprime que la justification : `cross-world call cleared`. C'est la filiation qu'utilise le chapitre 30.
 
-Le sol partagé est un monde aussi. Dans une constellation, le socle commun est lui-même une plateforme, et il tient une identité, une session et un magasin. Le socle commun n'est pas un genre particulier de nœud ; les mots propres de la conception sont qu'il est uniforme et récursif. De quelle classe est le socle commun ? Demandez-le-lui :
+Le sol partagé est un monde aussi, dans les mots de la conception : le monde zéro, uniforme et récursif, et non un genre particulier de nœud. Dans une constellation, le socle commun est lui-même une plateforme, et il tient une identité, une session et un magasin. De quelle classe est le socle commun dans le code ? Demandez-le-lui :
 
 ```haro
 oCon = new stzSuperApp("acme-group")
@@ -221,7 +221,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-Le lien a survécu à l'échange : `CallAcross` répond encore `1` ! Le chapitre 28 a utilisé `Retire` et `Revive`, et ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre. Rien dans le code n'achemine un appel dans une constellation emboîtée, donc la récursion de la conception est celle d'un registre et pas encore celle d'un appel. Une traversée est un verdict : `CallAcross` autorise ou refuse par 1 ou 0, et rien n'est encore remis à la cible.
+Le lien a survécu à l'échange : `CallAcross` répond encore `1` ! Le chapitre 28 utilise `Retire` et `Revive` ; ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre. Rien dans le code n'achemine un appel dans une constellation emboîtée, donc la récursion de la conception est celle d'un registre et pas encore celle d'un appel. Une traversée est un verdict : `CallAcross` autorise ou refuse par 1 ou 0, et rien n'est encore remis à la cible.
 
 Un piège. Un monde enregistré est une copie. L'ancien langage hôte copie un objet par valeur quand il est stocké, de sorte que le monde que vous enregistrez n'est pas le monde que vous tenez. L'en-tête de la classe le dit : les objets monde s'atteignent par l'index du registre, le chemin vivant. Configurez le monde entièrement, enregistrez-le, et atteignez-le par la constellation à partir de là. L'enveloppe a la même doctrine : poser un monde sur la plateforme récolte ses déclarations au moment de l'appel, et poser la gouvernance prend un instantané du régime.
 
@@ -319,7 +319,7 @@ done
 
 La forme fichier est un texte simple que l'architecte possède, et elle fait l'aller-retour depuis une chaîne. La solution malsaine est refusée avant la construction, ses deux défauts nommés : `the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps`. L'ordre de construction et de déploiement est celui du chapitre 33, et la barrière sur qui déploie est celle du chapitre 24.
 
-Qui est l'architecte ? Le dossier nomme la personne deux fois par son nom : dans la System Foundation, et dans la note de Central pour une école qui certifierait des architectes de Softanza, avec trois niveaux. Cette note est marquée retirée, comme prompt de lancement, le jour même où elle a été écrite. Un troisième endroit, un livre privé du domaine de projets sur la modélisation de plateforme, modélise des plateformes et ne nomme pas l'architecte. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Je tiens cela pour une vue, non pour un résultat. Le site a une page de parcours pour l'architecte de plateforme et une page de certification qui dit que la proposition n'est pas annoncée (lu sur le site, le 9 octobre 2026). Je raconte l'architecte comme ce que l'on déclare, et la certification n'est que cette proposition ; aucune école n'est nommée ici.
+Qui est l'architecte ? Le dossier nomme l'architecte deux fois : dans la System Foundation, et dans une note du domaine de projets pour une école qui certifierait des architectes de Softanza, avec trois niveaux, une note marquée retirée le jour même où elle a été écrite. Cette certification est une proposition du 30 septembre 2026, non une livraison, et le site ne doit pas l'annoncer. Le protocole du domaine de projets définit un rôle comme un profil tenu dans une portée. Appliqué ici, ce qui est mon application et non celle du dossier, l'architecte n'est pas un rang. C'est ce que l'on tient dans la portée d'une solution : le profil, les mondes, la gouvernance. Je tiens cela pour une vue, non pour un résultat. Le site, tel que je l'ai lu le 9 octobre 2026, a une page de parcours pour l'architecte de plateforme et une page de certification qui dit que la proposition n'est pas annoncée. Je raconte l'architecte comme ce que l'on déclare, et la certification comme cette proposition ; aucune école n'est nommée ici.
 
 Sept refus se tiennent derrière cette forme.
 
@@ -327,7 +327,7 @@ Sept refus se tiennent derrière cette forme.
 
 **J'ai refusé l'hôte et la mini-appli.** Des mondes, non des mini-applis ; un graphe gouverné, non un conteneur hôte. Le chapitre 4 l'a raconté, et je renvoie à lui.
 
-**J'ai refusé de faire du socle commun un genre particulier de nœud.** C'est un monde, et un monde est uniforme et récursif.
+**J'ai refusé de faire du socle commun un genre particulier de nœud.** Dans la conception, c'est un monde, le monde zéro, uniforme et récursif ; dans le code, comme la section 3 l'a imprimé, c'est un objet plateforme et non un nœud du graphe.
 
 **J'ai refusé le bac à sable comme définition de l'isolation.** L'isolation est un sens déclaré et inspectable, et non une machine virtuelle en boîte noire. Un corps souverain de monde plus des liens barrés par une norme. Un bac à sable d'exécution n'est qu'une implémentation pour des mondes non dignes de confiance.
 
@@ -351,7 +351,7 @@ Je place maintenant le dossier à côté du terrain.
 
 ## 6. Le terrain, et où il mène
 
-La super-appli mène en utilisateurs. La conception nomme son modèle et le remplace ; le chapitre 4 dit que le dossier ne mesure rien contre eux. La page Plateformes imprime l'autre moitié : les plateformes de clients tournent aujourd'hui sur des piles web ordinaires. Aucune plateforme ne tourne sur la constellation en production.
+La super-appli mène en utilisateurs. La conception nomme son modèle et le remplace ; le chapitre 4 dit que le dossier ne mesure rien contre eux. La page Plateformes imprime l'autre moitié : les plateformes de clients tournent aujourd'hui sur des piles web ordinaires. Une plateforme de client sur le moteur, comme constellation, est la direction ; le chapitre 33 la porte comme la ligne suivante.
 
 Le terrain mène en coques. La conception promet une application web progressive, une coque de bureau, une coque mobile. Le code génère une page et un lanceur de quelques centaines d'octets. Les coques sont conçues. La génération est construite, et minuscule.
 
@@ -438,7 +438,7 @@ Les six portes viennent ensuite.
 
 **Le concepteur.** Un monde déclare des écrans comme des intentions, un raffinement comme un bouton borné, et où il apparaît. Les coques générées aujourd'hui sont des bouchons, et le persona qu'un monde sert n'est pas un champ.
 
-**Le décideur.** Vous déclarez qui peut traverser où et à quel risque, en trois barrières, et chaque traversée autorisée laisse une décision avec l'acteur, l'autorité et le risque de son instant. Le fichier de votre architecte est un texte que vous possédez.
+**Le décideur.** Vous déclarez qui peut traverser où et à quel risque, en trois barrières, et chaque traversée autorisée laisse une décision : le bloc a imprimé sa justification, et son enregistrement tient l'autorité et le risque de son instant. Le fichier de votre architecte est un texte que vous possédez.
 
 **Le formateur.** Le dossier est mince. Le plan d'éducation liste une échelle du praticien à l'architecte puis au contributeur parmi cinq schémas de niveaux concurrents, et je le dis. L'exercice ci-dessous se juge en l'exécutant.
 

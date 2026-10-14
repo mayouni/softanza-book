@@ -16,21 +16,21 @@ rulings: ["12.18", "12.19", "12.22", "12.23", "12.29"]
 research: research/ch20.md
 ---
 
-In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
+In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. Then come the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
 ## 1. The concept, as the field holds it
 
-In the field, safety is a property of the AI agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process, and does not tell a file moved from random bytes churning.
+In the field, safety is a property of the AI agent. The doctrine document of the library lists what the field offers: alignment, guardrails, confirmation prompts, a checkbox that says a human is in the loop. Tool-using agents, and the autonomous agents that descend from them, let the model's tool calls touch reality immediately, with a prompt for confirmation. Computer-use agents run in a sandboxed virtual machine, which contains a process and, in the doctrine's words, does not know a file move from random bytes churning.
 
 The best advice of the field, which the narration says every serious guide of 2026 gives (it paraphrases one roadmap), is to separate planning from execution and put a human approval between them. It is good advice, and it is advice: a pattern you implement, and can forget. The threat lists of the field, the OWASP list of risks for agentic applications among them, are lenses, and the record uses them so.
 
-So the field's posture, in a line, is that the agent is an AI model in a loop, and safety is vigilance around it. (General knowledge, not a study of the record, except where I name the document.) Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
+So the field's posture, in a line, is that the agent is an AI model in a loop, and safety is vigilance around it. That is general knowledge, not a study of the record, except where I name the document. Chapter 17 said this of the whole mind. This chapter takes the action half: what happens when the proposal meets the world.
 
 ## 2. The first principle
 
 **Do not build safe agents. Build a safe world, and let ordinary agents loose inside it.**
 
-The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more sentence. The only artifact that ever leaves its world is an update plan, and plans are executed by someone else. The document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. The chapter holds the sentence as the document's, dated by that first commit, and gives no date of writing.
+The sentence is in the library's doctrine document: "We will not build safe agents. We will build a safe world, and let ordinary agents loose inside it." The document gives its structural half in one more sentence. The only artefact that ever leaves its world is an update plan, and plans are executed by someone else. The document carries no date and no author line in its header, and git first records it in a commit of 9 July 2026. The chapter holds the sentence as the document's, dated by that first commit, and gives no date of writing.
 
 ## 3. The Softanza form
 
@@ -55,7 +55,7 @@ oGov.DeclareReversibility("restocker", :Compensable)
 #--> 1
 ```
 
-The first refusal ends on its law, `Law 18: nothing schedules what nobody has stated the reach of.` With both stated, the third call answers `1`.
+The first refusal ends on its law: nothing schedules what nobody has stated the reach of. The number it carries belongs to the library's own list of laws, which this book does not print. With both stated, the third call answers `1`.
 
 Reversibility is the sixth contract of the governance, beside risk, authority, commitment, decommission and lineage. It is orthogonal to risk: an act of small risk that cannot be undone deserves more ceremony than a large one that can.
 
@@ -249,7 +249,7 @@ nL2 = stzenginezutercreate("proposer")
 StzResetEngineAgentLoop()
 ```
 
-The engine refused the summarizer, in the words of the graph rule! The arguments after the slot are, in the order the guard gives them: the kind (1 is an AI model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
+The engine refused the summarizer, in the words of the graph rule! The arguments after the first, which is the agent itself, are, in the order the guard gives them: the kind (1 is an AI model), the reversibility class, the trigger and the capability. What remains is the priority, the interval in milliseconds and the coverage sentence. They are the engine's low-level names, and I show them so you can see the refusal come from the engine, in the same words.
 
 **An agent of the estate's own roster, rehearsed.** Until 22 August 2026, an agent of the estate's own roster, the one that rolls the ledger, moved a real journal file directly, on a tick. It had no plan, no scope and no committing actor.
 
@@ -324,11 +324,11 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 ## 4. The decision, and what I refused
 
-**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. Asking whether the AI agent might escape is like asking whether a chess engine might move a piece on a physical board. The doctrine says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
+**I refused safe agents.** The doctrine's reason is that the field's safety tries to make a fundamentally unpredictable actor trustworthy. I hold this reason as a view, not a result. The doctrine's image is that asking whether the AI agent might escape is like asking whether a chess engine might move a piece on a physical board. It says the agent's tool surface contains no operation that touches the disk, a database or the network. That is the doctrine's claim, and section 6 gives its limits.
 
 **I refused a permission check as the boundary.** It is not a check that the agent might route around. The powers are separated: creativity without authority, authority without creativity.
 
-**I refused a second workbench for machines.** The sandbox is the same workbench that the human programmer already uses. The framework was conceived for human programmers, and everything designed to liberate one is exactly what is needed to contain an artificial one. I hold this as a view, not a result.
+**I refused a second workbench for machines.** The sandbox is the same workbench that the human programmer already uses. The framework was conceived for human programmers, and everything designed to liberate one is exactly what is needed to contain an artificial one.
 
 **I refused to leave the gate optional.** The ruling of 22 August 2026 says the registration gate is doctrine, and that opting in is a migration state, not the design. The record is honest about the finding behind the ruling: where the doctrine of agents that cannot hurt you bound that day was nowhere. The safe world existed, and the agentic folder did not mention any of it. The ruling closed it the same day.
 
@@ -336,13 +336,13 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 **I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
-**I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop; its row is in Appendix C, read from the rules file.
+**I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop: it is rule 102 of the constitution (Appendix C).
 
 Section 5 names the guards that prove what the blocks showed.
 
 ## 5. The court
 
-`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load. Three more follow: what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In the run I made for my research note on 8 October 2026, the drill read 443 ms to detect and 61 ms to contain, on this machine. The book's data does not hold that run. The site prints other numbers from its own run, and the threat model others from its own. The three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
+`safeworld_narrated` has seven scenes: reversibility as the sixth contract; the registration gate in the engine's sentences; the table of posture against reversibility; the file's court at load. Three more follow: what the file declares landing in the agent's governance; the workbench, from the disk that did not move to the audit trail; and the roster's agent rehearsed and then committed. `agentfile_narrated` proves that an agent is a file judged at load, with one refusal per gate, and that a folder is a deployment. `agentloop_engine_narrated` proves that the engine loop states its coverage at run time, that registration is a gate, that one rule gives the same words in two layers, and that an over-full queue drops visits and counts them. `containment_drill_narrated` proves a drill against a real target on loopback: a model investigator proposes the containment and commits nothing; a human commits, and containment holds when verified from outside. In my run of 8 October 2026, the drill read 443 ms to detect and 61 ms to contain, on this machine. The book's data does not hold that run. The site prints other numbers from its own run, and the threat model others from its own. The three differ because the drill measures a clock. The limit of the drill is one attack shape, on loopback, on one machine, run on demand. `virtual_system_twin_narrated` proves the twin: a rehearsal touches nothing real; the plan narrates and flags its risks; a scope refuses; a reviewer rejects a step; snapshots roll back.
 
 The guard `roster_narrated` is not in the front matter, because it cannot run from a snapshot of the library: it loads the estate's roster files from a sibling repository. The rehearsal of the roster's agent is proved by `safeworld_narrated`, whose seventh scene is the last block above.
 
@@ -376,7 +376,7 @@ Each item below is a gap, found while running and reading.
 
 - **An unset executor and an unset scope are unguarded.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to an AI model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
 - **A plan flags; it does not rank.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE. There is no score and no order of severity. The chapter says "flags".
-- **The gate is opt-in at the host.** The default flips when the last host in the tree declares. A fresh host runs the older pump.
+- **The gate is opt-in at the host.** A program that hosts the library must declare that it uses the engine's loop; until the last such program in the library's own tree has declared, the default stays off, and a fresh program runs the older tick loop of the former host language.
 - **The loop checks that a coverage statement exists, not that it is true.**
 - **The drill's limits:** one shape of attack, on loopback, on one machine.
 

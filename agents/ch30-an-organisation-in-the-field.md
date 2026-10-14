@@ -2,9 +2,9 @@
 
 Source: Chapter 30. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
+Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
@@ -20,11 +20,11 @@ The organisation's study turns that third practice into a principle.
 
 ## 2. The first principle
 
-The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter (my translation of the French title): **the AI agent proposes, and a person decides.**
+The organisation's own study of the project gives it as the title of a section, and I take it as the principle of this chapter, in my translation of its French title: **the AI agent proposes, and a person decides.**
 
 ## 3. The Softanza form
 
-An organisation works in Niger, with a head office in Niamey and bases in the field. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was the one retained. The study lists four gains, and ownership is the first it lists. The organisation owns its vocabulary and its rules; it changes them without programming; it pays no licence per seat for the platform; and it can hand everything to a programmer of its own country. We built the design study together, with its teams, from 22 September to 8 October 2026. I say "design study" and not "delivery" every time, because the hub is not built. The study's version 1.2 is submitted to the executive director for validation, and the record does not say it was validated.
+An organisation works in Niger, with a head office in Niamey and bases in the field. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was the one retained. The study lists four gains, and ownership is the first it lists. The organisation owns its vocabulary and its rules; it changes them without programming; it pays no licence per seat for the platform; and it can hand everything to a programmer of its own country. We built the design study together, with its teams, from 22 September to 8 October 2026. The hub is not built. The study's version 1.2 is submitted to the executive director for validation, and the record does not say it was validated.
 
 Four things in that study the library carries. I will show them in the order the organisation would meet them, and then the one it asked for that the library does not carry.
 
@@ -55,7 +55,7 @@ oG.RulesReport()
 
 The report names one advance, `a2`, at 600 with a single approval, and the rule looks at `2` of the four, `a2` and `a3`.
 
-What happens when the ceiling is changed and the same model is judged again? A change of the rule is a change of its values, and the verdict and its scope follow:
+What happens when the ceiling is changed and the same model is judged again? Here the change is the rule rebuilt in code with another number, and the verdict and its scope follow:
 
 ```haro
 oG.ClearAttachedRules()
@@ -77,7 +77,7 @@ oG.RulesReport()
 
 > run: kept
 
-The report now says `2 finding(s), 2 error(s)` where it said one, and the scope is `3` where it was `2`! I have to be honest about what this block shows. The "change" is a rule rebuilt in code with another number. That the organisation's own person changes it like filling in a form is the study's promise. I did not find a file of the library that makes it so. Section 7 says what does and does not exist.
+The report now says `2 finding(s), 2 error(s)` where it said one, and the scope is `3` where it was `2`! I have to be honest about what this block shows. That a change of the rule is a change of its values, which the organisation's own person makes like filling in a form, is the study's promise. I did not find a file of the library that makes it so. Section 7 says what does and does not exist.
 
 What the library does carry is the answer to the worst thing that can go wrong when a non-programmer edits a rule: a rule that quietly governs nothing. I hold that as a view, not a result. Misspell a property, and the rule finds nothing, and the model reports that it is sound. What does a rule governor say of the same rule? The class is `StzRuleGovernance`; it asks rules what they govern and not what they say, and it names the dead rule:
 
@@ -158,7 +158,7 @@ oGov.SetAuthority("approver-1", :Autonomous)
 
 > run: kept
 
-The assistant holds the permission for `release-advance`, and the answer is `0`! The verdict reads `refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)`. For the approver it reads `allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3`.
+The assistant holds the permission for `release-advance`, and the answer is `0`! The verdict reads `refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)`. For the approver it reads `allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3`. In the message, SHOULD is the library's word for what an authority level covers, as against CAN, the permission held; the guard behind this block says it as "can is not should".
 
 The class here, `stzGovernance`, judges authority; it is not the rule governor of the dead rule above. The library knows an actor only by a name and an authority level. Whether an actor is a person or an assistant is what its level is declared to be. Binding a level to a signed-in person is the work of the authentication plane, which I have not read for this chapter.
 
@@ -217,9 +217,11 @@ The next section sets down the decision, and what I refused.
 
 **I refused to let the assistant decide.** It proposes. Its authority is advisory; a person's covers the risk. The refusal names the level, the risk tier, and the sentence that says the authority does not cover the act: `SHOULD does not cover it`.
 
-**I refused a silent rule.** A rule that governs nothing is reported. A rule with no message is reported too. That is the price of letting a non-programmer touch a rule. The rule governor exists because the silent rule already happened in the library.
+**I refused a silent rule.** A rule that governs nothing is reported. A rule with no message is reported too. That is the price of letting a non-programmer touch a rule. The rule governor exists for that case, and the library's own comment says why: a dead rule and a misspelt predicate produce identical output, silence.
 
 **I refused to call offline a lesson.** The Forged page, read on 9 October 2026, says: "This is a gap, not a lesson learned." A restaurant asked for the same. The study is clear that offline is the organisation's default, and the library has only a permission for it. A sister package of the estate, a browser-side one, holds a durable outbox on the device and an ordered, idempotent replay; it is outside the library. I did not run it.
+
+Six guards stand behind the blocks.
 
 ## 5. The court
 
@@ -241,9 +243,11 @@ The next section lists what is built, what is designed and what is absent.
 
 What is built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
 
-What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation that is not the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library has only the pieces. They are the rule governor, the refusal of an unknown rule type or a missing file, and the refusal of a duplicate name.
+What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation that is not the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library has only the pieces. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves and this chapter does not show.
 
 What is absent: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound. I found no store of rule versions, and my search was not exhaustive. The hub, built. Offline as a mechanism: no class in the library keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
+
+Six doors follow, one for each reader.
 
 ## 8. Six doors
 

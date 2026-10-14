@@ -4,13 +4,13 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
 ## 1. The concept, as the field holds it
 
-Two practices meet in the idea of a conversation that asks, and a third stands behind its last register. (General knowledge for this whole section, not a study of the record; the dates are to be checked before print.)
+Two practices meet in the idea of a conversation that asks, and a third stands behind its last register. This whole section is general knowledge, not a study of the record.
 
 The first is slot filling. A dialogue framework asks the user for the missing pieces of a form until the form is full. The frameworks of the field understand free text with trained models, speak on many channels and ship connectors, and they ask the designer to write intents and flows in their own language. They take the user's reply as the answer and act on it.
 
@@ -22,7 +22,7 @@ The third is programming by example. Spreadsheets fill a column from two example
 
 **A reply may come in any of five forms. Whatever the form, it is only a candidate, and the world's rules decide whether it becomes knowledge.**
 
-The design document says it in one sentence I keep: expression is free, admission is governed. The record holds this sentence, captured from my directive of 13 July 2026. It holds no sentence of mine on why these five registers and not four or six, nor on the moment I set wise coding against vibe coding. The chapter opens on this sentence.
+The design document says it in one sentence I keep: expression is free, admission is governed. The record holds this sentence, captured from my directive of 13 July 2026. It holds no sentence of mine on why these five registers and not four or six, nor on the moment I set wise coding against vibe coding.
 
 ## 3. The Softanza form
 
@@ -188,7 +188,7 @@ done
 
 > run: kept
 
-Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence. I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault. The same examples typed as one string, joined by a comma, are split and admitted as two literal values, and the goal reads fulfilled. The examples became the knowledge. Nothing was inferred.
+Neither admitted nor refused: `[ ]` and `[ ]`, the goal still `pursuing`, and not one checkpoint! This is not the refusal the protocol describes. It is silence. I hold silence to be the worse answer, as a view and not a result: the reader who offered the examples is not told they were not understood. I found a second form of the same fault, with the same examples typed as one string, joined by a comma. The exercise at the end of this chapter hands it to you.
 
 So three of the five registers are wired, one of them in its simplest form, a splitter. Two are not. I would rather you meet that here than on a page of mine that said five.
 
@@ -338,7 +338,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 
 > run: kept
 
-So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A value with a space in it raises at the moment (section 7 gives the evidence). So the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and the code calls them a draft awaiting a native reviewer. I wrote no Arabic or Hausa sentence of my own.
+So the library cannot ask in Arabic or in Hausa through `AskIn`. What it can do is hold the data in any script, take a candidate computed in any pack, and let the tutor say the gap in four languages. A value with a space in it raises at the moment (section 7 gives the evidence). And the splitter knows the comma and the English word "and" only: the connectors "et" in French, "da" in Hausa and "و" in Arabic are not connectors. The three sentences above are the library's own, printed as they stand, and the code calls them a draft awaiting a native reviewer. I wrote no Arabic or Hausa sentence of my own.
 
 ### An AI model is a fluency, never the mind
 
@@ -364,7 +364,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **I refused to guess.** The record's phrase is: guessing is replaced by asking; vibes are replaced by governance. A gap is a question. A reply is a candidate.
 
-**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust, and I hold this as a view, not a result. All five registers go through one door.
+**I refused a different gate for each way of answering.** A formula is not trusted because it is code, and a structure is not trusted because it is typed. The form does not buy trust. All five registers go through one door.
 
 **I refused a stub.** A reserved agent raises when it is asked for. The design document calls the raise the law working, and says it should not be read as a defect. I refused to pretend the fifth register works.
 
@@ -390,7 +390,7 @@ The field leads in understanding. A dialogue framework, as the field holds it, r
 
 The field leads on examples. Programming by example is, as the field holds it, shipped in spreadsheets today. Softanza has no induction at all, and the record says so: nothing induces yet. A search for "induce", "from examples" and "infer" over the regular-expression folder finds nothing.
 
-The field is honest about costs, and so is the record. Several candidates is the normal case when you ask for a rule from examples. A pattern induced from three examples overfits them. The remedy the record names is the question that tells two candidates apart. And the index that would carry the examples is as clean as the tags of the methods, with about eighty-five misspellings.
+The field is honest about costs, and so is the record. Several candidates is the normal case when you ask for a rule from examples. A pattern induced from three examples overfits them. The remedy the record names is the question that tells two candidates apart. And the index that would carry the examples is, in the study's words, as clean as the tags of the methods, in which the study counts about eighty-five misspellings.
 
 Here is where I think the record stands apart. Every reply, in whatever form, is judged by the world's laws before it counts, with the reason. The session keeps a transcript and a checkpoint that a person can read. The field's reply is a prompt, and the human keeps what comes out.
 
@@ -400,9 +400,9 @@ The limit comes next, and it names what is built, what is designed and what is a
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals. And the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example* (read 9 October 2026) calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages promise more than the code does. I say it so that the page or the code is corrected. The code wires three of the five registers. The memo that names the formula and the examples lists them as waiting, not routed, and for this chapter they are absent.
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example*, read on 9 October 2026, calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages promise more than the code does. The code wires three of the five registers. The record names the formula and the examples as waiting, not routed, and for this chapter they are absent.
 
-What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In the research run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is in the memo as a request, and the exercise below does not use a value with a space.
+What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In my run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is a request to the library, and the exercise below does not use a value with a space.
 
 ## 8. Six doors
 

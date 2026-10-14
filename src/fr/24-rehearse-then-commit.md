@@ -28,13 +28,13 @@ La deuxième est la virtualisation de service et le double de test : le mode tes
 
 La troisième est l'émulateur et le simulateur : un émulateur de téléphone, un émulateur de carte, un substitut local d'un nuage. La phrase propre du dossier sur le genre est que les simulateurs mentent. Ils feignent la base de données, bouchonnent l'appareil, approximent le calcul.
 
-Ce que les trois ont en commun, c'est que chacun est un outil séparé, et que le programme lui-même n'en sait rien. (Connaissance générale pour les outils, et non une étude du dossier, sauf là où je cite les documents.)
+Ce que les trois ont en commun, c'est que chacun est un outil séparé, et que le programme lui-même n'en sait rien. C'est la connaissance générale des outils, et non une étude du dossier, sauf là où je cite les documents.
 
 ## 2. Le premier principe
 
 **On atteint la réalité par exactement une porte : répéter sur ce qui ne touche à rien, valider par un acteur gouverné, et laisser la production refuser tout ce qui est faux.**
 
-Le premier principe du dossier pour ce terrain est la première clause, et l'étiquette propre de la bibliothèque l'appelle un premier principe : on atteint la réalité par exactement une porte. Le chemin par défaut d'un changement qui a des conséquences est de répéter dans un jumeau, de générer un plan, et de valider le plan. Le plan est la porte. Le résumé du cadre tient en trois mots : répéter, planifier, valider. La ligne de structure du plan de ce livre dit la dernière clause : la production refuse un faux. La première clause est un document de la bibliothèque sans ligne d'auteur (`SP3`, dans `SOFTANZA_SYSTEM_FOUNDATION.md`). La clause du milieu, valider par un acteur gouverné, est celle de la conception du déploiement (`SOFTANZA_DEPLOYMENT.md` : "only an effectful actor commits"). Le chapitre joint les trois et attribue chaque partie à sa source.
+Le premier principe du dossier pour ce terrain est la première clause, et l'étiquette propre de la bibliothèque l'appelle un premier principe : on atteint la réalité par exactement une porte. Le chemin par défaut d'un changement qui a des conséquences est de répéter dans un jumeau, de générer un plan, et de valider le plan. Le plan est la porte. Le résumé du cadre tient en trois mots : répéter, planifier, valider. La ligne de structure du plan de ce livre dit la dernière clause : la production refuse un faux. La première clause est celle d'un document de la bibliothèque, la System Foundation, écrit sans ligne d'auteur. La clause du milieu, valider par un acteur gouverné, est celle de la conception du déploiement : "only an effectful actor commits". Le chapitre joint les trois et attribue chaque partie à sa source.
 
 ## 3. La forme Softanza
 
@@ -85,9 +85,9 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 #--> [ [ 3, "RUNS an external command (side effects): spawn process: backup-database --all" ] ]
 ```
 
-Le jumeau détient `rehearsal` et un processus en attente, et l'environnement réel répond `0` ! Le paragraphe de limite du chapitre 20 disait que seuls les fichiers sont construits. C'était faux, et je l'ai corrigé là-bas.
+Le jumeau détient `rehearsal` et un processus en attente, et l'environnement réel répond `0` ! Le chapitre 20 compte les deux jumeaux comme construits, et voici le second.
 
-Le jumeau a un second travail. Un programmeur sur un portable sans broches écrit du code de broches pour une carte. La portée dit *répété*, comme les chapitres 8 et 31 l'ont montré. Au déploiement, le pont d'abaissement transforme la répétition en source de firmware. Que se passe-t-il quand un assistant demande à déployer ? `Build()` enregistre la commande de construction et n'exécute pas la chaîne d'outils, et `Deploy` abaisse en mémoire, donc aucun fichier n'est écrit :
+Le jumeau a un second travail. Un programmeur sur un portable sans broches écrit du code de broches pour une carte. La portée dit *répété*, comme le chapitre 8 l'a montré et comme le chapitre 31 le montre. Au déploiement, le pont d'abaissement transforme la répétition en source de firmware. Que se passe-t-il quand un assistant demande à déployer ? `Build()` enregistre la commande de construction et n'exécute pas la chaîne d'outils, et `Deploy` abaisse en mémoire, donc aucun fichier n'est écrit :
 
 ```haro
 oProduct = new stzPlatformProfile("greenhouse")
@@ -152,7 +152,7 @@ Le plan dit où ; l'émulateur construit ce que dit le plan.
 
 ### L'émulation
 
-L'émulateur transforme le plan en un bundle, et le bundle est ce qui est livré. Dans le bloc suivant, le bundle généré pour la répétition est câblé directement au rattachement de production, et c'est l'acteur qui décide. Que devient le site quand un assistant appelle `Deploy(:Production)`, et que devient-il quand une personne le fait ? Le manifeste qui arrive nomme le groupe du moteur que la partie porte. La cible ici est un répertoire local, le genre de site qui n'a besoin d'aucun outil hors des opérations sur fichiers :
+L'émulateur transforme le plan en un bundle, et le bundle est ce qui est livré. Dans le bloc suivant, le bundle généré pour la répétition est câblé directement au rattachement de production, et c'est l'acteur qui décide. Que devient le site quand un assistant appelle `Deploy(:Production)`, et que devient-il quand une personne le fait ? Le manifeste qui arrive nomme le groupe du moteur que la partie porte. La cible ici est un répertoire local, le genre de site qui n'a besoin d'aucun outil hors des opérations sur fichiers. Le bloc écrit deux répertoires dans le répertoire de travail, `_bundle` et `_live`, et les retire à sa fin :
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -194,7 +194,7 @@ Je n'ai pas exécuté `Deploy(:Emulated)`, parce qu'il construit le sous-ensembl
 
 ### Le déploiement
 
-Pour un site local, un déploiement qui échoue défait ce qu'il avait fait ; les autres genres de site essaient seulement, au mieux. La partie web se déploie et passe sa barrière. Le stockage de la partie api échoue. Les étapes restantes sont sautées et le déploiement ne valide pas. Que devient le site web, déjà en ligne ? Le site qui échoue est un serveur sans emplacement de stockage, ce qui échoue sans lancer quoi que ce soit :
+Pour un site local, un déploiement qui échoue défait ce qu'il avait fait ; les autres genres de site essaient seulement, au mieux. La partie web se déploie et passe sa barrière. Le stockage de la partie api échoue. Les étapes restantes sont sautées et le déploiement ne valide pas. Que devient le site web, déjà en ligne ? Le site qui échoue est un serveur sans emplacement de stockage, ce qui échoue sans lancer quoi que ce soit. Le bloc écrit un répertoire, `_site_cdn`, et le retire :
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -282,7 +282,7 @@ Le jour où vous vous abonnez, vous changez une liaison et pas une ligne. La cl�
 
 ### La production refuse
 
-Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production. Quatre sont des erreurs : un service déclaré jamais lié (`unbound-service`), un faux (`sandbox-in-production`), une vraie base de données qui disparaît au redémarrage (`ephemeral-in-production`), et un adaptateur réel dont la clé n'est pas dans le magasin de secrets (`live-without-secret`). La cinquième est un avertissement : un adaptateur réel qui ne nomme aucun secret (`inline-credential`). Le chapitre 31 a montré le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
+Un seul rapport nomme cinq des huit façons dont une surface n'est pas apte à la production. Quatre sont des erreurs : un service déclaré jamais lié (`unbound-service`), un faux (`sandbox-in-production`), une vraie base de données qui disparaît au redémarrage (`ephemeral-in-production`), et un adaptateur réel dont la clé n'est pas dans le magasin de secrets (`live-without-secret`). La cinquième est un avertissement : un adaptateur réel qui ne nomme aucun secret (`inline-credential`). Le chapitre 31 montre le service non lié et la levée d'erreur. Voici le reste de la liste. En phase de développement, la surface n'est déjà pas saine, puisqu'un service non lié et une clé manquante sont des erreurs dans toute phase. Les deux autres erreurs n'apparaissent qu'en phase de production. Le code liste huit invariants, et le plan des services (section 4) et la narration en listent cinq :
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -360,7 +360,7 @@ Voilà ce que l'exécution a montré ; les décisions derrière elle viennent en
 
 Tout ce qui suit vient des documents de conception et des narrations de la bibliothèque, écrits en sessions sans ligne d'auteur. Le dossier ne contient aucune décision de ma part pour ce chapitre. Ses décisions sont celles des documents.
 
-**J'ai refusé le simulateur qui ment.** L'émulateur ne feint rien. Chaque partie exécute le même artefact de moteur compilé qui sera livré à sa cible. Cette affirmation a une mise en garde, à la section 7 : la preuve que le moteur tourne dans un navigateur n'est pas dans l'arbre épinglé.
+**J'ai refusé le simulateur qui ment.** L'émulateur ne feint rien : dans les mots de la conception, chaque partie exécute le même artefact de moteur compilé qui sera livré à sa cible. Cette affirmation a une mise en garde, à la section 7 : la preuve que le moteur tourne dans un navigateur n'est pas dans l'arbre épinglé.
 
 **J'ai refusé de relivrer ce que la cible fait bien.** La périphérie ne porte une capacité que si elle est critique et soit unique, soit faible sur la cible.
 
@@ -374,7 +374,7 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé « faux contre réel » comme vérité entière.** C'était trop grossier. Il y a maintenant quatre postures : bac à sable, local, réel et conformité. La posture locale a été ajoutée quand l'exemple de la base de données a montré qu'un fichier SQLite est une vraie base de données dans un fichier qu'on possède.
 
-**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs. L'attacher à une livraison en prenait un instantané, si bien que la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière : c'est mon point de vue. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
+**J'ai refusé une barrière qui échoue en laissant passer.** Le registre gardait autrefois son état dans des attributs. L'attacher à une livraison en prenait un instantané, si bien que la barrière aurait laissé passer une surface non saine. Une barrière qui échoue en laissant passer est pire que pas de barrière. L'état se trouve désormais dans une table indexée par identité, de sorte que chaque copie est le registre. Tout ce qui gouverne les autres doit survivre à la copie.
 
 **J'ai refusé de virtualiser la qualité d'un modèle d'IA.** La qualité d'un modèle de pointe ne peut pas être virtualisée. Ce que le bac à sable vend à la place, c'est le déterminisme, un coût sur lequel on peut faire une assertion, et le travail hors ligne.
 
@@ -382,9 +382,9 @@ Tout ce qui suit vient des documents de conception et des narrations de la bibli
 
 **J'ai refusé de poser une question dans le mauvais cadre.** `MayGoLive` interrogeait autrefois sur la santé dans la phase courante, si bien qu'avec un faux lié il répondait oui. Maintenant il est interrogé dans le cadre de la production quelle que soit la phase.
 
-**J'ai refusé de dire que le besoin du restaurant était l'origine de la conception.** Le site dit que les conceptions de l'émulation et du déploiement prennent une solution comme exemple. C'est un exemple, pas l'origine de la conception. La solution d'exemple des documents porte le nom de produit d'un client, et je l'ai renommée dans chaque bloc. Le chapitre 28 a raconté l'histoire, et je ne la répète pas.
+**J'ai refusé de dire que le besoin du restaurant était l'origine de la conception.** Le site dit que les conceptions de l'émulation et du déploiement prennent une solution comme exemple. C'est un exemple, pas l'origine de la conception. La solution d'exemple des documents porte le nom de produit d'un client, et je l'ai renommée dans chaque bloc. Le chapitre 28 raconte l'histoire, et je ne la répète pas ici.
 
-Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à la question de l'utilisateur ». La question demande si l'émulation couvre les bases de données, les API métier, les modèles de pointe et les fournisseurs de nuage. Le but est qu'un programmeur puisse coder un programme entier sans abonnements ni frais et obtenir quand même une solution fonctionnelle prête à déployer. Le chapitre rapporte le titre du plan et sa date. Le dossier ne dit pas qui a posé la question, et le chapitre ne prétend pas que c'était celle de l'auteur.
+Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à la question de l'utilisateur ». La question demande si l'émulation couvre les bases de données, les API métier, les modèles de pointe et les fournisseurs de nuage. Le but est qu'un programmeur puisse coder un programme entier sans abonnements ni frais et obtenir quand même une solution fonctionnelle prête à déployer. Le chapitre rapporte le titre du plan et sa date. Le dossier ne dit pas qui a posé la question, et je ne prétends pas qu'elle était de moi.
 
 ## 5. Le tribunal
 
@@ -398,7 +398,7 @@ Le refus que fait la production est prouvé par les deux premières gardes, qui 
 
 Les services réels sont en tête. Le plan le dit : un double n'est pas le service réel, et il faut encore au moins une exécution réelle avant la production. Une passerelle scriptée n'est pas l'ensemble des cas limites d'un fournisseur. Les réponses enregistrées dérivent, et une suite de rejeu demande de ré-enregistrer et de tester les contrats contre l'API réelle. La bibliothèque a l'appel d'enregistrement ; une vérification de dérive pour les réponses enregistrées est conçue.
 
-Les modèles de pointe sont en tête, et ne peuvent pas être émulés. Le modèle est jugé contre le vrai modèle, délibérément, comme sa propre activité.
+Les modèles d'IA de pointe sont en tête, et ne peuvent pas être émulés. Le modèle d'IA est jugé contre le vrai, délibérément, comme sa propre activité.
 
 L'infrastructure réelle est en tête. Le déploiement dépend de l'infrastructure : vérification réelle contre un hôte ou un compte réel. Les commandes sont générées, et à un hôte joignable près d'être littérales.
 
@@ -440,7 +440,7 @@ Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est pass�
 
 **`Deploy(:Emulated)` ne déplace pas encore le registre.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre. La valeur de phase `:emulated` que possède le registre n'est posée aujourd'hui que par une garde ; la poser depuis le déploiement émulé est conçu.
 
-**Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après mon déploiement refusé (ma recherche du 8 octobre 2026, hors des blocs de ce chapitre), `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement non.
+**Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après le déploiement refusé de ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement non.
 
 **Un plan signale aujourd'hui ; classer est la direction.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
 
@@ -484,7 +484,7 @@ oStoreMine = new stzSecretStore("my-project")
 
 Ensuite, enregistrez une clé nommée `maps_key` dans le magasin de secrets, et écrivez de nouveau le nombre de constats de production. Puis liez une classe écrite à la main avec une méthode `Authorize` qui dit toujours oui, et demandez quelle posture le registre lui donne. Si une promesse casse, ne la changez pas : expliquez d'abord la sortie. Je ne vous dis pas où vous serez surpris.
 
-Je vous laisse celui-ci. Le bloc ci-dessous est celui de la section 3, « Le code d'abord, l'abonnement ensuite », avec un nom changé. Je l'ai changé exprès, et je ne dis pas ce que cela produit :
+Je vous laisse celui-ci. Le bloc ci-dessous est celui de la section 3, « Le code d'abord, l'abonnement ensuite », avec un nom changé. Je l'ai changé exprès :
 
 ```haro exercise
 oPay = new stzPaymentsSandbox()

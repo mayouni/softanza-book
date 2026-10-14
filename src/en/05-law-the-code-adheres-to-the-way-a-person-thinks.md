@@ -24,11 +24,11 @@ In this chapter I take the two things the field calls coding style and ask the q
 
 ## What the AI age changes here
 
-For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code, here as everywhere, is written by AI models. The design of the intelligence plane says it in one sentence: most programming today is done by agents and language models, not humans.
+For years, most of the code written with Softanza was written by one hand, and the hand was mine. The style of the library was the way I wrote. Then the machines arrived, and today most code here is written by AI models, as the design of the intelligence plane says it is everywhere, in one sentence: most programming today is done by agents and language models, not humans.
 
 That changes what a style is. A style that lives in one person's habits dies when that person stops writing every line. It has to become something a machine can be held to, and something a machine can check, or it thins away. In this house it did thin, and I will show you where. So this movement of the book, Programming rethought, opens on a law that has two halves. The second half exists because of the age: the code adheres to the way a person thinks, and the court judges it whoever wrote it. By the court I mean the machine that judges code against the house's rules; today it judges only the library's own classes, and section 5 says how.
 
-There is a dependency to say aloud. This book follows the order of its cover, from the familiar to the new: programming, then languages, then intelligence. The record's own logic runs the other way. The first act is to declare a language; programming happens inside a declared language; intelligence is governed by both. The vocabulary's forms are already declared in a spike of Haro (its charter, entry of 3 October 2026). The usage that this chapter describes, the scene, the chain, the named parameter, the promise under each line, is meant to be declared too. So read this law knowing that Part III holds it up.
+There is a dependency to say aloud. This book follows the order of its cover, from the familiar to the new: programming, then languages, then intelligence. The record's own logic runs the other way. The first act is to declare a language; programming happens inside a declared language; intelligence is governed by both. The vocabulary's forms are already declared in a spike of Haro, as its charter's entry of 3 October 2026 records. The usage that this chapter describes, the scene, the chain, the named parameter, the promise under each line, is meant to be declared too. So read this law knowing that Part III holds it up.
 
 ## 1. The concept, as the field holds it
 
@@ -77,19 +77,19 @@ The list answers `TRUE`, then `3`, then `[ 2, 4, 5 ]`, and after the act it read
 The verb's form says what happens to the object. What does each form do to it? Run them on one string:
 
 ```haro
-o1 = new stzString("RIxxNxG")
+o1 = new stzString("HAxxRxO")
 ? o1.Removed("x")
-#--> RING
+#--> HARO
 ? o1.Content()
-#--> RIxxNxG
+#--> HAxxRxO
 o1.Remove("x")
 ? o1.Content()
-#--> RING
-? Q("rixxnxg").RemoveQ("x").UppercaseQ().Spacified()
-#--> R I N G
+#--> HARO
+? Q("haxxrxo").RemoveQ("x").UppercaseQ().Spacified()
+#--> H A R O
 ```
 
-`Removed` printed `RING`, and the object still read `RIxxNxG`! `Remove` then acted on it, and `Content()` read `RING`. The chain with Q ended on `R I N G`. By the library's convention, the past participle gives you a changed copy and leaves the object alone. The plain verb acts on the object. The verb with Q acts and hands the object back, so the next step can follow.
+`Removed` printed `HARO`, and the object still read `HAxxRxO`! `Remove` then acted on it, and `Content()` read `HARO`. The chain with Q ended on `H A R O`. By the library's convention, the past participle gives you a changed copy and leaves the object alone. The plain verb acts on the object. The verb with Q acts and hands the object back, so the next step can follow.
 
 Do you need to remember which argument comes second? A parameter can be named, and the name reads as English:
 
@@ -130,7 +130,7 @@ The run printed `[ 12500, 13000, 11500, 23, 46 ]`. Five values, the starting one
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore; I hold this as a view, not a result. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. Five of the fourteen run over the graph of the code. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are fourteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -142,7 +142,7 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 
 The court answers `FALSE`, and names the rule: `q-returns-object`. It did not ask who wrote the class! That is the whole of the second half. And the promise under each question is read by a machine too: the library's runner judges a promise as a claim about what the line printed. The house's oldest form of example is also its newest form of test.
 
-The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the fourteen house rules of the court below, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline, the grid and deep operations. Chapter 10 tells how programming becomes refinement.
+The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the fourteen house rules of the court you have just seen, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, the deep form among them, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline and the grid. Chapter 10 tells how programming becomes refinement.
 
 ## 4. The decision, and what I refused
 
@@ -150,11 +150,11 @@ The chapters of this part prove the law, each from one side. Chapter 6 tells the
 
 **I refused to let the style of the code written with Softanza go.** Every line a programmer, a person or an AI agent, writes with the library must take the historic style. That style is the scene, the chain one step per line, the named parameter, the verb's form, and the promise under each question. That is the line I drew when I saw what had happened.
 
-What had happened is measurable. A study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one. They assert in another form, a call that names the expectation. They adopted it because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends one form for new test blocks: the classic form, a title, the questions and the promises under them. The converted blocks are left as they are. The record holds that recommendation, and no ruling of mine on it.
+What had happened is measurable. My study of the record counted the promise under each line, per thousand lines. In the short recipes the house keeps, there are nearly a hundred. In my articles, seventy-five. In the classic tests, fifty-two. In the guards the sessions wrote, under one. They assert in another form, a call that names the expectation. They adopted it because the bare comparisons of the older suites printed 0 or 1, and that does not tell a block that failed from a block that never ran. That gap is closed now; the runner reads the promise as a claim. The study that counted them recommends one form for new test blocks: the classic form, a title, the questions and the promises under them. The converted blocks are left as they are. The record holds that recommendation, and no ruling of mine on it.
 
 **I refused to rewrite code when the language changed its name.** When the language beneath became Haro, the code in my articles was renamed and nothing else. The forms are the asset; the name is a label.
 
-**The forms of the vocabulary were made data, and three old features were refused as grammar.** In Haro, the forms a verb can take are declared once and generated. In the language's spike, the library's shipped names are judged against that declaration. Its charter reports 584 of the 595 shipped spellings of the string class in agreement (entry of 3 October 2026). The design of that work refuses three things the record counted as features: names that tolerate a misspelling, parameters in any order, and method names in other human languages. The founding deck counted the last two; the narration of the forms counted the first. Misspelling tolerance and free order stay in the library, in part; the multilingual names survive only in an archived file. None of the three is part of the grammar a machine is held to. The refusal is written in the language's principles file, as its seventh principle, marked designed. The book prints it as the design's, and the record does not say it is mine.
+**The forms of the vocabulary were made data, and three old features were refused as grammar.** In Haro, the forms a verb can take are declared once and generated. In the language's spike, the library's shipped names are judged against that declaration. Its charter's entry of 3 October 2026 reports 584 of the 595 shipped spellings of the string class in agreement. The design of that work refuses three things the record counted as features: names that tolerate a misspelling, parameters in any order, and method names in other human languages. The founding deck counted the last two; the narration of the forms counted the first. Misspelling tolerance and free order stay in the library, in part; the multilingual names survive only in an archived file. None of the three is part of the grammar a machine is held to. The refusal is written in the language's principles file, as its seventh principle, marked designed. The book prints it as the design's, and the record does not say it is mine.
 
 **I chose goals before laws.** The 2022 design held seven goals, expressiveness, flexibility, reliability, consistency, human metaphors, practical abstractions and manageability, and every feature served one. The operating rules of today are laws paid for by incidents, which say how and not why. Chapter 7 puts the goals back beside the laws.
 
@@ -166,7 +166,7 @@ Section 6 sets the court beside the field.
 
 ## 6. The field, and where it leads
 
-The field leads in enforcement. Most mainstream languages have a formatter and a linter, and most projects run them before a commit or in continuous integration. (General knowledge, not a study of the record.) The court that would judge the style of a program written with Softanza is a specification; the one that exists judges the library's own classes.
+The field leads in enforcement. Most mainstream languages have a formatter and a linter, and most projects run them before a commit or in continuous integration; that is general knowledge, not a study of the record. The court that would judge the style of a program written with Softanza is a specification; the one that exists judges the library's own classes.
 
 The field leads in reach and in people. There is a labour market for its tools and none yet for this one, and the field's generators are the largest that exist.
 

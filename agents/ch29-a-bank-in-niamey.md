@@ -4,7 +4,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
 
 In this chapter I take a bank in Niamey, under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -12,7 +12,7 @@ In this chapter I take a bank in Niamey, under the central bank of the West Afri
 
 A bank is judged on its structure as much as on its numbers. A regulator asks who reports to whom: whether the audit function is independent of the executives it audits, whether there is a board, whether a risk function exists. It asks whether the person who operates a payment is the one who approves it. The field answers with documents: an organisation chart drawn in a slide, a policy written in a word processor, an audit that compares the two once a year.
 
-The field also has a family of tools called governance, risk and compliance platforms, which keep registers of risks and controls and track findings through to closure. They record that a control exists and who owns it. They usually do not read the structure of the organisation and tell you that it is wrong. (General knowledge, not a study of the record.)
+The field also has a family of tools called governance, risk and compliance platforms, which keep registers of risks and controls and track findings through to closure. They record that a control exists and who owns it. They usually do not read the structure of the organisation and tell you that it is wrong. That is general knowledge, not a study of the record.
 
 ## 2. The first principle
 
@@ -89,7 +89,7 @@ aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
 
 Two validators fail, each with its own code, and the compliance report says `non-compliant`.
 
-The library names seven regimes: the regional one, Basel III, SOX, PCI DSS, ISO 27001, GDPR and HIPAA. They share one mechanism. How many rules does each hold? I print it, rather than write a sentence that says "Basel III is validated":
+The library names seven regimes, by class name: the regional one, Basel III, SOX, PCI DSS, ISO 27001, GDPR and HIPAA. They share one mechanism. How many rules does each hold? I print it, rather than write a sentence that says "Basel III is validated":
 
 ```haro
 aBases = [ new stzBCEAORuleBase(), new stzBaselIIIRuleBase(), new stzSOXRuleBase(), new stzPCIDSSRuleBase(),
@@ -108,7 +108,7 @@ next
 
 > run: kept
 
-Six regimes carry four rules, and one carries five! Four rules every base carries: nobody reports to themselves, no reporting cycle, no orphan position, and a span of control. SOX adds one of its own: no position holds both the approver and the executor role. It is also called the separation of duties, but it is a different rule from the second court above. The library's comment says it plainly: the regime classes differ by name today, and only one adds a rule of its own. I will come back to what that means.
+Six regimes carry four rules, and one carries five! Four rules every base carries: nobody reports to themselves, no reporting cycle, no orphan position, and a span of control. SOX adds one of its own: no position holds both the approver and the executor role. It is also called the separation of duties, but it is a different rule from the second court above. The library's comment says it plainly: the regime classes differ by name today, and only one adds a rule of its own. The four are the rule base's; the validator that refused the chart in the first block holds three rules of its own, coded BCEAO-001 to BCEAO-003, and the two are not the same thing. I will come back to what that means.
 
 A bank's own rule is data too. Take the rule that internal audit reports to the board. It is an object declared by calls. It names the department it governs, the line it requires and the sentence it prints, and it is added to a regime's rule base. Which rule broke, and where? The report says:
 
@@ -151,7 +151,7 @@ oRep.Report()
 
 > run: kept
 
-They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one. Its own code does not run at the pinned commit; the calls above do. The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. What does it say when the chief executive's department is left blank? Run it:
+They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one. The narration's own code does not run at the pinned commit; the calls above do. The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. The regional rule compares the department of a position's superior only when that department is declared, so I expect the finding on audit to vanish when the chief executive's department is left blank. What does it say when it is? Run it:
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -179,7 +179,7 @@ My first book, *Refinement-Oriented Programming*, tells the discipline of govern
 
 **I refused to carry a regulator's text in a code I cannot source.** The codes BCEAO-001 to BCEAO-003 are the library's own. The record ties them to no article of the central bank's text. They are the library's own rules, named after the regulator's regime; the record does not name a text they are drawn from.
 
-**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, the questionnaire or the rules. It is silent on how long the product has been installed, and on how many people use it. I will invent none of it, and the chapter does not fill the gap. On "built with Softanza", the record shows a Python application, a small web server with a database, that calls nothing of the library. The library's validators are separate from it, and they are what this chapter runs. Chapter 1 says the product is built with Softanza and keeps its wording; this chapter says what the record shows.
+**I refused to tell what I do not know.** What the bank's own people declare, operate or say is not in the record. The installation guide is my document to the bank: installation steps, a licence file, a support contact. The Forged page keeps no figure and no person of a client. The record is silent on who at the bank declares the chart, the questionnaire or the rules. It is silent on how long the product has been installed, and on how many people use it. I will invent none of it, and the chapter does not fill the gap. On "built with Softanza", the record shows a Python application, a small web server with a database, that calls nothing of the library. The library's validators are separate from it, and they are what this chapter runs. Chapter 1 says that building the platform shaped Softanza; this chapter says what the record shows.
 
 Six guards stand behind the blocks.
 
@@ -189,9 +189,9 @@ Six guards stand behind the blocks.
 
 ## 6. The field, and where it leads
 
-The field leads in coverage. A governance and compliance platform usually holds a register of regulations, controls and findings, with workflows, owners and deadlines. (General knowledge, not a study of the record.) The library holds one structural check of a regional regulator, one of segregation of duties, and a mechanism. For GDPR, HIPAA and the others, it holds the mechanism and the four universal rules, and nothing that is specific to them.
+The field leads in coverage. A governance and compliance platform usually holds a register of regulations, controls and findings, with workflows, owners and deadlines. That is general knowledge, not a study of the record. The library holds one structural check of a regional regulator, one of segregation of duties, and a mechanism. For GDPR, HIPAA and the others, it holds the mechanism and the four universal rules, and nothing that is specific to them.
 
-The field leads in actual use: such a platform is often one that a bank's auditors already know, and that a regulator has already seen. (General knowledge, not a study of the record.)
+The field leads in actual use: such a platform is often one that a bank's auditors already know, and that a regulator has already seen. That is general knowledge, not a study of the record.
 
 Where I think this stands apart is that the chart is the data and the court is a rule over it. A chart is a text, a rule is data, a finding names the rule and the position, and the report is one verdict. The library's own comparison table for this feature is all wins, undated, with cost figures that cite nothing, and I will not print it.
 
@@ -205,7 +205,7 @@ Four things are designed, or built in part.
 
 - The content of the six regimes other than the regional one. Five of them hold the same four universal rules and nothing else; SOX adds a fifth.
 - A rule file that judges. The library can load a file of rules in a `when` and `then` text, and the one in its test data loads two rules. The loader reads a rule's name, type, severity, function, params and message, and no `when` or `then` line. Such a rule loads and judges nothing. The format is admitted, and the rule is not enforced.
-- A validator reads declared properties. It finds the board by the word "board" in a position title. It needs the departments to be declared.
+- A validator reads declared properties. It finds the board by the word "board" in a position title, and it compares departments only where they are declared: the limit block of section 3 blanks the chief executive's and the finding on audit disappears.
 - The succession validator flags every filled position, by the library's own comment a known defect. The reorganisation simulation raises when it is asked to change a reporting line, also a known defect. The article that tells the simulation names a method that exists nowhere in the library.
 
 Four things are absent.
@@ -215,7 +215,7 @@ Four things are absent.
 - A perceived verdict. No document says that an auditor or a supervisor read a finding that the library produced.
 - A delivery date. The delivered files carry file-system times, and those are not a delivery date.
 
-The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that its rules 117 to 121 were harvested from a banking-supervision product. The record does not say that product is the bank's installation. I will not say that it is.
+The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that five of its rules were harvested from a banking-supervision product. The record does not say that product is the bank's installation. I will not say that it is.
 
 Six doors follow, one for each reader.
 

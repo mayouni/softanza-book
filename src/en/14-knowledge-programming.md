@@ -10,7 +10,7 @@ guards: [knowledge_integration_narrated, provenance_survives_save_narrated, prog
 stage:
   built: "a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory"
   designed: "rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load"
-  absent: "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips"
+  absent: "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops"
 status: draft
 rulings: ["12.2", "12.6", "12.12", "12.13", "12.19"]
 research: research/ch14.md
@@ -28,7 +28,7 @@ The second is the property-graph database, with its query language. The record h
 
 The third is rules over facts, in Prolog and in Datalog. Facts and rules in one program, a query by resolution. The record names Prolog only, as a language to reach, and not to rebuild.
 
-A fourth practice stands behind the contrast, and the design document names it only to refuse it. It is retrieval, a pile of document fragments searched by similarity. (General knowledge, not a study of the record.)
+A fourth practice stands behind the contrast, and the design document names it only to refuse it. It is retrieval, a pile of document fragments searched by similarity; that description is general knowledge, not a study of the record.
 
 So in the field the knowledge lives in a store and its logic in a reasoner, both beside the program. Here the knowledge is a plain text file that the program loads.
 
@@ -36,7 +36,7 @@ So in the field the knowledge lives in a store and its logic in a reasoner, both
 
 **A system is a file. Adding a line to it makes the system know more, and nothing is coded or trained.**
 
-Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opened on the first, and I open here on the second. The design document of 13 July 2026 already says it, in nearly the same words, and the chapter keeps its opening.
+Two sentences of the record carry it. The definition, in the design document written from my directive of 13 July 2026: intelligence is the computational ability to derive new knowledge from existing knowledge. And what the 2026 vision keeps from it: adding one fact augments the system's intelligence, with no code change and no training. Chapter 17 opens on the first, and I open here on the second. The design document of 13 July 2026 already says it, in nearly the same words, and the chapter keeps its opening.
 
 Now the form itself, a text and what it does when you run it.
 
@@ -71,7 +71,7 @@ oB.KnowRelation("porridge", "made-from", "couscous")
 
 The graph with the law proves the longer chain and writes its steps out: `proved: porridge made-from couscous made-from flour made-from millet`. The graph without the law, which also never received the fact, still answers `not derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'`, and I want you to notice that this no has two causes, named in its own line: no recorded fact, and no lawful chain. A refusal is as certain as a proof, about what is recorded and declared: the graph says "not derivable", not "false". The library's comment on `Prove` says it: `a certain no is still certain`.
 
-The same growth reaches the domain language model of chapter 19. Nothing is trained. But a model forged from a graph is a snapshot. Does the model learn the new fact when the graph does? Run it:
+The same growth reaches the domain language model of chapter 19. Nothing is trained. But a model forged from a graph, in chapter 19's word, is a snapshot. Does the model learn the new fact when the graph does? Run it:
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
@@ -196,7 +196,7 @@ That is what the guards prove. What the field does better comes next.
 
 ## 6. The field, and where it leads
 
-The record's own graph comparison says where the traditional solutions win: large-scale systems that need distributed storage and processing, and performance-critical applications. Its table puts Softanza at business scale, in the hundreds to thousands of nodes, in a single process. That is the fair summary of the loss: the field leads in scale, persistence, transactions and tooling. (The comparison's row for persistence predates the file; the knowledge graph now writes one.)
+The record's own graph comparison says where the traditional solutions win: large-scale systems that need distributed storage and processing, and performance-critical applications. Its table puts Softanza at business scale, in the hundreds to thousands of nodes, in a single process. That is the fair summary of the loss: the field leads in scale, persistence, transactions and tooling. The comparison's row for persistence predates the file; the knowledge graph now writes one.
 
 The field leads in standards and reach, in general knowledge. A knowledge base in RDF can be shared with any tool that reads the W3C formats, linked to public vocabularies and queried across stores. As far as the record shows, a knowledge file is read by this library and by nothing else. A reasoner for a rich ontology language does what three laws and a class declaration do not. The field leads in the expressiveness of rules: Prolog and Datalog derive new facts from arbitrary rules. Here, in the runs I kept, one law derives a fact, and only on the default world. The field leads in multi-step queries, since SPARQL and Cypher join patterns. And in many relations between two things.
 
@@ -206,7 +206,7 @@ The losses are printed. The limit of the chapter comes next, with its runs.
 
 ## 7. The limit
 
-The limit of this chapter is the one the structure line already carries: *entities, relations, an ontology, rules*. The file at this commit has no rules. Here is the file with a rules section. What does the reader make of it?
+The limit of this chapter is the one my directive, in section 4, already carries: *entities, relations, an ontology, rules*. The file at this commit has no rules. Here is the file with a rules section. What does the parser make of it?
 
 ```haro
 cRules = 'knowledge "pairs"' + nl + nl + "facts" + nl + "    margherita | pairs-with | chianti" + nl + nl +
@@ -219,7 +219,7 @@ aM = oRul.ImportKnow(cRules)
 #--> 0
 ```
 
-The file merges, `1`, and the ontology is empty, `0`. The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped: the ontology holds `0`, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and section 7 prints the gap as the chapter's limit.
+The file merges, `1`, and the ontology is empty, `0`. The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped: the ontology holds `0`, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and this section prints the gap as the chapter's limit.
 
 The law is also not derived on an instance graph. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
 
@@ -262,7 +262,7 @@ oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-fro
 
 The path answers `[ "couscous" ]`, the first step and nothing more: `QueryPath` ignores the rest of its patterns, so it is no multi-step query yet. The variable predicate answers `[ ]`.
 
-**A line that is not a fact.** Four lines, three of them not facts: two fields, four fields, and no bars. What does the reader refuse?
+**A line that is not a fact.** Four lines, three of them not facts: two fields, four fields, and no bars. What does the parser refuse?
 
 ```haro
 cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
@@ -275,7 +275,7 @@ aBad = oT.ImportKnow(cBad)
 #--> [ ]
 ```
 
-Nothing. The file merges, `1`, and the refused list is `[ ]`; the reader is silent and the three lines vanish! The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
+Nothing. The file merges, `1`, and the refused list is `[ ]`; the parser is silent and the three lines vanish! The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
 
 **The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line does not run. The text, which I show and do not run, is `@Q("Apple").IsA(:Fruit)`. On 8 October 2026 it stopped with `Calling Function without definition: @isfruit`; I did not keep that run as a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps the point. Does the world know one name with two meanings?
 
@@ -329,7 +329,7 @@ oW.ImportKnow(cWorld)
 
 Run it and see what prints. If you change the question to ask about grade 3, it will prove something, and it will not be the line you promised. Then ask the reverse question, whether primary is part of class 3b, once your world has its law, and see whether the law adds a fact in the wrong direction. I do not tell you the line to add.
 
-I left this one in your hands. Section 7 runs a file of four lines, three of them not facts, and prints what the reader says about them. Here is that file again with one change: it also asks the graph about three of the lines, and I print none of the answers.
+I left this one in your hands. Section 7 runs a file of four lines, three of them not facts, and prints what the parser says about them. Here is that file again with one change: it also asks the graph about three of the lines, and I print none of the answers.
 
 ```haro exercise
 cBad = 'knowledge "t"' + nl + nl + "facts" + nl + "    a | likes | b" + nl + "    c | likes" + nl +
@@ -343,6 +343,6 @@ aBad = oT.ImportKnow(cBad)
 ? oT.Query([ "g", "likes", "h" ])
 ```
 
-Run it. Read `merged`, read `refused`, read the three queries, and find which lines the graph holds and what the reader told you about the others. Set the design document's promise of a file "validated on load", in section 4, beside what you find; section 7 says what the parser keeps. I do not give you the answer, and I did not fix the reader. When you have it, you will know why a file that merges is not a file that was validated.
+Run it. Read `merged`, read `refused`, read the three queries, and find which lines the graph holds and what the parser told you about the others. Set the design document's promise of a file "validated on load", in section 4, beside what you find; section 7 says what the parser keeps. I do not give you the answer, and I did not fix the parser. When you have it, you will know why a file that merges is not a file that was validated.
 
 The next chapter is about pattern languages: a pattern is a rule about the shape of data, written as data, and the same habit serves data of every kind. Here a law about a relation was a line in a file; there the rule is about the shape of the data itself.

@@ -16,13 +16,13 @@ rulings: ["12.15", "12.19", "12.25", "12.29", "12.30"]
 research: research/ch28.md
 ---
 
-Dans ce chapitre, je raconte une leçon payée dans l'ordre, avec ses dates : un restaurateur de Lyon, deux ans de spécification sans rien d'utilisable, et le renversement du 4 juillet 2026, le client en premier. Je montre ce que la bibliothèque en porte : le Verrou comme règle sur les mondes d'un cycle, un bac à sable de paiements non complaisant, une constellation qui endort un monde, un budget de vitesse déclaré et jugé. Je dis où elle ne porte rien, et ce que j'ai refusé : le grand système d'un seul bloc, la dérive silencieuse, le faux complaisant, et prêter au propriétaire ce qu'une simulation avait dit. Le principe tient en une phrase sur le site : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison.
+Dans ce chapitre, je raconte une leçon payée dans l'ordre, avec ses dates : un restaurateur de Lyon, deux ans de spécification sans rien d'utilisable, et le renversement du 4 juillet 2026, le client en premier. Je montre ce que la bibliothèque en porte : le Verrou comme règle sur les mondes d'un cycle, un bac à sable de paiements non complaisant, une constellation qui endort un monde, un budget de vitesse déclaré et jugé. Je dis où elle ne porte rien, et les six choses que j'ai refusées, parmi lesquelles le grand système d'un seul bloc, la dérive silencieuse, le faux complaisant, et prêter au propriétaire ce qu'une simulation avait dit. Le principe tient en une phrase sur le site : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison.
 
 ## 1. Le concept, tel que le terrain le tient
 
 Chaque leçon de ce projet a, sur le terrain, un lieu ordinaire, et le terrain la garde en dehors du programme.
 
-Un périmètre fixé pour un cycle vit dans un processus. En Scrum, le but d'un sprint ne change pas pendant qu'il court ; en Shape Up, le temps est fixé et le périmètre varie, et les idées nouvelles attendent hors du cycle. Essayer un service avant de le payer vit dans le mode test d'un fournisseur et dans les outils qui tiennent la place d'un service HTTP. Un budget de performance vit dans un contrôle d'intégration continue du poids et de la vitesse d'une page. La mesure de la vitesse propre au web est un chiffre pris sur de vrais chargements de pages, au soixante-quinzième percentile. L'image de toute une constellation de petites applications vit dans la super-application : un hôte qui embarque un runtime et fait tourner des mini-applications à l'intérieur. (Tout cela est une connaissance générale, pas une étude du dossier.)
+Un périmètre fixé pour un cycle vit dans un processus. En Scrum, le but d'un sprint ne change pas pendant qu'il court ; en Shape Up, le temps est fixé et le périmètre varie, et les idées nouvelles attendent hors du cycle. Essayer un service avant de le payer vit dans le mode test d'un fournisseur et dans les outils qui tiennent la place d'un service HTTP. Un budget de performance vit dans un contrôle d'intégration continue du poids et de la vitesse d'une page. La mesure de la vitesse propre au web est un chiffre pris sur de vrais chargements de pages, au soixante-quinzième percentile. L'image de toute une constellation de petites applications vit dans la super-application : un hôte qui embarque un runtime et fait tourner des mini-applications à l'intérieur. Tout cela est une connaissance générale, pas une étude du dossier.
 
 Les quatre sont de bonnes pratiques, et dans les quatre le programme lui-même n'en sait rien.
 
@@ -92,7 +92,7 @@ oPay.Capture(aAuth[:id])
 #--> this authorization was already captured
 ```
 
-Trois réponses, et aucune n'est une chaîne vide : `declined`, `refused`, et `this authorization was already captured`.
+Trois lignes imprimées, un rejet, un refus et une raison, et aucune n'est une chaîne vide : `declined`, `refused`, et `this authorization was already captured`.
 
 Et la barrière de production refuse de s'ouvrir tant qu'un faux est encore lié, même pour une personne habilitée. Ici le lien réel est un bac à sable HTTP qui tient la place d'un adaptateur, comme le fait la garde : le registre ne tient que le nom du secret. Que répond la barrière de production quand le propriétaire, habilité, demande la production tant que le faux est encore lié ? Lancez-le :
 
@@ -116,7 +116,7 @@ oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
 #--> 1
 ```
 
-Le propriétaire est habilité, et il est refusé ! Rien n'est validé, et le journal dit pourquoi : `REFUSED -- the external surface is not production-ready` ; la raison dessous est la règle : `a fake must never ship`. Elle s'ouvre quand le lien est réel.
+Le propriétaire est habilité, et il est refusé ! Rien n'est validé, et le journal dit pourquoi : `REFUSED -- the external surface is not production-ready` ; la raison dessous est la règle : `a fake must never ship`. Elle s'ouvre quand le lien est déclaré réel : la barrière lit la nature du lien, bac à sable ou réel, et non la classe derrière lui, et c'est pourquoi un bac à sable HTTP lié comme réel l'ouvre ici.
 
 **La constellation.** Quand il a renversé l'ordre du travail, l'architecture du projet a été redessinée en une constellation de cinq mondes sur un socle commun. Les mondes sont le téléphone du client, l'écran de la cuisine, l'atelier du commerçant, la gestion, qui est la première application gardée et mise en sommeil, et la console de l'éditeur. Le socle commun est l'identité, le catalogue, les commandes, les paiements et la flotte. Dans la bibliothèque, le dernier monde dans l'ordre du travail peut être mis en sommeil, et il est réveillé quand son tour vient. Que répond un appel à travers un lien tant que le monde visé dort, et une fois qu'il est réveillé ? Lancez-le :
 
@@ -147,7 +147,7 @@ oCon.Revive("supplier")
 
 L'appel à travers le lien passe. L'appel vers le monde en sommeil est refusé ! La raison tient en une ligne : `target world 'supplier' is not active.` Réveillé, il passe.
 
-**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Je tiens cela pour une vue, non pour un résultat. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes et les juge contre ce qui a été mesuré. Un dépassement fait échouer la même barrière qu'un constat de sécurité. Les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
+**Le budget de vitesse.** La première priorité du propriétaire était la vitesse, donc la vitesse devait être une promesse jugée par quelque chose, pas une aspiration. Je tiens cela pour une vue, non pour un résultat. Le budget a trois nombres : le temps du premier affichage, le temps de réaction à un appui, et le temps pour qu'une commande arrive en cuisine. La bibliothèque les déclare à côté du code comme des attentes et les juge contre ce qui a été mesuré. Un dépassement fait échouer la même barrière qu'un constat de sécurité. Il a resserré les seuils lui-même, dans son second cadrage, et je n'en imprime aucun. Le nom du moniteur, les bornes et les échantillons de ce bloc sont les miens, pour montrer la forme ; ce ne sont pas le budget du projet. À quoi ressemble un dépassement ? Lancez-le :
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -176,7 +176,7 @@ oRep.Ingest(oSla.Findings())
 
 Le premier contrôle imprime `3 expectation(s), last check: MET.` Puis une commande prend 3 100 millisecondes, et la barrière n'est plus saine ! Le constat le dit dans les mots du budget : `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
 
-La bibliothèque porte-t-elle ce que le projet a appris des interfaces ? Non. Le fichier de règles d'interface du projet est de l'expérience en quelques lignes : une action claire par écran ; annuler plutôt que confirmer ; un bouton refusé est désactivé à la vue, jamais caché. Et un test : une première journée simulée sur une base vide a trouvé le trou le plus grave, qu'aucun fournisseur ne pouvait être créé en production. Ces règles ont été forgées, au compte du projet lui-même, par onze itérations et une campagne de vingt-deux tests simulés avec dix-sept corrections. La bibliothèque n'en porte aucune comme contrôle. Donc, selon la règle de ce chapitre, elles sont la leçon du projet et non celle de la bibliothèque, et je les raconte ici sans bloc.
+La bibliothèque porte-t-elle ce que le projet a appris des interfaces ? Non. Le fichier de règles d'interface du projet est de l'expérience en quelques lignes, quinze règles sous une seule directive que le projet appelle le test des trois secondes, qu'un restaurateur n'a pas le temps de regarder plusieurs secondes un écran encombré : une action claire par écran ; annuler plutôt que confirmer ; un bouton refusé est désactivé à la vue, jamais caché. Et un test : une première journée simulée sur une base vide a trouvé le trou le plus grave, qu'aucun fournisseur ne pouvait être créé en production. Ces règles ont été forgées, au compte du projet lui-même, par onze itérations et une campagne de vingt-deux tests simulés avec dix-sept corrections. La bibliothèque n'en porte aucune comme contrôle. Donc, selon la règle de ce chapitre, elles sont la leçon du projet et non celle de la bibliothèque, et je les raconte ici sans bloc.
 
 Six refus suivent, chacun avec sa raison.
 
@@ -186,7 +186,7 @@ Six refus suivent, chacun avec sa raison.
 
 **J'ai refusé de jeter la première application.** Quand le propriétaire a renversé l'ordre, l'application déjà construite a été gardée, en sommeil, jusqu'à ce que la première version du nouvel ordre soit en production. Les mots du projet lui-même : rien n'est jeté.
 
-**J'ai refusé la dérive silencieuse.** Le Verrou existe parce qu'un projet qui a échoué une fois dérive sans que personne ne l'ait décidé. C'est mon point de vue. Un second changement de cap avant que la première version tourne en production est refusé, et une idée qui entre dans le cycle sans sortie écrite l'est aussi.
+**J'ai refusé la dérive silencieuse.** Le Verrou existe parce qu'un projet qui a échoué une fois dérive sans que personne ne l'ait décidé. Un second changement de cap avant que la première version tourne en production est refusé, et une idée qui entre dans le cycle sans sortie écrite l'est aussi.
 
 **J'ai refusé le faux complaisant.** Un double qui répond en silence par une chaîne vide produit un test qui passe pour la mauvaise raison. Le bac à sable décline quand une passerelle décline, refuse quand une passerelle est en panne, et refuse une seconde capture. Et j'ai refusé un tarif fixe avant la barrière de mise en service : aucun abonnement à un établissement de paiement avant l'accord écrit du propriétaire.
 

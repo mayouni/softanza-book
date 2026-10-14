@@ -7,7 +7,7 @@ status: draft
 rulings: ["12.19"]
 ---
 
-L'étude du dossier a lu quatre inventaires que la bibliothèque tient d'elle-même : les narrations avec leurs titres, les documents de conception, la phase des moteurs de paradigme du moteur, et la liste de concepts repensés d'un lecteur extérieur. Elle les a croisés, et a trouvé quarante-six innovations en sept familles. Voici ce registre, tel que l'étude l'a tranché le 7 octobre 2026, avec une colonne propre à ce livre : le chapitre qui raconte chaque ligne. Un arrêt ultérieur du même jour, le 12.26, ajoute une quarante-septième ligne, la réponse par l'exemple ; elle n'est pas dans ce tableau.
+Mon étude du dossier a lu quatre inventaires que la bibliothèque tient d'elle-même : les narrations avec leurs titres, les documents de conception, la phase des moteurs de paradigme du moteur, et la liste de concepts repensés d'un lecteur extérieur. Elle les a croisés, et a trouvé quarante-six innovations en sept familles. Voici ce registre, tel que l'étude l'a tranché le 7 octobre 2026, avec une colonne propre à ce livre : le chapitre qui raconte chaque ligne. Une décision ultérieure du même jour ajoute une quarante-septième ligne, la réponse par l'exemple, avec les mots d'étape d'un plan : rien n'induit encore, comme le dit le chapitre 18. Elle n'est pas dans ce tableau, qui garde les quarante-six que l'étude a comptées.
 
 Lisez le registre comme l'étude le lit, et pas mieux. C'est une lecture et non un recensement. Un concept sans narration ni document de conception qui lui soit propre n'a pas été compté. Les preuves de l'étude comptent les fichiers qui nomment la chose dans du code hors des tests et des archives, les fichiers de test, et le module du moteur quand il en existe un ; elles comptent les fichiers qui nomment une chose, et non des tests qui passent. Je n'en ai recompté aucun. L'étude a aussi compté combien de pages du site nommaient chaque innovation ; le site a changé depuis, et je laisse cette colonne de côté.
 
@@ -74,7 +74,7 @@ L'étude a compté douze moteurs ; le registre en donne neuf une ligne à eux, e
 | 33 | `stzGraph` et ses organes | vingt-cinq notations, un planificateur, une requête, un organigramme | 14, 29, 30 | huit narrations |
 | 34 | Les règles comme règles de graphe | des règles qui voient le tableau entier | 29, 30 | un plan de conception ; une narration |
 | 35 | Les nombres repensés | une refonte globale des nombres, exacts par défaut | 22 | une conception de 3 167 lignes |
-| 36 | Les statistiques comme langage de pensée, le solveur linéaire, les matrices | | non raconté | quatre narrations |
+| 36 | Les statistiques comme langage de pensée, le solveur linéaire, les matrices | l'étude ne donne aucune ligne pour cette entrée | non raconté | quatre narrations |
 
 ### F · Système, livraison et exploitation
 
@@ -87,7 +87,7 @@ L'étude a compté douze moteurs ; le registre en donne neuf une ligne à eux, e
 | 41 | Le plan de la sécurité | l'événement, le registre, la sentinelle, l'exercice, la réponse, l'attestation | 21 | huit narrations ; une analyse d'incident de 815 lignes |
 | 42 | La filiation de la gouvernance | responsable pour toujours | 30 | une narration |
 | 43 | La porte d'entrée et les secrets | l'authentification et les identifiants, qui se masquent eux-mêmes | 21 (les secrets ; la porte d'entrée comme simple événement) | deux narrations |
-| 44 | La journalisation structurée, les sens du moteur, l'analyseur XML qui dit non, l'accès sûr aux listes de hachage | | 27 (les sens du moteur) | quatre narrations qui s'exécutent |
+| 44 | La journalisation structurée, les sens du moteur, l'analyseur XML qui dit non, l'accès sûr aux listes de hachage | l'étude ne donne aucune ligne pour cette entrée | 27 (les sens du moteur) | quatre narrations qui s'exécutent |
 
 ### G · La bibliothèque qui se connaît
 
@@ -98,7 +98,7 @@ L'étude a compté douze moteurs ; le registre en donne neuf une ligne à eux, e
 
 ### Ce que dit le registre
 
-La lecture de l'étude, que je garde : ce que le site nomme est ce qui a une page de produit, un principe ou un domaine de l'Atlas. Ce qu'il laisse dans l'ombre est ce qui traverse les domaines. Chaque paradigme de la première famille sauf ceux que le site nommait déjà (les lignes 4 à 8 et 10 à 12 ci-dessus ; la colonne du site de l'étude les marquait, et je l'ai laissée de côté), les douze moteurs sauf le pont polyglotte, les langages de motifs en tant que famille, l'idiome. Ce livre est en partie la réponse à cela : ses parties sont coupées à travers les domaines, et non le long d'eux.
+La lecture de l'étude, que je garde : ce que le site nomme est ce qui a une page de produit, un principe ou un domaine de l'Atlas. Ce qu'il laisse dans l'ombre est ce qui traverse les domaines. Chaque paradigme de la première famille sauf les lignes 4 à 8 et 10 à 12, que le site nommait déjà ; les douze moteurs sauf le pont polyglotte ; les langages de motifs en tant que famille ; l'idiome. Ce livre est en partie la réponse à cela : ses parties sont coupées à travers les domaines, et non le long d'eux.
 
 L'étude a aussi réconcilié les douze moteurs. Le macroplan marque la phase comme terminée. Huit des douze ont un fichier source sous leur nom dans le moteur ; quatre n'en ont aucun, qui sont la vérité, les quantificateurs, le polyglotte et le polycode, les deux premiers annoncés terminés comme bibliothèques. Du côté de la bibliothèque, trois moteurs n'ont aucun fichier de test : les adverbes, la fusion de sections et les variables nommées. Deux des trois sont les lignes 16 et 21 ci-dessus, que ce livre ne raconte pas, et la troisième, la ligne 19, il la raconte comme une absence.
 

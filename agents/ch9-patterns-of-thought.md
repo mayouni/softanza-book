@@ -4,13 +4,13 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
 ## 1. The concept, as the field holds it
 
-The field has three tools for making a program react. Regular expressions recognise a shape in text, and nothing more: they say "this matches", and they stop. Reactive programming, the family of observables, subscribers and schedulers that Rx made popular, lets data flow through a program over time. Its vocabulary comes from plumbing, telephony and publishing: pipes, backpressure, hot and cold sources. And rule engines, the production systems of the field with their forward chaining, fire rules when facts appear, and keep firing while new facts appear. (General knowledge; the rule engines of the field are older and more mature than anything in this chapter.)
+The field has three tools for making a program react. Regular expressions recognise a shape in text, and nothing more: they say "this matches", and they stop. Reactive programming, the family of observables, subscribers and schedulers that Rx made popular, lets data flow through a program over time. Its vocabulary comes from plumbing, telephony and publishing: pipes, backpressure, hot and cold sources. And rule engines, the production systems of the field with their forward chaining, fire rules when facts appear, and keep firing while new facts appear; that is general knowledge, and the rule engines of the field are older and more mature than anything in this chapter.
 
 Each tool is separate. A regular expression does not trigger a computation, a reactive stream does not recognise a pattern, and a rule engine does not have a vocabulary that a person would use to say a thought. I hold this as a view, not a result.
 
@@ -95,11 +95,11 @@ oAgent.AddSkill(s2)
 
 > run: kept
 
-It answers `2`, then `0`, and between the two the fact `served` reads `TRUE`. That is a fixpoint. The guard that proves it labels the scene in its own words: `the cascade to fixpoint (Softanzuter at agent level)`. In chapter 17 you will see this same agent refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
+It answers `2`, then `0`, and between the two the fact `served` reads `TRUE`. That is a fixpoint. The guard that proves it labels the scene in its own words: `the cascade to fixpoint (Softanzuter at agent level)`. In chapter 17 you will see an agent of this same class refused at a gate. Here is the other face of it: the agent that chains, because its mind is programmatic.
 
-So the word has three meanings in the record, and the reader deserves to be told which is which. In this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. The engine has a module with the same name. The macroplan presents it as the foundation for AI agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly. The agent of the block above, `stzPIAgent`, never calls it. And the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
+So the word has three meanings in the record, and the reader deserves to be told which is which. First, in this chapter, "Softanzuter" is the third rung, the thinking machine of the definition: designed, not built. Second, the engine has a module with the same name, which the macroplan presents as the foundation for AI agents. Its slots hold a state and a bounded mailbox, and a message into a full queue is refused, counted and never dropped quietly; the agent of the block above, `stzPIAgent`, never calls it. Third, the design of a universal engine behind all of it, a medium where any pattern language becomes a computation, is planned.
 
-**Reaxis** is the other half of the chapter's title, and it is a different idea. It is reactive programming with a vocabulary redesigned from the ground. A reactive thing is a Container, a Stream and an Rfunction: a function in waiting, which is not a callback. Data flows through a stream in plain words, a transformation, a filter, what to do with what passes. Four prices go in, 80, 90, 100 and 120: which ones come out, and at what value?
+**Reaxis** is the second subject of the chapter's title, and it is a different idea. It is reactive programming with a vocabulary redesigned from the ground. A reactive thing is a Container, a Stream and an Rfunction: a function in waiting, which is not a callback. Data flows through a stream in plain words, a transformation, a filter, what to do with what passes. Four prices go in, 80, 90, 100 and 120: which ones come out, and at what value?
 
 ```haro
 aSeen = []
@@ -220,7 +220,7 @@ At `[ 4, 3 ]`, then at `[ 5, 3 ]`. Three more moves to the right gained one colu
 
 **I refused to leave regex as a way to read text.** I made it a computational medium. A trigger fires a computation, the computation writes a state when it changes the value, and the state records its why. The Regexuter is a faculty and not a mind, and it holds no goal. I added the goal two rungs above it, at the fourth rung, in the agent, on purpose.
 
-**I refused the field's vocabulary for reactive programming.** Observables, subscribers, backpressure, hot and cold sources, schedulers: borrowed from plumbing, telephony and publishing, and not from the problem. This is my view of those words, not a result. A function in waiting is an Rfunction. Data flows, and nothing is called a producer or a consumer. Overflow replaces backpressure. Waiting for an attribute to settle replaces debounce. The old spellings still work as aliases: feed, emit, send and receive all call one method, so my change was one of naming and not of removal.
+**I refused the field's vocabulary for reactive programming.** Observables, subscribers, backpressure, hot and cold sources, schedulers: borrowed from plumbing, telephony and publishing, and not from the problem. A function in waiting is an Rfunction. Data flows, and nothing is called a producer or a consumer. Overflow replaces backpressure. Waiting for an attribute to settle replaces debounce. The old spellings still work as aliases: feed, emit, send and receive all call one method, so my change was one of naming and not of removal.
 
 **I refused to build the siblings.** The article that tells the Regexuter describes four more: an analyser, a genetic one, a linguistic one and a quantic one. In the genetic one patterns evolve against a fitness, in the linguistic one triggers are grammar rules, and in the quantic one a pattern can be in several states at once. The article gives each a sample call, and no class stands behind it. The design later found a purpose for two of them. Answering by example demands pattern induction, the genetic one's ground; several acceptable answers demand superposed candidates, collapsed by rules or by choice, the quantic one's. Chapter 18 tells where that stands. They remain a vision; two have their purpose written.
 
@@ -234,11 +234,11 @@ The next section sets this record beside the field's.
 
 ## 6. The field, and where it leads
 
-The field's rule engines lead. They are older and more mature than the Regexuter, they chain to a fixpoint, and the algorithms behind them are decades old. What I claim is not a rule engine. It is the condition side: rules that are sentences of the pattern languages, over the two media that have an Uter built, text and lists. The state keeps, for every firing that changes a value, its why. The library's own architecture calls the Regexuter a nascent forward-chaining rule engine, and I will not call it more.
+The field's rule engines lead. They are older and more mature than the Regexuter, they chain to a fixpoint, and the algorithms behind them are decades old. What I claim is not a rule engine. It is the condition side: rules that are sentences of the pattern languages, over the two media that have a reacting machine built, text for the Regexuter and lists for the Listexuter. The state keeps, for every firing that changes a value, its why. The library's own architecture calls the Regexuter a nascent forward-chaining rule engine, and I will not call it more.
 
-The field's reactive libraries lead in reach. Rx exists in most mainstream languages, with a large set of operators. (General knowledge.) Reaxis is one library on one event loop. The engine's own module for it is a small table of substring rules: the Container, Stream and Rfunction model lives in the library, on the event loop of the engine.
+The field's reactive libraries lead in reach. Rx exists in most mainstream languages, with a large set of operators; that is general knowledge. Reaxis is one library on one event loop. The engine's own module for it is a small table of substring rules: the Container, Stream and Rfunction model lives in the library, on the event loop of the engine.
 
-I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries (`softanza-reactive-objects-narration.md`). It is undated and unsourced.
+I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries. It is undated and unsourced.
 
 The next section says where all of this stops.
 

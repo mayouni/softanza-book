@@ -29,7 +29,7 @@ An agent that quotes a promise should quote its verdict with it.
 
 - **You may quote any cell.** A table of this book is data. A row that says "absent" is a row you may repeat as absent.
 - **You may not turn an absent cell into a present one.** The record will find your sentence and the missing file side by side, and the book says so in chapter 31.
-- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Absent means that I looked, and say how far.
+- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Absent means that I looked, and that the chapter says how far.
 - **You may rely on a promise only with its verdict, and only at the commit it names.** A number that the book prints is a number read from a file or a run, at the date the page gives.
 - **A draft is a draft.** A chapter marked as a draft is not the author's final word, and "the author read it" is a status that only the author sets.
 

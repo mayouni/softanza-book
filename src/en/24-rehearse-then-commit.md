@@ -28,19 +28,19 @@ The second is service virtualization and the test double: a vendor's test mode w
 
 The third is the emulator and the simulator: a phone emulator, a board emulator, a local stand-in for a cloud. The record's own sentence on the genre is that simulators lie. They mock the database, stub the device, approximate the compute.
 
-What the three share is that each is a separate tool, and the program itself knows nothing of it. (General knowledge for the tools, not a study of the record, except where I quote the documents.)
+What the three share is that each is a separate tool, and the program itself knows nothing of it. That is general knowledge of the tools, and not a study of the record, except where I quote the documents.
 
 ## 2. The first principle
 
 **Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.**
 
-The record's first principle for this ground is the first clause, and the library's own label calls it a first principle: reality is reached through exactly one door. The default path for consequential change is to rehearse in a twin, generate a plan, and commit the plan. The plan is the door. The framework's summary is three words: rehearse, plan, commit. The structure line of this book's outline says the last clause: production refuses a fake. The first clause is a library document without an author line (`SP3`, in `SOFTANZA_SYSTEM_FOUNDATION.md`). The middle clause, commit through a governed actor, is the deployment design's (`SOFTANZA_DEPLOYMENT.md`: "only an effectful actor commits"). The chapter joins the three and attributes each part to its source.
+The record's first principle for this ground is the first clause, and the library's own label calls it a first principle: reality is reached through exactly one door. The default path for consequential change is to rehearse in a twin, generate a plan, and commit the plan. The plan is the door. The framework's summary is three words: rehearse, plan, commit. The structure line of this book's outline says the last clause: production refuses a fake. The first clause is a library document's, the System Foundation's, written with no author line. The middle clause, commit through a governed actor, is the deployment design's: "only an effectful actor commits". The chapter joins the three and attributes each part to its source.
 
 ## 3. The Softanza form
 
 ### The twin
 
-The one artifact that crosses toward reality is a plan. It names each step. It flags the one that removes something. And asked to validate, it re-reads reality. Chapter 20 said "I saw it warn" and did not show the words. What does the plan say about the source it was going to move? Here are the words, and nothing is executed:
+The one artefact that crosses toward reality is a plan. It names each step. It flags the one that removes something. And asked to validate, it re-reads reality. Chapter 20 said "I saw it warn" and did not show the words. What does the plan say about the source it was going to move? Here are the words, and nothing is executed:
 
 ```haro
 oBench = new stzVirtualFileSystem()
@@ -85,9 +85,9 @@ oEnvPlan = oEnv.GenerateUpdatePlan()
 #--> [ [ 3, "RUNS an external command (side effects): spawn process: backup-database --all" ] ]
 ```
 
-The twin holds `rehearsal` and one pending spawn, and the real environment answers `0`! Chapter 20's limit paragraph said that only files are built. That was wrong, and I have corrected it there.
+The twin holds `rehearsal` and one pending spawn, and the real environment answers `0`! Chapter 20 counts both twins as built, and this is the second one.
 
-The twin has a second job. A programmer on a laptop with no pins writes pin code for a board. The scope says *rehearsed*, as chapters 8 and 31 showed. At deploy, the lowering bridge turns the rehearsal into the source of firmware. What happens when an assistant asks to deploy? `Build()` records the build command and does not run the toolchain, and `Deploy` lowers in memory, so no file is written:
+The twin has a second job. A programmer on a laptop with no pins writes pin code for a board. The scope says *rehearsed*, as chapter 8 showed and chapter 31 shows. At deploy, the lowering bridge turns the rehearsal into the source of firmware. What happens when an assistant asks to deploy? `Build()` records the build command and does not run the toolchain, and `Deploy` lowers in memory, so no file is written:
 
 ```haro
 oProduct = new stzPlatformProfile("greenhouse")
@@ -152,7 +152,7 @@ The plan says where; the emulator builds what the plan says.
 
 ### The emulation
 
-The emulator turns the plan into a bundle, and the bundle is what ships. In the next block the bundle generated for the rehearsal is wired straight into the production attach, and the actor decides. What does the site become when an assistant calls `Deploy(:Production)`, and what when a person does? The manifest that lands names the engine group the part carries. The target here is a local folder, the kind of site that needs no tool but file operations:
+The emulator turns the plan into a bundle, and the bundle is what ships. In the next block the bundle generated for the rehearsal is wired straight into the production attach, and the actor decides. What does the site become when an assistant calls `Deploy(:Production)`, and what when a person does? The manifest that lands names the engine group the part carries. The target here is a local folder, the kind of site that needs no tool but file operations. The block writes two folders in the working directory, `_bundle` and `_live`, and removes them at its end:
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -188,13 +188,13 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-The assistant left the site `absent`, and the person made it `launched`. The honest half: the manifest's artifacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
+The assistant left the site `absent`, and the person made it `launched`. The honest half: the manifest's artefacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
 
 I did not run `Deploy(:Emulated)`, because it builds each part's subset through the engine toolchain, and the toolchain's build is something this machine must not run. What I ran is the bundle without the compile. In my research run of 8 October 2026, outside this chapter's blocks, its map named an engine file that is not there. Section 7 says what that means for the claim that the engine runs in a browser.
 
 ### The deployment
 
-For a local site, a rollout that fails undoes what it had done; the other kinds of site only try, as a best effort. The web part deploys and passes its gate. The api part's store fails. The remaining steps are skipped and the deployment does not commit. What becomes of the web site, already live? The failing site is a server with no storage location, which fails without spawning anything:
+For a local site, a rollout that fails undoes what it had done; the other kinds of site only try, as a best effort. The web part deploys and passes its gate. The api part's store fails. The remaining steps are skipped and the deployment does not commit. What becomes of the web site, already live? The failing site is a server with no storage location, which fails without spawning anything. The block writes one folder, `_site_cdn`, and removes it:
 
 ```haro
 cHere = StzReplace(WorkingDirectory(), "\", "/")
@@ -282,7 +282,7 @@ The day you do subscribe, you change a binding and not a line. The key is an inv
 
 ### Production refuses
 
-One report names five of the eight ways a surface is not fit for production. Four are errors: a declared service never bound (`unbound-service`), a fake (`sandbox-in-production`), a real database that vanishes on restart (`ephemeral-in-production`), and a live adapter whose key is not in the store (`live-without-secret`). The fifth is a warning: a live adapter that names no secret at all (`inline-credential`). Chapter 31 showed the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
+One report names five of the eight ways a surface is not fit for production. Four are errors: a declared service never bound (`unbound-service`), a fake (`sandbox-in-production`), a real database that vanishes on restart (`ephemeral-in-production`), and a live adapter whose key is not in the store (`live-without-secret`). The fifth is a warning: a live adapter that names no secret at all (`inline-credential`). Chapter 31 shows the unbound one and the raise. This is the rest of the list. In the development phase the surface is already not sound, since an unbound service and a missing key are errors in any phase. The other two errors appear only in the production phase. The code lists eight invariants, and the service plan (section 4) and the narration list five:
 
 ```haro
 oStoreSf = new stzSecretStore("shop")
@@ -360,7 +360,7 @@ That is what the run showed; the decisions behind it come next.
 
 Everything below is from the library's design documents and narrations, written in sessions with no author line. The record holds no ruling of my own for this chapter. Its decisions are the documents'.
 
-**I refused the simulator that lies.** The emulator does not mock. Each part runs the same compiled engine artifact that will ship to its target. That claim has a caution, in section 7: the proof that the engine runs in a browser is not in the pinned tree.
+**I refused the simulator that lies.** The emulator does not mock: in the design's words, each part runs the same compiled engine artefact that will ship to its target. That claim has a caution, in section 7: the proof that the engine runs in a browser is not in the pinned tree.
 
 **I refused to re-ship what the target does well.** The edge carries a capability only if it is critical and either unique or weak on the target.
 
@@ -374,7 +374,7 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused "fake versus real" as the whole truth.** It was too coarse. There are four postures now: sandbox, local, live, and conformance. The local posture was added when the database exemplar showed that a SQLite file is a real database in a file you own.
 
-**I refused a gate that fails open.** The registry once kept its state in attributes. Attaching it to a delivery took a snapshot, so the gate would have passed an unsound surface. A gate that fails open is worse than no gate: this is my view. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
+**I refused a gate that fails open.** The registry once kept its state in attributes. Attaching it to a delivery took a snapshot, so the gate would have passed an unsound surface. A gate that fails open is worse than no gate. The state now sits in a table keyed by identity, so every copy is the registry. Anything that governs others must survive being copied.
 
 **I refused to virtualize the quality of an AI model.** Frontier-model quality cannot be virtualized. What the sandbox sells instead is determinism, a cost you can assert, and working offline.
 
@@ -382,9 +382,9 @@ Everything below is from the library's design documents and narrations, written 
 
 **I refused to ask a question in the wrong frame.** `MayGoLive` once asked about soundness in the current phase, so with a fake bound it answered yes. Now it is asked in the production frame whatever the phase.
 
-**I refused to say the restaurant's need was the design's origin.** The site says that the emulation and deployment designs take a solution as an example. It is an example, not the origin of the design. The sample solution in the documents carries a customer's product name, and I have renamed it in every block. Chapter 28 told the story, and I do not repeat it.
+**I refused to say the restaurant's need was the design's origin.** The site says that the emulation and deployment designs take a solution as an example. It is an example, not the origin of the design. The sample solution in the documents carries a customer's product name, and I have renamed it in every block. Chapter 28 tells the story, and I do not repeat it here.
 
-The service plan is headed "written 2026-07-23 in answer to the user's question". The question asks whether emulation covers databases, business APIs, frontier models and cloud providers. The aim is that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. The chapter tells the plan's own heading and date. The record does not say who asked, and the chapter does not claim it was the author's question.
+The service plan is headed "written 2026-07-23 in answer to the user's question". The question asks whether emulation covers databases, business APIs, frontier models and cloud providers. The aim is that a programmer can code a whole program without subscriptions or fees and still get a working solution ready to deploy. The chapter tells the plan's own heading and date. The record does not say who asked, and I do not claim it was mine.
 
 ## 5. The court
 
@@ -398,7 +398,7 @@ The refusal that production makes is proved by the first two guards, which ran. 
 
 Real services lead. The plan says it: a double is not the real service, and you still need at least one real run before production. A scripted gateway is not a vendor's edge cases. Recorded answers drift, and a replay suite needs re-recording and contract tests against the real API. The library has the recording call; a drift check for recorded answers is designed.
 
-Frontier models lead, and cannot be emulated. The model is judged against the real model, deliberately, as its own activity.
+Frontier AI models lead, and cannot be emulated. The AI model is judged against the real one, deliberately, as its own activity.
 
 Live infrastructure leads. The deployment is infrastructure-gated: live verification against a real host or account. The commands are generated, and one reachable host away from literal.
 
@@ -432,7 +432,7 @@ class AlwaysYes
 
 It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! The stand-in of the earlier block, `LiveGateway`, is such an object.
 
-**The lowering knows two verbs.** Only `read_pin` and `write_pin` become code. Any other rehearsed operation becomes a comment line. In my research run of 8 October 2026, outside this chapter's blocks, I rehearsed `UseIn(:sensor, :gpio, "blink the status led")` and the firmware got a comment. For a server or a phone, the artifact is a header with no lines when nothing was rehearsed. The narration's "the board is the last inch" holds for reads and writes of pins only.
+**The lowering knows two verbs.** Only `read_pin` and `write_pin` become code. Any other rehearsed operation becomes a comment line. In my research run of 8 October 2026, outside this chapter's blocks, I rehearsed `UseIn(:sensor, :gpio, "blink the status led")` and the firmware got a comment. For a server or a phone, the artefact is a header with no lines when nothing was rehearsed. The narration's "the board is the last inch" holds for reads and writes of pins only.
 
 **The fidelity contract is by target class.** The design says each part declares what is faithful and what is approximated. The code returns one fixed text for a microcontroller, listing two approximated things, and one for everything else, "faithful".
 
@@ -440,7 +440,7 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **`Deploy(:Emulated)` does not yet move the registry.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase. The `:emulated` phase value that the registry has is set today only by a guard; setting it from the emulated deploy is designed.
 
-**A refused `Deploy(:Production)` leaves the registry in the production phase.** After my refused deploy (my research run of 8 October 2026, outside this chapter's blocks), `Phase()` printed `production`. The pre-flight restores the phase, and the deploy does not.
+**A refused `Deploy(:Production)` leaves the registry in the production phase.** After the refused deploy of my research run of 8 October 2026, outside this chapter's blocks, `Phase()` printed `production`. The pre-flight restores the phase, and the deploy does not.
 
 **A plan flags today; ranking is the direction.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
@@ -484,7 +484,7 @@ oStoreMine = new stzSecretStore("my-project")
 
 Then register a key named `maps_key` in the store, and write the number of production findings again. Then bind a hand-written class with an `Authorize` method that always says yes, and ask what posture the registry gives it. If a promise breaks, do not change it: explain the output first. I do not tell you where you will be surprised.
 
-I left this one in your hands. The block below is the one from section 3, "Code first, subscribe later", with one name changed. I changed it on purpose, and I do not say what it does:
+I left this one in your hands. The block below is the one from section 3, "Code first, subscribe later", with one name changed. I changed it on purpose:
 
 ```haro exercise
 oPay = new stzPaymentsSandbox()

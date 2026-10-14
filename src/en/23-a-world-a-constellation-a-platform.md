@@ -38,7 +38,7 @@ Against that shape I set one principle.
 
 **The solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.**
 
-The sentences of the record are three. An application is a living world of meaning. Worlds, not mini-apps: a governed graph and not a host container. A Softanza architect models the deployment architecture first, as a declarative artifact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, put in my words; the sentence above is the chapter's own principle, in the book's voice.
+The sentences of the record are three. An application is a living world of meaning. Worlds, not mini-apps: a governed graph and not a host container. A Softanza architect models the deployment architecture first, as a declarative artefact, before a line of system feature code. The sentence above is built from the three and from the book's method, which is to declare and then govern. The three are the record's, put in my words; the sentence above is the chapter's own principle, in the book's voice.
 
 ## 3. The Softanza form
 
@@ -161,7 +161,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 
 The risk tier refuses first: `'order-produce' has NO declared risk tier`. The doubled word "refused: refused:" is the library's own text. The cleared crossing wrote a decision by itself! Its record holds the authority and the risk of that moment, and a clock read, so the block prints only the rationale: `cross-world call cleared`. That is the lineage chapter 30 uses.
 
-The shared ground is a world too. Inside a constellation the commons is itself a platform, and it holds an identity, a session and a store. The commons is not a special kind of node; the design's own words are that it is uniform and recursive. What class is the commons? Ask it:
+The shared ground is a world too, in the design's words: world zero, uniform and recursive, and not a special kind of node. Inside a constellation the commons is itself a platform, and it holds an identity, a session and a store. What class is the commons in code? Ask it:
 
 ```haro
 oCon = new stzSuperApp("acme-group")
@@ -221,7 +221,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-The bond survived the swap: `CallAcross` still answers `1`! Chapter 28 used `Retire` and `Revive`, and this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
+The bond survived the swap: `CallAcross` still answers `1`! Chapter 28 uses `Retire` and `Revive`; this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
 
 One trap. A registered world is a copy. The host language copies an object by value when it is stored, so the world you register is not the world you hold. The header of the class says it: world objects are reached through the registry index, the live path. Configure the world fully, register it, and reach it through the constellation from then on. The envelope has the same doctrine: setting a world on the platform harvests its declarations at call time, and setting the governance snapshots the regime.
 
@@ -319,7 +319,7 @@ done
 
 The file form is plain text that the architect owns, and it round-trips from a string. The unsound one is refused before building, with both faults named: `the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps`. The order of building and deploying is chapter 33's, and the gate on who deploys is chapter 24's.
 
-Who is the architect? The record names the person twice by name: in the System Foundation, and in Central's memo for a school that would certify architects of Softanza, with three levels. That memo is marked withdrawn, as a launch prompt, on the day it was written. A third place, a private book of the estate on platform modelling, models platforms and does not name the architect. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. I hold this as a view, not a result. The site has a journey page for the platform architect and a certification page that says the proposal is not announced (read from the site, 9 October 2026). I tell the architect as what one declares, and the certification is only that proposal; no school is named here.
+Who is the architect? The record names the architect twice: in the System Foundation, and in a memo of the estate for a school that would certify architects of Softanza, with three levels, a memo marked withdrawn on the day it was written. That certification is a proposal of 30 September 2026, not a delivery, and the site must not announce it. The estate's protocol defines a role as a profile held in a scope. Applied here, which is my application and not the record's, the architect is not a rank. It is what one holds in the scope of a solution: the profile, the worlds, the governance. I hold this as a view, not a result. The site, as I read it on 9 October 2026, has a journey page for the platform architect and a certification page that says the proposal is not announced. I tell the architect as what one declares, and the certification as that proposal; no school is named here.
 
 Seven refusals stand behind this form.
 
@@ -327,7 +327,7 @@ Seven refusals stand behind this form.
 
 **I refused the host and the mini-app.** Worlds, not mini-apps; a governed graph, not a host container. Chapter 4 told it, and I point back.
 
-**I refused to make the commons a special kind of node.** It is a world, and a world is uniform and recursive.
+**I refused to make the commons a special kind of node.** In the design it is a world, world zero, uniform and recursive; in code, as section 3 printed, it is a platform object and not a node of the graph.
 
 **I refused the sandbox as the definition of isolation.** Isolation is a declared, inspectable meaning and not a black-box virtual machine. A world's sovereign body plus norm-gated bonds. A runtime sandbox is only an implementation for untrusted worlds.
 
@@ -351,7 +351,7 @@ Next I set the record beside the field.
 
 ## 6. The field, and where it leads
 
-The super-app leads in users. The design names its model and replaces it; chapter 4 says the record measures nothing against them. The Platforms page prints the other half: the customer platforms run today on ordinary web stacks. No platform runs on the constellation in production.
+The super-app leads in users. The design names its model and replaces it; chapter 4 says the record measures nothing against them. The Platforms page prints the other half: the customer platforms run today on ordinary web stacks. A customer platform on the engine, as a constellation, is the direction; chapter 33 carries it as the next line.
 
 The field leads in shells. The design promises a progressive web app, a desktop shell, a mobile shell. The code generates a page and a launcher of a few hundred bytes. The shells are designed. Generation is built, and tiny.
 
@@ -438,7 +438,7 @@ The six doors come next.
 
 **The designer.** A world declares screens as intents, a refinement as a bounded knob, and where it appears. The shells generated today are stubs, and the persona a world serves is not a field.
 
-**The decision-maker.** You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision with the actor, the authority and the risk of its moment. Your architect's file is text you own.
+**The decision-maker.** You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision: the block printed its rationale, and its record holds the authority and the risk of its moment. Your architect's file is text you own.
 
 **The educator.** The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.
 

@@ -16,19 +16,19 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
-Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C'est un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture de mon premier livre : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
+Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C'est un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture du premier livre de cette maison d'édition : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
 
 ## 1. Le concept, tel que le terrain le tient
 
-Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites. Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents d'IA qui écrivent du code : les spécifications d'abord, et l'agent remplit. (Connaissance générale, pas une étude du dossier.)
+Le terrain a un nom pour changer une infrastructure avec une répétition : planifier, puis appliquer. Un outil calcule ce qui changerait, le montre, et ne l'applique que lorsque vous le dites. Terraform a rendu le schéma familier, et les contrôleurs d'admission du terrain appliquent la même idée à une requête avant qu'un cluster l'accepte. Plus récemment, le terrain a un nom pour une façon de travailler avec des agents d'IA qui écrivent du code : les spécifications d'abord, et l'agent remplit. Tout cela est une connaissance générale, pas une étude du dossier.
 
-Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. (Connaissance générale, non une étude du dossier.) Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume ; je tiens cela pour une vue, non pour un résultat.
+Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan et le contrôle d'admission portent sur l'infrastructure et sur les requêtes. Pour le code lui-même, une bonne part de la réponse du terrain à un changement reste un diff, un correctif de texte, et la relecture d'une personne. Cela marchait tant que chaque changement avait derrière lui une personne à qui poser la question. C'est un instrument faible quand la plupart des changements arrivent d'agents, en volume ; je tiens cela pour une vue, non pour un résultat.
 
 À cet instrument faible, j'oppose une seule phrase.
 
 ## 2. Le premier principe
 
-J'ai écrit la phrase sur la quatrième de couverture de mon premier livre, et je n'en ai pas trouvé de meilleure : **cessez de vouloir gouverner l'intelligence, et gouvernez le changement.** L'en-tête de la bibliothèque dit la même chose sous la forme d'un type : un changement est une proposition typée, pas un diff.
+J'ai écrit la phrase sur la quatrième de couverture du premier livre de cette maison d'édition, et je n'en ai pas trouvé de meilleure : **cessez de vouloir gouverner l'intelligence, et gouvernez le changement.** L'en-tête de la bibliothèque dit la même chose sous la forme d'un type : un changement est une proposition typée, pas un diff.
 
 Le reste du chapitre exécute cette phrase.
 
@@ -62,7 +62,7 @@ r = o.Refine("vat").To("0.22")
 #--> 1
 ```
 
-Et que change une proposition qui ne franchit pas la barrière, et que dit la barrière ? Exécutez-le :
+L'admission s'imprime en `1` et `0`, non en `TRUE` et `FALSE` : c'est ainsi que ce verbe répond, et j'imprime l'exécution. Et que change une proposition qui ne franchit pas la barrière, et que dit la barrière ? Exécutez-le :
 
 ```haro
 r2 = o.Refine("vat").To("0.99")
@@ -80,7 +80,7 @@ r2 = o.Refine("vat").To("0.99")
 #--> 1
 ```
 
-Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque appelle cela sa troisième loi : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, comme dans `structural: no refinement point 'ghost'`, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
+Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque en fait une de ses lois : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, comme dans `structural: no refinement point 'ghost'`, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
 
 **La cascade** est ce que vous lisez à la place du diff. Avant le changement, demandez ce qu'il atteint. Il y a deux cascades, et elles sont séparées. Pour un point, c'est la ligne où il se trouve et les autres points de cette même ligne :
 
@@ -217,13 +217,13 @@ t.Redo()
 
 À zéro, `CanRevert()` a imprimé `0`. Un seul `Redo()`, et la valeur est `0.21`, le premier pas de nouveau.
 
-Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute. La structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b. Le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026, et le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
+Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute. La structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. Je les ai exécutés plus haut dans l'ordre du récit, non dans celui du code. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b. Le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026, et le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
 
 Derrière la barrière se tiennent des décisions, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé de gouverner l'intelligence.** Une bonne part de l'approche du terrain pour les agents d'IA est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation. (Connaissance générale, comme plus haut.) J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde : c'est mon point de vue. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
+**J'ai refusé de gouverner l'intelligence.** Une bonne part de l'approche du terrain pour les agents d'IA est de rendre le modèle plus sûr : alignement, garde-fous, une consigne qui demande confirmation ; cela aussi est une connaissance générale. J'ai refusé ce cadre. La sortie d'un modèle est ce qu'elle est, de quelque modèle que ce soit, et l'intelligence de la génération suivante ne restera pas immobile pour que je la gouverne. Le changement est ce qui reste, et c'est lui qui atteint le monde. La barrière se tient donc là où le changement arrive, et elle ne demande qu'une chose : qu'est-ce qui est proposé, d'où, et le code dit-il que ce point peut changer ainsi.
 
 **J'ai refusé le diff comme unité.** Un diff est un changement de texte. Un raffinement est une proposition typée sur un point déclaré, avec un genre, des bornes et une origine. J'ai gardé le diff comme artefact, et je l'ai refusé comme ce qu'il faut relire.
 
@@ -239,11 +239,11 @@ Vient ensuite le terrain, et où il mène.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de nombreuses équipes et où l'application parle à de vrais fournisseurs. (Connaissance générale, comme dans la section 1.) La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
+Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de nombreuses équipes et où l'application parle à de vrais fournisseurs ; c'est une connaissance générale, comme dans la section 1. La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
 
-Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
+Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
-Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle d'IA. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
+Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle d'IA. La mienne repose sur une déclaration par point.
 
 Voyons maintenant où la barrière s'arrête.
 
@@ -258,7 +258,7 @@ Ce qui est construit, et où cela s'arrête : les limites de la barrière telle 
 - Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle ; les contrôles pour ces genres sont l'étape suivante.
 - Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition venue d'une origine que le code ne connaît pas franchit donc un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
-- Le fichier sauvegardé contient le source rendu ; l'historique, les postures, la ligne de temps et le rechargement sont absents, et c'est l'étape suivante. La réversibilité vit dans l'objet en cours d'exécution ; la porter dans le fichier est encore à venir. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient `.rfn` pour la phrase et laisse `.zrfn` à l'extraction par balises de commentaire de la bibliothèque.
+- Le fichier sauvegardé contient le source rendu ; l'historique, les postures, la ligne de temps et le rechargement sont absents, et c'est l'étape suivante. La réversibilité vit dans l'objet en cours d'exécution ; la porter dans le fichier est encore à venir. La bibliothèque écrit ce fichier avec le suffixe `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient le suffixe `.rfn` pour la phrase de raffinement de Haro, et laisse `.zrfn` à l'extraction de la bibliothèque par balises de commentaire, la forme que ce chapitre a exécutée.
 
 ## 8. Six portes
 
@@ -280,7 +280,7 @@ Prenez deux réglages d'un de vos programmes : un taux et un plafond, par exempl
 
 Exécutez-le. Si vous vous êtes trompé sur l'étape, vous avez trouvé un endroit où votre propre barrière est en désaccord avec votre propre attente.
 
-Je vous laisse celui-ci. La section 7 dit ce que la barrière fait d'une origine que le code ne connaît pas, et le bloc de confiance de la section 3 est celui à exécuter. Ses premières lignes sont ci-dessous ; changez une seule chose, et remplacez `:llm` par un nom de votre choix, que le code n'a jamais appris.
+Je vous laisse celui-ci. La section 7 dit ce que la barrière fait d'une origine que le code ne connaît pas, et le bloc de confiance de la section 3 est celui à exécuter. Ses premières lignes sont ci-dessous, et `d` est l'objet de ce bloc, alors exécutez d'abord la section 3 ; changez une seule chose, et remplacez `:llm` par un nom de votre choix, que le code n'a jamais appris.
 
 ```haro exercise
 d.TrustFloor("vat", :trusted)

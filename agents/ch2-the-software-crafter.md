@@ -4,21 +4,21 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:13 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
 ## 1. The concept, as the field holds it
 
-The field already has a word for programmers who care about their work: craftsmanship. A book of 2001 gave the idea its name, and a manifesto of 2009 gave it its slogan. Since then "software craftsman" has meant a professional who holds their code to a standard higher than the one the job requires. (General knowledge, not a study of the record.) It is a good movement. It is also a movement of programmers, about programmers' standards.
+The field already has a word for programmers who care about their work: craftsmanship. A book of 2001 gave the idea its name, and a manifesto of 2009 gave it its slogan. Since then "software craftsman" has meant a professional who holds their code to a standard higher than the one the job requires. That is general knowledge, not a reading of the record. It is a good movement. It is also a movement of programmers, about programmers' standards.
 
-The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: an AI model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its AI model, the person's work changes with it. (General knowledge, not a study of the record.)
+The field's two other answers to "who makes software, if not programmers" define the person by a tool. The first is low-code: business people building applications on a vendor's visual platform, the "citizen developer" of the analysts. The second is the coding agent: an AI model that reads files, edits them and runs commands, steered in plain words, with "vibe coding" as the name for keeping whatever it writes. Both answers share a shape. The person is defined by a tool, and the work lives where the tool lives. When the vendor changes its prices or its AI model, the person's work changes with it. That too is general knowledge, not a reading of the record.
 
 The next section says what the site means by the word.
 
 ## 2. The first principle
 
-The site gives the definition in two sentences. They say "crafter" today (read on 9 October 2026); until 8 October they said "maker". The glossary says that a crafter is whoever is declaring, at the moment they declare. The site says that a crafter owns what they make. I ruled on 12 October 2026 that the book keeps both, in one sentence: **a crafter is whoever declares what they know about a world, and owns what they declare: the artefact is theirs, in plain text, and it does not expire.** Skill does not enter the definition. The word "craft" suggests it, and I keep the word: the person is defined by the act and by ownership, not by programming skill. I hold this as a view, not a result.
+The site gives the definition in two sentences. Since 8 October 2026 they say "crafter"; before that they said "maker". The glossary says that a crafter is whoever is declaring, at the moment they declare. The site says that a crafter owns what they make. I keep both, in one sentence: **a crafter is whoever declares what they know about a world, and owns what they declare: the artefact is theirs, in plain text, and it does not expire.** Skill does not enter the definition. The word "craft" suggests it, and I keep the word: the person is defined by the act and by ownership, not by programming skill. I hold this as a view, not a result.
 
 ## 3. The Softanza form
 
@@ -38,7 +38,7 @@ The family answers: the list holds duplicates (`1`), and `tea` occurs `3` times.
 
 I write about this in an article on what the library was built on: I introduced its features when a real problem asked for them, or when I anticipated they would meet programmers' needs. This one came from a problem: the crafter comes first, and the feature after.
 
-Since 2022, I have presented Softanza not by its anatomy, its modules and classes, but by who you are and what you are trying to do. The 2022 deck had five audiences, each with a recipe of three to five steps. The site today has seven doors (read on 9 October 2026), one per kind of crafter. The seventh, for a team that ships an application, was added that day, and this chapter keeps the six it was drafted with. Each door says what you declare, what you get, and where to start. Here is what each of the six declares, in a line or two that run.
+Since 2022, I have presented Softanza not by its anatomy, its modules and classes, but by who you are and what you are trying to do. The 2022 deck had five audiences, each with a recipe of three to five steps. On 9 October 2026 the site had seven doors, one per kind of crafter. The seventh, for a team that ships an application, was added that day, and this chapter keeps the six it was drafted with. Each door says what you declare, what you get, and where to start. Here is what each of the six declares, in a line or two that run.
 
 **The programmer** declares intent in a library that reads like a sentence. You have just seen it.
 
@@ -98,7 +98,7 @@ oD = StzAgentDeclarationQ(cPia)
 
 The court refused it! Its reason is printed: `[pia-coverage @ coverage] an agent must say WHAT IT COVERS`. Here "law 18" is the engine's rule that an agent with no coverage statement is never scheduled, and `pia` names the format of the file, as its first line shows.
 
-**The educator** declares in the learner's own language. A sentence in Hausa runs. Does the engine count the letters of an Arabic word rather than its bytes, and does it know its script?
+**The educator** declares in the learner's own language. A sentence in Hausa runs: it asks for a text holding `'hello'`, turned to capitals. Does the engine count the letters of an Arabic word rather than its bytes, and does it know its script?
 
 ```haro
 ? NaturallyIn("ha", "Yi rubutu dauke 'hello' Maida shi").Result()
@@ -113,7 +113,7 @@ The court refused it! Its reason is printed: `[pia-coverage @ coverage] an agent
 
 The Hausa sentence came back as `HELLO`. The Arabic word counts `4`, its letters and not its bytes, and its script is `arabic`.
 
-**The agent** is the sixth crafter, the one 2020 could not draw. An AI agent declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
+**The agent** is the sixth crafter, the one the platform's 2020 presentation could not draw, in the words of the vision I ratified. An AI agent declares itself in the same kind of file, and it is welcome, with one thing withheld. An agent whose mind is a language model may propose; it may not hold an effect. What happens to a file that gives it one?
 
 ```haro
 cLlm = "pia: 1
@@ -155,7 +155,7 @@ A constellation is a graph of worlds. A world is one application; a bond is a de
 
 The project counts eleven iterations and a campaign of twenty-two simulated tests behind its interface rules. In his own report the speed of ordering is his first, non-negotiable priority. And on 19 August, after a day of tests in the field with two phones and a messaging app, the notes call him the project's co-architect.
 
-Chapter 1 tells the first demonstration as the owner's own, on his own phone, over a messaging app. The record is more exact. Its checklist for the 15 August demonstration plans it for the owner alone, with his own phone and a messaging app as the support line. The measurements he took over a messaging app are those of 19 August.
+The first demonstration, on 15 August 2026, was his alone: the record's checklist plans it for the owner by himself, with his own phone and a messaging app as the support line. The measurements he sent over a messaging app are those of 19 August.
 
 One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it:
 
@@ -188,9 +188,9 @@ oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reports
 
 > run: kept
 
-The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything, and this page does not say it.
+The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything.
 
-**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the AI agent proposes while a person decides. That rule is data the organisation attaches to its own domain model. Does that model judge itself, with an LLM actor in it that holds an effect?
+**An organisation in the field.** An organisation working in Niger, with a head office in Niamey and bases in the field, asked for a hub. Its own specification preferred a low-code platform built on a large vendor's office suite. My offer of 5 August 2026 was chosen instead. The design study lists four gains, with ownership first among them. The organisation owns its vocabulary and its rules, changes them without programming, pays no licence per seat, and can hand everything to a programmer of its own country. The design study was built with its teams between 22 September and 8 October 2026. Two of its principles are the book's in small: the default is to work offline, and the AI agent proposes while a person decides. That rule is data the organisation attaches to its own domain model. Does that model judge itself, with an LLM actor in it that holds an effect?
 
 ```haro
 oRule = new stzGraphRule("no-llm-effectful")
@@ -219,25 +219,25 @@ The three cases are a restaurateur who is not a programmer, a bank under a regul
 
 **I added the AI agent as a crafter, and withheld one power.** The agent is the sixth reader of every Softanza language: both a builder and a user. It gets a workbench and a court. It does not get the capability to commit.
 
-**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer (general knowledge, not a study of the record). The site's headline used it until 8 October 2026. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter. What this book's cover image carries, the record does not say, and this page does not say it for me.
+**I refused "maker", and I refused "builder".** "Maker" names the workshop movement, the soldering iron and the 3D printer, as general knowledge has it. The site's headline used it until 8 October 2026. "Builder" names someone who assembles what a plan says. Neither says what I think programming is. It is handwork, done with care, on something that is yours: it is craft. I call the person who does it a crafter.
 
-**I refused to count a customer without a document.** The site counts a project as a reference only when a document proves it, and quotes no number of countries and no number of programmers. It names a customer only on my word. A lesson is listed only when a file of the library carries it.
+**I refused to count a customer without a document.** The site lists a project as a reference only when a document proves it, and quotes no number of countries and no number of programmers. A customer's name goes on the site on my word; its standing as a reference needs the document. A lesson is listed only when a file of the library carries it.
 
-**I refused to present the library by its anatomy.** Since 2022, the front door is who you are and what you want to do, and the anatomy is placed under each step. The site keeps seven doors (read on 9 October 2026), and the journeys behind them exist as pages, nine on that day, each step carrying its stage word. That every step runs in order under a guard is designed; building it is the next step.
+**I refused to present the library by its anatomy.** Since 2022, the front door is who you are and what you want to do, and the anatomy is placed under each step. On 9 October 2026 the site kept seven doors, and the journeys behind them existed as pages, nine on that day, each step carrying its stage word. That every step runs in order under a guard is designed; building it is the next step.
 
 The guards that prove these claims, and the one still in development, are in the next section.
 
 ## 5. The court
 
-`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the agent whose mind is a language model, holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development. I ran it on 8 October 2026 and it stops with an error raised from a string-splitting function, after 29 assertions and before it reaches the Hausa ones; finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
+`agentfile_narrated` proves that an agent is a file judged when it is loaded: one refusal per gate, the missing coverage among them, and the agent whose mind is a language model, holding an effect refused by the same rule the graph uses. `service_registry_narrated` proves that a sandbox in production is a violation. `graphrule_object_narrated` proves the rule as an object attached to a model. `semantic_resolver_narrated` holds the Hausa path as its last scenario. At this commit it is in development: its run stops after 29 assertions, before the Hausa ones, on an error raised from a string-splitting function, and finishing that run is the next step. So the page counts its assertions and does not claim its verdict; the Hausa block ran on its own. `00_orgchart_narrated` proves the chart's positions, reporting lines and vacancy tracking; the BCEAO finding printed above comes from a sibling file, `14_bceao_governance.ring`.
 
 ## 6. The field, and where it leads
 
 Coding agents lead in hands. They already read, search, edit and run. What they lack, by the site's own account, is a way to know an unfamiliar interface without guessing, to judge their work against rules and promises, and to present a change as an intention a person can review. Softanza's judges are built; the door between them and a coding agent is designed, and building it is the next step.
 
-Low-code leads in installed base and in everything around it. (General knowledge, not a study of the record.) The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications. The crafter's platform sits beside the field's tools, not in place of them.
+Low-code leads in installed base and in everything around it, as general knowledge has it. The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications. The crafter's platform sits beside the field's tools, not in place of them.
 
-The messaging apps lead where the crafters already are. This is my view, not a result. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that direction.
+The messaging apps lead where the crafters already are, and the record of the restaurant does not yet make one his medium. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that direction.
 
 And the educator's door is at an earlier stage than the others. The course's editions in French, Arabic and Hausa are drafts that a reviewer has yet to read, and the first institution to adopt it is still to come.
 

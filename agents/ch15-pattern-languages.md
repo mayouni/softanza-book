@@ -2,9 +2,9 @@
 
 Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
+Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -12,7 +12,7 @@ In this chapter I start from the regular expression, which is what a pattern is 
 
 For a working programmer, a pattern is a regular expression: a compact notation for the shape of a string, handed to an engine that says whether the text fits, and where. The engines are old and well known. The one beneath this library is PCRE2, and the site measures it against two others.
 
-For data that is not text, the field uses other tools, one per medium and none shared. Structural pattern matching in the languages of the ML family, in Rust, and since Python 3.10 in Python. Schema checks for lists and records. Data-quality libraries for tables. Row pattern recognition in SQL, and stream engines, for sequences over time. And graph query languages, whose core is a path pattern. (General knowledge, well established; the record holds no dated study of any of them, and I invent none.)
+For data that is not text, the field uses other tools, one per medium and none shared. Structural pattern matching in the languages of the ML family, in Rust, and since Python 3.10 in Python. Schema checks for lists and records. Data-quality libraries for tables. Row pattern recognition in SQL, and stream engines, for sequences over time. And graph query languages, whose core is a path pattern. That is general knowledge, well established; the record holds no dated study of any of them, and I invent none.
 
 The estate's own field study of August 2026 gives the small languages that survived a profile: a closed grammar, one domain question, plain text, a tiny surface, a specification with a conformance suite, decades of stability. A pattern language is exactly that. One question, does this data fit, in a few characters. What the field does not offer is the same notation across the media.
 
@@ -22,7 +22,7 @@ Next, the first principle.
 
 **A pattern is a rule about the shape of data, written as data. The same habit serves every kind of data.**
 
-The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. The study of the record, which is not the field study above, also carries a phrase it calls mine, "for the first time in computer science history", and it is mine. I found it in no text of the library. The study does not let the site claim it. I keep the phrase here as what I said, and I claim no more than the study allows. The claim the study allows is the measured one: one regex-shaped grammar across seven kinds of data in one library, with the same small-function habit. And I will show you at once that the grammar is not quite one.
+The sentence the library's articles return to, in each medium, is the one in the article on numbers: instead of instructing the machine how to test a condition, you state what you mean. My study of the record, which is not the field study above, also carries a phrase of mine, "for the first time in computer science history". I found it in no text of the library, so the site does not claim it. I keep it here as what I said, and I claim only what is measured: one regex-shaped grammar across seven kinds of data in one library, text and six that are not text, with the same small-function habit. And I will show you at once that the grammar is not quite one.
 
 ## 3. The Softanza form
 
@@ -160,7 +160,7 @@ A matrix: a concept, square and symmetric, is one line.
 
 > run: kept
 
-Time, in the part of it that runs. A duration must fit a rule: one to two hours, on a step of a quarter of an hour. Which of three durations fits: ninety minutes, eighty minutes or three hours?
+Time, in the part of it that runs, written here with the class rather than its small function `Tmx`. A duration must fit a rule: one to two hours, on a step of a quarter of an hour. Which of three durations fits: ninety minutes, eighty minutes or three hours?
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
@@ -197,7 +197,7 @@ g.AddEdgeXT(:b, :c, "finishes")
 
 Yes: the path from `served` to `placed` finds nothing, and the line prints 0.
 
-Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an AI agent. Five of the six languages do:
+Last, the habit. The pattern is data in every language, and a language that exposes its tokens can be read back by a person and by an AI agent. Five of the six that are not text do; here are three of them:
 
 ```haro
 ? len( Lx("[@N, @S]").Tokens() )
@@ -218,7 +218,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 **I decided that a pattern states a meaning and not a procedure.** That decision is in the articles, and the articles are mine. The same ones decided to carry the regex idea to non-text data with one habit: braces, an `@` for a token, `&`, `|`, `@!` for not, `@cs:` for case. Lists keep square brackets. The other five use braces. That is the first honest correction of the phrase "one grammar".
 
-**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value. I hold that, as a view and not a result, to be the right way to retire a mechanism.
+**I refused to reinvent the notation for text.** Simple matches are kept: a classic pattern string, named groups and captures work as written. Clearer names are put around it. The older work on naming is kept as history, for educational value. I hold that to be the right way to retire a mechanism.
 
 **I refused, for now, to build the siblings.** The articles planned classes in which patterns are genetic, linguistic or quantic. The article says that they are in an early prototype and not in the library, and a search of the regex folder for "induce", "from example" and "infer" finds nothing. The study dates the finding of their purpose two years later, in the answer protocol (the way a person may answer by examples): induction from examples, and superposed candidates. That is chapter 18's ground, and chapter 9's refusal.
 
@@ -232,7 +232,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 Note the placement: the guard for tables lives in the folder for regex, and its stem has no `00_` prefix.
 
-There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end, and I note it in my research notes, not in a block. Sixty checks ran, and two of them disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
+There is no narrated guard for lists, time, or the regex builders. The courts of those are classic files without usable promises. The tests of lists sit after a function definition, so the host language reads them as the body of the function and runs none of them. I ran a copy with the function moved to the end, and I did not keep that run as a block. Sixty checks ran, and two of them disagree with the file's own expectation. The classic file of time says that a promise is TRUE and the run prints 0, and the central record filed this on 1 October 2026 as still open.
 
 Next, the field, and where it leads.
 
@@ -256,9 +256,9 @@ What is built: strings, numbers and tables, each with a guard and a small functi
 
 What is built in part: lists, matrices, time and graphs, in that order.
 
-- **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In my run (research notes, no block) the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
+- **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In a run I did not keep as a block, the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
-- **Time**: instants and durations with a step run. In my run (no block) a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match?
+- **Time**: instants and durations with a step run. In a run I did not keep as a block, a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -315,7 +315,7 @@ What is absent: induction from examples, which is reserved. The genetic, linguis
 
 ## 8. Six doors
 
-**The programmer.** One habit across six kinds of data, graphs apart: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, and build nothing on the cache of a reused list pattern.
+**The programmer.** One habit across seven kinds of data, with graphs still lacking the small function: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.
 
 **The analyst.** A data-quality rule is a sentence of the table language. The person who owns the data can read it.
 
@@ -325,7 +325,7 @@ What is absent: induction from examples, which is reserved. The genetic, linguis
 
 **The educator.** The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number.
 
-**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media can yet refuse a word it does not know, and that writing a pattern from examples is reserved.
+**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media that are not text can yet refuse a word it does not know, and that writing a pattern from examples is reserved.
 
 ## 9. Exercise
 

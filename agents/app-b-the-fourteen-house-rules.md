@@ -2,9 +2,9 @@
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-14 12:16 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-14 22:28 UTC+01:00.
 
-The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, most of which were written after the library did something it should not have. This appendix lists the fourteen, and shows three of them firing.
+The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
 
 There are two fourteens in this book, and they are different sets. The fourteen **house rules** of this appendix are rules of the library's code: they are a court, and they run. The fourteen **rules of writing**, in chapter 7, are a reading of how the style is written. They are readings of the code, stated as rules, and no machine judges them. The coincidence in the number is a coincidence.
 
@@ -66,7 +66,7 @@ A note on spelling, which a program that reads findings must know. The list uses
 | 13 | `writes-a-mutable-constant` | assigning to `true`, `false`, `null`, `nl`, `tab` or `cr`: in the host they are ordinary globals | error |
 | 14 | `value-called-as-function` | calling the result of a call, the shape a global replacement of tokens leaves | error |
 
-I fired rows 6, 11 and 1 above. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
+I fired rows 11, 6 and 1 above, in that order. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
 
 ### What the court does not judge
 

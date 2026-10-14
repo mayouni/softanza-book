@@ -4,13 +4,13 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
 ## 1. The concept, as the field holds it
 
-Conversational commerce, or omnichannel: a business reaches its customers in the channels they already use, and a dialogue engine sits behind them. These are the practices, from general knowledge and not from a study of the record. Every date and every provider rule is to be re-read before print, as the study of the record says in its own "Not measured". That study is an outside reader's long study of the project's roots, and its section 12.25 is the one about messaging.
+Conversational commerce, or omnichannel: a business reaches its customers in the channels they already use, and a dialogue engine sits behind them. These are the practices, from general knowledge and not from a study of the record.
 
 The dialogue frameworks own the dialogue model. The designer writes intents and flows in the framework's notation, and the framework understands free text with trained AI models and ships connectors to channels.
 
@@ -34,7 +34,7 @@ For the floor of the dialogue, the code's own sentence: deterministic floor, no 
 
 ## 3. The Softanza form
 
-The library ships the question as data: a force, a subject, a relation, options and a reason. It ships the verbs, ask, reply, refuse and conclude, and the court. A medium is a rendering of the data and a reader of the reply, both written by the crafter in a few lines. Nothing in the library renders a question to a phone. What it ships is an English line, `AskIn`, which is already a text menu: "(1) cheese (2) olives". I say that in those words.
+The library ships the question as data: a force, a subject, a relation, options and a reason. It ships the verbs, ask, reply, refuse and conclude, and the court. A medium is a rendering of the data and a reader of the reply, both written by the crafter in a few lines. Nothing in the library renders a question to a phone. What it ships is an English line, `AskIn`, which is already a text menu: "(1) cheese (2) olives".
 
 Two small functions of my own are the whole of the medium: one that renders the question to a line of text, and one that reads the reply. The reading matters, and I show why in the third block. What does one question cost, in Latin letters and in Arabic? Run it:
 
@@ -181,7 +181,7 @@ oE = new stzEarcons()
 
 > run: kept
 
-**The voice: spoken, heard, meant.** Text to sound, sound to text, text to meaning. The medium called voice renders and reads with a closed grammar, and the meaning is my declaration. This block needs a French voice and a French recogniser. This machine speaks two languages and hears one, and a machine without them would give another answer, so the output shown is the one recorded on this machine. No microphone, no file, no network: the recogniser is the in-process one. What does it make of a phrase it was taught, and of one it was not?
+**The voice: spoken, heard, meant.** Text to sound, sound to text, text to meaning. The medium called voice renders and reads with a closed grammar, and the meaning is my declaration. This block needs a French voice and a French recogniser. This machine speaks two languages, English and French, and hears one, French, and a machine without them would give another answer, so the output shown is the one recorded on this machine. No microphone, no file, no network: the recogniser is the in-process one. What does it make of a phrase it was taught, and of one it was not?
 
 ```haro
 oV = StzVoiceQ()
@@ -222,7 +222,7 @@ oApp.Explain()
 
 > run: kept
 
-`Acts(...)` is stored and not narrated. And the stage as a run: what does the platform say when it is asked to generate the surface the world declared? This block creates an empty folder in the working directory:
+`Acts(...)` is stored and not narrated: the basket's line reads `select dish`, and nothing of `:Confirm`. And the stage as a run: what does the platform say when it is asked to generate the surface the world declared? This block creates an empty folder in the working directory:
 
 ```haro
 oPlat = StzPlatformQ("stall-platform")
@@ -258,9 +258,9 @@ The approved sentence passed (`1`), the invented one was refused (`0`), and the 
 
 ### The restaurant's medium
 
-Chapter 1 says that the owner of the restaurant made his first demonstration over a messaging app. The record does not support that sentence as it stands, and I flag it for the author. Chapter 2 already gives his tool as a spreadsheet. His own report of 4 July 2026 gives his current tool as a spreadsheet. It asks for a web page opened by a QR code or by a button for a social network. Nothing heavy to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
+Chapter 1 says that the owner of the restaurant made his first demonstration alone, on his own phone, with a messaging app as his support line, and the record holds that: the checklist of the 15 August 2026 demonstration, and the measurements of 19 August that he sent over the same app. A support line is not a medium. Chapter 2 already gives his tool as a spreadsheet. His own report of 4 July 2026 gives his current tool as a spreadsheet. It asks for a web page opened by a QR code or by a button for a social network. Nothing heavy to download. The line about various apps, a messaging app among them, is the label of an option in the scoping form, and it is not what he ticked. "Simple like a messaging app" is simulated in the project, as chapter 28 already found.
 
-So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. I tell this story and make no statement about the owner's use of a messaging app, since the record holds none. Chapter 1 keeps its own wording of that demonstration, and what the record shows more exactly is what this section says.
+So the restaurant is the first form of the sentence of this chapter, and not an example of the messaging medium. The customer keeps their medium: a link that opens in the browser they already have. The messaging medium, as a thesis, is unbuilt. I tell this story and claim no more of a messaging app than the record holds: a support line, and the photos of one day. Chapter 1 and this section say the same.
 
 That is the form, built and run; next come what I decided, and what I refused.
 
@@ -268,7 +268,7 @@ That is the form, built and run; next come what I decided, and what I refused.
 
 The refusals below, after the first, are the record's: a session's decisions, written in the headers of the library's sound files and in its voice plan. I report them as such, and they are not rulings of mine.
 
-**Messaging, the question.** The study's report of my ask: conversations happen programmatically by default, or through minimal configuration, without obliging the users to change their usability cultures. The study's section is titled "ruled" and not "ruled by the author", and its proposals for the conversational surfaces are a session's. The record holds no ruling of mine that adopts them. I say *proposed*, not *decided*.
+**Messaging, the question.** My ask, as my study of the record reports it: conversations happen programmatically by default, or through minimal configuration, without obliging the users to change their usability cultures. The proposals for the conversational surfaces that follow it are a session's, and the record holds no ruling of mine that adopts them. I say *proposed*, not *decided*.
 
 **A conversation needs no AI model.** The floor is deterministic. A model can upgrade the fluency behind the same surface.
 
@@ -278,7 +278,7 @@ The refusals below, after the first, are the record's: a session's decisions, wr
 
 **Refuse, never substitute.** Speaking French to an operator who asked for English is worse than saying nothing.
 
-**No inferred meaning.** The author still declares the meaning. A sixth value would be a constitutional amendment wearing a library's clothes.
+**No inferred meaning.** The crafter still declares the meaning. A sixth value would be a constitutional amendment wearing a library's clothes.
 
 **A sink proves what you would have sent.** The SMS port's honest limit: carrier filtering, sender-ID rules, per-country alphabet quirks, and asynchronous delivery receipts. None of it is modelled here.
 
@@ -294,7 +294,7 @@ A caveat for the court line. The sound guards need the engine's sound library, a
 
 ## 6. The field, and where it leads
 
-The record's own count, in the study of 12.25: of the constituent units of messaging, eighteen in all, what is missing. The study's sentence is that the word for a messaging app appears in no code file and no design document of the library, and USSD in none. I re-measured it at this commit and confirmed it. There is no hit in the code or the design of base, core or max. The matches in the rest of the snapshot are word-list and test data files, and USSD has none in text.
+My study of the record counted the constituent units of messaging, eighteen in all, and what is missing. Its sentence is that the word for a messaging app appears in no code file and no design document of the library, and USSD in none. I re-measured it at this commit and confirmed it. There is no hit in the code or the design of base, core or max. The matches in the rest of the snapshot are word-list and test data files, and USSD has none in text.
 
 The frameworks lead in understanding and in connectors. Chapter 18 states Softanza's side from the code: the conversation asks one slot at a time, over a graph the user must first have declared. It does not understand an open reply.
 
@@ -310,7 +310,7 @@ The field leads in places, and the limit comes next, printed whole.
 
 ## 7. The limit
 
-The study (12.25) has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
+My study of the record has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
 
 ```haro
 oDb = new stzDatabase(":memory:")
@@ -323,11 +323,11 @@ oCom.PostMessage("customer", "kitchen", "one brik, no egg")
 
 > run: kept
 
-It is a sender, a recipient, a body and a time in a SQL table. It has no medium, no status and no parts. It is the message the study found absent, in its smallest form.
+It is a sender, a recipient, a body and a time in a SQL table. It has no medium, no status and no parts. It is the message my study found absent, in its smallest form.
 
 What is built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, wired to no messaging provider; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
 
-What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. The word `Provides` is in no code file of the application folder. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals B46 to B50 of the study. They are a session's, and not the library's design. A spoken analysis and a spoken transport: demos and compositions, and not a unit.
+What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. The word `Provides` is in no code file of the application folder. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session, and not the library's design. A spoken analysis and a spoken transport: demos and compositions, and not a unit.
 
 What is absent:
 
@@ -335,13 +335,13 @@ What is absent:
 - A conversational projection of a world. The only projection is `Generate`, which knows three surfaces and refuses a fourth. No shell renders a question or a flow.
 - The messaging units: channel, session with a window or a timeout, template, consent. No unit of consent exists for messaging. The word *consent* appears in the snapshot for the microphone's boundary, in comments, and in two design documents in other senses.
 - The twenty-two verbs as a library list. `stzApp` holds five of them as five screen-intent methods, and the helper behind them does not check the word it is given. The other seventeen are in the constitution and not in the library. The bridge sentence is applied by hand today.
-- The question in a language other than English. `AskIn` is English, and the tutor shows the pattern in four languages. In a research run at this commit, `NaturallyIn` asked for Zarma raised the opaque "Unsupported object type!" and not "no pack for this language"; no block of this book records that call.
+- The question in a language other than English. `AskIn` is English, and the tutor shows the pattern in four languages. In my research run at this commit, `NaturallyIn` asked for Zarma raised the opaque "Unsupported object type!" and not "no pack for this language"; no block of this book records that call.
 - A voice for the languages that the product designs name, Zarma, Hausa and Fulfulde. None here; the library would refuse.
-- **A reply with a space in it, from a phone.** In a research run at this commit I ran `ReplyIn("c", "grand couscous")` and it raised, with an uninitialised variable. With a hyphen it was admitted. No block of this book records either result, as chapter 18 says of the same fault. This is chapter 18's known limit, and it is decisive here, because people type spaces in a text message. The conversation above works only because the replies are digits and one-word dishes.
+- **A reply with a space in it, from a phone.** In my research run at this commit I ran `ReplyIn("c", "grand couscous")` and it raised, with an uninitialised variable. With a hyphen it was admitted. No block of this book records either result, as chapter 18 says of the same fault. This is chapter 18's known limit, and it is decisive here, because people type spaces in a text message. The conversation above works only because the replies are digits and one-word dishes.
 - Live adapters for SMS, for a messaging app and for a telephone line; delivery receipts; sender-ID rules.
 - Nothing in the record runs on a real phone as a conversation.
 
-`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what a study proposed, and I do not present them as what I mean to build. I found no decision of mine to build them in the record, and the limit is the list above, in which none of them exists.
+`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what my study of the record proposed, and I do not present them as what I mean to build. I found no decision of mine to build them in the record, and the limit is the list above, in which none of them exists.
 
 That is the limit, printed whole; the six doors follow.
 
@@ -351,13 +351,13 @@ That is the limit, printed whole; the six doors follow.
 
 **The analyst.** The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.
 
-**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. I hold this as a view, not a result. That is designed and not built, since the matrix does not exist.
+**The designer.** Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.
 
 **The decision-maker.** A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.
 
 **The educator.** The tutor already says the missing step as a question in four languages, in templates that carry no code. The record does not name a learner on a plain phone, and nothing serves one yet: there is no USSD and no messaging app.
 
-**The agent.** You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the author declares it.
+**The agent.** You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the crafter declares it.
 
 ## 9. Exercise
 

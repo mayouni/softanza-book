@@ -46,7 +46,7 @@ o2.RemoveManyCS([ "o", "f", "n" ], FALSE)
 
 L'article promettait `SOFTANZA` sur la deuxième ligne. L'exécution imprime `STAZA` ! Le code a raison et l'article a tort : un retrait qui ne se soucie pas de la casse retire aussi les majuscules. J'imprime l'exécution.
 
-La bibliothèque se contente-t-elle de suivre cette grammaire, ou la lit-elle ? Son analyseur de noms, `_StzParseName`, est un assistant interne que nulle garde ne couvre. La voie publique est `ExplainMethod`, qui explique une méthode dans ces termes :
+La bibliothèque se contente-t-elle de suivre cette grammaire, ou la lit-elle ? Son analyseur de noms, `_StzParseName`, est un assistant interne que nulle garde ne couvre ; je l'appelle en premier ci-dessous, pour la lecture brute. La voie publique est `ExplainMethod`, qui explique une méthode dans ces termes :
 
 ```haro
 ? @@( _StzParseName("FindNextSTCS") )
@@ -111,14 +111,14 @@ o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ```haro
 ? Q("*").IsNotLetter()
 #--> TRUE
-o3 = new stzList([ "R", "I", "N", "G" ])
+o3 = new stzList([ "H", "A", "R", "O" ])
 ? o3.IsNotAString()
 #--> TRUE
 ? o3.DoesNotContain("♥")
 #--> TRUE
 ```
 
-**La forme profonde** répond par un chemin, une liste d'indices qui va aussi profond que les données, et la même famille remplace et retire à cette profondeur :
+**La forme profonde** répond par un chemin, une liste d'indices qui va aussi profond que les données, et la même famille remplace et retire à cette profondeur, avec `:By` pour emplacement nommé là où le `Replaced` du chapitre 5 disait `:With` ; les verbes profonds acceptent les deux :
 
 ```haro
 o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
@@ -150,7 +150,7 @@ La chaîne a imprimé `H A R O`, et l'original contient encore `haxxrxo` !
 
 L'article dit que la bibliothèque reconnaît et corrige les fautes de frappe mineures, et que l'intelligence réside dans la bibliothèque elle-même. Le code montre comment la forme fonctionne : `WithoutSapces` fonctionne parce que cette orthographe a été écrite à la main comme un alias. Une autre faute, `WithoutSpces`, échoue. La forme est donc réelle, et dans ce que j'ai suivi c'est une liste d'alias déclarés ; le moteur de correction que décrit l'article ne fait pas partie de ce que j'ai suivi. Je n'ai pas suivi tous les fichiers qui parlent de correction ; un message de la classe objet ne fait que suggérer un nom, avec « Did you mean ».
 
-Voici maintenant la moitié du chapitre qui concerne la portée. Le même défaut apparaît partout en programmation : un comportement gouverné par un cadre invisible. Je tiens cela pour une vue, non pour un résultat ; ce qui la soutient ici, ce sont trois instances : les verbes de l'expression régulière, le système et le placement d'un déploiement. Une fonction fait une chose ici et une autre là, et rien dans son nom ne dit dans quel cadre elle se trouve. La réponse, en quatre gestes, est le paradigme que j'appelle la programmation orientée portée. Nommer le cadre caché. En faire un petit ensemble fermé de portées nommées. Choisir la portée à l'endroit de l'appel, dans le verbe, et pas dans un drapeau posé plus tôt. Et donner à la bibliothèque la portée pour raisonner, une prise sémantique et pas un commentaire.
+Voici maintenant la moitié du chapitre qui concerne la portée. Le même défaut apparaît partout en programmation : un comportement gouverné par un cadre invisible. Je tiens cela pour une vue, non pour un résultat ; ce qui la soutient ici, ce sont trois instances : les verbes de l'expression régulière, le système et le placement d'un déploiement. Une fonction fait une chose ici et une autre là, et rien dans son nom ne dit dans quel cadre elle se trouve. La réponse, en cinq gestes, est le paradigme que j'appelle la programmation orientée portée. Quatre viennent d'abord. Nommer le cadre caché. En faire un petit ensemble fermé de portées nommées. Choisir la portée à l'endroit de l'appel, dans le verbe, et pas dans un drapeau posé plus tôt. Et donner à la bibliothèque la portée pour raisonner, une prise sémantique et pas un commentaire.
 
 Il est né dans les expressions régulières, où le cadre est la part du texte qu'un motif doit couvrir. Le même motif, le même texte, trois verbes : que répond chacun ?
 
@@ -234,7 +234,7 @@ Voici maintenant le tribunal, et les gardes qui prouvent chacune de ces affirmat
 
 ## 5. Le tribunal
 
-`00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et, lors d'une exécution de sonde sous charge que `data/` n'enregistre pas, elle n'a pas tenu. Je l'imprime à côté de la preuve. `delivery_narrated` prouve le plan de placement.
+`00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et la section 7 dit ce qu'une sonde en a montré. `delivery_narrated` prouve le plan de placement.
 
 Où le terrain fait mieux vient ensuite.
 
@@ -261,9 +261,9 @@ Ce qui est absent, et la page doit dire chacune avec ce qui existe à côté :
 - **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
 - **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque appelle la forme informante pas encore construite.
 - **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
-- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
+- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre, au sens de l'article, un nombre et une chaîne permutés dans leurs positions, ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. L'ordre libre des paramètres nommés est autre chose, et le chapitre 7 l'exécute. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
 
-Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau de conception en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde que `data/` n'enregistre pas, 61 des 62 assertions de sa garde narrée ont passé, et la seule assertion qui n'a pas tenu était une limite de temps. Je dis ce que le code fait : la portée du système est construite, avec ce résultat imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
+Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau du document de conception de la portée en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde sous charge, que les données du livre ne gardent pas, 61 des 62 assertions de sa garde narrée ont passé, et la seule assertion qui n'a pas tenu était une limite de temps. Je dis ce que le code fait : la portée du système est construite, avec ce résultat imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
 
 ## 8. Six portes
 

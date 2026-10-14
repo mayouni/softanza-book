@@ -22,7 +22,7 @@ Dans ce chapitre, je prends une banque de Niamey, sous la banque centrale de l'u
 
 Une banque est jugée sur sa structure autant que sur ses chiffres. Un régulateur demande qui rend compte à qui : si la fonction d'audit est indépendante des dirigeants qu'elle audite, s'il y a un conseil, si une fonction de risque existe. Il demande si la personne qui exécute un paiement est celle qui l'approuve. Le terrain répond par des documents : un organigramme dessiné dans une diapositive, une politique écrite dans un traitement de texte, un audit qui compare les deux une fois par an.
 
-Le terrain a aussi une famille d'outils appelés plateformes de gouvernance, de risque et de conformité, qui tiennent des registres de risques et de contrôles et suivent les constats jusqu'à leur clôture. Ils enregistrent qu'un contrôle existe et à qui il appartient. Ils ne lisent en général pas la structure de l'organisation pour vous dire qu'elle est fausse. (Connaissance générale, pas une étude du dossier.)
+Le terrain a aussi une famille d'outils appelés plateformes de gouvernance, de risque et de conformité, qui tiennent des registres de risques et de contrôles et suivent les constats jusqu'à leur clôture. Ils enregistrent qu'un contrôle existe et à qui il appartient. Ils ne lisent en général pas la structure de l'organisation pour vous dire qu'elle est fausse. C'est une connaissance générale, pas une étude du dossier.
 
 ## 2. Le premier principe
 
@@ -95,7 +95,7 @@ aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
 
 Deux validateurs échouent, chacun avec son propre code, et le rapport de conformité dit `non-compliant`.
 
-La bibliothèque nomme sept régimes : le régional, Bâle III, SOX, PCI DSS, ISO 27001, le RGPD et HIPAA. Ils partagent un seul mécanisme. Combien de règles chacun contient-il ? Je l'imprime, plutôt que d'écrire une phrase qui dit « Bâle III est validé » :
+La bibliothèque nomme sept régimes, par le nom de leurs classes : le régional, Bâle III, SOX, PCI DSS, ISO 27001, le RGPD et HIPAA. Ils partagent un seul mécanisme. Combien de règles chacun contient-il ? Je l'imprime, plutôt que d'écrire une phrase qui dit « Bâle III est validé » :
 
 ```haro
 aBases = [ new stzBCEAORuleBase(), new stzBaselIIIRuleBase(), new stzSOXRuleBase(), new stzPCIDSSRuleBase(),
@@ -112,7 +112,7 @@ next
 #--> HIPAA : 4
 ```
 
-Six régimes portent quatre règles, et un en porte cinq ! Quatre règles que chaque base porte : personne ne rend compte à soi-même, aucun cycle de rattachement, aucun poste orphelin, et une étendue de contrôle. SOX en ajoute une qui lui est propre : aucun poste ne tient à la fois le rôle d'approbateur et celui d'exécutant. Elle est appelée aussi séparation des tâches, mais c'est une règle différente du second tribunal ci-dessus. Le commentaire de la bibliothèque le dit sans détour : les classes de régimes ne diffèrent aujourd'hui que par le nom, et une seule ajoute une règle qui lui est propre. Je reviendrai sur ce que cela veut dire.
+Six régimes portent quatre règles, et un en porte cinq ! Quatre règles que chaque base porte : personne ne rend compte à soi-même, aucun cycle de rattachement, aucun poste orphelin, et une étendue de contrôle. SOX en ajoute une qui lui est propre : aucun poste ne tient à la fois le rôle d'approbateur et celui d'exécutant. Elle est appelée aussi séparation des tâches, mais c'est une règle différente du second tribunal ci-dessus. Le commentaire de la bibliothèque le dit sans détour : les classes de régimes ne diffèrent aujourd'hui que par le nom, et une seule ajoute une règle qui lui est propre. Les quatre sont celles de la base de règles ; le validateur qui a refusé l'organigramme dans le premier bloc tient trois règles qui lui sont propres, codées BCEAO-001 à BCEAO-003, et les deux ne sont pas la même chose. Je reviendrai sur ce que cela veut dire.
 
 La règle propre d'une banque est aussi une donnée. Prenez la règle selon laquelle l'audit interne rend compte au conseil. C'est un objet déclaré par des appels. Elle nomme le département qu'elle gouverne, la ligne qu'elle exige et la phrase qu'elle imprime, et elle s'ajoute à la base de règles d'un régime. Quelle règle a été rompue, et où ? Le rapport le dit :
 
@@ -151,7 +151,7 @@ oRep.Report()
 #--> 1
 ```
 
-Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Son propre code ne s'exécute pas au commit épinglé ; les appels ci-dessus, si. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. Que dit-il quand le département du directeur général est laissé vide ? Lancez-le :
+Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Le code propre de la narration ne s'exécute pas au commit épinglé ; les appels ci-dessus, si. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. La règle régionale ne compare le département du supérieur d'un poste que lorsque ce département est déclaré, donc je m'attends à ce que le constat sur l'audit disparaisse quand le département du directeur général est laissé vide. Que dit-il quand il l'est ? Lancez-le :
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -177,7 +177,7 @@ Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui 
 
 **J'ai refusé de porter le texte d'un régulateur dans un code dont je ne peux pas citer la source.** Les codes BCEAO-001 à BCEAO-003 sont ceux de la bibliothèque. Le dossier ne les rattache à aucun article du texte de la banque centrale. Ce sont les propres règles de la bibliothèque, nommées d'après le régime du régulateur ; le dossier ne nomme aucun texte dont elles seraient tirées.
 
-**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles. Il est muet sur depuis combien de temps le produit est installé, et sur combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque. Les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que le produit est construit avec Softanza et garde sa formulation ; ce chapitre dit ce que le dossier montre.
+**J'ai refusé de dire ce que je ne sais pas.** Ce que les gens de la banque déclarent, exploitent ou disent n'est pas dans le dossier. Le guide d'installation est mon document à la banque : des étapes d'installation, un fichier de licence, un contact de support. La page Forged ne garde aucun chiffre ni aucune personne d'un client. Le dossier est muet sur qui, à la banque, déclare l'organigramme, le questionnaire ou les règles. Il est muet sur depuis combien de temps le produit est installé, et sur combien de personnes l'utilisent. Je n'en inventerai rien, et le chapitre ne comble pas le vide. Sur « construit avec Softanza », le dossier montre une application Python, un petit serveur web avec une base de données, qui n'appelle rien de la bibliothèque. Les validateurs de la bibliothèque en sont séparés, et ce sont eux que ce chapitre exécute. Le chapitre 1 dit que la construction de la plateforme a façonné Softanza ; ce chapitre dit ce que le dossier montre.
 
 Six gardes se tiennent derrière les blocs.
 
@@ -187,9 +187,9 @@ Six gardes se tiennent derrière les blocs.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en couverture. Une plateforme de gouvernance et de conformité tient en général un registre de réglementations, de contrôles et de constats, avec des flux de travail, des responsables et des échéances. (Connaissance générale, pas une étude du dossier.) La bibliothèque tient un contrôle structurel d'un régulateur régional, un de séparation des tâches, et un mécanisme. Pour le RGPD, HIPAA et les autres, elle tient le mécanisme et les quatre règles universelles, et rien qui leur soit propre.
+Le terrain mène en couverture. Une plateforme de gouvernance et de conformité tient en général un registre de réglementations, de contrôles et de constats, avec des flux de travail, des responsables et des échéances. C'est une connaissance générale, pas une étude du dossier. La bibliothèque tient un contrôle structurel d'un régulateur régional, un de séparation des tâches, et un mécanisme. Pour le RGPD, HIPAA et les autres, elle tient le mécanisme et les quatre règles universelles, et rien qui leur soit propre.
 
-Le terrain mène en usage réel : une telle plateforme est souvent une que les auditeurs d'une banque connaissent déjà, et qu'un régulateur a déjà vue. (Connaissance générale, pas une étude du dossier.)
+Le terrain mène en usage réel : une telle plateforme est souvent une que les auditeurs d'une banque connaissent déjà, et qu'un régulateur a déjà vue. C'est une connaissance générale, pas une étude du dossier.
 
 Là où je pense que ceci se distingue, c'est que l'organigramme est la donnée et que le tribunal est une règle sur elle. Un organigramme est un texte, une règle est une donnée, un constat nomme la règle et le poste, et le rapport est un seul verdict. Le tableau de comparaison propre de la bibliothèque pour cette fonction n'est que victoires, sans dates, avec des chiffres de coût qui ne citent rien, et je ne l'imprimerai pas.
 
@@ -203,7 +203,7 @@ Quatre choses sont conçues, ou construites en partie.
 
 - Le contenu des six régimes autres que le régional. Cinq d'entre eux tiennent les mêmes quatre règles universelles et rien d'autre ; SOX en ajoute une cinquième.
 - Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle, et aucune ligne `when` ni `then`. Une telle règle se charge et ne juge rien. Le format est admis, et la règle n'est pas appliquée.
-- Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste. Il exige que les départements soient déclarés.
+- Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste, et il ne compare les départements que là où ils sont déclarés : le bloc de la limite de la section 3 vide celui du directeur général et le constat sur l'audit disparaît.
 - Le validateur de succession signale chaque poste pourvu, ce qui est, selon le commentaire de la bibliothèque elle-même, un défaut connu. La simulation de réorganisation lève une erreur quand on lui demande de changer une ligne de rattachement, également un défaut connu. L'article qui raconte la simulation nomme une méthode qui n'existe nulle part dans la bibliothèque.
 
 Quatre choses sont absentes.
@@ -213,7 +213,7 @@ Quatre choses sont absentes.
 - Un verdict perçu. Aucun document ne dit qu'un auditeur ou un superviseur ait lu un constat que la bibliothèque a produit.
 - Une date de livraison. Les fichiers livrés portent des horodatages du système de fichiers, et ce ne sont pas une date de livraison.
 
-La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que ses règles 117 à 121 ont été récoltées sur un produit de supervision bancaire. Le dossier ne dit pas que ce produit soit l'installation de la banque. Je ne dirai pas qu'il l'est.
+La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que cinq de ses règles ont été récoltées sur un produit de supervision bancaire. Le dossier ne dit pas que ce produit soit l'installation de la banque. Je ne dirai pas qu'il l'est.
 
 Six portes suivent, une pour chaque lecteur.
 

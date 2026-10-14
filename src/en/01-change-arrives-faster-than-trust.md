@@ -13,7 +13,7 @@ stage:
 status: draft
 rulings: ["12.10", "12.11", "12.15", "12.28", "12.29"]
 source: drafts/book-01-change-arrives-faster-than-trust.md
-edits: ["section 5: one block, run by the book's runner (DECISIONS CH01-a)", "section 5: safeworld_narrated is in the agentic plane (CH01-b)"]
+edits: ["section 5: one block, run by the book's runner (DECISIONS CH01-a)", "section 5: safeworld_narrated is in the agentic plane (CH01-b)", "section 2: the mail scene given its registry block, made from chapter 2's guard, and four sentences aligned with the record (CLOSE-01, the reading of 2026-10-14)"]
 figures:
   - "seventy-six assertions: safeworld_narrated, counted at build (data/guards.json)"
   - "ninety-three percent: base holds 93.2 per cent of the lines, study 12.15, stzlib 93d7a39"
@@ -45,7 +45,20 @@ Let me show you rather than tell you, by example, which is how I have always pre
 
 A solution declares that it depends on a mail service. While I program, I bind that dependency to a sandbox: an object that captures every message and sends nothing, so my tests can read what *would* have gone out. Free, offline, deterministic. Then I move the solution to production, with the sandbox still bound, the way people do at two in the morning before a demo.
 
-The registry does not call it sound. The first line it prints is a zero, and the second says why: a fake must never ship. The fake is refused by name, and a service that was declared and never bound raises the moment it is asked for, instead of silently doing nothing. I did not remember to check this. The phase decided what comes back, and the check is enforced, not remembered.
+```haro
+oReg = new stzServiceRegistry("my-solution")
+oReg.Bind(:mail, new stzMailSandbox())
+oReg.SetPhase(:emulated)
+? oReg.IsSound()
+#--> 1
+oReg.SetPhase(:production)
+? oReg.IsSound()
+#--> 0
+? oReg.Findings()[1][:message]
+#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+```
+
+The registry does not call it sound. In the emulated phase it answers one; in production it answers zero, and the next line says why: a fake must never ship. The fake is refused by name, and a service that was declared and never bound raises the moment it is asked for, instead of silently doing nothing. I did not remember to check this. The phase decided what comes back, and the check is enforced, not remembered.
 
 That is the whole philosophy in one small scene. Expression is free: bind what you like, while you like. Admission is governed: the gate reads the phase and the binding, and refuses.
 
@@ -77,7 +90,7 @@ Every chapter of this book carries this section, and I promised in the preface t
 
 **I refused to let anything into BASE without a court, and I failed.** The three layers of the library, CORE, BASE and MAX, were meant to keep the foundation small and the innovations above it. Under the pressure of time I let everything go into BASE: ninety-three percent of the code sits there today, and the dependency rule is held at the engine and broken at the inheritance. I say this on the first chapter, not the last, because the discipline I am about to preach for thirty-two chapters is one I have broken, and the study of the record caught me. That is what a court is for, and the court for the layers is still only proposed.
 
-**I refused a second embedding.** When someone asks "what about Python, what about JavaScript, what about my language", the answer is one door, to be governed, and never another host runtime sewn into the platform. The record's seven languages were chosen for seven layers of a solution, and Chapter 16 counts them. The door is the answer to "what about language X", and it is one answer, not twenty.
+**I refused a second embedding.** When someone asks "what about Python, what about JavaScript, what about my language", the answer is one door, to be governed, and never another host runtime sewn into the platform. The record's seven languages, the host and six runtimes behind one door, were chosen for seven layers of a solution, and Chapter 16 counts them. The door is the answer to "what about language X", and it is one answer, not twenty.
 
 What was refused is as much a part of Softanza as what was built. You will not find the refusals on the site, because the site shows what is. You will find them here, in every chapter, under this heading.
 
@@ -85,7 +98,7 @@ What was refused is as much a part of Softanza as what was built. You will not f
 
 What proves this chapter? Three things, and I give them to you by name so that you can check them rather than believe me.
 
-The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The AI agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the agentic plane, beside `governance_crossing_narrated`, in the system plane, for the crossing itself. The code block above was run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.
+The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The AI agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the agentic plane, beside `governance_crossing_narrated`, in the system plane, for the crossing itself. The code blocks on this page were run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.
 
 Three guards for a chapter of philosophy may seem few. They are the right three, because they are the three places where philosophy meets a verdict.
 
@@ -101,7 +114,7 @@ Those are claims, and each has its chapter and its guard. I list them here so th
 
 The honest limit of this chapter is also the honest limit of the whole platform, and I put it on the first page on purpose.
 
-Softanza has been used. A bank in Niamey runs an assessment platform whose building shaped Softanza, under licence, attested by the installation guide we delivered. A restaurant in Lyon runs a platform for neighbourhood commerce whose first demo its owner made himself, on his own phone, over a messaging app. An organisation in Niger has its hub designed. Their lessons are in the code, by file name, in Part VI.
+Softanza has been used. A bank in Niamey runs an assessment platform whose building shaped Softanza, under licence, attested by the installation guide we delivered. A restaurant in Lyon runs a platform for neighbourhood commerce whose first demo its owner made alone, on his own phone, with a messaging app as his support line. An organisation in Niger has its hub designed. Their lessons are in the code, by file name, in Part VI.
 
 But the customer platforms run today on ordinary stacks. The bank's is a Python application; the restaurant's is a set of single-file web worlds; the organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. That move is the next step. The court is built, and the platforms exist; the next milestone is the first of them running on the engine. That is the next line this book will carry, and Chapter 33 is about nothing else.
 

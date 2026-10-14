@@ -2,7 +2,7 @@
 
 Source: Appendix A. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-The study of the record read four inventories the library keeps of itself: the narrations with their titles, the design documents, the engine's phase of paradigm engines, and an outside reader's list of rethought concepts. It crossed them, and found forty-six innovations in seven families. This is that register, as the study ruled it on 7 October 2026, with one column of this book's own: the chapter that tells each row. A later ruling the same day, 12.26, adds a forty-seventh row, answer by example; it is not in this table.
+My study of the record read four inventories the library keeps of itself: the narrations with their titles, the design documents, the engine's phase of paradigm engines, and an outside reader's list of rethought concepts. It crossed them, and found forty-six innovations in seven families. This is that register, as the study ruled it on 7 October 2026, with one column of this book's own: the chapter that tells each row. A later ruling the same day adds a forty-seventh row, answer by example, with the stage words of a plan: nothing induces yet, as chapter 18 says. It is not in this table, which keeps the forty-six the study counted.
 
 Read the register as the study reads it, and no better. It is a reading and not a census. A concept with no narration and no design document of its own was not counted. The study's evidence counts files that name the thing in code outside tests and archives, test files, and the engine module where one exists; it counts files that name a thing, and not tests that pass. I have not re-counted any of them. The study also counted how many pages of the site named each innovation; the site has changed since, and I leave that column out.
 
@@ -69,7 +69,7 @@ The study counted twelve engines; the register gives nine of them a row of their
 | 33 | `stzGraph` and its organs | twenty-five notations, a planner, a query, an organisation chart | 14, 29, 30 | eight narrations |
 | 34 | Rules as graph rules | rules that see the whole picture | 29, 30 | a design plan; a narration |
 | 35 | Numbers rethought | a global rethink of numbers, exact by default | 22 | a design of 3,167 lines |
-| 36 | Statistics as a language of thought, the linear solver, matrices | | not told | four narrations |
+| 36 | Statistics as a language of thought, the linear solver, matrices | the study gives no line for this row | not told | four narrations |
 
 ### F · System, delivery and operations
 
@@ -82,7 +82,7 @@ The study counted twelve engines; the register gives nine of them a row of their
 | 41 | The security plane | the event, the ledger, the sentinel, the drill, the response, attestation | 21 | eight narrations; an incident analysis of 815 lines |
 | 42 | Governance lineage | answerable forever | 30 | a narration |
 | 43 | The front door and secrets | authentication and credentials, self-redacting | 21 (secrets; the front door as an event only) | two narrations |
-| 44 | Structured logging, the engine senses, the XML parser that says no, safe hashlist access | | 27 (the engine senses) | four narrations that run |
+| 44 | Structured logging, the engine senses, the XML parser that says no, safe hashlist access | the study gives no line for this row | 27 (the engine senses) | four narrations that run |
 
 ### G · The self-knowing library
 
@@ -93,7 +93,7 @@ The study counted twelve engines; the register gives nine of them a row of their
 
 ### What the register says
 
-The study's reading, which I keep: what the site names is what has a product page, a principle or an area of the Atlas. What it leaves in the dark is what cuts across the areas. Every paradigm of the first family except those the site already named (rows 4 to 8 and 10 to 12 above; the study's site column marked them, and I left it out), all twelve engines except the polyglot bridge, the pattern languages as a family, the idiom. This book is in part the answer to that: its parts are cut across the areas, and not along them.
+The study's reading, which I keep: what the site names is what has a product page, a principle or an area of the Atlas. What it leaves in the dark is what cuts across the areas. Every paradigm of the first family except rows 4 to 8 and 10 to 12, which the site already named; all twelve engines except the polyglot bridge; the pattern languages as a family; the idiom. This book is in part the answer to that: its parts are cut across the areas, and not along them.
 
 The study also reconciled the twelve engines. The macroplan marks the phase done. Eight of the twelve have a source file under their name in the engine; four have none, which are truth, quantifiers, polyglot and polycode, the first two reported done as libraries. On the library's side three engines have no test file at all: adverb, section merging and named variables. Two of the three are rows 16 and 21 above, which this book does not tell, and the third, row 19, it tells as an absence.
 

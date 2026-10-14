@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 00_numbrex_narrated, tablex_narrated, 00_matrex_narr
 stage:
   built: "des motifs pour le texte, les nombres et les tableaux, chacun avec une garde ; la même petite habitude d'un support à l'autre (un constructeur, un motif dans une chaîne de caractères, Match, Tokens)"
   designed: "un seul moteur de motifs partagé par tous les supports ; le motif comme côté condition de la cascade ; le motif écrit à partir d'exemples"
-  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports ; des séquences sur une ligne de temps, dans le temps ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
+  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports qui ne sont pas du texte ; des séquences sur une ligne de temps, dans le temps ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
 status: draft
 rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
@@ -22,7 +22,7 @@ Dans ce chapitre, je pars de l'expression régulière, ce qu'un motif est pour u
 
 Pour un programmeur qui travaille, un motif est une expression régulière : une notation compacte de la forme d'une chaîne de caractères, remise à un moteur qui dit si le texte lui correspond, et où. Les moteurs sont anciens et bien connus. Celui qui est sous cette bibliothèque est PCRE2, et le site le mesure contre deux autres.
 
-Pour les données qui ne sont pas du texte, le terrain emploie d'autres outils, un par support et aucun partagé. La mise en correspondance structurelle de motifs dans les langages de la famille ML, en Rust, et depuis Python 3.10 en Python. Les vérifications de schéma pour les listes et les enregistrements. Les bibliothèques de qualité des données pour les tableaux. La reconnaissance de motifs de lignes en SQL, et les moteurs de flux, pour les séquences dans le temps. Et les langages de requête de graphes, dont le cœur est un motif de chemin. (Connaissance générale, bien établie ; le dossier ne contient aucune étude datée d'aucun d'eux, et je n'en invente aucune.)
+Pour les données qui ne sont pas du texte, le terrain emploie d'autres outils, un par support et aucun partagé. La mise en correspondance structurelle de motifs dans les langages de la famille ML, en Rust, et depuis Python 3.10 en Python. Les vérifications de schéma pour les listes et les enregistrements. Les bibliothèques de qualité des données pour les tableaux. La reconnaissance de motifs de lignes en SQL, et les moteurs de flux, pour les séquences dans le temps. Et les langages de requête de graphes, dont le cœur est un motif de chemin. C'est une connaissance générale, bien établie ; le dossier ne contient aucune étude datée d'aucun d'eux, et je n'en invente aucune.
 
 L'étude de terrain du domaine de projets lui-même, d'août 2026, donne le profil des petits langages qui ont survécu. Ce profil est une grammaire fermée, une question de domaine, du texte brut, une surface minuscule, une spécification avec une suite de conformité, des décennies de stabilité. Un langage de motifs est exactement cela. Une question, ces données correspondent-elles, en quelques caractères. Ce que le terrain n'offre pas, c'est la même notation d'un support à l'autre.
 
@@ -32,7 +32,7 @@ Vient ensuite le premier principe.
 
 **Un motif est une règle sur la forme des données, écrite comme des données. La même habitude sert tous les genres de données.**
 
-La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Le dossier de l'étude, qui n'est pas l'étude de terrain ci-dessus, porte aussi une phrase qu'elle dit de moi, « pour la première fois dans l'histoire de l'informatique », et elle est de moi. Je ne l'ai trouvée dans aucun texte de la bibliothèque. L'étude ne laisse pas le site la revendiquer. Je la garde ici comme ce que j'ai dit, et je n'affirme pas plus que l'étude ne permet. L'affirmation que l'étude permet est la mesurée : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
+La phrase à laquelle reviennent les articles de la bibliothèque, dans chaque support, est celle de l'article sur les nombres : au lieu d'indiquer à la machine comment tester une condition, vous énoncez ce que vous voulez dire. Mon étude du dossier, qui n'est pas l'étude de terrain ci-dessus, porte aussi une phrase de moi, « pour la première fois dans l'histoire de l'informatique ». Je ne l'ai trouvée dans aucun texte de la bibliothèque, donc le site ne la revendique pas. Je la garde ici comme ce que j'ai dit, et je n'affirme que ce qui est mesuré : une seule grammaire en forme de regex pour sept genres de données dans une seule bibliothèque, le texte et six qui ne sont pas du texte, avec la même habitude de petite fonction. Et je vais vous montrer tout de suite que la grammaire n'est pas tout à fait une.
 
 ## 3. La forme Softanza
 
@@ -156,7 +156,7 @@ Une matrice : un concept, carrée et symétrique, tient en une ligne.
 #--> 1
 ```
 
-Le temps, dans la part qui s'exécute. Une durée doit satisfaire une règle : d'une à deux heures, sur un pas d'un quart d'heure. Laquelle de trois durées convient : quatre-vingt-dix minutes, quatre-vingts minutes ou trois heures ?
+Le temps, dans la part qui s'exécute, écrit ici avec la classe plutôt qu'avec sa petite fonction `Tmx`. Une durée doit satisfaire une règle : d'une à deux heures, sur un pas d'un quart d'heure. Laquelle de trois durées convient : quatre-vingt-dix minutes, quatre-vingts minutes ou trois heures ?
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
@@ -189,7 +189,7 @@ g.AddEdgeXT(:b, :c, "finishes")
 
 Oui : le chemin de `served` à `placed` ne trouve rien, et la ligne imprime 0.
 
-Enfin, l'habitude. Le motif est une donnée dans chaque langage, et un langage qui expose ses jetons peut être relu par une personne et par un agent d'IA. Cinq des six langages le font :
+Enfin, l'habitude. Le motif est une donnée dans chaque langage, et un langage qui expose ses jetons peut être relu par une personne et par un agent d'IA. Cinq des six qui ne sont pas du texte le font ; en voici trois :
 
 ```haro
 ? len( Lx("[@N, @S]").Tokens() )
@@ -208,7 +208,7 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 **J'ai décidé qu'un motif énonce un sens et non une procédure.** Cette décision est dans les articles, et les articles sont les miens. Les mêmes ont décidé de porter l'idée de la regex aux données qui ne sont pas du texte avec une seule habitude : des accolades, un `@` pour un jeton, `&`, `|`, `@!` pour le non, `@cs:` pour la casse. Les listes gardent les crochets. Les cinq autres utilisent des accolades. C'est la première correction honnête de l'expression « une seule grammaire ».
 
-**J'ai refusé de réinventer la notation pour le texte.** Les correspondances simples sont gardées : une chaîne de motif classique, les groupes nommés et les captures fonctionnent comme écrits. Des noms plus clairs sont posés autour. Le travail plus ancien sur le nommage est gardé comme histoire, pour sa valeur éducative. Je tiens cela, comme une vue et non comme un résultat, pour la bonne façon de mettre à la retraite un mécanisme.
+**J'ai refusé de réinventer la notation pour le texte.** Les correspondances simples sont gardées : une chaîne de motif classique, les groupes nommés et les captures fonctionnent comme écrits. Des noms plus clairs sont posés autour. Le travail plus ancien sur le nommage est gardé comme histoire, pour sa valeur éducative. Je tiens cela pour la bonne façon de mettre à la retraite un mécanisme.
 
 **J'ai refusé, pour l'instant, de construire les classes sœurs.** Les articles prévoyaient des classes dans lesquelles les motifs sont génétiques, linguistiques ou quantiques. L'article dit qu'elles sont dans un prototype précoce et non dans la bibliothèque, et une recherche dans le dossier de la regex des mots « induce », « from example » et « infer » ne trouve rien. L'étude date la découverte de leur but de deux ans plus tard, dans le protocole de réponse (la façon dont une personne peut répondre par des exemples) : l'induction à partir d'exemples, et les candidats superposés. C'est le terrain du chapitre 18, et le refus du chapitre 9.
 
@@ -222,7 +222,7 @@ Les graphes n'ont ni `Tokens`, ni `Pattern`, ni `Explain` qui fonctionne à ce c
 
 Notez l'emplacement : la garde des tableaux vit dans le dossier de la regex, et son nom n'a pas de préfixe `00_`.
 
-Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin, et je le consigne dans mes notes de recherche, non dans un bloc. Soixante vérifications se sont exécutées, et deux d'entre elles contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
+Il n'y a pas de garde narrée pour les listes, le temps ou les constructeurs de regex. Les tribunaux de ceux-ci sont des fichiers classiques sans promesses utilisables. Les tests des listes sont placés après une définition de fonction, de sorte que le langage hôte les lit comme le corps de la fonction et n'en exécute aucun. J'ai lancé une copie avec la fonction déplacée à la fin, et je n'ai pas gardé cette exécution comme bloc. Soixante vérifications se sont exécutées, et deux d'entre elles contredisent l'attente du fichier lui-même. Le fichier classique du temps dit qu'une promesse est TRUE et l'exécution imprime 0, et le dossier central l'a consigné le 1er octobre 2026 comme encore ouvert.
 
 Vient ensuite le terrain, et où il mène.
 
@@ -246,9 +246,9 @@ Ce qui est construit : les chaînes de caractères, les nombres et les tableaux,
 
 Ce qui est construit en partie : les listes, les matrices, le temps et les graphes, dans cet ordre.
 
-- **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans mon exécution (notes de recherche, sans bloc), le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
+- **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans une exécution que je n'ai pas gardée comme bloc, le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
 - **Matrices** : la taille, la forme, l'élément et trois propriétés s'exécutent. L'en-tête de la classe liste les termes qui acceptent toute matrice : `row`, `col`, `pattern`, `determinant` et `sum`. Une matrice de deux par deux est acceptée par `{row(99)}`.
-- **Temps** : les instants et les durées avec un pas s'exécutent. Dans mon exécution (sans bloc), un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet. Correspond-il ?
+- **Temps** : les instants et les durées avec un pas s'exécutent. Dans une exécution que je n'ai pas gardée comme bloc, un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet. Correspond-il ?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -299,7 +299,7 @@ Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les cl
 
 ## 8. Six portes
 
-**Le programmeur.** Une habitude pour six genres de données, les graphes mis à part : un petit constructeur, un motif dans une chaîne de caractères, `Match`. Le motif est une donnée que vous pouvez lire et composer. Servez-vous de ceux qui ont une garde : le texte, les nombres, les tableaux, les matrices et les graphes, et ne bâtissez rien sur le cache d'un motif de liste réutilisé.
+**Le programmeur.** Une habitude pour sept genres de données, les graphes n'ayant pas encore la petite fonction : un petit constructeur, un motif dans une chaîne de caractères, `Match`. Le motif est une donnée que vous pouvez lire et composer. Servez-vous de ceux qui ont une garde : le texte, les nombres, les tableaux, les matrices et les graphes, ces deux derniers avec les manques de la section 7, et ne bâtissez rien sur le cache d'un motif de liste réutilisé.
 
 **L'analyste.** Une règle de qualité des données est une phrase du langage des tableaux. La personne qui possède les données peut la lire.
 
@@ -309,7 +309,7 @@ Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les cl
 
 **Le formateur.** Le cours enseigne les motifs en deux chapitres, en anglais, en français, en arabe et en haoussa. L'échelle est un programme : texte, liste, nombre.
 
-**L'agent.** Un motif est une petite notation fermée à laquelle un agent peut être tenu et qu'il peut relire. On vous dit qu'aucun des six supports ne peut encore refuser un mot qu'il ne connaît pas, et que l'écriture d'un motif à partir d'exemples est réservée.
+**L'agent.** Un motif est une petite notation fermée à laquelle un agent peut être tenu et qu'il peut relire. On vous dit qu'aucun des six supports qui ne sont pas du texte ne peut encore refuser un mot qu'il ne connaît pas, et que l'écriture d'un motif à partir d'exemples est réservée.
 
 ## 9. Exercice
 

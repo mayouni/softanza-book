@@ -16,7 +16,7 @@ rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
 ---
 
-In this chapter I take the seven steps of the mental model, which chapter 5 ran on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
+In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
 ## 1. The concept, as the field holds it
 
@@ -26,11 +26,11 @@ The field also has a vocabulary of metaphors for programming, but it keeps them 
 
 ## 2. The first principle
 
-**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** The site's Craft page says it, in the words of a session of 2 October 2026, as the page reads on 9 October 2026: "A loop hides which move it is making. Softanza names the four moves, and a task is decomposed into them instead." That sentence is the site's, not mine; the sentence above is this chapter's principle.
+**Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.** The site's Craft page says it, as I read it on 9 October 2026: "A loop hides which move it is making. Softanza names the four moves, and a task is decomposed into them instead." That sentence is the site's, not mine; the sentence above is this chapter's principle.
 
 ## 3. The Softanza form
 
-The mental model is seven steps, and they are the order in which a person asks. Define the problem in natural terms and take its keywords. Select the object that holds the data. Ask whether it contains what you care about. Ask how many. Ask where. Act on those positions, or call the verb that does it. And celebrate, and repeat. In chapter 5 you ran those steps on a list with empty strings. They do not belong to the list. Do they hold on a string? Here they are, in the same order:
+The mental model is seven steps, and they are the order in which a person asks. Define the problem in natural terms and take its keywords. Select the object that holds the data. Ask whether it contains what you care about. Ask how many. Ask where. Act on those positions, or call the verb that does it. And the seventh: celebrate, and repeat. In chapter 5 you ran those steps on a list with empty strings. They do not belong to the list. Do they hold on a string? Here they are, in the same order:
 
 ```haro
 o1 = new stzString("You and you")
@@ -65,7 +65,7 @@ oWalker = Wk(1, 10, 2)
 #--> [ 5, 7, 9 ]
 ```
 
-A loop does not hold its route as a value you can ask. A walker does, before it moves. What does it do at the edge of the road? Beyond the end, when the walk is underway, it stops in silence. Before the start, it refuses:
+`Walk()` is one step, and it prints the path of the move, from where it stood to where it landed: `[ 1, 3 ]`. A loop does not hold its route as a value you can ask. A walker does, before it moves. What does it do at the edge of the road? Beyond the end, when the walk is underway, it stops in silence. Before the start, it refuses:
 
 ```haro
 oWalker = Wk(1, 10, 3)
@@ -82,9 +82,9 @@ done
 #--> Can't walk backward! Already at the beginning of walkable positions.
 ```
 
-Ask for ten steps from a walk that has four and you get the four: `[ 1, 4, 7, 10 ]`. Walk again and it prints `[ 10 ]`, with no error. Ask it to walk backward from the start and it refuses! Its own words: `Can't walk backward! Already at the beginning of walkable positions.` The article argues that this mirrors how we walk in the physical world. You stop when you hit a wall behind you, and that is an error. When the road ahead ends, you stop in silence.
+Ask for ten steps from a walk that has four and you get the four: `[ 1, 4, 7, 10 ]`. Walk again and it prints `[ 10 ]`, the position it stands on, with no error. Ask it to walk backward from the start and it refuses! Its own words: `Can't walk backward! Already at the beginning of walkable positions.` The article argues that this mirrors how we walk in the physical world. You stop when you hit a wall behind you, and that is an error. When the road ahead ends, you stop in silence.
 
-**The Checker asks yes or no.** All of them, any of them, or where:
+**The Checker asks yes or no.** All of them, any of them, or where, with the condition written as a string, the W condition, W for where:
 
 ```haro
 o1 = new stzList([ "A", 5, "B", "C" ])
@@ -120,7 +120,7 @@ o2.PerformW('isString(@item)', 'upper(@item)')
 
 Look at the two `Content()` outputs, before and after the `PerformW` call. The yield returned `[ "HARO", "PYTHON", "RUBY" ]`. The list was untouched! The perform changed the list: `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. The verb tells you which, so a design can say "this step only reads" and mean it.
 
-Now the thing that all four share, which is the last piece of the title: a condition travels inside an argument. It is a small string, kept in a variable if you want. It goes in the same place for find, for items and for contains. And it has a twin that takes a real function:
+Now the thing that all four share: a condition travels inside an argument. It is a small string, kept in a variable if you want. It goes in the same place for find, for items and for contains. And it has a twin that takes a real function:
 
 ```haro
 o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
@@ -137,7 +137,7 @@ cCond = '{ @item > 5 }'
 
 The two agree: `FindW` with the string and `FindWF` with the function both print `[ 2, 4, 6 ]`. `ItemsW` gives the items themselves, `[ 8, 12, 9 ]`.
 
-The string form is the W condition, W for where; the function form is WF. They look alike, and the difference matters. The engine reads a W condition as data, in a small language of its own: literals, `@item`, arithmetic, comparisons, and a short list of functions. It cannot call your code. So what happens to a condition that tries to? It is not run:
+The string form is the W condition; the function form is WF. They look alike, and the difference matters. The engine reads a W condition as data, in a small language of its own: literals, `@item`, arithmetic, comparisons, and a short list of functions. It cannot call your code. So what happens to a condition that tries to? It is not run:
 
 ```haro
 o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
@@ -169,7 +169,7 @@ The court comes next, and its guards do not cover every line above.
 
 ## 5. The court
 
-The four metaphors have no single guard. The yielder has a narrated one, `00_yielder_narrated`: four map operations, three filter operations and a sum. The walker has `597_walker_basics`, named walkers and what they walked, and `495_walking_until_and_until_before`, a walk that stops on a condition, including the item that stops it, or not. The checker has `611_checkw`, which says a check is false when one item fails. The performer has `621_perform`, which says it changes the list in place. `483_w_and_wf_forms_in_conditional_code` proves that a W condition written with cursor words such as `@NextNumber` and the same one written with raw index arithmetic such as `This[@i+1]` give the same positions. `597_walker_basics` and `495_walking_until_and_until_before` test the list's named walkers and walks, through `StzListQ`, not the `Wk` walker of the blocks above.
+The four metaphors have no single guard. The yielder has a narrated one, `00_yielder_narrated`: four map operations, three filter operations and a sum. The walker has `597_walker_basics`, named walkers and what they walked, and `495_walking_until_and_until_before`, a walk that stops on a condition, including the item that stops it, or not; both test the list's named walkers and walks, through `StzListQ`, not the `Wk` walker of the blocks above. The checker has `611_checkw`, which says a check is false when one item fails. The performer has `621_perform`, which says it changes the list in place. `483_w_and_wf_forms_in_conditional_code` proves that a W condition written with cursor words such as `@NextNumber` and the same one written with raw index arithmetic such as `This[@i+1]` give the same positions.
 
 None of the guards named here covers `Walkables`, `WalkNSteps` or `WalkBackward`; those lines rest on the runs kept for this chapter.
 
@@ -183,7 +183,7 @@ The field leads in openness. A lambda carries any logic. The W language is bound
 
 The field leads in reach and in tooling. Iterators and comprehensions are in every mainstream language, with editor support, type checking and a literature. These four metaphors exist in one library.
 
-And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table is worth printing when its rows have been run and a loss stands beside the wins; for this one, that is the next step. This is my view, held on this table: thirteen rows, none with a loss.
+And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table is worth printing when its rows have been run and a loss stands beside the wins; for this one, that is the next step.
 
 Next, the limit, in the stage words built, designed and absent.
 

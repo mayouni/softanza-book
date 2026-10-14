@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-14 12:13 UTC+01:00",
+  "date": "2026-10-14 22:24 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -42,12 +42,20 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 5.0
   },
   "en/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
    "blocks": [
+    {
+     "hash": "8e3d95a046b8",
+     "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
+    },
     {
      "hash": "fe9b8eb3b97c",
      "promise": "[ 1, 3, 6 ]\n[ \"tea\", \"rice\", \"fish\" ]",
@@ -64,11 +72,11 @@
      "out": ""
     }
    ],
-   "kept": 1,
-   "runnable": 1,
+   "kept": 2,
+   "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 3.7
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -163,8 +171,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.3
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -227,8 +235,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.7
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -308,8 +316,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.4
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -331,14 +339,14 @@
      "out": "1\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]"
     },
     {
-     "hash": "b45229cbde5c",
-     "promise": "RING\nRIxxNxG\nRING\nR I N G",
+     "hash": "e92b1c685fa9",
+     "promise": "HARO\nHAxxRxO\nHARO\nH A R O",
      "effects": [
       "files"
      ],
      "unprinted": 0,
      "verdict": "kept",
-     "out": "RING\nRIxxNxG\nRING\nR I N G"
+     "out": "HARO\nHAxxRxO\nHARO\nH A R O"
     },
     {
      "hash": "0ed2c04313b1",
@@ -383,8 +391,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 5.8
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -456,8 +464,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.3
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -511,14 +519,6 @@
      "out": "4\n8\n8\n1\n0"
     },
     {
-     "hash": "7f8d85d3ffb6",
-     "promise": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
-     "effects": [],
-     "unprinted": 0,
-     "verdict": "kept",
-     "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
-    },
-    {
      "hash": "27f31e084c7b",
      "promise": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---",
      "effects": [],
@@ -557,11 +557,11 @@
      "out": ""
     }
    ],
-   "kept": 10,
-   "runnable": 10,
+   "kept": 9,
+   "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 5.5
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -607,7 +607,7 @@
      "out": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza"
     },
     {
-     "hash": "f0081144333d",
+     "hash": "246d762b72bb",
      "promise": "TRUE\nTRUE\nTRUE",
      "effects": [],
      "unprinted": 0,
@@ -683,8 +683,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 9.0
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -764,8 +764,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.9
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -853,8 +853,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.1
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.5
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -958,8 +958,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 12.7
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 16.1
   },
   "en/12-a-language-declared": {
    "id": "a-language-declared",
@@ -1046,8 +1046,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.0
   },
   "en/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -1206,8 +1206,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 11.5
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 15.5
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1338,8 +1338,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.4
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1466,8 +1466,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.5
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1489,7 +1489,7 @@
      "out": "Language 'cobol' is not supported"
     },
     {
-     "hash": "2cc3c9576838",
+     "hash": "256df3449cc3",
      "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "effects": [
       "the system"
@@ -1582,8 +1582,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 6.7
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1656,8 +1656,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.8
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
@@ -1800,8 +1800,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.6
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -1870,8 +1870,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.6
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -1977,8 +1977,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.7
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -2069,8 +2069,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.0
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -2133,8 +2133,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 9.2
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 12.0
   },
   "en/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
@@ -2239,8 +2239,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.0
   },
   "en/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
@@ -2353,8 +2353,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.3
   },
   "en/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
@@ -2465,8 +2465,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 7.9
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 14.3
   },
   "en/26-the-environment": {
    "id": "the-environment",
@@ -2575,8 +2575,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.0
   },
   "en/27-the-engine-beneath": {
    "id": "the-engine-beneath",
@@ -2670,8 +2670,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 10.1
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 12.5
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -2727,8 +2727,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.0
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -2792,8 +2792,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.7
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -2865,8 +2865,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.6
   },
   "en/31-what-the-projects-show": {
    "id": "what-the-projects-show",
@@ -2931,8 +2931,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.4
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -2972,8 +2972,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.8
   },
   "en/33-the-next-line": {
    "id": "the-next-line",
@@ -3020,8 +3020,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.3
   },
   "en/A-the-register-of-innovations": {
    "id": "the-register-of-innovations",
@@ -3053,8 +3053,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 0,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:28 UTC+01:00",
+   "seconds": 4.5
   },
   "en/C-the-twenty-two-verbs-and-the-constitution": {
    "id": "the-twenty-two-verbs-and-the-constitution",
@@ -3113,12 +3113,20 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 5.0
   },
   "fr/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
    "blocks": [
+    {
+     "hash": "8e3d95a046b8",
+     "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
+    },
     {
      "hash": "fe9b8eb3b97c",
      "promise": "[ 1, 3, 6 ]\n[ \"tea\", \"rice\", \"fish\" ]",
@@ -3135,11 +3143,11 @@
      "out": ""
     }
    ],
-   "kept": 1,
-   "runnable": 1,
+   "kept": 2,
+   "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -3234,8 +3242,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.3
   },
   "fr/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -3298,8 +3306,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.7
   },
   "fr/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -3379,8 +3387,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.4
   },
   "fr/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -3402,14 +3410,14 @@
      "out": "1\n3\n[ 2, 4, 5 ]\n[ \"A\", \"~\", \"B\", \"~\", \"~\", \"C\" ]"
     },
     {
-     "hash": "b45229cbde5c",
-     "promise": "RING\nRIxxNxG\nRING\nR I N G",
+     "hash": "e92b1c685fa9",
+     "promise": "HARO\nHAxxRxO\nHARO\nH A R O",
      "effects": [
       "files"
      ],
      "unprinted": 0,
      "verdict": "kept",
-     "out": "RING\nRIxxNxG\nRING\nR I N G"
+     "out": "HARO\nHAxxRxO\nHARO\nH A R O"
     },
     {
      "hash": "0ed2c04313b1",
@@ -3454,8 +3462,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 5.8
   },
   "fr/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
@@ -3527,8 +3535,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:24 UTC+01:00",
+   "seconds": 4.3
   },
   "fr/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -3582,14 +3590,6 @@
      "out": "4\n8\n8\n1\n0"
     },
     {
-     "hash": "7f8d85d3ffb6",
-     "promise": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
-     "effects": [],
-     "unprinted": 0,
-     "verdict": "kept",
-     "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
-    },
-    {
      "hash": "27f31e084c7b",
      "promise": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---",
      "effects": [],
@@ -3628,11 +3628,11 @@
      "out": ""
     }
    ],
-   "kept": 10,
-   "runnable": 10,
+   "kept": 9,
+   "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:13 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 5.5
   },
   "fr/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -3678,7 +3678,7 @@
      "out": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza"
     },
     {
-     "hash": "f0081144333d",
+     "hash": "246d762b72bb",
      "promise": "TRUE\nTRUE\nTRUE",
      "effects": [],
      "unprinted": 0,
@@ -3754,8 +3754,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 7.2
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 9.0
   },
   "fr/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -3835,8 +3835,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.9
   },
   "fr/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
@@ -3924,8 +3924,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.1
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.5
   },
   "fr/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -4029,8 +4029,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 12.7
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 16.1
   },
   "fr/12-a-language-declared": {
    "id": "a-language-declared",
@@ -4117,8 +4117,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.8
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 4.0
   },
   "fr/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -4277,8 +4277,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 11.5
+   "ran": "2026-10-14 22:25 UTC+01:00",
+   "seconds": 15.5
   },
   "fr/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -4409,8 +4409,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.4
   },
   "fr/15-pattern-languages": {
    "id": "pattern-languages",
@@ -4537,8 +4537,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.5
   },
   "fr/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -4560,7 +4560,7 @@
      "out": "Language 'cobol' is not supported"
     },
     {
-     "hash": "2cc3c9576838",
+     "hash": "256df3449cc3",
      "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "effects": [
       "the system"
@@ -4653,8 +4653,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.9
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 6.7
   },
   "fr/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -4727,8 +4727,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.8
   },
   "fr/18-the-five-registers": {
    "id": "the-five-registers",
@@ -4871,8 +4871,8 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-14 12:14 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.6
   },
   "fr/19-the-domain-language-model": {
    "id": "the-domain-language-model",
@@ -4941,8 +4941,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.6
   },
   "fr/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
@@ -5048,8 +5048,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.5
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.7
   },
   "fr/21-the-court": {
    "id": "the-court",
@@ -5140,8 +5140,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.0
   },
   "fr/22-compared-honestly": {
    "id": "compared-honestly",
@@ -5204,8 +5204,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 9.2
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 12.0
   },
   "fr/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
@@ -5310,8 +5310,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 4.0
   },
   "fr/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
@@ -5424,8 +5424,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-14 22:26 UTC+01:00",
+   "seconds": 5.3
   },
   "fr/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
@@ -5536,8 +5536,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 7.9
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 14.3
   },
   "fr/26-the-environment": {
    "id": "the-environment",
@@ -5646,8 +5646,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.0
   },
   "fr/27-the-engine-beneath": {
    "id": "the-engine-beneath",
@@ -5741,8 +5741,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 10.1
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 12.5
   },
   "fr/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -5798,8 +5798,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.0
   },
   "fr/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
@@ -5863,8 +5863,8 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.7
   },
   "fr/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
@@ -5936,8 +5936,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 12:15 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.6
   },
   "fr/31-what-the-projects-show": {
    "id": "what-the-projects-show",
@@ -6002,8 +6002,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.4
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.4
   },
   "fr/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -6043,8 +6043,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.2
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.8
   },
   "fr/33-the-next-line": {
    "id": "the-next-line",
@@ -6091,8 +6091,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:27 UTC+01:00",
+   "seconds": 4.3
   },
   "fr/A-the-register-of-innovations": {
    "id": "the-register-of-innovations",
@@ -6124,8 +6124,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 0,
-   "ran": "2026-10-14 12:16 UTC+01:00",
-   "seconds": 3.3
+   "ran": "2026-10-14 22:28 UTC+01:00",
+   "seconds": 4.5
   },
   "fr/C-the-twenty-two-verbs-and-the-constitution": {
    "id": "the-twenty-two-verbs-and-the-constitution",

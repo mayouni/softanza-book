@@ -8,7 +8,7 @@ guards: [coderule_narrated]
 rulings: ["12.16"]
 ---
 
-La bibliothèque a un tribunal sur son propre code. Il lit une classe comme un graphe (cinq règles) ou comme du texte (neuf) et la juge selon des règles, dont la plupart ont été écrites après que la bibliothèque a fait quelque chose qu'elle n'aurait pas dû faire. Cette annexe énumère les quatorze, et en montre trois qui se déclenchent.
+La bibliothèque a un tribunal sur son propre code. Il lit une classe comme un graphe (cinq règles) ou comme du texte (neuf) et la juge selon des règles, dont certaines ont été écrites après qu'un défaut de cette forme a été trouvé dans le code même de la bibliothèque. Cette annexe énumère les quatorze, et en montre trois qui se déclenchent.
 
 Il y a deux quatorze dans ce livre, et ce sont deux ensembles différents. Les quatorze **règles de la maison** de cette annexe sont des règles du code de la bibliothèque : elles forment un tribunal, et elles s'exécutent. Les quatorze **règles d'écriture**, au chapitre 7, sont une lecture de la manière dont le style s'écrit. Ce sont des lectures du code, énoncées comme des règles, et aucune machine ne les juge. La coïncidence du nombre est une coïncidence.
 
@@ -66,7 +66,7 @@ Une note sur l'orthographe, qu'un programme qui lit les constats doit connaître
 | 13 | `writes-a-mutable-constant` | affecter à `true`, `false`, `null`, `nl`, `tab` ou `cr` : dans l'hôte ce sont des globales ordinaires | erreur |
 | 14 | `value-called-as-function` | appeler le résultat d'un appel, la forme que laisse un remplacement global de jetons | erreur |
 
-J'ai déclenché les lignes 6, 11 et 1 ci-dessus. Le chapitre 32 déclenche la ligne 3, le chapitre 7 les lignes 10 et 13, et le chapitre 5 la ligne 2. Pour les lignes 7, 9 et 12, j'ai lu les gravités dans la source, comme pour les lignes 4, 5, 8 et 14 ; je n'ai pas déclenché ces sept-là.
+J'ai déclenché les lignes 11, 6 et 1 ci-dessus, dans cet ordre. Le chapitre 32 déclenche la ligne 3, le chapitre 7 les lignes 10 et 13, et le chapitre 5 la ligne 2. Pour les lignes 7, 9 et 12, j'ai lu les gravités dans la source, comme pour les lignes 4, 5, 8 et 14 ; je n'ai pas déclenché ces sept-là.
 
 ### Ce que le tribunal ne juge pas
 

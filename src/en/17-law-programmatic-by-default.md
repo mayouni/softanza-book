@@ -57,7 +57,7 @@ oDLM = StzDlmQ(oKB)
 #--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
 ```
 
-It answers, says why (`recorded fact(s): 'margherita' contains tomato-sauce, mozzarella`), and states its certainty (`1`). And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. A refusal that names its boundary is worth more than a fluent answer that has none. This is my view.
+It answers, says why (`recorded fact(s): 'margherita' contains tomato-sauce, mozzarella`), and states its certainty (`1`). And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. One entity, because only `margherita` was declared with `Know`, and one relation, `contains`: the objects of the two facts are not counted as entities. A refusal that names its boundary is worth more than a fluent answer that has none. This is my view.
 
 Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you. What does it ask, and what happens if you try to conclude before you have answered?
 
@@ -105,7 +105,7 @@ oG.Proposes("writer", "send")
 #--> 3
 ```
 
-It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(oG.Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? Ask one:
+It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(oG.Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? No AI model is loaded in the block that asks: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. Ask one:
 
 ```haro
 oF = new stzLLMFunction("sum")
@@ -120,7 +120,7 @@ oLLM.SetSkillFrom(oF)
 #--> 0
 ```
 
-Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. No AI model is loaded in this block: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
+Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.
 
 And the programmatic agent itself has a mind made of code. A skill is a condition and an action, and it fires on what the agent perceives. Governance gates the act before it happens. When the stock is low and the skill wants to order, does the act go through?
 
@@ -140,15 +140,15 @@ oRog.AddGovernedSkill(oSk, "order-stock")
 
 The stock is low, the skill wants to order, and the agent was never given the permission. `Pursue()` printed `0`: governance refused it! Nothing happens, and the log says why, by name: `refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'`. The world is as it was.
 
-Put the pieces in a line and you have the stack the vision of the platform names (its North Star, ratified on 27 September 2026): perceive, decide, react, learn. None of it needs a language model. It is a design, not an assembled agent. In it, perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. The pieces exist in the library beside the agent, not yet inside it: the agent above calls none of them. A model may sit beside each step as one more faculty, and none of them depends on it.
+Put the pieces in a line and you have the stack the vision of the platform names as its North Star, ratified on 27 September 2026: perceive, decide, react, learn. None of it needs a language model. It is a design, not an assembled agent. In it, perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. The pieces exist in the library beside the agent, not yet inside it: the agent above calls none of them. A model may sit beside each step as one more faculty, and none of them depends on it.
 
 Chapter 18 tells the five registers of an answer and the conversation that asks. Chapter 19 tells the domain language model, from its first rung, with no neurons, to its second, trained on the first one's own facts and nothing else. Chapter 20 tells the agent that cannot hurt you: it proposes, a workbench rehearses, the court judges, and only a governed actor commits. Chapter 21 tells the court itself. Chapter 22 compares all of it with the field, and prints where the field leads.
 
 ## 4. The decision, and what I refused
 
-**I refused the AI model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The record holds no earlier sentence of mine than the architecture of July 2026, and the chapter opens as it does.
+**I refused the AI model as the mind.** When the models arrived, the move was to put one at the centre and fence it. I wrote the opposite into the architecture: the mind is programmatic by default, and a model is a pluggable faculty, one among several, never the definition of the mind. The industry's loop is a special case of this design, with one faculty and no governance. The earliest sentence of mine the record holds on this is the architecture of July 2026.
 
-**I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model can be added on top. It is never the price of admission. "Last" means after the programmatic path, and under the court and a budget, whether the model is local or remote. The record supports both readings, and the chapter does not choose between them.
+**I refused anything paid or remote as a requirement.** Every capability has a floor that needs no setup, no subscription and no network. A model can be added on top. It is never the price of admission. "Last" means after the programmatic path, and under the court and a budget. Whether the last proposer can be a remote model under that budget, or must always be a local one, the record allows both readings, and I do not choose between them here.
 
 **I refused guessing.** Every ambiguity refuses rather than guesses. The field's habit of prompting and keeping what comes out has a name now; here, guessing is replaced by asking, and vibes are replaced by governance.
 
@@ -182,7 +182,7 @@ The next section says where the law stops.
 
 What is built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
 
-What is designed: the thinking machine of Chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn, whose pieces exist beside the agent and not yet inside it. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan does not yet.
+What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn, whose pieces exist beside the agent and not yet inside it. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan does not yet.
 
 What is absent: four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
 
@@ -204,7 +204,7 @@ And one limit of the first rung that you will meet the moment you rephrase a que
 #--> Margherita is a dish.
 ```
 
-It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, the answer here is a refusal, and that refusal is the next step. I print it here because a law is shown by a page that prints its stage as it stands, limit included. I hold this as a view, not a result. The request to the library is to refuse a question whose verb is not a declared relation.
+It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, the answer here is a refusal, and that refusal is the next step. I print it here because a law is shown by a page that prints its stage as it stands, limit included. The request to the library is to refuse a question whose verb is not a declared relation.
 
 ## 8. Six doors
 

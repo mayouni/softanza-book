@@ -4,7 +4,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -12,7 +12,7 @@ In this chapter I run the two directions of natural language in the library: the
 
 In the field's common language, "programming in natural language" means one thing: asking an AI model for code, or asking it to do the task, in a prompt. The tools are chat assistants and code completers, in wide use since about 2021. What the sentence runs on is the model's guess. The same sentence may give different code on different days, the model needs a network or a local runtime, and a person reads the result to know what was understood. Chapter 11 said it, and I point back.
 
-Older practices exist, and the record names them. Inform 7, a language whose programs are English sentences, compiled whole, with a world model and a way to say *it* across sentences. AppleScript, English-like and hard to write, because its naturalness was on the surface and not in a semantic model. Controlled natural languages, whose strongest device, the library's own comment says, is showing what can be said next. A session's reading of 30 August 2026 is that Inform 7 is a whole-text compiler with referential context, and not a command dispatcher. (General knowledge for the dates, not a study of the record.)
+Older practices exist, and the record names them. Inform 7, a language whose programs are English sentences, compiled whole, with a world model and a way to say *it* across sentences. AppleScript, English-like and hard to write, because its naturalness was on the surface and not in a semantic model. Controlled natural languages, whose strongest device, the library's own comment says, is showing what can be said next. A session's reading of 30 August 2026 is that Inform 7 is a whole-text compiler with referential context, and not a command dispatcher. The dates are general knowledge, not a study of the record.
 
 None of them is what the record claims. The claim is the opposite of prompting: a sentence executes because every word of it is in a closed lexicon, defined as data, mapped to a verb the library documents. Anything else is refused with the reason. And it has two directions, which the library's design review tabulates. In the first, the machine is the parser. In the second, the human is.
 
@@ -20,7 +20,7 @@ None of them is what the record claims. The claim is the opposite of prompting: 
 
 **A sentence runs because every word of it is in a dictionary the library owns. What the library does not know, it refuses, with the reason.**
 
-The study's thesis line for the page it asked for, and the lede of the site's page of 8 October 2026, say it. For the second direction, the design review's thesis: in near-natural language, the human is the parser. And the older motto, which chapter 5 carries: what you think is what you write.
+My study of the record, and the lede of the site's page of 8 October 2026, say it. For the second direction, the design review's thesis: in near-natural language, the human is the parser. And the older motto, which chapter 5 carries: what you think is what you write.
 
 ## 3. The Softanza form
 
@@ -41,7 +41,7 @@ A near-natural chain is a sentence in which every link is a real call. The sente
 
 > run: kept
 
-The chain answers `no: expected exactly 1, found 2`. Degree words are devices, and the reason is kept. The block reads it with the console's `Why()`; the chain's own is `WhyCheckFailed()`:
+The chain answers `no: expected exactly 1, found 2`. Degree words are devices, and the reason is kept. The block reads it with the console's `Why()`; the chain also keeps its own, `WhyCheckFailed()`, which I do not call here:
 
 ```haro
 ? Q("AnnIE").AtLeast(2).VowelNB()
@@ -88,7 +88,7 @@ A chain branches on its own truth, and an ordinal is a word:
 
 > run: kept
 
-Questions work the same way. A force word opens a frame, one word and one method. A tag question ends in "or not". What does the session keep when one answers yes and the other no? It keeps every answer and folds them, like a narration:
+Questions work the same way. A force word, the question's first word (`What`, `HowMany` and `Is` in the block below), opens a frame, one word and one method. A tag question ends in "or not". What does the session keep when one answers yes and the other no? It keeps every answer and folds them, like a narration:
 
 ```haro
 ? @@( WhatQ().TheQ().VowelsQ().OfQ("AnnIE").Is() )
@@ -303,7 +303,7 @@ The Hausa pack speaks nine of twenty-five meanings: `ha 9 of 25`! And no model i
 
 The library names three eras, in a design document of 10 July 2026. The first is near-natural language, the first paradigm. The second is natural programming: lower the language toward code, with free text, and one object per block. The third, of 2026, is one lexicon shared by execution and documentation, multilingual packs with morphology, and `Understood()`. I call the third *the shared lexicon*. The vision's own heading for it uses a word this book does not use.
 
-Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. (The git dates come from the library's own repository, which the snapshot lacks. The commit dates were checked there on 9 October 2026, and the commits cited are ancestors of the pin.)
+Here are the dates, as the record gives them. My strategic diagram carries the years 2020 to 2025, shared on 13 September 2026; its Narrations band reads "executable natural language". The deck of 2022 was exported on 20 September 2022, and its slide 2 says to express thinking in an executable natural language. The library's repository begins on 12 March 2022, and its history cannot date 2020 or 2021. The near-natural files and the engine at its present path were first committed between 16 and 19 September 2025. On 30 October 2025 languages became configuration. On 2 November 2025 string input replaced brace capture. On 9 July 2026 the lexicon was unified from the documentation tags. On 10 July 2026 the two design documents were written, and the audit of fifteen canonical examples found that four ran, and two of those answered correctly. The site's flagship page is of 8 October 2026. The git dates come from the library's own repository, which the snapshot lacks; I checked them there on 9 October 2026, and the commits cited are ancestors of the pin.
 
 So the earliest slide the record dates is the founding slide of the 2022 deck, exported on 20 September 2022. The year 2020 is the first year of my strategic diagram, which was shared on 13 September 2026; the record holds no slide of 2020.
 
@@ -311,11 +311,11 @@ Now the decision, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I built it without an AI model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The layer quietly delivered a fourth promise that the old documents never dared to make: accountability.
+**I built it without an AI model, as a dictionary.** The design says everything in the natural folder attacks one wall: the semantic gap between a human intention and its execution. The thesis of near-natural language, in that review: zero NLP, zero ML, native speed, full determinism, and the programmer in control. The natural vision's closing observation is that the layer delivered a fourth promise the old documents never dared to make: accountability.
 
 **I decided on two directions, one discipline.** The review's table has five rows. Who parses: a machine with a lexicon, or the human. Ambiguity: refused loudly, or impossible by construction. Vocabulary: bounded by packs, or unbounded. Understanding: verified by the machine, or by a human reading. Audience: domain experts and AI agents, or programmers. Both end at the same place: a deterministic sequence of semantic operations.
 
-**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. That is my view of language, not a result. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
+**I refused markers on reference.** On 10 July 2026 I rejected the family of suffixes that marked a reference. The cipher was inverted by its own inventor from memory, it duplicated meanings, and language itself never marks reference this way. More than two hundred and sixty methods were removed. Chapter 11 tells it in two sentences.
 
 **I refused the ungrammatical chain.** The chain is the sentence, and an ungrammatical chain that runs is a bug. I hold this as a view, not a result. The doctrine is held by reading aloud, not by a machine, and I show the proof below.
 
@@ -339,9 +339,9 @@ The court comes next, and one guard in it fails.
 
 `nnl_narrated` proves the flagship sentence, the generated surface of nouns, the degree words, the conditional mood, the ordinal reference, the refusal that accounts for itself, the grammaticality doctrine, context on the chain, and the discourse tense. `multilingual_pack_narrated` proves packs as data, programs in French, Arabic and Turkish that run, verified affix stripping, a language added at runtime, and `Understood()` back in the program's language. `question_narrated` proves the question frames and that a frame with no aspect is refused. `literate_templates_narrated`, the documents and templates. `truthchain_narrated` and `interrogative_narrated`, the folded verdicts.
 
-`semantic_resolver_narrated` is the guard that ought to protect the dictionary, and at this commit it fails. A researcher ran it twice on 8 October 2026 and each time it stopped with an error: three assertions failed, and the run ended after the twenty-ninth. In that run the word "caps", which the guard asserts, resolved to a method for bounds, and "mirrored" resolved to nothing. The reason is the design's own: the vocabulary is read from the library's documentation tags, plus seventeen hand-written operations grown by reflection to about three thousand. So a documentation edit changes what a word means. The library refuses honestly in the second case: in that run `Unresolved()` named the word and `UnderstoodAll()` printed 0. The court of the dictionary has failed on the dictionary, and chapter 11, chapter 22 and chapter 2 name this guard.
+`semantic_resolver_narrated` is the guard that ought to protect the dictionary, and at this commit it fails. I ran it twice on 8 October 2026 and each time it stopped with an error: three assertions failed, and the run ended after the twenty-ninth. In that run the word "caps", which the guard asserts, resolved to a method for bounds, and "mirrored" resolved to nothing. The reason is the design's own: the vocabulary is read from the library's documentation tags, plus seventeen hand-written operations grown by reflection to about three thousand. So a documentation edit changes what a word means. The library refuses honestly in the second case: in that run `Unresolved()` named the word and `UnderstoodAll()` printed 0. The court of the dictionary has failed on the dictionary, and chapter 11, chapter 22 and chapter 2 name this guard.
 
-A researcher ran the other guards named above once each on 8 October 2026, and in that run they passed all their assertions; the book's own data holds only their counts. The assertion calls written in the seven guards named above sum to 269.
+I ran the other guards named above once each on 8 October 2026, and in that run they passed all their assertions; the book's own data holds only their counts. The assertion calls written in the seven guards named above sum to 269.
 
 ## 6. The field, and where it leads
 
@@ -349,9 +349,9 @@ The field leads in breadth of phrasing. An AI model accepts any phrasing in any 
 
 The field leads in whole-program semantics. Inform 7 compiles a whole world. Here a program is a sequence of operations on a live object.
 
-The field leads in an editor. In a researcher's run, the suggestion function answered nine continuations for a half-written sentence, and the code credits the controlled-language field for the idea. There is no editor here that shows them as you type.
+The field leads in an editor. In my run, the suggestion function answered nine continuations for a half-written sentence, and the code credits the controlled-language field for the idea. There is no editor here that shows them as you type.
 
-And there is a loss on the library's own side. `Understood()` prints verbs and not their arguments: the block of section 3 prints `contains` and not the 'r' it asked about. In a researcher's run, `Replace` printed as `replace`, and `Add 3 to it` printed as `add` while the result was 8. A reader who checks the machine's reading sees no 3. This qualifies chapter 11's claim that a person can check what the machine understood.
+And there is a loss on the library's own side. `Understood()` prints verbs and not their arguments: the block of section 3 prints `contains` and not the 'r' it asked about. In my run, `Replace` printed as `replace`, and `Add 3 to it` printed as `add` while the result was 8. A reader who checks the machine's reading sees no 3. This qualifies chapter 11's claim that a person can check what the machine understood.
 
 Where the win is, with the loss beside it: the same sentence gives the same answer, with a reason, in the user's language, and designed to run offline, which no guard measures. The loss is that the user's language must be in a pack, and a word outside is a literal or a refusal. The record says the winning case is regulated or sovereign work: an instruction that executes locally and can be audited to the word.
 
@@ -406,13 +406,13 @@ done
 
 > run: kept
 
-**Several chains of the old articles no longer run.** The sentence of the bridging article that carries `IsAMQ` needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ` and `TheirQ().FirstCharQ()` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. The bridging article's chain with `ReplaceLowercaseCharsQ` is not defined either. A researcher ran twelve chains of the near-natural article on 8 October 2026, and eight work. In that researcher's run, the bridging article's paragraph still ran in permissive mode, and printed two nested boxes around "NOTHING SOFTANZA" instead of the one it promises. The machine said so, since `UnderstoodAll()` is false and the unresolved word is named (the block above shows both), but a reader has to ask.
+**Several chains of the old articles no longer run.** The sentence of the bridging article that carries `IsAMQ` needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ` and `TheirQ().FirstCharQ()` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. The bridging article's chain with `ReplaceLowercaseCharsQ` is not defined either. I ran twelve chains of the near-natural article on 8 October 2026, and eight work. In that run, the bridging article's paragraph still ran in permissive mode, and printed two nested boxes around "NOTHING SOFTANZA" instead of the one it promises. The machine said so, since `UnderstoodAll()` is false and the unresolved word is named (the block above shows both), but a reader has to ask.
 
 What is built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
 
 What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes: I searched the folder, and no grammar emitter touches it. A guard that fails if a socket opens during a natural run, which does not exist. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
-What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. The record also holds no account, and no date, of the author's plea to the project of the former host language that natural programming be made a first concern. Nor does it hold a sentence of his in that voice that the book can source. All it holds is a private memo of 30 August 2026, which gives his judgement of the language's shipped natural form. The memo is marked private, so the book does not quote it and does not source any phrase to him.
+What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: a plain list in a natural sentence reaches host code, which chapter 11 prints, and a descriptor reaches host code, above. Any machine that judges a chain's grammar. The standard Hausa letter, which the pack stores broken. A dictionary protected from drift. The record also holds no account, and no date, of my plea to the project of the former host language that natural programming be made a first concern, nor a sentence of mine in that voice that the book can source. All it holds is a private memo of 30 August 2026, which gives my judgement of the language's shipped natural form. The memo is marked private, so the book does not quote it and sources no phrase of mine to it.
 
 ## 8. Six doors
 
@@ -424,7 +424,7 @@ What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer c
 
 **The decision-maker.** Ask any "natural language" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key. The no-network claim is not yet measured.
 
-**The educator.** A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no reviewer has read the course's other-language editions.
+**The educator.** A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no speaker of those languages has read this page's sentences, as far as the record shows.
 
 **The agent.** Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built.
 

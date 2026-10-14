@@ -4,21 +4,21 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:14 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
 
-In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
+In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of the first book of this imprint: stop trying to govern the intelligence, and govern the change.
 
 ## 1. The concept, as the field holds it
 
-The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing AI agents: specifications first, and the agent fills in. (General knowledge, not a study of the record.)
+The field has a name for changing infrastructure with a rehearsal: plan, then apply. A tool computes what would change, shows it, and applies it only when you say so. Terraform made the pattern familiar, and the field's admission controllers apply the same idea to a request before a cluster accepts it. More recently, the field has a name for a way of working with code-writing AI agents: specifications first, and the agent fills in. All of this is general knowledge, not a study of the record.
 
-What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. (General knowledge, not a study of the record.) That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume; I hold this as a view, not a result.
+What these share is where they stand. The plan and the admission control are about infrastructure and requests. For the code itself, much of the field's answer to a change is still a diff, a patch of text, and a person's review of it. That worked while every change had a person behind it who could be asked. It is a weak instrument when most changes arrive from agents, in volume; I hold this as a view, not a result.
 
 Against that weak instrument I set one sentence.
 
 ## 2. The first principle
 
-I wrote the sentence on the back cover of my first book, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
+I wrote the sentence on the back cover of the first book of this imprint, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
 
 The rest of the chapter runs that sentence.
 
@@ -56,7 +56,7 @@ r = o.Refine("vat").To("0.22")
 
 > run: kept
 
-And what does a proposal that does not clear the gate change, and what does the gate say? Run it:
+The admission prints as `1` and `0`, not `TRUE` and `FALSE`: that is how this verb answers, and I print the run. And what does a proposal that does not clear the gate change, and what does the gate say? Run it:
 
 ```haro
 r2 = o.Refine("vat").To("0.99")
@@ -76,7 +76,7 @@ r2 = o.Refine("vat").To("0.99")
 
 > run: kept
 
-Three refusals, and the timeline did not grow by a step! The library's comment calls this its third law: a rejected proposal never ends changed. Each refusal names its stage first, `constraint` twice and `structural` once, as in `structural: no refinement point 'ghost'`, so that a person, or an agent, can correct the proposal without reading a diff.
+Three refusals, and the timeline did not grow by a step! The library's comment calls this a law of its own: a rejected proposal never ends changed. Each refusal names its stage first, `constraint` twice and `structural` once, as in `structural: no refinement point 'ghost'`, so that a person, or an agent, can correct the proposal without reading a diff.
 
 **The cascade** is what you read instead of the diff. Before the change, ask what it reaches. There are two cascades, and they are separate. For a point, it is the line it sits on and the other points on that same line:
 
@@ -225,13 +225,13 @@ t.Redo()
 
 At zero, `CanRevert()` printed `0`. One `Redo()`, and the value is `0.21`, the first step again.
 
-That is the gate in the form the library has it. Five checks, in the order the code runs them. The structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. The header of the file calls this a four-stage gate in one line and five in another. The code numbers its checks 1, 2, 3, 4 and 4b. The trust check was added to the four on 16 July 2026, and the design's count was not changed. I report what runs: five checks.
+That is the gate in the form the library has it. Five checks, in the order the code runs them. The structure of the proposal, then the constraints of the point, then the governance, then the trust of the origin, and last the derivation across points. I ran them above in the order of the story, not of the code. The header of the file calls this a four-stage gate in one line and five in another. The code numbers its checks 1, 2, 3, 4 and 4b. The trust check was added to the four on 16 July 2026, and the design's count was not changed. I report what runs: five checks.
 
 Behind the gate stand decisions, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused to govern the intelligence.** Much of the field's approach to AI agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation. (General knowledge, as above.) I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world: this is my view. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
+**I refused to govern the intelligence.** Much of the field's approach to AI agents is to make the model safer: alignment, guardrails, a prompt that asks for confirmation; that too is general knowledge. I refused that frame. A model's output is whatever it is, from whichever model, and the intelligence of the next generation will not hold still for me to govern it. The change is the thing that stays, and it is the thing that reaches the world. So the gate stands where the change arrives, and it asks one thing: what is proposed, from where, and does the code say this point may change that way.
 
 **I refused the diff as the unit.** A diff is a text change. A refinement is a typed proposal about a declared point, with a kind, bounds and an origin. I kept the diff as an artefact, and I refused it as the thing to review.
 
@@ -247,11 +247,11 @@ Next comes the field, and where it leads.
 
 ## 6. The field, and where it leads
 
-The field leads in infrastructure, where plan and apply are the daily practice of many teams and the apply talks to real providers. (General knowledge, as in section 1.) Softanza's gate is about the change to code, which the field handles with a review.
+The field leads in infrastructure, where plan and apply are the daily practice of many teams and the apply talks to real providers; this is general knowledge, as in section 1. Softanza's gate is about the change to code, which the field handles with a review.
 
-The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
+The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. Softanza's gate judges what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
 
-And on trust, much of the field's approach is built to scale to any AI model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
+And on trust, much of the field's approach is built to scale to any AI model. Mine rests on one declaration per point.
 
 Now, where the gate stops.
 
@@ -266,7 +266,7 @@ What is built, and where it stops: the limits of the gate as it stands.
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes without a check; checks for those kinds are the next step.
 - An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
-- The saved file holds the rendered source; the history, the postures, the timeline and the load-back are absent, and are the next step. Reversibility lives in the running object, and carrying it into the file is still to come. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes `.rfn` for the sentence and leaves `.zrfn` to the library's comment-tag lift.
+- The saved file holds the rendered source; the history, the postures, the timeline and the load-back are absent, and are the next step. Reversibility lives in the running object, and carrying it into the file is still to come. The library writes this file with the suffix `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes the suffix `.rfn` for the refinement sentence of Haro, and leaves `.zrfn` to the library's lift from comment tags, the form this chapter ran.
 
 ## 8. Six doors
 
@@ -288,7 +288,7 @@ Take two settings of a program of yours: a rate and a ceiling, say, with a rule 
 
 Run it. If you were wrong about the stage, you have found a place where your own gate disagrees with your own expectation.
 
-I left this one in your hands. Section 7 says what the gate does with an origin the code does not know, and the trust block of section 3 is the block to run. Its first lines are below; change one thing, and replace `:llm` with a name of your own, one the code was never told about.
+I left this one in your hands. Section 7 says what the gate does with an origin the code does not know, and the trust block of section 3 is the block to run. Its first lines are below, and `d` is the object of that block, so run section 3 first; change one thing, and replace `:llm` with a name of your own, one the code was never told about.
 
 ```haro exercise
 d.TrustFloor("vat", :trusted)

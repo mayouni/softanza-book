@@ -20,7 +20,7 @@ Dans ce chapitre, je vous montre les cinq formes qu'une réponse peut prendre, u
 
 ## 1. Le concept, tel que le terrain le tient
 
-Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et une troisième se tient derrière son dernier registre. (Connaissance générale pour toute cette section, non une étude du dossier ; les dates sont à vérifier avant impression.)
+Deux pratiques se rencontrent dans l'idée d'une conversation qui demande, et une troisième se tient derrière son dernier registre. Toute cette section est de la connaissance générale, non une étude du dossier.
 
 La première est le remplissage d'emplacements (slot filling). Un cadre de dialogue demande à l'utilisateur les éléments manquants d'un formulaire jusqu'à ce que le formulaire soit plein. Les frameworks du terrain comprennent le texte libre avec des modèles entraînés, parlent sur de nombreux canaux et livrent des connecteurs, et ils demandent au concepteur d'écrire des intentions et des flux dans leur propre langage. Ils prennent la réponse de l'utilisateur pour la réponse et agissent dessus.
 
@@ -32,7 +32,7 @@ La troisième est la programmation par l'exemple. Les tableurs remplissent une c
 
 **Une réponse peut venir sous cinq formes. Quelle que soit la forme, elle n'est qu'un candidat, et ce sont les règles du monde qui décident si elle devient connaissance.**
 
-Le document de conception le dit en une phrase que je garde : l'expression est libre, l'admission est gouvernée. Le dossier tient cette phrase, captée à partir de ma directive du 13 juillet 2026. Il ne tient aucune phrase de moi sur le pourquoi de ces cinq registres et pas quatre ou six, ni sur le moment où j'ai opposé le wise coding au vibe coding. Le chapitre s'ouvre sur cette phrase.
+Le document de conception le dit en une phrase que je garde : l'expression est libre, l'admission est gouvernée. Le dossier tient cette phrase, captée à partir de ma directive du 13 juillet 2026. Il ne tient aucune phrase de moi sur le pourquoi de ces cinq registres et pas quatre ou six, ni sur le moment où j'ai opposé le wise coding au vibe coding.
 
 ## 3. La forme Softanza
 
@@ -182,7 +182,7 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence. Je tiens le silence pour la pire réponse, comme une vue et non comme un résultat : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute. Les mêmes exemples tapés comme une seule chaîne, jointe par une virgule, sont découpés et admis comme deux valeurs littérales, et le but se lit accompli. Les exemples sont devenus la connaissance. Rien n'a été induit.
+Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence. Je tiens le silence pour la pire réponse, comme une vue et non comme un résultat : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute, avec les mêmes exemples tapés comme une seule chaîne, jointe par une virgule. L'exercice à la fin de ce chapitre vous la remet.
 
 Ainsi trois des cinq registres sont câblés, l'un d'eux sous sa forme la plus simple, un séparateur. Deux ne le sont pas. Je préfère que vous le rencontriez ici plutôt que sur une page de moi qui aurait dit cinq.
 
@@ -320,7 +320,7 @@ oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").
 #--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
 ```
 
-Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve). Les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont donc pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
+Ainsi la bibliothèque ne peut pas demander en arabe ou en haoussa par `AskIn`. Ce qu'elle peut faire, c'est tenir les données dans n'importe quelle écriture, prendre un candidat calculé dans n'importe quel paquet de langue, et laisser le tuteur dire l'écart en quatre langues. Une valeur qui contient un espace lève une erreur pour le moment (la section 7 donne la preuve). Et le séparateur ne connaît que la virgule et le mot anglais « and » : les connecteurs « et » en français, « da » en haoussa et « و » en arabe ne sont pas des connecteurs. Les trois phrases ci-dessus sont celles de la bibliothèque, imprimées telles quelles, et le code les appelle un brouillon en attente d'un relecteur natif. Je n'ai écrit moi-même aucune phrase en arabe ou en haoussa.
 
 ### Un modèle d'IA est une fluidité, jamais l'esprit
 
@@ -344,7 +344,7 @@ oKF2.ConversationQ("f").SetFluency(:neural)
 
 **J'ai refusé de deviner.** La phrase du dossier est : deviner est remplacé par demander ; les impressions sont remplacées par la gouvernance. Un écart est une question. Une réponse est un candidat.
 
-**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance, et je tiens cela pour une vue, non pour un résultat. Les cinq registres passent par une seule porte.
+**J'ai refusé une barrière différente pour chaque façon de répondre.** Une formule n'est pas crue parce qu'elle est du code, et une structure n'est pas crue parce qu'elle est typée. La forme n'achète pas la confiance. Les cinq registres passent par une seule porte.
 
 **J'ai refusé un bouchon.** Un agent réservé lève une erreur quand on le demande. Le document de conception appelle l'erreur levée la loi qui fonctionne, et dit qu'il ne faut pas la lire comme un défaut. J'ai refusé de faire semblant que le cinquième registre fonctionne.
 
@@ -370,7 +370,7 @@ Le terrain mène en compréhension. Un cadre de dialogue, tel que le terrain le 
 
 Le terrain mène sur les exemples. La programmation par l'exemple est, telle que le terrain la tient, livrée dans les tableurs aujourd'hui. Softanza n'a aucune induction, et le dossier le dit : rien n'induit encore. Une recherche de « induce », « from examples » et « infer » dans le répertoire des expressions régulières ne trouve rien.
 
-Le terrain est honnête sur les coûts, et le dossier aussi. Plusieurs candidats est le cas normal quand on demande une règle à partir d'exemples. Un motif induit de trois exemples les surapprend. Le remède que nomme le dossier est la question qui distingue deux candidats. Et l'index qui porterait les exemples est aussi propre que les étiquettes des méthodes, avec environ quatre-vingt-cinq fautes d'orthographe.
+Le terrain est honnête sur les coûts, et le dossier aussi. Plusieurs candidats est le cas normal quand on demande une règle à partir d'exemples. Un motif induit de trois exemples les surapprend. Le remède que nomme le dossier est la question qui distingue deux candidats. Et l'index qui porterait les exemples est, selon les mots de l'étude, aussi propre que les étiquettes des méthodes, dans lesquelles l'étude compte environ quatre-vingt-cinq fautes d'orthographe.
 
 Voici où je pense que le dossier se distingue. Chaque réponse, sous quelque forme que ce soit, est jugée par les lois du monde avant de compter, avec la raison. La session garde une transcription et un point de contrôle qu'une personne peut lire. La réponse du terrain est un prompt, et l'humain garde ce qui sort.
 
@@ -380,9 +380,9 @@ La limite vient ensuite, et elle nomme ce qui est construit, ce qui est conçu e
 
 Ce qui est construit : le but, l'écart, la question avec sa raison, le cadre ; le premier registre, le deuxième, et le quatrième sous la forme d'un séparateur ; la porte gouvernée avec ses refus. Et le point de contrôle et sa durée de vie ; le but accompli ou révoqué ; la transcription ; un agent câblé ; la phrase d'écart du tuteur en quatre langues.
 
-Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes. Les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse. Et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Et l'exemple réécrit comme promesse : la page du site *by example* (lue le 9 octobre 2026) l'appelle une règle de la conception, non construite. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit ». Les deux pages promettent plus que le code. Je le dis pour que la page ou le code soit corrigé. Le code câble trois registres sur cinq. La note qui nomme la formule et les exemples les liste comme en attente, non acheminés, et pour ce chapitre ils sont absents.
+Ce qui est conçu : la branche *plusieurs acceptables* telle que la conception l'écrit. Le protocole dit que lorsque plusieurs lectures d'une réponse sont acceptables, le système les énumère et la personne choisit. Ce qui est construit, ce sont deux choses différentes. Les valeurs déjà connues deviennent des options numérotées dans la question, avant la réponse. Et une réponse qui porte plusieurs valeurs voit chacune jugée à part, la première étant gardée sous une loi d'unicité. Aucune étape ne présente des lectures concurrentes d'une même réponse. Et la branche *aucune acceptable* telle qu'écrite : la raison est construite, et les alternatives acceptables les plus proches ne le sont pas. Le refus énonce une raison, et pour un numéro, combien d'options étaient sur la table. Et l'exemple réécrit comme promesse : la page du site *by example*, lue le 9 octobre 2026, l'appelle une règle de la conception, non construite. Les deux pages du site à ce sujet, *wise* et *by example*, disent « avec les alternatives les plus proches » et « la personne choisit ». Les deux pages promettent plus que le code. Le code câble trois registres sur cinq. Le dossier nomme la formule et les exemples comme en attente, non acheminés, et pour ce chapitre ils sont absents.
 
-Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une valeur avec un espace. Lors de l'exécution de recherche du 8 octobre 2026, sur la version de la bibliothèque que ce livre exécute, `ReplyIn` a levé une erreur sur chaque valeur contenant un espace que j'ai essayée. L'erreur était une variable non initialisée. Les trois étaient « tomato sauce », « fromage et tomate », « jibini da tumatir ». Appelée directement, la porte a renvoyé correctement le refus. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, de sorte que l'exécution du livre ne les montre pas. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est dans la note comme demande, et l'exercice ci-dessous n'emploie pas de valeur avec un espace.
+Ce qui est absent : le registre de la formule ; le registre de l'exemple, et l'agent d'induction derrière lui ; une conversation formulée en arabe, en haoussa ou en français ; et une valeur avec un espace. Lors de mon exécution du 8 octobre 2026, sur la version de la bibliothèque que ce livre exécute, `ReplyIn` a levé une erreur sur chaque valeur contenant un espace que j'ai essayée. L'erreur était une variable non initialisée. Les trois étaient « tomato sauce », « fromage et tomate », « jibini da tumatir ». Appelée directement, la porte a renvoyé correctement le refus. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, de sorte que l'exécution du livre ne les montre pas. La conversation aurait dû refuser avec la raison et écrire un point de contrôle, et elle ne le fait pas. C'est une demande à la bibliothèque, et l'exercice ci-dessous n'emploie pas de valeur avec un espace.
 
 ## 8. Six portes
 

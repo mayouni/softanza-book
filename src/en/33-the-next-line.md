@@ -88,13 +88,13 @@ oDep = oDel.Deploy(:Production)
 #--> sandbox-in-production @ shop/payments
 ```
 
-The person was allowed to deploy. The delivery refused it! `WasCommitted()` answers `0`. Why did it refuse? The log says: `sandbox-in-production @ shop/payments`. A payments service that is a sandbox cannot be what a real customer pays through. This is not a question of authority. It is a question of what is true.
+The person was allowed to deploy. The delivery refused it! `WasCommitted()` answers `0`. Why did it refuse? The log's first error entry says only that the external surface is not production-ready; the second names the service: `sandbox-in-production @ shop/payments`. A payments service that is a sandbox cannot be what a real customer pays through. This is not a question of authority. It is a question of what is true.
 
 So the floor is there: declare, build, rehearse, refuse the fake, commit through a governed actor.
 
 Now what the projects show, and the step after them.
 
-Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record, a reading made by a session of an AI model, wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
+Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce. An amendment closed on 4 August; the notebook shows that the owner took part in the first demonstration, and on 19 August he made a day of field measurements with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, each lesson it names and the file of the library that carries it. Part VI of this book tells their stories.
 
 And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is designed, and its build is to come. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken. That step is the next one.
 
@@ -103,9 +103,9 @@ So the next line is this one: *the solution ran on Softanza's own engine, and th
 What leads from here to that line? Five steps, read from the record and not composed.
 
 1. **A customer's declarations run on the engine instead of the ordinary stack.** The site says the declarations are being written as Softanza's own; I found no file of them yet, and chapter 31 says where I looked. The move to the engine is the next step.
-2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass and passes twice when run alone. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Whether Haro's own runtime runs the library is not yet measured.
+2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass and passes twice when run alone. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Those are two counts and not one: the first is of the suite's assertions, the second of whole programs, a program counted as agreeing only when every stable line it prints is the same on both runtimes. The morning's run gave 3,425, the figure chapter 27 prints; the 3,461 are the evening's, after a day of fixes. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Whether Haro's own runtime runs the library is not yet measured.
 3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. The sheet is designed, and the first one is yet to be written.
-4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine, a device written as a declaration, boots and judges itself in an emulator. Its hosted profile makes four promises: it is always reachable, it has a stable name, it keeps a durable log, and it survives a cut. The emulator can check three. The fourth waits for a watchdog on a real board. (General knowledge, a watchdog is a hardware timer that restarts a machine that stops answering.) The site says no production workload is on it yet.
+4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine, a device written as a declaration, boots and judges itself in an emulator. Its hosted profile makes four promises: it is always reachable, it has a stable name, it keeps a durable log, and it survives a cut. The emulator can check three. The fourth waits for a watchdog on a real board, a watchdog being, in the field's plain sense, a hardware timer that restarts a machine that stops answering. The site says no production workload is on it yet.
 5. **A person perceives it, and the record says who.** Not a counter. A person, named, with a date and what they said.
 
 The last step is a law of the estate, and it was earned. The sound plane of the library once held hundreds of passing assertions while, to my ear, it did not yet sound right. Since then, a piece of work that reaches a person through a sense must ship in a form a person can perceive, and the record must say who perceived it and what they said. And when nobody has, the law says it plainly: unperceived is a state, not a failure. A report may be honest and still be unperceived.
@@ -122,9 +122,9 @@ The record also holds two verdicts still to come. The pictures the library draws
 
 **I refused to move a platform by rewriting it.** A customer's platform moves to the engine as a change of engine, not of plan. The declarations are to be written once, as Softanza's own, and the engine beneath them changes. I hold this as a view, not a result.
 
-**I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. The study that read the record ruled that the figure should not be printed without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
+**I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. I do not print it without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
 
-**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. This is my view, and the sound plane above, with its hundreds of passing assertions and the sound that was not yet right, is what stands behind it.
+**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. The sound plane above, with its hundreds of passing assertions and the sound that was not yet right, is what stands behind it.
 
 ## 5. The court
 
@@ -134,7 +134,7 @@ The court of this chapter's subject is not a guard. It is a line in the record: 
 
 ## 6. The field, and where it leads
 
-The field leads in production. Ordinary stacks run real workloads for real users today (General knowledge, not a study of the record); the record's own page names among them the bank's Python application, installed under licence. The restaurant's first version is single-file web worlds, delivered, with a day of field measurements on 19 August, and the hub is designed.
+The field leads in production. Ordinary stacks run real workloads for real users today, a fact of the field and not a reading of the record; the record's own page names among them the bank's Python application, installed under licence. The restaurant's first version is single-file web worlds, delivered, with a day of field measurements on 19 August, and the hub is designed.
 
 The field leads in live infrastructure. Its tools drive real providers and real hosts every day; Softanza's deployment is proven end to end on local sites and rehearses the rest; live verification against a real host is the next step.
 
@@ -142,7 +142,7 @@ The field leads on hardware in the field. Its devices run in shops and clinics; 
 
 The field leads on speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and the estate's note recorded the measure.
 
-Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
+Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artefact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
 ## 7. The limit
 
@@ -166,7 +166,7 @@ What is absent: a customer solution running on the Softanza engine, a named pers
 
 **The educator.** Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.
 
-**The agent.** You may rehearse a deployment and explain it. You will be refused when you try to perform it, (chapter 24 shows the refusal).
+**The agent.** You may rehearse a deployment and explain it. You will be refused when you try to perform it (chapter 24 shows the refusal).
 
 ## 9. Exercise
 
@@ -181,9 +181,7 @@ oP.SetProfile(oSol)
 # your three questions here, each with the line you expect under it
 ```
 
-Run it. Then write one more line, the next one for your own project, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
-
-I left this one in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
+Run it. Then this one, which I also left in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
 
 ```haro exercise
 oReg = new stzServiceRegistry("shop")
@@ -200,4 +198,4 @@ oDep = oDel.Deploy(:Production)
 
 Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an AI agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
-The book ends here, and every block in it is yours to run again. It ends on the next milestone: a solution on Softanza's own engine, and what a named person who used it says.
+Every block in this book is yours to run again. Now write one more line, the next one for your own project, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.

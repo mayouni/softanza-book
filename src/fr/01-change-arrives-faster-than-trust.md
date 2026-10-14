@@ -45,7 +45,20 @@ Laissez-moi vous montrer plutôt que dire, par l'exemple, ce qui a toujours ét�
 
 Une solution déclare qu'elle dépend d'un service de courrier. Pendant que je programme, je lie cette dépendance à un bac à sable : un objet qui capture chaque message et n'envoie rien, pour que mes tests puissent lire ce qui *serait* parti. Gratuit, hors ligne, déterministe. Puis je déplace la solution en production, le bac à sable toujours lié, comme on le fait à deux heures du matin avant une démonstration.
 
-Le registre ne la déclare pas saine. La première ligne qu'il imprime est un zéro, et la deuxième dit pourquoi : un faux ne doit jamais être livré. Le faux est refusé par son nom, et un service déclaré et jamais lié lève une erreur au moment où on le demande, au lieu de ne rien faire en silence. Je n'ai pas eu à me souvenir de le vérifier. La phase a décidé de ce qui revient, et la vérification est imposée, non mémorisée.
+```haro
+oReg = new stzServiceRegistry("my-solution")
+oReg.Bind(:mail, new stzMailSandbox())
+oReg.SetPhase(:emulated)
+? oReg.IsSound()
+#--> 1
+oReg.SetPhase(:production)
+? oReg.IsSound()
+#--> 0
+? oReg.Findings()[1][:message]
+#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+```
+
+Le registre ne la déclare pas saine. En phase émulée il répond un ; en production il répond zéro, et la ligne suivante dit pourquoi : un faux ne doit jamais être livré. Le faux est refusé par son nom, et un service déclaré et jamais lié lève une erreur au moment où on le demande, au lieu de ne rien faire en silence. Je n'ai pas eu à me souvenir de le vérifier. La phase a décidé de ce qui revient, et la vérification est imposée, non mémorisée.
 
 C'est toute la philosophie en une petite scène. L'expression est libre : liez ce que vous voulez, aussi longtemps que vous voulez. L'admission est gouvernée : la barrière lit la phase et la liaison, et refuse.
 
@@ -77,7 +90,7 @@ Chaque chapitre de ce livre porte cette section, et j'ai promis dans la préface
 
 **J'ai refusé de laisser quoi que ce soit entrer dans BASE sans un tribunal, et j'ai échoué.** Les trois couches de la bibliothèque, NOYAU, BASE et MAX, devaient garder le fondement petit et les innovations au-dessus. Sous la pression du temps, j'ai laissé tout aller dans BASE : quatre-vingt-treize pour cent du code s'y trouve aujourd'hui, et la règle de dépendance est tenue au niveau du moteur et rompue au niveau de l'héritage. Je le dis au premier chapitre, non au dernier, parce que la discipline que je m'apprête à prêcher pendant trente-deux chapitres est une discipline que j'ai enfreinte, et l'étude du dossier m'a pris sur le fait. C'est à cela que sert un tribunal, et celui des couches n'est encore que proposé.
 
-**J'ai refusé une seconde intégration.** Quand quelqu'un demande « et Python, et JavaScript, et mon langage », la réponse est une porte, à gouverner, et jamais un autre runtime hôte cousu dans la plateforme. Les sept langages du dossier ont été choisis pour sept couches d'une solution, et le chapitre 16 les compte. La porte est la réponse à « et le langage X », et c'est une seule réponse, pas vingt.
+**J'ai refusé une seconde intégration.** Quand quelqu'un demande « et Python, et JavaScript, et mon langage », la réponse est une porte, à gouverner, et jamais un autre runtime hôte cousu dans la plateforme. Les sept langages du dossier, l'hôte et six runtimes derrière une seule porte, ont été choisis pour sept couches d'une solution, et le chapitre 16 les compte. La porte est la réponse à « et le langage X », et c'est une seule réponse, pas vingt.
 
 Ce qui a été refusé fait autant partie de Softanza que ce qui a été construit. Vous ne trouverez pas les refus sur le site, parce que le site montre ce qui est. Vous les trouverez ici, dans chaque chapitre, sous ce titre.
 
@@ -85,7 +98,7 @@ Ce qui a été refusé fait autant partie de Softanza que ce qui a été constru
 
 Qu'est-ce qui prouve ce chapitre ? Trois choses, et je vous les donne par leur nom pour que vous puissiez les vérifier plutôt que me croire.
 
-Le refus d'un faux en production par le registre de services est une garde, `service_registry_narrated`, dans le volet système. La suite proposer, répéter, juger et valider de l'agent d'IA est `safeworld_narrated`, soixante-seize assertions, dans le volet agentique, à côté de `governance_crossing_narrated`, dans le volet système, pour la traversée elle-même. Le bloc de code ci-dessus a été exécuté par l'exécuteur propre du livre à l'intérieur de la bibliothèque la nuit où cette page a été construite, et sa sortie est montrée telle qu'elle est venue.
+Le refus d'un faux en production par le registre de services est une garde, `service_registry_narrated`, dans le volet système. La suite proposer, répéter, juger et valider de l'agent d'IA est `safeworld_narrated`, soixante-seize assertions, dans le volet agentique, à côté de `governance_crossing_narrated`, dans le volet système, pour la traversée elle-même. Les blocs de code de cette page ont été exécutés par l'exécuteur propre du livre à l'intérieur de la bibliothèque la nuit où cette page a été construite, et sa sortie est montrée telle qu'elle est venue.
 
 Trois gardes pour un chapitre de philosophie peuvent sembler peu. Ce sont les trois bonnes, parce que ce sont les trois endroits où la philosophie rencontre un verdict.
 
@@ -101,7 +114,7 @@ Ce sont des affirmations, et chacune a son chapitre et sa garde. Je les liste ic
 
 La limite honnête de ce chapitre est aussi la limite honnête de toute la plateforme, et je la mets sur la première page à dessein.
 
-Softanza a été utilisé. Une banque à Niamey fait tourner une plateforme d'évaluation dont la construction a façonné Softanza, sous licence, attestée par le guide d'installation que nous avons livré. Un restaurant à Lyon fait tourner une plateforme pour le commerce de quartier dont le propriétaire a fait lui-même la première démonstration, sur son propre téléphone, par une application de messagerie. Une organisation au Niger a son hub conçu. Leurs leçons sont dans le code, par nom de fichier, dans la partie VI.
+Softanza a été utilisé. Une banque à Niamey fait tourner une plateforme d'évaluation dont la construction a façonné Softanza, sous licence, attestée par le guide d'installation que nous avons livré. Un restaurant à Lyon fait tourner une plateforme pour le commerce de quartier dont le propriétaire a fait seul la première démonstration, sur son propre téléphone, avec une application de messagerie comme ligne d'assistance. Une organisation au Niger a son hub conçu. Leurs leçons sont dans le code, par nom de fichier, dans la partie VI.
 
 Mais les plateformes clientes tournent aujourd'hui sur des piles ordinaires. Celle de la banque est une application Python ; celle du restaurant est un ensemble de mondes web d'un seul fichier ; le hub de l'organisation n'est pas construit. Leurs déclarations sont en cours d'écriture comme celles de Softanza elle-même, de sorte que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Ce passage est l'étape suivante. Le tribunal est construit, et les plateformes existent ; le prochain jalon est la première d'entre elles tournant sur le moteur. C'est la ligne suivante que ce livre portera, et le chapitre 33 ne parle de rien d'autre.
 

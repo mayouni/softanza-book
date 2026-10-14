@@ -36,7 +36,7 @@ Two acts. Everything else in this book is one of them, or the two together.
 
 "From first principles" can be checked. In this book it has a narrow meaning. Take a concept everyone uses, write down how the field holds it, redesign it, and leave code that carries the redesign and a court that judges it. The site's history page is titled *From first principles*, and the library has been on GitHub since 12 March 2022. The phrase is not decoration here. It is a work order.
 
-Let me show you the smallest rethink I know. Ask Python how many times the empty string occurs in the word "text", and it answers five: one before each letter and one at the end. Ask it whether "text" contains the empty string, and it says yes; JavaScript says the same. (Python 3.13 and Node 22, run on 8 October 2026.) That is a convention of implementers, not a fact anyone would say aloud. Softanza states a rule instead, and the rule has a name in the narration that argues it: emptiness is uncountable, and emptiness is uncontainable. What does Softanza answer to the same two questions? Run it:
+Let me show you the smallest rethink I know. Ask Python how many times the empty string occurs in the word "text", and it answers five: one before each letter and one at the end. Ask it whether "text" contains the empty string, and it says yes; JavaScript says the same. I asked Python 3.13 and Node 22, on 8 October 2026. That is a convention of implementers, not a fact anyone would say aloud. Softanza states a rule instead, and the rule has a name in the narration that argues it: emptiness is uncountable, and emptiness is uncontainable. What does Softanza answer to the same two questions? Run it:
 
 ```haro
 ? Q("text").Count("")
@@ -115,7 +115,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`! "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
-So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran. The second, **designed**, covers what the site calls in construction, specification and ratified proposal. The third, **absent**, covers a name with nothing behind it yet, and what nobody has named. Then six doors, one for each kind of reader, and one exercise.
+So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **absent**, covers what the site calls *named*, a name with nothing behind it yet, and what nobody has named. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
 
 And the book is judged the way the library is. Every block in it ran inside the library on the night the page was built, at the commit printed at the top of the page. A page whose promises are not kept does not build.
 
@@ -123,11 +123,11 @@ And the book is judged the way the library is. Every block in it ran inside the 
 
 There is no single record of a decision called "the method". The method was decided in pieces, and the pieces are in the record.
 
-**I refused to add a feature without a need.** I wrote it in an article of the library, which carries no date. "I introduce new features only when they solve a tangible problem or when I anticipate they'll meet developers' needs." First principles without that rule produce a museum. That is my view, not a result. With it, a rethink has to earn its place: someone had a problem the field's form did not answer.
+**I refused to add a feature without a need.** I wrote it in an article of the library, which carries no date. "I introduce new features only when they solve a tangible problem or when I anticipate they'll meet developers' needs." First principles without that rule produce a museum. With it, a rethink has to earn its place: someone had a problem the field's form did not answer.
 
 **I refused general-purpose code as the meeting ground between people and machines.** The vision of the platform says it in one line, which I ratified. Humans and AIs meet in declared languages, small, closed and judged, and not in general-purpose code. Declaring is the first act because it makes the second possible. A court can only judge a sentence of a language it knows.
 
-**I refused a title that looked back.** When this book was first proposed, its title was *Programming by Heart*, the slogan of the 2020 presentation. I turned it down as outdated: it named a stance, and the book had to name what was rethought. The next proposal was *Declare, Then Govern*. I kept the site's own sentence for the cover instead (on 8 October 2026 I changed one word of it, for *crafters*). The two verbs moved to the back cover, where you will find them. They organise every chapter; they did not need to be its name.
+**I refused a title that looked back.** When this book was first proposed, its title was *Programming by Heart*, the slogan of the 2020 presentation. I turned it down as outdated: it named a stance, and the book had to name what was rethought. The next proposal was *Declare, Then Govern*. The cover carries instead the sentence the preface gives: declare what you know, a court keeps it, the AI model comes last. The two verbs moved to the back cover, where you will find them. They organise every chapter; they did not need to be its name.
 
 **I refused the grid alone.** The library's documents hold dozens of comparison grids, and in them Softanza's column wins almost every row. A reader who sees only those grids is right to ask for more than a grid. The honesty in the record is elsewhere: in the sections of the field studies titled "what the field has that Softanza lacks, honestly", and in measured numbers. When the runtime beneath Softanza was measured again in September 2026 against the one it was compared with, the earlier headline did not reproduce. The loss was recorded the same day, in an internal memo. That is the rule this book follows: a loss is printed beside the win, in the same section.
 
@@ -155,19 +155,19 @@ What is built: the court behind every block of this chapter but the truth one, a
 
 What is designed: the register of rethought concepts as data, one row per concept with its article, its code, its guard and its stage. Beside it, a guard that fails when a new concept arrives without a row. Both are a specification today.
 
-What is absent: a page that shows each concept with a run proof (the site has a register page, read on 9 October 2026, that lists each with its evidence). A test file for the engine module of one paradigm engine, section merging: it has none of its own, though its merge methods run in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today. Its friendlier quantifiers, some, most and few, draw at random, so they carry no promise today. The register is a reading, and a reading can miss a concept that lives in only one article.
+What is absent: a page that shows each concept with a run proof; the site's register page, read on 9 October 2026, lists each with its evidence. A test file for the engine module of one paradigm engine, section merging: it has none of its own, though its merge methods run in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today. Its friendlier quantifiers, some, most and few, draw at random, so they carry no promise today. The register is a reading, and a reading can miss a concept that lives in only one article.
 
 That is where this chapter stops; six doors follow, one for each kind of reader.
 
 ## 8. Six doors
 
-**The programmer.** Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's update point (`Update()` for a string or a number, `_SetContent()` for a list).
+**The programmer.** Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's single update point, the one `UpdateWith()` reaches: `Update()` for a string or a number, `_SetContent()` for a list.
 
 **The analyst.** Your rule is a declaration, and its verdict names the rule that failed, by number.
 
 **The designer.** The stage word is part of the interface. A product that does not exist yet says so, in a word you can check.
 
-**The decision-maker.** Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by 1.04 to 1.88 times, measured on 13 September 2026.
+**The decision-maker.** Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by a factor between one and two on every row, measured on 13 September 2026; chapter 27 gives the rows.
 
 **The educator.** Each rethink has an article that argues it: the concept, the field's form, the redesign. That is a curriculum, ordered by family.
 

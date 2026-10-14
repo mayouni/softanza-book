@@ -4,15 +4,15 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
 
-In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
+In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and the six things I refused, among them the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
 ## 1. The concept, as the field holds it
 
 Each lesson of this project has an ordinary home in the field, and the field keeps it outside the program.
 
-A fixed scope for a cycle lives in a process. In Scrum the goal of a sprint does not change while it runs; in Shape Up, the time is fixed and the scope varies, and new ideas wait outside the cycle. Trying a service before paying for it lives in a vendor's test mode and in tools that stand in for an HTTP service. A performance budget lives in a continuous-integration check of a page's weight and speed. The web's own measure of speed is a figure taken over real page loads, at the seventy-fifth percentile. The picture of a whole constellation of small applications lives in the super-app: one host that embeds a runtime and runs mini-applications inside it. (All of this is general knowledge, not a study of the record.)
+A fixed scope for a cycle lives in a process. In Scrum the goal of a sprint does not change while it runs; in Shape Up, the time is fixed and the scope varies, and new ideas wait outside the cycle. Trying a service before paying for it lives in a vendor's test mode and in tools that stand in for an HTTP service. A performance budget lives in a continuous-integration check of a page's weight and speed. The web's own measure of speed is a figure taken over real page loads, at the seventy-fifth percentile. The picture of a whole constellation of small applications lives in the super-app: one host that embeds a runtime and runs mini-applications inside it. All of this is general knowledge, not a study of the record.
 
 All four are good practices, and in all four the program itself knows nothing of them.
 
@@ -86,7 +86,7 @@ oPay.Capture(aAuth[:id])
 
 > run: kept
 
-Three answers, and none of them is an empty string: `declined`, `refused`, and `this authorization was already captured`.
+Three lines printed, a decline, a refusal and a reason, and none of them is an empty string: `declined`, `refused`, and `this authorization was already captured`.
 
 And the production gate refuses to open while a fake is still bound, even for an entitled person. Here the live binding is an HTTP sandbox standing in for an adapter, as the guard does it: the registry holds only the name of the secret. What does the production gate answer when the owner, entitled, asks for production while the fake is still bound? Run it:
 
@@ -112,7 +112,7 @@ oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
 
 > run: kept
 
-The owner is entitled, and he is refused! Nothing is committed, and the log says why: `REFUSED -- the external surface is not production-ready`; the reason under it is the rule: `a fake must never ship`. It opens when the binding is real.
+The owner is entitled, and he is refused! Nothing is committed, and the log says why: `REFUSED -- the external surface is not production-ready`; the reason under it is the rule: `a fake must never ship`. It opens when the binding is declared live: the gate reads the binding's kind, sandbox or live, and not the class behind it, which is why an HTTP sandbox bound as live opens it here.
 
 **The constellation.** When he reversed the order of the work, the project's architecture was redrawn as a constellation of five worlds on a shared ground. The worlds are the customer's phone, the kitchen screen, the merchant's workshop, management, which is the first application kept and put to sleep, and the publisher's console. The shared ground is identity, the catalogue, orders, payments and the fleet. In the library, the last world in the order of work can be put to sleep, and it is revived when its turn comes. What does a call across a bond answer while the target world sleeps, and after it is revived? Run it:
 
@@ -145,7 +145,7 @@ oCon.Revive("supplier")
 
 The call across the bond passes. The call to the sleeping world is refused! The reason is one line: `target world 'supplier' is not active.` Revived, it passes.
 
-**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. I hold this as a view, not a result. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations and judges them against what was measured. A breach fails the same gate as a security finding. The bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
+**The speed budget.** The owner's first priority was speed, so speed had to be a promise judged by something, not an aspiration. I hold this as a view, not a result. The budget has three numbers: the time to first display, the time to react to a tap, and the time for an order to reach the kitchen. The library declares them next to the code as expectations and judges them against what was measured. A breach fails the same gate as a security finding. He tightened the thresholds himself, in his second scoping, and I print none of them. The name of the monitor, the bounds and the samples in this block are mine, to show the form; they are not the project's budget. What does a breach look like? Run it:
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
@@ -176,7 +176,7 @@ oRep.Ingest(oSla.Findings())
 
 The first check prints `3 expectation(s), last check: MET.` Then one order takes 3100 milliseconds, and the gate is no longer sound! The finding says it in the budget's own words: `p95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)`.
 
-Does the library carry what the project learned about interfaces? It does not. The project's file of interface rules is experience in a few lines: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden. And one test: a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check. So by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
+Does the library carry what the project learned about interfaces? It does not. The project's file of interface rules is experience in a few lines, fifteen rules under one directive that the project calls the three-second test, that a restaurateur has no time to look at a crowded screen for several seconds: one clear action per screen; undo instead of confirm; a button that is refused is disabled in view, never hidden. And one test: a simulated first day on an empty database found the gravest hole, that no supplier could be created in production. Those rules were forged, in the project's own count, by eleven iterations and a campaign of twenty-two simulated tests with seventeen fixes. The library carries none of them as a check. So by the rule of this chapter they are the project's lesson and not the library's, and I tell them here without a block.
 
 Six refusals follow, each with its reason.
 
@@ -186,7 +186,7 @@ Six refusals follow, each with its reason.
 
 **I refused to throw the first application away.** When the owner reversed the order, the application already built was kept, dormant, until the first version of the new order was in production. The project's own words for it: nothing is thrown away.
 
-**I refused silent drift.** The Lock exists because a project that has failed once drifts without anyone deciding to. That is my view. A second change of course before the first version runs in production is refused, and so is an idea that enters the cycle without a written exit.
+**I refused silent drift.** The Lock exists because a project that has failed once drifts without anyone deciding to. A second change of course before the first version runs in production is refused, and so is an idea that enters the cycle without a written exit.
 
 **I refused the agreeable fake.** A double that silently answers with an empty string produces a test that passes for the wrong reason. The sandbox declines when a gateway declines, refuses when a gateway is down, and refuses a second capture. And I refused a fixed fee before the go-live gate: no subscription to a payment institution before the owner's written go.
 

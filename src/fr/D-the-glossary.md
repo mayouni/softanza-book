@@ -46,7 +46,9 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **moteur.** La bibliothèque Zig qui fait le travail une fois, sous chaque surface. Chapitre 27.
 
-**facette.** Dans ce livre, trois sens, que les chapitres 12, 16 et 26 gardent distincts. (1) Une surface d'un langage déclaré : son texte, son tribunal, sa bouche, sa voix, ses langues. (2) Une syntaxe de Haro qu'un programmeur d'un autre langage pourrait écrire ; le dossier appelle cela une face, et seule ma déclaration la nomme. (3) Un outil du ruban d'un environnement, ordonné par la vie de la chose que l'on fait. Une facette est une syntaxe et jamais un runtime.
+**domaine de projets.** Mon ensemble de projets : une vingtaine de dépôts qui dépendent les uns des autres, la bibliothèque parmi eux, écrits sur une seule machine sous un seul protocole. Chapitre 32.
+
+**facette.** Dans ce livre, trois sens, que les chapitres 12, 16 et 26 gardent distincts. (1) Une surface d'un langage déclaré : son texte, son tribunal, sa bouche, sa voix, ses langues. (2) Une syntaxe de Haro qu'un programmeur d'un autre langage pourrait écrire ; le dossier appelle cela une face ; ce livre dit facette, et le chapitre 12 la définit. (3) Un outil du ruban d'un environnement, ordonné par la vie de la chose que l'on fait. Une facette est une syntaxe et jamais un runtime.
 
 **faux.** Un double qui dit qu'il en est un : un bac à sable, un puits de courrier, une réponse enregistrée. Un faux ne doit jamais être livré. Un double qui ne dit rien de lui-même est pris pour réel, et passe la barrière. Chapitre 24.
 
@@ -65,6 +67,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 **garde.** Un fichier de l'arbre de tests de la bibliothèque qui contient des assertions, et qui prouve un chapitre. Ce livre compte les assertions d'une garde et n'exécute pas la plupart d'entre elles. Chapitres 5, 21.
 
 **Haro.** Le langage dans lequel ce livre écrit : la surface de l'ancien langage hôte, gardée et rebaptisée, avec une charte et un runtime encore en construction. Haro n'exécute pas encore la bibliothèque. Chapitres 3, 27.
+
+**règles de la maison.** Les quatorze règles que la bibliothèque lance sur son propre code, cinq sur un graphe du code et neuf sur son texte : un tribunal qu'un agent d'IA peut lancer avant de commiter. Pas les quatorze règles d'écriture du chapitre 7, qu'aucune machine ne juge. Chapitres 5, 32 ; annexe B.
 
 **registre (de sécurité).** Le registre où le volet de sécurité consigne ce qui a été refusé et pourquoi, écrit par le tribunal et jamais par la chose qu'il juge. Chapitres 20, 21.
 
@@ -90,9 +94,13 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **posture.** Ce que le registre dit qu'un service est : bac à sable, local, réel, conformité. Et pour du code étranger, ce que son exécuteur dit qu'il est : de confiance, externe ou en bac à sable. Chapitres 16, 24.
 
+**Principal.** Le nom que le dossier me donne, celui qui tranche : une décision n'est écrite qu'en ma présence, et une session qui tranche à ma place le marque. Un rôle, pas un rang. Chapitres 32, 33.
+
 **promesse.** La ligne `#-->` sous une expression, qui dit ce qu'elle imprime. Une affirmation sur un arrêt du programme, jugée tenue, divergente, non atteinte ou non jugée. Chapitres 1, 21.
 
 **proposition.** Ce qu'offre un modèle d'IA, une réaction ou un agent d'IA. Elle ne valide rien. Chapitres 17, 20, 26.
+
+**dossier.** Les dépôts, les sessions et les fichiers sur lesquels ce livre a tourné, au commit imprimé sous chaque ligne de preuve. Ce dans quoi le livre lit ses faits, et ne les compose jamais. La préface ; chapitre 32.
 
 **raffinement.** La surface d'écriture : un changement déclaré avec ses points et jugé par une barrière à quatre étapes. Chapitre 10.
 
@@ -104,9 +112,15 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **portée.** Un cadre nommé dans lequel s'écrit un acte système : développement, déploiement, runtime courant. Les actes système d'un programme sont toujours dans une portée. Chapitres 8, 23.
 
+**session.** Une exécution d'un modèle d'IA au travail sur le domaine de projets : elle propose, construit, mesure et rend compte sous une forme fixe de huit clés, et clôt sur une ligne de coût. Je tranche ; elle non. Chapitre 32.
+
 **colonne.** Les neuf chapitres qui portent tout l'argument et peuvent se lire seuls. La préface.
 
 **mot d'étape.** L'un de construit, conçu, absent, imprimés en tête de la limite de chaque chapitre. Chapitre 3.
+
+**horodatage.** L'heure qu'une session écrit sur un message, un mémo ou un commit. Lue sur l'horloge, jamais composée ; un instrument compare chaque horodatage à son commit et publie les lignes. Chapitre 32.
+
+**étude.** Mon étude du dossier : une lecture des dépôts, des sessions et des fichiers, dans laquelle ce livre prend le registre de l'annexe A et les chiffres qu'il marque comme ceux de l'étude. Une lecture, non un recensement : là où le livre a relancé une chose, l'exécution est la preuve. La préface ; chapitre 3.
 
 **jumeau.** Une copie d'une partie de la réalité qui ne tient aucune référence à la réalité : un jumeau de fichiers, un jumeau de l'environnement du processus. Chapitres 20, 24.
 

@@ -4,7 +4,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -18,7 +18,7 @@ The second is the snapshot test. A screenshot or a rendered tree is stored and c
 
 The third is the audit against a list. The field's lists are OWASP's, NIST's and the compliance frameworks'. For detection and evidence, the toolchain is the log aggregator, the rule format, the orchestration of responses.
 
-The fourth is the instrument. Micrometer, OpenTelemetry, Prometheus and the profilers of every runtime measure a program from the outside. (General knowledge, not a study of the record, except where I name the file.)
+The fourth is the instrument. Micrometer, OpenTelemetry, Prometheus and the profilers of every runtime measure a program from the outside. All four are general knowledge, not a study of the record, except where I name the file.
 
 ## 2. The first principle
 
@@ -76,7 +76,7 @@ remove("raise.haro")
 
 The promise is `kept`, the end is `finished` and the exit code is `0`! The language process ended with an error, and the tour has finished as it said it would.
 
-Every rule of this judge was learned by watching the harness accuse the library falsely. The guard's header says it. A short promise `6` once hid inside a later `[ 6, 28 ]`, and that is why the rule on spellings exists. This book's own judge is a copy of the site's judge, which is looser than the traveller.
+Every rule of this judge was learned by watching the harness accuse the library falsely. The guard's header says it. A short promise `6` once hid inside a later `[ 6, 28 ]`; that is why there is a rule that a short lie may not hide in a later list, beside the rule on the spellings a true value may print as. This book's own judge is a copy of the site's judge and not the traveller. It has fewer rules than the traveller, and the one it keeps is the one this book stands on: the build fails when a block does not keep its promise.
 
 ### The court of perception
 
@@ -103,13 +103,13 @@ next
 
 It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! Only one is heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
 
-The law is the estate's, meaning the author's whole set of projects, adopted on 25 September 2026 at the author's instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
+The law is the estate's, meaning my whole set of projects, adopted on 25 September 2026 on my instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
 The gallery of pictures is where it is unmet. The library holds ninety-five judgements of pictures and text sections, in three index files, committed on 5 October 2026. Every one is by an AI model, reading the picture or reading the text the program printed. None has a human name. The first index says it in a sentence: no human has looked at these pictures. The register of findings ends with a line I repeat: a human verdict on a sample is still owed. The record holds no human verdict on any gallery picture. It stays unperceived.
 
 ### The court of security
 
-The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The AI model never holds the capability, and so an LLM that is fooled still cannot act. The document does not try to detect every malicious prompt.
+The security plane starts from a claim. The threat model assumes that a hijacked language model will get through, and makes it harmless. The AI model never holds the capability, and so an AI model that is fooled still cannot act. The document does not try to detect every malicious prompt.
 
 The evidence of what happened is a hash chain. Edit any line after the first, and the chain says which entry broke. If I edit one, which entry does it name, and does a wrong key draw the same accusation? Run it:
 
@@ -155,7 +155,7 @@ StzCloseSecurityLedger()
 
 > run: kept
 
-It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the AI model, and the ledger counts `1` refusal without anyone having called the ledger! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
+It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the AI model, and the ledger counts `1` refusal, though no line of the block records anything to it! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
 
 What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
 
@@ -193,7 +193,7 @@ oBatch.AddSpan(w).AddSpan(w2)
 
 The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
 
-Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. I list it among the requests.
+Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. It is a request to the library.
 
 The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when an AI model asks to commit it, and then a person does? Run it:
 
@@ -234,13 +234,13 @@ The four courts have spoken, and now I say what I refused.
 
 ## 4. The decision, and what I refused
 
-**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026, the study's 12.20, says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on another commit than this book's, says that of 135 articles 55 ran. Of the 423 blocks in those, 123 kept their promise. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise.
+**I refused the word for the thing it was not.** The structure of this book and the closing assessment of the study call the articles "narrations that cannot lie". My own ruling of 7 October 2026 says that "narration" names the articles under the library's documentation folder, and not the executable suites. The site's runner annotates an article and no longer decides whether it is shown. The site's own record of 8 October 2026, run on another commit than this book's, says that of 135 articles 55 ran. Of the 423 blocks in those, 123 kept their promise. That count is the site's runner's, of articles on the site's commit, and not a count of the library's guards. So the articles can drift. What cannot lie are the executable guards, and this book's own build, which fails when a block does not keep its promise.
 
 **I refused a second assertion library.** The promise runner's rulings refuse a second library, a rewrite of the test files, a coverage percentage before there are routes, and a mock written for a platform's production. They refuse the word "verified" on a perceptual claim without a name and a sentence.
 
 **I refused to fold unjudged or unperceived into pass or fail.** A stop has five states and no sixth: kept, diverged, unreached, unjudged, unperceived. A runner that folds unjudged or unperceived into pass or fail is wrong. I hold this as a view, not a result.
 
-**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning. This is my view.
+**I refused to analyse tampered evidence.** A tool that verifies, warns, and then analyses anyway teaches its users to ignore the warning.
 
 **I refused to detect everything.** Detections are declared. The sentinel speaks on transitions only: quiet, one alarm after five wrong passwords, and nothing new after a sixth, since the story did not restart. It does not write its own firings into the ledger, because detections over detection events invite feedback loops.
 
@@ -264,9 +264,9 @@ The record's own honest sections, each loss beside its win.
 
 **In security.** The ledger is a bounded ring, and bounded means forgetting. Telemetry from the host, the kernel and the network is absent; the plane reads what the program's own seams emit. Detections are declared and not learned; learning them is the next step, and one detection of rates on 30 September 2026 already covers part of it. The record's own comparison is that a rule corpus of the field's format is larger today than the eight detections shipped, and the field leads here. The workflow of a security operations centre is the field's today. The largest gap, in the record's words, is that a detection can only see what a seam emits. The win is that the event is typed at birth, where the door refuses, so no parser stands between what the program knew and what the detector judges.
 
-**In promises.** The field's doctests sit in the host's toolchain and answer pass or fail (general knowledge). The house's judge has five states. Where the field leads is instruments: the launch memo of Testoor, the plane that holds the traveller, counts coverage instruments of any kind at zero today, and route coverage is the next step.
+**In promises.** The field's doctests sit in the host's toolchain and answer pass or fail; that is general knowledge. The house's judge has five states. Where the field leads is instruments: the launch memo of Testoor, the plane that holds the traveller, counts coverage instruments of any kind at zero today, and route coverage is the next step.
 
-**In perception.** The field's visual snapshot services are mature and automatic (general knowledge). The house's law says a perception does not replace a number, and no number replaces it.
+**In perception.** The field's visual snapshot services are mature and automatic; that is general knowledge. The house's law says a perception does not replace a number, and no number replaces it.
 
 The study of the record puts the tone I try to echo. A grid of two hundred and eighty-six ticks against two hundred and sixty-nine crosses is, in its words, the shape of a brochure.
 
@@ -287,7 +287,7 @@ What is absent:
 - **A human verdict on any gallery picture.** Zero of ninety-five. The law's second requirement, a name, a date and what they said, is unmet there. The chapter says unperceived, and does not say verified.
 - Of the eight musical traditions, seven unheard.
 - A real vault and a real sandbox as proofs. The vault resolver is tested against a stand-in, over real HTTP. The cloud key-management adapter is absent.
-- Paths on POSIX systems, unverified, until a Linux machine is available; scheduled fuzzing; continuous integration; signed commits, which the author deferred for the development phase.
+- Paths on POSIX systems, unverified, until a Linux machine is available; scheduled fuzzing; continuous integration; signed commits, which I deferred for the development phase.
 - A time-series store. A coverage percentage, which is refused until there are routes.
 
 Three more things belong here, found while running the court.
@@ -308,7 +308,7 @@ Six doors follow, one for each reader.
 
 **The designer.** A picture or a sound is a claim only a person can close. The gallery says an AI model looked and no human has. Your verdict is a named line in the record.
 
-**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.
+**The decision-maker.** The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit after the first entry is named.
 
 **The educator.** The tutor's rule meets the court. Predict the verdict of a promise before the traveller walks it.
 

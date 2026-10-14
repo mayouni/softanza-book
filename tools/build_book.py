@@ -738,9 +738,9 @@ def generated_body(kind, en_src, guards, runs, st, lang="en", titles=None):
             out.append("")
         out.insert(0, (f"Les chapitres citent {len(seen)} gardes distinctes, qui contiennent {sum(seen.values())} assertions à elles toutes, "
                       f"lues dans l'arbre de tests au commit {lib.get('short', 'null')} le {guards.get('read', 'null')}. "
-                      "Une garde citée par deux chapitres n'est comptée qu'une fois dans ce total.\n") if lang == "fr" else (f"The chapters cite {len(seen)} distinct guards, holding {sum(seen.values())} assertions between them, "
+                      "Une garde citée par deux chapitres n'est comptée qu'une fois dans ce total. Les noms et les chemins sont imprimés tels que la bibliothèque les écrit ; l'extension est celle de l'ancien moteur tant que Haro ne fait pas tourner la bibliothèque.\n") if lang == "fr" else (f"The chapters cite {len(seen)} distinct guards, holding {sum(seen.values())} assertions between them, "
                       f"read from the test tree at commit {lib.get('short', 'null')} on {guards.get('read', 'null')}. "
-                      "A guard cited by two chapters is counted once in this total.\n"))
+                      "A guard cited by two chapters is counted once in this total. Names and paths are printed as the library spells them; the extension is the former runtime's until Haro runs the library.\n"))
     elif kind == "narrations":
         short = lib.get("short")
         nd = ROOT / ".cache" / f"stzlib-{short}" / "libraries" / "stzlib" / "base" / "doc" / "narrations" if short else None
@@ -760,24 +760,25 @@ def generated_body(kind, en_src, guards, runs, st, lang="en", titles=None):
                     absent.append(n)
                 out.append(f"| `{n}` | {('oui' if lang == 'fr' else 'yes') if ok else ('non' if lang == 'fr' else 'no')} |")
             out.append("")
-        tail = ("Une narration est un article de l'auteur ; son code est l'ancienne surface, et plusieurs de ses blocs ne tournent plus à ce commit, ce que chaque chapitre dit.\n"
-                if lang == "fr" else "A narration is the author's article; its code is the old surface, and several of its blocks no longer run at the pin, which each chapter says.\n")
+        tail = ("Les noms et les chemins sont imprimés tels que la bibliothèque les écrit ; l'extension est celle de l'ancien moteur tant que Haro ne fait pas tourner la bibliothèque.\n"
+                if lang == "fr" else "Names and paths are printed as the library spells them; the extension is the former runtime's until Haro runs the library.\n")
+        total = len(list(nd.glob('*.md'))) if nd and nd.exists() else None
         if lang == "fr":
-            lead = (f"Les chapitres citent {len(seen)} narrations distinctes. "
+            lead = ((f"Le dossier des narrations en compte {total} au commit. " if total else "") + f"Les chapitres citent {len(seen)} narrations distinctes. "
                     + (f"{len(absent)} des noms ne sont pas des fichiers du dossier des narrations de la bibliothèque au commit {lib.get('short', 'null')}" + ": " + ", ".join(f"`{a}`" for a in absent) + ". "
                        if absent else f"Chaque nom est un fichier du dossier des narrations de la bibliothèque au commit {lib.get('short', 'null')}. "))
         else:
-            lead = (f"The chapters cite {len(seen)} distinct narrations. "
+            lead = ((f"The library's narration folder holds {total} at the pin. " if total else "") + f"The chapters cite {len(seen)} distinct narrations. "
                     + (f"{len(absent)} of the names are not files of the library's narration folder at commit {lib.get('short', 'null')}" + ": " + ", ".join(f"`{a}`" for a in absent) + ". "
                        if absent else f"Every name is a file of the library's narration folder at commit {lib.get('short', 'null')}. "))
         out.insert(0, lead + tail)
     elif kind == "agents":
         out.append(T("| # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |", "| # | Id | Partie | Statut | Colonne | Blocs tenus | Gardes | Portes |"))
         out.append("|---|---|---|---|---|---|---|---|")
-        for path, m, body in chapters:
+        for path, m, body in en_src:
             r = runs.get("chapters", {}).get(f"en/{path.stem}", {})
             kept = f"{r['kept']} {'sur' if lang == 'fr' else 'of'} {r['runnable']}" if r.get("runnable") else ("pas de code" if lang == "fr" else "no code")
-            out.append(f"| {m['number'] or ''} | `{m['id']}` | {m.get('part', '')} | {m.get('status', '')} | {('oui' if lang == 'fr' else 'yes') if m.get('spine') else ''} | {kept} | {len(m.get('guards') or [])} | {len(doors_of(body))} |")
+            out.append(f"| {m.get('appendix') or m['number'] or ''} | `{m['id']}` | {m.get('part', '')} | {m.get('status', '')} | {('oui' if lang == 'fr' else 'yes') if m.get('spine') else ''} | {kept} | {len(m.get('guards') or [])} | {len(doors_of(body))} |")
     return "\n".join(out)
 
 
@@ -1285,7 +1286,7 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
     schema = json.loads((ROOT / "book.schema.json").read_text(encoding="utf-8"))
     problems = validate(data, schema)
     (ROOT / "book.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline']}. By {st['author']}. {st['series']}.", "",
+    lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline'].rstrip('.')}. By {st['author']}. {st['series']}.", "",
              "This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.", "",
              f"Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
              "## Files", "",
@@ -1294,13 +1295,23 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
              "- agents/<slug>.md: one page as text (the slug is in book.json)",
              "- en/index.html, fr/index.html: the reader; status.html: the state of each chapter", "",
              "## Rules for an agent", ""] + [f"- {x}" for x in AGENT_RULES] + ["", "## Pages", ""]
+    seen_part = None
     for c in chapters:
+        head = None
+        if c.get("appendix"):
+            head = "Appendices"
+        elif c.get("part"):
+            pt = next((x for x in st["parts"] if x["number"] == c["part"]), None)
+            head = f"Part {ROMAN[c['part']]} · {pt['title']}" if pt else f"Part {ROMAN[c['part']]}"
+        if head and head != seen_part:
+            lines += ["", f"### {head}", ""]
+            seen_part = head
         g = ", ".join(f"{x['name']} ({x.get('assertions', 'missing')})" for x in c["guards"]) or "none"
         run = f"{c['run']['kept']} of {c['run']['runnable']} blocks kept" if c["run"] and c["run"].get("runnable") else "no code"
         lead = f"Appendix {c['appendix']}" if c.get("appendix") else f"{c['number']}."
         lines.append(f"- {lead} {c['title']} [{c['status']}{', spine' if c['spine'] else ''}] {c['text']}; guards: {g}; run: {run}")
         if c.get("principle"):
-            lines.append(f"  principle: {c['principle']}")
+            lines.append(f"  principle: {c['principle'][0].upper() + c['principle'][1:]}")
     (ROOT / "llms-book.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     (ROOT / "llms-full-book.txt").write_text(
         f"# {st['title']} · {st['subtitle']}\n\nBuilt {built}. Library commit {lib.get('commit', 'null')}. Every page below is a draft unless it says otherwise.\n\n"

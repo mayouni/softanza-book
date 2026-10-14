@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-14 21:49 UTC+01:00",
+ "built": "2026-10-14 22:29 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -107,11 +107,11 @@
     }
    ],
    "open_questions": [],
-   "words": 1797,
+   "words": 1965,
    "french": true,
    "text": "agents/preface.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -156,6 +156,13 @@
     }
    ],
    "promises": [
+    {
+     "code": "oReg = new stzServiceRegistry(\"my-solution\")\noReg.Bind(:mail, new stzMailSandbox())\noReg.SetPhase(:emulated)\n? oReg.IsSound()\n#--> 1\noReg.SetPhase(:production)\n? oReg.IsSound()\n#--> 0\n? oReg.Findings()[1][:message]\n#--> still bound to a SANDBOX in a production phase -- a fake must never ship",
+     "promised": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "output": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
+     "verdict": "kept",
+     "effects": []
+    },
     {
      "code": "o1 = new stzList([ \"tea\", \"rice\", \"tea\", \"fish\", \"rice\", \"tea\" ])\n? @@( o1.FindAll(\"tea\") )\n#--> [ 1, 3, 6 ]\n? @@( o1.DuplicatesRemoved() )\n#--> [ \"tea\", \"rice\", \"fish\" ]",
      "promised": "[ 1, 3, 6 ]\n[ \"tea\", \"rice\", \"fish\" ]",
@@ -226,13 +233,13 @@
     }
    ],
    "open_questions": [],
-   "words": 2288,
+   "words": 2307,
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
-    "kept": 1,
-    "runnable": 1
+    "ran": "2026-10-14 22:24 UTC+01:00",
+    "kept": 2,
+    "runnable": 2
    }
   },
   {
@@ -430,11 +437,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3170,
+   "words": 3142,
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -542,10 +549,10 @@
     "12.30"
    ],
    "doors": {
-    "programmer": "Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's update point (`Update()` for a string or a number, `_SetContent()` for a list).",
+    "programmer": "Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's single update point, the one `UpdateWith()` reaches: `Update()` for a string or a number, `_SetContent()` for a list.",
     "analyst": "Your rule is a declaration, and its verdict names the rule that failed, by number.",
     "designer": "The stage word is part of the interface. A product that does not exist yet says so, in a word you can check.",
-    "decision-maker": "Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by 1.04 to 1.88 times, measured on 13 September 2026.",
+    "decision-maker": "Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by a factor between one and two on every row, measured on 13 September 2026; chapter 27 gives the rows.",
     "educator": "Each rethink has an article that argues it: the concept, the field's form, the redesign. That is a curriculum, ordered by family.",
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
    },
@@ -588,11 +595,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2654,
+   "words": 2679,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -778,11 +785,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2590,
+   "words": 2652,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -850,9 +857,9 @@
      "effects": []
     },
     {
-     "code": "o1 = new stzString(\"RIxxNxG\")\n? o1.Removed(\"x\")\n#--> RING\n? o1.Content()\n#--> RIxxNxG\no1.Remove(\"x\")\n? o1.Content()\n#--> RING\n? Q(\"rixxnxg\").RemoveQ(\"x\").UppercaseQ().Spacified()\n#--> R I N G",
-     "promised": "RING\nRIxxNxG\nRING\nR I N G",
-     "output": "RING\nRIxxNxG\nRING\nR I N G",
+     "code": "o1 = new stzString(\"HAxxRxO\")\n? o1.Removed(\"x\")\n#--> HARO\n? o1.Content()\n#--> HAxxRxO\no1.Remove(\"x\")\n? o1.Content()\n#--> HARO\n? Q(\"haxxrxo\").RemoveQ(\"x\").UppercaseQ().Spacified()\n#--> H A R O",
+     "promised": "HARO\nHAxxRxO\nHARO\nH A R O",
+     "output": "HARO\nHAxxRxO\nHARO\nH A R O",
      "verdict": "kept",
      "effects": [
       "files"
@@ -960,11 +967,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2959,
+   "words": 2980,
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1149,11 +1156,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2638,
+   "words": 2647,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
+    "ran": "2026-10-14 22:24 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1291,13 +1298,6 @@
      "effects": []
     },
     {
-     "code": "o1 = new stzString(\"fjharoljharodjharog\")\n? o1.vizFind(\"haro\")\n#--> fjharoljharodjharog\n#--> --^-----^-----^----\n? o1.vizFindXT(\"haro\", [ :Numbered = TRUE ])\n#--> fjharoljharodjharog\n#--> --^-----^-----^----\n#-->   3     9     15",
-     "promised": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n3     9     15",
-     "output": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15",
-     "verdict": "kept",
-     "effects": []
-    },
-    {
      "code": "o1 = new stzString(\"----@@--@@-------@@----@@---\")\no1.ReplaceNextNthOccurrence(2, :Of = \"@@\", :StartingAt = 12, :With = \"##\")\n? o1.Content()\n#--> ----@@--@@-------@@----##---\no2 = new stzString(\"----@@--@@-------@@----@@---\")\no2.ReplaceNextNthOccurrence(2, :With = \"##\", :StartingAt = 12, :Of = \"@@\")\n? o2.Content()\n#--> ----@@--@@-------@@----##---",
      "promised": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---",
      "output": "----@@--@@-------@@----##---\n----@@--@@-------@@----##---",
@@ -1394,13 +1394,13 @@
     }
    ],
    "open_questions": [],
-   "words": 3758,
+   "words": 3816,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
-    "ran": "2026-10-14 12:13 UTC+01:00",
-    "kept": 10,
-    "runnable": 10
+    "ran": "2026-10-14 22:25 UTC+01:00",
+    "kept": 9,
+    "runnable": 9
    }
   },
   {
@@ -1494,7 +1494,7 @@
      "effects": []
     },
     {
-     "code": "? Q(\"*\").IsNotLetter()\n#--> TRUE\no3 = new stzList([ \"R\", \"I\", \"N\", \"G\" ])\n? o3.IsNotAString()\n#--> TRUE\n? o3.DoesNotContain(\"♥\")\n#--> TRUE",
+     "code": "? Q(\"*\").IsNotLetter()\n#--> TRUE\no3 = new stzList([ \"H\", \"A\", \"R\", \"O\" ])\n? o3.IsNotAString()\n#--> TRUE\n? o3.DoesNotContain(\"♥\")\n#--> TRUE",
      "promised": "TRUE\nTRUE\nTRUE",
      "output": "1\n1\n1",
      "verdict": "kept",
@@ -1617,11 +1617,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2893,
+   "words": 2947,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1810,11 +1810,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2739,
+   "words": 2741,
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1986,11 +1986,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2324,
+   "words": 2375,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2217,11 +2217,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2951,
+   "words": 2969,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2366,7 +2366,7 @@
     "12.30"
    ],
    "doors": {
-    "programmer": "You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it.",
+    "programmer": "You declare the shape in a few lines and get its court, its grammar and its prompt from them. What you do not get is a way to run a host function from the declaration: the language has no word for it. The table's formula language of section 7 is another language, and open at its edge.",
     "analyst": "The declaration is plain text in the domain's words, and the court answers in those words.",
     "designer": "The refusal is declared beside the grammar, in the domain's voice, and is not authored per runtime. A designer chooses what a closed menu says when it is broken.",
     "decision-maker": "One declaration produces the mouth and the court, and the forge itself publishes where they disagree. The forge is outside the library today. Do not buy it as shipped.",
@@ -2412,11 +2412,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3930,
+   "words": 3967,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2641,7 +2641,7 @@
     "analyst": "A requirement can be a paragraph that runs, with a paraphrase that comes back. Today it acts on strings, lists and numbers, so the analyst's domain words go in a knowledge file (chapter 14), not here.",
     "designer": "A designer's tone is in the refusals: a message names the word and the nearest word. The record has no designer-specific evidence for this chapter, and I keep the line short.",
     "decision-maker": "Ask any \"natural language\" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key. The no-network claim is not yet measured.",
-    "educator": "A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no reviewer has read the course's other-language editions.",
+    "educator": "A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no speaker of those languages has read this page's sentences, as far as the record shows.",
     "agent": "Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built."
    },
    "sections": [
@@ -2683,11 +2683,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3751,
+   "words": 3753,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:25 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -2707,7 +2707,7 @@
    "stage": {
     "built": "a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory",
     "designed": "rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load",
-    "absent": "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips"
+    "absent": "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops"
    },
    "guards": [
     {
@@ -2902,11 +2902,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3487,
+   "words": 3497,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -2926,7 +2926,7 @@
    "stage": {
     "built": "patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens)",
     "designed": "one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples",
-    "absent": "the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
+    "absent": "the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
    },
    "guards": [
     {
@@ -3085,12 +3085,12 @@
     "12.26"
    ],
    "doors": {
-    "programmer": "One habit across six kinds of data, graphs apart: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, and build nothing on the cache of a reused list pattern.",
+    "programmer": "One habit across seven kinds of data, with graphs still lacking the small function: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.",
     "analyst": "A data-quality rule is a sentence of the table language. The person who owns the data can read it.",
     "designer": "A pattern states a shape the interface can show before the data arrives, and a half-typed value is answered on the way.",
     "decision-maker": "A rule is a line and not a procedure. It can be reviewed, and its verdict is 1 or 0. Say beside it that a pattern with an unknown word is not refused, and that a graph arrow means *later*.",
     "educator": "The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number.",
-    "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media can yet refuse a word it does not know, and that writing a pattern from examples is reserved."
+    "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media that are not text can yet refuse a word it does not know, and that writing a pattern from examples is reserved."
    },
    "sections": [
     {
@@ -3131,11 +3131,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3071,
+   "words": 3097,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3210,7 +3210,7 @@
      "effects": []
     },
     {
-     "code": "cPython = \"C:/Users/ASUSV3~1/AppData/Local/Programs/Python/Python313/python.exe\"\noPy = new stzExterCode(:python)\noPy.SetRuntimePath(cPython)\noPy.SetCode(\"\nres = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }\n\")\noPy.Execute()\n? @@( oPy.Result() )\n#--> [ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\n? oPy.CallTrace()[1][:language]\n#--> python\n? oPy.CallTrace()[1][:mode]\n#--> interpreted\n? isNumber(oPy.LastCallDuration())\n#--> 1",
+     "code": "cPython = \"python\"\noPy = new stzExterCode(:python)\noPy.SetRuntimePath(cPython)\noPy.SetCode(\"\nres = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }\n\")\noPy.Execute()\n? @@( oPy.Result() )\n#--> [ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\n? oPy.CallTrace()[1][:language]\n#--> python\n? oPy.CallTrace()[1][:mode]\n#--> interpreted\n? isNumber(oPy.LastCallDuration())\n#--> 1",
      "promised": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "output": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "verdict": "kept",
@@ -3353,11 +3353,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3337,
+   "words": 3360,
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3544,11 +3544,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2884,
+   "words": 2909,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -3777,11 +3777,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3342,
+   "words": 3314,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
-    "ran": "2026-10-14 12:14 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -3951,11 +3951,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2637,
+   "words": 2663,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4162,11 +4162,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3921,
+   "words": 3966,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -4350,7 +4350,7 @@
     "programmer": "Your examples already carry their expected output. The traveller reads them as promises and says kept, diverged or unjudged, and prose that argues with itself is never accused.",
     "analyst": "The threat model is a table you can read: each row with the guard that proves it and its honest limit. The performance judgment is declared before the code runs.",
     "designer": "A picture or a sound is a claim only a person can close. The gallery says an AI model looked and no human has. Your verdict is a named line in the record.",
-    "decision-maker": "The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit is named.",
+    "decision-maker": "The question who decided, and what is written down, has a mechanical answer in both planes. The same action is refused for the AI model and committed for the human, both in one audit, and the evidence is sealed so that an edit after the first entry is named.",
     "educator": "The tutor's rule meets the court. Predict the verdict of a promise before the traveller walks it.",
     "agent": "You may propose a containment plan or a tuning plan and you may commit neither. Your refusal is itself a recorded event. Do not tell a person that a picture is right. Say \"unperceived\"."
    },
@@ -4393,11 +4393,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3684,
+   "words": 3760,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4559,11 +4559,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3984,
+   "words": 4016,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -4728,7 +4728,7 @@
     "programmer": "You declare a world with braces, ask it to explain itself, and cross between worlds with a call that returns 0 and a `Why()` that names the gate. Watch the copy: configure, then register.",
     "analyst": "You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated and not yet judged.",
     "designer": "A world declares screens as intents, a refinement as a bounded knob, and where it appears. The shells generated today are stubs, and the persona a world serves is not a field.",
-    "decision-maker": "You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision with the actor, the authority and the risk of its moment. Your architect's file is text you own.",
+    "decision-maker": "You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision: the block printed its rationale, and its record holds the authority and the risk of its moment. Your architect's file is text you own.",
     "educator": "The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.",
     "agent": "A world can be wrapped as an AI agent that the host ticks. A deploy by a language-model actor is refused, and nothing is deployed. The crossing between worlds is governed by the calling world's name and authority."
    },
@@ -4771,11 +4771,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3757,
+   "words": 3766,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5006,11 +5006,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4126,
+   "words": 4144,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:26 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5185,10 +5185,10 @@
    "doors": {
     "programmer": "The question comes back as data. You write the rendering and the reader for your medium in a dozen lines, and every reply goes through the same door whatever carried it.",
     "analyst": "The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.",
-    "designer": "Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. I hold this as a view, not a result. That is designed and not built, since the matrix does not exist.",
+    "designer": "Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.",
     "decision-maker": "A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.",
     "educator": "The tutor already says the missing step as a question in four languages, in templates that carry no code. The record does not name a learner on a plain phone, and nothing serves one yet: there is no USSD and no messaging app.",
-    "agent": "You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the author declares it."
+    "agent": "You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the crafter declares it."
    },
    "sections": [
     {
@@ -5229,11 +5229,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3933,
+   "words": 3888,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5406,7 +5406,7 @@
     "programmer": "You write the shell as text, and a court tells you the one box that serves no verb before anything is drawn. The same file is a native window and a page, and the library has a page that says when they disagree.",
     "analyst": "The ribbon is the order of your solution's life, and not of a tool's features. The status cell reads the court, and you can ask the world what it proposes before it is asked to act.",
     "designer": "Your interface has a constitution of twenty-two verbs and a closed grammar that adds renderings and never verbs. Every element must say which verb it serves, and the library already finds the ones that say none.",
-    "decision-maker": "Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, which caught the empty-box case on its first run, by the guard's account.",
+    "decision-maker": "Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, which caught the empty-box case when I read it by hand on 8 October 2026; no guard judges it yet.",
     "educator": "The exercise is a prediction: say what the court will answer before you run it. The status word that is a constant is a lesson in the difference between a label and a truth.",
     "agent": "The shell is a text file that you can read and write, and the tree a screen reader reads is the tree you may read. Your proposals appear in a rail and commit nowhere."
    },
@@ -5449,11 +5449,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4178,
+   "words": 4212,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5601,7 +5601,7 @@
     "programmer": "You choose your depth by the file you load, and you can prove it in three fresh processes. The lean layer does not run its strings today: reach for base. Read the engine's count the way the library sees it, and not the way a page types it.",
     "analyst": "Three numbers for \"how big is the engine\", and three methods. Ask which one a vendor means. The core library is the size of the base one for strings.",
     "designer": "A layer is a decision about what you ship, and not about taste. At the binary, core and base have a library per domain and the third layer has none; the web subset, which chapters 4 and 24 show, is a subset and not a layer.",
-    "decision-maker": "The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in construction. What the replacement lost: every row against a fast peer, by 1.04 to 1.88 times, and ten megabytes of memory to the old one. This is my view: a record that prints its loss is the only kind to trust.",
+    "decision-maker": "The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in development. What the replacement measures: within 2x of a fast peer on every row, by 1.04 to 1.88 times, which no version of the former runtime ever was, and ten megabytes of memory more than the old one. This is my view: a record that prints its loss is the only kind to trust.",
     "educator": "Teach the dependency rule by making a learner load the core alone and predict, then count. Teach \"measured, never asserted\" with the memo of 13 September 2026.",
     "agent": "You may count the engine's functions yourself. Do not repeat a count from a page, and do not write a loop over the list of classes directly. Tell the reader which layer a class lives in by its parent chain, and not by its prefix."
    },
@@ -5644,11 +5644,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4843,
+   "words": 4930,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -5810,11 +5810,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3569,
+   "words": 3654,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -5987,11 +5987,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2378,
+   "words": 2469,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -6010,7 +6010,7 @@
    "status": "draft",
    "stage": {
     "built": "a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for",
-    "designed": "the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone",
+    "designed": "the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone",
     "absent": "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
    },
    "guards": [
@@ -6170,11 +6170,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2677,
+   "words": 2741,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
-    "ran": "2026-10-14 12:15 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -6369,11 +6369,11 @@
     }
    ],
    "open_questions": [],
-   "words": 4645,
+   "words": 4702,
    "french": true,
    "text": "agents/ch31-what-the-projects-show.md",
    "run": {
-    "ran": "2026-10-14 12:16 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6504,11 +6504,11 @@
     }
    ],
    "open_questions": [],
-   "words": 3086,
+   "words": 3085,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
-    "ran": "2026-10-14 12:16 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6610,7 +6610,7 @@
     "designer": "What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.",
     "decision-maker": "Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is absent.",
     "educator": "Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.",
-    "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it, (chapter 24 shows the refusal)."
+    "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it (chapter 24 shows the refusal)."
    },
    "sections": [
     {
@@ -6651,11 +6651,11 @@
     }
    ],
    "open_questions": [],
-   "words": 2727,
+   "words": 2745,
    "french": true,
    "text": "agents/ch33-the-next-line.md",
    "run": {
-    "ran": "2026-10-14 12:16 UTC+01:00",
+    "ran": "2026-10-14 22:27 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6682,7 +6682,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1569,
+   "words": 1592,
    "french": true,
    "text": "agents/app-a-the-register-of-innovations.md",
    "run": {
@@ -6736,11 +6736,11 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 932,
+   "words": 939,
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
-    "ran": "2026-10-14 12:16 UTC+01:00",
+    "ran": "2026-10-14 22:28 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }
@@ -6769,7 +6769,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 950,
+   "words": 961,
    "french": true,
    "text": "agents/app-c-the-twenty-two-verbs-and-the-constitution.md",
    "run": {
@@ -6798,7 +6798,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1673,
+   "words": 1950,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {
@@ -6827,7 +6827,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1776,
+   "words": 1799,
    "french": true,
    "text": "agents/app-e-the-guards-and-fixtures-cited.md",
    "run": {
@@ -6856,7 +6856,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1229,
+   "words": 1231,
    "french": true,
    "text": "agents/app-f-the-narrations-the-book-argues-from.md",
    "run": {
@@ -6885,7 +6885,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1054,
+   "words": 1141,
    "french": true,
    "text": "agents/app-g-the-book-as-data.md",
    "run": {
@@ -6931,7 +6931,7 @@
     }
    ],
    "open_questions": [],
-   "words": 414,
+   "words": 500,
    "french": true,
    "text": "agents/app-h-the-projects-history.md",
    "run": {

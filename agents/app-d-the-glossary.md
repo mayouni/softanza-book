@@ -42,7 +42,9 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **engine.** The Zig library that does the work once, beneath every surface. Chapter 27.
 
-**facet.** In this book, three senses, which chapters 12, 16 and 26 keep apart. (1) A surface of a declared language: its text, its court, its mouth, its voice, its tongues. (2) A syntax of Haro that a programmer of another language could write; the record calls this a face, and only my statement names it. (3) A tool of an environment's ribbon, ordered by the life of the thing being made. A facet is a syntax and never a runtime.
+**estate.** My body of projects: some twenty repositories that depend on each other, the library among them, written on one machine under one protocol. Chapter 32.
+
+**facet.** In this book, three senses, which chapters 12, 16 and 26 keep apart. (1) A surface of a declared language: its text, its court, its mouth, its voice, its tongues. (2) A syntax of Haro that a programmer of another language could write; the record calls this a face; this book says facet, and chapter 12 defines it. (3) A tool of an environment's ribbon, ordered by the life of the thing being made. A facet is a syntax and never a runtime.
 
 **fake.** A double that says it is one: a sandbox, a mail sink, a recorded answer. A fake must never ship. A double that says nothing about itself is taken for live, and passes the gate. Chapter 24.
 
@@ -62,6 +64,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro does not run the library yet. Chapters 3, 27.
 
+**house rules.** The fourteen rules the library runs over its own code, five over a graph of the code and nine over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
+
 **ledger.** The security plane's record of what was refused and why, written by the court and never by the thing it judged. Chapters 20, 21.
 
 **lexicon.** The dictionary of words a sentence may use, each mapped to a verb the library documents. Chapter 13.
@@ -78,7 +82,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **perception.** What a person has seen or heard of a thing, named, dated, and quoted. A comparison proves sameness and never rightness. Chapters 21, 33.
 
-**plan.** The one artifact that crosses from a twin toward reality. It narrates, flags and validates, and is committed by a governed actor. Chapters 20, 24.
+**plan.** The one artefact that crosses from a twin toward reality. It narrates, flags and validates, and is committed by a governed actor. Chapters 20, 24.
 
 **plane.** One area of the library, named by what it governs and proved by its own guards: the system plane, the agentic plane, the planes of security and performance. Not a floor, and not a plan, which is the artefact a machine proposes. Chapters 1, 21.
 
@@ -86,9 +90,13 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **posture.** What the registry says a service is: sandbox, local, live, conformance. And for foreign code, what its executor says it is: trusted, external or sandboxed. Chapters 16, 24.
 
+**Principal.** The record's name for me, the one who rules: a ruling is written only in my presence, and a session that rules on my behalf marks it so. A role, not a rank. Chapters 32, 33.
+
 **promise.** The line `#-->` under an expression, which says what it prints. A claim about a stop of the program, judged kept, diverged, unreached or unjudged. Chapters 1, 21.
 
 **proposal.** What an AI model, a reaction or an AI agent offers. It commits nothing. Chapters 17, 20, 26.
+
+**record.** The repositories, sessions and files this book ran against, at the commit printed under every proof line. What the book reads its facts from, and never composes. The preface; chapter 32.
 
 **refinement.** The write surface: a change declared with its points and judged by a four-stage gate. Chapter 10.
 
@@ -100,9 +108,15 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **scope.** A named frame in which a system act is written: development, deployment, runtime-current. The system acts of a program are always in a scope. Chapters 8, 23.
 
+**session.** One run of an AI model at work on the estate: it proposes, builds, measures and reports in a fixed form of eight keys, and closes with a cost line. I rule; it does not. Chapter 32.
+
 **spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
 **stage word.** One of built, designed, absent, printed at the head of each chapter's limit. Chapter 3.
+
+**stamp.** The time a session writes on a message, a memo or a commit. Read from the clock, never composed; an instrument compares every stamp with its commit and publishes the rows. Chapter 32.
+
+**study.** My study of the record: a reading of the repositories, sessions and files, from which this book takes the register of Appendix A and the figures it marks as the study's. A reading, not a census: where the book re-ran a thing, the run is the evidence. The preface; chapter 3.
 
 **twin.** A copy of a part of reality that holds no reference to reality: a twin of files, a twin of the process environment. Chapters 20, 24.
 

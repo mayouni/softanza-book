@@ -57,7 +57,7 @@ oDLM = StzDlmQ(oKB)
 #--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
 ```
 
-Il répond, dit pourquoi (`recorded fact(s): 'margherita' contains tomato-sauce, mozzarella`), et énonce sa certitude (`1`). Et quand on lui demande ce qu'il ne sait pas, il ne devine pas. Il refuse, et il vous dit combien son monde est petit : `I know 1 entities and 1 relations`. Un refus qui nomme sa frontière vaut mieux qu'une réponse fluide qui n'en a pas. C'est mon point de vue.
+Il répond, dit pourquoi (`recorded fact(s): 'margherita' contains tomato-sauce, mozzarella`), et énonce sa certitude (`1`). Et quand on lui demande ce qu'il ne sait pas, il ne devine pas. Il refuse, et il vous dit combien son monde est petit : `I know 1 entities and 1 relations`. Une entité, parce que seule `margherita` a été déclarée par `Know`, et une relation, `contains` : les objets des deux faits ne sont pas comptés comme des entités. Un refus qui nomme sa frontière vaut mieux qu'une réponse fluide qui n'en a pas. C'est mon point de vue.
 
 Voici maintenant la deuxième pièce, celle qui retourne le dialogue habituel. Sur le terrain, vous soumettez un prompt à la machine et gardez ce qui en sort. Ici le système vous interroge. Que demande-t-il, et que se passe-t-il si vous essayez de conclure avant d'avoir répondu ?
 
@@ -105,7 +105,7 @@ oG.Proposes("writer", "send")
 #--> 3
 ```
 
-Elle ne l'est pas : `IsSound()` a imprimé `0`, et elle est refusée avant que rien ne s'exécute ! Trois lois se déclenchent, et `len(oG.Violations())` a imprimé `3` : tout effet doit passer une barrière, tout texte libre doit avoir un endroit sûr où atterrir, et tout effet doit laisser un témoin. Que détient un acteur modèle qui puisse agir ? Interrogez-en un :
+Elle ne l'est pas : `IsSound()` a imprimé `0`, et elle est refusée avant que rien ne s'exécute ! Trois lois se déclenchent, et `len(oG.Violations())` a imprimé `3` : tout effet doit passer une barrière, tout texte libre doit avoir un endroit sûr où atterrir, et tout effet doit laisser un témoin. Que détient un acteur modèle qui puisse agir ? Aucun modèle d'IA n'est chargé dans le bloc qui le demande : la réponse est fixée d'avance, comme un test fixe une réponse golden, afin que la page s'exécute de la même façon chaque nuit. Interrogez-en un :
 
 ```haro
 oF = new stzLLMFunction("sum")
@@ -120,7 +120,7 @@ oLLM.SetSkillFrom(oF)
 #--> 0
 ```
 
-Rien. Un acteur modèle ne détient aucune capacité à effet ; il propose, et c'est tout son pouvoir. `HoldsEffectful()` a imprimé `0`. Aucun modèle d'IA n'est chargé dans ce bloc : la réponse est fixée d'avance, comme un test fixe une réponse golden, afin que la page s'exécute de la même façon chaque nuit. Ce que le bloc prouve ne dépend pas du modèle : quoi qu'il dise, il ne détient rien qui puisse agir.
+Rien. Un acteur modèle ne détient aucune capacité à effet ; il propose, et c'est tout son pouvoir. `HoldsEffectful()` a imprimé `0`. Ce que le bloc prouve ne dépend pas du modèle : quoi qu'il dise, il ne détient rien qui puisse agir.
 
 Et l'agent programmatique lui-même a un esprit fait de code. Une compétence est une condition et une action, et elle se déclenche sur ce que l'agent perçoit. La gouvernance soumet l'acte à la barrière avant qu'il ait lieu. Quand le stock est bas et que la compétence veut commander, l'acte passe-t-il ?
 
@@ -140,15 +140,15 @@ oRog.AddGovernedSkill(oSk, "order-stock")
 
 Le stock est bas, la compétence veut commander, et l'agent n'a jamais reçu la permission. `Pursue()` a imprimé `0` : la gouvernance l'a refusé ! Il ne se passe rien, et le journal dit pourquoi, par son nom : `refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'`. Le monde est comme il était.
 
-Mettez les pièces sur une ligne et vous avez la pile que nomme la vision de la plateforme (son Étoile polaire, ratifiée le 27 septembre 2026) : percevoir, décider, réagir, apprendre. Rien de tout cela n'a besoin d'un modèle de langage. C'est une conception, pas un agent assemblé. Dans cette conception, la perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Les pièces existent dans la bibliothèque à côté de l'agent, pas encore dedans : l'agent ci-dessus n'en appelle aucune. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
+Mettez les pièces sur une ligne et vous avez la pile que la vision de la plateforme nomme son Étoile polaire, ratifiée le 27 septembre 2026 : percevoir, décider, réagir, apprendre. Rien de tout cela n'a besoin d'un modèle de langage. C'est une conception, pas un agent assemblé. Dans cette conception, la perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Les pièces existent dans la bibliothèque à côté de l'agent, pas encore dedans : l'agent ci-dessus n'en appelle aucune. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
 
 Le chapitre 18 raconte les cinq registres d'une réponse et la conversation qui demande. Le chapitre 19 raconte le modèle de langage de domaine, de son premier échelon, sans neurones, à son second, entraîné sur les faits propres du premier et rien d'autre. Le chapitre 20 raconte l'agent qui ne peut pas vous nuire : il propose, un atelier répète, le tribunal juge, et seul un acteur gouverné valide. Le chapitre 21 raconte le tribunal lui-même. Le chapitre 22 compare tout cela au terrain, et imprime où le terrain mène.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le modèle d'IA comme esprit.** Quand les modèles sont arrivés, le geste était d'en mettre un au centre et de l'enclore. J'ai écrit le contraire dans l'architecture : l'esprit est programmatique par défaut, et un modèle est une faculté enfichable, l'une parmi plusieurs, jamais la définition de l'esprit. La boucle de l'industrie est un cas particulier de cette conception, avec une seule faculté et aucune gouvernance. Le dossier ne tient de moi aucune phrase antérieure à l'architecture de juillet 2026, et le chapitre s'ouvre comme il le fait.
+**J'ai refusé le modèle d'IA comme esprit.** Quand les modèles sont arrivés, le geste était d'en mettre un au centre et de l'enclore. J'ai écrit le contraire dans l'architecture : l'esprit est programmatique par défaut, et un modèle est une faculté enfichable, l'une parmi plusieurs, jamais la définition de l'esprit. La boucle de l'industrie est un cas particulier de cette conception, avec une seule faculté et aucune gouvernance. La plus ancienne phrase de moi que le dossier tienne là-dessus est l'architecture de juillet 2026.
 
-**J'ai refusé tout ce qui est payant ou distant comme exigence.** Chaque capacité a un plancher qui n'exige ni installation, ni abonnement, ni réseau. Un modèle peut être ajouté par-dessus. Il n'est jamais le prix d'entrée. « En dernier » veut dire après le chemin programmatique, et sous le tribunal et un budget, que le modèle soit local ou distant. Le dossier soutient les deux lectures, et le chapitre ne choisit pas entre elles.
+**J'ai refusé tout ce qui est payant ou distant comme exigence.** Chaque capacité a un plancher qui n'exige ni installation, ni abonnement, ni réseau. Un modèle peut être ajouté par-dessus. Il n'est jamais le prix d'entrée. « En dernier » veut dire après le chemin programmatique, et sous le tribunal et un budget. Que le dernier proposant puisse être un modèle distant sous ce budget, ou doive toujours être un modèle local, le dossier admet les deux lectures, et je ne tranche pas ici entre elles.
 
 **J'ai refusé de deviner.** Toute ambiguïté refuse plutôt que de deviner. L'habitude du terrain de soumettre un prompt et de garder ce qui sort a désormais un nom ; ici, deviner est remplacé par demander, et les impressions sont remplacées par la gouvernance.
 
@@ -204,7 +204,7 @@ Et une limite du premier échelon que vous rencontrerez dès que vous reformuler
 #--> Margherita is a dish.
 ```
 
-Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, la réponse ici est un refus, et ce refus est l'étape suivante. Je l'imprime ici parce qu'une loi se montre par une page qui imprime son étape telle qu'elle est, limite comprise. Je tiens cela pour une vue, non pour un résultat. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
+Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, la réponse ici est un refus, et ce refus est l'étape suivante. Je l'imprime ici parce qu'une loi se montre par une page qui imprime son étape telle qu'elle est, limite comprise. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
 
 ## 8. Six portes
 

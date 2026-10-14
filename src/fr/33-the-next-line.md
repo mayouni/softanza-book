@@ -88,13 +88,13 @@ oDep = oDel.Deploy(:Production)
 #--> sandbox-in-production @ shop/payments
 ```
 
-La personne avait le droit de déployer. La livraison l'a refusé ! `WasCommitted()` répond `0`. Pourquoi a-t-elle refusé ? Le journal dit : `sandbox-in-production @ shop/payments`. Un service de paiement qui est un bac à sable ne peut pas être ce par quoi un vrai client paie. Ce n'est pas une question d'autorité. C'est une question de ce qui est vrai.
+La personne avait le droit de déployer. La livraison l'a refusé ! `WasCommitted()` répond `0`. Pourquoi a-t-elle refusé ? La première entrée d'erreur du journal dit seulement que la surface externe n'est pas prête pour la production ; la seconde nomme le service : `sandbox-in-production @ shop/payments`. Un service de paiement qui est un bac à sable ne peut pas être ce par quoi un vrai client paie. Ce n'est pas une question d'autorité. C'est une question de ce qui est vrai.
 
 Le plancher est donc là : déclarer, construire, répéter, refuser le faux, valider par un acteur gouverné.
 
 Maintenant ce que les projets montrent, et l'étape qui les suit.
 
-Softanza a-t-elle été utilisée ? Oui. Je l'ai écrit au chapitre 1 et je m'y tiens. Des parties de Softanza sont en production, et d'autres sont en développement. L'étude qui a lu le dossier la première fois, une lecture faite par une session d'un modèle d'IA, a écrit le contraire, qu'aucun utilisateur hors de mes propres projets n'avait été mesuré. Je l'ai corrigée. Trois projets, et leur retour, ont façonné sa conception. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence. Le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier. Un avenant a été clos le 4 août ; le carnet montre que le propriétaire a pris part à la première démonstration, et le 19 août il a fait une journée de mesures sur le terrain avec deux téléphones. Le dernier enregistrement daté de ce projet est du 25 août 2026, et le prochain sera celui que la phase suivante écrira. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, chaque leçon qu'il nomme et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
+Softanza a-t-elle été utilisée ? Oui. Je l'ai écrit au chapitre 1 et je m'y tiens. Des parties de Softanza sont en production, et d'autres sont en développement. Trois projets, et leur retour, ont façonné sa conception. Une banque de Niamey a un produit d'évaluation d'organisation que j'ai construit à côté de la bibliothèque, installé sur son propre réseau sous licence. Le guide d'installation remis à la banque l'atteste. Un restaurant de Lyon a reçu la livraison d'une première version d'une plateforme de commerce de quartier. Un avenant a été clos le 4 août ; le carnet montre que le propriétaire a pris part à la première démonstration, et le 19 août il a fait une journée de mesures sur le terrain avec deux téléphones. Le dernier enregistrement daté de ce projet est du 25 août 2026, et le prochain sera celui que la phase suivante écrira. Une organisation du Niger a son hub conçu. Le site énumère, projet par projet, chaque leçon qu'il nomme et le fichier de la bibliothèque qui la porte. La partie VI de ce livre raconte leurs histoires.
 
 Et le site dit, dans la même page, sur quoi ces plateformes tournent aujourd'hui : des piles ordinaires. Celle de la banque est une application Python. Celle du restaurant est un ensemble de mondes web, chacun un seul fichier. Le hub de l'organisation est conçu, et sa construction est à venir. Le site dit que leurs déclarations sont écrites comme celles de Softanza elle-même, pour que les faire passer sur le moteur Softanza soit un changement de moteur et non de plan. Les mots du site sont exacts : c'est un pas en avant, pas un pas accompli. Ce pas est le prochain.
 
@@ -103,9 +103,9 @@ La ligne suivante est donc celle-ci : *la solution a tourné sur le moteur propr
 Qu'est-ce qui mène d'ici à cette ligne ? Cinq pas, lus dans le dossier et non composés.
 
 1. **Les déclarations d'un client tournent sur le moteur au lieu de la pile ordinaire.** Le site dit que les déclarations sont en cours d'écriture, comme celles de Softanza elle-même ; je n'en ai trouvé aucun fichier pour l'instant, et le chapitre 31 dit où j'ai cherché. Le passage au moteur est l'étape suivante.
-2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant toutes les assertions que l'ancien runtime passe sur la bibliothèque, sauf une requête HTTP/2. Cette requête a échoué une fois dans la passe et passe deux fois quand on la lance seule. Sur chaque ligne stable, 3 461 des 5 112 programmes concordent avec l'ancien runtime. Son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Que le runtime propre de Haro fasse tourner la bibliothèque n'est pas encore mesuré.
+2. **Le runtime propre à la langue fait tourner la bibliothèque sur le système du client.** Aujourd'hui les blocs de ce livre sont exécutés par le runtime de l'ancien langage hôte, version 1.27, et chaque page le dit sous sa ligne de preuve. Le runtime de pont censé le remplacer a été signalé le 5 octobre 2026 comme passant toutes les assertions que l'ancien runtime passe sur la bibliothèque, sauf une requête HTTP/2. Cette requête a échoué une fois dans la passe et passe deux fois quand on la lance seule. Sur chaque ligne stable, 3 461 des 5 112 programmes concordent avec l'ancien runtime. Ce sont deux comptes et non un seul : le premier porte sur les assertions de la suite, le second sur des programmes entiers, un programme n'étant compté comme concordant que si chaque ligne stable qu'il imprime est la même sur les deux runtimes. La passe du matin en donnait 3 425, le chiffre que le chapitre 27 imprime ; les 3 461 sont ceux du soir, après une journée de corrections. Son passage sous Linux est la prochaine étape. La charte de Haro a été ratifiée le 1er octobre 2026, et les étapes propres de Haro passent sur ses propres fixtures. Que le runtime propre de Haro fasse tourner la bibliothèque n'est pas encore mesuré.
 3. **La solution écrit sa fiche de garanties.** La vision demande à chaque solution cinq lignes, une pour chaque système auquel elle répond, technique, social, écologique, économique et culturel, jugées comme des fixtures, la machine en étant dérivée. La fiche est conçue ; la première reste à écrire.
-4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée, un appareil écrit comme une déclaration, démarre et se juge elle-même dans un émulateur. Son profil hébergé fait quatre promesses : être toujours joignable, avoir un nom stable, tenir un journal durable, et survivre à une coupure. L'émulateur peut en vérifier trois. La quatrième attend un chien de garde sur une vraie carte. (Connaissance générale, un chien de garde est une minuterie matérielle qui redémarre une machine qui ne répond plus.) Le site dit qu'aucune charge de production n'y est encore.
+4. **Des hôtes réels et une vraie carte.** La vérification du déploiement contre un hôte réel ou un compte réel dépend de l'infrastructure. La machine déclarée, un appareil écrit comme une déclaration, démarre et se juge elle-même dans un émulateur. Son profil hébergé fait quatre promesses : être toujours joignable, avoir un nom stable, tenir un journal durable, et survivre à une coupure. L'émulateur peut en vérifier trois. La quatrième attend un chien de garde sur une vraie carte, un chien de garde étant, au sens courant du terrain, une minuterie matérielle qui redémarre une machine qui ne répond plus. Le site dit qu'aucune charge de production n'y est encore.
 5. **Une personne le perçoit, et le dossier dit qui.** Pas un compteur. Une personne, nommée, avec une date et ce qu'elle a dit.
 
 Le dernier pas est une loi du domaine de projets, et elle a été gagnée. Le volet sonore de la bibliothèque a un jour tenu des centaines d'assertions réussies alors qu'à mon oreille il ne sonnait pas encore juste. Depuis, un travail qui atteint une personne par un sens doit être livré sous une forme qu'une personne peut percevoir, et le dossier doit dire qui l'a perçu et ce qu'elle a dit. Et quand personne ne l'a fait, la loi le dit clairement : non perçu est un état, pas un échec. Un rapport peut être honnête et rester non perçu.
@@ -122,9 +122,9 @@ Le dossier tient aussi deux verdicts à venir. Les images que la bibliothèque d
 
 **J'ai refusé de déplacer une plateforme en la réécrivant.** La plateforme d'un client passe sur le moteur comme un changement de moteur, non de plan. Les déclarations sont à écrire une fois, comme celles de Softanza elle-même, et le moteur en dessous change. Je tiens cela pour une vue, non pour un résultat.
 
-**J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. L'étude qui a lu le dossier a jugé que le chiffre ne devait pas être imprimé sans la garde qui le produit. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
+**J'ai refusé mon propre chiffre.** J'ai dit à voix haute, en pourcentage, jusqu'où le runtime de pont était arrivé. Je ne l'imprime pas sans la garde qui le produit. Le mot d'étape est « en construction », et les lignes mesurées sont la preuve.
 
-**J'ai refusé qu'un instrument tienne lieu de preuve d'une perception.** Une phase dont la preuve est entièrement un compteur n'est pas achevée quand la chose elle-même est quelque chose qu'une personne voit ou entend. Le compteur est un résultat. La personne est le verdict. C'est mon point de vue, et le volet sonore plus haut, avec ses centaines d'assertions réussies et le son qui n'était pas encore juste, en est le fondement.
+**J'ai refusé qu'un instrument tienne lieu de preuve d'une perception.** Une phase dont la preuve est entièrement un compteur n'est pas achevée quand la chose elle-même est quelque chose qu'une personne voit ou entend. Le compteur est un résultat. La personne est le verdict. Le volet sonore plus haut, avec ses centaines d'assertions réussies et le son qui n'était pas encore juste, en est le fondement.
 
 ## 5. Le tribunal
 
@@ -134,7 +134,7 @@ Le tribunal du sujet de ce chapitre n'est pas une garde. C'est une ligne du doss
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en production. Les piles ordinaires font tourner de vraies charges pour de vrais utilisateurs aujourd'hui (connaissance générale, non une étude du dossier) ; la page même du dossier nomme parmi elles l'application Python de la banque, installée sous licence. La première version du restaurant est faite de mondes web d'un seul fichier, livrée, avec une journée de mesures sur le terrain le 19 août, et le hub est conçu.
+Le terrain mène en production. Les piles ordinaires font tourner de vraies charges pour de vrais utilisateurs aujourd'hui, un fait du terrain et non une lecture du dossier ; la page même du dossier nomme parmi elles l'application Python de la banque, installée sous licence. La première version du restaurant est faite de mondes web d'un seul fichier, livrée, avec une journée de mesures sur le terrain le 19 août, et le hub est conçu.
 
 Le terrain mène en infrastructure réelle. Ses outils pilotent de vrais fournisseurs et de vrais hôtes chaque jour ; le déploiement de Softanza est éprouvé de bout en bout sur des sites locaux et répète le reste ; la vérification en réel contre un hôte réel est l'étape suivante.
 
@@ -166,7 +166,7 @@ Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le
 
 **Le formateur.** Enseignez que non perçu est un état et non un échec. Un rapport honnête peut être livré dessus, s'il le dit.
 
-**L'agent.** Vous pouvez répéter un déploiement et l'expliquer. Vous serez refusé quand vous essaierez de l'effectuer, (le chapitre 24 montre le refus).
+**L'agent.** Vous pouvez répéter un déploiement et l'expliquer. Vous serez refusé quand vous essaierez de l'effectuer (le chapitre 24 montre le refus).
 
 ## 9. Exercice
 
@@ -181,9 +181,7 @@ oP.SetProfile(oSol)
 # your three questions here, each with the line you expect under it
 ```
 
-Lancez-le. Puis écrivez une ligne de plus, la suivante de votre propre projet, dans la forme du dossier : qui l'a perçu, à quelle date, et ce qu'il a dit. Si personne ne l'a fait, écrivez « non perçu », et dites pourquoi. Cette ligne est la fin de ce livre, et le début du suivant.
-
-Je vous laisse celui-ci. Voici le bloc de la barrière de production de la section 3, avec une seule ligne changée : l'acteur n'est plus la personne mais l'assistant, `LLMActor("assistant")`, comme au chapitre 24. Je n'ai pas lancé cette version, et je n'imprime aucune réponse pour elle.
+Lancez-le. Puis celui-ci, que je vous laisse aussi. Voici le bloc de la barrière de production de la section 3, avec une seule ligne changée : l'acteur n'est plus la personne mais l'assistant, `LLMActor("assistant")`, comme au chapitre 24. Je n'ai pas lancé cette version, et je n'imprime aucune réponse pour elle.
 
 ```haro exercise
 oReg = new stzServiceRegistry("shop")
@@ -200,4 +198,4 @@ oDep = oDel.Deploy(:Production)
 
 Lancez celui-là aussi. Lisez ce que répond `WasCommitted()`, et lisez le journal : le bloc de la section 3 imprimait sa deuxième entrée d'erreur pour la personne, et je ne dis rien de celle de l'assistant. La section 5 dit ce que prouvent les trois gardes, et la section 8 ce qu'on refuse à un agent d'IA. Quand la barrière répondra, vous saurez ce qu'elle refuse pour ce qui est vrai et ce qu'elle refuse pour qui demande.
 
-Le livre s'arrête ici, et chaque bloc qu'il contient est à vous pour le relancer. Il s'arrête sur le prochain jalon : une solution sur le moteur propre de Softanza, et ce que dit une personne nommée qui l'a utilisée.
+Chaque bloc de ce livre est à vous pour le relancer. Écrivez maintenant une ligne de plus, la suivante de votre propre projet, dans la forme du dossier : qui l'a perçu, à quelle date, et ce qu'il a dit. Si personne ne l'a fait, écrivez « non perçu », et dites pourquoi. Cette ligne est la fin de ce livre, et le début du suivant.

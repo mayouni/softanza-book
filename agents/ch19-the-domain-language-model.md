@@ -4,7 +4,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:15 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
 
 In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.
 
@@ -68,7 +68,7 @@ Completion is constrained to the domain. What does the model offer after an enti
 
 After an entity that bears facts, its relations: `[ "contains", "pairs-with" ]`. After a relation, only its objects: `[ "tomato-sauce", "mozzarella" ]`. A fragment completes to entities, and a word that the domain does not hold completes to nothing: `[ ]`. The guard that proves this calls it "the grammar spirit". It is a lookup in the facts, not decoding under a compiled grammar. And it sees one word, not the sentence so far: `Complete("contains")` returns the objects of every `contains` fact, whatever its subject.
 
-The grammar itself can be derived from the knowledge base, and here the reader of this book has to write the derivation. There is no call in the library that turns a knowledge base into a grammar, and the design lists it as the first rung's task. But the pieces compose. The domain's vocabulary becomes the choices of a schema from chapter 11, the schema compiles to a grammar, and the grammar has no path for a word outside the domain:
+The grammar itself can be derived from the knowledge base, and here the reader of this book has to write the derivation. There is no call in the library that turns a knowledge base into a grammar, and the design lists it as the first rung's task. But the pieces compose. The domain's vocabulary becomes the choices of a schema from chapter 11, the schema compiles to a grammar, and the grammar has no path for a word outside the domain. The three rules it prints last, for text, number and boolean, are the ones the compiler always emits, and no field here uses them:
 
 ```haro
 aLex = oDLM.Lexicon()
@@ -213,9 +213,9 @@ On 13 July 2026, I ruled on this. The concept of a domain language model had bee
 
 **I refused the token as the unit.** The unit is a chunk of the world, which a graph can admit or refuse.
 
-**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial AI model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: the library's second law says a capability never requires anything paid or remote.
+**I refused a teacher I cannot see.** The earlier design of the idea used a large commercial AI model to write its training corpus. I put a law against it, and this model's corpus is rendered from the domain's own facts: a law of the library says a capability never requires anything paid or remote.
 
-**I refused neural first.** The finding I start from is that the canonical model is not neural. A review of the earlier product archived a transformer of one to three billion parameters, in favour of rule-based prediction. Its ground was that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
+**I refused neural first.** The finding I start from is that the canonical model is not neural. A review of the earlier product, recorded in the estate's design of it, archived a transformer of one to three billion parameters in favour of rule-based prediction. Its ground was that hallucination is impossible when the model cannot generate almost-valid text. So the first rung has zero training and zero cost, and the neural rung comes second.
 
 **I refused to let the shape stand for the truth.** The grammar says structure kills malformedness, not falsehood. The truth belongs to the graph, to its laws, and to a person.
 
@@ -241,9 +241,9 @@ Section 7 says what is built, what is designed and what is absent.
 
 What is built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
 
-What is designed comes in four points, and the page must say each.
+What is designed comes in four points.
 
-- The grammar derived from a knowledge base by one call. Chapter 19's composition is the reader's, not the library's.
+- The grammar derived from a knowledge base by one call. This chapter's composition is the reader's, not the library's.
 - The second rung's corpus validated by the first rung's grammar before it is admitted. The design says so; the code renders the facts directly, with no such check. So "correct by construction" holds for the training text, and not for what the model says.
 - The five-stage validation of a chunk. None exists as a pipeline.
 - The foundry's steps beyond the bigram.
