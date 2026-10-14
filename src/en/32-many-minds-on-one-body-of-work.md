@@ -18,10 +18,10 @@ figures:
   - "5 composed of 25, worst +42m27s: softanza/CLAUDE.md lines 55 and 68 (Central's own desk, measured 2026-08-26)"
   - "34 composed of 151, 13 of 17 desks: softanza/dashboard/stamp-ground-truth-2026-08-26.csv, counted"
   - "146 of 244 cost-line stamps composed: softanza/dashboard/cost-ground-truth-estate-2026-08-26.csv, counted"
-  - "379 of 380 cost lines with no token count: stz-principal/budget/SESSIONS.jsonl, counted 2026-10-08"
+  - "379 of 380 cost lines with no token count: the estate's budget ledger (a private repository), counted 2026-10-08"
   - "622 green assertions, four defects by ear: softanza/protocol/PERCEPTION.md section 1"
   - "eight minutes, six seconds of coverage, 20.4 s after: softanza/protocol/PX.md sections 1 and 5"
-  - "twenty commands, eighteen as described: bangalo/DOCTRINE.md law 5"
+  - "twenty commands, eighteen as described: the harness manager's doctrine, law 5 (a private repository)"
   - "promise density 98.9 and 75.1 against 0.7 per thousand lines: study 12.16"
 ---
 
