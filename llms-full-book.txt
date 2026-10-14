@@ -1,6 +1,6 @@
 # Softanza · The Software Crafters Platform of the AI Age
 
-Built 2026-10-14 13:09 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-14 13:13 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
