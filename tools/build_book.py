@@ -1158,7 +1158,7 @@ code {{ font-family: ui-monospace, Consolas, monospace; font-size: 12px; }}
 <p class="meta"><a href="en/index.html">← Softanza</a></p>
 <h1>Status of the book</h1>
 <p class="meta">Built {html.escape(built)}. Blocks run {html.escape(runs.get("run", {}).get("date", "never"))} inside the library at commit {html.escape(lib.get("short", "none"))} ({html.escape(lib.get("ref", ""))}, committed {html.escape(lib.get("commit_date", ""))}).</p>
-<p class="meta">Engine binaries: {eng.get("count", "null")} copied from {html.escape(str(eng.get("copied_from", "")))}, newest built {html.escape(str(eng.get("newest_build", "null")))}; {"pinned" if eng.get("pinned") else "not pinned to the commit"}.</p>
+<p class="meta">Engine binaries: {eng.get("count", "null")} copied from the library's {"worktree at this commit" if eng.get("pinned") else "working checkout"}, newest built {html.escape(str(eng.get("newest_build", "null")))}; {"pinned" if eng.get("pinned") else "not pinned to the commit"}.</p>
 <p class="meta">Guards read {html.escape(guards.get("read", "never"))}. A chapter is done when its code runs, its guards resolve, its French exists, and the author has read it: {done_count} done.</p>
 <div class="wrap"><table>
 <thead><tr><th>#</th><th>Chapter</th><th>Spine</th><th>Status</th><th>Run</th><th>Guards · assertions</th><th>Words</th><th>Open questions</th><th>FR</th><th>Done</th></tr></thead>
