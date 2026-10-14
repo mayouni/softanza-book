@@ -24,7 +24,7 @@ Trois pratiques du terrain se rencontrent dans cette idée, et aucune n'est la m
 
 La première est la pile sémantique : RDF, OWL et SPARQL. Un fait est un triplet de sujet, de prédicat et d'objet, écrit dans un vocabulaire partagé. Une ontologie dit quelles classes et quelles propriétés existent et ce qui en découle, et un raisonneur en dérive les conséquences. Ce sont des recommandations du W3C, de 2014, 2009 et 2013. Ce que le terrain demande à l'auteur d'une base de connaissance, c'est un langage d'ontologie à lui, un magasin et un langage de requête. Ils se tiennent d'ordinaire à côté de l'application et non dedans.
 
-La deuxième est la base de données de graphes de propriétés, avec son langage de requête. Le dossier a une comparaison qui met de telles bases face à cette bibliothèque. C'est un texte de modèle gardé dans la bibliothèque, et il reconnaît au terrain l'échelle, la persistance et les transactions.
+La deuxième est la base de données de graphes de propriétés, avec son langage de requête. Le dossier a une comparaison qui met de telles bases face à cette bibliothèque. C'est un texte qu'un modèle d'IA a écrit, gardé dans le dossier de la bibliothèque, et il reconnaît au terrain l'échelle, la persistance et les transactions.
 
 La troisième est les règles sur des faits, en Prolog et en Datalog. Des faits et des règles dans un seul programme, une requête par résolution. Le dossier ne nomme que Prolog, comme un langage à rejoindre, et non à reconstruire.
 

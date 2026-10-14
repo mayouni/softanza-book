@@ -24,7 +24,7 @@ Three practices of the field meet in this idea, and none of them is the same as 
 
 The first is the semantic stack: RDF, OWL and SPARQL. A fact is a triple of subject, predicate and object, written in a shared vocabulary. An ontology says what classes and properties exist and what follows from them, and a reasoner derives the consequences. These are W3C recommendations, of 2014, 2009 and 2013. What the field asks of the author of a knowledge base is an ontology language of their own, a store and a query language. They usually stand beside the application and not in it.
 
-The second is the property-graph database, with its query language. The record has one comparison that sets such databases against this library. It is a model's text kept in the library, and it credits the field with scale, persistence and transactions.
+The second is the property-graph database, with its query language. The record has one comparison that sets such databases against this library. It is a text an AI model wrote, kept in the library's record, and it credits the field with scale, persistence and transactions.
 
 The third is rules over facts, in Prolog and in Datalog. Facts and rules in one program, a query by resolution. The record names Prolog only, as a language to reach, and not to rebuild.
 

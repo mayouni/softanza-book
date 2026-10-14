@@ -72,6 +72,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **lineage.** The record of a decision with the authority and the risk of its moment. Chapter 30.
 
+**LLM.** Large language model: the AI model the field builds today, trained on text and asked to propose. In this book it is a proposer, never the mind. Chapters 1, 17.
+
 **narration.** The author's article under the library's documentation folder, whose code is the old surface. Not an executable test. (The word has since been given to the executable guards named *narrated*, and chapter 21 says why that confuses.) Chapters 3, 21.
 
 **near-natural chain.** A sentence in which every link is a real call, so that the human is the parser. Chapter 13.

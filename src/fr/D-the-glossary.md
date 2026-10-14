@@ -72,6 +72,8 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **filiation.** Le relevé d'une décision avec l'autorité et le risque de son moment. Chapitre 30.
 
+**LLM.** Grand modèle de langage : le modèle d'IA que le terrain construit aujourd'hui, entraîné sur du texte et sollicité pour proposer. Dans ce livre, c'est un auteur de propositions, jamais l'esprit. Chapitres 1, 17.
+
 **narration.** L'article de l'auteur sous le dossier de documentation de la bibliothèque, dont le code est l'ancienne surface. Pas un test exécutable. (Le mot a depuis été donné aux gardes exécutables nommées *narrated*, et le chapitre 21 dit pourquoi cela prête à confusion.) Chapitres 3, 21.
 
 **chaîne quasi naturelle.** Une phrase dans laquelle chaque maillon est un vrai appel, si bien que l'humain est l'analyseur. Chapitre 13.

@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-14 21:44 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-14 21:49 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -109,7 +109,7 @@ Run: 1 of 1 blocks kept their promise, on 2026-10-14 12:13 UTC+01:00.
 
 Ask the industry what changed in programming these last years and you will get one answer, said with excitement or with dread: *machines write the code now.*
 
-The picture is familiar. A model proposes a function, a file, a whole application. A person reviews it, or does not. Tools are added around the model to make it safer: linters that read what it wrote, tests it generates for itself, guardrails that catch the worst of it, a second model that judges the first. The model is at the centre. Everything else is a fence built around it after the fact.
+The picture is familiar. An AI model proposes a function, a file, a whole application. A person reviews it, or does not. Tools are added around the model to make it safer: linters that read what it wrote, tests it generates for itself, guardrails that catch the worst of it, a second model that judges the first. The model is at the centre. Everything else is a fence built around it after the fact.
 
 I do not think that picture is wrong about the facts. It is wrong about where to stand.
 
@@ -133,9 +133,9 @@ The registry does not call it sound. The first line it prints is a zero, and the
 
 That is the whole philosophy in one small scene. Expression is free: bind what you like, while you like. Admission is governed: the gate reads the phase and the binding, and refuses.
 
-Now a second scene, because the first one has no model in it and you are waiting for the model.
+Now a second scene, because the first one has no AI model in it and you are waiting for the model.
 
-Take a restaurant as the illustration: an agent that knows its world proposes to place an order. In Softanza the agent does not place it. It proposes a plan. A workbench rehearses the plan on a twin of the system, a copy that holds no reference to the real one, and records every operation it would perform. A court reads the rehearsal against the rules the restaurant declared: who may order, what may be ordered, what a supplier must confirm. Only then does a governed actor commit, and the commit is recorded with its actor and its outcome. The guard that proves this sequence, `safeworld_narrated`, rehearses in a twin of the files, plans, and lets an actor commit; it holds seventy-six assertions as I write, none of them about a restaurant, and the site shows a recorded run of the same mechanism.
+Take a restaurant as the illustration: an AI agent that knows its world proposes to place an order. In Softanza the agent does not place it. It proposes a plan. A workbench rehearses the plan on a twin of the system, a copy that holds no reference to the real one, and records every operation it would perform. A court reads the rehearsal against the rules the restaurant declared: who may order, what may be ordered, what a supplier must confirm. Only then does a governed actor commit, and the commit is recorded with its actor and its outcome. The guard that proves this sequence, `safeworld_narrated`, rehearses in a twin of the files, plans, and lets an actor commit; it holds seventy-six assertions as I write, none of them about a restaurant, and the site shows a recorded run of the same mechanism.
 
 Notice what the model did and did not do. It proposed. It did not decide, did not write, did not send. It was a proposer beside the registers of answer. Three of them, an option chosen, a data structure given, a sentence spoken, are built today and open to the person before the model is called at all; two more, a formula written and an example shown, are not yet built (Chapter 18). I call this *programmatic by default, the model last*. It is the sentence under every chapter of Part IV.
 
@@ -157,7 +157,7 @@ The question is spoken as it is thought: find all, remove duplicates. And the tw
 
 Every chapter of this book carries this section, and I promised in the preface that it is the reason the book exists. So let me be concrete about the decisions behind this first chapter, because they were not comfortable.
 
-**I refused to put the model at the centre.** When the models arrived, that was the obvious move, and I had the pieces to make it: a natural layer, a knowledge graph, an agent class. I could have wired a model into each and shipped a Softanza that "talks". I did not, and I wrote the refusal into the architecture as a law: the mind is programmatic by default, and a model may only propose. I gave up some fashion by that choice. I think I kept the platform.
+**I refused to put the AI model at the centre.** When the AI models arrived, that was the obvious move, and I had the pieces to make it: a natural layer, a knowledge graph, an agent class. I could have wired a model into each and shipped a Softanza that "talks". I did not, and I wrote the refusal into the architecture as a law: the mind is programmatic by default, and a model may only propose. I gave up some fashion by that choice. I think I kept the platform.
 
 **I retired the language I was born on.** Softanza was written for years on a small, warm scripting language that I love and that I pleaded with, long before the LLM era, to make executable natural language its first concern. It did not, and that is its right. In 2026 I ruled that the language would not be carried forward: the runtime beneath Softanza is being replaced by one we own, written in Zig, a charter and a spike so far, wearing the old surface so that every line I wrote can keep running, under a new name, **Haro**. The old surface stays because the code is the asset; the old runtime goes because sovereignty over the runtime is one of the commitments I made. That decision was not free. It is in Chapter 27 with its numbers, including the one I did not want: our runtime is slower than the one we measured against, by a factor between one and two, on every row. I recorded the loss in the estate memo of 13 September. A book that hides that is not worth your trust, and neither is a platform.
 
@@ -171,15 +171,15 @@ What was refused is as much a part of Softanza as what was built. You will not f
 
 What proves this chapter? Three things, and I give them to you by name so that you can check them rather than believe me.
 
-The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the agentic plane, beside `governance_crossing_narrated`, in the system plane, for the crossing itself. The code block above was run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.
+The service registry's refusal of a fake in production is a guard, `service_registry_narrated`, in the system plane. The AI agent's propose, rehearse, judge and commit is `safeworld_narrated`, seventy-six assertions, in the agentic plane, beside `governance_crossing_narrated`, in the system plane, for the crossing itself. The code block above was run by the book's own runner inside the library on the night this page was built, and its output is shown as it came.
 
 Three guards for a chapter of philosophy may seem few. They are the right three, because they are the three places where philosophy meets a verdict.
 
 ## 6. The field, and where it leads
 
-I will not pretend the field has nothing. It has, in the last three years, built the most capable code generators in history, and every day I use them. The industry's answer to the trust problem is real work: generated tests, review bots, policy engines, sandboxes for agents, structured outputs, a second model to grade the first. Where the field leads, and it leads clearly, is in the generators themselves. Softanza does not build the large generators and does not compete with them; where it trains, it trains small models bound to one domain, whose every answer will be checked by a grammar. The field also leads in scale: its review tools read volumes of generated code that nothing in Softanza has been run against.
+I will not pretend the field has nothing. It has, in the last three years, built the most capable code generators in history, and every day I use them. The industry's answer to the trust problem is real work: generated tests, review bots, policy engines, sandboxes for AI agents, structured outputs, a second model to grade the first. Where the field leads, and it leads clearly, is in the generators themselves. Softanza does not build the large generators and does not compete with them; where it trains, it trains small models bound to one domain, whose every answer will be checked by a grammar. The field also leads in scale: its review tools read volumes of generated code that nothing in Softanza has been run against.
 
-Where I believe Softanza stands alone is in the order of things. The field adds admission to a generator. Softanza adds a generator to a court. In the field, a model writes in your language and tools check it afterwards; here, the model may only write in a language you declared, whose grammar is closed and whose court is meant to be born with it, so that, for the languages whose grammar is compiled today, an invalid sentence cannot be spoken at all. In the field, the dialogue with a system is a prompt; here, the system asks, and the answer can be an example, a formula or a sentence before it is ever a model. In the field, the record of a decision is a log; here, it is a transcript with a speaker and a certainty, answerable forever.
+Where I believe Softanza stands alone is in the order of things. The field adds admission to a generator. Softanza adds a generator to a court. In the field, an AI model writes in your language and tools check it afterwards; here, the model may only write in a language you declared, whose grammar is closed and whose court is meant to be born with it, so that, for the languages whose grammar is compiled today, an invalid sentence cannot be spoken at all. In the field, the dialogue with a system is a prompt; here, the system asks, and the answer can be an example, a formula or a sentence before it is ever a model. In the field, the record of a decision is a log; here, it is a transcript with a speaker and a certainty, answerable forever.
 
 Those are claims, and each has its chapter and its guard. I list them here so that you know where the argument is going, and so that you can hold me to it.
 
@@ -207,7 +207,7 @@ But the customer platforms run today on ordinary stacks. The bank's is a Python 
 
 ## 9. Exercise
 
-Take one function a model wrote for you this week. Under it, write the line it must print for one input you care about, in the form you have just met:
+Take one function an AI model wrote for you this week. Under it, write the line it must print for one input you care about, in the form you have just met:
 
 ```haro exercise
 ? YourFunction(the_input)
@@ -3856,7 +3856,7 @@ Three practices of the field meet in this idea, and none of them is the same as 
 
 The first is the semantic stack: RDF, OWL and SPARQL. A fact is a triple of subject, predicate and object, written in a shared vocabulary. An ontology says what classes and properties exist and what follows from them, and a reasoner derives the consequences. These are W3C recommendations, of 2014, 2009 and 2013. What the field asks of the author of a knowledge base is an ontology language of their own, a store and a query language. They usually stand beside the application and not in it.
 
-The second is the property-graph database, with its query language. The record has one comparison that sets such databases against this library. It is a model's text kept in the library, and it credits the field with scale, persistence and transactions.
+The second is the property-graph database, with its query language. The record has one comparison that sets such databases against this library. It is a text an AI model wrote, kept in the library's record, and it credits the field with scale, persistence and transactions.
 
 The third is rules over facts, in Prolog and in Datalog. Facts and rules in one program, a query by resolution. The record names Prolog only, as a language to reach, and not to rebuild.
 
@@ -10991,6 +10991,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 **lexicon.** The dictionary of words a sentence may use, each mapped to a verb the library documents. Chapter 13.
 
 **lineage.** The record of a decision with the authority and the risk of its moment. Chapter 30.
+
+**LLM.** Large language model: the AI model the field builds today, trained on text and asked to propose. In this book it is a proposer, never the mind. Chapters 1, 17.
 
 **narration.** The author's article under the library's documentation folder, whose code is the old surface. Not an executable test. (The word has since been given to the executable guards named *narrated*, and chapter 21 says why that confuses.) Chapters 3, 21.
 

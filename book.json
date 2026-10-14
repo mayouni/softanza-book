@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-14 21:44 UTC+01:00",
+ "built": "2026-10-14 21:49 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -226,7 +226,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2279,
+   "words": 2288,
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
@@ -2902,7 +2902,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3483,
+   "words": 3487,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
@@ -6798,7 +6798,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1642,
+   "words": 1673,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {
