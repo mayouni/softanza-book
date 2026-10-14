@@ -434,4 +434,6 @@ aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
 
 Run it, then read what was admitted and what the goal says, and decide whether that is what you wanted to hand to the door as examples. Section 4, in its last refusal, and section 7, in the absent example register, say why I call it a fault. When you can say why, you will know what the door did with your examples, and why that is not induction.
 
+This is what I call wise coding. The platform asks the question you have to answer, in the register you choose, and refuses to guess the answer for you: expression is free, admission is governed. Chapter 17 stated the law. This chapter ran its five registers, and showed where the fifth still falls silent.
+
 The next chapter is about the domain language model. There the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, and never a token.

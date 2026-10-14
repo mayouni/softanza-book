@@ -434,4 +434,6 @@ aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
 
 Exécutez-le, puis lisez ce qui a été admis et ce que dit le but, et décidez si c'est ce que vous vouliez remettre à la porte en fait d'exemples. La section 4, dans son dernier refus, et la section 7, dans le registre des exemples absent, disent pourquoi j'y vois une faute. Quand vous saurez dire pourquoi, vous saurez ce que la porte a fait de vos exemples, et pourquoi ce n'est pas de l'induction.
 
+C'est ce que j'appelle le wise coding. La plateforme pose la question à laquelle vous devez répondre, dans le registre que vous choisissez, et refuse de deviner la réponse à votre place : l'expression est libre, l'admission est gouvernée. Le chapitre 17 a énoncé la loi. Ce chapitre a fait tourner ses cinq registres, et montré où le cinquième reste encore muet.
+
 Le chapitre suivant porte sur le modèle de langage de domaine. Là, la prochaine chose que dit le modèle est une unité vérifiable de votre monde, un fait que vos règles admettent ou refusent, et jamais un jeton.

@@ -3,8 +3,8 @@
 # A chapter with a source file in src/<lang>/ is drafted; the others are listed as not yet drafted.
 
 title: Softanza
-subtitle: The Software Crafters Platform of the AI Age
-tagline: Rethinking programming, languages and intelligence, from first principles
+subtitle: The Governed Software Platform of the AI Age
+tagline: Declare what you know. A court keeps it. The AI model comes last.
 author: Mansour Ayouni
 series: Second of the AYOUNI books
 back_cover:
@@ -13,8 +13,8 @@ back_cover:
 
 fr:
   title: Softanza
-  subtitle: La plateforme des artisans du logiciel à l'ère de l'IA
-  tagline: Repenser la programmation, ses langages et son intelligence depuis les premiers principes
+  subtitle: La plateforme logicielle gouvernée de l'ère de l'IA
+  tagline: Déclarez ce que vous savez. Un tribunal le garde. Le modèle d'IA vient en dernier.
   series: Deuxième des livres AYOUNI
 
 spine: [1, 2, 3, 4, 5, 11, 17, 32, 33]

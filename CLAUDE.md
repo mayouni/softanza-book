@@ -4,8 +4,8 @@
 
 ```
 Softanza
-The Software Crafters Platform of the AI Age
-Rethinking programming, languages and intelligence, from first principles
+The Governed Software Platform of the AI Age
+Declare what you know. A court keeps it. The AI model comes last.
 ```
 
 **Author:** Mansour Ayouni · **Imprint:** AYOUNI · **Series:** second of the AYOUNI books, after

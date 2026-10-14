@@ -54,7 +54,7 @@ You will say that you already have tests, schemas and policy checks in your CI. 
 
 ## What Softanza is
 
-Three things, and for each I say how far it exists.
+A governed software platform. You declare what you know about a world, in plain text; a court built from that declaration keeps it; and the AI model, where there is one, comes last. That is the cover's line, and every chapter runs it. In matter, Softanza is three things, and for each I say how far it exists.
 
 - A **library** that you call from code. You write a few lines of Haro like the ones above, and you run them with the library loaded. The library holds the declarations and the courts made from them. Its source is at github.com/mayouni/stzlib, and every block of code in this book ran against a named commit of it. If your work is in Python or TypeScript, today you would use the library beside your code, not inside it: through one governed door it can run code in Python, NodeJS (JavaScript), R, Julia, Prolog and C, and chapter 16 shows how.
 - An **engine** beneath the library, written in Zig, a systems language. It does the actual computation, on text, lists and tables, once and in one place, so that every language that talks to it gets the same behaviour. It runs today.
@@ -79,6 +79,8 @@ Each chapter ends with six short doors. A door is a way in for one kind of reade
 Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the AI model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
 
 Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. The limit. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
+
+One more name you will meet. Softanza asks you the question you have to answer, in your own words, and refuses to guess the answer for you. I call that practice wise coding. Chapter 18 runs it, register by register.
 
 ## What to trust
 

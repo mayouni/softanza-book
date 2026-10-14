@@ -110,7 +110,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **unperceived.** The state of a thing that reaches a person through a sense, when no person has perceived it and said so. It is a state and not a failure. Chapters 21, 33.
 
-**wise coding.** Softanza asks and the world judges. The inversion of the loop of prompting and keeping what runs. Chapter 18.
+**wise coding.** The platform asks the question the person has to answer, and refuses to guess the answer: Softanza asks and the world judges. The inversion of the loop of prompting an AI model and keeping what runs. Chapter 18.
 
 **workbench.** Where a proposal is rehearsed. It holds a twin, a copy of the system with no reference to the real one; what the proposal would write goes into the twin, and what comes out is a plan. The one a programmer already uses, not a second one for machines. Chapters 1, 20.
 

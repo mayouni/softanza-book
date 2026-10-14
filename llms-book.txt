@@ -1,10 +1,10 @@
-# Softanza · The Software Crafters Platform of the AI Age
+# Softanza · The Governed Software Platform of the AI Age
 
-> Rethinking programming, languages and intelligence, from first principles. By Mansour Ayouni. Second of the AYOUNI books.
+> Declare what you know. A court keeps it. The AI model comes last.. By Mansour Ayouni. Second of the AYOUNI books.
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-14 13:20 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Built 2026-10-14 21:44 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 

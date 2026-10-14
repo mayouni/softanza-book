@@ -70,7 +70,9 @@ Keep the same number of paragraphs, list items, table rows and [AUTHOR] markers.
 | promise | promesse | the `#-->` line |
 | narration | narration | the author's article |
 | declare | déclarer | « une déclaration » |
-| crafter | artisan du logiciel | |
+| crafter | artisan du logiciel | the person; the platform is no longer named by it (COVER-02) |
+| governed (the cover: the governed software platform) | gouverné, gouvernée | « la plateforme logicielle gouvernée » |
+| wise coding | wise coding | the name of the practice, kept in English; defined in plain words at first use |
 | stage words | mots d'étape | built = construit, designed = conçu, absent = absent |
 | spine | colonne | « la colonne » (the nine chapters) |
 | decision (box) | décision | |

@@ -1,11 +1,11 @@
 {
  "schema": "softanza-book/2",
  "title": "Softanza",
- "subtitle": "The Software Crafters Platform of the AI Age",
- "tagline": "Rethinking programming, languages and intelligence, from first principles",
+ "subtitle": "The Governed Software Platform of the AI Age",
+ "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-14 13:20 UTC+01:00",
+ "built": "2026-10-14 21:44 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -107,7 +107,7 @@
     }
    ],
    "open_questions": [],
-   "words": 1709,
+   "words": 1797,
    "french": true,
    "text": "agents/preface.md",
    "run": {
@@ -3777,7 +3777,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3288,
+   "words": 3342,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
@@ -6798,7 +6798,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1623,
+   "words": 1642,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {

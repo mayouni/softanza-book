@@ -110,7 +110,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **non perçu.** L'état d'une chose qui atteint une personne par un sens, quand aucune personne ne l'a perçue et ne l'a dit. C'est un état et non un échec. Chapitres 21, 33.
 
-**wise coding.** Softanza demande et le monde juge. L'inversion de la boucle qui consiste à demander à un modèle et à garder ce qui s'exécute. Chapitre 18.
+**wise coding.** La plateforme pose la question à laquelle la personne doit répondre, et refuse d'en deviner la réponse : Softanza demande et le monde juge. L'inversion de la boucle qui consiste à solliciter un modèle d'IA et à garder ce qui s'exécute. Chapitre 18.
 
 **atelier.** Là où une proposition est répétée. Il tient un jumeau, une copie du système sans aucune référence au vrai ; ce que la proposition écrirait va dans le jumeau, et ce qui en sort est un plan. Celui qu'un programmeur emploie déjà, et non un second pour les machines. Chapitres 1, 20.
 

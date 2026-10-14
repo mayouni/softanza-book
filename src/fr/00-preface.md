@@ -54,7 +54,7 @@ Vous direz que vous avez déjà des tests, des schémas et des contrôles de pol
 
 ## Ce qu'est Softanza
 
-Trois choses, et pour chacune je dis jusqu'où elle existe.
+Une plateforme logicielle gouvernée. Vous déclarez ce que vous savez d'un monde, en texte clair ; un tribunal construit à partir de cette déclaration le garde ; et le modèle d'IA, quand il y en a un, vient en dernier. C'est la ligne de la couverture, et chaque chapitre la fait tourner. Matériellement, Softanza est trois choses, et pour chacune je dis jusqu'où elle existe.
 
 - Une **bibliothèque** que vous appelez depuis du code. Vous écrivez quelques lignes de Haro comme celles ci-dessus, et vous les lancez avec la bibliothèque chargée. La bibliothèque tient les déclarations et les tribunaux qui en sont faits. Sa source est à github.com/mayouni/stzlib, et chaque bloc de code de ce livre a tourné sur un commit nommé de celle-ci. Si votre travail est en Python ou en TypeScript, vous l'utiliseriez aujourd'hui à côté de votre code, non dedans : par une seule porte gouvernée elle peut exécuter du code en Python, NodeJS (JavaScript), R, Julia, Prolog et C, et le chapitre 16 montre comment.
 - Un **moteur** sous la bibliothèque, écrit en Zig, un langage système. Il fait le calcul réel, sur le texte, les listes et les tables, une seule fois et en un seul endroit, pour que chaque langage qui lui parle obtienne le même comportement. Il tourne aujourd'hui.
@@ -79,6 +79,8 @@ Chaque chapitre se termine par six courtes portes. Une porte est une entrée pou
 Lisez d'abord neuf chapitres. Ils portent tout l'argument et peuvent se lire seuls : les quatre de la partie I, les deux derniers, et trois qui énoncent chacun une règle que le livre tient partout. Chapitre 5 : le code doit se lire comme une personne pense. Chapitre 11 : un langage est déclaré et fermé. Chapitre 17 : un programme est programmatique par défaut, ce qui veut dire que les règles et le code décident d'abord, et que le modèle d'IA vient en dernier. Le lecteur a un bouton qui n'affiche que ces neuf. Revenez aux autres quand l'un d'eux vous intéresse.
 
 Chaque chapitre a les mêmes neuf parties, dans le même ordre. L'idée telle que le terrain la tient aujourd'hui. Le premier principe. La forme qu'elle prend dans Softanza, en code. La décision, et ce que j'ai refusé. Le tribunal : les tests nommés qui prouvent l'affirmation du chapitre. Le terrain, et ce qu'il fait mieux. La limite. Les six portes. Un exercice, auquel vous répondez avant de le lancer. Les chapitres 5, 11 et 17 s'ouvrent par une courte section de plus, sur ce que l'ère de l'IA change.
+
+Un nom de plus que vous rencontrerez. Softanza vous pose la question à laquelle vous devez répondre, dans vos propres mots, et refuse de deviner la réponse à votre place. J'appelle cette pratique le wise coding. Le chapitre 18 la fait tourner, registre par registre.
 
 ## À quoi se fier
 
