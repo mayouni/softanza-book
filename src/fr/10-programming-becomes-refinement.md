@@ -241,7 +241,7 @@ Vient ensuite le terrain, et où il mène.
 
 Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de nombreuses équipes et où l'application parle à de vrais fournisseurs. (Connaissance générale, comme dans la section 1.) La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
 
-Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza ne juge que ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
+Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. (Connaissance générale, comme dans la section 1.) La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
 Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle. (Connaissance générale, comme dans la section 1.) La mienne repose sur une déclaration par point.
 
@@ -255,10 +255,10 @@ Ce qui est conçu, et absent de la bibliothèque par son nom : l'expérience que
 
 Ce qui est construit, et où cela s'arrête : les limites de la barrière telle qu'elle est.
 
-- Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle.
+- Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle ; les contrôles pour ces genres sont l'étape suivante.
 - Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition venue d'une origine que le code ne connaît pas franchit donc un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
-- Le fichier sauvegardé contient le source rendu et rien d'autre : pas d'historique, pas de postures, pas de ligne de temps, et aucun moyen de le recharger. La réversibilité ne survit pas au fichier. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient `.rfn` pour la phrase et laisse `.zrfn` à l'extraction par balises de commentaire de la bibliothèque.
+- Le fichier sauvegardé contient le source rendu ; l'historique, les postures, la ligne de temps et le rechargement sont absents, et c'est l'étape suivante. La réversibilité vit dans l'objet en cours d'exécution ; la porter dans le fichier est encore à venir. La bibliothèque écrit ce fichier au format `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient `.rfn` pour la phrase et laisse `.zrfn` à l'extraction par balises de commentaire de la bibliothèque.
 
 ## 8. Six portes
 

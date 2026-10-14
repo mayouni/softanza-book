@@ -133,7 +133,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 
 The declared crossing answers `1`. The other answers `0`, refused! The constellation gives its reason in one line: `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Every other crossing is refused with its reason.
 
-The commons is the shared ground of a constellation, what every world of it stands on. It holds an identity, a session and a store. It is a world like the others, world zero, and not a node of a special kind. Chapter 23 shows it and says where the code falls short of that.
+The commons is the shared ground of a constellation, what every world of it stands on. It holds an identity, a session and a store. It is a world like the others, world zero, and not a node of a special kind. Chapter 23 shows it and says how far the code has come in that direction.
 
 And a platform is the envelope around a solution: its parts, the systems they run on, and the order in which it is built, rehearsed and deployed. You will see it refuse to deploy before it is built in chapter 33. Here is what it does with the layers, for the web: a part of a solution ships only the engine groups it needs, and only those that are Softanza's own. The phone below asks for four capabilities. How many engine groups does it ship? Run it:
 
@@ -159,7 +159,7 @@ Parts II to IV of this book are rethinks, and each of them is a box of this pict
 
 ## 4. The decision, and what I refused
 
-**I refused computation in the faces.** The engine is the product. The language above it adds beauty, not computation: thousands of methods that read like sentences, and the algorithms beneath them in one place. The rule is that every feature is implemented once, in the engine. The migration is not finished. The layer contract lists number, list, object, graph, stats and natural as still in Ring.
+**I refused computation in the faces.** The engine is the product. The language above it adds beauty, not computation: thousands of methods that read like sentences, and the algorithms beneath them in one place. The rule is that every feature is implemented once, in the engine. The migration is in development. The layer contract lists number, list, object, graph, stats and natural as still in the host language the library was first written for.
 
 **I removed the old framework, with no fallback.** The library sat on a large C++ framework for its text, its dates and its files. When the engine replaced it, every path through the framework was removed: no fallback, no feature flag kept in case.
 
@@ -167,7 +167,7 @@ Parts II to IV of this book are rethinks, and each of them is a box of this pict
 
 **I refused a flag to choose a layer.** The first way of choosing a layer was a flag. It could never work, because the language beneath loads every file it sees at compile time, so all three layers loaded on every call. The failure of one was the failure of all. The flag was removed rather than kept as a switch that silently does nothing. The reason was written where the next reader would stand: a layer is chosen by the file you load.
 
-**I let everything go into base, and I say so.** Under the pressure of time, the domains landed in base. The engine, the planes such as security and performance, and the customers moved forward meanwhile. That was the agile choice, and it is defensible only while the debt is visible. So the figure draws base widest, and chapter 27 tells the debt with its numbers.
+**I let everything go into base, and I say so.** Under the pressure of time, the domains landed in base. The engine, the planes such as security and performance, and the customers moved forward meanwhile. That was the agile choice, and the next step is to place each domain in its layer, in plain sight. So the figure draws base widest, and chapter 27 gives the numbers.
 
 **I refused mini-applications.** The field's super-app is a host that runs small applications. Softanza's is a governed graph of worlds: worlds, not mini-apps; bonds and norms, not a container.
 
@@ -179,13 +179,13 @@ Five guards stand beside the floors; the next section names what each proves.
 
 ## 6. The field, and where it leads
 
-Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and broken where base should build on core, as section 7 shows.
+Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and not yet carried to where base should build on core, as section 7 shows.
 
 The field's text libraries lead on locale: Softanza's own map says that the clear gap of its strings is the international components' locale layer. Its locale area is a deliberate bet against those components: no collation, no plural rules and no time zones.
 
-The field's super-app hosts run real users at a scale this platform has never met. The record names them as the model it refused and measures nothing against them, so I will not either.
+At the scale of real users, the field's super-app hosts lead today. The record names them as the model it refused and measures nothing against them, so I will not either.
 
-And the Atlas itself prints where Softanza is weak. The binary area is a plan with no shipped code, the plugin, foreign-function and embed plane of extensibility is mostly planned, the system area has few strong lanes. I hold this as a view, not a result. A map that prints its weak areas is the only kind worth reading.
+And the Atlas itself prints what is still to come for Softanza. The binary area is a plan for now, and its shipped code is the next step; the plugin, foreign-function and embed plane of extensibility is mostly planned; the system area has few lanes rated strong so far. I hold this as a view, not a result. A map that prints its stages is the only kind worth reading.
 
 ## 7. The limit
 
@@ -206,7 +206,7 @@ done
 
 The runtime answers: `Error in class name, class not found: stxstring`. The class is written, and no entry file loads it!
 
-The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is broken against the engine today. Its string and character classes call engine names that no engine file registers, as the site study of the book's roots reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that site study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
+The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names that no engine file registers, as the site study of the book's roots reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that site study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
 What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
 
@@ -232,7 +232,7 @@ Draw your own solution the way this chapter draws Softanza: floors, and a court 
 
 Then declare two parts of it with `stzPlatformProfile`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
 
-I left this one in your hands. Section 7 says the core layer's string classes are broken against the engine, and the block of section 3 shows you lists only. Take the block of section 7 and change one word: `stxString` becomes `stkString`.
+I left this one in your hands. Section 7 says the core layer's string classes are still in development against the engine, and the block of section 3 shows you lists only. Take the block of section 7 and change one word: `stxString` becomes `stkString`.
 
 ```haro exercise
 try

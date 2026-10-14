@@ -56,21 +56,21 @@ You will say that you already have tests, schemas and policy checks in your CI. 
 
 Three things, and for each I say how far it exists.
 
-- A **library** that you call from code. Today that code is Ring, a small scripting language: you write a few lines like the ones above, and you run them with the library loaded. The library holds the declarations and the courts made from them. Its source is at github.com/mayouni/stzlib, and every block of code in this book ran against a named commit of it. If your work is in Python or TypeScript, today you would use the library beside your code, not inside it: through one governed door it can run code in Python, NodeJS (JavaScript), R, Julia, Prolog and C, and chapter 16 shows how.
+- A **library** that you call from code. You write a few lines of Haro like the ones above, and you run them with the library loaded. The library holds the declarations and the courts made from them. Its source is at github.com/mayouni/stzlib, and every block of code in this book ran against a named commit of it. If your work is in Python or TypeScript, today you would use the library beside your code, not inside it: through one governed door it can run code in Python, NodeJS (JavaScript), R, Julia, Prolog and C, and chapter 16 shows how.
 - An **engine** beneath the library, written in Zig, a systems language. It does the actual computation, on text, lists and tables, once and in one place, so that every language that talks to it gets the same behaviour. It runs today.
-- A **language**, Haro, meant to hold the declarations. It is meant to read the code already written for Ring, so nothing written so far is lost. It is still being built: it has a charter and a first experiment, and no executable yet.
+- A **language**, Haro, made to hold the declarations. For now it uses the syntax of its first facet, so all the code written so far runs unchanged. Its own executable is in development: it has a charter and a first experiment.
 
 Chapter 4 draws the three in one picture.
 
 ## Where it stands
 
-Three projects, a restaurant, a bank and an organisation, shaped the library. None of them runs on the engine yet. So this book owes you one thing it does not have: a whole solution that ran on Softanza's own engine, and a named person who said what they saw. Chapter 33 is about that gap. I would rather you heard it from me now.
+Softanza is not a research project, although it rests on deep research. Real projects shaped it: a restaurant, a bank and an organisation, and their feedback shaped its design. Parts of Softanza are in production. Other parts are in development, as is normal for a platform that is new and this ambitious. Each chapter says which is which.
 
 ## What this book is
 
-This is a book of arguments, with running code. For each question about programming, about languages and about intelligence, I do four things. I give the answer the field usually gives. I give the answer Softanza takes. I give the decision I made, and what I refused. And I give the proof: the code ran, and the tests that prove it are named. I also say where Softanza is weaker than what the field already does well.
+This is a book of arguments, with running code. For each question about programming, about languages and about intelligence, I do four things. I give the answer the field usually gives. I give the answer Softanza takes. I give the decision I made, and what I refused. And I give the proof: the code ran, and the tests that prove it are named. I also say what the field already does well, so that you can compare.
 
-It has seven parts and thirty-three chapters. You do not need to know Softanza, Ring or Zig. You need to have written code, and to have felt the doubt above. The project's website holds its evidence, with the proofs, and its course teaches the same ground by exercises. This book holds the argument.
+It has seven parts and thirty-three chapters. You do not need to know Softanza or Zig. You need to have written code, and to have felt the doubt above. The project's website holds its evidence, with the proofs, and its course teaches the same ground by exercises. This book holds the argument.
 
 Each chapter ends with six short doors. A door is a way in for one kind of reader: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. The agent is an AI program, because the book is also published as data that a program can read. Enter by the door that is yours today.
 
@@ -86,7 +86,7 @@ Every block of code in this book was run inside the library. Under each title th
 
 When a chapter says what is not finished, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document says so, and nothing runs. *Absent*: I looked and found nothing, and I say how far I looked. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
 
-One more honest note. Haro does not run the library yet, so the blocks marked `haro` run on Ring, the older language, version 1.27. Each page says so.
+One more note. Haro's own executable is still in development, so the blocks marked `haro` run today on the runtime of the language the library was first written for, version 1.27, and each page says so. Appendix H, the project's history, tells how that came about.
 
 ## About this draft
 

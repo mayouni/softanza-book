@@ -141,14 +141,14 @@ o1 = new stzString("haxxrxo")
 
 The chain printed `H A R O`, and the original still holds `haxxrxo`!
 
-**The misspelled form** is accepted, with a note I owe you. A misspelling of a name works:
+**The misspelled form** is accepted, with a note on what stands behind it. A misspelling of a name works:
 
 ```haro
 ? Q("   Haro ").WithoutSapces()
 #--> Haro
 ```
 
-The article says the library recognises and corrects minor typos, and that the intelligence resides in the library itself. The code shows something plainer: `WithoutSapces` works because that spelling was written by hand as an alias. Another misspelling, `WithoutSpces`, fails. So the form is real, and in what I traced it is a list of declared aliases, not a correction engine. I did not trace every file that mentions correction; one message in the object class only suggests a name, with "Did you mean".
+The article says the library recognises and corrects minor typos, and that the intelligence resides in the library itself. The code shows how the form works: `WithoutSapces` works because that spelling was written by hand as an alias. Another misspelling, `WithoutSpces`, fails. So the form is real, and in what I traced it is a list of declared aliases; the correction engine the article describes is not among what I traced. I did not trace every file that mentions correction; one message in the object class only suggests a name, with "Did you mean".
 
 Now the scope half of the chapter. The same fault shows up everywhere in programming: behaviour with an invisible governing frame. I hold this as a view, not a result; what stands behind it here is three instances: the regex verbs, the system and the placement of a deployment. A function does one thing here and another there, and nothing in its name says which frame it is in. The answer, in four moves, is the paradigm I call scope-oriented programming. Name the hidden frame. Turn it into a small, closed set of named scopes. Choose the scope at the call site, in the verb, and not in a flag set earlier. And give the library the scope to reason with, a semantic handle and not a comment.
 
@@ -234,7 +234,7 @@ Now the court, and which guards prove which of these claims.
 
 ## 5. The court
 
-`00_regex_narrated` proves the verbs `Match` and `MatchFirst`: `Match` anchors, `MatchFirst` searches, Z hands back positions and does not print them. It asserts nothing for `MatchLine` and `MatchWord`: the blocks above show them, and only classic blocks, which are not guards, cover them. `972_narration_viz-finding_a_recurring_substring` proves the drawn answer. `full_scope_model_narrated` proves the system scope, with its three verdicts. `system_scope_model_narrated` proves the closed set of capabilities; one of its assertions is a timing limit, and it failed under load in one probe run, which `data/` does not record. I report it and do not hide it. `delivery_narrated` proves the placement plan.
+`00_regex_narrated` proves the verbs `Match` and `MatchFirst`: `Match` anchors, `MatchFirst` searches, Z hands back positions and does not print them. It asserts nothing for `MatchLine` and `MatchWord`: the blocks above show them, and only classic blocks, which are not guards, cover them. `972_narration_viz-finding_a_recurring_substring` proves the drawn answer. `full_scope_model_narrated` proves the system scope, with its three verdicts. `system_scope_model_narrated` proves the closed set of capabilities; one of its assertions is a timing limit, and in one probe run under load it did not hold, a run `data/` does not record. I print it beside the proof. `delivery_narrated` proves the placement plan.
 
 Where the field does better comes next.
 
@@ -254,16 +254,16 @@ What is built: fourteen of the twenty-two forms of a name run, some with example
 
 What is designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
 
-What is absent, and the page should say each with its failure:
+What is absent, and the page should say each with what exists beside it:
 
 - **Partial**, `@Removed`, is in the archive only: the call is not defined.
 - **Future**, `BeforeQ`, was trimmed on purpose, as I said.
 - **Free**, the suffix that lets a call give its parameters in any order and any subset: there is no definition of it outside the archive. The library's own parser knows the name `FX` and not `FF`. The two narrations that tell it use two names, and the code has neither.
 - **Default**, `dftRange` and `infRange`: not defined; the library's comment calls the informing form not yet built.
 - **Multilingual**, a method named in French or Arabic: not in the live library. The names exist in the archive. The nearest thing today is the language packs of chapter 11.
-- The three that run in another shape. The exceptional form exists, but the article's example does not. Free order works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. And the statement form is half right: the "All" half works, and the "No" half returns the wrong truth value. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
+- The three that run in another shape. The exceptional form exists, but the article's example does not. Free order works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
 
-On the scope side: the regex verbs differ from the design table in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run, which `data/` does not record, 61 of the 62 assertions of its narrated guard passed, and the one failure was a timing one. I state what the code does: the system scope is built, with that failure printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
+On the scope side: the regex verbs differ from the design table in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run, which `data/` does not record, 61 of the 62 assertions of its narrated guard passed, and the one assertion that did not hold was a timing limit. I state what the code does: the system scope is built, with that result printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
 
 ## 8. Six doors
 

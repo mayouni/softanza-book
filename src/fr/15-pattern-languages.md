@@ -16,7 +16,7 @@ rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
 ---
 
-Dans ce chapitre, je pars de l'expression régulière, ce qu'un motif est pour un programmeur qui travaille, et je porte son habitude aux données qui ne sont pas du texte : listes, nombres, tableaux, matrices, temps et graphes. Je fais le même petit geste dans chaque support, un constructeur, un motif dans une chaîne de caractères, `Match`, et je vous montre tout de suite que la grammaire n'est pas tout à fait une. Je dis ce que les gardes prouvent et là où la famille est faible en elle-même, et je garde sa seule tension pour la limite : un mot que le langage ne connaît pas n'est pas encore refusé. Le principe est celui-ci : un motif est une règle sur la forme des données, écrite comme des données, et la même habitude sert tous les genres de données.
+Dans ce chapitre, je pars de l'expression régulière, ce qu'un motif est pour un programmeur qui travaille, et je porte son habitude aux données qui ne sont pas du texte : listes, nombres, tableaux, matrices, temps et graphes. Je fais le même petit geste dans chaque support, un constructeur, un motif dans une chaîne de caractères, `Match`, et je vous montre tout de suite que la grammaire n'est pas tout à fait une. Je dis ce que les gardes prouvent et là où la famille est encore en développement, et je garde sa seule tension pour la limite : un mot que le langage ne connaît pas n'est pas encore refusé. Le principe est celui-ci : un motif est une règle sur la forme des données, écrite comme des données, et la même habitude sert tous les genres de données.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -230,13 +230,13 @@ Vient ensuite le terrain, et où il mène.
 
 **Chaînes de caractères.** Le terrain mène en sûreté et en vitesse, et Softanza mène en nommage. La page du site pour ce domaine le dit elle-même : elle est derrière les moteurs modernes en sûreté et en débit, sans JIT et sans moteur de correspondance en temps linéaire. Le contrôle contre le retour arrière catastrophique n'est pas atteignable depuis Haro, bien que le code pour les deux soit déjà compilé dans le binaire. L'en-tête du moteur confirme que le durcissement existe en dessous : une limite de correspondances, une limite de récursion, des plafonds de longueur.
 
-**Listes, nombres, temps, graphes.** Le terrain a des outils uniques plus anciens et plus forts. L'étude le dit sans les classer : un outil a des motifs de listes, l'unicité et des intervalles à pas, et trois langages ont la mise en correspondance structurelle. Les langages de requête de graphes existent, et le traitement d'événements existe pour le temps. Ce que le terrain n'a pas, et ce que le dossier revendique, c'est l'habitude unique d'un support à l'autre.
+**Listes, nombres, temps, graphes.** Le terrain a des outils uniques plus anciens et mieux établis. L'étude le dit sans les classer : un outil a des motifs de listes, l'unicité et des intervalles à pas, et trois langages ont la mise en correspondance structurelle. Les langages de requête de graphes existent, et le traitement d'événements existe pour le temps. Ce que le terrain n'a pas, et ce que le dossier revendique, c'est l'habitude unique d'un support à l'autre.
 
 **Tableaux.** Les bibliothèques de qualité des données mènent en portée et en écosystème. Ici une règle est une phrase que la personne qui possède les données peut lire. La perte est qu'elle ne s'exécute que sur `stzTable`.
 
-**Là où la famille est faible en elle-même.** Les en-têtes de classe impriment leurs défauts comme des avertissements : pour les matrices et les graphes. C'est rare, et je le dis. Graphes : les quantificateurs sont analysés mais pas encore utilisés par la correspondance. Matrices : des manques connus aujourd'hui, chacun porté comme un avertissement sur sa méthode.
+**Là où la famille est encore en développement.** Les en-têtes de classe impriment leurs limites connues comme des avertissements : pour les matrices et les graphes. C'est rare, et je le dis. Graphes : les quantificateurs sont analysés mais pas encore utilisés par la correspondance. Matrices : des manques connus aujourd'hui, chacun porté comme un avertissement sur sa méthode.
 
-**Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi une raison probable pour laquelle le temps échoue.
+**Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi une raison probable pour laquelle le temps ne correspond pas encore.
 
 Vient ensuite la limite.
 
@@ -265,7 +265,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 #--> "Lunch)"
 ```
 
-L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas ! Le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé, toujours présent dans le temps.
+L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas ! Le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé ; le réparer dans le temps est l'étape suivante.
 
 - **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux. Le motif correspond-il ?
 

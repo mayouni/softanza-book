@@ -215,23 +215,23 @@ Les trois cas sont un restaurateur qui n'est pas programmeur, une banque sous un
 
 **J'ai refusé de compter un client sans document.** Le site ne compte un projet comme référence que lorsqu'un document le prouve, et ne cite aucun nombre de pays ni aucun nombre de programmeurs. Il ne nomme un client que sur ma parole. Une leçon n'est listée que lorsqu'un fichier de la bibliothèque la porte.
 
-**J'ai refusé de présenter la bibliothèque par son anatomie.** Depuis 2022, la porte d'entrée est qui vous êtes et ce que vous voulez faire, et l'anatomie est placée sous chaque étape. Le site garde sept portes (lu le 9 octobre 2026), et les parcours derrière elles existent comme pages, neuf ce jour-là, chaque étape portant son mot d'étape. Que chaque étape s'exécute dans l'ordre sous une garde est conçu et non construit.
+**J'ai refusé de présenter la bibliothèque par son anatomie.** Depuis 2022, la porte d'entrée est qui vous êtes et ce que vous voulez faire, et l'anatomie est placée sous chaque étape. Le site garde sept portes (lu le 9 octobre 2026), et les parcours derrière elles existent comme pages, neuf ce jour-là, chaque étape portant son mot d'étape. Que chaque étape s'exécute dans l'ordre sous une garde est conçu ; le construire est l'étape suivante.
 
-Les gardes qui prouvent ces affirmations, et celle qui ne passe pas, sont dans la section suivante.
+Les gardes qui prouvent ces affirmations, et celle qui est en développement, sont dans la section suivante.
 
 ## 5. Le tribunal
 
-`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent modèle qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. Elle ne passe pas à ce commit. Je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa. La page compte donc ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
+`agentfile_narrated` prouve qu'un agent est un fichier jugé quand il est chargé : un refus par barrière, la couverture manquante parmi eux, et l'agent modèle qui détient un effet refusé par la même règle que celle qu'emploie le graphe. `service_registry_narrated` prouve qu'un bac à sable en production est une violation. `graphrule_object_narrated` prouve la règle comme un objet attaché à un modèle. `semantic_resolver_narrated` tient le chemin haoussa comme dernier scénario. À ce commit, elle est en développement. Je l'ai exécutée le 8 octobre 2026 et elle s'arrête sur une erreur levée par une fonction de découpage de chaînes, après 29 assertions et avant d'atteindre les assertions haoussa ; terminer cette exécution est l'étape suivante. La page compte donc ses assertions et ne revendique pas son verdict ; le bloc haoussa a été exécuté seul. `00_orgchart_narrated` prouve les postes, les liens hiérarchiques et le suivi des vacances de l'organigramme ; le constat BCEAO imprimé plus haut vient d'un fichier voisin, `14_bceao_governance.ring`.
 
 ## 6. Le terrain, et où il mène
 
-Les agents de code mènent en mains. Ils lisent, cherchent, modifient et exécutent déjà. Ce qui leur manque, selon le site lui-même, c'est un moyen de connaître une interface inconnue sans deviner, de juger leur travail selon des règles et des promesses, et de présenter un changement comme une intention qu'une personne peut relire. Les juges de Softanza sont construits ; la porte entre eux et un agent de code est décidée et non construite.
+Les agents de code mènent en mains. Ils lisent, cherchent, modifient et exécutent déjà. Ce qui leur manque, selon le site lui-même, c'est un moyen de connaître une interface inconnue sans deviner, de juger leur travail selon des règles et des promesses, et de présenter un changement comme une intention qu'une personne peut relire. Les juges de Softanza sont construits ; la porte entre eux et un agent de code est conçue, et la construire est l'étape suivante.
 
 Le low-code mène en base installée et en tout ce qui l'entoure. (Connaissance générale, non une étude du dossier.) L'organisation sur le terrain garde la suite de son éditeur pour ses comptes, ses documents et ses notifications. La plateforme de l'artisan du logiciel se place à côté des outils du terrain, non à leur place.
 
-Les applications de messagerie mènent là où les artisans du logiciel sont déjà. C'est mon point de vue, non un résultat. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cet écart.
+Les applications de messagerie mènent là où les artisans du logiciel sont déjà. C'est mon point de vue, non un résultat. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cette direction.
 
-Et la porte du formateur n'est pas prouvée. Les éditions du cours en français, en arabe et en haoussa sont des brouillons qu'aucun relecteur n'a lus, et aucune institution ne l'a adopté.
+Et la porte du formateur en est à une étape plus précoce que les autres. Les éditions du cours en français, en arabe et en haoussa sont des brouillons qu'un relecteur n'a pas encore lus, et la première institution à l'adopter reste à venir.
 
 La section suivante dit ce qui est construit, ce qui est conçu et ce qui est absent.
 
@@ -253,7 +253,7 @@ Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur
 
 **Le décideur.** Vous déclarez votre monde, votre gouvernance, et ce que chaque acteur peut valider, et vous possédez tout, en texte brut.
 
-**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site. Les éditions en français, en arabe et en haoussa sont encore des brouillons qu'aucun relecteur n'a lus.
+**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site. Les éditions en français, en arabe et en haoussa sont des brouillons qu'un relecteur n'a pas encore lus.
 
 **L'agent.** Vous vous déclarez dans un fichier : ce que vous couvrez, à quel point vos actes sont réversibles. Vous recevez un atelier et un tribunal. Vous ne recevez pas la capacité de valider.
 

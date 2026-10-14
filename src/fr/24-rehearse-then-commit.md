@@ -392,11 +392,11 @@ Le plan des services est intitulé « écrit le 23 juillet 2026 en réponse à l
 
 `virtual_system_twin_narrated` prouve, en douze scènes, que le jumeau ne touche à rien de réel, que le plan narre et signale, que la validation est l'unique porte, qu'une portée refuse, et qu'un relecteur rejette une étape. Il prouve aussi que cent opérations restent en mémoire jusqu'à une seule validation. `virtual_environment_twin_narrated` prouve la même forme pour les variables, un répertoire et des lancements de processus en file. `emulator_narrated` prouve que le bundle se génère, que la carte rend chaque partie par rôle, et que chaque partie ne porte que son sous-ensemble. `deployment_narrated` prouve le site comme configuration, la validation gouvernée, le plan d'étapes, le retour arrière, la faisabilité, et le backend git ; il lance `git`, donc le livre ne l'exécute pas. `full_scope_model_narrated`, scènes 13 à 16, prouve que construire précède déployer, qu'une solution non saine ne peut pas être construite, le pont d'abaissement, et le déploiement gouverné.
 
-Le refus que fait la production est prouvé par les deux premières gardes, qui ont tourné. Que le moteur répété tourne dans un navigateur n'est prouvé par aucune garde qui tourne.
+Le refus que fait la production est prouvé par les deux premières gardes, qui ont tourné. Que le moteur répété tourne dans un navigateur est la preuve suivante : aucune garde qui tourne ne le vérifie aujourd'hui.
 
 ## 6. Le terrain, et où il mène
 
-Les services réels sont en tête. Le plan le dit : un double n'est pas le service réel, et il faut encore au moins une exécution réelle avant la production. Une passerelle scriptée n'est pas l'ensemble des cas limites d'un fournisseur. Les réponses enregistrées dérivent, et une suite de rejeu demande de ré-enregistrer et de tester les contrats contre l'API réelle. La bibliothèque a l'appel d'enregistrement et pas de vérification de dérive.
+Les services réels sont en tête. Le plan le dit : un double n'est pas le service réel, et il faut encore au moins une exécution réelle avant la production. Une passerelle scriptée n'est pas l'ensemble des cas limites d'un fournisseur. Les réponses enregistrées dérivent, et une suite de rejeu demande de ré-enregistrer et de tester les contrats contre l'API réelle. La bibliothèque a l'appel d'enregistrement ; une vérification de dérive pour les réponses enregistrées est conçue.
 
 Les modèles de pointe sont en tête, et ne peuvent pas être émulés. Le modèle est jugé contre le vrai modèle, délibérément, comme sa propre activité.
 
@@ -404,7 +404,7 @@ L'infrastructure réelle est en tête. Le déploiement dépend de l'infrastructu
 
 Les outils de déploiement matures sont en tête. La narration le dit clairement : cela ne remplace pas tous les outils de déploiement matures, cela unifie les coutures que ces outils laissent exposées.
 
-La fidélité est limitée, et le dit. L'émulation est fidèle mais pas omnisciente, donc elle dit ce qui est quoi. Ce qu'un double prouve est plus étroit encore : un puits de capture prouve ce que vous auriez envoyé, et un répertoire n'est pas un CDN.
+La fidélité a une frontière déclarée. L'émulation est fidèle mais pas omnisciente, donc elle dit ce qui est quoi. Ce qu'un double prouve est plus étroit encore : un puits de capture prouve ce que vous auriez envoyé, et un répertoire n'est pas un CDN.
 
 Là où je pense que le dossier se distingue, c'est dans le couplage. Le double, le plan, les noms de justificatifs, la barrière et l'acteur sont déclarés dans le même programme que celui qui est livré, et une seule barrière les juge.
 
@@ -438,21 +438,21 @@ Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est pass�
 
 **Les tailles sont des estimations.** Le plan imprime un chiffre tiré d'un catalogue, et la narration imprime deux chiffres différents pour la même partie. N'imprimez pas une taille comme une affirmation.
 
-**`Deploy(:Emulated)` ne déplace jamais le registre.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre. La valeur de phase `:emulated` que possède le registre n'est posée par aucun code de la bibliothèque ; seule une garde la pose.
+**`Deploy(:Emulated)` ne déplace pas encore le registre.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre. La valeur de phase `:emulated` que possède le registre n'est posée aujourd'hui que par une garde ; la poser depuis le déploiement émulé est conçu.
 
 **Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après mon déploiement refusé (ma recherche du 8 octobre 2026, hors des blocs de ce chapitre), `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement non.
 
-**Un plan signale, il ne classe pas.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
+**Un plan signale aujourd'hui ; classer est la direction.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
 
 Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent que le `solve 2 -8` du téléphone renvoie `x = 4` dans une page. La garde qui le vérifie, `wasm_narrated`, dit dans son propre en-tête qu'elle vérifie le câblage et la construction, puisque l'ancien langage hôte ne peut pas exécuter wasm. Elle cite une page dans le navigateur avec "8/8 checks". Cette page n'est pas dans l'arbre épinglé : je l'ai cherchée et n'en ai trouvé aucune. Et je n'ai pas vu la surface de l'émulateur dans un navigateur, et le dossier ne nomme personne qui l'ait vue. Par la loi du chapitre 33, cette surface est non perçue. Le chapitre dit donc : câblé, sa construction vérifiée par une garde que je n'ai pas exécutée, non vu dans un navigateur par quiconque le dossier nomme.
 
-Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan, pour lesquels aucune méthode n'existe ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
+Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan, pour lesquels aucune méthode n'est encore construite ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
 
 Ce qui est absent : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels ne le sont pas, délibérément. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et rien n'a tourné contre un hôte. Une solution client émulée et déployée par ce chemin : rien dans le dossier, ce que le chapitre 33 porte comme la ligne encore due.
 
 ## 8. Six portes
 
-**Le programmeur.** Vous codez toute l'intégration contre des noms, avec des doubles qui lèvent une erreur quand vous avez oublié quelque chose et un compteur qui vous permet de faire une assertion sur un frais. Le jour où vous vous abonnez, vous changez une liaison et pas une ligne. La perte : le double toujours-oui que vous avez écrit vous-même passe la barrière.
+**Le programmeur.** Vous codez toute l'intégration contre des noms, avec des doubles qui lèvent une erreur quand vous avez oublié quelque chose et un compteur qui vous permet de faire une assertion sur un frais. Le jour où vous vous abonnez, vous changez une liaison et pas une ligne. La perte : un double que vous avez écrit vous-même et qui ne déclare rien est pris pour réel par la barrière.
 
 **L'analyste.** Avant que quoi que ce soit bouge, vous pouvez lire le plan de placement, les dépendances externes avec les justificatifs que la production demandera par leur nom, le graphe d'étapes, et quelle partie dépend d'un faux. Les tailles sont des estimations, et les constats sont par partie.
 

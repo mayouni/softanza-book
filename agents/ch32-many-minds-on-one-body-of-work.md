@@ -4,7 +4,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 01:36 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
 
 In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
@@ -90,11 +90,11 @@ Those are the laws. Now for what I refused, and the loss I accepted.
 
 **I refused to let a coordinator grade its legislator.** Authority runs down from me; correction runs up, and the central session is corrected by the Observer and bound by the doctrine. A coordinator that judged its own rules would be the one part of the system nothing could fix. I hold this as a view, not a result.
 
-**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the uncomfortable part: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number! What did the clocks cost? It is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never a model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is not yet written (section 7).
+**I refused to automate to the maximum.** From the middle of August 2026, sessions were opened by clocks. On 27 August I stopped them. The record keeps my reason as written then: the routines consumed quota without added value. And it keeps the part still open: that judgement was the only measurement anybody had, because the cost line every session writes at its close carries no token count. The harness does not tell a session what it spent. Of the three hundred and eighty cost lines written so far, one carries a number! What did the clocks cost? It is not in the record: it holds the reason and no figure, and I give none. Since then the ruling is that a timer may run a script, never a model, and every timer is paused for now. The direction is that a session starts when a file arrives in a watched folder, or when I start it; the watcher is designed and still to come (section 7).
 
 **I refused to rule in my absence.** A ruling is written in the record only while I am there. On 28 September I asked the central session to settle what was pending on my behalf. The five rulings it took that day are marked as taken on my delegation. The mark is there so that nobody later mistakes them for mine. The decisions at the front of this book are marked the same way.
 
-**I refused to let the protocol become a product.** The doctrine of the harness is open, and it is never to be sold: its value is in what it refuses. It has also been proved in one place only, one person, one machine, one filesystem, about fifteen sessions. It has no adopter outside this estate.
+**I refused to let the protocol become a product.** The doctrine of the harness is open, and it is never to be sold: its value is in what it refuses. So far it has been proved in one place: one person, one machine, one filesystem, about fifteen sessions. The first adopter outside this estate is the next step.
 
 **And I accepted a loss.** The code of the last two years was largely written by sessions, and my hand, which was the style, thinned where they wrote. A study of the record measured it. The promise under each line (the `#-->` line) is the house's way of writing an example. It stands at nearly a hundred per thousand lines in the short recipes (the quickers) and at seventy-five in my articles. In the narrated guards the sessions wrote, which assert in another form, it stands at under one. The sessions even took the name of my articles for their test files, a name that a model proposed. I accept the implementation code they wrote. I do not accept that the style a programmer or an agent writes with Softanza should be theirs rather than the house's. That is why the law of Part II exists, and why this book is written in my voice, with sessions as researchers and as the court. And it is why every chapter waits for my reading before it loses the word draft.
 
@@ -108,9 +108,9 @@ The blocks of this chapter stand on the library's guards of its house rules. `co
 
 ## 6. The field, and where it leads
 
-The field leads in scale and in independence. Its frameworks run on many machines for many teams; this protocol has been proved at one person, one machine, one filesystem, and nobody outside the estate has tried it. Its doctrine says so in its own words: these are laws that survived one estate.
+The field leads in scale and in independence. Its frameworks run on many machines for many teams; this protocol is proved so far at one person, one machine, one filesystem, and the first trial outside the estate is the next step. Its doctrine says so in its own words: these are laws that survived one estate.
 
-The field leads in accounting. A paid interface reports the tokens of every call. This estate's cost record was built to report them and could not, so the most important economic decision it took was taken by feeling.
+The field leads in accounting. A paid interface reports the tokens of every call. This estate's cost record carries no token count yet; adding it is the next step, and until then the most important economic decision it took was taken by judgement.
 
 The field leads in tooling for many writers. Branches, merge queues and owners of folders handle concurrency at a scale the estate has not met. Here, the answer is a discipline and one hook. The hook reads the text of a command, so it also refuses a commit message that merely quotes the forbidden form. That cost is known and accepted.
 
@@ -122,9 +122,9 @@ Now the limit, in the stage words.
 
 What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
 
-What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is not written. And a court of style for the code that a programmer or an agent writes with the library. The house style would then be held by a machine and not by a hope.
+What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an agent writes with the library. The house style would then be held by a machine as well as by my reading.
 
-What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and nothing performs it. The study that read the record named one more limit. I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
+What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and no tool performs it yet; that check is the next step. The study that read the record named one more limit. I leave it here in its words, "the author" being me: the protocol that makes the record trustworthy also costs energy the product needs, and the author should watch the ratio. The record holds no reading of that ratio.
 
 ## 8. Six doors
 

@@ -17,7 +17,7 @@ rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit I show rather than hide: a question asked in other words, answered instead of refused. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -168,9 +168,9 @@ These six guards prove what ran; the next section says where the field leads.
 
 ## 6. The field, and where it leads
 
-The field leads in reach. Its frameworks connect to hosted services of every kind, its stores search open collections of documents, and its loops call the largest models available for each step. Softanza's inversion, curate a domain and derive from it, wins on a curated domain and loses on the open web. When the task is open-ended language work over material nobody can curate, summarising arbitrary documents or research over the web, the field's stack is the right tool. The record says so in those words.
+The field leads in reach. Its frameworks connect to hosted services of every kind, its stores search open collections of documents, and its loops call the largest models available for each step. Softanza's inversion, curate a domain and derive from it, leads on a curated domain, and on the open web the field leads today. When the task is open-ended language work over material nobody can curate, summarising arbitrary documents or research over the web, the field's stack is the right tool. The record says so in those words.
 
-The field leads in the market. There is a labour market for its stack, and none yet for this one.
+The field leads in the market. There is a labour market for its stack today; the one for this stack is still to come.
 
 The field leads in models. The second rung of the domain language model, as built, is a small neural model of word pairs, and the foundry beyond the bigram is designed (chapter 19). Softanza does not build the large generators and does not compete with them.
 
@@ -204,7 +204,7 @@ And one limit of the first rung that you will meet the moment you rephrase a que
 #--> Margherita is a dish.
 ```
 
-It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, it should have been a refusal. I show it here rather than hide it, because a law is only as good as the page that prints where it is broken. I hold this as a view, not a result. The request to the library is to refuse a question whose verb is not a declared relation.
+It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, the answer here is a refusal, and that refusal is the next step. I print it here because a law is shown by a page that prints its stage as it stands, limit included. I hold this as a view, not a result. The request to the library is to refuse a question whose verb is not a declared relation.
 
 ## 8. Six doors
 
@@ -214,7 +214,7 @@ It did not refuse! It printed `Margherita is a dish.` That answer is true, and i
 
 **The designer.** The system asks the user one accountable question at a time, and the question is handed to any door as a frame, so that a terminal, a page or an agent can render it. Only the terminal ran here.
 
-**The decision-maker.** A decision costs nothing per call, runs offline and is the same tomorrow. The four agents still reserved are the honest gap.
+**The decision-maker.** A decision costs nothing per call, runs offline and is the same tomorrow. The four agents still reserved are the next step.
 
 **The educator.** The conversation asks and never answers first, and it uses a model's fluency only when a model is there, so a learner always sees the floor.
 

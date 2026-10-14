@@ -392,11 +392,11 @@ The service plan is headed "written 2026-07-23 in answer to the user's question"
 
 `virtual_system_twin_narrated` proves, in twelve scenes, that the twin touches nothing real, that the plan narrates and flags, that commit is the one door, that a scope refuses, and that a reviewer rejects a step. It proves, too, that a hundred operations stay in memory until one commit. `virtual_environment_twin_narrated` proves the same shape for variables, a directory and queued spawns. `emulator_narrated` proves that the bundle generates, the map renders every part by role, and each part carries only its subset. `deployment_narrated` proves the site as config, the governed commit, the step plan, the rollback, feasibility, and the git backend; it spawns `git`, so the book does not run it. `full_scope_model_narrated`, scenes 13 to 16, proves that building precedes deploying, that an unsound solution cannot be built, the lowering bridge, and the governed deploy.
 
-The refusal that production makes is proved by the first two guards, which ran. That the rehearsed engine runs in a browser is proved by no guard that runs.
+The refusal that production makes is proved by the first two guards, which ran. That the rehearsed engine runs in a browser is the next proof: no guard that runs checks it today.
 
 ## 6. The field, and where it leads
 
-Real services lead. The plan says it: a double is not the real service, and you still need at least one real run before production. A scripted gateway is not a vendor's edge cases. Recorded answers drift, and a replay suite needs re-recording and contract tests against the real API. The library has the recording call and no drift check.
+Real services lead. The plan says it: a double is not the real service, and you still need at least one real run before production. A scripted gateway is not a vendor's edge cases. Recorded answers drift, and a replay suite needs re-recording and contract tests against the real API. The library has the recording call; a drift check for recorded answers is designed.
 
 Frontier models lead, and cannot be emulated. The model is judged against the real model, deliberately, as its own activity.
 
@@ -404,7 +404,7 @@ Live infrastructure leads. The deployment is infrastructure-gated: live verifica
 
 The mature deploy tools lead. The narration says it plainly: this does not replace every mature deploy tool, it unifies the seams those tools leave exposed.
 
-Fidelity is limited, and says so. Emulation is faithful but not omniscient, so it says which is which. What a double proves is narrower still: a capture sink proves what you would have sent, and a directory is not a CDN.
+Fidelity has a stated boundary. Emulation is faithful but not omniscient, so it says which is which. What a double proves is narrower still: a capture sink proves what you would have sent, and a directory is not a CDN.
 
 Where I think the record stands apart is the coupling. The double, the plan, the credential names, the gate and the actor are declared in the same program that ships, and one gate judges them.
 
@@ -438,21 +438,21 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **The sizes are estimates.** The plan prints a figure from a catalogue, and the narration prints two different figures for the same part. Do not print a size as a claim.
 
-**`Deploy(:Emulated)` never moves the registry.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase. The `:emulated` phase value that the registry has is set by no library code; only a guard sets it.
+**`Deploy(:Emulated)` does not yet move the registry.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase. The `:emulated` phase value that the registry has is set today only by a guard; setting it from the emulated deploy is designed.
 
 **A refused `Deploy(:Production)` leaves the registry in the production phase.** After my refused deploy (my research run of 8 October 2026, outside this chapter's blocks), `Phase()` printed `production`. The pre-flight restores the phase, and the deploy does not.
 
-**A plan flags, it does not rank.** Chapter 20 said it, and the framework document says "ranked risk assessment".
+**A plan flags today; ranking is the direction.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
 What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks". That page is not in the pinned tree: I searched for it and found none. And I have not seen the emulator's surface in a browser, and the record names no one who has. By the law of chapter 33, that surface is unperceived. So the chapter says: wired, its build checked by a guard that I did not run, not seen in a browser by anyone the record names.
 
-Also designed: branches of a twin and the plan's alternatives and feedback, for which no method exists; twins for databases, interfaces and networks; and a drift check for recorded answers.
+Also designed: branches of a twin and the plan's alternatives and feedback, for which no method is built yet; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
 What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and nothing ran against a host. A customer solution emulated and deployed through this path: nothing in the record, which chapter 33 carries as the one line still owed.
 
 ## 8. Six doors
 
-**The programmer.** You code the whole integration against names, with doubles that raise when you forgot something and a counter that lets you assert a fee. The day you subscribe, you change a binding and not a line. The loss: the always-yes double you wrote yourself passes the gate.
+**The programmer.** You code the whole integration against names, with doubles that raise when you forgot something and a counter that lets you assert a fee. The day you subscribe, you change a binding and not a line. The loss: a double you wrote yourself that declares nothing is taken for live by the gate.
 
 **The analyst.** Before anything moves you can read the placement plan, the external dependencies with the credentials production will ask for by name, the step graph, and which part depends on a fake. The sizes are estimates, and the findings are by part.
 

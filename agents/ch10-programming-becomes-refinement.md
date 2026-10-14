@@ -4,7 +4,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 01:34 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
 
@@ -249,7 +249,7 @@ Next comes the field, and where it leads.
 
 The field leads in infrastructure, where plan and apply are the daily practice of many teams and the apply talks to real providers. (General knowledge, as in section 1.) Softanza's gate is about the change to code, which the field handles with a review.
 
-The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges only what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
+The field's tools lead in breadth: they are not tied to one library, one language, or one declared knob. (General knowledge, as in section 1.) Softanza's gate judges what the code declared as a point. A change to a place that was never declared is not a refinement here; it is outside the gate.
 
 And on trust, much of the field's approach is built to scale to any model. (General knowledge, as in section 1.) Mine rests on one declaration per point.
 
@@ -263,10 +263,10 @@ What is designed, and absent from the library by name: the experience the origin
 
 What is built, and where it stops: the limits of the gate as it stands.
 
-- It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes unchecked.
+- It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes without a check; checks for those kinds are the next step.
 - An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
-- The saved file holds the rendered source and nothing else: no history, no postures, no timeline, and no way to load it back. Reversibility does not survive the file. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes `.rfn` for the sentence and leaves `.zrfn` to the library's comment-tag lift.
+- The saved file holds the rendered source; the history, the postures, the timeline and the load-back are absent, and are the next step. Reversibility lives in the running object, and carrying it into the file is still to come. The library writes this file in the format `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes `.rfn` for the sentence and leaves `.zrfn` to the library's comment-tag lift.
 
 ## 8. Six doors
 

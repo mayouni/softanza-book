@@ -4,9 +4,9 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 01:35 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
 
-In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is weak in itself, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
+In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
 ## 1. The concept, as the field holds it
 
@@ -240,13 +240,13 @@ Next, the field, and where it leads.
 
 **Strings.** The field leads on safety and speed, and Softanza leads on naming. The site's page for the area says it itself: it trails the modern engines on safety and throughput, with no JIT and no linear-time matcher. The control against catastrophic backtracking is not reachable from Haro, although the code for both is already compiled into the binary. The engine's header confirms that the hardening exists underneath: a match limit, a recursion limit, length caps.
 
-**Lists, numbers, time, graphs.** The field has older, stronger single tools. The study says it without ranking them: one tool has list patterns, uniqueness and stepped ranges; three languages have structural matching; graph query languages exist; event processing exists for time. What the field lacks, and what the record claims, is the one habit across the media.
+**Lists, numbers, time, graphs.** The field has older, more established single tools. The study says it without ranking them: one tool has list patterns, uniqueness and stepped ranges; three languages have structural matching; graph query languages exist; event processing exists for time. What the field lacks, and what the record claims, is the one habit across the media.
 
 **Tables.** Data-quality libraries lead in reach and ecosystem. Here a rule is a sentence the person who owns the data can read. The loss is that it runs only on `stzTable`.
 
-**Where the family is weak in itself.** The class headers print their defects as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
+**Where the family is still in development.** The class headers print their known gaps as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
 
-**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also a likely reason time fails.
+**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also a likely reason time does not yet match.
 
 Next, the limit.
 
@@ -277,7 +277,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 
 > run: kept
 
-The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug, still present in time.
+The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug; repairing it in time is the next step.
 
 - **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 

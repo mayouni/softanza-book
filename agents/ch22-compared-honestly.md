@@ -4,7 +4,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 01:35 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
 
 In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.
 
@@ -62,7 +62,7 @@ It answers `0.3` and `2.9985`: the cents are kept! The other side, Python with f
 
 It answers `[ "eau", "zoo", "zèbre", "étoile" ]`: `étoile` last, after `zoo`! The field's locale-aware sort puts `étoile` between `eau` and `zèbre`. The other side, Python's `sorted`, prints the same list: level, and both wrong for French. With the standard `locale` module set to `fr_FR.UTF-8`, sorted with `locale.strxfrm`, Python prints `eau, étoile, zèbre, zoo`. That worked on the machine of the run. The locale must exist on the host, and the call is process-wide. Node, with `Intl.Collator('fr')`, prints the same French order, `eau, étoile, zèbre, zoo`, with a built-in library. So the field leads: JavaScript with one argument, Python with the host's locale. Softanza has no collation. The culture plan of 18 August 2026 says the sorting is the engine's ordinal sort. And the coverage page rates internationalisation partial, against deep for two other platforms, with a note: a deliberate bet against the big international library.
 
-This block is a pinned gap. Its promise records the library's present, weaker answer, so the page fails the day the library gains collation. That is by design. The culture plan's own rule says that pinning a known gap is legitimate only when the assertion fails the day the gap is fixed, and when the label says so.
+This block is a pinned gap. Its promise records the library's present answer, so the page fails the day the library gains collation. That is by design. The culture plan's own rule says that pinning a known gap is legitimate only when the assertion fails the day the gap is fixed, and when the label says so.
 
 **Four: Turkish uppercase. The field leads.** What does the method answer when it is given the Turkish locale? Run it:
 
@@ -73,7 +73,7 @@ This block is a pinned gap. Its promise records the library's present, weaker an
 
 > run: kept
 
-It answers `ISTANBUL`: the locale was accepted and ignored! Python prints `ISTANBUL`: level, since the standard library has no locale casing. Node, with `toLocaleUpperCase('tr')`, prints `İSTANBUL`. Turkish needs the dotted capital. This is the loss most worth printing, and it is not that the engine lacks Turkish. It is that the method takes a locale and returns the wrong answer silently. The source comment says: plain uppercase when it has no rule. The culture plan measured the same on 18 August 2026 and called it the code equivalent of the fake progress bar. Its law is the reason for this chapter: no facades. An operation either honours the culture it was given, or refuses. I hold this as a view, not a result, and the culture plan's law says the same.
+It answers `ISTANBUL`: the locale was accepted and ignored! Python prints `ISTANBUL`: level, since the standard library has no locale casing. Node, with `toLocaleUpperCase('tr')`, prints `İSTANBUL`. Turkish needs the dotted capital. This is the loss most worth printing, and it is not that the engine lacks Turkish. It is that the method takes a locale and, today, answers with plain uppercase without saying so; honouring the locale, or refusing, is the next step. The source comment says: plain uppercase when it has no rule. The culture plan measured the same on 18 August 2026 and called it the code equivalent of the fake progress bar. Its law is the reason for this chapter: no facades. An operation either honours the culture it was given, or refuses. I hold this as a view, not a result, and the culture plan's law says the same.
 
 **Five: an instruction in your language.** A natural-language instruction is dictionary-driven and local: no network, no model, no key. What does it do with the sentence, and what did it understand? Run it:
 
@@ -89,7 +89,7 @@ o1 = Naturally("Make a list holding [ 3, 1, 3 ] then drop its duplicates")
 
 It answers `[ 3, 1 ]`, and says what it understood: `create a list with [ 3, 1, 3 ] -> remove duplicates`. I did not run the other side. The field's equivalent of "take this sentence and do it" is a model call. What it needs is a model. A hosted one needs a network, an account, a key and a per-token cost; a local one needs a downloaded model and a GPU or a patient CPU. It needs a prompt, and a check that the answer is what was asked, and the answer is not guaranteed to be the same twice. The site's own pair of this kind writes the other side as a comment, which says that there is no counterpart without an external language model.
 
-One more loss, which is not a block. A string of a family emoji, five code points, joined by joiners, shows a weakness in what the public string exposes. The counter class answers `1` for the grapheme count; `NumberOfChars` answers `5` and `NumberOfBytes` answers `18`; and `GraphemeCount()` on the string itself raises, because the method is not defined. The engine knows, and the string does not say. Python's `len` gives `5`, and Node's `.length` gives `8`.
+One more loss, which is not a block. A string of a family emoji, five code points, joined by joiners, shows where the public string does not yet expose what the engine knows. The counter class answers `1` for the grapheme count; `NumberOfChars` answers `5` and `NumberOfBytes` answers `18`; and `GraphemeCount()` on the string itself raises, because the method is not defined. The engine knows, and the string does not say. Python's `len` gives `5`, and Node's `.length` gives `8`.
 
 That is the form, five pairs and one more loss; what I refused to reach it comes next.
 
@@ -125,13 +125,13 @@ The court is not built, but the record already keeps the list of what the field 
 
 The record already keeps the list of what the field has and Softanza lacks. I print it, by file and date, beside the wins.
 
-**Performance, against the field, 29 July 2026.** No time-series store, no query language, no dashboards: by design, the plane exports. No distributed context beyond HTTP. Sampling that is honest and cruder. Decades of integrations, which the incumbents own. The study's own words are that on breadth the incumbents win decisively, and that the plane does not compete with them and should not pretend to. Four losses are struck through with the phase that closed them.
+**Performance, against the field, 29 July 2026.** No time-series store, no query language, no dashboards: by design, the plane exports. No distributed context beyond HTTP. Sampling that is honest, where the field's is finer today. Decades of integrations, which the incumbents own. The study's own words are that on breadth the incumbents win decisively, and that the plane does not compete with them and should not pretend to. Four losses are struck through with the phase that closed them.
 
 **Incident analysis, against the field, 1 August 2026.** Scale, retention and search, where bounded means forgetting. No telemetry from the host, the kernel or the network. A small set of shipped detections against a community's corpus. The workflow of an operations centre. And the unwired seams, which the study calls the system's largest honest gap, listed and not hidden.
 
 **The plugin study, 16 August 2026.** The field is ahead on permission granularity, on dependency resolution, on distribution and signing. The study's header says it is analysis and not rules.
 
-**The culture plan, 18 August 2026.** Every row was verified in that session by running it. Casing is a facade four levels deep. Collation, digit shaping, non-Gregorian calendars and time zones do not exist. The plan's status then was not started.
+**The culture plan, 18 August 2026.** Every row was verified in that session by running it. Casing takes a locale four levels deep and does not yet honour it. Collation, digit shaping, non-Gregorian calendars and time zones are absent. The plan's status then was not started.
 
 **The estate's browser-runtime study, 8 August 2026.** Four of nine rows won, five to the peers, and the fused loop opcode of one peer stays a design generation ahead.
 
@@ -157,7 +157,7 @@ What is absent: a *compared* column on the Atlas, on the register of innovations
 
 And something that is unreproduced: the study's sixty-four, six hundred and fifteen and thirty-one, which my scan did not reproduce, and the symbol counts.
 
-The method is stricter than the record it is applied to. Older comparisons in the library fail one or more of its rules. The string benchmark probably ran on a debug engine. The polyglot battle has no versions and no dates inside its text, and says its times are relative to a specific computer environment. The graph grid has no versions, dates or sources for its cells. The cognitive-load grid of another design article makes claims of sixty to seventy percent with no method printed beside them. That article then ends on an honest positioning that names four things the library does not compete on.
+The method is stricter than the record it is applied to. Older comparisons in the library predate its rules and do not yet meet one or more of them. The string benchmark probably ran on a debug engine. The polyglot battle has no versions and no dates inside its text, and says its times are relative to a specific computer environment. The graph grid has no versions, dates or sources for its cells. The cognitive-load grid of another design article makes claims of sixty to seventy percent with no method printed beside them. That article then ends on an honest positioning that names four things the library does not compete on.
 
 Six doors follow, one for each reader of this page.
 

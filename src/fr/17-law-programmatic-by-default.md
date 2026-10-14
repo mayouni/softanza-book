@@ -17,7 +17,7 @@ rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait que personne n'a enregistré prouvé à partir d'une seule loi déclarée, un modèle tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite que je montre plutôt que de la cacher : une question posée avec d'autres mots, et une réponse là où il aurait dû y avoir un refus. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait que personne n'a enregistré prouvé à partir d'une seule loi déclarée, un modèle tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -168,9 +168,9 @@ Ces six gardes prouvent ce qui a tourné ; la section suivante dit où le terrai
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en portée. Ses frameworks se connectent à des services hébergés de toutes sortes, ses magasins cherchent dans des collections ouvertes de documents, et ses boucles appellent les plus grands modèles disponibles à chaque étape. L'inversion de Softanza, constituer un domaine et en dériver, gagne sur un domaine constitué et perd sur le web ouvert. Quand la tâche est un travail de langage ouvert sur une matière que personne ne peut constituer, résumer des documents arbitraires ou faire de la recherche sur le web, la pile du terrain est le bon outil. Le dossier le dit en ces mots.
+Le terrain mène en portée. Ses frameworks se connectent à des services hébergés de toutes sortes, ses magasins cherchent dans des collections ouvertes de documents, et ses boucles appellent les plus grands modèles disponibles à chaque étape. L'inversion de Softanza, constituer un domaine et en dériver, mène sur un domaine constitué, et sur le web ouvert le terrain mène aujourd'hui. Quand la tâche est un travail de langage ouvert sur une matière que personne ne peut constituer, résumer des documents arbitraires ou faire de la recherche sur le web, la pile du terrain est le bon outil. Le dossier le dit en ces mots.
 
-Le terrain mène sur le marché. Il existe un marché du travail pour sa pile, et pas encore pour celle-ci.
+Le terrain mène sur le marché. Il existe aujourd'hui un marché du travail pour sa pile ; celui de cette pile est à venir.
 
 Le terrain mène sur les modèles. Le second échelon du modèle de langage de domaine, tel que construit, est un petit modèle neuronal de paires de mots, et la fonderie au-delà du bigramme est conçue (chapitre 19). Softanza ne construit pas les grands générateurs et ne rivalise pas avec eux.
 
@@ -204,7 +204,7 @@ Et une limite du premier échelon que vous rencontrerez dès que vous reformuler
 #--> Margherita is a dish.
 ```
 
-Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, cela aurait dû être un refus. Je la montre ici plutôt que de la cacher, parce qu'une loi ne vaut que ce que vaut la page qui imprime où elle est brisée. Je tiens cela pour une vue, non pour un résultat. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
+Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, la réponse ici est un refus, et ce refus est l'étape suivante. Je l'imprime ici parce qu'une loi se montre par une page qui imprime son étape telle qu'elle est, limite comprise. Je tiens cela pour une vue, non pour un résultat. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
 
 ## 8. Six portes
 
@@ -214,7 +214,7 @@ Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vr
 
 **Le concepteur.** Le système pose à l'utilisateur une question responsable à la fois, et la question est remise à n'importe quelle porte sous forme de cadre, pour qu'un terminal, une page ou un agent puisse la rendre. Seul le terminal a tourné ici.
 
-**Le décideur.** Une décision ne coûte rien par appel, s'exécute hors ligne et est la même demain. Les quatre agents encore réservés sont l'écart honnête.
+**Le décideur.** Une décision ne coûte rien par appel, s'exécute hors ligne et est la même demain. Les quatre agents encore réservés sont l'étape suivante.
 
 **Le formateur.** La conversation demande et ne répond jamais la première, et elle n'emploie la fluidité d'un modèle que lorsqu'un modèle est là, de sorte qu'un apprenant voit toujours le plancher.
 

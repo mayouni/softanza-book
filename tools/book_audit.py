@@ -85,6 +85,11 @@ def main():
                 for mm in re.finditer(pat, text, re.I):
                     ln = text[:mm.start()].count("\n") + 1
                     errors.append(f"names  {tag}: '{mm.group(0)}' near prose line {ln}")
+            # the author's rule of 2026-10-14: the language Softanza grew up on is named in Appendix H, the project's history, and nowhere else in prose
+            if str(m.get("appendix")) != "H":
+                for mm in re.finditer(r"\bRing(?:\+\+)?\b", text):
+                    ln = text[:mm.start()].count("\n") + 1
+                    errors.append(f"names  {tag}: '{mm.group(0)}' near prose line {ln} (Ring is named only in Appendix H)")
             maker = FR_MAKER if lang == "fr" else MAKER
             for mm in maker.finditer(text):
                 ctx = text[max(0, mm.start() - 40):mm.end() + 40].replace("\n", " ")
@@ -99,8 +104,8 @@ def main():
                 for n in re.findall(r"\d+", mm.group(1)):
                     if int(n) not in chapter_numbers and int(n) != 0:
                         errors.append(f"refs   {tag}: chapter {n} does not exist (…{text[max(0, mm.start() - 20):mm.end()].replace(chr(10), ' ')}…)")
-            for mm in re.finditer(r"\b(?:Appendix|Appendices|Annexes?)\s+([A-G](?:\s*(?:,|and|et|to|à)\s*[A-G])*)\b", text):
-                for l in re.findall(r"\b[A-G]\b", mm.group(1)):
+            for mm in re.finditer(r"\b(?:Appendix|Appendices|Annexes?)\s+([A-H](?:\s*(?:,|and|et|to|à)\s*[A-H])*)\b", text):
+                for l in re.findall(r"\b[A-H]\b", mm.group(1)):
                     if l not in letters:
                         errors.append(f"refs   {tag}: appendix {l} does not exist")
 

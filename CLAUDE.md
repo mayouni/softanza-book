@@ -100,3 +100,9 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
+
+## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01)
+
+- **Never undersell Softanza** in the name of transparency or balance. It is not a research project; parts are in production and parts in development; it is a professional foundation for professional decision-makers. Say stage and direction, never "weak", "falls short", "nothing runs in production".
+- **Ring is named only in Appendix H** (the project's history). The language is Haro (for now it uses the syntax of its first facet); the former runtime is "the former host language". The audit enforces it.
+- **No horizontal scrollbar in a code block**: long lines wrap.

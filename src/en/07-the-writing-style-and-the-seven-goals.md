@@ -52,7 +52,7 @@ The study of the record wrote the style down as fourteen rules, in its ruling 12
 | 10 | Code travels inside an argument as a small string | the seat runs; the `@` on a parameter's name is retired |
 | 11 | Small literal languages live in strings | runs in one form; the braced form raises |
 | 12 | A sentence can be near-natural | not this chapter's; none of the deck's three forms ran as written |
-| 13 | A function may be named in any human language | does not run |
+| 13 | A function may be named in any human language | absent; section 7 |
 | 14 | A comment speaks before the code, in the teacher's voice | runs |
 
 Rule 11 first, because it is the strangest. The host language counts in integers and cuts the decimals. What does a range written inside a string keep? The comments below speak before the code, in the teacher's voice, which is rule 14. Run it:
@@ -211,11 +211,11 @@ Next comes the decision, and what I refused.
 
 **I refused a goal that lives only in a document.** The seven goals are written in one design document and in tags that no court reads. The study's finding is that there is no court over either.
 
-**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand. They carry a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style survived where the author wrote for a reader, and thinned where the AI wrote for others. A marker is a reading of the text, not a judgement of the code; the study says so itself.
+**I refused to hide the cost of the style.** The study measured markers per thousand lines. The narrated guards, the test files written to be read as articles, carry the promise `#-->` in under one line per thousand. They carry a call to the assertion helper in eighty-five. The older numbered tests carry the promise in fifty-two. The library's code carries the promise in less than two. The style is densest where the author wrote for a reader, and thinner where the AI wrote for others; carrying it there is the next step. A marker is a reading of the text, not a judgement of the code; the study says so itself.
 
 **I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026, with the command in the research file, and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and answer wrongly on some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and do not yet match some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
 
 The court comes next, and I run it.
 
@@ -244,11 +244,11 @@ The misspelling is found by name, `misspelled_name`, and the code stays clean, `
 
 A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
 
-What the court does not read is the code of a program written with the library. None of the fourteen rules of the house is a rule of writing.
+What the court does not read is the code of a program written with the library. The fourteen rules of the house are rules of the library's own code; a rule of writing for the code written with it is designed (section 7).
 
 ## 6. The field, and where it leads
 
-The field leads in enforcement by default. A formatter runs on every commit. For the code a programmer writes with Softanza, the enforcement today is none, and chapter 5 says so.
+The field leads in enforcement by default. A formatter runs on every commit. For the code a programmer writes with Softanza, the court that would enforce the style is designed and not yet built, and chapter 5 says so.
 
 The field leads in having its goals somewhere a reader looks first. The seven goals are in one design document and in tags that no court reads, and the operating notes of the library's own repository name none of them. An AI reader's account of the library says that sixty paradigm documents could easily be sixty disconnected ideas. The study reads it as a sign that the discipline is in the code and written nowhere a reader would look first. It is a session's document, and not an independent witness.
 
@@ -264,15 +264,15 @@ What is built: the fourteen house rules of the library as a court over its own c
 
 What is designed:
 
-- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and found nothing.
-- **A court that reads the goals.** It would read the tags. Not built.
+- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and it is not built yet; it is the next step.
+- **A court that reads the goals.** It would read the tags. To come.
 - **The classic form of the test block as the one form for new blocks.** The study's ruling is that the revival "is not a rewrite" but a decision. The classic form is the one form for new blocks, and the converted blocks are left as they are. The test tree's own README still calls the classic form the authoritative test surface. I found no ruling that makes it the one form, so it stays a decision, and chapter 5 names it.
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is not declared.
 - **The discipline declared once.** Partly done on the site, as data, which is the page's source and not a court.
 
 What is absent:
 
-- Any machine that judges, today, the style of a program written with the library.
+- Any machine that judges, today, the style of a program written with the library; beside it, the house court judges the library's own code.
 - Rules 12 and 13 as running forms. In the research session's runs, the deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
 - The `@` on a parameter's name as a working form.
 - The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too. These three come from the research session's runs; no block of this chapter keeps them.
@@ -290,7 +290,7 @@ What is absent:
 
 **The educator.** The discipline is taught whole and in order. The converted guard for lists in strings keeps the old promise's wrong spacing in a comment, which is a lesson on the cost of hand-typed answers.
 
-**The agent.** The rules are given to you as data on the site. For the code you write, the court is still a specification. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string.
+**The agent.** The rules are given to you as data on the site. For the code you write, the court is designed and not yet built. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string.
 
 ## 9. Exercise
 

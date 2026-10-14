@@ -16,7 +16,7 @@ rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
 ---
 
-Dans ce chapitre, je prends les sept étapes du modèle mental, que le chapitre 5 a exécutées sur une liste, et je les exécute sur une chaîne, dans le même ordre. Puis j'en viens à la boucle, l'endroit où les étapes se répètent, et aux quatre métaphores que la bibliothèque vous donne à la place : le marcheur, le vérificateur, le producteur et l'exécutant. Je montre la condition que les quatre portent à l'intérieur d'un argument, la condition W que le moteur lit comme des données, et son jumeau WF, qui exécute du code hôte. Je dis pourquoi j'ai fait des métaphores un but de conception, pourquoi j'ai remplacé `eval` par un langage que le moteur possède, et où les articles sur lesquels ce chapitre repose ne s'exécutent pas à ce commit. Le principe sous tout cela est celui du chapitre : quand vous écririez une boucle, nommez le mouvement que vous faites, marcher, vérifier, produire ou exécuter.
+Dans ce chapitre, je prends les sept étapes du modèle mental, que le chapitre 5 a exécutées sur une liste, et je les exécute sur une chaîne, dans le même ordre. Puis j'en viens à la boucle, l'endroit où les étapes se répètent, et aux quatre métaphores que la bibliothèque vous donne à la place : le marcheur, le vérificateur, le producteur et l'exécutant. Je montre la condition que les quatre portent à l'intérieur d'un argument, la condition W que le moteur lit comme des données, et son jumeau WF, qui exécute du code hôte. Je dis pourquoi j'ai fait des métaphores un but de conception, pourquoi j'ai remplacé `eval` par un langage que le moteur possède, et où le code des articles sur lesquels ce chapitre repose n'est pas encore exécutable à ce commit. Le principe sous tout cela est celui du chapitre : quand vous écririez une boucle, nommez le mouvement que vous faites, marcher, vérifier, produire ou exécuter.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -179,11 +179,11 @@ Ensuite, ce que le terrain fait mieux que le marcheur.
 
 Le terrain mène en paresse. Un générateur produit l'élément suivant à la demande et peut être sans fin. Le marcheur construit une carte de tout son voyage à l'instant où il est fait. C'est un gain pour la prévoyance : vous pouvez demander quelles positions il sautera avant qu'il bouge. C'est une perte pour un grand parcours, ou un parcours sans fin.
 
-Le terrain mène en ouverture. Une lambda porte n'importe quelle logique. Le langage W est borné exprès, et le prix de la borne est le second chemin, WF, qui a toute la puissance de l'hôte et aucune sécurité contre une entrée à laquelle on ne fait pas confiance. Il y a aussi un coût plus discret que j'ai mesuré une fois, sur un cas : une condition qui appelle quelque chose que le langage ne connaît pas donne une liste vide et aucune erreur.
+Le terrain mène en ouverture. Une lambda porte n'importe quelle logique. Le langage W est borné exprès, et le prix de la borne est le second chemin, WF, qui a toute la puissance de l'hôte et il est fait pour une entrée à laquelle on fait confiance. Il y a aussi un coût plus discret que j'ai mesuré une fois, sur un cas : une condition qui appelle quelque chose que le langage ne connaît pas donne une liste vide et aucune erreur.
 
 Le terrain mène en portée et en outillage. Les itérateurs et les compréhensions sont dans tous les langages courants, avec le soutien des éditeurs, la vérification des types et une littérature. Ces quatre métaphores existent dans une seule bibliothèque.
 
-Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table sans aucune perte est la forme d'une brochure. C'est mon point de vue, tenu sur cette table : treize lignes, aucune avec une perte.
+Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table vaut d'être imprimée quand ses lignes ont été exécutées et qu'une perte figure à côté des gains ; pour celle-ci, c'est l'étape suivante. C'est mon point de vue, tenu sur cette table : treize lignes, aucune avec une perte.
 
 Ensuite, la limite, dans les mots d'étape construit, conçu et absent.
 
@@ -193,14 +193,14 @@ Ce qui est construit : le marcheur à une dimension, dans la couche max, et les 
 
 Ce qui est conçu : les métaphores comme modules natifs du moteur. La conception du moteur marque les quatre comme prévus ; seul le producteur a un fichier de moteur. Et un marcheur qui ne porte plus du tout sur les listes mais sur toute structure indexée.
 
-Six choses sont absentes ou cassées à ce commit, d'après mes exécutions.
+Six choses sont absentes, ou restent à aligner sur leurs articles, à ce commit, d'après mes exécutions.
 
-- La table de l'article sur la marche au bord ne tient pas. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et n'imprime que les cas qui s'exécutent ; la table n'est pas imprimée.
+- La table de l'article sur la marche au bord et la bibliothèque diffèrent dans deux cas ; les aligner est l'étape suivante. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et n'imprime que les cas qui s'exécutent ; la table n'est pas imprimée.
 - Le code de l'article « Beyond Loops » diffère par endroits. L'historique d'un marcheur est une liste de marches ; une marche en arrière ne prend plus d'argument ; la direction s'imprime « backward » là où l'article dit « reverse ». L'exécution de l'article par le site a gardé dix blocs sur dix-huit.
 - Les trois modèles de « Bridging Minds and Code » : aucun de ses codes ne s'exécute tel qu'écrit ; dans l'exécution du site, douze blocs ont levé une erreur et un a différé. Alors je les ai racontés en mots.
-- Le getter `EmptyStrings()` de l'article du modèle mental n'existe pas.
-- La classe dédiée du vérificateur lève une erreur quand on lui demande `ContainsW`, et le marcheur de chaînes n'a pas la marche en arrière avec condition.
-- Et « pas d'eval » n'a pas tout atteint. Le résolveur quasi naturel, l'autre direction du chapitre 13, évalue encore du code hôte. Il en va de même de `StringsW` et de `ItemsWhere` sur la liste, et de `ContainsW` sur la classe dédiée du vérificateur : chacun appelle encore `eval` sur une chaîne de condition. Ce que j'ai dit plus haut, que le moteur lit une condition W et ne peut pas l'exécuter comme du code, vaut pour le chemin du moteur et non pour ces trois.
+- Le getter `EmptyStrings()` de l'article du modèle mental est absent.
+- Sur la classe dédiée du vérificateur, `ContainsW` est en développement : il lève une erreur aujourd'hui. La marche en arrière avec condition du marcheur de chaînes est absente.
+- Et « pas d'eval » est encore en route vers le reste. Le résolveur quasi naturel, l'autre direction du chapitre 13, évalue encore du code hôte. Il en va de même de `StringsW` et de `ItemsWhere` sur la liste, et de `ContainsW` sur la classe dédiée du vérificateur : chacun appelle encore `eval` sur une chaîne de condition. Ce que j'ai dit plus haut, que le moteur lit une condition W et ne peut pas l'exécuter comme du code, vaut pour le chemin du moteur ; pour ces trois, c'est l'étape suivante.
 
 Viennent ensuite les six portes, du programmeur à l'agent.
 

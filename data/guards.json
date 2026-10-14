@@ -1,5 +1,5 @@
 {
- "read": "2026-10-14 01:36 UTC+01:00",
+ "read": "2026-10-14 11:12 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -1395,6 +1395,7 @@
   "en/E-the-guards-and-fixtures-cited": [],
   "en/F-the-narrations-the-book-argues-from": [],
   "en/G-the-book-as-data": [],
+  "en/H-the-projects-history": [],
   "fr/00-preface": [],
   "fr/01-change-arrives-faster-than-trust": [
    "service_registry_narrated",
@@ -1644,6 +1645,7 @@
   "fr/D-the-glossary": [],
   "fr/E-the-guards-and-fixtures-cited": [],
   "fr/F-the-narrations-the-book-argues-from": [],
-  "fr/G-the-book-as-data": []
+  "fr/G-the-book-as-data": [],
+  "fr/H-the-projects-history": []
  }
 }

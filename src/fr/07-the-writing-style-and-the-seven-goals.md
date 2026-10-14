@@ -52,7 +52,7 @@ L'étude du dossier a écrit le style en quatorze règles, dans sa décision 12.
 | 10 | Le code voyage à l'intérieur d'un argument comme une petite chaîne | l'emplacement s'exécute ; le `@` sur le nom d'un paramètre est retiré |
 | 11 | De petits langages littéraux vivent dans des chaînes | s'exécute sous une forme ; la forme à accolades lève une erreur |
 | 12 | Une phrase peut être quasi naturelle | pas de ce chapitre ; aucune des trois formes du diaporama ne s'est exécutée telle qu'écrite |
-| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | ne s'exécute pas |
+| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | absent ; section 7 |
 | 14 | Un commentaire parle avant le code, dans la voix du maître | s'exécute |
 
 La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte en entiers et coupe les décimales. Que garde un intervalle écrit à l'intérieur d'une chaîne ? Les commentaires ci-dessous parlent avant le code, dans la voix du maître, ce qui est la règle 14. Exécutez-le :
@@ -211,11 +211,11 @@ Vient ensuite la décision, et ce que j'ai refusé.
 
 **J'ai refusé un but qui ne vit que dans un document.** Les sept buts sont écrits dans un document de conception et dans des balises qu'aucun tribunal ne lit. La trouvaille de l'étude est qu'il n'y a de tribunal sur aucun des deux.
 
-**J'ai refusé de cacher le coût du style.** L'étude a mesuré des marqueurs par millier de lignes. Les gardes narrées, les fichiers de test écrits pour être lus comme des articles, portent la promesse `#-->` à moins d'une ligne par millier. Elles portent un appel à la fonction d'aide d'assertion à quatre-vingt-cinq. Les tests numérotés plus anciens portent la promesse à cinquante-deux. Le code de la bibliothèque porte la promesse à moins de deux. Le style a survécu là où l'auteur écrivait pour un lecteur, et s'est amenuisé là où l'IA écrivait pour d'autres. Un marqueur est une lecture du texte, non un jugement du code ; l'étude le dit elle-même.
+**J'ai refusé de cacher le coût du style.** L'étude a mesuré des marqueurs par millier de lignes. Les gardes narrées, les fichiers de test écrits pour être lus comme des articles, portent la promesse `#-->` à moins d'une ligne par millier. Elles portent un appel à la fonction d'aide d'assertion à quatre-vingt-cinq. Les tests numérotés plus anciens portent la promesse à cinquante-deux. Le code de la bibliothèque porte la promesse à moins de deux. Le style est le plus dense là où l'auteur écrivait pour un lecteur, et plus mince là où l'IA écrivait pour d'autres ; l'y porter est l'étape suivante. Un marqueur est une lecture du texte, non un jugement du code ; l'étude le dit elle-même.
 
 **J'ai refusé de recompter les balises comme les miennes.** Les formes des fonctions sont marquées dans le code par des info-balises, dans des commentaires qui commencent par `#<` et un `@`, appliquées à la main. L'étude y lit le vocabulaire, au niveau des fonctionnalités, de deux buts, l'expressivité et la flexibilité, et en a compté 6 090. J'ai recompté le 8 octobre 2026, avec la commande du fichier de recherche, et j'en ai trouvé 6 126, avec 89 orthographes. Mais 1 360 d'entre elles se trouvent hors des dossiers d'archive, et 4 766 dans les dossiers d'archive. Donc la phrase « appliquées à la main en 6 090 points » est, à ce commit, surtout une phrase sur l'archive. Aucune garde ne les lit : la couche de réflexion lit le nom d'une méthode, avec une grammaire, et non sa balise.
 
-**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part. Ce sont les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste. Ce dernier est le vérificateur du diaporama, qui répond 1 ou 0 pour chaque élément. Deux sont définies et répondent à tort sur certains exemples du diaporama. `Yield` devrait donner le résultat d'une expression pour chaque élément. `Perform` devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme. Le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
+**J'ai refusé le décompte comme un compte de réussites.** L'étude compte trente-trois fonctionnalités : vingt-quatre construites, quatre transformées avec le projet, deux qui ont changé de forme, une partielle, une archivée, une seulement un nom. L'arithmétique tient. Mais c'est un compte de noms trouvés, et une définition trouvée n'est pas un test qui passe. Plusieurs des fonctionnalités sont nommées dans le diaporama et ne sont pas définies dans le code de la bibliothèque, l'archive mise à part. Ce sont les familles `FF` et `FX` pour les sections, les familles `dft` et `inf` pour les défauts et les infinis, `WalkFF` et `AddWalkerFF`, et le `Check` sur une liste. Ce dernier est le vérificateur du diaporama, qui répond 1 ou 0 pour chaque élément. Deux sont définies et ne concordent pas encore avec certains exemples du diaporama. `Yield` devrait donner le résultat d'une expression pour chaque élément. `Perform` devrait appliquer une action à chaque élément. J'imprime le décompte, et j'imprime ses pertes avec lui. Le diaporama dit aussi « 7 causes racines de la complexité de la programmation », à côté des sept buts. Aucune diapositive ne liste ces sept causes, et aucun autre fichier du dossier ne les nomme. Le chapitre n'en nomme aucune et ne les met pas en correspondance avec les buts, une par une.
 
 Vient ensuite le tribunal, et je l'exécute.
 
@@ -244,11 +244,11 @@ La faute d'orthographe est trouvée par son nom, `misspelled_name`, et le code r
 
 Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de huit des quatorze revient avec des soulignés. Le bloc le montre : la liste imprime `misspelled-name`, et le constat imprime `misspelled_name`.
 
-Ce que le tribunal ne lit pas, c'est le code d'un programme écrit avec la bibliothèque. Aucune des quatorze règles de la maison n'est une règle d'écriture.
+Ce que le tribunal ne lit pas, c'est le code d'un programme écrit avec la bibliothèque. Les quatorze règles de la maison sont des règles du propre code de la bibliothèque ; une règle d'écriture pour le code écrit avec elle est conçue (section 7).
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en application par défaut. Un formateur s'exécute à chaque commit. Pour le code qu'un programmeur écrit avec Softanza, l'application aujourd'hui est nulle, et le chapitre 5 le dit.
+Le terrain mène en application par défaut. Un formateur s'exécute à chaque commit. Pour le code qu'un programmeur écrit avec Softanza, le tribunal qui appliquerait le style est conçu et pas encore construit, et le chapitre 5 le dit.
 
 Le terrain mène en ayant ses buts quelque part où un lecteur regarde d'abord. Les sept buts sont dans un document de conception et dans des balises qu'aucun tribunal ne lit, et les notes de fonctionnement du dépôt propre de la bibliothèque n'en nomment aucun. Le récit d'un lecteur IA de la bibliothèque dit que soixante documents de paradigme pourraient aisément être soixante idées déconnectées. L'étude y lit un signe que la discipline est dans le code et écrite nulle part où un lecteur regarderait d'abord. C'est un document de session, et non un témoin indépendant.
 
@@ -264,15 +264,15 @@ Ce qui est construit : les quatorze règles de la maison de la bibliothèque com
 
 Ce qui est conçu :
 
-- **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait. Ses exemples sont un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Je l'ai cherché dans la bibliothèque et je n'ai rien trouvé.
-- **Un tribunal qui lit les buts.** Il lirait les balises. Non construit.
+- **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait. Ses exemples sont un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Je l'ai cherché dans la bibliothèque : il n'est pas encore construit, c'est l'étape suivante.
+- **Un tribunal qui lit les buts.** Il lirait les balises. À venir.
 - **La forme classique du bloc de test comme forme unique des nouveaux blocs.** Le jugement de l'étude est que le retour « n'est pas une réécriture » mais une décision. La forme classique est la forme unique des nouveaux blocs, et les blocs convertis restent tels qu'ils sont. Le README de l'arbre de tests dit encore de la forme classique qu'elle est la surface de test faisant autorité. Je n'ai trouvé aucune décision qui en fasse la forme unique : cela reste une décision, et le chapitre 5 la nomme.
 - **La grammaire d'écriture déclarée en Haro.** La moitié vocabulaire existe : les formes des noms de la bibliothèque sont des données en Haro, et le relevé de la session est de 584 orthographes livrées sur 595 qui concordent. La moitié usage, la scène, la chaîne, l'emplacement du code et la promesse, n'est pas déclarée.
 - **La discipline déclarée une fois.** En partie faite sur le site, comme données, ce qui est la source de la page et non un tribunal.
 
 Ce qui est absent :
 
-- Toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque.
+- Toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque ; à côté, le tribunal de la maison juge le propre code de la bibliothèque.
 - Les règles 12 et 13 comme formes qui s'exécutent. Dans les exécutions de la session de recherche, les exemples quasi naturels du diaporama ne s'exécutaient pas tels qu'écrits, ni une fonction nommée en chinois ou en français.
 - Le `@` sur le nom d'un paramètre comme forme qui fonctionne.
 - La forme à accolades du langage d'intervalles, `L('{ "♥1" : "♥6" }')`, qui lève une erreur, et les intervalles qui changent de largeur, comme `day8 : day11`, qui lèvent aussi une erreur, avec une erreur de variable non initialisée de l'hôte. Le constructeur de liste à partir d'une chaîne en lève une aussi. Ces trois constats viennent des exécutions de la session de recherche ; aucun bloc de ce chapitre ne les garde.
@@ -290,7 +290,7 @@ Ce qui est absent :
 
 **Le formateur.** La discipline s'enseigne entière et dans l'ordre. La garde convertie pour les listes dans des chaînes garde en commentaire l'espacement erroné de l'ancienne promesse, ce qui est une leçon sur le coût des réponses tapées à la main.
 
-**L'agent.** Les règles vous sont données comme données sur le site. Pour le code que vous écrivez, le tribunal reste une spécification. Écrivez la question, puis la promesse dessous, et mettez votre condition dans l'emplacement, non dans l'évaluation d'une chaîne.
+**L'agent.** Les règles vous sont données comme données sur le site. Pour le code que vous écrivez, le tribunal est conçu et pas encore construit. Écrivez la question, puis la promesse dessous, et mettez votre condition dans l'emplacement, non dans l'évaluation d'une chaîne.
 
 ## 9. Exercice
 

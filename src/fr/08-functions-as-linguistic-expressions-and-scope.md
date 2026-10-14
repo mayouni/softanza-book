@@ -141,14 +141,14 @@ o1 = new stzString("haxxrxo")
 
 La chaîne a imprimé `H A R O`, et l'original contient encore `haxxrxo` !
 
-**La forme mal orthographiée** est acceptée, avec une note que je vous dois. Une faute d'orthographe dans un nom fonctionne :
+**La forme mal orthographiée** est acceptée, avec une note sur ce qui la soutient. Une faute d'orthographe dans un nom fonctionne :
 
 ```haro
 ? Q("   Haro ").WithoutSapces()
 #--> Haro
 ```
 
-L'article dit que la bibliothèque reconnaît et corrige les fautes de frappe mineures, et que l'intelligence réside dans la bibliothèque elle-même. Le code montre quelque chose de plus simple : `WithoutSapces` fonctionne parce que cette orthographe a été écrite à la main comme un alias. Une autre faute, `WithoutSpces`, échoue. La forme est donc réelle, et dans ce que j'ai suivi c'est une liste d'alias déclarés, pas un moteur de correction. Je n'ai pas suivi tous les fichiers qui parlent de correction ; un message de la classe objet ne fait que suggérer un nom, avec « Did you mean ».
+L'article dit que la bibliothèque reconnaît et corrige les fautes de frappe mineures, et que l'intelligence réside dans la bibliothèque elle-même. Le code montre comment la forme fonctionne : `WithoutSapces` fonctionne parce que cette orthographe a été écrite à la main comme un alias. Une autre faute, `WithoutSpces`, échoue. La forme est donc réelle, et dans ce que j'ai suivi c'est une liste d'alias déclarés ; le moteur de correction que décrit l'article ne fait pas partie de ce que j'ai suivi. Je n'ai pas suivi tous les fichiers qui parlent de correction ; un message de la classe objet ne fait que suggérer un nom, avec « Did you mean ».
 
 Voici maintenant la moitié du chapitre qui concerne la portée. Le même défaut apparaît partout en programmation : un comportement gouverné par un cadre invisible. Je tiens cela pour une vue, non pour un résultat ; ce qui la soutient ici, ce sont trois instances : les verbes de l'expression régulière, le système et le placement d'un déploiement. Une fonction fait une chose ici et une autre là, et rien dans son nom ne dit dans quel cadre elle se trouve. La réponse, en quatre gestes, est le paradigme que j'appelle la programmation orientée portée. Nommer le cadre caché. En faire un petit ensemble fermé de portées nommées. Choisir la portée à l'endroit de l'appel, dans le verbe, et pas dans un drapeau posé plus tôt. Et donner à la bibliothèque la portée pour raisonner, une prise sémantique et pas un commentaire.
 
@@ -234,7 +234,7 @@ Voici maintenant le tribunal, et les gardes qui prouvent chacune de ces affirmat
 
 ## 5. Le tribunal
 
-`00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et elle a échoué sous charge lors d'une exécution de sonde que `data/` n'enregistre pas. Je le signale et ne le cache pas. `delivery_narrated` prouve le plan de placement.
+`00_regex_narrated` prouve les verbes `Match` et `MatchFirst` : `Match` ancre, `MatchFirst` cherche, Z rend les positions et ne les imprime pas. Elle n'affirme rien pour `MatchLine` et `MatchWord` : les blocs plus haut les montrent, et seuls des blocs classiques, qui ne sont pas des gardes, les couvrent. `972_narration_viz-finding_a_recurring_substring` prouve la réponse dessinée. `full_scope_model_narrated` prouve la portée du système, avec ses trois verdicts. `system_scope_model_narrated` prouve l'ensemble fermé de capacités ; l'une de ses assertions est une limite de temps, et, lors d'une exécution de sonde sous charge que `data/` n'enregistre pas, elle n'a pas tenu. Je l'imprime à côté de la preuve. `delivery_narrated` prouve le plan de placement.
 
 Où le terrain fait mieux vient ensuite.
 
@@ -254,16 +254,16 @@ Ce qui est construit : quatorze des vingt-deux formes d'un nom tournent, certain
 
 Ce qui est conçu : les formes de Haro comme données, avec des familles générées ; et le paradigme de portée pour le temps, les unités, la mémoire et le style, comme lignes d'un tableau.
 
-Ce qui est absent, et la page doit dire chacune avec son échec :
+Ce qui est absent, et la page doit dire chacune avec ce qui existe à côté :
 
 - **Partielle**, `@Removed`, n'est que dans l'archive : l'appel n'est pas défini.
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.
 - **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
 - **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque appelle la forme informante pas encore construite.
 - **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
-- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. Et la forme d'énoncé est à moitié juste : la moitié « All » fonctionne, et la moitié « No » renvoie la mauvaise valeur de vérité. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
+- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
 
-Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau de conception en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde que `data/` n'enregistre pas, 61 des 62 assertions de sa garde narrée ont passé, et le seul échec était un échec de temps. Je dis ce que le code fait : la portée du système est construite, avec cet échec imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
+Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau de conception en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde que `data/` n'enregistre pas, 61 des 62 assertions de sa garde narrée ont passé, et la seule assertion qui n'a pas tenu était une limite de temps. Je dis ce que le code fait : la portée du système est construite, avec ce résultat imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
 
 ## 8. Six portes
 

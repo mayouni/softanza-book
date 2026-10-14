@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Built 2026-10-14 01:36 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Built 2026-10-14 11:12 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 
@@ -99,3 +99,4 @@ Built 2026-10-14 01:36 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69
 - Appendix E The guards and fixtures cited, by chapter [draft] agents/app-e-the-guards-and-fixtures-cited.md; guards: none; run: no code
 - Appendix F The narrations the book argues from [draft] agents/app-f-the-narrations-the-book-argues-from.md; guards: none; run: no code
 - Appendix G The book as data, for the agent that reads it [draft] agents/app-g-the-book-as-data.md; guards: none; run: no code
+- Appendix H The project's history: from Ring to Haro [draft] agents/app-h-the-projects-history.md; guards: none; run: no code

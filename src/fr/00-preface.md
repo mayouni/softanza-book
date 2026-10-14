@@ -56,21 +56,21 @@ Vous direz que vous avez déjà des tests, des schémas et des contrôles de pol
 
 Trois choses, et pour chacune je dis jusqu'où elle existe.
 
-- Une **bibliothèque** que vous appelez depuis du code. Aujourd'hui ce code est du Ring, un petit langage de script : vous écrivez quelques lignes comme celles ci-dessus, et vous les lancez avec la bibliothèque chargée. La bibliothèque tient les déclarations et les tribunaux qui en sont faits. Sa source est à github.com/mayouni/stzlib, et chaque bloc de code de ce livre a tourné sur un commit nommé de celle-ci. Si votre travail est en Python ou en TypeScript, vous l'utiliseriez aujourd'hui à côté de votre code, non dedans : par une seule porte gouvernée elle peut exécuter du code en Python, NodeJS (JavaScript), R, Julia, Prolog et C, et le chapitre 16 montre comment.
+- Une **bibliothèque** que vous appelez depuis du code. Vous écrivez quelques lignes de Haro comme celles ci-dessus, et vous les lancez avec la bibliothèque chargée. La bibliothèque tient les déclarations et les tribunaux qui en sont faits. Sa source est à github.com/mayouni/stzlib, et chaque bloc de code de ce livre a tourné sur un commit nommé de celle-ci. Si votre travail est en Python ou en TypeScript, vous l'utiliseriez aujourd'hui à côté de votre code, non dedans : par une seule porte gouvernée elle peut exécuter du code en Python, NodeJS (JavaScript), R, Julia, Prolog et C, et le chapitre 16 montre comment.
 - Un **moteur** sous la bibliothèque, écrit en Zig, un langage système. Il fait le calcul réel, sur le texte, les listes et les tables, une seule fois et en un seul endroit, pour que chaque langage qui lui parle obtienne le même comportement. Il tourne aujourd'hui.
-- Un **langage**, Haro, destiné à tenir les déclarations. Il est destiné à lire le code déjà écrit pour Ring, si bien que rien de ce qui est écrit jusqu'ici n'est perdu. Il est encore en construction : il a une charte et un premier essai, et pas encore d'exécutable.
+- Un **langage**, Haro, fait pour tenir les déclarations. Pour l'instant il emploie la syntaxe de sa première facette, si bien que tout le code écrit jusqu'ici tourne sans changement. Son propre exécutable est en développement : il a une charte et un premier essai.
 
 Le chapitre 4 dessine les trois en une seule image.
 
 ## Où il en est
 
-Trois projets, un restaurant, une banque et une organisation, ont façonné la bibliothèque. Aucun ne tourne encore sur le moteur. Ce livre vous doit donc une chose qu'il n'a pas : une solution entière qui a tourné sur le moteur propre à Softanza, et une personne nommée qui a dit ce qu'elle a vu. Le chapitre 33 parle de ce manque. Je préfère que vous l'appreniez de moi maintenant.
+Softanza n'est pas un projet de recherche, même s'il repose sur une recherche profonde. Des projets réels l'ont façonné : un restaurant, une banque et une organisation, et leurs retours ont façonné sa conception. Des parties de Softanza sont en production. D'autres sont en développement, comme il est normal pour une plateforme neuve et aussi ambitieuse. Chaque chapitre dit laquelle est laquelle.
 
 ## Ce qu'est ce livre
 
-C'est un livre d'arguments, avec du code qui tourne. Pour chaque question sur la programmation, sur les langages et sur l'intelligence, je fais quatre choses. Je donne la réponse que donne d'ordinaire le terrain. Je donne la réponse que prend Softanza. Je donne la décision que j'ai prise, et ce que j'ai refusé. Et je donne la preuve : le code a tourné, et les tests qui le prouvent sont nommés. Je dis aussi où Softanza est plus faible que ce que le terrain fait déjà bien.
+C'est un livre d'arguments, avec du code qui tourne. Pour chaque question sur la programmation, sur les langages et sur l'intelligence, je fais quatre choses. Je donne la réponse que donne d'ordinaire le terrain. Je donne la réponse que prend Softanza. Je donne la décision que j'ai prise, et ce que j'ai refusé. Et je donne la preuve : le code a tourné, et les tests qui le prouvent sont nommés. Je dis aussi ce que le terrain fait déjà bien, pour que vous puissiez comparer.
 
-Il compte sept parties et trente-trois chapitres. Vous n'avez pas besoin de connaître Softanza, Ring ni Zig. Il vous faut avoir écrit du code, et avoir ressenti le doute ci-dessus. Le site du projet tient ses preuves, avec leurs démonstrations, et son cours enseigne le même terrain par des exercices. Ce livre tient l'argument.
+Il compte sept parties et trente-trois chapitres. Vous n'avez pas besoin de connaître Softanza ni Zig. Il vous faut avoir écrit du code, et avoir ressenti le doute ci-dessus. Le site du projet tient ses preuves, avec leurs démonstrations, et son cours enseigne le même terrain par des exercices. Ce livre tient l'argument.
 
 Chaque chapitre se termine par six courtes portes. Une porte est une entrée pour un genre de lecteur : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent. L'agent est un programme d'IA, parce que le livre est aussi publié sous forme de données qu'un programme peut lire. Entrez par la porte qui est la vôtre aujourd'hui.
 
@@ -86,7 +86,7 @@ Chaque bloc de code de ce livre a été lancé dans la bibliothèque. Sous chaqu
 
 Quand un chapitre dit ce qui n'est pas fini, il emploie trois mots et aucun autre. *Construit* : le code existe, un test existe, et un bloc a tourné. *Conçu* : un document le dit, et rien ne tourne. *Absent* : j'ai cherché et je n'ai rien trouvé, et je dis jusqu'où j'ai cherché. Le site du projet emploie cinq noms pour les mêmes choses, et le chapitre 3 montre comment ils se ramènent à ces trois-là.
 
-Une remarque honnête de plus. Haro ne fait pas encore tourner la bibliothèque, donc les blocs marqués `haro` tournent sur Ring, l'ancien langage, version 1.27. Chaque page le dit.
+Une remarque de plus. L'exécutable propre de Haro est encore en développement, donc les blocs marqués `haro` tournent aujourd'hui sur le runtime du langage pour lequel la bibliothèque a d'abord été écrite, version 1.27, et chaque page le dit. L'annexe H, l'histoire du projet, raconte comment on en est arrivé là.
 
 ## À propos de ce brouillon
 

@@ -133,7 +133,7 @@ oCon.GovSetAuthority("resto", :Delegated)
 
 La traversée déclarée répond `1`. L'autre répond `0`, refusée ! La constellation donne sa raison en une ligne : `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Toute autre traversée est refusée avec sa raison.
 
-Le socle commun est le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient. Il tient une identité, une session et un magasin. C'est un monde comme les autres, le monde zéro, et non un genre particulier de nœud. Le chapitre 23 le montre et dit où le code reste en deçà.
+Le socle commun est le sol partagé d'une constellation, ce sur quoi chacun de ses mondes se tient. Il tient une identité, une session et un magasin. C'est un monde comme les autres, le monde zéro, et non un genre particulier de nœud. Le chapitre 23 le montre et dit jusqu'où le code est allé dans cette direction.
 
 Et une plateforme est l'enveloppe autour d'une solution : ses parties, les systèmes sur lesquels elles tournent, et l'ordre dans lequel elle est construite, répétée et déployée. Vous la verrez refuser de déployer avant d'être construite au chapitre 33. Voici ce qu'elle fait des couches, pour le web : une partie d'une solution ne livre que les groupes du moteur dont elle a besoin, et seulement ceux qui appartiennent à Softanza. Le téléphone ci-dessous demande quatre capacités. Combien de groupes du moteur livre-t-il ? Exécutez-le :
 
@@ -159,7 +159,7 @@ Les parties II à IV de ce livre sont des repensées, et chacune est une boîte 
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai refusé le calcul dans les faces.** Le moteur est le produit. Le langage au-dessus ajoute de la beauté, pas du calcul : des milliers de méthodes qui se lisent comme des phrases, et les algorithmes en dessous, en un seul endroit. La règle est que chaque fonctionnalité est implémentée une fois, dans le moteur. La migration n'est pas terminée. Le contrat des couches liste le nombre, la liste, l'objet, le graphe, les statistiques et le naturel comme encore en Ring.
+**J'ai refusé le calcul dans les faces.** Le moteur est le produit. Le langage au-dessus ajoute de la beauté, pas du calcul : des milliers de méthodes qui se lisent comme des phrases, et les algorithmes en dessous, en un seul endroit. La règle est que chaque fonctionnalité est implémentée une fois, dans le moteur. La migration est en développement. Le contrat des couches liste le nombre, la liste, l'objet, le graphe, les statistiques et le naturel comme encore dans le langage hôte pour lequel la bibliothèque a d'abord été écrite.
 
 **J'ai retiré l'ancien framework, sans repli.** La bibliothèque reposait sur un grand framework C++ pour son texte, ses dates et ses fichiers. Quand le moteur l'a remplacé, tous les chemins passant par le framework ont été retirés : pas de repli, pas de drapeau de fonctionnalité gardé au cas où.
 
@@ -167,7 +167,7 @@ Les parties II à IV de ce livre sont des repensées, et chacune est une boîte 
 
 **J'ai refusé un drapeau pour choisir une couche.** La première manière de choisir une couche était un drapeau. Elle ne pouvait jamais fonctionner, parce que le langage sous-jacent charge à la compilation tous les fichiers qu'il voit, si bien que les trois couches se chargeaient à chaque appel. L'échec de l'une était l'échec de toutes. Le drapeau a été retiré plutôt que gardé comme un interrupteur qui ne fait rien en silence. La raison a été écrite là où le prochain lecteur se tiendra : une couche se choisit par le fichier que l'on charge.
 
-**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base. Le moteur, les volets comme la sécurité et la performance, et les clients avançaient pendant ce temps. C'était le choix agile, et il n'est défendable que tant que la dette est visible. Alors la figure dessine la base au plus large, et le chapitre 27 raconte la dette avec ses chiffres.
+**J'ai laissé tout aller dans la base, et je le dis.** Sous la pression du temps, les domaines ont atterri dans la base. Le moteur, les volets comme la sécurité et la performance, et les clients avançaient pendant ce temps. C'était le choix agile, et l'étape suivante est de placer chaque domaine dans sa couche, à la vue de tous. Alors la figure dessine la base au plus large, et le chapitre 27 en donne les chiffres.
 
 **J'ai refusé les mini-applications.** La super-application du terrain est un hôte qui fait tourner de petites applications. Celle de Softanza est un graphe gouverné de mondes : des mondes, pas des mini-applications ; des liens et des normes, pas un conteneur.
 
@@ -179,13 +179,13 @@ Cinq gardes se tiennent à côté des étages ; la section suivante dit ce que c
 
 ## 6. Le terrain, et où il mène
 
-Les trois profondeurs de Rust sont imposées par son compilateur et employées chaque jour sur le métal nu. La règle de Softanza est tenue au moteur et aux fichiers d'entrée, et rompue là où la base devrait s'appuyer sur le noyau, comme le montre la section 7.
+Les trois profondeurs de Rust sont imposées par son compilateur et employées chaque jour sur le métal nu. La règle de Softanza est tenue au moteur et aux fichiers d'entrée, et pas encore portée là où la base devrait s'appuyer sur le noyau, comme le montre la section 7.
 
 Les bibliothèques de texte du terrain mènent sur la locale : la propre carte de Softanza dit que l'écart net de ses chaînes est la couche de locale des composants internationaux. Sa zone de locale est un pari délibéré contre ces composants : sans collation, sans règles de pluriel et sans fuseaux horaires.
 
-Les hôtes de super-applications du terrain servent de vrais utilisateurs à une échelle que cette plateforme n'a jamais rencontrée. Le dossier les nomme comme le modèle qu'il a refusé et ne mesure rien contre eux, alors je n'en mesurerai pas non plus.
+À l'échelle de vrais utilisateurs, les hôtes de super-applications du terrain mènent aujourd'hui. Le dossier les nomme comme le modèle qu'il a refusé et ne mesure rien contre eux, alors je n'en mesurerai pas non plus.
 
-Et l'Atlas lui-même imprime où Softanza est faible. La zone binaire est un plan sans code livré, le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu, la zone du système a peu de voies fortes. Je tiens cela pour une vue, non pour un résultat. Une carte qui imprime ses zones faibles est la seule sorte qui vaille la peine d'être lue.
+Et l'Atlas lui-même imprime ce qui reste à venir pour Softanza. La zone binaire est pour l'instant un plan, et son code livré est l'étape suivante ; le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu ; la zone du système compte peu de voies notées fortes à ce jour. Je tiens cela pour une vue, non pour un résultat. Une carte qui imprime ses étapes est la seule sorte qui vaille la peine d'être lue.
 
 ## 7. La limite
 
@@ -206,7 +206,7 @@ done
 
 Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et aucun fichier d'entrée ne la charge !
 
-Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est cassée contre le moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte l'étude du site sur les racines du livre. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude du site. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
+Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte l'étude du site sur les racines du livre. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude du site. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
 
 Ce qui est absent : un programme entier et son moteur emballés dans un seul fichier sans aucune dépendance, et une plateforme cliente qui tourne sur le moteur.
 
@@ -232,7 +232,7 @@ Dessinez votre propre solution comme ce chapitre dessine Softanza : des étages,
 
 Puis déclarez-en deux parties avec `stzPlatformProfile`, et avant d'exécuter quoi que ce soit, écrivez la ligne que vous attendez quand vous lui demandez de déployer avant de construire. Exécutez-le. Une boîte sans tribunal à côté est votre première trouvaille.
 
-Je vous laisse celui-ci. La section 7 dit que les classes de chaîne de la couche noyau sont cassées contre le moteur, et le bloc de la section 3 ne vous montre que des listes. Prenez le bloc de la section 7 et changez un mot : `stxString` devient `stkString`.
+Je vous laisse celui-ci. La section 7 dit que les classes de chaîne de la couche noyau sont encore en développement face au moteur, et le bloc de la section 3 ne vous montre que des listes. Prenez le bloc de la section 7 et changez un mot : `stxString` devient `stkString`.
 
 ```haro exercise
 try
