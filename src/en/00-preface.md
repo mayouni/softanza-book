@@ -10,30 +10,84 @@ status: draft
 rulings: []
 ---
 
-This is the second book of the AYOUNI imprint. The first, *Refinement-Oriented Programming*, told one discipline through one bank. This one tells the platform beneath it: Softanza, a library and an engine, and a language still in construction, all shaped by one idea. Declare a thing, and then govern it. A person says what a language is, what a world is, what a solution is, and a court made from the declaration judges whoever speaks it, person or model. Chapter 12 says how far that is built: the library judges a declaration when it is declared, and the forge that makes a language's court and grammar from its declaration is built outside the library.
+## A question you already have
 
-A world is one application, as a declaration with a being, a becoming and a way of being met. Chapter 4 declares one and shows its being, and chapter 23 says the rest.
+You use a tool that writes code. You ask it for a function, or for a whole feature, and it answers in seconds. Then comes the question that no tool answers for you: should this code enter my system?
 
-By a court I mean the judge of a thing. It is made from a declaration, and it judges whoever speaks that declaration, a person or a model. It says one of two words, kept or refused, and it says why in the words of the declaration. A guard is a file of the library's test tree that holds assertions, and the fifth element of every chapter, the court, is the list of the guards that prove it.
+You have always had ways to answer. You run the tests. The type checker agrees, or it does not. A colleague reads the change. Those ways were made when people wrote code slowly. Now one sentence can produce a thousand lines, and nobody has time to read a thousand lines for every sentence.
 
-I wrote it as a running document. Every block of code in it, except the exercises, which are yours to run, was run inside the library, at a commit that the page names. It was judged against the lines that begin with `#-->`, which say what the block printed. If a block does not print what it promises, the build fails, and so does the page. This is why the book is not finished the day it is written: it is finished each time it runs.
+Code has become cheap. Trust has not become cheap. This book keeps coming back to one sentence, the one every chapter rests on: **change arrives faster than trust.**
 
-**How to read it.** The book has seven parts and thirty-three chapters. Nine of them, the spine, carry the whole argument and can be read alone: the four of the first part, the three that each state a law (chapters 5, 11 and 17), and the last two. The reader has a button that shows the spine only. Read it first, and come back for the rest when a door of it interests you.
+## The idea, in two moves
 
-Every chapter has the same nine elements, in the same order. The three chapters that state a law (5, 11 and 17) open with one more short section, on what the AI age changes. The nine: the concept as the field holds it today; the first principle; the form it takes in Softanza, in code; the decision, and what I refused; the court, which is the list of guards that prove it; the field, with what it has that Softanza lacks; the limit; six doors, one for the programmer, the analyst, the designer, the decision-maker, the educator and the agent; and an exercise that you answer before you run. The shape of every chapter puts the limit seventh.
+First you **declare**. In plain text, you say what a thing is: an application (I call it a *world*), a language, an AI agent, a whole product. Then you **govern**. From your declaration you get a judge, which I call a *court*. A court is a validator built from your declaration. It gives a verdict, *kept* or *refused*, and the reason, in the words of your declaration.
 
-A door is a way into a chapter, and not a job title. The programmer, the analyst, the designer, the decision-maker, the educator and the agent are six ways of using the work, and each door says what the chapter gives you when you use it that way. Enter by the one that is yours today.
+Every change goes to the court before it enters, whoever wrote it: you, a colleague, a script or an AI model. The model can still propose anything. It cannot decide anything. It is also asked last: whatever rules can decide, the rules decide first.
 
-**The three stage words.** Every limit is stated in three words and no others. *Built*: the code exists, a guard exists, and a block ran. *Designed*: a document says so, and nothing runs. *Absent*: I looked, and I say how far. The site uses five names: built, in construction, specification, ratified proposal and named. Chapter 3 prints how they fold into these three.
+## A declaration, in real code
 
-**What the page says about itself.** Under each title a line says when the blocks ran, at which commit of the library, and how many kept their promise. A second line says what ran them: the runtime of the former host language, the one the library was run on before Haro, version 1.27. Haro, the language this book writes in, has no executable yet and does not run the library, so the blocks tagged `haro` run on that earlier runtime, and each page says so. The engine's binaries are copied from a build made in a checkout of the same commit. That build is not pinned, and the page says how recent it is and which engine commits came after it.
+Here is the smallest case. You add an AI agent to your system, a program that watches stock levels and reorders. You do not start with its code. You start with a short text file that says what it is: its name, how often it runs, what it may do, and whether its actions can be undone. That file is a declaration. You load it, and the court reads it before the agent can ever run. This agent's file leaves something out. What does the court say?
 
-**A draft is a draft.** Each chapter carries a banner that says it has not been read by the author. The questions that the record could not answer were once marked in the pages. They have been answered on my behalf, by rules that invent nothing: where the record holds nothing, the page says so in one plain sentence and does not fill the gap. These answers are delegated, and I can overrule any of them by editing the page. You can see where the record stops.
+```haro
+cPia = "pia: 1
+name: stock-watcher
+kind: pi
+reversibility: compensable
+schedule:
+  timer: 20
+skills:
+  - name: restock
+    does: learn stock level ordered
+"
+oD = StzAgentDeclarationQ(cPia)
+? oD.IsValid()
+#--> 0
+? oD.CiteFindings()
+#--> [pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.
+```
 
-**The three media.** The site holds the record, with its proof lines. The course, in the library's education program, teaches the same ground in four languages, of which French, Arabic and Hausa are drafts that no native speaker has reviewed (the site's education page, read on 9 October 2026). It teaches by exercises that are judged by running the learner's program. This book holds the argument. Where they differ, the page says so.
+Read it in three parts. The text between the quotes is the declaration. The next line loads it. Then `?` prints an answer, and the line after `#-->` is what the block printed when I ran it. The court answers `0`: refused. It names the rule and gives the reason: an agent must say what it covers, because the engine will not schedule an agent that does not, so the file is refused now and not at its first run. A few words of the file: `pia` names the file format, `compensable` means its effects can be undone by a compensating action, and law 18 is the engine's rule that an agent with no coverage is never scheduled.
 
-**What is owed.** The last chapter is about a line that the record does not yet carry: a solution that ran on Softanza's own engine, and what a named user said of it. Three projects, a restaurant, a bank and an organisation, have taught the library, and none yet runs on it. I wrote the chapter before the line exists, and it will have to be written again when the line does.
+You could write this check in your own CI. Here nobody had to. The court for agents ships with the library, so the rule is the library's, and the facts are yours, in the declaration. A one-off assert in a start-up script judges one fact. A declaration holds all the facts about the agent in one text, and the same court judges it whether a person, a script or a model wrote it. The rule can be yours too: chapter 2 has a rule you write in a few lines over two facts, that an actor is a language model and that it holds an effect, and the court finds the violation in your own graph of agents. This example is small on purpose, and a schema can check it too. The book does not argue that a court checks more than a schema. It argues that one court, built from your declaration, stands in front of every actor and gives its reason. It does not read a thousand generated lines and call them good: it checks that a change fits what you declared, and chapter 24 shows a change tried out on a copy of your system before anything is committed. For a thing of your own, such as a language you invent, chapter 12 shows how you make the court, and says how far that is built. Chapter 1 tells a second scene, with a mail service, and chapter 2 runs this block again.
 
-The French edition exists as a translation of the English drafts. Each French page says so, and it is read again once I have marked the English page as read.
+You will say that you already have tests, schemas and policy checks in your CI. You do. Today those rules live in many places: tests here, a schema there, a policy file elsewhere, each written by hand after the code. Here you state them once, in the declaration, and the court comes from it. Chapter 22 compares the two honestly, and where the field does better, it says so. A court judges what you declared. It cannot judge what you left out, and each chapter's limit says where that stops.
 
-The book speaks in the author's voice, which is why it says "I". This preface was written after the chapters were first drafted, by the session that drafted them, and it has not been re-read since the later edits to the chapters. It says nothing about why the book was written, since the record does not. It stays a working page.
+## What Softanza is
+
+Three things, and for each I say how far it exists.
+
+- A **library** that you call from code. Today that code is Ring, a small scripting language: you write a few lines like the ones above, and you run them with the library loaded. The library holds the declarations and the courts made from them. Its source is at github.com/mayouni/stzlib, and every block of code in this book ran against a named commit of it. If your work is in Python or TypeScript, today you would use the library beside your code, not inside it: through one governed door it can run code in Python, NodeJS (JavaScript), R, Julia, Prolog and C, and chapter 16 shows how.
+- An **engine** beneath the library, written in Zig, a systems language. It does the actual computation, on text, lists and tables, once and in one place, so that every language that talks to it gets the same behaviour. It runs today.
+- A **language**, Haro, meant to hold the declarations. It is meant to read the code already written for Ring, so nothing written so far is lost. It is still being built: it has a charter and a first experiment, and no executable yet.
+
+Chapter 4 draws the three in one picture.
+
+## Where it stands
+
+Three projects, a restaurant, a bank and an organisation, shaped the library. None of them runs on the engine yet. So this book owes you one thing it does not have: a whole solution that ran on Softanza's own engine, and a named person who said what they saw. Chapter 33 is about that gap. I would rather you heard it from me now.
+
+## What this book is
+
+This is a book of arguments, with running code. For each question about programming, about languages and about intelligence, I do four things. I give the answer the field usually gives. I give the answer Softanza takes. I give the decision I made, and what I refused. And I give the proof: the code ran, and the tests that prove it are named. I also say where Softanza is weaker than what the field already does well.
+
+It has seven parts and thirty-three chapters. You do not need to know Softanza, Ring or Zig. You need to have written code, and to have felt the doubt above. The project's website holds its evidence, with the proofs, and its course teaches the same ground by exercises. This book holds the argument.
+
+Each chapter ends with six short doors. A door is a way in for one kind of reader: the programmer, the analyst, the designer, the decision-maker, the educator and the agent. The agent is an AI program, because the book is also published as data that a program can read. Enter by the door that is yours today.
+
+## How to read it
+
+Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
+
+Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. The limit. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
+
+## What to trust
+
+Every block of code in this book was run inside the library. Under each title the page says when, at which commit, and how many blocks kept their promise: how many printed what the line after `#-->` says they print. If a block prints something else, the build fails, and so does the page. The exercises are yours to run.
+
+When a chapter says what is not finished, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document says so, and nothing runs. *Absent*: I looked and found nothing, and I say how far I looked. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
+
+One more honest note. Haro does not run the library yet, so the blocks marked `haro` run on Ring, the older language, version 1.27. Each page says so.
+
+## About this draft
+
+The chapters were drafted with AI agents working from the project's own files, and every code block was run. I have not read every page yet, and each chapter has a banner at its top that says so until I do. Where the files held no answer to a question, the page says so in one plain sentence and does not invent one. The French edition is a translation of the English drafts, and each French page says so. This preface was written after the chapters, and it stays unfinished until I write my own. This is the second book of my imprint, AYOUNI. The first, *Refinement-Oriented Programming*, is about one discipline for software in the age of AI agents, told through one bank.

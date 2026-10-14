@@ -5,7 +5,7 @@
  "tagline": "Rethinking programming, languages and intelligence, from first principles",
  "author": "Mansour Ayouni",
  "series": "Second of the AYOUNI books",
- "built": "2026-10-13 10:18 UTC+01:00",
+ "built": "2026-10-14 01:36 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "runtime": {
   "name": "the former host language",
@@ -56,19 +56,64 @@
    "status": "draft",
    "stage": {},
    "guards": [],
-   "promises": [],
+   "promises": [
+    {
+     "code": "cPia = \"pia: 1\nname: stock-watcher\nkind: pi\nreversibility: compensable\nschedule:\n  timer: 20\nskills:\n  - name: restock\n    does: learn stock level ordered\n\"\noD = StzAgentDeclarationQ(cPia)\n? oD.IsValid()\n#--> 0\n? oD.CiteFindings()\n#--> [pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "promised": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "output": "0\n[pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.",
+     "verdict": "kept",
+     "effects": []
+    }
+   ],
    "narrations": [],
    "rulings": [],
    "doors": {},
-   "sections": [],
+   "sections": [
+    {
+     "n": null,
+     "title": "A question you already have"
+    },
+    {
+     "n": null,
+     "title": "The idea, in two moves"
+    },
+    {
+     "n": null,
+     "title": "A declaration, in real code"
+    },
+    {
+     "n": null,
+     "title": "What Softanza is"
+    },
+    {
+     "n": null,
+     "title": "Where it stands"
+    },
+    {
+     "n": null,
+     "title": "What this book is"
+    },
+    {
+     "n": null,
+     "title": "How to read it"
+    },
+    {
+     "n": null,
+     "title": "What to trust"
+    },
+    {
+     "n": null,
+     "title": "About this draft"
+    }
+   ],
    "open_questions": [],
-   "words": 1079,
+   "words": 1704,
    "french": true,
    "text": "agents/preface.md",
    "run": {
-    "ran": null,
-    "kept": 0,
-    "runnable": 0
+    "ran": "2026-10-14 01:34 UTC+01:00",
+    "kept": 1,
+    "runnable": 1
    }
   },
   {
@@ -185,7 +230,7 @@
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -389,7 +434,7 @@
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -547,7 +592,7 @@
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -737,7 +782,7 @@
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -919,7 +964,7 @@
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1108,7 +1153,7 @@
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1353,7 +1398,7 @@
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
-    "ran": "2026-10-13 10:15 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -1576,7 +1621,7 @@
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1769,7 +1814,7 @@
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -1945,7 +1990,7 @@
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2176,7 +2221,7 @@
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:34 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2371,7 +2416,7 @@
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2642,7 +2687,7 @@
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -2861,7 +2906,7 @@
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3090,7 +3135,7 @@
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3312,7 +3357,7 @@
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
-    "ran": "2026-10-13 10:16 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3503,7 +3548,7 @@
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -3736,7 +3781,7 @@
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -3910,7 +3955,7 @@
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4121,7 +4166,7 @@
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -4352,7 +4397,7 @@
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4518,7 +4563,7 @@
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -4730,7 +4775,7 @@
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -4965,7 +5010,7 @@
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:35 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5188,7 +5233,7 @@
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5408,7 +5453,7 @@
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5603,7 +5648,7 @@
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -5769,7 +5814,7 @@
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
-    "ran": "2026-10-13 10:17 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -5946,7 +5991,7 @@
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -6129,7 +6174,7 @@
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -6328,7 +6373,7 @@
    "french": true,
    "text": "agents/ch31-what-the-projects-did-not-prove.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6463,7 +6508,7 @@
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6610,7 +6655,7 @@
    "french": true,
    "text": "agents/ch33-the-one-line-still-owed.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6695,7 +6740,7 @@
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
-    "ran": "2026-10-13 10:18 UTC+01:00",
+    "ran": "2026-10-14 01:36 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }
@@ -6840,7 +6885,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1056,
+   "words": 1057,
    "french": true,
    "text": "agents/app-g-the-book-as-data.md",
    "run": {

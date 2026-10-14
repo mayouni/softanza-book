@@ -10,30 +10,84 @@ status: draft
 rulings: []
 ---
 
-Ceci est le deuxième livre de la collection AYOUNI. Le premier, *Refinement-Oriented Programming*, racontait une discipline à travers une banque. Celui-ci raconte la plateforme qui se trouve en dessous : Softanza, une bibliothèque et un moteur, et un langage encore en construction, tous façonnés par une seule idée. Déclarez une chose, puis gouvernez-la. Une personne dit ce qu'est un langage, ce qu'est un monde, ce qu'est une solution, et un tribunal fait à partir de la déclaration juge celui qui la parle, personne ou modèle. Le chapitre 12 dit jusqu'où cela est construit : la bibliothèque juge une déclaration au moment où elle est déclarée, et la forge qui fait le tribunal et la grammaire d'un langage à partir de sa déclaration est construite hors de la bibliothèque.
+## Une question que vous avez déjà
 
-Un monde est une application, comme une déclaration avec un être, un devenir et une façon d'être rencontrée. Le chapitre 4 en déclare un et montre son être, et le chapitre 23 dit le reste.
+Vous utilisez un outil qui écrit du code. Vous lui demandez une fonction, ou une fonctionnalité entière, et il répond en quelques secondes. Vient alors la question qu'aucun outil ne résout pour vous : ce code doit-il entrer dans mon système ?
 
-Par tribunal, j'entends le juge d'une chose. Il est fait à partir d'une déclaration, et il juge celui qui parle cette déclaration, personne ou modèle. Il dit l'un de deux mots, gardé ou refusé, et il dit pourquoi dans les mots de la déclaration. Une garde est un fichier de l'arbre de tests de la bibliothèque qui contient des assertions, et le cinquième élément de chaque chapitre, le tribunal, est la liste des gardes qui le prouvent.
+Vous avez toujours eu des moyens de répondre. Vous lancez les tests. Le vérificateur de types est d'accord, ou il ne l'est pas. Un collègue relit le changement. Ces moyens ont été faits quand on écrivait le code lentement. Aujourd'hui une seule phrase peut produire mille lignes, et personne n'a le temps de relire mille lignes pour chaque phrase.
 
-Je l'ai écrit comme un document qui s'exécute. Chaque bloc de code qu'il contient, sauf les exercices, qu'il vous revient d'exécuter, a été exécuté dans la bibliothèque, à un commit que la page nomme. Il a été jugé contre les lignes qui commencent par `#-->`, qui disent ce que le bloc a imprimé. Si un bloc n'imprime pas ce qu'il promet, la construction échoue, et la page avec elle. C'est pourquoi le livre n'est pas terminé le jour où il est écrit : il est terminé chaque fois qu'il s'exécute.
+Le code est devenu bon marché. La confiance, non. Ce livre revient sans cesse à une phrase, celle sur laquelle repose chaque chapitre : **le changement arrive plus vite que la confiance.**
 
-**Comment le lire.** Le livre compte sept parties et trente-trois chapitres. Neuf d'entre eux, la colonne, portent tout l'argument et peuvent être lus seuls : les quatre de la première partie, les trois qui énoncent chacun une loi (chapitres 5, 11 et 17), et les deux derniers. Le lecteur dispose d'un bouton qui n'affiche que la colonne. Lisez-la d'abord, et revenez au reste quand une de ses portes vous intéresse.
+## L'idée, en deux gestes
 
-Chaque chapitre a les mêmes neuf éléments, dans le même ordre. Les trois chapitres qui énoncent une loi (5, 11 et 17) s'ouvrent sur une courte section de plus, sur ce que l'âge de l'IA change. Les neuf : le concept tel que le terrain le tient aujourd'hui ; le premier principe ; la forme qu'il prend dans Softanza, en code ; la décision, et ce que j'ai refusé ; le tribunal, qui est la liste des gardes qui le prouvent ; le terrain, avec ce qu'il possède et qui manque à Softanza ; la limite ; six portes, une pour le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent ; et un exercice auquel vous répondez avant de l'exécuter. La forme de chaque chapitre place la limite en septième.
+D'abord vous **déclarez**. En texte simple, vous dites ce qu'est une chose : une application (je l'appelle un *monde*), un langage, un agent d'IA, un produit entier. Ensuite vous **gouvernez**. De votre déclaration vous obtenez un juge, que j'appelle un *tribunal*. Un tribunal est un validateur construit à partir de votre déclaration. Il rend un verdict, *tenu* ou *refusé*, et la raison, dans les mots de votre déclaration.
 
-Une porte est une façon d'entrer dans un chapitre, et non un intitulé de poste. Le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent sont six façons d'utiliser le travail, et chaque porte dit ce que le chapitre vous donne quand vous l'utilisez ainsi. Entrez par celle qui est la vôtre aujourd'hui.
+Chaque changement passe devant le tribunal avant d'entrer, quel qu'en soit l'auteur : vous, un collègue, un script ou un modèle d'IA. Le modèle peut toujours tout proposer. Il ne peut rien décider. On l'interroge aussi en dernier : tout ce que des règles peuvent décider, les règles le décident d'abord.
 
-**Les trois mots d'étape.** Chaque limite est énoncée en trois mots et aucun autre. *Construit* : le code existe, une garde existe, et un bloc s'est exécuté. *Conçu* : un document le dit, et rien ne s'exécute. *Absent* : j'ai cherché, et je dis jusqu'où. Le site emploie cinq noms : construit, en construction, spécification, proposition ratifiée et nommé. Le chapitre 3 imprime comment ils se replient sur ces trois-ci.
+## Une déclaration, en vrai code
 
-**Ce que la page dit d'elle-même.** Sous chaque titre, une ligne dit quand les blocs se sont exécutés, à quel commit de la bibliothèque, et combien ont tenu leur promesse. Une deuxième ligne dit ce qui les a exécutés : le runtime de l'ancien langage hôte, celui sur lequel la bibliothèque tournait avant Haro, version 1.27. Haro, le langage dans lequel ce livre est écrit, n'a pas encore d'exécutable et n'exécute pas la bibliothèque, si bien que les blocs balisés `haro` tournent sur ce runtime plus ancien, et chaque page le dit. Les binaires du moteur sont copiés d'une construction faite dans une copie du même commit. Cette construction n'est pas épinglée, et la page dit à quel point elle est récente et quels commits du moteur l'ont suivie.
+Voici le cas le plus petit. Vous ajoutez à votre système un agent d'IA, un programme qui surveille les niveaux de stock et réapprovisionne. Vous ne commencez pas par son code. Vous commencez par un court fichier texte qui dit ce qu'il est : son nom, la fréquence à laquelle il tourne, ce qu'il peut faire, et si ses actions peuvent être défaites. Ce fichier est une déclaration. Vous le chargez, et le tribunal le lit avant que l'agent puisse jamais tourner. Le fichier de cet agent omet quelque chose. Que dit le tribunal ?
 
-**Un brouillon est un brouillon.** Chaque chapitre porte un bandeau qui dit qu'il n'a pas été lu par l'auteur. Les questions auxquelles le dossier n'a pas pu répondre étaient autrefois marquées dans les pages. Il y a été répondu en mon nom, par des règles qui n'inventent rien : là où le dossier ne contient rien, la page le dit en une phrase simple et ne comble pas le vide. Ces réponses sont déléguées, et je peux revenir sur chacune en éditant la page. Vous voyez où le dossier s'arrête.
+```haro
+cPia = "pia: 1
+name: stock-watcher
+kind: pi
+reversibility: compensable
+schedule:
+  timer: 20
+skills:
+  - name: restock
+    does: learn stock level ordered
+"
+oD = StzAgentDeclarationQ(cPia)
+? oD.IsValid()
+#--> 0
+? oD.CiteFindings()
+#--> [pia-coverage @ coverage] an agent must say WHAT IT COVERS. The engine loop refuses to schedule an agent with no coverage statement (law 18), so a file without one could never run and is refused here instead of at the first tick.
+```
 
-**Les trois médias.** Le site tient le dossier, avec ses lignes de preuve. Le cours, dans le programme d'éducation de la bibliothèque, enseigne le même terrain en quatre langues. Le français, l'arabe et le haoussa en sont des brouillons qu'aucun locuteur natif n'a relus (la page éducation du site, lue le 9 octobre 2026). Il enseigne par des exercices jugés en exécutant le programme de l'apprenant. Ce livre tient l'argument. Là où ils diffèrent, la page le dit.
+Lisez-le en trois parties. Le texte entre les guillemets est la déclaration. La ligne suivante la charge. Ensuite `?` imprime une réponse, et la ligne après `#-->` est ce que le bloc a imprimé quand je l'ai lancé. Le tribunal répond `0` : refusé. Il nomme la règle et donne la raison : un agent doit dire ce qu'il couvre, parce que le moteur ne planifiera pas un agent qui ne le dit pas, donc le fichier est refusé maintenant et non à sa première exécution. Quelques mots du fichier : `pia` nomme le format du fichier, `compensable` veut dire que ses effets peuvent être défaits par une action de compensation, et la loi 18 est la règle du moteur selon laquelle un agent sans couverture n'est jamais planifié.
 
-**Ce qui est dû.** Le dernier chapitre porte sur une ligne que le dossier ne porte pas encore : une solution qui a tourné sur le moteur propre de Softanza, et ce qu'un utilisateur nommé en a dit. Trois projets, un restaurant, une banque et une organisation, ont enseigné la bibliothèque, et aucun ne tourne encore dessus. J'ai écrit le chapitre avant que la ligne existe, et il faudra l'écrire de nouveau quand la ligne existera.
+Vous pourriez écrire ce contrôle dans votre propre CI. Ici personne n'a eu à le faire. Le tribunal des agents est livré avec la bibliothèque, donc la règle est celle de la bibliothèque, et les faits sont les vôtres, dans la déclaration. Un simple assert dans un script de démarrage juge un seul fait. Une déclaration tient dans un seul texte tous les faits sur l'agent, et le même tribunal la juge, qu'elle ait été écrite par une personne, un script ou un modèle. La règle peut aussi être la vôtre : le chapitre 2 a une règle que vous écrivez en quelques lignes sur deux faits, qu'un acteur est un modèle de langage et qu'il détient un effet, et le tribunal trouve la violation dans votre propre graphe d'agents. Cet exemple est petit exprès, et un schéma peut le vérifier aussi. Le livre ne soutient pas qu'un tribunal vérifie plus qu'un schéma. Il soutient qu'un seul tribunal, construit à partir de votre déclaration, se tient devant chaque acteur et donne sa raison. Il ne lit pas mille lignes générées pour les déclarer bonnes : il vérifie qu'un changement tient dans ce que vous avez déclaré, et le chapitre 24 montre un changement essayé sur une copie de votre système avant que rien ne soit validé. Pour une chose à vous, par exemple un langage que vous inventez, le chapitre 12 montre comment faire le tribunal, et dit jusqu'où cela est construit. Le chapitre 1 raconte une deuxième scène, avec un service de courrier, et le chapitre 2 relance ce bloc.
 
-L'édition française existe comme traduction des brouillons anglais. Chaque page française le dit, et elle est relue une fois que j'ai marqué la page anglaise comme lue.
+Vous direz que vous avez déjà des tests, des schémas et des contrôles de politique dans votre CI. C'est vrai. Aujourd'hui ces règles vivent à plusieurs endroits : des tests ici, un schéma là, un fichier de politique ailleurs, chacun écrit à la main après le code. Ici vous les énoncez une seule fois, dans la déclaration, et le tribunal en découle. Le chapitre 22 compare honnêtement les deux, et là où le terrain fait mieux, il le dit. Un tribunal juge ce que vous avez déclaré. Il ne peut pas juger ce que vous avez omis, et la limite de chaque chapitre dit où cela s'arrête.
 
-Le livre parle avec la voix de l'auteur, c'est pourquoi il dit « je ». Cette préface a été écrite après la première rédaction des chapitres, par la session qui les a rédigés, et elle n'a pas été relue depuis les modifications ultérieures des chapitres. Elle ne dit rien de la raison pour laquelle le livre a été écrit, puisque le dossier ne la dit pas. Elle reste une page de travail.
+## Ce qu'est Softanza
+
+Trois choses, et pour chacune je dis jusqu'où elle existe.
+
+- Une **bibliothèque** que vous appelez depuis du code. Aujourd'hui ce code est du Ring, un petit langage de script : vous écrivez quelques lignes comme celles ci-dessus, et vous les lancez avec la bibliothèque chargée. La bibliothèque tient les déclarations et les tribunaux qui en sont faits. Sa source est à github.com/mayouni/stzlib, et chaque bloc de code de ce livre a tourné sur un commit nommé de celle-ci. Si votre travail est en Python ou en TypeScript, vous l'utiliseriez aujourd'hui à côté de votre code, non dedans : par une seule porte gouvernée elle peut exécuter du code en Python, NodeJS (JavaScript), R, Julia, Prolog et C, et le chapitre 16 montre comment.
+- Un **moteur** sous la bibliothèque, écrit en Zig, un langage système. Il fait le calcul réel, sur le texte, les listes et les tables, une seule fois et en un seul endroit, pour que chaque langage qui lui parle obtienne le même comportement. Il tourne aujourd'hui.
+- Un **langage**, Haro, destiné à tenir les déclarations. Il est destiné à lire le code déjà écrit pour Ring, si bien que rien de ce qui est écrit jusqu'ici n'est perdu. Il est encore en construction : il a une charte et un premier essai, et pas encore d'exécutable.
+
+Le chapitre 4 dessine les trois en une seule image.
+
+## Où il en est
+
+Trois projets, un restaurant, une banque et une organisation, ont façonné la bibliothèque. Aucun ne tourne encore sur le moteur. Ce livre vous doit donc une chose qu'il n'a pas : une solution entière qui a tourné sur le moteur propre à Softanza, et une personne nommée qui a dit ce qu'elle a vu. Le chapitre 33 parle de ce manque. Je préfère que vous l'appreniez de moi maintenant.
+
+## Ce qu'est ce livre
+
+C'est un livre d'arguments, avec du code qui tourne. Pour chaque question sur la programmation, sur les langages et sur l'intelligence, je fais quatre choses. Je donne la réponse que donne d'ordinaire le terrain. Je donne la réponse que prend Softanza. Je donne la décision que j'ai prise, et ce que j'ai refusé. Et je donne la preuve : le code a tourné, et les tests qui le prouvent sont nommés. Je dis aussi où Softanza est plus faible que ce que le terrain fait déjà bien.
+
+Il compte sept parties et trente-trois chapitres. Vous n'avez pas besoin de connaître Softanza, Ring ni Zig. Il vous faut avoir écrit du code, et avoir ressenti le doute ci-dessus. Le site du projet tient ses preuves, avec leurs démonstrations, et son cours enseigne le même terrain par des exercices. Ce livre tient l'argument.
+
+Chaque chapitre se termine par six courtes portes. Une porte est une entrée pour un genre de lecteur : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent. L'agent est un programme d'IA, parce que le livre est aussi publié sous forme de données qu'un programme peut lire. Entrez par la porte qui est la vôtre aujourd'hui.
+
+## Comment le lire
+
+Lisez d'abord neuf chapitres. Ils portent tout l'argument et peuvent se lire seuls : les quatre de la partie I, les deux derniers, et trois qui énoncent chacun une règle que le livre tient partout. Chapitre 5 : le code doit se lire comme une personne pense. Chapitre 11 : un langage est déclaré et fermé. Chapitre 17 : un programme est programmatique par défaut, ce qui veut dire que les règles et le code décident d'abord, et que le modèle vient en dernier. Le lecteur a un bouton qui n'affiche que ces neuf. Revenez aux autres quand l'un d'eux vous intéresse.
+
+Chaque chapitre a les mêmes neuf parties, dans le même ordre. L'idée telle que le terrain la tient aujourd'hui. Le premier principe. La forme qu'elle prend dans Softanza, en code. La décision, et ce que j'ai refusé. Le tribunal : les tests nommés qui prouvent l'affirmation du chapitre. Le terrain, et ce qu'il fait mieux. La limite. Les six portes. Un exercice, auquel vous répondez avant de le lancer. Les chapitres 5, 11 et 17 s'ouvrent par une courte section de plus, sur ce que l'ère de l'IA change.
+
+## À quoi se fier
+
+Chaque bloc de code de ce livre a été lancé dans la bibliothèque. Sous chaque titre, la page dit quand, à quel commit, et combien de blocs ont tenu leur promesse : combien ont imprimé ce que dit la ligne après `#-->`. Si un bloc imprime autre chose, la construction échoue, et la page avec elle. Les exercices sont à vous de les lancer.
+
+Quand un chapitre dit ce qui n'est pas fini, il emploie trois mots et aucun autre. *Construit* : le code existe, un test existe, et un bloc a tourné. *Conçu* : un document le dit, et rien ne tourne. *Absent* : j'ai cherché et je n'ai rien trouvé, et je dis jusqu'où j'ai cherché. Le site du projet emploie cinq noms pour les mêmes choses, et le chapitre 3 montre comment ils se ramènent à ces trois-là.
+
+Une remarque honnête de plus. Haro ne fait pas encore tourner la bibliothèque, donc les blocs marqués `haro` tournent sur Ring, l'ancien langage, version 1.27. Chaque page le dit.
+
+## À propos de ce brouillon
+
+Les chapitres ont été rédigés avec des agents d'IA, à partir des propres fichiers du projet, et chaque bloc de code a été lancé. Je n'ai pas encore lu toutes les pages, et chaque chapitre porte en haut un bandeau qui le dit jusqu'à ce que je les aie lues. Là où les fichiers ne contenaient aucune réponse à une question, la page le dit en une phrase simple et n'en invente pas. L'édition française est une traduction des brouillons anglais, et chaque page française le dit. Cette préface a été écrite après les chapitres, et elle reste inachevée jusqu'à ce que j'écrive la mienne. C'est le deuxième livre de ma maison d'édition, AYOUNI. Le premier, *Refinement-Oriented Programming*, parle d'une discipline pour le logiciel à l'ère des agents d'IA, racontée à travers une banque.

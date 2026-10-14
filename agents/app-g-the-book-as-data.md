@@ -34,7 +34,7 @@ The table below is generated at every build from the same data as `book.json`.
 
 | # | Id | Part | Status | Spine | Blocks kept | Guards | Doors |
 |---|---|---|---|---|---|---|---|
-|  | `preface` | 0 | draft | yes | no code | 0 | 0 |
+|  | `preface` | 0 | draft | yes | 1 of 1 | 0 | 0 |
 | 1 | `change-arrives-faster-than-trust` | 1 | draft | yes | 1 of 1 | 3 | 6 |
 | 2 | `the-software-crafter` | 1 | draft | yes | 9 of 9 | 5 | 6 |
 | 3 | `the-method-from-first-principles` | 1 | draft | yes | 5 of 5 | 3 | 6 |
