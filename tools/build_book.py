@@ -234,7 +234,7 @@ def apply_shell(ui):
               "@media (prefers-color-scheme: dark) { :root:not([data-theme=\"light\"]) { " + css_vars(DARK) + " color-scheme: dark; } }\n"
               "@media print { :root, :root[data-theme=\"dark\"], :root:not([data-theme=\"light\"]) { " + css_vars(LIGHT) + " } }")
     shell = shell[:root_block.start()] + themed + shell[root_block.end():]
-    shell = shell.replace("</style>", BOOK_CSS + "\n</style>", 1)
+    shell = shell.replace("</style>", BOOK_CSS + type_css() + "\n</style>", 1)
     OV = "<!-- ============ OVERVIEW VIEW ============ -->"
     return shell[:shell.index(OV)], shell[shell.index("<script>"):]
 
@@ -357,14 +357,7 @@ pre .c-promise{color:var(--code-promise);}
 .untranslated a{color:var(--bookmark);font-weight:600;}
 
 /* navigation: parts, the spine, the chapters not yet drafted */
-.sb-part{font-family:var(--sans);font-size:13px;letter-spacing:1.6px;font-weight:700;text-transform:uppercase;color:var(--ink-soft);margin:26px 0 6px;line-height:1.5;}
-/* the menu is the way through the book: large enough to read at a glance (the reader's own size was 16px and 10.5px) */
-.chapter-sidebar{padding:34px 28px 60px;}
-.sidebar-book-title{font-size:24px;margin-bottom:22px;}
-.sidebar-link{font-size:18.5px;line-height:1.32;padding:11px 0;}
-.sidebar-link .sl-spine{width:9px;height:9px;margin-right:10px;vertical-align:1px;}
-.sidebar-link.is-absent{font-size:18.5px;}
-@media (max-width: 900px){.sidebar-link{font-size:18px;}.sb-part{font-size:12.5px;}}
+.sb-part{font-family:var(--sans);font-weight:700;text-transform:uppercase;color:var(--ink);}
 .sidebar-link .sl-spine{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);margin-right:8px;vertical-align:2px;}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
@@ -393,13 +386,6 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 .overview-contents h2{font-family:var(--sans);font-size:26px;font-weight:800;letter-spacing:-0.3px;margin-bottom:6px;color:var(--ink);}
 .contents-listing .ce-row.is-absent .ce-title{color:var(--soft-2);}
 .contents-listing .ce-row a.ce-title:hover{text-decoration:underline;}
-/* the contents is the book's map: sized to read comfortably (the Refine shell's 17px rows, 12px numbers and 11px part labels were too small) */
-.contents-listing .ce-row{font-size:22px;padding:11px 0;}
-.contents-listing .ce-num{font-size:16px;width:46px;}
-.contents-listing .ce-part{font-size:14px;letter-spacing:2.4px;margin:34px 0 14px;}
-.contents-listing .ce-pg{font-size:15px;}
-.overview-contents h2{font-size:32px;}
-.chapter-card .card-words{font-size:15px;}
 .contents-listing .ce-spine{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:1px 6px;margin-left:8px;}
 
 @media (max-width: 600px) {
@@ -412,6 +398,70 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
   body.spine-only .sidebar-link, body.spine-only .chapter-card, body.spine-only .ce-row { display: initial; }
 }
 """
+
+
+# ============================================================================ the type scale
+# One scale, and a check (the author's rule, repeated: the size of a text follows its level. A part is above a chapter,
+# a chapter above a section, a section above the body text it heads; a label is never smaller than 12px).
+TYPE = {
+    # the reader's navigation, in px
+    "sidebar_book": 24, "sidebar_part": 20, "sidebar_link": 18.5,
+    "contents_h2": 36, "contents_part": 27, "contents_row": 22, "contents_num": 16, "contents_pg": 15, "contents_badge": 12,
+    "card_title": 21, "card_words": 15,
+    # inside a chapter page, in em of the reading size (so it follows the font control)
+    "section_h3": 1.3, "subsection_h4": 1.12, "body": 1.0, "stage_li": 0.92,
+    # labels and notes, in px
+    "eyebrow": 13, "decision_tag": 13, "proof": 14, "proof_engine": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
+}
+
+
+def check_type_scale():
+    T, bad = TYPE, []
+    def above(hi, lo):
+        if not T[hi] > T[lo]:
+            bad.append(f"the type scale: {hi} ({T[hi]}) must be larger than {lo} ({T[lo]})")
+    above("sidebar_book", "sidebar_part"); above("sidebar_part", "sidebar_link")
+    above("contents_h2", "contents_part"); above("contents_part", "contents_row"); above("contents_row", "contents_num")
+    above("section_h3", "subsection_h4"); above("subsection_h4", "body")
+    for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "eyebrow", "decision_tag", "proof", "proof_engine",
+              "court_li", "court_head", "court_path", "sources"):
+        if T[k] < 12:
+            bad.append(f"the type scale: {k} ({T[k]}px) is below the 12px floor for any label or note")
+    if T["stage_li"] < 0.85:
+        bad.append("the type scale: the stage list is below 0.85 of the body text")
+    return bad
+
+
+def type_css():
+    T = TYPE
+    return (
+        "\n/* ---- the type scale (TYPE in build_book.py): generated, checked at build ---- */\n"
+        f".sidebar-book-title{{font-size:{T['sidebar_book']}px;margin-bottom:22px;}}\n"
+        f".sb-part{{font-size:{T['sidebar_part']}px;letter-spacing:1px;font-weight:800;margin:30px 0 6px;line-height:1.3;}}\n"
+        f".sidebar-link,.sidebar-link.is-absent{{font-size:{T['sidebar_link']}px;line-height:1.32;padding:11px 0;}}\n"
+        ".sidebar-link .sl-spine{width:9px;height:9px;margin-right:10px;vertical-align:1px;}\n"
+        f".contents-listing .ce-part{{font-size:{T['contents_part']}px;font-weight:800;letter-spacing:1px;line-height:1.25;margin:44px 0 12px;}}\n"
+        f".contents-listing .ce-row{{font-size:{T['contents_row']}px;padding:11px 0;}}\n"
+        f".contents-listing .ce-num{{font-size:{T['contents_num']}px;width:46px;}}\n"
+        f".contents-listing .ce-pg{{font-size:{T['contents_pg']}px;}}\n"
+        f".contents-listing .ce-spine{{font-size:{T['contents_badge']}px;}}\n"
+        f".overview-contents h2{{font-size:{T['contents_h2']}px;}}\n"
+        f".chapter-card .card-title{{font-size:{T['card_title']}px;}}\n"
+        f".chapter-card .card-words{{font-size:{T['card_words']}px;}}\n"
+        f".chapter-page .subsection-h{{font-size:{T['section_h3']}em;letter-spacing:1px;line-height:1.3;}}\n"
+        f".chapter-page h4.subsubsection-h{{font-size:{T['subsection_h4']}em;letter-spacing:0.5px;}}\n"
+        f".chapter-page .ch-eyebrow{{font-size:{T['eyebrow']}px;}}\n"
+        f".decision-tag{{font-size:{T['decision_tag']}px;}}\n"
+        f".chapter-page p.proof{{font-size:{T['proof']}px;}}\n"
+        f".chapter-page p.proof-engine{{font-size:{T['proof_engine']}px;}}\n"
+        f".stage-list li{{font-size:{T['stage_li']}em;}}\n"
+        f".court li{{font-size:{T['court_li']}px;}}\n"
+        f".chapter-page .court p.court-head{{font-size:{T['court_head']}px;}}\n"
+        f".court .g-path{{font-size:{T['court_path']}px;}}\n"
+        f".sources{{font-size:{T['sources']}px;}}\n"
+        f"@media (max-width: 900px){{.sb-part{{font-size:19px;}}.sidebar-link{{font-size:18px;}}.contents-listing .ce-part{{font-size:23px;}}.contents-listing .ce-row{{font-size:20px;}}}}\n"
+    )
+
 
 # ============================================================================ Markdown, as the Refine build reads it
 def inline(text):
@@ -1279,6 +1329,7 @@ def main():
     errors = []
 
     # the build's checks
+    errors.extend(check_type_scale())
     for lang, srcs in (("en", en_src), ("fr", fr_src)):
         for path, m, body in srcs:
             bad = former_name_fences(body)

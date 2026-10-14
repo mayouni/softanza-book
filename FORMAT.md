@@ -87,3 +87,7 @@ the elder from Niger), in the layout of the *Refinement-Oriented Programming* co
 left, the figure on the right, author bottom left, cities and year bottom right), without the hands: the strict rectangular
 image only. The build embeds it as a JPEG so each reader stays one file. If the image is missing the build falls back to
 the typographic working cover it drew before. The back-cover lines are shown on the overview under "From the back cover".
+
+## The type scale (TYPE-01)
+
+The Refine shell sets some sizes that invert the hierarchy at the reader's size (part labels at 11px under chapter rows at 17px; section headings at 0.8em of the body). The book's reader replaces them with one scale, `TYPE` in `tools/build_book.py`: size follows level (book, part, chapter, section, body), a heading is above the text it heads, every label is at least 12px. The CSS is generated from the scale and `check_type_scale()` fails the build on a broken order.
