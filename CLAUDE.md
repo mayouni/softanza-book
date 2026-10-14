@@ -100,6 +100,7 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
+- **Public since 2026-10-14** (PUBLISH-01): origin https://github.com/mayouni/softanza-book; the readers at https://mayouni.github.io/ayouni/books/softanza/en/ and /fr/, served by the house repository (`mayouni/ayouni`), which pins one commit. **A push to origin publishes everything pushed: tell the house desk before pushing**, commit locally as before. Only the author gives the go for a push.
 
 ## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01, TYPE-01, VOICE-05)
 
