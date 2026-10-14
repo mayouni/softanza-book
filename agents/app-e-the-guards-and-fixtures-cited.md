@@ -8,7 +8,7 @@ This appendix is that reading, by chapter. Nothing in it is typed. It is regener
 
 Two things to keep in mind. A figure is the number of assertion calls the file holds, counted in its text; it is not a run. Most of these guards are not run by the book, because they write files, open ports or spawn processes. The few I ran myself are named in the chapters that rely on them, with the date. And the only fixtures the book cites are the ones the guards and the blocks read: the course folder of the library's education program, and the data folders its guards name. The blocks of the book are themselves the other fixtures: each one runs inside the library at the commit named under every chapter's title.
 
-The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-14 11:12 UTC+01:00. A guard cited by two chapters is counted once in this total.
+The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-14 12:02 UTC+01:00. A guard cited by two chapters is counted once in this total.
 
 ### 1 · Change arrives faster than trust
 
@@ -320,7 +320,7 @@ The chapters cite 114 distinct guards, holding 3359 assertions between them, rea
 | `governance_lineage_narrated` | 37 | `base/test/governance/governance_lineage_narrated.ring` |
 | `01_platform_narrated` | 31 | `base/test/platform/01_platform_narrated.ring` |
 
-### 31 · What the projects did not prove
+### 31 · What the projects show, and what comes next
 
 | Guard | Assertions | Where in the library's test tree |
 |---|---|---|
@@ -341,7 +341,7 @@ The chapters cite 114 distinct guards, holding 3359 assertions between them, rea
 | `codegraph_narrated` | 28 | `base/test/meta/codegraph_narrated.ring` |
 | `coderule_project_narrated` | 13 | `base/test/meta/coderule_project_narrated.ring` |
 
-### 33 · The one line still owed
+### 33 · The next line: a solution on its own engine
 
 | Guard | Assertions | Where in the library's test tree |
 |---|---|---|

@@ -280,4 +280,4 @@ oWatch2.AddCase("advances", oG)
 
 Lancez-le sur le modèle de la section 3. Comparez ce que le modèle rapporte avec ce qu'il rapportait quand la règle avait son message, et lisez ce que le gouverneur renvoie. Sous « J'ai refusé une règle silencieuse », la section 4 dit ce que le gouverneur fait d'une telle règle, et pourquoi. Je ne donne pas la réponse ici. Quand vous l'aurez résolu, vous saurez pourquoi le gouverneur signale une règle qui n'a pas de message.
 
-Le chapitre suivant demande ce que les projets n'ont pas prouvé. Sa mesure est celle-ci : un projet prouve exactement ce qu'un document, un fichier, une exécution et une personne nommée atteignent, et la page dit où ils s'arrêtent.
+Le chapitre suivant dit ce que les projets montrent, et la suite. Sa mesure est celle-ci : un projet montre exactement ce qu'un document, un fichier, une exécution et une personne nommée atteignent, et la page dit où ils s'arrêtent.

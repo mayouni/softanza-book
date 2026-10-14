@@ -171,4 +171,4 @@ aFindings = StzCheckCode(cCode)
 
 When you have settled it, you will know why a word rule advises and does not refuse.
 
-The last chapter is about the one line still owed. Its principle says when that line may be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.
+The last chapter is about the next line. Its principle says when that line can be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.

@@ -4,7 +4,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -90,7 +90,7 @@ The honest limit of this chapter is also the honest limit of the whole platform,
 
 Softanza has been used. A bank in Niamey runs an assessment platform whose building shaped Softanza, under licence, attested by the installation guide we delivered. A restaurant in Lyon runs a platform for neighbourhood commerce whose first demo its owner made himself, on his own phone, over a messaging app. An organisation in Niger has its hub designed. Their lessons are in the code, by file name, in Part VI.
 
-But the customer platforms run today on ordinary stacks. The bank's is a Python application; the restaurant's is a set of single-file web worlds; the organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. That move has not been made. The court is built; the crowd has spoken; the crowd has not yet run on the engine. That is the one line this book owes, and Chapter 33 is about nothing else.
+But the customer platforms run today on ordinary stacks. The bank's is a Python application; the restaurant's is a set of single-file web worlds; the organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. That move is the next step. The court is built, and the platforms exist; the next milestone is the first of them running on the engine. That is the next line this book will carry, and Chapter 33 is about nothing else.
 
 ## 8. Six doors
 

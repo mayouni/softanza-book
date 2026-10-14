@@ -448,7 +448,7 @@ Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent 
 
 Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan, pour lesquels aucune méthode n'est encore construite ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
 
-Ce qui est absent : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels ne le sont pas, délibérément. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et rien n'a tourné contre un hôte. Une solution client émulée et déployée par ce chemin : rien dans le dossier, ce que le chapitre 33 porte comme la ligne encore due.
+Ce qui est absent : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels ne le sont pas, délibérément. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et rien n'a tourné contre un hôte. Une solution client émulée et déployée par ce chemin : rien dans le dossier pour l'instant, ce que le chapitre 33 porte comme la ligne suivante.
 
 ## 8. Six portes
 

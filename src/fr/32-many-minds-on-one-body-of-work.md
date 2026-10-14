@@ -171,4 +171,4 @@ aFindings = StzCheckCode(cCode)
 
 Quand vous aurez tranché, vous saurez pourquoi une règle de mots conseille et ne refuse pas.
 
-Le dernier chapitre porte sur la ligne qui reste due. Son principe dit quand cette ligne pourra être écrite : le dossier ne porte une solution que lorsqu'elle a tourné sur son propre moteur et qu'une personne nommée a dit ce qu'elle a vu.
+Le dernier chapitre porte sur la ligne suivante. Son principe dit quand cette ligne pourra être écrite : le dossier ne porte une solution que lorsqu'elle a tourné sur son propre moteur et qu'une personne nommée a dit ce qu'elle a vu.

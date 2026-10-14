@@ -1,5 +1,5 @@
 {
- "read": "2026-10-14 11:12 UTC+01:00",
+ "read": "2026-10-14 12:02 UTC+01:00",
  "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "guards": {
   "service_registry_narrated": {
@@ -1366,7 +1366,7 @@
    "governance_lineage_narrated",
    "01_platform_narrated"
   ],
-  "en/31-what-the-projects-did-not-prove": [
+  "en/31-what-the-projects-show": [
    "service_registry_narrated",
    "full_scope_model_narrated",
    "payments_live_adapter_narrated",
@@ -1381,7 +1381,7 @@
    "codegraph_narrated",
    "coderule_project_narrated"
   ],
-  "en/33-the-one-line-still-owed": [
+  "en/33-the-next-line": [
    "full_scope_model_narrated",
    "virtual_system_twin_narrated",
    "service_delivery_narrated"
@@ -1617,7 +1617,7 @@
    "governance_lineage_narrated",
    "01_platform_narrated"
   ],
-  "fr/31-what-the-projects-did-not-prove": [
+  "fr/31-what-the-projects-show": [
    "service_registry_narrated",
    "full_scope_model_narrated",
    "payments_live_adapter_narrated",
@@ -1632,7 +1632,7 @@
    "codegraph_narrated",
    "coderule_project_narrated"
   ],
-  "fr/33-the-one-line-still-owed": [
+  "fr/33-the-next-line": [
    "full_scope_model_narrated",
    "virtual_system_twin_narrated",
    "service_delivery_narrated"

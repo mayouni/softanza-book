@@ -448,7 +448,7 @@ What is designed: the engine running in a browser. The documents say that the ph
 
 Also designed: branches of a twin and the plan's alternatives and feedback, for which no method is built yet; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
-What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and nothing ran against a host. A customer solution emulated and deployed through this path: nothing in the record, which chapter 33 carries as the one line still owed.
+What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and nothing ran against a host. A customer solution emulated and deployed through this path: nothing in the record yet, which chapter 33 carries as the next line.
 
 ## 8. Six doors
 

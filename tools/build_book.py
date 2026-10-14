@@ -393,7 +393,14 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 .overview-contents h2{font-family:var(--sans);font-size:26px;font-weight:800;letter-spacing:-0.3px;margin-bottom:6px;color:var(--ink);}
 .contents-listing .ce-row.is-absent .ce-title{color:var(--soft-2);}
 .contents-listing .ce-row a.ce-title:hover{text-decoration:underline;}
-.contents-listing .ce-spine{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:1px 6px;margin-left:8px;}
+/* the contents is the book's map: sized to read comfortably (the Refine shell's 17px rows, 12px numbers and 11px part labels were too small) */
+.contents-listing .ce-row{font-size:22px;padding:11px 0;}
+.contents-listing .ce-num{font-size:16px;width:46px;}
+.contents-listing .ce-part{font-size:14px;letter-spacing:2.4px;margin:34px 0 14px;}
+.contents-listing .ce-pg{font-size:15px;}
+.overview-contents h2{font-size:32px;}
+.chapter-card .card-words{font-size:15px;}
+.contents-listing .ce-spine{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:1px 6px;margin-left:8px;}
 
 @media (max-width: 600px) {
   .lang-toggle a{padding:0 8px;}

@@ -4,7 +4,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
@@ -160,4 +160,4 @@ aFindings = StzCheckCode(cCode)
 
 When you have settled it, you will know why a word rule advises and does not refuse.
 
-The last chapter is about the one line still owed. Its principle says when that line may be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.
+The last chapter is about the next line. Its principle says when that line can be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.

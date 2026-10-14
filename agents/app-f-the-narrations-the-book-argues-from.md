@@ -256,7 +256,7 @@ The chapters cite 50 distinct narrations. Every name is a file of the library's 
 | `stz-rules-as-graph-rules-narration.md` | yes |
 | `stz-governance-lineage-narration.md` | yes |
 
-### 31 · What the projects did not prove
+### 31 · What the projects show, and what comes next
 
 | Narration | In the library at the pin |
 |---|---|
@@ -272,7 +272,7 @@ The chapters cite 50 distinct narrations. Every name is a file of the library's 
 | `stz-rules-as-graph-rules-narration.md` | yes |
 | `stz-governance-lineage-narration.md` | yes |
 
-### 33 · The one line still owed
+### 33 · The next line: a solution on its own engine
 
 | Narration | In the library at the pin |
 |---|---|

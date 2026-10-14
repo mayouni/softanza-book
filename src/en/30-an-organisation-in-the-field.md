@@ -280,4 +280,4 @@ oWatch2.AddCase("advances", oG)
 
 Run it on the model of section 3. Compare what the model reports with what it reported when the rule had its message, and read what the governor returns. Under "I refused a silent rule", section 4 says what the governor does with such a rule, and why. I do not give the answer here. When you have solved it, you will know why the governor reports a rule that has no message.
 
-The next chapter asks what the projects did not prove. Its measure is this: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
+The next chapter says what the projects show, and what comes next. Its measure is this: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.

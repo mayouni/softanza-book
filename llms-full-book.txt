@@ -1,12 +1,12 @@
 # Softanza · The Software Crafters Platform of the AI Age
 
-Built 2026-10-14 11:12 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-14 12:02 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
 Source: Preface. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 ## A question you already have
 
@@ -101,7 +101,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -187,7 +187,7 @@ The honest limit of this chapter is also the honest limit of the whole platform,
 
 Softanza has been used. A bank in Niamey runs an assessment platform whose building shaped Softanza, under licence, attested by the installation guide we delivered. A restaurant in Lyon runs a platform for neighbourhood commerce whose first demo its owner made himself, on his own phone, over a messaging app. An organisation in Niger has its hub designed. Their lessons are in the code, by file name, in Part VI.
 
-But the customer platforms run today on ordinary stacks. The bank's is a Python application; the restaurant's is a set of single-file web worlds; the organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. That move has not been made. The court is built; the crowd has spoken; the crowd has not yet run on the engine. That is the one line this book owes, and Chapter 33 is about nothing else.
+But the customer platforms run today on ordinary stacks. The bank's is a Python application; the restaurant's is a set of single-file web worlds; the organisation's hub is not built. Their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. That move is the next step. The court is built, and the platforms exist; the next milestone is the first of them running on the engine. That is the next line this book will carry, and Chapter 33 is about nothing else.
 
 ## 8. Six doors
 
@@ -225,7 +225,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
@@ -530,7 +530,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -744,7 +744,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -1003,7 +1003,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an agent writes; the writing grammar declared in Haro, so a model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -1223,7 +1223,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:09 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I take the seven steps of the mental model, which chapter 5 ran on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
@@ -1469,7 +1469,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
@@ -1811,7 +1811,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -2129,7 +2129,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:59 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
@@ -2433,7 +2433,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my first book: stop trying to govern the intelligence, and govern the change.
 
@@ -2740,7 +2740,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
@@ -3026,7 +3026,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for a model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, a model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
@@ -3384,7 +3384,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds a model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -3844,7 +3844,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the reader skips
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
@@ -4216,7 +4216,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in all six media; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -4582,7 +4582,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 11:10 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -4926,7 +4926,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, a model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
@@ -5170,7 +5170,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -5635,7 +5635,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.
 
@@ -5916,7 +5916,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code, the agent proposes, the workbench rehearses, the court judges, and only a governed actor commits, and then the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
@@ -6359,7 +6359,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let a model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -6719,7 +6719,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 12:00 UTC+01:00.
 
 In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.
 
@@ -6926,7 +6926,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.
 
@@ -7427,7 +7427,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
@@ -7883,7 +7883,7 @@ What is designed: the engine running in a browser. The documents say that the ph
 
 Also designed: branches of a twin and the plan's alternatives and feedback, for which no method is built yet; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
-What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and nothing ran against a host. A customer solution emulated and deployed through this path: nothing in the record, which chapter 33 carries as the one line still owed.
+What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and nothing ran against a host. A customer solution emulated and deployed through this path: nothing in the record yet, which chapter 33 carries as the next line.
 
 ## 8. Six doors
 
@@ -7975,7 +7975,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -8375,7 +8375,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stands: at this commit, an IDE of this family is absent, and the pieces beneath it run. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.
 
@@ -8805,7 +8805,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 11:11 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -9133,7 +9133,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and what I refused: the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -9397,7 +9397,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I take a bank in Niamey, under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -9658,7 +9658,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local developer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the agent proposes, and a person decides.
 
@@ -9940,26 +9940,26 @@ oWatch2.AddCase("advances", oG)
 
 Run it on the model of section 3. Compare what the model reports with what it reported when the rule had its message, and read what the governor returns. Under "I refused a silent rule", section 4 says what the governor does with such a rule, and why. I do not give the answer here. When you have solved it, you will know why the governor reports a rule that has no message.
 
-The next chapter asks what the projects did not prove. Its measure is this: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
+The next chapter says what the projects show, and what comes next. Its measure is this: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
 
 =====
 
-# What the projects did not prove
+# What the projects show, and what comes next
 
 Source: Chapter 31. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Stage: built: the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
+Stage: built: what the three projects delivered, each with a document (a first delivery, field-tested; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
-In this chapter I say, project by project, what the three projects of chapters 28 to 30 did not prove. I start with the field's three habits for saying what a piece of work has proved. Then I run five small blocks in which the library shows an absence by refusing, and I lay out the tables: for each project, the claim, the document or file that proves it, and what is absent. I say what I refused, the author's memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.
+In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, the author's memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
 ## 1. The concept, as the field holds it
 
-The field has three habits for saying what a piece of work has proved.
+The field has three habits for saying what a piece of work has shown.
 
-The first is the reference: a logo on a home page, a customer story of two pages, the sentence "trusted by". It proves that someone paid or signed. It does not say what they ran, for how long, or what they said.
+The first is the reference: a logo on a home page, a customer story of two pages, the sentence "trusted by". It shows that someone paid or signed. It does not say what they ran, for how long, or what they said.
 
 The second is the readiness scale. NASA's technology readiness levels, later an international standard, name how far a technology has travelled from a laboratory to the place it was built for. The highest level is a system proven in operation. It is a vocabulary of stage, and this book uses one of its own (built, designed, absent).
 
@@ -9971,17 +9971,17 @@ What the three have in common is that the claim and its proof travel apart. A pa
 
 The record gives two sentences, and they are one. The site says: "Nothing is a reference until a document proves it." And, of what the author remembers: what "no file proves is not listed."
 
-**A project proves exactly what a document, a file, a run and a named person reach, and the page says where they stop.** This is the chapter's own sentence, drawn from the site's two. The site's words are the two quoted above, from its customers page and its forged page.
+**A project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.** This is the chapter's own sentence, drawn from the site's two. The site's words are the two quoted above, from its customers page and its forged page.
 
 ## 3. The Softanza form
 
-This chapter is the other half of chapters 28 to 30. Those told what three projects taught the library. This one says, project by project, what they did not prove. I did not write it after the fact, to be modest. The site's forged page carries a section with the same heading.
+This chapter is the other half of chapters 28 to 30. Those told what three projects taught the library. This one says, project by project, what each project shows today and what it makes the next step. Parts of Softanza are in production, and others are in development. I did not write this chapter after the fact, to be modest: the site's forged page already carries a section on the same subject.
 
-The shape of the answer is a table of three columns for each project: the claim, the document or file that proves it, and what is absent. I leave a cell empty when I cannot name what fills it. And I will not fill the third column from memory.
+The shape of the answer is a table of three columns for each project: the claim, the document or file that backs it, and what comes next. I leave a cell empty when I cannot name what fills it. And I will not fill the third column from memory.
 
-Before the tables, five small blocks. Each is a place where the library shows an absence by refusing, instead of passing silently. They are the chapter's sentence, written as code.
+Before the tables, five small blocks. Each is a place where the library shows, by refusing, where a stage ends, instead of passing silently. They are the chapter's sentence, written as code.
 
-**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first unproved thing the restaurant's lesson cannot hide: no real payments service is bound anywhere in the record. What does the registry answer when the payments service is asked for and nothing backs it? Run it:
+**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first step the restaurant's lesson points to: binding a real payments service, which the record does not yet hold. What does the registry answer when the payments service is asked for and nothing backs it? Run it:
 
 ```haro
 oReg = new stzServiceRegistry("shop")
@@ -10004,7 +10004,7 @@ done
 
 Two services declared, none bound, and the registry says so itself: `nothing is bound for service 'payments'`!
 
-**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host itself can do it. *Rehearsed*: the target allows it and the host lacks it, so the run proves only the plan. Reading a pin on a development machine is rehearsed, not native. The word depends on the machine this book was run on. A Windows PC has no such pin, and a board that has one would print `native` for the same line. What does the board's scope answer to a pin read, and to a request to spawn a process? Run it:
+**What a rehearsal can claim, and what only the target can.** The platform model gives three verdicts for the same operation. *Refused*: the target forbids it. *Native*: the host itself can do it. *Rehearsed*: the target allows it and the host lacks it, so the run shows only the plan. Reading a pin on a development machine is rehearsed, not native. The word depends on the machine this book was run on. A Windows PC has no such pin, and a board that has one would print `native` for the same line. What does the board's scope answer to a pin read, and to a request to spawn a process? Run it:
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
@@ -10029,9 +10029,9 @@ oFw.Show()
 
 The pin read answers `rehearsed`, and the scope refuses the process with `forbids 'process'`!
 
-The library's own comment, in the class that lowers a rehearsal to a real artifact, says the last step, flashing a board, "remains a PLANNED external action".
+The library's own comment, in the class that lowers a rehearsal to a real artifact, names the next step: the last one, flashing a board, "remains a PLANNED external action".
 
-**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. It has never been run against the central bank's sandbox. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
+**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. Its run against the central bank's sandbox has not happened yet, and it is the next step. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
 
 ```haro
 oAd = new stzPispiHttpAdapter()
@@ -10078,9 +10078,9 @@ aVerdicts = StzSoundSingingVerdict()
 
 > run: kept
 
-The formant voice refused to sing: `Refusals()` reads `1`, and the message begins `Sing is not available YET`! The verdict of the formant voice stays `UNPERCEIVED`. The verdict of the retuned voice reads `SINGING`, with the date `2026-09-27` and the words `the retuned voice is somehow singing, open Sing()`. This is the form of the line chapter 33 says the customers' runs do not yet have: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
+The formant voice refused to sing: `Refusals()` reads `1`, and the message begins `Sing is not available YET`! The verdict of the formant voice stays `UNPERCEIVED`. The verdict of the retuned voice reads `SINGING`, with the date `2026-09-27` and the words `the retuned voice is somehow singing, open Sing()`. This is the form of the line that chapter 33 sets as the next milestone for a customer's run: a date, a person, and a sentence. The record also carries the person's name beside it, and I do not print it here. (SAPI is the operating system's speech interface.)
 
-**A pre-flight that says "feasible" without touching a host.** The deployment's pre-flight refuses a host that is too small. For a host whose provider is a cloud, it says feasible and "provision on aws", without any account. A feasibility is a plan, not a verification. The design file says it plainly: what remains is the verification against a real host or account, gated by infrastructure. The figures below are illustrative. What does the pre-flight answer to a host that is too small, and to a cloud provider with no account? Run the block:
+**A pre-flight that says "feasible" without touching a host.** The deployment's pre-flight refuses a host that is too small. For a host whose provider is a cloud, it says feasible and "provision on aws", without any account. A feasibility is a plan, not a verification. The design file names the next step plainly: the verification against a real host or account, which waits on infrastructure. The figures below are illustrative. What does the pre-flight answer to a host that is too small, and to a cloud provider with no account? Run the block:
 
 ```haro
 oBrain = new stzDelivery("shop")
@@ -10108,63 +10108,63 @@ oPool.SetTarget(:api, oCloud)
 
 The tiny host gets `SHORTFALL -- host too small`, and the cloud with no account is feasible, with `provision on aws`!
 
-Now the tables. Every cell is from the record, read on 8 October 2026. A line count or a file date I read myself is labelled as mine.
+Now the tables. Each one opens with what the project delivered or ran, and ends with what comes next. Every cell is from the record, read on 8 October 2026. A line count or a file date I read myself is labelled as mine.
 
 ### The restaurant in Lyon
 
-| Claim | Proof | What is absent |
+| Claim | Proof | What comes next |
 |---|---|---|
-| The platform exists, and its first delivery was made | the site: an amendment closed on 4 August 2026; the project's commit "iteration 1" of 15 August; a server of 565 lines that I read; the last commit, 25 August 2026, 13:07 | anything after 25 August: production, a real order, the planned go-live gate. The record is silent |
-| The restaurant runs it | a day of field measurements with two phones, 19 August | a sentence that says it runs. Chapter 1 writes "runs" |
-| No growth of scope during a cycle (the Lock, chapter 28) | the pact and the notebook of the Lock: private documents | the Lock as code. Chapter 28 shows the nearest the library gives |
-| Payments can be tried without a subscription, and a fake never ships | the registry and the production gate, with their guards | the live payment adapter for the restaurant: "a later desk" in the library's own design file. No real service is bound live |
-| The constellation of worlds | the restaurant's map of its worlds; the library's super-app class, with a guard | the restaurant on the constellation: its worlds are single-file web pages, and the map says it is a map, not an implementation |
-| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's own checklist defers it to the next cycle |
-| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone. The study (12.29) conflates two facts |
+| The platform exists, and its first delivery was made | the site: an amendment closed on 4 August 2026; the project's commit "iteration 1" of 15 August; a server of 565 lines that I read; the last commit, 25 August 2026, 13:07 | 25 August 2026 is the last dated record; the next record is the one the next phase writes: production, a real order, the planned go-live gate |
+| The first version was field-tested with the restaurant's owner | a day of field measurements with two phones, 19 August | the owner's own sentence on how he uses it is the next record to gather; chapter 1 writes "runs", and the record's wording is "delivered and field-tested" |
+| No growth of scope during a cycle (the Lock, chapter 28) | the pact and the notebook of the Lock: private documents | the Lock as code; chapter 28 shows the nearest the library gives |
+| Payments can be tried without a subscription, and a fake never ships | the registry and the production gate, with their guards | the live payment adapter for the restaurant, "a later desk" in the library's own design file; the sandbox is bound today, and the live binding is the step after it |
+| The constellation of worlds | the restaurant's map of its worlds; the library's super-app class, with a guard | the restaurant on the constellation: its worlds are single-file web pages today, and the map says it is a map, not an implementation |
+| A speed budget is a promise | the library's service-level object, with a guard | a measure on a real 4G network: the project's own checklist moves it to the next cycle |
+| The interface rules were forged with the owner, phone in hand | the project's file says eleven iterations with the real user | who held the phone: the record does not hold it. The study (12.29) conflates two facts |
 
 ### The bank in Niamey
 
-| Claim | Proof | What is absent |
+| Claim | Proof | What comes next |
 |---|---|---|
-| The bank runs the author's assessment product | the installation guide delivered to the bank; a licence file | a word from the bank: who declares the chart, for how long, how many people use it. And no date of delivery: the files carry file-system times, which are not dates |
-| The product is "built with Softanza" | the author built both | the product does not call the library. It is a Python application with a small web server; I searched its code, and found no regional or Basel check and no call to the library |
+| The bank has the author's assessment product, installed on its own internal network under licence | the installation guide delivered to the bank; a licence file | the bank's own account: who declares the chart, for how long, how many people use it. And a date of delivery: the files carry file-system times, which are not dates |
+| The product is "built with Softanza" | the author built both | the product calling the library. Today it is a Python application with a small web server; I searched its code, and found no regional or Basel check and no call to the library |
 | The regulator's rules judge the chart | the library's validator of three rules and of segregation of duties, with guards | the validators inside the product; an article of the central bank's text for the three rule codes; a finding read by an auditor |
-| A rule file for the bank | a file of two regional rules that loads | it judges nothing: on a chart with no board it reports sound |
-| The product's interface rules came from the bank | the interface constitution's rules 117 to 121 | the evidence line of rule 117 in the constitution reads "A banking supervision product (April 2026)" and names no bank. The study attaches them to this bank |
+| A rule file for the bank | a file of two regional rules that loads | its first judgment: on a chart with no board it reports sound today |
+| The product's interface rules came from the bank | the interface constitution's rules 117 to 121 | the evidence line of rule 117 in the constitution reads "A banking supervision product (April 2026)" and names no bank. The study attaches them to this bank, and the record does not |
 
 ### The organisation in the field
 
-| Claim | Proof | What is absent |
+| Claim | Proof | What comes next |
 |---|---|---|
-| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study of 8 October 2026 | the organisation's hub: nothing of it is in production, and the study's version 1.2 is submitted for validation. And who chose: the record is silent |
+| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, designed and not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the study promises; the study's own rule notation is not the library's |
 | An agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
-| Offline by default | the study's word that the browser-side outbox is already in service | in the library: no queue, no outbox, no synchronisation. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
+| Offline by default | the study's word that the browser-side outbox is already in service | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
 
 ### Across the three
 
-| Claim | Proof | What is absent |
+| Claim | Proof | What comes next |
 |---|---|---|
-| The platforms run today on ordinary stacks | the site's own page: single-file web worlds and a small Node server; a Python application; the organisation's hub not built | no platform runs on the engine. The site says so, and every repository I opened agrees |
-| Their declarations "are being written as Softanza's own" | the platforms page and the forged page, as intent | I searched, on 8 October 2026, and did not find them as a file: in the restaurant's repository no code file declares an app, a constellation or a platform; in the bank's delivery, none; in the organisation's study folder, none (its annex uses a notation that is not the library's). The record shows the intent and the maps, not yet the declarations |
-| A change of engine, not of plan | the principle: rewriting was refused | the move itself; who moves first; who perceives it |
-| A solution writes its guarantee sheet in five rows | the vision asks for it | no solution has one; no class, fixture or guard in the library has the sheet |
-| The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro does not run the library. A session's note of 5 October 2026 reports that the bridge runtime passes every assertion the old runtime passes on the library, though not every program agrees on every stable line; the Linux pass is the next step. I print no percentage. This book's blocks run on the former runtime, 1.27 |
-| A live host verifies a deployment | the deployment design | the verification is infrastructure-gated. Local sites run for real; remote transfer is "a later slice" |
-| The payments plane works against the central bank's sandbox | the twin, served over HTTP, with a guard | the sandbox run: unperceived, postponed. Production is never from this plane |
-| A named person has said what they saw | a drum, and the retuned voice, in another plane | any of the three platforms |
+| The platforms run today on ordinary stacks | the site's own page: single-file web worlds and a small Node server; a Python application; the organisation's hub not built | the first platform on the engine. The site says so, and every repository I opened agrees |
+| Their declarations "are being written as Softanza's own" | the platforms page and the forged page, as intent | the declarations as files are the next piece to write. I searched, on 8 October 2026, and did not find them as a file: in the restaurant's repository no code file declares an app, a constellation or a platform; in the bank's delivery, none; in the organisation's study folder, none (its annex uses a notation that is not the library's). The record shows the intent and the maps; the declarations are the step that follows |
+| A change of engine, not of plan | the principle: rewriting was refused | the move itself; the record does not yet say who moves first or who perceives it |
+| A solution writes its guarantee sheet in five rows | the vision asks for it | the first sheet is to come: no solution has one yet, and no class, fixture or guard in the library holds the sheet |
+| The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro running the library is the next step. A session's note of 5 October 2026 reports that the bridge runtime passes every assertion the old runtime passes on the library, though not every program agrees on every stable line; the Linux pass is the step after that. I print no percentage. This book's blocks run on the former runtime, 1.27 |
+| A live host verifies a deployment | the deployment design | the verification waits on infrastructure and is the next step. Local sites run for real; remote transfer is "a later slice" |
+| The payments plane works against the central bank's sandbox | the twin, served over HTTP, with a guard | the sandbox run: postponed, unperceived so far. Production is never from this plane |
+| A named person has said what they saw | a drum, and the retuned voice, in another plane | the same line for any of the three platforms, which is the next milestone |
 
-### What the study of the record did not measure
+### What the study of the record marks for measurement
 
-The comparative study that read the record says, in its own paragraphs headed "Not measured", what it could not support. It did not run what it read: its closing assessment of the record says "Nothing in it was run". It did not measure whether Haro's runtime runs the library. It did not test whether two published speed benchmarks hold today, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more. The forty-one pictures of part 1 of the gallery were judged by a model, and no person has looked at them. The restaurant's speed budget has no real 4G measure. The study applies its own perception law to itself, which is why I trust the paragraph.
+The comparative study that read the record says, in its own paragraphs headed "Not measured", what it leaves to measure next. It read the record and did not run it: its closing assessment of the record says "Nothing in it was run". Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by a model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. The study applies its own perception law to itself, which is why I trust the paragraph.
 
 ## 4. The decision, and what I refused
 
-**I refused the author's memory as evidence.** The site lists nothing that I remember and no file proves. The same rule bound the bank: I know the product, because I built it, and what the bank's own people did with it is not in a file.
+**I refused the author's memory as evidence.** The site lists nothing that I remember and no file proves. The same rule bound the bank: I know the product, because I built it, and what the bank's own people do with it is not yet in a file.
 
-**I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, by the library's log as chapter 28 reads it. The order of the commits makes "born of" unproved. What I can say is "needed" and "carries".
+**I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence in the study of 12.29 that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, by the library's log as chapter 28 reads it. The order of the commits does not support "born of". What I can say is "needed" and "carries".
 
-**I refused two wordings of my own.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application that does not call the library, built beside it by the same person, and for the restaurant a first delivery and a field day, then silence after 25 August. The honest wording is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
+**I replaced two wordings of my own with the record's.** In chapters 1, 2 and 33 I wrote that the bank "runs" a product "built with" Softanza, and that the restaurant "runs" a platform. The record shows a Python application, installed at the bank under licence and built beside the library by the same person, and for the restaurant a first delivery and a field day, with the record ending on 25 August. The wording that the record bears out is *built by me, under the discipline the library now carries*, and *delivered and field-tested*. Chapters 2 and 33 now carry those wordings. Chapter 1 keeps its own, and this paragraph is where the record's more exact one stands.
 
 **I refused a stage word the repository does not carry.** The site's estate page says it: never called available before it is. A piece of work that reaches a person through a sense is perceived by a person. Until then it is unperceived, which is a state and not a failure.
 
@@ -10178,43 +10178,43 @@ The court of this chapter's subject is not a guard. It is a line of the record, 
 
 ## 6. The field, and where it leads
 
-The field leads in production. Ordinary stacks run real workloads for real users, including, on the site's own page, the three platforms of this part.
+The field leads in production. Ordinary stacks run real workloads for real users, including, on the site's own page, the platforms of this part; moving their declarations onto Softanza's own engine is the next step.
 
 The field leads in references at scale. The site prints two references and a design study, and quotes no number of countries and no number of programmers. A buyer reading a logo wall sees more.
 
-The field leads in live infrastructure. Provisioning tools drive real providers every day. The library's deployment stops short of a real host, and the fifth block shows where.
+The field leads in live infrastructure. Provisioning tools drive real providers every day. The library's deployment reaches local sites for real today, and the real host is the next step; the fifth block shows where the line runs.
 
-The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision says no customer runs on it. Its guarantee text says four of four promised, three kept in the emulator; the fourth, surviving a cut, is not kept in that text, which carries no slot decision. The vision says it waits for the watchdog on the board, and the board is on order.
+The field leads in hardware in the field. The declared machine boots and judges itself in an emulator, and the vision records that no customer is on it yet. Its guarantee text says four of four promised, three kept in the emulator; the fourth, surviving a cut, waits for the watchdog on the board, and that text carries no slot decision yet. The board is on order.
 
-The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime.
+The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and both benchmarks were run on the former runtime; Haro's own speed is the measure still to come.
 
-The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them.
+The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by a model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
 
 Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
 ## 7. The limit
 
-This whole chapter is a limit. Here is its sum in the stage words.
+This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: the three lessons that are proved. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The limit of each is in the tables. A sandbox is bound and no live payment adapter is; the bank's product does not call the chart validator. The organisation's hub is not built, and offline is a gap.
+What is built: what the three projects delivered, each with a document (a first delivery, field-tested at the restaurant; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. A sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator yet. The organisation's hub is designed, and its offline mechanism is to come.
 
 What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the restaurant's use after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it.
+What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the central bank's sandbox; a named person's verdict on any of it.
 
-The sum of every absent cell is the one line chapter 33 says is still owed: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are absent. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library. They are the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
+The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are absent today. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library. They are the restaurant's, the bank product's web repository with its older copies, the organisation's, the central one, the engine's, the site's, and four of the estate's other projects. I searched their text for the library's own classes for a platform, an organisation chart and a constellation, and the file names of five of them for declaration files. The hits are the library's notes and memos, the site's data, and, in the older copies of the bank product's web repository, a JavaScript class for an organisation chart that is that application's own code. No file declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
 
 ## 8. Six doors
 
 **The programmer.** Your demo is a rehearsal until a target has run it. Ask the scope whether the line was native, rehearsed or refused, and write the same word beside your own claims.
 
-**The analyst.** When you cite a project, write three columns: the claim, the document, and what is absent. Do not fill the third from memory.
+**The analyst.** When you cite a project, write three columns: the claim, the document, and what comes next. Do not fill the third from memory.
 
 **The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
 
 **The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document. You can ask for it in writing, with a name beside it.
 
-**The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is proved here, and the second is the line still owed. Unperceived is a state, not a failure.
+**The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.
 
 **The agent.** You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side.
 
@@ -10236,7 +10236,7 @@ oReg.Bind(:mail, new stzMailSandbox())
 
 > run: exercise
 
-Then, on paper, make the table of three columns for the project you know best. Leave empty what you cannot name. On the last line write who perceived it, on what date, and what they said, or the word "unperceived" and why.
+Then, on paper, make the table of three columns for the project you know best: the claim, the document or file that backs it, and what comes next. Leave empty what you cannot name. On the last line write who perceived it, on what date, and what they said, or the word "unperceived" and why.
 
 The exercise has no answer to be checked first. The question the tutor asks is: which cell did you fill from memory?
 
@@ -10253,7 +10253,7 @@ oReg.Bind(:payments, new stzPaymentsSandbox())
 
 Run it and read what `IsSound()` answers. Then ask whether a sound registry is a registry ready to ship, and what the guard of section 5 says about a fake still bound in production. I do not give the answer: section 5 names the guard that holds it, and section 7 says what the project has bound and what it has not. When you have solved it, you will know what a sound registry does not say about the service behind it.
 
-Chapter 32 turns to how many minds worked on this one body of work, and to the rule they keep. Every law cites the incident that earned it, and a new law without a dated failure behind it is a preference.
+Chapter 32 turns first to how many minds worked on this one body of work, and to the rule they keep: every law cites the incident that earned it, and a new law without a dated failure behind it is a preference. Chapter 33 then closes the book on the next milestone, a solution running on Softanza's own engine.
 
 
 =====
@@ -10264,7 +10264,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 In this chapter I show how Softanza has been written for the last two years: by many sessions of a model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
@@ -10420,20 +10420,20 @@ aFindings = StzCheckCode(cCode)
 
 When you have settled it, you will know why a word rule advises and does not refuse.
 
-The last chapter is about the one line still owed. Its principle says when that line may be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.
+The last chapter is about the next line. Its principle says when that line can be written: the record carries a solution only when it ran on its own engine and a named person said what they saw.
 
 
 =====
 
-# The one line still owed
+# The next line: a solution on its own engine
 
 Source: Chapter 33. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
-In this chapter I show you the floor the last line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I read from the record what stands between that floor and the line the record does not yet carry, in five steps. I say what I refused: a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
+In this chapter I show you the floor the next line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I say what the three projects establish today, and I read from the record the five steps from that floor to the next line: a solution on Softanza's own engine, and what a named person who used it says. I say what I refused: a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
 ## 1. The concept, as the field holds it
 
@@ -10447,7 +10447,7 @@ These are reasonable tests, and they all point at the same thing: production. Wh
 
 ## 3. The Softanza form
 
-This is the last chapter, and it is about something that has not happened. Let me first show you the floor it will stand on, because the floor exists.
+This is the last chapter, and it looks ahead. Let me first show you the floor the next line will stand on, because the floor exists and runs.
 
 A solution is declared before it is built, and the platform that carries it refuses to be deployed before it is built. What does it answer when you ask it to deploy first? Run it:
 
@@ -10515,31 +10515,31 @@ The person was allowed to deploy. The delivery refused it! `WasCommitted()` answ
 
 So the floor is there: declare, build, rehearse, refuse the fake, commit through a governed actor.
 
-Now the absence.
+Now what the projects show, and the step after them.
 
-Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. The study that first read the record wrote the opposite, that no user outside my own projects had been measured. I corrected it. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce and field-tested it. The record of that project ends on 25 August 2026. An amendment closed on 4 August; the owner took part in the first demonstration and ran a day of field tests with two phones. An organisation in Niger has its hub designed. The site lists, project by project, the lesson each one taught and the file of the library that carries it. Part VI of this book tells their stories.
+Has Softanza been used? Yes. I wrote that in chapter 1 and I hold to it. Parts of Softanza are in production, and others are in development. The study that first read the record wrote the opposite, that no user outside my own projects had been measured. I corrected it. Three projects, and their feedback, shaped its design. A bank in Niamey has an organisation-assessment product I built beside the library, installed on its own network under licence. The installation guide delivered to the bank attests it. A restaurant in Lyon was delivered a first version of a platform for neighbourhood commerce and field-tested it. An amendment closed on 4 August; the owner took part in the first demonstration and ran a day of field tests with two phones. The last dated record of that project is 25 August 2026, and the next record is the one the next phase writes. An organisation in Niger has its hub designed. The site lists, project by project, the lesson each one taught and the file of the library that carries it. Part VI of this book tells their stories.
 
-And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is not built. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken.
+And the site says, in the same page, what those platforms run on today: ordinary stacks. The bank's is a Python application. The restaurant's is a set of web worlds, each a single file. The organisation's hub is designed, and its build is to come. The site says their declarations are being written as Softanza's own, so that moving them onto the Softanza engine is a change of engine and not of plan. The site's own words are exact: it is a step ahead, not a step taken. That step is the next one.
 
-So the line the record does not yet carry is this one: *the solution ran on Softanza's own engine, and this is what the user said.*
+So the next line is this one: *the solution ran on Softanza's own engine, and this is what the user said.*
 
-What is between here and that line? Five steps, read from the record and not composed.
+What leads from here to that line? Five steps, read from the record and not composed.
 
-1. **A customer's declarations run on the engine instead of the ordinary stack.** The site says the declarations are being written; I found no file of them, and chapter 31 says where I looked. The move is not made.
-2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Haro does not run the library yet.
-3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. No solution has written one.
-4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine boots and judges itself in an emulator. Of the four promises its hosted profile makes, the emulator can check three. The fourth waits for a watchdog on a real board. No customer runs a production workload on it.
+1. **A customer's declarations run on the engine instead of the ordinary stack.** The site says the declarations are being written as Softanza's own; I found no file of them yet, and chapter 31 says where I looked. The move to the engine is the next step.
+2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Running the library is the stage that comes next for Haro.
+3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. The sheet is designed, and the first one is yet to be written.
+4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine boots and judges itself in an emulator. Of the four promises its hosted profile makes, the emulator can check three. The fourth waits for a watchdog on a real board. The first customer production workload on it is to come.
 5. **A person perceives it, and the record says who.** Not a counter. A person, named, with a date and what they said.
 
-The last step is a law of the estate, and it was paid for. The sound plane of the library once held hundreds of passing assertions while it was, to my ear, broken. Since then, a piece of work that reaches a person through a sense must be perceived by a person, and the record must say who perceived it and what they said. And when nobody has, the law says it plainly: unperceived is a state, not a failure. A report may be honest and still be unperceived.
+The last step is a law of the estate, and it was earned. The sound plane of the library once held hundreds of passing assertions while, to my ear, it did not yet sound right. Since then, a piece of work that reaches a person through a sense must be perceived by a person, and the record must say who perceived it and what they said. And when nobody has, the law says it plainly: unperceived is a state, not a failure. A report may be honest and still be unperceived.
 
-The record already holds the form of the line. In another plane, on 2 October 2026, the record says the Principal listened to a sound the library made and said, in the words written down: "yes it's real drum!!" It is not a solution, and it is not a customer. But it is a person, a date, and a sentence, and it is what the one line will look like.
+The record already holds the form of the line. In another plane, on 2 October 2026, the record says the Principal listened to a sound the library made and said, in the words written down: "yes it's real drum!!" It is not a solution, and it is not a customer. But it is a person, a date, and a sentence, and it is what the next line will look like.
 
-The record also holds the opposite, honestly. The pictures the library draws were judged by a model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are owed.
+The record also holds two verdicts still to come. The pictures the library draws were judged by a model, forty-one pictures or text sections, twenty right, nine wrong, twelve uncertain. The record says that no human has looked at them yet; that look is the next verdict. The live run of the payments plane with the organisation's test account was postponed, by me, and reported as unperceived. Neither is a failure. Both are next.
 
 ## 4. The decision, and what I refused
 
-**I refused to be told the projects did not count.** The first reading of the record wrote that no user outside my own projects had been measured. It was wrong, and I said so: Softanza has been used in real projects which, while not complete, gave the feedback that shaped its design. The reading was corrected in the record, in place, with the date. What replaced it is smaller and more honest: the users exist and have spoken; they have not yet run on the engine.
+**I refused to be told the projects did not count.** The first reading of the record wrote that no user outside my own projects had been measured. It was wrong, and I said so: Softanza has been used in real projects which, while not complete, gave the feedback that shaped its design. The reading was corrected in the record, in place, with the date. What replaced it is exact: the users exist and have spoken, and the next step is to move one of them onto the engine.
 
 **I refused a reference without a document.** The site counts a project as a reference only when a document proves it, and it quotes no number of countries and no number of programmers. A lesson is listed only when a file of the library carries it.
 
@@ -10547,45 +10547,45 @@ The record also holds the opposite, honestly. The pictures the library draws wer
 
 **I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. The study that read the record ruled that the figure should not be printed without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
 
-**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. This is my view, and the sound plane above, with its hundreds of passing assertions and its broken sound, is what stands behind it.
+**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. This is my view, and the sound plane above, with its hundreds of passing assertions and the sound that was not yet right, is what stands behind it.
 
 ## 5. The court
 
 The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that a model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
 
-The court of this chapter's subject is not a guard. It is a line in the record: who, when, and what they said. That line does not exist yet.
+The court of this chapter's subject is not a guard. It is a line in the record: who, when, and what they said. That line is the next one to be written.
 
 ## 6. The field, and where it leads
 
-The field leads in production. Ordinary stacks run real workloads for real users today, including, by the record's own page, the bank's Python application. The restaurant's first version is single-file web worlds, and the hub is not built.
+The field leads in production. Ordinary stacks run real workloads for real users today, including, by the record's own page, the bank's Python application. The restaurant's first version is single-file web worlds, delivered and field-tested, and the hub is designed.
 
-The field leads in live infrastructure. Its tools drive real providers and real hosts every day; Softanza's deployment verifies against a real host only when the infrastructure is there, and rehearses everything else.
+The field leads in live infrastructure. Its tools drive real providers and real hosts every day; Softanza's deployment verifies against a real host only when the infrastructure is there, and rehearses everything else; live hosts are the next step.
 
-The field leads on hardware in the field. Its devices run in shops and clinics; the declared machine boots in an emulator, and its board is not yet in service.
+The field leads on hardware in the field. Its devices run in shops and clinics; the declared machine boots in an emulator, and its board is the next step.
 
-The field leads on speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and the estate's note recorded the loss.
+The field leads on speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two, and the estate's note recorded the measure.
 
-Where I think the record stands apart is in what it will not let itself say. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and a model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
+Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artifact that ships. A fake cannot ship and a model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
 ## 7. The limit
 
-This whole chapter is a limit, so I will be brief.
+This chapter looks ahead, so the limit is short.
 
 What is built: the floor. Declare, build, deploy in order; rehearse on a twin; refuse a fake at the production gate; commit only through a governed actor.
 
 What is designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
 
-What is absent: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). The record names no project that moves to the engine first, and no person who will perceive it; I leave both unwritten.
+What is absent: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. The record does not yet name the project that moves to the engine first, nor the person who will perceive it; I leave both unwritten until the record can carry them.
 
 ## 8. Six doors
 
-**The programmer.** Your code runs today through build, rehearsal and a governed deployment. What you cannot claim yet is that a customer runs it on the engine, and the record will not let you claim it.
+**The programmer.** Your code runs today through build, rehearsal and a governed deployment. What comes next is a customer running it on the engine, and the record will carry that claim the day it is true.
 
 **The analyst.** Ask for two things before you count a project as proof: a document, and a named verdict.
 
 **The designer.** What you design is judged last by a person's sense. A model's opinion of a picture is a result; a person's is the verdict.
 
-**The decision-maker.** Read the stage word before the promise. Today the floor is built, and the customer run is absent.
+**The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is absent.
 
 **The educator.** Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.
 
@@ -10606,7 +10606,7 @@ oP.SetProfile(oSol)
 
 > run: exercise
 
-Run it. Then write one more line, the one your own project still owes, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
+Run it. Then write one more line, the next one for your own project, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
 
 I left this one in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
 
@@ -10627,7 +10627,7 @@ oDep = oDel.Deploy(:Production)
 
 Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the two guards prove, and section 8 what an agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
-The preface named what this book owes, and it is this line: a solution that ran on Softanza's own engine, and what a named person said of it. When the line exists, this chapter will be written again.
+The book ends here, and every block in it is yours to run again. It ends on the next milestone: a solution on Softanza's own engine, and what a named person who used it says.
 
 
 =====
@@ -10742,7 +10742,7 @@ No code was run to make the register. The evidence column counts files that name
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-14 11:12 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-14 12:01 UTC+01:00.
 
 The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, most of which were written after the library did something it should not have. This appendix lists the fourteen, and shows three of them firing.
 
@@ -11045,7 +11045,7 @@ This appendix is that reading, by chapter. Nothing in it is typed. It is regener
 
 Two things to keep in mind. A figure is the number of assertion calls the file holds, counted in its text; it is not a run. Most of these guards are not run by the book, because they write files, open ports or spawn processes. The few I ran myself are named in the chapters that rely on them, with the date. And the only fixtures the book cites are the ones the guards and the blocks read: the course folder of the library's education program, and the data folders its guards name. The blocks of the book are themselves the other fixtures: each one runs inside the library at the commit named under every chapter's title.
 
-The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-14 11:12 UTC+01:00. A guard cited by two chapters is counted once in this total.
+The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-14 12:02 UTC+01:00. A guard cited by two chapters is counted once in this total.
 
 ### 1 · Change arrives faster than trust
 
@@ -11357,7 +11357,7 @@ The chapters cite 114 distinct guards, holding 3359 assertions between them, rea
 | `governance_lineage_narrated` | 37 | `base/test/governance/governance_lineage_narrated.ring` |
 | `01_platform_narrated` | 31 | `base/test/platform/01_platform_narrated.ring` |
 
-### 31 · What the projects did not prove
+### 31 · What the projects show, and what comes next
 
 | Guard | Assertions | Where in the library's test tree |
 |---|---|---|
@@ -11378,7 +11378,7 @@ The chapters cite 114 distinct guards, holding 3359 assertions between them, rea
 | `codegraph_narrated` | 28 | `base/test/meta/codegraph_narrated.ring` |
 | `coderule_project_narrated` | 13 | `base/test/meta/coderule_project_narrated.ring` |
 
-### 33 · The one line still owed
+### 33 · The next line: a solution on its own engine
 
 | Guard | Assertions | Where in the library's test tree |
 |---|---|---|
@@ -11647,7 +11647,7 @@ The chapters cite 50 distinct narrations. Every name is a file of the library's 
 | `stz-rules-as-graph-rules-narration.md` | yes |
 | `stz-governance-lineage-narration.md` | yes |
 
-### 31 · What the projects did not prove
+### 31 · What the projects show, and what comes next
 
 | Narration | In the library at the pin |
 |---|---|
@@ -11663,7 +11663,7 @@ The chapters cite 50 distinct narrations. Every name is a file of the library's 
 | `stz-rules-as-graph-rules-narration.md` | yes |
 | `stz-governance-lineage-narration.md` | yes |
 
-### 33 · The one line still owed
+### 33 · The next line: a solution on its own engine
 
 | Narration | In the library at the pin |
 |---|---|
@@ -11742,9 +11742,9 @@ The table below is generated at every build from the same data as `book.json`.
 | 28 | `a-restaurant-in-lyon` | 6 | draft |  | 5 of 5 | 5 | 6 |
 | 29 | `a-bank-in-niamey` | 6 | draft |  | 6 of 6 | 6 | 6 |
 | 30 | `an-organisation-in-the-field` | 6 | draft |  | 7 of 7 | 6 | 6 |
-| 31 | `what-the-projects-did-not-prove` | 6 | draft |  | 5 of 5 | 8 | 6 |
+| 31 | `what-the-projects-show` | 6 | draft |  | 5 of 5 | 8 | 6 |
 | 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 3 of 3 | 3 | 6 |
-| 33 | `the-one-line-still-owed` | 7 | draft | yes | 3 of 3 | 3 | 6 |
+| 33 | `the-next-line` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 
 
 =====

@@ -83,13 +83,13 @@ parts:
       - [28, A restaurant in Lyon]
       - [29, A bank in Niamey]
       - [30, An organisation in the field]
-      - [31, What the projects did not prove]
+      - [31, "What the projects show, and what comes next"]
   - number: 7
-    title: What is owed
-    title_fr: "Ce qui reste dû"
+    title: What comes next
+    title_fr: "Ce qui vient"
     chapters:
       - [32, Many minds on one body of work]
-      - [33, The one line still owed]
+      - [33, "The next line: a solution on its own engine"]
 
 appendices:
   - [A, "The register of innovations"]
