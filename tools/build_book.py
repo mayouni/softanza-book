@@ -33,6 +33,7 @@ UI = {
     "lang": "en", "other": "fr", "part": "Part", "chapter": "Chapter", "preface": "Preface",
     "spine": "Spine", "spine_title": "One of the nine spine chapters: they carry the whole argument and can be read alone",
     "spine_only": "Read the spine only", "all_chapters": "Show every chapter",
+    "spine_group": "Which chapters to show", "opt_all": "Every chapter", "opt_spine": "The spine: {n} chapters",
     "draft": "Draft · not yet read by the author", "read": "Read by the author", "final": "Final",
     "missing": "Missing · the source has not been received",
     "proof": "Run on {d} inside the library at commit {sha}: {k} of {n} blocks kept their promise.",
@@ -71,6 +72,7 @@ UI = {
     "lang": "fr", "other": "en", "part": "Partie", "chapter": "Chapitre", "preface": "Préface",
     "spine": "Colonne", "spine_title": "Un des neuf chapitres de la colonne : ils portent tout l'argument et se lisent seuls",
     "spine_only": "Lire la colonne seule", "all_chapters": "Montrer tous les chapitres",
+    "spine_group": "Chapitres à montrer", "opt_all": "Tous les chapitres", "opt_spine": "La colonne : {n} chapitres",
     "draft": "Brouillon · traduit d'un brouillon anglais, pas encore lu par l'auteur", "read": "Lu par l'auteur", "final": "Final",
     "missing": "Manquant · la source n'a pas été reçue",
     "proof": "Exécuté le {d} dans la bibliothèque au commit {sha} : {k} bloc(s) sur {n} ont tenu leur promesse.",
@@ -225,13 +227,13 @@ def shell_edits(ui):
          "    try { localStorage.setItem('softanza-theme', next); } catch (e) {}\n"
          "  });\n"
          "  // SPINE (book): the nine chapters that carry the argument alone\n"
-         "  const spineButtons = Array.from(document.querySelectorAll('.spine-toggle'));\n"
+         "  const spineOpts = Array.from(document.querySelectorAll('.spine-opt'));\n"
          "  function applySpine(on) {\n"
          "    document.body.classList.toggle('spine-only', on);\n"
-         "    spineButtons.forEach(b => { b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.textContent = on ? b.dataset.off : b.dataset.on; });\n"
+         "    spineOpts.forEach(b => b.setAttribute('aria-pressed', (b.dataset.spine === '1') === on ? 'true' : 'false'));\n"
          "    try { localStorage.setItem('softanza-spine', on ? '1' : '0'); } catch (e) {}\n"
          "  }\n"
-         "  spineButtons.forEach(b => b.addEventListener('click', () => applySpine(!document.body.classList.contains('spine-only'))));\n"
+         "  spineOpts.forEach(b => b.addEventListener('click', () => applySpine(b.dataset.spine === '1')));\n"
          "  try { if (localStorage.getItem('softanza-spine') === '1') applySpine(true); } catch (e) {}\n"
          "  // LANGUAGE (book): the toggle keeps the page you are on\n"
          "  const langLinks = Array.from(document.querySelectorAll('.lang-link'));\n"
@@ -402,9 +404,11 @@ pre .c-promise{color:var(--code-promise);}
 .the-invite .invite-more,.the-invite .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
-.spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
-.spine-toggle:hover{border-color:var(--ink);color:var(--ink);}
-.spine-toggle[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.spine-switch{display:inline-flex;border:1px solid var(--rule-strong);border-radius:20px;overflow:hidden;margin:0 0 8px;}
+.spine-opt{font-family:var(--sans);font-size:15px;font-weight:600;border:0;background:var(--paper);color:var(--ink);padding:9px 16px;cursor:pointer;}
+.spine-opt + .spine-opt{border-left:1px solid var(--rule-strong);}
+.spine-opt:hover{background:var(--hover-bg);}
+.spine-opt[aria-pressed="true"]{background:var(--ink);color:var(--paper);cursor:default;}
 body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.is-spine),body.spine-only .ce-row:not(.is-spine){display:none;}
 .chapter-card.is-spine .card-bookmark{background:var(--ink);}
 
@@ -433,7 +437,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 }
 @media print {
   .code-cell, .court, .decision, .doors { break-inside: avoid; }
-  .spine-toggle, .lang-toggle, #btnTheme { display: none !important; }
+  .spine-switch, .lang-toggle, #btnTheme { display: none !important; }
   body.spine-only .sidebar-link, body.spine-only .chapter-card, body.spine-only .ce-row { display: initial; }
 }
 """
@@ -1053,8 +1057,10 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
                 side.append(f'<span class="sidebar-link is-absent" title="{ui["not_drafted"]}"><span class="sl-text" data-t="{label}">'
                             f'<span class="sl-spine"></span>{label}</span></span>')
                 rows.append(f'<div class="ce-row is-absent"><span class="ce-num">{letter}</span><span class="ce-title">{html.escape(atitle)}</span><span class="ce-pg">{ui["not_drafted"]}</span></div>')
-    spine_btn = (f'<button class="spine-toggle" aria-pressed="false" data-on="{ui["spine_only"]}" data-off="{ui["all_chapters"]}">'
-                 f'{ui["spine_only"]}</button>')
+    spine_btn = (f'<div class="spine-switch" role="group" aria-label="{html.escape(ui["spine_group"])}">'
+                 f'<button type="button" class="spine-opt" data-spine="0" aria-pressed="true">{html.escape(ui["opt_all"])}</button>'
+                 f'<button type="button" class="spine-opt" data-spine="1" aria-pressed="false">{html.escape(ui["opt_spine"].format(n=len(st["spine"])))}</button>'
+                 f'</div>')
     back = "".join(f"<span>{html.escape(l)}</span><br>" for l in st["back_cover"])
     series = st["fr"]["series"] if lang == "fr" else st["series"]
 

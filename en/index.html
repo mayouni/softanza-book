@@ -1052,9 +1052,11 @@ pre .c-promise{color:var(--code-promise);}
 .the-invite .invite-more,.the-invite .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
-.spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
-.spine-toggle:hover{border-color:var(--ink);color:var(--ink);}
-.spine-toggle[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.spine-switch{display:inline-flex;border:1px solid var(--rule-strong);border-radius:20px;overflow:hidden;margin:0 0 8px;}
+.spine-opt{font-family:var(--sans);font-size:15px;font-weight:600;border:0;background:var(--paper);color:var(--ink);padding:9px 16px;cursor:pointer;}
+.spine-opt + .spine-opt{border-left:1px solid var(--rule-strong);}
+.spine-opt:hover{background:var(--hover-bg);}
+.spine-opt[aria-pressed="true"]{background:var(--ink);color:var(--paper);cursor:default;}
 body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.is-spine),body.spine-only .ce-row:not(.is-spine){display:none;}
 .chapter-card.is-spine .card-bookmark{background:var(--ink);}
 
@@ -1083,7 +1085,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 }
 @media print {
   .code-cell, .court, .decision, .doors { break-inside: avoid; }
-  .spine-toggle, .lang-toggle, #btnTheme { display: none !important; }
+  .spine-switch, .lang-toggle, #btnTheme { display: none !important; }
   body.spine-only .sidebar-link, body.spine-only .chapter-card, body.spine-only .ce-row { display: initial; }
 }
 
@@ -1211,7 +1213,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <p class="hero-author">Mansour Ayouni</p>
 <p class="hero-back"><span class="hb-label">From the back cover</span><span>Born in Africa. Useful to the World!</span><br><span>Declare, then govern.</span><br></p>
 <p class="hero-status"><a href="../llms-book.txt">For agents</a> · <a href="../book.json">book.json</a></p>
-<button class="spine-toggle" aria-pressed="false" data-on="Read the spine only" data-off="Show every chapter">Read the spine only</button>
+<div class="spine-switch" role="group" aria-label="Which chapters to show"><button type="button" class="spine-opt" data-spine="0" aria-pressed="true">Every chapter</button><button type="button" class="spine-opt" data-spine="1" aria-pressed="false">The spine: 9 chapters</button></div>
 <div class="view-mode-toggle" role="group" aria-label="View mode">
 <button class="vm-list" id="vmList" aria-label="List view">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1.2"/><circle cx="4" cy="12" r="1.2"/><circle cx="4" cy="18" r="1.2"/></svg>
@@ -1459,7 +1461,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 
 <aside class="chapter-sidebar" id="chapterSidebar">
 <h2 class="sidebar-book-title"><a href="#">Softanza</a></h2>
-<button class="spine-toggle" aria-pressed="false" data-on="Read the spine only" data-off="Show every chapter">Read the spine only</button>
+<div class="spine-switch" role="group" aria-label="Which chapters to show"><button type="button" class="spine-opt" data-spine="0" aria-pressed="true">Every chapter</button><button type="button" class="spine-opt" data-spine="1" aria-pressed="false">The spine: 9 chapters</button></div>
 <nav class="sidebar-nav" id="sidebarNav">
 <a class="sidebar-link is-spine" href="#preface"><span class="sl-text" data-t="Preface"><span class="sl-spine"></span>Preface</span><span class="sl-leader"></span></a>
 <div class="sb-part">Part I · The age, the crafter, the method</div>
@@ -10555,13 +10557,13 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
     try { localStorage.setItem('softanza-theme', next); } catch (e) {}
   });
   // SPINE (book): the nine chapters that carry the argument alone
-  const spineButtons = Array.from(document.querySelectorAll('.spine-toggle'));
+  const spineOpts = Array.from(document.querySelectorAll('.spine-opt'));
   function applySpine(on) {
     document.body.classList.toggle('spine-only', on);
-    spineButtons.forEach(b => { b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.textContent = on ? b.dataset.off : b.dataset.on; });
+    spineOpts.forEach(b => b.setAttribute('aria-pressed', (b.dataset.spine === '1') === on ? 'true' : 'false'));
     try { localStorage.setItem('softanza-spine', on ? '1' : '0'); } catch (e) {}
   }
-  spineButtons.forEach(b => b.addEventListener('click', () => applySpine(!document.body.classList.contains('spine-only'))));
+  spineOpts.forEach(b => b.addEventListener('click', () => applySpine(b.dataset.spine === '1')));
   try { if (localStorage.getItem('softanza-spine') === '1') applySpine(true); } catch (e) {}
   // LANGUAGE (book): the toggle keeps the page you are on
   const langLinks = Array.from(document.querySelectorAll('.lang-link'));
