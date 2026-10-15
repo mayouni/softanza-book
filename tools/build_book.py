@@ -1001,7 +1001,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
 <p class="hero-tagline">{html.escape(tag)}</p>
 <p class="hero-author">Mansour Ayouni</p>
 <p class="hero-back"><span class="hb-label">{ui["back_cover"]}</span>{back}</p>
-<p class="hero-status"><a href="../status.html">{ui["status_link"]}</a> · <a href="../llms-book.txt">{ui["agents_link"]}</a> · <a href="../book.json">book.json</a></p>
+<p class="hero-status"><a href="../llms-book.txt">{ui["agents_link"]}</a> · <a href="../book.json">book.json</a></p>
 {spine_btn}
 <div class="view-mode-toggle" role="group" aria-label="View mode">
 <button class="vm-list" id="vmList" aria-label="List view">
@@ -1277,10 +1277,11 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
         texts.append(txt)
     data = {"schema": "softanza-book/2", "title": st["title"], "subtitle": st["subtitle"], "tagline": st["tagline"], "author": st["author"],
             "series": st["series"], "built": built, "library_commit": lib.get("commit"),
+            "edition": "proof copy" if any(c["status"] != "read" for c in chapters) else "read by the author",
             "runtime": {"name": "the former host language", "version": (rt or {}).get("version"), "haro_runs_the_library": False},
             "spine": st["spine"], "rules_for_agents": AGENT_RULES,
             "files": {"schema": "book.schema.json", "summary": "llms-book.txt", "full_text": "llms-full-book.txt",
-                      "per_page": "agents/<slug>.md", "reader_en": "en/index.html", "reader_fr": "fr/index.html", "status": "status.html"},
+                      "per_page": "agents/<slug>.md", "reader_en": "en/index.html", "reader_fr": "fr/index.html"},
             "chapters": chapters,
             "note": "Drafts are marked status: draft and are not the author's final word."}
     schema = json.loads((ROOT / "book.schema.json").read_text(encoding="utf-8"))
@@ -1288,12 +1289,12 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
     (ROOT / "book.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline'].rstrip('.')}. By {st['author']}. {st['series']}.", "",
              "This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.", "",
-             f"Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
+             f"Edition: {data['edition']} ({sum(1 for c in chapters if c['status'] != 'read')} of {len(chapters)} pages not yet read by the author). Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
              "## Files", "",
              "- book.json: the whole book as data, one entry per chapter, preface and appendix; book.schema.json describes it",
              "- llms-full-book.txt: every page as text, with the verdict of the last run under each code block",
              "- agents/<slug>.md: one page as text (the slug is in book.json)",
-             "- en/index.html, fr/index.html: the reader; status.html: the state of each chapter", "",
+             "- en/index.html, fr/index.html: the reader (status.html, the builder's page, is in the repository and not on the public site)", "",
              "## Rules for an agent", ""] + [f"- {x}" for x in AGENT_RULES] + ["", "## Pages", ""]
     seen_part = None
     for c in chapters:

@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-14 23:18 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-15 01:16 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -11715,7 +11715,7 @@ Files sit beside the reader, and each is regenerated at every build.
 - **`book.schema.json`** describes `book.json`, and the build validates the file against it. A build that produces a `book.json` that does not match its schema fails.
 - **`llms-book.txt`** is a short text: the rules for an agent, then one line per page with its status, its guards and the count of blocks that kept their promise, and its principle.
 - **`llms-full-book.txt`** is every page as text, one after the other, with the verdict of the last run written under each block of code. **`agents/<slug>.md`** is the same, one page per file; the slug is in `book.json`.
-- **`status.html`** is the page for a person: every chapter with its status, its run, its guards, its words, its open questions and whether it has a French edition.
+- **`status.html`** is the page for a person who builds the book: every chapter with its status, its run, its guards, its words, its open questions and whether it has a French edition. It is in the repository and not on the public site, because it prints the library's file names as they are.
 
 ### What a promise is
 

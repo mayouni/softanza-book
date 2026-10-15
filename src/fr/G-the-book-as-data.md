@@ -17,7 +17,7 @@ Des fichiers se trouvent à côté du lecteur, et chacun est régénéré à cha
 - **`book.schema.json`** décrit `book.json`, et la construction valide le fichier contre lui. Une construction qui produit un `book.json` qui ne correspond pas à son schéma échoue.
 - **`llms-book.txt`** est un texte court : les règles pour un agent, puis une ligne par page avec son statut, ses gardes et le nombre de blocs qui ont tenu leur promesse, et son principe.
 - **`llms-full-book.txt`** est chaque page en texte, l'une après l'autre, avec le verdict de la dernière exécution écrit sous chaque bloc de code. **`agents/<slug>.md`** est la même chose, une page par fichier ; le slug est dans `book.json`.
-- **`status.html`** est la page pour une personne : chaque chapitre avec son statut, son exécution, ses gardes, ses mots, ses questions ouvertes et s'il a une édition française.
+- **`status.html`** est la page pour une personne qui construit le livre : chaque chapitre avec son statut, son exécution, ses gardes, ses mots, ses questions ouvertes et s'il a une édition française. Elle est dans le dépôt et non sur le site public, parce qu'elle imprime les noms de fichiers de la bibliothèque tels quels.
 
 ### Ce qu'est une promesse
 
