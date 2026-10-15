@@ -64,6 +64,7 @@ p { margin: 0 0 0.62em; orphans: 3; widows: 3; hyphens: auto; }
 .titlepage .c { font: 8pt Arial, sans-serif; letter-spacing: 2px; color: #6b6358; margin-top: 0.1in; }
 .colophon { padding-top: 4.4in; font: 7.8pt/1.6 Arial, sans-serif; color: #3a3326; }
 .colophon p { margin-bottom: 0.08in; }
+.colophon.ask { break-before: page; padding-top: 2.2in; font-size: 10pt; }
 .colophon .warn { border: 1px solid #1a1612; padding: 0.08in 0.12in; font-weight: 600; color: #1a1612; }
 
 .toc h2 { font: 800 20pt Arial, sans-serif; margin: 0 0 0.25in; letter-spacing: -0.3px; }
@@ -235,6 +236,10 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
             if letter in by_letter:
                 out.append(chapter(by_letter[letter]))
 
+    # the open book: the ask and the colophon line on the last page (house OPEN-BOOK.md, HOUSE-11)
+    out.append(f'<section class="pfront colophon ask"><p class="warn">{esc(ui["ask"])}</p>'
+               f'<p>{esc(ui["ask_btn"])} : {esc(ui["offer_url"])}</p>'
+               f'<p>{esc(ui["colophon"])}</p><p>{esc(ui["licence_url"])}</p></section>')
     back = st["back_cover"]
     out.append(f'<section class="pback"><div class="bl bl-first">{esc(series.upper())}</div>'
                + "".join(f'<div class="bl">{esc(l)}</div>' for l in back)

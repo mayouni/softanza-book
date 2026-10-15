@@ -1036,6 +1036,12 @@ pre .c-promise{color:var(--code-promise);}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.active .sl-text{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
+.the-ask{margin:3.2em 0 1em;padding:1.6em 0 0;border-top:1px solid var(--rule);}
+.the-ask p{text-indent:0;text-align:left;hyphens:none;}
+.the-ask .ask-line{font-style:italic;}
+.the-ask .ask-btn{display:inline-block;font-family:var(--sans);font-weight:600;color:var(--paper);background:var(--ink);padding:9px 16px;border-radius:6px;}
+.the-ask .ask-btn:hover{background:var(--ink-soft);}
+.the-ask .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
 .spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
@@ -1100,6 +1106,8 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 .chapter-page .court p.court-head{font-size:13px;}
 .court .g-path{font-size:13px;}
 .sources{font-size:14.5px;}
+.the-ask .ask-btn{font-size:16px;}
+.the-ask .colophon-line{font-size:14.5px;}
 @media (max-width: 900px){.sb-part{font-size:19px;}.sidebar-link{font-size:18px;}.contents-listing .ce-part{font-size:23px;}.contents-listing .ce-row{font-size:20px;}}
 
 </style>
@@ -9299,6 +9307,7 @@ oDep = oDel.Deploy(:Production)
 </div>
 <p>Lancez celui-là aussi. Lisez ce que répond <code>WasCommitted()</code>, et lisez le journal : le bloc de la section 3 imprimait sa deuxième entrée d'erreur pour la personne, et je ne dis rien de celle de l'assistant. La section 5 dit ce que prouvent les trois gardes, et la section 8 ce qu'on refuse à un agent d'IA. Quand la barrière répondra, vous saurez ce qu'elle refuse pour ce qui est vrai et ce qu'elle refuse pour qui demande.</p>
 <p>Chaque bloc de ce livre est à vous pour le relancer. Écrivez maintenant une ligne de plus, la suivante de votre propre projet, dans la forme du dossier : qui l'a perçu, à quelle date, et ce qu'il a dit. Si personne ne l'a fait, écrivez « non perçu », et dites pourquoi. Cette ligne est la fin de ce livre, et le début du suivant.</p><aside class="sources"><div class="aside-h">Où sont les preuves</div><ul><li><span class="src-k">Narration</span><a href="https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/doc/narrations/stz-built-on-real-world-need.md" target="_blank" rel="noopener"><code>stz-built-on-real-world-need.md</code></a></li><li><span class="src-k">Narration</span><a href="https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/doc/narrations/stz-system-dev-to-deploy-narration.md" target="_blank" rel="noopener"><code>stz-system-dev-to-deploy-narration.md</code></a></li><li><span class="src-k">Narration</span><a href="https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/doc/narrations/stz-emulating-the-whole-solution-narration.md" target="_blank" rel="noopener"><code>stz-emulating-the-whole-solution-narration.md</code></a></li><li><span class="src-k">Narration</span><a href="https://github.com/mayouni/stzlib/blob/93d7a39bdd040f82eae21d949460d69c32a75c70/libraries/stzlib/base/doc/narrations/stz-service-virtualization-code-first-subscribe-later.md" target="_blank" rel="noopener"><code>stz-service-virtualization-code-first-subscribe-later.md</code></a></li><li><span class="src-k">Sur le site</span><a href="../../../../stzsite/fr/customers.html" target="_blank" rel="noopener">customers</a></li><li><span class="src-k">Sur le site</span><a href="../../../../stzsite/fr/forged.html" target="_blank" rel="noopener">forged</a></li><li><span class="src-k">Sur le site</span><a href="../../../../stzsite/fr/platforms.html" target="_blank" rel="noopener">platforms</a></li><li><span class="src-k">Sur le site</span><a href="../../../../stzsite/fr/estate.html" target="_blank" rel="noopener">estate</a></li><li><span class="src-k">Décisions de l'étude</span>12.5, 12.10, 12.13, 12.21, 12.29, 12.30</li></ul></aside>
+<section class="the-ask"><p class="ask-line">Si ce livre vous a été utile, et si vous le pouvez, payez ce qu&#x27;il a valu pour vous.</p><p><a class="ask-btn" href="https://mayouni.github.io/ayouni/fr/offre/">Comment payer ce qu&#x27;il a valu</a></p><p class="colophon-line">Libre à lire et à partager sous <a href="https://mayouni.github.io/ayouni/fr/licence/">CC BY-NC-ND 4.0</a> ; le code sous la licence de la bibliothèque ; payez ce que le livre a valu, s&#x27;il a valu quelque chose.</p></section>
 </article>
 <article class="chapter-page" id="page-app-a-the-register-of-innovations" data-slug="app-a-the-register-of-innovations" data-title="Le registre des innovations" data-prev="ch33-the-next-line" data-next="app-b-the-fourteen-house-rules">
 <div class="ch-eyebrow">Annexe A</div>
@@ -10717,6 +10726,12 @@ pre .c-promise{color:var(--code-promise);}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.active .sl-text{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
+.the-ask{margin:3.2em 0 1em;padding:1.6em 0 0;border-top:1px solid var(--rule);}
+.the-ask p{text-indent:0;text-align:left;hyphens:none;}
+.the-ask .ask-line{font-style:italic;}
+.the-ask .ask-btn{display:inline-block;font-family:var(--sans);font-weight:600;color:var(--paper);background:var(--ink);padding:9px 16px;border-radius:6px;}
+.the-ask .ask-btn:hover{background:var(--ink-soft);}
+.the-ask .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
 .spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
@@ -10781,6 +10796,8 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 .chapter-page .court p.court-head{font-size:13px;}
 .court .g-path{font-size:13px;}
 .sources{font-size:14.5px;}
+.the-ask .ask-btn{font-size:16px;}
+.the-ask .colophon-line{font-size:14.5px;}
 @media (max-width: 900px){.sb-part{font-size:19px;}.sidebar-link{font-size:18px;}.contents-listing .ce-part{font-size:23px;}.contents-listing .ce-row{font-size:20px;}}
 
 </style>
@@ -11023,7 +11040,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
   });
 
   // Print
-  btnPrint.addEventListener('click', () => window.print());
+  btnPrint.addEventListener('click', () => { const served = /\/books\/[^/]+\/(en|fr)\/(index\.html)?$/.test(location.pathname); window.open(served ? '../book.fr.pdf' : '../print/softanza-fr.pdf', '_blank', 'noopener'); });
 
   // Keyboard
   document.addEventListener('keydown', (e) => {

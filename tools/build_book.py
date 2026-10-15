@@ -56,6 +56,11 @@ UI = {
     "description": "Softanza, the Governed Software Platform of the AI Age: declare what you know, a court keeps it, the AI model comes last. Rethinking programming, languages and intelligence, from first principles. By Mansour Ayouni. Second of the AYOUNI books.",
     "theme": "Light or dark", "langs": "Language",
     "status_link": "Status of the book", "agents_link": "For agents",
+    # the open book (house OPEN-BOOK.md, HOUSE-11): the ask and the colophon line, word for word; the links are the house's pages
+    "ask": "If this book was useful to you, and you can, pay what it was worth.", "ask_btn": "How to pay what it was worth",
+    "colophon": "Free to read and share under CC BY-NC-ND 4.0; code under the library's licence; pay what it was worth, if it was.",
+    "offer_url": "https://mayouni.github.io/ayouni/offer/", "licence_url": "https://mayouni.github.io/ayouni/licence/",
+    "pdf_public": "../book.en.pdf", "pdf_local": "../print/softanza-en.pdf",
     "src_head": "Where the evidence lives", "src_narration": "Narration", "src_site": "On the site",
     "src_rulings": "Rulings of the study",
     "appendix": "Appendix", "appendices": "Appendices",
@@ -87,6 +92,10 @@ UI = {
     "description": "Softanza, la plateforme logicielle gouvernée de l'ère de l'IA : déclarez ce que vous savez, un tribunal le garde, le modèle d'IA vient en dernier. Repenser la programmation, ses langages et son intelligence depuis les premiers principes. Par Mansour Ayouni. Deuxième des livres AYOUNI.",
     "theme": "Clair ou sombre", "langs": "Langue",
     "status_link": "État du livre", "agents_link": "Pour les agents",
+    "ask": "Si ce livre vous a été utile, et si vous le pouvez, payez ce qu'il a valu pour vous.", "ask_btn": "Comment payer ce qu'il a valu",
+    "colophon": "Libre à lire et à partager sous CC BY-NC-ND 4.0 ; le code sous la licence de la bibliothèque ; payez ce que le livre a valu, s'il a valu quelque chose.",
+    "offer_url": "https://mayouni.github.io/ayouni/fr/offre/", "licence_url": "https://mayouni.github.io/ayouni/fr/licence/",
+    "pdf_public": "../book.fr.pdf", "pdf_local": "../print/softanza-fr.pdf",
     "src_head": "Où sont les preuves", "src_narration": "Narration", "src_site": "Sur le site",
     "src_rulings": "Décisions de l'étude",
     "appendix": "Annexe", "appendices": "Annexes",
@@ -162,6 +171,10 @@ def shell_edits(ui):
          '<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n',
          ""),
         ("font faces", "<style>\n:root {", "<style>\n" + FONT_FACES + ":root {"),
+        ("the print icon opens the book's PDF, never a page the browser generates (OPEN-BOOK, HOUSE-11)",
+         "  btnPrint.addEventListener('click', () => window.print());",
+         f"  btnPrint.addEventListener('click', () => {{ const served = /\\/books\\/[^/]+\\/(en|fr)\\/(index\\.html)?$/.test(location.pathname); "
+         f"window.open(served ? '{ui['pdf_public']}' : '{ui['pdf_local']}', '_blank', 'noopener'); }});"),
         ("the menu keeps the current page at its top", "    // Scroll to top of content\n    window.scrollTo({ top: 0, behavior: 'instant' });", "    // Scroll to top of content\n    window.scrollTo({ top: 0, behavior: 'instant' });\n\n    // the current page is underlined in the menu and brought to its top (the menu is visible now)\n    const sbEl = document.querySelector('.chapter-sidebar');\n    const cur = sbEl && sbEl.querySelector('.sidebar-link.active');\n    if (cur) { sbEl.scrollTo({ top: Math.max(0, cur.getBoundingClientRect().top - sbEl.getBoundingClientRect().top + sbEl.scrollTop - 24), behavior: 'instant' }); }"),
         ("colours: hero shadow", "box-shadow: 0 16px 48px rgba(40, 30, 18, 0.16), 0 4px 12px rgba(40, 30, 18, 0.08);",
          "box-shadow: 0 16px 48px var(--shadow-cover), 0 4px 12px var(--shadow-soft);"),
@@ -363,6 +376,12 @@ pre .c-promise{color:var(--code-promise);}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.active .sl-text{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
+.the-ask{margin:3.2em 0 1em;padding:1.6em 0 0;border-top:1px solid var(--rule);}
+.the-ask p{text-indent:0;text-align:left;hyphens:none;}
+.the-ask .ask-line{font-style:italic;}
+.the-ask .ask-btn{display:inline-block;font-family:var(--sans);font-weight:600;color:var(--paper);background:var(--ink);padding:9px 16px;border-radius:6px;}
+.the-ask .ask-btn:hover{background:var(--ink-soft);}
+.the-ask .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
 .spine-toggle{font-family:var(--sans);font-size:15px;font-weight:600;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink-soft);padding:9px 18px;margin:0 0 8px;}
@@ -413,7 +432,7 @@ TYPE = {
     # inside a chapter page, in em of the reading size (so it follows the font control)
     "section_h3": 1.3, "subsection_h4": 1.12, "body": 1.0, "stage_li": 0.92,
     # labels and notes, in px
-    "eyebrow": 13, "decision_tag": 13, "proof": 15, "proof_engine": 14.5, "ran": 15, "effects": 14.5, "banner": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
+    "ask_button": 16, "eyebrow": 13, "decision_tag": 13, "proof": 15, "proof_engine": 14.5, "ran": 15, "effects": 14.5, "banner": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
 }
 
 
@@ -425,7 +444,7 @@ def check_type_scale():
     above("sidebar_book", "sidebar_part"); above("sidebar_part", "sidebar_link")
     above("contents_h2", "contents_part"); above("contents_part", "contents_row"); above("contents_row", "contents_num")
     above("section_h3", "subsection_h4"); above("subsection_h4", "body")
-    for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "eyebrow", "decision_tag", "proof", "proof_engine", "ran", "effects", "banner",
+    for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "ask_button", "eyebrow", "decision_tag", "proof", "proof_engine", "ran", "effects", "banner",
               "court_li", "court_head", "court_path", "sources"):
         if T[k] < 13:
             bad.append(f"the type scale: {k} ({T[k]}px) is below the 13px floor for any label or note")
@@ -464,6 +483,8 @@ def type_css():
         f".chapter-page .court p.court-head{{font-size:{T['court_head']}px;}}\n"
         f".court .g-path{{font-size:{T['court_path']}px;}}\n"
         f".sources{{font-size:{T['sources']}px;}}\n"
+        f".the-ask .ask-btn{{font-size:{T['ask_button']}px;}}\n"
+        f".the-ask .colophon-line{{font-size:{T['sources']}px;}}\n"
         f"@media (max-width: 900px){{.sb-part{{font-size:19px;}}.sidebar-link{{font-size:18px;}}.contents-listing .ce-part{{font-size:23px;}}.contents-listing .ce-row{{font-size:20px;}}}}\n"
     )
 
@@ -910,6 +931,14 @@ def proof_html(p, runs, ui, stale):
     return out
 
 
+def the_ask(ui):
+    """The open book's ask and colophon line, once, at the end of the reader (house OPEN-BOOK.md): word for word, never a condition."""
+    col = html.escape(ui["colophon"]).replace("CC BY-NC-ND 4.0", f'<a href="{ui["licence_url"]}">CC BY-NC-ND 4.0</a>')
+    return (f'<section class="the-ask"><p class="ask-line">{html.escape(ui["ask"])}</p>'
+            f'<p><a class="ask-btn" href="{ui["offer_url"]}">{html.escape(ui["ask_btn"])}</a></p>'
+            f'<p class="colophon-line">{col}</p></section>\n')
+
+
 def status_banner(meta, ui):
     st = meta.get("status", "draft")
     label = {"draft": ui["draft"], "read": ui["read"], "final": ui["final"], "missing": ui["missing"]}.get(st, st)
@@ -925,6 +954,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
     by_number = {p["number"]: p for p in pages}
 
     cards, articles = [], []
+    last_chapter = max((p["number"] for p in pages if not p["meta"].get("appendix")), default=0)
     for p in pages:
         sp = " is-spine" if p["spine"] else ""
         meta_line = p["eyebrow"] + (f' · {p["words"]} {ui["words"]}' if p["own"] else "")
@@ -940,7 +970,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
             f'<div class="ch-eyebrow">{html.escape(p["eyebrow"])}{spine_badge}</div>\n'
             f'<h1 class="ch-title">{html.escape(p["title"], quote=False)}</h1>\n'
             f'{status_banner(p["meta"], ui) if p["own"] else ""}\n{proof_html(p, runs, ui, stale)}\n'
-            f'<div class="ch-rule"></div>\n{p["body_html"]}\n</article>')
+            f'<div class="ch-rule"></div>\n{p["body_html"]}\n{the_ask(ui) if p["number"] == last_chapter else ""}</article>')
 
     # the navigation: the whole book, parts and chapters; what is not drafted is shown and not linked
     side, rows = [], []
