@@ -57,6 +57,7 @@ UI = {
     "theme": "Light or dark", "langs": "Language",
     "status_link": "Status of the book", "agents_link": "For agents",
     # the open book (house OPEN-BOOK.md, HOUSE-11): the ask and the colophon line, word for word; the links are the house's pages
+    "zoom_label": "View the cover large", "close_label": "Close",
     "home_label": "AYOUNI Press: home", "home_url": "https://mayouni.github.io/ayouni/",
     "invite": "If this book is useful to your organisation, I work with organisations on its subjects: paper copies in quantity, workshops and training, talks, consulting and the building of solutions. Write to ", "invite_mail": "kalidianow@gmail.com", "offer_link": "How these books are offered",
     "colophon": "Free to read and share under CC BY-NC-ND 4.0; code under the library's licence.",
@@ -93,6 +94,7 @@ UI = {
     "description": "Softanza, la plateforme logicielle gouvernée de l'ère de l'IA : déclarez ce que vous savez, un tribunal le garde, le modèle d'IA vient en dernier. Repenser la programmation, ses langages et son intelligence depuis les premiers principes. Par Mansour Ayouni. Premier des livres AYOUNI.",
     "theme": "Clair ou sombre", "langs": "Langue",
     "status_link": "État du livre", "agents_link": "Pour les agents",
+    "zoom_label": "Voir la couverture en grand", "close_label": "Fermer",
     "home_label": "Éditions AYOUNI : accueil", "home_url": "https://mayouni.github.io/ayouni/",
     "invite": "Si ce livre est utile à votre organisation, je travaille avec les organisations sur ses sujets : exemplaires papier en quantité, ateliers et formations, conférences, conseil et réalisation de solutions. Écrivez à ", "invite_mail": "kalidianow@gmail.com", "offer_link": "Comment ces livres sont offerts",
     "colophon": "Libre à lire et à partager sous CC BY-NC-ND 4.0 ; le code sous la licence de la bibliothèque.",
@@ -106,7 +108,7 @@ UI = {
 
 # ============================================================================ colours: every one a variable
 LIGHT = {
-  "--ink": "#17140f", "--ink-soft": "#2a241b", "--soft": "#6b6358", "--soft-2": "#9a9078",
+  "--ink": "#17140f", "--ink-soft": "#2a241b", "--scrim": "rgba(23, 20, 15, 0.88)", "--soft": "#6b6358", "--soft-2": "#9a9078",
   "--paper": "#ffffff", "--bg": "#fbfaf6", "--rule": "#e3ddc9", "--rule-strong": "#1a1612",
   "--hover-bg": "#f3eedf", "--hover-bg-soft": "#fcfaf5", "--card-bg": "#ffffff", "--sidebar-bg": "#f5f0e2",
   "--bookmark": "#E96A1A", "--bookmark-text": "#b3480a",
@@ -124,7 +126,7 @@ LIGHT = {
   "--cover-accent": "#E96A1A",
 }
 DARK = {
-  "--ink": "#ece6da", "--ink-soft": "#cfc6b4", "--soft": "#a39a88", "--soft-2": "#7d7565",
+  "--ink": "#ece6da", "--ink-soft": "#cfc6b4", "--scrim": "rgba(8, 7, 5, 0.92)", "--soft": "#a39a88", "--soft-2": "#7d7565",
   "--paper": "#1d1a16", "--bg": "#14120f", "--rule": "#3a342b", "--rule-strong": "#ece6da",
   "--hover-bg": "#2a251e", "--hover-bg-soft": "#221e19", "--card-bg": "#1d1a16", "--sidebar-bg": "#191612",
   "--bookmark": "#ef7a2e", "--bookmark-text": "#f4a066",
@@ -257,7 +259,8 @@ def apply_shell(ui):
     shell = shell[:root_block.start()] + themed + shell[root_block.end():]
     shell = shell.replace("</style>", BOOK_CSS + type_css() + "\n</style>", 1)
     OV = "<!-- ============ OVERVIEW VIEW ============ -->"
-    return shell[:shell.index(OV)], shell[shell.index("<script>"):]
+    # the reader's own script is the first <script> after the overview marker (the theme script in the head comes before it)
+    return shell[:shell.index(OV)], shell[shell.index("<script>", shell.index(OV)):]
 
 
 def check_colours(page):
@@ -383,6 +386,15 @@ pre .c-promise{color:var(--code-promise);}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
 .sidebar-link.active .sl-text{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
+.cover-wrap{position:relative;display:inline-block;line-height:0;}
+.cover-wrap .cover-img{cursor:zoom-in;}
+.cover-zoom{position:absolute;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:0;box-shadow:0 2px 10px var(--shadow-soft);}
+.cover-zoom svg{width:22px;height:22px;}
+.cover-zoom:hover{background:var(--ink);color:var(--paper);}
+.cover-lightbox{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background:var(--scrim);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;}
+.cover-lightbox[hidden]{display:none;}
+.cover-lightbox img{max-width:calc(100vw - 48px);max-height:calc(100vh - 48px);width:auto;height:auto;background:var(--paper);box-shadow:0 8px 40px var(--shadow-cover);}
+.cover-close{position:absolute;top:14px;right:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);font-size:28px;line-height:1;cursor:pointer;padding:0;}
 .the-invite{margin:3.2em 0 1em;padding:1.6em 0 0;border-top:1px solid var(--rule);}
 .the-invite p{text-indent:0;text-align:left;hyphens:none;}
 .the-invite .invite-line{font-style:italic;}
@@ -509,7 +521,6 @@ def type_css():
         ".ayouni-home{display:inline-flex;align-items:center;}\n"
         ".top-header .ayouni-home{height:38px;margin-right:6px;}\n"
         ".top-header .ayouni-home svg{height:22px;width:auto;aspect-ratio:2095/518;}\n"
-        ".hero-imprint .ayouni-home svg{height:46px;width:auto;aspect-ratio:2095/518;}\n"
         "@media (max-width: 900px){.top-header .ayouni-home svg{height:16px;}}\n"
         f"@media (max-width: 900px){{.sb-part{{font-size:19px;}}.sidebar-link{{font-size:18px;}}.contents-listing .ce-part{{font-size:23px;}}.contents-listing .ce-row{{font-size:20px;}}}}\n"
     )
@@ -831,6 +842,9 @@ def generated_body(kind, en_src, guards, runs, st, lang="en", titles=None):
     return "\n".join(out)
 
 
+COVER_ZOOM_JS = "(function(){var z=document.querySelector('.cover-zoom'),lb=document.getElementById('coverLightbox'),im=document.querySelector('.hero-cover .cover-img');if(!z||!lb||!im)return;var big=lb.querySelector('img'),x=lb.querySelector('.cover-close');function open(){big.src=im.src;lb.hidden=false;document.body.style.overflow='hidden';x.focus();}function close(){lb.hidden=true;big.removeAttribute('src');document.body.style.overflow='';z.focus();}z.addEventListener('click',open);im.addEventListener('click',open);lb.addEventListener('click',function(e){if(e.target!==big)close();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});})();"
+
+
 # ============================================================================ the cover (typographic, a working cover)
 def cover_svg(st, ui, lang):
     """The author's cover image when assets/cover has one (a flat image, embedded so the reader stays one file);
@@ -1050,10 +1064,11 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
 
 <section class="book-hero">
 <div class="hero-cover">
-{cover_svg(st, ui, lang)}
+<div class="cover-wrap">{cover_svg(st, ui, lang)}<button type="button" class="cover-zoom" aria-label="{html.escape(ui["zoom_label"])}" title="{html.escape(ui["zoom_label"])}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/><line x1="10.5" y1="7.5" x2="10.5" y2="13.5"/><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"/></svg></button></div>
 </div>
+<div class="cover-lightbox" id="coverLightbox" role="dialog" aria-modal="true" aria-label="{html.escape(ui["zoom_label"])}" hidden><button type="button" class="cover-close" aria-label="{html.escape(ui["close_label"])}">&times;</button><img alt="{html.escape(ui["cover_alt"])}"></div>
+<script>{COVER_ZOOM_JS}</script>
 <div class="hero-info">
-<div class="hero-imprint"><a class="ayouni-home" href="{ui["home_url"]}" aria-label="{html.escape(ui["home_label"])}"><svg viewBox="0 0 2095 518" aria-hidden="true" focusable="false"><use href="#ayouni-logo"/></svg></a></div>
 <p class="hero-series">{html.escape(series)}</p>
 <h1 class="hero-title">{html.escape(title)}</h1>
 <p class="hero-subtitle">{html.escape(sub)}</p>
