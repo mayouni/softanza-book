@@ -162,6 +162,7 @@ def shell_edits(ui):
          '<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n',
          ""),
         ("font faces", "<style>\n:root {", "<style>\n" + FONT_FACES + ":root {"),
+        ("the menu keeps the current page at its top", "    // Scroll to top of content\n    window.scrollTo({ top: 0, behavior: 'instant' });", "    // Scroll to top of content\n    window.scrollTo({ top: 0, behavior: 'instant' });\n\n    // the current page is underlined in the menu and brought to its top (the menu is visible now)\n    const sbEl = document.querySelector('.chapter-sidebar');\n    const cur = sbEl && sbEl.querySelector('.sidebar-link.active');\n    if (cur) { sbEl.scrollTo({ top: Math.max(0, cur.getBoundingClientRect().top - sbEl.getBoundingClientRect().top + sbEl.scrollTop - 24), behavior: 'instant' }); }"),
         ("colours: hero shadow", "box-shadow: 0 16px 48px rgba(40, 30, 18, 0.16), 0 4px 12px rgba(40, 30, 18, 0.08);",
          "box-shadow: 0 16px 48px var(--shadow-cover), 0 4px 12px var(--shadow-soft);"),
         ("colours: card shadow", "box-shadow: 0 8px 20px rgba(40, 30, 18, 0.08);", "box-shadow: 0 8px 20px var(--shadow-soft);"),
@@ -360,6 +361,7 @@ pre .c-promise{color:var(--code-promise);}
 .sb-part{font-family:var(--sans);font-weight:700;text-transform:uppercase;color:var(--ink);}
 .sidebar-link .sl-spine{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);margin-right:8px;vertical-align:2px;}
 .sidebar-link:not(.is-spine) .sl-spine{background:transparent;border:1px solid var(--soft-2);}
+.sidebar-link.active .sl-text{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}
 .sidebar-link.is-absent{color:var(--soft-2);cursor:default;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
