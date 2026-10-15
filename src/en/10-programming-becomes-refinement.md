@@ -28,7 +28,7 @@ Against that weak instrument I set one sentence.
 
 ## 2. The first principle
 
-I wrote the sentence on the back cover of the first book of this imprint, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
+I wrote the sentence on the back cover of my earlier book, *Refinement-Oriented Programming*, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
 
 The rest of the chapter runs that sentence.
 

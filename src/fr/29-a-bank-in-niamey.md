@@ -167,7 +167,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
 
-Mon premier livre, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire d'une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
+Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire d'une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
 
 ## 4. La décision, et ce que j'ai refusé
 

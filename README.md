@@ -1,7 +1,7 @@
 # Softanza — the book
 
 *Softanza · The Governed Software Platform of the AI Age · Rethinking programming, languages and intelligence,
-from first principles.* By Mansour Ayouni. The second of the AYOUNI books.
+from first principles.* By Mansour Ayouni. The first of the AYOUNI books.
 
 This book runs. Every code block is run inside the Softanza library at a named commit and judged against the
 `#-->` promise lines it carries. A chapter whose promises are not kept fails the build.

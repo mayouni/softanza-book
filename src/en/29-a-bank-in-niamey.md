@@ -167,7 +167,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for rules not written yet.
 
-My first book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
+My earlier book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
 
 ## 4. The decision, and what I refused
 

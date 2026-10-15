@@ -28,7 +28,7 @@ Ce que ces pratiques partagent, c'est l'endroit où elles se tiennent. Le plan e
 
 ## 2. Le premier principe
 
-J'ai écrit la phrase sur la quatrième de couverture du premier livre de cette maison d'édition, et je n'en ai pas trouvé de meilleure : **cessez de vouloir gouverner l'intelligence, et gouvernez le changement.** L'en-tête de la bibliothèque dit la même chose sous la forme d'un type : un changement est une proposition typée, pas un diff.
+J'ai écrit la phrase sur la quatrième de couverture de mon livre précédent, *Refinement-Oriented Programming*, et je n'en ai pas trouvé de meilleure : **cessez de vouloir gouverner l'intelligence, et gouvernez le changement.** L'en-tête de la bibliothèque dit la même chose sous la forme d'un type : un changement est une proposition typée, pas un diff.
 
 Le reste du chapitre exécute cette phrase.
 

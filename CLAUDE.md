@@ -1,6 +1,6 @@
 # CLAUDE.md — Softanza (the book)
 
-**Read this first.** This repository holds the Softanza book, the second of the AYOUNI books.
+**Read this first.** This repository holds the Softanza book, the first of the AYOUNI books.
 
 ```
 Softanza
@@ -8,8 +8,7 @@ The Governed Software Platform of the AI Age
 Declare what you know. A court keeps it. The AI model comes last.
 ```
 
-**Author:** Mansour Ayouni · **Imprint:** AYOUNI · **Series:** second of the AYOUNI books, after
-*Refinement-Oriented Programming* (`../refinement-book/`).
+**Author:** Mansour Ayouni · **Imprint:** AYOUNI · **Series:** first of the AYOUNI books; *Refinement-Oriented Programming* (`../refinement-book/`) follows it, and is to be rewritten on Softanza's foundation.
 
 ## The contract
 

@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-15 09:43 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-15 10:11 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -2453,7 +2453,7 @@ Against that weak instrument I set one sentence.
 
 ## 2. The first principle
 
-I wrote the sentence on the back cover of the first book of this imprint, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
+I wrote the sentence on the back cover of my earlier book, *Refinement-Oriented Programming*, and I have not found a better one: **stop trying to govern the intelligence, and govern the change.** The library's header says the same thing in the form of a type: a change is a typed proposal, not a diff.
 
 The rest of the chapter runs that sentence.
 
@@ -9570,7 +9570,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for rules not written yet.
 
-My first book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
+My earlier book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
 
 ## 4. The decision, and what I refused
 
