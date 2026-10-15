@@ -4,7 +4,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
@@ -69,11 +69,13 @@ The same growth reaches the domain language model of chapter 19. Nothing is trai
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
-oKB.Know("couscous", "dish").KnowRelation("couscous", "contains", "semolina")
+oKB.Know("couscous", "dish")
+oKB.KnowRelation("couscous", "contains", "semolina")
 oDLM = StzDlmQ(oKB)
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
-oKB.Know("millet", "grain").KnowRelation("couscous", "contains", "millet")
+oKB.Know("millet", "grain")
+oKB.KnowRelation("couscous", "contains", "millet")
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
 oDLM = StzDlmQ(oKB)
@@ -90,19 +92,20 @@ It does not. The second answer is the old model still refusing, `That is outside
 **The file the library writes.** A clinic. A relation declared unique, and a graph in strict mode, where every fact needs its provenance. What does it do with a fact that has no source, with one that has, and with a second, contradicting one from a rumour? And what does it then write to the disk? Run it:
 
 ```haro
-oCl = new stzKnowledgeGraph("clinic")
-oCl.ConstrainRelation("treated-by", :Unique)
-oCl.EnableStrictMode()
-try
-	oCl.AddFact("fatou", "treated-by", "dr-diallo")
-catch
-	? cCatchError
-done
-#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
-oCl.AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
-? oCl.AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
-#--> 0
-oCl.WriteToKnowFile("clinic")
+StzKnowledgeGraphQ("clinic") {
+	ConstrainRelation("treated-by", :Unique)
+	EnableStrictMode()
+	try
+		AddFact("fatou", "treated-by", "dr-diallo")
+	catch
+		? cCatchError
+	done
+	#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
+	AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
+	? AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
+	#--> 0
+	WriteToKnowFile("clinic")
+}
 ? read("clinic.zknw")
 #--> knowledge "clinic"
 #
@@ -127,17 +130,18 @@ The naked fact is refused with the library's own sentence, `Strict mode: every f
 Does the file read back into a strict graph, with the law, the source of every fact and the refusal inside it? Load it:
 
 ```haro
-oBack = new stzKnowledgeGraph("clinic")
-oBack.EnableStrictMode()
-aR = oBack.ImportKnow("clinic.zknw")
-? aR[:merged]
-#--> 1
-? @@( oBack.MetaOfFact("fatou", "treated-by", "dr-diallo") )
-#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
-? len(oBack.Contradictions())
-#--> 1
-? oBack.RelationHasLaw("treated-by", "unique")
-#--> 1
+StzKnowledgeGraphQ("clinic") {
+	EnableStrictMode()
+	aR = ImportKnow("clinic.zknw")
+	? aR[:merged]
+	#--> 1
+	? @@( MetaOfFact("fatou", "treated-by", "dr-diallo") )
+	#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
+	? len(Contradictions())
+	#--> 1
+	? RelationHasLaw("treated-by", "unique")
+	#--> 1
+}
 remove("clinic.zknw")
 ? fexists("clinic.zknw")
 #--> 0
@@ -230,13 +234,14 @@ The file merges, `1`, and the ontology is empty, `0`. The parser recognises the 
 The law is also not derived on an instance graph. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
 
 ```haro
-oSy = new stzKnowledgeGraph("pairs")
-oSy.ConstrainRelation("pairs-with", :Symmetric)
-oSy.KnowRelation("margherita", "pairs-with", "chianti")
-? oSy.RelationHasLaw("pairs-with", "symmetric")
-#--> 1
-? oSy.Query([ "chianti", "pairs-with", "margherita" ])
-#--> 0
+StzKnowledgeGraphQ("pairs") {
+	ConstrainRelation("pairs-with", :Symmetric)
+	KnowRelation("margherita", "pairs-with", "chianti")
+	? RelationHasLaw("pairs-with", "symmetric")
+	#--> 1
+	? Query([ "chianti", "pairs-with", "margherita" ])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -262,12 +267,14 @@ The second relation is refused, `0`, with the library's own sentence, `Can't add
 **A two-step question answers only its first step.** Does `QueryPath` follow its second pattern, and can the predicate of a query be a variable? Run it:
 
 ```haro
-oQ = new stzKnowledgeGraph("coop2")
-oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-from", "flour")
-? @@( oQ.QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
-#--> [ "couscous" ]
-? @@( oQ.Query([ "amina", "?p", "?o" ]) )
-#--> [ ]
+StzKnowledgeGraphQ("coop2") {
+	KnowRelation("amina", "sells", "couscous")
+	KnowRelation("couscous", "made-from", "flour")
+	? @@( QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
+	#--> [ "couscous" ]
+	? @@( Query([ "amina", "?p", "?o" ]) )
+	#--> [ ]
+}
 ```
 
 > run: kept

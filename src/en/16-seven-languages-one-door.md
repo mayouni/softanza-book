@@ -74,19 +74,21 @@ What comes home from a Python call? The result arrives as the host's own structu
 ```haro
 cPython = "python"
 oPy = new stzExterCode(:python)
-oPy.SetRuntimePath(cPython)
-oPy.SetCode("
+oPy {
+	SetRuntimePath(cPython)
+	SetCode("
 res = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }
-")
-oPy.Execute()
-? @@( oPy.Result() )
-#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
-? oPy.CallTrace()[1][:language]
-#--> python
-? oPy.CallTrace()[1][:mode]
-#--> interpreted
-? isNumber(oPy.LastCallDuration())
-#--> 1
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
+	? CallTrace()[1][:language]
+	#--> python
+	? CallTrace()[1][:mode]
+	#--> interpreted
+	? isNumber(LastCallDuration())
+	#--> 1
+}
 ```
 
 The Python float `3.0` came back as `3`, in `[ "mean", 3 ]`. The trace also holds a duration. The block prints only `1`, the answer to `isNumber`, because a duration is a clock, and a clock cannot be promised.
@@ -96,23 +98,27 @@ That is the rationale of the whole plane, in one picture. Each layer of a soluti
 ```haro
 aStudents = [ [ "Alice", [ 85, 90, 78 ] ], [ "Bob", [ 72, 65, 70 ] ] ]
 oPy2 = new stzExterCode(:python)
-oPy2.SetRuntimePath(cPython)
-oPy2.SetCode("
+oPy2 {
+	SetRuntimePath(cPython)
+	SetCode("
 students = " + @@(aStudents) + "
 res = [ [ s[0], round(sum(s[1]) / len(s[1]), 2) ] for s in students ]
-")
-oPy2.Execute()
-aAverages = oPy2.Result()
+	")
+	Execute()
+	aAverages = Result()
+}
 ? @@(aAverages)
 #--> [ [ "Alice", 84.33 ], [ "Bob", 69 ] ]
 oNode = new stzExterCode(:nodejs)
-oNode.SetCode("
+oNode {
+	SetCode("
 const avgs = " + @@(aAverages) + ";
 const res = avgs.map(a => [ a[0], a[1] >= 80 ? 'Excellent' : 'Needs work' ]);
-")
-oNode.Execute()
-? @@( oNode.Result() )
-#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+}
 ```
 
 The data goes in by composing the code string with the host's own list printer, since the article's marshalling functions are absent (section 7).
@@ -131,20 +137,22 @@ cPy = "class Animal:" + nl +
       "        return 'woof'"
 cJs = "class Animal { speak() { return '...' } }" + nl +
       "class Dog extends Animal { speak() { return 'woof' } }"
-oPG = StzPyCodeGraphFromSourceTS(cPy)
-oJG = StzJsCodeGraphFromSourceTS(cJs)
-? oPG.Language()
-#--> python
-? @@( oPG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oPG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
-? oJG.Language()
-#--> javascript
-? @@( oJG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oJG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
+StzPyCodeGraphFromSourceTS(cPy) {
+	? Language()
+	#--> python
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
+StzJsCodeGraphFromSourceTS(cJs) {
+	? Language()
+	#--> javascript
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
 ```
 
 This is a parser into an index of classes, methods and inheritance, and not a program graph that can print a program. It is a coincidence of the order of work, and not yet a facet. The record has one statement of mine on facets. I made it in session on 8 October 2026, and it says that a link should be made with the future vision of Haro and its facet languages. In that vision the former host language is already there, and Python and JavaScript are planned. The charter of Haro on this machine speaks of one grammar and one text. Its design memo for a second facet, which proposes and rules nothing, recommends printers read by humans before any parser. Its own table lists the collisions: a Python reader expects zero-based indexing and Haro's is one-based. The chapter says "planned" only with that statement named as its source.
@@ -153,15 +161,17 @@ This is a parser into an index of classes, methods and inheritance, and not a pr
 
 ```haro
 oGov = new stzGovernance("shop")
-? oGov.MayExecute("python")
-#--> 0
-? oGov.Why()
-#--> refused: 'python' has NO declared trust posture
-oGov.DeclarePosture("python", :External)
-? oGov.MayExecute("python")
-#--> 1
-? oGov.Why()
-#--> allowed: posture 'external' declared
+oGov {
+	? MayExecute("python")
+	#--> 0
+	? Why()
+	#--> refused: 'python' has NO declared trust posture
+	DeclarePosture("python", :External)
+	? MayExecute("python")
+	#--> 1
+	? Why()
+	#--> allowed: posture 'external' declared
+}
 ```
 
 The refusal says why: `refused: 'python' has NO declared trust posture`. An executor with no declared trust posture never proceeds.
@@ -169,11 +179,12 @@ The refusal says why: `refused: 'python' has NO declared trust posture`. An exec
 And the twin can rehearse a spawn before it runs, flagged as a risk. Chapter 24 owns the twin, and one block here is enough to say what the door does not use:
 
 ```haro
-oTwin = new stzVirtualEnvironment()
-oTwin.Spawn("python analyse.py")
-? oTwin.NumberOfPendingSpawns()
-#--> 1
-oPlan = oTwin.GenerateUpdatePlan()
+StzVirtualEnvironmentQ() {
+	Spawn("python analyse.py")
+	? NumberOfPendingSpawns()
+	#--> 1
+	oPlan = GenerateUpdatePlan()
+}
 ? oPlan.Narration()
 #--> Update plan (1 of 1 operations to commit):
 #-->   * 1. spawn process: python analyse.py
@@ -228,11 +239,13 @@ oGov2 = new stzGovernance("shop")
 ? oGov2.MayExecute("python")
 #--> 0
 oPy3 = new stzExterCode(:python)
-oPy3.SetRuntimePath(cPython)
-oPy3.SetCode("res = 6 * 7")
-oPy3.Execute()
-? oPy3.Result()
-#--> 42
+oPy3 {
+	SetRuntimePath(cPython)
+	SetCode("res = 6 * 7")
+	Execute()
+	? Result()
+	#--> 42
+}
 ```
 
 The governance said no, and the door ran anyway, and returned `42`! Nothing in the door's folder mentions governance or posture. The door calls the system directly, and not the twin.
@@ -256,17 +269,19 @@ The R door is in development: today it raises on every call, because its generat
 
 ```haro
 oStat = new stzExterCode(:R)
-oStat.SetCode("res <- c(1, 2, 3)")
-bRaised = 0
-try
-	oStat.Execute()
-catch
-	bRaised = 1
-done
-? bRaised
-#--> 1
-? oStat.CallTrace()[1][:exitcode]
-#--> 0
+oStat {
+	SetCode("res <- c(1, 2, 3)")
+	bRaised = 0
+	try
+		Execute()
+	catch
+		bRaised = 1
+	done
+	? bRaised
+	#--> 1
+	? CallTrace()[1][:exitcode]
+	#--> 0
+}
 ```
 
 The call raised, and the trace still holds `0`! R's message was in French on this machine, so I do not promise it. This is the limit of the door at this commit, in the voice of chapter 11's open list. The runs above are its evidence. Governing the door is designed and not yet built, so the vision's word "governed" stays a design. The way back is not yet closed, since data returns through a file that the host evaluates. And the R door, in development, raises on every call today.

@@ -58,15 +58,16 @@ It refuses, and says why: `The pattern name you provided does not exist in stzRe
 A pattern can also answer the half-written value, which is what a form wants as the person types:
 
 ```haro
-o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
-? o1.MatchAsYouType("123-45")
-#--> 1
-? o1.MatchAsYouType("abc")
-#--> 0
-? o1.IsPartialMatch("123-45")
-#--> 1
-? o1.IsPartialMatch("123-45-6789")
-#--> 0
+StzRegexQ("^\d{3}-\d{2}-\d{4}$") {
+	? MatchAsYouType("123-45")
+	#--> 1
+	? MatchAsYouType("abc")
+	#--> 0
+	? IsPartialMatch("123-45")
+	#--> 1
+	? IsPartialMatch("123-45-6789")
+	#--> 0
+}
 ```
 
 Now the move that gives the chapter its title. Take a list. Its pattern is written in square brackets, and counts, nesting and negation are written, not looped. `@N` stands for a number, `@S` for a string, `+` for one or more, `@N1-3` for one to three, and `@!` for not. Does `[@N1-3, @S]` accept four numbers before the string? The second call answers:
@@ -160,12 +161,14 @@ Time, in the part of it that runs, written here with the class rather than its s
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
-? oTm.Match(new stzDuration("1 hour 30 minutes"))
-#--> 1
-? oTm.Match(new stzDuration("1 hour 20 minutes"))
-#--> 0
-? oTm.Match(new stzDuration("3 hours"))
-#--> 0
+oTm {
+	? Match(new stzDuration("1 hour 30 minutes"))
+	#--> 1
+	? Match(new stzDuration("1 hour 20 minutes"))
+	#--> 0
+	? Match(new stzDuration("3 hours"))
+	#--> 0
+}
 ```
 
 Only ninety minutes fits: eighty is inside the range and off the step, and three hours is outside.
@@ -174,11 +177,13 @@ A graph: a pattern reads like the path it looks for. The labels match without re
 
 ```haro
 g = new stzGraph("Order")
-g.AddNodeXT(:a, "Placed")
-g.AddNodeXT(:b, "Cooking")
-g.AddNodeXT(:c, "Served")
-g.AddEdgeXT(:a, :b, "starts")
-g.AddEdgeXT(:b, :c, "finishes")
+g {
+	AddNodeXT(:a, "Placed")
+	AddNodeXT(:b, "Cooking")
+	AddNodeXT(:c, "Served")
+	AddEdgeXT(:a, :b, "starts")
+	AddEdgeXT(:b, :c, "finishes")
+}
 ? (new stzGraphex("{@Node(placed) -> @Edge(starts) -> @Node(cooking)}", g)).Match(g)
 #--> 1
 ? (new stzGraphex("{@Node(served) -> @Node(placed)}", g)).Match(g)
@@ -252,9 +257,11 @@ What is built in part: lists, matrices, time and graphs, in that order.
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
-oTl.AddInstant("Meeting", "2025-10-22 09:00:00")
-oTl.AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
-oTl.AddInstant("Lunch", "2025-10-22 12:00:00")
+oTl {
+	AddInstant("Meeting", "2025-10-22 09:00:00")
+	AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
+	AddInstant("Lunch", "2025-10-22 12:00:00")
+}
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
 #--> 0

@@ -36,48 +36,54 @@ Le reste du chapitre exécute cette phrase.
 
 La pratique a changé de nom dans ma vie. Je disais que je programmais. Je dis maintenant de plus en plus que je raffine, et je veux dire par là quelque chose d'exact. Un raffinement est un changement apporté à du code qui a été déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline à travers l'histoire de Softibank, une banque devant la lettre d'un régulateur. Ce chapitre dit ce que la bibliothèque en porte.
 
-Il commence par déclarer où le code peut changer. Un point de raffinement est un bouton nommé, écrit dans le source sous forme de balise, avec son genre, sa valeur et ses bornes :
+Il commence par déclarer où le code peut changer. Un point de raffinement est un bouton nommé, écrit dans le source sous forme de balise, avec son genre, sa valeur et ses bornes, et le code qui le porte est interrogé dans sa scène, la forme du chapitre 5 :
 
 ```haro
 cSrc = 'vat_rate = <R:PARAM name="vat" value="0.20" min="0" max="0.25">' + nl +
        'sort_by  = <R:ALGO name="sort" value="quick" options="quick|merge|heap">'
 o = new stzRefinableCode(cSrc)
-? o.NumberOfPoints()
-#--> 2
-? @@( o.RefinementPoints() )
-#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
-? o.KindOf("vat")
-#--> param
+o {
+	? NumberOfPoints()
+	#--> 2
+	? @@( RefinementPoints() )
+	#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
+	? KindOf("vat")
+	#--> param
+}
 ```
 
 Un changement est alors une proposition. Elle nomme un point et une valeur ; si elle franchit la barrière, elle prend effet et est enregistrée comme un seul pas :
 
 ```haro
-r = o.Refine("vat").To("0.22")
-? r[:admitted]
-#--> 1
-? o.ValueOf("vat")
-#--> 0.22
-? o.NumberOfSteps()
-#--> 1
+o {
+	r = Refine("vat").To("0.22")
+	? r[:admitted]
+	#--> 1
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 L'admission s'imprime en `1` et `0`, non en `TRUE` et `FALSE` : c'est ainsi que ce verbe répond, et j'imprime l'exécution. Et que change une proposition qui ne franchit pas la barrière, et que dit la barrière ? Exécutez-le :
 
 ```haro
-r2 = o.Refine("vat").To("0.99")
-? r2[:admitted]
-#--> 0
-? r2[:why]
-#--> constraint: 0.99 above max 0.25
-? o.ValueOf("vat")
-#--> 0.22
-? o.Refine("sort").To("bubble")[:why]
-#--> constraint: 'bubble' not in options quick|merge|heap
-? o.Refine("ghost").To("1")[:why]
-#--> structural: no refinement point 'ghost'
-? o.NumberOfSteps()
-#--> 1
+o {
+	r2 = Refine("vat").To("0.99")
+	? r2[:admitted]
+	#--> 0
+	? r2[:why]
+	#--> constraint: 0.99 above max 0.25
+	? ValueOf("vat")
+	#--> 0.22
+	? Refine("sort").To("bubble")[:why]
+	#--> constraint: 'bubble' not in options quick|merge|heap
+	? Refine("ghost").To("1")[:why]
+	#--> structural: no refinement point 'ghost'
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la bibliothèque en fait une de ses lois : une proposition rejetée ne finit jamais modifiée. Chaque refus nomme d'abord son étape, `constraint` deux fois et `structural` une fois, comme dans `structural: no refinement point 'ghost'`, pour qu'une personne, ou un agent, puisse corriger la proposition sans lire un diff.
@@ -88,15 +94,17 @@ Trois refus, et la ligne de temps n'a pas grandi d'un pas ! Le commentaire de la
 cPrice = 'price = <R:PARAM name="vat" value="0.20" min="0" max="0.30"> * <R:PARAM name="margin" value="1.1" min="1" max="2">' + nl +
          'floor = <R:PARAM name="floor" value="0.10" min="0" max="0.30">'
 oc = new stzRefinableCode(cPrice)
-aC = oc.Cascade("vat")
-? aC[:lines][1]
-#--> 1
-? @@( aC[:alsoTouches] )
-#--> [ "margin" ]
-? oc.Cascade("floor")[:lines][1]
-#--> 2
-? len(oc.Cascade("floor")[:alsoTouches])
-#--> 0
+oc {
+	aC = Cascade("vat")
+	? aC[:lines][1]
+	#--> 1
+	? @@( aC[:alsoTouches] )
+	#--> [ "margin" ]
+	? Cascade("floor")[:lines][1]
+	#--> 2
+	? len(Cascade("floor")[:alsoTouches])
+	#--> 0
+}
 ```
 
 `vat` se trouve ligne 1 et touche aussi `[ "margin" ]` ; `floor` se trouve ligne 2, seul.
@@ -117,14 +125,16 @@ cCls = 'class Tariff' + nl +
        '	def Rate()' + nl +
        '		return 0.18' + nl
 g0 = new stzRingCodeGraph("")
-g0.ScanSource(cCls, "world.ring")
-g0.BuildGraph()
-? @@( g0.Cascade("Tariff")[:descendants] )
-#--> [ "Invoice", "Quote", "Receipt" ]
-? g0.Cascade("Tariff")[:blastRadius]
-#--> 3
-? @@( g0.ImpactOf("Rate")[:inheritedBy] )
-#--> [ "Invoice", "Receipt" ]
+g0 {
+	ScanSource(cCls, "world.ring")
+	BuildGraph()
+	? @@( Cascade("Tariff")[:descendants] )
+	#--> [ "Invoice", "Quote", "Receipt" ]
+	? Cascade("Tariff")[:blastRadius]
+	#--> 3
+	? @@( ImpactOf("Rate")[:inheritedBy] )
+	#--> [ "Invoice", "Receipt" ]
+}
 ```
 
 Changez le taux du tarif et trois classes sont dans le rayon d'impact. Deux d'entre elles héritent de la méthode, et `ImpactOf` les nomme : `[ "Invoice", "Receipt" ]`. La troisième, `Quote`, la redéfinit, de sorte qu'elle la possède et ne fait pas que l'hériter. C'est la différence que trace `ImpactOf`.
@@ -133,18 +143,20 @@ Comment un changement atteint-il ses dépendants ? Par une règle qui couvre plu
 
 ```haro
 d = new stzRefinableCode(cPrice)
-d.DeclareDerivation("vat-above-floor",
-	func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
-	"vat must not drop below floor")
-? d.Refine("vat").To("0.30")[:admitted]
-#--> 1
-r3 = d.Refine("vat").To("0.05")
-? r3[:admitted]
-#--> 0
-? r3[:why]
-#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
-? d.ValueOf("vat")
-#--> 0.30
+d {
+	DeclareDerivation("vat-above-floor",
+		func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
+		"vat must not drop below floor")
+	? Refine("vat").To("0.30")[:admitted]
+	#--> 1
+	r3 = Refine("vat").To("0.05")
+	? r3[:admitted]
+	#--> 0
+	? r3[:why]
+	#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
+	? ValueOf("vat")
+	#--> 0.30
+}
 ```
 
 La règle a refusé le changement et s'est nommée : `derivation: rule 'vat-above-floor' violated -- vat must not drop below floor`. La valeur est toujours `0.30`.
@@ -152,18 +164,20 @@ La règle a refusé le changement et s'est nommée : `derivation: rule 'vat-abov
 Et qui l'a proposé ? Chaque proposition porte son origine, et un point peut fixer un plancher de confiance qui refuse une origine inférieure, sans refuser une personne. Qu'arrive-t-il à une proposition venue d'un modèle de langage quand le plancher du point exige une origine de confiance ? Exécutez-le :
 
 ```haro
-d.TrustFloor("vat", :trusted)
-r4 = d.Refine("vat").As(:llm).To("0.25")
-? r4[:admitted]
-#--> 0
-? r4[:why]
-#--> trust: posture :llm below the required floor for 'vat'
-? d.ValueOf("vat")
-#--> 0.30
-? d.Refine("vat").As(:trusted).To("0.25")[:admitted]
-#--> 1
-? d.PostureOf(d.NumberOfSteps())
-#--> trusted
+d {
+	TrustFloor("vat", :trusted)
+	r4 = Refine("vat").As(:llm).To("0.25")
+	? r4[:admitted]
+	#--> 0
+	? r4[:why]
+	#--> trust: posture :llm below the required floor for 'vat'
+	? ValueOf("vat")
+	#--> 0.30
+	? Refine("vat").As(:trusted).To("0.25")[:admitted]
+	#--> 1
+	? PostureOf(NumberOfSteps())
+	#--> trusted
+}
 ```
 
 La proposition du modèle a été refusée : `trust: posture :llm below the required floor for 'vat'`. Le point a gardé `0.30` ! La même proposition, venue d'une origine de confiance, a été admise, et le pas enregistre `trusted`.
@@ -172,20 +186,25 @@ Et qui peut tourner quel bouton ? C'est déclaré lui aussi : une permission, et
 
 ```haro
 gv = new stzRefinableCode(cPrice)
-gv.SetGovernedBy(new stzGovernance("release-ops")).SetActor("release-bot")
-gv.SetRiskFor("vat", 3).SetAllowRefine("vat").SetAuthorityLevel(:Delegated)
-r5 = gv.Refine("vat").To("0.22")
-? r5[:admitted]
-#--> 0
-? r5[:why]
-#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
-? gv.ValueOf("vat")
-#--> 0.20
-gv.SetAuthorityLevel(:Autonomous)
-? gv.Refine("vat").To("0.22")[:admitted]
-#--> 1
-? gv.GovernanceQ().NumberOfDecisions()
-#--> 1
+gv {
+	SetGovernedBy(new stzGovernance("release-ops"))
+	SetActor("release-bot")
+	SetRiskFor("vat", 3)
+	SetAllowRefine("vat")
+	SetAuthorityLevel(:Delegated)
+	r5 = Refine("vat").To("0.22")
+	? r5[:admitted]
+	#--> 0
+	? r5[:why]
+	#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
+	? ValueOf("vat")
+	#--> 0.20
+	SetAuthorityLevel(:Autonomous)
+	? Refine("vat").To("0.22")[:admitted]
+	#--> 1
+	? GovernanceQ().NumberOfDecisions()
+	#--> 1
+}
 ```
 
 L'acteur délégué a été refusé, `'release-bot' holds 'delegated' authority (level 2)`, et la valeur est restée `0.20`. La même proposition a été admise une fois l'acteur escaladé ! La décision est enregistrée : `NumberOfDecisions()` a imprimé `1`.
@@ -194,25 +213,27 @@ Enfin, un pas peut-il être repris ? La réversibilité fait partie du modèle d
 
 ```haro
 t = new stzRefinableCode(cPrice)
-t.Refine("vat").To("0.21")
-t.Refine("vat").To("0.22")
-t.Checkpoint("reviewed")
-t.Refine("vat").To("0.28")
-? t.ValueOf("vat")
-#--> 0.28
-t.RevertToCheckpoint("reviewed")
-? t.ValueOf("vat")
-#--> 0.22
-? t.NumberOfSteps()
-#--> 2
-t.RevertTo(0)
-? t.ValueOf("vat")
-#--> 0.20
-? t.CanRevert()
-#--> 0
-t.Redo()
-? t.ValueOf("vat")
-#--> 0.21
+t {
+	Refine("vat").To("0.21")
+	Refine("vat").To("0.22")
+	Checkpoint("reviewed")
+	Refine("vat").To("0.28")
+	? ValueOf("vat")
+	#--> 0.28
+	RevertToCheckpoint("reviewed")
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 2
+	RevertTo(0)
+	? ValueOf("vat")
+	#--> 0.20
+	? CanRevert()
+	#--> 0
+	Redo()
+	? ValueOf("vat")
+	#--> 0.21
+}
 ```
 
 À zéro, `CanRevert()` a imprimé `0`. Un seul `Redo()`, et la valeur est `0.21`, le premier pas de nouveau.

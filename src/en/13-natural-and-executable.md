@@ -69,7 +69,7 @@ catch
 	? cCatchError
 done
 #--> NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.
-? Q("haro").IsAQ(:String).IfSo("majuscule").Content()
+? Q("haro").IsAQ(:String).IfSoQ("majuscule").Content()
 #--> HARO
 try
 	Q("haro").IsAQ(:String).IfSo("uppercse")
@@ -82,9 +82,9 @@ done
 A chain branches on its own truth, and an ordinal is a word:
 
 ```haro
-? Q("haro").IsAQ(:String).IfSo(:Uppercase).Otherwise(:Reverse).Content()
+? Q("haro").IsAQ(:String).IfSoQ(:Uppercase).OtherwiseQ(:Reverse).Content()
 #--> HARO
-? Q("hello").IsAQ(:Number).IfSo(:Reverse).Otherwise(:Uppercase).Content()
+? Q("hello").IsAQ(:Number).IfSoQ(:Reverse).OtherwiseQ(:Uppercase).Content()
 #--> HELLO
 ? Q("hello brave world").TheNth(2, :Words)
 #--> brave
@@ -128,8 +128,13 @@ oT = Naturally("Create a string with 'haro' Is it lowercase ? Does it contain 'r
 #--> TRUE
 ? oT.Understood()
 #--> create a string with haro -> ask: is lowercase -> ask: contains
-? TruthOf("haro").IsA(:Lowercase).AndIsA(:Latin).AndContaining("r").Holds()
-#--> TRUE
+TruthOf("haro") {
+	IsA(:Lowercase)
+	AndIsA(:Latin)
+	AndContaining("r")
+	? Holds()
+	#--> TRUE
+}
 ? Why()
 #--> yes: "haro" is lowercase and is latin and containing "r"
 ? Certainty()

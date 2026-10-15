@@ -128,6 +128,43 @@ Les étapes de la pensée peuvent-elles être relues ? Un objet élevé avec son
 
 L'exécution a imprimé `[ 12500, 13000, 11500, 23, 46 ]`. Cinq valeurs, la valeur de départ comprise, et la chaîne se termine à `46` ! L'article qui a raconté cela le premier promettait quatre valeurs, sans la première, et une valeur finale courte d'une unité, 45. La garde derrière le bloc énonce la règle d'aujourd'hui, sur une chaîne de texte : la valeur initiale, puis le résultat de chaque étape. Le livre prend la réponse de l'exécution, pas celle de l'article.
 
+Les mêmes pas peuvent s'écrire comme une scène, la forme que je tiens pour la base du style : l'objet est nommé une fois, et chaque ligne entre les accolades lui parle.
+
+```haro
+# A number object that keeps its history
+QH(12500) {
+	# Inside the braces, each line speaks to the object
+	Add(500)
+	Retrieve(1500)
+	DivideBy(500)
+	MultiplyBy(2)
+
+	# Its history, as one expressive value
+	? @@( History() )
+	#--> [ 12500, 13000, 11500, 23, 46 ]
+}
+```
+
+La chaîne le dit en une phrase, la scène le dit en pas. Le livre emploie les deux : la phrase quand la pensée est une, la scène quand elle est une procédure. La forme classique nomme l'objet à chaque ligne, et beaucoup de lecteurs pensent ainsi :
+
+```haro
+o1 = new stzNumber(12500)
+KeepHistory()
+
+o1.Add(500)
+o1.Retrieve(1500)
+o1.DivideBy(500)
+o1.MultiplyBy(2)
+
+? @@( o1.History() )
+#--> [ 12500, 13000, 11500, 23, 46 ]
+KeepHistoryOFF()
+```
+
+Trois formes, une réponse. Une quatrième est la phrase presque naturelle, `Naturally("...")`, que le chapitre 13 fait tourner sur du texte ; sur un nombre elle répond `Unsupported object type` à ce commit, et c'est son étape suivante.
+
+Un mot sur `@@()`. Sur l'ancien langage hôte, `?` imprime une liste un élément par ligne ; `@@()` demande sa forme expressive, `[ 12500, 13000, 11500, 23, 46 ]`, celle qu'une personne écrit. J'ai demandé que Haro imprime cette forme par défaut ; alors `@@()` quittera les exemples.
+
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer. Dans cette maison, elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
 Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent d'IA puisse vérifier une classe avant qu'elle n'atterrisse. Les règles sont quatorze, et la section 5 les compte ; cinq d'entre elles lisent le graphe du code, la structure que la bibliothèque construit à partir du texte d'une classe. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :

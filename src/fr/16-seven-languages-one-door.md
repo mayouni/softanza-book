@@ -74,19 +74,21 @@ Que rapporte un appel à Python ? Le résultat revient sous la structure propre 
 ```haro
 cPython = "python"
 oPy = new stzExterCode(:python)
-oPy.SetRuntimePath(cPython)
-oPy.SetCode("
+oPy {
+	SetRuntimePath(cPython)
+	SetCode("
 res = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }
-")
-oPy.Execute()
-? @@( oPy.Result() )
-#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
-? oPy.CallTrace()[1][:language]
-#--> python
-? oPy.CallTrace()[1][:mode]
-#--> interpreted
-? isNumber(oPy.LastCallDuration())
-#--> 1
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
+	? CallTrace()[1][:language]
+	#--> python
+	? CallTrace()[1][:mode]
+	#--> interpreted
+	? isNumber(LastCallDuration())
+	#--> 1
+}
 ```
 
 Le flottant Python `3.0` est revenu sous la forme `3`, dans `[ "mean", 3 ]`. La trace contient aussi une durée. Le bloc imprime seulement `1`, la réponse de `isNumber`, car une durée est une horloge, et une horloge ne se promet pas.
@@ -96,23 +98,27 @@ Voilà la raison d'être de tout le volet, en une image. Chaque couche d'une sol
 ```haro
 aStudents = [ [ "Alice", [ 85, 90, 78 ] ], [ "Bob", [ 72, 65, 70 ] ] ]
 oPy2 = new stzExterCode(:python)
-oPy2.SetRuntimePath(cPython)
-oPy2.SetCode("
+oPy2 {
+	SetRuntimePath(cPython)
+	SetCode("
 students = " + @@(aStudents) + "
 res = [ [ s[0], round(sum(s[1]) / len(s[1]), 2) ] for s in students ]
-")
-oPy2.Execute()
-aAverages = oPy2.Result()
+	")
+	Execute()
+	aAverages = Result()
+}
 ? @@(aAverages)
 #--> [ [ "Alice", 84.33 ], [ "Bob", 69 ] ]
 oNode = new stzExterCode(:nodejs)
-oNode.SetCode("
+oNode {
+	SetCode("
 const avgs = " + @@(aAverages) + ";
 const res = avgs.map(a => [ a[0], a[1] >= 80 ? 'Excellent' : 'Needs work' ]);
-")
-oNode.Execute()
-? @@( oNode.Result() )
-#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+}
 ```
 
 Les données entrent en composant la chaîne de code avec l'afficheur de listes propre à l'hôte, puisque les fonctions de conversion de l'article sont absentes (section 7).
@@ -131,20 +137,22 @@ cPy = "class Animal:" + nl +
       "        return 'woof'"
 cJs = "class Animal { speak() { return '...' } }" + nl +
       "class Dog extends Animal { speak() { return 'woof' } }"
-oPG = StzPyCodeGraphFromSourceTS(cPy)
-oJG = StzJsCodeGraphFromSourceTS(cJs)
-? oPG.Language()
-#--> python
-? @@( oPG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oPG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
-? oJG.Language()
-#--> javascript
-? @@( oJG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oJG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
+StzPyCodeGraphFromSourceTS(cPy) {
+	? Language()
+	#--> python
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
+StzJsCodeGraphFromSourceTS(cJs) {
+	? Language()
+	#--> javascript
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
 ```
 
 C'est un analyseur qui produit un index de classes, de méthodes et d'héritage, et non un graphe de programme capable d'imprimer un programme. C'est une coïncidence de l'ordre du travail, et pas encore une facette. Le dossier tient une seule déclaration de moi sur les facettes. Je l'ai faite en session le 8 octobre 2026, et elle dit qu'un lien doit être fait avec la future vision de Haro et de ses langages à facettes. Dans cette vision, l'ancien langage hôte est déjà là, et Python et JavaScript sont prévus. La charte de Haro sur cette machine parle d'une grammaire et d'un texte. Sa note de conception pour une seconde facette, qui propose et ne tranche rien, recommande des afficheurs lus par des humains avant tout analyseur. Sa propre table énumère les collisions : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le chapitre dit « prévues » seulement avec cette déclaration nommée comme source.
@@ -153,15 +161,17 @@ C'est un analyseur qui produit un index de classes, de méthodes et d'héritage,
 
 ```haro
 oGov = new stzGovernance("shop")
-? oGov.MayExecute("python")
-#--> 0
-? oGov.Why()
-#--> refused: 'python' has NO declared trust posture
-oGov.DeclarePosture("python", :External)
-? oGov.MayExecute("python")
-#--> 1
-? oGov.Why()
-#--> allowed: posture 'external' declared
+oGov {
+	? MayExecute("python")
+	#--> 0
+	? Why()
+	#--> refused: 'python' has NO declared trust posture
+	DeclarePosture("python", :External)
+	? MayExecute("python")
+	#--> 1
+	? Why()
+	#--> allowed: posture 'external' declared
+}
 ```
 
 Le refus dit pourquoi : `refused: 'python' has NO declared trust posture`. Un exécuteur sans posture de confiance déclarée ne procède jamais.
@@ -169,11 +179,12 @@ Le refus dit pourquoi : `refused: 'python' has NO declared trust posture`. Un ex
 Et le jumeau peut répéter un lancement avant qu'il s'exécute, signalé comme un risque. Le chapitre 24 traite du jumeau, et un bloc ici suffit pour dire ce que la porte n'utilise pas :
 
 ```haro
-oTwin = new stzVirtualEnvironment()
-oTwin.Spawn("python analyse.py")
-? oTwin.NumberOfPendingSpawns()
-#--> 1
-oPlan = oTwin.GenerateUpdatePlan()
+StzVirtualEnvironmentQ() {
+	Spawn("python analyse.py")
+	? NumberOfPendingSpawns()
+	#--> 1
+	oPlan = GenerateUpdatePlan()
+}
 ? oPlan.Narration()
 #--> Update plan (1 of 1 operations to commit):
 #-->   * 1. spawn process: python analyse.py
@@ -228,11 +239,13 @@ oGov2 = new stzGovernance("shop")
 ? oGov2.MayExecute("python")
 #--> 0
 oPy3 = new stzExterCode(:python)
-oPy3.SetRuntimePath(cPython)
-oPy3.SetCode("res = 6 * 7")
-oPy3.Execute()
-? oPy3.Result()
-#--> 42
+oPy3 {
+	SetRuntimePath(cPython)
+	SetCode("res = 6 * 7")
+	Execute()
+	? Result()
+	#--> 42
+}
 ```
 
 La gouvernance a dit non, et la porte s'est exécutée quand même, et a renvoyé `42` ! Rien dans le répertoire de la porte ne mentionne la gouvernance ni la posture. La porte appelle directement le système, et non le jumeau.
@@ -256,17 +269,19 @@ La porte R est en développement : aujourd'hui elle lève une erreur à chaque a
 
 ```haro
 oStat = new stzExterCode(:R)
-oStat.SetCode("res <- c(1, 2, 3)")
-bRaised = 0
-try
-	oStat.Execute()
-catch
-	bRaised = 1
-done
-? bRaised
-#--> 1
-? oStat.CallTrace()[1][:exitcode]
-#--> 0
+oStat {
+	SetCode("res <- c(1, 2, 3)")
+	bRaised = 0
+	try
+		Execute()
+	catch
+		bRaised = 1
+	done
+	? bRaised
+	#--> 1
+	? CallTrace()[1][:exitcode]
+	#--> 0
+}
 ```
 
 L'appel a levé une erreur, et la trace garde pourtant `0` ! Le message de R était en français sur cette machine, je ne le promets donc pas. C'est la limite de la porte à ce commit, dans la voix de la liste ouverte du chapitre 11. Les exécutions ci-dessus en sont la preuve. Gouverner la porte est conçu et pas encore construit, et le mot « gouvernée » de la vision reste donc une conception. Le chemin du retour n'est pas encore fermé, puisque les données reviennent par un fichier que l'hôte évalue. Et la porte R, en développement, lève une erreur à chaque appel aujourd'hui.

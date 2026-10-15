@@ -4,7 +4,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
@@ -127,14 +127,16 @@ Reaxis replaced backpressure with overflow, a word you do not need a diagram to 
 ```haro
 oRs = new stzReactiveSystem()
 oS = oRs.CreateStream("probe")
-oS.SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
-for i = 1 to 4
-	oS.Receive(i)
-next
-? oS.OverflowStats()[:currentBuffer]
-#--> 2
-? oS.OverflowStats()[:droppedCount]
-#--> 2
+oS {
+	SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
+	for i = 1 to 4
+		Receive(i)
+	next
+	? OverflowStats()[:currentBuffer]
+	#--> 2
+	? OverflowStats()[:droppedCount]
+	#--> 2
+}
 ```
 
 > run: kept
@@ -166,28 +168,32 @@ The chapter's third subject is the engines, the small paradigms the library reth
 
 ```haro
 oTl = new stzTimeLine("2024-01-01 00:00:00", "2024-12-31 23:59:59")
-oTl.AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
-oTl.AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
-? len(oTl.Gaps())
-#--> 1
-? oTl.Gaps()[1][:after]
-#--> PHASE1
-? oTl.Gaps()[1][:before]
-#--> PHASE2
-? oTl.HasOverlaps()
-#--> FALSE
-oTl.AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
-? oTl.HasOverlaps()
-#--> TRUE
+oTl {
+	AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
+	AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
+	? len(Gaps())
+	#--> 1
+	? Gaps()[1][:after]
+	#--> PHASE1
+	? Gaps()[1][:before]
+	#--> PHASE2
+	? HasOverlaps()
+	#--> FALSE
+	AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
+	? HasOverlaps()
+	#--> TRUE
+}
 oB = new stzTimeLine("2024-01-01", "2024-12-31")
-oB.AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
-oB.AddPoint("EVENT1", "2024-06-15 08:00:00")
-try
-	oB.AddPoint("EVENT2", "2024-06-15 12:00:00")
-catch
-	? cCatchError
-done
-#--> Point 'EVENT2' falls within a blocked span or blocked point
+oB {
+	AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
+	AddPoint("EVENT1", "2024-06-15 08:00:00")
+	try
+		AddPoint("EVENT2", "2024-06-15 12:00:00")
+	catch
+		? cCatchError
+	done
+	#--> Point 'EVENT2' falls within a blocked span or blocked point
+}
 ```
 
 > run: kept
@@ -197,19 +203,20 @@ The gap is named by what it lies between, `PHASE1` and `PHASE2`. The blocked spa
 And a grid has a cursor that knows where it is: position is column and row, and moving past an edge stays at the edge. Two moves down and three to the right, then three more to the right: where is the cursor?
 
 ```haro
-o = new stzGrid([ 5, 5 ])
-o.MoveDown()
-o.MoveDown()
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 4, 3 ]
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 5, 3 ]
+StzGridQ([ 5, 5 ]) {
+	MoveDown()
+	MoveDown()
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 4, 3 ]
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 5, 3 ]
+}
 ```
 
 > run: kept

@@ -128,6 +128,43 @@ Can the steps of thought be read back? An object lifted with history keeps the r
 
 The run printed `[ 12500, 13000, 11500, 23, 46 ]`. Five values, the starting one included, and the chain ends at `46`! The article that first told this promised four values, without the first, and a final value one unit short, 45. The guard behind the block states today's rule, on a string chain: the initial value, then each step's result. The book takes the run's answer, not the article's.
 
+The same steps can be written as a scene, the form I hold as the basis of the style: the object is named once, and each line inside the braces speaks to it.
+
+```haro
+# A number object that keeps its history
+QH(12500) {
+	# Inside the braces, each line speaks to the object
+	Add(500)
+	Retrieve(1500)
+	DivideBy(500)
+	MultiplyBy(2)
+
+	# Its history, as one expressive value
+	? @@( History() )
+	#--> [ 12500, 13000, 11500, 23, 46 ]
+}
+```
+
+The chain says it in one sentence, and the scene says it as steps. The book uses both: the sentence where the thought is one, the scene where it is a procedure. The classic form names the object on every line, and many readers think in it:
+
+```haro
+o1 = new stzNumber(12500)
+KeepHistory()
+
+o1.Add(500)
+o1.Retrieve(1500)
+o1.DivideBy(500)
+o1.MultiplyBy(2)
+
+? @@( o1.History() )
+#--> [ 12500, 13000, 11500, 23, 46 ]
+KeepHistoryOFF()
+```
+
+Three forms, one answer. A fourth is the near-natural sentence, `Naturally("...")`, which chapter 13 runs on text; on a number it answers `Unsupported object type` at this commit, and that is its next step.
+
+One word on `@@()`. On the former host language, `?` prints a list one item per line; `@@()` asks for the list's expressive form, `[ 12500, 13000, 11500, 23, 46 ]`, the one a person writes. I have asked that Haro print that form by default; then `@@()` leaves the examples.
+
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
 Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are fourteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:

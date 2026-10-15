@@ -129,14 +129,16 @@ Reaxis replaced backpressure with overflow, a word you do not need a diagram to 
 ```haro
 oRs = new stzReactiveSystem()
 oS = oRs.CreateStream("probe")
-oS.SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
-for i = 1 to 4
-	oS.Receive(i)
-next
-? oS.OverflowStats()[:currentBuffer]
-#--> 2
-? oS.OverflowStats()[:droppedCount]
-#--> 2
+oS {
+	SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
+	for i = 1 to 4
+		Receive(i)
+	next
+	? OverflowStats()[:currentBuffer]
+	#--> 2
+	? OverflowStats()[:droppedCount]
+	#--> 2
+}
 ```
 
 It says `currentBuffer` is `2` and `droppedCount` is `2`. The counter that read zero now counts!
@@ -164,28 +166,32 @@ The chapter's third subject is the engines, the small paradigms the library reth
 
 ```haro
 oTl = new stzTimeLine("2024-01-01 00:00:00", "2024-12-31 23:59:59")
-oTl.AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
-oTl.AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
-? len(oTl.Gaps())
-#--> 1
-? oTl.Gaps()[1][:after]
-#--> PHASE1
-? oTl.Gaps()[1][:before]
-#--> PHASE2
-? oTl.HasOverlaps()
-#--> FALSE
-oTl.AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
-? oTl.HasOverlaps()
-#--> TRUE
+oTl {
+	AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
+	AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
+	? len(Gaps())
+	#--> 1
+	? Gaps()[1][:after]
+	#--> PHASE1
+	? Gaps()[1][:before]
+	#--> PHASE2
+	? HasOverlaps()
+	#--> FALSE
+	AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
+	? HasOverlaps()
+	#--> TRUE
+}
 oB = new stzTimeLine("2024-01-01", "2024-12-31")
-oB.AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
-oB.AddPoint("EVENT1", "2024-06-15 08:00:00")
-try
-	oB.AddPoint("EVENT2", "2024-06-15 12:00:00")
-catch
-	? cCatchError
-done
-#--> Point 'EVENT2' falls within a blocked span or blocked point
+oB {
+	AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
+	AddPoint("EVENT1", "2024-06-15 08:00:00")
+	try
+		AddPoint("EVENT2", "2024-06-15 12:00:00")
+	catch
+		? cCatchError
+	done
+	#--> Point 'EVENT2' falls within a blocked span or blocked point
+}
 ```
 
 The gap is named by what it lies between, `PHASE1` and `PHASE2`. The blocked span refused `EVENT2`! The refusal carries its reason: `Point 'EVENT2' falls within a blocked span or blocked point`.
@@ -193,19 +199,20 @@ The gap is named by what it lies between, `PHASE1` and `PHASE2`. The blocked spa
 And a grid has a cursor that knows where it is: position is column and row, and moving past an edge stays at the edge. Two moves down and three to the right, then three more to the right: where is the cursor?
 
 ```haro
-o = new stzGrid([ 5, 5 ])
-o.MoveDown()
-o.MoveDown()
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 4, 3 ]
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 5, 3 ]
+StzGridQ([ 5, 5 ]) {
+	MoveDown()
+	MoveDown()
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 4, 3 ]
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 5, 3 ]
+}
 ```
 
 At `[ 4, 3 ]`, then at `[ 5, 3 ]`. Three more moves to the right gained one column, and the cursor stayed at the edge!

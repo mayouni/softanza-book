@@ -155,19 +155,21 @@ Le projet compte onze itérations et une campagne de vingt-deux tests simulés d
 
 La première démonstration, le 15 août 2026, a été la sienne seule : la liste de vérification du dossier la prévoit pour le propriétaire seul, avec son propre téléphone et une application de messagerie comme ligne d'assistance. Les mesures qu'il a envoyées par une application de messagerie sont celles du 19 août.
 
-L'un de ses besoins est porté par une loi de la bibliothèque : essayer les paiements avant de payer quiconque pour un compte. Que dit le registre d'un faux service de paiement pendant que vous répétez, et que dit-il quand vous passez au réel ? Exécutez-le :
+L'un de ses besoins est porté par une loi de la bibliothèque : essayer les paiements avant de payer quiconque pour un compte. Que dit le registre d'un faux service de paiement pendant que vous répétez, et que dit-il quand vous passez au réel ? Exécutez-le. Le registre est nommé une fois, et chaque ligne entre les accolades lui parle : le chapitre 5 appelle cette forme la scène.
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
-oReg.Bind(:payments, new stzPaymentsSandbox())
-oReg.SetPhase(:emulated)
-? oReg.IsSound()
-#--> 1
-oReg.SetPhase(:production)
-? oReg.IsSound()
-#--> 0
-? oReg.Findings()[1][:message]
-#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+oReg {
+	Bind(:payments, new stzPaymentsSandbox())
+	SetPhase(:emulated)
+	? IsSound()
+	#--> 1
+	SetPhase(:production)
+	? IsSound()
+	#--> 0
+	? Findings()[1][:message]
+	#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+}
 ```
 
 Il répond `1` en phase émulée et `0` en production, et dit pourquoi : `still bound to a SANDBOX in a production phase -- a fake must never ship`. Un faux en production est refusé !
@@ -176,10 +178,12 @@ Il répond `1` en phase émulée et `0` en production, et dit pourquoi : `still 
 
 ```haro
 oOrg = new stzOrgChart("bank")
-oOrg.AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
-oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
-? @@( oOrg.ValidateBCEAOGovernance() )
-#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+oOrg {
+	AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
+	AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
+	? @@( ValidateBCEAOGovernance() )
+	#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+}
 ```
 
 L'organigramme échoue, avec `"issuecount", 3` : trois constats pour un organigramme de deux postes ! Chacun est une règle avec un numéro qu'un auditeur peut lire : `BCEAO-001: No Board of Directors found` est le premier. Le dossier montre la banque comme titulaire d'une licence d'un produit que j'ai construit ; il ne dit pas qui, à la banque, a déclaré quoi que ce soit.

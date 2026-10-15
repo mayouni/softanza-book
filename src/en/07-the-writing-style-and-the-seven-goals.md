@@ -100,12 +100,13 @@ A list can also be carried as a string in its short form, recognised, converted 
 Rule 10: code travels inside an argument as a small string with a placeholder, `@char` for the characters of a string and `@item` for the items of a list. Chapter 6 showed the seat on a list. Here it is on a string, where it finds and removes by a rule and not by a loop:
 
 ```haro
-o1 = new stzString("SOooooFTAaaannnNZA")
-? @@( o1.FindW('{ Q(@char).IsUppercase() }') )
-#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
-o1.RemoveW('{ Q(@char).IsLowercase() }')
-? o1.Content()
-#--> SOFTANZA
+Q("SOooooFTAaaannnNZA") {
+	? @@( FindW('{ Q(@char).IsUppercase() }') )
+	#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
+	RemoveW('{ Q(@char).IsLowercase() }')
+	? Content()
+	#--> SOFTANZA
+}
 ```
 
 The deck of 2022 writes the same call with a named seat, `:Where = '...'`, and that form raises on a string in this commit. I do not show it. The same deck puts an `@` at the end of a parameter's name, `:With@`, to mark that its value is code to be evaluated. That form is retired. A guard's header says so: the eval-based forms are retired. The deck itself marks the form "TODO". Code now travels in the seat as a bounded string that the engine evaluates, or as a function.

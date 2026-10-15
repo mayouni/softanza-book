@@ -64,33 +64,37 @@ positions
         reportsTo: ceo
 '
 oOrg = new stzOrgChart("bank")
-oOrg.ImportStzOrg(cChart)
-? oOrg.NodeCount()
-#--> 4
-? @@( oOrg.ValidateXT(:BCEAO)[:issues] )
-#--> [ "BCEAO-002: Audit reports to non-board position" ]
-? oOrg.IsValidXT(:BCEAO)
-#--> 0
+oOrg {
+	ImportStzOrg(cChart)
+	? NodeCount()
+	#--> 4
+	? @@( ValidateXT(:BCEAO)[:issues] )
+	#--> [ "BCEAO-002: Audit reports to non-board position" ]
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 La règle du régulateur lit l'organigramme et le refuse ! L'audit rend compte au directeur général, et le verdict le dit dans ses propres mots, `BCEAO-002: Audit reports to non-board position`, avec un code de règle qu'un auditeur peut retrouver. Un organigramme est jugé par plus d'un tribunal à la fois, chaque constat porte son propre code, et le rapport de conformité dit conforme ou non. Que dit un second tribunal, la séparation des tâches, qui veut que les opérations ne rendent pas compte à la trésorerie ? J'ajoute la trésorerie et les opérations, les opérations sous la trésorerie, et je lance les deux tribunaux :
 
 ```haro
-oOrg.AddManagementPositionXT("treasury", "Treasury")
-oOrg.SetPositionDepartment("treasury", "treasury")
-oOrg.AddManagementPositionXT("ops", "Operations")
-oOrg.SetPositionDepartment("ops", "operations")
-oOrg.ReportsTo("treasury", "ceo")
-oOrg.ReportsTo("ops", "treasury")
-aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
-? aV[:validatorsFailed]
-#--> 2
-? aV[:results][1][:issues][1]
-#--> BCEAO-002: Audit reports to non-board position
-? aV[:results][2][:issues][1]
-#--> SOD-001: Operations reports through Treasury
-? oOrg.ComplianceReport()[:overallStatus]
-#--> non-compliant
+oOrg {
+	AddManagementPositionXT("treasury", "Treasury")
+	SetPositionDepartment("treasury", "treasury")
+	AddManagementPositionXT("ops", "Operations")
+	SetPositionDepartment("ops", "operations")
+	ReportsTo("treasury", "ceo")
+	ReportsTo("ops", "treasury")
+	aV = ValidateXT([ :BCEAO, :SOD ])
+	? aV[:validatorsFailed]
+	#--> 2
+	? aV[:results][1][:issues][1]
+	#--> BCEAO-002: Audit reports to non-board position
+	? aV[:results][2][:issues][1]
+	#--> SOD-001: Operations reports through Treasury
+	? ComplianceReport()[:overallStatus]
+	#--> non-compliant
+}
 ```
 
 Deux validateurs échouent, chacun avec son propre code, et le rapport de conformité dit `non-compliant`.
@@ -118,10 +122,12 @@ La règle propre d'une banque est aussi une donnée. Prenez la règle selon laqu
 
 ```haro
 oRule = new stzGraphRule("audit-reports-to-board")
-oRule.SetDomainQ("orgchart")
-oRule.WhenQ("department", "equals", "audit")
-oRule.ThenQ("reportsTo", "equals", "board")
-oRule.ThenViolationQ("internal audit must report to the board")
+oRule {
+	SetDomain("orgchart")
+	When("department", "equals", "audit")
+	ThenQ("reportsTo", "equals", "board")
+	ThenViolation("internal audit must report to the board")
+}
 oBasel = new stzBaselIIIRuleBase()
 oBasel.AddRule(oRule)
 oRep = new stzRuleReport("bank")
@@ -137,32 +143,38 @@ Le rapport dit `UNSOUND` et nomme la règle et le lieu : `ERROR audit-reports-to
 Puis le verdict suit l'organigramme. Deux modifications de deux lignes de rattachement, l'audit rend désormais compte au conseil et les opérations au directeur général. Que disent maintenant les tribunaux qui disaient non ? Lancez-le :
 
 ```haro
-oOrg.ReportsTo("audit", "board")
-oOrg.ReportsTo("ops", "ceo")
-? oOrg.IsValidXT([ :BCEAO, :SOD ])
-#--> 1
-? oOrg.ComplianceReport()[:overallStatus]
-#--> compliant
+oOrg {
+	ReportsTo("audit", "board")
+	ReportsTo("ops", "ceo")
+	? IsValidXT([ :BCEAO, :SOD ])
+	#--> 1
+	? ComplianceReport()[:overallStatus]
+	#--> compliant
+}
 oRep = new stzRuleReport("bank")
-oRep.Ingest(oOrg.CheckCompliance(oBasel))
-oRep.Report()
-#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
-? oRep.IsSound()
-#--> 1
+oRep {
+	Ingest(oOrg.CheckCompliance(oBasel))
+	Report()
+	#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
+	? IsSound()
+	#--> 1
+}
 ```
 
 Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Le code propre de la narration ne s'exécute pas au commit épinglé ; les appels ci-dessus, si. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. La règle régionale ne compare le département du supérieur d'un poste que lorsque ce département est déclaré, donc je m'attends à ce que le constat sur l'audit disparaisse quand le département du directeur général est laissé vide. Que dit-il quand il l'est ? Lancez-le :
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
-oOrg2.ImportStzOrg( substr(cChart, "department: executive", "department:") )
-? oOrg2.IsValidXT(:BCEAO)
-#--> 1
-? oOrg2.ValidateXT(:Banking)[:status]
-#--> pass
-oOrg2.SetPositionDepartment("ceo", "executive")
-? oOrg2.IsValidXT(:BCEAO)
-#--> 0
+oOrg2 {
+	ImportStzOrg( substr(cChart, "department: executive", "department:") )
+	? IsValidXT(:BCEAO)
+	#--> 1
+	? ValidateXT(:Banking)[:status]
+	#--> pass
+	SetPositionDepartment("ceo", "executive")
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.

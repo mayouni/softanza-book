@@ -46,24 +46,26 @@ oO = StzOutputSchemaQ([
 	[ :field = "quantity", :type = :number, :must = [ [ ">=", 1 ], [ "<=", 12 ] ] ],
 	[ :field = "note",     :type = :string, :optional = 1 ]
 ])
-? oO.Describe()
-#--> schema 'output' -- 3 field(s)
-#      dish : oneof (margherita | tiramisu) [required]
-#      quantity : number [required], must be at least '1', must be at most '12'
-#      note : string [optional]
-? oO.PromptClause()
-#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
-#
-#    dish: <one of: margherita | tiramisu>
-#    quantity: <number>
-#    note: <text>
-aV = oO.Verify([ :dish = "pizza", :quantity = 40 ])
-? aV[:ok]
-#--> 0
-? aV[:findings][1][:message]
-#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
-? aV[:findings][2][:message]
-#--> field 'quantity' must be at most '12', and the model answered '40'.
+oO {
+	? Describe()
+	#--> schema 'output' -- 3 field(s)
+	#      dish : oneof (margherita | tiramisu) [required]
+	#      quantity : number [required], must be at least '1', must be at most '12'
+	#      note : string [optional]
+	? PromptClause()
+	#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
+	#
+	#    dish: <one of: margherita | tiramisu>
+	#    quantity: <number>
+	#    note: <text>
+	aV = Verify([ :dish = "pizza", :quantity = 40 ])
+	? aV[:ok]
+	#--> 0
+	? aV[:findings][1][:message]
+	#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
+	? aV[:findings][2][:message]
+	#--> field 'quantity' must be at most '12', and the model answered '40'.
+}
 ```
 
 Le tribunal répond dans les mots de la déclaration : `field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.` Maintenant la même déclaration produit une grammaire. Le tribunal et la grammaire naissent d'un seul texte, et ils s'accordent sur la forme. Ils se séparent sur une valeur. Quarante portions ont la bonne forme : lequel des deux les laisse passer, et la bibliothèque dit-elle ce que la grammaire a laissé tomber ? Exécutez-le :
@@ -127,20 +129,21 @@ Ce que la machine ne tiendra pas, elle le refuse en le nommant. Un langage ferm�
 #--> GBNF-M4
 ? StzGrammarRefusal(cG) = ""
 #--> 1
-oNest = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "title",  :type = :string ],
 	[ :field = "author", :type = :structure, :fields = [ [ :field = "name", :type = :string ] ] ]
-])
-? oNest.IsExpressibleAsGrammar()
-#--> 0
-try
-	oNest.ToGBNF()
-catch
-	? len(StzFind("GBNF-F5", cCatchError)) > 0
-done
-#--> 1
-? oNest.ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
-#--> 1
+]) {
+	? IsExpressibleAsGrammar()
+	#--> 0
+	try
+		ToGBNF()
+	catch
+		? len(StzFind("GBNF-F5", cCatchError)) > 0
+	done
+	#--> 1
+	? ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
+	#--> 1
+}
 ```
 
 Le texte du refus de la structure imbriquée porte lui aussi l'ancien nom du tribunal, donc je n'imprime que les codes. La dernière ligne est l'enjeu : le tribunal lit ce que la grammaire refuse d'écrire.
@@ -161,13 +164,14 @@ La faute de frappe a été refusée sur-le-champ, et le message liste les clés 
 Et une fonction hôte n'est pas un mot du langage fermé des conditions. Il y a deux façons de dire une condition, le langage fermé et la porte d'une fonction. Une racine carrée est un mot du langage d'expressions du moteur, et un sinus n'en est pas un. Que répond la forme textuelle au sinus, et que répond la forme fonction, qui exécute du code hôte ?
 
 ```haro
-o = new stzList([ 4, 7, 10, 3, 8 ])
-? @@( o.FindW('{ sqrt(@item) < 3 }') )
-#--> [ 1, 2, 4, 5 ]
-? @@( o.FindW('{ sin(@item) < 2 }') )
-#--> [ ]
-? @@( o.FindWF( func x { return sin(x) < 2 } ) )
-#--> [ 1, 2, 3, 4, 5 ]
+StzListQ([ 4, 7, 10, 3, 8 ]) {
+	? @@( FindW('{ sqrt(@item) < 3 }') )
+	#--> [ 1, 2, 4, 5 ]
+	? @@( FindW('{ sin(@item) < 2 }') )
+	#--> [ ]
+	? @@( FindWF( func x { return sin(x) < 2 } ) )
+	#--> [ 1, 2, 3, 4, 5 ]
+}
 ```
 
 Ce que j'ai vu, et que la narration ne dit pas : le refus est silencieux et entier. La forme textuelle a imprimé `[ ]` et la forme fonction a imprimé `[ 1, 2, 3, 4, 5 ]` : rien de l'une, tout de l'autre. Une condition dont la branche gauche est vraie et dont la droite porte un sinus a imprimé `[ ]`. Une condition qui appelle une fonction de moi ne l'a jamais appelée. Une erreur de syntaxe a aussi imprimé `[ ]`. Le langage est fermé, et il refuse sans un mot. La couche naturelle du chapitre 11 dit pourquoi elle refuse, et celle-ci ne le dit pas.

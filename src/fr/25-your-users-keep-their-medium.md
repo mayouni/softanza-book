@@ -60,10 +60,12 @@ aAr = QuestionAfter("كسكس", "بريك")
 ? StzSmsSegments(ToText(aAr))[:segments]
 #--> 2
 oBill = new stzSmsSandbox()
-oBill.Send("+22790112233", ToText(aEn))
-oBill.Send("+22790112233", ToText(aAr))
-? oBill.TotalSegments()
-#--> 3
+oBill {
+	Send("+22790112233", ToText(aEn))
+	Send("+22790112233", ToText(aAr))
+	? TotalSegments()
+	#--> 3
+}
 
 func ToText(aQ)
 	cOut = "Which " + aQ[:relation] + " for " + aQ[:subject] + "? (" + aQ[:why] + ")"
@@ -82,12 +84,16 @@ func ReadReply(cText)
 
 func QuestionAfter(cA, cB)
 	oW = new stzKnowledgeGraph("stall")
-	oW.Know("order1", "order").Know("order2", "order").Know("order3", "order")
-	oW.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
-	oW.AskIn("c")
-	oW.ReplyIn("c", cA)
-	oW.AskIn("c")
-	oW.ReplyIn("c", cB)
+	oW {
+		Know("order1", "order")
+		Know("order2", "order")
+		Know("order3", "order")
+		AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+		AskIn("c")
+		ReplyIn("c", cA)
+		AskIn("c")
+		ReplyIn("c", cB)
+	}
 	return oW.AskInXT("c")
 ```
 
@@ -97,7 +103,9 @@ Maintenant toute la conversation, répétée sur le bac à sable SMS avant qu'au
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
-oKB.Know("order1", "order").Know("order2", "order").Know("order3", "order")
+oKB.Know("order1", "order")
+oKB.Know("order2", "order")
+oKB.Know("order3", "order")
 oKB.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
 oSms = new stzSmsSandbox()
 for cIn in [ "couscous", "brik", "7", "2" ]
@@ -135,17 +143,19 @@ Un plat nommé 2 ! Dans le bloc d'avant, mon `ReadReply` a transformé le texte 
 
 ```haro
 oPh = new stzSmsSandbox()
-? oPh.Send("0612345678", "ready")[:status]
-#--> rejected
-oPh.FailNextQ()
-? oPh.Send("+22790112233", "ready")[:status]
-#--> refused
-? oPh.NumberOfMessages()
-#--> 0
-? oPh.Send("+22790112233", "ready")[:status]
-#--> sent
-? oPh.NumberOfMessages()
-#--> 1
+oPh {
+	? Send("0612345678", "ready")[:status]
+	#--> rejected
+	FailNextQ()
+	? Send("+22790112233", "ready")[:status]
+	#--> refused
+	? NumberOfMessages()
+	#--> 0
+	? Send("+22790112233", "ready")[:status]
+	#--> sent
+	? NumberOfMessages()
+	#--> 1
+}
 ```
 
 `rejected` pour le numéro, `refused` pour la panne, et rien de compté. La reprise est `sent`, et le compte est de un.
@@ -154,15 +164,17 @@ oPh.FailNextQ()
 
 ```haro
 oSig = new stzRequestSigner("inbound")
-oSig.AddKey("provider", "a-shared-secret")
-cBody = '{"from":"+22790112233","text":"2"}'
-cSig = oSig.SignBody("provider", cBody)
-? oSig.VerifyWebhook(cBody, cSig, 1000, 5000)
-#--> provider
-? "[" + oSig.VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
-#--> []
-? oSig.Why()
-#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+oSig {
+	AddKey("provider", "a-shared-secret")
+	cBody = '{"from":"+22790112233","text":"2"}'
+	cSig = SignBody("provider", cBody)
+	? VerifyWebhook(cBody, cSig, 1000, 5000)
+	#--> provider
+	? "[" + VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
+	#--> []
+	? Why()
+	#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+}
 ```
 
 Le premier corps a donné `provider`. Le corps modifié a donné `[]`, et la raison est `signature mismatch (tampered body, or a secret this receiver does not hold)`. Un caractère a changé, et aucun fournisseur n'a été nommé ! Un corps rejoué à l'intérieur de la fenêtre a donné "replay detected" dans ma sonde.
@@ -185,15 +197,17 @@ oE = new stzEarcons()
 oV = StzVoiceQ()
 oV.UseLanguage("fr-FR")
 oL = new stzListener()
-oL.AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
-oL.HearSound( oV.ToSoundOf("disque plein") )
-? oL.MeaningHeard()
-#--> danger
-oL.HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
-? oL.WasNoMatch()
-#--> 1
-? oL.AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
-#--> 0
+oL {
+	AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
+	HearSound( oV.ToSoundOf("disque plein") )
+	? MeaningHeard()
+	#--> danger
+	HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
+	? WasNoMatch()
+	#--> 1
+	? AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
+	#--> 0
+}
 ```
 
 La phrase apprise a donné `danger`, la phrase non apprise n'a donné aucune correspondance (`1`), et `Catastrophe` a été refusée (`0`). La raison du refus dit que `catastrophe` n'est pas l'une des cinq valeurs sémantiques. Je n'imprime pas la confiance du module de reconnaissance, qui varie selon la machine.
@@ -202,18 +216,20 @@ La phrase apprise a donné `danger`, la phrase non apprise n'a donné aucune cor
 
 ```haro
 oApp = new stzApp("stall")
-oApp.AddThingQ(:Dish) { Has([ :name, :price ]) }
-oApp.AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
-oApp.AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
-oApp.AddReaches([ :web, :whatsapp ])
-oApp.Explain()
-#--> WORLD stall   lives in: memory (not persisted)
-#      BEING
-#        dish (name, price)
-#      MET FROM WITHOUT
-#        screen menu: discover dish shows name, price
-#        screen basket: select dish
-#        reaches web, whatsapp
+oApp {
+	AddThingQ(:Dish) { Has([ :name, :price ]) }
+	AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
+	AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
+	AddReaches([ :web, :whatsapp ])
+	Explain()
+	#--> WORLD stall   lives in: memory (not persisted)
+	#      BEING
+	#        dish (name, price)
+	#      MET FROM WITHOUT
+	#        screen menu: discover dish shows name, price
+	#        screen basket: select dish
+	#        reaches web, whatsapp
+}
 ```
 
 `Acts(...)` est stocké et non narré : la ligne du panier dit `select dish`, et rien de `:Confirm`. Et la scène en exécution : que dit la plateforme quand on lui demande de générer la surface que le monde a déclarée ? Ce bloc crée un répertoire vide dans le répertoire de travail :
@@ -235,13 +251,15 @@ done
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
-? oSay.ParseOutput('{"reply": "Your order is ready."}')[:ok]
-#--> 1
-aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
-? aNo[:ok]
-#--> 0
-? oSay.CiteFindings(aNo[:findings])
-#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+oSay {
+	? ParseOutput('{"reply": "Your order is ready."}')[:ok]
+	#--> 1
+	aNo = ParseOutput('{"reply": "Your order is free, tonight only."}')
+	? aNo[:ok]
+	#--> 0
+	? CiteFindings(aNo[:findings])
+	#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+}
 ```
 
 La phrase approuvée est passée (`1`), la phrase inventée a été refusée (`0`), et la raison du tribunal commence par `[oneof @ reply] field 'reply' is a closed enumeration`.
@@ -304,11 +322,12 @@ Mon étude du dossier contient deux erreurs que les exécutions de ce chapitre c
 
 ```haro
 oDb = new stzDatabase(":memory:")
-oCom = StzPlatformQ("neighbourhood")
-oCom.OpenCommonsOn(oDb)
-oCom.PostMessage("customer", "kitchen", "one brik, no egg")
-? @@(oCom.Inbox("kitchen"))
-#--> [ [ "customer", "one brik, no egg" ] ]
+StzPlatformQ("neighbourhood") {
+	OpenCommonsOn(oDb)
+	PostMessage("customer", "kitchen", "one brik, no egg")
+	? @@(Inbox("kitchen"))
+	#--> [ [ "customer", "one brik, no egg" ] ]
+}
 ```
 
 C'est un expéditeur, un destinataire, un corps et une heure dans une table SQL. Il n'a ni médium, ni statut, ni parties. C'est le message que mon étude a trouvé absent, dans sa plus petite forme.

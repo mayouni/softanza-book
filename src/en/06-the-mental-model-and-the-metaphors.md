@@ -33,16 +33,17 @@ The field also has a vocabulary of metaphors for programming, but it keeps them 
 The mental model is seven steps, and they are the order in which a person asks. Define the problem in natural terms and take its keywords. Select the object that holds the data. Ask whether it contains what you care about. Ask how many. Ask where. Act on those positions, or call the verb that does it. And the seventh: celebrate, and repeat. In chapter 5 you ran those steps on a list with empty strings. They do not belong to the list. Do they hold on a string? Here they are, in the same order:
 
 ```haro
-o1 = new stzString("You and you")
-? o1.ContainsCS("YOU", FALSE)
-#--> TRUE
-? o1.NumberOfOccurrenceCS("YOU", FALSE)
-#--> 2
-? o1.FindNthCS(2, "YOU", FALSE)
-#--> 9
-o1.ReplaceSection(9, 11, :With = "Me")
-? o1.Content()
-#--> You and Me
+Q("You and you") {
+	? ContainsCS("YOU", FALSE)
+	#--> TRUE
+	? NumberOfOccurrenceCS("YOU", FALSE)
+	#--> 2
+	? FindNthCS(2, "YOU", FALSE)
+	#--> 9
+	ReplaceSection(9, 11, :With = "Me")
+	? Content()
+	#--> You and Me
+}
 ```
 
 Contain prints `TRUE`, count prints `2`, find prints `9`, and act leaves `You and Me`, with the same suffix that says whether case matters. The three questions you ask of a string are the three you asked of a list.
@@ -52,17 +53,18 @@ When the steps repeat, the loop appears, and this is where the library gives you
 **The Walker moves along a route.** A walker is a map of its whole journey, built when it is created. It holds the positions it will visit, the positions it will skip, where it stands and what remains. What does it know before it takes a step? Ask it:
 
 ```haro
-oWalker = Wk(1, 10, 2)
-? @@( oWalker.Walkables() )
-#--> [ 1, 3, 5, 7, 9 ]
-? @@( oWalker.Unwalkables() )
-#--> [ 2, 4, 6, 8, 10 ]
-? @@( oWalker.Walk() )
-#--> [ 1, 3 ]
-? oWalker.CurrentPosition()
-#--> 3
-? @@( oWalker.RemainingWalkables() )
-#--> [ 5, 7, 9 ]
+Wk(1, 10, 2) {
+	? @@( Walkables() )
+	#--> [ 1, 3, 5, 7, 9 ]
+	? @@( Unwalkables() )
+	#--> [ 2, 4, 6, 8, 10 ]
+	? @@( Walk() )
+	#--> [ 1, 3 ]
+	? CurrentPosition()
+	#--> 3
+	? @@( RemainingWalkables() )
+	#--> [ 5, 7, 9 ]
+}
 ```
 
 `Walk()` is one step, and it prints the path of the move, from where it stood to where it landed: `[ 1, 3 ]`. A loop does not hold its route as a value you can ask. A walker does, before it moves. What does it do at the edge of the road? Beyond the end, when the walk is underway, it stops in silence. Before the start, it refuses:
@@ -87,13 +89,14 @@ Ask for ten steps from a walk that has four and you get the four: `[ 1, 4, 7, 10
 **The Checker asks yes or no.** All of them, any of them, or where, with the condition written as a string, the W condition, W for where:
 
 ```haro
-o1 = new stzList([ "A", 5, "B", "C" ])
-? o1.CheckW('{ isString(@item) and IsUppercase(@item) }')
-#--> FALSE
-? o1.ContainsW('{ isNumber(@item) }')
-#--> TRUE
-? @@( o1.FindW('{ isNumber(@item) }') )
-#--> [ 2 ]
+Q([ "A", 5, "B", "C" ]) {
+	? CheckW('{ isString(@item) and IsUppercase(@item) }')
+	#--> FALSE
+	? ContainsW('{ isNumber(@item) }')
+	#--> TRUE
+	? @@( FindW('{ isNumber(@item) }') )
+	#--> [ 2 ]
+}
 ```
 
 One item fails the test, so `CheckW` prints `FALSE`; a number is in the list, so `ContainsW` prints `TRUE`; and `FindW` says where, `[ 2 ]`.
@@ -102,20 +105,23 @@ One item fails the test, so `CheckW` prints `FALSE`; a number is in the list, so
 
 ```haro
 o1 = new stzYielder([ 1, -2, 3, -4, 5 ])
-? @@( o1.Filter(:IsPositive) )
-#--> [ 1, 3, 5 ]
-? @@( o1.Map(:Abs) )
-#--> [ 1, 2, 3, 4, 5 ]
-? o1.Reduce(:Sum)
-#--> 3
-o2 = new stzList([ 1, "haro", 3, "python", 5, "ruby" ])
-? @@( o2.YieldW('isString(@item)', 'upper(@item)') )
-#--> [ "HARO", "PYTHON", "RUBY" ]
-? @@( o2.Content() )
-#--> [ 1, "haro", 3, "python", 5, "ruby" ]
-o2.PerformW('isString(@item)', 'upper(@item)')
-? @@( o2.Content() )
-#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+o1 {
+	? @@( Filter(:IsPositive) )
+	#--> [ 1, 3, 5 ]
+	? @@( Map(:Abs) )
+	#--> [ 1, 2, 3, 4, 5 ]
+	? Reduce(:Sum)
+	#--> 3
+}
+Q([ 1, "haro", 3, "python", 5, "ruby" ]) {
+	? @@( YieldW('isString(@item)', 'upper(@item)') )
+	#--> [ "HARO", "PYTHON", "RUBY" ]
+	? @@( Content() )
+	#--> [ 1, "haro", 3, "python", 5, "ruby" ]
+	PerformW('isString(@item)', 'upper(@item)')
+	? @@( Content() )
+	#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+}
 ```
 
 Look at the two `Content()` outputs, before and after the `PerformW` call. The yield returned `[ "HARO", "PYTHON", "RUBY" ]`. The list was untouched! The perform changed the list: `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. The verb tells you which, so a design can say "this step only reads" and mean it.
@@ -123,16 +129,17 @@ Look at the two `Content()` outputs, before and after the `PerformW` call. The y
 Now the thing that all four share: a condition travels inside an argument. It is a small string, kept in a variable if you want. It goes in the same place for find, for items and for contains. And it has a twin that takes a real function:
 
 ```haro
-o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 cCond = '{ @item > 5 }'
-? @@( o1.FindW(cCond) )
-#--> [ 2, 4, 6 ]
-? @@( o1.ItemsW(cCond) )
-#--> [ 8, 12, 9 ]
-? o1.ContainsW(cCond)
-#--> TRUE
-? @@( o1.FindWF( func x { return x > 5 } ) )
-#--> [ 2, 4, 6 ]
+Q([ 3, 8, 5, 12, 1, 9 ]) {
+	? @@( FindW(cCond) )
+	#--> [ 2, 4, 6 ]
+	? @@( ItemsW(cCond) )
+	#--> [ 8, 12, 9 ]
+	? ContainsW(cCond)
+	#--> TRUE
+	? @@( FindWF( func x { return x > 5 } ) )
+	#--> [ 2, 4, 6 ]
+}
 ```
 
 The two agree: `FindW` with the string and `FindWF` with the function both print `[ 2, 4, 6 ]`. `ItemsW` gives the items themselves, `[ 8, 12, 9 ]`.

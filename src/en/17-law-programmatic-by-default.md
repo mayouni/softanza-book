@@ -43,18 +43,22 @@ Here is a domain language model with no neurons at all, forged from a small know
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").
-    KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("margherita", "contains", "mozzarella")
+oKB {
+	Know("margherita", "dish")
+	KnowRelation("margherita", "contains", "tomato-sauce")
+	KnowRelation("margherita", "contains", "mozzarella")
+}
 oDLM = StzDlmQ(oKB)
-? oDLM.Ask("margherita contains what?")
-#--> Margherita contains tomato-sauce and mozzarella.
-? oDLM.Why()
-#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella
-? oDLM.AskXT("margherita contains what?")[:certainty]
-#--> 1
-? oDLM.Ask("who won the 1998 world cup?")
-#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
+oDLM {
+	? Ask("margherita contains what?")
+	#--> Margherita contains tomato-sauce and mozzarella.
+	? Why()
+	#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella
+	? AskXT("margherita contains what?")[:certainty]
+	#--> 1
+	? Ask("who won the 1998 world cup?")
+	#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
+}
 ```
 
 It answers, says why (`recorded fact(s): 'margherita' contains tomato-sauce, mozzarella`), and states its certainty (`1`). And when it is asked something it does not know, it does not guess. It refuses, and it tells you how small its world is: `I know 1 entities and 1 relations`. One entity, because only `margherita` was declared with `Know`, and one relation, `contains`: the objects of the two facts are not counted as entities. A refusal that names its boundary is worth more than a fluent answer that has none. This is my view.
@@ -62,17 +66,19 @@ It answers, says why (`recorded fact(s): 'margherita' contains tomato-sauce, moz
 Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you. What does it ask, and what happens if you try to conclude before you have answered?
 
 ```haro
-oMenu = new stzKnowledgeGraph("menu")
-oMenu.Know("margherita", "dish").Know("tiramisu", "dish")
-oMenu.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-? oMenu.AskIn("setup")
-#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
-try
-	oMenu.ConcludeIn("setup", "menu")
-catch
-	? cCatchError
-done
-#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
+StzKnowledgeGraphQ("menu") {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	? AskIn("setup")
+	#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
+	try
+		ConcludeIn("setup", "menu")
+	catch
+		? cCatchError
+	done
+	#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
+}
 ```
 
 A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. An AI model, where there is one, comes after all of them, not first.
@@ -80,14 +86,15 @@ A goal was declared: every dish must say what it contains. The gap between the g
 The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
 
 ```haro
-oKG = new stzKnowledgeGraph("kitchen")
-oKG.ConstrainRelation("contains", :Transitive)
-oKG.KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("tomato-sauce", "contains", "tomato")
-? oKG.Prove([ "margherita", "contains", "tomato" ])[:narration]
-#--> proved: margherita contains tomato-sauce contains tomato
-? oKG.Prove([ "margherita", "contains", "luigi" ])[:narration]
-#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
+StzKnowledgeGraphQ("kitchen") {
+	ConstrainRelation("contains", :Transitive)
+	KnowRelation("margherita", "contains", "tomato-sauce").
+	    KnowRelation("tomato-sauce", "contains", "tomato")
+	? Prove([ "margherita", "contains", "tomato" ])[:narration]
+	#--> proved: margherita contains tomato-sauce contains tomato
+	? Prove([ "margherita", "contains", "luigi" ])[:narration]
+	#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
+}
 ```
 
 New knowledge from existing knowledge, with its chain written out! And a "no" that is as certain as the "yes", because it is the result of a search, not of a mood. The page printed it as `not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'`. It is certain about what is recorded and declared, not about the world: it says `not derivable`, not "false". No retrieval, no training. Adding a fact makes the system know more; adding a law makes it reason further.
@@ -96,28 +103,34 @@ Then the AI model. It is welcome, and it is held. Wire a model's output straight
 
 ```haro
 oG = new stzAgentGraph("mailer")
-oG.AddLLMActor("writer")
-oG.AddEffect("send")
-oG.Proposes("writer", "send")
-? oG.IsSound()
-#--> 0
-? len(oG.Violations())
-#--> 3
+oG {
+	AddLLMActor("writer")
+	AddEffect("send")
+	Proposes("writer", "send")
+	? IsSound()
+	#--> 0
+	? len(Violations())
+	#--> 3
+}
 ```
 
-It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(oG.Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? No AI model is loaded in the block that asks: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. Ask one:
+It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? No AI model is loaded in the block that asks: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. Ask one:
 
 ```haro
 oF = new stzLLMFunction("sum")
-oF.SetPrompt("summarize: {input}")
-oF.Budget(2)
-oF.SeedAnswer("hello world", "a greeting")
+oF {
+	SetPrompt("summarize: {input}")
+	Budget(2)
+	SeedAnswer("hello world", "a greeting")
+}
 oLLM = new stzLLMAgent("summarizer")
-oLLM.SetSkillFrom(oF)
-? oLLM.Propose("hello world")
-#--> a greeting
-? oLLM.HoldsEffectful()
-#--> 0
+oLLM {
+	SetSkillFrom(oF)
+	? Propose("hello world")
+	#--> a greeting
+	? HoldsEffectful()
+	#--> 0
+}
 ```
 
 Nothing. A model actor holds no effectful capability at all; it proposes, and that is the whole of its power. `HoldsEffectful()` printed `0`. What the block proves does not depend on the model: whatever it says, it holds nothing that can act.

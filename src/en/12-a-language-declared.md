@@ -46,24 +46,26 @@ oO = StzOutputSchemaQ([
 	[ :field = "quantity", :type = :number, :must = [ [ ">=", 1 ], [ "<=", 12 ] ] ],
 	[ :field = "note",     :type = :string, :optional = 1 ]
 ])
-? oO.Describe()
-#--> schema 'output' -- 3 field(s)
-#      dish : oneof (margherita | tiramisu) [required]
-#      quantity : number [required], must be at least '1', must be at most '12'
-#      note : string [optional]
-? oO.PromptClause()
-#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
-#
-#    dish: <one of: margherita | tiramisu>
-#    quantity: <number>
-#    note: <text>
-aV = oO.Verify([ :dish = "pizza", :quantity = 40 ])
-? aV[:ok]
-#--> 0
-? aV[:findings][1][:message]
-#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
-? aV[:findings][2][:message]
-#--> field 'quantity' must be at most '12', and the model answered '40'.
+oO {
+	? Describe()
+	#--> schema 'output' -- 3 field(s)
+	#      dish : oneof (margherita | tiramisu) [required]
+	#      quantity : number [required], must be at least '1', must be at most '12'
+	#      note : string [optional]
+	? PromptClause()
+	#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
+	#
+	#    dish: <one of: margherita | tiramisu>
+	#    quantity: <number>
+	#    note: <text>
+	aV = Verify([ :dish = "pizza", :quantity = 40 ])
+	? aV[:ok]
+	#--> 0
+	? aV[:findings][1][:message]
+	#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
+	? aV[:findings][2][:message]
+	#--> field 'quantity' must be at most '12', and the model answered '40'.
+}
 ```
 
 The court answers in the declaration's words: `field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.` Now the same declaration produces a grammar. The court and the grammar are born of one text, and they agree on the shape. They part ways on a value. Forty portions has the right shape: which of the two lets it through, and does the library say what the grammar dropped? Run it:
@@ -127,20 +129,21 @@ What the machine will not hold, it refuses by name. A closed language refuses wh
 #--> GBNF-M4
 ? StzGrammarRefusal(cG) = ""
 #--> 1
-oNest = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "title",  :type = :string ],
 	[ :field = "author", :type = :structure, :fields = [ [ :field = "name", :type = :string ] ] ]
-])
-? oNest.IsExpressibleAsGrammar()
-#--> 0
-try
-	oNest.ToGBNF()
-catch
-	? len(StzFind("GBNF-F5", cCatchError)) > 0
-done
-#--> 1
-? oNest.ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
-#--> 1
+]) {
+	? IsExpressibleAsGrammar()
+	#--> 0
+	try
+		ToGBNF()
+	catch
+		? len(StzFind("GBNF-F5", cCatchError)) > 0
+	done
+	#--> 1
+	? ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
+	#--> 1
+}
 ```
 
 The text of the nested-structure refusal carries the court's former name too, so I print only the codes. The last line is the point: the court reads what the grammar refuses to write.
@@ -161,13 +164,14 @@ The typo was refused at once, and the message lists the keys that are allowed!
 And a host function is not a word of the closed language of conditions. There are two ways to say a condition, the closed language and the door of a function. A square root is a word of the engine's expression language, and a sine is not. What does the textual form answer to the sine, and what does the function form, which runs host code?
 
 ```haro
-o = new stzList([ 4, 7, 10, 3, 8 ])
-? @@( o.FindW('{ sqrt(@item) < 3 }') )
-#--> [ 1, 2, 4, 5 ]
-? @@( o.FindW('{ sin(@item) < 2 }') )
-#--> [ ]
-? @@( o.FindWF( func x { return sin(x) < 2 } ) )
-#--> [ 1, 2, 3, 4, 5 ]
+StzListQ([ 4, 7, 10, 3, 8 ]) {
+	? @@( FindW('{ sqrt(@item) < 3 }') )
+	#--> [ 1, 2, 4, 5 ]
+	? @@( FindW('{ sin(@item) < 2 }') )
+	#--> [ ]
+	? @@( FindWF( func x { return sin(x) < 2 } ) )
+	#--> [ 1, 2, 3, 4, 5 ]
+}
 ```
 
 What I saw, and the narration does not say: the refusal is silent and whole. The textual form printed `[ ]` and the function form printed `[ 1, 2, 3, 4, 5 ]`: nothing from the one, everything from the other. A condition with the true left branch and a sine on the right printed `[ ]`. A condition that calls a function of mine never called it. A syntax error also printed `[ ]`. The language is closed, and it refuses without a word. Chapter 11's natural layer says why it refuses, and this one does not.

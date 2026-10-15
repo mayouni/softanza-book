@@ -4,7 +4,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my earlier book, *Refinement-Oriented Programming*: stop trying to govern the intelligence, and govern the change.
 
@@ -26,18 +26,20 @@ The rest of the chapter runs that sentence.
 
 The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. My earlier book, *Refinement-Oriented Programming*, tells the discipline through the story of Softibank, a bank facing a regulator's letter. This chapter tells what the library carries of it.
 
-It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds:
+It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds, and the code that holds it is questioned in its scene, the form of chapter 5:
 
 ```haro
 cSrc = 'vat_rate = <R:PARAM name="vat" value="0.20" min="0" max="0.25">' + nl +
        'sort_by  = <R:ALGO name="sort" value="quick" options="quick|merge|heap">'
 o = new stzRefinableCode(cSrc)
-? o.NumberOfPoints()
-#--> 2
-? @@( o.RefinementPoints() )
-#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
-? o.KindOf("vat")
-#--> param
+o {
+	? NumberOfPoints()
+	#--> 2
+	? @@( RefinementPoints() )
+	#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
+	? KindOf("vat")
+	#--> param
+}
 ```
 
 > run: kept
@@ -45,13 +47,15 @@ o = new stzRefinableCode(cSrc)
 A change is then a proposal. It names a point and a value; if it clears the gate it takes effect and is recorded as one step:
 
 ```haro
-r = o.Refine("vat").To("0.22")
-? r[:admitted]
-#--> 1
-? o.ValueOf("vat")
-#--> 0.22
-? o.NumberOfSteps()
-#--> 1
+o {
+	r = Refine("vat").To("0.22")
+	? r[:admitted]
+	#--> 1
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -59,19 +63,21 @@ r = o.Refine("vat").To("0.22")
 The admission prints as `1` and `0`, not `TRUE` and `FALSE`: that is how this verb answers, and I print the run. And what does a proposal that does not clear the gate change, and what does the gate say? Run it:
 
 ```haro
-r2 = o.Refine("vat").To("0.99")
-? r2[:admitted]
-#--> 0
-? r2[:why]
-#--> constraint: 0.99 above max 0.25
-? o.ValueOf("vat")
-#--> 0.22
-? o.Refine("sort").To("bubble")[:why]
-#--> constraint: 'bubble' not in options quick|merge|heap
-? o.Refine("ghost").To("1")[:why]
-#--> structural: no refinement point 'ghost'
-? o.NumberOfSteps()
-#--> 1
+o {
+	r2 = Refine("vat").To("0.99")
+	? r2[:admitted]
+	#--> 0
+	? r2[:why]
+	#--> constraint: 0.99 above max 0.25
+	? ValueOf("vat")
+	#--> 0.22
+	? Refine("sort").To("bubble")[:why]
+	#--> constraint: 'bubble' not in options quick|merge|heap
+	? Refine("ghost").To("1")[:why]
+	#--> structural: no refinement point 'ghost'
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -84,15 +90,17 @@ Three refusals, and the timeline did not grow by a step! The library's comment c
 cPrice = 'price = <R:PARAM name="vat" value="0.20" min="0" max="0.30"> * <R:PARAM name="margin" value="1.1" min="1" max="2">' + nl +
          'floor = <R:PARAM name="floor" value="0.10" min="0" max="0.30">'
 oc = new stzRefinableCode(cPrice)
-aC = oc.Cascade("vat")
-? aC[:lines][1]
-#--> 1
-? @@( aC[:alsoTouches] )
-#--> [ "margin" ]
-? oc.Cascade("floor")[:lines][1]
-#--> 2
-? len(oc.Cascade("floor")[:alsoTouches])
-#--> 0
+oc {
+	aC = Cascade("vat")
+	? aC[:lines][1]
+	#--> 1
+	? @@( aC[:alsoTouches] )
+	#--> [ "margin" ]
+	? Cascade("floor")[:lines][1]
+	#--> 2
+	? len(Cascade("floor")[:alsoTouches])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -115,14 +123,16 @@ cCls = 'class Tariff' + nl +
        '	def Rate()' + nl +
        '		return 0.18' + nl
 g0 = new stzRingCodeGraph("")
-g0.ScanSource(cCls, "world.ring")
-g0.BuildGraph()
-? @@( g0.Cascade("Tariff")[:descendants] )
-#--> [ "Invoice", "Quote", "Receipt" ]
-? g0.Cascade("Tariff")[:blastRadius]
-#--> 3
-? @@( g0.ImpactOf("Rate")[:inheritedBy] )
-#--> [ "Invoice", "Receipt" ]
+g0 {
+	ScanSource(cCls, "world.ring")
+	BuildGraph()
+	? @@( Cascade("Tariff")[:descendants] )
+	#--> [ "Invoice", "Quote", "Receipt" ]
+	? Cascade("Tariff")[:blastRadius]
+	#--> 3
+	? @@( ImpactOf("Rate")[:inheritedBy] )
+	#--> [ "Invoice", "Receipt" ]
+}
 ```
 
 > run: kept
@@ -133,18 +143,20 @@ How does a change reach its dependents? By a rule that spans several points, jud
 
 ```haro
 d = new stzRefinableCode(cPrice)
-d.DeclareDerivation("vat-above-floor",
-	func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
-	"vat must not drop below floor")
-? d.Refine("vat").To("0.30")[:admitted]
-#--> 1
-r3 = d.Refine("vat").To("0.05")
-? r3[:admitted]
-#--> 0
-? r3[:why]
-#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
-? d.ValueOf("vat")
-#--> 0.30
+d {
+	DeclareDerivation("vat-above-floor",
+		func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
+		"vat must not drop below floor")
+	? Refine("vat").To("0.30")[:admitted]
+	#--> 1
+	r3 = Refine("vat").To("0.05")
+	? r3[:admitted]
+	#--> 0
+	? r3[:why]
+	#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
+	? ValueOf("vat")
+	#--> 0.30
+}
 ```
 
 > run: kept
@@ -154,18 +166,20 @@ The rule refused the change and named itself: `derivation: rule 'vat-above-floor
 And who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. What happens to a proposal from a language model when the floor of the point asks for a trusted origin? Run it:
 
 ```haro
-d.TrustFloor("vat", :trusted)
-r4 = d.Refine("vat").As(:llm).To("0.25")
-? r4[:admitted]
-#--> 0
-? r4[:why]
-#--> trust: posture :llm below the required floor for 'vat'
-? d.ValueOf("vat")
-#--> 0.30
-? d.Refine("vat").As(:trusted).To("0.25")[:admitted]
-#--> 1
-? d.PostureOf(d.NumberOfSteps())
-#--> trusted
+d {
+	TrustFloor("vat", :trusted)
+	r4 = Refine("vat").As(:llm).To("0.25")
+	? r4[:admitted]
+	#--> 0
+	? r4[:why]
+	#--> trust: posture :llm below the required floor for 'vat'
+	? ValueOf("vat")
+	#--> 0.30
+	? Refine("vat").As(:trusted).To("0.25")[:admitted]
+	#--> 1
+	? PostureOf(NumberOfSteps())
+	#--> trusted
+}
 ```
 
 > run: kept
@@ -176,20 +190,25 @@ And who may turn which knob? That is declared, too: a permission, and an authori
 
 ```haro
 gv = new stzRefinableCode(cPrice)
-gv.SetGovernedBy(new stzGovernance("release-ops")).SetActor("release-bot")
-gv.SetRiskFor("vat", 3).SetAllowRefine("vat").SetAuthorityLevel(:Delegated)
-r5 = gv.Refine("vat").To("0.22")
-? r5[:admitted]
-#--> 0
-? r5[:why]
-#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
-? gv.ValueOf("vat")
-#--> 0.20
-gv.SetAuthorityLevel(:Autonomous)
-? gv.Refine("vat").To("0.22")[:admitted]
-#--> 1
-? gv.GovernanceQ().NumberOfDecisions()
-#--> 1
+gv {
+	SetGovernedBy(new stzGovernance("release-ops"))
+	SetActor("release-bot")
+	SetRiskFor("vat", 3)
+	SetAllowRefine("vat")
+	SetAuthorityLevel(:Delegated)
+	r5 = Refine("vat").To("0.22")
+	? r5[:admitted]
+	#--> 0
+	? r5[:why]
+	#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
+	? ValueOf("vat")
+	#--> 0.20
+	SetAuthorityLevel(:Autonomous)
+	? Refine("vat").To("0.22")[:admitted]
+	#--> 1
+	? GovernanceQ().NumberOfDecisions()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -200,25 +219,27 @@ Last, can a step be taken back? Reversibility is part of the data model: every a
 
 ```haro
 t = new stzRefinableCode(cPrice)
-t.Refine("vat").To("0.21")
-t.Refine("vat").To("0.22")
-t.Checkpoint("reviewed")
-t.Refine("vat").To("0.28")
-? t.ValueOf("vat")
-#--> 0.28
-t.RevertToCheckpoint("reviewed")
-? t.ValueOf("vat")
-#--> 0.22
-? t.NumberOfSteps()
-#--> 2
-t.RevertTo(0)
-? t.ValueOf("vat")
-#--> 0.20
-? t.CanRevert()
-#--> 0
-t.Redo()
-? t.ValueOf("vat")
-#--> 0.21
+t {
+	Refine("vat").To("0.21")
+	Refine("vat").To("0.22")
+	Checkpoint("reviewed")
+	Refine("vat").To("0.28")
+	? ValueOf("vat")
+	#--> 0.28
+	RevertToCheckpoint("reviewed")
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 2
+	RevertTo(0)
+	? ValueOf("vat")
+	#--> 0.20
+	? CanRevert()
+	#--> 0
+	Redo()
+	? ValueOf("vat")
+	#--> 0.21
+}
 ```
 
 > run: kept

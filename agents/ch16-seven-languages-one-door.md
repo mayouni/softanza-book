@@ -4,7 +4,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -68,19 +68,21 @@ What comes home from a Python call? The result arrives as the host's own structu
 ```haro
 cPython = "python"
 oPy = new stzExterCode(:python)
-oPy.SetRuntimePath(cPython)
-oPy.SetCode("
+oPy {
+	SetRuntimePath(cPython)
+	SetCode("
 res = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }
-")
-oPy.Execute()
-? @@( oPy.Result() )
-#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
-? oPy.CallTrace()[1][:language]
-#--> python
-? oPy.CallTrace()[1][:mode]
-#--> interpreted
-? isNumber(oPy.LastCallDuration())
-#--> 1
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
+	? CallTrace()[1][:language]
+	#--> python
+	? CallTrace()[1][:mode]
+	#--> interpreted
+	? isNumber(LastCallDuration())
+	#--> 1
+}
 ```
 
 > run: kept (touches the system)
@@ -92,23 +94,27 @@ That is the rationale of the whole plane, in one picture. Each layer of a soluti
 ```haro
 aStudents = [ [ "Alice", [ 85, 90, 78 ] ], [ "Bob", [ 72, 65, 70 ] ] ]
 oPy2 = new stzExterCode(:python)
-oPy2.SetRuntimePath(cPython)
-oPy2.SetCode("
+oPy2 {
+	SetRuntimePath(cPython)
+	SetCode("
 students = " + @@(aStudents) + "
 res = [ [ s[0], round(sum(s[1]) / len(s[1]), 2) ] for s in students ]
-")
-oPy2.Execute()
-aAverages = oPy2.Result()
+	")
+	Execute()
+	aAverages = Result()
+}
 ? @@(aAverages)
 #--> [ [ "Alice", 84.33 ], [ "Bob", 69 ] ]
 oNode = new stzExterCode(:nodejs)
-oNode.SetCode("
+oNode {
+	SetCode("
 const avgs = " + @@(aAverages) + ";
 const res = avgs.map(a => [ a[0], a[1] >= 80 ? 'Excellent' : 'Needs work' ]);
-")
-oNode.Execute()
-? @@( oNode.Result() )
-#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+}
 ```
 
 > run: kept (touches the system)
@@ -129,20 +135,22 @@ cPy = "class Animal:" + nl +
       "        return 'woof'"
 cJs = "class Animal { speak() { return '...' } }" + nl +
       "class Dog extends Animal { speak() { return 'woof' } }"
-oPG = StzPyCodeGraphFromSourceTS(cPy)
-oJG = StzJsCodeGraphFromSourceTS(cJs)
-? oPG.Language()
-#--> python
-? @@( oPG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oPG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
-? oJG.Language()
-#--> javascript
-? @@( oJG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oJG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
+StzPyCodeGraphFromSourceTS(cPy) {
+	? Language()
+	#--> python
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
+StzJsCodeGraphFromSourceTS(cJs) {
+	? Language()
+	#--> javascript
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
 ```
 
 > run: kept
@@ -153,15 +161,17 @@ This is a parser into an index of classes, methods and inheritance, and not a pr
 
 ```haro
 oGov = new stzGovernance("shop")
-? oGov.MayExecute("python")
-#--> 0
-? oGov.Why()
-#--> refused: 'python' has NO declared trust posture
-oGov.DeclarePosture("python", :External)
-? oGov.MayExecute("python")
-#--> 1
-? oGov.Why()
-#--> allowed: posture 'external' declared
+oGov {
+	? MayExecute("python")
+	#--> 0
+	? Why()
+	#--> refused: 'python' has NO declared trust posture
+	DeclarePosture("python", :External)
+	? MayExecute("python")
+	#--> 1
+	? Why()
+	#--> allowed: posture 'external' declared
+}
 ```
 
 > run: kept
@@ -171,11 +181,12 @@ The refusal says why: `refused: 'python' has NO declared trust posture`. An exec
 And the twin can rehearse a spawn before it runs, flagged as a risk. Chapter 24 owns the twin, and one block here is enough to say what the door does not use:
 
 ```haro
-oTwin = new stzVirtualEnvironment()
-oTwin.Spawn("python analyse.py")
-? oTwin.NumberOfPendingSpawns()
-#--> 1
-oPlan = oTwin.GenerateUpdatePlan()
+StzVirtualEnvironmentQ() {
+	Spawn("python analyse.py")
+	? NumberOfPendingSpawns()
+	#--> 1
+	oPlan = GenerateUpdatePlan()
+}
 ? oPlan.Narration()
 #--> Update plan (1 of 1 operations to commit):
 #-->   * 1. spawn process: python analyse.py
@@ -232,11 +243,13 @@ oGov2 = new stzGovernance("shop")
 ? oGov2.MayExecute("python")
 #--> 0
 oPy3 = new stzExterCode(:python)
-oPy3.SetRuntimePath(cPython)
-oPy3.SetCode("res = 6 * 7")
-oPy3.Execute()
-? oPy3.Result()
-#--> 42
+oPy3 {
+	SetRuntimePath(cPython)
+	SetCode("res = 6 * 7")
+	Execute()
+	? Result()
+	#--> 42
+}
 ```
 
 > run: kept (touches the system)
@@ -264,17 +277,19 @@ The R door is in development: today it raises on every call, because its generat
 
 ```haro
 oStat = new stzExterCode(:R)
-oStat.SetCode("res <- c(1, 2, 3)")
-bRaised = 0
-try
-	oStat.Execute()
-catch
-	bRaised = 1
-done
-? bRaised
-#--> 1
-? oStat.CallTrace()[1][:exitcode]
-#--> 0
+oStat {
+	SetCode("res <- c(1, 2, 3)")
+	bRaised = 0
+	try
+		Execute()
+	catch
+		bRaised = 1
+	done
+	? bRaised
+	#--> 1
+	? CallTrace()[1][:exitcode]
+	#--> 0
+}
 ```
 
 > run: kept (touches the system)

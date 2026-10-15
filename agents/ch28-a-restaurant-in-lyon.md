@@ -4,7 +4,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and the six things I refused, among them the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -40,26 +40,30 @@ That is the story. What does the library carry of it?
 
 ```haro
 oRule = new stzGraphRule("the-lock")
-oRule.SetDomainQ("scope")
-oRule.WhenQ("kind", "equals", "world")
-oRule.WhenQ("admitted-by", "missing", "")
-oRule.ThenViolationQ("a world entered the cycle with no written admission")
+oRule {
+	SetDomain("scope")
+	When("kind", "equals", "world")
+	When("admitted-by", "missing", "")
+	ThenViolation("a world entered the cycle with no written admission")
+}
 g = new stzGraph("cycle-1")
-g.AddNode("customer-phone")
-g.SetNodeProperty("customer-phone", "kind", "world")
-g.SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
-g.AddRule(oRule)
-? g.RulesAreSound()
-#--> 1
-g.AddNode("loyalty-club")
-g.SetNodeProperty("loyalty-club", "kind", "world")
-g.RulesReport()
-#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
-#      [scope] 1 finding(s)
-#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
-g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
-? g.RulesAreSound()
-#--> 1
+g {
+	AddNode("customer-phone")
+	SetNodeProperty("customer-phone", "kind", "world")
+	SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
+	AddRule(oRule)
+	? RulesAreSound()
+	#--> 1
+	AddNode("loyalty-club")
+	SetNodeProperty("loyalty-club", "kind", "world")
+	RulesReport()
+	#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
+	#      [scope] 1 finding(s)
+	#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
+	SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
+	? RulesAreSound()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -70,18 +74,20 @@ The idea of a loyalty club arrives, and the cycle is no longer sound! The court 
 
 ```haro
 oPay = new stzPaymentsSandbox()
-oPay.DeclineTokenQ("tok_chargeback")
-? oPay.Authorize(4200, "tok_chargeback")[:status]
-#--> declined
-oPay.FailNextQ()
-? oPay.Authorize(4200, "tok_visa")[:status]
-#--> refused
-aAuth = oPay.Authorize(4200, "tok_visa")
-? aAuth[:status]
-#--> authorized
-oPay.Capture(aAuth[:id])
-? oPay.Capture(aAuth[:id])[:why]
-#--> this authorization was already captured
+oPay {
+	DeclineToken("tok_chargeback")
+	? Authorize(4200, "tok_chargeback")[:status]
+	#--> declined
+	FailNext()
+	? Authorize(4200, "tok_visa")[:status]
+	#--> refused
+	aAuth = Authorize(4200, "tok_visa")
+	? aAuth[:status]
+	#--> authorized
+	Capture(aAuth[:id])
+	? Capture(aAuth[:id])[:why]
+	#--> this authorization was already captured
+}
 ```
 
 > run: kept
@@ -94,20 +100,22 @@ And the production gate refuses to open while a fake is still bound, even for an
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.NeedsServiceInQ("api", [ :payments ])
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor( HumanActor("owner") )
-? oDel.Deploy(:Production).WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[1][:message]
-#--> REFUSED -- the external surface is not production-ready
-? oDel.WhyServicesNotReady()
-#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
-oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
-? oDel.ServicesAreProductionReady()
-#--> 1
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	NeedsServiceIn("api", [ :payments ])
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor( HumanActor("owner") )
+	? Deploy(:Production).WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[1][:message]
+	#--> REFUSED -- the external surface is not production-ready
+	? WhyServicesNotReady()
+	#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
+	ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
+	? ServicesAreProductionReady()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -118,27 +126,29 @@ The owner is entitled, and he is refused! Nothing is committed, and the log says
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
-oCon.AddWorld("customer", StzAppQ("customer"))
-oCon.AddWorld("kitchen", StzAppQ("kitchen"))
-oCon.AddWorld("supplier", StzAppQ("supplier"))
-oCon.Bond("customer", "kitchen", "send-order")
-oCon.Bond("kitchen", "supplier", "order-produce")
-oCon.GovDeclareRisk("send-order", 1)
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("customer", "send-order")
-oCon.GovGrant("kitchen", "order-produce")
-oCon.GovSetAuthority("customer", :Delegated)
-oCon.GovSetAuthority("kitchen", :Delegated)
-oCon.Retire("supplier")
-? oCon.CallAcross("customer", "kitchen", "send-order")
-#--> 1
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 0
-? oCon.Why()
-#--> target world 'supplier' is not active.
-oCon.Revive("supplier")
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 1
+oCon {
+	AddWorld("customer", StzAppQ("customer"))
+	AddWorld("kitchen", StzAppQ("kitchen"))
+	AddWorld("supplier", StzAppQ("supplier"))
+	Bond("customer", "kitchen", "send-order")
+	Bond("kitchen", "supplier", "order-produce")
+	GovDeclareRisk("send-order", 1)
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("customer", "send-order")
+	GovGrant("kitchen", "order-produce")
+	GovSetAuthority("customer", :Delegated)
+	GovSetAuthority("kitchen", :Delegated)
+	Retire("supplier")
+	? CallAcross("customer", "kitchen", "send-order")
+	#--> 1
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 0
+	? Why()
+	#--> target world 'supplier' is not active.
+	Revive("supplier")
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 1
+}
 ```
 
 > run: kept
@@ -149,19 +159,23 @@ The call across the bond passes. The call to the sleeping world is refused! The 
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
-oMon.NewTimer("first.display.ms").Record(900)
-oMon.NewTimer("tap.ms").Record(40)
-oMon.NewTimer("order.to.kitchen.ms").Record(1800)
+oMon {
+	NewTimer("first.display.ms").Record(900)
+	NewTimer("tap.ms").Record(40)
+	NewTimer("order.to.kitchen.ms").Record(1800)
+}
 oSla = StzSla("speed-budget")
-oSla.ExpectP95("first.display.ms").Under(1200)
-oSla.ExpectP95("tap.ms").Under(80)
-oSla.ExpectP95("order.to.kitchen.ms").Under(2500)
-oSla.CheckAgainst(oMon)
-oSla.Show()
-#--> SLA speed-budget -- 3 expectation(s), last check: MET.
-#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
-#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
-#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+oSla {
+	ExpectP95("first.display.ms").Under(1200)
+	ExpectP95("tap.ms").Under(80)
+	ExpectP95("order.to.kitchen.ms").Under(2500)
+	CheckAgainst(oMon)
+	Show()
+	#--> SLA speed-budget -- 3 expectation(s), last check: MET.
+	#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
+	#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
+	#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+}
 oMon.MetricQ("order.to.kitchen.ms").Record(3100)
 oSla.CheckAgainst(oMon)
 oRep = new stzRuleReport("cycle-gate")

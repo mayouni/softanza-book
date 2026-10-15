@@ -51,40 +51,40 @@ Un monde a un être, un devenir, et une manière d'être rencontré. Le chapitre
 ```haro
 oApp = new stzApp("FieldVisits")
 oApp {
-    AddThingQ(:Account) { Has([ :number, :chapter, :balance ])  IsTrue(:balance, "@ >= 0") }
-    AddThingQ(:Client)  { Has([ :code, :name, :city ])  Owns(:Account) }
-    AddThingQ(:Visit)   { Of(:Client)  Has([ :agent, :date, :subject ]) }
-    AddRelation(:Account, :belongsTo, :Client)
-    AddFlowQ(:agent, :records, :Visit) { Require(:subject) }
-    AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
-    AddGoalQ(:EveryClientSeenThisQuarter) {
-        Means      = "every :Client Has(:visit) Since(:quarterStart)"
-        ReachedBy  = :planning
-    }
-    SetBody([ :GraphDB, :Files ]) { Graph = ".stzapp/world.stzgraf"  Files = "./" }
+	AddThingQ(:Account) { Has([ :number, :chapter, :balance ])  IsTrue(:balance, "@ >= 0") }
+	AddThingQ(:Client)  { Has([ :code, :name, :city ])  Owns(:Account) }
+	AddThingQ(:Visit)   { Of(:Client)  Has([ :agent, :date, :subject ]) }
+	AddRelation(:Account, :belongsTo, :Client)
+	AddFlowQ(:agent, :records, :Visit) { Require(:subject) }
+	AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
+	AddGoalQ(:EveryClientSeenThisQuarter) {
+		Means      = "every :Client Has(:visit) Since(:quarterStart)"
+		ReachedBy  = :planning
+	}
+	SetBody([ :GraphDB, :Files ]) { Graph = ".stzapp/world.stzgraf"  Files = "./" }
+	AddScreenQ(:ClientFile) { ToUnderstand(:Client)  Shows([ :identity, :accounts, :visits ]) }
+	AddRefinementQ(:balance).Bounds(0, 1000000)
+	AddReaches([ :mobile, :desktop, :web ])
+	Explain()
+	#--> WORLD FieldVisits   lives in: graphdb + files
+	#      BEING
+	#        account (number, chapter, balance)
+	#            true when balance @ >= 0
+	#        client (code, name, city)
+	#        visit (agent, date, subject)
+	#      RELATIONS
+	#        client owns account
+	#        visit of client
+	#        account belongsto client
+	#      BECOMING
+	#        when agent records visit require subject
+	#        whenever client unseen 90 days -> propose visit
+	#        wants everyclientseenthisquarter -> reached by planning
+	#      MET FROM WITHOUT
+	#        screen clientfile: understand client shows identity, accounts, visits
+	#        refine balance bounds [0..1000000]
+	#        reaches mobile, desktop, web
 }
-oApp.AddScreenQ(:ClientFile) { ToUnderstand(:Client)  Shows([ :identity, :accounts, :visits ]) }
-oApp.AddRefinementQ(:balance).Bounds(0, 1000000)
-oApp.AddReaches([ :mobile, :desktop, :web ])
-oApp.Explain()
-#--> WORLD FieldVisits   lives in: graphdb + files
-#      BEING
-#        account (number, chapter, balance)
-#            true when balance @ >= 0
-#        client (code, name, city)
-#        visit (agent, date, subject)
-#      RELATIONS
-#        client owns account
-#        visit of client
-#        account belongsto client
-#      BECOMING
-#        when agent records visit require subject
-#        whenever client unseen 90 days -> propose visit
-#        wants everyclientseenthisquarter -> reached by planning
-#      MET FROM WITHOUT
-#        screen clientfile: understand client shows identity, accounts, visits
-#        refine balance bounds [0..1000000]
-#        reaches mobile, desktop, web
 ```
 
 Il a répondu sous trois titres, `BEING`, `BECOMING` et `MET FROM WITHOUT`. `SetBody` ne fait que déclarer. Aucun fichier n'a été écrit par ce bloc.
@@ -92,31 +92,32 @@ Il a répondu sous trois titres, `BEING`, `BECOMING` et `MET FROM WITHOUT`. `Set
 Un monde tend vers quelque chose. Un but est un état voulu du graphe, et l'écart est mesuré. Un but sans motif à évaluer est refusé, et jamais simulé :
 
 ```haro
-oApp = StzAppQ("visits")
-oApp.AddThingQ(:Client) { Has([ :code, :name ]) }
-oApp.AddThingQ(:Visit)  { Of(:Client) }
-oApp.AddGoalQ(:EveryClientVisited) { Means = "every :Client Has(:visited)"  ReachedBy = :planning }
-oApp.AddInstance("anna", :Client)
-oApp.AddInstance("bilal", :Client)
-oApp.Relate("anna", :visited, "visit1")
-? @@( oApp.Pursue(:EveryClientVisited) )
-#--> pursuing everyclientvisited via planning -- 1 proposal(s)
-#    [ [ "attend", "client", "for", "bilal" ] ]
-? oApp.GoalSatisfied(:EveryClientVisited)
-#--> 0
-oApp.Relate("bilal", :visited, "visit2")
-? @@( oApp.Pursue(:EveryClientVisited) )
-#--> pursuing everyclientvisited via planning -- 0 proposal(s)
-#    [ ]
-? oApp.GoalSatisfied(:EveryClientVisited)
-#--> 1
-oApp.AddGoalQ(:Vague) { Means = "make things nice" }
-try
-    oApp.Pursue(:Vague)
-catch
-    ? cCatchError
-done
-#--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
+StzAppQ("visits") {
+	AddThingQ(:Client) { Has([ :code, :name ]) }
+	AddThingQ(:Visit)  { Of(:Client) }
+	AddGoalQ(:EveryClientVisited) { Means = "every :Client Has(:visited)"  ReachedBy = :planning }
+	AddInstance("anna", :Client)
+	AddInstance("bilal", :Client)
+	Relate("anna", :visited, "visit1")
+	? @@( Pursue(:EveryClientVisited) )
+	#--> pursuing everyclientvisited via planning -- 1 proposal(s)
+	#    [ [ "attend", "client", "for", "bilal" ] ]
+	? GoalSatisfied(:EveryClientVisited)
+	#--> 0
+	Relate("bilal", :visited, "visit2")
+	? @@( Pursue(:EveryClientVisited) )
+	#--> pursuing everyclientvisited via planning -- 0 proposal(s)
+	#    [ ]
+	? GoalSatisfied(:EveryClientVisited)
+	#--> 1
+	AddGoalQ(:Vague) { Means = "make things nice" }
+	try
+		Pursue(:Vague)
+	catch
+		? cCatchError
+	done
+	#--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
+}
 ```
 
 `Pursue` imprime sa propre première ligne, puis le `?` imprime la liste qu'il renvoie. Une relation plus tard, l'écart est comblé : `0 proposal(s)`, et `GoalSatisfied` répond `1`. Le but vague est refusé avec sa raison : `no 'every :Type' clause in 'make things nice'`. Avec une réaction déclarée, le même écart propose une *visit* pour Bilal, et sans elle, comme dans l'exécution ci-dessus, l'acte par défaut est *attend* : `[ "attend", "client", "for", "bilal" ]`.
@@ -169,17 +170,19 @@ oDb = new stzDatabase(":memory:")
 oCon.OpenCommonsOn(oDb)
 ? classname( oCon.CommonsQ() )
 #--> stzplatform
-? oCon.RegisterIdentity("owner", "s3cret")
-#--> 1
-? oCon.RegisterIdentity("owner", "other")
-#--> 0
-? len( oCon.OpenSession("owner", "s3cret") ) > 0
-#--> 1
-? oCon.OpenSession("owner", "wrong") = ""
-#--> 1
-oCon.StorePut("currency", "EUR")
-? oCon.StoreGet("currency")
-#--> EUR
+oCon {
+	? RegisterIdentity("owner", "s3cret")
+	#--> 1
+	? RegisterIdentity("owner", "other")
+	#--> 0
+	? len( OpenSession("owner", "s3cret") ) > 0
+	#--> 1
+	? OpenSession("owner", "wrong") = ""
+	#--> 1
+	StorePut("currency", "EUR")
+	? StoreGet("currency")
+	#--> EUR
+}
 oDb.Close()
 ```
 
@@ -191,26 +194,30 @@ Un monde échangé à chaud garde-t-il ses liens ? Une constellation s'emboîte 
 oResto = StzAppQ("resto")
 oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
 oCon = new stzSuperApp("acme-group")
-oCon.AddWorld("resto", oResto)
-oCon.AddWorld("supplier", StzAppQ("supplier"))
-oCon.Bond("resto", "supplier", "order-produce")
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("resto", "order-produce")
-oCon.GovSetAuthority("resto", :Delegated)
-oNew = StzAppQ("supplier-v2")
-oCon.Swap("supplier", oNew)
-? oCon.NumberOfWorlds()
-#--> 2
-? oCon.WorldQ("supplier").Name()
-#--> supplier-v2
-? oCon.CallAcross("resto", "supplier", "order-produce")
-#--> 1
+oCon {
+	AddWorld("resto", oResto)
+	AddWorld("supplier", StzAppQ("supplier"))
+	Bond("resto", "supplier", "order-produce")
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("resto", "order-produce")
+	GovSetAuthority("resto", :Delegated)
+	oNew = StzAppQ("supplier-v2")
+	Swap("supplier", oNew)
+	? NumberOfWorlds()
+	#--> 2
+	? WorldQ("supplier").Name()
+	#--> supplier-v2
+	? CallAcross("resto", "supplier", "order-produce")
+	#--> 1
+}
 oHolding = new stzSuperApp("holding")
-oHolding.AddConstellation("acme", oCon)
-? oHolding.KindOf("acme")
-#--> super
-? oHolding.WorldQ("acme").NumberOfWorlds()
-#--> 2
+oHolding {
+	AddConstellation("acme", oCon)
+	? KindOf("acme")
+	#--> super
+	? WorldQ("acme").NumberOfWorlds()
+	#--> 2
+}
 ? oCon.KindOf("resto")
 #--> app
 try
@@ -231,22 +238,25 @@ Une plateforme n'accorde une capacité d'un appareil que si la gouvernance en au
 
 ```haro
 oGov = new stzGovernance("resto-regime")
-oGov.GrantPermission("resto", "use-camera")
-oGov.GrantPermission("resto", "use-payments")
-oGov.SetAuthority("resto", :Delegated)
+oGov {
+	GrantPermission("resto", "use-camera")
+	GrantPermission("resto", "use-payments")
+	SetAuthority("resto", :Delegated)
+}
 oResto = StzAppQ("resto")
 oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
-oPlat = StzPlatformQ("resto-envelope")
-oPlat.SetWorld(oResto)
-oPlat.SetGovernedBy(oGov)
-oPlat.AddCapabilityQ(:camera).SetPurposes([ :scan_dish_photo ])
-? oPlat.Granted(:camera)
-#--> 1
-oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
-? oPlat.Granted(:payments)
-#--> 0
-? oPlat.Why()
-#--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
+StzPlatformQ("resto-envelope") {
+	SetWorld(oResto)
+	SetGovernedBy(oGov)
+	AddCapabilityQ(:camera).SetPurposes([ :scan_dish_photo ])
+	? Granted(:camera)
+	#--> 1
+	AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
+	? Granted(:payments)
+	#--> 0
+	? Why()
+	#--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
+}
 ```
 
 La permission était détenue pour les deux, et les paiements ont été refusés quand même ! La raison : `'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4`.
@@ -259,28 +269,30 @@ Par *portée* j'entends celle de la System Foundation : développement, déploie
 
 ```haro
 oSol = new stzPlatformProfile("greenhouse")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithSuperApp(:phone, :Android)
-oSol.WithApp(:sensor, :ESP32)
-? oSol.DevelopmentSystem().OSName()
-#--> windows
-? oSol.App(:phone).System().OSName()
-#--> android
-? oSol.App(:sensor).System().OSName()
-#--> espidf
-? @@( oSol.App(:sensor).System().System().Capabilities() )
-#--> [ "gpio", "network", "clock", "threads" ]
-? oSol.CurrentSystem().IsRuntime()
-#--> 1
-? oSol.App(:backend).System().Spawn("cron")
-#--> native
-try
-    oSol.App(:phone).System().Spawn("cron")
-catch
-    ? cCatchError
-done
-#--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithSuperApp(:phone, :Android)
+	WithApp(:sensor, :ESP32)
+	? DevelopmentSystem().OSName()
+	#--> windows
+	? App(:phone).System().OSName()
+	#--> android
+	? App(:sensor).System().OSName()
+	#--> espidf
+	? @@( App(:sensor).System().System().Capabilities() )
+	#--> [ "gpio", "network", "clock", "threads" ]
+	? CurrentSystem().IsRuntime()
+	#--> 1
+	? App(:backend).System().Spawn("cron")
+	#--> native
+	try
+		App(:phone).System().Spawn("cron")
+	catch
+		? cCatchError
+	done
+	#--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.
+}
 ```
 
 Le nom du système de développement est celui qui a été déclaré, donc il ne dépend pas de la machine. La ligne `native` dépend de l'hôte : elle ne tient que sur un hôte qui peut lancer un processus, comme le chapitre 31 le dit de son propre mot. Le refus d'Android, `scope 'android' (android) forbids 'process'`, et la liste de capacités de la carte sont ceux de la cible, quel que soit l'hôte. Les trois portées sont `new stzDevSystem()` ou `DevelopmentSystem()` pour le développement, qui est de l'outillage seulement ; `App(:x).System()` pour le déploiement, où le code des fonctionnalités est écrit et vérifié ; et `new stzCurrentSystem()` ou `CurrentSystem()` pour l'exécution courante, qui est ce qui tourne maintenant. L'objet portée n'a pas de `Capabilities()` propre : l'appel passe par `.System().System()`. Une demande.
@@ -289,17 +301,19 @@ L'artefact de l'architecte est un fichier texte. Peut-il être relu, et que dit 
 
 ```haro
 oSol = new stzPlatformProfile("greenhouse")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithSuperApp(:phone, :Android)
-oSol.WithApp(:sensor, :ESP32)
-? oSol.ToStzPlatform()
-#--> # .stzplatform -- a Softanza solution profile
-#    platform: greenhouse
-#    developed_on: windows
-#    server: backend -> linux
-#    superapp: phone -> android
-#    app: sensor -> espidf
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithSuperApp(:phone, :Android)
+	WithApp(:sensor, :ESP32)
+	? ToStzPlatform()
+	#--> # .stzplatform -- a Softanza solution profile
+	#    platform: greenhouse
+	#    developed_on: windows
+	#    server: backend -> linux
+	#    superapp: phone -> android
+	#    app: sensor -> espidf
+}
 oBack = StzPlatformProfileQ()
 oBack.FromString( oSol.ToStzPlatform() )
 ? oBack.App(:sensor).DeploymentOSName()
@@ -369,19 +383,23 @@ Les vérités d'un monde sont narrées et non jugées. Le nombre dans une réact
 
 ```haro
 oA = StzAppQ("clinic-a")
-oA.AddThingQ(:Patient) { Has([ :name ]) }
-oA.AddThing(:Checkup)
-oA.AddReactionQ(:Patient).Unseen(90, :Days) { Propose(:Checkup) }
-oA.AddInstance("alice", :Patient)
-oA.AddInstance("bob", :Patient)
-oA.Relate("alice", :checkup, "checkup-1")
+oA {
+	AddThingQ(:Patient) { Has([ :name ]) }
+	AddThing(:Checkup)
+	AddReactionQ(:Patient).Unseen(90, :Days) { Propose(:Checkup) }
+	AddInstance("alice", :Patient)
+	AddInstance("bob", :Patient)
+	Relate("alice", :checkup, "checkup-1")
+}
 oB = StzAppQ("clinic-b")
-oB.AddThingQ(:Patient) { Has([ :name ]) }
-oB.AddThing(:Checkup)
-oB.AddReactionQ(:Patient).Unseen(1, :Days) { Propose(:Checkup) }
-oB.AddInstance("alice", :Patient)
-oB.AddInstance("bob", :Patient)
-oB.Relate("alice", :checkup, "checkup-1")
+oB {
+	AddThingQ(:Patient) { Has([ :name ]) }
+	AddThing(:Checkup)
+	AddReactionQ(:Patient).Unseen(1, :Days) { Propose(:Checkup) }
+	AddInstance("alice", :Patient)
+	AddInstance("bob", :Patient)
+	Relate("alice", :checkup, "checkup-1")
+}
 oA.Live()
 #--> [clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)
 oB.Live()

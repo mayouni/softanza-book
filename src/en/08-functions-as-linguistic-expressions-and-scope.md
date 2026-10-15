@@ -94,12 +94,13 @@ o1 = new stzString("fjharoljharodjharog")
 **The plural** extends a verb to many things without a loop, and **the exceptional form** keeps only what you name. The article's example for the second, `RemoveNonLettersExcept`, does not exist. The form does, in other names:
 
 ```haro
-o1 = new stzString("__H~~~AR***O__")
-? @@( o1.FindMany([ "~", "*" ]) )
-#--> [ 4, 5, 6, 9, 10, 11 ]
-o1.RemoveMany([ "_", "~", "*" ])
-? o1.Content()
-#--> HARO
+Q("__H~~~AR***O__") {
+	? @@( FindMany([ "~", "*" ]) )
+	#--> [ 4, 5, 6, 9, 10, 11 ]
+	RemoveMany([ "_", "~", "*" ])
+	? Content()
+	#--> HARO
+}
 o2 = new stzString("--Haro--&__Softanza__")
 o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ? o2.Content()
@@ -121,12 +122,13 @@ o3 = new stzList([ "H", "A", "R", "O" ])
 **The deep form** answers a path, a list of indices that goes as deep as the data does, and the same family replaces and removes at that depth, with `:By` as its named seat where chapter 5's `Replaced` said `:With`; the deep verbs accept both:
 
 ```haro
-o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
-? @@( o1.DeepFind("you") )
-#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
-o1.DeepReplace("you", :By = "♥")
-? @@( o1.Content() )
-#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+Q([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ]) {
+	? @@( DeepFind("you") )
+	#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
+	DeepReplace("you", :By = "♥")
+	? @@( Content() )
+	#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+}
 ```
 
 **The immutable form**, QC, runs the whole chain on a copy. After that chain, what does the original hold?
@@ -157,12 +159,14 @@ It was born in regular expressions, where the frame is how much of the text a pa
 ```haro
 cText = "First: Line1" + nl + "Second: Line2" + nl + "Third: Line3"
 o1 = new stzRegex("^Second:.*$")
-? o1.Match(cText)
-#--> FALSE
-? o1.MatchFirst(cText)
-#--> FALSE
-? o1.MatchLine(cText)
-#--> TRUE
+o1 {
+	? Match(cText)
+	#--> FALSE
+	? MatchFirst(cText)
+	#--> FALSE
+	? MatchLine(cText)
+	#--> TRUE
+}
 ```
 
 `Match` answers `FALSE`: it asks whether the pattern covers the whole value. `MatchFirst` answers `FALSE` too: it asks whether the pattern occurs anywhere, with the line anchors off. `MatchLine` answers `TRUE`: it makes `^` and `$` bind at each line. The frame is in the verb. There is a word scope too, which supplies the word boundaries so that you do not write them. It rewrites the pattern of its object for good, which is why the second instance is a new object with the same pattern. Does the same pattern answer alike under `MatchFirst` and under `MatchWord`?
@@ -182,11 +186,13 @@ The second instance is the system. Feature code is written in a named scope, and
 
 ```haro
 oSol = new stzPlatformProfile("my-iot-product")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
-oBack = oSol.App(:backend).System()
-oFirm = oSol.App(:firmware).System()
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+	oBack = App(:backend).System()
+	oFirm = App(:firmware).System()
+}
 ? oBack.Spawn("worker")
 #--> native
 ? oFirm.ReadPin(4)

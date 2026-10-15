@@ -4,7 +4,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -115,9 +115,11 @@ The evidence of what happened is a hash chain. Edit any line after the first, an
 
 ```haro
 oLed = StzSecurityLedger(256)
-oLed.Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
-oLed.Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
-oLed.SealTo("evidence.txt", "the-evidence-key")
+oLed {
+	Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
+	Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
+	SealTo("evidence.txt", "the-evidence-key")
+}
 ? StzVerifySealedLedger("evidence.txt", "the-evidence-key")[:why]
 #--> chain intact over 2 entries
 ? StzVerifySealedLedger("evidence.txt", "another-key")[:why]
@@ -137,11 +139,13 @@ A secret is the same law applied to a key. Its only public face is its descripto
 ```haro
 StzOpenSecurityLedger(64)
 oKey = new stzSecret("deploy-key")
-oKey.FromLiteralQ("ssh-ed25519-AAAA")
-? oKey.Descriptor()
-#--> <secret 'deploy-key' (secret) from literal>
-? oKey.Reveal(HumanActor("ops"))
-#--> ssh-ed25519-AAAA
+oKey {
+	FromLiteral("ssh-ed25519-AAAA")
+	? Descriptor()
+	#--> <secret 'deploy-key' (secret) from literal>
+	? Reveal(HumanActor("ops"))
+	#--> ssh-ed25519-AAAA
+}
 try
 	oKey.Reveal(LLMActor("planner"))
 catch
@@ -167,31 +171,34 @@ An instrument owes a number. The honest stopwatch gives a number from a clock th
 
 ```haro
 w = StzStopwatchXT("import-orders")
-w.Lap("parsed")
-w.Pause()
-StzEngineTimeSleepMs(200)
-w.Resume()
-w.Stop()
-? isnumber(w.ElapsedMs())
-#--> 1
-? w.ElapsedMs() < 200
-#--> 1
-? w.Record()[:running]
-#--> 0
+w {
+	Lap("parsed")
+	Pause()
+	StzEngineTimeSleepMs(200)
+	Resume()
+	Stop()
+	? isnumber(ElapsedMs())
+	#--> 1
+	? ElapsedMs() < 200
+	#--> 1
+	? Record()[:running]
+	#--> 0
+}
 w2 = StzStopwatchXT("notify-customer")
 w2.JoinTrace(w.TraceParent())
 w2.Stop()
 ? w2.TraceId() = w.TraceId()
 #--> 1
 oBatch = StzOtelBatch("shop")
-oBatch.AddSpan(w).AddSpan(w2)
+oBatch.AddSpan(w)
+oBatch.AddSpan(w2)
 ? Q(oBatch.ToJson()).NumberOfOccurrence(w.TraceId())
 #--> 2
 ```
 
 > run: kept
 
-The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
+The pause did not count: in the stopwatch's scene, `ElapsedMs() < 200` printed `1`, and `Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
 
 Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. It is a request to the library.
 
@@ -199,24 +206,26 @@ The instrument is not the end of the court. Judgment and action live inside the 
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
-oPlan.Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
 oFleet = new FakeFleet
-? oPlan.MayCommit(LLMActor("advisor"))
-#--> 0
-? oPlan.ExecuteOn(oFleet, LLMActor("advisor"))
-#--> 0
-? oFleet.CallCount()
-#--> 0
-? oPlan.ExecuteOn(oFleet, HumanActor("mansour"))
-#--> 1
-? oFleet.CallCount()
-#--> 1
-oPlan.Show()
-#--> Perf plan relieve-queue -- 1 proposed action(s).
-#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
-#    Audit (2):
-#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
-#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+oPlan {
+	Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
+	? MayCommit(LLMActor("advisor"))
+	#--> 0
+	? ExecuteOn(oFleet, LLMActor("advisor"))
+	#--> 0
+	? oFleet.CallCount()
+	#--> 0
+	? ExecuteOn(oFleet, HumanActor("mansour"))
+	#--> 1
+	? oFleet.CallCount()
+	#--> 1
+	Show()
+	#--> Perf plan relieve-queue -- 1 proposed action(s).
+	#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
+	#    Audit (2):
+	#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
+	#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+}
 
 class FakeFleet
 	aFleetCalls = []

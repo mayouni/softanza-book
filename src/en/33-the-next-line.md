@@ -46,12 +46,14 @@ catch
 	? cCatchError
 done
 #--> stzPlatform.Deploy: the platform must be Build() before it can be deployed.
-? oPlatform.IsDeployed()
-#--> 0
-oPlatform.Build()
-oPlatform.Deploy()
-? oPlatform.IsDeployed()
-#--> 1
+oPlatform {
+	? IsDeployed()
+	#--> 0
+	Build()
+	Deploy()
+	? IsDeployed()
+	#--> 1
+}
 ```
 
 The platform answers: `stzPlatform.Deploy: the platform must be Build() before it can be deployed.` Built, then deployed, `IsDeployed()` answers `1`.
@@ -60,11 +62,13 @@ Before anything is real, the solution can run on a twin, a copy of the system th
 
 ```haro
 oTwin = new stzVirtualFileSystem()
-oTwin.CreateFile("orders/today.txt", "3 couscous")
-? oTwin.ContentOf("orders/today.txt")
-#--> 3 couscous
-? oTwin.OriginOf("orders/today.txt")
-#--> virtual
+oTwin {
+	CreateFile("orders/today.txt", "3 couscous")
+	? ContentOf("orders/today.txt")
+	#--> 3 couscous
+	? OriginOf("orders/today.txt")
+	#--> virtual
+}
 ? StzEngineFileExists("orders/today.txt")
 #--> 0
 ```
@@ -77,15 +81,17 @@ And at the production gate, a solution cannot reach production with a fake servi
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor(HumanActor("dana"))
-oDep = oDel.Deploy(:Production)
-? oDep.WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[2][:message]
-#--> sandbox-in-production @ shop/payments
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor(HumanActor("dana"))
+	oDep = Deploy(:Production)
+	? oDep.WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[2][:message]
+	#--> sandbox-in-production @ shop/payments
+}
 ```
 
 The person was allowed to deploy. The delivery refused it! `WasCommitted()` answers `0`. Why did it refuse? The log's first error entry says only that the external surface is not production-ready; the second names the service: `sandbox-in-production @ shop/payments`. A payments service that is a sandbox cannot be what a real customer pays through. This is not a question of authority. It is a question of what is true.

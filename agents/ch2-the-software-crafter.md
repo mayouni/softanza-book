@@ -4,7 +4,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, Softibank, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
@@ -157,19 +157,21 @@ The project counts eleven iterations and a campaign of twenty-two simulated test
 
 The first demonstration, on 15 August 2026, was his alone: the record's checklist plans it for the owner by himself, with his own phone and a messaging app as the support line. The measurements he sent over a messaging app are those of 19 August.
 
-One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it:
+One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it. The registry is named once, and each line inside the braces speaks to it: chapter 5 calls this form the scene.
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
-oReg.Bind(:payments, new stzPaymentsSandbox())
-oReg.SetPhase(:emulated)
-? oReg.IsSound()
-#--> 1
-oReg.SetPhase(:production)
-? oReg.IsSound()
-#--> 0
-? oReg.Findings()[1][:message]
-#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+oReg {
+	Bind(:payments, new stzPaymentsSandbox())
+	SetPhase(:emulated)
+	? IsSound()
+	#--> 1
+	SetPhase(:production)
+	? IsSound()
+	#--> 0
+	? Findings()[1][:message]
+	#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+}
 ```
 
 > run: kept
@@ -180,10 +182,12 @@ It answers `1` in the emulated phase and `0` in production, and says why: `still
 
 ```haro
 oOrg = new stzOrgChart("bank")
-oOrg.AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
-oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
-? @@( oOrg.ValidateBCEAOGovernance() )
-#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+oOrg {
+	AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
+	AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
+	? @@( ValidateBCEAOGovernance() )
+	#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+}
 ```
 
 > run: kept

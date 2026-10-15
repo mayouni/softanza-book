@@ -4,7 +4,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
@@ -96,12 +96,13 @@ A list can also be carried as a string in its short form, recognised, converted 
 Rule 10: code travels inside an argument as a small string with a placeholder, `@char` for the characters of a string and `@item` for the items of a list. Chapter 6 showed the seat on a list. Here it is on a string, where it finds and removes by a rule and not by a loop:
 
 ```haro
-o1 = new stzString("SOooooFTAaaannnNZA")
-? @@( o1.FindW('{ Q(@char).IsUppercase() }') )
-#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
-o1.RemoveW('{ Q(@char).IsLowercase() }')
-? o1.Content()
-#--> SOFTANZA
+Q("SOooooFTAaaannnNZA") {
+	? @@( FindW('{ Q(@char).IsUppercase() }') )
+	#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
+	RemoveW('{ Q(@char).IsLowercase() }')
+	? Content()
+	#--> SOFTANZA
+}
 ```
 
 > run: kept

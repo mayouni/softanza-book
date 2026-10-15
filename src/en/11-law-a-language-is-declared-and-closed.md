@@ -140,27 +140,28 @@ done
 The refusal names the unknown type, `'colour'`, and lists the six it accepts: `(use string|number|boolean|oneof|list|structure)`. The schema was refused before any model was called! A correct schema is a small closed language. The court judges any answer against it, whoever wrote the answer. And the schema emits its grammar, so that a model can be held to it while it writes:
 
 ```haro
-oS = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "name", :type = :string ],
 	[ :field = "age",  :type = :number, :must = [ [ ">=", 0 ], [ "<=", 130 ] ] ],
 	[ :field = "mood", :type = :oneof,  :choices = [ "positive", "negative" ] ]
-])
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
-#--> 1
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
-#--> 1
-? oS.ToGBNF()
-#--> root ::= name-line age-line mood-line
-#    name-line ::= "name: " text "\n"
-#    age-line ::= "age: " number "\n"
-#    mood-line ::= "mood: " ("positive" | "negative") "\n"
-#    text ::= [^\n]+
-#    number ::= "-"? [0-9]+ ("." [0-9]+)?
-#    boolean ::= ("yes" | "no" | "true" | "false")
+]) {
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
+	#--> 1
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
+	#--> 1
+	? ToGBNF()
+	#--> root ::= name-line age-line mood-line
+	#    name-line ::= "name: " text "\n"
+	#    age-line ::= "age: " number "\n"
+	#    mood-line ::= "mood: " ("positive" | "negative") "\n"
+	#    text ::= [^\n]+
+	#    number ::= "-"? [0-9]+ ("." [0-9]+)?
+	#    boolean ::= ("yes" | "no" | "true" | "false")
+}
 ```
 
 Look at the four verdicts. The first answer printed `1`. The second, with `mood: angry`, and the third, with `age: 900000`, printed `0`: the court refused both. The fourth printed `1` again. Hadiza is forty-one in the first answer and sixty-two in the fourth, and the court accepts both! A grammar kills malformed sentences, not false ones. The record says it in five words: structure kills malformedness, not falsehood. This book says the same: the truth of an answer is not for the grammar. The record says that truth needs reversibility, an auditor and a Principal, the person who rules. A grammar is the gate, not the judge of everything. The grammar also prints a `boolean` rule that no field of this schema uses.

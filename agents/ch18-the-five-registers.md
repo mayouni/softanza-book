@@ -4,7 +4,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -32,16 +32,21 @@ Chapter 17 showed a conversation asking, and refusing to conclude while a gap is
 
 ```haro
 oKB = new stzKnowledgeGraph("pizzeria")
-oKB.Know("pizza1", "dish").Know("pizza2", "dish").Know("pizza3", "dish").Know("pizza4", "dish")
-oKB.AddConversationQ("frame").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
-oKB.AskIn("frame")
-oKB.ReplyIn("frame", "cheese")
-oKB.AskIn("frame")
-oKB.ReplyIn("frame", "olives")
-? oKB.AskIn("frame")
-#--> Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
-? @@(oKB.ReplyIn("frame", 2)[:admitted])
-#--> [ "olives" ]
+oKB {
+	Know("pizza1", "dish")
+	Know("pizza2", "dish")
+	Know("pizza3", "dish")
+	Know("pizza4", "dish")
+	AddConversationQ("frame").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
+	AskIn("frame")
+	ReplyIn("frame", "cheese")
+	AskIn("frame")
+	ReplyIn("frame", "olives")
+	? AskIn("frame")
+	#--> Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
+	? @@(ReplyIn("frame", 2)[:admitted])
+	#--> [ "olives" ]
+}
 ```
 
 > run: kept
@@ -51,17 +56,19 @@ The question offers the known values as numbers, and `2` picked `olives`.
 What does the door answer to a number nobody offered? Run it:
 
 ```haro
-? oKB.AskIn("frame")
-#--> Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
-aV = oKB.ReplyIn("frame", 99)
-? @@(aV[:admitted])
-#--> [ ]
-? @@(aV[:refused])
-#--> [ [ "(99)", "no such option" ] ]
-? oKB.ConversationQ("frame").Checkpoints()[1][:why]
-#--> no option (99) was offered -- 2 option(s) on the table
-? aV[:goalState]
-#--> pursuing
+oKB {
+	? AskIn("frame")
+	#--> Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
+	aV = ReplyIn("frame", 99)
+	? @@(aV[:admitted])
+	#--> [ ]
+	? @@(aV[:refused])
+	#--> [ [ "(99)", "no such option" ] ]
+	? ConversationQ("frame").Checkpoints()[1][:why]
+	#--> no option (99) was offered -- 2 option(s) on the table
+	? aV[:goalState]
+	#--> pursuing
+}
 ```
 
 > run: kept
@@ -72,16 +79,19 @@ The question is data before it is text. It carries a force, which is *what* whil
 
 ```haro
 oKF = new stzKnowledgeGraph("pizzeria2")
-oKF.Know("p1", "dish").Know("p2", "dish")
-oKF.AddConversationQ("f").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
-? oKF.AskInXT("f")[:force]
-#--> what
-oKF.ReplyIn("f", "cheese")
-aQ = oKF.AskInXT("f")
-? aQ[:force]
-#--> which
-? @@(aQ[:options])
-#--> [ "cheese" ]
+oKF {
+	Know("p1", "dish")
+	Know("p2", "dish")
+	AddConversationQ("f").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
+	? AskInXT("f")[:force]
+	#--> what
+	ReplyIn("f", "cheese")
+	aQ = AskInXT("f")
+	? aQ[:force]
+	#--> which
+	? @@(aQ[:options])
+	#--> [ "cheese" ]
+}
 ```
 
 > run: kept
@@ -90,14 +100,16 @@ aQ = oKF.AskInXT("f")
 
 ```haro
 oKD = new stzKnowledgeGraph("desserts")
-oKD.Know("tiramisu", "dish")
-oKD.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKD.AskIn("setup")
-aV = oKD.ReplyIn("setup", [ "mascarpone", "espresso" ])
-? @@(aV[:admitted])
-#--> [ "mascarpone", "espresso" ]
-? aV[:goalState]
-#--> fulfilled
+oKD {
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("setup")
+	aV = ReplyIn("setup", [ "mascarpone", "espresso" ])
+	? @@(aV[:admitted])
+	#--> [ "mascarpone", "espresso" ]
+	? aV[:goalState]
+	#--> fulfilled
+}
 ```
 
 > run: kept
@@ -108,17 +120,19 @@ A list of values is taken as the values, and each one goes through the same door
 
 ```haro
 oKM = new stzKnowledgeGraph("menu")
-oKM.Know("margherita", "dish")
-oKM.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKM.AskIn("setup")
-oKM.ReplyIn("setup", "tomato-sauce and mozzarella")
-? oKM.ConversationQ("setup").Transcript()
-#--> SOFTANZA: Goal adopted -- this conversation is now accountable for it.
-#--> SOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
-#--> YOU:      tomato-sauce and mozzarella
-#-->   -> admitted: 'margherita' contains 'tomato-sauce'
-#-->   -> admitted: 'margherita' contains 'mozzarella'
-#--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'
+oKM {
+	Know("margherita", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("setup")
+	ReplyIn("setup", "tomato-sauce and mozzarella")
+	? ConversationQ("setup").Transcript()
+	#--> SOFTANZA: Goal adopted -- this conversation is now accountable for it.
+	#--> SOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
+	#--> YOU:      tomato-sauce and mozzarella
+	#-->   -> admitted: 'margherita' contains 'tomato-sauce'
+	#-->   -> admitted: 'margherita' contains 'mozzarella'
+	#--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'
+}
 ```
 
 > run: kept
@@ -129,16 +143,18 @@ It is read as two values, each one judged: the transcript holds `admitted: 'marg
 
 ```haro
 oKS = new stzKnowledgeGraph("staffing")
-oKS.AddConversationQ("s").SetGoal(StzGoalQ().RequireOne("kitchen3", "led-by"))
-oKS.ConstrainRelation("led-by", :Unique)
-oKS.AskIn("s")
-aV = oKS.ReplyIn("s", "mario and giovanni")
-? @@(aV[:admitted])
-#--> [ "mario" ]
-? @@(aV[:refused])
-#--> [ [ "giovanni", "'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique" ] ]
-? len(oKS.ConversationQ("s").Checkpoints())
-#--> 1
+oKS {
+	AddConversationQ("s").SetGoal(StzGoalQ().RequireOne("kitchen3", "led-by"))
+	ConstrainRelation("led-by", :Unique)
+	AskIn("s")
+	aV = ReplyIn("s", "mario and giovanni")
+	? @@(aV[:admitted])
+	#--> [ "mario" ]
+	? @@(aV[:refused])
+	#--> [ [ "giovanni", "'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique" ] ]
+	? len(ConversationQ("s").Checkpoints())
+	#--> 1
+}
 ```
 
 > run: kept
@@ -149,13 +165,15 @@ The first value was admitted, and the second was refused with the law's reason: 
 
 ```haro
 oKP = new stzKnowledgeGraph("shop")
-oKP.Know("tea", "product")
-oKP.AddConversationQ("price").SetGoal(StzGoalQ().RequireEach("product", "price"))
-oKP.AskIn("price")
-? @@(oKP.ReplyIn("price", "=12*3")[:admitted])
-#--> [ "=12*3" ]
-? oKP.Query([ "tea", "price", "?o" ])[1]
-#--> =12*3
+oKP {
+	Know("tea", "product")
+	AddConversationQ("price").SetGoal(StzGoalQ().RequireEach("product", "price"))
+	AskIn("price")
+	? @@(ReplyIn("price", "=12*3")[:admitted])
+	#--> [ "=12*3" ]
+	? Query([ "tea", "price", "?o" ])[1]
+	#--> =12*3
+}
 ```
 
 > run: kept
@@ -166,18 +184,20 @@ It is not. The price of the tea is now the text `=12*3`! I found this out by run
 
 ```haro
 oKX = new stzKnowledgeGraph("phones")
-oKX.Know("contact1", "contact")
-oKX.AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
-oKX.AskIn("fmt")
-aV = oKX.ReplyIn("fmt", [ [ "+216-21-298-374", "valid" ], [ "+33-6-12-34-56-78", "valid" ] ])
-? @@(aV[:admitted])
-#--> [ ]
-? @@(aV[:refused])
-#--> [ ]
-? aV[:goalState]
-#--> pursuing
-? len(oKX.ConversationQ("fmt").Checkpoints())
-#--> 0
+oKX {
+	Know("contact1", "contact")
+	AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
+	AskIn("fmt")
+	aV = ReplyIn("fmt", [ [ "+216-21-298-374", "valid" ], [ "+33-6-12-34-56-78", "valid" ] ])
+	? @@(aV[:admitted])
+	#--> [ ]
+	? @@(aV[:refused])
+	#--> [ ]
+	? aV[:goalState]
+	#--> pursuing
+	? len(ConversationQ("fmt").Checkpoints())
+	#--> 0
+}
 try
 	StzOwnAgent("induction")
 catch
@@ -200,18 +220,20 @@ A refusal waits for a person, with its context. A lifetime can be set so that a 
 
 ```haro
 oKT = new stzKnowledgeGraph("ttl")
-oKT.AddConversationQ("t").SetGoal(StzGoalQ().RequireOne("kitchen", "led-by"))
-oKT.AskIn("t")
-oKT.ReplyIn("t", 7)
-? len(oKT.ConversationQ("t").Checkpoints())
-#--> 1
-oKT.ConversationQ("t").SetCheckpointTTL(1)
-oKT.AskIn("t")
-oKT.AskIn("t")
-? len(oKT.ConversationQ("t").Checkpoints())
-#--> 0
-? len(oKT.ConversationQ("t").AllCheckpoints())
-#--> 1
+oKT {
+	AddConversationQ("t").SetGoal(StzGoalQ().RequireOne("kitchen", "led-by"))
+	AskIn("t")
+	ReplyIn("t", 7)
+	? len(ConversationQ("t").Checkpoints())
+	#--> 1
+	ConversationQ("t").SetCheckpointTTL(1)
+	AskIn("t")
+	AskIn("t")
+	? len(ConversationQ("t").Checkpoints())
+	#--> 0
+	? len(ConversationQ("t").AllCheckpoints())
+	#--> 1
+}
 ```
 
 > run: kept
@@ -222,27 +244,30 @@ A conversation is accountable for one goal, and it ends by fulfilling the goal o
 
 ```haro
 oKG = new stzKnowledgeGraph("lifecycle")
-oKG.Know("d1", "dish").Know("d2", "dish")
-oKG.AddConversationQ("s1").SetGoal(StzGoalQ().RequireEach("dish", "sauce"))
-oKG.AddConversationQ("s2").SetGoal(StzGoalQ().RequireEach("dish", "garnish"))
-? oKG.ConversationQ("s1").GoalState()
-#--> pursuing
-oKG.AskIn("s1")
-oKG.ReplyIn("s1", "pesto")
-oKG.AskIn("s1")
-oKG.ReplyIn("s1", "pesto")
-? oKG.ConversationQ("s1").GoalState()
-#--> fulfilled
-? oKG.ConversationQ("s1").GoalWhy()
-#--> every required slot is filled in 'lifecycle'
-oKG.AskIn("s2")
-oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
-? oKG.ConversationQ("s2").GoalState()
-#--> revoked
-? oKG.ConversationQ("s2").GoalWhy()
-#--> out of scope tonight
-? len(oKG.OpenConversations())
-#--> 0
+oKG {
+	Know("d1", "dish")
+	Know("d2", "dish")
+	AddConversationQ("s1").SetGoal(StzGoalQ().RequireEach("dish", "sauce"))
+	AddConversationQ("s2").SetGoal(StzGoalQ().RequireEach("dish", "garnish"))
+	? ConversationQ("s1").GoalState()
+	#--> pursuing
+	AskIn("s1")
+	ReplyIn("s1", "pesto")
+	AskIn("s1")
+	ReplyIn("s1", "pesto")
+	? ConversationQ("s1").GoalState()
+	#--> fulfilled
+	? ConversationQ("s1").GoalWhy()
+	#--> every required slot is filled in 'lifecycle'
+	AskIn("s2")
+	ConversationQ("s2").RevokeGoal("out of scope tonight")
+	? ConversationQ("s2").GoalState()
+	#--> revoked
+	? ConversationQ("s2").GoalWhy()
+	#--> out of scope tonight
+	? len(OpenConversations())
+	#--> 0
+}
 ```
 
 > run: kept
@@ -253,7 +278,8 @@ Chapter 17's law says conversations happen in code first. Here is the conversati
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
-oKW.Know("margherita", "dish").Know("tiramisu", "dish")
+oKW.Know("margherita", "dish")
+oKW.Know("tiramisu", "dish")
 answers = [ [ "margherita", "tomato-sauce" ], [ "tiramisu", "mascarpone" ] ]
 aR = StzOwnAgent("wise-coder").PursueGoal(StzGoalQ().RequireEach("dish", "contains"), oKW, func subj, rel {
 	for a in answers
@@ -290,15 +316,17 @@ First, the data. Names, values and lists in Arabic script pass the gate exactly 
 
 ```haro
 oKA = new stzKnowledgeGraph("مطعم")
-oKA.Know("بيتزا", "dish")
-oKA.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-? oKA.AskIn("c")
-#--> What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')
-aV = oKA.ReplyIn("c", [ "جبن", "طماطم" ])
-? @@(aV[:admitted])
-#--> [ "جبن", "طماطم" ]
-? aV[:goalState]
-#--> fulfilled
+oKA {
+	Know("بيتزا", "dish")
+	AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	? AskIn("c")
+	#--> What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')
+	aV = ReplyIn("c", [ "جبن", "طماطم" ])
+	? @@(aV[:admitted])
+	#--> [ "جبن", "طماطم" ]
+	? aV[:goalState]
+	#--> fulfilled
+}
 ```
 
 > run: kept
@@ -309,9 +337,11 @@ Second, the candidate. A Hausa sentence can produce a value in the natural layer
 
 ```haro
 oKH = new stzKnowledgeGraph("menu")
-oKH.Know("pizza", "dish")
-oKH.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKH.AskIn("c")
+oKH {
+	Know("pizza", "dish")
+	AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("c")
+}
 cCandidate = NaturallyIn("ha", "Yi rubutu dauke 'jibini' Maida shi").Result()
 ? cCandidate
 #--> JIBINI
@@ -326,14 +356,16 @@ Third, the question in the learner's language. The tutor is a consumer of the co
 
 ```haro
 oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").ExerciseQ("ex-01-01")
-? oEx.GapText("finds", "en")
-#--> Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)
-? oEx.GapText("finds", "fr")
-#--> Où sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)
-? oEx.GapText("finds", "ar")
-#--> أين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)
-? oEx.GapText("finds", "ha")
-#--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
+oEx {
+	? GapText("finds", "en")
+	#--> Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)
+	? GapText("finds", "fr")
+	#--> Où sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)
+	? GapText("finds", "ar")
+	#--> أين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)
+	? GapText("finds", "ha")
+	#--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
+}
 ```
 
 > run: kept
@@ -346,14 +378,16 @@ Without a model, what does a conversation say of its own fluency? Run it:
 
 ```haro
 oKF2 = new stzKnowledgeGraph("fluency-space")
-oKF2.AddConversation("f")
-? oKF2.ConversationQ("f").Fluency()
-#--> plain
-oKF2.ConversationQ("f").SetFluency(:neural)
-? oKF2.ConversationQ("f").Fluency()
-#--> neural
-? oKF2.ConversationQ("f").IsFluencyNeural()
-#--> 0
+oKF2 {
+	AddConversation("f")
+	? ConversationQ("f").Fluency()
+	#--> plain
+	ConversationQ("f").SetFluency(:neural)
+	? ConversationQ("f").Fluency()
+	#--> neural
+	? ConversationQ("f").IsFluencyNeural()
+	#--> 0
+}
 ```
 
 > run: kept
@@ -432,7 +466,8 @@ Then run it. An admitted reply uses up the question, so call `AskIn` again befor
 
 ```haro exercise
 oWorld = new stzKnowledgeGraph("my-world")
-oWorld.Know("item1", "thing").Know("item2", "thing")
+oWorld.Know("item1", "thing")
+oWorld.Know("item2", "thing")
 oWorld.AddConversationQ("mine").SetGoal(StzGoalQ().RequireEach("thing", "colour"))
 oWorld.AskIn("mine")
 # your five replies here, each with the verdict you expect

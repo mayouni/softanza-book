@@ -4,7 +4,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
@@ -32,16 +32,20 @@ Four things in that study the library carries. I will show them in the order the
 
 ```haro
 oG = new stzGraph("advances")
-oG.AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
-oG.AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
-oG.AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
-oG.AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+oG {
+	AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
+	AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
+	AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
+	AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+}
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 500)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 500)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -60,11 +64,13 @@ What happens when the ceiling is changed and the same model is judged again? Her
 ```haro
 oG.ClearAttachedRules()
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 200)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -83,25 +89,31 @@ What the library does carry is the answer to the worst thing that can go wrong w
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")
-oTypo.SetMessageQ("above the ceiling an advance needs two approvals")
-oTypo.WhenQ("amont", "greaterthan", 200)
-oTypo.ThenQ("approvals", "greaterthan", 1)
-oTypo.ThenViolationQ("two approvals needed")
-? len(oTypo.Check(oG))
-#--> 0
+oTypo {
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amont", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+	? len(Check(oG))
+	#--> 0
+}
 oWatch = StzRuleGovernance("hub")
-oWatch.AddRule(oTypo)
-oWatch.AddCase("advances", oG)
-aF = oWatch.CheckRules()
-? aF[1][:rule]
-#--> scope_empty
-? aF[1][:message]
-#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+oWatch {
+	AddRule(oTypo)
+	AddCase("advances", oG)
+	aF = CheckRules()
+	? aF[1][:rule]
+	#--> scope_empty
+	? aF[1][:message]
+	#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+}
 oWatch2 = StzRuleGovernance("hub")
-oWatch2.AddRule(oRule)
-oWatch2.AddCase("advances", oG)
-? len(oWatch2.CheckRules())
-#--> 0
+oWatch2 {
+	AddRule(oRule)
+	AddCase("advances", oG)
+	? len(CheckRules())
+	#--> 0
+}
 ```
 
 > run: kept
@@ -112,21 +124,23 @@ The misspelt rule finds nothing, `0`, and to the model nothing found means sound
 
 ```haro
 oKB = new stzKnowledgeGraph("requests")
-oKB.AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
-? oKB.AskIn("review")
-#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
-oKB.ConstrainRelation("approved-by", :Unique)
-oKB.KnowRelation("request-7", "approved-by", "approver-1")
-aR = oKB.ReplyIn("review", "approver-2")
-? aR[:refused][1][2]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
-aCp = oKB.ConversationQ("review").Checkpoints()
-? len(aCp)
-#--> 1
-? aCp[1][:attempted]
-#--> approver-2
-? aCp[1][:why]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+oKB {
+	AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
+	? AskIn("review")
+	#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
+	ConstrainRelation("approved-by", :Unique)
+	KnowRelation("request-7", "approved-by", "approver-1")
+	aR = ReplyIn("review", "approver-2")
+	? aR[:refused][1][2]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+	aCp = ConversationQ("review").Checkpoints()
+	? len(aCp)
+	#--> 1
+	? aCp[1][:attempted]
+	#--> approver-2
+	? aCp[1][:why]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+}
 ```
 
 > run: kept
@@ -137,23 +151,25 @@ The machine asks first: `What does 'request-7' have for 'approved-by'?  (why: 'r
 
 ```haro
 oGov = new stzGovernance("hub")
-oGov.DeclareRisk("prepare-file", 1)
-oGov.DeclareRisk("release-advance", 3)
-oGov.GrantPermission("assistant", "prepare-file")
-oGov.GrantPermission("assistant", "release-advance")
-oGov.SetAuthority("assistant", :Advisory)
-oGov.GrantPermission("approver-1", "release-advance")
-oGov.SetAuthority("approver-1", :Autonomous)
-? oGov.MayProceed("assistant", "prepare-file")
-#--> 1
-? oGov.MayProceed("assistant", "release-advance")
-#--> 0
-? oGov.Why()
-#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
-? oGov.MayProceed("approver-1", "release-advance")
-#--> 1
-? oGov.Why()
-#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+oGov {
+	DeclareRisk("prepare-file", 1)
+	DeclareRisk("release-advance", 3)
+	GrantPermission("assistant", "prepare-file")
+	GrantPermission("assistant", "release-advance")
+	SetAuthority("assistant", :Advisory)
+	GrantPermission("approver-1", "release-advance")
+	SetAuthority("approver-1", :Autonomous)
+	? MayProceed("assistant", "prepare-file")
+	#--> 1
+	? MayProceed("assistant", "release-advance")
+	#--> 0
+	? Why()
+	#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
+	? MayProceed("approver-1", "release-advance")
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+}
 ```
 
 > run: kept
@@ -166,16 +182,18 @@ The class here, `stzGovernance`, judges authority; it is not the rule governor o
 
 ```haro
 nAt = 1785700000000
-oGov.RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
-oGov.RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
-? oGov.LineageOf("c-1")[:rationale]
-#--> ceiling restored, the season is over
-? len(oGov.LineageHistoryOf("c-1"))
-#--> 2
-? oGov.LineageHistoryOf("c-1")[1][:rationale]
-#--> ceiling raised for the harvest season
-? oGov.LineageOf("c-1")[:authorityAtTime]
-#--> autonomous
+oGov {
+	RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
+	RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
+	? LineageOf("c-1")[:rationale]
+	#--> ceiling restored, the season is over
+	? len(LineageHistoryOf("c-1"))
+	#--> 2
+	? LineageHistoryOf("c-1")[1][:rationale]
+	#--> ceiling raised for the harvest season
+	? LineageOf("c-1")[:authorityAtTime]
+	#--> autonomous
+}
 ```
 
 > run: kept
@@ -191,16 +209,18 @@ oPlat.SetWorld(oApp)
 oRegime = new stzGovernance("field-regime")
 oRegime.GrantPermission("field-visits", "use-offline")
 oRegime.SetAuthority("field-visits", :Advisory)
-oPlat.SetGovernedBy(oRegime)
-? oPlat.Granted(:offline)
-#--> 0
-? oPlat.Why()
-#--> capability 'offline' was never requested via AddCapabilityQ().
-oPlat.AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
-? oPlat.Granted(:offline)
-#--> 1
-? oPlat.Why()
-#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+oPlat {
+	SetGovernedBy(oRegime)
+	? Granted(:offline)
+	#--> 0
+	? Why()
+	#--> capability 'offline' was never requested via AddCapabilityQ().
+	AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
+	? Granted(:offline)
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+}
 ```
 
 > run: kept

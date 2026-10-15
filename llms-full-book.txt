@@ -1,12 +1,12 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-15 11:44 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-15 13:01 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
 Source: Preface. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 ## A question you already have
 
@@ -105,7 +105,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -244,7 +244,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, Softibank, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
@@ -397,19 +397,21 @@ The project counts eleven iterations and a campaign of twenty-two simulated test
 
 The first demonstration, on 15 August 2026, was his alone: the record's checklist plans it for the owner by himself, with his own phone and a messaging app as the support line. The measurements he sent over a messaging app are those of 19 August.
 
-One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it:
+One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it. The registry is named once, and each line inside the braces speaks to it: chapter 5 calls this form the scene.
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
-oReg.Bind(:payments, new stzPaymentsSandbox())
-oReg.SetPhase(:emulated)
-? oReg.IsSound()
-#--> 1
-oReg.SetPhase(:production)
-? oReg.IsSound()
-#--> 0
-? oReg.Findings()[1][:message]
-#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+oReg {
+	Bind(:payments, new stzPaymentsSandbox())
+	SetPhase(:emulated)
+	? IsSound()
+	#--> 1
+	SetPhase(:production)
+	? IsSound()
+	#--> 0
+	? Findings()[1][:message]
+	#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+}
 ```
 
 > run: kept
@@ -420,10 +422,12 @@ It answers `1` in the emulated phase and `0` in production, and says why: `still
 
 ```haro
 oOrg = new stzOrgChart("bank")
-oOrg.AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
-oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
-? @@( oOrg.ValidateBCEAOGovernance() )
-#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+oOrg {
+	AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
+	AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
+	? @@( ValidateBCEAOGovernance() )
+	#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+}
 ```
 
 > run: kept
@@ -549,7 +553,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -629,11 +633,14 @@ Governing also has a side that faces the person. The system asks, and it does no
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").Know("tiramisu", "dish")
-oKB.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-aQ = oKB.AskInXT("setup")
-? aQ[:why]
-#--> every dish needs 'contains'
+oKB {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	aQ = AskInXT("setup")
+	? aQ[:why]
+	#--> every dish needs 'contains'
+}
 try
 	oKB.ConcludeIn("setup", "world")
 catch
@@ -763,7 +770,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -876,18 +883,20 @@ oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
 oSupplier = StzAppQ("supplier")
 oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
 oCon = new stzSuperApp("acme-group")
-oCon.AddWorld("resto", oResto)
-oCon.AddWorld("supplier", oSupplier)
-oCon.Bond("resto", "supplier", "order-produce")
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("resto", "order-produce")
-oCon.GovSetAuthority("resto", :Delegated)
-? oCon.CallAcross("resto", "supplier", "order-produce")
-#--> 1
-? oCon.CallAcross("resto", "supplier", "raid-kitchen")
-#--> 0
-? oCon.Why()
-#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+oCon {
+	AddWorld("resto", oResto)
+	AddWorld("supplier", oSupplier)
+	Bond("resto", "supplier", "order-produce")
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("resto", "order-produce")
+	GovSetAuthority("resto", :Delegated)
+	? CallAcross("resto", "supplier", "order-produce")
+	#--> 1
+	? CallAcross("resto", "supplier", "raid-kitchen")
+	#--> 0
+	? Why()
+	#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+}
 ```
 
 > run: kept
@@ -900,10 +909,12 @@ And a platform, `stzPlatform` in the figure, is the envelope around a solution: 
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
-oDelivery.AddSuperApp(:phone, :Android)
-oDelivery.AddBackend(:api, :LinuxServer)
-oDelivery.NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
-oPlan = oDelivery.Plan()
+oDelivery {
+	AddSuperApp(:phone, :Android)
+	AddBackend(:api, :LinuxServer)
+	NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
+	oPlan = Plan()
+}
 ? @@( oPlan.EngineCapsFor(:phone) )
 #--> [ "pivottable", "constraintsolver" ]
 ? @@( StzWasmGroupsFor( oPlan.EngineCapsFor(:phone) ) )
@@ -1022,7 +1033,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -1144,6 +1155,47 @@ Can the steps of thought be read back? An object lifted with history keeps the r
 
 The run printed `[ 12500, 13000, 11500, 23, 46 ]`. Five values, the starting one included, and the chain ends at `46`! The article that first told this promised four values, without the first, and a final value one unit short, 45. The guard behind the block states today's rule, on a string chain: the initial value, then each step's result. The book takes the run's answer, not the article's.
 
+The same steps can be written as a scene, the form I hold as the basis of the style: the object is named once, and each line inside the braces speaks to it.
+
+```haro
+# A number object that keeps its history
+QH(12500) {
+	# Inside the braces, each line speaks to the object
+	Add(500)
+	Retrieve(1500)
+	DivideBy(500)
+	MultiplyBy(2)
+
+	# Its history, as one expressive value
+	? @@( History() )
+	#--> [ 12500, 13000, 11500, 23, 46 ]
+}
+```
+
+> run: kept
+
+The chain says it in one sentence, and the scene says it as steps. The book uses both: the sentence where the thought is one, the scene where it is a procedure. The classic form names the object on every line, and many readers think in it:
+
+```haro
+o1 = new stzNumber(12500)
+KeepHistory()
+
+o1.Add(500)
+o1.Retrieve(1500)
+o1.DivideBy(500)
+o1.MultiplyBy(2)
+
+? @@( o1.History() )
+#--> [ 12500, 13000, 11500, 23, 46 ]
+KeepHistoryOFF()
+```
+
+> run: kept
+
+Three forms, one answer. A fourth is the near-natural sentence, `Naturally("...")`, which chapter 13 runs on text; on a number it answers `Unsupported object type` at this commit, and that is its next step.
+
+One word on `@@()`. On the former host language, `?` prints a list one item per line; `@@()` asks for the list's expressive form, `[ 12500, 13000, 11500, 23, 46 ]`, the one a person writes. I have asked that Haro print that form by default; then `@@()` leaves the examples.
+
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
 Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are fourteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
@@ -1242,7 +1294,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
@@ -1261,16 +1313,17 @@ The field also has a vocabulary of metaphors for programming, but it keeps them 
 The mental model is seven steps, and they are the order in which a person asks. Define the problem in natural terms and take its keywords. Select the object that holds the data. Ask whether it contains what you care about. Ask how many. Ask where. Act on those positions, or call the verb that does it. And the seventh: celebrate, and repeat. In chapter 5 you ran those steps on a list with empty strings. They do not belong to the list. Do they hold on a string? Here they are, in the same order:
 
 ```haro
-o1 = new stzString("You and you")
-? o1.ContainsCS("YOU", FALSE)
-#--> TRUE
-? o1.NumberOfOccurrenceCS("YOU", FALSE)
-#--> 2
-? o1.FindNthCS(2, "YOU", FALSE)
-#--> 9
-o1.ReplaceSection(9, 11, :With = "Me")
-? o1.Content()
-#--> You and Me
+Q("You and you") {
+	? ContainsCS("YOU", FALSE)
+	#--> TRUE
+	? NumberOfOccurrenceCS("YOU", FALSE)
+	#--> 2
+	? FindNthCS(2, "YOU", FALSE)
+	#--> 9
+	ReplaceSection(9, 11, :With = "Me")
+	? Content()
+	#--> You and Me
+}
 ```
 
 > run: kept
@@ -1282,17 +1335,18 @@ When the steps repeat, the loop appears, and this is where the library gives you
 **The Walker moves along a route.** A walker is a map of its whole journey, built when it is created. It holds the positions it will visit, the positions it will skip, where it stands and what remains. What does it know before it takes a step? Ask it:
 
 ```haro
-oWalker = Wk(1, 10, 2)
-? @@( oWalker.Walkables() )
-#--> [ 1, 3, 5, 7, 9 ]
-? @@( oWalker.Unwalkables() )
-#--> [ 2, 4, 6, 8, 10 ]
-? @@( oWalker.Walk() )
-#--> [ 1, 3 ]
-? oWalker.CurrentPosition()
-#--> 3
-? @@( oWalker.RemainingWalkables() )
-#--> [ 5, 7, 9 ]
+Wk(1, 10, 2) {
+	? @@( Walkables() )
+	#--> [ 1, 3, 5, 7, 9 ]
+	? @@( Unwalkables() )
+	#--> [ 2, 4, 6, 8, 10 ]
+	? @@( Walk() )
+	#--> [ 1, 3 ]
+	? CurrentPosition()
+	#--> 3
+	? @@( RemainingWalkables() )
+	#--> [ 5, 7, 9 ]
+}
 ```
 
 > run: kept
@@ -1321,13 +1375,14 @@ Ask for ten steps from a walk that has four and you get the four: `[ 1, 4, 7, 10
 **The Checker asks yes or no.** All of them, any of them, or where, with the condition written as a string, the W condition, W for where:
 
 ```haro
-o1 = new stzList([ "A", 5, "B", "C" ])
-? o1.CheckW('{ isString(@item) and IsUppercase(@item) }')
-#--> FALSE
-? o1.ContainsW('{ isNumber(@item) }')
-#--> TRUE
-? @@( o1.FindW('{ isNumber(@item) }') )
-#--> [ 2 ]
+Q([ "A", 5, "B", "C" ]) {
+	? CheckW('{ isString(@item) and IsUppercase(@item) }')
+	#--> FALSE
+	? ContainsW('{ isNumber(@item) }')
+	#--> TRUE
+	? @@( FindW('{ isNumber(@item) }') )
+	#--> [ 2 ]
+}
 ```
 
 > run: kept
@@ -1338,20 +1393,23 @@ One item fails the test, so `CheckW` prints `FALSE`; a number is in the list, so
 
 ```haro
 o1 = new stzYielder([ 1, -2, 3, -4, 5 ])
-? @@( o1.Filter(:IsPositive) )
-#--> [ 1, 3, 5 ]
-? @@( o1.Map(:Abs) )
-#--> [ 1, 2, 3, 4, 5 ]
-? o1.Reduce(:Sum)
-#--> 3
-o2 = new stzList([ 1, "haro", 3, "python", 5, "ruby" ])
-? @@( o2.YieldW('isString(@item)', 'upper(@item)') )
-#--> [ "HARO", "PYTHON", "RUBY" ]
-? @@( o2.Content() )
-#--> [ 1, "haro", 3, "python", 5, "ruby" ]
-o2.PerformW('isString(@item)', 'upper(@item)')
-? @@( o2.Content() )
-#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+o1 {
+	? @@( Filter(:IsPositive) )
+	#--> [ 1, 3, 5 ]
+	? @@( Map(:Abs) )
+	#--> [ 1, 2, 3, 4, 5 ]
+	? Reduce(:Sum)
+	#--> 3
+}
+Q([ 1, "haro", 3, "python", 5, "ruby" ]) {
+	? @@( YieldW('isString(@item)', 'upper(@item)') )
+	#--> [ "HARO", "PYTHON", "RUBY" ]
+	? @@( Content() )
+	#--> [ 1, "haro", 3, "python", 5, "ruby" ]
+	PerformW('isString(@item)', 'upper(@item)')
+	? @@( Content() )
+	#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+}
 ```
 
 > run: kept
@@ -1361,16 +1419,17 @@ Look at the two `Content()` outputs, before and after the `PerformW` call. The y
 Now the thing that all four share: a condition travels inside an argument. It is a small string, kept in a variable if you want. It goes in the same place for find, for items and for contains. And it has a twin that takes a real function:
 
 ```haro
-o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 cCond = '{ @item > 5 }'
-? @@( o1.FindW(cCond) )
-#--> [ 2, 4, 6 ]
-? @@( o1.ItemsW(cCond) )
-#--> [ 8, 12, 9 ]
-? o1.ContainsW(cCond)
-#--> TRUE
-? @@( o1.FindWF( func x { return x > 5 } ) )
-#--> [ 2, 4, 6 ]
+Q([ 3, 8, 5, 12, 1, 9 ]) {
+	? @@( FindW(cCond) )
+	#--> [ 2, 4, 6 ]
+	? @@( ItemsW(cCond) )
+	#--> [ 8, 12, 9 ]
+	? ContainsW(cCond)
+	#--> TRUE
+	? @@( FindWF( func x { return x > 5 } ) )
+	#--> [ 2, 4, 6 ]
+}
 ```
 
 > run: kept
@@ -1488,7 +1547,7 @@ Source: Chapter 7. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
@@ -1580,12 +1639,13 @@ A list can also be carried as a string in its short form, recognised, converted 
 Rule 10: code travels inside an argument as a small string with a placeholder, `@char` for the characters of a string and `@item` for the items of a list. Chapter 6 showed the seat on a list. Here it is on a string, where it finds and removes by a rule and not by a loop:
 
 ```haro
-o1 = new stzString("SOooooFTAaaannnNZA")
-? @@( o1.FindW('{ Q(@char).IsUppercase() }') )
-#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
-o1.RemoveW('{ Q(@char).IsLowercase() }')
-? o1.Content()
-#--> SOFTANZA
+Q("SOooooFTAaaannnNZA") {
+	? @@( FindW('{ Q(@char).IsUppercase() }') )
+	#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
+	RemoveW('{ Q(@char).IsLowercase() }')
+	? Content()
+	#--> SOFTANZA
+}
 ```
 
 > run: kept
@@ -1817,7 +1877,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -1903,12 +1963,13 @@ o1 = new stzString("fjharoljharodjharog")
 **The plural** extends a verb to many things without a loop, and **the exceptional form** keeps only what you name. The article's example for the second, `RemoveNonLettersExcept`, does not exist. The form does, in other names:
 
 ```haro
-o1 = new stzString("__H~~~AR***O__")
-? @@( o1.FindMany([ "~", "*" ]) )
-#--> [ 4, 5, 6, 9, 10, 11 ]
-o1.RemoveMany([ "_", "~", "*" ])
-? o1.Content()
-#--> HARO
+Q("__H~~~AR***O__") {
+	? @@( FindMany([ "~", "*" ]) )
+	#--> [ 4, 5, 6, 9, 10, 11 ]
+	RemoveMany([ "_", "~", "*" ])
+	? Content()
+	#--> HARO
+}
 o2 = new stzString("--Haro--&__Softanza__")
 o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ? o2.Content()
@@ -1934,12 +1995,13 @@ o3 = new stzList([ "H", "A", "R", "O" ])
 **The deep form** answers a path, a list of indices that goes as deep as the data does, and the same family replaces and removes at that depth, with `:By` as its named seat where chapter 5's `Replaced` said `:With`; the deep verbs accept both:
 
 ```haro
-o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
-? @@( o1.DeepFind("you") )
-#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
-o1.DeepReplace("you", :By = "♥")
-? @@( o1.Content() )
-#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+Q([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ]) {
+	? @@( DeepFind("you") )
+	#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
+	DeepReplace("you", :By = "♥")
+	? @@( Content() )
+	#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+}
 ```
 
 > run: kept
@@ -1976,12 +2038,14 @@ It was born in regular expressions, where the frame is how much of the text a pa
 ```haro
 cText = "First: Line1" + nl + "Second: Line2" + nl + "Third: Line3"
 o1 = new stzRegex("^Second:.*$")
-? o1.Match(cText)
-#--> FALSE
-? o1.MatchFirst(cText)
-#--> FALSE
-? o1.MatchLine(cText)
-#--> TRUE
+o1 {
+	? Match(cText)
+	#--> FALSE
+	? MatchFirst(cText)
+	#--> FALSE
+	? MatchLine(cText)
+	#--> TRUE
+}
 ```
 
 > run: kept
@@ -2005,11 +2069,13 @@ The second instance is the system. Feature code is written in a named scope, and
 
 ```haro
 oSol = new stzPlatformProfile("my-iot-product")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
-oBack = oSol.App(:backend).System()
-oFirm = oSol.App(:firmware).System()
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+	oBack = App(:backend).System()
+	oFirm = App(:firmware).System()
+}
 ? oBack.Spawn("worker")
 #--> native
 ? oFirm.ReadPin(4)
@@ -2135,7 +2201,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
@@ -2258,14 +2324,16 @@ Reaxis replaced backpressure with overflow, a word you do not need a diagram to 
 ```haro
 oRs = new stzReactiveSystem()
 oS = oRs.CreateStream("probe")
-oS.SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
-for i = 1 to 4
-	oS.Receive(i)
-next
-? oS.OverflowStats()[:currentBuffer]
-#--> 2
-? oS.OverflowStats()[:droppedCount]
-#--> 2
+oS {
+	SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
+	for i = 1 to 4
+		Receive(i)
+	next
+	? OverflowStats()[:currentBuffer]
+	#--> 2
+	? OverflowStats()[:droppedCount]
+	#--> 2
+}
 ```
 
 > run: kept
@@ -2297,28 +2365,32 @@ The chapter's third subject is the engines, the small paradigms the library reth
 
 ```haro
 oTl = new stzTimeLine("2024-01-01 00:00:00", "2024-12-31 23:59:59")
-oTl.AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
-oTl.AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
-? len(oTl.Gaps())
-#--> 1
-? oTl.Gaps()[1][:after]
-#--> PHASE1
-? oTl.Gaps()[1][:before]
-#--> PHASE2
-? oTl.HasOverlaps()
-#--> FALSE
-oTl.AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
-? oTl.HasOverlaps()
-#--> TRUE
+oTl {
+	AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
+	AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
+	? len(Gaps())
+	#--> 1
+	? Gaps()[1][:after]
+	#--> PHASE1
+	? Gaps()[1][:before]
+	#--> PHASE2
+	? HasOverlaps()
+	#--> FALSE
+	AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
+	? HasOverlaps()
+	#--> TRUE
+}
 oB = new stzTimeLine("2024-01-01", "2024-12-31")
-oB.AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
-oB.AddPoint("EVENT1", "2024-06-15 08:00:00")
-try
-	oB.AddPoint("EVENT2", "2024-06-15 12:00:00")
-catch
-	? cCatchError
-done
-#--> Point 'EVENT2' falls within a blocked span or blocked point
+oB {
+	AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
+	AddPoint("EVENT1", "2024-06-15 08:00:00")
+	try
+		AddPoint("EVENT2", "2024-06-15 12:00:00")
+	catch
+		? cCatchError
+	done
+	#--> Point 'EVENT2' falls within a blocked span or blocked point
+}
 ```
 
 > run: kept
@@ -2328,19 +2400,20 @@ The gap is named by what it lies between, `PHASE1` and `PHASE2`. The blocked spa
 And a grid has a cursor that knows where it is: position is column and row, and moving past an edge stays at the edge. Two moves down and three to the right, then three more to the right: where is the cursor?
 
 ```haro
-o = new stzGrid([ 5, 5 ])
-o.MoveDown()
-o.MoveDown()
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 4, 3 ]
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 5, 3 ]
+StzGridQ([ 5, 5 ]) {
+	MoveDown()
+	MoveDown()
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 4, 3 ]
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 5, 3 ]
+}
 ```
 
 > run: kept
@@ -2439,7 +2512,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my earlier book, *Refinement-Oriented Programming*: stop trying to govern the intelligence, and govern the change.
 
@@ -2461,18 +2534,20 @@ The rest of the chapter runs that sentence.
 
 The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. My earlier book, *Refinement-Oriented Programming*, tells the discipline through the story of Softibank, a bank facing a regulator's letter. This chapter tells what the library carries of it.
 
-It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds:
+It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds, and the code that holds it is questioned in its scene, the form of chapter 5:
 
 ```haro
 cSrc = 'vat_rate = <R:PARAM name="vat" value="0.20" min="0" max="0.25">' + nl +
        'sort_by  = <R:ALGO name="sort" value="quick" options="quick|merge|heap">'
 o = new stzRefinableCode(cSrc)
-? o.NumberOfPoints()
-#--> 2
-? @@( o.RefinementPoints() )
-#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
-? o.KindOf("vat")
-#--> param
+o {
+	? NumberOfPoints()
+	#--> 2
+	? @@( RefinementPoints() )
+	#--> [ [ "vat", "param", "0.20" ], [ "sort", "algo", "quick" ] ]
+	? KindOf("vat")
+	#--> param
+}
 ```
 
 > run: kept
@@ -2480,13 +2555,15 @@ o = new stzRefinableCode(cSrc)
 A change is then a proposal. It names a point and a value; if it clears the gate it takes effect and is recorded as one step:
 
 ```haro
-r = o.Refine("vat").To("0.22")
-? r[:admitted]
-#--> 1
-? o.ValueOf("vat")
-#--> 0.22
-? o.NumberOfSteps()
-#--> 1
+o {
+	r = Refine("vat").To("0.22")
+	? r[:admitted]
+	#--> 1
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -2494,19 +2571,21 @@ r = o.Refine("vat").To("0.22")
 The admission prints as `1` and `0`, not `TRUE` and `FALSE`: that is how this verb answers, and I print the run. And what does a proposal that does not clear the gate change, and what does the gate say? Run it:
 
 ```haro
-r2 = o.Refine("vat").To("0.99")
-? r2[:admitted]
-#--> 0
-? r2[:why]
-#--> constraint: 0.99 above max 0.25
-? o.ValueOf("vat")
-#--> 0.22
-? o.Refine("sort").To("bubble")[:why]
-#--> constraint: 'bubble' not in options quick|merge|heap
-? o.Refine("ghost").To("1")[:why]
-#--> structural: no refinement point 'ghost'
-? o.NumberOfSteps()
-#--> 1
+o {
+	r2 = Refine("vat").To("0.99")
+	? r2[:admitted]
+	#--> 0
+	? r2[:why]
+	#--> constraint: 0.99 above max 0.25
+	? ValueOf("vat")
+	#--> 0.22
+	? Refine("sort").To("bubble")[:why]
+	#--> constraint: 'bubble' not in options quick|merge|heap
+	? Refine("ghost").To("1")[:why]
+	#--> structural: no refinement point 'ghost'
+	? NumberOfSteps()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -2519,15 +2598,17 @@ Three refusals, and the timeline did not grow by a step! The library's comment c
 cPrice = 'price = <R:PARAM name="vat" value="0.20" min="0" max="0.30"> * <R:PARAM name="margin" value="1.1" min="1" max="2">' + nl +
          'floor = <R:PARAM name="floor" value="0.10" min="0" max="0.30">'
 oc = new stzRefinableCode(cPrice)
-aC = oc.Cascade("vat")
-? aC[:lines][1]
-#--> 1
-? @@( aC[:alsoTouches] )
-#--> [ "margin" ]
-? oc.Cascade("floor")[:lines][1]
-#--> 2
-? len(oc.Cascade("floor")[:alsoTouches])
-#--> 0
+oc {
+	aC = Cascade("vat")
+	? aC[:lines][1]
+	#--> 1
+	? @@( aC[:alsoTouches] )
+	#--> [ "margin" ]
+	? Cascade("floor")[:lines][1]
+	#--> 2
+	? len(Cascade("floor")[:alsoTouches])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -2550,14 +2631,16 @@ cCls = 'class Tariff' + nl +
        '	def Rate()' + nl +
        '		return 0.18' + nl
 g0 = new stzRingCodeGraph("")
-g0.ScanSource(cCls, "world.ring")
-g0.BuildGraph()
-? @@( g0.Cascade("Tariff")[:descendants] )
-#--> [ "Invoice", "Quote", "Receipt" ]
-? g0.Cascade("Tariff")[:blastRadius]
-#--> 3
-? @@( g0.ImpactOf("Rate")[:inheritedBy] )
-#--> [ "Invoice", "Receipt" ]
+g0 {
+	ScanSource(cCls, "world.ring")
+	BuildGraph()
+	? @@( Cascade("Tariff")[:descendants] )
+	#--> [ "Invoice", "Quote", "Receipt" ]
+	? Cascade("Tariff")[:blastRadius]
+	#--> 3
+	? @@( ImpactOf("Rate")[:inheritedBy] )
+	#--> [ "Invoice", "Receipt" ]
+}
 ```
 
 > run: kept
@@ -2568,18 +2651,20 @@ How does a change reach its dependents? By a rule that spans several points, jud
 
 ```haro
 d = new stzRefinableCode(cPrice)
-d.DeclareDerivation("vat-above-floor",
-	func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
-	"vat must not drop below floor")
-? d.Refine("vat").To("0.30")[:admitted]
-#--> 1
-r3 = d.Refine("vat").To("0.05")
-? r3[:admitted]
-#--> 0
-? r3[:why]
-#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
-? d.ValueOf("vat")
-#--> 0.30
+d {
+	DeclareDerivation("vat-above-floor",
+		func oCode { return ring_number(oCode.ValueOf("vat")) >= ring_number(oCode.ValueOf("floor")) },
+		"vat must not drop below floor")
+	? Refine("vat").To("0.30")[:admitted]
+	#--> 1
+	r3 = Refine("vat").To("0.05")
+	? r3[:admitted]
+	#--> 0
+	? r3[:why]
+	#--> derivation: rule 'vat-above-floor' violated -- vat must not drop below floor
+	? ValueOf("vat")
+	#--> 0.30
+}
 ```
 
 > run: kept
@@ -2589,18 +2674,20 @@ The rule refused the change and named itself: `derivation: rule 'vat-above-floor
 And who proposed it? Every proposal carries its origin, and a point can set a floor of trust that refuses a lower origin, without refusing a person. What happens to a proposal from a language model when the floor of the point asks for a trusted origin? Run it:
 
 ```haro
-d.TrustFloor("vat", :trusted)
-r4 = d.Refine("vat").As(:llm).To("0.25")
-? r4[:admitted]
-#--> 0
-? r4[:why]
-#--> trust: posture :llm below the required floor for 'vat'
-? d.ValueOf("vat")
-#--> 0.30
-? d.Refine("vat").As(:trusted).To("0.25")[:admitted]
-#--> 1
-? d.PostureOf(d.NumberOfSteps())
-#--> trusted
+d {
+	TrustFloor("vat", :trusted)
+	r4 = Refine("vat").As(:llm).To("0.25")
+	? r4[:admitted]
+	#--> 0
+	? r4[:why]
+	#--> trust: posture :llm below the required floor for 'vat'
+	? ValueOf("vat")
+	#--> 0.30
+	? Refine("vat").As(:trusted).To("0.25")[:admitted]
+	#--> 1
+	? PostureOf(NumberOfSteps())
+	#--> trusted
+}
 ```
 
 > run: kept
@@ -2611,20 +2698,25 @@ And who may turn which knob? That is declared, too: a permission, and an authori
 
 ```haro
 gv = new stzRefinableCode(cPrice)
-gv.SetGovernedBy(new stzGovernance("release-ops")).SetActor("release-bot")
-gv.SetRiskFor("vat", 3).SetAllowRefine("vat").SetAuthorityLevel(:Delegated)
-r5 = gv.Refine("vat").To("0.22")
-? r5[:admitted]
-#--> 0
-? r5[:why]
-#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
-? gv.ValueOf("vat")
-#--> 0.20
-gv.SetAuthorityLevel(:Autonomous)
-? gv.Refine("vat").To("0.22")[:admitted]
-#--> 1
-? gv.GovernanceQ().NumberOfDecisions()
-#--> 1
+gv {
+	SetGovernedBy(new stzGovernance("release-ops"))
+	SetActor("release-bot")
+	SetRiskFor("vat", 3)
+	SetAllowRefine("vat")
+	SetAuthorityLevel(:Delegated)
+	r5 = Refine("vat").To("0.22")
+	? r5[:admitted]
+	#--> 0
+	? r5[:why]
+	#--> governance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)
+	? ValueOf("vat")
+	#--> 0.20
+	SetAuthorityLevel(:Autonomous)
+	? Refine("vat").To("0.22")[:admitted]
+	#--> 1
+	? GovernanceQ().NumberOfDecisions()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -2635,25 +2727,27 @@ Last, can a step be taken back? Reversibility is part of the data model: every a
 
 ```haro
 t = new stzRefinableCode(cPrice)
-t.Refine("vat").To("0.21")
-t.Refine("vat").To("0.22")
-t.Checkpoint("reviewed")
-t.Refine("vat").To("0.28")
-? t.ValueOf("vat")
-#--> 0.28
-t.RevertToCheckpoint("reviewed")
-? t.ValueOf("vat")
-#--> 0.22
-? t.NumberOfSteps()
-#--> 2
-t.RevertTo(0)
-? t.ValueOf("vat")
-#--> 0.20
-? t.CanRevert()
-#--> 0
-t.Redo()
-? t.ValueOf("vat")
-#--> 0.21
+t {
+	Refine("vat").To("0.21")
+	Refine("vat").To("0.22")
+	Checkpoint("reviewed")
+	Refine("vat").To("0.28")
+	? ValueOf("vat")
+	#--> 0.28
+	RevertToCheckpoint("reviewed")
+	? ValueOf("vat")
+	#--> 0.22
+	? NumberOfSteps()
+	#--> 2
+	RevertTo(0)
+	? ValueOf("vat")
+	#--> 0.20
+	? CanRevert()
+	#--> 0
+	Redo()
+	? ValueOf("vat")
+	#--> 0.21
+}
 ```
 
 > run: kept
@@ -2746,7 +2840,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
@@ -2883,27 +2977,28 @@ done
 The refusal names the unknown type, `'colour'`, and lists the six it accepts: `(use string|number|boolean|oneof|list|structure)`. The schema was refused before any model was called! A correct schema is a small closed language. The court judges any answer against it, whoever wrote the answer. And the schema emits its grammar, so that a model can be held to it while it writes:
 
 ```haro
-oS = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "name", :type = :string ],
 	[ :field = "age",  :type = :number, :must = [ [ ">=", 0 ], [ "<=", 130 ] ] ],
 	[ :field = "mood", :type = :oneof,  :choices = [ "positive", "negative" ] ]
-])
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
-#--> 1
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
-#--> 1
-? oS.ToGBNF()
-#--> root ::= name-line age-line mood-line
-#    name-line ::= "name: " text "\n"
-#    age-line ::= "age: " number "\n"
-#    mood-line ::= "mood: " ("positive" | "negative") "\n"
-#    text ::= [^\n]+
-#    number ::= "-"? [0-9]+ ("." [0-9]+)?
-#    boolean ::= ("yes" | "no" | "true" | "false")
+]) {
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
+	#--> 1
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
+	#--> 1
+	? ToGBNF()
+	#--> root ::= name-line age-line mood-line
+	#    name-line ::= "name: " text "\n"
+	#    age-line ::= "age: " number "\n"
+	#    mood-line ::= "mood: " ("positive" | "negative") "\n"
+	#    text ::= [^\n]+
+	#    number ::= "-"? [0-9]+ ("." [0-9]+)?
+	#    boolean ::= ("yes" | "no" | "true" | "false")
+}
 ```
 
 > run: kept
@@ -3032,7 +3127,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
@@ -3064,24 +3159,26 @@ oO = StzOutputSchemaQ([
 	[ :field = "quantity", :type = :number, :must = [ [ ">=", 1 ], [ "<=", 12 ] ] ],
 	[ :field = "note",     :type = :string, :optional = 1 ]
 ])
-? oO.Describe()
-#--> schema 'output' -- 3 field(s)
-#      dish : oneof (margherita | tiramisu) [required]
-#      quantity : number [required], must be at least '1', must be at most '12'
-#      note : string [optional]
-? oO.PromptClause()
-#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
-#
-#    dish: <one of: margherita | tiramisu>
-#    quantity: <number>
-#    note: <text>
-aV = oO.Verify([ :dish = "pizza", :quantity = 40 ])
-? aV[:ok]
-#--> 0
-? aV[:findings][1][:message]
-#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
-? aV[:findings][2][:message]
-#--> field 'quantity' must be at most '12', and the model answered '40'.
+oO {
+	? Describe()
+	#--> schema 'output' -- 3 field(s)
+	#      dish : oneof (margherita | tiramisu) [required]
+	#      quantity : number [required], must be at least '1', must be at most '12'
+	#      note : string [optional]
+	? PromptClause()
+	#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
+	#
+	#    dish: <one of: margherita | tiramisu>
+	#    quantity: <number>
+	#    note: <text>
+	aV = Verify([ :dish = "pizza", :quantity = 40 ])
+	? aV[:ok]
+	#--> 0
+	? aV[:findings][1][:message]
+	#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
+	? aV[:findings][2][:message]
+	#--> field 'quantity' must be at most '12', and the model answered '40'.
+}
 ```
 
 > run: kept
@@ -3153,20 +3250,21 @@ What the machine will not hold, it refuses by name. A closed language refuses wh
 #--> GBNF-M4
 ? StzGrammarRefusal(cG) = ""
 #--> 1
-oNest = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "title",  :type = :string ],
 	[ :field = "author", :type = :structure, :fields = [ [ :field = "name", :type = :string ] ] ]
-])
-? oNest.IsExpressibleAsGrammar()
-#--> 0
-try
-	oNest.ToGBNF()
-catch
-	? len(StzFind("GBNF-F5", cCatchError)) > 0
-done
-#--> 1
-? oNest.ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
-#--> 1
+]) {
+	? IsExpressibleAsGrammar()
+	#--> 0
+	try
+		ToGBNF()
+	catch
+		? len(StzFind("GBNF-F5", cCatchError)) > 0
+	done
+	#--> 1
+	? ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
+	#--> 1
+}
 ```
 
 > run: kept
@@ -3191,13 +3289,14 @@ The typo was refused at once, and the message lists the keys that are allowed!
 And a host function is not a word of the closed language of conditions. There are two ways to say a condition, the closed language and the door of a function. A square root is a word of the engine's expression language, and a sine is not. What does the textual form answer to the sine, and what does the function form, which runs host code?
 
 ```haro
-o = new stzList([ 4, 7, 10, 3, 8 ])
-? @@( o.FindW('{ sqrt(@item) < 3 }') )
-#--> [ 1, 2, 4, 5 ]
-? @@( o.FindW('{ sin(@item) < 2 }') )
-#--> [ ]
-? @@( o.FindWF( func x { return sin(x) < 2 } ) )
-#--> [ 1, 2, 3, 4, 5 ]
+StzListQ([ 4, 7, 10, 3, 8 ]) {
+	? @@( FindW('{ sqrt(@item) < 3 }') )
+	#--> [ 1, 2, 4, 5 ]
+	? @@( FindW('{ sin(@item) < 2 }') )
+	#--> [ ]
+	? @@( FindWF( func x { return sin(x) < 2 } ) )
+	#--> [ 1, 2, 3, 4, 5 ]
+}
 ```
 
 > run: kept
@@ -3390,7 +3489,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -3449,7 +3548,7 @@ catch
 	? cCatchError
 done
 #--> NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.
-? Q("haro").IsAQ(:String).IfSo("majuscule").Content()
+? Q("haro").IsAQ(:String).IfSoQ("majuscule").Content()
 #--> HARO
 try
 	Q("haro").IsAQ(:String).IfSo("uppercse")
@@ -3464,9 +3563,9 @@ done
 A chain branches on its own truth, and an ordinal is a word:
 
 ```haro
-? Q("haro").IsAQ(:String).IfSo(:Uppercase).Otherwise(:Reverse).Content()
+? Q("haro").IsAQ(:String).IfSoQ(:Uppercase).OtherwiseQ(:Reverse).Content()
 #--> HARO
-? Q("hello").IsAQ(:Number).IfSo(:Reverse).Otherwise(:Uppercase).Content()
+? Q("hello").IsAQ(:Number).IfSoQ(:Reverse).OtherwiseQ(:Uppercase).Content()
 #--> HELLO
 ? Q("hello brave world").TheNth(2, :Words)
 #--> brave
@@ -3514,8 +3613,13 @@ oT = Naturally("Create a string with 'haro' Is it lowercase ? Does it contain 'r
 #--> TRUE
 ? oT.Understood()
 #--> create a string with haro -> ask: is lowercase -> ask: contains
-? TruthOf("haro").IsA(:Lowercase).AndIsA(:Latin).AndContaining("r").Holds()
-#--> TRUE
+TruthOf("haro") {
+	IsA(:Lowercase)
+	AndIsA(:Latin)
+	AndContaining("r")
+	? Holds()
+	#--> TRUE
+}
 ? Why()
 #--> yes: "haro" is lowercase and is latin and containing "r"
 ? Certainty()
@@ -3850,7 +3954,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
@@ -3915,11 +4019,13 @@ The same growth reaches the domain language model of chapter 19. Nothing is trai
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
-oKB.Know("couscous", "dish").KnowRelation("couscous", "contains", "semolina")
+oKB.Know("couscous", "dish")
+oKB.KnowRelation("couscous", "contains", "semolina")
 oDLM = StzDlmQ(oKB)
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
-oKB.Know("millet", "grain").KnowRelation("couscous", "contains", "millet")
+oKB.Know("millet", "grain")
+oKB.KnowRelation("couscous", "contains", "millet")
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
 oDLM = StzDlmQ(oKB)
@@ -3936,19 +4042,20 @@ It does not. The second answer is the old model still refusing, `That is outside
 **The file the library writes.** A clinic. A relation declared unique, and a graph in strict mode, where every fact needs its provenance. What does it do with a fact that has no source, with one that has, and with a second, contradicting one from a rumour? And what does it then write to the disk? Run it:
 
 ```haro
-oCl = new stzKnowledgeGraph("clinic")
-oCl.ConstrainRelation("treated-by", :Unique)
-oCl.EnableStrictMode()
-try
-	oCl.AddFact("fatou", "treated-by", "dr-diallo")
-catch
-	? cCatchError
-done
-#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
-oCl.AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
-? oCl.AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
-#--> 0
-oCl.WriteToKnowFile("clinic")
+StzKnowledgeGraphQ("clinic") {
+	ConstrainRelation("treated-by", :Unique)
+	EnableStrictMode()
+	try
+		AddFact("fatou", "treated-by", "dr-diallo")
+	catch
+		? cCatchError
+	done
+	#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
+	AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
+	? AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
+	#--> 0
+	WriteToKnowFile("clinic")
+}
 ? read("clinic.zknw")
 #--> knowledge "clinic"
 #
@@ -3973,17 +4080,18 @@ The naked fact is refused with the library's own sentence, `Strict mode: every f
 Does the file read back into a strict graph, with the law, the source of every fact and the refusal inside it? Load it:
 
 ```haro
-oBack = new stzKnowledgeGraph("clinic")
-oBack.EnableStrictMode()
-aR = oBack.ImportKnow("clinic.zknw")
-? aR[:merged]
-#--> 1
-? @@( oBack.MetaOfFact("fatou", "treated-by", "dr-diallo") )
-#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
-? len(oBack.Contradictions())
-#--> 1
-? oBack.RelationHasLaw("treated-by", "unique")
-#--> 1
+StzKnowledgeGraphQ("clinic") {
+	EnableStrictMode()
+	aR = ImportKnow("clinic.zknw")
+	? aR[:merged]
+	#--> 1
+	? @@( MetaOfFact("fatou", "treated-by", "dr-diallo") )
+	#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
+	? len(Contradictions())
+	#--> 1
+	? RelationHasLaw("treated-by", "unique")
+	#--> 1
+}
 remove("clinic.zknw")
 ? fexists("clinic.zknw")
 #--> 0
@@ -4076,13 +4184,14 @@ The file merges, `1`, and the ontology is empty, `0`. The parser recognises the 
 The law is also not derived on an instance graph. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
 
 ```haro
-oSy = new stzKnowledgeGraph("pairs")
-oSy.ConstrainRelation("pairs-with", :Symmetric)
-oSy.KnowRelation("margherita", "pairs-with", "chianti")
-? oSy.RelationHasLaw("pairs-with", "symmetric")
-#--> 1
-? oSy.Query([ "chianti", "pairs-with", "margherita" ])
-#--> 0
+StzKnowledgeGraphQ("pairs") {
+	ConstrainRelation("pairs-with", :Symmetric)
+	KnowRelation("margherita", "pairs-with", "chianti")
+	? RelationHasLaw("pairs-with", "symmetric")
+	#--> 1
+	? Query([ "chianti", "pairs-with", "margherita" ])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -4108,12 +4217,14 @@ The second relation is refused, `0`, with the library's own sentence, `Can't add
 **A two-step question answers only its first step.** Does `QueryPath` follow its second pattern, and can the predicate of a query be a variable? Run it:
 
 ```haro
-oQ = new stzKnowledgeGraph("coop2")
-oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-from", "flour")
-? @@( oQ.QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
-#--> [ "couscous" ]
-? @@( oQ.Query([ "amina", "?p", "?o" ]) )
-#--> [ ]
+StzKnowledgeGraphQ("coop2") {
+	KnowRelation("amina", "sells", "couscous")
+	KnowRelation("couscous", "made-from", "flour")
+	? @@( QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
+	#--> [ "couscous" ]
+	? @@( Query([ "amina", "?p", "?o" ]) )
+	#--> [ ]
+}
 ```
 
 > run: kept
@@ -4222,7 +4333,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -4268,15 +4379,16 @@ It refuses, and says why: `The pattern name you provided does not exist in stzRe
 A pattern can also answer the half-written value, which is what a form wants as the person types:
 
 ```haro
-o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
-? o1.MatchAsYouType("123-45")
-#--> 1
-? o1.MatchAsYouType("abc")
-#--> 0
-? o1.IsPartialMatch("123-45")
-#--> 1
-? o1.IsPartialMatch("123-45-6789")
-#--> 0
+StzRegexQ("^\d{3}-\d{2}-\d{4}$") {
+	? MatchAsYouType("123-45")
+	#--> 1
+	? MatchAsYouType("abc")
+	#--> 0
+	? IsPartialMatch("123-45")
+	#--> 1
+	? IsPartialMatch("123-45-6789")
+	#--> 0
+}
 ```
 
 > run: kept
@@ -4382,12 +4494,14 @@ Time, in the part of it that runs, written here with the class rather than its s
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
-? oTm.Match(new stzDuration("1 hour 30 minutes"))
-#--> 1
-? oTm.Match(new stzDuration("1 hour 20 minutes"))
-#--> 0
-? oTm.Match(new stzDuration("3 hours"))
-#--> 0
+oTm {
+	? Match(new stzDuration("1 hour 30 minutes"))
+	#--> 1
+	? Match(new stzDuration("1 hour 20 minutes"))
+	#--> 0
+	? Match(new stzDuration("3 hours"))
+	#--> 0
+}
 ```
 
 > run: kept
@@ -4398,11 +4512,13 @@ A graph: a pattern reads like the path it looks for. The labels match without re
 
 ```haro
 g = new stzGraph("Order")
-g.AddNodeXT(:a, "Placed")
-g.AddNodeXT(:b, "Cooking")
-g.AddNodeXT(:c, "Served")
-g.AddEdgeXT(:a, :b, "starts")
-g.AddEdgeXT(:b, :c, "finishes")
+g {
+	AddNodeXT(:a, "Placed")
+	AddNodeXT(:b, "Cooking")
+	AddNodeXT(:c, "Served")
+	AddEdgeXT(:a, :b, "starts")
+	AddEdgeXT(:b, :c, "finishes")
+}
 ? (new stzGraphex("{@Node(placed) -> @Edge(starts) -> @Node(cooking)}", g)).Match(g)
 #--> 1
 ? (new stzGraphex("{@Node(served) -> @Node(placed)}", g)).Match(g)
@@ -4480,9 +4596,11 @@ What is built in part: lists, matrices, time and graphs, in that order.
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
-oTl.AddInstant("Meeting", "2025-10-22 09:00:00")
-oTl.AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
-oTl.AddInstant("Lunch", "2025-10-22 12:00:00")
+oTl {
+	AddInstant("Meeting", "2025-10-22 09:00:00")
+	AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
+	AddInstant("Lunch", "2025-10-22 12:00:00")
+}
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
 #--> 0
@@ -4588,7 +4706,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -4652,19 +4770,21 @@ What comes home from a Python call? The result arrives as the host's own structu
 ```haro
 cPython = "python"
 oPy = new stzExterCode(:python)
-oPy.SetRuntimePath(cPython)
-oPy.SetCode("
+oPy {
+	SetRuntimePath(cPython)
+	SetCode("
 res = { 'numbers': [1, 2, 3, 4, 5], 'mean': sum([1, 2, 3, 4, 5]) / 5 }
-")
-oPy.Execute()
-? @@( oPy.Result() )
-#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
-? oPy.CallTrace()[1][:language]
-#--> python
-? oPy.CallTrace()[1][:mode]
-#--> interpreted
-? isNumber(oPy.LastCallDuration())
-#--> 1
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "numbers", [ 1, 2, 3, 4, 5 ] ], [ "mean", 3 ] ]
+	? CallTrace()[1][:language]
+	#--> python
+	? CallTrace()[1][:mode]
+	#--> interpreted
+	? isNumber(LastCallDuration())
+	#--> 1
+}
 ```
 
 > run: kept (touches the system)
@@ -4676,23 +4796,27 @@ That is the rationale of the whole plane, in one picture. Each layer of a soluti
 ```haro
 aStudents = [ [ "Alice", [ 85, 90, 78 ] ], [ "Bob", [ 72, 65, 70 ] ] ]
 oPy2 = new stzExterCode(:python)
-oPy2.SetRuntimePath(cPython)
-oPy2.SetCode("
+oPy2 {
+	SetRuntimePath(cPython)
+	SetCode("
 students = " + @@(aStudents) + "
 res = [ [ s[0], round(sum(s[1]) / len(s[1]), 2) ] for s in students ]
-")
-oPy2.Execute()
-aAverages = oPy2.Result()
+	")
+	Execute()
+	aAverages = Result()
+}
 ? @@(aAverages)
 #--> [ [ "Alice", 84.33 ], [ "Bob", 69 ] ]
 oNode = new stzExterCode(:nodejs)
-oNode.SetCode("
+oNode {
+	SetCode("
 const avgs = " + @@(aAverages) + ";
 const res = avgs.map(a => [ a[0], a[1] >= 80 ? 'Excellent' : 'Needs work' ]);
-")
-oNode.Execute()
-? @@( oNode.Result() )
-#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+	")
+	Execute()
+	? @@( Result() )
+	#--> [ [ "Alice", "Excellent" ], [ "Bob", "Needs work" ] ]
+}
 ```
 
 > run: kept (touches the system)
@@ -4713,20 +4837,22 @@ cPy = "class Animal:" + nl +
       "        return 'woof'"
 cJs = "class Animal { speak() { return '...' } }" + nl +
       "class Dog extends Animal { speak() { return 'woof' } }"
-oPG = StzPyCodeGraphFromSourceTS(cPy)
-oJG = StzJsCodeGraphFromSourceTS(cJs)
-? oPG.Language()
-#--> python
-? @@( oPG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oPG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
-? oJG.Language()
-#--> javascript
-? @@( oJG.ParentsOf("Dog") )
-#--> [ "Animal" ]
-? @@( oJG.OwnersOf("speak") )
-#--> [ "Animal", "Dog" ]
+StzPyCodeGraphFromSourceTS(cPy) {
+	? Language()
+	#--> python
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
+StzJsCodeGraphFromSourceTS(cJs) {
+	? Language()
+	#--> javascript
+	? @@( ParentsOf("Dog") )
+	#--> [ "Animal" ]
+	? @@( OwnersOf("speak") )
+	#--> [ "Animal", "Dog" ]
+}
 ```
 
 > run: kept
@@ -4737,15 +4863,17 @@ This is a parser into an index of classes, methods and inheritance, and not a pr
 
 ```haro
 oGov = new stzGovernance("shop")
-? oGov.MayExecute("python")
-#--> 0
-? oGov.Why()
-#--> refused: 'python' has NO declared trust posture
-oGov.DeclarePosture("python", :External)
-? oGov.MayExecute("python")
-#--> 1
-? oGov.Why()
-#--> allowed: posture 'external' declared
+oGov {
+	? MayExecute("python")
+	#--> 0
+	? Why()
+	#--> refused: 'python' has NO declared trust posture
+	DeclarePosture("python", :External)
+	? MayExecute("python")
+	#--> 1
+	? Why()
+	#--> allowed: posture 'external' declared
+}
 ```
 
 > run: kept
@@ -4755,11 +4883,12 @@ The refusal says why: `refused: 'python' has NO declared trust posture`. An exec
 And the twin can rehearse a spawn before it runs, flagged as a risk. Chapter 24 owns the twin, and one block here is enough to say what the door does not use:
 
 ```haro
-oTwin = new stzVirtualEnvironment()
-oTwin.Spawn("python analyse.py")
-? oTwin.NumberOfPendingSpawns()
-#--> 1
-oPlan = oTwin.GenerateUpdatePlan()
+StzVirtualEnvironmentQ() {
+	Spawn("python analyse.py")
+	? NumberOfPendingSpawns()
+	#--> 1
+	oPlan = GenerateUpdatePlan()
+}
 ? oPlan.Narration()
 #--> Update plan (1 of 1 operations to commit):
 #-->   * 1. spawn process: python analyse.py
@@ -4816,11 +4945,13 @@ oGov2 = new stzGovernance("shop")
 ? oGov2.MayExecute("python")
 #--> 0
 oPy3 = new stzExterCode(:python)
-oPy3.SetRuntimePath(cPython)
-oPy3.SetCode("res = 6 * 7")
-oPy3.Execute()
-? oPy3.Result()
-#--> 42
+oPy3 {
+	SetRuntimePath(cPython)
+	SetCode("res = 6 * 7")
+	Execute()
+	? Result()
+	#--> 42
+}
 ```
 
 > run: kept (touches the system)
@@ -4848,17 +4979,19 @@ The R door is in development: today it raises on every call, because its generat
 
 ```haro
 oStat = new stzExterCode(:R)
-oStat.SetCode("res <- c(1, 2, 3)")
-bRaised = 0
-try
-	oStat.Execute()
-catch
-	bRaised = 1
-done
-? bRaised
-#--> 1
-? oStat.CallTrace()[1][:exitcode]
-#--> 0
+oStat {
+	SetCode("res <- c(1, 2, 3)")
+	bRaised = 0
+	try
+		Execute()
+	catch
+		bRaised = 1
+	done
+	? bRaised
+	#--> 1
+	? CallTrace()[1][:exitcode]
+	#--> 0
+}
 ```
 
 > run: kept (touches the system)
@@ -4932,7 +5065,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
@@ -4960,18 +5093,22 @@ Here is a domain language model with no neurons at all, forged from a small know
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").
-    KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("margherita", "contains", "mozzarella")
+oKB {
+	Know("margherita", "dish")
+	KnowRelation("margherita", "contains", "tomato-sauce")
+	KnowRelation("margherita", "contains", "mozzarella")
+}
 oDLM = StzDlmQ(oKB)
-? oDLM.Ask("margherita contains what?")
-#--> Margherita contains tomato-sauce and mozzarella.
-? oDLM.Why()
-#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella
-? oDLM.AskXT("margherita contains what?")[:certainty]
-#--> 1
-? oDLM.Ask("who won the 1998 world cup?")
-#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
+oDLM {
+	? Ask("margherita contains what?")
+	#--> Margherita contains tomato-sauce and mozzarella.
+	? Why()
+	#--> recorded fact(s): 'margherita' contains tomato-sauce, mozzarella
+	? AskXT("margherita contains what?")[:certainty]
+	#--> 1
+	? Ask("who won the 1998 world cup?")
+	#--> That is outside the 'restaurant' domain (I know 1 entities and 1 relations).
+}
 ```
 
 > run: kept
@@ -4981,17 +5118,19 @@ It answers, says why (`recorded fact(s): 'margherita' contains tomato-sauce, moz
 Now the second piece, the one that turns the usual dialogue around. In the field, you prompt the machine and keep what comes out. Here the system asks you. What does it ask, and what happens if you try to conclude before you have answered?
 
 ```haro
-oMenu = new stzKnowledgeGraph("menu")
-oMenu.Know("margherita", "dish").Know("tiramisu", "dish")
-oMenu.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-? oMenu.AskIn("setup")
-#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
-try
-	oMenu.ConcludeIn("setup", "menu")
-catch
-	? cCatchError
-done
-#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
+StzKnowledgeGraphQ("menu") {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	? AskIn("setup")
+	#--> What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
+	try
+		ConcludeIn("setup", "menu")
+	catch
+		? cCatchError
+	done
+	#--> Can't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.
+}
 ```
 
 > run: kept
@@ -5001,14 +5140,15 @@ A goal was declared: every dish must say what it contains. The gap between the g
 The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
 
 ```haro
-oKG = new stzKnowledgeGraph("kitchen")
-oKG.ConstrainRelation("contains", :Transitive)
-oKG.KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("tomato-sauce", "contains", "tomato")
-? oKG.Prove([ "margherita", "contains", "tomato" ])[:narration]
-#--> proved: margherita contains tomato-sauce contains tomato
-? oKG.Prove([ "margherita", "contains", "luigi" ])[:narration]
-#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
+StzKnowledgeGraphQ("kitchen") {
+	ConstrainRelation("contains", :Transitive)
+	KnowRelation("margherita", "contains", "tomato-sauce").
+	    KnowRelation("tomato-sauce", "contains", "tomato")
+	? Prove([ "margherita", "contains", "tomato" ])[:narration]
+	#--> proved: margherita contains tomato-sauce contains tomato
+	? Prove([ "margherita", "contains", "luigi" ])[:narration]
+	#--> not derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'
+}
 ```
 
 > run: kept
@@ -5019,30 +5159,36 @@ Then the AI model. It is welcome, and it is held. Wire a model's output straight
 
 ```haro
 oG = new stzAgentGraph("mailer")
-oG.AddLLMActor("writer")
-oG.AddEffect("send")
-oG.Proposes("writer", "send")
-? oG.IsSound()
-#--> 0
-? len(oG.Violations())
-#--> 3
+oG {
+	AddLLMActor("writer")
+	AddEffect("send")
+	Proposes("writer", "send")
+	? IsSound()
+	#--> 0
+	? len(Violations())
+	#--> 3
+}
 ```
 
 > run: kept
 
-It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(oG.Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? No AI model is loaded in the block that asks: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. Ask one:
+It is not: `IsSound()` printed `0`, and it is refused before anything runs! Three laws fire, and `len(Violations())` printed `3`: every effect must pass a gate, open text must have somewhere safe to land, and every effect must leave a witness. What does a model actor hold that can act? No AI model is loaded in the block that asks: the answer is seeded, the way a test fixes a golden answer, so that the page runs the same on every night. Ask one:
 
 ```haro
 oF = new stzLLMFunction("sum")
-oF.SetPrompt("summarize: {input}")
-oF.Budget(2)
-oF.SeedAnswer("hello world", "a greeting")
+oF {
+	SetPrompt("summarize: {input}")
+	Budget(2)
+	SeedAnswer("hello world", "a greeting")
+}
 oLLM = new stzLLMAgent("summarizer")
-oLLM.SetSkillFrom(oF)
-? oLLM.Propose("hello world")
-#--> a greeting
-? oLLM.HoldsEffectful()
-#--> 0
+oLLM {
+	SetSkillFrom(oF)
+	? Propose("hello world")
+	#--> a greeting
+	? HoldsEffectful()
+	#--> 0
+}
 ```
 
 > run: kept
@@ -5176,7 +5322,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -5204,16 +5350,21 @@ Chapter 17 showed a conversation asking, and refusing to conclude while a gap is
 
 ```haro
 oKB = new stzKnowledgeGraph("pizzeria")
-oKB.Know("pizza1", "dish").Know("pizza2", "dish").Know("pizza3", "dish").Know("pizza4", "dish")
-oKB.AddConversationQ("frame").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
-oKB.AskIn("frame")
-oKB.ReplyIn("frame", "cheese")
-oKB.AskIn("frame")
-oKB.ReplyIn("frame", "olives")
-? oKB.AskIn("frame")
-#--> Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
-? @@(oKB.ReplyIn("frame", 2)[:admitted])
-#--> [ "olives" ]
+oKB {
+	Know("pizza1", "dish")
+	Know("pizza2", "dish")
+	Know("pizza3", "dish")
+	Know("pizza4", "dish")
+	AddConversationQ("frame").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
+	AskIn("frame")
+	ReplyIn("frame", "cheese")
+	AskIn("frame")
+	ReplyIn("frame", "olives")
+	? AskIn("frame")
+	#--> Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
+	? @@(ReplyIn("frame", 2)[:admitted])
+	#--> [ "olives" ]
+}
 ```
 
 > run: kept
@@ -5223,17 +5374,19 @@ The question offers the known values as numbers, and `2` picked `olives`.
 What does the door answer to a number nobody offered? Run it:
 
 ```haro
-? oKB.AskIn("frame")
-#--> Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
-aV = oKB.ReplyIn("frame", 99)
-? @@(aV[:admitted])
-#--> [ ]
-? @@(aV[:refused])
-#--> [ [ "(99)", "no such option" ] ]
-? oKB.ConversationQ("frame").Checkpoints()[1][:why]
-#--> no option (99) was offered -- 2 option(s) on the table
-? aV[:goalState]
-#--> pursuing
+oKB {
+	? AskIn("frame")
+	#--> Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')
+	aV = ReplyIn("frame", 99)
+	? @@(aV[:admitted])
+	#--> [ ]
+	? @@(aV[:refused])
+	#--> [ [ "(99)", "no such option" ] ]
+	? ConversationQ("frame").Checkpoints()[1][:why]
+	#--> no option (99) was offered -- 2 option(s) on the table
+	? aV[:goalState]
+	#--> pursuing
+}
 ```
 
 > run: kept
@@ -5244,16 +5397,19 @@ The question is data before it is text. It carries a force, which is *what* whil
 
 ```haro
 oKF = new stzKnowledgeGraph("pizzeria2")
-oKF.Know("p1", "dish").Know("p2", "dish")
-oKF.AddConversationQ("f").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
-? oKF.AskInXT("f")[:force]
-#--> what
-oKF.ReplyIn("f", "cheese")
-aQ = oKF.AskInXT("f")
-? aQ[:force]
-#--> which
-? @@(aQ[:options])
-#--> [ "cheese" ]
+oKF {
+	Know("p1", "dish")
+	Know("p2", "dish")
+	AddConversationQ("f").SetGoal(StzGoalQ().RequireEach("dish", "topping"))
+	? AskInXT("f")[:force]
+	#--> what
+	ReplyIn("f", "cheese")
+	aQ = AskInXT("f")
+	? aQ[:force]
+	#--> which
+	? @@(aQ[:options])
+	#--> [ "cheese" ]
+}
 ```
 
 > run: kept
@@ -5262,14 +5418,16 @@ aQ = oKF.AskInXT("f")
 
 ```haro
 oKD = new stzKnowledgeGraph("desserts")
-oKD.Know("tiramisu", "dish")
-oKD.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKD.AskIn("setup")
-aV = oKD.ReplyIn("setup", [ "mascarpone", "espresso" ])
-? @@(aV[:admitted])
-#--> [ "mascarpone", "espresso" ]
-? aV[:goalState]
-#--> fulfilled
+oKD {
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("setup")
+	aV = ReplyIn("setup", [ "mascarpone", "espresso" ])
+	? @@(aV[:admitted])
+	#--> [ "mascarpone", "espresso" ]
+	? aV[:goalState]
+	#--> fulfilled
+}
 ```
 
 > run: kept
@@ -5280,17 +5438,19 @@ A list of values is taken as the values, and each one goes through the same door
 
 ```haro
 oKM = new stzKnowledgeGraph("menu")
-oKM.Know("margherita", "dish")
-oKM.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKM.AskIn("setup")
-oKM.ReplyIn("setup", "tomato-sauce and mozzarella")
-? oKM.ConversationQ("setup").Transcript()
-#--> SOFTANZA: Goal adopted -- this conversation is now accountable for it.
-#--> SOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
-#--> YOU:      tomato-sauce and mozzarella
-#-->   -> admitted: 'margherita' contains 'tomato-sauce'
-#-->   -> admitted: 'margherita' contains 'mozzarella'
-#--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'
+oKM {
+	Know("margherita", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("setup")
+	ReplyIn("setup", "tomato-sauce and mozzarella")
+	? ConversationQ("setup").Transcript()
+	#--> SOFTANZA: Goal adopted -- this conversation is now accountable for it.
+	#--> SOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')
+	#--> YOU:      tomato-sauce and mozzarella
+	#-->   -> admitted: 'margherita' contains 'tomato-sauce'
+	#-->   -> admitted: 'margherita' contains 'mozzarella'
+	#--> SOFTANZA: Goal fulfilled: every required slot is filled in 'menu'
+}
 ```
 
 > run: kept
@@ -5301,16 +5461,18 @@ It is read as two values, each one judged: the transcript holds `admitted: 'marg
 
 ```haro
 oKS = new stzKnowledgeGraph("staffing")
-oKS.AddConversationQ("s").SetGoal(StzGoalQ().RequireOne("kitchen3", "led-by"))
-oKS.ConstrainRelation("led-by", :Unique)
-oKS.AskIn("s")
-aV = oKS.ReplyIn("s", "mario and giovanni")
-? @@(aV[:admitted])
-#--> [ "mario" ]
-? @@(aV[:refused])
-#--> [ [ "giovanni", "'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique" ] ]
-? len(oKS.ConversationQ("s").Checkpoints())
-#--> 1
+oKS {
+	AddConversationQ("s").SetGoal(StzGoalQ().RequireOne("kitchen3", "led-by"))
+	ConstrainRelation("led-by", :Unique)
+	AskIn("s")
+	aV = ReplyIn("s", "mario and giovanni")
+	? @@(aV[:admitted])
+	#--> [ "mario" ]
+	? @@(aV[:refused])
+	#--> [ [ "giovanni", "'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique" ] ]
+	? len(ConversationQ("s").Checkpoints())
+	#--> 1
+}
 ```
 
 > run: kept
@@ -5321,13 +5483,15 @@ The first value was admitted, and the second was refused with the law's reason: 
 
 ```haro
 oKP = new stzKnowledgeGraph("shop")
-oKP.Know("tea", "product")
-oKP.AddConversationQ("price").SetGoal(StzGoalQ().RequireEach("product", "price"))
-oKP.AskIn("price")
-? @@(oKP.ReplyIn("price", "=12*3")[:admitted])
-#--> [ "=12*3" ]
-? oKP.Query([ "tea", "price", "?o" ])[1]
-#--> =12*3
+oKP {
+	Know("tea", "product")
+	AddConversationQ("price").SetGoal(StzGoalQ().RequireEach("product", "price"))
+	AskIn("price")
+	? @@(ReplyIn("price", "=12*3")[:admitted])
+	#--> [ "=12*3" ]
+	? Query([ "tea", "price", "?o" ])[1]
+	#--> =12*3
+}
 ```
 
 > run: kept
@@ -5338,18 +5502,20 @@ It is not. The price of the tea is now the text `=12*3`! I found this out by run
 
 ```haro
 oKX = new stzKnowledgeGraph("phones")
-oKX.Know("contact1", "contact")
-oKX.AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
-oKX.AskIn("fmt")
-aV = oKX.ReplyIn("fmt", [ [ "+216-21-298-374", "valid" ], [ "+33-6-12-34-56-78", "valid" ] ])
-? @@(aV[:admitted])
-#--> [ ]
-? @@(aV[:refused])
-#--> [ ]
-? aV[:goalState]
-#--> pursuing
-? len(oKX.ConversationQ("fmt").Checkpoints())
-#--> 0
+oKX {
+	Know("contact1", "contact")
+	AddConversationQ("fmt").SetGoal(StzGoalQ().RequireEach("contact", "number-pattern"))
+	AskIn("fmt")
+	aV = ReplyIn("fmt", [ [ "+216-21-298-374", "valid" ], [ "+33-6-12-34-56-78", "valid" ] ])
+	? @@(aV[:admitted])
+	#--> [ ]
+	? @@(aV[:refused])
+	#--> [ ]
+	? aV[:goalState]
+	#--> pursuing
+	? len(ConversationQ("fmt").Checkpoints())
+	#--> 0
+}
 try
 	StzOwnAgent("induction")
 catch
@@ -5372,18 +5538,20 @@ A refusal waits for a person, with its context. A lifetime can be set so that a 
 
 ```haro
 oKT = new stzKnowledgeGraph("ttl")
-oKT.AddConversationQ("t").SetGoal(StzGoalQ().RequireOne("kitchen", "led-by"))
-oKT.AskIn("t")
-oKT.ReplyIn("t", 7)
-? len(oKT.ConversationQ("t").Checkpoints())
-#--> 1
-oKT.ConversationQ("t").SetCheckpointTTL(1)
-oKT.AskIn("t")
-oKT.AskIn("t")
-? len(oKT.ConversationQ("t").Checkpoints())
-#--> 0
-? len(oKT.ConversationQ("t").AllCheckpoints())
-#--> 1
+oKT {
+	AddConversationQ("t").SetGoal(StzGoalQ().RequireOne("kitchen", "led-by"))
+	AskIn("t")
+	ReplyIn("t", 7)
+	? len(ConversationQ("t").Checkpoints())
+	#--> 1
+	ConversationQ("t").SetCheckpointTTL(1)
+	AskIn("t")
+	AskIn("t")
+	? len(ConversationQ("t").Checkpoints())
+	#--> 0
+	? len(ConversationQ("t").AllCheckpoints())
+	#--> 1
+}
 ```
 
 > run: kept
@@ -5394,27 +5562,30 @@ A conversation is accountable for one goal, and it ends by fulfilling the goal o
 
 ```haro
 oKG = new stzKnowledgeGraph("lifecycle")
-oKG.Know("d1", "dish").Know("d2", "dish")
-oKG.AddConversationQ("s1").SetGoal(StzGoalQ().RequireEach("dish", "sauce"))
-oKG.AddConversationQ("s2").SetGoal(StzGoalQ().RequireEach("dish", "garnish"))
-? oKG.ConversationQ("s1").GoalState()
-#--> pursuing
-oKG.AskIn("s1")
-oKG.ReplyIn("s1", "pesto")
-oKG.AskIn("s1")
-oKG.ReplyIn("s1", "pesto")
-? oKG.ConversationQ("s1").GoalState()
-#--> fulfilled
-? oKG.ConversationQ("s1").GoalWhy()
-#--> every required slot is filled in 'lifecycle'
-oKG.AskIn("s2")
-oKG.ConversationQ("s2").RevokeGoal("out of scope tonight")
-? oKG.ConversationQ("s2").GoalState()
-#--> revoked
-? oKG.ConversationQ("s2").GoalWhy()
-#--> out of scope tonight
-? len(oKG.OpenConversations())
-#--> 0
+oKG {
+	Know("d1", "dish")
+	Know("d2", "dish")
+	AddConversationQ("s1").SetGoal(StzGoalQ().RequireEach("dish", "sauce"))
+	AddConversationQ("s2").SetGoal(StzGoalQ().RequireEach("dish", "garnish"))
+	? ConversationQ("s1").GoalState()
+	#--> pursuing
+	AskIn("s1")
+	ReplyIn("s1", "pesto")
+	AskIn("s1")
+	ReplyIn("s1", "pesto")
+	? ConversationQ("s1").GoalState()
+	#--> fulfilled
+	? ConversationQ("s1").GoalWhy()
+	#--> every required slot is filled in 'lifecycle'
+	AskIn("s2")
+	ConversationQ("s2").RevokeGoal("out of scope tonight")
+	? ConversationQ("s2").GoalState()
+	#--> revoked
+	? ConversationQ("s2").GoalWhy()
+	#--> out of scope tonight
+	? len(OpenConversations())
+	#--> 0
+}
 ```
 
 > run: kept
@@ -5425,7 +5596,8 @@ Chapter 17's law says conversations happen in code first. Here is the conversati
 
 ```haro
 oKW = new stzKnowledgeGraph("menu")
-oKW.Know("margherita", "dish").Know("tiramisu", "dish")
+oKW.Know("margherita", "dish")
+oKW.Know("tiramisu", "dish")
 answers = [ [ "margherita", "tomato-sauce" ], [ "tiramisu", "mascarpone" ] ]
 aR = StzOwnAgent("wise-coder").PursueGoal(StzGoalQ().RequireEach("dish", "contains"), oKW, func subj, rel {
 	for a in answers
@@ -5462,15 +5634,17 @@ First, the data. Names, values and lists in Arabic script pass the gate exactly 
 
 ```haro
 oKA = new stzKnowledgeGraph("مطعم")
-oKA.Know("بيتزا", "dish")
-oKA.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-? oKA.AskIn("c")
-#--> What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')
-aV = oKA.ReplyIn("c", [ "جبن", "طماطم" ])
-? @@(aV[:admitted])
-#--> [ "جبن", "طماطم" ]
-? aV[:goalState]
-#--> fulfilled
+oKA {
+	Know("بيتزا", "dish")
+	AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	? AskIn("c")
+	#--> What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')
+	aV = ReplyIn("c", [ "جبن", "طماطم" ])
+	? @@(aV[:admitted])
+	#--> [ "جبن", "طماطم" ]
+	? aV[:goalState]
+	#--> fulfilled
+}
 ```
 
 > run: kept
@@ -5481,9 +5655,11 @@ Second, the candidate. A Hausa sentence can produce a value in the natural layer
 
 ```haro
 oKH = new stzKnowledgeGraph("menu")
-oKH.Know("pizza", "dish")
-oKH.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-oKH.AskIn("c")
+oKH {
+	Know("pizza", "dish")
+	AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	AskIn("c")
+}
 cCandidate = NaturallyIn("ha", "Yi rubutu dauke 'jibini' Maida shi").Result()
 ? cCandidate
 #--> JIBINI
@@ -5498,14 +5674,16 @@ Third, the question in the learner's language. The tutor is a consumer of the co
 
 ```haro
 oEx = StzProgramQ("../../education/program").CourseQ("elementary-introduction").ExerciseQ("ex-01-01")
-? oEx.GapText("finds", "en")
-#--> Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)
-? oEx.GapText("finds", "fr")
-#--> Où sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)
-? oEx.GapText("finds", "ar")
-#--> أين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)
-? oEx.GapText("finds", "ha")
-#--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
+oEx {
+	? GapText("finds", "en")
+	#--> Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)
+	? GapText("finds", "fr")
+	#--> Où sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)
+	? GapText("finds", "ar")
+	#--> أين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)
+	? GapText("finds", "ha")
+	#--> Ina abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)
+}
 ```
 
 > run: kept
@@ -5518,14 +5696,16 @@ Without a model, what does a conversation say of its own fluency? Run it:
 
 ```haro
 oKF2 = new stzKnowledgeGraph("fluency-space")
-oKF2.AddConversation("f")
-? oKF2.ConversationQ("f").Fluency()
-#--> plain
-oKF2.ConversationQ("f").SetFluency(:neural)
-? oKF2.ConversationQ("f").Fluency()
-#--> neural
-? oKF2.ConversationQ("f").IsFluencyNeural()
-#--> 0
+oKF2 {
+	AddConversation("f")
+	? ConversationQ("f").Fluency()
+	#--> plain
+	ConversationQ("f").SetFluency(:neural)
+	? ConversationQ("f").Fluency()
+	#--> neural
+	? ConversationQ("f").IsFluencyNeural()
+	#--> 0
+}
 ```
 
 > run: kept
@@ -5604,7 +5784,8 @@ Then run it. An admitted reply uses up the question, so call `AskIn` again befor
 
 ```haro exercise
 oWorld = new stzKnowledgeGraph("my-world")
-oWorld.Know("item1", "thing").Know("item2", "thing")
+oWorld.Know("item1", "thing")
+oWorld.Know("item2", "thing")
 oWorld.AddConversationQ("mine").SetGoal(StzGoalQ().RequireEach("thing", "colour"))
 oWorld.AskIn("mine")
 # your five replies here, each with the verdict you expect
@@ -5643,7 +5824,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.
 
@@ -5671,19 +5852,23 @@ Where does the training text come from? Build a small knowledge base, render it,
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").
-    Know("tiramisu", "dish").
-    Know("chianti", "wine").
-    KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("margherita", "contains", "mozzarella").
-    KnowRelation("margherita", "pairs-with", "chianti")
+oKB {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	Know("chianti", "wine")
+	KnowRelation("margherita", "contains", "tomato-sauce")
+	KnowRelation("margherita", "contains", "mozzarella")
+	KnowRelation("margherita", "pairs-with", "chianti")
+}
 oDLM = StzDlmQ(oKB)
-? @@( oDLM.GenerateCorpus() )
-#--> [ "margherita is a dish.", "tiramisu is a dish.", "chianti is a wine.", "margherita contains tomato-sauce.", "margherita contains mozzarella.", "margherita pairs-with chianti." ]
-? @@( oDLM.Tokenizer() )
-#--> [ "<unk>", "margherita", "tiramisu", "chianti", "dish", "wine", "contains", "pairs-with", "is", "a", "tomato-sauce", "mozzarella" ]
-? @@( oDLM.Tokenize("margherita contains something-new") )
-#--> [ 2, 7, 1 ]
+oDLM {
+	? @@( GenerateCorpus() )
+	#--> [ "margherita is a dish.", "tiramisu is a dish.", "chianti is a wine.", "margherita contains tomato-sauce.", "margherita contains mozzarella.", "margherita pairs-with chianti." ]
+	? @@( Tokenizer() )
+	#--> [ "<unk>", "margherita", "tiramisu", "chianti", "dish", "wine", "contains", "pairs-with", "is", "a", "tomato-sauce", "mozzarella" ]
+	? @@( Tokenize("margherita contains something-new") )
+	#--> [ 2, 7, 1 ]
+}
 ```
 
 > run: kept
@@ -5693,14 +5878,16 @@ No one wrote that corpus: each of its six sentences is a fact of the knowledge b
 Completion is constrained to the domain. What does the model offer after an entity that bears facts, after a relation, after a fragment, and after a word the domain does not hold? Run it:
 
 ```haro
-? @@( oDLM.Complete("margherita") )
-#--> [ "contains", "pairs-with" ]
-? @@( oDLM.Complete("contains") )
-#--> [ "tomato-sauce", "mozzarella" ]
-? @@( oDLM.Complete("tira") )
-#--> [ "tiramisu" ]
-? @@( oDLM.Complete("pizza") )
-#--> [ ]
+oDLM {
+	? @@( Complete("margherita") )
+	#--> [ "contains", "pairs-with" ]
+	? @@( Complete("contains") )
+	#--> [ "tomato-sauce", "mozzarella" ]
+	? @@( Complete("tira") )
+	#--> [ "tiramisu" ]
+	? @@( Complete("pizza") )
+	#--> [ ]
+}
 ```
 
 > run: kept
@@ -5750,10 +5937,12 @@ Look at the last four lines together. The grammar accepts the lie! It has the ri
 A domain language model is a file that travels. It is saved as plain text, readable and diff-able, with no binary and no weights. Can a second model that has never seen the knowledge base answer from it, and run its own tests? Save it, read it back, and load it:
 
 ```haro
-oDLM.AddGolden("what is margherita", "Margherita is a dish.")
-oDLM.AddGolden("what is the weather today?",
-	"That is outside the 'restaurant' domain (I know 3 entities and 2 relations).")
-cFile = oDLM.Save("probe_dlm")
+oDLM {
+	AddGolden("what is margherita", "Margherita is a dish.")
+	AddGolden("what is the weather today?",
+		"That is outside the 'restaurant' domain (I know 3 entities and 2 relations).")
+	cFile = Save("probe_dlm")
+}
 ? cFile
 #--> probe_dlm.zdlm
 ? read(cFile)
@@ -5774,11 +5963,13 @@ cFile = oDLM.Save("probe_dlm")
 #        what is margherita | Margherita is a dish.
 #        what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).
 oShipped = StzDlmQ("")
-oShipped.LoadFrom(cFile)
-? oShipped.Ask("what is tiramisu")
-#--> Tiramisu is a dish.
-? @@( oShipped.RunGoldens() )
-#--> [ [ "total", 2 ], [ "passed", 2 ], [ "failed", [ ] ] ]
+oShipped {
+	LoadFrom(cFile)
+	? Ask("what is tiramisu")
+	#--> Tiramisu is a dish.
+	? @@( RunGoldens() )
+	#--> [ [ "total", 2 ], [ "passed", 2 ], [ "failed", [ ] ] ]
+}
 remove(cFile)
 ? fexists(cFile)
 #--> 0
@@ -5791,14 +5982,16 @@ The second model answers: `Tiramisu is a dish.` The refusal travels with the bun
 Now the second rung. It is a small neural model trained on the corpus you saw, with no teacher, and it can be exported as a model file. How small is it, and does it learn?
 
 ```haro
-oDLM.TrainNeuralRung(500)
-? oDLM.NeuralWhy()
-#--> neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70
-? oDLM.NextToken("is")
-#--> a
-? oDLM.NextTokenConfidence("is")
-#--> 1.00
-cGguf = oDLM.ExportNeuralGguf("probe_bigram")
+oDLM {
+	TrainNeuralRung(500)
+	? NeuralWhy()
+	#--> neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70
+	? NextToken("is")
+	#--> a
+	? NextTokenConfidence("is")
+	#--> 1.00
+	cGguf = ExportNeuralGguf("probe_bigram")
+}
 ? cGguf
 #--> probe_bigram.gguf
 ? StzEngineNeuralGgufInspect(cGguf)
@@ -5828,16 +6021,18 @@ next
 "Tiramisu is a wine" is false, because tiramisu is a dish. "Chianti is a wine" is true. And "margherita contains mozzarella is" is a run-on, because the bigram has no word that ends a sentence. The test against the corpus is a crude gate, and it would refuse a true fact nobody recorded. The real gate is the graph and its laws. What does the graph answer when the false sentence is proposed to it as a fact? Declare the law, then propose:
 
 ```haro
-oKB.ConstrainRelation("is-a", :Unique)
-aVerdict = oKB.Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
-? aVerdict[:admitted]
-#--> 0
-? aVerdict[:why]
-#--> 'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique
-? @@( oKB.Contradictions() )
-#--> [ [ [ "subject", "tiramisu" ], [ "relation", "is-a" ], [ "existing", "dish" ], [ "attempted", "wine" ], [ "source", "rung 2" ] ] ]
-? oKB.Admit("pizza", "is-a", "dish", [ :source = "rung 2" ])[:why]
-#--> admitted: 'pizza' is-a 'dish'
+oKB {
+	ConstrainRelation("is-a", :Unique)
+	aVerdict = Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
+	? aVerdict[:admitted]
+	#--> 0
+	? aVerdict[:why]
+	#--> 'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique
+	? @@( Contradictions() )
+	#--> [ [ [ "subject", "tiramisu" ], [ "relation", "is-a" ], [ "existing", "dish" ], [ "attempted", "wine" ], [ "source", "rung 2" ] ] ]
+	? Admit("pizza", "is-a", "dish", [ :source = "rung 2" ])[:why]
+	#--> admitted: 'pizza' is-a 'dish'
+}
 ```
 
 > run: kept
@@ -5924,7 +6119,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. Then come the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
@@ -5950,19 +6145,21 @@ Four steps, in the form the study of the record gives them: the AI agent propose
 
 ```haro
 oGov = new stzGovernance("shop")
-oGov.DeclareReversibility("restocker", :Compensable)
-? oGov.ReversibilityOf("restocker")
-#--> compensable
-? oGov.MayRegister("mystery", "", "reversible")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
-? oGov.MayRegister("mystery", "reorders stock", "")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
-? oGov.MayRegister("mystery", "reorders stock", :Compensable)
-#--> 1
+oGov {
+	DeclareReversibility("restocker", :Compensable)
+	? ReversibilityOf("restocker")
+	#--> compensable
+	? MayRegister("mystery", "", "reversible")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
+	? MayRegister("mystery", "reorders stock", "")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
+	? MayRegister("mystery", "reorders stock", :Compensable)
+	#--> 1
+}
 ```
 
 > run: kept
@@ -6020,18 +6217,20 @@ skills:
     posture: trusted
 "
 oAg = StzAgentDeclarationQ(cPia).ToAgent()
-oAg.GiveWorkbench()
-? oAg.Cycle()
-#--> 1
-? oAg.MemoryQ().Fact("prices", "were", "written")
-#--> 1
-? StzFileExists($cPrices)
-#--> 0
-? oAg.WorkbenchQ().Exists($cPrices)
-#--> 1
-? oAg.WorkbenchQ().ContentOf($cPrices)
-#--> espresso,2.40
-#--> flat-white,3.10
+oAg {
+	GiveWorkbench()
+	? Cycle()
+	#--> 1
+	? MemoryQ().Fact("prices", "were", "written")
+	#--> 1
+	? StzFileExists($cPrices)
+	#--> 0
+	? WorkbenchQ().Exists($cPrices)
+	#--> 1
+	? WorkbenchQ().ContentOf($cPrices)
+	#--> espresso,2.40
+	#--> flat-white,3.10
+}
 
 func ScribblePrices(poMemory)
 	StzActiveWorkbenchQ().WriteFile($cPrices, "espresso,2.40" + char(10) + "flat-white,3.10")
@@ -6367,7 +6566,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -6478,9 +6677,11 @@ The evidence of what happened is a hash chain. Edit any line after the first, an
 
 ```haro
 oLed = StzSecurityLedger(256)
-oLed.Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
-oLed.Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
-oLed.SealTo("evidence.txt", "the-evidence-key")
+oLed {
+	Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
+	Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
+	SealTo("evidence.txt", "the-evidence-key")
+}
 ? StzVerifySealedLedger("evidence.txt", "the-evidence-key")[:why]
 #--> chain intact over 2 entries
 ? StzVerifySealedLedger("evidence.txt", "another-key")[:why]
@@ -6500,11 +6701,13 @@ A secret is the same law applied to a key. Its only public face is its descripto
 ```haro
 StzOpenSecurityLedger(64)
 oKey = new stzSecret("deploy-key")
-oKey.FromLiteralQ("ssh-ed25519-AAAA")
-? oKey.Descriptor()
-#--> <secret 'deploy-key' (secret) from literal>
-? oKey.Reveal(HumanActor("ops"))
-#--> ssh-ed25519-AAAA
+oKey {
+	FromLiteral("ssh-ed25519-AAAA")
+	? Descriptor()
+	#--> <secret 'deploy-key' (secret) from literal>
+	? Reveal(HumanActor("ops"))
+	#--> ssh-ed25519-AAAA
+}
 try
 	oKey.Reveal(LLMActor("planner"))
 catch
@@ -6530,31 +6733,34 @@ An instrument owes a number. The honest stopwatch gives a number from a clock th
 
 ```haro
 w = StzStopwatchXT("import-orders")
-w.Lap("parsed")
-w.Pause()
-StzEngineTimeSleepMs(200)
-w.Resume()
-w.Stop()
-? isnumber(w.ElapsedMs())
-#--> 1
-? w.ElapsedMs() < 200
-#--> 1
-? w.Record()[:running]
-#--> 0
+w {
+	Lap("parsed")
+	Pause()
+	StzEngineTimeSleepMs(200)
+	Resume()
+	Stop()
+	? isnumber(ElapsedMs())
+	#--> 1
+	? ElapsedMs() < 200
+	#--> 1
+	? Record()[:running]
+	#--> 0
+}
 w2 = StzStopwatchXT("notify-customer")
 w2.JoinTrace(w.TraceParent())
 w2.Stop()
 ? w2.TraceId() = w.TraceId()
 #--> 1
 oBatch = StzOtelBatch("shop")
-oBatch.AddSpan(w).AddSpan(w2)
+oBatch.AddSpan(w)
+oBatch.AddSpan(w2)
 ? Q(oBatch.ToJson()).NumberOfOccurrence(w.TraceId())
 #--> 2
 ```
 
 > run: kept
 
-The pause did not count: `w.ElapsedMs() < 200` printed `1`, and `w.Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
+The pause did not count: in the stopwatch's scene, `ElapsedMs() < 200` printed `1`, and `Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
 
 Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. It is a request to the library.
 
@@ -6562,24 +6768,26 @@ The instrument is not the end of the court. Judgment and action live inside the 
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
-oPlan.Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
 oFleet = new FakeFleet
-? oPlan.MayCommit(LLMActor("advisor"))
-#--> 0
-? oPlan.ExecuteOn(oFleet, LLMActor("advisor"))
-#--> 0
-? oFleet.CallCount()
-#--> 0
-? oPlan.ExecuteOn(oFleet, HumanActor("mansour"))
-#--> 1
-? oFleet.CallCount()
-#--> 1
-oPlan.Show()
-#--> Perf plan relieve-queue -- 1 proposed action(s).
-#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
-#    Audit (2):
-#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
-#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+oPlan {
+	Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
+	? MayCommit(LLMActor("advisor"))
+	#--> 0
+	? ExecuteOn(oFleet, LLMActor("advisor"))
+	#--> 0
+	? oFleet.CallCount()
+	#--> 0
+	? ExecuteOn(oFleet, HumanActor("mansour"))
+	#--> 1
+	? oFleet.CallCount()
+	#--> 1
+	Show()
+	#--> Perf plan relieve-queue -- 1 proposed action(s).
+	#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
+	#    Audit (2):
+	#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
+	#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+}
 
 class FakeFleet
 	aFleetCalls = []
@@ -6727,7 +6935,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.
 
@@ -6934,7 +7142,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.
 
@@ -6971,40 +7179,40 @@ A world has a being, a becoming, and a way of being met. Chapter 4 showed its be
 ```haro
 oApp = new stzApp("FieldVisits")
 oApp {
-    AddThingQ(:Account) { Has([ :number, :chapter, :balance ])  IsTrue(:balance, "@ >= 0") }
-    AddThingQ(:Client)  { Has([ :code, :name, :city ])  Owns(:Account) }
-    AddThingQ(:Visit)   { Of(:Client)  Has([ :agent, :date, :subject ]) }
-    AddRelation(:Account, :belongsTo, :Client)
-    AddFlowQ(:agent, :records, :Visit) { Require(:subject) }
-    AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
-    AddGoalQ(:EveryClientSeenThisQuarter) {
-        Means      = "every :Client Has(:visit) Since(:quarterStart)"
-        ReachedBy  = :planning
-    }
-    SetBody([ :GraphDB, :Files ]) { Graph = ".stzapp/world.stzgraf"  Files = "./" }
+	AddThingQ(:Account) { Has([ :number, :chapter, :balance ])  IsTrue(:balance, "@ >= 0") }
+	AddThingQ(:Client)  { Has([ :code, :name, :city ])  Owns(:Account) }
+	AddThingQ(:Visit)   { Of(:Client)  Has([ :agent, :date, :subject ]) }
+	AddRelation(:Account, :belongsTo, :Client)
+	AddFlowQ(:agent, :records, :Visit) { Require(:subject) }
+	AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
+	AddGoalQ(:EveryClientSeenThisQuarter) {
+		Means      = "every :Client Has(:visit) Since(:quarterStart)"
+		ReachedBy  = :planning
+	}
+	SetBody([ :GraphDB, :Files ]) { Graph = ".stzapp/world.stzgraf"  Files = "./" }
+	AddScreenQ(:ClientFile) { ToUnderstand(:Client)  Shows([ :identity, :accounts, :visits ]) }
+	AddRefinementQ(:balance).Bounds(0, 1000000)
+	AddReaches([ :mobile, :desktop, :web ])
+	Explain()
+	#--> WORLD FieldVisits   lives in: graphdb + files
+	#      BEING
+	#        account (number, chapter, balance)
+	#            true when balance @ >= 0
+	#        client (code, name, city)
+	#        visit (agent, date, subject)
+	#      RELATIONS
+	#        client owns account
+	#        visit of client
+	#        account belongsto client
+	#      BECOMING
+	#        when agent records visit require subject
+	#        whenever client unseen 90 days -> propose visit
+	#        wants everyclientseenthisquarter -> reached by planning
+	#      MET FROM WITHOUT
+	#        screen clientfile: understand client shows identity, accounts, visits
+	#        refine balance bounds [0..1000000]
+	#        reaches mobile, desktop, web
 }
-oApp.AddScreenQ(:ClientFile) { ToUnderstand(:Client)  Shows([ :identity, :accounts, :visits ]) }
-oApp.AddRefinementQ(:balance).Bounds(0, 1000000)
-oApp.AddReaches([ :mobile, :desktop, :web ])
-oApp.Explain()
-#--> WORLD FieldVisits   lives in: graphdb + files
-#      BEING
-#        account (number, chapter, balance)
-#            true when balance @ >= 0
-#        client (code, name, city)
-#        visit (agent, date, subject)
-#      RELATIONS
-#        client owns account
-#        visit of client
-#        account belongsto client
-#      BECOMING
-#        when agent records visit require subject
-#        whenever client unseen 90 days -> propose visit
-#        wants everyclientseenthisquarter -> reached by planning
-#      MET FROM WITHOUT
-#        screen clientfile: understand client shows identity, accounts, visits
-#        refine balance bounds [0..1000000]
-#        reaches mobile, desktop, web
 ```
 
 > run: kept
@@ -7014,31 +7222,32 @@ It answered under three headings, `BEING`, `BECOMING` and `MET FROM WITHOUT`. `S
 A world strives. A goal is a wanted state of the graph, and the gap is measured. A goal with no pattern to evaluate is refused, and never faked:
 
 ```haro
-oApp = StzAppQ("visits")
-oApp.AddThingQ(:Client) { Has([ :code, :name ]) }
-oApp.AddThingQ(:Visit)  { Of(:Client) }
-oApp.AddGoalQ(:EveryClientVisited) { Means = "every :Client Has(:visited)"  ReachedBy = :planning }
-oApp.AddInstance("anna", :Client)
-oApp.AddInstance("bilal", :Client)
-oApp.Relate("anna", :visited, "visit1")
-? @@( oApp.Pursue(:EveryClientVisited) )
-#--> pursuing everyclientvisited via planning -- 1 proposal(s)
-#    [ [ "attend", "client", "for", "bilal" ] ]
-? oApp.GoalSatisfied(:EveryClientVisited)
-#--> 0
-oApp.Relate("bilal", :visited, "visit2")
-? @@( oApp.Pursue(:EveryClientVisited) )
-#--> pursuing everyclientvisited via planning -- 0 proposal(s)
-#    [ ]
-? oApp.GoalSatisfied(:EveryClientVisited)
-#--> 1
-oApp.AddGoalQ(:Vague) { Means = "make things nice" }
-try
-    oApp.Pursue(:Vague)
-catch
-    ? cCatchError
-done
-#--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
+StzAppQ("visits") {
+	AddThingQ(:Client) { Has([ :code, :name ]) }
+	AddThingQ(:Visit)  { Of(:Client) }
+	AddGoalQ(:EveryClientVisited) { Means = "every :Client Has(:visited)"  ReachedBy = :planning }
+	AddInstance("anna", :Client)
+	AddInstance("bilal", :Client)
+	Relate("anna", :visited, "visit1")
+	? @@( Pursue(:EveryClientVisited) )
+	#--> pursuing everyclientvisited via planning -- 1 proposal(s)
+	#    [ [ "attend", "client", "for", "bilal" ] ]
+	? GoalSatisfied(:EveryClientVisited)
+	#--> 0
+	Relate("bilal", :visited, "visit2")
+	? @@( Pursue(:EveryClientVisited) )
+	#--> pursuing everyclientvisited via planning -- 0 proposal(s)
+	#    [ ]
+	? GoalSatisfied(:EveryClientVisited)
+	#--> 1
+	AddGoalQ(:Vague) { Means = "make things nice" }
+	try
+		Pursue(:Vague)
+	catch
+		? cCatchError
+	done
+	#--> stzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.
+}
 ```
 
 > run: kept
@@ -7095,17 +7304,19 @@ oDb = new stzDatabase(":memory:")
 oCon.OpenCommonsOn(oDb)
 ? classname( oCon.CommonsQ() )
 #--> stzplatform
-? oCon.RegisterIdentity("owner", "s3cret")
-#--> 1
-? oCon.RegisterIdentity("owner", "other")
-#--> 0
-? len( oCon.OpenSession("owner", "s3cret") ) > 0
-#--> 1
-? oCon.OpenSession("owner", "wrong") = ""
-#--> 1
-oCon.StorePut("currency", "EUR")
-? oCon.StoreGet("currency")
-#--> EUR
+oCon {
+	? RegisterIdentity("owner", "s3cret")
+	#--> 1
+	? RegisterIdentity("owner", "other")
+	#--> 0
+	? len( OpenSession("owner", "s3cret") ) > 0
+	#--> 1
+	? OpenSession("owner", "wrong") = ""
+	#--> 1
+	StorePut("currency", "EUR")
+	? StoreGet("currency")
+	#--> EUR
+}
 oDb.Close()
 ```
 
@@ -7119,26 +7330,30 @@ Does a world swapped live keep its bonds? A constellation also nests in another,
 oResto = StzAppQ("resto")
 oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
 oCon = new stzSuperApp("acme-group")
-oCon.AddWorld("resto", oResto)
-oCon.AddWorld("supplier", StzAppQ("supplier"))
-oCon.Bond("resto", "supplier", "order-produce")
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("resto", "order-produce")
-oCon.GovSetAuthority("resto", :Delegated)
-oNew = StzAppQ("supplier-v2")
-oCon.Swap("supplier", oNew)
-? oCon.NumberOfWorlds()
-#--> 2
-? oCon.WorldQ("supplier").Name()
-#--> supplier-v2
-? oCon.CallAcross("resto", "supplier", "order-produce")
-#--> 1
+oCon {
+	AddWorld("resto", oResto)
+	AddWorld("supplier", StzAppQ("supplier"))
+	Bond("resto", "supplier", "order-produce")
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("resto", "order-produce")
+	GovSetAuthority("resto", :Delegated)
+	oNew = StzAppQ("supplier-v2")
+	Swap("supplier", oNew)
+	? NumberOfWorlds()
+	#--> 2
+	? WorldQ("supplier").Name()
+	#--> supplier-v2
+	? CallAcross("resto", "supplier", "order-produce")
+	#--> 1
+}
 oHolding = new stzSuperApp("holding")
-oHolding.AddConstellation("acme", oCon)
-? oHolding.KindOf("acme")
-#--> super
-? oHolding.WorldQ("acme").NumberOfWorlds()
-#--> 2
+oHolding {
+	AddConstellation("acme", oCon)
+	? KindOf("acme")
+	#--> super
+	? WorldQ("acme").NumberOfWorlds()
+	#--> 2
+}
 ? oCon.KindOf("resto")
 #--> app
 try
@@ -7161,22 +7376,25 @@ A platform grants a capability of a device only if governance clears its risk. I
 
 ```haro
 oGov = new stzGovernance("resto-regime")
-oGov.GrantPermission("resto", "use-camera")
-oGov.GrantPermission("resto", "use-payments")
-oGov.SetAuthority("resto", :Delegated)
+oGov {
+	GrantPermission("resto", "use-camera")
+	GrantPermission("resto", "use-payments")
+	SetAuthority("resto", :Delegated)
+}
 oResto = StzAppQ("resto")
 oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
-oPlat = StzPlatformQ("resto-envelope")
-oPlat.SetWorld(oResto)
-oPlat.SetGovernedBy(oGov)
-oPlat.AddCapabilityQ(:camera).SetPurposes([ :scan_dish_photo ])
-? oPlat.Granted(:camera)
-#--> 1
-oPlat.AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
-? oPlat.Granted(:payments)
-#--> 0
-? oPlat.Why()
-#--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
+StzPlatformQ("resto-envelope") {
+	SetWorld(oResto)
+	SetGovernedBy(oGov)
+	AddCapabilityQ(:camera).SetPurposes([ :scan_dish_photo ])
+	? Granted(:camera)
+	#--> 1
+	AddCapabilityQ(:payments).SetPurposes([ :charge_guests ])
+	? Granted(:payments)
+	#--> 0
+	? Why()
+	#--> refused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)
+}
 ```
 
 > run: kept
@@ -7191,28 +7409,30 @@ By *scope* I mean the System Foundation's: development, deployment, and runtime-
 
 ```haro
 oSol = new stzPlatformProfile("greenhouse")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithSuperApp(:phone, :Android)
-oSol.WithApp(:sensor, :ESP32)
-? oSol.DevelopmentSystem().OSName()
-#--> windows
-? oSol.App(:phone).System().OSName()
-#--> android
-? oSol.App(:sensor).System().OSName()
-#--> espidf
-? @@( oSol.App(:sensor).System().System().Capabilities() )
-#--> [ "gpio", "network", "clock", "threads" ]
-? oSol.CurrentSystem().IsRuntime()
-#--> 1
-? oSol.App(:backend).System().Spawn("cron")
-#--> native
-try
-    oSol.App(:phone).System().Spawn("cron")
-catch
-    ? cCatchError
-done
-#--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithSuperApp(:phone, :Android)
+	WithApp(:sensor, :ESP32)
+	? DevelopmentSystem().OSName()
+	#--> windows
+	? App(:phone).System().OSName()
+	#--> android
+	? App(:sensor).System().OSName()
+	#--> espidf
+	? @@( App(:sensor).System().System().Capabilities() )
+	#--> [ "gpio", "network", "clock", "threads" ]
+	? CurrentSystem().IsRuntime()
+	#--> 1
+	? App(:backend).System().Spawn("cron")
+	#--> native
+	try
+		App(:phone).System().Spawn("cron")
+	catch
+		? cCatchError
+	done
+	#--> scope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.
+}
 ```
 
 > run: kept (touches the system)
@@ -7223,17 +7443,19 @@ The architect's artefact is a text file. Can it be read back, and what does the 
 
 ```haro
 oSol = new stzPlatformProfile("greenhouse")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithSuperApp(:phone, :Android)
-oSol.WithApp(:sensor, :ESP32)
-? oSol.ToStzPlatform()
-#--> # .stzplatform -- a Softanza solution profile
-#    platform: greenhouse
-#    developed_on: windows
-#    server: backend -> linux
-#    superapp: phone -> android
-#    app: sensor -> espidf
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithSuperApp(:phone, :Android)
+	WithApp(:sensor, :ESP32)
+	? ToStzPlatform()
+	#--> # .stzplatform -- a Softanza solution profile
+	#    platform: greenhouse
+	#    developed_on: windows
+	#    server: backend -> linux
+	#    superapp: phone -> android
+	#    app: sensor -> espidf
+}
 oBack = StzPlatformProfileQ()
 oBack.FromString( oSol.ToStzPlatform() )
 ? oBack.App(:sensor).DeploymentOSName()
@@ -7305,19 +7527,23 @@ A world's truths are narrated and not judged. The number in a reaction is the fi
 
 ```haro
 oA = StzAppQ("clinic-a")
-oA.AddThingQ(:Patient) { Has([ :name ]) }
-oA.AddThing(:Checkup)
-oA.AddReactionQ(:Patient).Unseen(90, :Days) { Propose(:Checkup) }
-oA.AddInstance("alice", :Patient)
-oA.AddInstance("bob", :Patient)
-oA.Relate("alice", :checkup, "checkup-1")
+oA {
+	AddThingQ(:Patient) { Has([ :name ]) }
+	AddThing(:Checkup)
+	AddReactionQ(:Patient).Unseen(90, :Days) { Propose(:Checkup) }
+	AddInstance("alice", :Patient)
+	AddInstance("bob", :Patient)
+	Relate("alice", :checkup, "checkup-1")
+}
 oB = StzAppQ("clinic-b")
-oB.AddThingQ(:Patient) { Has([ :name ]) }
-oB.AddThing(:Checkup)
-oB.AddReactionQ(:Patient).Unseen(1, :Days) { Propose(:Checkup) }
-oB.AddInstance("alice", :Patient)
-oB.AddInstance("bob", :Patient)
-oB.Relate("alice", :checkup, "checkup-1")
+oB {
+	AddThingQ(:Patient) { Has([ :name ]) }
+	AddThing(:Checkup)
+	AddReactionQ(:Patient).Unseen(1, :Days) { Propose(:Checkup) }
+	AddInstance("alice", :Patient)
+	AddInstance("bob", :Patient)
+	Relate("alice", :checkup, "checkup-1")
+}
 oA.Live()
 #--> [clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)
 oB.Live()
@@ -7435,7 +7661,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
@@ -7465,19 +7691,23 @@ The one artefact that crosses toward reality is a plan. It names each step. It f
 
 ```haro
 oBench = new stzVirtualFileSystem()
-oBench.CreateFolder("config")
-oBench.CreateFile("config/pump.ini", "threshold=40")
-oBench.MoveFile("old_settings.txt", "config/legacy.ini")
+oBench {
+	CreateFolder("config")
+	CreateFile("config/pump.ini", "threshold=40")
+	MoveFile("old_settings.txt", "config/legacy.ini")
+}
 oPlan = oBench.GenerateUpdatePlan()
-? oPlan.Narration()
-#--> Update plan (3 of 3 operations to commit):
-#-->   * 1. create folder 'config'
-#-->   * 2. create file 'config/pump.ini' (12 bytes)
-#-->   * 3. move 'old_settings.txt' -> 'config/legacy.ini'
-? @@(oPlan.Risks())
-#--> [ [ 3, "MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'" ] ]
-? @@(oPlan.Validate())
-#--> [ [ 3, "source absent in reality: old_settings.txt" ] ]
+oPlan {
+	? Narration()
+	#--> Update plan (3 of 3 operations to commit):
+	#-->   * 1. create folder 'config'
+	#-->   * 2. create file 'config/pump.ini' (12 bytes)
+	#-->   * 3. move 'old_settings.txt' -> 'config/legacy.ini'
+	? @@(Risks())
+	#--> [ [ 3, "MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'" ] ]
+	? @@(Validate())
+	#--> [ [ 3, "source absent in reality: old_settings.txt" ] ]
+}
 ```
 
 > run: kept
@@ -7488,14 +7718,16 @@ The twin is not only a twin of files. A variable set, a directory changed and a 
 
 ```haro
 oEnv = new stzVirtualEnvironment()
-oEnv.SetActor("agent-42")
-oEnv.SetVar("SHOP_MODE", "rehearsal")
-oEnv.Cd("/srv/shop")
-oEnv.Spawn("backup-database --all")
-? oEnv.Var("SHOP_MODE")
-#--> rehearsal
-? oEnv.NumberOfPendingSpawns()
-#--> 1
+oEnv {
+	SetActor("agent-42")
+	SetVar("SHOP_MODE", "rehearsal")
+	Cd("/srv/shop")
+	Spawn("backup-database --all")
+	? Var("SHOP_MODE")
+	#--> rehearsal
+	? NumberOfPendingSpawns()
+	#--> 1
+}
 ? (new stzEnvironment()).Has("SHOP_MODE")
 #--> 0
 oEnvPlan = oEnv.GenerateUpdatePlan()
@@ -7516,32 +7748,36 @@ The twin has a second job. A programmer on a laptop with no pins writes pin code
 
 ```haro
 oProduct = new stzPlatformProfile("greenhouse")
-oProduct.DevelopedOn(:Windows)
-oProduct.WithApp(:sensor, :ESP32)
-? oProduct.ReadPinIn(:sensor, 34)
-#--> rehearsed
-? oProduct.WritePinIn(:sensor, 26, 1)
-#--> rehearsed
+oProduct {
+	DevelopedOn(:Windows)
+	WithApp(:sensor, :ESP32)
+	? ReadPinIn(:sensor, 34)
+	#--> rehearsed
+	? WritePinIn(:sensor, 26, 1)
+	#--> rehearsed
+}
 oPlatform = StzPlatformQ("greenhouse")
-oPlatform.SetProfile(oProduct)
-oPlatform.Build()
-try
-	oPlatform.DeployAs(LLMActor("copilot"))
-catch
-	? cCatchError
-done
-#--> stzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.
-? oPlatform.IsDeployed()
-#--> 0
-oPlatform.DeployAs(HumanActor("me"))
-? oPlatform.ArtifactFor(:sensor)
-#--> // firmware generated by the Softanza lowering bridge
-#--> // target: espidf
-#--> void setup() {}
-#--> void loop() {
-#-->   digitalRead(34);
-#-->   digitalWrite(26, 1);
-#--> }
+oPlatform {
+	SetProfile(oProduct)
+	Build()
+	try
+		DeployAs(LLMActor("copilot"))
+	catch
+		? cCatchError
+	done
+	#--> stzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.
+	? IsDeployed()
+	#--> 0
+	DeployAs(HumanActor("me"))
+	? ArtifactFor(:sensor)
+	#--> // firmware generated by the Softanza lowering bridge
+	#--> // target: espidf
+	#--> void setup() {}
+	#--> void loop() {
+	#-->   digitalRead(34);
+	#-->   digitalWrite(26, 1);
+	#--> }
+}
 ```
 
 > run: kept
@@ -7556,21 +7792,23 @@ Before a byte is built, the delivery planner states, for each capability a part 
 
 ```haro
 oShip = new stzDelivery("shop")
-oShip.AddSuperApp(:phone, :Android)
-oShip.NeedsIn(:phone, [ :Unicode, :PivotTable, :Collection, :Neural ])
-oShip.Plan().Show()
-#--> Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)
-#--> ==============================================================================
-#-->
-#-->   Part 'phone' [superapp] -> android (mobile / edge)
-#-->      Unicode            [target]    Unicode: the target-platform is strong at it -> use its own
-#-->      PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine
-#-->      Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language
-#-->      Neural             [server]    Neural: heavy -> runs on the backend, not the edge
-#-->      -> stz.wasm carries: [ "PivotTable" ]  (~12 KB, 1 of 4)
-#-->
-#-->   Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.
-#-->   Build() will compile exactly this scope; Deploy() will commit it.
+oShip {
+	AddSuperApp(:phone, :Android)
+	NeedsIn(:phone, [ :Unicode, :PivotTable, :Collection, :Neural ])
+	Plan().Show()
+	#--> Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)
+	#--> ==============================================================================
+	#-->
+	#-->   Part 'phone' [superapp] -> android (mobile / edge)
+	#-->      Unicode            [target]    Unicode: the target-platform is strong at it -> use its own
+	#-->      PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine
+	#-->      Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language
+	#-->      Neural             [server]    Neural: heavy -> runs on the backend, not the edge
+	#-->      -> stz.wasm carries: [ "PivotTable" ]  (~12 KB, 1 of 4)
+	#-->
+	#-->   Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.
+	#-->   Build() will compile exactly this scope; Deploy() will commit it.
+}
 ```
 
 > run: kept
@@ -7589,21 +7827,25 @@ oFront = new stzDelivery("shopfront")
 oFront.AddSuperApp(:web, :Browser)
 oFront.NeedsIn(:web, [ :Unicode, :PivotTable, :Collection ])
 oBundle = new stzEmulator(oFront)
-oBundle.CompileEngineQ(FALSE)
-oBundle.SetOutDirQ(cHere + "/_bundle")
-oBundle.Build()
+oBundle {
+	CompileEngineQ(FALSE)
+	SetOutDirQ(cHere + "/_bundle")
+	Build()
+}
 oSite = new stzDeploymentSite("cdn")
 oSite.SetKindQ(:LocalRepo).SetStoreAtQ(cHere + "/_live")
-oFront.DeployTo(oSite, :web)
-oFront.ShipSlice(:web, oBundle)
-oFront.SetActor(LLMActor("assistant"))
-oFront.Deploy(:Production)
-? oSite.Status()
-#--> absent
-oFront.SetActor(HumanActor("ops"))
-oFront.Deploy(:Production)
-? oSite.Status()
-#--> launched
+oFront {
+	DeployTo(oSite, :web)
+	ShipSlice(:web, oBundle)
+	SetActor(LLMActor("assistant"))
+	Deploy(:Production)
+	? oSite.Status()
+	#--> absent
+	SetActor(HumanActor("ops"))
+	Deploy(:Production)
+	? oSite.Status()
+	#--> launched
+}
 ? @@(StzEngineDirListFiles(cHere + "/_live"))
 #--> [ ".stzsite", "deploy.json", "index.html", "stz.js" ]
 ? read(cHere + "/_live/deploy.json")
@@ -7637,11 +7879,13 @@ oGood.SetKindQ(:LocalRepo).SetStoreAtQ(cHere + "/_site_cdn")
 oBad = new stzDeploymentSite("prod-api")
 oBad.SetKindQ(:Server)
 oRun = new stzDeployment(oShop10)
-oRun.SetActor(HumanActor("ops"))
-oRun.SetTarget(:web, oGood)
-oRun.SetTarget(:api, oBad)
-oRun.RunAfter(:api, :web)
-aRun = oRun.Run()
+oRun {
+	SetActor(HumanActor("ops"))
+	SetTarget(:web, oGood)
+	SetTarget(:api, oBad)
+	RunAfter(:api, :web)
+	aRun = Run()
+}
 ? aRun[1]
 #--> 0
 for aLine in aRun[2]
@@ -7722,21 +7966,23 @@ One report names five of the eight ways a surface is not fit for production. Fou
 ```haro
 oStoreSf = new stzSecretStore("shop")
 oSurf = new stzServiceRegistry("shop")
-oSurf.Bind(:payments, new stzPaymentsSandbox())
-oSurf.Bind(:scratch, StzMemoryDataSourceQ())
-oSurf.BindLive(:cache, new stzString("cache-adapter"), "redis-url")
-oSurf.BindLive(:sms, new stzString("sms-adapter"), "")
-oSurf.Declare(:reporting)
-? oSurf.IsSoundVia(oStoreSf)
-#--> 0
-oSurf.SetPhase(:production)
-oSurf.ReportVia(oStoreSf)
-#--> Service registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live
-#-->   [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise
-#-->   [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship
-#-->   [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase
-#-->   [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store
-#-->   [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret
+oSurf {
+	Bind(:payments, new stzPaymentsSandbox())
+	Bind(:scratch, StzMemoryDataSourceQ())
+	BindLive(:cache, new stzString("cache-adapter"), "redis-url")
+	BindLive(:sms, new stzString("sms-adapter"), "")
+	Declare(:reporting)
+	? IsSoundVia(oStoreSf)
+	#--> 0
+	SetPhase(:production)
+	ReportVia(oStoreSf)
+	#--> Service registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live
+	#-->   [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise
+	#-->   [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship
+	#-->   [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase
+	#-->   [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store
+	#-->   [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret
+}
 ```
 
 > run: kept
@@ -7746,19 +7992,21 @@ Two different questions are asked at the door: who is refused, and what is refus
 ```haro
 oStoreWw = new stzSecretStore("shop")
 oOne = new stzServiceRegistry("shop")
-oOne.Bind(:payments, new stzPaymentsSandbox())
-? oOne.Phase()
-#--> development
-? oOne.MayGoLive(LLMActor("assistant"), oStoreWw)
-#--> 0
-? oOne.WhyNotLive(LLMActor("assistant"), oStoreWw)
-#--> actor 'assistant' is not effectful -- it may propose, not commit
-? oOne.MayGoLive(HumanActor("dana"), oStoreWw)
-#--> 0
-? oOne.WhyNotLive(HumanActor("dana"), oStoreWw)
-#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
-? oOne.Phase()
-#--> development
+oOne {
+	Bind(:payments, new stzPaymentsSandbox())
+	? Phase()
+	#--> development
+	? MayGoLive(LLMActor("assistant"), oStoreWw)
+	#--> 0
+	? WhyNotLive(LLMActor("assistant"), oStoreWw)
+	#--> actor 'assistant' is not effectful -- it may propose, not commit
+	? MayGoLive(HumanActor("dana"), oStoreWw)
+	#--> 0
+	? WhyNotLive(HumanActor("dana"), oStoreWw)
+	#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
+	? Phase()
+	#--> development
+}
 ```
 
 > run: kept
@@ -7769,16 +8017,20 @@ And the registry knows services while the delivery knows parts. Joined, they ans
 
 ```haro
 oS3 = new stzServiceRegistry("shop")
-oS3.DeclareMany([ :payments, :cache ])
-oS3.BindSandbox(:payments, new stzPaymentsSandbox())
-oS3.BindLocal(:cache, StzMemoryBlobStoreQ())
+oS3 {
+	DeclareMany([ :payments, :cache ])
+	BindSandbox(:payments, new stzPaymentsSandbox())
+	BindLocal(:cache, StzMemoryBlobStoreQ())
+}
 oD3 = new stzDelivery("shop")
-oD3.AddBackend("api", "linux")
-oD3.AddApp("web", "browser")
-oD3.UseServicesQ(oS3)
-oD3.NeedsServiceInQ("api", [ :payments, :cache ])
-oD3.NeedsServiceInQ("web", [ :reporting ])
-oD3.DeployTo(StzDeploymentSiteQ("host1"), "api")
+oD3 {
+	AddBackend("api", "linux")
+	AddApp("web", "browser")
+	UseServicesQ(oS3)
+	NeedsServiceInQ("api", [ :payments, :cache ])
+	NeedsServiceInQ("web", [ :reporting ])
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+}
 ? oS3.Phase()
 #--> development
 ? len(oS3.Findings())
@@ -7857,12 +8109,14 @@ That is the field; the limit is where I stop.
 
 ```haro
 oUndeclared = new stzServiceRegistry("shop")
-oUndeclared.Bind(:payments, new AlwaysYes)
-oUndeclared.SetPhase(:production)
-? oUndeclared.PostureOf(:payments)
-#--> live
-? oUndeclared.IsSound()
-#--> 1
+oUndeclared {
+	Bind(:payments, new AlwaysYes)
+	SetPhase(:production)
+	? PostureOf(:payments)
+	#--> live
+	? IsSound()
+	#--> 1
+}
 
 class AlwaysYes
 	def init
@@ -7983,7 +8237,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -8029,10 +8283,12 @@ aAr = QuestionAfter("كسكس", "بريك")
 ? StzSmsSegments(ToText(aAr))[:segments]
 #--> 2
 oBill = new stzSmsSandbox()
-oBill.Send("+22790112233", ToText(aEn))
-oBill.Send("+22790112233", ToText(aAr))
-? oBill.TotalSegments()
-#--> 3
+oBill {
+	Send("+22790112233", ToText(aEn))
+	Send("+22790112233", ToText(aAr))
+	? TotalSegments()
+	#--> 3
+}
 
 func ToText(aQ)
 	cOut = "Which " + aQ[:relation] + " for " + aQ[:subject] + "? (" + aQ[:why] + ")"
@@ -8051,12 +8307,16 @@ func ReadReply(cText)
 
 func QuestionAfter(cA, cB)
 	oW = new stzKnowledgeGraph("stall")
-	oW.Know("order1", "order").Know("order2", "order").Know("order3", "order")
-	oW.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
-	oW.AskIn("c")
-	oW.ReplyIn("c", cA)
-	oW.AskIn("c")
-	oW.ReplyIn("c", cB)
+	oW {
+		Know("order1", "order")
+		Know("order2", "order")
+		Know("order3", "order")
+		AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+		AskIn("c")
+		ReplyIn("c", cA)
+		AskIn("c")
+		ReplyIn("c", cB)
+	}
 	return oW.AskInXT("c")
 ```
 
@@ -8068,7 +8328,9 @@ Now the whole conversation, rehearsed over the SMS sandbox before any account ex
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
-oKB.Know("order1", "order").Know("order2", "order").Know("order3", "order")
+oKB.Know("order1", "order")
+oKB.Know("order2", "order")
+oKB.Know("order3", "order")
 oKB.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
 oSms = new stzSmsSandbox()
 for cIn in [ "couscous", "brik", "7", "2" ]
@@ -8110,17 +8372,19 @@ A dish named 2! In the block before, my `ReadReply` turned the text "2" into the
 
 ```haro
 oPh = new stzSmsSandbox()
-? oPh.Send("0612345678", "ready")[:status]
-#--> rejected
-oPh.FailNextQ()
-? oPh.Send("+22790112233", "ready")[:status]
-#--> refused
-? oPh.NumberOfMessages()
-#--> 0
-? oPh.Send("+22790112233", "ready")[:status]
-#--> sent
-? oPh.NumberOfMessages()
-#--> 1
+oPh {
+	? Send("0612345678", "ready")[:status]
+	#--> rejected
+	FailNextQ()
+	? Send("+22790112233", "ready")[:status]
+	#--> refused
+	? NumberOfMessages()
+	#--> 0
+	? Send("+22790112233", "ready")[:status]
+	#--> sent
+	? NumberOfMessages()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -8131,15 +8395,17 @@ oPh.FailNextQ()
 
 ```haro
 oSig = new stzRequestSigner("inbound")
-oSig.AddKey("provider", "a-shared-secret")
-cBody = '{"from":"+22790112233","text":"2"}'
-cSig = oSig.SignBody("provider", cBody)
-? oSig.VerifyWebhook(cBody, cSig, 1000, 5000)
-#--> provider
-? "[" + oSig.VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
-#--> []
-? oSig.Why()
-#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+oSig {
+	AddKey("provider", "a-shared-secret")
+	cBody = '{"from":"+22790112233","text":"2"}'
+	cSig = SignBody("provider", cBody)
+	? VerifyWebhook(cBody, cSig, 1000, 5000)
+	#--> provider
+	? "[" + VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
+	#--> []
+	? Why()
+	#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+}
 ```
 
 > run: kept
@@ -8166,15 +8432,17 @@ oE = new stzEarcons()
 oV = StzVoiceQ()
 oV.UseLanguage("fr-FR")
 oL = new stzListener()
-oL.AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
-oL.HearSound( oV.ToSoundOf("disque plein") )
-? oL.MeaningHeard()
-#--> danger
-oL.HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
-? oL.WasNoMatch()
-#--> 1
-? oL.AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
-#--> 0
+oL {
+	AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
+	HearSound( oV.ToSoundOf("disque plein") )
+	? MeaningHeard()
+	#--> danger
+	HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
+	? WasNoMatch()
+	#--> 1
+	? AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -8185,18 +8453,20 @@ The taught phrase gave `danger`, the phrase it was not taught gave no match (`1`
 
 ```haro
 oApp = new stzApp("stall")
-oApp.AddThingQ(:Dish) { Has([ :name, :price ]) }
-oApp.AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
-oApp.AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
-oApp.AddReaches([ :web, :whatsapp ])
-oApp.Explain()
-#--> WORLD stall   lives in: memory (not persisted)
-#      BEING
-#        dish (name, price)
-#      MET FROM WITHOUT
-#        screen menu: discover dish shows name, price
-#        screen basket: select dish
-#        reaches web, whatsapp
+oApp {
+	AddThingQ(:Dish) { Has([ :name, :price ]) }
+	AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
+	AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
+	AddReaches([ :web, :whatsapp ])
+	Explain()
+	#--> WORLD stall   lives in: memory (not persisted)
+	#      BEING
+	#        dish (name, price)
+	#      MET FROM WITHOUT
+	#        screen menu: discover dish shows name, price
+	#        screen basket: select dish
+	#        reaches web, whatsapp
+}
 ```
 
 > run: kept
@@ -8222,13 +8492,15 @@ done
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
-? oSay.ParseOutput('{"reply": "Your order is ready."}')[:ok]
-#--> 1
-aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
-? aNo[:ok]
-#--> 0
-? oSay.CiteFindings(aNo[:findings])
-#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+oSay {
+	? ParseOutput('{"reply": "Your order is ready."}')[:ok]
+	#--> 1
+	aNo = ParseOutput('{"reply": "Your order is free, tonight only."}')
+	? aNo[:ok]
+	#--> 0
+	? CiteFindings(aNo[:findings])
+	#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+}
 ```
 
 > run: kept
@@ -8293,11 +8565,12 @@ My study of the record has two errors that this chapter's runs correct. The firs
 
 ```haro
 oDb = new stzDatabase(":memory:")
-oCom = StzPlatformQ("neighbourhood")
-oCom.OpenCommonsOn(oDb)
-oCom.PostMessage("customer", "kitchen", "one brik, no egg")
-? @@(oCom.Inbox("kitchen"))
-#--> [ [ "customer", "one brik, no egg" ] ]
+StzPlatformQ("neighbourhood") {
+	OpenCommonsOn(oDb)
+	PostMessage("customer", "kitchen", "one brik, no egg")
+	? @@(Inbox("kitchen"))
+	#--> [ [ "customer", "one brik, no egg" ] ]
+}
 ```
 
 > run: kept
@@ -8383,7 +8656,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stands: at this commit, an IDE of this family is absent, and the pieces beneath it run. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.
 
@@ -8429,12 +8702,14 @@ cShell = 'DEFINE PANEL shell ( SIZE [640, 360], DIRECTION column, FONT "app", SA
 	'DEFINE BOX status ( HEIGHT 24, ROLE status, SATISFIES understand, CHILDREN [state] ) RATIONALE "The truth of the build."' + nl +
 	'DEFINE TEXT state ( CONTENT "clean", SATISFIES understand ) RATIONALE "The court verdict."'
 oShell = new stzUiDocument(cShell)
-? oShell.IsClean()
-#--> 1
-? len(oShell.Declarations())
-#--> 12
-? @@( oShell.Orphans() )
-#--> [ "work" ]
+oShell {
+	? IsClean()
+	#--> 1
+	? len(Declarations())
+	#--> 12
+	? @@( Orphans() )
+	#--> [ "work" ]
+}
 ```
 
 > run: kept (touches the system)
@@ -8588,14 +8863,16 @@ And what a screen reader reads is emitted from the declaration. A region declare
 oShell.UseFont("C:/Windows/Fonts/segoeui.ttf")
 oP = oShell.ToPanel()
 oT = new stzAccessibilityTree(oShell, oP)
-? oT.NodeCount()
-#--> 12
-? oT.NodeOf("status")[:role]
-#--> status
-? oT.NodeOf("status")[:description]
-#--> The truth of the build.
-? @@( oT.ReadingOrder() )
-#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+oT {
+	? NodeCount()
+	#--> 12
+	? NodeOf("status")[:role]
+	#--> status
+	? NodeOf("status")[:description]
+	#--> The truth of the build.
+	? @@( ReadingOrder() )
+	#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+}
 ```
 
 > run: kept
@@ -8607,29 +8884,30 @@ The tree answers `status`, and for its description `The truth of the build.`, th
 A rail is a view over what the world proposes. A pulse proposes and never relates. An act on the world clears a proposal, and the world's own status line counts from the same list the rail shows. What does the world propose, and what remains after one act? Run it:
 
 ```haro
-oApp = StzAppQ("fieldvisits")
-oApp.AddThingQ(:Client) { Has([ :name ]) }
-oApp.AddThing(:Visit)
-oApp.AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
-oApp.AddInstance("amadou", :Client)
-oApp.AddInstance("binta", :Client)
-oApp.Live()
-#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for amadou
-#--> propose visit for binta
-? oApp.Pulse()
-#--> 0
-? len(oApp.Proposals())
-#--> 2
-oApp.Relate("amadou", :visit, "visit-1")
-oApp.Pulse()
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for binta
+StzAppQ("fieldvisits") {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddThing(:Visit)
+	AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
+	AddInstance("amadou", :Client)
+	AddInstance("binta", :Client)
+	Live()
+	#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for amadou
+	#--> propose visit for binta
+	? Pulse()
+	#--> 0
+	? len(Proposals())
+	#--> 2
+	Relate("amadou", :visit, "visit-1")
+	Pulse()
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for binta
+}
 ```
 
 > run: kept
@@ -8640,20 +8918,22 @@ And a screen is an intent. One place where the world speaks in verbs is its scre
 
 ```haro
 oW = StzAppQ("fieldvisits")
-oW.AddThingQ(:Client) { Has([ :name ]) }
-oW.AddScreenQ(:Home)  { ToDiscover(:Client) }
-oW.AddScreenQ(:File)  { ToUnderstand(:Client) }
-oW.AddScreenQ(:Pick)  { ToSelect(:Client) }
-oW.AddScreenQ(:Edit)  { ToAct(:Client) }
-oW.Explain()
-#--> WORLD fieldvisits   lives in: memory (not persisted)
-#      BEING
-#        client (name)
-#      MET FROM WITHOUT
-#        screen home: discover client
-#        screen file: understand client
-#        screen pick: select client
-#        screen edit: act client
+oW {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddScreenQ(:Home)  { ToDiscover(:Client) }
+	AddScreenQ(:File)  { ToUnderstand(:Client) }
+	AddScreenQ(:Pick)  { ToSelect(:Client) }
+	AddScreenQ(:Edit)  { ToAct(:Client) }
+	Explain()
+	#--> WORLD fieldvisits   lives in: memory (not persisted)
+	#      BEING
+	#        client (name)
+	#      MET FROM WITHOUT
+	#        screen home: discover client
+	#        screen file: understand client
+	#        screen pick: select client
+	#        screen edit: act client
+}
 try
 	oW.AddScreenQ(:Side) { ToCompare(:Client) }
 catch
@@ -8727,9 +9007,11 @@ oPlan = new stzDelivery("greenhouse")
 oPlan.AddFirmware(:node, :ESP32)
 oPlan.NeedsIn(:node, [ :GPIO ])
 oEmu = new stzEmulator(oPlan)
-oEmu.CompileEngineQ(FALSE)
-oEmu.SetOutDirQ("_emu")
-oEmu.Build()
+oEmu {
+	CompileEngineQ(FALSE)
+	SetOutDirQ("_emu")
+	Build()
+}
 cH = read("_emu/index.html")
 ? StzContains(cH, "needs a look")
 #--> 1
@@ -8813,7 +9095,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -9141,7 +9423,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and the six things I refused, among them the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -9177,26 +9459,30 @@ That is the story. What does the library carry of it?
 
 ```haro
 oRule = new stzGraphRule("the-lock")
-oRule.SetDomainQ("scope")
-oRule.WhenQ("kind", "equals", "world")
-oRule.WhenQ("admitted-by", "missing", "")
-oRule.ThenViolationQ("a world entered the cycle with no written admission")
+oRule {
+	SetDomain("scope")
+	When("kind", "equals", "world")
+	When("admitted-by", "missing", "")
+	ThenViolation("a world entered the cycle with no written admission")
+}
 g = new stzGraph("cycle-1")
-g.AddNode("customer-phone")
-g.SetNodeProperty("customer-phone", "kind", "world")
-g.SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
-g.AddRule(oRule)
-? g.RulesAreSound()
-#--> 1
-g.AddNode("loyalty-club")
-g.SetNodeProperty("loyalty-club", "kind", "world")
-g.RulesReport()
-#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
-#      [scope] 1 finding(s)
-#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
-g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
-? g.RulesAreSound()
-#--> 1
+g {
+	AddNode("customer-phone")
+	SetNodeProperty("customer-phone", "kind", "world")
+	SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
+	AddRule(oRule)
+	? RulesAreSound()
+	#--> 1
+	AddNode("loyalty-club")
+	SetNodeProperty("loyalty-club", "kind", "world")
+	RulesReport()
+	#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
+	#      [scope] 1 finding(s)
+	#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
+	SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
+	? RulesAreSound()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -9207,18 +9493,20 @@ The idea of a loyalty club arrives, and the cycle is no longer sound! The court 
 
 ```haro
 oPay = new stzPaymentsSandbox()
-oPay.DeclineTokenQ("tok_chargeback")
-? oPay.Authorize(4200, "tok_chargeback")[:status]
-#--> declined
-oPay.FailNextQ()
-? oPay.Authorize(4200, "tok_visa")[:status]
-#--> refused
-aAuth = oPay.Authorize(4200, "tok_visa")
-? aAuth[:status]
-#--> authorized
-oPay.Capture(aAuth[:id])
-? oPay.Capture(aAuth[:id])[:why]
-#--> this authorization was already captured
+oPay {
+	DeclineToken("tok_chargeback")
+	? Authorize(4200, "tok_chargeback")[:status]
+	#--> declined
+	FailNext()
+	? Authorize(4200, "tok_visa")[:status]
+	#--> refused
+	aAuth = Authorize(4200, "tok_visa")
+	? aAuth[:status]
+	#--> authorized
+	Capture(aAuth[:id])
+	? Capture(aAuth[:id])[:why]
+	#--> this authorization was already captured
+}
 ```
 
 > run: kept
@@ -9231,20 +9519,22 @@ And the production gate refuses to open while a fake is still bound, even for an
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.NeedsServiceInQ("api", [ :payments ])
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor( HumanActor("owner") )
-? oDel.Deploy(:Production).WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[1][:message]
-#--> REFUSED -- the external surface is not production-ready
-? oDel.WhyServicesNotReady()
-#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
-oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
-? oDel.ServicesAreProductionReady()
-#--> 1
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	NeedsServiceIn("api", [ :payments ])
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor( HumanActor("owner") )
+	? Deploy(:Production).WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[1][:message]
+	#--> REFUSED -- the external surface is not production-ready
+	? WhyServicesNotReady()
+	#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
+	ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
+	? ServicesAreProductionReady()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -9255,27 +9545,29 @@ The owner is entitled, and he is refused! Nothing is committed, and the log says
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
-oCon.AddWorld("customer", StzAppQ("customer"))
-oCon.AddWorld("kitchen", StzAppQ("kitchen"))
-oCon.AddWorld("supplier", StzAppQ("supplier"))
-oCon.Bond("customer", "kitchen", "send-order")
-oCon.Bond("kitchen", "supplier", "order-produce")
-oCon.GovDeclareRisk("send-order", 1)
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("customer", "send-order")
-oCon.GovGrant("kitchen", "order-produce")
-oCon.GovSetAuthority("customer", :Delegated)
-oCon.GovSetAuthority("kitchen", :Delegated)
-oCon.Retire("supplier")
-? oCon.CallAcross("customer", "kitchen", "send-order")
-#--> 1
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 0
-? oCon.Why()
-#--> target world 'supplier' is not active.
-oCon.Revive("supplier")
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 1
+oCon {
+	AddWorld("customer", StzAppQ("customer"))
+	AddWorld("kitchen", StzAppQ("kitchen"))
+	AddWorld("supplier", StzAppQ("supplier"))
+	Bond("customer", "kitchen", "send-order")
+	Bond("kitchen", "supplier", "order-produce")
+	GovDeclareRisk("send-order", 1)
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("customer", "send-order")
+	GovGrant("kitchen", "order-produce")
+	GovSetAuthority("customer", :Delegated)
+	GovSetAuthority("kitchen", :Delegated)
+	Retire("supplier")
+	? CallAcross("customer", "kitchen", "send-order")
+	#--> 1
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 0
+	? Why()
+	#--> target world 'supplier' is not active.
+	Revive("supplier")
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 1
+}
 ```
 
 > run: kept
@@ -9286,19 +9578,23 @@ The call across the bond passes. The call to the sleeping world is refused! The 
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
-oMon.NewTimer("first.display.ms").Record(900)
-oMon.NewTimer("tap.ms").Record(40)
-oMon.NewTimer("order.to.kitchen.ms").Record(1800)
+oMon {
+	NewTimer("first.display.ms").Record(900)
+	NewTimer("tap.ms").Record(40)
+	NewTimer("order.to.kitchen.ms").Record(1800)
+}
 oSla = StzSla("speed-budget")
-oSla.ExpectP95("first.display.ms").Under(1200)
-oSla.ExpectP95("tap.ms").Under(80)
-oSla.ExpectP95("order.to.kitchen.ms").Under(2500)
-oSla.CheckAgainst(oMon)
-oSla.Show()
-#--> SLA speed-budget -- 3 expectation(s), last check: MET.
-#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
-#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
-#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+oSla {
+	ExpectP95("first.display.ms").Under(1200)
+	ExpectP95("tap.ms").Under(80)
+	ExpectP95("order.to.kitchen.ms").Under(2500)
+	CheckAgainst(oMon)
+	Show()
+	#--> SLA speed-budget -- 3 expectation(s), last check: MET.
+	#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
+	#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
+	#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+}
 oMon.MetricQ("order.to.kitchen.ms").Record(3100)
 oSla.CheckAgainst(oMon)
 oRep = new stzRuleReport("cycle-gate")
@@ -9405,7 +9701,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take a bank in Niamey, which I call Softibank (the name is fictional), under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -9455,13 +9751,15 @@ positions
         reportsTo: ceo
 '
 oOrg = new stzOrgChart("bank")
-oOrg.ImportStzOrg(cChart)
-? oOrg.NodeCount()
-#--> 4
-? @@( oOrg.ValidateXT(:BCEAO)[:issues] )
-#--> [ "BCEAO-002: Audit reports to non-board position" ]
-? oOrg.IsValidXT(:BCEAO)
-#--> 0
+oOrg {
+	ImportStzOrg(cChart)
+	? NodeCount()
+	#--> 4
+	? @@( ValidateXT(:BCEAO)[:issues] )
+	#--> [ "BCEAO-002: Audit reports to non-board position" ]
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 > run: kept
@@ -9469,21 +9767,23 @@ oOrg.ImportStzOrg(cChart)
 The regulator's rule reads the chart and refuses it! Audit reports to the chief executive, and the verdict says so in its own words, `BCEAO-002: Audit reports to non-board position`, with a rule code an auditor can look up. A chart is judged by more than one court at a time, each finding carries its own code, and the compliance report says compliant or not. What does a second court say, the segregation of duties, which holds that operations must not report to treasury? I add treasury and operations, operations under treasury, and run both courts:
 
 ```haro
-oOrg.AddManagementPositionXT("treasury", "Treasury")
-oOrg.SetPositionDepartment("treasury", "treasury")
-oOrg.AddManagementPositionXT("ops", "Operations")
-oOrg.SetPositionDepartment("ops", "operations")
-oOrg.ReportsTo("treasury", "ceo")
-oOrg.ReportsTo("ops", "treasury")
-aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
-? aV[:validatorsFailed]
-#--> 2
-? aV[:results][1][:issues][1]
-#--> BCEAO-002: Audit reports to non-board position
-? aV[:results][2][:issues][1]
-#--> SOD-001: Operations reports through Treasury
-? oOrg.ComplianceReport()[:overallStatus]
-#--> non-compliant
+oOrg {
+	AddManagementPositionXT("treasury", "Treasury")
+	SetPositionDepartment("treasury", "treasury")
+	AddManagementPositionXT("ops", "Operations")
+	SetPositionDepartment("ops", "operations")
+	ReportsTo("treasury", "ceo")
+	ReportsTo("ops", "treasury")
+	aV = ValidateXT([ :BCEAO, :SOD ])
+	? aV[:validatorsFailed]
+	#--> 2
+	? aV[:results][1][:issues][1]
+	#--> BCEAO-002: Audit reports to non-board position
+	? aV[:results][2][:issues][1]
+	#--> SOD-001: Operations reports through Treasury
+	? ComplianceReport()[:overallStatus]
+	#--> non-compliant
+}
 ```
 
 > run: kept
@@ -9515,10 +9815,12 @@ A bank's own rule is data too. Take the rule that internal audit reports to the 
 
 ```haro
 oRule = new stzGraphRule("audit-reports-to-board")
-oRule.SetDomainQ("orgchart")
-oRule.WhenQ("department", "equals", "audit")
-oRule.ThenQ("reportsTo", "equals", "board")
-oRule.ThenViolationQ("internal audit must report to the board")
+oRule {
+	SetDomain("orgchart")
+	When("department", "equals", "audit")
+	ThenQ("reportsTo", "equals", "board")
+	ThenViolation("internal audit must report to the board")
+}
 oBasel = new stzBaselIIIRuleBase()
 oBasel.AddRule(oRule)
 oRep = new stzRuleReport("bank")
@@ -9536,18 +9838,22 @@ The report says `UNSOUND` and names the rule and the place: `ERROR audit-reports
 Then the verdict follows the chart. Two edits to two reporting lines, audit now to the board and operations to the chief executive. What do the courts that said no say now? Run it:
 
 ```haro
-oOrg.ReportsTo("audit", "board")
-oOrg.ReportsTo("ops", "ceo")
-? oOrg.IsValidXT([ :BCEAO, :SOD ])
-#--> 1
-? oOrg.ComplianceReport()[:overallStatus]
-#--> compliant
+oOrg {
+	ReportsTo("audit", "board")
+	ReportsTo("ops", "ceo")
+	? IsValidXT([ :BCEAO, :SOD ])
+	#--> 1
+	? ComplianceReport()[:overallStatus]
+	#--> compliant
+}
 oRep = new stzRuleReport("bank")
-oRep.Ingest(oOrg.CheckCompliance(oBasel))
-oRep.Report()
-#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
-? oRep.IsSound()
-#--> 1
+oRep {
+	Ingest(oOrg.CheckCompliance(oBasel))
+	Report()
+	#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
+	? IsSound()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -9556,14 +9862,16 @@ They say `compliant`, and the report says `SOUND`. That is the move the narratio
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
-oOrg2.ImportStzOrg( substr(cChart, "department: executive", "department:") )
-? oOrg2.IsValidXT(:BCEAO)
-#--> 1
-? oOrg2.ValidateXT(:Banking)[:status]
-#--> pass
-oOrg2.SetPositionDepartment("ceo", "executive")
-? oOrg2.IsValidXT(:BCEAO)
-#--> 0
+oOrg2 {
+	ImportStzOrg( substr(cChart, "department: executive", "department:") )
+	? IsValidXT(:BCEAO)
+	#--> 1
+	? ValidateXT(:Banking)[:status]
+	#--> pass
+	SetPositionDepartment("ceo", "executive")
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 > run: kept
@@ -9666,7 +9974,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
@@ -9694,16 +10002,20 @@ Four things in that study the library carries. I will show them in the order the
 
 ```haro
 oG = new stzGraph("advances")
-oG.AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
-oG.AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
-oG.AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
-oG.AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+oG {
+	AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
+	AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
+	AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
+	AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+}
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 500)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 500)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -9722,11 +10034,13 @@ What happens when the ceiling is changed and the same model is judged again? Her
 ```haro
 oG.ClearAttachedRules()
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 200)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -9745,25 +10059,31 @@ What the library does carry is the answer to the worst thing that can go wrong w
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")
-oTypo.SetMessageQ("above the ceiling an advance needs two approvals")
-oTypo.WhenQ("amont", "greaterthan", 200)
-oTypo.ThenQ("approvals", "greaterthan", 1)
-oTypo.ThenViolationQ("two approvals needed")
-? len(oTypo.Check(oG))
-#--> 0
+oTypo {
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amont", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+	? len(Check(oG))
+	#--> 0
+}
 oWatch = StzRuleGovernance("hub")
-oWatch.AddRule(oTypo)
-oWatch.AddCase("advances", oG)
-aF = oWatch.CheckRules()
-? aF[1][:rule]
-#--> scope_empty
-? aF[1][:message]
-#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+oWatch {
+	AddRule(oTypo)
+	AddCase("advances", oG)
+	aF = CheckRules()
+	? aF[1][:rule]
+	#--> scope_empty
+	? aF[1][:message]
+	#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+}
 oWatch2 = StzRuleGovernance("hub")
-oWatch2.AddRule(oRule)
-oWatch2.AddCase("advances", oG)
-? len(oWatch2.CheckRules())
-#--> 0
+oWatch2 {
+	AddRule(oRule)
+	AddCase("advances", oG)
+	? len(CheckRules())
+	#--> 0
+}
 ```
 
 > run: kept
@@ -9774,21 +10094,23 @@ The misspelt rule finds nothing, `0`, and to the model nothing found means sound
 
 ```haro
 oKB = new stzKnowledgeGraph("requests")
-oKB.AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
-? oKB.AskIn("review")
-#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
-oKB.ConstrainRelation("approved-by", :Unique)
-oKB.KnowRelation("request-7", "approved-by", "approver-1")
-aR = oKB.ReplyIn("review", "approver-2")
-? aR[:refused][1][2]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
-aCp = oKB.ConversationQ("review").Checkpoints()
-? len(aCp)
-#--> 1
-? aCp[1][:attempted]
-#--> approver-2
-? aCp[1][:why]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+oKB {
+	AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
+	? AskIn("review")
+	#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
+	ConstrainRelation("approved-by", :Unique)
+	KnowRelation("request-7", "approved-by", "approver-1")
+	aR = ReplyIn("review", "approver-2")
+	? aR[:refused][1][2]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+	aCp = ConversationQ("review").Checkpoints()
+	? len(aCp)
+	#--> 1
+	? aCp[1][:attempted]
+	#--> approver-2
+	? aCp[1][:why]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+}
 ```
 
 > run: kept
@@ -9799,23 +10121,25 @@ The machine asks first: `What does 'request-7' have for 'approved-by'?  (why: 'r
 
 ```haro
 oGov = new stzGovernance("hub")
-oGov.DeclareRisk("prepare-file", 1)
-oGov.DeclareRisk("release-advance", 3)
-oGov.GrantPermission("assistant", "prepare-file")
-oGov.GrantPermission("assistant", "release-advance")
-oGov.SetAuthority("assistant", :Advisory)
-oGov.GrantPermission("approver-1", "release-advance")
-oGov.SetAuthority("approver-1", :Autonomous)
-? oGov.MayProceed("assistant", "prepare-file")
-#--> 1
-? oGov.MayProceed("assistant", "release-advance")
-#--> 0
-? oGov.Why()
-#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
-? oGov.MayProceed("approver-1", "release-advance")
-#--> 1
-? oGov.Why()
-#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+oGov {
+	DeclareRisk("prepare-file", 1)
+	DeclareRisk("release-advance", 3)
+	GrantPermission("assistant", "prepare-file")
+	GrantPermission("assistant", "release-advance")
+	SetAuthority("assistant", :Advisory)
+	GrantPermission("approver-1", "release-advance")
+	SetAuthority("approver-1", :Autonomous)
+	? MayProceed("assistant", "prepare-file")
+	#--> 1
+	? MayProceed("assistant", "release-advance")
+	#--> 0
+	? Why()
+	#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
+	? MayProceed("approver-1", "release-advance")
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+}
 ```
 
 > run: kept
@@ -9828,16 +10152,18 @@ The class here, `stzGovernance`, judges authority; it is not the rule governor o
 
 ```haro
 nAt = 1785700000000
-oGov.RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
-oGov.RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
-? oGov.LineageOf("c-1")[:rationale]
-#--> ceiling restored, the season is over
-? len(oGov.LineageHistoryOf("c-1"))
-#--> 2
-? oGov.LineageHistoryOf("c-1")[1][:rationale]
-#--> ceiling raised for the harvest season
-? oGov.LineageOf("c-1")[:authorityAtTime]
-#--> autonomous
+oGov {
+	RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
+	RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
+	? LineageOf("c-1")[:rationale]
+	#--> ceiling restored, the season is over
+	? len(LineageHistoryOf("c-1"))
+	#--> 2
+	? LineageHistoryOf("c-1")[1][:rationale]
+	#--> ceiling raised for the harvest season
+	? LineageOf("c-1")[:authorityAtTime]
+	#--> autonomous
+}
 ```
 
 > run: kept
@@ -9853,16 +10179,18 @@ oPlat.SetWorld(oApp)
 oRegime = new stzGovernance("field-regime")
 oRegime.GrantPermission("field-visits", "use-offline")
 oRegime.SetAuthority("field-visits", :Advisory)
-oPlat.SetGovernedBy(oRegime)
-? oPlat.Granted(:offline)
-#--> 0
-? oPlat.Why()
-#--> capability 'offline' was never requested via AddCapabilityQ().
-oPlat.AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
-? oPlat.Granted(:offline)
-#--> 1
-? oPlat.Why()
-#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+oPlat {
+	SetGovernedBy(oRegime)
+	? Granted(:offline)
+	#--> 0
+	? Why()
+	#--> capability 'offline' was never requested via AddCapabilityQ().
+	AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
+	? Granted(:offline)
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+}
 ```
 
 > run: kept
@@ -9963,7 +10291,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -9997,13 +10325,15 @@ Before the tables, five small blocks. Each is a place where the library shows, b
 
 ```haro
 oReg = new stzServiceRegistry("shop")
-oReg.DeclareMany([ :mail, :payments ])
-? @@( oReg.UnboundServices() )
-#--> [ "mail", "payments" ]
-? oReg.Findings()[1][:invariant]
-#--> unbound-service
-? oReg.IsSound()
-#--> 0
+oReg {
+	DeclareMany([ :mail, :payments ])
+	? @@( UnboundServices() )
+	#--> [ "mail", "payments" ]
+	? Findings()[1][:invariant]
+	#--> unbound-service
+	? IsSound()
+	#--> 0
+}
 try
 	oReg.Service(:payments)
 catch
@@ -10020,9 +10350,11 @@ Two services declared, none bound, and the registry says so itself: `nothing is 
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+}
 oFw = oSol.App(:firmware).System()
 ? oFw.ReadPin(4)
 #--> rehearsed
@@ -10047,11 +10379,13 @@ The library's own comment, in the class that lowers a rehearsal to a real artefa
 
 ```haro
 oAd = new stzPispiHttpAdapter()
-oAd.WithParticipant("shop")
-oAd.WithBaseUrl("https://pispi.example")
-oAd.AsLive()
-? oAd.IsSandbox()
-#--> 0
+oAd {
+	WithParticipant("shop")
+	WithBaseUrl("https://pispi.example")
+	AsLive()
+	? IsSandbox()
+	#--> 0
+}
 try
 	oAd.Request("GET", "/comptes", [], [])
 catch
@@ -10072,11 +10406,13 @@ The library has a script that tries the live run. I ran it once, with none of it
 
 ```haro
 oVoice = StzSoundFormantVoiceQ()
-oVoice.Sing("la la la", "c4 e4 g4")
-? oVoice.Refusals()
-#--> 1
-? oVoice.LastError()
-#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+oVoice {
+	Sing("la la la", "c4 e4 g4")
+	? Refusals()
+	#--> 1
+	? LastError()
+	#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+}
 aVerdicts = StzSoundSingingVerdict()
 ? aVerdicts[:formant][:verdict]
 #--> UNPERCEIVED
@@ -10276,7 +10612,7 @@ Source: Chapter 32. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
@@ -10443,7 +10779,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-15 13:01 UTC+01:00.
 
 In this chapter I show you the floor the next line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I say what the three projects establish today, and I read from the record the five steps from that floor to the next line: a solution on Softanza's own engine, and what a named person who used it says. I say five things I refused, among them a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
@@ -10475,12 +10811,14 @@ catch
 	? cCatchError
 done
 #--> stzPlatform.Deploy: the platform must be Build() before it can be deployed.
-? oPlatform.IsDeployed()
-#--> 0
-oPlatform.Build()
-oPlatform.Deploy()
-? oPlatform.IsDeployed()
-#--> 1
+oPlatform {
+	? IsDeployed()
+	#--> 0
+	Build()
+	Deploy()
+	? IsDeployed()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -10491,11 +10829,13 @@ Before anything is real, the solution can run on a twin, a copy of the system th
 
 ```haro
 oTwin = new stzVirtualFileSystem()
-oTwin.CreateFile("orders/today.txt", "3 couscous")
-? oTwin.ContentOf("orders/today.txt")
-#--> 3 couscous
-? oTwin.OriginOf("orders/today.txt")
-#--> virtual
+oTwin {
+	CreateFile("orders/today.txt", "3 couscous")
+	? ContentOf("orders/today.txt")
+	#--> 3 couscous
+	? OriginOf("orders/today.txt")
+	#--> virtual
+}
 ? StzEngineFileExists("orders/today.txt")
 #--> 0
 ```
@@ -10510,15 +10850,17 @@ And at the production gate, a solution cannot reach production with a fake servi
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor(HumanActor("dana"))
-oDep = oDel.Deploy(:Production)
-? oDep.WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[2][:message]
-#--> sandbox-in-production @ shop/payments
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor(HumanActor("dana"))
+	oDep = Deploy(:Production)
+	? oDep.WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[2][:message]
+	#--> sandbox-in-production @ shop/payments
+}
 ```
 
 > run: kept
@@ -10752,7 +11094,7 @@ No code was run to make the register. The evidence column counts files that name
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-14 22:28 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-15 13:01 UTC+01:00.
 
 The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
 
@@ -11071,7 +11413,7 @@ This appendix is that reading, by chapter. No figure in it is typed. It is regen
 
 Two things to keep in mind. A figure is the number of assertion calls the file holds, counted in its text; it is not a run. Most of these guards are not run by the book, because they write files, open ports or spawn processes. The few I ran myself are named in the chapters that rely on them, with the date. And the only fixtures the book cites are the ones the guards and the blocks read: the course folder of the library's education program, and the data folders its guards name. The blocks of the book are themselves the other fixtures: each one runs inside the library at the commit named under every chapter's title.
 
-The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-14 22:28 UTC+01:00. A guard cited by two chapters is counted once in this total. Names and paths are printed as the library spells them; the extension is the former runtime's until Haro runs the library.
+The chapters cite 114 distinct guards, holding 3359 assertions between them, read from the test tree at commit 93d7a39bd on 2026-10-15 13:01 UTC+01:00. A guard cited by two chapters is counted once in this total. Names and paths are printed as the library spells them; the extension is the former runtime's until Haro runs the library.
 
 ### 1 · Change arrives faster than trust
 
@@ -11742,7 +12084,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 2 | `the-software-crafter` | 1 | draft | yes | 9 of 9 | 5 | 6 |
 | 3 | `the-method-from-first-principles` | 1 | draft | yes | 5 of 5 | 3 | 6 |
 | 4 | `the-platform-in-one-picture` | 1 | draft | yes | 8 of 8 | 5 | 6 |
-| 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 7 of 7 | 4 | 6 |
+| 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 9 of 9 | 4 | 6 |
 | 6 | `the-mental-model-and-the-metaphors` | 2 | draft |  | 7 of 7 | 6 | 6 |
 | 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 9 of 9 | 10 | 6 |
 | 8 | `functions-as-linguistic-expressions-and-scope` | 2 | draft |  | 13 of 13 | 5 | 6 |

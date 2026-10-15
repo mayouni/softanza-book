@@ -48,13 +48,15 @@ Avant les tableaux, cinq petits blocs. Chacun est un lieu où la bibliothèque m
 
 ```haro
 oReg = new stzServiceRegistry("shop")
-oReg.DeclareMany([ :mail, :payments ])
-? @@( oReg.UnboundServices() )
-#--> [ "mail", "payments" ]
-? oReg.Findings()[1][:invariant]
-#--> unbound-service
-? oReg.IsSound()
-#--> 0
+oReg {
+	DeclareMany([ :mail, :payments ])
+	? @@( UnboundServices() )
+	#--> [ "mail", "payments" ]
+	? Findings()[1][:invariant]
+	#--> unbound-service
+	? IsSound()
+	#--> 0
+}
 try
 	oReg.Service(:payments)
 catch
@@ -69,9 +71,11 @@ Deux services déclarés, aucun lié, et le registre le dit lui-même : `nothing
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+}
 oFw = oSol.App(:firmware).System()
 ? oFw.ReadPin(4)
 #--> rehearsed
@@ -94,11 +98,13 @@ Le commentaire de la bibliothèque, dans la classe qui abaisse une répétition 
 
 ```haro
 oAd = new stzPispiHttpAdapter()
-oAd.WithParticipant("shop")
-oAd.WithBaseUrl("https://pispi.example")
-oAd.AsLive()
-? oAd.IsSandbox()
-#--> 0
+oAd {
+	WithParticipant("shop")
+	WithBaseUrl("https://pispi.example")
+	AsLive()
+	? IsSandbox()
+	#--> 0
+}
 try
 	oAd.Request("GET", "/comptes", [], [])
 catch
@@ -117,11 +123,13 @@ La bibliothèque a un script qui tente l'exécution réelle. Je l'ai lancé une 
 
 ```haro
 oVoice = StzSoundFormantVoiceQ()
-oVoice.Sing("la la la", "c4 e4 g4")
-? oVoice.Refusals()
-#--> 1
-? oVoice.LastError()
-#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+oVoice {
+	Sing("la la la", "c4 e4 g4")
+	? Refusals()
+	#--> 1
+	? LastError()
+	#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+}
 aVerdicts = StzSoundSingingVerdict()
 ? aVerdicts[:formant][:verdict]
 #--> UNPERCEIVED

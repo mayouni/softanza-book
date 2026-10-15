@@ -129,14 +129,16 @@ Reaxis a remplacé la contre-pression par le débordement, un mot qu'on n'a pas 
 ```haro
 oRs = new stzReactiveSystem()
 oS = oRs.CreateStream("probe")
-oS.SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
-for i = 1 to 4
-	oS.Receive(i)
-next
-? oS.OverflowStats()[:currentBuffer]
-#--> 2
-? oS.OverflowStats()[:droppedCount]
-#--> 2
+oS {
+	SetOverflowStrategy(BUFFER_REJECT_NEWEST, 2)
+	for i = 1 to 4
+		Receive(i)
+	next
+	? OverflowStats()[:currentBuffer]
+	#--> 2
+	? OverflowStats()[:droppedCount]
+	#--> 2
+}
 ```
 
 Il dit que `currentBuffer` vaut `2` et que `droppedCount` vaut `2`. Le compteur qui affichait zéro compte désormais !
@@ -164,28 +166,32 @@ Le troisième sujet du chapitre, ce sont les moteurs, les petits paradigmes que 
 
 ```haro
 oTl = new stzTimeLine("2024-01-01 00:00:00", "2024-12-31 23:59:59")
-oTl.AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
-oTl.AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
-? len(oTl.Gaps())
-#--> 1
-? oTl.Gaps()[1][:after]
-#--> PHASE1
-? oTl.Gaps()[1][:before]
-#--> PHASE2
-? oTl.HasOverlaps()
-#--> FALSE
-oTl.AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
-? oTl.HasOverlaps()
-#--> TRUE
+oTl {
+	AddSpan("PHASE1", "2024-01-01 00:00:00", "2024-02-15 23:59:59")
+	AddSpan("PHASE2", "2024-03-01 00:00:00", "2024-04-15 23:59:59")
+	? len(Gaps())
+	#--> 1
+	? Gaps()[1][:after]
+	#--> PHASE1
+	? Gaps()[1][:before]
+	#--> PHASE2
+	? HasOverlaps()
+	#--> FALSE
+	AddSpan("PHASE2B", "2024-04-01 00:00:00", "2024-05-15 23:59:59")
+	? HasOverlaps()
+	#--> TRUE
+}
 oB = new stzTimeLine("2024-01-01", "2024-12-31")
-oB.AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
-oB.AddPoint("EVENT1", "2024-06-15 08:00:00")
-try
-	oB.AddPoint("EVENT2", "2024-06-15 12:00:00")
-catch
-	? cCatchError
-done
-#--> Point 'EVENT2' falls within a blocked span or blocked point
+oB {
+	AddBlockedSpan("MAINTENANCE", "2024-06-15 09:00:00", "2024-06-15 17:00:00")
+	AddPoint("EVENT1", "2024-06-15 08:00:00")
+	try
+		AddPoint("EVENT2", "2024-06-15 12:00:00")
+	catch
+		? cCatchError
+	done
+	#--> Point 'EVENT2' falls within a blocked span or blocked point
+}
 ```
 
 Le vide est nommé par ce qu'il sépare, `PHASE1` et `PHASE2`. La plage bloquée a refusé `EVENT2` ! Le refus porte sa raison : `Point 'EVENT2' falls within a blocked span or blocked point`.
@@ -193,19 +199,20 @@ Le vide est nommé par ce qu'il sépare, `PHASE1` et `PHASE2`. La plage bloquée
 Et une grille a un curseur qui sait où il est : la position est une colonne et une ligne, et se déplacer au-delà d'un bord reste au bord. Deux pas vers le bas et trois vers la droite, puis trois de plus vers la droite : où est le curseur ?
 
 ```haro
-o = new stzGrid([ 5, 5 ])
-o.MoveDown()
-o.MoveDown()
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 4, 3 ]
-o.MoveRight()
-o.MoveRight()
-o.MoveRight()
-? @@( o.CurrentPosition() )
-#--> [ 5, 3 ]
+StzGridQ([ 5, 5 ]) {
+	MoveDown()
+	MoveDown()
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 4, 3 ]
+	MoveRight()
+	MoveRight()
+	MoveRight()
+	? @@( CurrentPosition() )
+	#--> [ 5, 3 ]
+}
 ```
 
 En `[ 4, 3 ]`, puis en `[ 5, 3 ]`. Trois pas de plus vers la droite ont gagné une colonne, et le curseur est resté au bord !

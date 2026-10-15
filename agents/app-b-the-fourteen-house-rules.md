@@ -2,7 +2,7 @@
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-14 22:28 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-15 13:01 UTC+01:00.
 
 The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
 

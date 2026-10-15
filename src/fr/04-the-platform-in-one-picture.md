@@ -117,18 +117,20 @@ oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
 oSupplier = StzAppQ("supplier")
 oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
 oCon = new stzSuperApp("acme-group")
-oCon.AddWorld("resto", oResto)
-oCon.AddWorld("supplier", oSupplier)
-oCon.Bond("resto", "supplier", "order-produce")
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("resto", "order-produce")
-oCon.GovSetAuthority("resto", :Delegated)
-? oCon.CallAcross("resto", "supplier", "order-produce")
-#--> 1
-? oCon.CallAcross("resto", "supplier", "raid-kitchen")
-#--> 0
-? oCon.Why()
-#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+oCon {
+	AddWorld("resto", oResto)
+	AddWorld("supplier", oSupplier)
+	Bond("resto", "supplier", "order-produce")
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("resto", "order-produce")
+	GovSetAuthority("resto", :Delegated)
+	? CallAcross("resto", "supplier", "order-produce")
+	#--> 1
+	? CallAcross("resto", "supplier", "raid-kitchen")
+	#--> 0
+	? Why()
+	#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+}
 ```
 
 La traversée déclarée répond `1`. L'autre répond `0`, refusée ! La constellation donne sa raison en une ligne : `no bond declares 'raid-kitchen' from 'resto' to 'supplier'.` Toute autre traversée est refusée avec sa raison.
@@ -139,10 +141,12 @@ Et une plateforme, `stzPlatform` dans la figure, est l'enveloppe autour d'une so
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
-oDelivery.AddSuperApp(:phone, :Android)
-oDelivery.AddBackend(:api, :LinuxServer)
-oDelivery.NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
-oPlan = oDelivery.Plan()
+oDelivery {
+	AddSuperApp(:phone, :Android)
+	AddBackend(:api, :LinuxServer)
+	NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
+	oPlan = Plan()
+}
 ? @@( oPlan.EngineCapsFor(:phone) )
 #--> [ "pivottable", "constraintsolver" ]
 ? @@( StzWasmGroupsFor( oPlan.EngineCapsFor(:phone) ) )

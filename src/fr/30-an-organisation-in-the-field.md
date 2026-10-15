@@ -42,16 +42,20 @@ Quatre choses de cette étude, la bibliothèque les porte. Je les montrerai dans
 
 ```haro
 oG = new stzGraph("advances")
-oG.AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
-oG.AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
-oG.AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
-oG.AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+oG {
+	AddNodeXTT("a0", "A0", [ :amount = 120, :approvals = 1 ])
+	AddNodeXTT("a1", "A1", [ :amount = 250, :approvals = 1 ])
+	AddNodeXTT("a2", "A2", [ :amount = 600, :approvals = 1 ])
+	AddNodeXTT("a3", "A3", [ :amount = 900, :approvals = 2 ])
+}
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 500)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 500)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -68,11 +72,13 @@ Que se passe-t-il quand le plafond est changé et que le même modèle est jugé
 ```haro
 oG.ClearAttachedRules()
 oRule = new stzGraphRule("second-approval")
-oRule.SetDomainQ("advances")
-oRule.SetMessageQ("above the ceiling an advance needs two approvals")
-oRule.WhenQ("amount", "greaterthan", 200)
-oRule.ThenQ("approvals", "greaterthan", 1)
-oRule.ThenViolationQ("two approvals needed")
+oRule {
+	SetDomain("advances")
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amount", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+}
 oG.AddRule(oRule)
 oG.RulesReport()
 #--> Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)
@@ -89,25 +95,31 @@ Ce que la bibliothèque porte, c'est la réponse à la pire chose qui puisse arr
 
 ```haro
 oTypo = new stzGraphRule("second-approval-typo")
-oTypo.SetMessageQ("above the ceiling an advance needs two approvals")
-oTypo.WhenQ("amont", "greaterthan", 200)
-oTypo.ThenQ("approvals", "greaterthan", 1)
-oTypo.ThenViolationQ("two approvals needed")
-? len(oTypo.Check(oG))
-#--> 0
+oTypo {
+	SetMessage("above the ceiling an advance needs two approvals")
+	When("amont", "greaterthan", 200)
+	ThenQ("approvals", "greaterthan", 1)
+	ThenViolation("two approvals needed")
+	? len(Check(oG))
+	#--> 0
+}
 oWatch = StzRuleGovernance("hub")
-oWatch.AddRule(oTypo)
-oWatch.AddCase("advances", oG)
-aF = oWatch.CheckRules()
-? aF[1][:rule]
-#--> scope_empty
-? aF[1][:message]
-#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+oWatch {
+	AddRule(oTypo)
+	AddCase("advances", oG)
+	aF = CheckRules()
+	? aF[1][:rule]
+	#--> scope_empty
+	? aF[1][:message]
+	#--> governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing
+}
 oWatch2 = StzRuleGovernance("hub")
-oWatch2.AddRule(oRule)
-oWatch2.AddCase("advances", oG)
-? len(oWatch2.CheckRules())
-#--> 0
+oWatch2 {
+	AddRule(oRule)
+	AddCase("advances", oG)
+	? len(CheckRules())
+	#--> 0
+}
 ```
 
 La règle mal orthographiée ne trouve rien, `0`, et pour le modèle, rien trouvé veut dire sain ! Le gouverneur répond `scope_empty`, et dit pourquoi : `governs nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing`. Une règle morte et un feu vert produisent la même sortie : le silence. Le tribunal doit distinguer « rien n'était faux » de « rien n'a été regardé ». Le mot « pictures » dans le message est l'origine du gouverneur de règles : il a d'abord été construit pour les dessins du volet des graphes, et je dirais « cas ».
@@ -116,21 +128,23 @@ La règle mal orthographiée ne trouve rien, `0`, et pour le modèle, rien trouv
 
 ```haro
 oKB = new stzKnowledgeGraph("requests")
-oKB.AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
-? oKB.AskIn("review")
-#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
-oKB.ConstrainRelation("approved-by", :Unique)
-oKB.KnowRelation("request-7", "approved-by", "approver-1")
-aR = oKB.ReplyIn("review", "approver-2")
-? aR[:refused][1][2]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
-aCp = oKB.ConversationQ("review").Checkpoints()
-? len(aCp)
-#--> 1
-? aCp[1][:attempted]
-#--> approver-2
-? aCp[1][:why]
-#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+oKB {
+	AddConversationQ("review").SetGoal(StzGoalQ().RequireOne("request-7", "approved-by"))
+	? AskIn("review")
+	#--> What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')
+	ConstrainRelation("approved-by", :Unique)
+	KnowRelation("request-7", "approved-by", "approver-1")
+	aR = ReplyIn("review", "approver-2")
+	? aR[:refused][1][2]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+	aCp = ConversationQ("review").Checkpoints()
+	? len(aCp)
+	#--> 1
+	? aCp[1][:attempted]
+	#--> approver-2
+	? aCp[1][:why]
+	#--> 'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique
+}
 ```
 
 La machine demande d'abord : `What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')`. Puis le second approbateur est refusé ! Le point de contrôle garde ce qui a été tenté, `approver-2`, et la raison, dans les mots mêmes du refus : `'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique`.
@@ -139,23 +153,25 @@ La machine demande d'abord : `What does 'request-7' have for 'approved-by'?  (wh
 
 ```haro
 oGov = new stzGovernance("hub")
-oGov.DeclareRisk("prepare-file", 1)
-oGov.DeclareRisk("release-advance", 3)
-oGov.GrantPermission("assistant", "prepare-file")
-oGov.GrantPermission("assistant", "release-advance")
-oGov.SetAuthority("assistant", :Advisory)
-oGov.GrantPermission("approver-1", "release-advance")
-oGov.SetAuthority("approver-1", :Autonomous)
-? oGov.MayProceed("assistant", "prepare-file")
-#--> 1
-? oGov.MayProceed("assistant", "release-advance")
-#--> 0
-? oGov.Why()
-#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
-? oGov.MayProceed("approver-1", "release-advance")
-#--> 1
-? oGov.Why()
-#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+oGov {
+	DeclareRisk("prepare-file", 1)
+	DeclareRisk("release-advance", 3)
+	GrantPermission("assistant", "prepare-file")
+	GrantPermission("assistant", "release-advance")
+	SetAuthority("assistant", :Advisory)
+	GrantPermission("approver-1", "release-advance")
+	SetAuthority("approver-1", :Autonomous)
+	? MayProceed("assistant", "prepare-file")
+	#--> 1
+	? MayProceed("assistant", "release-advance")
+	#--> 0
+	? Why()
+	#--> refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)
+	? MayProceed("approver-1", "release-advance")
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3
+}
 ```
 
 L'assistant détient la permission de `release-advance`, et la réponse est `0` ! Le verdict dit `refused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)`. Pour l'approbateur, il dit `allowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3`. Dans le message, SHOULD est le mot de la bibliothèque pour ce qu'un niveau d'autorité couvre, face à CAN, la permission détenue ; la garde derrière ce bloc le dit ainsi : « pouvoir n'est pas devoir ».
@@ -166,16 +182,18 @@ La classe d'ici, `stzGovernance`, juge l'autorité ; ce n'est pas le gouverneur 
 
 ```haro
 nAt = 1785700000000
-oGov.RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
-oGov.RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
-? oGov.LineageOf("c-1")[:rationale]
-#--> ceiling restored, the season is over
-? len(oGov.LineageHistoryOf("c-1"))
-#--> 2
-? oGov.LineageHistoryOf("c-1")[1][:rationale]
-#--> ceiling raised for the harvest season
-? oGov.LineageOf("c-1")[:authorityAtTime]
-#--> autonomous
+oGov {
+	RecordDecisionAt("c-1", "ceiling raised for the harvest season", "approver-1", "release-advance", nAt)
+	RecordDecisionAt("c-1", "ceiling restored, the season is over", "approver-1", "release-advance", nAt + 3600000)
+	? LineageOf("c-1")[:rationale]
+	#--> ceiling restored, the season is over
+	? len(LineageHistoryOf("c-1"))
+	#--> 2
+	? LineageHistoryOf("c-1")[1][:rationale]
+	#--> ceiling raised for the harvest season
+	? LineageOf("c-1")[:authorityAtTime]
+	#--> autonomous
+}
 ```
 
 La filiation répond `ceiling restored, the season is over`. Elle garde `2` décisions, et la première dit encore `ceiling raised for the harvest season`. L'autorité du moment est `autonomous`. L'instant est un nombre fixe, donc l'horloge n'est pas lue. Cela rend le bloc répétable. Ce n'est pas un magasin de versions de la règle elle-même, et je ne ferai pas semblant que ce l'est.
@@ -189,16 +207,18 @@ oPlat.SetWorld(oApp)
 oRegime = new stzGovernance("field-regime")
 oRegime.GrantPermission("field-visits", "use-offline")
 oRegime.SetAuthority("field-visits", :Advisory)
-oPlat.SetGovernedBy(oRegime)
-? oPlat.Granted(:offline)
-#--> 0
-? oPlat.Why()
-#--> capability 'offline' was never requested via AddCapabilityQ().
-oPlat.AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
-? oPlat.Granted(:offline)
-#--> 1
-? oPlat.Why()
-#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+oPlat {
+	SetGovernedBy(oRegime)
+	? Granted(:offline)
+	#--> 0
+	? Why()
+	#--> capability 'offline' was never requested via AddCapabilityQ().
+	AddCapabilityQ(:offline).SetPurposes([ :enter_without_network ])
+	? Granted(:offline)
+	#--> 1
+	? Why()
+	#--> allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1
+}
 ```
 
 Avant la demande, `Granted(:offline)` vaut `0`, et la raison imprimée est `capability 'offline' was never requested via AddCapabilityQ().`. Après la demande, il vaut `1`, et la raison imprimée est `allowed: permission held AND 'advisory' authority (level 1) covers risk tier 1`.

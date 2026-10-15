@@ -4,7 +4,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-15 13:01 UTC+01:00.
 
 In this chapter I show you the floor the next line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I say what the three projects establish today, and I read from the record the five steps from that floor to the next line: a solution on Softanza's own engine, and what a named person who used it says. I say five things I refused, among them a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
@@ -36,12 +36,14 @@ catch
 	? cCatchError
 done
 #--> stzPlatform.Deploy: the platform must be Build() before it can be deployed.
-? oPlatform.IsDeployed()
-#--> 0
-oPlatform.Build()
-oPlatform.Deploy()
-? oPlatform.IsDeployed()
-#--> 1
+oPlatform {
+	? IsDeployed()
+	#--> 0
+	Build()
+	Deploy()
+	? IsDeployed()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -52,11 +54,13 @@ Before anything is real, the solution can run on a twin, a copy of the system th
 
 ```haro
 oTwin = new stzVirtualFileSystem()
-oTwin.CreateFile("orders/today.txt", "3 couscous")
-? oTwin.ContentOf("orders/today.txt")
-#--> 3 couscous
-? oTwin.OriginOf("orders/today.txt")
-#--> virtual
+oTwin {
+	CreateFile("orders/today.txt", "3 couscous")
+	? ContentOf("orders/today.txt")
+	#--> 3 couscous
+	? OriginOf("orders/today.txt")
+	#--> virtual
+}
 ? StzEngineFileExists("orders/today.txt")
 #--> 0
 ```
@@ -71,15 +75,17 @@ And at the production gate, a solution cannot reach production with a fake servi
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor(HumanActor("dana"))
-oDep = oDel.Deploy(:Production)
-? oDep.WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[2][:message]
-#--> sandbox-in-production @ shop/payments
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor(HumanActor("dana"))
+	oDep = Deploy(:Production)
+	? oDep.WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[2][:message]
+	#--> sandbox-in-production @ shop/payments
+}
 ```
 
 > run: kept

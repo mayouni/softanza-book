@@ -75,11 +75,13 @@ The same growth reaches the domain language model of chapter 19. Nothing is trai
 
 ```haro
 oKB = new stzKnowledgeGraph("coop")
-oKB.Know("couscous", "dish").KnowRelation("couscous", "contains", "semolina")
+oKB.Know("couscous", "dish")
+oKB.KnowRelation("couscous", "contains", "semolina")
 oDLM = StzDlmQ(oKB)
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
-oKB.Know("millet", "grain").KnowRelation("couscous", "contains", "millet")
+oKB.Know("millet", "grain")
+oKB.KnowRelation("couscous", "contains", "millet")
 ? oDLM.Ask("what is millet?")
 #--> That is outside the 'coop' domain (I know 1 entities and 1 relations).
 oDLM = StzDlmQ(oKB)
@@ -94,19 +96,20 @@ It does not. The second answer is the old model still refusing, `That is outside
 **The file the library writes.** A clinic. A relation declared unique, and a graph in strict mode, where every fact needs its provenance. What does it do with a fact that has no source, with one that has, and with a second, contradicting one from a rumour? And what does it then write to the disk? Run it:
 
 ```haro
-oCl = new stzKnowledgeGraph("clinic")
-oCl.ConstrainRelation("treated-by", :Unique)
-oCl.EnableStrictMode()
-try
-	oCl.AddFact("fatou", "treated-by", "dr-diallo")
-catch
-	? cCatchError
-done
-#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
-oCl.AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
-? oCl.AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
-#--> 0
-oCl.WriteToKnowFile("clinic")
+StzKnowledgeGraphQ("clinic") {
+	ConstrainRelation("treated-by", :Unique)
+	EnableStrictMode()
+	try
+		AddFact("fatou", "treated-by", "dr-diallo")
+	catch
+		? cCatchError
+	done
+	#--> Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).
+	AddFactXT("fatou", "treated-by", "dr-diallo", [ :source = "registry", :confidence = 0.95 ])
+	? AddFactXT("fatou", "treated-by", "dr-sani", [ :source = "rumour", :confidence = 0.2 ])
+	#--> 0
+	WriteToKnowFile("clinic")
+}
 ? read("clinic.zknw")
 #--> knowledge "clinic"
 #
@@ -129,17 +132,18 @@ The naked fact is refused with the library's own sentence, `Strict mode: every f
 Does the file read back into a strict graph, with the law, the source of every fact and the refusal inside it? Load it:
 
 ```haro
-oBack = new stzKnowledgeGraph("clinic")
-oBack.EnableStrictMode()
-aR = oBack.ImportKnow("clinic.zknw")
-? aR[:merged]
-#--> 1
-? @@( oBack.MetaOfFact("fatou", "treated-by", "dr-diallo") )
-#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
-? len(oBack.Contradictions())
-#--> 1
-? oBack.RelationHasLaw("treated-by", "unique")
-#--> 1
+StzKnowledgeGraphQ("clinic") {
+	EnableStrictMode()
+	aR = ImportKnow("clinic.zknw")
+	? aR[:merged]
+	#--> 1
+	? @@( MetaOfFact("fatou", "treated-by", "dr-diallo") )
+	#--> [ [ "source", "registry" ], [ "confidence", 0.95 ] ]
+	? len(Contradictions())
+	#--> 1
+	? RelationHasLaw("treated-by", "unique")
+	#--> 1
+}
 remove("clinic.zknw")
 ? fexists("clinic.zknw")
 #--> 0
@@ -224,13 +228,14 @@ The file merges, `1`, and the ontology is empty, `0`. The parser recognises the 
 The law is also not derived on an instance graph. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
 
 ```haro
-oSy = new stzKnowledgeGraph("pairs")
-oSy.ConstrainRelation("pairs-with", :Symmetric)
-oSy.KnowRelation("margherita", "pairs-with", "chianti")
-? oSy.RelationHasLaw("pairs-with", "symmetric")
-#--> 1
-? oSy.Query([ "chianti", "pairs-with", "margherita" ])
-#--> 0
+StzKnowledgeGraphQ("pairs") {
+	ConstrainRelation("pairs-with", :Symmetric)
+	KnowRelation("margherita", "pairs-with", "chianti")
+	? RelationHasLaw("pairs-with", "symmetric")
+	#--> 1
+	? Query([ "chianti", "pairs-with", "margherita" ])
+	#--> 0
+}
 ```
 
 The law is recorded, `1`, and the reverse edge is not there, `0`! The class header says it: `only :unique and :transitive are acted on here`; symmetric is only recorded. Four more limits, each with its run.
@@ -252,12 +257,14 @@ The second relation is refused, `0`, with the library's own sentence, `Can't add
 **A two-step question answers only its first step.** Does `QueryPath` follow its second pattern, and can the predicate of a query be a variable? Run it:
 
 ```haro
-oQ = new stzKnowledgeGraph("coop2")
-oQ.KnowRelation("amina", "sells", "couscous").KnowRelation("couscous", "made-from", "flour")
-? @@( oQ.QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
-#--> [ "couscous" ]
-? @@( oQ.Query([ "amina", "?p", "?o" ]) )
-#--> [ ]
+StzKnowledgeGraphQ("coop2") {
+	KnowRelation("amina", "sells", "couscous")
+	KnowRelation("couscous", "made-from", "flour")
+	? @@( QueryPath([ [ "amina", "sells", "?p" ], [ "?p", "made-from", "?m" ] ]) )
+	#--> [ "couscous" ]
+	? @@( Query([ "amina", "?p", "?o" ]) )
+	#--> [ ]
+}
 ```
 
 The path answers `[ "couscous" ]`, the first step and nothing more: `QueryPath` ignores the rest of its patterns, so it is no multi-step query yet. The variable predicate answers `[ ]`.

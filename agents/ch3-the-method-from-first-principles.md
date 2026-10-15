@@ -4,7 +4,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -84,11 +84,14 @@ Governing also has a side that faces the person. The system asks, and it does no
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").Know("tiramisu", "dish")
-oKB.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-aQ = oKB.AskInXT("setup")
-? aQ[:why]
-#--> every dish needs 'contains'
+oKB {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	aQ = AskInXT("setup")
+	? aQ[:why]
+	#--> every dish needs 'contains'
+}
 try
 	oKB.ConcludeIn("setup", "world")
 catch

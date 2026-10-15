@@ -155,19 +155,21 @@ The project counts eleven iterations and a campaign of twenty-two simulated test
 
 The first demonstration, on 15 August 2026, was his alone: the record's checklist plans it for the owner by himself, with his own phone and a messaging app as the support line. The measurements he sent over a messaging app are those of 19 August.
 
-One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it:
+One of his needs is carried by a law of the library: try payments before paying anyone for an account. What does the registry say to a fake payments service while you rehearse, and what does it say when you go live? Run it. The registry is named once, and each line inside the braces speaks to it: chapter 5 calls this form the scene.
 
 ```haro
 oReg = new stzServiceRegistry("restaurant")
-oReg.Bind(:payments, new stzPaymentsSandbox())
-oReg.SetPhase(:emulated)
-? oReg.IsSound()
-#--> 1
-oReg.SetPhase(:production)
-? oReg.IsSound()
-#--> 0
-? oReg.Findings()[1][:message]
-#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+oReg {
+	Bind(:payments, new stzPaymentsSandbox())
+	SetPhase(:emulated)
+	? IsSound()
+	#--> 1
+	SetPhase(:production)
+	? IsSound()
+	#--> 0
+	? Findings()[1][:message]
+	#--> still bound to a SANDBOX in a production phase -- a fake must never ship
+}
 ```
 
 It answers `1` in the emulated phase and `0` in production, and says why: `still bound to a SANDBOX in a production phase -- a fake must never ship`. A fake in production is refused!
@@ -176,10 +178,12 @@ It answers `1` in the emulated phase and `0` in production, and says why: `still
 
 ```haro
 oOrg = new stzOrgChart("bank")
-oOrg.AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
-oOrg.AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
-? @@( oOrg.ValidateBCEAOGovernance() )
-#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+oOrg {
+	AddPositionXTT("ceo", "Chief Executive", [ :department = "executive" ])
+	AddPositionXTT("audit", "Internal Audit", [ :department = "audit", :reportsTo = "ceo" ])
+	? @@( ValidateBCEAOGovernance() )
+	#--> [ [ "status", "fail" ], [ "domain", "BCEAO_governance" ], [ "issuecount", 3 ], [ "issues", [ "BCEAO-001: No Board of Directors found", "BCEAO-002: Audit reports to non-board position", "BCEAO-003: No dedicated Risk Management function" ] ] ]
+}
 ```
 
 The chart fails, with `"issuecount", 3`: three findings from a chart of two positions! Each is a rule with a number an auditor can read: `BCEAO-001: No Board of Directors found` is the first. The record shows the bank as the licensee of a product I built; it does not say who at the bank declared anything.

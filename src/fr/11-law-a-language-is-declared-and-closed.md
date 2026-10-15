@@ -140,27 +140,28 @@ done
 Le refus nomme le type inconnu, `'colour'`, et liste les six qu'il accepte : `(use string|number|boolean|oneof|list|structure)`. Le schéma a été refusé avant qu'aucun modèle soit appelé ! Un schéma correct est un petit langage fermé. Le tribunal juge n'importe quelle réponse contre lui, quel qu'en soit l'auteur. Et le schéma émet sa grammaire, pour qu'un modèle puisse y être tenu pendant qu'il écrit :
 
 ```haro
-oS = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "name", :type = :string ],
 	[ :field = "age",  :type = :number, :must = [ [ ">=", 0 ], [ "<=", 130 ] ] ],
 	[ :field = "mood", :type = :oneof,  :choices = [ "positive", "negative" ] ]
-])
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
-#--> 1
-? oS.Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
-#--> 0
-? oS.Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
-#--> 1
-? oS.ToGBNF()
-#--> root ::= name-line age-line mood-line
-#    name-line ::= "name: " text "\n"
-#    age-line ::= "age: " number "\n"
-#    mood-line ::= "mood: " ("positive" | "negative") "\n"
-#    text ::= [^\n]+
-#    number ::= "-"? [0-9]+ ("." [0-9]+)?
-#    boolean ::= ("yes" | "no" | "true" | "false")
+]) {
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: positive")
+	#--> 1
+	? Accepts("name: Hadiza" + nl + "age: 41" + nl + "mood: angry")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 900000" + nl + "mood: positive")
+	#--> 0
+	? Accepts("name: Hadiza" + nl + "age: 62" + nl + "mood: positive")
+	#--> 1
+	? ToGBNF()
+	#--> root ::= name-line age-line mood-line
+	#    name-line ::= "name: " text "\n"
+	#    age-line ::= "age: " number "\n"
+	#    mood-line ::= "mood: " ("positive" | "negative") "\n"
+	#    text ::= [^\n]+
+	#    number ::= "-"? [0-9]+ ("." [0-9]+)?
+	#    boolean ::= ("yes" | "no" | "true" | "false")
+}
 ```
 
 Regardez les quatre verdicts. La première réponse a imprimé `1`. La deuxième, avec `mood: angry`, et la troisième, avec `age: 900000`, ont imprimé `0` : le tribunal les a refusées. La quatrième a imprimé `1` de nouveau. Hadiza a quarante et un ans dans la première réponse et soixante-deux dans la quatrième, et le tribunal accepte les deux ! Une grammaire tue les phrases mal formées, pas les phrases fausses. Le dossier le dit en cinq mots (dans l'original anglais) : structure tue l'informe, pas le faux. Ce livre dit la même chose : la vérité d'une réponse n'est pas l'affaire de la grammaire. Le dossier dit que la vérité demande la réversibilité, un auditeur et un Principal, la personne qui tranche. Une grammaire est la barrière, pas le juge de tout. La grammaire imprime aussi une règle `boolean` qu'aucun champ de ce schéma n'emploie.

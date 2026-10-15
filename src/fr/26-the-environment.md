@@ -60,12 +60,14 @@ cShell = 'DEFINE PANEL shell ( SIZE [640, 360], DIRECTION column, FONT "app", SA
 	'DEFINE BOX status ( HEIGHT 24, ROLE status, SATISFIES understand, CHILDREN [state] ) RATIONALE "The truth of the build."' + nl +
 	'DEFINE TEXT state ( CONTENT "clean", SATISFIES understand ) RATIONALE "The court verdict."'
 oShell = new stzUiDocument(cShell)
-? oShell.IsClean()
-#--> 1
-? len(oShell.Declarations())
-#--> 12
-? @@( oShell.Orphans() )
-#--> [ "work" ]
+oShell {
+	? IsClean()
+	#--> 1
+	? len(Declarations())
+	#--> 12
+	? @@( Orphans() )
+	#--> [ "work" ]
+}
 ```
 
 `Orphans()` répond `[ "work" ]`, et `IsClean()` répond `1` sur les `12` déclarations.
@@ -207,14 +209,16 @@ Et ce que lit un lecteur d'écran est émis depuis la déclaration. Une région 
 oShell.UseFont("C:/Windows/Fonts/segoeui.ttf")
 oP = oShell.ToPanel()
 oT = new stzAccessibilityTree(oShell, oP)
-? oT.NodeCount()
-#--> 12
-? oT.NodeOf("status")[:role]
-#--> status
-? oT.NodeOf("status")[:description]
-#--> The truth of the build.
-? @@( oT.ReadingOrder() )
-#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+oT {
+	? NodeCount()
+	#--> 12
+	? NodeOf("status")[:role]
+	#--> status
+	? NodeOf("status")[:description]
+	#--> The truth of the build.
+	? @@( ReadingOrder() )
+	#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+}
 ```
 
 L'arbre répond `status`, et pour sa description `The truth of the build.`, la justification mot pour mot ! L'en-tête de la bibliothèque dit pourquoi : chaque toolkit garde l'accessibilité derrière un drapeau de performance, et c'est là que les utilisateurs n'obtiennent silencieusement rien. Donc ici il n'y a rien à garder derrière un drapeau et rien à oublier d'activer. Le même fichier dit ce qu'un lecteur d'écran peut manipuler, un agent d'IA peut le manipuler.
@@ -224,29 +228,30 @@ L'arbre répond `status`, et pour sa description `The truth of the build.`, la j
 Un rail est une vue sur ce que le monde propose. Une pulsation propose et ne relie jamais. Un acte sur le monde efface une proposition, et la ligne d'état propre du monde compte à partir de la même liste que montre le rail. Que propose le monde, et que reste-t-il après un acte ? Exécutez-le :
 
 ```haro
-oApp = StzAppQ("fieldvisits")
-oApp.AddThingQ(:Client) { Has([ :name ]) }
-oApp.AddThing(:Visit)
-oApp.AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
-oApp.AddInstance("amadou", :Client)
-oApp.AddInstance("binta", :Client)
-oApp.Live()
-#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for amadou
-#--> propose visit for binta
-? oApp.Pulse()
-#--> 0
-? len(oApp.Proposals())
-#--> 2
-oApp.Relate("amadou", :visit, "visit-1")
-oApp.Pulse()
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for binta
+StzAppQ("fieldvisits") {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddThing(:Visit)
+	AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
+	AddInstance("amadou", :Client)
+	AddInstance("binta", :Client)
+	Live()
+	#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for amadou
+	#--> propose visit for binta
+	? Pulse()
+	#--> 0
+	? len(Proposals())
+	#--> 2
+	Relate("amadou", :visit, "visit-1")
+	Pulse()
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for binta
+}
 ```
 
 `Live()` imprime sa ligne, `2 proposal(s)` à sa fin, et le juge compare ce qui est imprimé. Avant l'acte, `Pulse()` répond `0` et le rail tient encore `2` propositions. Après l'acte, une ligne reste : `propose visit for binta`. "2 thing(s)" compte les deux choses, Client et Visit, et non les instances. Le chapitre 20 possède la loi sous le rail, la proposition, le plan et le tribunal.
@@ -255,20 +260,22 @@ Et un écran est une intention. Un endroit où le monde parle en verbes est celu
 
 ```haro
 oW = StzAppQ("fieldvisits")
-oW.AddThingQ(:Client) { Has([ :name ]) }
-oW.AddScreenQ(:Home)  { ToDiscover(:Client) }
-oW.AddScreenQ(:File)  { ToUnderstand(:Client) }
-oW.AddScreenQ(:Pick)  { ToSelect(:Client) }
-oW.AddScreenQ(:Edit)  { ToAct(:Client) }
-oW.Explain()
-#--> WORLD fieldvisits   lives in: memory (not persisted)
-#      BEING
-#        client (name)
-#      MET FROM WITHOUT
-#        screen home: discover client
-#        screen file: understand client
-#        screen pick: select client
-#        screen edit: act client
+oW {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddScreenQ(:Home)  { ToDiscover(:Client) }
+	AddScreenQ(:File)  { ToUnderstand(:Client) }
+	AddScreenQ(:Pick)  { ToSelect(:Client) }
+	AddScreenQ(:Edit)  { ToAct(:Client) }
+	Explain()
+	#--> WORLD fieldvisits   lives in: memory (not persisted)
+	#      BEING
+	#        client (name)
+	#      MET FROM WITHOUT
+	#        screen home: discover client
+	#        screen file: understand client
+	#        screen pick: select client
+	#        screen edit: act client
+}
 try
 	oW.AddScreenQ(:Side) { ToCompare(:Client) }
 catch
@@ -340,9 +347,11 @@ oPlan = new stzDelivery("greenhouse")
 oPlan.AddFirmware(:node, :ESP32)
 oPlan.NeedsIn(:node, [ :GPIO ])
 oEmu = new stzEmulator(oPlan)
-oEmu.CompileEngineQ(FALSE)
-oEmu.SetOutDirQ("_emu")
-oEmu.Build()
+oEmu {
+	CompileEngineQ(FALSE)
+	SetOutDirQ("_emu")
+	Build()
+}
 cH = read("_emu/index.html")
 ? StzContains(cH, "needs a look")
 #--> 1

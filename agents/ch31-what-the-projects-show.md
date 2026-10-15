@@ -4,7 +4,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -38,13 +38,15 @@ Before the tables, five small blocks. Each is a place where the library shows, b
 
 ```haro
 oReg = new stzServiceRegistry("shop")
-oReg.DeclareMany([ :mail, :payments ])
-? @@( oReg.UnboundServices() )
-#--> [ "mail", "payments" ]
-? oReg.Findings()[1][:invariant]
-#--> unbound-service
-? oReg.IsSound()
-#--> 0
+oReg {
+	DeclareMany([ :mail, :payments ])
+	? @@( UnboundServices() )
+	#--> [ "mail", "payments" ]
+	? Findings()[1][:invariant]
+	#--> unbound-service
+	? IsSound()
+	#--> 0
+}
 try
 	oReg.Service(:payments)
 catch
@@ -61,9 +63,11 @@ Two services declared, none bound, and the registry says so itself: `nothing is 
 
 ```haro
 oSol = new stzPlatformProfile("kiosk")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+}
 oFw = oSol.App(:firmware).System()
 ? oFw.ReadPin(4)
 #--> rehearsed
@@ -88,11 +92,13 @@ The library's own comment, in the class that lowers a rehearsal to a real artefa
 
 ```haro
 oAd = new stzPispiHttpAdapter()
-oAd.WithParticipant("shop")
-oAd.WithBaseUrl("https://pispi.example")
-oAd.AsLive()
-? oAd.IsSandbox()
-#--> 0
+oAd {
+	WithParticipant("shop")
+	WithBaseUrl("https://pispi.example")
+	AsLive()
+	? IsSandbox()
+	#--> 0
+}
 try
 	oAd.Request("GET", "/comptes", [], [])
 catch
@@ -113,11 +119,13 @@ The library has a script that tries the live run. I ran it once, with none of it
 
 ```haro
 oVoice = StzSoundFormantVoiceQ()
-oVoice.Sing("la la la", "c4 e4 g4")
-? oVoice.Refusals()
-#--> 1
-? oVoice.LastError()
-#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+oVoice {
+	Sing("la la la", "c4 e4 g4")
+	? Refusals()
+	#--> 1
+	? LastError()
+	#--> Sing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does
+}
 aVerdicts = StzSoundSingingVerdict()
 ? aVerdicts[:formant][:verdict]
 #--> UNPERCEIVED

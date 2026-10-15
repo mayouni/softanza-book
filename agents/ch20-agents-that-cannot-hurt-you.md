@@ -4,7 +4,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. Then come the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
@@ -30,19 +30,21 @@ Four steps, in the form the study of the record gives them: the AI agent propose
 
 ```haro
 oGov = new stzGovernance("shop")
-oGov.DeclareReversibility("restocker", :Compensable)
-? oGov.ReversibilityOf("restocker")
-#--> compensable
-? oGov.MayRegister("mystery", "", "reversible")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
-? oGov.MayRegister("mystery", "reorders stock", "")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
-? oGov.MayRegister("mystery", "reorders stock", :Compensable)
-#--> 1
+oGov {
+	DeclareReversibility("restocker", :Compensable)
+	? ReversibilityOf("restocker")
+	#--> compensable
+	? MayRegister("mystery", "", "reversible")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
+	? MayRegister("mystery", "reorders stock", "")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
+	? MayRegister("mystery", "reorders stock", :Compensable)
+	#--> 1
+}
 ```
 
 > run: kept
@@ -100,18 +102,20 @@ skills:
     posture: trusted
 "
 oAg = StzAgentDeclarationQ(cPia).ToAgent()
-oAg.GiveWorkbench()
-? oAg.Cycle()
-#--> 1
-? oAg.MemoryQ().Fact("prices", "were", "written")
-#--> 1
-? StzFileExists($cPrices)
-#--> 0
-? oAg.WorkbenchQ().Exists($cPrices)
-#--> 1
-? oAg.WorkbenchQ().ContentOf($cPrices)
-#--> espresso,2.40
-#--> flat-white,3.10
+oAg {
+	GiveWorkbench()
+	? Cycle()
+	#--> 1
+	? MemoryQ().Fact("prices", "were", "written")
+	#--> 1
+	? StzFileExists($cPrices)
+	#--> 0
+	? WorkbenchQ().Exists($cPrices)
+	#--> 1
+	? WorkbenchQ().ContentOf($cPrices)
+	#--> espresso,2.40
+	#--> flat-white,3.10
+}
 
 func ScribblePrices(poMemory)
 	StzActiveWorkbenchQ().WriteFile($cPrices, "espresso,2.40" + char(10) + "flat-white,3.10")

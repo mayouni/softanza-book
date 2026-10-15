@@ -46,12 +46,14 @@ catch
 	? cCatchError
 done
 #--> stzPlatform.Deploy: the platform must be Build() before it can be deployed.
-? oPlatform.IsDeployed()
-#--> 0
-oPlatform.Build()
-oPlatform.Deploy()
-? oPlatform.IsDeployed()
-#--> 1
+oPlatform {
+	? IsDeployed()
+	#--> 0
+	Build()
+	Deploy()
+	? IsDeployed()
+	#--> 1
+}
 ```
 
 La plateforme répond : `stzPlatform.Deploy: the platform must be Build() before it can be deployed.` Construite, puis déployée, `IsDeployed()` répond `1`.
@@ -60,11 +62,13 @@ Avant que quoi que ce soit soit réel, la solution peut tourner sur un jumeau, u
 
 ```haro
 oTwin = new stzVirtualFileSystem()
-oTwin.CreateFile("orders/today.txt", "3 couscous")
-? oTwin.ContentOf("orders/today.txt")
-#--> 3 couscous
-? oTwin.OriginOf("orders/today.txt")
-#--> virtual
+oTwin {
+	CreateFile("orders/today.txt", "3 couscous")
+	? ContentOf("orders/today.txt")
+	#--> 3 couscous
+	? OriginOf("orders/today.txt")
+	#--> virtual
+}
 ? StzEngineFileExists("orders/today.txt")
 #--> 0
 ```
@@ -77,15 +81,17 @@ Et à la barrière de production, une solution ne peut pas atteindre la producti
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor(HumanActor("dana"))
-oDep = oDel.Deploy(:Production)
-? oDep.WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[2][:message]
-#--> sandbox-in-production @ shop/payments
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor(HumanActor("dana"))
+	oDep = Deploy(:Production)
+	? oDep.WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[2][:message]
+	#--> sandbox-in-production @ shop/payments
+}
 ```
 
 La personne avait le droit de déployer. La livraison l'a refusé ! `WasCommitted()` répond `0`. Pourquoi a-t-elle refusé ? La première entrée d'erreur du journal dit seulement que la surface externe n'est pas prête pour la production ; la seconde nomme le service : `sandbox-in-production @ shop/payments`. Un service de paiement qui est un bac à sable ne peut pas être ce par quoi un vrai client paie. Ce n'est pas une question d'autorité. C'est une question de ce qui est vrai.

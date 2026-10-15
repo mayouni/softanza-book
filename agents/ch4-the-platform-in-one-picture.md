@@ -4,7 +4,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:24 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -117,18 +117,20 @@ oResto.AddThingQ(:dish) { Has([ :name, :price ]) }
 oSupplier = StzAppQ("supplier")
 oSupplier.AddThingQ(:crate) { Has([ :produce, :qty ]) }
 oCon = new stzSuperApp("acme-group")
-oCon.AddWorld("resto", oResto)
-oCon.AddWorld("supplier", oSupplier)
-oCon.Bond("resto", "supplier", "order-produce")
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("resto", "order-produce")
-oCon.GovSetAuthority("resto", :Delegated)
-? oCon.CallAcross("resto", "supplier", "order-produce")
-#--> 1
-? oCon.CallAcross("resto", "supplier", "raid-kitchen")
-#--> 0
-? oCon.Why()
-#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+oCon {
+	AddWorld("resto", oResto)
+	AddWorld("supplier", oSupplier)
+	Bond("resto", "supplier", "order-produce")
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("resto", "order-produce")
+	GovSetAuthority("resto", :Delegated)
+	? CallAcross("resto", "supplier", "order-produce")
+	#--> 1
+	? CallAcross("resto", "supplier", "raid-kitchen")
+	#--> 0
+	? Why()
+	#--> no bond declares 'raid-kitchen' from 'resto' to 'supplier'.
+}
 ```
 
 > run: kept
@@ -141,10 +143,12 @@ And a platform, `stzPlatform` in the figure, is the envelope around a solution: 
 
 ```haro
 oDelivery = new stzDelivery("my-shop")
-oDelivery.AddSuperApp(:phone, :Android)
-oDelivery.AddBackend(:api, :LinuxServer)
-oDelivery.NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
-oPlan = oDelivery.Plan()
+oDelivery {
+	AddSuperApp(:phone, :Android)
+	AddBackend(:api, :LinuxServer)
+	NeedsIn(:phone, [ :Unicode, :PivotTable, :ConstraintSolver, :Regex ])
+	oPlan = Plan()
+}
 ? @@( oPlan.EngineCapsFor(:phone) )
 #--> [ "pivottable", "constraintsolver" ]
 ? @@( StzWasmGroupsFor( oPlan.EngineCapsFor(:phone) ) )

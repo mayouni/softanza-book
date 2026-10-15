@@ -39,7 +39,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 2 | `the-software-crafter` | 1 | draft | yes | 9 of 9 | 5 | 6 |
 | 3 | `the-method-from-first-principles` | 1 | draft | yes | 5 of 5 | 3 | 6 |
 | 4 | `the-platform-in-one-picture` | 1 | draft | yes | 8 of 8 | 5 | 6 |
-| 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 7 of 7 | 4 | 6 |
+| 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 9 of 9 | 4 | 6 |
 | 6 | `the-mental-model-and-the-metaphors` | 2 | draft |  | 7 of 7 | 6 | 6 |
 | 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 9 of 9 | 10 | 6 |
 | 8 | `functions-as-linguistic-expressions-and-scope` | 2 | draft |  | 13 of 13 | 5 | 6 |

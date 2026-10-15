@@ -100,12 +100,13 @@ Une liste peut aussi être portée comme une chaîne dans sa forme courte, recon
 Règle 10 : le code voyage à l'intérieur d'un argument comme une petite chaîne avec un espace réservé, `@char` pour les caractères d'une chaîne et `@item` pour les éléments d'une liste. Le chapitre 6 a montré l'emplacement sur une liste. Ici il est sur une chaîne, où il trouve et retire par une règle et non par une boucle :
 
 ```haro
-o1 = new stzString("SOooooFTAaaannnNZA")
-? @@( o1.FindW('{ Q(@char).IsUppercase() }') )
-#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
-o1.RemoveW('{ Q(@char).IsLowercase() }')
-? o1.Content()
-#--> SOFTANZA
+Q("SOooooFTAaaannnNZA") {
+	? @@( FindW('{ Q(@char).IsUppercase() }') )
+	#--> [ 1, 2, 7, 8, 9, 16, 17, 18 ]
+	RemoveW('{ Q(@char).IsLowercase() }')
+	? Content()
+	#--> SOFTANZA
+}
 ```
 
 Le diaporama de 2022 écrit le même appel avec un emplacement nommé, `:Where = '...'`, et cette forme lève une erreur sur une chaîne à ce commit. Je ne la montre pas. Le même diaporama met un `@` à la fin du nom d'un paramètre, `:With@`, pour marquer que sa valeur est du code à évaluer. Cette forme est retirée. L'en-tête d'une garde le dit : les formes fondées sur eval sont retirées. Le diaporama lui-même marque la forme « TODO ». Le code voyage maintenant dans l'emplacement comme une chaîne bornée que le moteur évalue, ou comme une fonction.

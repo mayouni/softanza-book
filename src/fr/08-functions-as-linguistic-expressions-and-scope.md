@@ -94,12 +94,13 @@ o1 = new stzString("fjharoljharodjharog")
 **Le pluriel** étend un verbe à plusieurs choses sans boucle, et **la forme d'exception** ne garde que ce que vous nommez. L'exemple de l'article pour la seconde, `RemoveNonLettersExcept`, n'existe pas. La forme existe, sous d'autres noms :
 
 ```haro
-o1 = new stzString("__H~~~AR***O__")
-? @@( o1.FindMany([ "~", "*" ]) )
-#--> [ 4, 5, 6, 9, 10, 11 ]
-o1.RemoveMany([ "_", "~", "*" ])
-? o1.Content()
-#--> HARO
+Q("__H~~~AR***O__") {
+	? @@( FindMany([ "~", "*" ]) )
+	#--> [ 4, 5, 6, 9, 10, 11 ]
+	RemoveMany([ "_", "~", "*" ])
+	? Content()
+	#--> HARO
+}
 o2 = new stzString("--Haro--&__Softanza__")
 o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ? o2.Content()
@@ -121,12 +122,13 @@ o3 = new stzList([ "H", "A", "R", "O" ])
 **La forme profonde** répond par un chemin, une liste d'indices qui va aussi profond que les données, et la même famille remplace et retire à cette profondeur, avec `:By` pour emplacement nommé là où le `Replaced` du chapitre 5 disait `:With` ; les verbes profonds acceptent les deux :
 
 ```haro
-o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
-? @@( o1.DeepFind("you") )
-#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
-o1.DeepReplace("you", :By = "♥")
-? @@( o1.Content() )
-#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+Q([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ]) {
+	? @@( DeepFind("you") )
+	#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
+	DeepReplace("you", :By = "♥")
+	? @@( Content() )
+	#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+}
 ```
 
 **La forme immuable**, QC, exécute toute la chaîne sur une copie. Après cette chaîne, que contient l'original ?
@@ -157,12 +159,14 @@ Il est né dans les expressions régulières, où le cadre est la part du texte 
 ```haro
 cText = "First: Line1" + nl + "Second: Line2" + nl + "Third: Line3"
 o1 = new stzRegex("^Second:.*$")
-? o1.Match(cText)
-#--> FALSE
-? o1.MatchFirst(cText)
-#--> FALSE
-? o1.MatchLine(cText)
-#--> TRUE
+o1 {
+	? Match(cText)
+	#--> FALSE
+	? MatchFirst(cText)
+	#--> FALSE
+	? MatchLine(cText)
+	#--> TRUE
+}
 ```
 
 `Match` répond `FALSE` : il demande si le motif couvre la valeur entière. `MatchFirst` répond `FALSE` aussi : il demande si le motif apparaît quelque part, avec les ancres de ligne désactivées. `MatchLine` répond `TRUE` : il fait que `^` et `$` s'accrochent à chaque ligne. Le cadre est dans le verbe. Il y a aussi une portée de mot, qui fournit les limites de mot pour que vous ne les écriviez pas. Elle réécrit pour de bon le motif de son objet, c'est pourquoi la deuxième instance est un nouvel objet avec le même motif. Le même motif répond-il pareil sous `MatchFirst` et sous `MatchWord` ?
@@ -182,11 +186,13 @@ La deuxième instance est le système. Le code d'une fonctionnalité s'écrit da
 
 ```haro
 oSol = new stzPlatformProfile("my-iot-product")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
-oBack = oSol.App(:backend).System()
-oFirm = oSol.App(:firmware).System()
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+	oBack = App(:backend).System()
+	oFirm = App(:firmware).System()
+}
 ? oBack.Spawn("worker")
 #--> native
 ? oFirm.ReadPin(4)

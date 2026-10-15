@@ -119,9 +119,11 @@ La preuve de ce qui s'est passé est une chaîne de hachage. Modifiez n'importe 
 
 ```haro
 oLed = StzSecurityLedger(256)
-oLed.Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
-oLed.Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
-oLed.SealTo("evidence.txt", "the-evidence-key")
+oLed {
+	Record(StzSecurityRefusal("auth.login.failed", HumanActor("admin"), "user:admin", "wrong credentials"))
+	Record(StzSecurityRefusal("secret.reveal.refused", LLMActor("advisor"), "secret:payments-key", "actor is not effectful"))
+	SealTo("evidence.txt", "the-evidence-key")
+}
 ? StzVerifySealedLedger("evidence.txt", "the-evidence-key")[:why]
 #--> chain intact over 2 entries
 ? StzVerifySealedLedger("evidence.txt", "another-key")[:why]
@@ -139,11 +141,13 @@ Un secret est la même loi appliquée à une clé. Son seul visage public est so
 ```haro
 StzOpenSecurityLedger(64)
 oKey = new stzSecret("deploy-key")
-oKey.FromLiteralQ("ssh-ed25519-AAAA")
-? oKey.Descriptor()
-#--> <secret 'deploy-key' (secret) from literal>
-? oKey.Reveal(HumanActor("ops"))
-#--> ssh-ed25519-AAAA
+oKey {
+	FromLiteral("ssh-ed25519-AAAA")
+	? Descriptor()
+	#--> <secret 'deploy-key' (secret) from literal>
+	? Reveal(HumanActor("ops"))
+	#--> ssh-ed25519-AAAA
+}
 try
 	oKey.Reveal(LLMActor("planner"))
 catch
@@ -167,29 +171,32 @@ Un instrument doit un nombre. Le chronomètre honnête donne un nombre issu d'un
 
 ```haro
 w = StzStopwatchXT("import-orders")
-w.Lap("parsed")
-w.Pause()
-StzEngineTimeSleepMs(200)
-w.Resume()
-w.Stop()
-? isnumber(w.ElapsedMs())
-#--> 1
-? w.ElapsedMs() < 200
-#--> 1
-? w.Record()[:running]
-#--> 0
+w {
+	Lap("parsed")
+	Pause()
+	StzEngineTimeSleepMs(200)
+	Resume()
+	Stop()
+	? isnumber(ElapsedMs())
+	#--> 1
+	? ElapsedMs() < 200
+	#--> 1
+	? Record()[:running]
+	#--> 0
+}
 w2 = StzStopwatchXT("notify-customer")
 w2.JoinTrace(w.TraceParent())
 w2.Stop()
 ? w2.TraceId() = w.TraceId()
 #--> 1
 oBatch = StzOtelBatch("shop")
-oBatch.AddSpan(w).AddSpan(w2)
+oBatch.AddSpan(w)
+oBatch.AddSpan(w2)
 ? Q(oBatch.ToJson()).NumberOfOccurrence(w.TraceId())
 #--> 2
 ```
 
-La pause n'a pas compté : `w.ElapsedMs() < 200` a imprimé `1`, et `w.Record()[:running]` a imprimé `0`, parce que le chronomètre s'était arrêté. Le second chronomètre a rejoint la trace du premier : `w2.TraceId() = w.TraceId()` a imprimé `1`, et le JSON du lot contient l'identifiant de trace `2` fois, pour deux spans.
+La pause n'a pas compté : dans la scène du chronomètre, `ElapsedMs() < 200` a imprimé `1`, et `Record()[:running]` a imprimé `0`, parce que le chronomètre s'était arrêté. Le second chronomètre a rejoint la trace du premier : `w2.TraceId() = w.TraceId()` a imprimé `1`, et le JSON du lot contient l'identifiant de trace `2` fois, pour deux spans.
 
 Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace, comme le montre le `1` ci-dessus, et le même identifiant de span, que ce bloc n'imprime pas. La phrase tient pour l'écho du serveur, que je n'ai pas exécuté, et non pour le chronomètre. C'est une demande à la bibliothèque.
 
@@ -197,24 +204,26 @@ L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'i
 
 ```haro
 oPlan = StzPerfPlan("relieve-queue")
-oPlan.Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
 oFleet = new FakeFleet
-? oPlan.MayCommit(LLMActor("advisor"))
-#--> 0
-? oPlan.ExecuteOn(oFleet, LLMActor("advisor"))
-#--> 0
-? oFleet.CallCount()
-#--> 0
-? oPlan.ExecuteOn(oFleet, HumanActor("mansour"))
-#--> 1
-? oFleet.CallCount()
-#--> 1
-oPlan.Show()
-#--> Perf plan relieve-queue -- 1 proposed action(s).
-#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
-#    Audit (2):
-#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
-#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+oPlan {
+	Propose(:ScaleUp, "nlp", "queue.depth: measured 900 (must be <= 100)")
+	? MayCommit(LLMActor("advisor"))
+	#--> 0
+	? ExecuteOn(oFleet, LLMActor("advisor"))
+	#--> 0
+	? oFleet.CallCount()
+	#--> 0
+	? ExecuteOn(oFleet, HumanActor("mansour"))
+	#--> 1
+	? oFleet.CallCount()
+	#--> 1
+	Show()
+	#--> Perf plan relieve-queue -- 1 proposed action(s).
+	#      1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)
+	#    Audit (2):
+	#      #1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed
+	#      #1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)
+}
 
 class FakeFleet
 	aFleetCalls = []

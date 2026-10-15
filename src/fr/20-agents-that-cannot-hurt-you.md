@@ -40,19 +40,21 @@ Quatre étapes, dans la forme que l'étude du dossier leur donne : l'agent d'IA 
 
 ```haro
 oGov = new stzGovernance("shop")
-oGov.DeclareReversibility("restocker", :Compensable)
-? oGov.ReversibilityOf("restocker")
-#--> compensable
-? oGov.MayRegister("mystery", "", "reversible")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
-? oGov.MayRegister("mystery", "reorders stock", "")
-#--> 0
-? oGov.Why()
-#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
-? oGov.MayRegister("mystery", "reorders stock", :Compensable)
-#--> 1
+oGov {
+	DeclareReversibility("restocker", :Compensable)
+	? ReversibilityOf("restocker")
+	#--> compensable
+	? MayRegister("mystery", "", "reversible")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.
+	? MayRegister("mystery", "reorders stock", "")
+	#--> 0
+	? Why()
+	#--> AGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.
+	? MayRegister("mystery", "reorders stock", :Compensable)
+	#--> 1
+}
 ```
 
 Le premier refus se termine sur sa loi : rien ne planifie ce dont personne n'a énoncé la portée. Le numéro qu'il porte appartient à la liste des lois propre à la bibliothèque, que ce livre n'imprime pas. Avec les deux déclarées, le troisième appel répond `1`.
@@ -106,18 +108,20 @@ skills:
     posture: trusted
 "
 oAg = StzAgentDeclarationQ(cPia).ToAgent()
-oAg.GiveWorkbench()
-? oAg.Cycle()
-#--> 1
-? oAg.MemoryQ().Fact("prices", "were", "written")
-#--> 1
-? StzFileExists($cPrices)
-#--> 0
-? oAg.WorkbenchQ().Exists($cPrices)
-#--> 1
-? oAg.WorkbenchQ().ContentOf($cPrices)
-#--> espresso,2.40
-#--> flat-white,3.10
+oAg {
+	GiveWorkbench()
+	? Cycle()
+	#--> 1
+	? MemoryQ().Fact("prices", "were", "written")
+	#--> 1
+	? StzFileExists($cPrices)
+	#--> 0
+	? WorkbenchQ().Exists($cPrices)
+	#--> 1
+	? WorkbenchQ().ContentOf($cPrices)
+	#--> espresso,2.40
+	#--> flat-white,3.10
+}
 
 func ScribblePrices(poMemory)
 	StzActiveWorkbenchQ().WriteFile($cPrices, "espresso,2.40" + char(10) + "flat-white,3.10")

@@ -42,19 +42,23 @@ D'où vient le texte d'entraînement ? Construisez une petite base de connaissan
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").
-    Know("tiramisu", "dish").
-    Know("chianti", "wine").
-    KnowRelation("margherita", "contains", "tomato-sauce").
-    KnowRelation("margherita", "contains", "mozzarella").
-    KnowRelation("margherita", "pairs-with", "chianti")
+oKB {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	Know("chianti", "wine")
+	KnowRelation("margherita", "contains", "tomato-sauce")
+	KnowRelation("margherita", "contains", "mozzarella")
+	KnowRelation("margherita", "pairs-with", "chianti")
+}
 oDLM = StzDlmQ(oKB)
-? @@( oDLM.GenerateCorpus() )
-#--> [ "margherita is a dish.", "tiramisu is a dish.", "chianti is a wine.", "margherita contains tomato-sauce.", "margherita contains mozzarella.", "margherita pairs-with chianti." ]
-? @@( oDLM.Tokenizer() )
-#--> [ "<unk>", "margherita", "tiramisu", "chianti", "dish", "wine", "contains", "pairs-with", "is", "a", "tomato-sauce", "mozzarella" ]
-? @@( oDLM.Tokenize("margherita contains something-new") )
-#--> [ 2, 7, 1 ]
+oDLM {
+	? @@( GenerateCorpus() )
+	#--> [ "margherita is a dish.", "tiramisu is a dish.", "chianti is a wine.", "margherita contains tomato-sauce.", "margherita contains mozzarella.", "margherita pairs-with chianti." ]
+	? @@( Tokenizer() )
+	#--> [ "<unk>", "margherita", "tiramisu", "chianti", "dish", "wine", "contains", "pairs-with", "is", "a", "tomato-sauce", "mozzarella" ]
+	? @@( Tokenize("margherita contains something-new") )
+	#--> [ 2, 7, 1 ]
+}
 ```
 
 Personne n'a écrit ce corpus : chacune de ses six phrases est un fait de la base de connaissances, rendu. Le vocabulaire est fermé, chaque mot que le domaine contient avec une première entrée pour l'inconnu. Douze entrées, et `something-new`, un mot hors du domaine, est envoyé sur la première : `[ 2, 7, 1 ]`. « Correct par construction » vaut ici dans le seul sens que le code lui donne : chaque phrase est un fait enregistré. Cela ne vaut pas encore dans le sens que la conception visait ; la section 7 dit où.
@@ -62,14 +66,16 @@ Personne n'a écrit ce corpus : chacune de ses six phrases est un fait de la bas
 La complétion est contrainte au domaine. Qu'offre le modèle après une entité qui porte des faits, après une relation, après un fragment, et après un mot que le domaine ne contient pas ? Exécutez-le :
 
 ```haro
-? @@( oDLM.Complete("margherita") )
-#--> [ "contains", "pairs-with" ]
-? @@( oDLM.Complete("contains") )
-#--> [ "tomato-sauce", "mozzarella" ]
-? @@( oDLM.Complete("tira") )
-#--> [ "tiramisu" ]
-? @@( oDLM.Complete("pizza") )
-#--> [ ]
+oDLM {
+	? @@( Complete("margherita") )
+	#--> [ "contains", "pairs-with" ]
+	? @@( Complete("contains") )
+	#--> [ "tomato-sauce", "mozzarella" ]
+	? @@( Complete("tira") )
+	#--> [ "tiramisu" ]
+	? @@( Complete("pizza") )
+	#--> [ ]
+}
 ```
 
 Après une entité qui porte des faits, ses relations : `[ "contains", "pairs-with" ]`. Après une relation, seulement ses objets : `[ "tomato-sauce", "mozzarella" ]`. Un fragment se complète en entités, et un mot que le domaine ne contient pas se complète en rien : `[ ]`. La garde qui le prouve l'appelle « the grammar spirit ». C'est une consultation dans les faits, non un décodage sous une grammaire compilée. Et elle voit un mot, pas la phrase jusque-là : `Complete("contains")` renvoie les objets de chaque fait `contains`, quel que soit son sujet.
@@ -115,10 +121,12 @@ Regardez ensemble les quatre dernières lignes. La grammaire accepte le mensonge
 Un modèle de langage de domaine est un fichier qui voyage. Il est sauvegardé en texte simple, lisible et comparable par diff, sans binaire et sans poids. Un second modèle qui n'a jamais lu la base de connaissances peut-il répondre à partir de lui, et exécuter ses propres tests ? Sauvegardez-le, relisez-le, et chargez-le :
 
 ```haro
-oDLM.AddGolden("what is margherita", "Margherita is a dish.")
-oDLM.AddGolden("what is the weather today?",
-	"That is outside the 'restaurant' domain (I know 3 entities and 2 relations).")
-cFile = oDLM.Save("probe_dlm")
+oDLM {
+	AddGolden("what is margherita", "Margherita is a dish.")
+	AddGolden("what is the weather today?",
+		"That is outside the 'restaurant' domain (I know 3 entities and 2 relations).")
+	cFile = Save("probe_dlm")
+}
 ? cFile
 #--> probe_dlm.zdlm
 ? read(cFile)
@@ -139,11 +147,13 @@ cFile = oDLM.Save("probe_dlm")
 #        what is margherita | Margherita is a dish.
 #        what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).
 oShipped = StzDlmQ("")
-oShipped.LoadFrom(cFile)
-? oShipped.Ask("what is tiramisu")
-#--> Tiramisu is a dish.
-? @@( oShipped.RunGoldens() )
-#--> [ [ "total", 2 ], [ "passed", 2 ], [ "failed", [ ] ] ]
+oShipped {
+	LoadFrom(cFile)
+	? Ask("what is tiramisu")
+	#--> Tiramisu is a dish.
+	? @@( RunGoldens() )
+	#--> [ [ "total", 2 ], [ "passed", 2 ], [ "failed", [ ] ] ]
+}
 remove(cFile)
 ? fexists(cFile)
 #--> 0
@@ -154,14 +164,16 @@ Le second modèle répond : `Tiramisu is a dish.` Le refus voyage avec le lot co
 Maintenant le second échelon. C'est un petit modèle neuronal entraîné sur le corpus que vous avez vu, sans enseignant, et il peut être exporté comme fichier de modèle. Quelle est sa taille, et apprend-il ?
 
 ```haro
-oDLM.TrainNeuralRung(500)
-? oDLM.NeuralWhy()
-#--> neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70
-? oDLM.NextToken("is")
-#--> a
-? oDLM.NextTokenConfidence("is")
-#--> 1.00
-cGguf = oDLM.ExportNeuralGguf("probe_bigram")
+oDLM {
+	TrainNeuralRung(500)
+	? NeuralWhy()
+	#--> neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70
+	? NextToken("is")
+	#--> a
+	? NextTokenConfidence("is")
+	#--> 1.00
+	cGguf = ExportNeuralGguf("probe_bigram")
+}
 ? cGguf
 #--> probe_bigram.gguf
 ? StzEngineNeuralGgufInspect(cGguf)
@@ -187,16 +199,18 @@ next
 « Tiramisu is a wine » est faux, parce que le tiramisu est un plat. « Chianti is a wine » est vrai. Et « margherita contains mozzarella is » est une phrase qui n'en finit pas, parce que le bigramme n'a aucun mot qui termine une phrase. Le test contre le corpus est une barrière grossière, et il refuserait un fait vrai que personne n'a enregistré. La vraie barrière est le graphe et ses lois. Que répond le graphe quand la fausse phrase lui est proposée comme un fait ? Déclarez la loi, puis proposez :
 
 ```haro
-oKB.ConstrainRelation("is-a", :Unique)
-aVerdict = oKB.Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
-? aVerdict[:admitted]
-#--> 0
-? aVerdict[:why]
-#--> 'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique
-? @@( oKB.Contradictions() )
-#--> [ [ [ "subject", "tiramisu" ], [ "relation", "is-a" ], [ "existing", "dish" ], [ "attempted", "wine" ], [ "source", "rung 2" ] ] ]
-? oKB.Admit("pizza", "is-a", "dish", [ :source = "rung 2" ])[:why]
-#--> admitted: 'pizza' is-a 'dish'
+oKB {
+	ConstrainRelation("is-a", :Unique)
+	aVerdict = Admit("tiramisu", "is-a", "wine", [ :source = "rung 2" ])
+	? aVerdict[:admitted]
+	#--> 0
+	? aVerdict[:why]
+	#--> 'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique
+	? @@( Contradictions() )
+	#--> [ [ [ "subject", "tiramisu" ], [ "relation", "is-a" ], [ "existing", "dish" ], [ "attempted", "wine" ], [ "source", "rung 2" ] ] ]
+	? Admit("pizza", "is-a", "dish", [ :source = "rung 2" ])[:why]
+	#--> admitted: 'pizza' is-a 'dish'
+}
 ```
 
 Le graphe a refusé la fausse proposition ! Il dit pourquoi : `'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique`. Le refus est gardé, avec sa source : le second échelon du modèle. Un fait nouveau est admis. C'est tout le principe en six appels : une proposition, une loi, un refus avec son pourquoi, et le refus au dossier.

@@ -58,15 +58,16 @@ Elle refuse, et dit pourquoi : `The pattern name you provided does not exist in 
 Un motif peut aussi répondre à la valeur à moitié écrite, ce que veut un formulaire pendant que la personne tape :
 
 ```haro
-o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
-? o1.MatchAsYouType("123-45")
-#--> 1
-? o1.MatchAsYouType("abc")
-#--> 0
-? o1.IsPartialMatch("123-45")
-#--> 1
-? o1.IsPartialMatch("123-45-6789")
-#--> 0
+StzRegexQ("^\d{3}-\d{2}-\d{4}$") {
+	? MatchAsYouType("123-45")
+	#--> 1
+	? MatchAsYouType("abc")
+	#--> 0
+	? IsPartialMatch("123-45")
+	#--> 1
+	? IsPartialMatch("123-45-6789")
+	#--> 0
+}
 ```
 
 Voici maintenant le geste qui donne son titre au chapitre. Prenons une liste. Son motif s'écrit entre crochets, et les comptes, l'imbrication et la négation sont écrits, non bouclés. `@N` représente un nombre, `@S` une chaîne de caractères, `+` un ou plus, `@N1-3` un à trois, et `@!` le non. `[@N1-3, @S]` accepte-t-il quatre nombres avant la chaîne de caractères ? Le deuxième appel répond :
@@ -160,12 +161,14 @@ Le temps, dans la part qui s'exécute, écrit ici avec la classe plutôt qu'avec
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
-? oTm.Match(new stzDuration("1 hour 30 minutes"))
-#--> 1
-? oTm.Match(new stzDuration("1 hour 20 minutes"))
-#--> 0
-? oTm.Match(new stzDuration("3 hours"))
-#--> 0
+oTm {
+	? Match(new stzDuration("1 hour 30 minutes"))
+	#--> 1
+	? Match(new stzDuration("1 hour 20 minutes"))
+	#--> 0
+	? Match(new stzDuration("3 hours"))
+	#--> 0
+}
 ```
 
 Seules quatre-vingt-dix minutes conviennent : quatre-vingts sont dans l'intervalle et hors du pas, et trois heures sont dehors.
@@ -174,11 +177,13 @@ Un graphe : un motif se lit comme le chemin qu'il cherche. Les étiquettes corre
 
 ```haro
 g = new stzGraph("Order")
-g.AddNodeXT(:a, "Placed")
-g.AddNodeXT(:b, "Cooking")
-g.AddNodeXT(:c, "Served")
-g.AddEdgeXT(:a, :b, "starts")
-g.AddEdgeXT(:b, :c, "finishes")
+g {
+	AddNodeXT(:a, "Placed")
+	AddNodeXT(:b, "Cooking")
+	AddNodeXT(:c, "Served")
+	AddEdgeXT(:a, :b, "starts")
+	AddEdgeXT(:b, :c, "finishes")
+}
 ? (new stzGraphex("{@Node(placed) -> @Edge(starts) -> @Node(cooking)}", g)).Match(g)
 #--> 1
 ? (new stzGraphex("{@Node(served) -> @Node(placed)}", g)).Match(g)
@@ -252,9 +257,11 @@ Ce qui est construit en partie : les listes, les matrices, le temps et les graph
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
-oTl.AddInstant("Meeting", "2025-10-22 09:00:00")
-oTl.AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
-oTl.AddInstant("Lunch", "2025-10-22 12:00:00")
+oTl {
+	AddInstant("Meeting", "2025-10-22 09:00:00")
+	AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
+	AddInstant("Lunch", "2025-10-22 12:00:00")
+}
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
 #--> 0

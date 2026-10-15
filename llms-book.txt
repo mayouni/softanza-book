@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Edition: proof copy (42 of 42 pages not yet read by the author). Built 2026-10-15 11:44 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Edition: proof copy (42 of 42 pages not yet read by the author). Built 2026-10-15 13:01 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 
@@ -40,7 +40,7 @@ Edition: proof copy (42 of 42 pages not yet read by the author). Built 2026-10-1
 
 ### Part II · Programming, rethought
 
-- 5. Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it [draft, spine] agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md; guards: coderule_narrated (77), testoor_promises_narrated (46), 05_containsemptystrings (5), 466_keeping_the_history_of_updates_of_a_softanza_objec (2); run: 7 of 7 blocks kept
+- 5. Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it [draft, spine] agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md; guards: coderule_narrated (77), testoor_promises_narrated (46), 05_containsemptystrings (5), 466_keeping_the_history_of_updates_of_a_softanza_objec (2); run: 9 of 9 blocks kept
   principle: What you think is what you write.
 - 6. The mental model, and the metaphors [draft] agents/ch6-the-mental-model-and-the-metaphors.md; guards: 00_yielder_narrated (8), 597_walker_basics (6), 611_checkw (1), 621_perform (2), 483_w_and_wf_forms_in_conditional_code (2), 495_walking_until_and_until_before (4); run: 7 of 7 blocks kept
   principle: Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.

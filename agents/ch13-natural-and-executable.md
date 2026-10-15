@@ -4,7 +4,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -63,7 +63,7 @@ catch
 	? cCatchError
 done
 #--> NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.
-? Q("haro").IsAQ(:String).IfSo("majuscule").Content()
+? Q("haro").IsAQ(:String).IfSoQ("majuscule").Content()
 #--> HARO
 try
 	Q("haro").IsAQ(:String).IfSo("uppercse")
@@ -78,9 +78,9 @@ done
 A chain branches on its own truth, and an ordinal is a word:
 
 ```haro
-? Q("haro").IsAQ(:String).IfSo(:Uppercase).Otherwise(:Reverse).Content()
+? Q("haro").IsAQ(:String).IfSoQ(:Uppercase).OtherwiseQ(:Reverse).Content()
 #--> HARO
-? Q("hello").IsAQ(:Number).IfSo(:Reverse).Otherwise(:Uppercase).Content()
+? Q("hello").IsAQ(:Number).IfSoQ(:Reverse).OtherwiseQ(:Uppercase).Content()
 #--> HELLO
 ? Q("hello brave world").TheNth(2, :Words)
 #--> brave
@@ -128,8 +128,13 @@ oT = Naturally("Create a string with 'haro' Is it lowercase ? Does it contain 'r
 #--> TRUE
 ? oT.Understood()
 #--> create a string with haro -> ask: is lowercase -> ask: contains
-? TruthOf("haro").IsA(:Lowercase).AndIsA(:Latin).AndContaining("r").Holds()
-#--> TRUE
+TruthOf("haro") {
+	IsA(:Lowercase)
+	AndIsA(:Latin)
+	AndContaining("r")
+	? Holds()
+	#--> TRUE
+}
 ? Why()
 #--> yes: "haro" is lowercase and is latin and containing "r"
 ? Certainty()

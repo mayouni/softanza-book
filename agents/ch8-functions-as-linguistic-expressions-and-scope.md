@@ -4,7 +4,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -90,12 +90,13 @@ o1 = new stzString("fjharoljharodjharog")
 **The plural** extends a verb to many things without a loop, and **the exceptional form** keeps only what you name. The article's example for the second, `RemoveNonLettersExcept`, does not exist. The form does, in other names:
 
 ```haro
-o1 = new stzString("__H~~~AR***O__")
-? @@( o1.FindMany([ "~", "*" ]) )
-#--> [ 4, 5, 6, 9, 10, 11 ]
-o1.RemoveMany([ "_", "~", "*" ])
-? o1.Content()
-#--> HARO
+Q("__H~~~AR***O__") {
+	? @@( FindMany([ "~", "*" ]) )
+	#--> [ 4, 5, 6, 9, 10, 11 ]
+	RemoveMany([ "_", "~", "*" ])
+	? Content()
+	#--> HARO
+}
 o2 = new stzString("--Haro--&__Softanza__")
 o2.RemoveAllExcept([ "Haro", "&", "Softanza" ])
 ? o2.Content()
@@ -121,12 +122,13 @@ o3 = new stzList([ "H", "A", "R", "O" ])
 **The deep form** answers a path, a list of indices that goes as deep as the data does, and the same family replaces and removes at that depth, with `:By` as its named seat where chapter 5's `Replaced` said `:With`; the deep verbs accept both:
 
 ```haro
-o1 = new stzList([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ])
-? @@( o1.DeepFind("you") )
-#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
-o1.DeepReplace("you", :By = "♥")
-? @@( o1.Content() )
-#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+Q([ "you", "other", [ "other", "you", [ "you" ], "other" ], "other", "you" ]) {
+	? @@( DeepFind("you") )
+	#--> [ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]
+	DeepReplace("you", :By = "♥")
+	? @@( Content() )
+	#--> [ "♥", "other", [ "other", "♥", [ "♥" ], "other" ], "other", "♥" ]
+}
 ```
 
 > run: kept
@@ -163,12 +165,14 @@ It was born in regular expressions, where the frame is how much of the text a pa
 ```haro
 cText = "First: Line1" + nl + "Second: Line2" + nl + "Third: Line3"
 o1 = new stzRegex("^Second:.*$")
-? o1.Match(cText)
-#--> FALSE
-? o1.MatchFirst(cText)
-#--> FALSE
-? o1.MatchLine(cText)
-#--> TRUE
+o1 {
+	? Match(cText)
+	#--> FALSE
+	? MatchFirst(cText)
+	#--> FALSE
+	? MatchLine(cText)
+	#--> TRUE
+}
 ```
 
 > run: kept
@@ -192,11 +196,13 @@ The second instance is the system. Feature code is written in a named scope, and
 
 ```haro
 oSol = new stzPlatformProfile("my-iot-product")
-oSol.DevelopedOn(:Windows)
-oSol.WithServer(:backend, :LinuxServer)
-oSol.WithApp(:firmware, :ESP32)
-oBack = oSol.App(:backend).System()
-oFirm = oSol.App(:firmware).System()
+oSol {
+	DevelopedOn(:Windows)
+	WithServer(:backend, :LinuxServer)
+	WithApp(:firmware, :ESP32)
+	oBack = App(:backend).System()
+	oFirm = App(:firmware).System()
+}
 ? oBack.Spawn("worker")
 #--> native
 ? oFirm.ReadPin(4)

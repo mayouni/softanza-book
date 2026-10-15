@@ -4,7 +4,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take a bank in Niamey, which I call Softibank (the name is fictional), under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -54,13 +54,15 @@ positions
         reportsTo: ceo
 '
 oOrg = new stzOrgChart("bank")
-oOrg.ImportStzOrg(cChart)
-? oOrg.NodeCount()
-#--> 4
-? @@( oOrg.ValidateXT(:BCEAO)[:issues] )
-#--> [ "BCEAO-002: Audit reports to non-board position" ]
-? oOrg.IsValidXT(:BCEAO)
-#--> 0
+oOrg {
+	ImportStzOrg(cChart)
+	? NodeCount()
+	#--> 4
+	? @@( ValidateXT(:BCEAO)[:issues] )
+	#--> [ "BCEAO-002: Audit reports to non-board position" ]
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 > run: kept
@@ -68,21 +70,23 @@ oOrg.ImportStzOrg(cChart)
 The regulator's rule reads the chart and refuses it! Audit reports to the chief executive, and the verdict says so in its own words, `BCEAO-002: Audit reports to non-board position`, with a rule code an auditor can look up. A chart is judged by more than one court at a time, each finding carries its own code, and the compliance report says compliant or not. What does a second court say, the segregation of duties, which holds that operations must not report to treasury? I add treasury and operations, operations under treasury, and run both courts:
 
 ```haro
-oOrg.AddManagementPositionXT("treasury", "Treasury")
-oOrg.SetPositionDepartment("treasury", "treasury")
-oOrg.AddManagementPositionXT("ops", "Operations")
-oOrg.SetPositionDepartment("ops", "operations")
-oOrg.ReportsTo("treasury", "ceo")
-oOrg.ReportsTo("ops", "treasury")
-aV = oOrg.ValidateXT([ :BCEAO, :SOD ])
-? aV[:validatorsFailed]
-#--> 2
-? aV[:results][1][:issues][1]
-#--> BCEAO-002: Audit reports to non-board position
-? aV[:results][2][:issues][1]
-#--> SOD-001: Operations reports through Treasury
-? oOrg.ComplianceReport()[:overallStatus]
-#--> non-compliant
+oOrg {
+	AddManagementPositionXT("treasury", "Treasury")
+	SetPositionDepartment("treasury", "treasury")
+	AddManagementPositionXT("ops", "Operations")
+	SetPositionDepartment("ops", "operations")
+	ReportsTo("treasury", "ceo")
+	ReportsTo("ops", "treasury")
+	aV = ValidateXT([ :BCEAO, :SOD ])
+	? aV[:validatorsFailed]
+	#--> 2
+	? aV[:results][1][:issues][1]
+	#--> BCEAO-002: Audit reports to non-board position
+	? aV[:results][2][:issues][1]
+	#--> SOD-001: Operations reports through Treasury
+	? ComplianceReport()[:overallStatus]
+	#--> non-compliant
+}
 ```
 
 > run: kept
@@ -114,10 +118,12 @@ A bank's own rule is data too. Take the rule that internal audit reports to the 
 
 ```haro
 oRule = new stzGraphRule("audit-reports-to-board")
-oRule.SetDomainQ("orgchart")
-oRule.WhenQ("department", "equals", "audit")
-oRule.ThenQ("reportsTo", "equals", "board")
-oRule.ThenViolationQ("internal audit must report to the board")
+oRule {
+	SetDomain("orgchart")
+	When("department", "equals", "audit")
+	ThenQ("reportsTo", "equals", "board")
+	ThenViolation("internal audit must report to the board")
+}
 oBasel = new stzBaselIIIRuleBase()
 oBasel.AddRule(oRule)
 oRep = new stzRuleReport("bank")
@@ -135,18 +141,22 @@ The report says `UNSOUND` and names the rule and the place: `ERROR audit-reports
 Then the verdict follows the chart. Two edits to two reporting lines, audit now to the board and operations to the chief executive. What do the courts that said no say now? Run it:
 
 ```haro
-oOrg.ReportsTo("audit", "board")
-oOrg.ReportsTo("ops", "ceo")
-? oOrg.IsValidXT([ :BCEAO, :SOD ])
-#--> 1
-? oOrg.ComplianceReport()[:overallStatus]
-#--> compliant
+oOrg {
+	ReportsTo("audit", "board")
+	ReportsTo("ops", "ceo")
+	? IsValidXT([ :BCEAO, :SOD ])
+	#--> 1
+	? ComplianceReport()[:overallStatus]
+	#--> compliant
+}
 oRep = new stzRuleReport("bank")
-oRep.Ingest(oOrg.CheckCompliance(oBasel))
-oRep.Report()
-#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
-? oRep.IsSound()
-#--> 1
+oRep {
+	Ingest(oOrg.CheckCompliance(oBasel))
+	Report()
+	#--> Rule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND
+	? IsSound()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -155,14 +165,16 @@ They say `compliant`, and the report says `SOUND`. That is the move the narratio
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
-oOrg2.ImportStzOrg( substr(cChart, "department: executive", "department:") )
-? oOrg2.IsValidXT(:BCEAO)
-#--> 1
-? oOrg2.ValidateXT(:Banking)[:status]
-#--> pass
-oOrg2.SetPositionDepartment("ceo", "executive")
-? oOrg2.IsValidXT(:BCEAO)
-#--> 0
+oOrg2 {
+	ImportStzOrg( substr(cChart, "department: executive", "department:") )
+	? IsValidXT(:BCEAO)
+	#--> 1
+	? ValidateXT(:Banking)[:status]
+	#--> pass
+	SetPositionDepartment("ceo", "executive")
+	? IsValidXT(:BCEAO)
+	#--> 0
+}
 ```
 
 > run: kept

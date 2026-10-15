@@ -88,11 +88,14 @@ Gouverner a aussi un côté qui fait face à la personne. Le système demande, e
 
 ```haro
 oKB = new stzKnowledgeGraph("restaurant")
-oKB.Know("margherita", "dish").Know("tiramisu", "dish")
-oKB.AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
-aQ = oKB.AskInXT("setup")
-? aQ[:why]
-#--> every dish needs 'contains'
+oKB {
+	Know("margherita", "dish")
+	Know("tiramisu", "dish")
+	AddConversationQ("setup").SetGoal(StzGoalQ().RequireEach("dish", "contains"))
+	aQ = AskInXT("setup")
+	? aQ[:why]
+	#--> every dish needs 'contains'
+}
 try
 	oKB.ConcludeIn("setup", "world")
 catch

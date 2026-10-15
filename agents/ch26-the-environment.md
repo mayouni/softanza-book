@@ -4,7 +4,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stands: at this commit, an IDE of this family is absent, and the pieces beneath it run. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.
 
@@ -50,12 +50,14 @@ cShell = 'DEFINE PANEL shell ( SIZE [640, 360], DIRECTION column, FONT "app", SA
 	'DEFINE BOX status ( HEIGHT 24, ROLE status, SATISFIES understand, CHILDREN [state] ) RATIONALE "The truth of the build."' + nl +
 	'DEFINE TEXT state ( CONTENT "clean", SATISFIES understand ) RATIONALE "The court verdict."'
 oShell = new stzUiDocument(cShell)
-? oShell.IsClean()
-#--> 1
-? len(oShell.Declarations())
-#--> 12
-? @@( oShell.Orphans() )
-#--> [ "work" ]
+oShell {
+	? IsClean()
+	#--> 1
+	? len(Declarations())
+	#--> 12
+	? @@( Orphans() )
+	#--> [ "work" ]
+}
 ```
 
 > run: kept (touches the system)
@@ -209,14 +211,16 @@ And what a screen reader reads is emitted from the declaration. A region declare
 oShell.UseFont("C:/Windows/Fonts/segoeui.ttf")
 oP = oShell.ToPanel()
 oT = new stzAccessibilityTree(oShell, oP)
-? oT.NodeCount()
-#--> 12
-? oT.NodeOf("status")[:role]
-#--> status
-? oT.NodeOf("status")[:description]
-#--> The truth of the build.
-? @@( oT.ReadingOrder() )
-#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+oT {
+	? NodeCount()
+	#--> 12
+	? NodeOf("status")[:role]
+	#--> status
+	? NodeOf("status")[:description]
+	#--> The truth of the build.
+	? @@( ReadingOrder() )
+	#--> [ "window", "tablist", 'tab "Define"', 'tab "Build"', 'tab "Govern"', 'tab "Ship"', "group", 'label "the work"', "group", 'label "no proposal"', "status", 'label "clean"' ]
+}
 ```
 
 > run: kept
@@ -228,29 +232,30 @@ The tree answers `status`, and for its description `The truth of the build.`, th
 A rail is a view over what the world proposes. A pulse proposes and never relates. An act on the world clears a proposal, and the world's own status line counts from the same list the rail shows. What does the world propose, and what remains after one act? Run it:
 
 ```haro
-oApp = StzAppQ("fieldvisits")
-oApp.AddThingQ(:Client) { Has([ :name ]) }
-oApp.AddThing(:Visit)
-oApp.AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
-oApp.AddInstance("amadou", :Client)
-oApp.AddInstance("binta", :Client)
-oApp.Live()
-#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for amadou
-#--> propose visit for binta
-? oApp.Pulse()
-#--> 0
-? len(oApp.Proposals())
-#--> 2
-oApp.Relate("amadou", :visit, "visit-1")
-oApp.Pulse()
-for aP in oApp.Proposals()
-	? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
-next
-#--> propose visit for binta
+StzAppQ("fieldvisits") {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddThing(:Visit)
+	AddReactionQ(:Client).Unseen(90, :Days) { Propose(:Visit) }
+	AddInstance("amadou", :Client)
+	AddInstance("binta", :Client)
+	Live()
+	#--> [fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for amadou
+	#--> propose visit for binta
+	? Pulse()
+	#--> 0
+	? len(Proposals())
+	#--> 2
+	Relate("amadou", :visit, "visit-1")
+	Pulse()
+	for aP in Proposals()
+		? aP[1] + " " + aP[2] + " " + aP[3] + " " + aP[4]
+	next
+	#--> propose visit for binta
+}
 ```
 
 > run: kept
@@ -261,20 +266,22 @@ And a screen is an intent. One place where the world speaks in verbs is its scre
 
 ```haro
 oW = StzAppQ("fieldvisits")
-oW.AddThingQ(:Client) { Has([ :name ]) }
-oW.AddScreenQ(:Home)  { ToDiscover(:Client) }
-oW.AddScreenQ(:File)  { ToUnderstand(:Client) }
-oW.AddScreenQ(:Pick)  { ToSelect(:Client) }
-oW.AddScreenQ(:Edit)  { ToAct(:Client) }
-oW.Explain()
-#--> WORLD fieldvisits   lives in: memory (not persisted)
-#      BEING
-#        client (name)
-#      MET FROM WITHOUT
-#        screen home: discover client
-#        screen file: understand client
-#        screen pick: select client
-#        screen edit: act client
+oW {
+	AddThingQ(:Client) { Has([ :name ]) }
+	AddScreenQ(:Home)  { ToDiscover(:Client) }
+	AddScreenQ(:File)  { ToUnderstand(:Client) }
+	AddScreenQ(:Pick)  { ToSelect(:Client) }
+	AddScreenQ(:Edit)  { ToAct(:Client) }
+	Explain()
+	#--> WORLD fieldvisits   lives in: memory (not persisted)
+	#      BEING
+	#        client (name)
+	#      MET FROM WITHOUT
+	#        screen home: discover client
+	#        screen file: understand client
+	#        screen pick: select client
+	#        screen edit: act client
+}
 try
 	oW.AddScreenQ(:Side) { ToCompare(:Client) }
 catch
@@ -348,9 +355,11 @@ oPlan = new stzDelivery("greenhouse")
 oPlan.AddFirmware(:node, :ESP32)
 oPlan.NeedsIn(:node, [ :GPIO ])
 oEmu = new stzEmulator(oPlan)
-oEmu.CompileEngineQ(FALSE)
-oEmu.SetOutDirQ("_emu")
-oEmu.Build()
+oEmu {
+	CompileEngineQ(FALSE)
+	SetOutDirQ("_emu")
+	Build()
+}
 cH = read("_emu/index.html")
 ? StzContains(cH, "needs a look")
 #--> 1

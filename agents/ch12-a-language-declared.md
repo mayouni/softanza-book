@@ -4,7 +4,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-14 22:25 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
@@ -36,24 +36,26 @@ oO = StzOutputSchemaQ([
 	[ :field = "quantity", :type = :number, :must = [ [ ">=", 1 ], [ "<=", 12 ] ] ],
 	[ :field = "note",     :type = :string, :optional = 1 ]
 ])
-? oO.Describe()
-#--> schema 'output' -- 3 field(s)
-#      dish : oneof (margherita | tiramisu) [required]
-#      quantity : number [required], must be at least '1', must be at most '12'
-#      note : string [optional]
-? oO.PromptClause()
-#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
-#
-#    dish: <one of: margherita | tiramisu>
-#    quantity: <number>
-#    note: <text>
-aV = oO.Verify([ :dish = "pizza", :quantity = 40 ])
-? aV[:ok]
-#--> 0
-? aV[:findings][1][:message]
-#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
-? aV[:findings][2][:message]
-#--> field 'quantity' must be at most '12', and the model answered '40'.
+oO {
+	? Describe()
+	#--> schema 'output' -- 3 field(s)
+	#      dish : oneof (margherita | tiramisu) [required]
+	#      quantity : number [required], must be at least '1', must be at most '12'
+	#      note : string [optional]
+	? PromptClause()
+	#--> Answer with ONLY this structure, one field per line, nothing before it and nothing after it:
+	#
+	#    dish: <one of: margherita | tiramisu>
+	#    quantity: <number>
+	#    note: <text>
+	aV = Verify([ :dish = "pizza", :quantity = 40 ])
+	? aV[:ok]
+	#--> 0
+	? aV[:findings][1][:message]
+	#--> field 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.
+	? aV[:findings][2][:message]
+	#--> field 'quantity' must be at most '12', and the model answered '40'.
+}
 ```
 
 > run: kept
@@ -125,20 +127,21 @@ What the machine will not hold, it refuses by name. A closed language refuses wh
 #--> GBNF-M4
 ? StzGrammarRefusal(cG) = ""
 #--> 1
-oNest = StzOutputSchemaQ([
+StzOutputSchemaQ([
 	[ :field = "title",  :type = :string ],
 	[ :field = "author", :type = :structure, :fields = [ [ :field = "name", :type = :string ] ] ]
-])
-? oNest.IsExpressibleAsGrammar()
-#--> 0
-try
-	oNest.ToGBNF()
-catch
-	? len(StzFind("GBNF-F5", cCatchError)) > 0
-done
-#--> 1
-? oNest.ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
-#--> 1
+]) {
+	? IsExpressibleAsGrammar()
+	#--> 0
+	try
+		ToGBNF()
+	catch
+		? len(StzFind("GBNF-F5", cCatchError)) > 0
+	done
+	#--> 1
+	? ParseOutput('{ "title":"T", "author":{"name":"Ada"} }')[:ok]
+	#--> 1
+}
 ```
 
 > run: kept
@@ -163,13 +166,14 @@ The typo was refused at once, and the message lists the keys that are allowed!
 And a host function is not a word of the closed language of conditions. There are two ways to say a condition, the closed language and the door of a function. A square root is a word of the engine's expression language, and a sine is not. What does the textual form answer to the sine, and what does the function form, which runs host code?
 
 ```haro
-o = new stzList([ 4, 7, 10, 3, 8 ])
-? @@( o.FindW('{ sqrt(@item) < 3 }') )
-#--> [ 1, 2, 4, 5 ]
-? @@( o.FindW('{ sin(@item) < 2 }') )
-#--> [ ]
-? @@( o.FindWF( func x { return sin(x) < 2 } ) )
-#--> [ 1, 2, 3, 4, 5 ]
+StzListQ([ 4, 7, 10, 3, 8 ]) {
+	? @@( FindW('{ sqrt(@item) < 3 }') )
+	#--> [ 1, 2, 4, 5 ]
+	? @@( FindW('{ sin(@item) < 2 }') )
+	#--> [ ]
+	? @@( FindWF( func x { return sin(x) < 2 } ) )
+	#--> [ 1, 2, 3, 4, 5 ]
+}
 ```
 
 > run: kept

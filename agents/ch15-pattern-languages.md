@@ -4,7 +4,7 @@ Source: Chapter 15. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-14 22:26 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -50,15 +50,16 @@ It refuses, and says why: `The pattern name you provided does not exist in stzRe
 A pattern can also answer the half-written value, which is what a form wants as the person types:
 
 ```haro
-o1 = new stzRegex("^\d{3}-\d{2}-\d{4}$")
-? o1.MatchAsYouType("123-45")
-#--> 1
-? o1.MatchAsYouType("abc")
-#--> 0
-? o1.IsPartialMatch("123-45")
-#--> 1
-? o1.IsPartialMatch("123-45-6789")
-#--> 0
+StzRegexQ("^\d{3}-\d{2}-\d{4}$") {
+	? MatchAsYouType("123-45")
+	#--> 1
+	? MatchAsYouType("abc")
+	#--> 0
+	? IsPartialMatch("123-45")
+	#--> 1
+	? IsPartialMatch("123-45-6789")
+	#--> 0
+}
 ```
 
 > run: kept
@@ -164,12 +165,14 @@ Time, in the part of it that runs, written here with the class rather than its s
 
 ```haro
 oTm = new stzTimex("{@Duration(1h..2h:15min)}")
-? oTm.Match(new stzDuration("1 hour 30 minutes"))
-#--> 1
-? oTm.Match(new stzDuration("1 hour 20 minutes"))
-#--> 0
-? oTm.Match(new stzDuration("3 hours"))
-#--> 0
+oTm {
+	? Match(new stzDuration("1 hour 30 minutes"))
+	#--> 1
+	? Match(new stzDuration("1 hour 20 minutes"))
+	#--> 0
+	? Match(new stzDuration("3 hours"))
+	#--> 0
+}
 ```
 
 > run: kept
@@ -180,11 +183,13 @@ A graph: a pattern reads like the path it looks for. The labels match without re
 
 ```haro
 g = new stzGraph("Order")
-g.AddNodeXT(:a, "Placed")
-g.AddNodeXT(:b, "Cooking")
-g.AddNodeXT(:c, "Served")
-g.AddEdgeXT(:a, :b, "starts")
-g.AddEdgeXT(:b, :c, "finishes")
+g {
+	AddNodeXT(:a, "Placed")
+	AddNodeXT(:b, "Cooking")
+	AddNodeXT(:c, "Served")
+	AddEdgeXT(:a, :b, "starts")
+	AddEdgeXT(:b, :c, "finishes")
+}
 ? (new stzGraphex("{@Node(placed) -> @Edge(starts) -> @Node(cooking)}", g)).Match(g)
 #--> 1
 ? (new stzGraphex("{@Node(served) -> @Node(placed)}", g)).Match(g)
@@ -262,9 +267,11 @@ What is built in part: lists, matrices, time and graphs, in that order.
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
-oTl.AddInstant("Meeting", "2025-10-22 09:00:00")
-oTl.AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
-oTl.AddInstant("Lunch", "2025-10-22 12:00:00")
+oTl {
+	AddInstant("Meeting", "2025-10-22 09:00:00")
+	AddSpan("Break", "2025-10-22 10:00:00", "2025-10-22 10:15:00")
+	AddInstant("Lunch", "2025-10-22 12:00:00")
+}
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
 #--> 0

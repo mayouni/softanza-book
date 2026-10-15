@@ -4,7 +4,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -50,10 +50,12 @@ aAr = QuestionAfter("كسكس", "بريك")
 ? StzSmsSegments(ToText(aAr))[:segments]
 #--> 2
 oBill = new stzSmsSandbox()
-oBill.Send("+22790112233", ToText(aEn))
-oBill.Send("+22790112233", ToText(aAr))
-? oBill.TotalSegments()
-#--> 3
+oBill {
+	Send("+22790112233", ToText(aEn))
+	Send("+22790112233", ToText(aAr))
+	? TotalSegments()
+	#--> 3
+}
 
 func ToText(aQ)
 	cOut = "Which " + aQ[:relation] + " for " + aQ[:subject] + "? (" + aQ[:why] + ")"
@@ -72,12 +74,16 @@ func ReadReply(cText)
 
 func QuestionAfter(cA, cB)
 	oW = new stzKnowledgeGraph("stall")
-	oW.Know("order1", "order").Know("order2", "order").Know("order3", "order")
-	oW.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
-	oW.AskIn("c")
-	oW.ReplyIn("c", cA)
-	oW.AskIn("c")
-	oW.ReplyIn("c", cB)
+	oW {
+		Know("order1", "order")
+		Know("order2", "order")
+		Know("order3", "order")
+		AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
+		AskIn("c")
+		ReplyIn("c", cA)
+		AskIn("c")
+		ReplyIn("c", cB)
+	}
 	return oW.AskInXT("c")
 ```
 
@@ -89,7 +95,9 @@ Now the whole conversation, rehearsed over the SMS sandbox before any account ex
 
 ```haro
 oKB = new stzKnowledgeGraph("stall")
-oKB.Know("order1", "order").Know("order2", "order").Know("order3", "order")
+oKB.Know("order1", "order")
+oKB.Know("order2", "order")
+oKB.Know("order3", "order")
 oKB.AddConversationQ("c").SetGoal(StzGoalQ().RequireEach("order", "dish"))
 oSms = new stzSmsSandbox()
 for cIn in [ "couscous", "brik", "7", "2" ]
@@ -131,17 +139,19 @@ A dish named 2! In the block before, my `ReadReply` turned the text "2" into the
 
 ```haro
 oPh = new stzSmsSandbox()
-? oPh.Send("0612345678", "ready")[:status]
-#--> rejected
-oPh.FailNextQ()
-? oPh.Send("+22790112233", "ready")[:status]
-#--> refused
-? oPh.NumberOfMessages()
-#--> 0
-? oPh.Send("+22790112233", "ready")[:status]
-#--> sent
-? oPh.NumberOfMessages()
-#--> 1
+oPh {
+	? Send("0612345678", "ready")[:status]
+	#--> rejected
+	FailNextQ()
+	? Send("+22790112233", "ready")[:status]
+	#--> refused
+	? NumberOfMessages()
+	#--> 0
+	? Send("+22790112233", "ready")[:status]
+	#--> sent
+	? NumberOfMessages()
+	#--> 1
+}
 ```
 
 > run: kept
@@ -152,15 +162,17 @@ oPh.FailNextQ()
 
 ```haro
 oSig = new stzRequestSigner("inbound")
-oSig.AddKey("provider", "a-shared-secret")
-cBody = '{"from":"+22790112233","text":"2"}'
-cSig = oSig.SignBody("provider", cBody)
-? oSig.VerifyWebhook(cBody, cSig, 1000, 5000)
-#--> provider
-? "[" + oSig.VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
-#--> []
-? oSig.Why()
-#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+oSig {
+	AddKey("provider", "a-shared-secret")
+	cBody = '{"from":"+22790112233","text":"2"}'
+	cSig = SignBody("provider", cBody)
+	? VerifyWebhook(cBody, cSig, 1000, 5000)
+	#--> provider
+	? "[" + VerifyWebhook('{"from":"+22790112233","text":"1"}', cSig, 2000, 5000) + "]"
+	#--> []
+	? Why()
+	#--> signature mismatch (tampered body, or a secret this receiver does not hold)
+}
 ```
 
 > run: kept
@@ -187,15 +199,17 @@ oE = new stzEarcons()
 oV = StzVoiceQ()
 oV.UseLanguage("fr-FR")
 oL = new stzListener()
-oL.AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
-oL.HearSound( oV.ToSoundOf("disque plein") )
-? oL.MeaningHeard()
-#--> danger
-oL.HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
-? oL.WasNoMatch()
-#--> 1
-? oL.AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
-#--> 0
+oL {
+	AcceptMeanings([ [ "disque plein", :Danger ], [ "sauvegarde terminee", :Success ] ])
+	HearSound( oV.ToSoundOf("disque plein") )
+	? MeaningHeard()
+	#--> danger
+	HearSound( oV.ToSoundOf("je voudrais un cafe au lait") )
+	? WasNoMatch()
+	#--> 1
+	? AcceptMeanings([ [ "tout brule", :Catastrophe ] ])
+	#--> 0
+}
 ```
 
 > run: kept
@@ -206,18 +220,20 @@ The taught phrase gave `danger`, the phrase it was not taught gave no match (`1`
 
 ```haro
 oApp = new stzApp("stall")
-oApp.AddThingQ(:Dish) { Has([ :name, :price ]) }
-oApp.AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
-oApp.AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
-oApp.AddReaches([ :web, :whatsapp ])
-oApp.Explain()
-#--> WORLD stall   lives in: memory (not persisted)
-#      BEING
-#        dish (name, price)
-#      MET FROM WITHOUT
-#        screen menu: discover dish shows name, price
-#        screen basket: select dish
-#        reaches web, whatsapp
+oApp {
+	AddThingQ(:Dish) { Has([ :name, :price ]) }
+	AddScreenQ(:Menu) { ToDiscover(:Dish)  Shows([ :name, :price ]) }
+	AddScreenQ(:Basket) { ToSelect(:Dish)  Acts(:Confirm, :Order) }
+	AddReaches([ :web, :whatsapp ])
+	Explain()
+	#--> WORLD stall   lives in: memory (not persisted)
+	#      BEING
+	#        dish (name, price)
+	#      MET FROM WITHOUT
+	#        screen menu: discover dish shows name, price
+	#        screen basket: select dish
+	#        reaches web, whatsapp
+}
 ```
 
 > run: kept
@@ -243,13 +259,15 @@ done
 
 ```haro
 oSay = StzOutputSchemaQ([ [ :field = "reply", :type = :oneof, :choices = [ "Your order is received.", "Your order is ready.", "We are closed tonight." ] ] ])
-? oSay.ParseOutput('{"reply": "Your order is ready."}')[:ok]
-#--> 1
-aNo = oSay.ParseOutput('{"reply": "Your order is free, tonight only."}')
-? aNo[:ok]
-#--> 0
-? oSay.CiteFindings(aNo[:findings])
-#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+oSay {
+	? ParseOutput('{"reply": "Your order is ready."}')[:ok]
+	#--> 1
+	aNo = ParseOutput('{"reply": "Your order is free, tonight only."}')
+	? aNo[:ok]
+	#--> 0
+	? CiteFindings(aNo[:findings])
+	#--> [oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.
+}
 ```
 
 > run: kept
@@ -314,11 +332,12 @@ My study of the record has two errors that this chapter's runs correct. The firs
 
 ```haro
 oDb = new stzDatabase(":memory:")
-oCom = StzPlatformQ("neighbourhood")
-oCom.OpenCommonsOn(oDb)
-oCom.PostMessage("customer", "kitchen", "one brik, no egg")
-? @@(oCom.Inbox("kitchen"))
-#--> [ [ "customer", "one brik, no egg" ] ]
+StzPlatformQ("neighbourhood") {
+	OpenCommonsOn(oDb)
+	PostMessage("customer", "kitchen", "one brik, no egg")
+	? @@(Inbox("kitchen"))
+	#--> [ [ "customer", "one brik, no egg" ] ]
+}
 ```
 
 > run: kept

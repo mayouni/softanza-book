@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-14 22:24 UTC+01:00",
+  "date": "2026-10-15 12:58 UTC+01:00",
   "library": {
    "commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
    "short": "93d7a39bd",
@@ -42,8 +42,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 5.0
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "en/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
@@ -75,8 +75,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "en/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -130,7 +130,7 @@
      "out": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited)."
     },
     {
-     "hash": "c9cdc44a4340",
+     "hash": "05b426463878",
      "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
      "effects": [],
      "unprinted": 0,
@@ -138,7 +138,7 @@
      "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
     },
     {
-     "hash": "e2570e740079",
+     "hash": "85ae956f1758",
      "promise": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]",
      "effects": [],
      "unprinted": 0,
@@ -171,8 +171,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "en/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -202,7 +202,7 @@
      "out": "1\nhello"
     },
     {
-     "hash": "6607465b51bc",
+     "hash": "845aac9fbeba",
      "promise": "every dish needs 'contains'\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
      "effects": [],
      "unprinted": 0,
@@ -235,8 +235,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "en/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -282,7 +282,7 @@
      "out": "WORLD FieldVisits   lives in: memory (not persisted)\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n  RELATIONS\n    client owns account\n    account belongsto client\n[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)"
     },
     {
-     "hash": "b9f577ba066d",
+     "hash": "89a2c66623db",
      "promise": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'.",
      "effects": [],
      "unprinted": 0,
@@ -290,7 +290,7 @@
      "out": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'."
     },
     {
-     "hash": "9fa1b7d90b4b",
+     "hash": "64a62f3959c3",
      "promise": "[ \"pivottable\", \"constraintsolver\" ]\n[ \"aggregation\", \"solver\" ]",
      "effects": [],
      "unprinted": 0,
@@ -316,8 +316,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -373,6 +373,22 @@
      "out": "[ 12500, 13000, 11500, 23, 46 ]"
     },
     {
+     "hash": "9675d2b47696",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
+     "hash": "4023d3dec7a4",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
      "hash": "5e1deb80314f",
      "promise": "FALSE\nq-returns-object",
      "effects": [],
@@ -388,17 +404,17 @@
      "out": ""
     }
    ],
-   "kept": 7,
-   "runnable": 7,
+   "kept": 9,
+   "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "en/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
    "blocks": [
     {
-     "hash": "4caddf90b519",
+     "hash": "14ff5bc3e91c",
      "promise": "TRUE\n2\n9\nYou and Me",
      "effects": [],
      "unprinted": 0,
@@ -406,7 +422,7 @@
      "out": "1\n2\n9\nYou and Me"
     },
     {
-     "hash": "ff3abee62427",
+     "hash": "dcd902aa7dec",
      "promise": "[ 1, 3, 5, 7, 9 ]\n[ 2, 4, 6, 8, 10 ]\n[ 1, 3 ]\n3\n[ 5, 7, 9 ]",
      "effects": [],
      "unprinted": 0,
@@ -422,7 +438,7 @@
      "out": "[ 1, 4, 7, 10 ]\n[ 10 ]\nCan't walk backward! Already at the beginning of walkable positions."
     },
     {
-     "hash": "ad73537d82b9",
+     "hash": "03394c4e607a",
      "promise": "FALSE\nTRUE\n[ 2 ]",
      "effects": [],
      "unprinted": 0,
@@ -430,7 +446,7 @@
      "out": "0\n1\n[ 2 ]"
     },
     {
-     "hash": "c6a5f992cfe4",
+     "hash": "583c0d4c642e",
      "promise": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]",
      "effects": [],
      "unprinted": 0,
@@ -438,7 +454,7 @@
      "out": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]"
     },
     {
-     "hash": "c2facc728da2",
+     "hash": "f1d15a9b89bb",
      "promise": "[ 2, 4, 6 ]\n[ 8, 12, 9 ]\nTRUE\n[ 2, 4, 6 ]",
      "effects": [],
      "unprinted": 0,
@@ -464,8 +480,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "en/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -495,7 +511,7 @@
      "out": "1\n\"1 : 3\"\n[ \"A\", \"B\", \"C\" ]"
     },
     {
-     "hash": "ac8d2403ee34",
+     "hash": "36c3d5b91f1b",
      "promise": "[ 1, 2, 7, 8, 9, 16, 17, 18 ]\nSOFTANZA",
      "effects": [],
      "unprinted": 0,
@@ -560,8 +576,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.7
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -599,7 +615,7 @@
      "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
     },
     {
-     "hash": "7ebd7a501879",
+     "hash": "050d906ab80f",
      "promise": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza",
      "effects": [],
      "unprinted": 0,
@@ -615,7 +631,7 @@
      "out": "1\n1\n1"
     },
     {
-     "hash": "1dee0cb073a9",
+     "hash": "89d0ffc33cd1",
      "promise": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]",
      "effects": [],
      "unprinted": 0,
@@ -639,7 +655,7 @@
      "out": "Haro"
     },
     {
-     "hash": "04ed96a37b52",
+     "hash": "546ffe981e0b",
      "promise": "FALSE\nFALSE\nTRUE",
      "effects": [],
      "unprinted": 0,
@@ -655,7 +671,7 @@
      "out": "1\n0"
     },
     {
-     "hash": "0342b687c59c",
+     "hash": "2c5b6c13fcef",
      "promise": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.",
      "effects": [
       "the system"
@@ -683,8 +699,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 9.0
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 8.3
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -722,7 +738,7 @@
      "out": "[ 108, 120, 144 ]"
     },
     {
-     "hash": "990647cd5cbb",
+     "hash": "f0daee17ac0c",
      "promise": "2\n2",
      "effects": [],
      "unprinted": 0,
@@ -738,7 +754,7 @@
      "out": "1"
     },
     {
-     "hash": "e4a814343a88",
+     "hash": "1b271027865b",
      "promise": "1\nPHASE1\nPHASE2\nFALSE\nTRUE\nPoint 'EVENT2' falls within a blocked span or blocked point",
      "effects": [],
      "unprinted": 0,
@@ -746,7 +762,7 @@
      "out": "1\nPHASE1\nPHASE2\n0\n1\nPoint 'EVENT2' falls within a blocked span or blocked point"
     },
     {
-     "hash": "20d3f2d93a10",
+     "hash": "aa9d885ae2a4",
      "promise": "[ 4, 3 ]\n[ 5, 3 ]",
      "effects": [],
      "unprinted": 0,
@@ -764,14 +780,14 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.9
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.9
   },
   "en/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
    "blocks": [
     {
-     "hash": "620c74abe4da",
+     "hash": "b3b531842567",
      "promise": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam",
      "effects": [],
      "unprinted": 0,
@@ -779,7 +795,7 @@
      "out": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam"
     },
     {
-     "hash": "618375625499",
+     "hash": "48dca991e9c1",
      "promise": "1\n0.22\n1",
      "effects": [],
      "unprinted": 0,
@@ -787,7 +803,7 @@
      "out": "1\n0.22\n1"
     },
     {
-     "hash": "b51ce801333a",
+     "hash": "3a2409e6f7df",
      "promise": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1",
      "effects": [],
      "unprinted": 0,
@@ -795,7 +811,7 @@
      "out": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1"
     },
     {
-     "hash": "c45b3cc53d49",
+     "hash": "d70eb78acfeb",
      "promise": "1\n[ \"margin\" ]\n2\n0",
      "effects": [],
      "unprinted": 0,
@@ -803,7 +819,7 @@
      "out": "1\n[ \"margin\" ]\n2\n0"
     },
     {
-     "hash": "964708281cff",
+     "hash": "43c48d2dfc22",
      "promise": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]",
      "effects": [],
      "unprinted": 0,
@@ -811,7 +827,7 @@
      "out": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]"
     },
     {
-     "hash": "95ab468c871a",
+     "hash": "f9f6e03deebe",
      "promise": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30",
      "effects": [],
      "unprinted": 0,
@@ -819,7 +835,7 @@
      "out": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30"
     },
     {
-     "hash": "8636c9c76b51",
+     "hash": "c0ef4a0a7081",
      "promise": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted",
      "effects": [],
      "unprinted": 0,
@@ -827,7 +843,7 @@
      "out": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted"
     },
     {
-     "hash": "315698812000",
+     "hash": "b31b3ce679cf",
      "promise": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1",
      "effects": [],
      "unprinted": 0,
@@ -835,7 +851,7 @@
      "out": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1"
     },
     {
-     "hash": "7f03692993b3",
+     "hash": "6d98655fa73e",
      "promise": "0.28\n0.22\n2\n0.20\n0\n0.21",
      "effects": [],
      "unprinted": 0,
@@ -853,8 +869,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.2
   },
   "en/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -916,7 +932,7 @@
      "out": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure)."
     },
     {
-     "hash": "b743b937925a",
+     "hash": "b4c3a19a77ac",
      "promise": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")",
      "effects": [],
      "unprinted": 0,
@@ -958,14 +974,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 16.1
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 14.6
   },
   "en/12-a-language-declared": {
    "id": "a-language-declared",
    "blocks": [
     {
-     "hash": "c731c5079d75",
+     "hash": "d7db49998c0f",
      "promise": "schema 'output' -- 3 field(s)\ndish : oneof (margherita | tiramisu) [required]\nquantity : number [required], must be at least '1', must be at most '12'\nnote : string [optional]\nAnswer with ONLY this structure, one field per line, nothing before it and nothing after it:\n\ndish: <one of: margherita | tiramisu>\nquantity: <number>\nnote: <text>\n0\nfield 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.\nfield 'quantity' must be at most '12', and the model answered '40'.",
      "effects": [],
      "unprinted": 0,
@@ -997,7 +1013,7 @@
      "out": "1\n1\n0"
     },
     {
-     "hash": "f532a65ddc4e",
+     "hash": "5e096652ff21",
      "promise": "GBNF-M7\nGBNF-M4\n1\n0\n1\n1",
      "effects": [],
      "unprinted": 0,
@@ -1013,7 +1029,7 @@
      "out": "stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description)."
     },
     {
-     "hash": "7deab060248b",
+     "hash": "68990c4d9b90",
      "promise": "[ 1, 2, 4, 5 ]\n[ ]\n[ 1, 2, 3, 4, 5 ]",
      "effects": [],
      "unprinted": 0,
@@ -1046,8 +1062,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.4
   },
   "en/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -1069,7 +1085,7 @@
      "out": "1\n0\nno: expected atmost 2, found 3"
     },
     {
-     "hash": "86f73517c9df",
+     "hash": "55c70ed9081b",
      "promise": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?",
      "effects": [],
      "unprinted": 0,
@@ -1077,7 +1093,7 @@
      "out": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\n\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?"
     },
     {
-     "hash": "04330a038598",
+     "hash": "b7823f1d9cb2",
      "promise": "HARO\nHELLO\nbrave",
      "effects": [],
      "unprinted": 0,
@@ -1093,7 +1109,7 @@
      "out": "[ \"A\", \"I\", \"E\" ]\n3\n1\nyes: 4 is the same as 4\n0\nno: 4 is not the same as 8\n[ 1, 0 ]\n0\n1"
     },
     {
-     "hash": "aa29e767fce5",
+     "hash": "81d03dbe113e",
      "promise": "[ 1, 1 ]\nTRUE\ncreate a string with haro -> ask: is lowercase -> ask: contains\nTRUE\nyes: \"haro\" is lowercase and is latin and containing \"r\"\n1\ncertainly",
      "effects": [],
      "unprinted": 0,
@@ -1206,8 +1222,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 15.5
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 17.4
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1229,7 +1245,7 @@
      "out": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'"
     },
     {
-     "hash": "374572229ae7",
+     "hash": "241dff750df2",
      "promise": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet.",
      "effects": [],
      "unprinted": 0,
@@ -1237,7 +1253,7 @@
      "out": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet."
     },
     {
-     "hash": "d9fb8c25a90a",
+     "hash": "f16d45cc97f3",
      "promise": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n0\nknowledge \"clinic\"\n\nfacts\nfatou | treated-by | dr-diallo\n\nprovenance\nfatou | treated-by | dr-diallo | source | text | registry\nfatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\nfatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\ntreated-by | unique",
      "effects": [
       "files"
@@ -1247,7 +1263,7 @@
      "out": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n\n0\nknowledge \"clinic\"\n\nfacts\n    fatou | treated-by | dr-diallo\n\nprovenance\n    fatou | treated-by | dr-diallo | source | text | registry\n    fatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\n    fatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\n    treated-by | unique"
     },
     {
-     "hash": "ef89e8481613",
+     "hash": "0d2aee3606e7",
      "promise": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0",
      "effects": [
       "files"
@@ -1281,7 +1297,7 @@
      "out": "1\n0"
     },
     {
-     "hash": "02e87d27524f",
+     "hash": "33fb78ce2ccb",
      "promise": "1\n0",
      "effects": [],
      "unprinted": 0,
@@ -1297,7 +1313,7 @@
      "out": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)."
     },
     {
-     "hash": "aec432a3d756",
+     "hash": "3e53271a952f",
      "promise": "[ \"couscous\" ]\n[ ]",
      "effects": [],
      "unprinted": 0,
@@ -1338,8 +1354,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.5
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1353,7 +1369,7 @@
      "out": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file."
     },
     {
-     "hash": "3418ef785835",
+     "hash": "b388eb8a5128",
      "promise": "1\n0\n1\n0",
      "effects": [],
      "unprinted": 0,
@@ -1401,7 +1417,7 @@
      "out": "1\n0\n1\n1"
     },
     {
-     "hash": "eeb9487a3c3b",
+     "hash": "c62b58594ab6",
      "promise": "1\n0\n0",
      "effects": [],
      "unprinted": 0,
@@ -1409,7 +1425,7 @@
      "out": "1\n0\n0"
     },
     {
-     "hash": "a034999fa53e",
+     "hash": "158295f38a99",
      "promise": "1\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -1425,7 +1441,7 @@
      "out": "2\nstring\nconjunction\n2"
     },
     {
-     "hash": "34f1776a0791",
+     "hash": "e7dea9068002",
      "promise": "0\n0\n\"Lunch)\"",
      "effects": [],
      "unprinted": 0,
@@ -1466,8 +1482,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.8
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1489,7 +1505,7 @@
      "out": "Language 'cobol' is not supported"
     },
     {
-     "hash": "256df3449cc3",
+     "hash": "48071b4f3b7e",
      "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "effects": [
       "the system"
@@ -1499,7 +1515,7 @@
      "out": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1"
     },
     {
-     "hash": "0e744afec921",
+     "hash": "38f2f3035478",
      "promise": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]",
      "effects": [
       "the system"
@@ -1509,7 +1525,7 @@
      "out": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]"
     },
     {
-     "hash": "48e980c00cf5",
+     "hash": "b73b0d773276",
      "promise": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]",
      "effects": [],
      "unprinted": 0,
@@ -1517,7 +1533,7 @@
      "out": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]"
     },
     {
-     "hash": "c0aeefd24e7d",
+     "hash": "201e0a1a13ea",
      "promise": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared",
      "effects": [],
      "unprinted": 0,
@@ -1525,7 +1541,7 @@
      "out": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared"
     },
     {
-     "hash": "d8e2cd7f0942",
+     "hash": "3a4c0ae86aa9",
      "promise": "1\nUpdate plan (1 of 1 operations to commit):\n* 1. spawn process: python analyse.py\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -1533,7 +1549,7 @@
      "out": "1\nUpdate plan (1 of 1 operations to commit):\n  * 1. spawn process: python analyse.py\n\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]"
     },
     {
-     "hash": "7393d862a580",
+     "hash": "4dfa94917e35",
      "promise": "0\n42",
      "effects": [
       "the system"
@@ -1553,7 +1569,7 @@
      "out": "xYz"
     },
     {
-     "hash": "96d3c3e67570",
+     "hash": "b6e679a2fd72",
      "promise": "1\n0",
      "effects": [
       "the system"
@@ -1582,14 +1598,14 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 4.2
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
    "blocks": [
     {
-     "hash": "5f4f2bbbbc61",
+     "hash": "f10657eac2a7",
      "promise": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations).",
      "effects": [],
      "unprinted": 0,
@@ -1597,7 +1613,7 @@
      "out": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations)."
     },
     {
-     "hash": "b360347d517d",
+     "hash": "65ca65e27425",
      "promise": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
      "effects": [],
      "unprinted": 0,
@@ -1605,7 +1621,7 @@
      "out": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question."
     },
     {
-     "hash": "adfd08cbf9a9",
+     "hash": "1080dbb5cc5c",
      "promise": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'",
      "effects": [],
      "unprinted": 0,
@@ -1613,7 +1629,7 @@
      "out": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'"
     },
     {
-     "hash": "e6b4a509f631",
+     "hash": "d3891fd3f4d9",
      "promise": "0\n3",
      "effects": [],
      "unprinted": 0,
@@ -1621,7 +1637,7 @@
      "out": "0\n3"
     },
     {
-     "hash": "940b7efd95f1",
+     "hash": "5f639fc9993f",
      "promise": "a greeting\n0",
      "effects": [],
      "unprinted": 0,
@@ -1656,14 +1672,14 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.8
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "en/18-the-five-registers": {
    "id": "the-five-registers",
    "blocks": [
     {
-     "hash": "4eca6e1e600d",
+     "hash": "4cc979d5d8bc",
      "promise": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]",
      "effects": [],
      "unprinted": 0,
@@ -1671,7 +1687,7 @@
      "out": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]"
     },
     {
-     "hash": "33c893b36796",
+     "hash": "be4dda8d2e0d",
      "promise": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing",
      "effects": [],
      "unprinted": 0,
@@ -1679,7 +1695,7 @@
      "out": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing"
     },
     {
-     "hash": "e361bfe19cb9",
+     "hash": "68c8e4f003b0",
      "promise": "what\nwhich\n[ \"cheese\" ]",
      "effects": [],
      "unprinted": 0,
@@ -1687,7 +1703,7 @@
      "out": "what\nwhich\n[ \"cheese\" ]"
     },
     {
-     "hash": "58121915fcd5",
+     "hash": "1a7b8e638b3d",
      "promise": "[ \"mascarpone\", \"espresso\" ]\nfulfilled",
      "effects": [],
      "unprinted": 0,
@@ -1695,7 +1711,7 @@
      "out": "[ \"mascarpone\", \"espresso\" ]\nfulfilled"
     },
     {
-     "hash": "44737c524fd0",
+     "hash": "1f4f7f648d66",
      "promise": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n-> admitted: 'margherita' contains 'tomato-sauce'\n-> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'",
      "effects": [],
      "unprinted": 0,
@@ -1703,7 +1719,7 @@
      "out": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n  -> admitted: 'margherita' contains 'tomato-sauce'\n  -> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'"
     },
     {
-     "hash": "bba558135e1a",
+     "hash": "52f9e252d967",
      "promise": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1",
      "effects": [],
      "unprinted": 0,
@@ -1711,7 +1727,7 @@
      "out": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1"
     },
     {
-     "hash": "4217e97691d9",
+     "hash": "30d185d8a638",
      "promise": "[ \"=12*3\" ]\n=12*3",
      "effects": [],
      "unprinted": 0,
@@ -1719,7 +1735,7 @@
      "out": "[ \"=12*3\" ]\n=12*3"
     },
     {
-     "hash": "83aa5929b94e",
+     "hash": "7537768492f6",
      "promise": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().",
      "effects": [],
      "unprinted": 0,
@@ -1727,7 +1743,7 @@
      "out": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents()."
     },
     {
-     "hash": "dcfa876f8f59",
+     "hash": "e59d757f164a",
      "promise": "1\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -1735,7 +1751,7 @@
      "out": "1\n0\n1"
     },
     {
-     "hash": "6fb51b072487",
+     "hash": "258e2ea600c6",
      "promise": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0",
      "effects": [],
      "unprinted": 0,
@@ -1743,7 +1759,7 @@
      "out": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0"
     },
     {
-     "hash": "126774f01e74",
+     "hash": "30dc24d4abb9",
      "promise": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human",
      "effects": [],
      "unprinted": 0,
@@ -1751,7 +1767,7 @@
      "out": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human"
     },
     {
-     "hash": "34118cc05e0f",
+     "hash": "1ab077fc5c52",
      "promise": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled",
      "effects": [],
      "unprinted": 0,
@@ -1759,7 +1775,7 @@
      "out": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled"
     },
     {
-     "hash": "cd4cef4627ae",
+     "hash": "9ef939cabfcc",
      "promise": "JIBINI\nadmitted: 'pizza' contains 'jibini'",
      "effects": [],
      "unprinted": 0,
@@ -1767,7 +1783,7 @@
      "out": "JIBINI\nadmitted: 'pizza' contains 'jibini'"
     },
     {
-     "hash": "f8bd87cc7249",
+     "hash": "530b32377a71",
      "promise": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)",
      "effects": [],
      "unprinted": 0,
@@ -1775,7 +1791,7 @@
      "out": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)"
     },
     {
-     "hash": "485a01a30065",
+     "hash": "f1c371eac2d1",
      "promise": "plain\nneural\n0",
      "effects": [],
      "unprinted": 0,
@@ -1783,7 +1799,7 @@
      "out": "plain\nneural\n0"
     },
     {
-     "hash": "8c2def6273d3",
+     "hash": "3513689da9c5",
      "promise": "",
      "effects": [],
      "verdict": "exercise",
@@ -1800,14 +1816,14 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.6
   },
   "en/19-the-domain-language-model": {
    "id": "the-domain-language-model",
    "blocks": [
     {
-     "hash": "928138789a8c",
+     "hash": "7ce1933cd0de",
      "promise": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]",
      "effects": [],
      "unprinted": 0,
@@ -1815,7 +1831,7 @@
      "out": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]"
     },
     {
-     "hash": "bf622f1bf7de",
+     "hash": "6b1e6dcf9de4",
      "promise": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]",
      "effects": [],
      "unprinted": 0,
@@ -1831,7 +1847,7 @@
      "out": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'."
     },
     {
-     "hash": "f3c264dc8a59",
+     "hash": "77df716d5997",
      "promise": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\nmargherita | dish\ntiramisu | dish\nchianti | wine\nrelations\ncontains\npairs-with\nfacts\nmargherita | contains | tomato-sauce\nmargherita | contains | mozzarella\nmargherita | pairs-with | chianti\nlaws\ngoldens\nwhat is margherita | Margherita is a dish.\nwhat is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0",
      "effects": [
       "files"
@@ -1841,7 +1857,7 @@
      "out": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\n    margherita | dish\n    tiramisu | dish\n    chianti | wine\nrelations\n    contains\n    pairs-with\nfacts\n    margherita | contains | tomato-sauce\n    margherita | contains | mozzarella\n    margherita | pairs-with | chianti\nlaws\ngoldens\n    what is margherita | Margherita is a dish.\n    what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\n\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0"
     },
     {
-     "hash": "7df6db528cb8",
+     "hash": "e90baddfe592",
      "promise": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2",
      "effects": [
       "files"
@@ -1859,7 +1875,7 @@
      "out": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0"
     },
     {
-     "hash": "f486682e559c",
+     "hash": "59c92767b10e",
      "promise": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'",
      "effects": [],
      "unprinted": 0,
@@ -1870,14 +1886,14 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.4
   },
   "en/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
    "blocks": [
     {
-     "hash": "a751b6c20180",
+     "hash": "bab93485c326",
      "promise": "compensable\n0\nAGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.\n0\nAGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.\n1",
      "effects": [],
      "unprinted": 0,
@@ -1893,7 +1909,7 @@
      "out": "trusted: yes yes yes\nexternal: yes yes no\nsandboxed: yes no no\na 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)"
     },
     {
-     "hash": "d3f9eeb493ec",
+     "hash": "4c4baedc360b",
      "promise": "1\n1\n0\n1\nespresso,2.40\nflat-white,3.10",
      "effects": [],
      "unprinted": 0,
@@ -1977,8 +1993,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "en/21-the-court": {
    "id": "the-court",
@@ -2012,7 +2028,7 @@
      "out": "8\n7\nHEARD"
     },
     {
-     "hash": "5212bb1a3d79",
+     "hash": "c1b26144db30",
      "promise": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited",
      "effects": [
       "files"
@@ -2022,7 +2038,7 @@
      "out": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited"
     },
     {
-     "hash": "dcbef8311e43",
+     "hash": "0701bf62f983",
      "promise": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n1",
      "effects": [],
      "unprinted": 0,
@@ -2030,7 +2046,7 @@
      "out": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n\n1"
     },
     {
-     "hash": "6d419185d7ed",
+     "hash": "dc0f37efc0dd",
      "promise": "1\n1\n0\n1\n2",
      "effects": [],
      "unprinted": 0,
@@ -2038,7 +2054,7 @@
      "out": "1\n1\n0\n1\n2"
     },
     {
-     "hash": "beae8eb61df9",
+     "hash": "4a823ba4a19d",
      "promise": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n#1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n#1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)",
      "effects": [
       "the system"
@@ -2069,8 +2085,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.0
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "en/22-compared-honestly": {
    "id": "compared-honestly",
@@ -2133,14 +2149,14 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 12.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 13.6
   },
   "en/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
    "blocks": [
     {
-     "hash": "6a547cc32926",
+     "hash": "5b55486eaa72",
      "promise": "WORLD FieldVisits   lives in: graphdb + files\nBEING\naccount (number, chapter, balance)\ntrue when balance @ >= 0\nclient (code, name, city)\nvisit (agent, date, subject)\nRELATIONS\nclient owns account\nvisit of client\naccount belongsto client\nBECOMING\nwhen agent records visit require subject\nwhenever client unseen 90 days -> propose visit\nwants everyclientseenthisquarter -> reached by planning\nMET FROM WITHOUT\nscreen clientfile: understand client shows identity, accounts, visits\nrefine balance bounds [0..1000000]\nreaches mobile, desktop, web",
      "effects": [],
      "unprinted": 0,
@@ -2148,7 +2164,7 @@
      "out": "WORLD FieldVisits   lives in: graphdb + files\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n    visit (agent, date, subject)\n  RELATIONS\n    client owns account\n    visit of client\n    account belongsto client\n  BECOMING\n    when agent records visit require subject\n    whenever client unseen 90 days -> propose visit\n    wants everyclientseenthisquarter -> reached by planning\n  MET FROM WITHOUT\n    screen clientfile: understand client shows identity, accounts, visits\n    refine balance bounds [0..1000000]\n    reaches mobile, desktop, web"
     },
     {
-     "hash": "6b36cf1588f0",
+     "hash": "b3a82d1651d5",
      "promise": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.",
      "effects": [],
      "unprinted": 0,
@@ -2164,7 +2180,7 @@
      "out": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]"
     },
     {
-     "hash": "d86059de8f46",
+     "hash": "08ef1a22db31",
      "promise": "stzplatform\n1\n0\n1\n1\nEUR",
      "effects": [],
      "unprinted": 0,
@@ -2172,7 +2188,7 @@
      "out": "stzplatform\n1\n0\n1\n1\nEUR"
     },
     {
-     "hash": "26ad3779f943",
+     "hash": "fc54a879ddea",
      "promise": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation.",
      "effects": [],
      "unprinted": 0,
@@ -2180,7 +2196,7 @@
      "out": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation."
     },
     {
-     "hash": "068c2af00c5f",
+     "hash": "c3fed417f9d2",
      "promise": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)",
      "effects": [],
      "unprinted": 0,
@@ -2188,7 +2204,7 @@
      "out": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)"
     },
     {
-     "hash": "3244caff7e07",
+     "hash": "7aa526699e00",
      "promise": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.",
      "effects": [
       "the system"
@@ -2198,7 +2214,7 @@
      "out": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability."
     },
     {
-     "hash": "99aef33a4b72",
+     "hash": "315ab001c851",
      "promise": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps",
      "effects": [],
      "unprinted": 0,
@@ -2206,7 +2222,7 @@
      "out": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\n\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps"
     },
     {
-     "hash": "bfdc37c8c6ba",
+     "hash": "61d2b2bb58ac",
      "promise": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -2239,14 +2255,14 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.7
   },
   "en/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
    "blocks": [
     {
-     "hash": "f59d1b7870b3",
+     "hash": "84da2b9c1854",
      "promise": "Update plan (3 of 3 operations to commit):\n* 1. create folder 'config'\n* 2. create file 'config/pump.ini' (12 bytes)\n* 3. move 'old_settings.txt' -> 'config/legacy.ini'\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -2254,7 +2270,7 @@
      "out": "Update plan (3 of 3 operations to commit):\n  * 1. create folder 'config'\n  * 2. create file 'config/pump.ini' (12 bytes)\n  * 3. move 'old_settings.txt' -> 'config/legacy.ini'\n\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]"
     },
     {
-     "hash": "f70ba2a0862e",
+     "hash": "0fa7993c4009",
      "promise": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n* 1. set env var 'SHOP_MODE' = 'rehearsal'\n* 2. change directory to '/srv/shop'\n* 3. spawn process: backup-database --all\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -2262,7 +2278,7 @@
      "out": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n  * 1. set env var 'SHOP_MODE' = 'rehearsal'\n  * 2. change directory to '/srv/shop'\n  * 3. spawn process: backup-database --all\n\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]"
     },
     {
-     "hash": "a6e9abec952e",
+     "hash": "9aaa0f9466ff",
      "promise": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\ndigitalRead(34);\ndigitalWrite(26, 1);\n}",
      "effects": [],
      "unprinted": 0,
@@ -2270,7 +2286,7 @@
      "out": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\n  digitalRead(34);\n  digitalWrite(26, 1);\n}"
     },
     {
-     "hash": "625dad2b59d9",
+     "hash": "de4d13f40260",
      "promise": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\nPart 'phone' [superapp] -> android (mobile / edge)\nUnicode            [target]    Unicode: the target-platform is strong at it -> use its own\nPivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\nCollection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\nNeural             [server]    Neural: heavy -> runs on the backend, not the edge\n-> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\nSummary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\nBuild() will compile exactly this scope; Deploy() will commit it.",
      "effects": [],
      "unprinted": 0,
@@ -2278,7 +2294,7 @@
      "out": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\n\n  Part 'phone' [superapp] -> android (mobile / edge)\n     Unicode            [target]    Unicode: the target-platform is strong at it -> use its own\n     PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\n     Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\n     Neural             [server]    Neural: heavy -> runs on the backend, not the edge\n     -> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\n\n  Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\n  Build() will compile exactly this scope; Deploy() will commit it."
     },
     {
-     "hash": "aced2076317e",
+     "hash": "b9bc8b8dfc18",
      "promise": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n\"solution\": \"shopfront\",\n\"part\": \"web\",\n\"engine\": \"aggregation\",\n\"artifacts\": \"index.html,stz.js\"\n}",
      "effects": [
       "files"
@@ -2288,7 +2304,7 @@
      "out": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n  \"solution\": \"shopfront\",\n  \"part\": \"web\",\n  \"engine\": \"aggregation\",\n  \"artifacts\": \"index.html,stz.js\"\n}"
     },
     {
-     "hash": "02f3ac0e4630",
+     "hash": "f0cd40621b4d",
      "promise": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback",
      "effects": [],
      "unprinted": 0,
@@ -2304,7 +2320,7 @@
      "out": "authorized\n1\nauthorized\n1\nlive\n1"
     },
     {
-     "hash": "113df73703d2",
+     "hash": "df3365de4a6e",
      "promise": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n[ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n[ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n[ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n[ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n[WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret",
      "effects": [],
      "unprinted": 0,
@@ -2312,7 +2328,7 @@
      "out": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n  [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n  [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n  [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n  [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n  [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret"
     },
     {
-     "hash": "70bc9ce10ea1",
+     "hash": "97286c02864a",
      "promise": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment",
      "effects": [],
      "unprinted": 0,
@@ -2320,7 +2336,7 @@
      "out": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment"
     },
     {
-     "hash": "635ce048849e",
+     "hash": "67a7f03e653d",
      "promise": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]",
      "effects": [],
      "unprinted": 0,
@@ -2328,7 +2344,7 @@
      "out": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]"
     },
     {
-     "hash": "a4e90aee4a48",
+     "hash": "c12161fd762d",
      "promise": "live\n1",
      "effects": [],
      "unprinted": 0,
@@ -2353,14 +2369,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 4.0
   },
   "en/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
    "blocks": [
     {
-     "hash": "3af49c04d8a5",
+     "hash": "a95cbe972ec1",
      "promise": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3",
      "effects": [],
      "unprinted": 0,
@@ -2368,7 +2384,7 @@
      "out": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3"
     },
     {
-     "hash": "399af0bf4031",
+     "hash": "138442953291",
      "promise": "fulfilled\n4\n4\nno option (7) was offered -- 2 option(s) on the table\n[ \"brik\" ]",
      "effects": [],
      "unprinted": 0,
@@ -2384,7 +2400,7 @@
      "out": "[ \"2\" ]"
     },
     {
-     "hash": "ac828da97dcd",
+     "hash": "196f7c717664",
      "promise": "rejected\nrefused\n0\nsent\n1",
      "effects": [],
      "unprinted": 0,
@@ -2392,7 +2408,7 @@
      "out": "rejected\nrefused\n0\nsent\n1"
     },
     {
-     "hash": "920b42758a79",
+     "hash": "8f011d4ec472",
      "promise": "provider\n[]\nsignature mismatch (tampered body, or a secret this receiver does not hold)",
      "effects": [],
      "unprinted": 0,
@@ -2408,7 +2424,7 @@
      "out": "[ \"danger\", \"warning\", \"info\", \"success\", \"muted\" ]\n0\n1"
     },
     {
-     "hash": "ca26d86b7480",
+     "hash": "d64ec818289b",
      "promise": "danger\n1\n0",
      "effects": [],
      "unprinted": 0,
@@ -2416,7 +2432,7 @@
      "out": "danger\n1\n0"
     },
     {
-     "hash": "ec11f5d5ee14",
+     "hash": "f53d6d573e7e",
      "promise": "WORLD stall   lives in: memory (not persisted)\nBEING\ndish (name, price)\nMET FROM WITHOUT\nscreen menu: discover dish shows name, price\nscreen basket: select dish\nreaches web, whatsapp",
      "effects": [],
      "unprinted": 0,
@@ -2432,7 +2448,7 @@
      "out": "stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile)."
     },
     {
-     "hash": "c9bfd31b1f14",
+     "hash": "776030584208",
      "promise": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.",
      "effects": [],
      "unprinted": 0,
@@ -2440,7 +2456,7 @@
      "out": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'."
     },
     {
-     "hash": "3c4122e3f61e",
+     "hash": "4122ebcf3739",
      "promise": "[ [ \"customer\", \"one brik, no egg\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -2465,14 +2481,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 14.3
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 8.2
   },
   "en/26-the-environment": {
    "id": "the-environment",
    "blocks": [
     {
-     "hash": "b4c90d500cbb",
+     "hash": "5243af2a156b",
      "promise": "1\n12\n[ \"work\" ]",
      "effects": [
       "the system"
@@ -2522,7 +2538,7 @@
      "out": "clean\nrefused: DANGLING_REFERENCE\nrefused: UNKNOWN_ROLE"
     },
     {
-     "hash": "d55e52d65cab",
+     "hash": "64dbc34e0609",
      "promise": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]",
      "effects": [],
      "unprinted": 0,
@@ -2530,7 +2546,7 @@
      "out": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]"
     },
     {
-     "hash": "a7f0d4cce297",
+     "hash": "b3328d2d4d19",
      "promise": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta",
      "effects": [],
      "unprinted": 0,
@@ -2538,7 +2554,7 @@
      "out": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta"
     },
     {
-     "hash": "0e5a70494c67",
+     "hash": "b8cc2b55bbcd",
      "promise": "WORLD fieldvisits   lives in: memory (not persisted)\nBEING\nclient (name)\nMET FROM WITHOUT\nscreen home: discover client\nscreen file: understand client\nscreen pick: select client\nscreen edit: act client\nError (R3) : Calling Function without definition: tocompare",
      "effects": [],
      "unprinted": 0,
@@ -2546,7 +2562,7 @@
      "out": "WORLD fieldvisits   lives in: memory (not persisted)\n  BEING\n    client (name)\n  MET FROM WITHOUT\n    screen home: discover client\n    screen file: understand client\n    screen pick: select client\n    screen edit: act client\nError (R3) : Calling Function without definition: tocompare"
     },
     {
-     "hash": "168fe459f2a4",
+     "hash": "f01a5802a841",
      "promise": "1\n1\n1\n1",
      "effects": [
       "files"
@@ -2575,8 +2591,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.5
   },
   "en/27-the-engine-beneath": {
    "id": "the-engine-beneath",
@@ -2670,14 +2686,14 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 12.5
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 10.1
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
    "blocks": [
     {
-     "hash": "802631c020eb",
+     "hash": "e4c44d6bc07a",
      "promise": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[scope] 1 finding(s)\nERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1",
      "effects": [],
      "unprinted": 0,
@@ -2685,7 +2701,7 @@
      "out": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [scope] 1 finding(s)\n    ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1"
     },
     {
-     "hash": "c41c74136b2e",
+     "hash": "88d98f56ec5a",
      "promise": "declined\nrefused\nauthorized\nthis authorization was already captured",
      "effects": [],
      "unprinted": 0,
@@ -2693,7 +2709,7 @@
      "out": "declined\nrefused\nauthorized\nthis authorization was already captured"
     },
     {
-     "hash": "4e279384c706",
+     "hash": "493af8358f6e",
      "promise": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1",
      "effects": [],
      "unprinted": 0,
@@ -2701,7 +2717,7 @@
      "out": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1"
     },
     {
-     "hash": "06c7f967a819",
+     "hash": "788271a87425",
      "promise": "1\n0\ntarget world 'supplier' is not active.\n1",
      "effects": [],
      "unprinted": 0,
@@ -2709,7 +2725,7 @@
      "out": "1\n0\ntarget world 'supplier' is not active.\n1"
     },
     {
-     "hash": "0ede9addb656",
+     "hash": "835b97457dc1",
      "promise": "SLA speed-budget -- 3 expectation(s), last check: MET.\n[MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)\n[MET] p95-tap.ms-under-80: measured 40 (must be <= 80)\n[MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)\n0\np95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)",
      "effects": [],
      "unprinted": 0,
@@ -2727,14 +2743,14 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.4
   },
   "en/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
    "blocks": [
     {
-     "hash": "67ae32ec172c",
+     "hash": "89dbd6431959",
      "promise": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0",
      "effects": [],
      "unprinted": 0,
@@ -2742,7 +2758,7 @@
      "out": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0"
     },
     {
-     "hash": "b2a84000ea51",
+     "hash": "7a22408fa520",
      "promise": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant",
      "effects": [],
      "unprinted": 0,
@@ -2758,7 +2774,7 @@
      "out": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4"
     },
     {
-     "hash": "9807673c6d6a",
+     "hash": "2e2c5f5d7e9e",
      "promise": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[orgchart] 1 finding(s)\nERROR audit-reports-to-board @ audit -- internal audit must report to the board",
      "effects": [],
      "unprinted": 0,
@@ -2766,7 +2782,7 @@
      "out": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [orgchart] 1 finding(s)\n    ERROR audit-reports-to-board @ audit -- internal audit must report to the board"
     },
     {
-     "hash": "cb825c9c5646",
+     "hash": "ed58574c9611",
      "promise": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1",
      "effects": [],
      "unprinted": 0,
@@ -2774,7 +2790,7 @@
      "out": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1"
     },
     {
-     "hash": "59d6daf40360",
+     "hash": "5aa9f207e874",
      "promise": "1\npass\n0",
      "effects": [],
      "unprinted": 0,
@@ -2792,14 +2808,14 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.4
   },
   "en/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
    "blocks": [
     {
-     "hash": "5bb1b33ae1dd",
+     "hash": "24d462e8d881",
      "promise": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 1 finding(s)\nERROR second-approval @ a2 -- two approvals needed\n2",
      "effects": [],
      "unprinted": 0,
@@ -2807,7 +2823,7 @@
      "out": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 1 finding(s)\n    ERROR second-approval @ a2 -- two approvals needed\n2"
     },
     {
-     "hash": "de05cb034536",
+     "hash": "3b6fb92e8f1f",
      "promise": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 2 finding(s)\nERROR second-approval @ a1 -- two approvals needed\nERROR second-approval @ a2 -- two approvals needed\n3",
      "effects": [],
      "unprinted": 0,
@@ -2815,7 +2831,7 @@
      "out": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 2 finding(s)\n    ERROR second-approval @ a1 -- two approvals needed\n    ERROR second-approval @ a2 -- two approvals needed\n3"
     },
     {
-     "hash": "561f5196af5b",
+     "hash": "726c4b47858d",
      "promise": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0",
      "effects": [],
      "unprinted": 0,
@@ -2823,7 +2839,7 @@
      "out": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0"
     },
     {
-     "hash": "d2f3a9773207",
+     "hash": "9ca6612277ea",
      "promise": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique",
      "effects": [],
      "unprinted": 0,
@@ -2831,7 +2847,7 @@
      "out": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique"
     },
     {
-     "hash": "a0453c091cc6",
+     "hash": "f11536b0f5ea",
      "promise": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3",
      "effects": [],
      "unprinted": 0,
@@ -2839,7 +2855,7 @@
      "out": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3"
     },
     {
-     "hash": "a72bd3f99758",
+     "hash": "76216c653af8",
      "promise": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous",
      "effects": [],
      "unprinted": 0,
@@ -2847,7 +2863,7 @@
      "out": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous"
     },
     {
-     "hash": "c210ea6a699c",
+     "hash": "ed6a032be1cc",
      "promise": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
      "effects": [],
      "unprinted": 0,
@@ -2865,14 +2881,14 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.3
   },
   "en/31-what-the-projects-show": {
    "id": "what-the-projects-show",
    "blocks": [
     {
-     "hash": "5c1f9b079e95",
+     "hash": "8a9a1ca9c128",
      "promise": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use.",
      "effects": [],
      "unprinted": 0,
@@ -2880,7 +2896,7 @@
      "out": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use."
     },
     {
-     "hash": "125794d1ea79",
+     "hash": "5eddd3a62689",
      "promise": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\nScope: esp32 (espidf)\n[rehearsed] read pin 4",
      "effects": [
       "the system"
@@ -2890,7 +2906,7 @@
      "out": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\n\nScope: esp32 (espidf)\n  [rehearsed] read pin 4"
     },
     {
-     "hash": "aa560b37ecb4",
+     "hash": "b77e0b0279a4",
      "promise": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n0",
      "effects": [],
      "unprinted": 0,
@@ -2898,7 +2914,7 @@
      "out": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n\n0"
     },
     {
-     "hash": "2073ee3ba3d2",
+     "hash": "59b264b9ee7a",
      "promise": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()",
      "effects": [],
      "unprinted": 0,
@@ -2931,8 +2947,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.3
   },
   "en/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -2972,14 +2988,14 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.8
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.1
   },
   "en/33-the-next-line": {
    "id": "the-next-line",
    "blocks": [
     {
-     "hash": "cc43a6b06f66",
+     "hash": "bcb373132ee2",
      "promise": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -2987,7 +3003,7 @@
      "out": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n\n0\n1"
     },
     {
-     "hash": "7b436f4d4a04",
+     "hash": "6bf7edd05ba7",
      "promise": "3 couscous\nvirtual\n0",
      "effects": [],
      "unprinted": 0,
@@ -2995,7 +3011,7 @@
      "out": "3 couscous\nvirtual\n0"
     },
     {
-     "hash": "0e0d2d9e64da",
+     "hash": "f8b8b943f8bc",
      "promise": "0\nsandbox-in-production @ shop/payments",
      "effects": [],
      "unprinted": 0,
@@ -3020,8 +3036,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 13:01 UTC+01:00",
+   "seconds": 3.3
   },
   "en/A-the-register-of-innovations": {
    "id": "the-register-of-innovations",
@@ -3053,8 +3069,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 0,
-   "ran": "2026-10-14 22:28 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 13:01 UTC+01:00",
+   "seconds": 3.4
   },
   "en/C-the-twenty-two-verbs-and-the-constitution": {
    "id": "the-twenty-two-verbs-and-the-constitution",
@@ -3113,8 +3129,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 5.0
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
@@ -3146,8 +3162,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 3.7
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/02-the-software-crafter": {
    "id": "the-software-crafter",
@@ -3201,7 +3217,7 @@
      "out": "0\n[no-llm-effectful @ skills.send.effect] REFUSED: granting 'effectful' to llm actor 'rogue' -- an LLM proposes, only a pi-gate commits (no-llm-effectful, enforced at CONSTRUCTION, not merely audited)."
     },
     {
-     "hash": "c9cdc44a4340",
+     "hash": "05b426463878",
      "promise": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship",
      "effects": [],
      "unprinted": 0,
@@ -3209,7 +3225,7 @@
      "out": "1\n0\nstill bound to a SANDBOX in a production phase -- a fake must never ship"
     },
     {
-     "hash": "e2570e740079",
+     "hash": "85ae956f1758",
      "promise": "[ [ \"status\", \"fail\" ], [ \"domain\", \"BCEAO_governance\" ], [ \"issuecount\", 3 ], [ \"issues\", [ \"BCEAO-001: No Board of Directors found\", \"BCEAO-002: Audit reports to non-board position\", \"BCEAO-003: No dedicated Risk Management function\" ] ] ]",
      "effects": [],
      "unprinted": 0,
@@ -3242,8 +3258,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "fr/03-the-method-from-first-principles": {
    "id": "the-method-from-first-principles",
@@ -3273,7 +3289,7 @@
      "out": "1\nhello"
     },
     {
-     "hash": "6607465b51bc",
+     "hash": "845aac9fbeba",
      "promise": "every dish needs 'contains'\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
      "effects": [],
      "unprinted": 0,
@@ -3306,8 +3322,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/04-the-platform-in-one-picture": {
    "id": "the-platform-in-one-picture",
@@ -3353,7 +3369,7 @@
      "out": "WORLD FieldVisits   lives in: memory (not persisted)\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n  RELATIONS\n    client owns account\n    account belongsto client\n[FieldVisits] is live -- 2 thing(s), 0 flow(s), 0 reaction(s), 0 goal(s); 0 proposal(s)"
     },
     {
-     "hash": "b9f577ba066d",
+     "hash": "89a2c66623db",
      "promise": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'.",
      "effects": [],
      "unprinted": 0,
@@ -3361,7 +3377,7 @@
      "out": "1\n0\nno bond declares 'raid-kitchen' from 'resto' to 'supplier'."
     },
     {
-     "hash": "9fa1b7d90b4b",
+     "hash": "64a62f3959c3",
      "promise": "[ \"pivottable\", \"constraintsolver\" ]\n[ \"aggregation\", \"solver\" ]",
      "effects": [],
      "unprinted": 0,
@@ -3387,8 +3403,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "fr/05-law-the-code-adheres-to-the-way-a-person-thinks": {
    "id": "law-the-code-adheres-to-the-way-a-person-thinks",
@@ -3444,6 +3460,22 @@
      "out": "[ 12500, 13000, 11500, 23, 46 ]"
     },
     {
+     "hash": "9675d2b47696",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
+     "hash": "4023d3dec7a4",
+     "promise": "[ 12500, 13000, 11500, 23, 46 ]",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "[ 12500, 13000, 11500, 23, 46 ]"
+    },
+    {
      "hash": "5e1deb80314f",
      "promise": "FALSE\nq-returns-object",
      "effects": [],
@@ -3459,17 +3491,17 @@
      "out": ""
     }
    ],
-   "kept": 7,
-   "runnable": 7,
+   "kept": 9,
+   "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 5.8
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.6
   },
   "fr/06-the-mental-model-and-the-metaphors": {
    "id": "the-mental-model-and-the-metaphors",
    "blocks": [
     {
-     "hash": "4caddf90b519",
+     "hash": "14ff5bc3e91c",
      "promise": "TRUE\n2\n9\nYou and Me",
      "effects": [],
      "unprinted": 0,
@@ -3477,7 +3509,7 @@
      "out": "1\n2\n9\nYou and Me"
     },
     {
-     "hash": "ff3abee62427",
+     "hash": "dcd902aa7dec",
      "promise": "[ 1, 3, 5, 7, 9 ]\n[ 2, 4, 6, 8, 10 ]\n[ 1, 3 ]\n3\n[ 5, 7, 9 ]",
      "effects": [],
      "unprinted": 0,
@@ -3493,7 +3525,7 @@
      "out": "[ 1, 4, 7, 10 ]\n[ 10 ]\nCan't walk backward! Already at the beginning of walkable positions."
     },
     {
-     "hash": "ad73537d82b9",
+     "hash": "03394c4e607a",
      "promise": "FALSE\nTRUE\n[ 2 ]",
      "effects": [],
      "unprinted": 0,
@@ -3501,7 +3533,7 @@
      "out": "0\n1\n[ 2 ]"
     },
     {
-     "hash": "c6a5f992cfe4",
+     "hash": "583c0d4c642e",
      "promise": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]",
      "effects": [],
      "unprinted": 0,
@@ -3509,7 +3541,7 @@
      "out": "[ 1, 3, 5 ]\n[ 1, 2, 3, 4, 5 ]\n3\n[ \"HARO\", \"PYTHON\", \"RUBY\" ]\n[ 1, \"haro\", 3, \"python\", 5, \"ruby\" ]\n[ 1, \"HARO\", 3, \"PYTHON\", 5, \"RUBY\" ]"
     },
     {
-     "hash": "c2facc728da2",
+     "hash": "f1d15a9b89bb",
      "promise": "[ 2, 4, 6 ]\n[ 8, 12, 9 ]\nTRUE\n[ 2, 4, 6 ]",
      "effects": [],
      "unprinted": 0,
@@ -3535,8 +3567,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 22:24 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/07-the-writing-style-and-the-seven-goals": {
    "id": "the-writing-style-and-the-seven-goals",
@@ -3566,7 +3598,7 @@
      "out": "1\n\"1 : 3\"\n[ \"A\", \"B\", \"C\" ]"
     },
     {
-     "hash": "ac8d2403ee34",
+     "hash": "36c3d5b91f1b",
      "promise": "[ 1, 2, 7, 8, 9, 16, 17, 18 ]\nSOFTANZA",
      "effects": [],
      "unprinted": 0,
@@ -3631,8 +3663,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 5.5
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/08-functions-as-linguistic-expressions-and-scope": {
    "id": "functions-as-linguistic-expressions-and-scope",
@@ -3670,7 +3702,7 @@
      "out": "fjharoljharodjharog\n--^-----^-----^----\nfjharoljharodjharog\n--^-----^-----^----\n  3     9     15"
     },
     {
-     "hash": "7ebd7a501879",
+     "hash": "050d906ab80f",
      "promise": "[ 4, 5, 6, 9, 10, 11 ]\nHARO\nHaro&Softanza",
      "effects": [],
      "unprinted": 0,
@@ -3686,7 +3718,7 @@
      "out": "1\n1\n1"
     },
     {
-     "hash": "1dee0cb073a9",
+     "hash": "89d0ffc33cd1",
      "promise": "[ [ 1 ], [ 3, 2 ], [ 3, 3, 1 ], [ 5 ] ]\n[ \"♥\", \"other\", [ \"other\", \"♥\", [ \"♥\" ], \"other\" ], \"other\", \"♥\" ]",
      "effects": [],
      "unprinted": 0,
@@ -3710,7 +3742,7 @@
      "out": "Haro"
     },
     {
-     "hash": "04ed96a37b52",
+     "hash": "546ffe981e0b",
      "promise": "FALSE\nFALSE\nTRUE",
      "effects": [],
      "unprinted": 0,
@@ -3726,7 +3758,7 @@
      "out": "1\n0"
     },
     {
-     "hash": "0342b687c59c",
+     "hash": "2c5b6c13fcef",
      "promise": "native\nrehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.",
      "effects": [
       "the system"
@@ -3754,8 +3786,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 9.0
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 8.3
   },
   "fr/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -3793,7 +3825,7 @@
      "out": "[ 108, 120, 144 ]"
     },
     {
-     "hash": "990647cd5cbb",
+     "hash": "f0daee17ac0c",
      "promise": "2\n2",
      "effects": [],
      "unprinted": 0,
@@ -3809,7 +3841,7 @@
      "out": "1"
     },
     {
-     "hash": "e4a814343a88",
+     "hash": "1b271027865b",
      "promise": "1\nPHASE1\nPHASE2\nFALSE\nTRUE\nPoint 'EVENT2' falls within a blocked span or blocked point",
      "effects": [],
      "unprinted": 0,
@@ -3817,7 +3849,7 @@
      "out": "1\nPHASE1\nPHASE2\n0\n1\nPoint 'EVENT2' falls within a blocked span or blocked point"
     },
     {
-     "hash": "20d3f2d93a10",
+     "hash": "aa9d885ae2a4",
      "promise": "[ 4, 3 ]\n[ 5, 3 ]",
      "effects": [],
      "unprinted": 0,
@@ -3835,14 +3867,14 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.9
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.9
   },
   "fr/10-programming-becomes-refinement": {
    "id": "programming-becomes-refinement",
    "blocks": [
     {
-     "hash": "620c74abe4da",
+     "hash": "b3b531842567",
      "promise": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam",
      "effects": [],
      "unprinted": 0,
@@ -3850,7 +3882,7 @@
      "out": "2\n[ [ \"vat\", \"param\", \"0.20\" ], [ \"sort\", \"algo\", \"quick\" ] ]\nparam"
     },
     {
-     "hash": "618375625499",
+     "hash": "48dca991e9c1",
      "promise": "1\n0.22\n1",
      "effects": [],
      "unprinted": 0,
@@ -3858,7 +3890,7 @@
      "out": "1\n0.22\n1"
     },
     {
-     "hash": "b51ce801333a",
+     "hash": "3a2409e6f7df",
      "promise": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1",
      "effects": [],
      "unprinted": 0,
@@ -3866,7 +3898,7 @@
      "out": "0\nconstraint: 0.99 above max 0.25\n0.22\nconstraint: 'bubble' not in options quick|merge|heap\nstructural: no refinement point 'ghost'\n1"
     },
     {
-     "hash": "c45b3cc53d49",
+     "hash": "d70eb78acfeb",
      "promise": "1\n[ \"margin\" ]\n2\n0",
      "effects": [],
      "unprinted": 0,
@@ -3874,7 +3906,7 @@
      "out": "1\n[ \"margin\" ]\n2\n0"
     },
     {
-     "hash": "964708281cff",
+     "hash": "43c48d2dfc22",
      "promise": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]",
      "effects": [],
      "unprinted": 0,
@@ -3882,7 +3914,7 @@
      "out": "[ \"Invoice\", \"Quote\", \"Receipt\" ]\n3\n[ \"Invoice\", \"Receipt\" ]"
     },
     {
-     "hash": "95ab468c871a",
+     "hash": "f9f6e03deebe",
      "promise": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30",
      "effects": [],
      "unprinted": 0,
@@ -3890,7 +3922,7 @@
      "out": "1\n0\nderivation: rule 'vat-above-floor' violated -- vat must not drop below floor\n0.30"
     },
     {
-     "hash": "8636c9c76b51",
+     "hash": "c0ef4a0a7081",
      "promise": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted",
      "effects": [],
      "unprinted": 0,
@@ -3898,7 +3930,7 @@
      "out": "0\ntrust: posture :llm below the required floor for 'vat'\n0.30\n1\ntrusted"
     },
     {
-     "hash": "315698812000",
+     "hash": "b31b3ce679cf",
      "promise": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1",
      "effects": [],
      "unprinted": 0,
@@ -3906,7 +3938,7 @@
      "out": "0\ngovernance: refused: 'release-bot' holds 'delegated' authority (level 2) but 'refine-vat' is risk tier 3 (SHOULD does not cover it)\n0.20\n1\n1"
     },
     {
-     "hash": "7f03692993b3",
+     "hash": "6d98655fa73e",
      "promise": "0.28\n0.22\n2\n0.20\n0\n0.21",
      "effects": [],
      "unprinted": 0,
@@ -3924,8 +3956,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 3.2
   },
   "fr/11-law-a-language-is-declared-and-closed": {
    "id": "law-a-language-is-declared-and-closed",
@@ -3987,7 +4019,7 @@
      "out": "stzOutputSchema: unknown field type 'colour' (use string|number|boolean|oneof|list|structure)."
     },
     {
-     "hash": "b743b937925a",
+     "hash": "b4c3a19a77ac",
      "promise": "1\n0\n0\n1\nroot ::= name-line age-line mood-line\nname-line ::= \"name: \" text \"\\n\"\nage-line ::= \"age: \" number \"\\n\"\nmood-line ::= \"mood: \" (\"positive\" | \"negative\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")",
      "effects": [],
      "unprinted": 0,
@@ -4029,14 +4061,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 16.1
+   "ran": "2026-10-15 12:58 UTC+01:00",
+   "seconds": 14.6
   },
   "fr/12-a-language-declared": {
    "id": "a-language-declared",
    "blocks": [
     {
-     "hash": "c731c5079d75",
+     "hash": "d7db49998c0f",
      "promise": "schema 'output' -- 3 field(s)\ndish : oneof (margherita | tiramisu) [required]\nquantity : number [required], must be at least '1', must be at most '12'\nnote : string [optional]\nAnswer with ONLY this structure, one field per line, nothing before it and nothing after it:\n\ndish: <one of: margherita | tiramisu>\nquantity: <number>\nnote: <text>\n0\nfield 'dish' is a closed enumeration (margherita | tiramisu) and the model answered 'pizza'.\nfield 'quantity' must be at most '12', and the model answered '40'.",
      "effects": [],
      "unprinted": 0,
@@ -4068,7 +4100,7 @@
      "out": "1\n1\n0"
     },
     {
-     "hash": "f532a65ddc4e",
+     "hash": "5e096652ff21",
      "promise": "GBNF-M7\nGBNF-M4\n1\n0\n1\n1",
      "effects": [],
      "unprinted": 0,
@@ -4084,7 +4116,7 @@
      "out": "stzOutputSchema: unknown key ':requird' in field #1 (use :field, :name, :type, :required, :optional, :choices, :oneof, :of, :fields, :must, :note, :description)."
     },
     {
-     "hash": "7deab060248b",
+     "hash": "68990c4d9b90",
      "promise": "[ 1, 2, 4, 5 ]\n[ ]\n[ 1, 2, 3, 4, 5 ]",
      "effects": [],
      "unprinted": 0,
@@ -4117,8 +4149,8 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.4
   },
   "fr/13-natural-and-executable": {
    "id": "natural-and-executable",
@@ -4140,7 +4172,7 @@
      "out": "1\n0\nno: expected atmost 2, found 3"
     },
     {
-     "hash": "86f73517c9df",
+     "hash": "55c70ed9081b",
      "promise": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?",
      "effects": [],
      "unprinted": 0,
@@ -4148,7 +4180,7 @@
      "out": "NNL: a stznumber cannot count 'numberofvowels' -- and neither can the chain subject.\n\nHARO\nNNL: this stzstring does not understand 'uppercse'. Did you mean 'uppercase'?"
     },
     {
-     "hash": "04330a038598",
+     "hash": "b7823f1d9cb2",
      "promise": "HARO\nHELLO\nbrave",
      "effects": [],
      "unprinted": 0,
@@ -4164,7 +4196,7 @@
      "out": "[ \"A\", \"I\", \"E\" ]\n3\n1\nyes: 4 is the same as 4\n0\nno: 4 is not the same as 8\n[ 1, 0 ]\n0\n1"
     },
     {
-     "hash": "aa29e767fce5",
+     "hash": "81d03dbe113e",
      "promise": "[ 1, 1 ]\nTRUE\ncreate a string with haro -> ask: is lowercase -> ask: contains\nTRUE\nyes: \"haro\" is lowercase and is latin and containing \"r\"\n1\ncertainly",
      "effects": [],
      "unprinted": 0,
@@ -4277,8 +4309,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-14 22:25 UTC+01:00",
-   "seconds": 15.5
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 17.4
   },
   "fr/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -4300,7 +4332,7 @@
      "out": "proved: porridge made-from couscous made-from flour made-from millet\nnot derivable: no recorded fact or lawful chain gives 'porridge' made-from 'millet'"
     },
     {
-     "hash": "374572229ae7",
+     "hash": "241dff750df2",
      "promise": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet.",
      "effects": [],
      "unprinted": 0,
@@ -4308,7 +4340,7 @@
      "out": "That is outside the 'coop' domain (I know 1 entities and 1 relations).\nThat is outside the 'coop' domain (I know 1 entities and 1 relations).\nMillet is a grain.\nCouscous contains semolina and millet."
     },
     {
-     "hash": "d9fb8c25a90a",
+     "hash": "f16d45cc97f3",
      "promise": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n0\nknowledge \"clinic\"\n\nfacts\nfatou | treated-by | dr-diallo\n\nprovenance\nfatou | treated-by | dr-diallo | source | text | registry\nfatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\nfatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\ntreated-by | unique",
      "effects": [
       "files"
@@ -4318,7 +4350,7 @@
      "out": "Strict mode: every fact needs provenance -- use AddFactXT(s, p, o, [ :source = ..., :confidence = ... ]).\n\n0\nknowledge \"clinic\"\n\nfacts\n    fatou | treated-by | dr-diallo\n\nprovenance\n    fatou | treated-by | dr-diallo | source | text | registry\n    fatou | treated-by | dr-diallo | confidence | number | 0.95\n\ncontradictions\n    fatou | treated-by | dr-diallo | dr-sani | rumour\n\nontology\n    treated-by | unique"
     },
     {
-     "hash": "ef89e8481613",
+     "hash": "0d2aee3606e7",
      "promise": "1\n[ [ \"source\", \"registry\" ], [ \"confidence\", 0.95 ] ]\n1\n1\n0",
      "effects": [
       "files"
@@ -4352,7 +4384,7 @@
      "out": "1\n0"
     },
     {
-     "hash": "02e87d27524f",
+     "hash": "33fb78ce2ccb",
      "promise": "1\n0",
      "effects": [],
      "unprinted": 0,
@@ -4368,7 +4400,7 @@
      "out": "0\nCan't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)."
     },
     {
-     "hash": "aec432a3d756",
+     "hash": "3e53271a952f",
      "promise": "[ \"couscous\" ]\n[ ]",
      "effects": [],
      "unprinted": 0,
@@ -4409,8 +4441,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/15-pattern-languages": {
    "id": "pattern-languages",
@@ -4424,7 +4456,7 @@
      "out": "1\n0\nMatches ISO 8601 date format (YYYY-MM-DD)\nThe pattern name you provided does not exist in stzRegexData file."
     },
     {
-     "hash": "3418ef785835",
+     "hash": "b388eb8a5128",
      "promise": "1\n0\n1\n0",
      "effects": [],
      "unprinted": 0,
@@ -4472,7 +4504,7 @@
      "out": "1\n0\n1\n1"
     },
     {
-     "hash": "eeb9487a3c3b",
+     "hash": "c62b58594ab6",
      "promise": "1\n0\n0",
      "effects": [],
      "unprinted": 0,
@@ -4480,7 +4512,7 @@
      "out": "1\n0\n0"
     },
     {
-     "hash": "a034999fa53e",
+     "hash": "158295f38a99",
      "promise": "1\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -4496,7 +4528,7 @@
      "out": "2\nstring\nconjunction\n2"
     },
     {
-     "hash": "34f1776a0791",
+     "hash": "e7dea9068002",
      "promise": "0\n0\n\"Lunch)\"",
      "effects": [],
      "unprinted": 0,
@@ -4537,8 +4569,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.8
   },
   "fr/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -4560,7 +4592,7 @@
      "out": "Language 'cobol' is not supported"
     },
     {
-     "hash": "256df3449cc3",
+     "hash": "48071b4f3b7e",
      "promise": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1",
      "effects": [
       "the system"
@@ -4570,7 +4602,7 @@
      "out": "[ [ \"numbers\", [ 1, 2, 3, 4, 5 ] ], [ \"mean\", 3 ] ]\npython\ninterpreted\n1"
     },
     {
-     "hash": "0e744afec921",
+     "hash": "38f2f3035478",
      "promise": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]",
      "effects": [
       "the system"
@@ -4580,7 +4612,7 @@
      "out": "[ [ \"Alice\", 84.33 ], [ \"Bob\", 69 ] ]\n[ [ \"Alice\", \"Excellent\" ], [ \"Bob\", \"Needs work\" ] ]"
     },
     {
-     "hash": "48e980c00cf5",
+     "hash": "b73b0d773276",
      "promise": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]",
      "effects": [],
      "unprinted": 0,
@@ -4588,7 +4620,7 @@
      "out": "python\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]\njavascript\n[ \"Animal\" ]\n[ \"Animal\", \"Dog\" ]"
     },
     {
-     "hash": "c0aeefd24e7d",
+     "hash": "201e0a1a13ea",
      "promise": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared",
      "effects": [],
      "unprinted": 0,
@@ -4596,7 +4628,7 @@
      "out": "0\nrefused: 'python' has NO declared trust posture\n1\nallowed: posture 'external' declared"
     },
     {
-     "hash": "d8e2cd7f0942",
+     "hash": "3a4c0ae86aa9",
      "promise": "1\nUpdate plan (1 of 1 operations to commit):\n* 1. spawn process: python analyse.py\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -4604,7 +4636,7 @@
      "out": "1\nUpdate plan (1 of 1 operations to commit):\n  * 1. spawn process: python analyse.py\n\n[ [ 1, \"RUNS an external command (side effects): spawn process: python analyse.py\" ] ]"
     },
     {
-     "hash": "7393d862a580",
+     "hash": "4dfa94917e35",
      "promise": "0\n42",
      "effects": [
       "the system"
@@ -4624,7 +4656,7 @@
      "out": "xYz"
     },
     {
-     "hash": "96d3c3e67570",
+     "hash": "b6e679a2fd72",
      "promise": "1\n0",
      "effects": [
       "the system"
@@ -4653,14 +4685,14 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 6.7
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 4.2
   },
   "fr/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
    "blocks": [
     {
-     "hash": "5f4f2bbbbc61",
+     "hash": "f10657eac2a7",
      "promise": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations).",
      "effects": [],
      "unprinted": 0,
@@ -4668,7 +4700,7 @@
      "out": "Margherita contains tomato-sauce and mozzarella.\nrecorded fact(s): 'margherita' contains tomato-sauce, mozzarella\n1\nThat is outside the 'restaurant' domain (I know 1 entities and 1 relations)."
     },
     {
-     "hash": "b360347d517d",
+     "hash": "65ca65e27425",
      "promise": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question.",
      "effects": [],
      "unprinted": 0,
@@ -4676,7 +4708,7 @@
      "out": "What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nCan't conclude: 2 gap(s) remain -- the wise-coding loop is not done. Ask the next question."
     },
     {
-     "hash": "adfd08cbf9a9",
+     "hash": "1080dbb5cc5c",
      "promise": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'",
      "effects": [],
      "unprinted": 0,
@@ -4684,7 +4716,7 @@
      "out": "proved: margherita contains tomato-sauce contains tomato\nnot derivable: no recorded fact or lawful chain gives 'margherita' contains 'luigi'"
     },
     {
-     "hash": "e6b4a509f631",
+     "hash": "d3891fd3f4d9",
      "promise": "0\n3",
      "effects": [],
      "unprinted": 0,
@@ -4692,7 +4724,7 @@
      "out": "0\n3"
     },
     {
-     "hash": "940b7efd95f1",
+     "hash": "5f639fc9993f",
      "promise": "a greeting\n0",
      "effects": [],
      "unprinted": 0,
@@ -4727,14 +4759,14 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.8
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/18-the-five-registers": {
    "id": "the-five-registers",
    "blocks": [
     {
-     "hash": "4eca6e1e600d",
+     "hash": "4cc979d5d8bc",
      "promise": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]",
      "effects": [],
      "unprinted": 0,
@@ -4742,7 +4774,7 @@
      "out": "Which 'topping' does 'pizza3' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ \"olives\" ]"
     },
     {
-     "hash": "33c893b36796",
+     "hash": "be4dda8d2e0d",
      "promise": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing",
      "effects": [],
      "unprinted": 0,
@@ -4750,7 +4782,7 @@
      "out": "Which 'topping' does 'pizza4' have? (1) cheese  (2) olives -- or answer freely.  (why: every dish needs 'topping')\n[ ]\n[ [ \"(99)\", \"no such option\" ] ]\nno option (99) was offered -- 2 option(s) on the table\npursuing"
     },
     {
-     "hash": "e361bfe19cb9",
+     "hash": "68c8e4f003b0",
      "promise": "what\nwhich\n[ \"cheese\" ]",
      "effects": [],
      "unprinted": 0,
@@ -4758,7 +4790,7 @@
      "out": "what\nwhich\n[ \"cheese\" ]"
     },
     {
-     "hash": "58121915fcd5",
+     "hash": "1a7b8e638b3d",
      "promise": "[ \"mascarpone\", \"espresso\" ]\nfulfilled",
      "effects": [],
      "unprinted": 0,
@@ -4766,7 +4798,7 @@
      "out": "[ \"mascarpone\", \"espresso\" ]\nfulfilled"
     },
     {
-     "hash": "44737c524fd0",
+     "hash": "1f4f7f648d66",
      "promise": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n-> admitted: 'margherita' contains 'tomato-sauce'\n-> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'",
      "effects": [],
      "unprinted": 0,
@@ -4774,7 +4806,7 @@
      "out": "SOFTANZA: Goal adopted -- this conversation is now accountable for it.\nSOFTANZA: What does 'margherita' have for 'contains'?  (why: every dish needs 'contains')\nYOU:      tomato-sauce and mozzarella\n  -> admitted: 'margherita' contains 'tomato-sauce'\n  -> admitted: 'margherita' contains 'mozzarella'\nSOFTANZA: Goal fulfilled: every required slot is filled in 'menu'"
     },
     {
-     "hash": "bba558135e1a",
+     "hash": "52f9e252d967",
      "promise": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1",
      "effects": [],
      "unprinted": 0,
@@ -4782,7 +4814,7 @@
      "out": "[ \"mario\" ]\n[ [ \"giovanni\", \"'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique\" ] ]\n1"
     },
     {
-     "hash": "4217e97691d9",
+     "hash": "30d185d8a638",
      "promise": "[ \"=12*3\" ]\n=12*3",
      "effects": [],
      "unprinted": 0,
@@ -4790,7 +4822,7 @@
      "out": "[ \"=12*3\" ]\n=12*3"
     },
     {
-     "hash": "83aa5929b94e",
+     "hash": "7537768492f6",
      "promise": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().",
      "effects": [],
      "unprinted": 0,
@@ -4798,7 +4830,7 @@
      "out": "[ ]\n[ ]\npursuing\n0\nSoftanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents()."
     },
     {
-     "hash": "dcfa876f8f59",
+     "hash": "e59d757f164a",
      "promise": "1\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -4806,7 +4838,7 @@
      "out": "1\n0\n1"
     },
     {
-     "hash": "6fb51b072487",
+     "hash": "258e2ea600c6",
      "promise": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0",
      "effects": [],
      "unprinted": 0,
@@ -4814,7 +4846,7 @@
      "out": "pursuing\nfulfilled\nevery required slot is filled in 'lifecycle'\nrevoked\nout of scope tonight\n0"
     },
     {
-     "hash": "126774f01e74",
+     "hash": "30dc24d4abb9",
      "promise": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human",
      "effects": [],
      "unprinted": 0,
@@ -4822,7 +4854,7 @@
      "out": "1\n2\ngoal filled in 2 question(s), governed admission throughout\n0\nstopped: no answer for 'panna-cotta' / 'contains' -- gap left for a human"
     },
     {
-     "hash": "34118cc05e0f",
+     "hash": "1ab077fc5c52",
      "promise": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled",
      "effects": [],
      "unprinted": 0,
@@ -4830,7 +4862,7 @@
      "out": "What does 'بيتزا' have for 'contains'?  (why: every dish needs 'contains')\n[ \"جبن\", \"طماطم\" ]\nfulfilled"
     },
     {
-     "hash": "cd4cef4627ae",
+     "hash": "9ef939cabfcc",
      "promise": "JIBINI\nadmitted: 'pizza' contains 'jibini'",
      "effects": [],
      "unprinted": 0,
@@ -4838,7 +4870,7 @@
      "out": "JIBINI\nadmitted: 'pizza' contains 'jibini'"
     },
     {
-     "hash": "f8bd87cc7249",
+     "hash": "530b32377a71",
      "promise": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)",
      "effects": [],
      "unprinted": 0,
@@ -4846,7 +4878,7 @@
      "out": "Where are the repeated items? Which line of your program asks for their positions? (why: the mental model finds before it applies)\nOù sont les éléments répétés ? Quelle ligne de votre programme demande leurs positions ? (pourquoi : le modèle mental trouve avant d'agir)\nأين العناصر المكررة؟ أيّ سطر في برنامجك يسأل عن مواضعها؟ (لماذا: النموذج الذهني يبحث قبل أن يطبّق)\nIna abubuwan da aka maimaita? Wane layi a shirinka yake tambayar wurarensu? (dalili: tsarin tunani yana nemo kafin ya aiwatar)"
     },
     {
-     "hash": "485a01a30065",
+     "hash": "f1c371eac2d1",
      "promise": "plain\nneural\n0",
      "effects": [],
      "unprinted": 0,
@@ -4854,7 +4886,7 @@
      "out": "plain\nneural\n0"
     },
     {
-     "hash": "8c2def6273d3",
+     "hash": "3513689da9c5",
      "promise": "",
      "effects": [],
      "verdict": "exercise",
@@ -4871,14 +4903,14 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.6
   },
   "fr/19-the-domain-language-model": {
    "id": "the-domain-language-model",
    "blocks": [
     {
-     "hash": "928138789a8c",
+     "hash": "7ce1933cd0de",
      "promise": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]",
      "effects": [],
      "unprinted": 0,
@@ -4886,7 +4918,7 @@
      "out": "[ \"margherita is a dish.\", \"tiramisu is a dish.\", \"chianti is a wine.\", \"margherita contains tomato-sauce.\", \"margherita contains mozzarella.\", \"margherita pairs-with chianti.\" ]\n[ \"<unk>\", \"margherita\", \"tiramisu\", \"chianti\", \"dish\", \"wine\", \"contains\", \"pairs-with\", \"is\", \"a\", \"tomato-sauce\", \"mozzarella\" ]\n[ 2, 7, 1 ]"
     },
     {
-     "hash": "bf622f1bf7de",
+     "hash": "6b1e6dcf9de4",
      "promise": "[ \"contains\", \"pairs-with\" ]\n[ \"tomato-sauce\", \"mozzarella\" ]\n[ \"tiramisu\" ]\n[ ]",
      "effects": [],
      "unprinted": 0,
@@ -4902,7 +4934,7 @@
      "out": "root ::= subject-line relation-line object-line\nsubject-line ::= \"subject: \" (\"margherita\" | \"tiramisu\" | \"chianti\") \"\\n\"\nrelation-line ::= \"relation: \" (\"contains\" | \"pairs-with\") \"\\n\"\nobject-line ::= \"object: \" (\"tomato-sauce\" | \"mozzarella\" | \"chianti\") \"\\n\"\ntext ::= [^\\n]+\nnumber ::= \"-\"? [0-9]+ (\".\" [0-9]+)?\nboolean ::= (\"yes\" | \"no\" | \"true\" | \"false\")\n\n1\n0\n1\nI hold no 'contains' knowledge about 'tiramisu'."
     },
     {
-     "hash": "f3c264dc8a59",
+     "hash": "77df716d5997",
      "promise": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\nmargherita | dish\ntiramisu | dish\nchianti | wine\nrelations\ncontains\npairs-with\nfacts\nmargherita | contains | tomato-sauce\nmargherita | contains | mozzarella\nmargherita | pairs-with | chianti\nlaws\ngoldens\nwhat is margherita | Margherita is a dish.\nwhat is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0",
      "effects": [
       "files"
@@ -4912,7 +4944,7 @@
      "out": "probe_dlm.zdlm\ndlm \"restaurant\"\nentities\n    margherita | dish\n    tiramisu | dish\n    chianti | wine\nrelations\n    contains\n    pairs-with\nfacts\n    margherita | contains | tomato-sauce\n    margherita | contains | mozzarella\n    margherita | pairs-with | chianti\nlaws\ngoldens\n    what is margherita | Margherita is a dish.\n    what is the weather today? | That is outside the 'restaurant' domain (I know 3 entities and 2 relations).\n\nTiramisu is a dish.\n[ [ \"total\", 2 ], [ \"passed\", 2 ], [ \"failed\", [ ] ] ]\n0"
     },
     {
-     "hash": "7df6db528cb8",
+     "hash": "e90baddfe592",
      "promise": "neural bigram rung: 15 pairs over a 12-word vocab; trained 500 epoch(s), lr 0.50: loss 2.57 -> 0.70\na\n1.00\nprobe_bigram.gguf\n2",
      "effects": [
       "files"
@@ -4930,7 +4962,7 @@
      "out": "tiramisu is a wine  ->  0\nchianti is a wine  ->  1\nmargherita contains mozzarella is  ->  0"
     },
     {
-     "hash": "f486682e559c",
+     "hash": "59c92767b10e",
      "promise": "0\n'tiramisu' already bears 'is-a' (to 'dish'); the relation is :Unique\n[ [ [ \"subject\", \"tiramisu\" ], [ \"relation\", \"is-a\" ], [ \"existing\", \"dish\" ], [ \"attempted\", \"wine\" ], [ \"source\", \"rung 2\" ] ] ]\nadmitted: 'pizza' is-a 'dish'",
      "effects": [],
      "unprinted": 0,
@@ -4941,14 +4973,14 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.4
   },
   "fr/20-agents-that-cannot-hurt-you": {
    "id": "agents-that-cannot-hurt-you",
    "blocks": [
     {
-     "hash": "a751b6c20180",
+     "hash": "bab93485c326",
      "promise": "compensable\n0\nAGENTLOOP-R4: agent 'mystery' declares no coverage statement. Registration refuses it. Say what this agent covers, in one sentence, before the loop will run it. Law 18: nothing schedules what nobody has stated the reach of.\n0\nAGENTLOOP-R5: agent 'mystery' declares no reversibility class. Registration refuses it. Declare one of: reversible | compensable | irreversible. Law 18: an agent whose reversal nobody stated cannot be scheduled by something that cannot undo it.\n1",
      "effects": [],
      "unprinted": 0,
@@ -4964,7 +4996,7 @@
      "out": "trusted: yes yes yes\nexternal: yes yes no\nsandboxed: yes no no\na 'sandboxed' posture does not cover 'irreversible' work -- the harder an act is to undo, the more trusted the code performing it must be (reversibility x posture, ruling 3.2)"
     },
     {
-     "hash": "d3f9eeb493ec",
+     "hash": "4c4baedc360b",
      "promise": "1\n1\n0\n1\nespresso,2.40\nflat-white,3.10",
      "effects": [],
      "unprinted": 0,
@@ -5048,8 +5080,8 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.7
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/21-the-court": {
    "id": "the-court",
@@ -5083,7 +5115,7 @@
      "out": "8\n7\nHEARD"
     },
     {
-     "hash": "5212bb1a3d79",
+     "hash": "c1b26144db30",
      "promise": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited",
      "effects": [
       "files"
@@ -5093,7 +5125,7 @@
      "out": "chain intact over 2 entries\nthe chain is intact but the SEAL does not match this key\nthe chain breaks at entry 2 -- that record (or one before it) was edited"
     },
     {
-     "hash": "dcbef8311e43",
+     "hash": "0701bf62f983",
      "promise": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n1",
      "effects": [],
      "unprinted": 0,
@@ -5101,7 +5133,7 @@
      "out": "<secret 'deploy-key' (secret) from literal>\nssh-ed25519-AAAA\nRefused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'. Only an effectful, non-sandboxed actor can read a secret.\n\n1"
     },
     {
-     "hash": "6d419185d7ed",
+     "hash": "dc0f37efc0dd",
      "promise": "1\n1\n0\n1\n2",
      "effects": [],
      "unprinted": 0,
@@ -5109,7 +5141,7 @@
      "out": "1\n1\n0\n1\n2"
     },
     {
-     "hash": "beae8eb61df9",
+     "hash": "4a823ba4a19d",
      "promise": "0\n0\n0\n1\n1\nPerf plan relieve-queue -- 1 proposed action(s).\n1. scaleup 'nlp' -- queue.depth: measured 900 (must be <= 100)\nAudit (2):\n#1 REFUSED scaleup 'nlp' by advisor -- actor is not effectful -- expression is free; admission is governed\n#1 COMMITTED scaleup 'nlp' by mansour -- queue.depth: measured 900 (must be <= 100)",
      "effects": [
       "the system"
@@ -5140,8 +5172,8 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.0
+   "ran": "2026-10-15 12:59 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/22-compared-honestly": {
    "id": "compared-honestly",
@@ -5204,14 +5236,14 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 12.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 13.6
   },
   "fr/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
    "blocks": [
     {
-     "hash": "6a547cc32926",
+     "hash": "5b55486eaa72",
      "promise": "WORLD FieldVisits   lives in: graphdb + files\nBEING\naccount (number, chapter, balance)\ntrue when balance @ >= 0\nclient (code, name, city)\nvisit (agent, date, subject)\nRELATIONS\nclient owns account\nvisit of client\naccount belongsto client\nBECOMING\nwhen agent records visit require subject\nwhenever client unseen 90 days -> propose visit\nwants everyclientseenthisquarter -> reached by planning\nMET FROM WITHOUT\nscreen clientfile: understand client shows identity, accounts, visits\nrefine balance bounds [0..1000000]\nreaches mobile, desktop, web",
      "effects": [],
      "unprinted": 0,
@@ -5219,7 +5251,7 @@
      "out": "WORLD FieldVisits   lives in: graphdb + files\n  BEING\n    account (number, chapter, balance)\n        true when balance @ >= 0\n    client (code, name, city)\n    visit (agent, date, subject)\n  RELATIONS\n    client owns account\n    visit of client\n    account belongsto client\n  BECOMING\n    when agent records visit require subject\n    whenever client unseen 90 days -> propose visit\n    wants everyclientseenthisquarter -> reached by planning\n  MET FROM WITHOUT\n    screen clientfile: understand client shows identity, accounts, visits\n    refine balance bounds [0..1000000]\n    reaches mobile, desktop, web"
     },
     {
-     "hash": "6b36cf1588f0",
+     "hash": "b3a82d1651d5",
      "promise": "pursuing everyclientvisited via planning -- 1 proposal(s)\n[ [ \"attend\", \"client\", \"for\", \"bilal\" ] ]\n0\npursuing everyclientvisited via planning -- 0 proposal(s)\n[ ]\n1\nstzGraphGoal.FromMeans: no 'every :Type' clause in 'make things nice'.",
      "effects": [],
      "unprinted": 0,
@@ -5235,7 +5267,7 @@
      "out": "0\ngovernance refused: refused: 'order-produce' has NO declared risk tier (undeclared actions never proceed)\n0\ngovernance refused: refused: 'resto' lacks PERMISSION (can) for 'order-produce'\n0\ngovernance refused: refused: 'resto' holds '' authority (level 0) but 'order-produce' is risk tier 2 (SHOULD does not cover it)\n1\nallowed: active + bonded + governed\n1\n[ \"rationale\", \"cross-world call cleared\" ]"
     },
     {
-     "hash": "d86059de8f46",
+     "hash": "08ef1a22db31",
      "promise": "stzplatform\n1\n0\n1\n1\nEUR",
      "effects": [],
      "unprinted": 0,
@@ -5243,7 +5275,7 @@
      "out": "stzplatform\n1\n0\n1\n1\nEUR"
     },
     {
-     "hash": "26ad3779f943",
+     "hash": "fc54a879ddea",
      "promise": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation.",
      "effects": [],
      "unprinted": 0,
@@ -5251,7 +5283,7 @@
      "out": "2\nsupplier-v2\n1\nsuper\n2\napp\nstzSuperApp: world 'resto' already in the constellation."
     },
     {
-     "hash": "068c2af00c5f",
+     "hash": "c3fed417f9d2",
      "promise": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)",
      "effects": [],
      "unprinted": 0,
@@ -5259,7 +5291,7 @@
      "out": "1\n0\nrefused: 'resto' holds 'delegated' authority (level 2) but 'use-payments' is risk tier 4 (SHOULD does not cover it)"
     },
     {
-     "hash": "3244caff7e07",
+     "hash": "7aa526699e00",
      "promise": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability.",
      "effects": [
       "the system"
@@ -5269,7 +5301,7 @@
      "out": "windows\nandroid\nespidf\n[ \"gpio\", \"network\", \"clock\", \"threads\" ]\n1\nnative\nscope 'android' (android) forbids 'process' -- spawn 'cron'. This target has no such capability."
     },
     {
-     "hash": "99aef33a4b72",
+     "hash": "315ab001c851",
      "promise": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps",
      "effects": [],
      "unprinted": 0,
@@ -5277,7 +5309,7 @@
      "out": "# .stzplatform -- a Softanza solution profile\nplatform: greenhouse\ndeveloped_on: windows\nserver: backend -> linux\nsuperapp: phone -> android\napp: sensor -> espidf\n\nespidf\n[ \"no development system declared (use DevelopedOn)\", \"the solution deploys no apps\" ]\nstzPlatform.Build: the solution is not sound -- no development system declared (use DevelopedOn); the solution deploys no apps"
     },
     {
-     "hash": "bfdc37c8c6ba",
+     "hash": "61d2b2bb58ac",
      "promise": "[clinic-a] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[clinic-b] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 1 proposal(s)\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]\n[ [ \"propose\", \"checkup\", \"for\", \"bob\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -5310,14 +5342,14 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.7
   },
   "fr/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
    "blocks": [
     {
-     "hash": "f59d1b7870b3",
+     "hash": "84da2b9c1854",
      "promise": "Update plan (3 of 3 operations to commit):\n* 1. create folder 'config'\n* 2. create file 'config/pump.ini' (12 bytes)\n* 3. move 'old_settings.txt' -> 'config/legacy.ini'\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -5325,7 +5357,7 @@
      "out": "Update plan (3 of 3 operations to commit):\n  * 1. create folder 'config'\n  * 2. create file 'config/pump.ini' (12 bytes)\n  * 3. move 'old_settings.txt' -> 'config/legacy.ini'\n\n[ [ 3, \"MOVES (removes source): move 'old_settings.txt' -> 'config/legacy.ini'\" ] ]\n[ [ 3, \"source absent in reality: old_settings.txt\" ] ]"
     },
     {
-     "hash": "f70ba2a0862e",
+     "hash": "0fa7993c4009",
      "promise": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n* 1. set env var 'SHOP_MODE' = 'rehearsal'\n* 2. change directory to '/srv/shop'\n* 3. spawn process: backup-database --all\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -5333,7 +5365,7 @@
      "out": "rehearsal\n1\n0\nUpdate plan (3 of 3 operations to commit):\n  * 1. set env var 'SHOP_MODE' = 'rehearsal'\n  * 2. change directory to '/srv/shop'\n  * 3. spawn process: backup-database --all\n\n[ [ 3, \"RUNS an external command (side effects): spawn process: backup-database --all\" ] ]"
     },
     {
-     "hash": "a6e9abec952e",
+     "hash": "9aaa0f9466ff",
      "promise": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\ndigitalRead(34);\ndigitalWrite(26, 1);\n}",
      "effects": [],
      "unprinted": 0,
@@ -5341,7 +5373,7 @@
      "out": "rehearsed\nrehearsed\nstzPlatform.Deploy: actor 'copilot' lacks the 'effectful' capability -- it may propose a deploy, not perform it.\n\n0\n// firmware generated by the Softanza lowering bridge\n// target: espidf\nvoid setup() {}\nvoid loop() {\n  digitalRead(34);\n  digitalWrite(26, 1);\n}"
     },
     {
-     "hash": "625dad2b59d9",
+     "hash": "de4d13f40260",
      "promise": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\nPart 'phone' [superapp] -> android (mobile / edge)\nUnicode            [target]    Unicode: the target-platform is strong at it -> use its own\nPivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\nCollection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\nNeural             [server]    Neural: heavy -> runs on the backend, not the edge\n-> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\nSummary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\nBuild() will compile exactly this scope; Deploy() will commit it.",
      "effects": [],
      "unprinted": 0,
@@ -5349,7 +5381,7 @@
      "out": "Solution 'shop' -- placement & scope plan (rehearsal; nothing built yet)\n==============================================================================\n\n  Part 'phone' [superapp] -> android (mobile / edge)\n     Unicode            [target]    Unicode: the target-platform is strong at it -> use its own\n     PivotTable         [stz.wasm]  PivotTable: Softanza-differential, mobile weak -> the on-device engine\n     Collection         [stz.js]    Collection: ergonomic -> a Softanza construct in the target language\n     Neural             [server]    Neural: heavy -> runs on the backend, not the edge\n     -> stz.wasm carries: [ \"PivotTable\" ]  (~12 KB, 1 of 4)\n\n  Summary: 4 capabilities across 1 parts -> target 1, engine 1, construct 1, server 1.\n  Build() will compile exactly this scope; Deploy() will commit it."
     },
     {
-     "hash": "aced2076317e",
+     "hash": "b9bc8b8dfc18",
      "promise": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n\"solution\": \"shopfront\",\n\"part\": \"web\",\n\"engine\": \"aggregation\",\n\"artifacts\": \"index.html,stz.js\"\n}",
      "effects": [
       "files"
@@ -5359,7 +5391,7 @@
      "out": "absent\nlaunched\n[ \".stzsite\", \"deploy.json\", \"index.html\", \"stz.js\" ]\n{\n  \"solution\": \"shopfront\",\n  \"part\": \"web\",\n  \"engine\": \"aggregation\",\n  \"artifacts\": \"index.html,stz.js\"\n}"
     },
     {
-     "hash": "02f3ac0e4630",
+     "hash": "f0cd40621b4d",
      "promise": "0\nstore:web -> done\nlaunch:web -> done\nverify:web -> done\nstore:api -> FAILED\nlaunch:api -> skipped\nverify:api -> skipped\nrolledback",
      "effects": [],
      "unprinted": 0,
@@ -5375,7 +5407,7 @@
      "out": "authorized\n1\nauthorized\n1\nlive\n1"
     },
     {
-     "hash": "113df73703d2",
+     "hash": "df3365de4a6e",
      "promise": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n[ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n[ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n[ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n[ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n[WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret",
      "effects": [],
      "unprinted": 0,
@@ -5383,7 +5415,7 @@
      "out": "0\nService registry 'shop' [production] -- 4 bound: 1 sandboxed, 1 local, 2 live\n  [ERROR] unbound-service @ shop/reporting -- declared but never bound -- asking for it will raise\n  [ERROR] sandbox-in-production @ shop/payments -- still bound to a SANDBOX in a production phase -- a fake must never ship\n  [ERROR] ephemeral-in-production @ shop/scratch -- a LOCAL source that vanishes on restart (in-memory) is bound in a production phase\n  [ERROR] live-without-secret @ shop/cache -- credential 'redis-url' is not in the secret store\n  [WARN] inline-credential @ shop/sms -- live adapter bound without naming a store secret"
     },
     {
-     "hash": "70bc9ce10ea1",
+     "hash": "97286c02864a",
      "promise": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment",
      "effects": [],
      "unprinted": 0,
@@ -5391,7 +5423,7 @@
      "out": "development\n0\nactor 'assistant' is not effectful -- it may propose, not commit\n0\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\ndevelopment"
     },
     {
-     "hash": "635ce048849e",
+     "hash": "67a7f03e653d",
      "promise": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]",
      "effects": [],
      "unprinted": 0,
@@ -5399,7 +5431,7 @@
      "out": "development\n0\nproduction-part-uses-sandbox @ api [error]\nproduction-part-uses-ephemeral @ api [error]\npart-uses-undeclared-service @ web [warning]"
     },
     {
-     "hash": "a4e90aee4a48",
+     "hash": "c12161fd762d",
      "promise": "live\n1",
      "effects": [],
      "unprinted": 0,
@@ -5424,14 +5456,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 22:26 UTC+01:00",
-   "seconds": 5.3
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 4.0
   },
   "fr/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
    "blocks": [
     {
-     "hash": "3af49c04d8a5",
+     "hash": "a95cbe972ec1",
      "promise": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3",
      "effects": [],
      "unprinted": 0,
@@ -5439,7 +5471,7 @@
      "out": "Which dish for order3? (every order needs 'dish') 1) couscous 2) brik. Reply with the number.\n1\nucs2\n2\n3"
     },
     {
-     "hash": "399af0bf4031",
+     "hash": "138442953291",
      "promise": "fulfilled\n4\n4\nno option (7) was offered -- 2 option(s) on the table\n[ \"brik\" ]",
      "effects": [],
      "unprinted": 0,
@@ -5455,7 +5487,7 @@
      "out": "[ \"2\" ]"
     },
     {
-     "hash": "ac828da97dcd",
+     "hash": "196f7c717664",
      "promise": "rejected\nrefused\n0\nsent\n1",
      "effects": [],
      "unprinted": 0,
@@ -5463,7 +5495,7 @@
      "out": "rejected\nrefused\n0\nsent\n1"
     },
     {
-     "hash": "920b42758a79",
+     "hash": "8f011d4ec472",
      "promise": "provider\n[]\nsignature mismatch (tampered body, or a secret this receiver does not hold)",
      "effects": [],
      "unprinted": 0,
@@ -5479,7 +5511,7 @@
      "out": "[ \"danger\", \"warning\", \"info\", \"success\", \"muted\" ]\n0\n1"
     },
     {
-     "hash": "ca26d86b7480",
+     "hash": "d64ec818289b",
      "promise": "danger\n1\n0",
      "effects": [],
      "unprinted": 0,
@@ -5487,7 +5519,7 @@
      "out": "danger\n1\n0"
     },
     {
-     "hash": "ec11f5d5ee14",
+     "hash": "f53d6d573e7e",
      "promise": "WORLD stall   lives in: memory (not persisted)\nBEING\ndish (name, price)\nMET FROM WITHOUT\nscreen menu: discover dish shows name, price\nscreen basket: select dish\nreaches web, whatsapp",
      "effects": [],
      "unprinted": 0,
@@ -5503,7 +5535,7 @@
      "out": "stzPlatform.Generate: unknown reach surface 'whatsapp' (web/desktop/mobile)."
     },
     {
-     "hash": "c9bfd31b1f14",
+     "hash": "776030584208",
      "promise": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'.",
      "effects": [],
      "unprinted": 0,
@@ -5511,7 +5543,7 @@
      "out": "1\n0\n[oneof @ reply] field 'reply' is a closed enumeration (your order is received. | your order is ready. | we are closed tonight.) and the model answered 'Your order is free, tonight only.'."
     },
     {
-     "hash": "3c4122e3f61e",
+     "hash": "4122ebcf3739",
      "promise": "[ [ \"customer\", \"one brik, no egg\" ] ]",
      "effects": [],
      "unprinted": 0,
@@ -5536,14 +5568,14 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 14.3
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 8.2
   },
   "fr/26-the-environment": {
    "id": "the-environment",
    "blocks": [
     {
-     "hash": "b4c90d500cbb",
+     "hash": "5243af2a156b",
      "promise": "1\n12\n[ \"work\" ]",
      "effects": [
       "the system"
@@ -5593,7 +5625,7 @@
      "out": "clean\nrefused: DANGLING_REFERENCE\nrefused: UNKNOWN_ROLE"
     },
     {
-     "hash": "d55e52d65cab",
+     "hash": "64dbc34e0609",
      "promise": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]",
      "effects": [],
      "unprinted": 0,
@@ -5601,7 +5633,7 @@
      "out": "12\nstatus\nThe truth of the build.\n[ \"window\", \"tablist\", 'tab \"Define\"', 'tab \"Build\"', 'tab \"Govern\"', 'tab \"Ship\"', \"group\", 'label \"the work\"', \"group\", 'label \"no proposal\"', \"status\", 'label \"clean\"' ]"
     },
     {
-     "hash": "a7f0d4cce297",
+     "hash": "b3328d2d4d19",
      "promise": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta",
      "effects": [],
      "unprinted": 0,
@@ -5609,7 +5641,7 @@
      "out": "[fieldvisits] is live -- 2 thing(s), 0 flow(s), 1 reaction(s), 0 goal(s); 2 proposal(s)\npropose visit for amadou\npropose visit for binta\n0\n2\npropose visit for binta"
     },
     {
-     "hash": "0e5a70494c67",
+     "hash": "b8cc2b55bbcd",
      "promise": "WORLD fieldvisits   lives in: memory (not persisted)\nBEING\nclient (name)\nMET FROM WITHOUT\nscreen home: discover client\nscreen file: understand client\nscreen pick: select client\nscreen edit: act client\nError (R3) : Calling Function without definition: tocompare",
      "effects": [],
      "unprinted": 0,
@@ -5617,7 +5649,7 @@
      "out": "WORLD fieldvisits   lives in: memory (not persisted)\n  BEING\n    client (name)\n  MET FROM WITHOUT\n    screen home: discover client\n    screen file: understand client\n    screen pick: select client\n    screen edit: act client\nError (R3) : Calling Function without definition: tocompare"
     },
     {
-     "hash": "168fe459f2a4",
+     "hash": "f01a5802a841",
      "promise": "1\n1\n1\n1",
      "effects": [
       "files"
@@ -5646,8 +5678,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.5
   },
   "fr/27-the-engine-beneath": {
    "id": "the-engine-beneath",
@@ -5741,14 +5773,14 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 12.5
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 10.1
   },
   "fr/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
    "blocks": [
     {
-     "hash": "802631c020eb",
+     "hash": "e4c44d6bc07a",
      "promise": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[scope] 1 finding(s)\nERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1",
      "effects": [],
      "unprinted": 0,
@@ -5756,7 +5788,7 @@
      "out": "1\nRule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [scope] 1 finding(s)\n    ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission\n1"
     },
     {
-     "hash": "c41c74136b2e",
+     "hash": "88d98f56ec5a",
      "promise": "declined\nrefused\nauthorized\nthis authorization was already captured",
      "effects": [],
      "unprinted": 0,
@@ -5764,7 +5796,7 @@
      "out": "declined\nrefused\nauthorized\nthis authorization was already captured"
     },
     {
-     "hash": "4e279384c706",
+     "hash": "493af8358f6e",
      "promise": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1",
      "effects": [],
      "unprinted": 0,
@@ -5772,7 +5804,7 @@
      "out": "0\nREFUSED -- the external surface is not production-ready\nsandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship\n1"
     },
     {
-     "hash": "06c7f967a819",
+     "hash": "788271a87425",
      "promise": "1\n0\ntarget world 'supplier' is not active.\n1",
      "effects": [],
      "unprinted": 0,
@@ -5780,7 +5812,7 @@
      "out": "1\n0\ntarget world 'supplier' is not active.\n1"
     },
     {
-     "hash": "0ede9addb656",
+     "hash": "835b97457dc1",
      "promise": "SLA speed-budget -- 3 expectation(s), last check: MET.\n[MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)\n[MET] p95-tap.ms-under-80: measured 40 (must be <= 80)\n[MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)\n0\np95-order.to.kitchen.ms-under-2500: measured 3100 (must be <= 2500)",
      "effects": [],
      "unprinted": 0,
@@ -5798,14 +5830,14 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.0
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.4
   },
   "fr/29-a-bank-in-niamey": {
    "id": "a-bank-in-niamey",
    "blocks": [
     {
-     "hash": "67ae32ec172c",
+     "hash": "89dbd6431959",
      "promise": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0",
      "effects": [],
      "unprinted": 0,
@@ -5813,7 +5845,7 @@
      "out": "4\n[ \"BCEAO-002: Audit reports to non-board position\" ]\n0"
     },
     {
-     "hash": "b2a84000ea51",
+     "hash": "7a22408fa520",
      "promise": "2\nBCEAO-002: Audit reports to non-board position\nSOD-001: Operations reports through Treasury\nnon-compliant",
      "effects": [],
      "unprinted": 0,
@@ -5829,7 +5861,7 @@
      "out": "BCEAO : 4\nBasel III : 4\nSOX : 5\nPCI-DSS : 4\nISO 27001 : 4\nGDPR : 4\nHIPAA : 4"
     },
     {
-     "hash": "9807673c6d6a",
+     "hash": "2e2c5f5d7e9e",
      "promise": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[orgchart] 1 finding(s)\nERROR audit-reports-to-board @ audit -- internal audit must report to the board",
      "effects": [],
      "unprinted": 0,
@@ -5837,7 +5869,7 @@
      "out": "Rule report 'bank': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [orgchart] 1 finding(s)\n    ERROR audit-reports-to-board @ audit -- internal audit must report to the board"
     },
     {
-     "hash": "cb825c9c5646",
+     "hash": "ed58574c9611",
      "promise": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1",
      "effects": [],
      "unprinted": 0,
@@ -5845,7 +5877,7 @@
      "out": "1\ncompliant\nRule report 'bank': 0 finding(s), 0 error(s), 0 warning(s) -> SOUND\n1"
     },
     {
-     "hash": "59d6daf40360",
+     "hash": "5aa9f207e874",
      "promise": "1\npass\n0",
      "effects": [],
      "unprinted": 0,
@@ -5863,14 +5895,14 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.7
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.4
   },
   "fr/30-an-organisation-in-the-field": {
    "id": "an-organisation-in-the-field",
    "blocks": [
     {
-     "hash": "5bb1b33ae1dd",
+     "hash": "24d462e8d881",
      "promise": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 1 finding(s)\nERROR second-approval @ a2 -- two approvals needed\n2",
      "effects": [],
      "unprinted": 0,
@@ -5878,7 +5910,7 @@
      "out": "Rule report 'advances': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 1 finding(s)\n    ERROR second-approval @ a2 -- two approvals needed\n2"
     },
     {
-     "hash": "de05cb034536",
+     "hash": "3b6fb92e8f1f",
      "promise": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n[advances] 2 finding(s)\nERROR second-approval @ a1 -- two approvals needed\nERROR second-approval @ a2 -- two approvals needed\n3",
      "effects": [],
      "unprinted": 0,
@@ -5886,7 +5918,7 @@
      "out": "Rule report 'advances': 2 finding(s), 2 error(s), 0 warning(s) -> UNSOUND (errors present)\n  [advances] 2 finding(s)\n    ERROR second-approval @ a1 -- two approvals needed\n    ERROR second-approval @ a2 -- two approvals needed\n3"
     },
     {
-     "hash": "561f5196af5b",
+     "hash": "726c4b47858d",
      "promise": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0",
      "effects": [],
      "unprinted": 0,
@@ -5894,7 +5926,7 @@
      "out": "0\nscope_empty\ngoverns nothing in 1 pictures -- a dead rule and a misspelt scope predicate both report as passing\n0"
     },
     {
-     "hash": "d2f3a9773207",
+     "hash": "9ca6612277ea",
      "promise": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique",
      "effects": [],
      "unprinted": 0,
@@ -5902,7 +5934,7 @@
      "out": "What does 'request-7' have for 'approved-by'?  (why: 'request-7' needs 'approved-by')\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique\n1\napprover-2\n'request-7' already bears 'approved-by' (to 'approver-1'); the relation is :Unique"
     },
     {
-     "hash": "a0453c091cc6",
+     "hash": "f11536b0f5ea",
      "promise": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3",
      "effects": [],
      "unprinted": 0,
@@ -5910,7 +5942,7 @@
      "out": "1\n0\nrefused: 'assistant' holds 'advisory' authority (level 1) but 'release-advance' is risk tier 3 (SHOULD does not cover it)\n1\nallowed: permission held AND 'autonomous' authority (level 3) covers risk tier 3"
     },
     {
-     "hash": "a72bd3f99758",
+     "hash": "76216c653af8",
      "promise": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous",
      "effects": [],
      "unprinted": 0,
@@ -5918,7 +5950,7 @@
      "out": "ceiling restored, the season is over\n2\nceiling raised for the harvest season\nautonomous"
     },
     {
-     "hash": "c210ea6a699c",
+     "hash": "ed6a032be1cc",
      "promise": "0\ncapability 'offline' was never requested via AddCapabilityQ().\n1\nallowed: permission held AND 'advisory' authority (level 1) covers risk tier 1",
      "effects": [],
      "unprinted": 0,
@@ -5936,14 +5968,14 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.6
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.3
   },
   "fr/31-what-the-projects-show": {
    "id": "what-the-projects-show",
    "blocks": [
     {
-     "hash": "5c1f9b079e95",
+     "hash": "8a9a1ca9c128",
      "promise": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use.",
      "effects": [],
      "unprinted": 0,
@@ -5951,7 +5983,7 @@
      "out": "[ \"mail\", \"payments\" ]\nunbound-service\n0\nstzServiceRegistry(shop): nothing is bound for service 'payments'. Bind it (or BindLive it) before use."
     },
     {
-     "hash": "125794d1ea79",
+     "hash": "5eddd3a62689",
      "promise": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\nScope: esp32 (espidf)\n[rehearsed] read pin 4",
      "effects": [
       "the system"
@@ -5961,7 +5993,7 @@
      "out": "rehearsed\nscope 'esp32' (espidf) forbids 'process' -- spawn 'worker'. This target has no such capability.\n\nScope: esp32 (espidf)\n  [rehearsed] read pin 4"
     },
     {
-     "hash": "aa560b37ecb4",
+     "hash": "b77e0b0279a4",
      "promise": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n0",
      "effects": [],
      "unprinted": 0,
@@ -5969,7 +6001,7 @@
      "out": "0\nstzPispiHttpAdapter: no credentials. Give it the store and an actor: WithSecretsFrom(oStore, oActor).\n\n0"
     },
     {
-     "hash": "2073ee3ba3d2",
+     "hash": "59b264b9ee7a",
      "promise": "1\nSing is not available YET: the formant voice has not been heard by the author (sound_mu5_demo.ring plays it). SAPI was measured and does not hold a pitch (measured 2026-09-26: +-6 st asked, +-2.5 st given, up to 407 cents off, 286-575 cents of wander within a syllable -- it speaks, it cannot hold a note). Until the author calls the formant voice singing, Vowel and VowelsQ are what this voice honestly does\nUNPERCEIVED\nSINGING\n2026-09-27\nthe retuned voice is somehow singing, open Sing()",
      "effects": [],
      "unprinted": 0,
@@ -6002,8 +6034,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.4
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.3
   },
   "fr/32-many-minds-on-one-body-of-work": {
    "id": "many-minds-on-one-body-of-work",
@@ -6043,14 +6075,14 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.8
+   "ran": "2026-10-15 13:00 UTC+01:00",
+   "seconds": 3.1
   },
   "fr/33-the-next-line": {
    "id": "the-next-line",
    "blocks": [
     {
-     "hash": "cc43a6b06f66",
+     "hash": "bcb373132ee2",
      "promise": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n0\n1",
      "effects": [],
      "unprinted": 0,
@@ -6058,7 +6090,7 @@
      "out": "stzPlatform.Deploy: the platform must be Build() before it can be deployed.\n\n0\n1"
     },
     {
-     "hash": "7b436f4d4a04",
+     "hash": "6bf7edd05ba7",
      "promise": "3 couscous\nvirtual\n0",
      "effects": [],
      "unprinted": 0,
@@ -6066,7 +6098,7 @@
      "out": "3 couscous\nvirtual\n0"
     },
     {
-     "hash": "0e0d2d9e64da",
+     "hash": "f8b8b943f8bc",
      "promise": "0\nsandbox-in-production @ shop/payments",
      "effects": [],
      "unprinted": 0,
@@ -6091,8 +6123,8 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-14 22:27 UTC+01:00",
-   "seconds": 4.3
+   "ran": "2026-10-15 13:01 UTC+01:00",
+   "seconds": 3.3
   },
   "fr/A-the-register-of-innovations": {
    "id": "the-register-of-innovations",
@@ -6124,8 +6156,8 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 0,
-   "ran": "2026-10-14 22:28 UTC+01:00",
-   "seconds": 4.5
+   "ran": "2026-10-15 13:01 UTC+01:00",
+   "seconds": 3.4
   },
   "fr/C-the-twenty-two-verbs-and-the-constitution": {
    "id": "the-twenty-two-verbs-and-the-constitution",

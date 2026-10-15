@@ -33,16 +33,17 @@ Le terrain a aussi un vocabulaire de métaphores pour la programmation, mais il 
 Le modèle mental compte sept étapes, et ce sont celles dans l'ordre desquelles une personne demande. Définir le problème en termes naturels et en prendre les mots-clés. Choisir l'objet qui tient les données. Demander s'il contient ce qui vous importe. Demander combien. Demander où. Agir sur ces positions, ou appeler le verbe qui le fait. Et la septième : célébrer, et recommencer. Au chapitre 5, vous avez exécuté ces étapes sur une liste de chaînes vides. Elles n'appartiennent pas à la liste. Tiennent-elles sur une chaîne ? Les voici, dans le même ordre :
 
 ```haro
-o1 = new stzString("You and you")
-? o1.ContainsCS("YOU", FALSE)
-#--> TRUE
-? o1.NumberOfOccurrenceCS("YOU", FALSE)
-#--> 2
-? o1.FindNthCS(2, "YOU", FALSE)
-#--> 9
-o1.ReplaceSection(9, 11, :With = "Me")
-? o1.Content()
-#--> You and Me
+Q("You and you") {
+	? ContainsCS("YOU", FALSE)
+	#--> TRUE
+	? NumberOfOccurrenceCS("YOU", FALSE)
+	#--> 2
+	? FindNthCS(2, "YOU", FALSE)
+	#--> 9
+	ReplaceSection(9, 11, :With = "Me")
+	? Content()
+	#--> You and Me
+}
 ```
 
 Contenir imprime `TRUE`, compter imprime `2`, trouver imprime `9`, et agir laisse `You and Me`, avec le même suffixe qui dit si la casse compte. Les trois questions que vous posez à une chaîne sont les trois que vous avez posées à une liste.
@@ -52,17 +53,18 @@ Quand les étapes se répètent, la boucle apparaît, et c'est là que la biblio
 **Le Marcheur se déplace le long d'une route.** Un marcheur est une carte de tout son voyage, construite à sa création. Il garde les positions qu'il visitera, les positions qu'il sautera, où il se tient et ce qui reste. Que sait-il avant de faire un pas ? Demandez-le-lui :
 
 ```haro
-oWalker = Wk(1, 10, 2)
-? @@( oWalker.Walkables() )
-#--> [ 1, 3, 5, 7, 9 ]
-? @@( oWalker.Unwalkables() )
-#--> [ 2, 4, 6, 8, 10 ]
-? @@( oWalker.Walk() )
-#--> [ 1, 3 ]
-? oWalker.CurrentPosition()
-#--> 3
-? @@( oWalker.RemainingWalkables() )
-#--> [ 5, 7, 9 ]
+Wk(1, 10, 2) {
+	? @@( Walkables() )
+	#--> [ 1, 3, 5, 7, 9 ]
+	? @@( Unwalkables() )
+	#--> [ 2, 4, 6, 8, 10 ]
+	? @@( Walk() )
+	#--> [ 1, 3 ]
+	? CurrentPosition()
+	#--> 3
+	? @@( RemainingWalkables() )
+	#--> [ 5, 7, 9 ]
+}
 ```
 
 `Walk()` est un pas, et il imprime le chemin du mouvement, de là où il se tenait à là où il a atterri : `[ 1, 3 ]`. Une boucle ne garde pas son itinéraire comme une valeur qu'on peut interroger. Un marcheur le fait, avant de bouger. Que fait-il au bord de la route ? Au-delà de la fin, quand la marche est en cours, il s'arrête en silence. Avant le début, il refuse :
@@ -87,13 +89,14 @@ Demandez dix pas à une marche qui en compte quatre et vous obtenez les quatre :
 **Le Vérificateur demande oui ou non.** Tous, n'importe lequel, ou où, avec la condition écrite comme une chaîne, la condition W, W pour where :
 
 ```haro
-o1 = new stzList([ "A", 5, "B", "C" ])
-? o1.CheckW('{ isString(@item) and IsUppercase(@item) }')
-#--> FALSE
-? o1.ContainsW('{ isNumber(@item) }')
-#--> TRUE
-? @@( o1.FindW('{ isNumber(@item) }') )
-#--> [ 2 ]
+Q([ "A", 5, "B", "C" ]) {
+	? CheckW('{ isString(@item) and IsUppercase(@item) }')
+	#--> FALSE
+	? ContainsW('{ isNumber(@item) }')
+	#--> TRUE
+	? @@( FindW('{ isNumber(@item) }') )
+	#--> [ 2 ]
+}
 ```
 
 Un élément échoue au test, donc `CheckW` imprime `FALSE` ; un nombre est dans la liste, donc `ContainsW` imprime `TRUE` ; et `FindW` dit où, `[ 2 ]`.
@@ -102,20 +105,23 @@ Un élément échoue au test, donc `CheckW` imprime `FALSE` ; un nombre est dans
 
 ```haro
 o1 = new stzYielder([ 1, -2, 3, -4, 5 ])
-? @@( o1.Filter(:IsPositive) )
-#--> [ 1, 3, 5 ]
-? @@( o1.Map(:Abs) )
-#--> [ 1, 2, 3, 4, 5 ]
-? o1.Reduce(:Sum)
-#--> 3
-o2 = new stzList([ 1, "haro", 3, "python", 5, "ruby" ])
-? @@( o2.YieldW('isString(@item)', 'upper(@item)') )
-#--> [ "HARO", "PYTHON", "RUBY" ]
-? @@( o2.Content() )
-#--> [ 1, "haro", 3, "python", 5, "ruby" ]
-o2.PerformW('isString(@item)', 'upper(@item)')
-? @@( o2.Content() )
-#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+o1 {
+	? @@( Filter(:IsPositive) )
+	#--> [ 1, 3, 5 ]
+	? @@( Map(:Abs) )
+	#--> [ 1, 2, 3, 4, 5 ]
+	? Reduce(:Sum)
+	#--> 3
+}
+Q([ 1, "haro", 3, "python", 5, "ruby" ]) {
+	? @@( YieldW('isString(@item)', 'upper(@item)') )
+	#--> [ "HARO", "PYTHON", "RUBY" ]
+	? @@( Content() )
+	#--> [ 1, "haro", 3, "python", 5, "ruby" ]
+	PerformW('isString(@item)', 'upper(@item)')
+	? @@( Content() )
+	#--> [ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]
+}
 ```
 
 Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`. Le producteur a rendu `[ "HARO", "PYTHON", "RUBY" ]`. La liste n'a pas été touchée ! L'exécutant a changé la liste : `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. Le verbe vous dit lequel, si bien qu'une conception peut dire « cette étape ne fait que lire » et le penser.
@@ -123,16 +129,17 @@ Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`.
 Maintenant ce que les quatre partagent : une condition voyage à l'intérieur d'un argument. C'est une petite chaîne, gardée dans une variable si vous voulez. Elle se place au même endroit pour find, pour items et pour contains. Et elle a un jumeau qui prend une vraie fonction :
 
 ```haro
-o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 cCond = '{ @item > 5 }'
-? @@( o1.FindW(cCond) )
-#--> [ 2, 4, 6 ]
-? @@( o1.ItemsW(cCond) )
-#--> [ 8, 12, 9 ]
-? o1.ContainsW(cCond)
-#--> TRUE
-? @@( o1.FindWF( func x { return x > 5 } ) )
-#--> [ 2, 4, 6 ]
+Q([ 3, 8, 5, 12, 1, 9 ]) {
+	? @@( FindW(cCond) )
+	#--> [ 2, 4, 6 ]
+	? @@( ItemsW(cCond) )
+	#--> [ 8, 12, 9 ]
+	? ContainsW(cCond)
+	#--> TRUE
+	? @@( FindWF( func x { return x > 5 } ) )
+	#--> [ 2, 4, 6 ]
+}
 ```
 
 Les deux s'accordent : `FindW` avec la chaîne et `FindWF` avec la fonction impriment tous deux `[ 2, 4, 6 ]`. `ItemsW` rend les éléments eux-mêmes, `[ 8, 12, 9 ]`.

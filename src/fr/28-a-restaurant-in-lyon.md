@@ -50,26 +50,30 @@ Voilà l'histoire. Qu'en porte la bibliothèque ?
 
 ```haro
 oRule = new stzGraphRule("the-lock")
-oRule.SetDomainQ("scope")
-oRule.WhenQ("kind", "equals", "world")
-oRule.WhenQ("admitted-by", "missing", "")
-oRule.ThenViolationQ("a world entered the cycle with no written admission")
+oRule {
+	SetDomain("scope")
+	When("kind", "equals", "world")
+	When("admitted-by", "missing", "")
+	ThenViolation("a world entered the cycle with no written admission")
+}
 g = new stzGraph("cycle-1")
-g.AddNode("customer-phone")
-g.SetNodeProperty("customer-phone", "kind", "world")
-g.SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
-g.AddRule(oRule)
-? g.RulesAreSound()
-#--> 1
-g.AddNode("loyalty-club")
-g.SetNodeProperty("loyalty-club", "kind", "world")
-g.RulesReport()
-#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
-#      [scope] 1 finding(s)
-#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
-g.SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
-? g.RulesAreSound()
-#--> 1
+g {
+	AddNode("customer-phone")
+	SetNodeProperty("customer-phone", "kind", "world")
+	SetNodeProperty("customer-phone", "admitted-by", "the opening scope")
+	AddRule(oRule)
+	? RulesAreSound()
+	#--> 1
+	AddNode("loyalty-club")
+	SetNodeProperty("loyalty-club", "kind", "world")
+	RulesReport()
+	#--> Rule report 'cycle-1': 1 finding(s), 1 error(s), 0 warning(s) -> UNSOUND (errors present)
+	#      [scope] 1 finding(s)
+	#        ERROR the-lock @ loyalty-club -- a world entered the cycle with no written admission
+	SetNodeProperty("loyalty-club", "admitted-by", "a notebook entry, and one exit written")
+	? RulesAreSound()
+	#--> 1
+}
 ```
 
 L'idée d'un club de fidélité arrive, et le cycle n'est plus sain ! Le tribunal répond `UNSOUND (errors present)`, et nomme la règle et le nœud : `ERROR the-lock @ loyalty-club`. Le cycle redevient sain quand l'idée porte son admission écrite.
@@ -78,18 +82,20 @@ L'idée d'un club de fidélité arrive, et le cycle n'est plus sain ! Le tribuna
 
 ```haro
 oPay = new stzPaymentsSandbox()
-oPay.DeclineTokenQ("tok_chargeback")
-? oPay.Authorize(4200, "tok_chargeback")[:status]
-#--> declined
-oPay.FailNextQ()
-? oPay.Authorize(4200, "tok_visa")[:status]
-#--> refused
-aAuth = oPay.Authorize(4200, "tok_visa")
-? aAuth[:status]
-#--> authorized
-oPay.Capture(aAuth[:id])
-? oPay.Capture(aAuth[:id])[:why]
-#--> this authorization was already captured
+oPay {
+	DeclineToken("tok_chargeback")
+	? Authorize(4200, "tok_chargeback")[:status]
+	#--> declined
+	FailNext()
+	? Authorize(4200, "tok_visa")[:status]
+	#--> refused
+	aAuth = Authorize(4200, "tok_visa")
+	? aAuth[:status]
+	#--> authorized
+	Capture(aAuth[:id])
+	? Capture(aAuth[:id])[:why]
+	#--> this authorization was already captured
+}
 ```
 
 Trois lignes imprimées, un rejet, un refus et une raison, et aucune n'est une chaîne vide : `declined`, `refused`, et `this authorization was already captured`.
@@ -100,20 +106,22 @@ Et la barrière de production refuse de s'ouvrir tant qu'un faux est encore lié
 oReg = new stzServiceRegistry("shop")
 oReg.BindSandbox(:payments, new stzPaymentsSandbox())
 oDel = new stzDelivery("shop")
-oDel.AddBackend("api", "linux")
-oDel.UseServicesQ(oReg)
-oDel.NeedsServiceInQ("api", [ :payments ])
-oDel.DeployTo(StzDeploymentSiteQ("host1"), "api")
-oDel.SetActor( HumanActor("owner") )
-? oDel.Deploy(:Production).WasCommitted()
-#--> 0
-? oDel.Log().EntriesOfLevel(:error)[1][:message]
-#--> REFUSED -- the external surface is not production-ready
-? oDel.WhyServicesNotReady()
-#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
-oDel.ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
-? oDel.ServicesAreProductionReady()
-#--> 1
+oDel {
+	AddBackend("api", "linux")
+	UseServices(oReg)
+	NeedsServiceIn("api", [ :payments ])
+	DeployTo(StzDeploymentSiteQ("host1"), "api")
+	SetActor( HumanActor("owner") )
+	? Deploy(:Production).WasCommitted()
+	#--> 0
+	? Log().EntriesOfLevel(:error)[1][:message]
+	#--> REFUSED -- the external surface is not production-ready
+	? WhyServicesNotReady()
+	#--> sandbox-in-production: still bound to a SANDBOX in a production phase -- a fake must never ship
+	ServicesQ().BindLiveQ(:payments, new stzHttpSandbox(), "payments_key")
+	? ServicesAreProductionReady()
+	#--> 1
+}
 ```
 
 Le propriétaire est habilité, et il est refusé ! Rien n'est validé, et le journal dit pourquoi : `REFUSED -- the external surface is not production-ready` ; la raison dessous est la règle : `a fake must never ship`. Elle s'ouvre quand le lien est déclaré réel : la barrière lit la nature du lien, bac à sable ou réel, et non la classe derrière lui, et c'est pourquoi un bac à sable HTTP lié comme réel l'ouvre ici.
@@ -122,27 +130,29 @@ Le propriétaire est habilité, et il est refusé ! Rien n'est validé, et le jo
 
 ```haro
 oCon = new stzSuperApp("neighbourhood")
-oCon.AddWorld("customer", StzAppQ("customer"))
-oCon.AddWorld("kitchen", StzAppQ("kitchen"))
-oCon.AddWorld("supplier", StzAppQ("supplier"))
-oCon.Bond("customer", "kitchen", "send-order")
-oCon.Bond("kitchen", "supplier", "order-produce")
-oCon.GovDeclareRisk("send-order", 1)
-oCon.GovDeclareRisk("order-produce", 2)
-oCon.GovGrant("customer", "send-order")
-oCon.GovGrant("kitchen", "order-produce")
-oCon.GovSetAuthority("customer", :Delegated)
-oCon.GovSetAuthority("kitchen", :Delegated)
-oCon.Retire("supplier")
-? oCon.CallAcross("customer", "kitchen", "send-order")
-#--> 1
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 0
-? oCon.Why()
-#--> target world 'supplier' is not active.
-oCon.Revive("supplier")
-? oCon.CallAcross("kitchen", "supplier", "order-produce")
-#--> 1
+oCon {
+	AddWorld("customer", StzAppQ("customer"))
+	AddWorld("kitchen", StzAppQ("kitchen"))
+	AddWorld("supplier", StzAppQ("supplier"))
+	Bond("customer", "kitchen", "send-order")
+	Bond("kitchen", "supplier", "order-produce")
+	GovDeclareRisk("send-order", 1)
+	GovDeclareRisk("order-produce", 2)
+	GovGrant("customer", "send-order")
+	GovGrant("kitchen", "order-produce")
+	GovSetAuthority("customer", :Delegated)
+	GovSetAuthority("kitchen", :Delegated)
+	Retire("supplier")
+	? CallAcross("customer", "kitchen", "send-order")
+	#--> 1
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 0
+	? Why()
+	#--> target world 'supplier' is not active.
+	Revive("supplier")
+	? CallAcross("kitchen", "supplier", "order-produce")
+	#--> 1
+}
 ```
 
 L'appel à travers le lien passe. L'appel vers le monde en sommeil est refusé ! La raison tient en une ligne : `target world 'supplier' is not active.` Réveillé, il passe.
@@ -151,19 +161,23 @@ L'appel à travers le lien passe. L'appel vers le monde en sommeil est refusé !
 
 ```haro
 oMon = StzPerfMonitor("remote-control")
-oMon.NewTimer("first.display.ms").Record(900)
-oMon.NewTimer("tap.ms").Record(40)
-oMon.NewTimer("order.to.kitchen.ms").Record(1800)
+oMon {
+	NewTimer("first.display.ms").Record(900)
+	NewTimer("tap.ms").Record(40)
+	NewTimer("order.to.kitchen.ms").Record(1800)
+}
 oSla = StzSla("speed-budget")
-oSla.ExpectP95("first.display.ms").Under(1200)
-oSla.ExpectP95("tap.ms").Under(80)
-oSla.ExpectP95("order.to.kitchen.ms").Under(2500)
-oSla.CheckAgainst(oMon)
-oSla.Show()
-#--> SLA speed-budget -- 3 expectation(s), last check: MET.
-#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
-#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
-#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+oSla {
+	ExpectP95("first.display.ms").Under(1200)
+	ExpectP95("tap.ms").Under(80)
+	ExpectP95("order.to.kitchen.ms").Under(2500)
+	CheckAgainst(oMon)
+	Show()
+	#--> SLA speed-budget -- 3 expectation(s), last check: MET.
+	#      [MET] p95-first.display.ms-under-1200: measured 900 (must be <= 1200)
+	#      [MET] p95-tap.ms-under-80: measured 40 (must be <= 80)
+	#      [MET] p95-order.to.kitchen.ms-under-2500: measured 1800 (must be <= 2500)
+}
 oMon.MetricQ("order.to.kitchen.ms").Record(3100)
 oSla.CheckAgainst(oMon)
 oRep = new stzRuleReport("cycle-gate")
