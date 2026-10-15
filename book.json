@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-10-15 10:11 UTC+01:00",
+ "built": "2026-10-15 10:48 UTC+01:00",
  "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
  "edition": "proof copy",
  "runtime": {
@@ -1986,7 +1986,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2375,
+   "words": 2372,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
@@ -6798,7 +6798,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1950,
+   "words": 1951,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {

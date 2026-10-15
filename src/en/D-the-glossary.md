@@ -102,7 +102,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **record.** The repositories, sessions and files this book ran against, at the commit printed under every proof line. What the book reads its facts from, and never composes. The preface; chapter 32.
 
-**refinement.** The write surface: a change declared with its points and judged by a four-stage gate. Chapter 10.
+**refinement.** The write surface: a change declared with its points and judged by a gate of five checks. Chapter 10.
 
 **register.** In this book, two senses. (1) One of the five forms a reply can take: an option, a data structure, a formula, a sentence, examples. (2) The register of innovations, Appendix A. Chapter 18.
 

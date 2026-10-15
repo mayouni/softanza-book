@@ -16,7 +16,7 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
-In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of the first book of this imprint: stop trying to govern the intelligence, and govern the change.
+In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my earlier book, *Refinement-Oriented Programming*: stop trying to govern the intelligence, and govern the change.
 
 ## 1. The concept, as the field holds it
 
@@ -34,7 +34,7 @@ The rest of the chapter runs that sentence.
 
 ## 3. The Softanza form
 
-The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. The first book of this imprint, *Refinement-Oriented Programming*, tells the discipline through the story of a bank facing a regulator's letter. This chapter tells what the library carries of it.
+The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. My earlier book, *Refinement-Oriented Programming*, tells the discipline through the story of a bank facing a regulator's letter. This chapter tells what the library carries of it.
 
 It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds:
 

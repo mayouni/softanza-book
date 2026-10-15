@@ -102,7 +102,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **dossier.** Les dépôts, les sessions et les fichiers sur lesquels ce livre a tourné, au commit imprimé sous chaque ligne de preuve. Ce dans quoi le livre lit ses faits, et ne les compose jamais. La préface ; chapitre 32.
 
-**raffinement.** La surface d'écriture : un changement déclaré avec ses points et jugé par une barrière à quatre étapes. Chapitre 10.
+**raffinement.** La surface d'écriture : un changement déclaré avec ses points et jugé par une barrière à cinq contrôles. Chapitre 10.
 
 **registre.** Dans ce livre, deux sens. (1) L'une des cinq formes que peut prendre une réponse : une option, une structure de données, une formule, une phrase, des exemples. (2) Le registre des innovations, l'annexe A. Chapitre 18.
 

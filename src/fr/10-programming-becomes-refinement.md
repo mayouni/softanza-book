@@ -16,7 +16,7 @@ rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
 ---
 
-Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C'est un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture du premier livre de cette maison d'édition : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
+Dans ce chapitre, je dis ce que j'entends par raffiner plutôt que programmer. C'est un changement apporté à du code déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. J'exécute la forme que la bibliothèque lui donne : le point de raffinement, la proposition, la barrière, la cascade, le plancher de confiance et le retour en arrière. Et j'imprime la barrière telle qu'elle est, cinq contrôles et non les quatre de ma conception. Je dis où le terrain mène et où la barrière s'arrête. Le principe est la phrase que j'ai écrite sur la quatrième de couverture de mon livre précédent, *Refinement-Oriented Programming* : cessez de vouloir gouverner l'intelligence, et gouvernez le changement.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -34,7 +34,7 @@ Le reste du chapitre exécute cette phrase.
 
 ## 3. La forme Softanza
 
-La pratique a changé de nom dans ma vie. Je disais que je programmais. Je dis maintenant de plus en plus que je raffine, et je veux dire par là quelque chose d'exact. Un raffinement est un changement apporté à du code qui a été déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. Le premier livre de cette maison d'édition, *Refinement-Oriented Programming*, raconte la discipline à travers l'histoire d'une banque devant la lettre d'un régulateur. Ce chapitre dit ce que la bibliothèque en porte.
+La pratique a changé de nom dans ma vie. Je disais que je programmais. Je dis maintenant de plus en plus que je raffine, et je veux dire par là quelque chose d'exact. Un raffinement est un changement apporté à du code qui a été déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline à travers l'histoire d'une banque devant la lettre d'un régulateur. Ce chapitre dit ce que la bibliothèque en porte.
 
 Il commence par déclarer où le code peut changer. Un point de raffinement est un bouton nommé, écrit dans le source sous forme de balise, avec son genre, sa valeur et ses bornes :
 
