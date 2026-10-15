@@ -16,7 +16,7 @@ rulings: ["12.19", "12.29", "12.30"]
 research: research/ch29.md
 ---
 
-Dans ce chapitre, je prends une banque de Niamey, sous la banque centrale de l'union monétaire ouest-africaine, et je dis d'abord où est la leçon : dans la bibliothèque, et non dans le produit que la banque fait tourner. J'écris l'organigramme d'une petite banque comme un texte et je le juge selon la règle régionale et selon la séparation des tâches. J'imprime ce que chacun des sept régimes contient, j'ajoute une règle propre à la banque comme une donnée, et je lis le rapport unique avec son verdict. Je dis les quatre choses que j'ai refusées, la première étant de cacher la structure dans une base de données. Le principe tient en une phrase : l'organigramme dit ce qui est, la règle dit ce qui doit être, et le verdict nomme la règle et le lieu.
+Dans ce chapitre, je prends une banque de Niamey, que j'appelle Softibank (le nom est fictif), sous la banque centrale de l'union monétaire ouest-africaine, et je dis d'abord où est la leçon : dans la bibliothèque, et non dans le produit que la banque fait tourner. J'écris l'organigramme d'une petite banque comme un texte et je le juge selon la règle régionale et selon la séparation des tâches. J'imprime ce que chacun des sept régimes contient, j'ajoute une règle propre à la banque comme une donnée, et je lis le rapport unique avec son verdict. Je dis les quatre choses que j'ai refusées, la première étant de cacher la structure dans une base de données. Le principe tient en une phrase : l'organigramme dit ce qui est, la règle dit ce qui doit être, et le verdict nomme la règle et le lieu.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -167,7 +167,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
 
-Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire d'une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
+Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire de Softibank, une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
 
 ## 4. La décision, et ce que j'ai refusé
 

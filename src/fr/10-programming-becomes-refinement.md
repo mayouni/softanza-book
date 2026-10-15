@@ -34,7 +34,7 @@ Le reste du chapitre exécute cette phrase.
 
 ## 3. La forme Softanza
 
-La pratique a changé de nom dans ma vie. Je disais que je programmais. Je dis maintenant de plus en plus que je raffine, et je veux dire par là quelque chose d'exact. Un raffinement est un changement apporté à du code qui a été déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline à travers l'histoire d'une banque devant la lettre d'un régulateur. Ce chapitre dit ce que la bibliothèque en porte.
+La pratique a changé de nom dans ma vie. Je disais que je programmais. Je dis maintenant de plus en plus que je raffine, et je veux dire par là quelque chose d'exact. Un raffinement est un changement apporté à du code qui a été déclaré modifiable, proposé sous une forme typée, jugé par une barrière, enregistré comme un pas, et réversible. Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline à travers l'histoire de Softibank, une banque devant la lettre d'un régulateur. Ce chapitre dit ce que la bibliothèque en porte.
 
 Il commence par déclarer où le code peut changer. Un point de raffinement est un bouton nommé, écrit dans le source sous forme de balise, avec son genre, sa valeur et ses bornes :
 

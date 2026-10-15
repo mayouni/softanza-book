@@ -24,7 +24,7 @@ The rest of the chapter runs that sentence.
 
 ## 3. The Softanza form
 
-The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. My earlier book, *Refinement-Oriented Programming*, tells the discipline through the story of a bank facing a regulator's letter. This chapter tells what the library carries of it.
+The practice has changed names in my life. I used to say I programmed. I now say that, more and more, I refine, and I mean something exact by it. A refinement is a change to code that was declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. My earlier book, *Refinement-Oriented Programming*, tells the discipline through the story of Softibank, a bank facing a regulator's letter. This chapter tells what the library carries of it.
 
 It begins by declaring where the code may change. A refinement point is a named knob written in the source as a tag, with its kind, its value and its bounds:
 

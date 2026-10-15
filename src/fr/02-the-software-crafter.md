@@ -16,7 +16,7 @@ rulings: ["12.2", "12.12", "12.13", "12.25", "12.29", "12.30"]
 research: research/ch02.md
 ---
 
-Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent d'IA, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est une phrase qui joint celle du site et celle du glossaire : un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare.
+Dans ce chapitre, je prends le mot « crafter » au terrain, à son artisanat et à ses deux réponses qui définissent la personne par un outil, le low-code et l'agent de code. Je dis ce que le site entend par lui. Je montre les six portes, chacune avec une ou deux lignes qui s'exécutent, et les trois cas pour lesquels ce livre est écrit : un restaurateur à Lyon, Softibank, une banque à Niamey, une organisation sur le terrain. Je dis ce que j'ai gardé, le programmeur en premier ; ce que j'ai ajouté, l'agent d'IA, avec un pouvoir retenu ; et ce que j'ai refusé, « maker » et « builder ». Le principe est une phrase qui joint celle du site et celle du glossaire : un artisan du logiciel est quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare.
 
 ## 1. Le concept, tel que le terrain le tient
 

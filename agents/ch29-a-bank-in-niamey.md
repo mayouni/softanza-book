@@ -6,7 +6,7 @@ Stage: built: the organisation chart as a text a person can edit; the validators
 
 Run: 6 of 6 blocks kept their promise, on 2026-10-14 22:27 UTC+01:00.
 
-In this chapter I take a bank in Niamey, under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
+In this chapter I take a bank in Niamey, which I call Softibank (the name is fictional), under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
 ## 1. The concept, as the field holds it
 
@@ -169,7 +169,7 @@ oOrg2.SetPositionDepartment("ceo", "executive")
 
 It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for rules not written yet.
 
-My earlier book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
+My earlier book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of Softibank, a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
 
 ## 4. The decision, and what I refused
 
