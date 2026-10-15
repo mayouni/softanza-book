@@ -101,6 +101,10 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
 - **Public since 2026-10-14** (PUBLISH-01): origin https://github.com/mayouni/softanza-book; the readers at https://mayouni.github.io/ayouni/books/softanza/en/ and /fr/, served by the house repository (`mayouni/ayouni`), which pins one commit. **A push to origin publishes everything pushed: tell the house desk before pushing**, commit locally as before. Only the author gives the go for a push.
 
+## How this session reports (2026-10-15)
+
+A substantive report to the author is a **memo** in Bangalo's style (`D:\GitHubangalo\CLAUDE.md`, "Talk in the memo style"): by / subject / why / did / state / waiting / next / note, and each memo is appended to `D:\GitHub\softanza\memos\YYYY-MM-DD.md`. The author confirmed it to this session directly.
+
 ## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01, TYPE-01, VOICE-05)
 
 - **Never undersell Softanza** in the name of transparency or balance. It is not a research project; parts are in production and parts in development; it is a professional foundation for professional decision-makers. Say stage and direction, never "weak", "falls short", "nothing runs in production".
