@@ -57,6 +57,7 @@ UI = {
     "theme": "Light or dark", "langs": "Language",
     "status_link": "Status of the book", "agents_link": "For agents",
     # the open book (house OPEN-BOOK.md, HOUSE-11): the ask and the colophon line, word for word; the links are the house's pages
+    "home_label": "AYOUNI Press: home", "home_url": "https://mayouni.github.io/ayouni/",
     "invite": "If this book is useful to your organisation, I work with organisations on its subjects: paper copies in quantity, workshops and training, talks, consulting and the building of solutions. Write to ", "invite_mail": "kalidianow@gmail.com", "offer_link": "How these books are offered",
     "colophon": "Free to read and share under CC BY-NC-ND 4.0; code under the library's licence.",
     "offer_url": "https://mayouni.github.io/ayouni/offer/", "licence_url": "https://mayouni.github.io/ayouni/licence/",
@@ -92,6 +93,7 @@ UI = {
     "description": "Softanza, la plateforme logicielle gouvernée de l'ère de l'IA : déclarez ce que vous savez, un tribunal le garde, le modèle d'IA vient en dernier. Repenser la programmation, ses langages et son intelligence depuis les premiers principes. Par Mansour Ayouni. Premier des livres AYOUNI.",
     "theme": "Clair ou sombre", "langs": "Langue",
     "status_link": "État du livre", "agents_link": "Pour les agents",
+    "home_label": "Éditions AYOUNI : accueil", "home_url": "https://mayouni.github.io/ayouni/",
     "invite": "Si ce livre est utile à votre organisation, je travaille avec les organisations sur ses sujets : exemplaires papier en quantité, ateliers et formations, conférences, conseil et réalisation de solutions. Écrivez à ", "invite_mail": "kalidianow@gmail.com", "offer_link": "Comment ces livres sont offerts",
     "colophon": "Libre à lire et à partager sous CC BY-NC-ND 4.0 ; le code sous la licence de la bibliothèque.",
     "offer_url": "https://mayouni.github.io/ayouni/fr/offre/", "licence_url": "https://mayouni.github.io/ayouni/fr/licence/",
@@ -104,7 +106,7 @@ UI = {
 
 # ============================================================================ colours: every one a variable
 LIGHT = {
-  "--ink": "#1a1612", "--ink-soft": "#3a3326", "--soft": "#6b6358", "--soft-2": "#9a9078",
+  "--ink": "#17140f", "--ink-soft": "#2a241b", "--soft": "#6b6358", "--soft-2": "#9a9078",
   "--paper": "#ffffff", "--bg": "#fbfaf6", "--rule": "#e3ddc9", "--rule-strong": "#1a1612",
   "--hover-bg": "#f3eedf", "--hover-bg-soft": "#fcfaf5", "--card-bg": "#ffffff", "--sidebar-bg": "#f5f0e2",
   "--bookmark": "#E96A1A", "--bookmark-text": "#b3480a",
@@ -171,6 +173,11 @@ def shell_edits(ui):
          '<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n',
          ""),
         ("font faces", "<style>\n:root {", "<style>\n" + FONT_FACES + ":root {"),
+        ("the default reading size is 24px: a Garamond reads small (READER-02)", "  --font-size: 22px;", "  --font-size: " + str(TYPE["body_px"]) + "px;"),
+        ("the reading size control starts on 24px", "  let currentSizeIdx = 2;", "  let currentSizeIdx = 3;"),
+        ("the AYOUNI logo, once, as a symbol", "<body>", "<body>\n" + (ROOT / "reader" / "logo-sprite.html").read_text(encoding="utf-8")),
+        ("the logo is the way home, at the top of every page", '<div class="hdr-section hdr-left">',
+         '<div class="hdr-section hdr-left">\n    <a class="ayouni-home" href="' + ui["home_url"] + '" aria-label="' + html.escape(ui["home_label"]) + '"><svg viewBox="0 0 2095 518" aria-hidden="true" focusable="false"><use href="#ayouni-logo"/></svg></a>'),
         ("the print icon opens the book's PDF, never a page the browser generates (OPEN-BOOK, HOUSE-11)",
          "  btnPrint.addEventListener('click', () => window.print());",
          f"  btnPrint.addEventListener('click', () => {{ const served = /\\/books\\/[^/]+\\/(en|fr)\\/(index\\.html)?$/.test(location.pathname); "
@@ -426,12 +433,13 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 TYPE = {
     # the reader's navigation, in px
     "sidebar_book": 24, "sidebar_part": 20, "sidebar_link": 18.5,
-    "contents_h2": 36, "contents_part": 27, "contents_row": 22, "contents_num": 16, "contents_pg": 15, "contents_badge": 13,
+    "contents_h2": 36, "contents_part": 27, "contents_row": 22, "contents_num": 16, "contents_pg": 15, "contents_badge": 14,
     "card_title": 21, "card_words": 15,
     # inside a chapter page, in em of the reading size (so it follows the font control)
     "section_h3": 1.3, "subsection_h4": 1.12, "body": 1.0, "stage_li": 0.92,
     # labels and notes, in px
-    "eyebrow": 13, "decision_tag": 13, "proof": 15, "proof_engine": 14.5, "ran": 15, "effects": 14.5, "banner": 13, "court_li": 15, "court_head": 13, "court_path": 13, "sources": 14.5,
+    "body_px": 24, "card_preview": 18, "hero_subtitle": 24, "hero_tagline": 22, "hero_author": 20, "hero_label": 14, "micro": 14,
+    "eyebrow": 14, "decision_tag": 14, "proof": 15, "proof_engine": 14.5, "ran": 15, "effects": 14.5, "banner": 14, "court_li": 15, "court_head": 14, "court_path": 14, "sources": 14.5,
 }
 
 
@@ -444,9 +452,17 @@ def check_type_scale():
     above("contents_h2", "contents_part"); above("contents_part", "contents_row"); above("contents_row", "contents_num")
     above("section_h3", "subsection_h4"); above("subsection_h4", "body")
     for k in ("sidebar_link", "contents_num", "contents_pg", "contents_badge", "card_words", "eyebrow", "decision_tag", "proof", "proof_engine", "ran", "effects", "banner",
-              "court_li", "court_head", "court_path", "sources"):
-        if T[k] < 13:
-            bad.append(f"the type scale: {k} ({T[k]}px) is below the 13px floor for any label or note")
+              "court_li", "court_head", "court_path", "sources", "micro", "hero_label"):
+        if T[k] < 14:
+            bad.append(f"the type scale: {k} ({T[k]}px) is below the 14px floor for any label or note")
+    if T["body_px"] < 20:
+        bad.append(f"the type scale: the default reading size ({T['body_px']}px) is below 20px")
+    for k in ("card_preview", "hero_subtitle", "hero_tagline", "hero_author"):
+        if T[k] < 18:
+            bad.append(f"the type scale: {k} ({T[k]}px) is below 18px")
+    r, g, b = (int(LIGHT["--ink"][i:i + 2], 16) for i in (1, 3, 5))
+    if 0.299 * r + 0.587 * g + 0.114 * b > 0.299 * 0x17 + 0.587 * 0x14 + 0.114 * 0x0f + 0.5:
+        bad.append("the type scale: the body ink is lighter than #17140f")
     if T["stage_li"] < 0.85:
         bad.append("the type scale: the stage list is below 0.85 of the body text")
     return bad
@@ -483,6 +499,18 @@ def type_css():
         f".court .g-path{{font-size:{T['court_path']}px;}}\n"
         f".sources{{font-size:{T['sources']}px;}}\n"
         f".the-invite .invite-more,.the-invite .colophon-line{{font-size:{T['sources']}px;}}\n"
+        f".card-preview{{font-size:{T['card_preview']}px;line-height:1.55;color:var(--ink);max-height:340px;}}\n"
+        f".hero-subtitle{{font-size:{T['hero_subtitle']}px;color:var(--ink);}}\n"
+        f".hero-tagline{{font-size:{T['hero_tagline']}px;color:var(--ink);}}\n"
+        f".hero-author{{font-size:{T['hero_author']}px;}}\n"
+        f".hero-series,.hero-status,.hero-back .hb-label,.hb-label,.search-clear-hl{{font-size:{T['hero_label']}px;}}\n"
+        ".hero-back em,.hero-back{color:var(--ink);}\n"
+        f".spine-badge,.code-cell .cell-label,.stage,.aside-h,.src-k,.cnb-dir,.court .g-name code,.chapter-page .sources .src-k,.chapter-page .sources li code,.chapter-page .sources a code{{font-size:{T['micro']}px;}}\n"
+        ".ayouni-home{display:inline-flex;align-items:center;}\n"
+        ".top-header .ayouni-home{height:38px;margin-right:6px;}\n"
+        ".top-header .ayouni-home svg{height:22px;width:auto;aspect-ratio:2095/518;}\n"
+        ".hero-imprint .ayouni-home svg{height:46px;width:auto;aspect-ratio:2095/518;}\n"
+        "@media (max-width: 900px){.top-header .ayouni-home svg{height:16px;}}\n"
         f"@media (max-width: 900px){{.sb-part{{font-size:19px;}}.sidebar-link{{font-size:18px;}}.contents-listing .ce-part{{font-size:23px;}}.contents-listing .ce-row{{font-size:20px;}}}}\n"
     )
 
@@ -1025,7 +1053,7 @@ def render_reader(lang, st, pages, runs, guards, stale_keys):
 {cover_svg(st, ui, lang)}
 </div>
 <div class="hero-info">
-<div class="hero-imprint ayouni">AYOUN<span class="i-dot">I</span></div>
+<div class="hero-imprint"><a class="ayouni-home" href="{ui["home_url"]}" aria-label="{html.escape(ui["home_label"])}"><svg viewBox="0 0 2095 518" aria-hidden="true" focusable="false"><use href="#ayouni-logo"/></svg></a></div>
 <p class="hero-series">{html.escape(series)}</p>
 <h1 class="hero-title">{html.escape(title)}</h1>
 <p class="hero-subtitle">{html.escape(sub)}</p>

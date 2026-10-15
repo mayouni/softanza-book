@@ -60,7 +60,9 @@ p { margin: 0 0 0.62em; orphans: 3; widows: 3; hyphens: auto; }
 .titlepage .s { font-style: italic; font-size: 13pt; margin-top: 0.25in; color: #3a3326; }
 .titlepage .g { font-style: italic; font-size: 10.5pt; margin-top: 0.14in; color: #6b6358; }
 .titlepage .a { font: 600 12pt Arial, sans-serif; margin-top: 0.75in; }
-.titlepage .i { font: 800 13pt Arial, sans-serif; margin-top: 0.9in; letter-spacing: 1px; }
+.titlepage .i { margin-top: 0.9in; }
+.titlepage .i img { height: 0.34in; width: auto; }
+.pback .im img { height: 0.36in; width: auto; }
 .titlepage .c { font: 8pt Arial, sans-serif; letter-spacing: 2px; color: #6b6358; margin-top: 0.1in; }
 .colophon { padding-top: 4.4in; font: 7.8pt/1.6 Arial, sans-serif; color: #3a3326; }
 .colophon p { margin-bottom: 0.08in; }
@@ -169,7 +171,7 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
     out.append(f'<section class="pfront halftitle">{esc(title)}</section>')
     out.append(f'<section class="pfront titlepage"><div class="t">{esc(title)}</div><div class="s">{esc(sub)}</div>'
                f'<div class="g">{esc(tag)}</div><div class="a">Mansour Ayouni</div>'
-               f'<div class="i">AYOUNI</div><div class="c">TUNIS · NIAMEY · PARIS · 2026</div></section>')
+               f'<div class="i"><img alt="AYOUNI" src="{LOGO_URI}"></div><div class="c">TUNIS · NIAMEY · PARIS · 2026</div></section>')
 
     if fr:
         warn = (f"Épreuve de travail. {n_draft} pages sur {len(pages)} sont des brouillons que l'auteur n'a pas encore lus ; "
@@ -243,7 +245,7 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
     back = st["back_cover"]
     out.append(f'<section class="pback"><div class="bl bl-first">{esc(series.upper())}</div>'
                + "".join(f'<div class="bl">{esc(l)}</div>' for l in back)
-               + '<div class="im">AYOUNI</div></section>')
+               + f'<div class="im"><img alt="AYOUNI" src="{LOGO_URI}"></div></section>')
     out.append("</body></html>")
     return "\n".join(out)
 
@@ -280,6 +282,9 @@ def find_pages(pdf_path, pages, toc_end):
     return found, len(rd.pages), texts
 
 
+LOGO_URI = None  # set in build(): the AYOUNI logo, rasterised from the SVG, as a data URI
+
+
 def build(lang, html_only=False):
     st = structure()
     runs = load_json("book-run.json", {})
@@ -288,6 +293,8 @@ def build(lang, html_only=False):
     src = sources(lang)
     by_id = {m["id"]: (p, m, b) for p, m, b in src}
     ui = B.UI[lang]
+    global LOGO_URI
+    LOGO_URI = data_uri(ROOT / "assets" / "cover" / "source" / "ayouni-logo.png")
     pages = B.build_pages(lang, st, en_src, by_id, runs, guards, ui)
     pages = [p for p in pages if p["own"]]
     OUT.mkdir(exist_ok=True)

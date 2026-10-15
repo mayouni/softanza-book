@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-15 10:48 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-15 11:07 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
