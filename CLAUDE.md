@@ -103,7 +103,7 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 
 ## How this session reports (2026-10-15)
 
-A substantive report to the author is a **memo** in Bangalo's style (`D:\GitHubangalo\CLAUDE.md`, "Talk in the memo style"): by / subject / why / did / state / waiting / next / note, and each memo is appended to `D:\GitHub\softanza\memos\YYYY-MM-DD.md`. The author confirmed it to this session directly.
+A substantive report to the author is a **memo** in Bangalo's style (`D:\GitHubbangalo\CLAUDE.md`, "Talk in the memo style"): by / subject / why / did / state / waiting / next / note, and each memo is appended to `D:\GitHub\softanza\memos\YYYY-MM-DD.md`. The author confirmed it to this session directly.
 
 ## Standing rules the author has repeated (VOICE-04, RING-01, CODEWRAP-01, TYPE-01, VOICE-05)
 
