@@ -236,9 +236,9 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
             if letter in by_letter:
                 out.append(chapter(by_letter[letter]))
 
-    # the open book: the ask and the colophon line on the last page (house OPEN-BOOK.md, HOUSE-11)
-    out.append(f'<section class="pfront colophon ask"><p class="warn">{esc(ui["ask"])}</p>'
-               f'<p>{esc(ui["ask_btn"])} : {esc(ui["offer_url"])}</p>'
+    # the open book: the invitation to organisations and the colophon line on the last page (house OPEN-BOOK.md, revised)
+    out.append(f'<section class="pfront colophon ask"><p class="warn">{esc(ui["invite"] + ui["invite_mail"] + ".")}</p>'
+               f'<p>{esc(ui["offer_link"])} : {esc(ui["offer_url"])}</p>'
                f'<p>{esc(ui["colophon"])}</p><p>{esc(ui["licence_url"])}</p></section>')
     back = st["back_cover"]
     out.append(f'<section class="pback"><div class="bl bl-first">{esc(series.upper())}</div>'
