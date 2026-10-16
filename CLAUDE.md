@@ -45,7 +45,7 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 ## Rules that bind every session (from the brief, §9)
 
 - Outputs are never stored in a source file. Every number is read, never composed. Stamps come from the clock.
-- A page has one of three stages (STATUS-01): `draft` (written, its code run and judged, read by fresh readers), `review` (the author is reviewing it), `published` (the author approved it); the banner shows the stage, with its meaning on hover. Only the author moves a page to `review` or `published`; an agent never does. The edition is a proof copy until every page is published.
+- A page has one of three stages (STATUS-01): `draft` (written, its code run and judged, read by fresh readers), `review` (the author is reviewing it), `published` (the author approved it); the banner shows the stage, with its meaning on hover. Only the author moves a page to `review` or `published`; an agent never does. The edition is a proof copy until every page is published. The author adopted the stages for every AYOUNI book (house HOUSE-18, framework AWF-13). When he moves a page, send the house desk a memo with the page id, the stage and his words **before** the hand-over: its gate fails on any page beyond Draft that its registry (`moved_by_author`) does not record. Write `review` / `published` in front matter and manifests, never the old `read` / `final`.
 - The author owns `drafts/`. Propose edits in the memo; never change a draft silently. The one mechanical change
   made to chapter 1 on its way to `src/` is the fence tag (`ring` → `haro`, and `haro exercise` for the exercise),
   as §4.8 rules.
