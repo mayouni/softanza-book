@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-16 13:00 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-16 13:14 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -10642,7 +10642,7 @@ What makes it a discipline and not a filing system is that each rule was paid fo
 
 **Words name states, never people.** A session once reported my working tree as "dirty". Work that is not yet committed is not dirty, and often it contains no error at all; and a word that judges the work judges the one who made it. So the record keeps a table of words the estate does not use, with the word it uses instead.
 
-**What no counter can see.** What did the counters say of the sound plane of the library? Six hundred and twenty-two passing assertions across nineteen guards, and yet to any listener it was broken! I heard four defects that no counter reported: a voice too quick to understand, a sentence cut before its end. The law that came out of it says that a thing nobody has perceived is in a state, not in failure: unperceived is a state, and the page must say so. It is the same instinct as the line every chapter of this book carries, "not yet read by the author", until I have read it.
+**What no counter can see.** What did the counters say of the sound plane of the library? Six hundred and twenty-two passing assertions across nineteen guards, and yet to any listener it was broken! I heard four defects that no counter reported: a voice too quick to understand, a sentence cut before its end. The law that came out of it says that a thing nobody has perceived is in a state, not in failure: unperceived is a state, and the page must say so. It is the same instinct as the stage every page of this book carries, Draft, until I have approved it.
 
 **The loop is seconds, not minutes.** I stopped two sessions over the same eight-minute test run. It was measured: six seconds of the eight minutes were coverage, the rest were three sections re-rendering the world to test one pixel property. It was rewritten to twenty seconds. I had written, in my own words, that it "takes a lot of time and should be rethinked". The law was written by a session; the sentence was mine.
 
