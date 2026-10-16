@@ -130,9 +130,11 @@ def build(lang):
     for k, p in enumerate(pages):
         manifest.append(f'<item id="i{k:02d}" href="{names[p["slug"]]}" media-type="application/xhtml+xml"/>')
         spine.append(f'<itemref idref="i{k:02d}"/>')
-    n_draft = sum(1 for p in pages if p["meta"].get("status", "draft") == "draft")
-    desc = (f"{tag}. " + (f"Épreuve de travail : {n_draft} pages sur {len(pages)} sont des brouillons non lus par l'auteur."
-                          if fr else f"Proof copy: {n_draft} of {len(pages)} pages are drafts not yet read by the author."))
+    n_draft = sum(1 for p in pages if B.stage_of(p["meta"]) == "draft")
+    n_review = sum(1 for p in pages if B.stage_of(p["meta"]) == "review")
+    n_pub = sum(1 for p in pages if B.stage_of(p["meta"]) == "published")
+    desc = (f"{tag}. " + (f"Épreuve de travail : {n_draft} pages en brouillon, {n_review} en relecture, {n_pub} publiées."
+                          if fr else f"Proof copy: {n_draft} pages in draft, {n_review} in review, {n_pub} published."))
     opf = (f'<?xml version="1.0" encoding="utf-8"?>\n<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="{lang}">'
            f'<metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:identifier id="bookid">{uid}</dc:identifier>'
            f'<dc:title>{esc(title)} — {esc(sub)}</dc:title><dc:creator>Mansour Ayouni</dc:creator><dc:language>{lang}</dc:language>'

@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Edition: proof copy (42 of 42 pages not yet read by the author). Built 2026-10-15 13:47 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
+Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-16 13:00 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.
 
 ## Files
 

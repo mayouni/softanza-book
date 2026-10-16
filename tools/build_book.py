@@ -34,7 +34,10 @@ UI = {
     "spine": "Spine", "spine_title": "One of the nine spine chapters: they carry the whole argument and can be read alone",
     "spine_only": "Read the spine only", "all_chapters": "Show every chapter",
     "spine_group": "Which chapters to show", "opt_all": "Every chapter", "opt_spine": "The spine: {n} chapters",
-    "draft": "Draft · not yet read by the author", "read": "Read by the author", "final": "Final",
+    "draft": "Draft", "review": "In review", "published": "Published",
+    "draft_title": "Written, its code run and judged, read by fresh readers; awaiting the author's review",
+    "review_title": "The author is reviewing this page; his remarks are being applied",
+    "published_title": "Approved by the author: this is the book's text",
     "missing": "Missing · the source has not been received",
     "proof": "Run on {d} inside the library at commit {sha}: {k} of {n} blocks kept their promise.",
     "proof_none": "This page has no code to run.",
@@ -73,7 +76,10 @@ UI = {
     "spine": "Colonne", "spine_title": "Un des neuf chapitres de la colonne : ils portent tout l'argument et se lisent seuls",
     "spine_only": "Lire la colonne seule", "all_chapters": "Montrer tous les chapitres",
     "spine_group": "Chapitres à montrer", "opt_all": "Tous les chapitres", "opt_spine": "La colonne : {n} chapitres",
-    "draft": "Brouillon · traduit d'un brouillon anglais, pas encore lu par l'auteur", "read": "Lu par l'auteur", "final": "Final",
+    "draft": "Brouillon · traduit de l'anglais", "review": "En relecture", "published": "Publié",
+    "draft_title": "Écrit, son code exécuté et jugé, lu par des lecteurs neufs ; en attente de la relecture de l'auteur",
+    "review_title": "L'auteur relit cette page ; ses remarques sont en cours d'application",
+    "published_title": "Approuvé par l'auteur : c'est le texte du livre",
     "missing": "Manquant · la source n'a pas été reçue",
     "proof": "Exécuté le {d} dans la bibliothèque au commit {sha} : {k} bloc(s) sur {n} ont tenu leur promesse.",
     "proof_none": "Cette page n'a pas de code à exécuter.",
@@ -308,6 +314,8 @@ pre .c-promise{color:var(--code-promise);}
 
 .status-banner{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;border-radius:4px;margin:0 0 14px;border:1px solid var(--rule);color:var(--soft);background:var(--sidebar-bg);}
 .status-banner.st-draft{border-color:var(--bookmark);color:var(--bookmark-text);background:transparent;}
+.status-banner.st-review{border-color:var(--designed);color:var(--designed);background:var(--designed-bg);}
+.status-banner.st-published{border-color:var(--ok);color:var(--ok);background:var(--ok-bg);}
 .status-banner.st-missing{border-color:var(--bad);color:var(--bad);background:transparent;}
 .spine-badge{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:2px 7px;margin-left:10px;vertical-align:2px;}
 
@@ -984,10 +992,20 @@ def the_invitation(ui):
             f'<p class="colophon-line">{col}</p></section>\n')
 
 
-def status_banner(meta, ui):
+STAGES = ("draft", "review", "published")      # a page's life: written and verified, reviewed by the author, approved by him
+OLD_STAGE = {"read": "review", "final": "published"}
+
+
+def stage_of(meta):
     st = meta.get("status", "draft")
-    label = {"draft": ui["draft"], "read": ui["read"], "final": ui["final"], "missing": ui["missing"]}.get(st, st)
-    return f'<div class="status-banner st-{st}">{html.escape(label)}</div>'
+    return OLD_STAGE.get(st, st)
+
+
+def status_banner(meta, ui):
+    st = stage_of(meta)
+    label = ui.get(st, st) if st in STAGES or st == "missing" else st
+    title = ui.get(f"{st}_title", "")
+    return f'<div class="status-banner st-{st}" title="{html.escape(title)}">{html.escape(label)}</div>'
 
 
 def render_reader(lang, st, pages, runs, guards, stale_keys):
@@ -1175,11 +1193,11 @@ def render_status(st, en_src, fr_by_id, runs, guards, stale_keys, built):
             else:
                 gl.append(f'<code>{html.escape(g)}</code> <b class="bad">missing</b>'); g_ok = False
         fr = m["id"] in fr_by_id
-        read = m.get("status") in ("read", "final")
+        read = stage_of(m) == "published"
         checks = [run_ok and m.get("status") != "missing", g_ok, fr, read]
         done = all(checks)
         done_count += done
-        marks = " ".join(f'<span class="{"ok" if c else "no"}">{lbl}</span>' for c, lbl in zip(checks, ["runs", "guards", "FR", "read"]))
+        marks = " ".join(f'<span class="{"ok" if c else "no"}">{lbl}</span>' for c, lbl in zip(checks, ["runs", "guards", "FR", "published"]))
         rows.append(f'<tr><td>{num or ""}</td><td><a href="en/index.html#{"preface" if num == 0 else f"ch{num}-{m["id"]}"}">{html.escape(m["title"])}</a></td>'
                     f'<td>{sp}</td><td>{html.escape(m.get("status", ""))}</td><td class="{"" if run_ok else "bad"}">{run_txt}</td>'
                     f'<td>{"<br>".join(gl)}</td><td class="num">{words_of(body)}</td><td class="num">{len(author_questions(body)) or ""}</td><td>{"yes" if fr else "no"}</td>'
@@ -1357,7 +1375,7 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
         texts.append(txt)
     data = {"schema": "softanza-book/2", "title": st["title"], "subtitle": st["subtitle"], "tagline": st["tagline"], "author": st["author"],
             "series": st["series"], "built": built, "library_commit": lib.get("commit"),
-            "edition": "proof copy" if any(c["status"] != "read" for c in chapters) else "read by the author",
+            "edition": "proof copy" if any(OLD_STAGE.get(c["status"], c["status"]) != "published" for c in chapters) else "published",
             "runtime": {"name": "the former host language", "version": (rt or {}).get("version"), "haro_runs_the_library": False},
             "spine": st["spine"], "rules_for_agents": AGENT_RULES,
             "files": {"schema": "book.schema.json", "summary": "llms-book.txt", "full_text": "llms-full-book.txt",
@@ -1369,7 +1387,7 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
     (ROOT / "book.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline'].rstrip('.')}. By {st['author']}. {st['series']}.", "",
              "This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.", "",
-             f"Edition: {data['edition']} ({sum(1 for c in chapters if c['status'] != 'read')} of {len(chapters)} pages not yet read by the author). Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
+             f"Edition: {data['edition']} (" + ", ".join(f"{sum(1 for c in chapters if OLD_STAGE.get(c['status'], c['status']) == s)} {s}" for s in STAGES) + f"; {len(chapters)} pages). Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the runtime of the former host language, version {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
              "## Files", "",
              "- book.json: the whole book as data, one entry per chapter, preface and appendix; book.schema.json describes it",
              "- llms-full-book.txt: every page as text, with the verdict of the last run under each code block",

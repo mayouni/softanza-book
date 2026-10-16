@@ -956,6 +956,8 @@ pre .c-promise{color:var(--code-promise);}
 
 .status-banner{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;border-radius:4px;margin:0 0 14px;border:1px solid var(--rule);color:var(--soft);background:var(--sidebar-bg);}
 .status-banner.st-draft{border-color:var(--bookmark);color:var(--bookmark-text);background:transparent;}
+.status-banner.st-review{border-color:var(--designed);color:var(--designed);background:var(--designed-bg);}
+.status-banner.st-published{border-color:var(--ok);color:var(--ok);background:var(--ok-bg);}
 .status-banner.st-missing{border-color:var(--bad);color:var(--bad);background:transparent;}
 .spine-badge{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:3px;padding:2px 7px;margin-left:10px;vertical-align:2px;}
 
@@ -1228,7 +1230,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <section class="chapter-grid" id="chapterGrid">
 <a class="chapter-card is-spine" href="#preface">
 <span class="card-bookmark"></span><div class="card-preview"><p>You use a tool that writes code. You ask it for a function, or for a whole feature, and it answers in seconds. Then comes the question that no tool answers for you: should this code enter my system? You have always had ways to answer. You run the…</p></div>
-<div class="card-meta"><h3 class="card-title">Preface</h3><p class="card-words">Preface · 1965 words</p></div>
+<div class="card-meta"><h3 class="card-title">Preface</h3><p class="card-words">Preface · 1979 words</p></div>
 </a>
 <a class="chapter-card is-spine" href="#ch1-change-arrives-faster-than-trust">
 <span class="card-bookmark"></span><div class="card-preview"><p>Ask the industry what changed in programming these last years and you will get one answer, said with excitement or with dread: machines write the code now. The picture is familiar. An AI model proposes a function, a file, a whole application. A…</p></div>
@@ -1521,7 +1523,7 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 <article class="chapter-page" id="page-preface" data-slug="preface" data-title="Preface" data-prev="" data-next="ch1-change-arrives-faster-than-trust">
 <div class="ch-eyebrow">Preface<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Preface</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 1 of 1 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <h3 class="subsection-h">A question you already have</h3>
@@ -1575,12 +1577,12 @@ oD = StzAgentDeclarationQ(cPia)
 <p>When a chapter says what is not finished, it uses three words and no others. <em>Built</em>: the code exists, a test exists, and a block ran. <em>Designed</em>: a document says so, and nothing runs. <em>Absent</em>: I looked and found nothing, and I say how far I looked. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.</p>
 <p>One more note. Haro's own executable is still in development, so the blocks marked <code>haro</code> run today on the runtime of the language the library was first written for, version 1.27, and each page says so. Appendix H, the project's history, tells how that came about. Inside the code, the library's own names, its classes, its files and its keys, still carry that language's name, and will until the library is retired from it; the prose does not.</p>
 <h3 class="subsection-h">About this draft</h3>
-<p>The chapters were drafted with AI agents working from the project's own files, and every code block was run. I have not read every page yet, and each chapter has a banner at its top that says so until I do. Where the files held no answer to a question, the page says so in one plain sentence and does not invent one. The French edition is a translation of the English drafts, and each French page says so. This preface was written after the chapters, and it stays unfinished until I write my own. This is the second book of my imprint, AYOUNI. The first, <em>Refinement-Oriented Programming</em>, is about one discipline for software in the age of AI agents, told through one bank.</p>
+<p>The chapters were drafted with AI agents working from the project's own files, and every code block was run. Each page carries its stage at its top: Draft, written, its code run and judged, read by fresh readers; In review, while I review it; Published, once I approve it. Today every page is a draft. Where the files held no answer to a question, the page says so in one plain sentence and does not invent one. The French edition is a translation of the English drafts, and each French page says so. This preface was written after the chapters, and it stays unfinished until I write my own. This is the first book of my imprint, AYOUNI. The second, <em>Refinement-Oriented Programming</em>, is about one discipline for software in the age of AI agents, told through one bank.</p>
 </article>
 <article class="chapter-page" id="page-ch1-change-arrives-faster-than-trust" data-slug="ch1-change-arrives-faster-than-trust" data-title="Change arrives faster than trust" data-prev="preface" data-next="ch2-the-software-crafter">
 <div class="ch-eyebrow">Part I · Chapter 1<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Change arrives faster than trust</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 2 of 2 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <h3 class="subsection-h">1. The concept, as the field holds it</h3>
@@ -1663,7 +1665,7 @@ oReg.SetPhase(:production)
 <article class="chapter-page" id="page-ch2-the-software-crafter" data-slug="ch2-the-software-crafter" data-title="The software crafter" data-prev="ch1-change-arrives-faster-than-trust" data-next="ch3-the-method-from-first-principles">
 <div class="ch-eyebrow">Part I · Chapter 2<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">The software crafter</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, Softibank, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.</p>
@@ -1888,7 +1890,7 @@ g.AddRule(oRule)
 <article class="chapter-page" id="page-ch3-the-method-from-first-principles" data-slug="ch3-the-method-from-first-principles" data-title="The method, from first principles" data-prev="ch2-the-software-crafter" data-next="ch4-the-platform-in-one-picture">
 <div class="ch-eyebrow">Part I · Chapter 3<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">The method, from first principles</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 5 of 5 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.</p>
@@ -2036,7 +2038,7 @@ bRefused = FALSE
 <article class="chapter-page" id="page-ch4-the-platform-in-one-picture" data-slug="ch4-the-platform-in-one-picture" data-title="The platform in one picture" data-prev="ch3-the-method-from-first-principles" data-next="ch5-law-the-code-adheres-to-the-way-a-person-thinks">
 <div class="ch-eyebrow">Part I · Chapter 4<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">The platform in one picture</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 8 of 8 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.</p>
@@ -2312,7 +2314,7 @@ oDelivery {
 <article class="chapter-page" id="page-ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-slug="ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-title="Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it" data-prev="ch4-the-platform-in-one-picture" data-next="ch6-the-mental-model-and-the-metaphors">
 <div class="ch-eyebrow">Part II · Chapter 5<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.</p>
@@ -2494,7 +2496,7 @@ KeepHistoryOFF()</code></pre>
 <article class="chapter-page" id="page-ch6-the-mental-model-and-the-metaphors" data-slug="ch6-the-mental-model-and-the-metaphors" data-title="The mental model, and the metaphors" data-prev="ch5-law-the-code-adheres-to-the-way-a-person-thinks" data-next="ch7-the-writing-style-and-the-seven-goals">
 <div class="ch-eyebrow">Part II · Chapter 6</div>
 <h1 class="ch-title">The mental model, and the metaphors</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 7 of 7 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced <code>eval</code> with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.</p>
@@ -2670,7 +2672,7 @@ Q([ <span class="c-number">3</span>, <span class="c-number">8</span>, <span clas
 <article class="chapter-page" id="page-ch7-the-writing-style-and-the-seven-goals" data-slug="ch7-the-writing-style-and-the-seven-goals" data-title="The writing style, and the seven goals" data-prev="ch6-the-mental-model-and-the-metaphors" data-next="ch8-functions-as-linguistic-expressions-and-scope">
 <div class="ch-eyebrow">Part II · Chapter 7</div>
 <h1 class="ch-title">The writing style, and the seven goals</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.</p>
@@ -2884,7 +2886,7 @@ cTwo = <span class="c-string">"class Inbox"</span> + nl + <span class="c-string"
 <article class="chapter-page" id="page-ch8-functions-as-linguistic-expressions-and-scope" data-slug="ch8-functions-as-linguistic-expressions-and-scope" data-title="Functions as linguistic expressions, and scope" data-prev="ch7-the-writing-style-and-the-seven-goals" data-next="ch9-patterns-of-thought">
 <div class="ch-eyebrow">Part II · Chapter 8</div>
 <h1 class="ch-title">Functions as linguistic expressions, and scope</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 13 of 13 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.</p>
@@ -3122,7 +3124,7 @@ o2.RemoveManyCS([ <span class="c-string">"o"</span>, <span class="c-string">"f"<
 <article class="chapter-page" id="page-ch9-patterns-of-thought" data-slug="ch9-patterns-of-thought" data-title="Patterns of thought: the Softanzuter, Reaxis and the engines" data-prev="ch8-functions-as-linguistic-expressions-and-scope" data-next="ch10-programming-becomes-refinement">
 <div class="ch-eyebrow">Part II · Chapter 9</div>
 <h1 class="ch-title">Patterns of thought: the Softanzuter, Reaxis and the engines</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 8 of 8 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.</p>
@@ -3355,7 +3357,7 @@ oB {
 <article class="chapter-page" id="page-ch10-programming-becomes-refinement" data-slug="ch10-programming-becomes-refinement" data-title="Programming becomes refinement" data-prev="ch9-patterns-of-thought" data-next="ch11-law-a-language-is-declared-and-closed">
 <div class="ch-eyebrow">Part II · Chapter 10</div>
 <h1 class="ch-title">Programming becomes refinement</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my earlier book, <em>Refinement-Oriented Programming</em>: stop trying to govern the intelligence, and govern the change.</p>
@@ -3606,7 +3608,7 @@ r4 = d.Refine(<span class="c-string">"vat"</span>).As(:yourorigin).<span class="
 <article class="chapter-page" id="page-ch11-law-a-language-is-declared-and-closed" data-slug="ch11-law-a-language-is-declared-and-closed" data-title="Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it" data-prev="ch10-programming-becomes-refinement" data-next="ch12-a-language-declared">
 <div class="ch-eyebrow">Part III · Chapter 11<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Law: a language is declared and closed, and whatever speaks it, person or model, is judged by it</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:58 UTC+01:00 inside the library at commit 93d7a39bd: 11 of 11 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.</p>
@@ -3813,7 +3815,7 @@ r4 = d.Refine(<span class="c-string">"vat"</span>).As(:yourorigin).<span class="
 <article class="chapter-page" id="page-ch12-a-language-declared" data-slug="ch12-a-language-declared" data-title="A language, declared" data-prev="ch11-law-a-language-is-declared-and-closed" data-next="ch13-natural-and-executable">
 <div class="ch-eyebrow">Part III · Chapter 12</div>
 <h1 class="ch-title">A language, declared</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 8 of 8 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.</p>
@@ -4065,7 +4067,7 @@ o1.AddCalculatedCol(:SINE, <span class="c-string">'sin(@(:A))'</span>)
 <article class="chapter-page" id="page-ch13-natural-and-executable" data-slug="ch13-natural-and-executable" data-title="Natural, and executable: two directions, one discipline" data-prev="ch12-a-language-declared" data-next="ch14-knowledge-programming">
 <div class="ch-eyebrow">Part III · Chapter 13</div>
 <h1 class="ch-title">Natural, and executable: two directions, one discipline</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 17 of 17 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.</p>
@@ -4421,7 +4423,7 @@ cT = <span class="c-string">"Create a list with {#1} and remove its duplicates"<
 <article class="chapter-page" id="page-ch14-knowledge-programming" data-slug="ch14-knowledge-programming" data-title="Knowledge programming" data-prev="ch13-natural-and-executable" data-next="ch15-pattern-languages">
 <div class="ch-eyebrow">Part III · Chapter 14</div>
 <h1 class="ch-title">Knowledge programming</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 13 of 13 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.</p>
@@ -4707,7 +4709,7 @@ aBad = oT.ImportKnow(cBad)
 <article class="chapter-page" id="page-ch15-pattern-languages" data-slug="ch15-pattern-languages" data-title="Pattern languages" data-prev="ch14-knowledge-programming" data-next="ch16-seven-languages-one-door">
 <div class="ch-eyebrow">Part III · Chapter 15</div>
 <h1 class="ch-title">Pattern languages</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 13 of 13 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, <code>Match</code>, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.</p>
@@ -4990,7 +4992,7 @@ cPattern = <span class="c-string">"{ ... }"</span>
 <article class="chapter-page" id="page-ch16-seven-languages-one-door" data-slug="ch16-seven-languages-one-door" data-title="Seven languages, one door" data-prev="ch15-pattern-languages" data-next="ch17-law-programmatic-by-default">
 <div class="ch-eyebrow">Part III · Chapter 16</div>
 <h1 class="ch-title">Seven languages, one door</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 10 of 10 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.</p>
@@ -5270,7 +5272,7 @@ oPy4.Execute()
 <article class="chapter-page" id="page-ch17-law-programmatic-by-default" data-slug="ch17-law-programmatic-by-default" data-title="Law: programmatic by default, the model last, admission over generation" data-prev="ch16-seven-languages-one-door" data-next="ch18-the-five-registers">
 <div class="ch-eyebrow">Part IV · Chapter 17<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Law: programmatic by default, the model last, admission over generation</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 8 of 8 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.</p>
@@ -5452,7 +5454,7 @@ oRog.AddGovernedSkill(oSk, <span class="c-string">"order-stock"</span>)
 <article class="chapter-page" id="page-ch18-the-five-registers" data-slug="ch18-the-five-registers" data-title="The five registers, and conversations that ask" data-prev="ch17-law-programmatic-by-default" data-next="ch19-the-domain-language-model">
 <div class="ch-eyebrow">Part IV · Chapter 18</div>
 <h1 class="ch-title">The five registers, and conversations that ask</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 15 of 15 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.</p>
@@ -5845,7 +5847,7 @@ aV = oKX.ReplyIn(<span class="c-string">"fmt"</span>, <span class="c-string">"+2
 <article class="chapter-page" id="page-ch19-the-domain-language-model" data-slug="ch19-the-domain-language-model" data-title="The domain language model" data-prev="ch18-the-five-registers" data-next="ch20-agents-that-cannot-hurt-you">
 <div class="ch-eyebrow">Part IV · Chapter 19</div>
 <h1 class="ch-title">The domain language model</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 7 of 7 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.</p>
@@ -6069,7 +6071,7 @@ remove(cGguf)</code></pre>
 <article class="chapter-page" id="page-ch20-agents-that-cannot-hurt-you" data-slug="ch20-agents-that-cannot-hurt-you" data-title="Agents that cannot hurt you" data-prev="ch19-the-domain-language-model" data-next="ch21-the-court">
 <div class="ch-eyebrow">Part IV · Chapter 20</div>
 <h1 class="ch-title">Agents that cannot hurt you</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. Then come the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.</p>
@@ -6425,7 +6427,7 @@ oPlan3.Execute()</code></pre>
 <article class="chapter-page" id="page-ch21-the-court" data-slug="ch21-the-court" data-title="The court: promises, perception, security and performance" data-prev="ch20-agents-that-cannot-hurt-you" data-next="ch22-compared-honestly">
 <div class="ch-eyebrow">Part IV · Chapter 21</div>
 <h1 class="ch-title">The court: promises, perception, security and performance</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 12:59 UTC+01:00 inside the library at commit 93d7a39bd: 7 of 7 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.</p>
@@ -6695,7 +6697,7 @@ remove(<span class="c-string">"raise.haro"</span>)</code></pre>
 <article class="chapter-page" id="page-ch22-compared-honestly" data-slug="ch22-compared-honestly" data-title="Compared, honestly" data-prev="ch21-the-court" data-next="ch23-a-world-a-constellation-a-platform">
 <div class="ch-eyebrow">Part IV · Chapter 22</div>
 <h1 class="ch-title">Compared, honestly</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 5 of 5 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.</p>
@@ -6819,7 +6821,7 @@ remove(<span class="c-string">"raise.haro"</span>)</code></pre>
 <article class="chapter-page" id="page-ch23-a-world-a-constellation-a-platform" data-slug="ch23-a-world-a-constellation-a-platform" data-title="A world, a constellation, a platform, and the architect" data-prev="ch22-compared-honestly" data-next="ch24-rehearse-then-commit">
 <div class="ch-eyebrow">Part V · Chapter 23</div>
 <h1 class="ch-title">A world, a constellation, a platform, and the architect</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 10 of 10 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.</p>
@@ -7241,7 +7243,7 @@ oCon.GovGrant(<span class="c-string">"resto"</span>, <span class="c-string">"ord
 <article class="chapter-page" id="page-ch24-rehearse-then-commit" data-slug="ch24-rehearse-then-commit" data-title="Rehearse, then commit" data-prev="ch23-a-world-a-constellation-a-platform" data-next="ch25-your-users-keep-their-medium">
 <div class="ch-eyebrow">Part V · Chapter 24</div>
 <h1 class="ch-title">Rehearse, then commit</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 11 of 11 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.</p>
@@ -7707,7 +7709,7 @@ oReg.SetPhase(:production)
 <article class="chapter-page" id="page-ch25-your-users-keep-their-medium" data-slug="ch25-your-users-keep-their-medium" data-title="Your users keep their medium" data-prev="ch24-rehearse-then-commit" data-next="ch26-the-environment">
 <div class="ch-eyebrow">Part V · Chapter 25</div>
 <h1 class="ch-title">Your users keep their medium</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 11 of 11 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.</p>
@@ -8015,7 +8017,7 @@ oKT.AskIn(<span class="c-string">"c"</span>)
 <article class="chapter-page" id="page-ch26-the-environment" data-slug="ch26-the-environment" data-title="The environment" data-prev="ch25-your-users-keep-their-medium" data-next="ch27-the-engine-beneath">
 <div class="ch-eyebrow">Part V · Chapter 26</div>
 <h1 class="ch-title">The environment</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 10 of 10 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stands: at this commit, an IDE of this family is absent, and the pieces beneath it run. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.</p>
@@ -8352,7 +8354,7 @@ StzDirDeleteAll(<span class="c-string">"_emu"</span>)</code></pre>
 <article class="chapter-page" id="page-ch27-the-engine-beneath" data-slug="ch27-the-engine-beneath" data-title="The engine beneath: three layers, one engine, Haro" data-prev="ch26-the-environment" data-next="ch28-a-restaurant-in-lyon">
 <div class="ch-eyebrow">Part V · Chapter 27</div>
 <h1 class="ch-title">The engine beneath: three layers, one engine, Haro</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 9 of 9 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.</p>
@@ -8571,7 +8573,7 @@ oBuf.Free()</code></pre>
 <article class="chapter-page" id="page-ch28-a-restaurant-in-lyon" data-slug="ch28-a-restaurant-in-lyon" data-title="A restaurant in Lyon" data-prev="ch27-the-engine-beneath" data-next="ch29-a-bank-in-niamey">
 <div class="ch-eyebrow">Part VI · Chapter 28</div>
 <h1 class="ch-title">A restaurant in Lyon</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 5 of 5 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and the six things I refused, among them the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.</p>
@@ -8775,7 +8777,7 @@ oRep.Ingest(oSla.Findings())
 <article class="chapter-page" id="page-ch29-a-bank-in-niamey" data-slug="ch29-a-bank-in-niamey" data-title="A bank in Niamey" data-prev="ch28-a-restaurant-in-lyon" data-next="ch30-an-organisation-in-the-field">
 <div class="ch-eyebrow">Part VI · Chapter 29</div>
 <h1 class="ch-title">A bank in Niamey</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 6 of 6 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take a bank in Niamey, which I call Softibank (the name is fictional), under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.</p>
@@ -8977,7 +8979,7 @@ oOrg2.SetPositionDepartment(<span class="c-string">"ceo"</span>, <span class="c-
 <article class="chapter-page" id="page-ch30-an-organisation-in-the-field" data-slug="ch30-an-organisation-in-the-field" data-title="An organisation in the field" data-prev="ch29-a-bank-in-niamey" data-next="ch31-what-the-projects-show">
 <div class="ch-eyebrow">Part VI · Chapter 30</div>
 <h1 class="ch-title">An organisation in the field</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 7 of 7 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.</p>
@@ -9221,7 +9223,7 @@ oWatch2.AddCase(<span class="c-string">"advances"</span>, oG)
 <article class="chapter-page" id="page-ch31-what-the-projects-show" data-slug="ch31-what-the-projects-show" data-title="What the projects show, and what comes next" data-prev="ch30-an-organisation-in-the-field" data-next="ch32-many-minds-on-one-body-of-work">
 <div class="ch-eyebrow">Part VI · Chapter 31</div>
 <h1 class="ch-title">What the projects show, and what comes next</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 5 of 5 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.</p>
@@ -9429,7 +9431,7 @@ oReg.Bind(:payments, <span class="c-kw">new</span> stzPaymentsSandbox())
 <article class="chapter-page" id="page-ch32-many-minds-on-one-body-of-work" data-slug="ch32-many-minds-on-one-body-of-work" data-title="Many minds on one body of work" data-prev="ch31-what-the-projects-show" data-next="ch33-the-next-line">
 <div class="ch-eyebrow">Part VII · Chapter 32<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">Many minds on one body of work</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:00 UTC+01:00 inside the library at commit 93d7a39bd: 3 of 3 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.</p>
@@ -9529,7 +9531,7 @@ aFindings = StzCheckCode(cCode)
 <article class="chapter-page" id="page-ch33-the-next-line" data-slug="ch33-the-next-line" data-title="The next line: a solution on its own engine" data-prev="ch32-many-minds-on-one-body-of-work" data-next="app-a-the-register-of-innovations">
 <div class="ch-eyebrow">Part VII · Chapter 33<span class="spine-badge" title="One of the nine spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">The next line: a solution on its own engine</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:01 UTC+01:00 inside the library at commit 93d7a39bd: 3 of 3 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>In this chapter I show you the floor the next line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I say what the three projects establish today, and I read from the record the five steps from that floor to the next line: a solution on Softanza's own engine, and what a named person who used it says. I say five things I refused, among them a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.</p>
@@ -9671,7 +9673,7 @@ oDep = oDel.Deploy(:Production)
 <article class="chapter-page" id="page-app-a-the-register-of-innovations" data-slug="app-a-the-register-of-innovations" data-title="The register of innovations" data-prev="ch33-the-next-line" data-next="app-b-the-fourteen-house-rules">
 <div class="ch-eyebrow">Appendix A</div>
 <h1 class="ch-title">The register of innovations</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>My study of the record read four inventories the library keeps of itself: the narrations with their titles, the design documents, the engine's phase of paradigm engines, and an outside reader's list of rethought concepts. It crossed them, and found forty-six innovations in seven families. This is that register, as the study ruled it on 7 October 2026, with one column of this book's own: the chapter that tells each row. A later ruling the same day adds a forty-seventh row, answer by example, with the stage words of a plan: nothing induces yet, as chapter 18 says. It is not in this table, which keeps the forty-six the study counted.</p>
@@ -9701,7 +9703,7 @@ oDep = oDel.Deploy(:Production)
 <article class="chapter-page" id="page-app-b-the-fourteen-house-rules" data-slug="app-b-the-fourteen-house-rules" data-title="The fourteen house rules" data-prev="app-a-the-register-of-innovations" data-next="app-c-the-twenty-two-verbs-and-the-constitution">
 <div class="ch-eyebrow">Appendix B</div>
 <h1 class="ch-title">The fourteen house rules</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof"><strong>Run on 2026-10-15 13:01 UTC+01:00 inside the library at commit 93d7a39bd: 2 of 2 blocks kept their promise.</strong></p><p class="proof-engine">The blocks were run by the runtime of the former host language, version 1.27; Haro does not run the library yet. The engine binaries were built in a checkout of this commit, newest built 2026-10-05 20:27 UTC+01:00; 1 engine change(s) committed after that build are not in them.</p>
 <div class="ch-rule"></div>
 <p>The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.</p>
@@ -9752,7 +9754,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-c-the-twenty-two-verbs-and-the-constitution" data-slug="app-c-the-twenty-two-verbs-and-the-constitution" data-title="The twenty-two verbs and the constitution" data-prev="app-b-the-fourteen-house-rules" data-next="app-d-the-glossary">
 <div class="ch-eyebrow">Appendix C</div>
 <h1 class="ch-title">The twenty-two verbs and the constitution</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>The interface constitution lives in its own repository, and the site says that repository is not public yet. This book calls it the interface constitution and does not name the product it belongs to. The library holds only the slot for its verbs and the finder of the elements that serve none; the list itself is the constitution's. So this appendix prints what I read from the constitution's own file on 9 October 2026: its version is 3.11, last updated on 16 August 2026, with seven articles, thirty-one sets and one hundred and twenty-two rules. The counts in this sentence are the file's own, and I counted none of them myself.</p>
@@ -9780,7 +9782,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-d-the-glossary" data-slug="app-d-the-glossary" data-title="The glossary: words name states, never people" data-prev="app-c-the-twenty-two-verbs-and-the-constitution" data-next="app-e-the-guards-and-fixtures-cited">
 <div class="ch-eyebrow">Appendix D</div>
 <h1 class="ch-title">The glossary: words name states, never people</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>A word in this book names a state of a piece of work, or a role held in a scope. It does not name a rank, and it does not name a person. A crafter is someone who is declaring something, and a person is a crafter on the day they declare. An architect is what one holds in the scope of a solution. A user is whoever is using. When a sentence of this book is about a person, it says what the person did, on what date, and in whose words.</p>
@@ -9850,7 +9852,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-e-the-guards-and-fixtures-cited" data-slug="app-e-the-guards-and-fixtures-cited" data-title="The guards and fixtures cited, by chapter" data-prev="app-d-the-glossary" data-next="app-f-the-narrations-the-book-argues-from">
 <div class="ch-eyebrow">Appendix E</div>
 <h1 class="ch-title">The guards and fixtures cited, by chapter</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>A guard is a file of the library's test tree that holds assertions. A chapter that says "this is proved" names the guards that prove it, in the front matter of its source, and the build reads each one: it finds the file in the library at the commit the book runs at, and counts the assertions in it. A guard that is not there fails the build.</p>
@@ -9927,7 +9929,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-f-the-narrations-the-book-argues-from" data-slug="app-f-the-narrations-the-book-argues-from" data-title="The narrations the book argues from" data-prev="app-e-the-guards-and-fixtures-cited" data-next="app-g-the-book-as-data">
 <div class="ch-eyebrow">Appendix F</div>
 <h1 class="ch-title">The narrations the book argues from</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>A narration is one of the author's articles, under the library's documentation folder: an essay that tells an idea with its code. The table below counts them at the pin, and the book argues from the ones listed here. The code in them is the old surface, which Haro keeps under a new name. A narration is not an executable test: the word has since been given to the executable guards whose names end in <em>narrated</em>, and chapter 21 says why that is confusing.</p>
@@ -10001,7 +10003,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-g-the-book-as-data" data-slug="app-g-the-book-as-data" data-title="The book as data, for the agent that reads it" data-prev="app-f-the-narrations-the-book-argues-from" data-next="app-h-the-projects-history">
 <div class="ch-eyebrow">Appendix G</div>
 <h1 class="ch-title">The book as data, for the agent that reads it</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>This appendix is for an AI agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.</p>
@@ -10020,7 +10022,7 @@ cLen = <span class="c-string">"class Box"</span> + nl + <span class="c-string">"
 <article class="chapter-page" id="page-app-h-the-projects-history" data-slug="app-h-the-projects-history" data-title="The project&#x27;s history: from Ring to Haro" data-prev="app-g-the-book-as-data" data-next="">
 <div class="ch-eyebrow">Appendix H</div>
 <h1 class="ch-title">The project's history: from Ring to Haro</h1>
-<div class="status-banner st-draft">Draft · not yet read by the author</div>
+<div class="status-banner st-draft" title="Written, its code run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
 <p class="proof">This page has no code to run.</p>
 <div class="ch-rule"></div>
 <p>This is the one page of the book whose prose names the language Softanza grew up on; the library's own names inside code still carry it, until the library is retired from it. The chapters do not, because the platform is going where that language cannot follow. The history belongs here, told once, with thanks.</p>

@@ -52,7 +52,8 @@ def manifest():
     pages = [m for _, m, _ in sources("en")]
     status = {}
     for m in pages:
-        status[m.get("status", "draft")] = status.get(m.get("status", "draft"), 0) + 1
+        st = {"read": "review", "final": "published"}.get(m.get("status", "draft"), m.get("status", "draft"))
+        status[st] = status.get(st, 0) + 1
     chapters = runs.get("chapters", {})
     kept = sum(c.get("kept", 0) for k, c in chapters.items() if k.startswith("en/"))
     runnable = sum(c.get("runnable", 0) for k, c in chapters.items() if k.startswith("en/"))
@@ -63,7 +64,7 @@ def manifest():
     dirty = bool(git("status", "--porcelain"))
     m = {
         "made": stamp(now()),
-        "kind": "proof copy" if (status.get("draft", 0) or not pages) else "release",
+        "kind": "proof copy" if (status.get("published", 0) != len(pages) or not pages) else "release",
         "pages": len(pages), "pages_by_status": status,
         "blocks_kept": kept, "blocks_runnable": runnable, "library_commit": lib.get("commit"), "library_short": lib.get("short"),
         "book_commit": git("rev-parse", "HEAD"), "book_tree_has_uncommitted_changes": dirty,

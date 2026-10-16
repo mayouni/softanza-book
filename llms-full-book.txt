@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-15 13:47 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
+Built 2026-10-16 13:00 UTC+01:00. Library commit 93d7a39bdd040f82eae21d949460d69c32a75c70. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -94,7 +94,7 @@ One more note. Haro's own executable is still in development, so the blocks mark
 
 ## About this draft
 
-The chapters were drafted with AI agents working from the project's own files, and every code block was run. I have not read every page yet, and each chapter has a banner at its top that says so until I do. Where the files held no answer to a question, the page says so in one plain sentence and does not invent one. The French edition is a translation of the English drafts, and each French page says so. This preface was written after the chapters, and it stays unfinished until I write my own. This is the second book of my imprint, AYOUNI. The first, *Refinement-Oriented Programming*, is about one discipline for software in the age of AI agents, told through one bank.
+The chapters were drafted with AI agents working from the project's own files, and every code block was run. Each page carries its stage at its top: Draft, written, its code run and judged, read by fresh readers; In review, while I review it; Published, once I approve it. Today every page is a draft. Where the files held no answer to a question, the page says so in one plain sentence and does not invent one. The French edition is a translation of the English drafts, and each French page says so. This preface was written after the chapters, and it stays unfinished until I write my own. This is the first book of my imprint, AYOUNI. The second, *Refinement-Oriented Programming*, is about one discipline for software in the age of AI agents, told through one bank.
 
 
 =====

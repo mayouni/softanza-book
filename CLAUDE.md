@@ -45,7 +45,7 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 ## Rules that bind every session (from the brief, §9)
 
 - Outputs are never stored in a source file. Every number is read, never composed. Stamps come from the clock.
-- A draft is marked `status: draft` and shows "Draft · not yet read by the author". Only the author changes it.
+- A page has one of three stages (STATUS-01): `draft` (written, its code run and judged, read by fresh readers), `review` (the author is reviewing it), `published` (the author approved it); the banner shows the stage, with its meaning on hover. Only the author moves a page to `review` or `published`; an agent never does. The edition is a proof copy until every page is published.
 - The author owns `drafts/`. Propose edits in the memo; never change a draft silently. The one mechanical change
   made to chapter 1 on its way to `src/` is the fence tag (`ring` → `haro`, and `haro exercise` for the exercise),
   as §4.8 rules.
@@ -95,7 +95,7 @@ or the author did not give; one metaphor at a time, the ruling ones mapped once 
 - Phase A's rulings (PHASEA-01: the crafter, forge, the seven, chapter 1 corrected, stakes owned; VOICE-01 confirmed by the author on 2026-10-12) and Phase B, the beats
   (`sessions/2026-10-13-phase-b-beats.md`), are done; the 15 particulars of Phase A are answered "the record holds none" (PHASEA-02) and stay open.
 - Phase C (a defect per chapter, picked on his behalf, CDEFECT-01) is done: `sessions/2026-10-13-phase-c-defects.md`.
-- 2026-10-14: the standing rules below, the type scale (TYPE-01), the cover ruling (COVER-02), the terminology pass (VOICE-05), the pending calls closed on delegation (CLOSE-01), the book read on his behalf by eight fresh readers and fixed (READ-01, `sessions/2026-10-14-reading.md`). Next: the author reads the English and marks pages `read`; the French is then re-checked page by page. Method per chapter
+- 2026-10-14: the standing rules below, the type scale (TYPE-01), the cover ruling (COVER-02), the terminology pass (VOICE-05), the pending calls closed on delegation (CLOSE-01), the book read on his behalf by eight fresh readers and fixed (READ-01, `sessions/2026-10-14-reading.md`). Next: the author reviews the English and moves pages to `review`, then `published`; the French is then re-checked page by page. Method per chapter
   for any new evidence: a research session writes `research/chNN.md` from the record (brief: `research/BRIEF.md`; its snapshot paths must name
   the current `.cache/stzlib-<sha>`), runs every block it proposes; then the chapter is drafted in one voice from it, built, and committed.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

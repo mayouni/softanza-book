@@ -148,7 +148,8 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
 
     cover = ROOT / "assets" / "cover" / ("cover.fr.png" if fr else "cover.png")
     n_draft = sum(1 for p in pages if p["own"] and p["meta"].get("status", "draft") == "draft")
-    n_read = sum(1 for p in pages if p["own"] and p["meta"].get("status") in ("read", "final"))
+    n_review = sum(1 for p in pages if p["own"] and B.stage_of(p["meta"]) == "review")
+    n_read = sum(1 for p in pages if p["own"] and B.stage_of(p["meta"]) == "published")
     kept = sum(p["run"]["kept"] for p in pages if p["own"] and p["run"])
     runnable = sum(p["run"]["runnable"] for p in pages if p["own"] and p["run"])
     stamped = now().strftime("%Y-%m-%d")
@@ -174,13 +175,13 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
                f'<div class="i"><img alt="AYOUNI" src="{LOGO_URI}"></div><div class="c">TUNIS · NIAMEY · PARIS · 2026</div></section>')
 
     if fr:
-        warn = (f"Épreuve de travail. {n_draft} pages sur {len(pages)} sont des brouillons que l'auteur n'a pas encore lus ; "
-                f"{n_read} sont lues. Cette édition française est une traduction des brouillons anglais.")
+        warn = (f"Épreuve de travail : {n_draft} pages en brouillon, {n_review} en relecture, {n_read} publiées, sur {len(pages)}. "
+                f"Cette édition française est une traduction des brouillons anglais.")
         proof = (f"Le code de chaque bloc a été exécuté dans la bibliothèque au commit {lib.get('short', 'null')} : "
                  f"{kept} blocs sur {runnable} ont tenu leur promesse. Les verdicts imprimés sont ceux de l'exécution, jamais réécrits.")
         line = f"Imprimé le {stamped}. {series}."
     else:
-        warn = (f"Proof copy. {n_draft} of {len(pages)} pages are drafts the author has not yet read; {n_read} are read.")
+        warn = (f"Proof copy: {n_draft} pages in draft, {n_review} in review, {n_read} published, of {len(pages)}.")
         proof = (f"Every block of code was run inside the library at commit {lib.get('short', 'null')}: "
                  f"{kept} of {runnable} blocks kept their promise. The verdicts printed are the run's, never rewritten.")
         line = f"Printed {stamped}. {series}."
