@@ -183,6 +183,12 @@ def shell_edits(ui):
          '<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n',
          ""),
         ("font faces", "<style>\n:root {", "<style>\n" + FONT_FACES + ":root {"),
+        ("the overview shows one view at a time: the cards, or the contents as text (READER-05)",
+         "    chapterGrid.classList.remove('list-mode');\n",
+         "    chapterGrid.classList.remove('list-mode');\n    document.body.classList.remove('vm-list');\n    vmGrid.setAttribute('aria-pressed', 'true'); vmList.setAttribute('aria-pressed', 'false');\n"),
+        ("the list view is the contents",
+         "    chapterGrid.classList.add('list-mode');\n",
+         "    chapterGrid.classList.add('list-mode');\n    document.body.classList.add('vm-list');\n    vmList.setAttribute('aria-pressed', 'true'); vmGrid.setAttribute('aria-pressed', 'false');\n"),
         ("the default reading size is 24px: a Garamond reads small (READER-02)", "  --font-size: 22px;", "  --font-size: " + str(TYPE["body_px"]) + "px;"),
         ("the reading size control starts on 24px", "  let currentSizeIdx = 2;", "  let currentSizeIdx = 3;"),
         ("the AYOUNI logo, once, as a symbol", "<body>", "<body>\n" + (ROOT / "reader" / "logo-sprite.html").read_text(encoding="utf-8")),
@@ -434,6 +440,9 @@ body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.
 .cover-svg .cv-rule{stroke:var(--cover-accent);}
 
 .overview-contents{max-width:760px;margin:72px auto 0;}
+body:not(.vm-list) .overview-contents{display:none;}
+body.vm-list .chapter-grid{display:none;}
+body.vm-list .overview-contents{margin-top:24px;}
 .overview-contents h2{font-family:var(--sans);font-size:26px;font-weight:800;letter-spacing:-0.3px;margin-bottom:6px;color:var(--ink);}
 .contents-listing .ce-row.is-absent .ce-title{color:var(--soft-2);}
 .contents-listing .ce-row a.ce-title:hover{text-decoration:underline;}
