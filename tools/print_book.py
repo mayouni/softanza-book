@@ -15,10 +15,14 @@ out once with placeholders, the first page of every chapter is found in that PDF
 
 Trim 6.5 x 8.5 in, the cover's own proportion (1097 x 1434 px), so the cover prints full bleed with no crop.
 Page 1 is the cover; folios are the physical page numbers, so the contents and the folios agree.
+The covers are set as a bound book's (COVER-05): the front, a blank inside cover, the half title on a recto (page 3), its blank
+verso, the title page (5), the colophon on its verso (6), the contents on a recto (7); at the end a blank inside back cover on a
+recto and the back cover on the last, even, page. Both covers are full bleed at 337 dpi. The PDF carries its bookmarks (parts,
+chapters, appendices, covers), opens with them shown, and names its author, subject and keywords.
 """
 import base64, html, os, re, subprocess, sys, tempfile
 from pathlib import Path
-from pypdf import PdfReader
+from pypdf import PdfReader, PdfWriter
 
 import build_book as B
 from book_common import ROOT, sources, structure, load_json, now, stamp
@@ -46,12 +50,9 @@ body { background: #fff; color: #1a1612; font-family: Georgia, 'Times New Roman'
 a { color: inherit; text-decoration: none; }
 p { margin: 0 0 0.62em; orphans: 3; widows: 3; hyphens: auto; }
 
-.pcover, .pback { page: cover; break-after: page; margin: 0; padding: 0; width: %(w)s; height: %(h)s; overflow: hidden; }
-.pcover img { display: block; width: %(w)s; height: %(h)s; }
-.pback { position: relative; background: #1a1612; color: #fbfaf6; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.pback .bl { font-style: italic; font-size: 15pt; line-height: 1.7; }
-.pback .bl-first { font-style: normal; font-family: Arial, sans-serif; font-size: 8pt; letter-spacing: 3px; color: #E96A1A; margin-bottom: 0.4in; }
-.pback .im { position: absolute; bottom: 0.7in; font-family: Arial Black, Arial, sans-serif; font-size: 13pt; letter-spacing: 1px; }
+.pcover, .pback, .pblank { page: cover; break-after: page; margin: 0; padding: 0; width: %(w)s; height: %(h)s; overflow: hidden; }
+.pblank { break-before: page; }
+.pcover img, .pback img { display: block; width: %(w)s; height: %(h)s; }
 
 .pfront { page: front; break-before: page; }
 .halftitle { padding-top: 2.7in; text-align: center; font: 800 16pt Arial, sans-serif; }
@@ -62,7 +63,6 @@ p { margin: 0 0 0.62em; orphans: 3; widows: 3; hyphens: auto; }
 .titlepage .a { font: 600 12pt Arial, sans-serif; margin-top: 0.75in; }
 .titlepage .i { margin-top: 0.9in; }
 .titlepage .i img { height: 0.34in; width: auto; }
-.pback .im img { height: 0.36in; width: auto; }
 .titlepage .c { font: 8pt Arial, sans-serif; letter-spacing: 2px; color: #6b6358; margin-top: 0.1in; }
 .colophon { padding-top: 4.4in; font: 7.8pt/1.6 Arial, sans-serif; color: #3a3326; }
 .colophon p { margin-bottom: 0.08in; }
@@ -147,6 +147,7 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
     by_letter = {str(p["appendix"]): p for p in pages if p.get("appendix")}
 
     cover = ROOT / "assets" / "cover" / ("cover.fr.png" if fr else "cover.png")
+    back_cover = ROOT / "assets" / "cover" / ("back.fr.png" if fr else "back.png")
     n_draft = sum(1 for p in pages if p["own"] and p["meta"].get("status", "draft") == "draft")
     n_review = sum(1 for p in pages if p["own"] and B.stage_of(p["meta"]) == "review")
     n_read = sum(1 for p in pages if p["own"] and B.stage_of(p["meta"]) == "published")
@@ -168,8 +169,10 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
            + "\n".join(named) + '\n</style></head><body>']
 
     out.append(f'<section class="pcover"><img alt="{esc(ui["cover_alt"])}" src="{data_uri(cover)}"></section>')
+    out.append('<section class="pblank"></section>')          # the inside front cover
 
     out.append(f'<section class="pfront halftitle">{esc(title)}</section>')
+    out.append('<section class="pblank"></section>')          # the half title's verso, so the title page is a recto
     out.append(f'<section class="pfront titlepage"><div class="t">{esc(title)}</div><div class="s">{esc(sub)}</div>'
                f'<div class="g">{esc(tag)}</div><div class="a">Mansour Ayouni</div>'
                f'<div class="i"><img alt="AYOUNI" src="{LOGO_URI}"></div><div class="c">TUNIS · NIAMEY · PARIS · 2026</div></section>')
@@ -243,10 +246,11 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
     out.append(f'<section class="pfront colophon ask"><p class="warn">{esc(ui["invite"] + ui["invite_mail"] + ".")}</p>'
                f'<p>{esc(ui["offer_link"])} : {esc(ui["offer_url"])}</p>'
                f'<p>{esc(ui["colophon"])}</p><p>{esc(ui["licence_url"])}</p></section>')
-    back = st["back_cover"]
-    out.append(f'<section class="pback"><div class="bl bl-first">{esc(series.upper())}</div>'
-               + "".join(f'<div class="bl">{esc(l)}</div>' for l in back)
-               + f'<div class="im"><img alt="AYOUNI" src="{LOGO_URI}"></div></section>')
+    # the inside back cover on a recto, the back cover on the last page, a verso (COVER-05)
+    if PAD_END:
+        out.append('<section class="pblank"></section>')      # Chrome ignores break-before: left/right; the parity is counted
+    out.append('<section class="pblank"></section>')
+    out.append(f'<section class="pback"><img alt="{esc(ui["back_alt"])}" src="{data_uri(back_cover)}"></section>')
     out.append("</body></html>")
     return "\n".join(out)
 
@@ -270,10 +274,15 @@ def find_pages(pdf_path, pages, toc_end):
     rd = PdfReader(str(pdf_path))
     texts = [norm(pg.extract_text() or "") for pg in rd.pages]
     found, start = {}, toc_end
+    titles = [norm(p["title"]) for p in pages]
+    # a page of the contents names many chapters: it is never a chapter's first page (the preface was once found there)
+    listing = {i for i, t in enumerate(texts) if sum(1 for ti in titles if ti in t) >= 5}
     for p in pages:
         eb, ti = norm(p["eyebrow"]), norm(p["title"])
         for i in range(start, len(texts)):
             t = texts[i]
+            if i in listing:
+                continue
             if ti in t and (eb in t or p["number"] == 0 or p.get("appendix")):
                 if p.get("appendix") and eb not in t:
                     continue
@@ -284,6 +293,68 @@ def find_pages(pdf_path, pages, toc_end):
 
 
 LOGO_URI = None  # set in build(): the AYOUNI logo, rasterised from the SVG, as a data URI
+PAD_END = False  # one more blank page at the end, when the book would otherwise end on an odd page
+FRONT = 6        # pages before the contents: cover, inside cover, half title, its verso, title page, colophon
+
+
+def finish(pdf_path, lang, st, pages, first, ui):
+    """The press file's last touches (COVER-05): check the covers sit where a bound book has them, then write the bookmarks
+    and the metadata. Fails rather than ship a PDF whose back cover is not its last, even page."""
+    rd = PdfReader(str(pdf_path))
+    n = len(rd.pages)
+    text = lambda i: (rd.pages[i].extract_text() or "").strip()
+    bad = []
+    if n % 2:
+        bad.append(f"{n} pages: the back cover must fall on an even page")
+    for i, what in ((1, "the inside front cover"), (3, "the half title's verso"), (n - 2, "the inside back cover")):
+        if text(i):
+            bad.append(f"page {i + 1}, {what}, is not blank")
+    if text(0) or text(n - 1):
+        bad.append("a cover page carries text: it must be the cover image alone")
+    if norm(st["fr"]["title"] if lang == "fr" else st["title"]) not in norm(text(2)):
+        bad.append("page 3 is not the half title")
+    if bad:
+        raise SystemExit(f"{lang}: the covers are not set as a book's: " + "; ".join(bad))
+
+    w = PdfWriter(clone_from=rd)
+    fr = lang == "fr"
+    by_number = {q["number"]: q for q in pages if not q.get("appendix")}
+    by_letter = {str(q["appendix"]): q for q in pages if q.get("appendix")}
+    page_of = lambda q: first[q["slug"]] - 1                      # 0-based
+    w.add_outline_item("Couverture" if fr else "Front cover", 0)
+    w.add_outline_item(ui["contents"], FRONT)
+    if 0 in by_number:
+        w.add_outline_item(by_number[0]["title"], page_of(by_number[0]))
+
+    def section(name, members, label):
+        if not members:
+            return
+        start = page_of(members[0]) - 1                            # the part's own page, just before its first chapter
+        if norm(name.split(". ", 1)[-1])[:20] not in norm(text(start)):
+            raise SystemExit(f"{lang}: the page before {members[0]['slug']} is not the page of {name!r}")
+        parent = w.add_outline_item(name, start)
+        for q in members:
+            w.add_outline_item(label(q), page_of(q), parent=parent)
+
+    for part in st["parts"]:
+        pt = part.get("title_fr") if fr and part.get("title_fr") else part["title"]
+        members = [by_number[n] for n, _ in part["chapters"] if n in by_number]
+        section(f'{ui["part"]} {B.ROMAN[part["number"]]}. {pt}', members, lambda q: f'{q["number"]}. {q["title"]}')
+    section(ui["appendices"], [by_letter[l] for l, _ in st["appendices"] if l in by_letter],
+            lambda q: f'{ui["appendix"]} {q["appendix"]}. {q["title"]}')
+    w.add_outline_item("Quatrième de couverture" if fr else "Back cover", n - 1)
+    w.page_mode = "/UseOutlines"
+    title = st["fr"]["title"] if fr else st["title"]
+    sub = st["fr"]["subtitle"] if fr else st["subtitle"]
+    tag = st["fr"]["tagline"] if fr else st["tagline"]
+    w.add_metadata({"/Title": f"{title} \u2014 {sub}", "/Author": st["author"], "/Subject": tag,
+                    "/Keywords": ("Softanza, Haro, gouvernance du logiciel, IA, tribunal, déclaration" if fr
+                                  else "Softanza, Haro, software governance, AI, court, declaration"),
+                    "/Creator": "AYOUNI Press" if not fr else "Éditions AYOUNI"})
+    tmp = pdf_path.with_suffix(".tmp.pdf")
+    with open(tmp, "wb") as fh:
+        w.write(fh)
+    tmp.replace(pdf_path)
 
 
 def build(lang, html_only=False):
@@ -308,23 +379,34 @@ def build(lang, html_only=False):
         print(f"wrote {html_path.relative_to(ROOT)}")
         return
     render_pdf(html_path, pdf_path)
-    # the contents are 1 cover + half title + title + colophon + n pages; find where the first chapter begins
-    first, total, _ = find_pages(pdf_path, pages, 4)
+    # the contents begin on page 7 (cover, inside cover, half title, its verso, title, colophon); find where each chapter begins
+    first, total, _ = find_pages(pdf_path, pages, FRONT)
     pgmap = dict(first)
     html_path.write_text(compose(lang, st, pages, runs, guards, ui, pgmap), encoding="utf-8")
     render_pdf(html_path, pdf_path)
-    final, total, texts = find_pages(pdf_path, pages, 4)
+    final, total, texts = find_pages(pdf_path, pages, FRONT)
     if final != pgmap:
         # the contents changed length between passes; one more round settles it
         pgmap = dict(final)
         html_path.write_text(compose(lang, st, pages, runs, guards, ui, pgmap), encoding="utf-8")
         render_pdf(html_path, pdf_path)
-        final, total, texts = find_pages(pdf_path, pages, 4)
+        final, total, texts = find_pages(pdf_path, pages, FRONT)
     missing = [p["slug"] for p in pages if p["slug"] not in final]
     if missing:
         raise SystemExit(f"{lang}: the first page of {missing} was not found in the PDF")
     if final != pgmap:
         raise SystemExit(f"{lang}: the contents' page numbers did not settle")
+    global PAD_END
+    PAD_END = False
+    if len(PdfReader(str(pdf_path)).pages) % 2:
+        # the back cover must be the last page and a verso: one blank page before the inside back cover, at the very end,
+        # so no chapter moves and the contents stay as numbered
+        PAD_END = True
+        html_path.write_text(compose(lang, st, pages, runs, guards, ui, pgmap), encoding="utf-8")
+        render_pdf(html_path, pdf_path)
+        if find_pages(pdf_path, pages, FRONT)[0] != pgmap:
+            raise SystemExit(f"{lang}: padding the end moved a chapter")
+    finish(pdf_path, lang, st, pages, final, ui)
     size = pdf_path.stat().st_size // 1024
     print(f"{lang}: {pdf_path.relative_to(ROOT)}  {total} pages, {size} KB, {len(pages)} chapters, contents numbered")
 

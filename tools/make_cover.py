@@ -1,25 +1,33 @@
-"""Compose the flat front cover (assets/cover/cover.png, cover.fr.png) from the author's figure and the AYOUNI logo.
+"""Compose the flat covers: the front (assets/cover/cover.png, cover.fr.png) from the author's figure and the AYOUNI logo,
+and the back (assets/cover/back.png, back.fr.png, COVER-05) on the same grid, from src/structure.yaml.
 
 The first design (1097 x 1434 proportion; wordmark top left, title block left, the figure on the right, author bottom left,
 cities and year bottom right), on a pure white page as the author asked (COVER-04), drawn at twice the logical size
 (2194 x 2868) so the logo and the type stay sharp. Inputs live in assets/cover/source/: elder.png (the figure) and
 ayouni-logo.png (the logo, rasterised from ayouni-logo.svg, which the house traced from the author's file).
-Run: python tools/make_cover.py
+The back carries the author's two lines, the description (the preface's own sentences, never new prose), the imprint,
+a QR code to the free reader in its language, the edition and the licence. Run: python tools/make_cover.py
 """
 import sys
 from pathlib import Path
 
+import json
+
+import segno
 import yaml
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "assets" / "cover" / "source"
 OUTS = {"en": ROOT / "assets" / "cover" / "cover.png", "fr": ROOT / "assets" / "cover" / "cover.fr.png"}
+BACKS = {"en": ROOT / "assets" / "cover" / "back.png", "fr": ROOT / "assets" / "cover" / "back.fr.png"}
 K = 2                                   # drawn at twice the logical 1097 x 1434
 W, H = 1097 * K, 1434 * K
 PAPER = (255, 255, 255)
 INK = (20, 20, 20)
 GREY = (110, 110, 106)
+RULE = (200, 198, 192)
+RED = (212, 21, 25)          # the dot of the AYOUNI logo
 FONTS = Path("C:/Windows/Fonts")
 
 
@@ -84,9 +92,129 @@ def make(lang):
     print("wrote", OUT, cover.size)
 
 
+def typeset(text, fr):
+    """Typographic apostrophes; in French, no line may start with a colon, a question or exclamation mark, or a semicolon."""
+    text = text.replace("'", "\u2019")
+    if fr:
+        for mark in (":", "?", "!", ";"):
+            text = text.replace(" " + mark, "\u00a0" + mark)
+    return text
+
+
+def rich_lines(draw, text, regular, bold, maxw):
+    """Wrap a paragraph whose **...** runs are bold; returns lines of (word, font) pairs."""
+    words, on = [], False
+    for i, part in enumerate(text.split("**")):
+        on = i % 2 == 1
+        words += [(w, bold if on else regular) for w in part.split(" ") if w]
+    lines, cur, width = [], [], 0
+    for w, f in words:
+        ww = draw.textlength(w, font=f)
+        sp = draw.textlength(" ", font=f) if cur else 0
+        if cur and width + sp + ww > maxw * K:
+            lines.append(cur)
+            cur, width = [(w, f)], ww
+        else:
+            cur.append((w, f))
+            width += sp + ww
+    return lines + ([cur] if cur else [])
+
+
+def spaced(draw, xy, text, fnt, fill, track):
+    """Letter-spaced capitals (track in logical px)."""
+    x, y = xy
+    for ch in text:
+        draw.text((x, y), ch, font=fnt, fill=fill)
+        x += draw.textlength(ch, font=fnt) + track * K
+    return x
+
+
+def spaced_width(draw, text, fnt, track):
+    return sum(draw.textlength(ch, font=fnt) for ch in text) + track * K * (len(text) - 1)
+
+
+def qr_image(url, size):
+    """The QR code of the free reader, drawn module by module (no plugin), error level M, on white."""
+    q = segno.make(url, error="m", micro=False)
+    m = list(q.matrix)
+    n = len(m)
+    cell = (size * K) // n
+    im = Image.new("RGB", (cell * n, cell * n), PAPER)
+    d = ImageDraw.Draw(im)
+    for r, row in enumerate(m):
+        for c, v in enumerate(row):
+            if v:
+                d.rectangle((c * cell, r * cell, (c + 1) * cell - 1, (r + 1) * cell - 1), fill=INK)
+    return im
+
+
+def make_back(lang):
+    st = yaml.safe_load((ROOT / "src" / "structure.yaml").read_text(encoding="utf-8"))
+    fr = lang == "fr"
+    loc = {**st, **st["fr"]} if fr else st
+    edition = json.loads((ROOT / "book.json").read_text(encoding="utf-8")).get("edition", "proof copy")
+    fix = lambda s: typeset(s, fr)
+    back = Image.new("RGB", (W, H), PAPER)
+    d = ImageDraw.Draw(back)
+    x, right, maxw = 80 * K, W - 80 * K, 937
+
+    # the author's two lines: the verbs on top, the place at the foot of the description
+    head, place = st["back_cover"][1], st["back_cover"][0]
+    d.text((x, 104 * K), head, font=font("arial.ttf", 76), fill=INK)
+    d.rectangle((x, 222 * K, x + 64 * K, 222 * K + 5 * K), fill=RED)
+
+    y = 270 * K
+    reg, bld = font("georgia.ttf", 27), font("georgiab.ttf", 27)
+    for para in loc["back_blurb"]:
+        for line in rich_lines(d, fix(para), reg, bld, maxw):
+            cx = x
+            for w, f in line:
+                d.text((cx, y), w, font=f, fill=INK)
+                cx += d.textlength(w + " ", font=f)
+            y += 41 * K
+        y += 18 * K
+    y += 8 * K
+    d.text((x, y), fix(loc["back_runs"]), font=font("arial.ttf", 24), fill=INK)
+    y += 30 * K
+    PLACE_Y = 1056                       # the author's line has one place on both editions, above the imprint band
+    if y > (PLACE_Y - 44) * K:
+        raise SystemExit(f"back cover ({lang}): the description runs into the author's line ({y // K} > {PLACE_Y - 44})")
+    d.text((x, PLACE_Y * K), place, font=font("georgiai.ttf", 38), fill=INK)
+
+    # the imprint band: a hairline, the logo and the series on the left; the free reader and its QR code on the right
+    d.rectangle((x, 1150 * K, right, 1150 * K + 1 * K), fill=RULE)
+    logo = logo_png(196)
+    back.paste(logo, (x, 1190 * K), logo)
+    spaced(d, (x, 1190 * K + logo.height + 20 * K), loc["series"].upper(), font("arialbd.ttf", 17), GREY, 2.2)
+    qr = qr_image(loc["back_url"], 148)
+    back.paste(qr, (right - qr.width, 1180 * K))
+    tx = right - qr.width - 30 * K
+    f1, f2 = font("arial.ttf", 25), font("arial.ttf", 21)
+    url = loc["back_url"].split("://", 1)[1]
+    host, path = url.split("/", 1)[0] + "/ayouni/", url.split("/ayouni/", 1)[1]
+    for i, (s, f, c) in enumerate(((loc["back_free"], f1, INK), (host, f2, GREY), (path, f2, GREY))):
+        d.text((tx - d.textlength(s, font=f), (1196 + (0 if i == 0 else 8 + 30 * i)) * K), s, font=f, fill=c)
+
+    # the foot: the shelf on the left, the edition and the licence on the right, on the front's baseline
+    foot, track = font("arial.ttf", 19), 0.8
+    cat = typeset(loc["back_category"], fr).upper()
+    ed = ("ÉPREUVE DE TRAVAIL · " if fr else "PROOF COPY · ") if edition == "proof copy" else ""
+    lic = ed + "CC BY-NC-ND 4.0"
+    end_cat = spaced(d, (x, 1373 * K), cat, foot, GREY, track)
+    start_lic = right - spaced_width(d, lic, foot, track)
+    if start_lic - end_cat < 40 * K:
+        raise SystemExit(f"back cover ({lang}): the foot's two lines touch ({(start_lic - end_cat) // K} px apart)")
+    spaced(d, (start_lic, 1373 * K), lic, foot, GREY, track)
+
+    out = BACKS[lang]
+    back.save(out)
+    print("wrote", out, back.size, f"description ends at {y // K}, foot gap {(start_lic - end_cat) // K}")
+
+
 def main():
     for lang in OUTS:
         make(lang)
+        make_back(lang)
 
 
 if __name__ == "__main__":

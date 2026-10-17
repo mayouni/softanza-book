@@ -10,12 +10,31 @@ series: First of the AYOUNI books
 back_cover:
   - "Born in Africa. Useful to the World!"
   - "Declare, then govern."
+# The back cover's description (COVER-05): sentences of the preface as they stand, never new prose; **...** is bold.
+back_blurb:
+  - "You use a tool that writes code. You ask it for a function, or for a whole feature, and it answers in seconds. Then comes the question that no tool answers for you: should this code enter my system?"
+  - "Code has become cheap. Trust has not become cheap. This book keeps coming back to one sentence, the one every chapter rests on: **change arrives faster than trust.**"
+  - "First you declare. In plain text, you say what a thing is: an application, a language, an AI agent, a whole product. Then you govern. From your declaration you get a judge, which I call a court. It gives a verdict, kept or refused, and the reason, in the words of your declaration."
+  - "Every change goes to the court before it enters, whoever wrote it: you, a colleague, a script or an AI model. The model can still propose anything. It cannot decide anything."
+back_runs: "Every code block in this book was run, and its verdict is printed under it."
+back_category: "Software engineering · AI governance"
+back_free: "Free to read, in every form"
+back_url: "https://mayouni.github.io/ayouni/books/softanza/en/"
 
 fr:
   title: Softanza
   subtitle: La plateforme logicielle gouvernée de l'ère de l'IA
   tagline: Déclarez ce que vous savez. Un tribunal le garde. Le modèle d'IA vient en dernier.
   series: Premier des livres AYOUNI
+  back_blurb:
+    - "Vous utilisez un outil qui écrit du code. Vous lui demandez une fonction, ou une fonctionnalité entière, et il répond en quelques secondes. Vient alors la question qu'aucun outil ne résout pour vous : ce code doit-il entrer dans mon système ?"
+    - "Le code est devenu bon marché. La confiance, non. Ce livre revient sans cesse à une phrase, celle sur laquelle repose chaque chapitre : **le changement arrive plus vite que la confiance.**"
+    - "D'abord vous déclarez. En texte simple, vous dites ce qu'est une chose : une application, un langage, un agent d'IA, un produit entier. Ensuite vous gouvernez. De votre déclaration vous obtenez un juge, que j'appelle un tribunal. Il rend un verdict, tenu ou refusé, et la raison, dans les mots de votre déclaration."
+    - "Chaque changement passe devant le tribunal avant d'entrer, quel qu'en soit l'auteur : vous, un collègue, un script ou un modèle d'IA. Le modèle peut toujours tout proposer. Il ne peut rien décider."
+  back_runs: "Chaque bloc de code de ce livre a été exécuté, et son verdict est imprimé sous lui."
+  back_category: "Génie logiciel · Gouvernance de l'IA"
+  back_free: "Libre à lire, sous toutes ses formes"
+  back_url: "https://mayouni.github.io/ayouni/books/softanza/fr/"
 
 spine: [1, 2, 3, 4, 5, 11, 17, 32, 33]
 
