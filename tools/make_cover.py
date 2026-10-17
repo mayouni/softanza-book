@@ -26,6 +26,7 @@ W, H = 1097 * K, 1434 * K
 PAPER = (255, 255, 255)
 INK = (20, 20, 20)
 GREY = (110, 110, 106)
+GREY_DARK = (58, 56, 52)
 RULE = (200, 198, 192)
 RED = (212, 21, 25)          # the dot of the AYOUNI logo
 FONTS = Path("C:/Windows/Fonts")
@@ -148,7 +149,26 @@ def qr_image(url, size):
     return im
 
 
-def make_back(lang):
+def portrait(size):
+    """The author's portrait as a disc, antialiased (drawn at four times, then reduced); never enlarged."""
+    src = Image.open(SRC / "author.png").convert("RGB")
+    side = min(src.size)
+    src = src.crop(((src.width - side) // 2, (src.height - side) // 2, (src.width + side) // 2, (src.height + side) // 2))
+    px = size * K
+    if px > side:
+        raise SystemExit(f"the portrait is {side} px; the cover asks {px}: it would be enlarged")
+    src = src.resize((px, px), Image.LANCZOS)
+    mask = Image.new("L", (px * 4, px * 4), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, px * 4 - 1, px * 4 - 1), fill=255)
+    return src, mask.resize((px, px), Image.LANCZOS)
+
+
+BAND = 1192          # the imprint band's hairline
+BODY_SIZES = (25, 24, 23, 22)
+
+
+def make_back(lang, body, write=True):
+    """Draw the back cover with the description at `body` px; returns the free space above the author (negative: it overflows)."""
     st = yaml.safe_load((ROOT / "src" / "structure.yaml").read_text(encoding="utf-8"))
     fr = lang == "fr"
     loc = {**st, **st["fr"]} if fr else st
@@ -158,46 +178,70 @@ def make_back(lang):
     d = ImageDraw.Draw(back)
     x, right, maxw = 80 * K, W - 80 * K, 937
 
-    # the author's two lines: the verbs on top, the place at the foot of the description
+    # the book named first (COVER-06), then the author's two lines together (PRINT-03), then the accent
     head, place = st["back_cover"][1], st["back_cover"][0]
-    d.text((x, 104 * K), head, font=font("arial.ttf", 76), fill=INK)
-    d.rectangle((x, 222 * K, x + 64 * K, 222 * K + 5 * K), fill=RED)
+    spaced(d, (x, 86 * K), fix(f'{loc["title"]} · {loc["subtitle"]}').upper(), font("arialbd.ttf", 17), GREY, 2.0)
+    d.text((x, 116 * K), head, font=font("arial.ttf", 68), fill=INK)
+    d.text((x, 204 * K), place, font=font("georgiai.ttf", 31), fill=INK)
+    d.rectangle((x, 262 * K, x + 64 * K, 262 * K + 5 * K), fill=RED)
 
-    y = 270 * K
-    reg, bld = font("georgia.ttf", 27), font("georgiab.ttf", 27)
+    # the description: the hook, the thesis, what Softanza is, who it is for
+    y = 296 * K
+    lead = round(body * 1.42)
+    reg, bld = font("georgia.ttf", body), font("georgiab.ttf", body)
     for para in loc["back_blurb"]:
+        if para.startswith("## "):
+            y += 6 * K
+            spaced(d, (x, y), fix(para[3:]).upper(), font("arialbd.ttf", 16), RED, 2.0)
+            y += 28 * K
+            continue
         for line in rich_lines(d, fix(para), reg, bld, maxw):
             cx = x
             for w, f in line:
                 d.text((cx, y), w, font=f, fill=INK)
                 cx += d.textlength(w + " ", font=f)
-            y += 41 * K
-        y += 18 * K
-    y += 8 * K
-    d.text((x, y), fix(loc["back_runs"]), font=font("arial.ttf", 24), fill=INK)
-    y += 30 * K
-    PLACE_Y = 1056                       # the author's line has one place on both editions, above the imprint band
-    if y > (PLACE_Y - 44) * K:
-        raise SystemExit(f"back cover ({lang}): the description runs into the author's line ({y // K} > {PLACE_Y - 44})")
-    d.text((x, PLACE_Y * K), place, font=font("georgiai.ttf", 38), fill=INK)
+            y += lead * K
+        y += 12 * K
+    d.text((x, y), fix(loc["back_runs"]), font=font("arial.ttf", 22), fill=INK)
+    y += 28 * K
+
+    # the author (COVER-07): his portrait as a disc, his name, his note; set just above the imprint band
+    disc = 120
+    tx, tw = x + (disc + 26) * K, 937 - disc - 26
+    nf, bf = font("arialbd.ttf", 18), font("georgia.ttf", 20)
+    note = rich_lines(d, fix(loc.get("back_author_note") or st["back_author_note"]), bf, bf, tw)
+    block = max(disc, 30 + 28 * len(note))
+    top = BAND - 24 - block
+    free = top - 20 - y // K
+    if not write:
+        return free
+    if free < 0:
+        raise SystemExit(f"back cover ({lang}): the description runs into the author ({-free} px too long at {body} px)")
+    photo, mask = portrait(disc)
+    back.paste(photo, (x, top * K), mask)
+    spaced(d, (tx, top * K), st["back_author"].upper(), nf, INK, 1.6)
+    yy = (top + 30) * K
+    for line in note:
+        d.text((tx, yy), " ".join(w for w, _ in line), font=bf, fill=GREY_DARK)
+        yy += 28 * K
 
     # the imprint band: a hairline, the logo and the series on the left; the free reader and its QR code on the right
-    d.rectangle((x, 1150 * K, right, 1150 * K + 1 * K), fill=RULE)
-    logo = logo_png(196)
-    back.paste(logo, (x, 1190 * K), logo)
-    spaced(d, (x, 1190 * K + logo.height + 20 * K), loc["series"].upper(), font("arialbd.ttf", 17), GREY, 2.2)
-    qr = qr_image(loc["back_url"], 148)
-    back.paste(qr, (right - qr.width, 1180 * K))
-    tx = right - qr.width - 30 * K
-    f1, f2 = font("arial.ttf", 25), font("arial.ttf", 21)
+    d.rectangle((x, BAND * K, right, BAND * K + 1 * K), fill=RULE)
+    logo = logo_png(180)
+    back.paste(logo, (x, (BAND + 28) * K), logo)
+    spaced(d, (x, (BAND + 28) * K + logo.height + 16 * K), loc["series"].upper(), font("arialbd.ttf", 16), GREY, 2.2)
+    qr = qr_image(loc["back_url"], 132)
+    back.paste(qr, (right - qr.width, (BAND + 22) * K))
+    qx = right - qr.width - 28 * K
+    f1, f2 = font("arial.ttf", 23), font("arial.ttf", 20)
     url = loc["back_url"].split("://", 1)[1]
     host, path = url.split("/", 1)[0] + "/ayouni/", url.split("/ayouni/", 1)[1]
     for i, (s, f, c) in enumerate(((loc["back_free"], f1, INK), (host, f2, GREY), (path, f2, GREY))):
-        d.text((tx - d.textlength(s, font=f), (1196 + (0 if i == 0 else 8 + 30 * i)) * K), s, font=f, fill=c)
+        d.text((qx - d.textlength(s, font=f), (BAND + 30 + (0 if i == 0 else 6 + 28 * i)) * K), s, font=f, fill=c)
 
     # the foot: the shelf on the left, the edition and the licence on the right, on the front's baseline
     foot, track = font("arial.ttf", 19), 0.8
-    cat = typeset(loc["back_category"], fr).upper()
+    cat = fix(loc["back_category"]).upper()
     ed = ("ÉPREUVE DE TRAVAIL · " if fr else "PROOF COPY · ") if edition == "proof copy" else ""
     lic = ed + "CC BY-NC-ND 4.0"
     end_cat = spaced(d, (x, 1373 * K), cat, foot, GREY, track)
@@ -208,13 +252,23 @@ def make_back(lang):
 
     out = BACKS[lang]
     back.save(out)
-    print("wrote", out, back.size, f"description ends at {y // K}, foot gap {(start_lic - end_cat) // K}")
+    print("wrote", out, back.size, f"body {body} px, {free} px free above the author, foot gap {(start_lic - end_cat) // K}")
+    return free
+
+
+def fitted_body():
+    """The largest description size at which both editions fit: one size for both, so the two backs match."""
+    for body in BODY_SIZES:
+        if all(make_back(lang, body, write=False) >= 0 for lang in BACKS):
+            return body
+    raise SystemExit(f"the back cover's description does not fit at {BODY_SIZES[-1]} px: shorten it in src/structure.yaml")
 
 
 def main():
+    body = fitted_body()
     for lang in OUTS:
         make(lang)
-        make_back(lang)
+        make_back(lang, body)
 
 
 if __name__ == "__main__":

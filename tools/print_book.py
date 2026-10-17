@@ -365,7 +365,8 @@ def build(lang, html_only=False):
     src = sources(lang)
     by_id = {m["id"]: (p, m, b) for p, m, b in src}
     ui = B.UI[lang]
-    global LOGO_URI
+    global LOGO_URI, PAD_END
+    PAD_END = False           # never carried from the other language's build
     LOGO_URI = data_uri(ROOT / "assets" / "cover" / "source" / "ayouni-logo.png")
     pages = B.build_pages(lang, st, en_src, by_id, runs, guards, ui)
     pages = [p for p in pages if p["own"]]
@@ -396,8 +397,6 @@ def build(lang, html_only=False):
         raise SystemExit(f"{lang}: the first page of {missing} was not found in the PDF")
     if final != pgmap:
         raise SystemExit(f"{lang}: the contents' page numbers did not settle")
-    global PAD_END
-    PAD_END = False
     if len(PdfReader(str(pdf_path)).pages) % 2:
         # the back cover must be the last page and a verso: one blank page before the inside back cover, at the very end,
         # so no chapter moves and the contents stay as numbered

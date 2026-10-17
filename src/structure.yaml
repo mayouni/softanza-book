@@ -10,13 +10,20 @@ series: First of the AYOUNI books
 back_cover:
   - "Born in Africa. Useful to the World!"
   - "Declare, then govern."
-# The back cover's description (COVER-05): sentences of the preface as they stand, never new prose; **...** is bold.
+# The back cover's description (COVER-05, COVER-06): the book's own sentences (preface, chapter 2), never new prose;
+# **...** is bold; an item that starts with '## ' is a label (What Softanza is, Who it is for).
 back_blurb:
   - "You use a tool that writes code. You ask it for a function, or for a whole feature, and it answers in seconds. Then comes the question that no tool answers for you: should this code enter my system?"
-  - "Code has become cheap. Trust has not become cheap. This book keeps coming back to one sentence, the one every chapter rests on: **change arrives faster than trust.**"
-  - "First you declare. In plain text, you say what a thing is: an application, a language, an AI agent, a whole product. Then you govern. From your declaration you get a judge, which I call a court. It gives a verdict, kept or refused, and the reason, in the words of your declaration."
-  - "Every change goes to the court before it enters, whoever wrote it: you, a colleague, a script or an AI model. The model can still propose anything. It cannot decide anything."
+  - "Code has become cheap. Trust has not become cheap. **Change arrives faster than trust.**"
+  - "## What Softanza is"
+  - "**Softanza** is a governed software platform. You declare what you know about a world, in plain text; a court built from that declaration keeps it; and the AI model, where there is one, comes last. It is three things: a library you call from code, an engine beneath it that does the computation, and a language, Haro, made to hold the declarations."
+  - "## Who it is for"
+  - "The software crafter: whoever declares what they know about a world, and owns what they declare. The programmer, the analyst, the designer, the decision-maker, the educator, and the AI agent, since this book is also published as data a program can read. You do not need to know Softanza. You need to have written code, and to have felt the doubt above."
 back_runs: "Every code block in this book was run, and its verdict is printed under it."
+# The author on the back cover (COVER-07): his portrait (assets/cover/source/author.png) and a note made of the facts of his own
+# author note of 2020, rewritten, with no name the book reserves for Appendix H.
+back_author: "Mansour Ayouni"
+back_author_note: "He wrote his first program at ten, with pen and paper, in Regueb, a village in the centre of Tunisia that had no electricity. Programming then took him from Tunisia to Niger and to Canada, building software for law offices, banks and nuclear waste management, and leading teams of three cultures. He designed Softanza and was its first crafter."
 back_category: "Software engineering · AI governance"
 back_free: "Free to read, in every form"
 back_url: "https://mayouni.github.io/ayouni/books/softanza/en/"
@@ -28,10 +35,13 @@ fr:
   series: Premier des livres AYOUNI
   back_blurb:
     - "Vous utilisez un outil qui écrit du code. Vous lui demandez une fonction, ou une fonctionnalité entière, et il répond en quelques secondes. Vient alors la question qu'aucun outil ne résout pour vous : ce code doit-il entrer dans mon système ?"
-    - "Le code est devenu bon marché. La confiance, non. Ce livre revient sans cesse à une phrase, celle sur laquelle repose chaque chapitre : **le changement arrive plus vite que la confiance.**"
-    - "D'abord vous déclarez. En texte simple, vous dites ce qu'est une chose : une application, un langage, un agent d'IA, un produit entier. Ensuite vous gouvernez. De votre déclaration vous obtenez un juge, que j'appelle un tribunal. Il rend un verdict, tenu ou refusé, et la raison, dans les mots de votre déclaration."
-    - "Chaque changement passe devant le tribunal avant d'entrer, quel qu'en soit l'auteur : vous, un collègue, un script ou un modèle d'IA. Le modèle peut toujours tout proposer. Il ne peut rien décider."
+    - "Le code est devenu bon marché. La confiance, non. **Le changement arrive plus vite que la confiance.**"
+    - "## Ce qu'est Softanza"
+    - "**Softanza** est une plateforme logicielle gouvernée. Vous déclarez ce que vous savez d'un monde, en texte clair ; un tribunal construit à partir de cette déclaration le garde ; et le modèle d'IA, quand il y en a un, vient en dernier. Elle est trois choses : une bibliothèque que vous appelez depuis du code, un moteur sous elle qui fait le calcul, et un langage, Haro, fait pour tenir les déclarations."
+    - "## Pour qui"
+    - "L'artisan du logiciel : quiconque déclare ce qu'il sait d'un monde, et possède ce qu'il déclare. Le programmeur, l'analyste, le concepteur, le décideur, le formateur, et l'agent d'IA, puisque ce livre est aussi publié sous forme de données qu'un programme peut lire. Vous n'avez pas besoin de connaître Softanza. Il vous faut avoir écrit du code, et avoir ressenti le doute ci-dessus."
   back_runs: "Chaque bloc de code de ce livre a été exécuté, et son verdict est imprimé sous lui."
+  back_author_note: "Il a écrit son premier programme à dix ans, au stylo sur du papier, à Regueb, un village du centre de la Tunisie qui n'avait pas l'électricité. La programmation l'a mené ensuite de la Tunisie au Niger et au Canada : des logiciels pour des cabinets d'avocats, des banques et la gestion des déchets nucléaires, des équipes de trois cultures. Il a conçu Softanza, dont il a été le premier artisan."
   back_category: "Génie logiciel · Gouvernance de l'IA"
   back_free: "Libre à lire, sous toutes ses formes"
   back_url: "https://mayouni.github.io/ayouni/books/softanza/fr/"
