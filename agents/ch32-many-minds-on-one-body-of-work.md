@@ -2,11 +2,11 @@
 
 Source: Chapter 32. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
+Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's sixteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 2 of 3 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
-In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
+In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's sixteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
 ## 1. The concept, as the field holds it
 
@@ -42,7 +42,7 @@ What makes it a discipline and not a filing system is that each rule was paid fo
 
 You can see the shape. A failure, dated. A rule, written where the next session will read it. Then, when the rule is broken anyway, a mechanism. Some laws reached the last step, some are still a written rule, and the record says which.
 
-Where the laws touch code, the library itself can hold them. Its fourteen house rules are validators, five of them over a graph of the code and the rest over text: one law of the library's design document, made runnable. They are rules an agent can run before it commits, not folklore it must guess. One of them is about words. What does it say of a method called `KillOrder`, and is the code still clean? Run it:
+Where the laws touch code, the library itself can hold them. Its sixteen house rules are validators, five of them over a graph of the code and the rest over text: one law of the library's design document, made runnable. They are rules an agent can run before it commits, not folklore it must guess. One of them is about words. What does it say of a method called `KillOrder`, and is the code still clean? Run it:
 
 ```haro
 cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
@@ -73,14 +73,14 @@ And the rules are a closed set. How many are there, and can an agent list them b
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[3]
 #--> no-aggressive-verbs
 ```
 
-> run: differs
+> run: kept
 
-Yes: fourteen names, and the third is the rule that just spoke. The record does not link the library's tone rule to the estate's word law, ruled on 21 August 2026, so I will not either. But it is the same instinct at two altitudes: the words we use about work are part of the work.
+Yes: sixteen names, and the third is the rule that just spoke. The record does not link the library's tone rule to the estate's word law, ruled on 21 August 2026, so I will not either. But it is the same instinct at two altitudes: the words we use about work are part of the work.
 
 Those are the laws. Now for what I refused, and the loss I accepted.
 
@@ -104,7 +104,7 @@ Next, the court, and what it cannot prove.
 
 No guard of the library proves the protocol. Its courts are outside the library, and I name them by what they do. One hook refuses wholesale staging, and one refuses work when the machine has no memory to spare. A check says whether the hooks installed are the hooks written. An instrument compares every stamp with its commit and publishes the rows. They are scripts, not Haro, and this book's reader cannot count their assertions, so they are named here and not in the court line below.
 
-The blocks of this chapter stand on the library's guards of its house rules. `coderule_narrated` proves that a code rule is a rule over the graph, and that the house findings come out on a planted fixture in a frozen shape. It proves that the rules number fourteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
+The blocks of this chapter stand on the library's guards of its house rules. `coderule_narrated` proves that a code rule is a rule over the graph, and that the house findings come out on a planted fixture in a frozen shape. It proves that the rules number sixteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
 
 ## 6. The field, and where it leads
 
@@ -120,7 +120,7 @@ Now the limit, in the stage words.
 
 ## 7. The limit
 
-What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
+What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's sixteen house rules are built, five of them over its code graph.
 
 What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
 

@@ -4,7 +4,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 5 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -40,22 +40,22 @@ cAsk = 'aC = ringvm_classesList()' + nl +
 aEntries = [ "core/stkLib.ring", "stzLib.ring", "max/stxLib.ring" ]
 for i = 1 to 3
     write("layer" + i + ".ring", 'load "../../../' + aEntries[i] + '"' + nl + cAsk)
-    ? trim(systemcmd("ring layer" + i + ".ring"))
+    ? trim(systemcmd(char(34) + exefilename() + char(34) + " layer" + i + ".ring"))
     remove("layer" + i + ".ring")
 next
 #--> 17 1 0 0
-#--> 674 1 1 0
-#--> 714 1 1 1
+#--> 683 1 1 0
+#--> 723 1 1 1
 ```
 
-> run: differs (touches files)
+> run: kept (touches files)
 
-The first process prints `17 1 0 0`. Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. The second prints `674 1 1 0`: base holds 674 and no max class. The third prints `714 1 1 1`: max holds 714. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine. A load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
+The first process prints `17 1 0 0`. Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. The second prints `683 1 1 0`: base holds 683 and no max class. The third prints `723 1 1 1`: max holds 723. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine. A load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
 
 The contract says base builds on core, by inheritance or delegation. What do the classes say? `ringvm_classesList()` returns, for each class, its name, its identifier, and its parent:
 
 ```haro
-aClasses = ringvm_classesList()
+$aClasses = ringvm_classesList()
 ? ParentOf("stkString")
 #--> stzcorestring
 ? ParentOf("stzString")
@@ -66,12 +66,12 @@ aClasses = ringvm_classesList()
 #--> stzlist
 
 func ParentOf(cClass)
-    n = find(aClasses, lower(cClass), 1)
+    n = find($aClasses, lower(cClass), 1)
     if n = 0  return "(not loaded)" ok
-    return aClasses[n][3]
+    return $aClasses[n][3]
 ```
 
-> run: raised
+> run: kept
 
 The second line prints `stzobject`: `stzString` inherits `stzObject`, and not `stkString`! Core carries a parallel hierarchy, in which `stkString` inherits `stzCoreString`, the first line's `stzcorestring`. Max does build on base: `stzListXT` inherits `stzList`, the last line's `stzlist`. Exactly two base classes inherit a core class, `stzSciNumber` and `stzPointer`, and one delegates, in a line of `stzPointer`. They are two among the hundreds of base. The contract is not met, and it is not met in the way chapter 4 asked about. I print it as a debt.
 
@@ -88,12 +88,12 @@ for aClass in aClasses
     ok
 next
 ? @@([ nStk, nStz, nStx ])
-#--> [ 10, 693, 0 ]
+#--> [ 10, 702, 0 ]
 ```
 
-> run: raised
+> run: kept
 
-The block prints `[ 10, 693, 0 ]`. Ten, six hundred and ninety-three, and none! The three do not add up to the 714 of the first block: the classes that remain carry none of the three prefixes, and a count by prefix says nothing of them, which is the exercise's point. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
+The block prints `[ 10, 702, 0 ]`. Ten, seven hundred and two, and none! The three do not add up to the 723 of the first block: the classes that remain carry none of the three prefixes, and a count by prefix says nothing of them, which is the exercise's point. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
 
 ### One engine
 
@@ -128,14 +128,14 @@ for cName in aAll
     if left(lower(cName), 9) = "stzengine"  aNames + lower(cName)  ok
 next
 ? len( Q(aNames).DuplicatesRemoved() )
-#--> 2786
+#--> 2843
 ```
 
-> run: raised
+> run: kept
 
-The block prints `0.8.0` and `2786`. Two thousand seven hundred and eighty-six distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first. The call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
+The block prints `0.8.0` and `2843`. Two thousand eight hundred and forty-three distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first. The call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
 
-There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,786 above. The second is the count to any host through the C interface. A script of mine read the export tables of the eighty-nine libraries on 9 October 2026 and found 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
+There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,843 above. The second is the count to any host through the C interface. A script of mine read the export tables of the eighty-nine libraries on 9 October 2026 and found 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
 
 **The engine does the work.** What does the host's `upper` make of the German sharp s, and what does the engine's case mapping make of it, its own table over a vendored library? A second vendored library stems words. These are two of the engine's nineteen vendored libraries, which section 4 counts:
 
@@ -317,8 +317,8 @@ Before you run anything, write three numbers: how many classes each entry file w
 
 > run: exercise
 
-Then choose any class of the library, predict its parent, and read it with the parent chain. Write the line your prediction got wrong. A learner who guesses that `stzString` inherits `stkString` is in good company: the contract says so, and the library does not. I do not say which of the 17, 674 or 714 is which.
+Then choose any class of the library, predict its parent, and read it with the parent chain. Write the line your prediction got wrong. A learner who guesses that `stzString` inherits `stkString` is in good company: the contract says so, and the library does not. I do not say which of the 17, 683 or 723 is which.
 
-I left this one in your hands. The count by prefix in section 3, `[ 10, 693, 0 ]`, is correct, and it says nothing about layers. Write that count again so that it asks each class's parent chain, read with `ParentOf`, and not its first three letters, and look at what you get. Section 3 says what the prefix hides, and section 8, the agent's door, says why I refuse it. When your count answers, you will know why a class's layer is read from what it inherits, and not from what it is called.
+I left this one in your hands. The count by prefix in section 3, `[ 10, 702, 0 ]`, is correct, and it says nothing about layers. Write that count again so that it asks each class's parent chain, read with `ParentOf`, and not its first three letters, and look at what you get. Section 3 says what the prefix hides, and section 8, the agent's door, says why I refuse it. When your count answers, you will know why a class's layer is read from what it inherits, and not from what it is called.
 
 The next chapter leaves the engine for a restaurant in Lyon, and for the one sentence the project there taught: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.

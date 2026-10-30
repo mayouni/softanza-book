@@ -8,7 +8,7 @@ narrations: [stz-functions-as-linguistic-expressions.md, stz-conditional-code-na
 site: [craft, principles]
 guards: [coderule_narrated, 602_l_function, 59_use_of_the_l_small_function, 527_identifying_lists_inside_a_string, 48_replacebymany, 483_w_and_wf_forms_in_conditional_code, 28_numberofoccurrenceofcharleftside, 646_content, 972_narration_viz-finding_a_recurring_substring, testoor_promises_narrated]
 stage:
-  built: "les quatorze règles de la maison de la bibliothèque comme un tribunal sur son propre code ; la promesse jugée comme une affirmation ; les petits langages des intervalles, des listes et des conditions dans des chaînes ; l'emplacement du code ; le préfixe viz ; les alternatives et les paramètres nommés dans n'importe quel ordre, en partie"
+  built: "les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code ; la promesse jugée comme une affirmation ; les petits langages des intervalles, des listes et des conditions dans des chaînes ; l'emplacement du code ; le préfixe viz ; les alternatives et les paramètres nommés dans n'importe quel ordre, en partie"
   designed: "un tribunal qui juge le style d'un programme écrit avec la bibliothèque ; un tribunal qui lit les buts ; la grammaire d'écriture déclarée en Haro ; la forme classique d'un bloc de test comme forme unique"
   absent: "toute machine qui juge le style du code que vous écrivez aujourd'hui ; l'écriture dans n'importe quelle langue humaine du nom d'une fonction ; la phrase quasi naturelle telle que le diaporama l'écrivait ; le code fondé sur eval sur le nom d'un paramètre"
 status: draft
@@ -16,7 +16,7 @@ rulings: ["12.2", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch07.md
 ---
 
-Dans ce chapitre, je prends le reste du style d'écriture, comme une grammaire de quatorze règles. J'imprime l'état où chaque règle se trouve au commit sur lequel ce livre s'exécute, un bloc là où elle s'exécute et une limite là où elle ne s'exécute pas. Sous la grammaire je mets les sept buts, j'en montre trois dans des blocs et je laisse à l'étude les quatre que je n'ai pas exécutés. J'imprime le tribunal de la maison, les quatorze règles que la bibliothèque tient sur son propre code. Je dis ce qu'il ne lit pas : le code d'un programme écrit avec la bibliothèque. Le principe est celui du chapitre 5, et je ne l'argumente pas de nouveau : ce que vous pensez est ce que vous écrivez.
+Dans ce chapitre, je prends le reste du style d'écriture, comme une grammaire de quatorze règles. J'imprime l'état où chaque règle se trouve au commit sur lequel ce livre s'exécute, un bloc là où elle s'exécute et une limite là où elle ne s'exécute pas. Sous la grammaire je mets les sept buts, j'en montre trois dans des blocs et je laisse à l'étude les quatre que je n'ai pas exécutés. J'imprime le tribunal de la maison, les seize règles que la bibliothèque tient sur son propre code. Je dis ce qu'il ne lit pas : le code d'un programme écrit avec la bibliothèque. Le principe est celui du chapitre 5, et je ne l'argumente pas de nouveau : ce que vous pensez est ce que vous écrivez.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -211,13 +211,13 @@ Vient ensuite le tribunal, et je l'exécute.
 
 ## 5. Le tribunal
 
-`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code ; que le code planté est trouvé par son nom ; que le code propre passe ; et que la bibliothèque en liste quatorze. `testoor_promises_narrated` prouve que la promesse `#-->` est jugée comme l'affirmation d'un arrêt : tenue, divergente, non atteinte ou non jugée. `602_l_function` et `59_use_of_the_l_small_function` prouvent le langage d'intervalles. `527_identifying_lists_inside_a_string` prouve les listes hébergées dans des chaînes. `48_replacebymany` prouve que les remplacements se font dans l'ordre. `483_w_and_wf_forms_in_conditional_code` prouve la condition dans une chaîne, en deux écritures du même balayage. `28_numberofoccurrenceofcharleftside` prouve les noms alternatifs en arabe comme en latin, et porte une note disant que la promesse de l'archive était fausse et que l'implémentation fait autorité. `646_content` prouve les paramètres nommés. `972_narration_viz-finding_a_recurring_substring` prouve la visite viz.
+`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code ; que le code planté est trouvé par son nom ; que le code propre passe ; et que la bibliothèque en liste seize. `testoor_promises_narrated` prouve que la promesse `#-->` est jugée comme l'affirmation d'un arrêt : tenue, divergente, non atteinte ou non jugée. `602_l_function` et `59_use_of_the_l_small_function` prouvent le langage d'intervalles. `527_identifying_lists_inside_a_string` prouve les listes hébergées dans des chaînes. `48_replacebymany` prouve que les remplacements se font dans l'ordre. `483_w_and_wf_forms_in_conditional_code` prouve la condition dans une chaîne, en deux écritures du même balayage. `28_numberofoccurrenceofcharleftside` prouve les noms alternatifs en arabe comme en latin, et porte une note disant que la promesse de l'archive était fausse et que l'implémentation fait autorité. `646_content` prouve les paramètres nommés. `972_narration_viz-finding_a_recurring_substring` prouve la visite viz.
 
-Voici le tribunal de la maison lui-même, les quatorze règles de la bibliothèque et non les quatorze du style. La coïncidence numérique est une coïncidence. Que répond-il à une faute d'orthographe plantée, et à une écriture plantée sur une constante ? Exécutez-le :
+Voici le tribunal de la maison lui-même, les seize règles de la bibliothèque et non les quatorze du style. Que répond-il à une faute d'orthographe plantée, et à une écriture plantée sur une constante ? Exécutez-le :
 
 ```haro
 ? @@( StzCodeRuleNames() )
-#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function" ]
+#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function", "raw-markup-door", "markup-concatenation" ]
 cOne = "class Inbox" + nl + "def Recieve(x)" + nl + "	return x" + nl
 ? StzCheckCode(cOne)[1][:rule]
 #--> misspelled_name
@@ -232,9 +232,9 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 
 La faute d'orthographe est trouvée par son nom, `misspelled_name`, et le code reste propre, `TRUE`, parce que c'est un avertissement. L'écriture sur une constante est trouvée par son nom, `writes_a_mutable_constant`, et le code est refusé, `FALSE`, parce que c'est une erreur. Le tribunal a refusé l'écriture sur une constante !
 
-Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de huit des quatorze revient avec des soulignés. Le bloc le montre : la liste imprime `misspelled-name`, et le constat imprime `misspelled_name`.
+Un détail d'orthographe, pour l'annexe B : la liste des noms emploie des traits d'union, et le constat de dix des seize revient avec des soulignés. Le bloc le montre : la liste imprime `misspelled-name`, et le constat imprime `misspelled_name`.
 
-Ce que le tribunal ne lit pas, c'est le code d'un programme écrit avec la bibliothèque. Les quatorze règles de la maison sont des règles du propre code de la bibliothèque ; une règle d'écriture pour le code écrit avec elle est conçue (section 7).
+Ce que le tribunal ne lit pas, c'est le code d'un programme écrit avec la bibliothèque. Les seize règles de la maison sont des règles du propre code de la bibliothèque ; une règle d'écriture pour le code écrit avec elle est conçue (section 7).
 
 ## 6. Le terrain, et où il mène
 
@@ -250,7 +250,7 @@ La limite, à la section suivante, dit ce qui est construit, ce qui est conçu e
 
 ## 7. La limite
 
-Ce qui est construit : les quatorze règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT` et `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste ; `ZZ` s'exécute au chapitre 8).
+Ce qui est construit : les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT` et `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste ; `ZZ` s'exécute au chapitre 8).
 
 Ce qui est conçu :
 

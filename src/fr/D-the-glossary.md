@@ -68,7 +68,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **Haro.** Le langage dans lequel ce livre écrit : la surface de l'ancien langage hôte, gardée et rebaptisée, avec une charte et un runtime encore en construction. Haro n'exécute pas encore la bibliothèque. Chapitres 3, 27.
 
-**règles de la maison.** Les quatorze règles que la bibliothèque lance sur son propre code, cinq sur un graphe du code et neuf sur son texte : un tribunal qu'un agent d'IA peut lancer avant de commiter. Pas les quatorze règles d'écriture du chapitre 7, qu'aucune machine ne juge. Chapitres 5, 32 ; annexe B.
+**règles de la maison.** Les seize règles que la bibliothèque lance sur son propre code, cinq sur un graphe du code et onze sur son texte : un tribunal qu'un agent d'IA peut lancer avant de commiter. Pas les quatorze règles d'écriture du chapitre 7, qu'aucune machine ne juge. Chapitres 5, 32 ; annexe B.
 
 **registre (de sécurité).** Le registre où le volet de sécurité consigne ce qui a été refusé et pourquoi, écrit par le tribunal et jamais par la chose qu'il juge. Chapitres 20, 21.
 

@@ -158,3 +158,18 @@ chapter 27 measures the former runtime's own VM (`ringvm_classesList`, `ringvm_c
 the bridge does not have, and its counts were the old pin's. Those five chapters are the author's to update; nothing in their
 prose was changed. Four chapters (14, 16, 19, 25) that wrote `aR = ...` inside a brace, and chapter 30's `len(Check(oG))`, failed
 on the bridge first and pass now: the bridge was corrected (ringpp C-6 revised, F-145), not the book.
+
+**RUNTIME-03 · 2026-10-30.** The author: "update the five book chapters" (the five RUNTIME-02 left failing). Each claim was re-measured at
+the pin 0950e246a on the bridge runtime before the text changed. **The house rules are sixteen**: the library added `raw-markup-door` and
+`markup-concatenation` (both severity info: they count and never refuse; their findings come back with underscores; the code stays clean),
+and its guard `coderule_narrated` now asserts sixteen. Chapters 5, 7, 32, Appendix B and the glossary say sixteen wherever the house rules
+are counted (eleven over text, five over the graph); the fourteen rules of writing, chapter 8's fourteen forms, chapter 22's tally and
+Appendix A's fourteen files are other counts and stay; Appendix B's title says sixteen, and its `id` and file name stay, so no published link
+moves; it gains the two rows and a block firing both rules. **Chapter 15**: the library's time patterns now run sequences over a timeline
+and ranges without a step (its parser slices a token by its start and its end, 8ab918635); the timeline block promises the match, the label
+`"Lunch"` and a refused reverse order, and "sequences over a timeline" leaves the absent line. The list claims of the same paragraph were
+re-run and still hold. **Chapter 27**: its children spawn the running runtime (`exefilename()`) where they spawned the former one by name;
+the layers count 17, 683 and 723 classes, the prefixes `[ 10, 702, 0 ]`, the engine 2,843 distinct functions; `ParentOf` reads `$aClasses`,
+the spelling the bridge asks of a top-level name read in a function. The chapter's VM reflection (`ringvm_classesList`,
+`ringvm_cfunctionsList`) was missing from the bridge, which now answers it as the former runtime did -- in its build cfef30b, after its
+release 2.0.6; a reader on 2.0.6 sees those three blocks refused until the next release. Result: 286 of 286 blocks keep their promise.

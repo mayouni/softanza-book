@@ -1,12 +1,12 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-10-30 13:38 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Every page below is a draft unless it says otherwise.
+Built 2026-10-30 14:38 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Every page below is a draft unless it says otherwise.
 
 # Preface
 
 Source: Preface. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Run: 1 of 1 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 1 of 1 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 ## A question you already have
 
@@ -105,7 +105,7 @@ Source: Chapter 1. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 
@@ -244,7 +244,7 @@ Source: Chapter 2. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the word "crafter" from the field's craftsmanship and from its two answers that define the person by a tool, low-code and the coding agent. I say what the site means by it. I show the six doors, each with a line or two that run, and the three cases this book is for: a restaurateur in Lyon, Softibank, a bank in Niamey, an organisation in the field. I say what I kept, the programmer first; what I added, the AI agent, with one power withheld; and what I refused, "maker" and "builder". The principle is one sentence that joins the site's and the glossary's: a crafter is whoever declares what they know about a world, and owns what they declare.
 
@@ -553,7 +553,7 @@ Source: Chapter 3. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I show the method every chapter after this one follows. I take "from first principles", the field's slogan, and give it a narrow meaning: a concept, the field's form, a redesign in running code, and a court that judges it. I show the smallest rethink I know, the empty string, and then the two acts, declare and govern, in a few lines each. I say what I refused. First, a feature without a need, and general-purpose code as the meeting ground between people and machines. Then a title that looked back, the grid alone, and a reading called a census. The whole method returns to one sentence: you declare a world in a language made for it, and you govern how that world changes.
 
@@ -770,7 +770,7 @@ Source: Chapter 4. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web; designed: the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract; absent: a whole program and its engine packed into one file; a customer platform on the engine
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I draw the whole platform in one picture, read from the bottom up: the engine, the layers, the areas, the worlds, the crafters, and beside every floor its court. I walk it floor by floor, with one block at each floor that you can run. Then I say what I refused along the way: computation in the faces, a flag to choose a layer, mini-applications. The picture is summed up in one idea at every altitude: nothing is believed, everything is judged.
 
@@ -1033,7 +1033,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -1198,7 +1198,7 @@ One word on `@@()`. On the former host language, `?` prints a list one item per 
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are fourteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are sixteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -1212,7 +1212,7 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 
 The court answers `FALSE`, and names the rule: `q-returns-object`. It did not ask who wrote the class! That is the whole of the second half. And the promise under each question is read by a machine too: the library's runner judges a promise as a claim about what the line printed. The house's oldest form of example is also its newest form of test.
 
-The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the fourteen house rules of the court you have just seen, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, the deep form among them, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline and the grid. Chapter 10 tells how programming becomes refinement.
+The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the sixteen house rules of the court you have just seen, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, the deep form among them, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline and the grid. Chapter 10 tells how programming becomes refinement.
 
 ## 4. The decision, and what I refused
 
@@ -1230,7 +1230,7 @@ What had happened is measurable. My study of the record counted the promise unde
 
 ## 5. The court
 
-`coderule_narrated` proves that a house rule is a rule over the code graph and that the findings come out on planted code. It proves that clean code passes, and that the library's house rules are fourteen. `testoor_promises_narrated` proves that the promise is judged by a machine in the house's own form. Each rule is planted both ways: the lie it must catch, and the truth it must not accuse. `05_containsemptystrings` is the mental model's steps on the same list, a classic block kept as a guard. `466_keeping_the_history_of_updates_of_a_softanza_objec` proves the history of a chain.
+`coderule_narrated` proves that a house rule is a rule over the code graph and that the findings come out on planted code. It proves that clean code passes, and that the library's house rules are sixteen. `testoor_promises_narrated` proves that the promise is judged by a machine in the house's own form. Each rule is planted both ways: the lie it must catch, and the truth it must not accuse. `05_containsemptystrings` is the mental model's steps on the same list, a classic block kept as a guard. `466_keeping_the_history_of_updates_of_a_softanza_objec` proves the history of a chain.
 
 Section 6 sets the court beside the field.
 
@@ -1294,7 +1294,7 @@ Source: Chapter 6. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
@@ -1545,11 +1545,11 @@ The next chapter turns to the writing style, and to the seven goals. Its princip
 
 Source: Chapter 7. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
+Stage: built: the library's sixteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 8 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
-In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
+In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the sixteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
 ## 1. The concept, as the field holds it
 
@@ -1760,13 +1760,13 @@ The court comes next, and I run it.
 
 ## 5. The court
 
-`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
+`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists sixteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
 
-Here is the house court itself, the fourteen rules of the library and not the fourteen of the style. The numerical coincidence is a coincidence. What does it answer to a planted misspelling, and to a planted write to a constant? Run it:
+Here is the house court itself, the sixteen rules of the library and not the fourteen of the style. What does it answer to a planted misspelling, and to a planted write to a constant? Run it:
 
 ```haro
 ? @@( StzCodeRuleNames() )
-#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function" ]
+#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function", "raw-markup-door", "markup-concatenation" ]
 cOne = "class Inbox" + nl + "def Recieve(x)" + nl + "	return x" + nl
 ? StzCheckCode(cOne)[1][:rule]
 #--> misspelled_name
@@ -1779,13 +1779,13 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 #--> FALSE
 ```
 
-> run: differs
+> run: kept
 
 The misspelling is found by name, `misspelled_name`, and the code stays clean, `TRUE`, because it is a warning. The write to a constant is found by name, `writes_a_mutable_constant`, and the code is refused, `FALSE`, because it is an error. The court refused the write to a constant!
 
-A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
+A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of ten of the sixteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
 
-What the court does not read is the code of a program written with the library. The fourteen rules of the house are rules of the library's own code; a rule of writing for the code written with it is designed (section 7).
+What the court does not read is the code of a program written with the library. The sixteen rules of the house are rules of the library's own code; a rule of writing for the code written with it is designed (section 7).
 
 ## 6. The field, and where it leads
 
@@ -1801,7 +1801,7 @@ The limit, in the next section, says what is built, what is designed and what is
 
 ## 7. The limit
 
-What is built: the fourteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
+What is built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
 
 What is designed:
 
@@ -1877,7 +1877,7 @@ Source: Chapter 8. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment; designed: the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style; absent: five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I read a function's name the way the library reads it: a sentence whose prefixes, suffixes and parameters are a grammar. I walk the forms of a name that run, and I count the five that do not. Then I turn to scope: the same verb, three verdicts, with the frame in the verb and not in a flag set earlier. I say what Haro's design keeps of the forms, what it refuses, and what the court proves. The principle is this: a function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
 
@@ -2201,7 +2201,7 @@ Source: Chapter 9. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the three subjects of the title in turn: the Softanzuter, Reaxis, and the engines, of which the timeline and the grid run here. The Regexuter binds a pattern to code that fires and remembers why; Reaxis is reactive programming with its vocabulary redesigned. I climb the ladder the architecture draws, four rungs, and at the third I run the block that fails to cascade rather than claim a rung that is not built. I say what I refused: regex as a way to read text, the field's words for reactive programming, the four siblings, and the cascade. Everything serves one sentence: a Softanzuter is a computational representation of a thinking machine, based on one or many Regexuters, enabling it to identify and react to patterns of thought.
 
@@ -2512,7 +2512,7 @@ Source: Chapter 10. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining; designed: the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro; absent: a saved history: the file keeps the source and nothing of the timeline
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I say what I mean by refining rather than programming. It is a change to code declared to be changeable, proposed in a typed form, judged by a gate, recorded as a step, and reversible. I run the library's form of it: the refinement point, the proposal, the gate, the cascade, the trust floor and the reversal. And I print the gate as it is, five checks and not the four of my design. I say where the field leads and where the gate stops. The principle is the sentence I wrote on the back cover of my earlier book, *Refinement-Oriented Programming*: stop trying to govern the intelligence, and govern the change.
 
@@ -2840,7 +2840,7 @@ Source: Chapter 11. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
@@ -3127,7 +3127,7 @@ Source: Chapter 12. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages; designed: the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application; absent: the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take one declaration of a restaurant's order and give it to three readers: a person, an AI model and the court. I let the same declaration produce a grammar, and I show where the grammar and the court agree and where they part. Then I leave the library for the forge. It is the machinery that turns a language's declaration alone into its court and its grammar, and I say what it has forged and what it has not. I decided that Haro is the language of languages, and I refused an open escape form. The principle is one rule of Haro: declaring a language is as easy as declaring a variable.
 
@@ -3489,7 +3489,7 @@ Source: Chapter 13. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates; designed: a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures; absent: any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run
 
-Run: 17 of 17 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 17 of 17 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I run the two directions of natural language in the library: the chain, where you are the parser, and the sentence, where the library is. I print the refusals on both sides, five language packs as data and a sixth added at runtime, and the count of what each pack can say. I say what I refused, the markers on reference and the ungrammatical chain among them, and where the dictionary's own court fails at this commit. The principle is one sentence. A sentence runs because every word of it is in a dictionary the library owns, and what the library does not know, it refuses, with the reason.
 
@@ -3954,7 +3954,7 @@ Source: Chapter 14. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
@@ -4331,9 +4331,9 @@ The next chapter is about pattern languages: a pattern is a rule about the shape
 
 Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
+Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 12 of 13 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 13 of 13 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -4592,7 +4592,7 @@ What is built in part: lists, matrices, time and graphs, in that order.
 
 - **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In a run I did not keep as a block, the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
-- **Time**: instants and durations with a step run. In a run I did not keep as a block, a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match?
+- **Time**: instants and durations run, and a range runs with a step or without one. Sequences over a timeline run too: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match, and does the same pattern match when its order is reversed?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -4603,17 +4603,20 @@ oTl {
 }
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
-#--> 0
+#--> 1
 o2 = new stzTimex("{@Event(Lunch)}")
 ? o2.MatchPartial(oTl)
-#--> 0
+#--> 1
 ? @@( o2.Tokens()[1][:label] )
-#--> "Lunch)"
+#--> "Lunch"
+o3 = new stzTimex("{@Event(Break) -> @Event(Meeting)}")
+? o3.MatchPartial(oTl)
+#--> 0
 ```
 
-> run: differs
+> run: kept
 
-The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug; repairing it in time is the next step.
+The article promises that the first is TRUE, and it is. The second matches the single event the timeline holds, and the third shows why it can: the token's label is `"Lunch"`, the word between the parentheses and nothing more. The last refuses the break before the meeting, because the arrow keeps the order of the timeline. Time still has no narrated guard; this block is its proof in this book.
 
 - **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 
@@ -4706,7 +4709,7 @@ Source: Chapter 16. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
@@ -5065,7 +5068,7 @@ Source: Chapter 17. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model; designed: the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer; absent: four of the library's five own agents, induction from examples among them
 
-Run: 8 of 8 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 8 of 8 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
@@ -5322,7 +5325,7 @@ Source: Chapter 18. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent; designed: several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise; absent: the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it
 
-Run: 15 of 15 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 15 of 15 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I show you the five forms a reply can take, an option, a data structure, a formula, a sentence and examples. Then I show what the governed door does with each of them. I tell you which three run and which two do not, and what becomes of a refusal once it is written: it waits for a person, with its context and a lifetime. I let the conversation with no one in it run, and I show what a conversation can and cannot do in Arabic and in Hausa. Whatever the form, a reply is only a candidate, and the world's rules decide whether it becomes knowledge.
 
@@ -5824,7 +5827,7 @@ Source: Chapter 19. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I forge a domain language model from a knowledge base, and no one writes its training text: every sentence is a recorded fact. It has two rungs. The first answers from those facts and has no neurons. The second, a small neural model, is fluent in the grammar of the domain and wrong about facts. I show the grammar that refuses a malformed sentence and the graph that refuses a false one. I say which pieces the library holds and which the reader still has to compose. The principle is this: the next thing the model says is a checkable unit of your world, a fact your rules admit or refuse, never a token.
 
@@ -6119,7 +6122,7 @@ Source: Chapter 20. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the action half of what chapter 17 said of the whole mind: what happens when the proposal meets the world. I show four steps in code: the AI agent proposes, the workbench rehearses, the court judges, and only a governed actor commits. Then come the cases where a step does not hold. I say what I refused: safe agents, a permission check as the boundary, a second workbench for machines, an optional gate. And I say where it stops: a plan with no executor at all is allowed, and the loop checks that a coverage statement exists, not that it is true. The principle is the doctrine's: do not build safe agents; build a safe world, and let ordinary agents loose inside it.
 
@@ -6566,7 +6569,7 @@ Source: Chapter 21. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted; designed: routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan; absent: a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the court of chapter 5, which judges whoever wrote the code. I show four courts, each by something it refuses: promises, perception, security and performance. I walk the traveller over a file of three promises, and ask the record how many of eight musical traditions a person has heard. I edit a sealed ledger and read which entry the chain names, and I let an AI model propose a performance plan it may not commit. I say what I refused, seven things in all, among them the word "narration" for what cannot lie, a second assertion library, a sixth state for a stop, a guarantee without a guard. The principle holds the four courts together: a claim is only as good as the court that can refuse it, and where no court can see, the record says so.
 
@@ -6935,7 +6938,7 @@ Source: Chapter 22. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses; designed: a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine; absent: locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I compare Softanza with the field, and I say how a comparison must be made before it may be printed. I show five pairs, the same task run on both sides, with the other side's version and the date on the page and a line where the other side leads. I say what I refused, the grid alone first, and which guards prove the blocks, since the comparison court is proposed and not built. I print the list of what the field has and Softanza lacks, beside the wins. The principle is this. A comparison is worth nothing until the other side's version and the date are on the page, the other side has been run, and the loss is printed beside the win.
 
@@ -7142,7 +7145,7 @@ Source: Chapter 23. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I declare a solution at three levels, a world, a constellation and a platform, and I name the one person who declares all three, the architect. I take the field's three habits first: the super-app, the context map and the platform team. Then I run a world that explains itself, a constellation whose crossings are refused one gate at a time, and a profile that a platform refuses to build when it is not sound. I say where the code stops: a world's truths are narrated and not judged, the shells are tiny, and the architect's certification is a proposal. The principle is this: the solution is declared as worlds, bonds and an envelope before any of it is built, and every crossing between them is governed.
 
@@ -7661,7 +7664,7 @@ Source: Chapter 24. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the three practices the field keeps beside the program, plan and then apply, the test double and the emulator, and I show the one path the library puts in their place. I rehearse on a twin of files and a twin of the process environment, and I read the plan of placement. I build the emulator's bundle, run a deployment that fails and rolls back, and code against services by name before I subscribe to any. Then I ask production to refuse, and I print the one fake it does not refuse: a double that says nothing about itself. The principle is joined from three documents of the record. Reality is reached through exactly one door: rehearse on what touches nothing, commit through a governed actor, and let production refuse anything that is fake.
 
@@ -8237,7 +8240,7 @@ Source: Chapter 25. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform; designed: the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar; absent: a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it
 
-Run: 11 of 11 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 11 of 11 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
 
@@ -8656,7 +8659,7 @@ Source: Chapter 26. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface; designed: the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit; absent: an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the shape the field's environments have settled on, a toolbar, a sidebar, an editor and a status bar, and I set against it a pattern in five marks. I run the pieces the library has under those marks: a shell declared as text and judged, two projections, a ribbon in the order of a life, a rail that proposes, a status bar that tells the truth. I say what I decided, to carry both shells, and what I refused, among it a flag that turns the accessibility tree off. And I say where it stands: at this commit, an IDE of this family is absent, and the pieces beneath it run. The principle is one sentence: declare the interface once, and every shell is a projection of it that may add renderings, never verbs.
 
@@ -9095,7 +9098,7 @@ Source: Chapter 27. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 5 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -9131,22 +9134,22 @@ cAsk = 'aC = ringvm_classesList()' + nl +
 aEntries = [ "core/stkLib.ring", "stzLib.ring", "max/stxLib.ring" ]
 for i = 1 to 3
     write("layer" + i + ".ring", 'load "../../../' + aEntries[i] + '"' + nl + cAsk)
-    ? trim(systemcmd("ring layer" + i + ".ring"))
+    ? trim(systemcmd(char(34) + exefilename() + char(34) + " layer" + i + ".ring"))
     remove("layer" + i + ".ring")
 next
 #--> 17 1 0 0
-#--> 674 1 1 0
-#--> 714 1 1 1
+#--> 683 1 1 0
+#--> 723 1 1 1
 ```
 
-> run: differs (touches files)
+> run: kept (touches files)
 
-The first process prints `17 1 0 0`. Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. The second prints `674 1 1 0`: base holds 674 and no max class. The third prints `714 1 1 1`: max holds 714. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine. A load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
+The first process prints `17 1 0 0`. Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. The second prints `683 1 1 0`: base holds 683 and no max class. The third prints `723 1 1 1`: max holds 723. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine. A load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
 
 The contract says base builds on core, by inheritance or delegation. What do the classes say? `ringvm_classesList()` returns, for each class, its name, its identifier, and its parent:
 
 ```haro
-aClasses = ringvm_classesList()
+$aClasses = ringvm_classesList()
 ? ParentOf("stkString")
 #--> stzcorestring
 ? ParentOf("stzString")
@@ -9157,12 +9160,12 @@ aClasses = ringvm_classesList()
 #--> stzlist
 
 func ParentOf(cClass)
-    n = find(aClasses, lower(cClass), 1)
+    n = find($aClasses, lower(cClass), 1)
     if n = 0  return "(not loaded)" ok
-    return aClasses[n][3]
+    return $aClasses[n][3]
 ```
 
-> run: raised
+> run: kept
 
 The second line prints `stzobject`: `stzString` inherits `stzObject`, and not `stkString`! Core carries a parallel hierarchy, in which `stkString` inherits `stzCoreString`, the first line's `stzcorestring`. Max does build on base: `stzListXT` inherits `stzList`, the last line's `stzlist`. Exactly two base classes inherit a core class, `stzSciNumber` and `stzPointer`, and one delegates, in a line of `stzPointer`. They are two among the hundreds of base. The contract is not met, and it is not met in the way chapter 4 asked about. I print it as a debt.
 
@@ -9179,12 +9182,12 @@ for aClass in aClasses
     ok
 next
 ? @@([ nStk, nStz, nStx ])
-#--> [ 10, 693, 0 ]
+#--> [ 10, 702, 0 ]
 ```
 
-> run: raised
+> run: kept
 
-The block prints `[ 10, 693, 0 ]`. Ten, six hundred and ninety-three, and none! The three do not add up to the 714 of the first block: the classes that remain carry none of the three prefixes, and a count by prefix says nothing of them, which is the exercise's point. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
+The block prints `[ 10, 702, 0 ]`. Ten, seven hundred and two, and none! The three do not add up to the 723 of the first block: the classes that remain carry none of the three prefixes, and a count by prefix says nothing of them, which is the exercise's point. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
 
 ### One engine
 
@@ -9219,14 +9222,14 @@ for cName in aAll
     if left(lower(cName), 9) = "stzengine"  aNames + lower(cName)  ok
 next
 ? len( Q(aNames).DuplicatesRemoved() )
-#--> 2786
+#--> 2843
 ```
 
-> run: raised
+> run: kept
 
-The block prints `0.8.0` and `2786`. Two thousand seven hundred and eighty-six distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first. The call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
+The block prints `0.8.0` and `2843`. Two thousand eight hundred and forty-three distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first. The call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
 
-There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,786 above. The second is the count to any host through the C interface. A script of mine read the export tables of the eighty-nine libraries on 9 October 2026 and found 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
+There are three counts of three different things, and the chapter says which it prints. The first is the count to the library at run time: the 2,843 above. The second is the count to any host through the C interface. A script of mine read the export tables of the eighty-nine libraries on 9 October 2026 and found 1,710 named symbols, of which eighty-nine are the loader's hook, so 1,621 functions. The third is the count in the Zig sources, as registration names: 2,703 distinct literals. The site says 752 and 2,652, at commit 010743cce as the page reads on 9 October 2026, and the library's typed constants say 1,513, dated 16 June 2026. I cannot reproduce 752 by any method I tried. Print only a count the build reads, with its method and date.
 
 **The engine does the work.** What does the host's `upper` make of the German sharp s, and what does the engine's case mapping make of it, its own table over a vendored library? A second vendored library stems words. These are two of the engine's nineteen vendored libraries, which section 4 counts:
 
@@ -9408,9 +9411,9 @@ Before you run anything, write three numbers: how many classes each entry file w
 
 > run: exercise
 
-Then choose any class of the library, predict its parent, and read it with the parent chain. Write the line your prediction got wrong. A learner who guesses that `stzString` inherits `stkString` is in good company: the contract says so, and the library does not. I do not say which of the 17, 674 or 714 is which.
+Then choose any class of the library, predict its parent, and read it with the parent chain. Write the line your prediction got wrong. A learner who guesses that `stzString` inherits `stkString` is in good company: the contract says so, and the library does not. I do not say which of the 17, 683 or 723 is which.
 
-I left this one in your hands. The count by prefix in section 3, `[ 10, 693, 0 ]`, is correct, and it says nothing about layers. Write that count again so that it asks each class's parent chain, read with `ParentOf`, and not its first three letters, and look at what you get. Section 3 says what the prefix hides, and section 8, the agent's door, says why I refuse it. When your count answers, you will know why a class's layer is read from what it inherits, and not from what it is called.
+I left this one in your hands. The count by prefix in section 3, `[ 10, 702, 0 ]`, is correct, and it says nothing about layers. Write that count again so that it asks each class's parent chain, read with `ParentOf`, and not its first three letters, and look at what you get. Section 3 says what the prefix hides, and section 8, the agent's door, says why I refuse it. When your count answers, you will know why a class's layer is read from what it inherits, and not from what it is called.
 
 The next chapter leaves the engine for a restaurant in Lyon, and for the one sentence the project there taught: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -9423,7 +9426,7 @@ Source: Chapter 28. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
 In this chapter I tell a paid lesson in order, with its dates: a restaurateur in Lyon, two years of specification that produced nothing he could use, and the reversal of 4 July 2026 that put the customer first. I show what the library carries of each lesson: the Lock as a rule over a cycle's worlds, a payments sandbox that is not agreeable, a constellation that puts a world to sleep, a speed budget declared and judged. I say where it carries nothing, and the six things I refused, among them the grand system in one piece, silent drift, the agreeable fake, and crediting the owner with what a simulation said. The principle is one sentence on the site: deliver small, fast and useful, and let the foundations mature in parallel without ever blocking a delivery.
 
@@ -9701,7 +9704,7 @@ Source: Chapter 29. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict; designed: the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads; absent: the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced
 
-Run: 6 of 6 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 6 of 6 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
 In this chapter I take a bank in Niamey, which I call Softibank (the name is fictional), under the central bank of the West African monetary union, and I say first where the lesson is: in the library, and not inside the product the bank runs. I write the chart of a small bank as a text and judge it under the regional rule and under segregation of duties. I print what each of the seven regimes holds, add a rule of the bank's own as data, and read the one report with its verdict. I say the four things I refused, the first of them to hide the structure in a database. The principle is one sentence: the chart says what is, the rule says what must be, and the verdict names the rule and the place.
 
@@ -9974,7 +9977,7 @@ Source: Chapter 30. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for; designed: the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone; absent: the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine
 
-Run: 7 of 7 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 7 of 7 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
 In this chapter I take one organisation's design study and show the four things in it that the library carries. They are a rule as an object whose numbers can be changed, a refusal a person can read, authority set against risk, and a decision kept with its authority at the time. Then I show the one thing the organisation asked for that the library does not carry, offline, and I read that block as a limit and not as a win. I say "design study" and not "delivery" every time, because the hub is not built. The principle is the organisation's own: the AI agent proposes, and a person decides.
 
@@ -10291,7 +10294,7 @@ Source: Chapter 31. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it
 
-Run: 5 of 5 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 5 of 5 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
 In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
@@ -10610,11 +10613,11 @@ Chapter 32 turns first to how many minds worked on this one body of work, and to
 
 Source: Chapter 32. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's fourteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
+Stage: built: the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's sixteen house rules, five of them over a code graph; designed: a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes; absent: token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language
 
-Run: 2 of 3 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
-In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's fourteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
+In this chapter I show how Softanza has been written for the last two years: by many sessions of an AI model on one machine, with no framework, only files, a version history and a few hooks. I walk through the rules the record paid for, one failure at a time, and the library's sixteen house rules that an AI agent can run before it commits. I say what I refused: a framework, a coordinator that grades its legislator, automation to the maximum, a ruling in my absence, a protocol sold as a product. And I say the loss I accepted: my hand thinned where the sessions wrote. The principle is one of the sessions' own sentences: every law cites the incident that earned it.
 
 ## 1. The concept, as the field holds it
 
@@ -10650,7 +10653,7 @@ What makes it a discipline and not a filing system is that each rule was paid fo
 
 You can see the shape. A failure, dated. A rule, written where the next session will read it. Then, when the rule is broken anyway, a mechanism. Some laws reached the last step, some are still a written rule, and the record says which.
 
-Where the laws touch code, the library itself can hold them. Its fourteen house rules are validators, five of them over a graph of the code and the rest over text: one law of the library's design document, made runnable. They are rules an agent can run before it commits, not folklore it must guess. One of them is about words. What does it say of a method called `KillOrder`, and is the code still clean? Run it:
+Where the laws touch code, the library itself can hold them. Its sixteen house rules are validators, five of them over a graph of the code and the rest over text: one law of the library's design document, made runnable. They are rules an agent can run before it commits, not folklore it must guess. One of them is about words. What does it say of a method called `KillOrder`, and is the code still clean? Run it:
 
 ```haro
 cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
@@ -10681,14 +10684,14 @@ And the rules are a closed set. How many are there, and can an agent list them b
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[3]
 #--> no-aggressive-verbs
 ```
 
-> run: differs
+> run: kept
 
-Yes: fourteen names, and the third is the rule that just spoke. The record does not link the library's tone rule to the estate's word law, ruled on 21 August 2026, so I will not either. But it is the same instinct at two altitudes: the words we use about work are part of the work.
+Yes: sixteen names, and the third is the rule that just spoke. The record does not link the library's tone rule to the estate's word law, ruled on 21 August 2026, so I will not either. But it is the same instinct at two altitudes: the words we use about work are part of the work.
 
 Those are the laws. Now for what I refused, and the loss I accepted.
 
@@ -10712,7 +10715,7 @@ Next, the court, and what it cannot prove.
 
 No guard of the library proves the protocol. Its courts are outside the library, and I name them by what they do. One hook refuses wholesale staging, and one refuses work when the machine has no memory to spare. A check says whether the hooks installed are the hooks written. An instrument compares every stamp with its commit and publishes the rows. They are scripts, not Haro, and this book's reader cannot count their assertions, so they are named here and not in the court line below.
 
-The blocks of this chapter stand on the library's guards of its house rules. `coderule_narrated` proves that a code rule is a rule over the graph, and that the house findings come out on a planted fixture in a frozen shape. It proves that the rules number fourteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
+The blocks of this chapter stand on the library's guards of its house rules. `coderule_narrated` proves that a code rule is a rule over the graph, and that the house findings come out on a planted fixture in a frozen shape. It proves that the rules number sixteen, and that a definition or a comment is not taken for a call. `codegraph_narrated` proves the graph beneath them, and `coderule_project_narrated` runs the project rules over a fixture directory.
 
 ## 6. The field, and where it leads
 
@@ -10728,7 +10731,7 @@ Now the limit, in the stage words.
 
 ## 7. The limit
 
-What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's fourteen house rules are built, five of them over its code graph.
+What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's sixteen house rules are built, five of them over its code graph.
 
 What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
 
@@ -10779,7 +10782,7 @@ Source: Chapter 33. Status: draft (a draft, not read by the author). Library com
 
 Stage: built: a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service; designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board; absent: a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files
 
-Run: 3 of 3 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
 In this chapter I show you the floor the next line will stand on. A platform is declared, built and deployed in that order; a twin touches nothing real; a last door refuses a fake service. Then I say what the three projects establish today, and I read from the record the five steps from that floor to the next line: a solution on Softanza's own engine, and what a named person who used it says. I say five things I refused, among them a reference without a document, my own figure for the bridge runtime, and an instrument as proof of a perception. The record carries a solution only when it ran on its own engine and a named person said what they saw.
 
@@ -11090,28 +11093,28 @@ No code was run to make the register. The evidence column counts files that name
 
 =====
 
-# The fourteen house rules
+# The sixteen house rules
 
 Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Run: 1 of 2 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 3 of 3 blocks kept their promise, on 2026-10-30 14:38 UTC+01:00.
 
-The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
+The library has a court over its own code. It reads a class as a graph (five rules) or as text (eleven) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the sixteen, and shows five of them firing.
 
-There are two fourteens in this book, and they are different sets. The fourteen **house rules** of this appendix are rules of the library's code: they are a court, and they run. The fourteen **rules of writing**, in chapter 7, are a reading of how the style is written. They are readings of the code, stated as rules, and no machine judges them. The coincidence in the number is a coincidence.
+There are two sets of rules in this book, and they are different sets. The sixteen **house rules** of this appendix are rules of the library's code: they are a court, and they run. The fourteen **rules of writing**, in chapter 7, are a reading of how the style is written. They are readings of the code, stated as rules, and no machine judges them. Both sets numbered fourteen until the library added its two markup rules; the number never linked them.
 
-The list of names is fourteen and the library can print it. One more text pass, `for_in_loop`, also reports, and so do two rules over a whole project, `no-dead-code` and, in the deep audit, `no-cyclic-calls`:
+The list of names is sixteen and the library can print it. One more text pass, `for_in_loop`, also reports, and so do two rules over a whole project, `no-dead-code` and, in the deep audit, `no-cyclic-calls`:
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[2]
 #--> q-returns-object
-? StzCodeRuleNames()[14]
-#--> value-called-as-function
+? StzCodeRuleNames()[16]
+#--> markup-concatenation
 ```
 
-> run: differs
+> run: kept
 
 Here are three of them, fired on code I planted. A method that writes to the console is a warning, so the code stays clean. A method that differs from another only by case is an error, since the host language does not tell the two apart and the file would not load. And a class that defines `Len()` shadows the host's own function, and is refused:
 
@@ -11137,9 +11140,28 @@ cLen = "class Box" + nl + "def Len()" + nl + "	return 1" + nl
 
 > run: kept
 
-A note on spelling, which a program that reads findings must know. The list uses hyphens: `library-prints`. A finding of eight of the fourteen comes back with underscores: `library_prints`. The findings of the five rules over the code graph (rows 1, 3, 4, 5 and 6) keep their hyphens, and so does the finding of row 2. I print what the run printed.
+The two newest rules count and never refuse. They came when the library's HTML builder began to escape text by default: a method that joins a tag to a value with no escaping on the line is counted, and so is every use of `SetMarkup`, the one door that writes markup as given. Their severity is info, and the code stays clean:
 
-### The fourteen
+```haro
+cPage = "class Page" + nl + "def Row(c)" + nl + "	return " + char(34) + "<li>" + char(34) + " + c" + nl
+? StzCheckCode(cPage)[1][:rule]
+#--> markup_concatenation
+? StzCheckCode(cPage)[1][:severity]
+#--> info
+? StzCodeIsClean(cPage)
+#--> 1
+cDoor = "class View" + nl + "def Show(o, c)" + nl + "	o.SetMarkup(c)" + nl + "	return 1" + nl
+? StzCheckCode(cDoor)[1][:rule]
+#--> raw_markup_door
+? StzCodeIsClean(cDoor)
+#--> 1
+```
+
+> run: kept
+
+A note on spelling, which a program that reads findings must know. The list uses hyphens: `library-prints`. A finding of ten of the sixteen comes back with underscores: `library_prints`. The findings of the five rules over the code graph (rows 1, 3, 4, 5 and 6) keep their hyphens, and so does the finding of row 2. I print what the run printed.
+
+### The sixteen
 
 | # | Rule | What it refuses | Severity |
 |---|---|---|---|
@@ -11157,12 +11179,14 @@ A note on spelling, which a program that reads findings must know. The list uses
 | 12 | `empty-method-body` | a method declared and doing nothing; harsher for a predicate, which then answers nothing, read as false | warning; error for a predicate |
 | 13 | `writes-a-mutable-constant` | assigning to `true`, `false`, `null`, `nl`, `tab` or `cr`: in the host they are ordinary globals | error |
 | 14 | `value-called-as-function` | calling the result of a call, the shape a global replacement of tokens leaves | error |
+| 15 | `raw-markup-door` | nothing: it counts each use of `SetMarkup`, the HTML builder's one door that writes markup as given, so every place where text could reach the page unescaped is read in one report | info |
+| 16 | `markup-concatenation` | nothing: it counts a line that joins a tag literal to a value with no escaping on the line; a heuristic over one line, it cannot know whether the value is untrusted | info |
 
-I fired rows 11, 6 and 1 above, in that order. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
+I fired rows 11, 6 and 1 above, in that order, then rows 16 and 15. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
 
 ### What the court does not judge
 
-None of the fourteen is a rule of writing. No machine judges, today, the style of a program written with the library. That is chapter 7's limit, and it is the reason the other fourteen are in this book as a table with their state, and not as a court.
+None of the sixteen is a rule of writing. No machine judges, today, the style of a program written with the library. That is chapter 7's limit, and it is the reason the other fourteen are in this book as a table with their state, and not as a court.
 
 ### The other fourteen: the rules of writing, and where each stands
 
@@ -11336,7 +11360,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro does not run the library yet. Chapters 3, 27.
 
-**house rules.** The fourteen rules the library runs over its own code, five over a graph of the code and nine over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
+**house rules.** The sixteen rules the library runs over its own code, five over a graph of the code and eleven over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
 
 **ledger.** The security plane's record of what was refused and why, written by the court and never by the thing it judged. Chapters 20, 21.
 
@@ -12086,7 +12110,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 4 | `the-platform-in-one-picture` | 1 | draft | yes | 8 of 8 | 5 | 6 |
 | 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 9 of 9 | 4 | 6 |
 | 6 | `the-mental-model-and-the-metaphors` | 2 | draft |  | 7 of 7 | 6 | 6 |
-| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 8 of 9 | 10 | 6 |
+| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 9 of 9 | 10 | 6 |
 | 8 | `functions-as-linguistic-expressions-and-scope` | 2 | draft |  | 13 of 13 | 5 | 6 |
 | 9 | `patterns-of-thought` | 2 | draft |  | 8 of 8 | 6 | 6 |
 | 10 | `programming-becomes-refinement` | 2 | draft |  | 9 of 9 | 3 | 6 |
@@ -12094,7 +12118,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 12 | `a-language-declared` | 3 | draft |  | 8 of 8 | 5 | 6 |
 | 13 | `natural-and-executable` | 3 | draft |  | 17 of 17 | 7 | 6 |
 | 14 | `knowledge-programming` | 3 | draft |  | 13 of 13 | 3 | 6 |
-| 15 | `pattern-languages` | 3 | draft |  | 12 of 13 | 5 | 6 |
+| 15 | `pattern-languages` | 3 | draft |  | 13 of 13 | 5 | 6 |
 | 16 | `seven-languages-one-door` | 3 | draft |  | 10 of 10 | 5 | 6 |
 | 17 | `law-programmatic-by-default` | 4 | draft | yes | 8 of 8 | 6 | 6 |
 | 18 | `the-five-registers` | 4 | draft |  | 15 of 15 | 4 | 6 |
@@ -12106,15 +12130,15 @@ The table below is generated at every build from the same data as `book.json`.
 | 24 | `rehearse-then-commit` | 5 | draft |  | 11 of 11 | 7 | 6 |
 | 25 | `your-users-keep-their-medium` | 5 | draft |  | 11 of 11 | 6 | 6 |
 | 26 | `the-environment` | 5 | draft |  | 10 of 10 | 6 | 6 |
-| 27 | `the-engine-beneath` | 5 | draft |  | 5 of 9 | 4 | 6 |
+| 27 | `the-engine-beneath` | 5 | draft |  | 9 of 9 | 4 | 6 |
 | 28 | `a-restaurant-in-lyon` | 6 | draft |  | 5 of 5 | 5 | 6 |
 | 29 | `a-bank-in-niamey` | 6 | draft |  | 6 of 6 | 6 | 6 |
 | 30 | `an-organisation-in-the-field` | 6 | draft |  | 7 of 7 | 6 | 6 |
 | 31 | `what-the-projects-show` | 6 | draft |  | 5 of 5 | 8 | 6 |
-| 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 2 of 3 | 3 | 6 |
+| 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 | 33 | `the-next-line` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 | A | `the-register-of-innovations` |  | draft |  | no code | 0 | 0 |
-| B | `the-fourteen-house-rules` |  | draft |  | 1 of 2 | 1 | 0 |
+| B | `the-fourteen-house-rules` |  | draft |  | 3 of 3 | 1 | 0 |
 | C | `the-twenty-two-verbs-and-the-constitution` |  | draft |  | no code | 0 | 0 |
 | D | `the-glossary` |  | draft |  | no code | 0 | 0 |
 | E | `the-guards-and-fixtures-cited` |  | draft |  | no code | 0 | 0 |

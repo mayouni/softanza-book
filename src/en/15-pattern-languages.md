@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 00_numbrex_narrated, tablex_narrated, 00_matrex_narr
 stage:
   built: "patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens)"
   designed: "one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples"
-  absent: "the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
+  absent: "the refusal of a word the pattern language does not know, in the six media that are not text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
 status: draft
 rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
@@ -253,7 +253,7 @@ What is built in part: lists, matrices, time and graphs, in that order.
 
 - **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In a run I did not keep as a block, the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
-- **Time**: instants and durations with a step run. In a run I did not keep as a block, a range without a step raised. And sequences over a timeline do not run at all: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match?
+- **Time**: instants and durations run, and a range runs with a step or without one. Sequences over a timeline run too: here is a timeline with a meeting, a break and a lunch, and the pattern the article promises. Does it match, and does the same pattern match when its order is reversed?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -264,15 +264,18 @@ oTl {
 }
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
-#--> 0
+#--> 1
 o2 = new stzTimex("{@Event(Lunch)}")
 ? o2.MatchPartial(oTl)
-#--> 0
+#--> 1
 ? @@( o2.Tokens()[1][:label] )
-#--> "Lunch)"
+#--> "Lunch"
+o3 = new stzTimex("{@Event(Break) -> @Event(Meeting)}")
+? o3.MatchPartial(oTl)
+#--> 0
 ```
 
-The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug; repairing it in time is the next step.
+The article promises that the first is TRUE, and it is. The second matches the single event the timeline holds, and the third shows why it can: the token's label is `"Lunch"`, the word between the parentheses and nothing more. The last refuses the break before the meeting, because the arrow keeps the order of the timeline. Time still has no narrated guard; this block is its proof in this book.
 
 - **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 

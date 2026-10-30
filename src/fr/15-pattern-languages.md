@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 00_numbrex_narrated, tablex_narrated, 00_matrex_narr
 stage:
   built: "des motifs pour le texte, les nombres et les tableaux, chacun avec une garde ; la même petite habitude d'un support à l'autre (un constructeur, un motif dans une chaîne de caractères, Match, Tokens)"
   designed: "un seul moteur de motifs partagé par tous les supports ; le motif comme côté condition de la cascade ; le motif écrit à partir d'exemples"
-  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports qui ne sont pas du texte ; des séquences sur une ligne de temps, dans le temps ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
+  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports qui ne sont pas du texte ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
 status: draft
 rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
@@ -253,7 +253,7 @@ Ce qui est construit en partie : les listes, les matrices, le temps et les graph
 
 - **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans une exécution que je n'ai pas gardée comme bloc, le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
 - **Matrices** : la taille, la forme, l'élément et trois propriétés s'exécutent. L'en-tête de la classe liste les termes qui acceptent toute matrice : `row`, `col`, `pattern`, `determinant` et `sum`. Une matrice de deux par deux est acceptée par `{row(99)}`.
-- **Temps** : les instants et les durées avec un pas s'exécutent. Dans une exécution que je n'ai pas gardée comme bloc, un intervalle sans pas a levé une erreur. Et les séquences sur une ligne de temps ne s'exécutent pas du tout : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet. Correspond-il ?
+- **Temps** : les instants et les durées s'exécutent, et un intervalle s'exécute avec un pas ou sans pas. Les séquences sur une ligne de temps s'exécutent aussi : voici une ligne de temps avec une réunion, une pause et un déjeuner, et le motif que l'article promet. Correspond-il, et le même motif correspond-il quand son ordre est inversé ?
 
 ```haro
 oTl = new stzTimeLine("2025-10-22", "2025-10-22")
@@ -264,15 +264,18 @@ oTl {
 }
 o1 = new stzTimex("{@Event(Meeting) -> @Duration* -> @Event(Break)}")
 ? o1.MatchPartial(oTl)
-#--> 0
+#--> 1
 o2 = new stzTimex("{@Event(Lunch)}")
 ? o2.MatchPartial(oTl)
-#--> 0
+#--> 1
 ? @@( o2.Tokens()[1][:label] )
-#--> "Lunch)"
+#--> "Lunch"
+o3 = new stzTimex("{@Event(Break) -> @Event(Meeting)}")
+? o3.MatchPartial(oTl)
+#--> 0
 ```
 
-L'article promet que le premier est TRUE. Le deuxième montre que même un événement unique que la ligne de temps contient ne correspond pas ! Le troisième montre pourquoi : l'étiquette du jeton est `"Lunch)"`, lue avec sa parenthèse fermante. C'est le bogue partagé ; le réparer dans le temps est l'étape suivante.
+L'article promet que le premier est TRUE, et il l'est. Le deuxième correspond à l'événement unique que la ligne de temps contient, et le troisième montre pourquoi il le peut : l'étiquette du jeton est `"Lunch"`, le mot entre les parenthèses et rien de plus. Le dernier refuse la pause avant la réunion, parce que la flèche garde l'ordre de la ligne de temps. Le temps n'a toujours pas de garde narrée ; ce bloc en est la preuve dans ce livre.
 
 - **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux. Le motif correspond-il ?
 

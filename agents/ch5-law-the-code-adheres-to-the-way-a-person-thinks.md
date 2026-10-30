@@ -4,7 +4,7 @@ Source: Chapter 5. Status: draft (a draft, not read by the author). Library comm
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 
@@ -169,7 +169,7 @@ One word on `@@()`. On the former host language, `?` prints a list one item per 
 
 Notice the line under every question. It is not a comment. It is a promise, what the line must print. In this house it has been the form of an example from the first day: a short story, a few questions, and the answers written under them. That is the first half of the law, made visible: the code follows the order of thought, and each step says what it expects.
 
-Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are fourteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
+Now the second half. A rule a person must remember is folklore. The library turns its house rules into validators, so that a person or an AI agent can check a class before it lands. The rules are sixteen, and section 5 counts them; five of them read the graph of the code, the structure the library builds from a class's text. Here a class breaks the house's convention that a verb ending in Q returns the object. This rule needs the return statements, which the graph does not model, so it runs as a text pass. What does the court say of the class? Run it:
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -183,7 +183,7 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 
 The court answers `FALSE`, and names the rule: `q-returns-object`. It did not ask who wrote the class! That is the whole of the second half. And the promise under each question is read by a machine too: the library's runner judges a promise as a claim about what the line printed. The house's oldest form of example is also its newest form of test.
 
-The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the fourteen house rules of the court you have just seen, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, the deep form among them, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline and the grid. Chapter 10 tells how programming becomes refinement.
+The chapters of this part prove the law, each from one side. Chapter 6 tells the mental model and the four metaphors that replace loops: walk, check, yield, perform. Chapter 7 tells the writing style as fourteen rules of its own, not the sixteen house rules of the court you have just seen, and the seven design goals as its architectural half. Chapter 8 tells the forms a function's name can take, the deep form among them, and scope named in the verb. Chapter 9 tells patterns of thought: the machine that reacts to what it recognises, reactive programming in plain words, and the timeline and the grid. Chapter 10 tells how programming becomes refinement.
 
 ## 4. The decision, and what I refused
 
@@ -201,7 +201,7 @@ What had happened is measurable. My study of the record counted the promise unde
 
 ## 5. The court
 
-`coderule_narrated` proves that a house rule is a rule over the code graph and that the findings come out on planted code. It proves that clean code passes, and that the library's house rules are fourteen. `testoor_promises_narrated` proves that the promise is judged by a machine in the house's own form. Each rule is planted both ways: the lie it must catch, and the truth it must not accuse. `05_containsemptystrings` is the mental model's steps on the same list, a classic block kept as a guard. `466_keeping_the_history_of_updates_of_a_softanza_objec` proves the history of a chain.
+`coderule_narrated` proves that a house rule is a rule over the code graph and that the findings come out on planted code. It proves that clean code passes, and that the library's house rules are sixteen. `testoor_promises_narrated` proves that the promise is judged by a machine in the house's own form. Each rule is planted both ways: the lie it must catch, and the truth it must not accuse. `05_containsemptystrings` is the mental model's steps on the same list, a classic block kept as a guard. `466_keeping_the_history_of_updates_of_a_softanza_objec` proves the history of a chain.
 
 Section 6 sets the court beside the field.
 

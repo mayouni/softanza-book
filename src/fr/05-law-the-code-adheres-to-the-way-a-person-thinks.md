@@ -17,7 +17,7 @@ rulings: ["12.2", "12.3", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch05.md
 figures:
   - "promises per thousand lines, 98.9 / 75.1 / 52.5 / 0.7: study 12.16, measured at stzlib 93d7a39"
-  - "fourteen house rules: StzCodeRuleNames(), run in chapter 32"
+  - "sixteen house rules: StzCodeRuleNames(), run in chapter 32"
 ---
 
 Dans ce chapitre, je prends les deux choses que le terrain appelle style de code et je pose la question qu'il ne pose pas : si une ligne suit l'ordre dans lequel celui qui l'a écrite a raisonné. J'exécute l'exemple fondateur dans la forme la plus proche qui s'exécute encore, puis le modèle mental sur une liste, les formes du verbe, le paramètre nommé, la scène et l'historique d'une chaîne. Une promesse se tient sous chaque question. Je dis ce que j'ai laissé aller, l'implémentation propre de la bibliothèque, et ce que j'ai refusé de laisser aller, le style du code écrit avec elle. Je montre le tribunal qui existe aujourd'hui, sur les propres classes de la bibliothèque, et celui qui n'est que conçu. La devise n'a pas changé depuis 2020 : ce que vous pensez est ce que vous écrivez.
@@ -167,7 +167,7 @@ Un mot sur `@@()`. Sur l'ancien langage hôte, `?` imprime une liste un élémen
 
 Remarquez la ligne sous chaque question. Ce n'est pas un commentaire. C'est une promesse, ce que la ligne doit imprimer. Dans cette maison, elle est la forme d'un exemple depuis le premier jour : une courte histoire, quelques questions, et les réponses écrites dessous. C'est la première moitié de la loi, rendue visible : le code suit l'ordre de la pensée, et chaque étape dit ce qu'elle attend.
 
-Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent d'IA puisse vérifier une classe avant qu'elle n'atterrisse. Les règles sont quatorze, et la section 5 les compte ; cinq d'entre elles lisent le graphe du code, la structure que la bibliothèque construit à partir du texte d'une classe. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
+Maintenant la seconde moitié. Une règle qu'une personne doit retenir est du folklore. La bibliothèque transforme ses règles de maison en validateurs, pour qu'une personne ou un agent d'IA puisse vérifier une classe avant qu'elle n'atterrisse. Les règles sont seize, et la section 5 les compte ; cinq d'entre elles lisent le graphe du code, la structure que la bibliothèque construit à partir du texte d'une classe. Ici une classe enfreint la convention de la maison selon laquelle un verbe finissant en Q rend l'objet. Cette règle a besoin des instructions de retour, que le graphe ne modélise pas, et elle s'exécute donc comme un passage sur le texte. Que dit le tribunal de la classe ? Exécutez :
 
 ```haro
 cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x)" + nl + "	return 42" + nl
@@ -179,7 +179,7 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 
 Le tribunal répond `FALSE`, et nomme la règle : `q-returns-object`. Il n'a pas demandé qui avait écrit la classe ! C'est toute la seconde moitié. Et la promesse sous chaque question est lue elle aussi par une machine : l'exécuteur de la bibliothèque juge une promesse comme une affirmation sur ce que la ligne a imprimé. La plus ancienne forme d'exemple de la maison est aussi sa plus récente forme de test.
 
-Les chapitres de cette partie prouvent la loi, chacun d'un côté. Le chapitre 6 raconte le modèle mental et les quatre métaphores qui remplacent les boucles : marcher, vérifier, produire, exécuter. Le chapitre 7 raconte le style d'écriture comme quatorze règles qui lui sont propres, et non les quatorze règles de la maison du tribunal que vous venez de voir, et les sept buts de conception comme sa moitié architecturale. Le chapitre 8 raconte les formes que peut prendre le nom d'une fonction, la forme profonde parmi elles, et la portée nommée dans le verbe. Le chapitre 9 raconte les motifs de pensée : la machine qui réagit à ce qu'elle reconnaît, la programmation réactive en mots simples, et la ligne de temps et la grille. Le chapitre 10 raconte comment la programmation devient raffinement.
+Les chapitres de cette partie prouvent la loi, chacun d'un côté. Le chapitre 6 raconte le modèle mental et les quatre métaphores qui remplacent les boucles : marcher, vérifier, produire, exécuter. Le chapitre 7 raconte le style d'écriture comme quatorze règles qui lui sont propres, et non les seize règles de la maison du tribunal que vous venez de voir, et les sept buts de conception comme sa moitié architecturale. Le chapitre 8 raconte les formes que peut prendre le nom d'une fonction, la forme profonde parmi elles, et la portée nommée dans le verbe. Le chapitre 9 raconte les motifs de pensée : la machine qui réagit à ce qu'elle reconnaît, la programmation réactive en mots simples, et la ligne de temps et la grille. Le chapitre 10 raconte comment la programmation devient raffinement.
 
 ## 4. La décision, et ce que j'ai refusé
 
@@ -197,7 +197,7 @@ Ce qui s'est passé est mesurable. Mon étude du dossier a compté la promesse s
 
 ## 5. Le tribunal
 
-`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code et que les constats sortent sur du code planté. Elle prouve que le code propre passe, et que les règles de la maison de la bibliothèque sont quatorze. `testoor_promises_narrated` prouve que la promesse est jugée par une machine dans la forme propre à la maison. Chaque règle est plantée dans les deux sens : le mensonge qu'elle doit attraper, et la vérité qu'elle ne doit pas accuser. `05_containsemptystrings` est les étapes du modèle mental sur la même liste, un bloc classique gardé comme une garde. `466_keeping_the_history_of_updates_of_a_softanza_objec` prouve l'historique d'une chaîne.
+`coderule_narrated` prouve qu'une règle de la maison est une règle sur le graphe du code et que les constats sortent sur du code planté. Elle prouve que le code propre passe, et que les règles de la maison de la bibliothèque sont seize. `testoor_promises_narrated` prouve que la promesse est jugée par une machine dans la forme propre à la maison. Chaque règle est plantée dans les deux sens : le mensonge qu'elle doit attraper, et la vérité qu'elle ne doit pas accuser. `05_containsemptystrings` est les étapes du modèle mental sur la même liste, un bloc classique gardé comme une garde. `466_keeping_the_history_of_updates_of_a_softanza_objec` prouve l'historique d'une chaîne.
 
 La section 6 met le tribunal à côté du terrain.
 

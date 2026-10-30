@@ -2,25 +2,25 @@
 id: the-fourteen-house-rules
 appendix: B
 number: 102
-title: The fourteen house rules
+title: The sixteen house rules
 status: draft
 guards: [coderule_narrated]
 rulings: ["12.16"]
 ---
 
-The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
+The library has a court over its own code. It reads a class as a graph (five rules) or as text (eleven) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the sixteen, and shows five of them firing.
 
-There are two fourteens in this book, and they are different sets. The fourteen **house rules** of this appendix are rules of the library's code: they are a court, and they run. The fourteen **rules of writing**, in chapter 7, are a reading of how the style is written. They are readings of the code, stated as rules, and no machine judges them. The coincidence in the number is a coincidence.
+There are two sets of rules in this book, and they are different sets. The sixteen **house rules** of this appendix are rules of the library's code: they are a court, and they run. The fourteen **rules of writing**, in chapter 7, are a reading of how the style is written. They are readings of the code, stated as rules, and no machine judges them. Both sets numbered fourteen until the library added its two markup rules; the number never linked them.
 
-The list of names is fourteen and the library can print it. One more text pass, `for_in_loop`, also reports, and so do two rules over a whole project, `no-dead-code` and, in the deep audit, `no-cyclic-calls`:
+The list of names is sixteen and the library can print it. One more text pass, `for_in_loop`, also reports, and so do two rules over a whole project, `no-dead-code` and, in the deep audit, `no-cyclic-calls`:
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[2]
 #--> q-returns-object
-? StzCodeRuleNames()[14]
-#--> value-called-as-function
+? StzCodeRuleNames()[16]
+#--> markup-concatenation
 ```
 
 Here are three of them, fired on code I planted. A method that writes to the console is a warning, so the code stays clean. A method that differs from another only by case is an error, since the host language does not tell the two apart and the file would not load. And a class that defines `Len()` shadows the host's own function, and is refused:
@@ -45,9 +45,26 @@ cLen = "class Box" + nl + "def Len()" + nl + "	return 1" + nl
 #--> 0
 ```
 
-A note on spelling, which a program that reads findings must know. The list uses hyphens: `library-prints`. A finding of eight of the fourteen comes back with underscores: `library_prints`. The findings of the five rules over the code graph (rows 1, 3, 4, 5 and 6) keep their hyphens, and so does the finding of row 2. I print what the run printed.
+The two newest rules count and never refuse. They came when the library's HTML builder began to escape text by default: a method that joins a tag to a value with no escaping on the line is counted, and so is every use of `SetMarkup`, the one door that writes markup as given. Their severity is info, and the code stays clean:
 
-### The fourteen
+```haro
+cPage = "class Page" + nl + "def Row(c)" + nl + "	return " + char(34) + "<li>" + char(34) + " + c" + nl
+? StzCheckCode(cPage)[1][:rule]
+#--> markup_concatenation
+? StzCheckCode(cPage)[1][:severity]
+#--> info
+? StzCodeIsClean(cPage)
+#--> 1
+cDoor = "class View" + nl + "def Show(o, c)" + nl + "	o.SetMarkup(c)" + nl + "	return 1" + nl
+? StzCheckCode(cDoor)[1][:rule]
+#--> raw_markup_door
+? StzCodeIsClean(cDoor)
+#--> 1
+```
+
+A note on spelling, which a program that reads findings must know. The list uses hyphens: `library-prints`. A finding of ten of the sixteen comes back with underscores: `library_prints`. The findings of the five rules over the code graph (rows 1, 3, 4, 5 and 6) keep their hyphens, and so does the finding of row 2. I print what the run printed.
+
+### The sixteen
 
 | # | Rule | What it refuses | Severity |
 |---|---|---|---|
@@ -65,12 +82,14 @@ A note on spelling, which a program that reads findings must know. The list uses
 | 12 | `empty-method-body` | a method declared and doing nothing; harsher for a predicate, which then answers nothing, read as false | warning; error for a predicate |
 | 13 | `writes-a-mutable-constant` | assigning to `true`, `false`, `null`, `nl`, `tab` or `cr`: in the host they are ordinary globals | error |
 | 14 | `value-called-as-function` | calling the result of a call, the shape a global replacement of tokens leaves | error |
+| 15 | `raw-markup-door` | nothing: it counts each use of `SetMarkup`, the HTML builder's one door that writes markup as given, so every place where text could reach the page unescaped is read in one report | info |
+| 16 | `markup-concatenation` | nothing: it counts a line that joins a tag literal to a value with no escaping on the line; a heuristic over one line, it cannot know whether the value is untrusted | info |
 
-I fired rows 11, 6 and 1 above, in that order. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
+I fired rows 11, 6 and 1 above, in that order, then rows 16 and 15. Chapter 32 fires row 3, chapter 7 fires rows 10 and 13, and chapter 5 fires row 2. For rows 7, 9 and 12 I read the severities from the source, as I did for rows 4, 5, 8 and 14; I did not fire these seven.
 
 ### What the court does not judge
 
-None of the fourteen is a rule of writing. No machine judges, today, the style of a program written with the library. That is chapter 7's limit, and it is the reason the other fourteen are in this book as a table with their state, and not as a court.
+None of the sixteen is a rule of writing. No machine judges, today, the style of a program written with the library. That is chapter 7's limit, and it is the reason the other fourteen are in this book as a table with their state, and not as a court.
 
 ### The other fourteen: the rules of writing, and where each stands
 

@@ -2,11 +2,11 @@
 
 Source: Chapter 7. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the library's fourteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
+Stage: built: the library's sixteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part; designed: a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form; absent: any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name
 
-Run: 8 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 14:37 UTC+01:00.
 
-In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the fourteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
+In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the sixteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
 ## 1. The concept, as the field holds it
 
@@ -217,13 +217,13 @@ The court comes next, and I run it.
 
 ## 5. The court
 
-`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists fourteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
+`coderule_narrated` proves that a house rule is a rule over the code graph; that planted code is found by name; that clean code passes; and that the library lists sixteen. `testoor_promises_narrated` proves that the promise `#-->` is judged as a claim of a stop: kept, diverged, unreached or unjudged. `602_l_function` and `59_use_of_the_l_small_function` prove the range language. `527_identifying_lists_inside_a_string` proves the lists hosted in strings. `48_replacebymany` proves that the replacements go in order. `483_w_and_wf_forms_in_conditional_code` proves the condition in a string, in two spellings of the same scan. `28_numberofoccurrenceofcharleftside` proves the alternative names in Arabic as well as Latin, and carries a note that the archive's promise was wrong and the implementation is the authority. `646_content` proves the named parameters. `972_narration_viz-finding_a_recurring_substring` proves the viz tour.
 
-Here is the house court itself, the fourteen rules of the library and not the fourteen of the style. The numerical coincidence is a coincidence. What does it answer to a planted misspelling, and to a planted write to a constant? Run it:
+Here is the house court itself, the sixteen rules of the library and not the fourteen of the style. What does it answer to a planted misspelling, and to a planted write to a constant? Run it:
 
 ```haro
 ? @@( StzCodeRuleNames() )
-#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function" ]
+#--> [ "no-len-method", "q-returns-object", "no-aggressive-verbs", "engine-first", "q-has-plain-twin", "no-case-collision", "dead-knob", "setter-resets-on-reject", "setter-only-moves-one-way", "misspelled-name", "library-prints", "empty-method-body", "writes-a-mutable-constant", "value-called-as-function", "raw-markup-door", "markup-concatenation" ]
 cOne = "class Inbox" + nl + "def Recieve(x)" + nl + "	return x" + nl
 ? StzCheckCode(cOne)[1][:rule]
 #--> misspelled_name
@@ -236,13 +236,13 @@ cTwo = "class Inbox" + nl + "def Count()" + nl + "	nl = 3" + nl + "	return nl" +
 #--> FALSE
 ```
 
-> run: differs
+> run: kept
 
 The misspelling is found by name, `misspelled_name`, and the code stays clean, `TRUE`, because it is a warning. The write to a constant is found by name, `writes_a_mutable_constant`, and the code is refused, `FALSE`, because it is an error. The court refused the write to a constant!
 
-A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of eight of the fourteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
+A detail of the spelling, for Appendix B: the names list uses hyphens, and the finding of ten of the sixteen comes back with underscores. The block shows it: the list prints `misspelled-name`, and the finding prints `misspelled_name`.
 
-What the court does not read is the code of a program written with the library. The fourteen rules of the house are rules of the library's own code; a rule of writing for the code written with it is designed (section 7).
+What the court does not read is the code of a program written with the library. The sixteen rules of the house are rules of the library's own code; a rule of writing for the code written with it is designed (section 7).
 
 ## 6. The field, and where it leads
 
@@ -258,7 +258,7 @@ The limit, in the next section, says what is built, what is designed and what is
 
 ## 7. The limit
 
-What is built: the fourteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
+What is built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
 
 What is designed:
 

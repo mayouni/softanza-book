@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-10-30 13:37 UTC+01:00",
+  "date": "2026-10-30 14:37 UTC+01:00",
   "library": {
    "commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
    "short": "0950e246a",
@@ -25,18 +25,12 @@
   },
   "runtime": {
    "name": "Ring++",
-   "version": "686398f (2026-10-30)",
-   "build": "ringpp 686398f 2026-10-30 C-6 revised: a new name in a brace on an unproved object is a variable when no class declar",
+   "version": "cfef30b (2026-10-30)",
+   "build": "ringpp cfef30b 2026-10-30 F-146: ringvm_classesList(), ringvm_cfunctionsList() and cfunctions() answer as Ring's do",
    "ring_version": "1.27",
    "path": "D:/ringpp/ringpp-win64/bin/rnxc.exe"
   },
-  "failed": [
-   "en/07-the-writing-style-and-the-seven-goals",
-   "en/15-pattern-languages",
-   "en/27-the-engine-beneath",
-   "en/32-many-minds-on-one-body-of-work",
-   "en/B-the-fourteen-house-rules"
-  ]
+  "failed": []
  },
  "chapters": {
   "en/00-preface": {
@@ -54,8 +48,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 8.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.4
   },
   "en/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
@@ -87,7 +81,7 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/02-the-software-crafter": {
@@ -183,7 +177,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/03-the-method-from-first-principles": {
@@ -247,7 +241,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/04-the-platform-in-one-picture": {
@@ -328,7 +322,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/05-law-the-code-adheres-to-the-way-a-person-thinks": {
@@ -419,7 +413,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/06-the-mental-model-and-the-metaphors": {
@@ -492,7 +486,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/07-the-writing-style-and-the-seven-goals": {
@@ -563,11 +557,11 @@
      "out": "[ 3, 4 ]\n[ 3, 4 ]\n1\n1"
     },
     {
-     "hash": "a79ebea2ff60",
-     "promise": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
+     "hash": "ecbead59d4e4",
+     "promise": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\", \"raw-markup-door\", \"markup-concatenation\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
+     "verdict": "kept",
      "out": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\", \"raw-markup-door\", \"markup-concatenation\" ]\nmisspelled_name\n1\nwrites_a_mutable_constant\n0"
     },
     {
@@ -585,10 +579,10 @@
      "out": ""
     }
    ],
-   "kept": 8,
+   "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/08-functions-as-linguistic-expressions-and-scope": {
@@ -711,8 +705,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.8
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.3
   },
   "en/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -792,7 +786,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.7
   },
   "en/10-programming-becomes-refinement": {
@@ -881,7 +875,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/11-law-a-language-is-declared-and-closed": {
@@ -986,7 +980,7 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 1.3
   },
   "en/12-a-language-declared": {
@@ -1074,7 +1068,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/13-natural-and-executable": {
@@ -1234,8 +1228,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.3
   },
   "en/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -1366,8 +1360,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "en/15-pattern-languages": {
    "id": "pattern-languages",
@@ -1453,12 +1447,12 @@
      "out": "2\nstring\nconjunction\n2"
     },
     {
-     "hash": "e7dea9068002",
-     "promise": "0\n0\n\"Lunch)\"",
+     "hash": "9a2504e6e47d",
+     "promise": "1\n1\n\"Lunch\"\n0",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "1\n1\n\"Lunch\""
+     "verdict": "kept",
+     "out": "1\n1\n\"Lunch\"\n0"
     },
     {
      "hash": "8fcf2dd1119a",
@@ -1491,11 +1485,11 @@
      "out": ""
     }
    ],
-   "kept": 12,
+   "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "en/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -1610,8 +1604,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.1
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.2
   },
   "en/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -1684,7 +1678,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/18-the-five-registers": {
@@ -1828,7 +1822,7 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/19-the-domain-language-model": {
@@ -1898,7 +1892,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "en/20-agents-that-cannot-hurt-you": {
@@ -2005,7 +1999,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.5
   },
   "en/21-the-court": {
@@ -2097,7 +2091,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.7
   },
   "en/22-compared-honestly": {
@@ -2161,8 +2155,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.5
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.1
   },
   "en/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
@@ -2267,8 +2261,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.7
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.5
   },
   "en/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
@@ -2381,8 +2375,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.5
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "en/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
@@ -2493,7 +2487,7 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 4.6
   },
   "en/26-the-environment": {
@@ -2603,37 +2597,37 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.5
   },
   "en/27-the-engine-beneath": {
    "id": "the-engine-beneath",
    "blocks": [
     {
-     "hash": "f09f7e1fe882",
-     "promise": "17 1 0 0\n674 1 1 0\n714 1 1 1",
+     "hash": "4fd2a2911707",
+     "promise": "17 1 0 0\n683 1 1 0\n723 1 1 1",
      "effects": [
       "files"
      ],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (49) Error (C26) : Class redefinition, class is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (455) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (538) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring errors count : 3 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (18) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring Line (1) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring errors count : 1 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (74) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring errors count : 2 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring Line (1) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring errors count : 1 \n\nlayer3.ring Line (1) Error (C27) : Syntax Error!\n\nlayer3.ring errors count : 1"
+     "verdict": "kept",
+     "out": "17 1 0 0\n683 1 1 0\n723 1 1 1"
     },
     {
-     "hash": "d85878533d1a",
+     "hash": "b5ac9f23ed00",
      "promise": "stzcorestring\nstzobject\nstzobject\nstzlist",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "Error (R3) : Calling Function without definition: ringvm_classeslist"
+     "verdict": "kept",
+     "out": "stzcorestring\nstzobject\nstzobject\nstzlist"
     },
     {
-     "hash": "089633831d4e",
-     "promise": "[ 10, 693, 0 ]",
+     "hash": "a55ff825ee20",
+     "promise": "[ 10, 702, 0 ]",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "Error (R3) : Calling Function without definition: ringvm_classeslist"
+     "verdict": "kept",
+     "out": "[ 10, 702, 0 ]"
     },
     {
      "hash": "0b4ae8b7c727",
@@ -2646,12 +2640,12 @@
      "out": "4\n85\n0"
     },
     {
-     "hash": "f11828cb0026",
-     "promise": "0.8.0\n2786",
+     "hash": "864e3ef7920b",
+     "promise": "0.8.0\n2843",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "0.8.0\nError (R3) : Calling Function without definition: ringvm_cfunctionslist"
+     "verdict": "kept",
+     "out": "0.8.0\n2843"
     },
     {
      "hash": "b8bcc0b1a633",
@@ -2695,11 +2689,11 @@
      "out": ""
     }
    ],
-   "kept": 5,
+   "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 30.2
   },
   "en/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -2755,7 +2749,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/29-a-bank-in-niamey": {
@@ -2820,7 +2814,7 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/30-an-organisation-in-the-field": {
@@ -2893,7 +2887,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/31-what-the-projects-show": {
@@ -2959,7 +2953,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/32-many-minds-on-one-body-of-work": {
@@ -2982,11 +2976,11 @@
      "out": "0"
     },
     {
-     "hash": "a27b33844581",
-     "promise": "14\nno-aggressive-verbs",
+     "hash": "2f18e55695df",
+     "promise": "16\nno-aggressive-verbs",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
+     "verdict": "kept",
      "out": "16\nno-aggressive-verbs"
     },
     {
@@ -2997,10 +2991,10 @@
      "out": ""
     }
    ],
-   "kept": 2,
+   "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/33-the-next-line": {
@@ -3048,7 +3042,7 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/A-the-register-of-innovations": {
@@ -3062,12 +3056,12 @@
    "id": "the-fourteen-house-rules",
    "blocks": [
     {
-     "hash": "e35dd8d0a84c",
-     "promise": "14\nq-returns-object\nvalue-called-as-function",
+     "hash": "ca5ffbd8e3b4",
+     "promise": "16\nq-returns-object\nmarkup-concatenation",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "16\nq-returns-object\nvalue-called-as-function"
+     "verdict": "kept",
+     "out": "16\nq-returns-object\nmarkup-concatenation"
     },
     {
      "hash": "d739e2606dbf",
@@ -3076,12 +3070,20 @@
      "unprinted": 0,
      "verdict": "kept",
      "out": "library_prints\nwarning\n1\nno-case-collision\n0\nno-len-method\n0"
+    },
+    {
+     "hash": "a614177e0b5b",
+     "promise": "markup_concatenation\ninfo\n1\nraw_markup_door\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "markup_concatenation\ninfo\n1\nraw_markup_door\n1"
     }
    ],
-   "kept": 1,
-   "runnable": 2,
+   "kept": 3,
+   "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "en/C-the-twenty-two-verbs-and-the-constitution": {
@@ -3141,8 +3143,8 @@
    "kept": 1,
    "runnable": 1,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 8.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.4
   },
   "fr/01-change-arrives-faster-than-trust": {
    "id": "change-arrives-faster-than-trust",
@@ -3174,7 +3176,7 @@
    "kept": 2,
    "runnable": 2,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/02-the-software-crafter": {
@@ -3270,7 +3272,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/03-the-method-from-first-principles": {
@@ -3334,7 +3336,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/04-the-platform-in-one-picture": {
@@ -3415,7 +3417,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/05-law-the-code-adheres-to-the-way-a-person-thinks": {
@@ -3506,7 +3508,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/06-the-mental-model-and-the-metaphors": {
@@ -3579,7 +3581,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/07-the-writing-style-and-the-seven-goals": {
@@ -3650,11 +3652,11 @@
      "out": "[ 3, 4 ]\n[ 3, 4 ]\n1\n1"
     },
     {
-     "hash": "a79ebea2ff60",
-     "promise": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
+     "hash": "ecbead59d4e4",
+     "promise": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\", \"raw-markup-door\", \"markup-concatenation\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
+     "verdict": "kept",
      "out": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\", \"raw-markup-door\", \"markup-concatenation\" ]\nmisspelled_name\n1\nwrites_a_mutable_constant\n0"
     },
     {
@@ -3672,10 +3674,10 @@
      "out": ""
     }
    ],
-   "kept": 8,
+   "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/08-functions-as-linguistic-expressions-and-scope": {
@@ -3798,8 +3800,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.8
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.3
   },
   "fr/09-patterns-of-thought": {
    "id": "patterns-of-thought",
@@ -3879,7 +3881,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.7
   },
   "fr/10-programming-becomes-refinement": {
@@ -3968,7 +3970,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/11-law-a-language-is-declared-and-closed": {
@@ -4073,7 +4075,7 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 1.3
   },
   "fr/12-a-language-declared": {
@@ -4161,7 +4163,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/13-natural-and-executable": {
@@ -4321,8 +4323,8 @@
    "kept": 17,
    "runnable": 17,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.3
   },
   "fr/14-knowledge-programming": {
    "id": "knowledge-programming",
@@ -4453,8 +4455,8 @@
    "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "fr/15-pattern-languages": {
    "id": "pattern-languages",
@@ -4540,12 +4542,12 @@
      "out": "2\nstring\nconjunction\n2"
     },
     {
-     "hash": "e7dea9068002",
-     "promise": "0\n0\n\"Lunch)\"",
+     "hash": "9a2504e6e47d",
+     "promise": "1\n1\n\"Lunch\"\n0",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "1\n1\n\"Lunch\""
+     "verdict": "kept",
+     "out": "1\n1\n\"Lunch\"\n0"
     },
     {
      "hash": "8fcf2dd1119a",
@@ -4578,11 +4580,11 @@
      "out": ""
     }
    ],
-   "kept": 12,
+   "kept": 13,
    "runnable": 13,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "fr/16-seven-languages-one-door": {
    "id": "seven-languages-one-door",
@@ -4697,8 +4699,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.1
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.2
   },
   "fr/17-law-programmatic-by-default": {
    "id": "law-programmatic-by-default",
@@ -4771,7 +4773,7 @@
    "kept": 8,
    "runnable": 8,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/18-the-five-registers": {
@@ -4915,7 +4917,7 @@
    "kept": 15,
    "runnable": 15,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/19-the-domain-language-model": {
@@ -4985,7 +4987,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.4
   },
   "fr/20-agents-that-cannot-hurt-you": {
@@ -5092,7 +5094,7 @@
    "kept": 9,
    "runnable": 9,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.5
   },
   "fr/21-the-court": {
@@ -5184,7 +5186,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 0.7
   },
   "fr/22-compared-honestly": {
@@ -5248,8 +5250,8 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 1.5
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 1.1
   },
   "fr/23-a-world-a-constellation-a-platform": {
    "id": "a-world-a-constellation-a-platform",
@@ -5354,8 +5356,8 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.7
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.5
   },
   "fr/24-rehearse-then-commit": {
    "id": "rehearse-then-commit",
@@ -5468,8 +5470,8 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.5
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.6
   },
   "fr/25-your-users-keep-their-medium": {
    "id": "your-users-keep-their-medium",
@@ -5580,7 +5582,7 @@
    "kept": 11,
    "runnable": 11,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:37 UTC+01:00",
    "seconds": 4.6
   },
   "fr/26-the-environment": {
@@ -5690,37 +5692,37 @@
    "kept": 10,
    "runnable": 10,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 0.4
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 0.5
   },
   "fr/27-the-engine-beneath": {
    "id": "the-engine-beneath",
    "blocks": [
     {
-     "hash": "f09f7e1fe882",
-     "promise": "17 1 0 0\n674 1 1 0\n714 1 1 1",
+     "hash": "4fd2a2911707",
+     "promise": "17 1 0 0\n683 1 1 0\n723 1 1 1",
      "effects": [
       "files"
      ],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (49) Error (C26) : Class redefinition, class is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (455) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (538) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring errors count : 3 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (18) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring Line (1) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring errors count : 1 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (74) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring errors count : 2 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring Line (1) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring errors count : 1 \n\nlayer3.ring Line (1) Error (C27) : Syntax Error!\n\nlayer3.ring errors count : 1"
+     "verdict": "kept",
+     "out": "17 1 0 0\n683 1 1 0\n723 1 1 1"
     },
     {
-     "hash": "d85878533d1a",
+     "hash": "b5ac9f23ed00",
      "promise": "stzcorestring\nstzobject\nstzobject\nstzlist",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "Error (R3) : Calling Function without definition: ringvm_classeslist"
+     "verdict": "kept",
+     "out": "stzcorestring\nstzobject\nstzobject\nstzlist"
     },
     {
-     "hash": "089633831d4e",
-     "promise": "[ 10, 693, 0 ]",
+     "hash": "a55ff825ee20",
+     "promise": "[ 10, 702, 0 ]",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "Error (R3) : Calling Function without definition: ringvm_classeslist"
+     "verdict": "kept",
+     "out": "[ 10, 702, 0 ]"
     },
     {
      "hash": "0b4ae8b7c727",
@@ -5733,12 +5735,12 @@
      "out": "4\n85\n0"
     },
     {
-     "hash": "f11828cb0026",
-     "promise": "0.8.0\n2786",
+     "hash": "864e3ef7920b",
+     "promise": "0.8.0\n2843",
      "effects": [],
      "unprinted": 0,
-     "verdict": "raised",
-     "out": "0.8.0\nError (R3) : Calling Function without definition: ringvm_cfunctionslist"
+     "verdict": "kept",
+     "out": "0.8.0\n2843"
     },
     {
      "hash": "b8bcc0b1a633",
@@ -5782,11 +5784,11 @@
      "out": ""
     }
    ],
-   "kept": 5,
+   "kept": 9,
    "runnable": 9,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
-   "seconds": 6.9
+   "ran": "2026-10-30 14:37 UTC+01:00",
+   "seconds": 30.2
   },
   "fr/28-a-restaurant-in-lyon": {
    "id": "a-restaurant-in-lyon",
@@ -5842,7 +5844,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/29-a-bank-in-niamey": {
@@ -5907,7 +5909,7 @@
    "kept": 6,
    "runnable": 6,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/30-an-organisation-in-the-field": {
@@ -5980,7 +5982,7 @@
    "kept": 7,
    "runnable": 7,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/31-what-the-projects-show": {
@@ -6046,7 +6048,7 @@
    "kept": 5,
    "runnable": 5,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/32-many-minds-on-one-body-of-work": {
@@ -6069,11 +6071,11 @@
      "out": "0"
     },
     {
-     "hash": "a27b33844581",
-     "promise": "14\nno-aggressive-verbs",
+     "hash": "2f18e55695df",
+     "promise": "16\nno-aggressive-verbs",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
+     "verdict": "kept",
      "out": "16\nno-aggressive-verbs"
     },
     {
@@ -6084,10 +6086,10 @@
      "out": ""
     }
    ],
-   "kept": 2,
+   "kept": 3,
    "runnable": 3,
    "exercises": 1,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/33-the-next-line": {
@@ -6135,7 +6137,7 @@
    "kept": 3,
    "runnable": 3,
    "exercises": 2,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/A-the-register-of-innovations": {
@@ -6149,12 +6151,12 @@
    "id": "the-fourteen-house-rules",
    "blocks": [
     {
-     "hash": "e35dd8d0a84c",
-     "promise": "14\nq-returns-object\nvalue-called-as-function",
+     "hash": "ca5ffbd8e3b4",
+     "promise": "16\nq-returns-object\nmarkup-concatenation",
      "effects": [],
      "unprinted": 0,
-     "verdict": "differs",
-     "out": "16\nq-returns-object\nvalue-called-as-function"
+     "verdict": "kept",
+     "out": "16\nq-returns-object\nmarkup-concatenation"
     },
     {
      "hash": "d739e2606dbf",
@@ -6163,12 +6165,20 @@
      "unprinted": 0,
      "verdict": "kept",
      "out": "library_prints\nwarning\n1\nno-case-collision\n0\nno-len-method\n0"
+    },
+    {
+     "hash": "a614177e0b5b",
+     "promise": "markup_concatenation\ninfo\n1\nraw_markup_door\n1",
+     "effects": [],
+     "unprinted": 0,
+     "verdict": "kept",
+     "out": "markup_concatenation\ninfo\n1\nraw_markup_door\n1"
     }
    ],
-   "kept": 1,
-   "runnable": 2,
+   "kept": 3,
+   "runnable": 3,
    "exercises": 0,
-   "ran": "2026-10-30 13:37 UTC+01:00",
+   "ran": "2026-10-30 14:38 UTC+01:00",
    "seconds": 0.4
   },
   "fr/C-the-twenty-two-verbs-and-the-constitution": {

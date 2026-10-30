@@ -50,20 +50,20 @@ cAsk = 'aC = ringvm_classesList()' + nl +
 aEntries = [ "core/stkLib.ring", "stzLib.ring", "max/stxLib.ring" ]
 for i = 1 to 3
     write("layer" + i + ".ring", 'load "../../../' + aEntries[i] + '"' + nl + cAsk)
-    ? trim(systemcmd("ring layer" + i + ".ring"))
+    ? trim(systemcmd(char(34) + exefilename() + char(34) + " layer" + i + ".ring"))
     remove("layer" + i + ".ring")
 next
 #--> 17 1 0 0
-#--> 674 1 1 0
-#--> 714 1 1 1
+#--> 683 1 1 0
+#--> 723 1 1 1
 ```
 
-Le premier processus imprime `17 1 0 0`. Le noyau contient 17 classes, dix au préfixe `stk` et sept à `stzCore`, et aucune classe de base. Le deuxième imprime `674 1 1 0` : la base en contient 674 et aucune classe max. Le troisième imprime `714 1 1 1` : max en contient 714. Chaque couche inclut celle du dessous et aucune celle du dessus : noyau dans base dans max, chargées par le bas. Un chargement du seul fichier d'entrée du noyau prend environ un dixième de seconde sur cette machine. Un chargement de la base prend entre trois et huit secondes, en exécutions uniques le 9 octobre 2026. Mes notes consignent ces temps, et aucun bloc ne les montre.
+Le premier processus imprime `17 1 0 0`. Le noyau contient 17 classes, dix au préfixe `stk` et sept à `stzCore`, et aucune classe de base. Le deuxième imprime `683 1 1 0` : la base en contient 683 et aucune classe max. Le troisième imprime `723 1 1 1` : max en contient 723. Chaque couche inclut celle du dessous et aucune celle du dessus : noyau dans base dans max, chargées par le bas. Un chargement du seul fichier d'entrée du noyau prend environ un dixième de seconde sur cette machine. Un chargement de la base prend entre trois et huit secondes, en exécutions uniques le 9 octobre 2026. Mes notes consignent ces temps, et aucun bloc ne les montre.
 
 Le contrat dit que la base s'appuie sur le noyau, par héritage ou par délégation. Que disent les classes ? `ringvm_classesList()` renvoie, pour chaque classe, son nom, son identifiant et son parent :
 
 ```haro
-aClasses = ringvm_classesList()
+$aClasses = ringvm_classesList()
 ? ParentOf("stkString")
 #--> stzcorestring
 ? ParentOf("stzString")
@@ -74,9 +74,9 @@ aClasses = ringvm_classesList()
 #--> stzlist
 
 func ParentOf(cClass)
-    n = find(aClasses, lower(cClass), 1)
+    n = find($aClasses, lower(cClass), 1)
     if n = 0  return "(not loaded)" ok
-    return aClasses[n][3]
+    return $aClasses[n][3]
 ```
 
 La deuxième ligne imprime `stzobject` : `stzString` hérite de `stzObject`, et non de `stkString` ! Le noyau porte une hiérarchie parallèle, dans laquelle `stkString` hérite de `stzCoreString`, le `stzcorestring` de la première ligne. Max s'appuie bien sur la base : `stzListXT` hérite de `stzList`, le `stzlist` de la dernière ligne. Exactement deux classes de la base héritent d'une classe du noyau, `stzSciNumber` et `stzPointer`, et une délègue, dans une ligne de `stzPointer`. Ce sont deux parmi les centaines de la base. Le contrat n'est pas rempli, et il ne l'est pas de la manière dont le chapitre 4 posait la question. Je l'imprime comme une dette.
@@ -94,10 +94,10 @@ for aClass in aClasses
     ok
 next
 ? @@([ nStk, nStz, nStx ])
-#--> [ 10, 693, 0 ]
+#--> [ 10, 702, 0 ]
 ```
 
-Le bloc imprime `[ 10, 693, 0 ]`. Dix, six cent quatre-vingt-treize, et aucune ! Les trois ne font pas les 714 du premier bloc : les classes qui restent ne portent aucun des trois préfixes, et un décompte par préfixe n'en dit rien, ce qui est le point de l'exercice. Les quarante classes que max ajoute à la base portent toutes le préfixe de la base. Les trente-deux classes au troisième préfixe existent, toutes dans un seul répertoire, et aucun fichier d'entrée ne les charge. La section 7 le redit.
+Le bloc imprime `[ 10, 702, 0 ]`. Dix, sept cent deux, et aucune ! Les trois ne font pas les 723 du premier bloc : les classes qui restent ne portent aucun des trois préfixes, et un décompte par préfixe n'en dit rien, ce qui est le point de l'exercice. Les quarante classes que max ajoute à la base portent toutes le préfixe de la base. Les trente-deux classes au troisième préfixe existent, toutes dans un seul répertoire, et aucun fichier d'entrée ne les charge. La section 7 le redit.
 
 ### Un moteur
 
@@ -130,12 +130,12 @@ for cName in aAll
     if left(lower(cName), 9) = "stzengine"  aNames + lower(cName)  ok
 next
 ? len( Q(aNames).DuplicatesRemoved() )
-#--> 2786
+#--> 2843
 ```
 
-Le bloc imprime `0.8.0` et `2786`. Deux mille sept cent quatre-vingt-six fonctions distinctes du moteur, la vue propre de la bibliothèque, prise à l'exécution. Le même appel renvoie plus d'entrées, puisque celles de la machine virtuelle elle-même sont incluses, et plusieurs noms apparaissent plus d'une fois ; je n'ai pas cherché pourquoi. J'ai d'abord assigné la liste à une variable. L'appel est réévalué à chaque tour d'une boucle, et j'ai arrêté deux exécutions qui avaient grossi jusqu'à des gigaoctets avant que je l'apprenne. Le décompte bouge avec le moteur construit.
+Le bloc imprime `0.8.0` et `2843`. Deux mille huit cent quarante-trois fonctions distinctes du moteur, la vue propre de la bibliothèque, prise à l'exécution. Le même appel renvoie plus d'entrées, puisque celles de la machine virtuelle elle-même sont incluses, et plusieurs noms apparaissent plus d'une fois ; je n'ai pas cherché pourquoi. J'ai d'abord assigné la liste à une variable. L'appel est réévalué à chaque tour d'une boucle, et j'ai arrêté deux exécutions qui avaient grossi jusqu'à des gigaoctets avant que je l'apprenne. Le décompte bouge avec le moteur construit.
 
-Il y a trois décomptes de trois choses différentes, et le chapitre dit lequel il imprime. Le premier est le décompte vu de la bibliothèque à l'exécution : les 2 786 ci-dessus. Le deuxième est le décompte vu de n'importe quel hôte par l'interface C. Un script à moi a lu les tables d'export des quatre-vingt-neuf bibliothèques le 9 octobre 2026 et y a trouvé 1 710 symboles nommés, dont quatre-vingt-neuf sont le crochet du chargeur, donc 1 621 fonctions. Le troisième est le décompte dans les sources Zig, comme noms d'enregistrement : 2 703 littéraux distincts. Le site dit 752 et 2 652, au commit 010743cce tel que la page le lit au 9 octobre 2026, et les constantes typées de la bibliothèque disent 1 513, datées du 16 juin 2026. Je ne peux reproduire 752 par aucune méthode que j'ai essayée. N'imprimez qu'un décompte que la construction lit, avec sa méthode et sa date.
+Il y a trois décomptes de trois choses différentes, et le chapitre dit lequel il imprime. Le premier est le décompte vu de la bibliothèque à l'exécution : les 2 843 ci-dessus. Le deuxième est le décompte vu de n'importe quel hôte par l'interface C. Un script à moi a lu les tables d'export des quatre-vingt-neuf bibliothèques le 9 octobre 2026 et y a trouvé 1 710 symboles nommés, dont quatre-vingt-neuf sont le crochet du chargeur, donc 1 621 fonctions. Le troisième est le décompte dans les sources Zig, comme noms d'enregistrement : 2 703 littéraux distincts. Le site dit 752 et 2 652, au commit 010743cce tel que la page le lit au 9 octobre 2026, et les constantes typées de la bibliothèque disent 1 513, datées du 16 juin 2026. Je ne peux reproduire 752 par aucune méthode que j'ai essayée. N'imprimez qu'un décompte que la construction lit, avec sa méthode et sa date.
 
 **Le moteur fait le travail.** Que fait le `upper` de l'hôte de l'eszett allemand, et qu'en fait la mise en correspondance de casse du moteur, sa propre table au-dessus d'une bibliothèque embarquée ? Une seconde bibliothèque embarquée extrait les radicaux des mots. Ce sont deux des dix-neuf bibliothèques embarquées du moteur, que la section 4 compte :
 
@@ -307,8 +307,8 @@ Avant d'exécuter quoi que ce soit, écrivez trois nombres : combien de classes 
 # then load each entry in its own process and count with ringvm_classesList().
 ```
 
-Puis choisissez n'importe quelle classe de la bibliothèque, prédisez son parent, et lisez-le avec la chaîne de parents. Écrivez la ligne que votre prédiction a ratée. Un apprenant qui devine que `stzString` hérite de `stkString` est en bonne compagnie : le contrat le dit, et la bibliothèque non. Je ne dis pas lequel des 17, 674 ou 714 est lequel.
+Puis choisissez n'importe quelle classe de la bibliothèque, prédisez son parent, et lisez-le avec la chaîne de parents. Écrivez la ligne que votre prédiction a ratée. Un apprenant qui devine que `stzString` hérite de `stkString` est en bonne compagnie : le contrat le dit, et la bibliothèque non. Je ne dis pas lequel des 17, 683 ou 723 est lequel.
 
-Je vous laisse celui-ci. Le décompte par préfixe de la section 3, `[ 10, 693, 0 ]`, est juste, et il ne dit rien des couches. Écrivez ce décompte à nouveau pour qu'il interroge la chaîne de parents de chaque classe, lue avec `ParentOf`, et non ses trois premières lettres, et regardez ce que vous obtenez. La section 3 dit ce que le préfixe cache, et la section 8, la porte de l'agent, dit pourquoi je le refuse. Quand votre décompte répondra, vous saurez pourquoi la couche d'une classe se lit dans ce qu'elle hérite, et non dans le nom qu'elle porte.
+Je vous laisse celui-ci. Le décompte par préfixe de la section 3, `[ 10, 702, 0 ]`, est juste, et il ne dit rien des couches. Écrivez ce décompte à nouveau pour qu'il interroge la chaîne de parents de chaque classe, lue avec `ParentOf`, et non ses trois premières lettres, et regardez ce que vous obtenez. La section 3 dit ce que le préfixe cache, et la section 8, la porte de l'agent, dit pourquoi je le refuse. Quand votre décompte répondra, vous saurez pourquoi la couche d'une classe se lit dans ce qu'elle hérite, et non dans le nom qu'elle porte.
 
 Le chapitre suivant quitte le moteur pour un restaurant à Lyon, et pour la phrase que le projet y a enseignée : livrer petit, vite et utile, et laisser les fondations mûrir en parallèle sans jamais bloquer une livraison.

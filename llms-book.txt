@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-30 13:38 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Blocks ran on the bridge runtime, build 686398f (2026-10-30); Haro does not run the library yet.
+Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-30 14:38 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Blocks ran on the bridge runtime, build cfef30b (2026-10-30); Haro does not run the library yet.
 
 ## Files
 
@@ -44,7 +44,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-3
   principle: What you think is what you write.
 - 6. The mental model, and the metaphors [draft] agents/ch6-the-mental-model-and-the-metaphors.md; guards: 00_yielder_narrated (8), 597_walker_basics (6), 611_checkw (1), 621_perform (2), 483_w_and_wf_forms_in_conditional_code (2), 495_walking_until_and_until_before (4); run: 7 of 7 blocks kept
   principle: Say the problem in plain words, ask the same questions in the same order of any object, and when you would write a loop, name the move you are making: walk, check, yield or perform.
-- 7. The writing style, and the seven goals [draft] agents/ch7-the-writing-style-and-the-seven-goals.md; guards: coderule_narrated (77), 602_l_function (6), 59_use_of_the_l_small_function (8), 527_identifying_lists_inside_a_string (32), 48_replacebymany (1), 483_w_and_wf_forms_in_conditional_code (2), 28_numberofoccurrenceofcharleftside (8), 646_content (1), 972_narration_viz-finding_a_recurring_substring (7), testoor_promises_narrated (46); run: 8 of 9 blocks kept
+- 7. The writing style, and the seven goals [draft] agents/ch7-the-writing-style-and-the-seven-goals.md; guards: coderule_narrated (77), 602_l_function (6), 59_use_of_the_l_small_function (8), 527_identifying_lists_inside_a_string (32), 48_replacebymany (1), 483_w_and_wf_forms_in_conditional_code (2), 28_numberofoccurrenceofcharleftside (8), 646_content (1), 972_narration_viz-finding_a_recurring_substring (7), testoor_promises_narrated (46); run: 9 of 9 blocks kept
   principle: What you think is what you write.
 - 8. Functions as linguistic expressions, and scope [draft] agents/ch8-functions-as-linguistic-expressions-and-scope.md; guards: 00_regex_narrated (28), 972_narration_viz-finding_a_recurring_substring (7), full_scope_model_narrated (62), system_scope_model_narrated (62), delivery_narrated (34); run: 13 of 13 blocks kept
   principle: A function's name is a sentence, and its prefixes, suffixes and parameters are a grammar that the library can read.
@@ -63,7 +63,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-3
   principle: A sentence runs because every word of it is in a dictionary the library owns. What the library does not know, it refuses, with the reason.
 - 14. Knowledge programming [draft] agents/ch14-knowledge-programming.md; guards: knowledge_integration_narrated (19), provenance_survives_save_narrated (23), program_narrated (21); run: 13 of 13 blocks kept
   principle: A system is a file. Adding a line to it makes the system know more, and nothing is coded or trained.
-- 15. Pattern languages [draft] agents/ch15-pattern-languages.md; guards: 00_regex_narrated (28), 00_numbrex_narrated (15), tablex_narrated (95), 00_matrex_narrated (8), 00_graphex_narrated (27); run: 12 of 13 blocks kept
+- 15. Pattern languages [draft] agents/ch15-pattern-languages.md; guards: 00_regex_narrated (28), 00_numbrex_narrated (15), tablex_narrated (95), 00_matrex_narrated (8), 00_graphex_narrated (27); run: 13 of 13 blocks kept
   principle: A pattern is a rule about the shape of data, written as data. The same habit serves every kind of data.
 - 16. Seven languages, one door [draft] agents/ch16-seven-languages-one-door.md; guards: 51_extercode_narrated (11), governance_narrated (19), virtual_environment_twin_narrated (38), pycodegraph_narrated (48), jscodegraph_narrated (13); run: 10 of 10 blocks kept
   principle: A facet is a syntax of one grammar, and never a runtime. A door is a runtime, and never a syntax. The door is one, and it is the answer to "what about language X".
@@ -93,7 +93,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-3
   principle: A new medium adds renderings, never verbs.
 - 26. The environment [draft] agents/ch26-the-environment.md; guards: gui_stzui_narrated (58), gui_profile_narrated (35), gui_tier_agreement_narrated (24), gui_accessibility_narrated (37), 05_stzapp_live_narrated (11), emulator_narrated (39); run: 10 of 10 blocks kept
   principle: Declare the interface once. Every shell is a projection of it, and a projection may add renderings, never verbs.
-- 27. The engine beneath: three layers, one engine, Haro [draft] agents/ch27-the-engine-beneath.md; guards: engine_is_optimised_narrated (7), engine_senses_narrated (36), wasm_narrated (23), threat_model_narrated (11); run: 5 of 9 blocks kept
+- 27. The engine beneath: three layers, one engine, Haro [draft] agents/ch27-the-engine-beneath.md; guards: engine_is_optimised_narrated (7), engine_senses_narrated (36), wasm_narrated (23), threat_model_narrated (11); run: 9 of 9 blocks kept
   principle: Every feature is implemented once, in the engine. The surface is the promise, and the runtime is the part you measure, and never assert.
 
 ### Part VI · Software crafters, forged
@@ -109,7 +109,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-3
 
 ### Part VII · What comes next
 
-- 32. Many minds on one body of work [draft, spine] agents/ch32-many-minds-on-one-body-of-work.md; guards: coderule_narrated (77), codegraph_narrated (28), coderule_project_narrated (13); run: 2 of 3 blocks kept
+- 32. Many minds on one body of work [draft, spine] agents/ch32-many-minds-on-one-body-of-work.md; guards: coderule_narrated (77), codegraph_narrated (28), coderule_project_narrated (13); run: 3 of 3 blocks kept
   principle: Every law cites the incident that earned it. A new law without a dated failure behind it is a preference, and belongs in a style guide instead.
 - 33. The next line: a solution on its own engine [draft, spine] agents/ch33-the-next-line.md; guards: full_scope_model_narrated (62), virtual_system_twin_narrated (48), service_delivery_narrated (60); run: 3 of 3 blocks kept
   principle: The record carries a solution only when it ran on its own engine and a named person said what they saw.
@@ -117,7 +117,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-10-3
 ### Appendices
 
 - Appendix A The register of innovations [draft] agents/app-a-the-register-of-innovations.md; guards: none; run: no code
-- Appendix B The fourteen house rules [draft] agents/app-b-the-fourteen-house-rules.md; guards: coderule_narrated (77); run: 1 of 2 blocks kept
+- Appendix B The sixteen house rules [draft] agents/app-b-the-fourteen-house-rules.md; guards: coderule_narrated (77); run: 3 of 3 blocks kept
 - Appendix C The twenty-two verbs and the constitution [draft] agents/app-c-the-twenty-two-verbs-and-the-constitution.md; guards: none; run: no code
 - Appendix D The glossary: words name states, never people [draft] agents/app-d-the-glossary.md; guards: none; run: no code
 - Appendix E The guards and fixtures cited, by chapter [draft] agents/app-e-the-guards-and-fixtures-cited.md; guards: none; run: no code

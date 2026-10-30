@@ -2,25 +2,25 @@
 id: the-fourteen-house-rules
 appendix: B
 number: 102
-title: Les quatorze règles de la maison
+title: Les seize règles de la maison
 status: draft
 guards: [coderule_narrated]
 rulings: ["12.16"]
 ---
 
-La bibliothèque a un tribunal sur son propre code. Il lit une classe comme un graphe (cinq règles) ou comme du texte (neuf) et la juge selon des règles, dont certaines ont été écrites après qu'un défaut de cette forme a été trouvé dans le code même de la bibliothèque. Cette annexe énumère les quatorze, et en montre trois qui se déclenchent.
+La bibliothèque a un tribunal sur son propre code. Il lit une classe comme un graphe (cinq règles) ou comme du texte (onze) et la juge selon des règles, dont certaines ont été écrites après qu'un défaut de cette forme a été trouvé dans le code même de la bibliothèque. Cette annexe énumère les seize, et en montre cinq qui se déclenchent.
 
-Il y a deux quatorze dans ce livre, et ce sont deux ensembles différents. Les quatorze **règles de la maison** de cette annexe sont des règles du code de la bibliothèque : elles forment un tribunal, et elles s'exécutent. Les quatorze **règles d'écriture**, au chapitre 7, sont une lecture de la manière dont le style s'écrit. Ce sont des lectures du code, énoncées comme des règles, et aucune machine ne les juge. La coïncidence du nombre est une coïncidence.
+Il y a deux ensembles de règles dans ce livre, et ils sont différents. Les seize **règles de la maison** de cette annexe sont des règles du code de la bibliothèque : elles forment un tribunal, et elles s'exécutent. Les quatorze **règles d'écriture**, au chapitre 7, sont une lecture de la manière dont le style s'écrit. Ce sont des lectures du code, énoncées comme des règles, et aucune machine ne les juge. Les deux ensembles comptaient quatorze règles jusqu'à ce que la bibliothèque ajoute ses deux règles du balisage ; le nombre ne les a jamais liés.
 
-La liste des noms compte quatorze et la bibliothèque peut l'imprimer. Une passe de texte de plus, `for_in_loop`, rapporte aussi, de même que deux règles sur un projet entier, `no-dead-code` et, dans l'audit approfondi, `no-cyclic-calls` :
+La liste des noms compte seize et la bibliothèque peut l'imprimer. Une passe de texte de plus, `for_in_loop`, rapporte aussi, de même que deux règles sur un projet entier, `no-dead-code` et, dans l'audit approfondi, `no-cyclic-calls` :
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[2]
 #--> q-returns-object
-? StzCodeRuleNames()[14]
-#--> value-called-as-function
+? StzCodeRuleNames()[16]
+#--> markup-concatenation
 ```
 
 Voici trois d'entre elles, déclenchées sur du code que j'ai planté. Une méthode qui écrit sur la console est un avertissement, le code reste donc propre. Une méthode qui ne diffère d'une autre que par la casse est une erreur, puisque le langage hôte ne distingue pas les deux et que le fichier ne se chargerait pas. Et une classe qui définit `Len()` masque la fonction propre de l'hôte, et elle est refusée :
@@ -45,9 +45,26 @@ cLen = "class Box" + nl + "def Len()" + nl + "	return 1" + nl
 #--> 0
 ```
 
-Une note sur l'orthographe, qu'un programme qui lit les constats doit connaître. La liste emploie des traits d'union : `library-prints`. Un constat de huit des quatorze revient avec des tirets bas : `library_prints`. Les constats des cinq règles sur le graphe du code (lignes 1, 3, 4, 5 et 6) gardent leurs traits d'union, et celui de la ligne 2 aussi. Je donne ce que l'exécution a imprimé.
+Les deux règles les plus récentes comptent et ne refusent jamais. Elles sont venues quand le constructeur HTML de la bibliothèque s'est mis à échapper le texte par défaut : une méthode qui joint une balise à une valeur sans échappement sur la ligne est comptée, et chaque usage de `SetMarkup`, la seule porte qui écrit le balisage tel quel, l'est aussi. Leur sévérité est info, et le code reste propre :
 
-### Les quatorze
+```haro
+cPage = "class Page" + nl + "def Row(c)" + nl + "	return " + char(34) + "<li>" + char(34) + " + c" + nl
+? StzCheckCode(cPage)[1][:rule]
+#--> markup_concatenation
+? StzCheckCode(cPage)[1][:severity]
+#--> info
+? StzCodeIsClean(cPage)
+#--> 1
+cDoor = "class View" + nl + "def Show(o, c)" + nl + "	o.SetMarkup(c)" + nl + "	return 1" + nl
+? StzCheckCode(cDoor)[1][:rule]
+#--> raw_markup_door
+? StzCodeIsClean(cDoor)
+#--> 1
+```
+
+Une note sur l'orthographe, qu'un programme qui lit les constats doit connaître. La liste emploie des traits d'union : `library-prints`. Un constat de dix des seize revient avec des tirets bas : `library_prints`. Les constats des cinq règles sur le graphe du code (lignes 1, 3, 4, 5 et 6) gardent leurs traits d'union, et celui de la ligne 2 aussi. Je donne ce que l'exécution a imprimé.
+
+### Les seize
 
 | # | Règle | Ce qu'elle refuse | Gravité |
 |---|---|---|---|
@@ -65,12 +82,14 @@ Une note sur l'orthographe, qu'un programme qui lit les constats doit connaître
 | 12 | `empty-method-body` | une méthode déclarée qui ne fait rien ; plus sévère pour un prédicat, qui alors ne répond rien, lu comme faux | avertissement ; erreur pour un prédicat |
 | 13 | `writes-a-mutable-constant` | affecter à `true`, `false`, `null`, `nl`, `tab` ou `cr` : dans l'hôte ce sont des globales ordinaires | erreur |
 | 14 | `value-called-as-function` | appeler le résultat d'un appel, la forme que laisse un remplacement global de jetons | erreur |
+| 15 | `raw-markup-door` | rien : elle compte chaque usage de `SetMarkup`, la seule porte du constructeur HTML qui écrit le balisage tel quel, pour que tout endroit où du texte pourrait atteindre la page sans échappement se lise dans un seul rapport | info |
+| 16 | `markup-concatenation` | rien : elle compte une ligne qui joint une balise littérale à une valeur sans échappement sur la ligne ; heuristique sur une seule ligne, elle ne peut pas savoir si la valeur est sûre | info |
 
-J'ai déclenché les lignes 11, 6 et 1 ci-dessus, dans cet ordre. Le chapitre 32 déclenche la ligne 3, le chapitre 7 les lignes 10 et 13, et le chapitre 5 la ligne 2. Pour les lignes 7, 9 et 12, j'ai lu les gravités dans la source, comme pour les lignes 4, 5, 8 et 14 ; je n'ai pas déclenché ces sept-là.
+J'ai déclenché les lignes 11, 6 et 1 ci-dessus, dans cet ordre, puis les lignes 16 et 15. Le chapitre 32 déclenche la ligne 3, le chapitre 7 les lignes 10 et 13, et le chapitre 5 la ligne 2. Pour les lignes 7, 9 et 12, j'ai lu les gravités dans la source, comme pour les lignes 4, 5, 8 et 14 ; je n'ai pas déclenché ces sept-là.
 
 ### Ce que le tribunal ne juge pas
 
-Aucune des quatorze n'est une règle d'écriture. Aucune machine ne juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque. C'est la limite du chapitre 7, et c'est la raison pour laquelle les quatorze autres sont dans ce livre sous la forme d'une table avec leur état, et non d'un tribunal.
+Aucune des seize n'est une règle d'écriture. Aucune machine ne juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque. C'est la limite du chapitre 7, et c'est la raison pour laquelle les quatorze autres sont dans ce livre sous la forme d'une table avec leur état, et non d'un tribunal.
 
 ### Les quatorze autres : les règles d'écriture, et où en est chacune
 

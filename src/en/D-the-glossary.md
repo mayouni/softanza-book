@@ -68,7 +68,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro does not run the library yet. Chapters 3, 27.
 
-**house rules.** The fourteen rules the library runs over its own code, five over a graph of the code and nine over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
+**house rules.** The sixteen rules the library runs over its own code, five over a graph of the code and eleven over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
 
 **ledger.** The security plane's record of what was refused and why, written by the court and never by the thing it judged. Chapters 20, 21.
 

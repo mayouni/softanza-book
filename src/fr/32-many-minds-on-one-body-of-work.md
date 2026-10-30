@@ -8,7 +8,7 @@ narrations: [stz-rules-as-graph-rules-narration.md, stz-governance-lineage-narra
 site: [estate, principles]
 guards: [coderule_narrated, codegraph_narrated, coderule_project_narrated]
 stage:
-  built: "le protocole, ses mémos et son registre des décisions ; trois hooks : l'un refuse l'indexation en bloc, l'autre refuse une modification de registre faite sur une vue périmée de son système source, le troisième refuse le travail sur une machine inondée ; l'instrument qui mesure les horodatages composés ; les quatorze règles de la maison de la bibliothèque, dont cinq sur un graphe du code"
+  built: "le protocole, ses mémos et son registre des décisions ; trois hooks : l'un refuse l'indexation en bloc, l'autre refuse une modification de registre faite sur une vue périmée de son système source, le troisième refuse le travail sur une machine inondée ; l'instrument qui mesure les horodatages composés ; les seize règles de la maison de la bibliothèque, dont cinq sur un graphe du code"
   designed: "un surveillant qui réveille une session quand un fichier arrive, à la place des horloges ; un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit"
   absent: "des chiffres de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui ait essayé le protocole ; une vérification d'un mot dans la langue du lecteur"
 status: draft
@@ -25,7 +25,7 @@ figures:
   - "promise density 98.9 and 75.1 against 0.7 per thousand lines: study 12.16"
 ---
 
-Dans ce chapitre, je montre comment Softanza a été écrite depuis deux ans : par de nombreuses sessions d'un modèle d'IA sur une seule machine, sans cadre logiciel, avec seulement des fichiers, un historique de versions et quelques hooks. Je parcours les règles que le dossier a payées, un échec à la fois, et les quatorze règles de la maison de la bibliothèque qu'un agent d'IA peut lancer avant de commiter. Je dis ce que j'ai refusé : un cadre logiciel, un coordinateur qui note son législateur, l'automatisation au maximum, une décision prise en mon absence, un protocole vendu comme un produit. Et je dis la perte que j'ai acceptée : ma main s'est amincie là où les sessions ont écrit. Le principe est une phrase des sessions elles-mêmes : chaque loi cite l'incident qui l'a gagnée.
+Dans ce chapitre, je montre comment Softanza a été écrite depuis deux ans : par de nombreuses sessions d'un modèle d'IA sur une seule machine, sans cadre logiciel, avec seulement des fichiers, un historique de versions et quelques hooks. Je parcours les règles que le dossier a payées, un échec à la fois, et les seize règles de la maison de la bibliothèque qu'un agent d'IA peut lancer avant de commiter. Je dis ce que j'ai refusé : un cadre logiciel, un coordinateur qui note son législateur, l'automatisation au maximum, une décision prise en mon absence, un protocole vendu comme un produit. Et je dis la perte que j'ai acceptée : ma main s'est amincie là où les sessions ont écrit. Le principe est une phrase des sessions elles-mêmes : chaque loi cite l'incident qui l'a gagnée.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -61,7 +61,7 @@ Ce qui en fait une discipline et non un système de classement, c'est que chaque
 
 Vous voyez la forme. Un échec, daté. Une règle, écrite là où la session suivante la lira. Puis, quand la règle est enfreinte malgré tout, un mécanisme. Certaines lois sont arrivées à la dernière étape, d'autres sont encore une règle écrite, et le dossier dit lesquelles.
 
-Là où les lois touchent le code, la bibliothèque elle-même peut les tenir. Ses quatorze règles de la maison sont des validateurs, cinq sur un graphe du code et les autres sur le texte : une loi du document de conception de la bibliothèque, rendue exécutable. Ce sont des règles qu'un agent peut lancer avant de commiter, et non du folklore qu'il doit deviner. L'une d'elles porte sur les mots. Que dit-elle d'une méthode nommée `KillOrder`, et le code est-il encore propre ? Exécutez-le :
+Là où les lois touchent le code, la bibliothèque elle-même peut les tenir. Ses seize règles de la maison sont des validateurs, cinq sur un graphe du code et les autres sur le texte : une loi du document de conception de la bibliothèque, rendue exécutable. Ce sont des règles qu'un agent peut lancer avant de commiter, et non du folklore qu'il doit deviner. L'une d'elles porte sur les mots. Que dit-elle d'une méthode nommée `KillOrder`, et le code est-il encore propre ? Exécutez-le :
 
 ```haro
 cCode = "class Shop" + nl + "def KillOrder()" + nl + "  return" + nl
@@ -88,12 +88,12 @@ Et les règles forment un ensemble fermé. Combien y en a-t-il, et un agent peut
 
 ```haro
 ? len( StzCodeRuleNames() )
-#--> 14
+#--> 16
 ? StzCodeRuleNames()[3]
 #--> no-aggressive-verbs
 ```
 
-Oui : quatorze noms, et le troisième est la règle qui vient de parler. Le dossier ne relie pas la règle de ton de la bibliothèque à la loi des mots du domaine de projets, tranchée le 21 août 2026, je ne le ferai donc pas non plus. Mais c'est le même instinct à deux altitudes : les mots que nous employons à propos du travail font partie du travail.
+Oui : seize noms, et le troisième est la règle qui vient de parler. Le dossier ne relie pas la règle de ton de la bibliothèque à la loi des mots du domaine de projets, tranchée le 21 août 2026, je ne le ferai donc pas non plus. Mais c'est le même instinct à deux altitudes : les mots que nous employons à propos du travail font partie du travail.
 
 Voilà les lois. Reste ce que j'ai refusé, et la perte que j'ai acceptée.
 
@@ -117,7 +117,7 @@ Vient ensuite le tribunal, et ce qu'il ne peut pas prouver.
 
 Aucune garde de la bibliothèque ne prouve le protocole. Ses tribunaux sont hors de la bibliothèque, et je les nomme par ce qu'ils font. Un hook refuse l'indexation en bloc, et un autre refuse le travail quand la machine n'a plus de mémoire à revendre. Une vérification dit si les hooks installés sont les hooks écrits. Un instrument compare chaque horodatage à son commit et publie les lignes. Ce sont des scripts, pas du Haro, et le lecteur de ce livre ne peut pas compter leurs assertions ; ils sont donc nommés ici et non dans la ligne du tribunal ci-dessous.
 
-Les blocs de ce chapitre reposent sur les gardes de la bibliothèque pour ses règles de la maison. `coderule_narrated` prouve qu'une règle de code est une règle sur le graphe, et que les constats de la maison sortent sur une fixture plantée sous une forme figée. Elle prouve que les règles sont au nombre de quatorze, et qu'une définition ou un commentaire n'est pas pris pour un appel. `codegraph_narrated` prouve le graphe en dessous, et `coderule_project_narrated` lance les règles de projet sur un dossier de fixture.
+Les blocs de ce chapitre reposent sur les gardes de la bibliothèque pour ses règles de la maison. `coderule_narrated` prouve qu'une règle de code est une règle sur le graphe, et que les constats de la maison sortent sur une fixture plantée sous une forme figée. Elle prouve que les règles sont au nombre de seize, et qu'une définition ou un commentaire n'est pas pris pour un appel. `codegraph_narrated` prouve le graphe en dessous, et `coderule_project_narrated` lance les règles de projet sur un dossier de fixture.
 
 ## 6. Le terrain, et où il mène
 
@@ -133,7 +133,7 @@ Reste la limite, en mots d'étape.
 
 ## 7. La limite
 
-Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, et l'instrument qui mesure les horodatages. Les quatorze règles de la maison de la bibliothèque sont construites, dont cinq sur son graphe de code.
+Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, et l'instrument qui mesure les horodatages. Les seize règles de la maison de la bibliothèque sont construites, dont cinq sur son graphe de code.
 
 Ce qui est conçu : un surveillant qui réveille une session quand un fichier arrive, ce qui est, à mon avis, le bon remplacement des horloges et reste à venir. Et un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Le style de la maison serait alors tenu par une machine autant que par ma lecture.
 
