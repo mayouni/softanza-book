@@ -3,7 +3,7 @@
  "base_libs": 85,
  "max_libs": 0,
  "vendored": 19,
- "guards": 529,
+ "guards": 639,
  "atlas": {
   "version": 21,
   "read_at": "2026-09-30",

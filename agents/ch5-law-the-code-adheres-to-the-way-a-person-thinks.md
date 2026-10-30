@@ -1,10 +1,10 @@
 # Law: the code adheres to the way a person thinks, and the court judges it whoever wrote it
 
-Source: Chapter 5. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Chapter 5. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 Stage: built: the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form; designed: a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it; absent: any machine that judges today the style of a program written with the library
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
+Run: 9 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 In this chapter I take the two things the field calls coding style and ask the question it does not ask: whether a line follows the order in which its writer reasoned. I run the founding example in the nearest form that still runs, then the mental model on a list, the verb's forms, the named parameter, the scene and the history of a chain. A promise stands under every question. I say what I let go, the library's own implementation, and what I refused to let go, the style of the code written with it. I show the court that exists today, over the library's own classes, and the one that is only designed. The motto has not changed since 2020: what you think is what you write.
 

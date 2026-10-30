@@ -1,6 +1,6 @@
 # The project's history: from Ring to Haro
 
-Source: Appendix H. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix H. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 This is the one page of the book whose prose names the language Softanza grew up on; the library's own names inside code still carry it, until the library is retired from it. The chapters do not, because the platform is going where that language cannot follow. The history belongs here, told once, with thanks.
 

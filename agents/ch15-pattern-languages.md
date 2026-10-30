@@ -1,10 +1,10 @@
 # Pattern languages
 
-Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; sequences over a timeline in time; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
-Run: 13 of 13 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
+Run: 12 of 13 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
@@ -282,7 +282,7 @@ o2 = new stzTimex("{@Event(Lunch)}")
 #--> "Lunch)"
 ```
 
-> run: kept
+> run: differs
 
 The article promises that the first is TRUE. The second shows that even a single event the timeline holds does not match! The third shows why: the token's label is `"Lunch)"`, read with its closing parenthesis. That is the shared bug; repairing it in time is the next step.
 

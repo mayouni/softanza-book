@@ -1,10 +1,10 @@
 # The engine beneath: three layers, one engine, Haro
 
-Source: Chapter 27. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Chapter 27. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 Stage: built: three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one; designed: the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's; absent: a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print
 
-Run: 9 of 9 blocks kept their promise, on 2026-10-15 13:00 UTC+01:00.
+Run: 5 of 9 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 In this chapter I load the three layers of the library, one entry file at a time, and count what each holds. I read the engine beneath them, its eighty-nine libraries and the functions it registers, and I let the court say whether it is optimised. I set down the decisions, that the future is Haro and that every feature is implemented once, in the engine, and I print the rows where a fast peer still leads. The principle stands over all of it: the surface is the promise, and the runtime is the part you measure, and never assert.
 
@@ -48,7 +48,7 @@ next
 #--> 714 1 1 1
 ```
 
-> run: kept (touches files)
+> run: differs (touches files)
 
 The first process prints `17 1 0 0`. Core holds 17 classes, ten with the prefix `stk` and seven with `stzCore`, and no base class. The second prints `674 1 1 0`: base holds 674 and no max class. The third prints `714 1 1 1`: max holds 714. Each layer includes the one beneath and none above: core inside base inside max, loaded from below. A load of the core entry alone takes about a tenth of a second on this machine. A load of base takes between three and eight seconds, in single runs on 9 October 2026. My notes hold those times, and no block shows them.
 
@@ -71,7 +71,7 @@ func ParentOf(cClass)
     return aClasses[n][3]
 ```
 
-> run: kept
+> run: raised
 
 The second line prints `stzobject`: `stzString` inherits `stzObject`, and not `stkString`! Core carries a parallel hierarchy, in which `stkString` inherits `stzCoreString`, the first line's `stzcorestring`. Max does build on base: `stzListXT` inherits `stzList`, the last line's `stzlist`. Exactly two base classes inherit a core class, `stzSciNumber` and `stzPointer`, and one delegates, in a line of `stzPointer`. They are two among the hundreds of base. The contract is not met, and it is not met in the way chapter 4 asked about. I print it as a debt.
 
@@ -91,7 +91,7 @@ next
 #--> [ 10, 693, 0 ]
 ```
 
-> run: kept
+> run: raised
 
 The block prints `[ 10, 693, 0 ]`. Ten, six hundred and ninety-three, and none! The three do not add up to the 714 of the first block: the classes that remain carry none of the three prefixes, and a count by prefix says nothing of them, which is the exercise's point. The forty classes max adds to base all carry the base prefix. The thirty-two classes with the third prefix exist, all in one folder, and no entry file loads them. Section 7 says it again.
 
@@ -131,7 +131,7 @@ next
 #--> 2786
 ```
 
-> run: kept
+> run: raised
 
 The block prints `0.8.0` and `2786`. Two thousand seven hundred and eighty-six distinct engine functions, the library's own view, taken at run time. The same call returns more entries, since the virtual machine's own are included, and several names appear more than once; I did not trace why. I assigned the list to a variable first. The call is re-evaluated at every turn of a loop, and I stopped two runs that grew to gigabytes before I learned it. The count moves with the built engine.
 

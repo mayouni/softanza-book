@@ -143,3 +143,18 @@ Still open and asked of him: the particulars of Phase A (the interview of 2026-1
 **COVER-06 · 2026-10-17.** The author, on the back cover of COVER-05: "The cover does not cite Softanza anywhere and does not say what is it and for whome!!!" The back cover now names the book at its top (title and subtitle in small capitals), keeps his two lines together under it ("Declare, then govern." and "Born in Africa. Useful to the World!"), and carries two labelled blocks made of the book's own sentences: What Softanza is (the preface's definition and its three things, library, engine, Haro) and Who it is for (chapter 2's crafter, the preface's six readers and what a reader needs). The thesis paragraph is cut to its three short sentences. The composer fits the body to the largest size at which both editions fit (24 px today, about 10 pt in print) and fails rather than let two blocks touch.
 
 **COVER-07 · 2026-10-17.** The author: "The cover should present the author, me, Mansour Ayouni, along with my photo." The back cover presents him above the imprint band: his portrait as a disc (`assets/cover/source/author.png`, the square portrait of his own press material, 256 px, printed at about 0.7 in and never enlarged), his name, and a note of facts from his own author note of 2020 (Regueb, a first program at ten on paper, Tunisia, Niger and Canada, law offices, banks and nuclear waste management, teams of three cultures), rewritten, not copied, with no name reserved for Appendix H; the last sentence is the book's own (he designed Softanza and was its first crafter). Decided on his behalf, reversible: he may replace the note (`back_author_note`) or the portrait at any time. The QR code stays at 20 mm, the size a phone reads reliably.
+
+**RUNTIME-02 · 2026-10-30.** The author retired the former host language from all his projects (2026-10-14) and asked the
+Ring++ session to lead the cutover ("you lead it"), which ran this book on the bridge runtime, `rnxc`. **The blocks now run on the
+bridge runtime** (`tools/book_run.py` calls `rnxc` from the installed bridge, found by `book_common.find_rnxc`), and **the library pin
+moved from 93d7a39bd to 0950e246a** (the library's main branch after its Rule A migration, and the commit the bridge's install
+ships), with the engine copied from that install -- built from that very commit, so for the first time the engine line reads
+"built in a checkout of this commit". The proof line under every chapter says "the bridge runtime that carries the former host
+language's code, build <commit> (<date>)" -- RING-01 still names neither runtime in prose (`book_audit.py`: clean); the run record
+keeps the bridge's build line. Result: 277 of 285 blocks keep their promise (285 on the former runtime at the old pin), in 31 s
+(175 s). The eight: chapters 7, 32 and Appendix B promise fourteen code rules where the library now has sixteen (two were added
+to the library); chapter 15's `"Lunch)"` was a parser defect the library fixed (8ab918635), so the timeline example now matches;
+chapter 27 measures the former runtime's own VM (`ringvm_classesList`, `ringvm_cfunctionsList`, a child started as `ring`), which
+the bridge does not have, and its counts were the old pin's. Those five chapters are the author's to update; nothing in their
+prose was changed. Four chapters (14, 16, 19, 25) that wrote `aR = ...` inside a brace, and chapter 30's `len(Check(oG))`, failed
+on the bridge first and pass now: the bridge was corrected (ringpp C-6 revised, F-145), not the book.

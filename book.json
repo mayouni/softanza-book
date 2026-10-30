@@ -5,12 +5,12 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-10-17 04:50 UTC+01:00",
- "library_commit": "93d7a39bdd040f82eae21d949460d69c32a75c70",
+ "built": "2026-10-30 13:38 UTC+01:00",
+ "library_commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
  "edition": "proof copy",
  "runtime": {
-  "name": "the former host language",
-  "version": "1.27",
+  "name": "the bridge runtime",
+  "version": "686398f (2026-10-30)",
   "haro_runs_the_library": false
  },
  "spine": [
@@ -30,7 +30,7 @@
   "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
   "Rely on a promise only with its verdict, and only at the library commit named in this file.",
   "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
-  "The blocks ran on the runtime of the former host language, version 1.27; Haro does not run the library yet.",
+  "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro does not run the library yet.",
   "Never name the products of other repositories: the book describes them, and says 'the interface constitution' for the one it quotes."
  ],
  "files": {
@@ -111,7 +111,7 @@
    "french": true,
    "text": "agents/preface.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 1,
     "runnable": 1
    }
@@ -237,7 +237,7 @@
    "french": true,
    "text": "agents/ch1-change-arrives-faster-than-trust.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 2,
     "runnable": 2
    }
@@ -441,7 +441,7 @@
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -599,7 +599,7 @@
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -789,7 +789,7 @@
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -985,7 +985,7 @@
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -1174,7 +1174,7 @@
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -1328,8 +1328,8 @@
     {
      "code": "? @@( StzCodeRuleNames() )\n#--> [ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\ncOne = \"class Inbox\" + nl + \"def Recieve(x)\" + nl + \"\treturn x\" + nl\n? StzCheckCode(cOne)[1][:rule]\n#--> misspelled_name\n? StzCodeIsClean(cOne)\n#--> TRUE\ncTwo = \"class Inbox\" + nl + \"def Count()\" + nl + \"\tnl = 3\" + nl + \"\treturn nl\" + nl\n? StzCheckCode(cTwo)[1][:rule]\n#--> writes_a_mutable_constant\n? StzCodeIsClean(cTwo)\n#--> FALSE",
      "promised": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\nTRUE\nwrites_a_mutable_constant\nFALSE",
-     "output": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\" ]\nmisspelled_name\n1\nwrites_a_mutable_constant\n0",
-     "verdict": "kept",
+     "output": "[ \"no-len-method\", \"q-returns-object\", \"no-aggressive-verbs\", \"engine-first\", \"q-has-plain-twin\", \"no-case-collision\", \"dead-knob\", \"setter-resets-on-reject\", \"setter-only-moves-one-way\", \"misspelled-name\", \"library-prints\", \"empty-method-body\", \"writes-a-mutable-constant\", \"value-called-as-function\", \"raw-markup-door\", \"markup-concatenation\" ]\nmisspelled_name\n1\nwrites_a_mutable_constant\n0",
+     "verdict": "differs",
      "effects": []
     },
     {
@@ -1412,8 +1412,8 @@
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
-    "kept": 9,
+    "ran": "2026-10-30 13:37 UTC+01:00",
+    "kept": 8,
     "runnable": 9
    }
   },
@@ -1635,7 +1635,7 @@
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -1828,7 +1828,7 @@
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2004,7 +2004,7 @@
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -2235,7 +2235,7 @@
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
-    "ran": "2026-10-15 12:58 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -2430,7 +2430,7 @@
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -2701,7 +2701,7 @@
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 17,
     "runnable": 17
    }
@@ -2920,7 +2920,7 @@
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 13,
     "runnable": 13
    }
@@ -3053,8 +3053,8 @@
     {
      "code": "oTl = new stzTimeLine(\"2025-10-22\", \"2025-10-22\")\noTl {\n\tAddInstant(\"Meeting\", \"2025-10-22 09:00:00\")\n\tAddSpan(\"Break\", \"2025-10-22 10:00:00\", \"2025-10-22 10:15:00\")\n\tAddInstant(\"Lunch\", \"2025-10-22 12:00:00\")\n}\no1 = new stzTimex(\"{@Event(Meeting) -> @Duration* -> @Event(Break)}\")\n? o1.MatchPartial(oTl)\n#--> 0\no2 = new stzTimex(\"{@Event(Lunch)}\")\n? o2.MatchPartial(oTl)\n#--> 0\n? @@( o2.Tokens()[1][:label] )\n#--> \"Lunch)\"",
      "promised": "0\n0\n\"Lunch)\"",
-     "output": "0\n0\n\"Lunch)\"",
-     "verdict": "kept",
+     "output": "1\n1\n\"Lunch\"",
+     "verdict": "differs",
      "effects": []
     },
     {
@@ -3149,8 +3149,8 @@
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
-    "kept": 13,
+    "ran": "2026-10-30 13:37 UTC+01:00",
+    "kept": 12,
     "runnable": 13
    }
   },
@@ -3371,7 +3371,7 @@
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -3562,7 +3562,7 @@
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 8,
     "runnable": 8
    }
@@ -3795,7 +3795,7 @@
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 15,
     "runnable": 15
    }
@@ -3969,7 +3969,7 @@
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4180,7 +4180,7 @@
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 9,
     "runnable": 9
    }
@@ -4411,7 +4411,7 @@
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
-    "ran": "2026-10-15 12:59 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -4577,7 +4577,7 @@
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -4789,7 +4789,7 @@
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5024,7 +5024,7 @@
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5247,7 +5247,7 @@
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 11,
     "runnable": 11
    }
@@ -5467,7 +5467,7 @@
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 10,
     "runnable": 10
    }
@@ -5523,8 +5523,8 @@
     {
      "code": "cAsk = 'aC = ringvm_classesList()' + nl +\n       '? \"\" + len(aC) + \" \" + (find(aC, \"stklist\", 1) > 0) + \" \" + (find(aC, \"stzlist\", 1) > 0) + \" \" + (find(aC, \"stzlistxt\", 1) > 0)' + nl\naEntries = [ \"core/stkLib.ring\", \"stzLib.ring\", \"max/stxLib.ring\" ]\nfor i = 1 to 3\n    write(\"layer\" + i + \".ring\", 'load \"../../../' + aEntries[i] + '\"' + nl + cAsk)\n    ? trim(systemcmd(\"ring layer\" + i + \".ring\"))\n    remove(\"layer\" + i + \".ring\")\nnext\n#--> 17 1 0 0\n#--> 674 1 1 0\n#--> 714 1 1 1",
      "promised": "17 1 0 0\n674 1 1 0\n714 1 1 1",
-     "output": "17 1 0 0\n674 1 1 0\n714 1 1 1",
-     "verdict": "kept",
+     "output": "\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (49) Error (C26) : Class redefinition, class is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (455) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring Line (538) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\common/stzWalker.ring errors count : 3 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (18) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring Line (1) Error (C22) : Function redefinition, function is already defined!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\error/stzSetError.ring errors count : 1 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring Line (74) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\max\\stzMax.ring errors count : 2 \n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring Line (1) Error (C27) : Syntax Error!\n\nD:\\GitHub\\ayouni\\books\\softanza-book\\.cache\\stzlib-0950e246a\\libraries\\stzlib\\base\\test\\_book_run\\../../../max/stxLib.ring errors count : 1 \n\nlayer3.ring Line (1) Error (C27) : Syntax Error!\n\nlayer3.ring errors count : 1",
+     "verdict": "differs",
      "effects": [
       "files"
      ]
@@ -5532,15 +5532,15 @@
     {
      "code": "aClasses = ringvm_classesList()\n? ParentOf(\"stkString\")\n#--> stzcorestring\n? ParentOf(\"stzString\")\n#--> stzobject\n? ParentOf(\"stzList\")\n#--> stzobject\n? ParentOf(\"stzListXT\")\n#--> stzlist\n\nfunc ParentOf(cClass)\n    n = find(aClasses, lower(cClass), 1)\n    if n = 0  return \"(not loaded)\" ok\n    return aClasses[n][3]",
      "promised": "stzcorestring\nstzobject\nstzobject\nstzlist",
-     "output": "stzcorestring\nstzobject\nstzobject\nstzlist",
-     "verdict": "kept",
+     "output": "Error (R3) : Calling Function without definition: ringvm_classeslist",
+     "verdict": "raised",
      "effects": []
     },
     {
      "code": "nStk = 0  nStz = 0  nStx = 0\naClasses = ringvm_classesList()\nfor aClass in aClasses\n    cPrefix = left(aClass[1], 3)\n    if cPrefix = \"stk\"  nStk++\n    but cPrefix = \"stz\"  nStz++\n    but cPrefix = \"stx\"  nStx++\n    ok\nnext\n? @@([ nStk, nStz, nStx ])\n#--> [ 10, 693, 0 ]",
      "promised": "[ 10, 693, 0 ]",
-     "output": "[ 10, 693, 0 ]",
-     "verdict": "kept",
+     "output": "Error (R3) : Calling Function without definition: ringvm_classeslist",
+     "verdict": "raised",
      "effects": []
     },
     {
@@ -5555,8 +5555,8 @@
     {
      "code": "? StzEngineEmbedVersionString()\n#--> 0.8.0\naAll = ringvm_cfunctionslist()\naNames = []\nfor cName in aAll\n    if left(lower(cName), 9) = \"stzengine\"  aNames + lower(cName)  ok\nnext\n? len( Q(aNames).DuplicatesRemoved() )\n#--> 2786",
      "promised": "0.8.0\n2786",
-     "output": "0.8.0\n2786",
-     "verdict": "kept",
+     "output": "0.8.0\nError (R3) : Calling Function without definition: ringvm_cfunctionslist",
+     "verdict": "raised",
      "effects": []
     },
     {
@@ -5662,8 +5662,8 @@
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
-    "kept": 9,
+    "ran": "2026-10-30 13:37 UTC+01:00",
+    "kept": 5,
     "runnable": 9
    }
   },
@@ -5828,7 +5828,7 @@
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6005,7 +6005,7 @@
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 6,
     "runnable": 6
    }
@@ -6188,7 +6188,7 @@
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 7,
     "runnable": 7
    }
@@ -6387,7 +6387,7 @@
    "french": true,
    "text": "agents/ch31-what-the-projects-show.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 5,
     "runnable": 5
    }
@@ -6450,8 +6450,8 @@
     {
      "code": "? len( StzCodeRuleNames() )\n#--> 14\n? StzCodeRuleNames()[3]\n#--> no-aggressive-verbs",
      "promised": "14\nno-aggressive-verbs",
-     "output": "14\nno-aggressive-verbs",
-     "verdict": "kept",
+     "output": "16\nno-aggressive-verbs",
+     "verdict": "differs",
      "effects": []
     },
     {
@@ -6522,8 +6522,8 @@
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
-    "ran": "2026-10-15 13:00 UTC+01:00",
-    "kept": 3,
+    "ran": "2026-10-30 13:37 UTC+01:00",
+    "kept": 2,
     "runnable": 3
    }
   },
@@ -6669,7 +6669,7 @@
    "french": true,
    "text": "agents/ch33-the-next-line.md",
    "run": {
-    "ran": "2026-10-15 13:01 UTC+01:00",
+    "ran": "2026-10-30 13:37 UTC+01:00",
     "kept": 3,
     "runnable": 3
    }
@@ -6731,8 +6731,8 @@
     {
      "code": "? len( StzCodeRuleNames() )\n#--> 14\n? StzCodeRuleNames()[2]\n#--> q-returns-object\n? StzCodeRuleNames()[14]\n#--> value-called-as-function",
      "promised": "14\nq-returns-object\nvalue-called-as-function",
-     "output": "14\nq-returns-object\nvalue-called-as-function",
-     "verdict": "kept",
+     "output": "16\nq-returns-object\nvalue-called-as-function",
+     "verdict": "differs",
      "effects": []
     },
     {
@@ -6754,8 +6754,8 @@
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
-    "ran": "2026-10-15 13:01 UTC+01:00",
-    "kept": 2,
+    "ran": "2026-10-30 13:37 UTC+01:00",
+    "kept": 1,
     "runnable": 2
    }
   },

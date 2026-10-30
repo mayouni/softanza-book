@@ -1,6 +1,6 @@
 # The register of innovations
 
-Source: Appendix A. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix A. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 My study of the record read four inventories the library keeps of itself: the narrations with their titles, the design documents, the engine's phase of paradigm engines, and an outside reader's list of rethought concepts. It crossed them, and found forty-six innovations in seven families. This is that register, as the study ruled it on 7 October 2026, with one column of this book's own: the chapter that tells each row. A later ruling the same day adds a forty-seventh row, answer by example, with the stage words of a plan: nothing induces yet, as chapter 18 says. It is not in this table, which keeps the forty-six the study counted.
 

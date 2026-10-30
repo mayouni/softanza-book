@@ -1,10 +1,10 @@
 # Change arrives faster than trust
 
-Source: Chapter 1. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Chapter 1. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 Stage: built: the court that admits or refuses a change, for a person and for a machine; absent: a customer platform running on the Softanza engine
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-15 12:58 UTC+01:00.
+Run: 2 of 2 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 ## 1. The concept, as the field holds it
 

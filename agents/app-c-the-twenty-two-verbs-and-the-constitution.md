@@ -1,6 +1,6 @@
 # The twenty-two verbs and the constitution
 
-Source: Appendix C. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix C. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 The interface constitution lives in its own repository, and the site says that repository is not public yet. This book calls it the interface constitution and does not name the product it belongs to. The library holds only the slot for its verbs and the finder of the elements that serve none; the list itself is the constitution's. So this appendix prints what I read from the constitution's own file on 9 October 2026: its version is 3.11, last updated on 16 August 2026, with seven articles, thirty-one sets and one hundred and twenty-two rules. The counts in this sentence are the file's own, and I counted none of them myself.
 

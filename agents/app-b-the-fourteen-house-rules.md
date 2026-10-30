@@ -1,8 +1,8 @@
 # The fourteen house rules
 
-Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix B. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Run: 2 of 2 blocks kept their promise, on 2026-10-15 13:01 UTC+01:00.
+Run: 1 of 2 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 The library has a court over its own code. It reads a class as a graph (five rules) or as text (nine) and judges it against rules, some of them written after a defect of that shape was found in the library's own code. This appendix lists the fourteen, and shows three of them firing.
 
@@ -19,7 +19,7 @@ The list of names is fourteen and the library can print it. One more text pass, 
 #--> value-called-as-function
 ```
 
-> run: kept
+> run: differs
 
 Here are three of them, fired on code I planted. A method that writes to the console is a warning, so the code stays clean. A method that differs from another only by case is an error, since the host language does not tell the two apart and the file would not load. And a class that defines `Len()` shadows the host's own function, and is refused:
 

@@ -1,6 +1,6 @@
 # The glossary: words name states, never people
 
-Source: Appendix D. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix D. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 A word in this book names a state of a piece of work, or a role held in a scope. It does not name a rank, and it does not name a person. A crafter is someone who is declaring something, and a person is a crafter on the day they declare. An architect is what one holds in the scope of a solution. A user is whoever is using. When a sentence of this book is about a person, it says what the person did, on what date, and in whose words.
 

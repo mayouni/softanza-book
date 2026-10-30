@@ -1,6 +1,6 @@
 # The book as data, for the agent that reads it
 
-Source: Appendix G. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Appendix G. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 This appendix is for an AI agent that reads the book, and for the person who gives it the book to read. It says what the book offers in a form a machine can take, and what an agent may do with it.
 
@@ -41,7 +41,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 4 | `the-platform-in-one-picture` | 1 | draft | yes | 8 of 8 | 5 | 6 |
 | 5 | `law-the-code-adheres-to-the-way-a-person-thinks` | 2 | draft | yes | 9 of 9 | 4 | 6 |
 | 6 | `the-mental-model-and-the-metaphors` | 2 | draft |  | 7 of 7 | 6 | 6 |
-| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 9 of 9 | 10 | 6 |
+| 7 | `the-writing-style-and-the-seven-goals` | 2 | draft |  | 8 of 9 | 10 | 6 |
 | 8 | `functions-as-linguistic-expressions-and-scope` | 2 | draft |  | 13 of 13 | 5 | 6 |
 | 9 | `patterns-of-thought` | 2 | draft |  | 8 of 8 | 6 | 6 |
 | 10 | `programming-becomes-refinement` | 2 | draft |  | 9 of 9 | 3 | 6 |
@@ -49,7 +49,7 @@ The table below is generated at every build from the same data as `book.json`.
 | 12 | `a-language-declared` | 3 | draft |  | 8 of 8 | 5 | 6 |
 | 13 | `natural-and-executable` | 3 | draft |  | 17 of 17 | 7 | 6 |
 | 14 | `knowledge-programming` | 3 | draft |  | 13 of 13 | 3 | 6 |
-| 15 | `pattern-languages` | 3 | draft |  | 13 of 13 | 5 | 6 |
+| 15 | `pattern-languages` | 3 | draft |  | 12 of 13 | 5 | 6 |
 | 16 | `seven-languages-one-door` | 3 | draft |  | 10 of 10 | 5 | 6 |
 | 17 | `law-programmatic-by-default` | 4 | draft | yes | 8 of 8 | 6 | 6 |
 | 18 | `the-five-registers` | 4 | draft |  | 15 of 15 | 4 | 6 |
@@ -61,15 +61,15 @@ The table below is generated at every build from the same data as `book.json`.
 | 24 | `rehearse-then-commit` | 5 | draft |  | 11 of 11 | 7 | 6 |
 | 25 | `your-users-keep-their-medium` | 5 | draft |  | 11 of 11 | 6 | 6 |
 | 26 | `the-environment` | 5 | draft |  | 10 of 10 | 6 | 6 |
-| 27 | `the-engine-beneath` | 5 | draft |  | 9 of 9 | 4 | 6 |
+| 27 | `the-engine-beneath` | 5 | draft |  | 5 of 9 | 4 | 6 |
 | 28 | `a-restaurant-in-lyon` | 6 | draft |  | 5 of 5 | 5 | 6 |
 | 29 | `a-bank-in-niamey` | 6 | draft |  | 6 of 6 | 6 | 6 |
 | 30 | `an-organisation-in-the-field` | 6 | draft |  | 7 of 7 | 6 | 6 |
 | 31 | `what-the-projects-show` | 6 | draft |  | 5 of 5 | 8 | 6 |
-| 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 3 of 3 | 3 | 6 |
+| 32 | `many-minds-on-one-body-of-work` | 7 | draft | yes | 2 of 3 | 3 | 6 |
 | 33 | `the-next-line` | 7 | draft | yes | 3 of 3 | 3 | 6 |
 | A | `the-register-of-innovations` |  | draft |  | no code | 0 | 0 |
-| B | `the-fourteen-house-rules` |  | draft |  | 2 of 2 | 1 | 0 |
+| B | `the-fourteen-house-rules` |  | draft |  | 1 of 2 | 1 | 0 |
 | C | `the-twenty-two-verbs-and-the-constitution` |  | draft |  | no code | 0 | 0 |
 | D | `the-glossary` |  | draft |  | no code | 0 | 0 |
 | E | `the-guards-and-fixtures-cited` |  | draft |  | no code | 0 | 0 |

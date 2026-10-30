@@ -1,10 +1,10 @@
 # Seven languages, one door
 
-Source: Chapter 16. Status: draft (a draft, not read by the author). Library commit 93d7a39bd.
+Source: Chapter 16. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
 Stage: built: a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph; designed: the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one; absent: a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door
 
-Run: 10 of 10 blocks kept their promise, on 2026-10-15 12:59 UTC+01:00.
+Run: 10 of 10 blocks kept their promise, on 2026-10-30 13:37 UTC+01:00.
 
 In this chapter I take the field's two lessons about reaching another language, an escape that is open and a border with no way out, and I put the door where they meet. I ask the door which languages it knows, run Python and NodeJS through it, read Python and JavaScript into one code graph, and show the governance refusing an executor with no posture. Then I say what I decided: one door, and no further host embeddings. And I say where the door stands at this commit: its governance is designed, a way back that is closed is absent, and the R door, in development, raises today. The principle is the one chapter 11 promised: a facet is a syntax of one grammar and never a runtime, a door is a runtime and never a syntax, and the door is one.
 
