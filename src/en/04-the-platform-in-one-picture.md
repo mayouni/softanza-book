@@ -10,7 +10,7 @@ guards: [00_stzapp_narrated, 06_stzsuperapp_narrated, full_scope_model_narrated,
 stage:
   built: "the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web"
   designed: "the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract"
-  absent: "a whole program and its engine packed into one file; a customer platform on the engine"
+  reached: "a whole program and its engine packed into one file; a customer platform on the engine"
 status: draft
 rulings: ["12.2", "12.10", "12.12", "12.13", "12.15", "12.23", "12.29"]
 research: research/ch04.md
@@ -191,13 +191,13 @@ At the scale of real users, the field's super-app hosts lead today. The record n
 
 And the Atlas itself prints what is still to come for Softanza. The binary area is a plan for now, and its shipped code is the next step; the plugin, foreign-function and embed plane of extensibility is mostly planned; the system area has few lanes rated strong so far. I hold this as a view, not a result. A map that prints its stages is the only kind worth reading.
 
-## 7. The limit
+## 7. What it covers today
 
-Now I put the three stage words on the picture, built, designed and absent.
+Now I put the three stage words on the picture, built, designed and ahead.
 
 What is built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
 
-What is designed, or built and not reachable. The max layer's own classes are written and loaded by no entry file. What does the runtime answer when you ask for one? Run it:
+What is designed, or built with its entry designed. The max layer's own classes are written, and loading them from an entry file is designed. What does the runtime answer when you ask for one? Run it:
 
 ```haro
 try
@@ -208,11 +208,11 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-The runtime answers: `Error in class name, class not found: stxstring`. The class is written, and no entry file loads it!
+The runtime answers: `Error in class name, class not found: stxstring`. The class is written, and the entry file that loads it is designed!
 
-The layer contract says the base layer builds on core, by inheritance or delegation. It does neither for the common domains: the two share the engine and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names that no engine file registers, as my study of the record reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is not built. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
+The layer contract says the base layer builds on core, by inheritance or delegation. For the common domains, the two share the engine today and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names whose registration in the engine comes next in that development, as my study of the record reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is designed. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
-What is absent: a whole program and its engine packed into one file with no dependency, and a customer platform running on the engine.
+What lies ahead: a whole program and its engine packed into one file that stands alone, and a customer platform running on the engine.
 
 ## 8. Six doors
 
@@ -232,7 +232,7 @@ Each of the six doors reads this picture from where it stands.
 
 ## 9. Exercise
 
-Draw your own solution the way this chapter draws Softanza: floors, and a court beside each. For each box, write the file that declares it and the guard that judges it, and put a stage word on it: built, designed or absent.
+Draw your own solution the way this chapter draws Softanza: floors, and a court beside each. For each box, write the file that declares it and the guard that judges it, and put a stage word on it: built, designed or ahead.
 
 Then declare two parts of it with `stzPlatformProfile`, give the profile to a `stzPlatform`, and before you run anything, write the line you expect when you ask it to deploy before you build it. Run it. A box with no court beside it is your first finding.
 

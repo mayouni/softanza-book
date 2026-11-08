@@ -2,7 +2,7 @@
 
 Source: Chapter 9. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; absent: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
+Stage: built: the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint; designed: the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic; reached: a dependency chain that links one trigger to another; a section-merging verb the article presents as its point
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -247,23 +247,23 @@ The field's reactive libraries lead in reach. Rx exists in most mainstream langu
 
 I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries. It is undated and unsourced.
 
-The next section says where all of this stops.
+Section 7, next, says what all of this covers today.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
 
 What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
 
-What is absent or broken at this commit:
+What lies ahead at this commit:
 
-- The dependency chain is not one. Each state entry depends only on its own trigger, so the chain records which trigger was active and never a link between two. Asking for the chain overflows the stack: the run ends with `Error (R4) : Stack Overflow`. No test calls it.
-- Five of the Listexuter's seven classic tests fail their own expected output, and two promise nothing. The error log of that folder records, in the sixth file, `Error (C8) : Parentheses ')' is missing`.
-- A nested list that matches as a whole is reported twice.
-- The article's repeating timer takes three arguments and the library takes two; the form with units is `RunEveryXT`.
-- Two of the deep-lists article's path verbs, `ItemAtPath` and `ItemsAtPaths`, live on a subclass, `stzDeepList`, and not on a plain list; `Paths()` is on a plain list.
-- The section-merging article presents a comprehensive verb as its point, and that verb does not exist. The two that do exist, merging what overlaps and merging what is included, run. Section merging has no test file of its own.
-- There is no native engine module for the Container, Stream and Rfunction model: it runs in the library, and the engine's own reactive module is a small table of substring rules. The timeline's guard checks no gap, no overlap and no blocked span; in the classic timeline files, seven fail their expected output and eighteen promise nothing. The grid's engine-backed navigator, `stzGridNav`, has no test.
+- A dependency chain that links one trigger to another. Today each state entry depends on its own trigger, so the chain records which trigger was active. Asking for the chain overflows the stack: the run ends with `Error (R4) : Stack Overflow`. A test that calls it is part of that work.
+- The Listexuter's seven classic tests, brought to their own promise: five differ from the output they expect, and two have their promise to write. The error log of that folder records, in the sixth file, `Error (C8) : Parentheses ')' is missing`.
+- A nested list that matches as a whole, reported once: today it is reported twice.
+- The article's repeating timer and the library's, aligned: the article's takes three arguments and the library's takes two; the form with units is `RunEveryXT`.
+- Two of the deep-lists article's path verbs, `ItemAtPath` and `ItemsAtPaths`, live on a subclass, `stzDeepList`, where you call them; `Paths()` is on a plain list.
+- The comprehensive verb that the section-merging article presents as its point. The two verbs that exist, merging what overlaps and merging what is included, run. A test file of its own for section merging is ahead too.
+- A native engine module for the Container, Stream and Rfunction model: today it runs in the library, and the engine's own reactive module is a small table of substring rules. A timeline guard that checks gaps, overlaps and blocked spans; in the classic timeline files, seven differ from their expected output and eighteen have their promise to write. A test for the grid's engine-backed navigator, `stzGridNav`.
 
 ## 8. Six doors
 

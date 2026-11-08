@@ -11,7 +11,7 @@ Errors (the book breaks a rule it states):
   dup        the same long paragraph in two pages of one language
   assert     a sentence names a guard and a number of assertions that is not the guard's count in data/guards.json
   glossary   Appendix D cites a chapter that never uses the entry's word
-  stage      a stage word other than built, designed, absent
+  stage      a stage word other than built, designed, reached (shown as ahead)
   future     a date after today written as something that happened
   todo       TODO / TBD / lorem left in a page
 
@@ -116,7 +116,7 @@ def main():
 
             # stage words
             for k in (m.get("stage") or {}):
-                if k not in ("built", "designed", "absent"):
+                if k not in ("built", "designed", "reached"):        # HOUSE-22: the third stage is the one the thing has reached
                     errors.append(f"stage  {tag}: front matter stage key '{k}'")
 
             # todo

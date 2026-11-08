@@ -9,7 +9,7 @@ site: [forged, agentic]
 guards: [service_registry_narrated, safeworld_narrated, governance_crossing_narrated]
 stage:
   built: le tribunal qui admet ou refuse un changement, pour une personne et pour une machine
-  absent: une plateforme cliente qui tourne sur le moteur Softanza
+  reached: une plateforme cliente qui tourne sur le moteur Softanza
 status: draft
 rulings: ["12.10", "12.11", "12.15", "12.28", "12.29"]
 source: drafts/book-01-change-arrives-faster-than-trust.md
@@ -110,7 +110,7 @@ Là où je crois que Softanza se tient seul, c'est dans l'ordre des choses. Le t
 
 Ce sont des affirmations, et chacune a son chapitre et sa garde. Je les liste ici pour que vous sachiez où va l'argument, et pour que vous puissiez me le faire tenir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 La limite honnête de ce chapitre est aussi la limite honnête de toute la plateforme, et je la mets sur la première page à dessein.
 

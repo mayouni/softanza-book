@@ -10,7 +10,7 @@ guards: [wisecoding_narrated, wisecoding_rich_narrated, ownagentstack_narrated, 
 stage:
   built: "the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent"
   designed: "several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise"
-  absent: "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it"
+  reached: "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a conversation that judges a value with a space in it"
 status: draft
 rulings: ["12.25", "12.26", "12.27"]
 research: research/ch18.md
@@ -408,15 +408,15 @@ The field is honest about costs, and so is the record. Several candidates is the
 
 Here is where I think the record stands apart. Every reply, in whatever form, is judged by the world's laws before it counts, with the reason. The session keeps a transcript and a checkpoint that a person can read. The field's reply is a prompt, and the human keeps what comes out.
 
-The limit comes next, and it names what is built, what is designed and what is absent.
+Section 7 comes next, and it names what is built, what is designed and what lies ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals. And the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. No step presents competing readings of one reply. And the *none acceptable* branch as written: the reason is built, and the nearest acceptable alternatives are not. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example*, read on 9 October 2026, calls it a rule of the design that is not built. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages promise more than the code does. The code wires three of the five registers. The record names the formula and the examples as waiting, not routed, and for this chapter they are absent.
+What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. Presenting competing readings of one reply is the designed step. And the *none acceptable* branch as written: the reason is built, and naming the nearest acceptable alternatives is designed. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example*, read on 9 October 2026, calls it a rule of the design, and the design is its stage. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages describe the design, which reaches past what the code builds. The code wires three of the five registers. The record names the formula and the examples as waiting, and for this chapter they lie ahead.
 
-What is absent: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French; and a value with a space in it. In my run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. No block of this book records either result, so the run of the book does not show them. The conversation should have refused with the reason and written a checkpoint, and it doesn't. It is a request to the library, and the exercise below does not use a value with a space.
+What lies ahead: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French. And a conversation that judges a value with a space in it. In my run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. Both results come from my own run, outside the blocks this book records. The step ahead is a conversation that refuses with the reason and writes a checkpoint. It is a request to the library, and the exercise below uses one-word values.
 
 ## 8. Six doors
 
@@ -467,7 +467,7 @@ aV = oKX.ReplyIn("fmt", "+216-21-298-374,+33-6-12-34-56-78")
 ? aV[:goalState]
 ```
 
-Run it, then read what was admitted and what the goal says, and decide whether that is what you wanted to hand to the door as examples. Section 4, in its last refusal, and section 7, in the absent example register, say why I call it a fault. When you can say why, you will know what the door did with your examples, and why that is not induction.
+Run it, then read what was admitted and what the goal says, and decide whether that is what you wanted to hand to the door as examples. Section 4, in its last refusal, and section 7, in the example register that lies ahead, say why I call it a fault. When you can say why, you will know what the door did with your examples, and why that is not induction.
 
 This is what I call wise coding. The platform asks the question you have to answer, in the register you choose, and refuses to guess the answer for you: expression is free, admission is governed. Chapter 17 stated the law. This chapter ran its five registers, and showed where the fifth still falls silent.
 

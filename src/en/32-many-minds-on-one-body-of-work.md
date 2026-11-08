@@ -10,7 +10,7 @@ guards: [coderule_narrated, codegraph_narrated, coderule_project_narrated]
 stage:
   built: "the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's sixteen house rules, five of them over a code graph"
   designed: "a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes"
-  absent: "token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language"
+  reached: "token figures in the cost record; a team outside this estate trying the protocol; a check of a word in the reader's own language"
 status: draft
 rulings: ["12.16", "12.20", "12.29"]
 research: research/ch32.md
@@ -129,15 +129,15 @@ The field leads in tooling for many writers. Branches, merge queues and owners o
 
 Where I think the record stands apart is in one habit: each law carries the failure that paid for it, and the record publishes its own rate of breaking its own law. The central desk broke the stamp law about as often as the estate it measured, on a different surface: 5 of 25 against 34 of 151. Four of the five came before the law. Both numbers are printed side by side.
 
-Now the limit, in the stage words.
+Section 7 gives the sum in the stage words.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's sixteen house rules are built, five of them over its code graph.
 
 What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
 
-What is absent: a token figure in the cost record; any team outside this estate that has used the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and no tool performs it yet; that check is the next step. My study of the record named one more measure to take: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. The record holds no reading of that ratio.
+What lies ahead: a token figure in the cost record; a team outside this estate using the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and the tool that performs it is the next step. My study of the record named one more measure to take: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. Its first reading is ahead as well.
 
 ## 8. Six doors
 

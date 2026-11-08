@@ -11,13 +11,13 @@ guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agen
 stage:
   built: "le premier échelon du modèle de langage de domaine et son second, un petit bigramme ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle d'IA non gouverné"
   designed: "la cascade de la machine pensante entre les facultés ; la pile de décision, ses pièces à côté de l'agent ; l'unité typée de prédiction, une conception du domaine de projets avec cinq étapes de validation ; la négociation entre un agent et son relecteur"
-  absent: "quatre des cinq agents propres de la bibliothèque, dont l'induction à partir d'exemples"
+  reached: "le câblage de quatre des cinq agents propres de la bibliothèque, dont l'induction à partir d'exemples"
 status: draft
 rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait non enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait non enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la section 7, ce que la loi couvre aujourd'hui, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -81,7 +81,7 @@ StzKnowledgeGraphQ("menu") {
 }
 ```
 
-Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet : `Can't conclude: 2 gap(s) remain`. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont absents. Un modèle d'IA, s'il y en a un, vient après toutes, pas en premier.
+Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet : `Can't conclude: 2 gap(s) remain`. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont à venir. Un modèle d'IA, s'il y en a un, vient après toutes, pas en premier.
 
 La troisième pièce est la dérivation, ma définition à l'œuvre. Une loi est déclarée, et un fait non enregistré est prouvé :
 
@@ -191,13 +191,13 @@ Là où je pense que la loi se distingue, c'est en trois endroits. Une décision
 
 La section suivante dit où la loi s'arrête.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le premier échelon du modèle de langage de domaine et son second, un petit bigramme, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
 
 Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise. La pile de décision qui perçoit, décide, réagit et apprend : ses pièces existent à côté de l'agent, et les câbler dedans est l'étape suivante. L'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque. La conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet est l'étape suivante.
 
-Ce qui est absent : quatre des cinq agents propres de la bibliothèque. Combien la bibliothèque en déclare-t-elle, et combien sont câblés ? La liste le dit clairement :
+Ce qui est à venir : le câblage de quatre des cinq agents propres de la bibliothèque. Combien la bibliothèque en déclare-t-elle, et combien sont câblés ? La liste le dit clairement :
 
 ```haro
 ? len(StzOwnAgents())
@@ -210,14 +210,14 @@ Ce qui est absent : quatre des cinq agents propres de la bibliothèque. Combien 
 
 Le validateur, le classeur, le planificateur et l'agent qui induirait un motif à partir de vos exemples sont déclarés et réservés. Ainsi le cinquième registre d'une réponse, les exemples, attend l'agent d'induction : le câbler est l'étape suivante.
 
-Et une limite du premier échelon que vous rencontrerez dès que vous reformulerez une question. Il ne reconnaît une relation que par le mot avec lequel elle a été déclarée. Que fait-il quand vous demandez avec d'autres mots ?
+Et une étape à venir pour le premier échelon, que vous rencontrerez dès que vous reformulerez une question. Il ne reconnaît une relation que par le mot avec lequel elle a été déclarée. Que fait-il quand vous demandez avec d'autres mots ?
 
 ```haro
 ? oDLM.Ask("what does margherita contain?")
 #--> Margherita is a dish.
 ```
 
-Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, la réponse ici est un refus, et ce refus est l'étape suivante. Je l'imprime ici parce qu'une loi se montre par une page qui imprime son étape telle qu'elle est, limite comprise. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
+Il n'a pas refusé ! Il a imprimé `Margherita is a dish.` Cette réponse est vraie, et ce n'est pas ce qui était demandé. Par la loi de ce chapitre, la réponse ici est un refus, et ce refus est l'étape suivante. Je l'imprime ici parce qu'une loi se montre par une page qui imprime son étape telle qu'elle est, bornes comprises. La demande à la bibliothèque est de refuser une question dont le verbe n'est pas une relation déclarée.
 
 ## 8. Six portes
 

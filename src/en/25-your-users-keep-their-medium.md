@@ -10,7 +10,7 @@ guards: [sms_port_narrated, wisecoding_rich_narrated, sound_convergence_narrated
 stage:
   built: "the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform"
   designed: "the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar"
-  absent: "a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it"
+  reached: "a messaging app, USSD and a telephone line as media; a conversational projection of a world; a channel, a session, a template, consent; the question in languages beyond English; a voice for Hausa, Zarma and Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it"
 status: draft
 rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
@@ -314,9 +314,9 @@ What the field has in cloud dictation and in trained recognisers for many langua
 
 What the record claims instead: the dialogue is a rendering of a declared world judged by a court, deterministic by default. The medium is a port with a sandbox, so the conversation and its bill are rehearsed before an account exists.
 
-The field leads in places, and the limit comes next, printed whole.
+The field leads in places, and what the medium covers today comes next, printed whole.
 
-## 7. The limit
+## 7. What it covers today
 
 My study of the record has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
 
@@ -330,27 +330,27 @@ StzPlatformQ("neighbourhood") {
 }
 ```
 
-It is a sender, a recipient, a body and a time in a SQL table. It has no medium, no status and no parts. It is the message my study found absent, in its smallest form.
+It is a sender, a recipient, a body and a time in a SQL table; a medium, a status and parts are the work ahead. It is the message my study looked for, in its smallest form.
 
-What is built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, wired to no messaging provider; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
+What is built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, its wiring to a messaging provider ahead; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
 
-What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. The word `Provides` is in no code file of the application folder. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session, and not the library's design. A spoken analysis and a spoken transport: demos and compositions, and not a unit.
+What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. `Provides` is designed, and its code in the application folder is ahead. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session; the library's own design is the line above. A spoken analysis and a spoken transport: demos and compositions, with the unit ahead.
 
-What is absent:
+What lies ahead:
 
-- Ports for a messaging app, Telegram, USSD, and the telephone call: zero hits. A USSD session has no shape in the library.
-- A conversational projection of a world. The only projection is `Generate`, which knows three surfaces and refuses a fourth. No shell renders a question or a flow.
-- The messaging units: channel, session with a window or a timeout, template, consent. No unit of consent exists for messaging. The word *consent* appears in the snapshot for the microphone's boundary, in comments, and in two design documents in other senses.
-- The twenty-two verbs as a library list. `stzApp` holds five of them as five screen-intent methods, and the helper behind them does not check the word it is given. The other seventeen are in the constitution and not in the library. The bridge sentence is applied by hand today.
-- The question in a language other than English. `AskIn` is English, and the tutor shows the pattern in four languages. In my research run at this commit, `NaturallyIn` asked for Zarma raised the opaque "Unsupported object type!" and not "no pack for this language"; no block of this book records that call.
-- A voice for the languages that the product designs name, Zarma, Hausa and Fulfulde. None here; the library would refuse.
-- **A reply with a space in it, from a phone.** In my research run at this commit I ran `ReplyIn("c", "grand couscous")` and it raised, with an uninitialised variable. With a hyphen it was admitted. No block of this book records either result, as chapter 18 says of the same fault. This is chapter 18's known limit, and it is decisive here, because people type spaces in a text message. The conversation above works only because the replies are digits and one-word dishes.
+- Ports for a messaging app, Telegram, USSD and the telephone call (zero hits in my search at this commit), and a shape for a USSD session in the library.
+- A conversational projection of a world. The projection today is `Generate`, which knows three surfaces and refuses a fourth. A shell that renders a question or a flow belongs to this work.
+- The messaging units: channel, session with a window or a timeout, template, consent. Consent for messaging is a unit ahead; the word *consent* appears in the snapshot for the microphone's boundary, in comments, and in two design documents in other senses.
+- The twenty-two verbs as a library list. `stzApp` holds five of them as five screen-intent methods, and checking the word given to the helper behind them is ahead. The other seventeen are in the constitution, ahead of the library. The bridge sentence is applied by hand today.
+- The question in languages beyond English. `AskIn` is English, and the tutor shows the pattern in four languages. In my research run at this commit, `NaturallyIn` asked for Zarma raised the opaque "Unsupported object type!", where the clear answer is "no pack for this language"; that call stays in my research run, outside this book's blocks.
+- A voice for the languages that the product designs name, Zarma, Hausa and Fulfulde. Today the library would refuse them.
+- **A reply with a space in it, from a phone.** In my research run at this commit I ran `ReplyIn("c", "grand couscous")` and it raised, with an uninitialised variable. With a hyphen it was admitted. Both results stay in my research run, outside this book's blocks, as chapter 18 says of the same fault. This is chapter 18's known limit, and its fix is decisive here, because people type spaces in a text message. The conversation above runs because its replies are digits and one-word dishes.
 - Live adapters for SMS, for a messaging app and for a telephone line; delivery receipts; sender-ID rules.
-- Nothing in the record runs on a real phone as a conversation.
+- A conversation run on a real phone.
 
-`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what my study of the record proposed, and I do not present them as what I mean to build. I found no decision of mine to build them in the record, and the limit is the list above, in which none of them exists.
+`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` and the satisfiability matrix are what my study of the record proposed, and I present them at that stage: proposals, and the decision to build them is mine to take. The list above is where the medium stands today.
 
-That is the limit, printed whole; the six doors follow.
+That is what the medium covers today, printed whole; the six doors follow.
 
 ## 8. Six doors
 

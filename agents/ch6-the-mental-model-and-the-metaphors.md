@@ -2,7 +2,7 @@
 
 Source: Chapter 6. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; absent: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
+Stage: built: the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin; designed: the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure; reached: runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -196,22 +196,22 @@ The field leads in reach and in tooling. Iterators and comprehensions are in eve
 
 And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table is worth printing when its rows have been run and a loss stands beside the wins; for this one, that is the next step.
 
-Next, the limit, in the stage words built, designed and absent.
+Next, section 7, in the stage words built, designed and ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
 
 What is designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
 
-Six things are absent, or still to be aligned with their articles, at this commit, from my runs.
+What lies ahead, at this commit and from my runs: six pieces of work, some to build and some to align with their articles.
 
-- The walking-at-the-edge article's table and the library differ in two cases; aligning them is the next step. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above. The book states the principle and prints only the cases that run; the table is not printed.
+- The walking-at-the-edge article's table and the library differ in two cases; aligning them is the next step. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above. The book states the principle and prints the cases that run, and leaves the table to its article.
 - The "Beyond Loops" article's code differs in places. The history of a walker is a list of walks; a backward walk takes no argument now; the direction prints as "backward" where the article says "reverse". The site's own run of the article kept ten of eighteen blocks.
-- The three models of "Bridging Minds and Code": none of its code runs as written; in the site's run twelve blocks raised and one differed. So I told them in words.
-- The mental-model article's getter `EmptyStrings()` is absent.
-- On the dedicated checker class, `ContainsW` is in development: it raises today. The string walker's backward-with-condition walk is absent.
-- And "no eval" is still on its way to everything. The near-natural resolver, the other direction of chapter 13, still evaluates host code. So do `StringsW` and `ItemsWhere` on the list, and `ContainsW` on the dedicated checker class: each still calls `eval` on a condition string. What I said above, that the engine reads a W condition and cannot run it as code, holds for the engine's path; for these three it is the next step.
+- The three models of "Bridging Minds and Code": runnable code for them is the work ahead; in the site's run of the article, twelve blocks raised and one differed. So I told them in words.
+- The getter `EmptyStrings()`, which the mental-model article names, is work ahead for the library.
+- On the dedicated checker class, `ContainsW` is in development: it raises today. The string walker's backward-with-condition walk is ahead.
+- And "no eval" is on its way to everything. The near-natural resolver, the other direction of chapter 13, evaluates host code today. So do `StringsW` and `ItemsWhere` on the list, and `ContainsW` on the dedicated checker class: each calls `eval` on a condition string today. What I said above, that the engine reads a W condition and cannot run it as code, holds for the engine's path; for these three it is the next step.
 
 Next come the six doors, from the programmer to the agent.
 

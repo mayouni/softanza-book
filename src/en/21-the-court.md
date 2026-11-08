@@ -10,7 +10,7 @@ guards: [testoor_promises_narrated, threat_model_narrated, security_ledger_narra
 stage:
   built: "the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted"
   designed: "routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan"
-  absent: "a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store"
+  reached: "a human verdict on each picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store"
 status: draft
 rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
@@ -265,9 +265,9 @@ The build counts 11 assertions in `threat_model_narrated`, a static count of its
 
 The record's own honest sections, each loss beside its win.
 
-**In performance.** A time-series database, a query language and dashboards are the field's today, and absent here. By design, the plane exports. Its sampling answer is bounded rings that drop the oldest; head and tail sampling are what the field does better today. Distributed context reaches HTTP today; going past it is the next step. The ecosystem of integrations and auto-instrumentation for every framework is the field's. The profiler is cooperative: it sees what you bracket, where a native profiler sees everything. The win it claims is that judgment and action live inside the program: budgets that fail the build, tuning that passes governance, monitoring that prices itself.
+**In performance.** A time-series database, a query language and dashboards are the field's today. By design, the plane exports. Its sampling answer is bounded rings that drop the oldest; head and tail sampling are what the field does better today. Distributed context reaches HTTP today; going past it is the next step. The ecosystem of integrations and auto-instrumentation for every framework is the field's. The profiler is cooperative: it sees what you bracket, where a native profiler sees everything. The win it claims is that judgment and action live inside the program: budgets that fail the build, tuning that passes governance, monitoring that prices itself.
 
-**In security.** The ledger is a bounded ring, and bounded means forgetting. Telemetry from the host, the kernel and the network is absent; the plane reads what the program's own seams emit. Detections are declared and not learned; learning them is the next step, and one detection of rates on 30 September 2026 already covers part of it. The record's own comparison is that a rule corpus of the field's format is larger today than the eight detections shipped, and the field leads here. The workflow of a security operations centre is the field's today. The largest gap, in the record's words, is that a detection can only see what a seam emits. The win is that the event is typed at birth, where the door refuses, so no parser stands between what the program knew and what the detector judges.
+**In security.** The ledger is a bounded ring, and bounded means forgetting. Telemetry from the host, the kernel and the network is the field's; the plane reads what the program's own seams emit. Detections are declared and not learned; learning them is the next step, and one detection of rates on 30 September 2026 already covers part of it. The record's own comparison is that a rule corpus of the field's format is larger today than the eight detections shipped, and the field leads here. The workflow of a security operations centre is the field's today. The largest gap, in the record's words, is that a detection can only see what a seam emits. The win is that the event is typed at birth, where the door refuses, so no parser stands between what the program knew and what the detector judges.
 
 **In promises.** The field's doctests sit in the host's toolchain and answer pass or fail; that is general knowledge. The house's judge has five states. Where the field leads is instruments: the launch memo of Testoor, the plane that holds the traveller, counts coverage instruments of any kind at zero today, and route coverage is the next step.
 
@@ -275,25 +275,25 @@ The record's own honest sections, each loss beside its win.
 
 The study of the record puts the tone I try to echo. A grid of two hundred and eighty-six ticks against two hundred and sixty-nine crosses is, in its words, the shape of a brochure.
 
-Now to where the chapter stops.
+Now to what the court covers today.
 
-## 7. The limit
+## 7. What it covers today
 
-What is built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, none missing.
+What is built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, all present.
 
 What is designed:
 
 - The promise runner's routes and map, its clock and weather, its excursions, perception and mutation, and its inherited tours. All are planned. The state *unperceived* is named in the runner's header, and the reader assigns none of them.
-- The negotiation over a rejected plan, which the threat model calls design only.
+- The negotiation over a rejected plan, which the threat model calls design.
 - The plugin plane, and with it the governance of foreign code.
 
-What is absent:
+What lies ahead:
 
-- **A human verdict on any gallery picture.** Zero of ninety-five. The law's second requirement, a name, a date and what they said, is unmet there. The chapter says unperceived, and does not say verified.
-- Of the eight musical traditions, seven unheard.
-- A real vault and a real sandbox as proofs. The vault resolver is tested against a stand-in, over real HTTP. The cloud key-management adapter is absent.
-- Paths on POSIX systems, unverified, until a Linux machine is available; scheduled fuzzing; continuous integration; signed commits, which I deferred for the development phase.
-- A time-series store. A coverage percentage, which is refused until there are routes.
+- **A human verdict on each gallery picture.** The gallery holds ninety-five pictures, and the chapter calls each one unperceived. The law's second requirement, a name, a date and what they said, is the work ahead for each.
+- Seven of the eight musical traditions, heard by a person from each.
+- A real vault and a real sandbox as proofs. The vault resolver is tested against a stand-in, over real HTTP. The cloud key-management adapter is ahead.
+- Paths on POSIX systems, to be verified on a Linux machine; scheduled fuzzing; continuous integration; signed commits, which I deferred for the development phase.
+- A time-series store. A coverage percentage, which follows the routes; before them it is refused.
 
 Three more things belong here, found while running the court.
 

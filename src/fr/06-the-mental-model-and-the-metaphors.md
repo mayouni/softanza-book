@@ -10,7 +10,7 @@ guards: [00_yielder_narrated, 597_walker_basics, 611_checkw, 621_perform, 483_w_
 stage:
   built: "le marcheur à une dimension, le vérificateur, le producteur et l'exécutant sur les listes ; le langage de condition compilé par le moteur, avec son jumeau en code hôte"
   designed: "les quatre métaphores comme modules natifs du moteur (seul le producteur en est un) ; un marcheur sur toute structure indexée"
-  absent: "du code exécutable pour les trois modèles de l'article « Bridging Minds and Code » ; la table des bords de la narration du marcheur telle qu'écrite"
+  reached: "du code exécutable pour les trois modèles de l'article « Bridging Minds and Code » ; la table des bords de la narration du marcheur telle qu'écrite"
 status: draft
 rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
@@ -192,22 +192,22 @@ Le terrain mène en portée et en outillage. Les itérateurs et les compréhensi
 
 Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table vaut d'être imprimée quand ses lignes ont été exécutées et qu'une perte figure à côté des gains ; pour celle-ci, c'est l'étape suivante.
 
-Ensuite, la limite, dans les mots d'étape construit, conçu et absent.
+Ensuite, la section 7, dans les mots d'étape construit, conçu et à venir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le marcheur à une dimension, dans la couche max, et les marches sur les listes ; le vérificateur comme `CheckW`, `ContainsW` et `FindW` ; le producteur comme une classe adossée au moteur, et comme `YieldW` ; l'exécutant comme `PerformW` ; et le langage de condition W compilé par le moteur.
 
 Ce qui est conçu : les métaphores comme modules natifs du moteur. La conception du moteur marque les quatre comme prévus ; seul le producteur a un fichier de moteur. Et un marcheur qui ne porte plus du tout sur les listes mais sur toute structure indexée.
 
-Six choses sont absentes, ou restent à aligner sur leurs articles, à ce commit, d'après mes exécutions.
+Ce qui est à venir, à ce commit et d'après mes exécutions : six chantiers, certains à construire et d'autres à aligner sur leurs articles.
 
-- La table de l'article sur la marche au bord et la bibliothèque diffèrent dans deux cas ; les aligner est l'étape suivante. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et n'imprime que les cas qui s'exécutent ; la table n'est pas imprimée.
+- La table de l'article sur la marche au bord et la bibliothèque diffèrent dans deux cas ; les aligner est l'étape suivante. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et imprime les cas qui s'exécutent, et laisse la table à son article.
 - Le code de l'article « Beyond Loops » diffère par endroits. L'historique d'un marcheur est une liste de marches ; une marche en arrière ne prend plus d'argument ; la direction s'imprime « backward » là où l'article dit « reverse ». L'exécution de l'article par le site a gardé dix blocs sur dix-huit.
-- Les trois modèles de « Bridging Minds and Code » : aucun de ses codes ne s'exécute tel qu'écrit ; dans l'exécution du site, douze blocs ont levé une erreur et un a différé. Alors je les ai racontés en mots.
-- Le getter `EmptyStrings()` de l'article du modèle mental est absent.
-- Sur la classe dédiée du vérificateur, `ContainsW` est en développement : il lève une erreur aujourd'hui. La marche en arrière avec condition du marcheur de chaînes est absente.
-- Et « pas d'eval » est encore en route vers le reste. Le résolveur quasi naturel, l'autre direction du chapitre 13, évalue encore du code hôte. Il en va de même de `StringsW` et de `ItemsWhere` sur la liste, et de `ContainsW` sur la classe dédiée du vérificateur : chacun appelle encore `eval` sur une chaîne de condition. Ce que j'ai dit plus haut, que le moteur lit une condition W et ne peut pas l'exécuter comme du code, vaut pour le chemin du moteur ; pour ces trois, c'est l'étape suivante.
+- Les trois modèles de « Bridging Minds and Code » : du code exécutable pour eux est le travail à venir ; dans l'exécution de l'article par le site, douze blocs ont levé une erreur et un a différé. Alors je les ai racontés en mots.
+- Le getter `EmptyStrings()`, que nomme l'article du modèle mental, est un travail à venir pour la bibliothèque.
+- Sur la classe dédiée du vérificateur, `ContainsW` est en développement : il lève une erreur aujourd'hui. La marche en arrière avec condition du marcheur de chaînes est à venir.
+- Et « pas d'eval » est en route vers le reste. Le résolveur quasi naturel, l'autre direction du chapitre 13, évalue aujourd'hui du code hôte. Il en va de même de `StringsW` et de `ItemsWhere` sur la liste, et de `ContainsW` sur la classe dédiée du vérificateur : chacun appelle aujourd'hui `eval` sur une chaîne de condition. Ce que j'ai dit plus haut, que le moteur lit une condition W et ne peut pas l'exécuter comme du code, vaut pour le chemin du moteur ; pour ces trois, c'est l'étape suivante.
 
 Viennent ensuite les six portes, du programmeur à l'agent.
 

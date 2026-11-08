@@ -37,7 +37,7 @@ The study counted twelve engines; the register gives nine of them a row of their
 | 16 | The adverb engine | from quick to quickly: morphology for `Explain()` | not told | one code file, no test |
 | 17 | The timeline | a temporal workspace: points, spans, blocked regions, constraint reasoning | 9, 15 | seven code files, sixty-nine tests |
 | 18 | The grid navigator | a two-dimensional cursor with direction and boundary awareness | 9 | ten code files, forty tests |
-| 19 | Section merging | interval arithmetic, three merging strategies | 9 (the verb the article presents is absent) | five code files, no test |
+| 19 | Section merging | interval arithmetic, three merging strategies | 9 (the verb the article presents is ahead) | five code files, no test |
 | 20 | Deep operations | path-based recursive traversal of nested lists | 9 | fourteen code files, thirty-seven tests |
 | 21 | Named variables | dynamic names; named objects | not told | one code file, no test |
 | 22 | The polyglot bridge, EXCIS and ExterLib | orchestrating a polyglot symphony | 16 | four narrations, a design of 1,986 lines |

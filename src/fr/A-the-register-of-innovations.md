@@ -42,7 +42,7 @@ L'étude a compté douze moteurs ; le registre en donne neuf une ligne à eux, e
 | 16 | Le moteur des adverbes | de rapide à rapidement : la morphologie pour `Explain()` | non raconté | un fichier de code, aucun test |
 | 17 | La ligne du temps | un espace de travail temporel : points, intervalles, zones bloquées, raisonnement sous contraintes | 9, 15 | sept fichiers de code, soixante-neuf tests |
 | 18 | Le navigateur de grille | un curseur à deux dimensions qui connaît ses directions et ses bords | 9 | dix fichiers de code, quarante tests |
-| 19 | La fusion de sections | l'arithmétique des intervalles, trois stratégies de fusion | 9 (le verbe que l'article présente est absent) | cinq fichiers de code, aucun test |
+| 19 | La fusion de sections | l'arithmétique des intervalles, trois stratégies de fusion | 9 (le verbe que l'article présente est à venir) | cinq fichiers de code, aucun test |
 | 20 | Les opérations profondes | le parcours récursif par chemins des listes imbriquées | 9 | quatorze fichiers de code, trente-sept tests |
 | 21 | Les variables nommées | des noms dynamiques ; des objets nommés | non raconté | un fichier de code, aucun test |
 | 22 | Le pont polyglotte, EXCIS et ExterLib | orchestrer une symphonie polyglotte | 16 | quatre narrations, une conception de 1 986 lignes |

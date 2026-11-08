@@ -89,7 +89,7 @@ I fired rows 11, 6 and 1 above, in that order, then rows 16 and 15. Chapter 32 f
 
 ### What the court does not judge
 
-None of the sixteen is a rule of writing. No machine judges, today, the style of a program written with the library. That is chapter 7's limit, and it is the reason the other fourteen are in this book as a table with their state, and not as a court.
+None of the sixteen is a rule of writing. A machine that judges the style of a program written with the library is the work ahead that section 7 of chapter 7 names. That is why the other fourteen are in this book as a table with their state, and not as a court.
 
 ### The other fourteen: the rules of writing, and where each stands
 

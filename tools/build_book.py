@@ -50,7 +50,7 @@ UI = {
     "decision": "The decision, and what was refused",
     "court_head": "Read from the library's test tree at commit {sha} on {d}. The figure is the number of assertions the guard holds, counted in its file; the site shows each one run.",
     "assertions": "assertions", "guard_missing": "this guard does not exist in the test tree",
-    "stage": {"built": "built", "designed": "designed", "absent": "absent"},
+    "stage": {"built": "built", "designed": "designed", "reached": "ahead"},
     "doors_h": ["Door", "What you take from this chapter"],
     "untranslated": "This chapter reads in French; its English edition is in writing.",
     "read_other": "Read it in French",
@@ -94,7 +94,7 @@ UI = {
     "decision": "La décision, et ce qui a été refusé",
     "court_head": "Lu dans l'arbre de tests de la bibliothèque au commit {sha} le {d}. Le chiffre est le nombre d'assertions que la garde contient, compté dans son fichier ; le site montre chacune exécutée.",
     "assertions": "assertions", "guard_missing": "cette garde n'existe pas dans l'arbre de tests",
-    "stage": {"built": "construit", "designed": "conçu", "absent": "absent"},
+    "stage": {"built": "construit", "designed": "conçu", "reached": "à venir"},
     "doors_h": ["Porte", "Ce que vous retirez de ce chapitre"],
     "untranslated": "Ce chapitre se lit en anglais ; son édition française est en cours d'écriture, à partir de l'anglais.",
     "read_other": "Le lire en anglais",
@@ -355,7 +355,7 @@ pre .c-promise{color:var(--code-promise);}
 .stage{display:inline-block;flex:0 0 auto;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;border:1px solid currentColor;min-width:86px;text-align:center;}
 .stage.s-built{color:var(--ok);background:var(--ok-bg);}
 .stage.s-designed{color:var(--designed);background:var(--designed-bg);}
-.stage.s-absent{color:var(--neutral);background:var(--neutral-bg);}
+.stage.s-reached{color:var(--neutral);background:var(--neutral-bg);}
 
 .decision{background:var(--decision-bg);border-left:4px solid var(--ink);border-radius:0 6px 6px 0;padding:6px 26px 22px;margin:44px -26px 36px -30px;}
 .decision > .subsection-h{margin-top:26px;}
@@ -1334,7 +1334,7 @@ def doors_of(body):
 AGENT_RULES = [
     "A draft is a draft: a chapter whose status is draft is not the author's final word, and 'the author read it' is a status that only the author sets.",
     "You may quote any cell of a table. You may not turn an absent cell into a present one.",
-    "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
+    "Rely on the stage words: built means the code, a guard and a run; designed means a document describes it; ahead (the key reached) names the work the chapter's subject leads to, as the record names it.",
     "Rely on a promise only with its verdict, and only at the library commit named in this file.",
     "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
     "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.",

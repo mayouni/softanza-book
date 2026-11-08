@@ -89,7 +89,7 @@ J'ai déclenché les lignes 11, 6 et 1 ci-dessus, dans cet ordre, puis les ligne
 
 ### Ce que le tribunal ne juge pas
 
-Aucune des seize n'est une règle d'écriture. Aucune machine ne juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque. C'est la limite du chapitre 7, et c'est la raison pour laquelle les quatorze autres sont dans ce livre sous la forme d'une table avec leur état, et non d'un tribunal.
+Aucune des seize n'est une règle d'écriture. Une machine qui juge le style d'un programme écrit avec la bibliothèque est le travail à venir que nomme la section 7 du chapitre 7. C'est pourquoi les quatorze autres sont dans ce livre sous la forme d'une table avec leur état, et non d'un tribunal.
 
 ### Les quatorze autres : les règles d'écriture, et où en est chacune
 

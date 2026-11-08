@@ -10,7 +10,7 @@ guards: [orgrule_narrated, 14_bceao_governance, 15_multiple_validators, 13_segre
 stage:
   built: "l'organigramme comme un texte qu'une personne peut éditer ; les validateurs du régulateur régional et de la séparation des tâches ; les sept régimes comme un seul mécanisme ; une règle écrite comme une donnée ; un rapport avec un verdict"
   designed: "le contenu qui ferait différer les six autres régimes du premier ; un fichier de règles qui juge, et pas seulement qui se charge"
-  absent: "le produit livré tournant sur la bibliothèque ; un mot des gens de la banque ; la lecture, par un auditeur, d'un constat produit par la bibliothèque"
+  reached: "le produit livré tournant sur la bibliothèque ; la parole des gens de la banque sur lui ; la lecture, par un auditeur, d'un constat produit par la bibliothèque"
 status: draft
 rulings: ["12.19", "12.29", "12.30"]
 research: research/ch29.md
@@ -205,27 +205,27 @@ Le terrain mène en usage réel : une telle plateforme est souvent une que les a
 
 Là où je pense que ceci se distingue, c'est que l'organigramme est la donnée et que le tribunal est une règle sur elle. Un organigramme est un texte, une règle est une donnée, un constat nomme la règle et le poste, et le rapport est un seul verdict. Le tableau de comparaison propre de la bibliothèque pour cette fonction n'est que victoires, sans dates, avec des chiffres de coût qui ne citent rien, et je ne l'imprimerai pas.
 
-Voici la limite, dans les mots d'étape.
+Voici ce qu'il couvre aujourd'hui, dans les mots d'étape.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : l'organigramme comme modèle et comme texte ; les validateurs du régulateur régional et de la séparation des tâches ; les sept régimes comme un seul mécanisme avec l'exemple SOX. Construit aussi : une règle écrite comme une donnée, et le rapport unique avec son verdict.
 
 Quatre choses sont conçues, ou construites en partie.
 
-- Le contenu des six régimes autres que le régional. Cinq d'entre eux tiennent les mêmes quatre règles universelles et rien d'autre ; SOX en ajoute une cinquième.
-- Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle, et aucune ligne `when` ni `then`. Une telle règle se charge et ne juge rien. Le format est admis, et la règle n'est pas appliquée.
+- Le contenu des six régimes autres que le régional. Cinq d'entre eux tiennent exactement les mêmes quatre règles universelles ; SOX en ajoute une cinquième.
+- Un fichier de règles qui juge. La bibliothèque peut charger un fichier de règles dans un texte `when` et `then`, et celui de ses données de test charge deux règles. Le chargeur lit le nom, le type, la gravité, la fonction, les paramètres et le message d'une règle ; lire les lignes `when` et `then` est l'étape conçue. Une telle règle se charge aujourd'hui, et son jugement est à venir. Le format est admis, et son application est l'étape suivante.
 - Un validateur lit des propriétés déclarées. Il trouve le conseil par le mot « board » dans le titre d'un poste, et il ne compare les départements que là où ils sont déclarés : le bloc de la limite de la section 3 vide celui du directeur général et le constat sur l'audit disparaît.
-- Le validateur de succession signale chaque poste pourvu, ce qui est, selon le commentaire de la bibliothèque elle-même, un défaut connu. La simulation de réorganisation lève une erreur quand on lui demande de changer une ligne de rattachement, également un défaut connu. L'article qui raconte la simulation nomme une méthode qui n'existe nulle part dans la bibliothèque.
+- Le validateur de succession signale chaque poste pourvu, ce qui est, selon le commentaire de la bibliothèque elle-même, un défaut connu. La simulation de réorganisation lève une erreur quand on lui demande de changer une ligne de rattachement, également un défaut connu. L'article qui raconte la simulation nomme une méthode en avance sur le code de la bibliothèque.
 
-Quatre choses sont absentes.
+Quatre choses sont à venir.
 
-- Le produit livré tournant sur la bibliothèque. C'est une application Python ; une recherche dans son code n'a trouvé aucun contrôle régional ou de Bâle et aucun appel à la bibliothèque.
-- Un mot de la banque. Le dossier est muet.
-- Un verdict perçu. Aucun document ne dit qu'un auditeur ou un superviseur ait lu un constat que la bibliothèque a produit.
-- Une date de livraison. Les fichiers livrés portent des horodatages du système de fichiers, et ce ne sont pas une date de livraison.
+- Le produit livré tournant sur la bibliothèque. C'est une application Python aujourd'hui ; les contrôles régionaux et de Bâle et l'appel à la bibliothèque sont le travail à venir pour elle.
+- La parole des gens de la banque sur lui, que le dossier doit recueillir.
+- Un verdict perçu, la lecture, par un auditeur ou un superviseur, d'un constat que la bibliothèque a produit, consignée dans un document.
+- Une date de livraison, consignée comme telle, à côté des horodatages du système de fichiers que portent les fichiers livrés.
 
-La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que cinq de ses règles ont été récoltées sur un produit de supervision bancaire. Le dossier ne dit pas que ce produit soit l'installation de la banque. Je ne dirai pas qu'il l'est.
+La couche web du produit est née dans son propre dépôt : son premier commit est daté du 4 février 2026, et le texte de la constitution de l'interface a été commité pour la première fois le 8 février. Les champs de preuve de la constitution disent que cinq de ses règles ont été récoltées sur un produit de supervision bancaire. Le dossier laisse ouverte la question de savoir si ce produit est l'installation de la banque, et je la laisse ouverte aussi.
 
 Six portes suivent, une pour chaque lecteur.
 

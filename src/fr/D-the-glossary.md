@@ -10,7 +10,7 @@ Un mot de ce livre nomme un état d'un travail, ou un rôle tenu dans une porté
 
 Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il est montré. Là où le dossier emploie un mot en deux sens, les deux sont donnés, et ils sont numérotés.
 
-**absent.** L'un des trois mots d'étape. Ce que le dossier ne contient pas, dans le code ou dans les fichiers, autant que j'ai regardé, et je dis jusqu'où. Chapitre 3.
+**à venir.** L'un des trois mots d'étape : le travail vers lequel le sujet mène, tel que le dossier le nomme ; la clé de l'en-tête est `reached`. Chapitre 3.
 
 **admission.** L'acte par lequel un candidat devient connaissance : il est jugé par les règles du monde, et refusé avec une raison s'il échoue. L'expression est libre, et l'admission est gouvernée. Chapitres 17, 18.
 
@@ -116,7 +116,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **colonne.** Les neuf chapitres qui portent tout l'argument et peuvent se lire seuls. La préface.
 
-**mot d'étape.** L'un de construit, conçu, absent, imprimés en tête de la limite de chaque chapitre. Chapitre 3.
+**mot d'étape.** L'un de construit, conçu, à venir, imprimés en tête de la section 7 de chaque chapitre. Chapitre 3.
 
 **horodatage.** L'heure qu'une session écrit sur un message, un mémo ou un commit. Lue sur l'horloge, jamais composée ; un instrument compare chaque horodatage à son commit et publie les lignes. Chapitre 32.
 

@@ -10,7 +10,7 @@ guards: [refinablecode_narrated, refine_deepening_narrated, gate_deepening_narra
 stage:
   built: "le point de raffinement déclaré dans le source ; la barrière à cinq contrôles ; la cascade d'un point et d'une classe ; le retour en arrière par pas, par point de contrôle et jusqu'à zéro ; le plancher de confiance et le raffinement gouverné"
   designed: "l'expérience que décrit l'article : demander à un point de s'expliquer, appliquer un plan, un raffinement en une ligne ; la cascade du graphe de code jointe à la barrière ; le siège de raffinement de Haro"
-  absent: "un historique sauvegardé : le fichier garde le source et rien de la ligne de temps"
+  reached: "un historique sauvegardé de la ligne de temps, à côté du source que le fichier garde"
 status: draft
 rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
@@ -266,20 +266,20 @@ Les outils du terrain mènent en étendue : ils ne sont liés ni à une biblioth
 
 Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle d'IA. La mienne repose sur une déclaration par point.
 
-Voyons maintenant où la barrière s'arrête.
+Voyons maintenant ce que la barrière couvre aujourd'hui.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné. Les gardes de la section 5 les couvrent, avec deux exceptions. La cascade d'une classe n'a pas de garde ici, parce que la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et aucune garde n'affirme les autres points d'une ligne.
+Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné. Les gardes de la section 5 les couvrent, avec deux exceptions, toutes deux à venir. Une garde ici pour la cascade d'une classe : la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et une garde qui affirme les autres points d'une ligne.
 
-Ce qui est conçu, et absent de la bibliothèque par son nom : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, n'est pas dans la bibliothèque à ce commit. Le raffinement en une ligne du document de conception, un point qui s'explique, un plan qui est appliqué, ne sont pas dans la bibliothèque. La cascade du graphe de code et la cascade de la barrière ne sont pas jointes. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, son propre siège de raffinement n'étant pas construit.
+Ce qui est conçu : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, appartient à cette conception à ce commit. De même le raffinement en une ligne du document de conception, un point qui s'explique et un plan qui est appliqué. Joindre la cascade du graphe de code à la cascade de la barrière est conçu aussi. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, avec son propre siège de raffinement conçu.
 
-Ce qui est construit, et où cela s'arrête : les limites de la barrière telle qu'elle est.
+Ce qui est à venir, à partir de la barrière telle qu'elle est :
 
 - Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle ; les contrôles pour ces genres sont l'étape suivante.
 - Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition venue d'une origine que le code ne connaît pas franchit donc un plancher de confiance.
 - Une dérivation est appliquée à titre provisoire et restaurée en cas d'échec. Je dis donc « ne finit jamais modifié », pas « jamais touché ».
-- Le fichier sauvegardé contient le source rendu ; l'historique, les postures, la ligne de temps et le rechargement sont absents, et c'est l'étape suivante. La réversibilité vit dans l'objet en cours d'exécution ; la porter dans le fichier est encore à venir. La bibliothèque écrit ce fichier avec le suffixe `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient le suffixe `.rfn` pour la phrase de raffinement de Haro, et laisse `.zrfn` à l'extraction de la bibliothèque par balises de commentaire, la forme que ce chapitre a exécutée.
+- Le fichier sauvegardé contient le source rendu ; l'historique, les postures, la ligne de temps et le rechargement sont l'étape suivante. La réversibilité vit dans l'objet en cours d'exécution ; la porter dans le fichier est le travail à venir. La bibliothèque écrit ce fichier avec le suffixe `.zrfn`, tel que livré. La charte de Haro, ratifiée le 1er octobre 2026, retient le suffixe `.rfn` pour la phrase de raffinement de Haro, et laisse `.zrfn` à l'extraction de la bibliothèque par balises de commentaire, la forme que ce chapitre a exécutée.
 
 ## 8. Six portes
 

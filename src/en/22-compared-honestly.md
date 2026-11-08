@@ -10,7 +10,7 @@ guards: [numeric_exactness_narrated, numeric_no_loss_narrated, semantic_resolver
 stage:
   built: "five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses"
   designed: "a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine"
-  absent: "locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate"
+  reached: "locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix"
 status: draft
 rulings: ["12.10", "12.22", "12.29"]
 research: research/ch22.md
@@ -130,7 +130,7 @@ The record already keeps the list of what the field has and Softanza lacks. I pr
 
 **The plugin study, 16 August 2026.** The field is ahead on permission granularity, on dependency resolution, on distribution and signing. The study's header says it is analysis and not rules.
 
-**The culture plan, 18 August 2026.** Every row was verified in that session by running it. Casing takes a locale four levels deep and answers with plain uppercase. Collation, digit shaping, non-Gregorian calendars and time zones are absent. The plan's status then was not started.
+**The culture plan, 18 August 2026.** Every row was verified in that session by running it. Casing takes a locale four levels deep and answers with plain uppercase. Collation, digit shaping, non-Gregorian calendars and time zones are the plan's rows ahead. The plan's status then was not started.
 
 **The estate's browser-runtime study, 8 August 2026.** Four of nine rows won, five to the peers, and the fused loop opcode of one peer stays a design generation ahead.
 
@@ -138,7 +138,7 @@ The record already keeps the list of what the field has and Softanza lacks. I pr
 
 **The string benchmark of 7 July 2026**, and the polyglot battle, in a narration dated 18 April 2025: the former host language came last of seven in two of three rounds. It came last in the total too. Both carry caveats the later record has put on them. The engine's default build was a debug build until 26 July 2026, and the library's own build file says every shared library it had ever loaded was compiled unoptimised. So the benchmark probably ran unoptimised. That is an inference, and I state it as one. The same comment says that on string, list and matrix work the change buys only about fifteen percent. So the build mode is a caveat on the numbers and not an excuse for them. I could not read the build mode of the engine this book runs on, and the clock of the former host language resolves ten to fifteen milliseconds; a fair re-run needs both read. So the benchmark is cited here as a dated record, with that caveat, and not as a present measure.
 
-**The coverage matrix.** Thirty domains in seven groups, against four other platforms, read on 17 September 2026. Softanza's tally is seven deep, fourteen solid, seven partial, two absent, present in twenty-eight of thirty. I recounted it from the rows and it matches. The two absent rows are symbolic mathematics ("no computer algebra") and package, build and deploy ("a library, not a registry"). Among the seven partial rows is internationalisation, "a deliberate bet against ICU", and the neural row is "inference only; no training foundry". The stored tallies of two of the other platforms do not match their own rows, by one in two places. I print Softanza's tally only. The matrix cites a compass file as the source of the ratings. I could not locate the file in the snapshot, in the live checkout or in the estate's repository.
+**The coverage matrix.** Thirty domains in seven groups, against four other platforms, read on 17 September 2026. Softanza's tally is seven deep, fourteen solid, seven partial, present in twenty-eight of thirty. I recounted it from the rows and it matches. The other two rows are symbolic mathematics ("no computer algebra") and package, build and deploy ("a library, not a registry"). Among the seven partial rows is internationalisation, "a deliberate bet against ICU", and the neural row is "inference only; no training foundry". The stored tallies of two of the other platforms do not match their own rows, by one in two places. I print Softanza's tally only. The matrix cites a compass file as the source of the ratings. I could not locate the file in the snapshot, in the live checkout or in the estate's repository.
 
 **The graph comparison, a narration dated 26 December 2025.** An AI model wrote it, and says so in its byline. Its column for Softanza rates itself with a cross on scalability and on transactions and with a warning on performance, and its conclusion lists where traditional solutions win.
 
@@ -146,17 +146,17 @@ Where Softanza stands apart, by the record, without a number: the SLA; the gover
 
 That is the list; now I say where this chapter stops.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: four of the five pairs, run on both sides, and the fifth on the Softanza side. The four code pairs of the site are built too. I re-ran them on 8 October 2026, three of them on both sides (the fourth has a comment for its other side). The outputs matched. So are the library's field studies of performance, incident analysis and plugins, with their loss sections, and the culture plan, which prints its losses. So are the harness of the string benchmark and the guard that the engine is optimised.
 
-What is designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of the nine rows where Softanza is partial or absent, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
+What is designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of nine rows, the seven partial ones and the other two, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
 
-What is absent: a *compared* column on the Atlas, on the register of innovations and on the narrations. Absent from the site: the field studies, the sixty-four grids themselves (it now gives their number and no more), both benchmarks and the runtime table. Absent from the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And absent still: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
+What lies ahead: a *compared* column on the Atlas, on the register of innovations and on the narrations. On the site: the field studies, the sixty-four grids themselves (it gives their number today), both benchmarks and the runtime table. In the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And two more: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
 
-And something that is unreproduced: the study's sixty-four tables, six hundred and fifteen rows and thirty-one documents, which my scan did not reproduce, and the symbol counts.
+And one task for a later scan: reproducing the study's sixty-four tables, six hundred and fifteen rows and thirty-one documents, and the symbol counts.
 
-The method is stricter than the record it is applied to. Older comparisons in the library predate its rules. The string benchmark probably ran on a debug engine. The polyglot battle has no versions and no dates inside its text, and says its times are relative to a specific computer environment. The graph grid has no versions, dates or sources for its cells. The cognitive-load grid of another design article makes claims of sixty to seventy percent with no method printed beside them. That article then ends on an honest positioning that names four things the library does not compete on.
+The method is stricter than the record it is applied to. Older comparisons in the library predate its rules. The string benchmark probably ran on a debug engine. Bringing the rest to the method is work ahead: versions and dates for the polyglot battle, whose times are relative to a specific computer environment; versions, dates and sources for the cells of the graph grid; and a method printed beside the cognitive-load grid of another design article, which claims sixty to seventy percent. That article then ends on an honest positioning that names four grounds the library leaves to others.
 
 Six doors follow, one for each reader of this page.
 
@@ -164,7 +164,7 @@ Six doors follow, one for each reader of this page.
 
 **The programmer.** Copy a pair. Run both sides in your own versions, keep the output as it came, and add the line where the other tool is ahead.
 
-**The analyst.** The coverage matrix is a buying aid only because it shows two absent rows and seven partial ones in its own colours. Read those first.
+**The analyst.** The coverage matrix is a buying aid only because it shows its seven partial rows and its other two in its own colours. Read those first.
 
 **The designer.** The loss goes in the same block and in the same type as the win. The stage word is part of the interface.
 

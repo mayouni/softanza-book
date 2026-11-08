@@ -4,7 +4,7 @@
 
 This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.
 
-Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-11-08 23:21 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Blocks ran on the bridge runtime, build ddc98fa (2026-10-30). Haro's own runtime is in development.
+Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-11-08 23:52 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Blocks ran on the bridge runtime, build ddc98fa (2026-10-30). Haro's own runtime is in development.
 
 ## Files
 
@@ -17,7 +17,7 @@ Edition: proof copy (42 draft, 0 review, 0 published; 42 pages). Built 2026-11-0
 
 - A draft is a draft: a chapter whose status is draft is not the author's final word, and 'the author read it' is a status that only the author sets.
 - You may quote any cell of a table. You may not turn an absent cell into a present one.
-- Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.
+- Rely on the stage words: built means the code, a guard and a run; designed means a document describes it; ahead (the key reached) names the work the chapter's subject leads to, as the record names it.
 - Rely on a promise only with its verdict, and only at the library commit named in this file.
 - A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.
 - The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.

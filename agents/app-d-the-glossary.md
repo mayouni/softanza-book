@@ -6,11 +6,11 @@ A word in this book names a state of a piece of work, or a role held in a scope.
 
 Each entry gives the word as the book uses it, and the chapter where it is shown. Where the record uses a word in two senses, both are given, and they are numbered.
 
-**absent.** One of the three stage words. What the record does not hold, in code or in files, as far as I looked, and I say how far. Chapter 3.
-
 **admission.** The act by which a candidate becomes knowledge: it is judged by the world's rules, and refused with a reason if it fails. Expression is free, and admission is governed. Chapters 17, 18.
 
 **agent.** A program that proposes and cannot commit. In the library an AI agent is a file, judged at load, whose AI model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
+
+**ahead.** One of the three stage words: the work the subject leads to, as the record names it; the front matter's key is `reached`. Chapter 3.
 
 **architect.** What one holds in the scope of a solution: the profile, the worlds and the governance. Not a rank. Chapter 23.
 
@@ -112,7 +112,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
-**stage word.** One of built, designed, absent, printed at the head of each chapter's limit. Chapter 3.
+**stage word.** One of built, designed, ahead, printed at the head of each chapter's section 7. Chapter 3.
 
 **stamp.** The time a session writes on a message, a memo or a commit. Read from the clock, never composed; an instrument compares every stamp with its commit and publishes the rows. Chapter 32.
 

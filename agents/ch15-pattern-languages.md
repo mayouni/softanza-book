@@ -2,7 +2,7 @@
 
 Source: Chapter 15. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; absent: the refusal of a word the pattern language does not know, in the six media that are not text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
+Stage: built: patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens); designed: one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples; reached: the refusal of an unknown word, in the six media beyond text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings
 
 Run: 13 of 13 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -253,9 +253,9 @@ Next, the field, and where it leads.
 
 **A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also the likely cause of the open case of time in section 5.
 
-Next, the limit.
+Next, section 7.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: strings, numbers and tables, each with a guard and a small function. The shared habit.
 
@@ -287,7 +287,7 @@ o3 = new stzTimex("{@Event(Break) -> @Event(Meeting)}")
 
 > run: kept
 
-The article promises that the first is TRUE, and it is. The second matches the single event the timeline holds, and the third shows why it can: the token's label is `"Lunch"`, the word between the parentheses and nothing more. The last refuses the break before the meeting, because the arrow keeps the order of the timeline. Time still has no narrated guard; this block is its proof in this book.
+The article promises that the first is TRUE, and it is. The second matches the single event the timeline holds, and the third shows why it can: the token's label is `"Lunch"`, the word between the parentheses and nothing more. The last refuses the break before the meeting, because the arrow keeps the order of the timeline. A narrated guard for time is the next step; this block is its proof in this book.
 
 - **Graphs**: labels in order along a path, negation, alternation and numeric properties run. The arrow means *later on one path*, and not *next*. The quantifiers (`+`, `*`, `?` or a number after a token) are read and ignored. The graph of section 3 has three nodes; here `@Node10`, a node with the quantifier ten, is asked for between them. Does the pattern match?
 
@@ -321,7 +321,7 @@ A pattern with a word the language does not know matches every number! The token
 
 What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
-What is absent: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision only. The explanation of an unnamed pattern, since `rx("[a-z]+").Explain()` raises because the analyser class is absent. And any use of the pattern classes by the rest of the library: outside the regex folder, the tests and the docs, no class takes a pattern. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` have no `Matches(pattern)`. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
+What lies ahead: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision. The explanation of an unnamed pattern. `rx("[a-z]+").Explain()` raises, and the analyser class it calls is the piece ahead. And the use of the pattern classes across the rest of the library: today they serve the regex folder, the tests and the docs, and a `Matches(pattern)` on `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` is the next reach. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
 
 ## 8. Six doors
 

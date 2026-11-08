@@ -11,7 +11,7 @@ guards: [multilingual_pack_narrated, semantic_resolver_narrated, literate_templa
 stage:
   built: "le vocabulaire de la couche naturelle comme données en cinq langues, avec ses refus ; le tribunal de la sortie structurée, son compilateur de grammaire et son échantillonneur ; les langages de motifs, qui acceptent un mot qu'ils ne connaissent pas"
   designed: "la forge qui produit l'analyseur, le tribunal et la grammaire d'un langage à partir de sa seule déclaration ; une grammaire émise pour chaque langage déclaré ; le style d'écriture comme grammaire déclarée"
-  absent: "une couche naturelle fermée jusqu'au fond : une forme de liste atteint encore le code de l'hôte ; des classes de motifs qui refusent un mot qu'elles ne connaissent pas ; la lettre ɗ du hausa standard dans le paquet hausa"
+  reached: "une couche naturelle fermée jusqu'au fond, ses listes entre crochets comme ses mots ; des classes de motifs qui refusent un mot qu'elles ne connaissent pas ; la lettre ɗ du hausa standard dans le paquet hausa"
 status: draft
 rulings: ["12.4", "12.10", "12.16", "12.19", "12.21", "12.27", "12.28", "12.29", "12.30"]
 research: research/ch11.md
@@ -222,24 +222,24 @@ Le terrain a construit le décodage contraint le premier. L'échantillonneur de 
 
 Et l'âge coupe dans les deux sens. Le code généré rend aussi bon marché la fabrication négligente de langages. C'est pourquoi le tribunal n'est pas un accessoire d'un langage déclaré. Il en est le cœur. C'est mon point de vue.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus. Construits aussi : le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur, et les langages de motifs. Ceux-ci acceptent aujourd'hui un mot qu'ils ne connaissent pas ; les fermer est à venir.
 
-Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. L'exécuter depuis la bibliothèque est à venir. Le texte de la vision précède le forgeage (fabriquer les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la mise à jour de la vision est à venir. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est conçue et à venir.
+Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. L'exécuter depuis la bibliothèque est à venir. Le texte de la vision précède le forgeage (fabriquer les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la mise à jour de la vision est à venir. Le chapitre 12 la raconte à sa vraie taille. Une grammaire pour chaque langage déclaré est conçue et à venir.
 
-Ce qui est absent, et la loi l'énonce. La couche naturelle n'est pas fermée jusqu'au fond. Une forme, une liste écrite entre crochets, est encore remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
+Ce qui est à venir, et la loi l'énonce. Une couche naturelle fermée jusqu'au fond. Ses mots sont fermés aujourd'hui, et une forme, une liste écrite entre crochets, est remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )
 #--> [ "X", 1 ]
 ```
 
-La fonction `upper` n'est pas un mot du dictionnaire naturel, et la liste est revenue `[ "X", 1 ]`. Elle s'est exécutée quand même ! Le dossier connaît déjà cette échappée et a acheminé sa réparation. Tant que la réparation n'est pas arrivée, « la couche naturelle est un langage fermé » est vrai de ses mots et pas de ses listes, et ce livre le dira.
+La fonction `upper` n'est pas un mot du dictionnaire naturel, et la liste est revenue `[ "X", 1 ]`. Elle s'est exécutée quand même ! Le dossier connaît déjà cette échappée et a acheminé sa réparation. « La couche naturelle est un langage fermé » vaut aujourd'hui pour ses mots, et vaudra pour ses listes quand la réparation arrivera ; ce livre le dit.
 
 Et le paquet hausa lit le hausa écrit sans la lettre ɗ, qu'emploie l'orthographe standard du hausa ; porter cette lettre dans l'encodage du paquet est à venir. Quand je l'ai sondé le 8 octobre 2026 sur l'instantané précédant ce commit, une phrase écrite avec cette lettre est passée sans être lue ni signalée. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Les phrases en langue étrangère imprimées dans ce chapitre viennent de la narration et des gardes de la bibliothèque, ou sont composées à partir de son vocabulaire.
 
-Voilà les limites ; la section suivante ouvre six portes sur elles.
+Voilà ce que le langage couvre aujourd'hui ; la section suivante ouvre six portes sur lui.
 
 ## 8. Six portes
 

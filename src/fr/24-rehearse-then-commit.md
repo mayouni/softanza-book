@@ -10,7 +10,7 @@ guards: [service_registry_narrated, service_delivery_narrated, virtual_system_tw
 stage:
   built: "un jumeau des fichiers et un jumeau de l'environnement du processus, chacun avec son historique, ses instantanés, un plan narré, ses risques et, pour le jumeau des fichiers, une vérification contre la réalité ; le plan de placement ; le bundle de l'émulateur, câblé au rattachement de production ; un déploiement comme graphe d'étapes avec un retour arrière ; le registre des services avec ses postures et la barrière qui refuse un faux en production"
   designed: "le moteur vu tournant dans un navigateur ; une vérification de dérive pour les réponses enregistrées ; des branches d'un jumeau ; des jumeaux pour les bases de données, les interfaces et les réseaux ; la phase émulée posée par le déploiement émulé"
-  absent: "tout adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle d'IA, le courrier, les SMS ou un magasin d'objets ; la vérification réelle d'un hôte distant ; le regard d'une personne sur la surface de l'émulateur ; une solution client émulée et déployée par ce chemin"
+  reached: "un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé contre un jumeau, chapitre 31), un modèle d'IA, le courrier, les SMS ou un magasin d'objets ; la vérification réelle d'un hôte distant ; le regard d'une personne sur la surface de l'émulateur ; une solution client émulée et déployée par ce chemin"
 status: draft
 rulings: ["12.13", "12.19", "12.21", "12.22", "12.25", "12.28", "12.29"]
 research: research/ch24.md
@@ -129,7 +129,7 @@ oPlatform {
 }
 ```
 
-L'assistant est refusé, et on lui dit qu'il `may propose a deploy, not perform it` ! Le déploiement de la personne produit le firmware. La limite de ce bloc est à la section 7 : seuls deux verbes sont abaissés.
+L'assistant est refusé, et on lui dit qu'il `may propose a deploy, not perform it` ! Le déploiement de la personne produit le firmware. La section 7 donne la portée de ce bloc : deux verbes sont abaissés.
 
 Le jumeau répète ; ensuite, le plan dit où irait chaque partie.
 
@@ -204,7 +204,7 @@ StzDirDeleteAll(cHere + "/_bundle")
 StzDirDeleteAll(cHere + "/_live")
 ```
 
-L'assistant a laissé le site `absent`, et la personne l'a rendu `launched`. La moitié honnête : la ligne des artefacts du manifeste dit `index.html,stz.js`, et aucun fichier du moteur pour la partie web n'y figure, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté absent et rien n'a été écrit.
+L'assistant a laissé le site `absent`, et la personne l'a rendu `launched`. La moitié honnête : la ligne des artefacts du manifeste dit `index.html,stz.js`, et aucun fichier du moteur pour la partie web n'y figure, parce que la compilation du moteur était désactivée. Le bloc dit ce que l'exécution a livré, et non ce qu'une exécution complète livrerait. Un `Deploy(:Production)` nu, sans acteur du tout, renvoie une répétition et écrit un avertissement, "no effectful actor -- returning a rehearsal (nothing committed)". Je l'ai exécuté aussi, dans ma recherche du 8 octobre 2026 et non dans un bloc montré ici : le site est resté `absent` et rien n'a été écrit.
 
 `Deploy(:Emulated)` construit le sous-ensemble de chaque partie par la chaîne d'outils du moteur, une construction que cette machine ne doit pas exécuter ; ce que j'ai exécuté, c'est donc le bundle sans la compilation. Dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, sa carte nommait un fichier du moteur qui n'y était pas. La section 7 dit ce que cela signifie pour l'affirmation que le moteur tourne dans un navigateur.
 
@@ -245,7 +245,7 @@ next
 StzDirDeleteAll(cHere + "/_site_cdn")
 ```
 
-Le stockage de la partie api dit `FAILED`. Le site web, dont les trois étapes disent `done`, dit `rolledback` ! Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste absent, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
+Le stockage de la partie api dit `FAILED`. Le site web, dont les trois étapes disent `done`, dit `rolledback` ! Avec un assistant comme acteur, la même exécution renvoie chaque étape comme *répétée*, le site reste `absent`, et aucun répertoire n'est créé. Je l'ai exécuté dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, et je ne l'imprime pas.
 
 Le déploiement échoue sans danger ; les services viennent ensuite.
 
@@ -434,9 +434,9 @@ La fidélité a une frontière déclarée. L'émulation est fidèle mais pas omn
 
 Là où je pense que le dossier se distingue, c'est dans le couplage. Le double, le plan, les noms de justificatifs, la barrière et l'acteur sont déclarés dans le même programme que celui qui est livré, et une seule barrière les juge.
 
-Voilà le terrain ; la limite est l'endroit où je m'arrête.
+Voilà le terrain ; la section 7 dit ce que le chapitre couvre aujourd'hui.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 **Un faux écrit à la main qui ne dit rien de lui-même passe la barrière.** Le registre lit ce que l'objet dit qu'il est. Un double qui ne déclare ni qu'il est un bac à sable ni qu'il est local et réel est pris pour réel : pas d'avis veut dire réel. Donc « la production refuse un faux » est exact pour les doubles propres de la bibliothèque, et pour tout double qui se déclare. Quelle posture le registre donne-t-il à un double qui ne déclare rien, et la surface est-elle saine ? Demandez-le-lui en phase de production :
 
@@ -460,7 +460,7 @@ class AlwaysYes
 
 Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est passé ! La classe de remplacement du bloc antérieur, `LiveGateway`, est un tel objet.
 
-**L'abaissement connaît deux verbes.** Seuls `read_pin` et `write_pin` deviennent du code. Toute autre opération répétée devient une ligne de commentaire. Dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, j'ai répété `UseIn(:sensor, :gpio, "blink the status led")` et le firmware a reçu un commentaire. Pour un serveur ou un téléphone, l'artefact est un en-tête sans ligne quand rien n'a été répété. Le « la carte est le dernier pouce » de la narration vaut pour les lectures et écritures de broches seulement.
+**L'abaissement connaît deux verbes.** Seuls `read_pin` et `write_pin` deviennent du code. Toute autre opération répétée devient une ligne de commentaire. Dans ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, j'ai répété `UseIn(:sensor, :gpio, "blink the status led")` et le firmware a reçu un commentaire. Pour un serveur ou un téléphone, l'artefact est un en-tête sans ligne quand rien n'a été répété. Le « la carte est le dernier pouce » de la narration vaut aujourd'hui pour les lectures et écritures de broches.
 
 **Le contrat de fidélité est par classe de cible.** La conception dit que chaque partie déclare ce qui est fidèle et ce qui est approximé. Le code renvoie un texte fixe pour un microcontrôleur, qui liste deux choses approximées, et un pour tout le reste, "faithful".
 
@@ -468,7 +468,7 @@ Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est pass�
 
 **`Deploy(:Emulated)` construit l'émulateur ; déplacer le registre est conçu.** Le plan dit qu'il résout les services vers des bacs à sable. Le code construit l'émulateur et retourne ; seul le déploiement de production touche à la phase du registre. La valeur de phase `:emulated` que possède le registre n'est posée aujourd'hui que par une garde ; la poser depuis le déploiement émulé est conçu.
 
-**Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après le déploiement refusé de ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement non.
+**Un `Deploy(:Production)` refusé laisse le registre en phase de production.** Après le déploiement refusé de ma recherche du 8 octobre 2026, hors des blocs de ce chapitre, `Phase()` a imprimé `production`. Le contrôle préalable restaure la phase, et le déploiement la laisse à `production`.
 
 **Un plan signale aujourd'hui ; classer est la direction.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
 
@@ -476,7 +476,7 @@ Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent 
 
 Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
 
-Ce qui est absent : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé seulement contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels ne le sont pas, délibérément. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et les exécuter contre un hôte est l'étape suivante. Une solution client émulée et déployée par ce chemin : le chapitre 33 la porte comme la ligne suivante.
+Ce qui est à venir : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels viennent après eux, par choix délibéré. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et les exécuter contre un hôte est l'étape suivante. Une solution client émulée et déployée par ce chemin : le chapitre 33 la porte comme la ligne suivante.
 
 ## 8. Six portes
 
@@ -486,7 +486,7 @@ Ce qui est absent : un adaptateur réel de passerelle de cartes pour les paiemen
 
 **Le concepteur.** L'émulateur génère une surface à partir du plan, avec une grille de parties par rôle et une fenêtre par partie. J'ai vérifié le texte généré. Dites « généré », et non « vu ».
 
-**Le décideur.** « Qui peut déployer ? » est une propriété. Un assistant peut planifier la livraison et le site reste absent. Une personne peut valider. Aucun des deux ne peut livrer un faux déclaré. La perte à imprimer : les hôtes réels et les fournisseurs réels dépendent de l'infrastructure, et le dossier ne nomme aucune exécution réelle.
+**Le décideur.** « Qui peut déployer ? » est une propriété. Un assistant peut planifier la livraison et le site reste `absent`. Une personne peut valider. Aucun des deux ne peut livrer un faux déclaré. La perte à imprimer : les hôtes réels et les fournisseurs réels dépendent de l'infrastructure, et le dossier ne nomme aucune exécution réelle.
 
 **Le formateur.** Une personne qui apprend peut construire l'intégration d'une boutique entière sans compte, sans clé et sans frais, et regarder le double refuser ce qu'elle a oublié. Son déploiement échoue sans danger et revient en arrière.
 

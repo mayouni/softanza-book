@@ -10,7 +10,7 @@ guards: [00_stzapp_narrated, 06_stzsuperapp_narrated, full_scope_model_narrated,
 stage:
   built: "le moteur et ses bibliothèques ; la couche base ; les mondes, les constellations et les plateformes avec leurs gardes ; le sous-ensemble du moteur qu'une partie livre, pour le web"
   designed: "la couche max chargée par son fichier d'entrée ; la couche base s'appuyant sur la couche noyau ; un chargeur pour un seul domaine de la base ; un tribunal qui vérifie les couches contre leur contrat"
-  absent: "un programme entier et son moteur emballés dans un seul fichier ; une plateforme cliente sur le moteur"
+  reached: "un programme entier et son moteur emballés dans un seul fichier ; une plateforme cliente sur le moteur"
 status: draft
 rulings: ["12.2", "12.10", "12.12", "12.13", "12.15", "12.23", "12.29"]
 research: research/ch04.md
@@ -191,13 +191,13 @@ Les bibliothèques de texte du terrain mènent sur la locale : la propre carte d
 
 Et l'Atlas lui-même imprime ce qui reste à venir pour Softanza. La zone binaire est pour l'instant un plan, et son code livré est l'étape suivante ; le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu ; la zone du système compte peu de voies notées fortes à ce jour. Je tiens cela pour une vue, non pour un résultat. Une carte qui imprime ses étapes est la seule sorte qui vaille la peine d'être lue.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-Je mets maintenant sur l'image les trois mots d'étape, construit, conçu et absent.
+Je mets maintenant sur l'image les trois mots d'étape, construit, conçu et à venir.
 
 Ce qui est construit : le moteur et ses bibliothèques, la couche base, les mondes, les constellations et les plateformes avec leurs gardes, et, pour le web, le sous-ensemble du moteur qu'une partie livre.
 
-Ce qui est conçu, ou construit et inaccessible. Les propres classes de la couche max sont écrites et chargées par aucun fichier d'entrée. Que répond le runtime quand vous en demandez une ? Exécutez-le :
+Ce qui est conçu, ou construit avec son entrée conçue. Les propres classes de la couche max sont écrites, et leur chargement par un fichier d'entrée est conçu. Que répond le runtime quand vous en demandez une ? Exécutez-le :
 
 ```haro
 try
@@ -208,11 +208,11 @@ done
 #--> Error (R11) : Error in class name, class not found: stxstring
 ```
 
-Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et aucun fichier d'entrée ne la charge !
+Le runtime répond : `Error in class name, class not found: stxstring`. La classe est écrite, et le fichier d'entrée qui la charge est conçu !
 
-Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Elle ne fait ni l'un ni l'autre pour les domaines communs : les deux partagent le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur qu'aucun fichier du moteur n'enregistre, comme le rapporte mon étude du dossier. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres n'est pas construit. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
+Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Pour les domaines communs, les deux partagent aujourd'hui le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur dont l'enregistrement dans le moteur vient ensuite dans ce développement, comme le rapporte mon étude du dossier. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres est conçu. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
 
-Ce qui est absent : un programme entier et son moteur emballés dans un seul fichier sans aucune dépendance, et une plateforme cliente qui tourne sur le moteur.
+Ce qui est à venir : un programme entier et son moteur emballés dans un seul fichier autonome, et une plateforme cliente qui tourne sur le moteur.
 
 ## 8. Six portes
 
@@ -232,7 +232,7 @@ Chacune des six portes lit cette image depuis l'endroit où elle se tient.
 
 ## 9. Exercice
 
-Dessinez votre propre solution comme ce chapitre dessine Softanza : des étages, et un tribunal à côté de chacun. Pour chaque boîte, écrivez le fichier qui la déclare et la garde qui la juge, et mettez dessus un mot d'étape : construit, conçu ou absent.
+Dessinez votre propre solution comme ce chapitre dessine Softanza : des étages, et un tribunal à côté de chacun. Pour chaque boîte, écrivez le fichier qui la déclare et la garde qui la juge, et mettez dessus un mot d'étape : construit, conçu ou à venir.
 
 Puis déclarez-en deux parties avec `stzPlatformProfile`, donnez le profil à un `stzPlatform`, et avant d'exécuter quoi que ce soit, écrivez la ligne que vous attendez quand vous lui demandez de déployer avant de construire. Exécutez-le. Une boîte sans tribunal à côté est votre première trouvaille.
 

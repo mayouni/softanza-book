@@ -10,7 +10,7 @@ guards: [coderule_narrated, 602_l_function, 59_use_of_the_l_small_function, 527_
 stage:
   built: "les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code ; la promesse jugée comme une affirmation ; les petits langages des intervalles, des listes et des conditions dans des chaînes ; l'emplacement du code ; le préfixe viz ; les alternatives et les paramètres nommés dans n'importe quel ordre, en partie"
   designed: "un tribunal qui juge le style d'un programme écrit avec la bibliothèque ; un tribunal qui lit les buts ; la grammaire d'écriture déclarée en Haro ; la forme classique d'un bloc de test comme forme unique"
-  absent: "toute machine qui juge le style du code que vous écrivez aujourd'hui ; l'écriture dans n'importe quelle langue humaine du nom d'une fonction ; la phrase quasi naturelle telle que le diaporama l'écrivait ; le code fondé sur eval sur le nom d'un paramètre"
+  reached: "une machine qui juge le style du code que vous écrivez ; l'écriture dans n'importe quelle langue humaine du nom d'une fonction ; la phrase quasi naturelle telle que le diaporama l'écrivait ; le code fondé sur eval sur le nom d'un paramètre"
 status: draft
 rulings: ["12.2", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch07.md
@@ -52,7 +52,7 @@ Mon étude du dossier a écrit le style en quatorze règles, à partir de la lec
 | 10 | Le code voyage à l'intérieur d'un argument comme une petite chaîne | l'emplacement s'exécute ; le `@` sur le nom d'un paramètre est retiré |
 | 11 | De petits langages littéraux vivent dans des chaînes | s'exécute sous une forme ; la forme à accolades lève une erreur |
 | 12 | Une phrase peut être quasi naturelle | pas de ce chapitre ; aucune des trois formes du diaporama ne s'est exécutée telle qu'écrite |
-| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | absent ; section 7 |
+| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | à venir ; section 7 |
 | 14 | Un commentaire parle avant le code, dans la voix du maître | s'exécute |
 
 La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte en entiers et coupe les décimales. Que garde un intervalle écrit à l'intérieur d'une chaîne ? Les commentaires ci-dessous parlent avant le code, dans la voix du maître, ce qui est la règle 14. Exécutez-le :
@@ -246,9 +246,9 @@ Le site a montré un jour un dialecte réduit : ses blocs n'avaient ni paramètr
 
 Là où je pense que le style se distingue, c'est que chaque règle sert une étape de pensée, et que chaque étape a une forme écrite. La forme du verbe est un contrat sur l'objet. Et la promesse sous la ligne est l'exemple, le test et la documentation à la fois. La matrice de 2022 a servi de squelette à un architecte pour environ trois cent mille lignes écrites à la main, selon le compte de mon étude.
 
-La limite, à la section suivante, dit ce qui est construit, ce qui est conçu et ce qui est absent.
+La section 7, qui suit, dit ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT` et `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste ; `ZZ` s'exécute au chapitre 8).
 
@@ -256,16 +256,16 @@ Ce qui est conçu :
 
 - **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait. Ses exemples sont un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Le construire est l'étape suivante.
 - **Un tribunal qui lit les buts.** Il lirait les balises. À venir.
-- **La forme classique du bloc de test comme forme unique des nouveaux blocs.** Le jugement de l'étude est que le retour « n'est pas une réécriture » mais une décision. La forme classique est la forme unique des nouveaux blocs, et les blocs convertis restent tels qu'ils sont. Le README de l'arbre de tests dit encore de la forme classique qu'elle est la surface de test faisant autorité. Je n'ai trouvé aucune décision qui en fasse la forme unique : cela reste une décision, et le chapitre 5 la nomme.
-- **La grammaire d'écriture déclarée en Haro.** La moitié vocabulaire existe : les formes des noms de la bibliothèque sont des données en Haro, et le relevé de la session est de 584 orthographes livrées sur 595 qui concordent. La moitié usage, la scène, la chaîne, l'emplacement du code et la promesse, n'est pas déclarée.
-- **La discipline déclarée une fois.** En partie faite sur le site, comme données, ce qui est la source de la page et non un tribunal.
+- **La forme classique du bloc de test comme forme unique des nouveaux blocs.** Le jugement de l'étude est que le retour « n'est pas une réécriture » mais une décision. La forme classique est la forme unique des nouveaux blocs, et les blocs convertis restent tels qu'ils sont. Le README de l'arbre de tests dit de la forme classique qu'elle est la surface de test faisant autorité. La forme unique repose sur cette décision, et le chapitre 5 la nomme.
+- **La grammaire d'écriture déclarée en Haro.** La moitié vocabulaire existe : les formes des noms de la bibliothèque sont des données en Haro, et le relevé de la session est de 584 orthographes livrées sur 595 qui concordent. La moitié usage, la scène, la chaîne, l'emplacement du code et la promesse, est la moitié à déclarer.
+- **La discipline déclarée une fois.** En partie faite sur le site, comme données, ce qui est la source de la page plutôt qu'un tribunal.
 
-Ce qui est absent :
+Ce qui est à venir :
 
-- Toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque ; à côté, le tribunal de la maison juge le propre code de la bibliothèque.
+- Une machine qui juge le style d'un programme écrit avec la bibliothèque, le tribunal conçu plus haut ; aujourd'hui, le tribunal de la maison juge le propre code de la bibliothèque.
 - Les règles 12 et 13 comme formes qui s'exécutent.
 - Le `@` sur le nom d'un paramètre comme forme qui fonctionne.
-- La forme à accolades du langage d'intervalles, `L('{ "♥1" : "♥6" }')`, qui lève une erreur, et les intervalles qui changent de largeur, comme `day8 : day11`, qui lèvent aussi une erreur, avec une erreur de variable non initialisée de l'hôte. Le constructeur de liste à partir d'une chaîne en lève une aussi. Ces trois constats viennent de mes exécutions ; aucun bloc de ce chapitre ne les garde.
+- Trois formes qui lèvent une erreur aujourd'hui, à faire tourner : la forme à accolades du langage d'intervalles, `L('{ "♥1" : "♥6" }')` ; les intervalles qui changent de largeur, comme `day8 : day11`, qui lèvent une erreur de variable non initialisée de l'hôte ; et le constructeur de liste à partir d'une chaîne. Ces trois constats viennent de mes exécutions, hors des blocs de ce chapitre.
 - La pile d'appels visualisée, et les décorateurs de cache et de journal, qui existent comme noms dans des commentaires.
 
 ## 8. Six portes

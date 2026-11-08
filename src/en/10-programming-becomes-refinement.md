@@ -10,7 +10,7 @@ guards: [refinablecode_narrated, refine_deepening_narrated, gate_deepening_narra
 stage:
   built: "the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining"
   designed: "the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro"
-  absent: "a saved history: the file keeps the source and nothing of the timeline"
+  reached: "a saved history of the timeline, beside the source the file keeps"
 status: draft
 rulings: ["12.19", "12.23", "12.29"]
 research: research/ch10.md
@@ -266,20 +266,20 @@ The field's tools lead in breadth: they are not tied to one library, one languag
 
 And on trust, much of the field's approach is built to scale to any AI model. Mine rests on one declaration per point.
 
-Now, where the gate stops.
+Now, what the gate covers today.
 
-## 7. The limit
+## 7. What it covers today
 
-What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions. The cascade of a class has no guard here, because the code-graph guard scans a live path of the library's working tree. And no guard asserts the other points on a line.
+What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions, both ahead. A guard here for the cascade of a class: the code-graph guard scans a live path of the library's working tree. And a guard that asserts the other points on a line.
 
-What is designed, and absent from the library by name: the experience the original article describes. The class that article names, `stzPolyCode`, is not in the library at this commit. The one-line refinement of the design document, a point that explains itself, a plan that is applied, are not in the library. The cascade of the code graph and the cascade of the gate are not joined. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement not built.
+What is designed: the experience the original article describes. The class that article names, `stzPolyCode`, belongs to that design at this commit. So do the one-line refinement of the design document, a point that explains itself, and a plan that is applied. Joining the cascade of the code graph to the cascade of the gate is designed too. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement designed.
 
-What is built, and where it stops: the limits of the gate as it stands.
+What lies ahead, from the gate as it stands:
 
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes without a check; checks for those kinds are the next step.
 - An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.
 - A derivation is applied tentatively and restored on failure. So I say "never ends changed", not "never touched".
-- The saved file holds the rendered source; the history, the postures, the timeline and the load-back are absent, and are the next step. Reversibility lives in the running object, and carrying it into the file is still to come. The library writes this file with the suffix `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes the suffix `.rfn` for the refinement sentence of Haro, and leaves `.zrfn` to the library's lift from comment tags, the form this chapter ran.
+- The saved file holds the rendered source; the history, the postures, the timeline and the load-back are the next step. Reversibility lives in the running object, and carrying it into the file is the work ahead. The library writes this file with the suffix `.zrfn`, as shipped. The Haro charter, ratified on 1 October 2026, takes the suffix `.rfn` for the refinement sentence of Haro, and leaves `.zrfn` to the library's lift from comment tags, the form this chapter ran.
 
 ## 8. Six doors
 

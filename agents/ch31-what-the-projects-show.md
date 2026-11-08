@@ -2,11 +2,11 @@
 
 Source: Chapter 31. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it
+Stage: built: what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it; designed: the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board; reached: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on each of them
 
 Run: 5 of 5 blocks kept their promise, on 2026-10-30 15:01 UTC+01:00.
 
-In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court, the field and the limit in the stage words. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
+In this chapter I say, project by project, what the three projects of chapters 28 to 30 show today, and what each one makes the next step. I start with the field's three habits for saying what a piece of work has shown. Then I run five small blocks in which the library shows, by refusing, where a stage ends, and I lay out the tables: for each project, the claim, the document or file that backs it, and what comes next. I say what I refused, my memory as evidence first of all, and I give the court and the field, then the sum in the stage words in section 7. The principle is the chapter's own sentence: a project shows exactly what a document, a file, a run and a named person reach, and the page says where they stop.
 
 ## 1. The concept, as the field holds it
 
@@ -14,7 +14,7 @@ The field has three habits for saying what a piece of work has shown.
 
 The first is the reference: a logo on a home page, a customer story of two pages, the sentence "trusted by". It shows that someone paid or signed. It does not say what they ran, for how long, or what they said.
 
-The second is the readiness scale. NASA's technology readiness levels, later an international standard, name how far a technology has travelled from a laboratory to the place it was built for. The highest level is a system proven in operation. It is a vocabulary of stage, and this book uses one of its own (built, designed, absent).
+The second is the readiness scale. NASA's technology readiness levels, later an international standard, name how far a technology has travelled from a laboratory to the place it was built for. The highest level is a system proven in operation. It is a vocabulary of stage, and this book uses one of its own (built, designed, ahead).
 
 The third is the limits section. An empirical study must state its threats to validity. A machine-learning model ships with a card whose last part is its caveats. An artefact submitted to a research conference is badged by what someone else did with it. This is the form closest to this chapter, and the one most often skipped when the reader is a buyer.
 
@@ -251,19 +251,19 @@ The field leads in speed. The runtime Softanza measured itself against was faste
 
 The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that a person looking at them is the next step.
 
-Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
+Where I think the record stands apart is that what its work covers today is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
-## 7. The limit
+## 7. What it covers today
 
 This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator. The organisation's hub is the next to build, and its offline mechanism is to come.
+What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the chart validator stands in the library, apart from the bank's product. The organisation's hub is the next to build, and its offline mechanism is to come.
 
 What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What is absent: any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it.
+What lies ahead: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; and a named person's verdict on each of them.
 
-The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are absent today. The site says they are being written as Softanza's own. On 8 October 2026 I looked for a file of them in the restaurant's repository, in the bank's delivery and in the organisation's study folder, and found none. On 9 October 2026 I looked again, read-only, in thirteen repositories beside the library, and found no file that declares a customer's platform as Softanza's own. The chapter's word for them is *absent*, and the stage line at the top says so.
+The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are ahead. The site says they are being written as Softanza's own. On 8 October 2026 I searched the restaurant's repository, the bank's delivery and the organisation's study folder for a file of them. On 9 October 2026 I searched again, read-only, thirteen repositories beside the library. The file that declares a customer's platform as Softanza's own is the one to write next. The chapter's word for the declarations is *ahead*, and the stage line at the top says so.
 
 ## 8. Six doors
 
@@ -277,7 +277,7 @@ The sum of every next step is the line that chapter 33 sets as the next mileston
 
 **The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.
 
-**The agent.** You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side.
+**The agent.** You may read the tables and quote any cell. A cell marked ahead stays ahead in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it.
 
 ## 9. Exercise
 

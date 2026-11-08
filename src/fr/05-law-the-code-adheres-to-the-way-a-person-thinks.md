@@ -11,7 +11,7 @@ guards: [coderule_narrated, testoor_promises_narrated, 05_containsemptystrings, 
 stage:
   built: "les formes du vocabulaire dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse lue par une machine dans la forme propre à la maison"
   designed: "un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit ; la grammaire d'écriture déclarée en Haro, pour qu'un modèle d'IA ne puisse écrire que dans elle"
-  absent: "toute machine qui juge aujourd'hui le style d'un programme écrit avec la bibliothèque"
+  reached: "une machine qui juge le style d'un programme écrit avec la bibliothèque"
 status: draft
 rulings: ["12.2", "12.3", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch05.md
@@ -211,13 +211,13 @@ Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude
 
 Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, et la forme du verbe est un contrat sur l'objet. La promesse sous la ligne est l'exemple, le test et la documentation à la fois.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : les formes du vocabulaire, dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse jugée par une machine.
 
 Ce qui est conçu : un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle d'IA y soit tenue avant d'être écrite.
 
-Ce qui est absent : la machine qui juge le style d'un programme écrit avec la bibliothèque ; son tribunal est conçu, et le construire est la prochaine étape. La chaîne de la diapositive fondatrice s'exécute aujourd'hui dans sa forme la plus proche, et une demande à la bibliothèque réclame le retour de son lien fluide. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
+Ce qui est à venir : la machine qui juge le style d'un programme écrit avec la bibliothèque ; son tribunal est conçu, et le construire est la prochaine étape. La chaîne de la diapositive fondatrice s'exécute aujourd'hui dans sa forme la plus proche, et une demande à la bibliothèque réclame le retour de son lien fluide. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
 
 ## 8. Six portes
 

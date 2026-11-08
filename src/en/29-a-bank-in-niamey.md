@@ -10,7 +10,7 @@ guards: [orgrule_narrated, 14_bceao_governance, 15_multiple_validators, 13_segre
 stage:
   built: "the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict"
   designed: "the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads"
-  absent: "the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced"
+  reached: "the delivered product running on the library; the bank's own people's word on it; an auditor's reading of a finding the library produced"
 status: draft
 rulings: ["12.19", "12.29", "12.30"]
 research: research/ch29.md
@@ -205,27 +205,27 @@ The field leads in actual use: such a platform is often one that a bank's audito
 
 Where I think this stands apart is that the chart is the data and the court is a rule over it. A chart is a text, a rule is data, a finding names the rule and the position, and the report is one verdict. The library's own comparison table for this feature is all wins, undated, with cost figures that cite nothing, and I will not print it.
 
-Now the limit, in the stage words.
+Now what it covers today, in the stage words.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
 
 Four things are designed, or built in part.
 
-- The content of the six regimes other than the regional one. Five of them hold the same four universal rules and nothing else; SOX adds a fifth.
-- A rule file that judges. The library can load a file of rules in a `when` and `then` text, and the one in its test data loads two rules. The loader reads a rule's name, type, severity, function, params and message, and no `when` or `then` line. Such a rule loads and judges nothing. The format is admitted, and the rule is not enforced.
+- The content of the six regimes other than the regional one. Five of them hold exactly the same four universal rules; SOX adds a fifth.
+- A rule file that judges. The library can load a file of rules in a `when` and `then` text, and the one in its test data loads two rules. The loader reads a rule's name, type, severity, function, params and message; reading the `when` and `then` lines is the designed step. Such a rule loads today, and its judging is ahead. The format is admitted, and its enforcement is the next step.
 - A validator reads declared properties. It finds the board by the word "board" in a position title, and it compares departments only where they are declared: the limit block of section 3 blanks the chief executive's and the finding on audit disappears.
-- The succession validator flags every filled position, by the library's own comment a known defect. The reorganisation simulation raises when it is asked to change a reporting line, also a known defect. The article that tells the simulation names a method that exists nowhere in the library.
+- The succession validator flags every filled position, by the library's own comment a known defect. The reorganisation simulation raises when it is asked to change a reporting line, also a known defect. The article that tells the simulation names a method ahead of the library's code.
 
-Four things are absent.
+Four things lie ahead.
 
-- The delivered product running on the library. It is a Python application; a search of its code found no regional or Basel check and no call to the library.
-- A word from the bank. The record is silent.
-- A perceived verdict. No document says that an auditor or a supervisor read a finding that the library produced.
-- A delivery date. The delivered files carry file-system times, and those are not a delivery date.
+- The delivered product running on the library. It is a Python application today; the regional and Basel checks and the call to the library are the work ahead for it.
+- The bank's own people's word on it, for the record to gather.
+- A perceived verdict, an auditor's or a supervisor's reading of a finding that the library produced, set down in a document.
+- A delivery date, recorded as such, beside the file-system times the delivered files carry.
 
-The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that five of its rules were harvested from a banking-supervision product. The record does not say that product is the bank's installation. I will not say that it is.
+The web layer of the product was born in its own repository: its first commit is dated 4 February 2026, and the interface constitution's text was first committed on 8 February. The constitution's own evidence fields say that five of its rules were harvested from a banking-supervision product. The record leaves open whether that product is the bank's installation, and I leave it open too.
 
 Six doors follow, one for each reader.
 

@@ -10,7 +10,7 @@ guards: [sms_port_narrated, wisecoding_rich_narrated, sound_convergence_narrated
 stage:
   built: "la conversation gouvernée avec sa question comme donnée ; le port SMS et son bac à sable, avec la facture par segment dans deux alphabets ; un vérificateur du corps d'un message entrant ; cinq valeurs sémantiques rendues en couleur, en earcon et en phrase ; une voix qui parle, et qui entend une grammaire fermée ; un ensemble fermé de phrases qu'une entreprise accepte de dire ; un message de trois champs entre identités d'une même plateforme"
   designed: "le service du socle commun pour la messagerie ; des surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD et la voix, avec une matrice de satisfaisabilité comme tribunal ; des gabarits comme grammaire"
-  absent: "une application de messagerie, l'USSD ou une ligne téléphonique, sous quelque forme que ce soit ; une projection conversationnelle d'un monde ; un canal, une session, un gabarit, le consentement ; la question dans une autre langue que l'anglais ; une voix pour le haoussa, le zarma ou le fulfulde ; les vingt-deux verbes comme liste que la bibliothèque détient ; une réponse contenant un espace"
+  reached: "une application de messagerie, l'USSD et une ligne téléphonique comme médiums ; une projection conversationnelle d'un monde ; un canal, une session, un gabarit, le consentement ; la question dans des langues au-delà de l'anglais ; une voix pour le haoussa, le zarma et le fulfulde ; les vingt-deux verbes comme liste que la bibliothèque détient ; une réponse contenant un espace"
 status: draft
 rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
@@ -314,9 +314,9 @@ Ce que le terrain a en dictée dans le nuage et en modules de reconnaissance ent
 
 Ce que le dossier affirme à la place : le dialogue est un rendu d'un monde déclaré jugé par un tribunal, déterministe par défaut. Le médium est un port avec un bac à sable, donc la conversation et sa facture sont répétées avant qu'aucun compte existe.
 
-Le terrain est en tête sur certains points, et la limite vient ensuite, imprimée entière.
+Le terrain est en tête sur certains points, et ce que le médium couvre aujourd'hui vient ensuite, imprimé en entier.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Mon étude du dossier contient deux erreurs que les exécutions de ce chapitre corrigent. La première : elle dit que la parole vers texte manque. À ce commit elle existe, par décision, pour les commandes et non pour la dictée. La seconde : elle dit qu'aucun message n'existe. Il existe un message de trois champs, entre identités d'une même plateforme, et je le montre :
 
@@ -330,27 +330,27 @@ StzPlatformQ("neighbourhood") {
 }
 ```
 
-C'est un expéditeur, un destinataire, un corps et une heure dans une table SQL. Il n'a ni médium, ni statut, ni parties. C'est le message que mon étude a trouvé absent, dans sa plus petite forme.
+C'est un expéditeur, un destinataire, un corps et une heure dans une table SQL ; un médium, un statut et des parties sont le travail à venir. C'est le message que mon étude cherchait, dans sa plus petite forme.
 
-Ce qui est construit : la conversation gouvernée ; le port SMS et son bac à sable ; un vérificateur de signature de corps avec protection contre le rejeu, câblé à aucun fournisseur de messagerie ; la couche sémantique de cinq valeurs rendues en couleur, en earcon et en phrase. Construits aussi : la voix ; un message minimal dans le socle commun ; un ensemble fermé de phrases avec un refus ; et les intentions et portées déclarées du monde.
+Ce qui est construit : la conversation gouvernée ; le port SMS et son bac à sable ; un vérificateur de signature de corps avec protection contre le rejeu, son câblage à un fournisseur de messagerie à venir ; la couche sémantique de cinq valeurs rendues en couleur, en earcon et en phrase. Construits aussi : la voix ; un message minimal dans le socle commun ; un ensemble fermé de phrases avec un refus ; et les intentions et portées déclarées du monde.
 
-Ce qui est conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. Un seul fichier de conception le dit, en deux lignes : un schéma qui range la messagerie parmi les communs, et une esquisse qui écrit `Provides(:Messaging)`. Le mot `Provides` n'est dans aucun fichier de code du répertoire de l'application. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont des propositions de mon étude du dossier, écrites par une session, et non la conception de la bibliothèque. Une analyse parlée et un transport parlé : des démonstrations et des compositions, et non une unité.
+Ce qui est conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. Un seul fichier de conception le dit, en deux lignes : un schéma qui range la messagerie parmi les communs, et une esquisse qui écrit `Provides(:Messaging)`. `Provides` est conçu, et son code dans le répertoire de l'application est à venir. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont des propositions de mon étude du dossier, écrites par une session ; la conception propre de la bibliothèque est la ligne ci-dessus. Une analyse parlée et un transport parlé : des démonstrations et des compositions, avec l'unité à venir.
 
-Ce qui est absent :
+Ce qui est à venir :
 
-- Des ports pour une application de messagerie, Telegram, l'USSD, et l'appel téléphonique : zéro résultat. Une session USSD n'a aucune forme dans la bibliothèque.
-- Une projection conversationnelle d'un monde. La seule projection est `Generate`, qui connaît trois surfaces et en refuse une quatrième. Aucun shell ne rend une question ou un flux.
-- Les unités de messagerie : canal, session avec une fenêtre ou un délai, gabarit, consentement. Aucune unité de consentement n'existe pour la messagerie. Le mot *consentement* apparaît dans l'instantané pour la frontière du microphone, dans des commentaires, et dans deux documents de conception en d'autres sens.
-- Les vingt-deux verbes comme liste de la bibliothèque. `stzApp` en tient cinq comme cinq méthodes d'intention d'écran, et l'assistant derrière elles ne contrôle pas le mot qu'on lui donne. Les dix-sept autres sont dans la constitution et non dans la bibliothèque. La phrase-pont est appliquée à la main aujourd'hui.
-- La question dans une autre langue que l'anglais. `AskIn` est en anglais, et le tuteur montre le motif en quatre langues. Dans ma recherche à ce commit, `NaturallyIn` demandé pour le zarma a levé l'opaque "Unsupported object type!" et non "no pack for this language" ; aucun bloc de ce livre n'enregistre cet appel.
-- Une voix pour les langues que les conceptions de produit nomment, le zarma, le haoussa et le fulfulde. Aucune ici ; la bibliothèque refuserait.
-- **Une réponse contenant un espace, venant d'un téléphone.** Dans ma recherche à ce commit, j'ai exécuté `ReplyIn("c", "grand couscous")` et il a levé une erreur, avec une variable non initialisée. Avec un trait d'union il a été admis. Aucun bloc de ce livre n'enregistre l'un ou l'autre résultat, comme le chapitre 18 le dit de la même faute. C'est la limite connue du chapitre 18, et elle est décisive ici, parce que les gens tapent des espaces dans un SMS. La conversation ci-dessus ne fonctionne que parce que les réponses sont des chiffres et des plats d'un seul mot.
+- Des ports pour une application de messagerie, Telegram, l'USSD et l'appel téléphonique (zéro résultat dans ma recherche à ce commit), et une forme pour une session USSD dans la bibliothèque.
+- Une projection conversationnelle d'un monde. La projection d'aujourd'hui est `Generate`, qui connaît trois surfaces et en refuse une quatrième. Un shell qui rend une question ou un flux appartient à ce travail.
+- Les unités de messagerie : canal, session avec une fenêtre ou un délai, gabarit, consentement. Le consentement pour la messagerie est une unité à venir ; le mot *consentement* apparaît dans l'instantané pour la frontière du microphone, dans des commentaires, et dans deux documents de conception en d'autres sens.
+- Les vingt-deux verbes comme liste de la bibliothèque. `stzApp` en tient cinq comme cinq méthodes d'intention d'écran, et le contrôle du mot donné à l'assistant derrière elles est à venir. Les dix-sept autres sont dans la constitution, en avance sur la bibliothèque. La phrase-pont est appliquée à la main aujourd'hui.
+- La question dans des langues au-delà de l'anglais. `AskIn` est en anglais, et le tuteur montre le motif en quatre langues. Dans ma recherche à ce commit, `NaturallyIn` demandé pour le zarma a levé l'opaque "Unsupported object type!", là où la réponse claire est "no pack for this language" ; cet appel reste dans ma recherche, hors des blocs de ce livre.
+- Une voix pour les langues que les conceptions de produit nomment, le zarma, le haoussa et le fulfulde. Aujourd'hui la bibliothèque les refuserait.
+- **Une réponse contenant un espace, venant d'un téléphone.** Dans ma recherche à ce commit, j'ai exécuté `ReplyIn("c", "grand couscous")` et il a levé une erreur, avec une variable non initialisée. Avec un trait d'union il a été admis. Les deux résultats restent dans ma recherche, hors des blocs de ce livre, comme le chapitre 18 le dit de la même faute. C'est la limite connue du chapitre 18, et sa correction est décisive ici, parce que les gens tapent des espaces dans un SMS. La conversation ci-dessus tourne parce que ses réponses sont des chiffres et des plats d'un seul mot.
 - Des adaptateurs réels pour le SMS, pour une application de messagerie et pour une ligne téléphonique ; des accusés de réception de livraison ; des règles d'identifiant d'expéditeur.
-- Rien dans le dossier ne tourne sur un vrai téléphone comme conversation.
+- Une conversation exécutée sur un vrai téléphone.
 
-`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` et la matrice de satisfaisabilité sont ce que mon étude du dossier a proposé, et je ne les présente pas comme ce que je compte construire. Je n'ai trouvé dans le dossier aucune décision de ma part de les construire, et la limite est la liste ci-dessus, où aucun d'eux n'existe.
+`On(:whatsapp)`, `On(:ussd)`, `On(:voice)` et la matrice de satisfaisabilité sont ce que mon étude du dossier a proposé, et je les présente à ce stade : des propositions, et la décision de les construire m'appartient. La liste ci-dessus dit où le médium en est aujourd'hui.
 
-Voilà la limite, imprimée entière ; les six portes suivent.
+Voilà ce que le médium couvre aujourd'hui, imprimé en entier ; les six portes suivent.
 
 ## 8. Six portes
 

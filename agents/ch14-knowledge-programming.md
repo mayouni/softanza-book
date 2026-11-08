@@ -2,11 +2,11 @@
 
 Source: Chapter 14. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which the book shows as text; Explain on a knowledge graph; the rules section of the file, which the parser drops
+Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; reached: the 2022 founding dialog as running code, which the book shows as text today; Explain on a knowledge graph; a parser that reads the rules section of the file
 
 Run: 13 of 13 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
-In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print the limit, a file that at this commit has no rules. It stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
+In this chapter I take the three practices of the field that meet in this idea, the semantic stack, the property-graph database and rules over facts, and set beside them a system that is a plain text file. I run that file: two facts, one law and a proof with its steps, then a clinic in strict mode, where a refused rumour is kept and named. I write the file, read it back and show it at scale, from a course catalogue to an AI agent's memory. I say what I decided, that a business describes itself in one file and that the file is the program. I say what I refused: a parallel world, a contradiction resolved in silence, retrieval. I print what the file covers today, facts and laws, with rules designed. That stands beside the principle: a system is a file, and adding a line to it makes the system know more, and nothing is coded or trained.
 
 ## 1. The concept, as the field holds it
 
@@ -210,11 +210,11 @@ The field leads in standards and reach, in general knowledge. A knowledge base i
 
 Here is where I think this stands apart, with the measured limits beside it. The knowledge is a text file a person can read, edit, diff and ship with the program. Every answer is provable with its steps, and a no is as certain as a yes. What a fact claims travels with its source and its refusals. And the same format carries a course, a learner's project and an agent's memory. None of that needs a store, a server, an AI model or a training run.
 
-The losses are printed. The limit of the chapter comes next, with its runs.
+The losses are printed. Section 7 comes next, with its runs.
 
-## 7. The limit
+## 7. What it covers today
 
-The limit of this chapter is the one my directive, in section 4, already carries: *entities, relations, an ontology, rules*. The file at this commit has no rules. Here is the file with a rules section. What does the parser make of it?
+What this chapter's subject covers today is measured against my directive, in section 4: *entities, relations, an ontology, rules*. The file at this commit holds facts and laws; rules in the file are designed. Here is the file with a rules section. What does the parser make of it?
 
 ```haro
 cRules = 'knowledge "pairs"' + nl + nl + "facts" + nl + "    margherita | pairs-with | chianti" + nl + nl +
@@ -229,9 +229,9 @@ aM = oRul.ImportKnow(cRules)
 
 > run: kept
 
-The file merges, `1`, and the ontology is empty, `0`. The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped: the ontology holds `0`, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules, which the design promises, is not there, and this section prints the gap as the chapter's limit.
+The file merges, `1`, and the ontology is empty, `0`. The parser recognises the header `rules`, and has a handler for none of the lines under it. They are dropped: the ontology holds `0`, and no refusal comes back. The same law under the header `ontology` gives an ontology of length 1. Rules live elsewhere, as data in a rule attached to a graph, which are chapters 29 and 30, and in a separate file that names rule functions. In this file there are facts and laws. I print "facts and laws", and I send the rules to those two chapters. The single file that holds rules is what the design promises, and it is designed; this section prints the file as it stands today.
 
-The law is also not derived on an instance graph. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
+On an instance graph the law is recorded, and derivation there is designed. Take the same symmetric law and the same fact as on the default world. Is the reverse there?
 
 ```haro
 StzKnowledgeGraphQ("pairs") {
@@ -246,7 +246,7 @@ StzKnowledgeGraphQ("pairs") {
 
 > run: kept
 
-The law is recorded, `1`, and the reverse edge is not there, `0`! The class header says it: `only :unique and :transitive are acted on here`; symmetric is only recorded. Four more limits, each with its run.
+The law is recorded, `1`, and the reverse edge is not there, `0`! The class header says it: `only :unique and :transitive are acted on here`; symmetric is only recorded. Four more measures of what the file covers today, each with its run.
 
 **One relation between two things.** The graph stores one edge per node pair. Does it admit a second relation between the same two entities, `amina` and `bread`? Run it:
 
@@ -262,9 +262,9 @@ aV = oShop.Admit("amina", "buys", "bread", [ :source = "till" ])
 
 > run: kept
 
-The second relation is refused, `0`, with the library's own sentence, `Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)`. A knowledge model that cannot hold *sells* and *buys* between the same two entities is a real limit. The code says it: `known limitation, revisit with multi-edge support`.
+The second relation is refused, `0`, with the library's own sentence, `Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)`. Holding *sells* and *buys* between the same two entities is designed, and a knowledge model needs it. The code says it: `known limitation, revisit with multi-edge support`.
 
-**A two-step question answers only its first step.** Does `QueryPath` follow its second pattern, and can the predicate of a query be a variable? Run it:
+**A two-step question answers its first step.** Does `QueryPath` follow its second pattern, and can the predicate of a query be a variable? Run it:
 
 ```haro
 StzKnowledgeGraphQ("coop2") {
@@ -296,7 +296,7 @@ aBad = oT.ImportKnow(cBad)
 
 > run: kept
 
-Nothing. The file merges, `1`, and the refused list is `[ ]`; the parser is silent and the three lines vanish! The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
+Nothing. The file merges, `1`, and the refused list is `[ ]`; the parser is silent and the three lines vanish! The design document promises that the file is "validated on load". At this commit the parser keeps a line with exactly three fields; validation on load is designed.
 
 **The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line stops before it answers. I show its text, `@Q("Apple").IsA(:Fruit)`. On 8 October 2026 it stopped with `Calling Function without definition: @isfruit`, and I quote that message here in place of a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps the point. Does the world know one name with two meanings?
 
@@ -313,19 +313,19 @@ It knows both: `[ "company", "fruit" ]`.
 
 The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. The chapter keeps the file as its opening, and the 2022 dialog stays at the margin.
 
-What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact, and no inheritance follows. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, has no method of that name.
+What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact; inheritance from it is designed. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, is designed.
 
-What is absent or broken: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function defined nowhere. And `ValidateOntology()`, which returns 1 whatever the ontology holds, as its own comment says, `known defect`.
+What lies ahead: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function to be defined. And `ValidateOntology()` judging what the ontology holds, where today it returns 1 whatever the ontology holds, as its own comment says, `known defect`.
 
 One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education module.
 
-That is the limit, printed. Now the six doors.
+That is what the file covers today, printed. Now the six doors.
 
 ## 8. Six doors
 
 **The programmer.** One class and a text file: `Know`, `KnowRelation`, `ConstrainRelation`, `Prove`, `Query`, `WriteToKnowFile`, `ImportKnow`. The file is diffable and ships with the program.
 
-**The analyst.** The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read "rules" as the limit above. Where to start, in the course: the chapter called "Teach a world".
+**The analyst.** The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read "rules" as section 7 reads it. Where to start, in the course: the chapter called "Teach a world".
 
 **The designer.** The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.
 

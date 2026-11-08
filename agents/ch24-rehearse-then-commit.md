@@ -2,7 +2,7 @@
 
 Source: Chapter 24. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; absent: any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
+Stage: built: a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production; designed: the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy; reached: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -125,7 +125,7 @@ oPlatform {
 
 > run: kept
 
-The assistant is refused, and told that it `may propose a deploy, not perform it`! The person's deploy yields the firmware. The limit of this block is in section 7: only two verbs are lowered.
+The assistant is refused, and told that it `may propose a deploy, not perform it`! The person's deploy yields the firmware. Section 7 gives this block's reach: two verbs are lowered.
 
 The twin rehearses; next, the plan says where each part would go.
 
@@ -204,7 +204,7 @@ StzDirDeleteAll(cHere + "/_live")
 
 > run: kept (touches files)
 
-The assistant left the site `absent`, and the person made it `launched`. The honest half: the manifest's artefacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed absent and nothing was written.
+The assistant left the site `absent`, and the person made it `launched`. The honest half: the manifest's artefacts line reads `index.html,stz.js`, and no engine file for the web part is in it, because the engine compile was off. The block says what the run shipped, and not what a full run would. A bare `Deploy(:Production)` with no actor at all returns a rehearsal and writes a warning, "no effectful actor -- returning a rehearsal (nothing committed)". I ran it too, in my research run of 8 October 2026 and not in a block shown here: the site stayed `absent` and nothing was written.
 
 `Deploy(:Emulated)` builds each part's subset through the engine toolchain, a build this machine must not run, so what I ran is the bundle without the compile. In my research run of 8 October 2026, outside this chapter's blocks, its map named an engine file that is not there. Section 7 says what that means for the claim that the engine runs in a browser.
 
@@ -247,7 +247,7 @@ StzDirDeleteAll(cHere + "/_site_cdn")
 
 > run: kept
 
-The api store reads `FAILED`. The web site, whose three steps read `done`, reads `rolledback`! With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays absent, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
+The api store reads `FAILED`. The web site, whose three steps read `done`, reads `rolledback`! With an assistant as the actor, the same run returns every step as *rehearsed*, the site stays `absent`, and no folder is created. I ran it in my research run of 8 October 2026, outside this chapter's blocks, and do not print it.
 
 The deployment fails safely; the services come next.
 
@@ -444,9 +444,9 @@ Fidelity has a stated boundary. Emulation is faithful but not omniscient, so it 
 
 Where I think the record stands apart is the coupling. The double, the plan, the credential names, the gate and the actor are declared in the same program that ships, and one gate judges them.
 
-That is the field; the limit is where I stop.
+That is the field; section 7 says what the chapter covers today.
 
-## 7. The limit
+## 7. What it covers today
 
 **A hand-written fake that says nothing about itself passes the gate.** The registry reads what the object says it is. A double that declares neither that it is a sandbox nor that it is local and real is taken for live: no opinion means live. So "production refuses a fake" is exact for the library's own doubles, and for any double that declares itself. What posture does the registry give a double that declares nothing, and is the surface sound? Ask it in the production phase:
 
@@ -472,7 +472,7 @@ class AlwaysYes
 
 It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! The stand-in of the earlier block, `LiveGateway`, is such an object.
 
-**The lowering knows two verbs.** Only `read_pin` and `write_pin` become code. Any other rehearsed operation becomes a comment line. In my research run of 8 October 2026, outside this chapter's blocks, I rehearsed `UseIn(:sensor, :gpio, "blink the status led")` and the firmware got a comment. For a server or a phone, the artefact is a header with no lines when nothing was rehearsed. The narration's "the board is the last inch" holds for reads and writes of pins only.
+**The lowering knows two verbs.** Only `read_pin` and `write_pin` become code. Any other rehearsed operation becomes a comment line. In my research run of 8 October 2026, outside this chapter's blocks, I rehearsed `UseIn(:sensor, :gpio, "blink the status led")` and the firmware got a comment. For a server or a phone, the artefact is a header with no lines when nothing was rehearsed. The narration's "the board is the last inch" holds today for reads and writes of pins.
 
 **The fidelity contract is by target class.** The design says each part declares what is faithful and what is approximated. The code returns one fixed text for a microcontroller, listing two approximated things, and one for everything else, "faithful".
 
@@ -480,7 +480,7 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **`Deploy(:Emulated)` builds the emulator; moving the registry is designed.** The plan says it resolves services to sandboxes. The code builds the emulator and returns; only the production deploy touches the registry's phase. The `:emulated` phase value that the registry has is set today only by a guard; setting it from the emulated deploy is designed.
 
-**A refused `Deploy(:Production)` leaves the registry in the production phase.** After the refused deploy of my research run of 8 October 2026, outside this chapter's blocks, `Phase()` printed `production`. The pre-flight restores the phase, and the deploy does not.
+**A refused `Deploy(:Production)` leaves the registry in the production phase.** After the refused deploy of my research run of 8 October 2026, outside this chapter's blocks, `Phase()` printed `production`. The pre-flight restores the phase, and the deploy leaves it at `production`.
 
 **A plan flags today; ranking is the direction.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
@@ -488,7 +488,7 @@ What is designed: the engine running in a browser. The documents say that the ph
 
 Also designed: branches of a twin and the plan's alternatives and feedback; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
-What is absent: a live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients do not, deliberately. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
+What lies ahead: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients come after them, by deliberate choice. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
 
 ## 8. Six doors
 
@@ -498,7 +498,7 @@ What is absent: a live card-gateway adapter for payments (a hub adapter is built
 
 **The designer.** The emulator generates a surface from the plan, with a parts grid by role and one window per part. I checked the generated text. Say "generated", and not "seen".
 
-**The decision-maker.** "Who may deploy?" is a property. An assistant may plan the release and the site stays absent. A person may commit. Neither may ship a declared fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.
+**The decision-maker.** "Who may deploy?" is a property. An assistant may plan the release and the site stays `absent`. A person may commit. Neither may ship a declared fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.
 
 **The educator.** A learner can build a whole shop's integration with no account, no key and no fee, and watch the double refuse what she forgot. Her deployment fails safely and rolls back.
 

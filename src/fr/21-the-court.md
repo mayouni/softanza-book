@@ -10,7 +10,7 @@ guards: [testoor_promises_narrated, threat_model_narrated, security_ledger_narra
 stage:
   built: "la promesse jugée comme une affirmation sur un arrêt ; le volet de sécurité avec son registre, sa sentinelle, son exercice, sa réponse et ses secrets, et sa table de garanties liées à des gardes ; le volet de performance avec son instrument et sa boucle gouvernée ; la loi de la perception, adoptée"
   designed: "les routes, l'horloge et la météo, et la perception pour le lanceur de promesses ; le volet des extensions ; la négociation autour d'un plan rejeté"
-  absent: "un verdict humain sur une image de la galerie ; sept des huit traditions musicales entendues par une personne qui en vient ; un vrai coffre et un vrai bac à sable comme preuves ; un magasin de séries temporelles"
+  reached: "un verdict humain sur chaque image de la galerie ; sept des huit traditions musicales entendues par une personne qui en vient ; un vrai coffre et un vrai bac à sable comme preuves ; un magasin de séries temporelles"
 status: draft
 rulings: ["12.13", "12.16", "12.19", "12.20", "12.22", "12.26", "12.29"]
 research: research/ch21.md
@@ -265,9 +265,9 @@ La construction compte 11 assertions dans `threat_model_narrated`, un compte sta
 
 Les sections honnêtes propres du dossier, chaque perte à côté de son gain.
 
-**En performance.** Une base de données de séries temporelles, un langage de requête et des tableaux de bord sont ceux du terrain aujourd'hui, et absents ici. Par conception, le volet exporte. Sa réponse d'échantillonnage est faite d'anneaux bornés qui abandonnent le plus ancien, et l'échantillonnage en tête ou en queue, c'est ce que le terrain fait mieux aujourd'hui. Le contexte distribué atteint HTTP aujourd'hui ; aller au-delà est l'étape suivante. L'écosystème d'intégrations et d'auto-instrumentation pour chaque cadre est celui du terrain. Le profileur est coopératif : il voit ce que vous encadrez, là où un profileur natif voit tout. Le gain qu'il revendique est que le jugement et l'action vivent à l'intérieur du programme : des budgets qui font échouer la construction, un réglage qui passe la gouvernance, une surveillance qui se facture elle-même.
+**En performance.** Une base de données de séries temporelles, un langage de requête et des tableaux de bord sont ceux du terrain aujourd'hui. Par conception, le volet exporte. Sa réponse d'échantillonnage est faite d'anneaux bornés qui abandonnent le plus ancien, et l'échantillonnage en tête ou en queue, c'est ce que le terrain fait mieux aujourd'hui. Le contexte distribué atteint HTTP aujourd'hui ; aller au-delà est l'étape suivante. L'écosystème d'intégrations et d'auto-instrumentation pour chaque cadre est celui du terrain. Le profileur est coopératif : il voit ce que vous encadrez, là où un profileur natif voit tout. Le gain qu'il revendique est que le jugement et l'action vivent à l'intérieur du programme : des budgets qui font échouer la construction, un réglage qui passe la gouvernance, une surveillance qui se facture elle-même.
 
-**En sécurité.** Le registre est un anneau borné, et borné veut dire oublier. La télémétrie de l'hôte, du noyau et du réseau est absente ; le volet lit ce que les propres jointures du programme émettent. Les détections sont déclarées et non apprises ; les apprendre est l'étape suivante, et une détection de taux, le 30 septembre 2026, en couvre déjà une partie. La propre comparaison du dossier est qu'un corpus de règles au format du terrain est plus grand aujourd'hui que les huit détections livrées, et le terrain mène ici. Le flux de travail d'un centre d'opérations de sécurité est celui du terrain aujourd'hui. Le plus grand écart, dans les mots du dossier, est qu'une détection ne peut voir que ce qu'une jointure émet. Le gain est que l'événement est typé à la naissance, là où la porte refuse, de sorte qu'aucun analyseur ne se tient entre ce que le programme savait et ce que le détecteur juge.
+**En sécurité.** Le registre est un anneau borné, et borné veut dire oublier. La télémétrie de l'hôte, du noyau et du réseau est celle du terrain ; le volet lit ce que les propres jointures du programme émettent. Les détections sont déclarées et non apprises ; les apprendre est l'étape suivante, et une détection de taux, le 30 septembre 2026, en couvre déjà une partie. La propre comparaison du dossier est qu'un corpus de règles au format du terrain est plus grand aujourd'hui que les huit détections livrées, et le terrain mène ici. Le flux de travail d'un centre d'opérations de sécurité est celui du terrain aujourd'hui. Le plus grand écart, dans les mots du dossier, est qu'une détection ne peut voir que ce qu'une jointure émet. Le gain est que l'événement est typé à la naissance, là où la porte refuse, de sorte qu'aucun analyseur ne se tient entre ce que le programme savait et ce que le détecteur juge.
 
 **En promesses.** Les doctests du terrain vivent dans la chaîne d'outils de l'hôte et répondent réussite ou échec ; c'est de la connaissance générale. Le juge de la maison a cinq états. Là où le terrain mène, c'est en instruments : la note de lancement de Testoor, le volet qui tient le voyageur, compte les instruments de couverture de toute sorte à zéro aujourd'hui, et la couverture de routes est l'étape suivante.
 
@@ -275,25 +275,25 @@ Les sections honnêtes propres du dossier, chaque perte à côté de son gain.
 
 L'étude du dossier donne le ton que j'essaie de faire résonner. Une grille de deux cent quatre-vingt-six coches contre deux cent soixante-neuf croix est, dans ses mots, la forme d'une brochure.
 
-Voyons maintenant où le chapitre s'arrête.
+Voyons maintenant ce que le tribunal couvre aujourd'hui.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, aucun ne manquant.
+Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, tous présents.
 
 Ce qui est conçu :
 
 - Les routes et la carte du lanceur de promesses, son horloge et sa météo, ses excursions, sa perception et sa mutation, et ses tournées héritées. Tout cela est planifié. L'état *non perçu* est nommé dans l'en-tête du lanceur, et le lecteur n'en assigne aucun.
-- La négociation autour d'un plan rejeté, que le modèle de menace appelle conception seulement.
+- La négociation autour d'un plan rejeté, que le modèle de menace appelle conception.
 - Le volet des extensions, et avec lui la gouvernance du code étranger.
 
-Ce qui est absent :
+Ce qui est à venir :
 
-- **Un verdict humain sur une image de la galerie.** Zéro sur quatre-vingt-quinze. La deuxième exigence de la loi, un nom, une date et ce qu'ils ont dit, n'y est pas satisfaite. Le chapitre dit non perçu, et ne dit pas vérifié.
-- Sur les huit traditions musicales, sept non entendues.
-- Un vrai coffre et un vrai bac à sable comme preuves. Le résolveur de coffre est testé contre un remplaçant, sur un vrai HTTP. L'adaptateur de gestion de clés dans le nuage est absent.
-- Les chemins sur les systèmes POSIX, non vérifiés, en attendant une machine Linux ; le fuzzing planifié ; l'intégration continue ; les commits signés, que j'ai différés pour la phase de développement.
-- Un magasin de séries temporelles. Un pourcentage de couverture, qui est refusé tant qu'il n'y a pas de routes.
+- **Un verdict humain sur chaque image de la galerie.** La galerie tient quatre-vingt-quinze images, et le chapitre dit de chacune : non perçue. La deuxième exigence de la loi, un nom, une date et ce qu'ils ont dit, est le travail à venir pour chacune.
+- Sept des huit traditions musicales, chacune entendue par quelqu'un qui en vient.
+- Un vrai coffre et un vrai bac à sable comme preuves. Le résolveur de coffre est testé contre un remplaçant, sur un vrai HTTP. L'adaptateur de gestion de clés dans le nuage est à venir.
+- Les chemins sur les systèmes POSIX, à vérifier sur une machine Linux ; le fuzzing planifié ; l'intégration continue ; les commits signés, que j'ai différés pour la phase de développement.
+- Un magasin de séries temporelles. Un pourcentage de couverture, qui suit les routes ; avant elles, il est refusé.
 
 Trois autres choses ont leur place ici, trouvées en exécutant le tribunal.
 

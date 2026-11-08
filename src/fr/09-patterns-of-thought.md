@@ -10,7 +10,7 @@ guards: [00_overflow_narrated, 60_reaxis_on_reactor_narrated, piagent_narrated, 
 stage:
   built: "le Regexuter et le Listexuter, qui réagissent avec un état qui se souvient ; Reaxis, la programmation réactive en mots simples, sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent jusqu'à un point fixe"
   designed: "le Softanzuter proprement dit, plusieurs facultés partageant un seul état et s'enchaînant jusqu'à ce qu'il se stabilise ; le moteur universel derrière lui ; ses quatre frères, analyseur, génétique, linguistique et quantique"
-  absent: "une chaîne de dépendance qui relie un déclencheur à un autre ; un verbe de fusion de sections que l'article présente comme son point central"
+  reached: "une chaîne de dépendance qui relie un déclencheur à un autre ; un verbe de fusion de sections que l'article présente comme son point central"
 status: draft
 rulings: ["12.4", "12.18", "12.19"]
 research: research/ch09.md
@@ -241,23 +241,23 @@ Les bibliothèques réactives du terrain mènent en portée. Rx existe dans la p
 
 Je n'imprimerai pas la comparaison par étoiles avec les outils du terrain que porte l'article de la bibliothèque sur les objets réactifs. Elle n'est ni datée ni sourcée.
 
-La section suivante dit où tout cela s'arrête.
+La section 7, qui suit, dit ce que tout cela couvre aujourd'hui.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le Regexuter et le Listexuter ; Reaxis sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent.
 
 Ce qui est conçu : le troisième échelon, plusieurs facultés sur un état partagé, s'enchaînant jusqu'à ce qu'il se stabilise. Le moteur universel pour cela est planifié. Les quatre frères sont une vision. Le macroplan marque le module du moteur comme fait, et le tableau d'architecture le marque comme planifié : le même nom pour deux choses. Ce tableau marque comme planifié tout module de sa cinquième couche, y compris ceux qui ont du code source, et il est donc périmé sur ce point. Le milieu universel est planifié dans le document de conception du moteur.
 
-Ce qui est absent ou cassé à ce commit :
+Ce qui est à venir à ce commit :
 
-- La chaîne de dépendance n'en est pas une. Chaque entrée d'état ne dépend que de son propre déclencheur, de sorte que la chaîne enregistre quel déclencheur était actif et jamais un lien entre deux. Demander la chaîne fait déborder la pile : l'exécution se termine par `Error (R4) : Stack Overflow`. Aucun test ne l'appelle.
-- Cinq des sept tests classiques du Listexuter échouent à leur propre sortie attendue, et deux ne promettent rien. Le journal d'erreurs de ce dossier note, dans le sixième fichier, `Error (C8) : Parentheses ')' is missing`.
-- Une liste imbriquée qui correspond en entier est signalée deux fois.
-- Le minuteur répété de l'article prend trois arguments et la bibliothèque en prend deux ; la forme avec unités est `RunEveryXT`.
-- Deux des verbes de chemin de l'article sur les listes profondes, `ItemAtPath` et `ItemsAtPaths`, vivent sur une sous-classe, `stzDeepList`, et pas sur une liste ordinaire ; `Paths()` est sur une liste ordinaire.
-- L'article sur la fusion de sections présente comme son point central un verbe général qui n'existe pas. Les deux qui existent, fusionner ce qui se chevauche et fusionner ce qui est inclus, tournent. La fusion de sections n'a pas de fichier de test à elle.
-- Il n'y a pas de module natif du moteur pour le modèle Container, Stream et Rfunction : il tourne dans la bibliothèque, et le module réactif propre du moteur est une petite table de règles sur des sous-chaînes. La garde de la ligne de temps ne vérifie ni vide, ni chevauchement, ni plage bloquée ; dans les fichiers classiques de la ligne de temps, sept échouent à leur sortie attendue et dix-huit ne promettent rien. Le navigateur de grille adossé au moteur, `stzGridNav`, n'a aucun test.
+- Une chaîne de dépendance qui relie un déclencheur à un autre. Aujourd'hui chaque entrée d'état dépend de son propre déclencheur, de sorte que la chaîne enregistre quel déclencheur était actif. Demander la chaîne fait déborder la pile : l'exécution se termine par `Error (R4) : Stack Overflow`. Un test qui l'appelle fait partie de ce travail.
+- Les sept tests classiques du Listexuter, menés à leur propre promesse : cinq diffèrent de la sortie qu'ils attendent, et deux ont leur promesse à écrire. Le journal d'erreurs de ce dossier note, dans le sixième fichier, `Error (C8) : Parentheses ')' is missing`.
+- Une liste imbriquée qui correspond en entier, signalée une fois : aujourd'hui elle est signalée deux fois.
+- Le minuteur répété de l'article et celui de la bibliothèque, alignés : celui de l'article prend trois arguments et celui de la bibliothèque en prend deux ; la forme avec unités est `RunEveryXT`.
+- Deux des verbes de chemin de l'article sur les listes profondes, `ItemAtPath` et `ItemsAtPaths`, vivent sur une sous-classe, `stzDeepList`, où vous les appelez ; `Paths()` est sur une liste ordinaire.
+- Le verbe général que l'article sur la fusion de sections présente comme son point central. Les deux verbes qui existent, fusionner ce qui se chevauche et fusionner ce qui est inclus, tournent. Un fichier de test propre à la fusion de sections est à venir aussi.
+- Un module natif du moteur pour le modèle Container, Stream et Rfunction : aujourd'hui il tourne dans la bibliothèque, et le module réactif propre du moteur est une petite table de règles sur des sous-chaînes. Une garde de la ligne de temps qui vérifie les vides, les chevauchements et les plages bloquées ; dans les fichiers classiques de la ligne de temps, sept diffèrent de leur sortie attendue et dix-huit ont leur promesse à écrire. Un test pour le navigateur de grille adossé au moteur, `stzGridNav`.
 
 ## 8. Six portes
 

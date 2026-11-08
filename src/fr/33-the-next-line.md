@@ -10,7 +10,7 @@ guards: [full_scope_model_narrated, virtual_system_twin_narrated, service_delive
 stage:
   built: "une plateforme déclarée construite, puis déployée, et refusée dans l'autre ordre ; le jumeau qui ne touche rien de réel ; la barrière de production qui refuse un faux service"
   designed: "le runtime propre à la langue, qui fait tourner la bibliothèque ; la fiche de garanties d'une solution en cinq lignes ; des hôtes réels et une vraie carte"
-  absent: "une solution de client qui tourne sur le moteur Softanza, et le verdict d'une personne nommée à son sujet ; les déclarations des clients en fichiers"
+  reached: "une solution de client qui tourne sur le moteur Softanza, et le verdict d'une personne nommée à son sujet ; les déclarations des clients en fichiers"
 status: draft
 rulings: ["12.5", "12.10", "12.13", "12.21", "12.29", "12.30"]
 research: research/ch33.md
@@ -150,15 +150,15 @@ Le terrain mène en vitesse. Le runtime auquel Softanza s'est mesurée était pl
 
 Là où je pense que le dossier se distingue, c'est dans ce à quoi il se tient. Chaque référence a un document. Chaque étape a un mot. Selon le document de conception, le déploiement émulé fait tourner le même artefact que celui qui est livré. Un faux ne peut pas être livré et un modèle d'IA ne peut pas valider. Et une perception est une ligne nommée, datée, citée, ce qu'un logo sur une page d'accueil ne porte pas.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-Ce chapitre regarde devant, la limite est donc courte.
+Ce chapitre regarde devant, cette section est donc courte.
 
 Ce qui est construit : le plancher. Déclarer, construire, déployer dans l'ordre ; répéter sur un jumeau ; refuser un faux à la barrière de production ; valider seulement par un acteur gouverné.
 
 Ce qui est conçu : le runtime propre à la langue, qui fait tourner la bibliothèque ; la fiche de garanties d'une solution en cinq lignes ; la vérification sur des hôtes réels et sur une vraie carte.
 
-Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le verdict d'une personne nommée à son sujet, et les déclarations des clients en fichiers (le chapitre 31 dit où j'ai cherché). À côté se tiennent le plancher ci-dessus et le retour de trois projets. Nommer le projet qui passe en premier sur le moteur, et la personne qui le percevra, est l'étape suivante ; j'écris les deux quand le dossier les porte.
+Ce qui est à venir : une solution de client qui tourne sur le moteur Softanza, le verdict d'une personne nommée à son sujet, et les déclarations des clients en fichiers (le chapitre 31 dit où j'ai cherché). À côté se tiennent le plancher ci-dessus et le retour de trois projets. Nommer le projet qui passe en premier sur le moteur, et la personne qui le percevra, est l'étape suivante ; j'écris les deux quand le dossier les porte.
 
 ## 8. Six portes
 
@@ -168,7 +168,7 @@ Ce qui est absent : une solution de client qui tourne sur le moteur Softanza, le
 
 **Le concepteur.** Ce que vous concevez est jugé en dernier par le sens d'une personne. L'opinion d'un modèle d'IA sur une image est un résultat ; celle d'une personne est le verdict.
 
-**Le décideur.** Lisez le mot d'étape avant la promesse. Aujourd'hui le plancher est construit ; l'exécution chez un client sur le moteur est le prochain jalon, et son mot d'étape est absent.
+**Le décideur.** Lisez le mot d'étape avant la promesse. Aujourd'hui le plancher est construit ; l'exécution chez un client sur le moteur est le prochain jalon, et son mot d'étape est à venir.
 
 **Le formateur.** Enseignez que non perçu est un état et non un échec. Un rapport honnête peut être livré dessus, s'il le dit.
 

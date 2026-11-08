@@ -10,7 +10,7 @@ guards: [dlm_narrated, structuredoutput_narrated, schema_grammar_narrated, knowl
 stage:
   built: "le premier échelon du modèle de domaine sans neurones ; ses faits rendus comme un corpus ; un vocabulaire fermé ; la complétion par consultation ; un lot en texte simple qui voyage avec ses tests ; un petit second échelon, un bigramme, exporté vers un fichier de modèle ; l'admission d'un fait par une loi"
   designed: "une grammaire dérivée d'une base de connaissances par un seul appel ; l'unité typée de prédiction validée en cinq étapes ; un second échelon dont le corpus est vérifié avant qu'il s'entraîne ; la fonderie qui l'agrandirait"
-  absent: "un pipeline qui enchaîne les cinq étapes sur n'importe quelle unité ; un mot de fin de phrase pour le second échelon ; une complétion qui voit la phrase jusque-là"
+  reached: "un pipeline qui enchaîne les cinq étapes sur n'importe quelle unité ; un mot de fin de phrase pour le second échelon ; une complétion qui voit la phrase jusque-là"
 status: draft
 rulings: ["12.19", "12.29", "12.30"]
 research: research/ch19.md
@@ -245,20 +245,20 @@ Le terrain mène en fluidité, ce qui est le but d'un modèle d'IA. Un premier �
 
 Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle d'IA général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un. Chaque proposition du second peut être soumise à une barrière, et la barrière peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
 
-La section 7 dit ce qui est construit, ce qui est conçu et ce qui est absent.
+La section 7 dit ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le premier échelon et ses réponses ; les faits rendus comme corpus, avec un vocabulaire fermé ; la complétion par consultation ; et le lot qui voyage avec ses tests. Construit aussi : un second échelon qui s'entraîne en une fraction de seconde et exporte un petit fichier de modèle, et l'admission d'un fait par une loi.
 
 Ce qui est conçu tient en quatre points.
 
-- La grammaire dérivée d'une base de connaissances par un seul appel. La composition de ce chapitre est celle du lecteur, pas celle de la bibliothèque.
-- Le corpus du second échelon validé par la grammaire du premier avant d'être admis. La conception le dit ; le code rend les faits directement, sans une telle vérification. Ainsi « correct par construction » vaut pour le texte d'entraînement, et non pour ce que dit le modèle.
-- La validation en cinq étapes d'un chunk. Aucune n'existe comme pipeline.
+- La grammaire dérivée d'une base de connaissances par un seul appel. La composition de ce chapitre est celle du lecteur ; l'appel unique de la bibliothèque est conçu.
+- Le corpus du second échelon validé par la grammaire du premier avant d'être admis. La conception le dit ; le code rend les faits directement, et la vérification est conçue. Ainsi « correct par construction » vaut pour le texte d'entraînement, et ce que dit le modèle est une proposition pour la barrière.
+- La validation en cinq étapes d'un chunk ; le pipeline qui enchaîne les étapes est à venir.
 - Les étapes de la fonderie au-delà du bigramme.
 
-Ce qui est absent : un mot de fin de phrase pour le second échelon, ce qui explique qu'une de ses phrases n'en finisse pas. Absente aussi, une complétion qui voit la phrase jusque-là ; c'est pourquoi une complétion après une relation énumère les objets de chaque fait de cette relation. Le premier échelon répond aussi à une question reformulée avec le type, comme l'a montré le chapitre 17, là où la loi de cette partie dit qu'il devrait refuser.
+Ce qui est à venir : un mot de fin de phrase pour le second échelon, pour terminer celle de ses phrases qui n'en finit pas ici. Une complétion qui voit la phrase jusque-là est aussi à venir ; aujourd'hui une complétion après une relation énumère les objets de chaque fait de cette relation. Et le refus, par le premier échelon, d'une question reformulée : aujourd'hui il répond avec le type, comme l'a montré le chapitre 17, là où la loi de cette partie dit qu'il devrait refuser.
 
 ## 8. Six portes
 
@@ -280,7 +280,7 @@ Forgez un domaine à vous avec trois entités et deux relations. Avant d'exécut
 
 Exécutez-le. Puis écrivez une phrase de la bonne forme et de la mauvaise vérité, et dites lequel de la grammaire et du graphe la refuse, et lequel ne la refuse pas.
 
-Je vous laisse celui-ci. La section 3 dit que la complétion voit un mot et non la phrase jusque-là, et la section 7 la range parmi ce qui est absent. Dans votre domaine, donnez à deux entités la même relation avec des objets différents, demandez la complétion de cette relation, et lisez la liste contre la phrase que vous aviez en tête. La bibliothèque ne le répare pas, et je ne l'ai pas réparé pour vous. Puis composez, avec ce que la section 3 montre (les faits d'une base de connaissances, lus un par un), une complétion qui voit le sujet en plus de la relation.
+Je vous laisse celui-ci. La section 3 dit que la complétion voit un mot et non la phrase jusque-là, et la section 7 la range parmi ce qui est à venir. Dans votre domaine, donnez à deux entités la même relation avec des objets différents, demandez la complétion de cette relation, et lisez la liste contre la phrase que vous aviez en tête. La bibliothèque ne le répare pas, et je ne l'ai pas réparé pour vous. Puis composez, avec ce que la section 3 montre (les faits d'une base de connaissances, lus un par un), une complétion qui voit le sujet en plus de la relation.
 
 Quand vous l'aurez résolu, vous saurez pourquoi une complétion qui voit un mot énumère les objets de chaque fait de cette relation.
 

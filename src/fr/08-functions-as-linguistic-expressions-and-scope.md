@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 972_narration_viz-finding_a_recurring_substring, ful
 stage:
   built: "quatorze des vingt-deux formes, certaines avec d'autres exemples que ceux de l'article, et trois autres sous une autre forme ; la bibliothèque qui lit un nom comme une phrase ; la portée dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement"
   designed: "les formes déclarées une fois comme données et générées, en Haro ; le paradigme de portée pour le temps, les unités, la mémoire et le style"
-  absent: "cinq formes : partielle, future, libre, par défaut et multilingue ; la concurrence comme portée : un plan sans code"
+  reached: "cinq formes : partielle, future, libre, par défaut et multilingue ; la concurrence comme portée, de son plan à son code"
 status: draft
 rulings: ["12.3", "12.13", "12.19", "12.21"]
 research: research/ch08.md
@@ -252,24 +252,24 @@ Le terrain mène en garantie. Les arguments nommés de Python sont vérifiés à
 
 Sur la portée, le terrain mène en maturité. La pratique la plus proche est le contexte explicite : l'habitude de Go de passer un contexte à chaque appel, un objet de locale qui porte un cadre. Elles sont plus anciennes et plus largement employées. Ce que ce paradigme ajoute, c'est que le cadre fait partie d'un petit ensemble fermé, choisi dans le verbe, et que la bibliothèque peut raisonner avec lui.
 
-Enfin, la limite, avec ce qui est construit, ce qui est conçu et ce qui est absent.
+Enfin, la section 7, avec ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : quatorze des vingt-deux formes d'un nom tournent, certaines avec d'autres exemples que ceux de l'article, et trois autres tournent sous une autre forme. La bibliothèque lit un nom comme une phrase. Et la portée tourne dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement. L'article compte vingt-trois sections : les vingt-deux formes d'un nom, et « small functions », qui sont des fonctions et non une forme de nom. Le nombre du livre est vingt-deux, les formes d'un nom.
 
 Ce qui est conçu : les formes de Haro comme données, avec des familles générées ; et le paradigme de portée pour le temps, les unités, la mémoire et le style, comme lignes d'un tableau.
 
-Ce qui est absent, et la page doit dire chacune avec ce qui existe à côté :
+Ce qui est à venir, chacune avec ce qui existe à côté :
 
-- **Partielle**, `@Removed`, n'est que dans l'archive : l'appel n'est pas défini.
+- **Partielle**, `@Removed`, vit dans l'archive : définir l'appel dans la bibliothèque vivante est le travail à venir.
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.
-- **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
-- **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque donne la forme informante comme prévue.
-- **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
-- Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre, au sens de l'article, un nombre et une chaîne permutés dans leurs positions, ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. L'ordre libre des paramètres nommés est autre chose, et le chapitre 7 l'exécute. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
+- **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : sa définition vit dans l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` ; les deux narrations qui la racontent emploient deux noms, et sa définition dans le code, sous l'un d'eux, est le travail à venir.
+- **Par défaut**, `dftRange` et `infRange` : à venir ; le commentaire de la bibliothèque donne la forme informante comme prévue.
+- **Multilingue**, une méthode nommée en français ou en arabe : à venir pour la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
+- Les trois qui tournent sous une autre forme. La forme d'exception existe, et l'exemple de l'article est à venir. L'ordre libre, au sens de l'article, un nombre et une chaîne permutés dans leurs positions, fonctionne pour le premier ordre, et l'ordre permuté est à venir : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et une sortie vide. L'ordre libre des paramètres nommés est autre chose, et le chapitre 7 l'exécute. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
 
-Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau du document de conception de la portée en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, n'est pas défini. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde sous charge, que les données du livre ne gardent pas, 61 des 62 assertions de sa garde narrée ont passé, et la seule assertion qui n'a pas tenu était une limite de temps. Je dis ce que le code fait : la portée du système est construite, avec ce résultat imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence est un plan du dossier sans code : le mot `Concurrently` n'a aucune définition.
+Du côté de la portée : les verbes de l'expression régulière diffèrent du tableau du document de conception de la portée en deux endroits. `MatchLine` laisse un point traverser une ligne, là où le tableau dit qu'il reste dans une seule, et `MatchOneSegment`, que le tableau propose pour le cas paresseux, est à venir dans le code. La portée du système est construite, et le document de conception l'appelle encore conçue : le dossier se contredit lui-même. Le document de conception de la portée, version 1.2 du 16 août 2026, est cité ici comme le texte du document. Le dossier ne dit pas qui l'a écrit, et je ne l'imprime pas comme mien. Le document de fondation du système, du 20 juillet 2026, dit que la fondation est implémentée. Lors d'une exécution de sonde sous charge, que les données du livre ne gardent pas, 61 des 62 assertions de sa garde narrée ont passé, et la seule assertion qui n'a pas tenu était une limite de temps. Je dis ce que le code fait : la portée du système est construite, avec ce résultat imprimé à côté, et le mot « conçue » du document de conception est celui du document, périmé. Et la concurrence comme portée est un plan du dossier ; son code, à commencer par une définition du mot `Concurrently`, est le travail à venir.
 
 ## 8. Six portes
 

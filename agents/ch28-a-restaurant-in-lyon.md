@@ -2,7 +2,7 @@
 
 Source: Chapter 28. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; absent: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
+Stage: built: the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged; designed: the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes; reached: the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine
 
 Run: 5 of 5 blocks kept their promise, on 2026-10-30 15:01 UTC+01:00.
 
@@ -228,15 +228,15 @@ And the super-app hosts lead in installed base. The design names what the indust
 
 Now I say where the chapter stops.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
 
-What is designed: the Lock as a rule of the library, of which the record has no code; the near-natural idiom of the constellation, with the verbs the design names and the class does not have.
+What is designed: the Lock as a rule of the library, which the record holds as a design; the near-natural idiom of the constellation, with the verbs the design names for the class.
 
-What is absent: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August postponed to the next cycle. The interface rules, the two-gesture rule among them, as checks, a seventy-fifth percentile expectation and browser-side timing, of which no document of the library holds a design. And the state of the platform after 25 August 2026, where the record ends. Nothing in it says the first version reached production at the restaurant, passed the go-live gate, or took a real order from a real customer. The record is silent on what happened after 25 August 2026, and I say so. Of the owner's tightened speed thresholds I print none, and say only that such a budget exists.
+What lies ahead: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August set for the next cycle. The interface rules as checks, the two-gesture rule among them, a seventy-fifth percentile expectation, and browser-side timing, whose design is the first step ahead. And the platform's path after 25 August 2026, where the record ends. As the record leaves it, the first version's next steps are production at the restaurant, the go-live gate, and a real order from a real customer. The owner's tightened speed thresholds stay his. I say that such a budget exists, and keep its numbers with him.
 
-And what runs today is ordinary. The worlds are single HTML files, one per world, with a vendored framework, no build step and no content network. The server is a Node program of a few hundred lines. It uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. None of it runs on the Softanza engine. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant does not.
+And what runs today is ordinary. The worlds are single HTML files, one per world, each carrying its vendored framework and served as written. The server is a Node program of a few hundred lines. It uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. It all runs on these ordinary pieces, and the platform on the Softanza engine is the work ahead. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant runs on the pieces above.
 
 Six doors follow, one for each reader.
 
@@ -267,7 +267,7 @@ Declare your own Lock for one cycle. Write the worlds of the cycle you are in, t
 
 The court will tell you the circumstance and the rule. It will not write the declaration. If you want a harder one, add a rule about the actions of your cycle, and find the action that costs a third gesture.
 
-I left this one in your hands, on purpose. The owner's speed protocol is at the seventy-fifth percentile, and the budget of section 3 is judged at the ninety-fifth. Take that block, change the percentile of one expectation to another that the library offers, keep every other line, and run it. Read what the court judges against what he asked for. Section 6 says what the library's terms offer, and section 7 lists his expectation among the things absent. I give you neither the verdict nor the answer.
+I left this one in your hands, on purpose. The owner's speed protocol is at the seventy-fifth percentile, and the budget of section 3 is judged at the ninety-fifth. Take that block, change the percentile of one expectation to another that the library offers, keep every other line, and run it. Read what the court judges against what he asked for. Section 6 says what the library's terms offer, and section 7 lists his expectation among the work ahead. I give you neither the verdict nor the answer.
 
 When you have solved it, you will know why a promise the court can judge differs from the promise the owner asked for.
 

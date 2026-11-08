@@ -2,7 +2,7 @@
 
 Source: Chapter 23. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; absent: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution
+Stage: built: a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes; designed: the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement; reached: a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for a solution
 
 Run: 10 of 10 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -383,9 +383,9 @@ The compiler leads on scopes. It checks against a target in daily use at scale; 
 
 Where the field and the record meet: a super-app is a graph of graphs. The field's context map is a diagram. Softanza's is a registry that refuses.
 
-## 7. The limit
+## 7. What it covers today
 
-A world's truths are narrated and not judged. The number in a reaction is the first case. Do ninety days and one day give different proposals? A reaction fires for each instance that lacks a relation named after the thing it proposes, and the comment above `Pulse()` says so. Run two clinics:
+A world's truths are declared and narrated, and judging them is the work ahead. The number in a reaction is the first case. Do ninety days and one day give different proposals? A reaction fires for each instance that lacks a relation named after the thing it proposes, and the comment above `Pulse()` says so. Run two clinics:
 
 ```haro
 oA = StzAppQ("clinic-a")
@@ -420,7 +420,7 @@ oB.Live()
 
 Both clinics answer `[ "propose", "checkup", "for", "bob" ]`. Ninety days and one day give the same proposals!
 
-The same reading holds for `IsTrue`, which is stored and narrated while instances carry no fields to judge it against. It holds for a flow's `Require` and `Then`, stored and narrated, where I found no executor; and for the bounds of a refinement. A world today declares that a balance must not be negative. It does not judge a balance. What it does judge is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. So the chapter says it in one line: declared and narrated; judged only for goals, crossings and capabilities.
+The same reading holds for `IsTrue`, which is stored and narrated; judging it asks for fields on the instances, and that is ahead. It holds for a flow's `Require` and `Then`, stored and narrated, with their executor ahead; and for the bounds of a refinement. A world today declares that a balance must not be negative, and narrates it. What it judges is a goal's gap, a crossing and a capability. So I say "a world that wants" for the goal, and "narrated" for the truth. Chapter 4's `true when balance @ >= 0` is a declaration only. So the chapter says it in one line: declared and narrated; judged only for goals, crossings and capabilities.
 
 The design writes more than the class speaks. Does the class speak the design's near-natural idiom for the constellation? Ask it for `Hosts`, `Admits` and `Explain`:
 
@@ -448,13 +448,13 @@ done
 
 > run: kept
 
-Three times the answer is `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` and `Generate` are not defined on a constellation either. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part that is not there. The design's own header calls the document a forward design.
+Three times the answer is `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` and `Generate` answer the same way on a constellation. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part ahead. The design's own header calls the document a forward design.
 
 What is built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
 
-What is designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and nothing is handed to the target); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
+What is designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and handing the call to the target is the design); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
 
-What is absent: a narration for the constellation or the envelope, since none exists. The narration for building a first app uses verbs the class does not have. Seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet: no solution has one. A lane of the Atlas for the world, the constellation or the envelope.
+What lies ahead: a narration for the constellation or the envelope. The narration for building a first app speaks verbs ahead of the class: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet for a solution. A lane of the Atlas for the world, the constellation or the envelope.
 
 The six doors come next.
 

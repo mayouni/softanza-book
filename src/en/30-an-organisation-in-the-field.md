@@ -10,7 +10,7 @@ guards: [graphruleset_narrated, gg_rule_governance, wisecoding_narrated, governa
 stage:
   built: "a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for"
   designed: "the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone"
-  absent: "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
+  reached: "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
 status: draft
 rulings: ["12.13", "12.29"]
 research: research/ch30.md
@@ -253,15 +253,15 @@ The field leads in offline. Local-first software is a practice with synchronisin
 
 The field leads in people. A decision table is a thing a trained analyst already knows how to read. And the organisation's own specification, which preferred the vendor's suite, had good reasons: its users already have accounts there.
 
-The next section lists what is built, what is designed and what is absent.
+The next section lists what is built, what is designed and what lies ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
 
-What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation that is not the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library has only the pieces. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves and this chapter does not show.
+What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation of its own, apart from the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library holds the pieces today. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves, outside this chapter's blocks.
 
-What is absent: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound. I found no store of rule versions, and my search was not exhaustive. The hub, built. Offline as a mechanism: no class in the library keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
+What lies ahead: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound; a store of rule versions is the piece ahead, as far as my search of the library reached. The hub, built. Offline as a mechanism: a class of the library that keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
 
 Six doors follow, one for each reader.
 

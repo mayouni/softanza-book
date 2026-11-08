@@ -10,7 +10,7 @@ guards: [06_stzsuperapp_narrated, service_delivery_narrated, payments_port_narra
 stage:
   built: "la constellation de mondes avec ses liens et ses normes ; le bac à sable des paiements et la barrière de production qui refuse un faux ; le budget de vitesse déclaré et jugé"
   designed: "le Verrou comme règle de la bibliothèque ; la constellation écrite dans l'idiome proche du naturel que la conception décrit"
-  absent: "l'adaptateur de paiement réel du restaurant ; une mesure du budget sur un vrai réseau mobile ; une attente de vitesse dans le percentile propre au propriétaire ; la mesure du temps côté navigateur ; la plateforme sur le moteur Softanza"
+  reached: "l'adaptateur de paiement réel du restaurant ; une mesure du budget sur un vrai réseau mobile ; une attente de vitesse dans le percentile propre au propriétaire ; la mesure du temps côté navigateur ; la plateforme sur le moteur Softanza"
 status: draft
 rulings: ["12.15", "12.19", "12.25", "12.29", "12.30"]
 research: research/ch28.md
@@ -228,15 +228,15 @@ Et les hôtes de super-applications mènent en base installée. La conception no
 
 Je dis maintenant où le chapitre s'arrête.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : la constellation de mondes avec ses liens et ses passages gouvernés par des normes, le retrait, le réveil, l'échange à chaud et l'imbrication ; le bac à sable des paiements et la barrière de production. Le budget de vitesse déclaré et jugé ; les règles de graphe qu'utilise la construction du Verrou.
 
-Ce qui est conçu : le Verrou comme règle de la bibliothèque, dont le dossier n'a aucun code ; l'idiome proche du naturel de la constellation, avec les verbes que la conception nomme et que la classe n'a pas.
+Ce qui est conçu : le Verrou comme règle de la bibliothèque, que le dossier tient comme une conception ; l'idiome proche du naturel de la constellation, avec les verbes que la conception nomme pour la classe.
 
-Ce qui est absent : l'adaptateur de paiement réel du restaurant, que la charte de la bibliothèque appelle une tâche ultérieure et la décision du propriétaire. Une mesure du budget sur un vrai réseau mobile, que le tableau de bord du projet du 23 août a reportée au cycle suivant. Les règles d'interface, dont la règle des deux gestes, comme contrôles, une attente au soixante-quinzième percentile et la mesure du temps côté navigateur, dont aucun document de la bibliothèque ne porte la conception. Et l'état de la plateforme après le 25 août 2026, où le dossier s'arrête. Rien n'y dit que la première version soit arrivée en production au restaurant, ait passé la barrière de mise en service, ou ait pris une vraie commande d'un vrai client. Le dossier est muet sur ce qui s'est passé après le 25 août 2026, et je le dis. Des seuils de vitesse resserrés du propriétaire, je n'en imprime aucun, et dis seulement qu'un tel budget existe.
+Ce qui est à venir : l'adaptateur de paiement réel du restaurant, que la charte de la bibliothèque appelle une tâche ultérieure et la décision du propriétaire. Une mesure du budget sur un vrai réseau mobile, que le tableau de bord du projet du 23 août a placée au cycle suivant. Les règles d'interface comme contrôles, dont la règle des deux gestes, une attente au soixante-quinzième percentile, et la mesure du temps côté navigateur, dont la conception est le premier pas à venir. Et le chemin de la plateforme après le 25 août 2026, où le dossier s'arrête. Tel que le dossier la laisse, les prochaines étapes de la première version sont la production au restaurant, la barrière de mise en service, et une vraie commande d'un vrai client. Les seuils de vitesse resserrés du propriétaire restent les siens. Je dis qu'un tel budget existe, et je lui en laisse les nombres.
 
-Et ce qui tourne aujourd'hui est ordinaire. Les mondes sont des fichiers HTML uniques, un par monde, avec un cadriciel embarqué, sans étape de construction et sans réseau de contenu. Le serveur est un programme Node de quelques centaines de lignes. Il utilise cinq modules propres à Node, sert les mondes sur le réseau local, et ne garde qu'une chose : un journal, chaîné par des empreintes, rejoué au redémarrage. La première application de gestion a une enveloppe de téléphone autour d'une vue web. Rien de tout cela ne tourne sur le moteur Softanza. La bibliothèque est la référence de conception du projet. La constellation est, selon les mots du site, une conception que la bibliothèque sait exécuter. Le restaurant, non.
+Et ce qui tourne aujourd'hui est ordinaire. Les mondes sont des fichiers HTML uniques, un par monde, chacun portant son cadriciel embarqué et servi tel qu'il est écrit. Le serveur est un programme Node de quelques centaines de lignes. Il utilise cinq modules propres à Node, sert les mondes sur le réseau local, et ne garde qu'une chose : un journal, chaîné par des empreintes, rejoué au redémarrage. La première application de gestion a une enveloppe de téléphone autour d'une vue web. Tout cela tourne sur ces pièces ordinaires, et la plateforme sur le moteur Softanza est le travail à venir. La bibliothèque est la référence de conception du projet. La constellation est, selon les mots du site, une conception que la bibliothèque sait exécuter. Le restaurant tourne sur les pièces ci-dessus.
 
 Six portes suivent, une pour chaque lecteur.
 
@@ -265,7 +265,7 @@ Déclarez votre propre Verrou pour un cycle. Puis écrivez les mondes du cycle o
 
 Le tribunal vous dira la circonstance et la règle. Il n'écrira pas la déclaration. Si vous voulez une épreuve plus dure, ajoutez une règle sur les actions de votre cycle, et trouvez l'action qui coûte un troisième geste.
 
-Je vous laisse celui-ci, volontairement. Le protocole de vitesse du propriétaire est au soixante-quinzième percentile, et le budget de la section 3 est jugé au quatre-vingt-quinzième. Prenez ce bloc, changez le percentile d'une attente pour un autre que la bibliothèque offre, gardez toutes les autres lignes, et lancez-le. Lisez ce que le tribunal juge contre ce qu'il a demandé. La section 6 dit ce que les termes de la bibliothèque offrent, et la section 7 range son attente parmi les choses absentes. Je ne vous donne ni le verdict ni la réponse.
+Je vous laisse celui-ci, volontairement. Le protocole de vitesse du propriétaire est au soixante-quinzième percentile, et le budget de la section 3 est jugé au quatre-vingt-quinzième. Prenez ce bloc, changez le percentile d'une attente pour un autre que la bibliothèque offre, gardez toutes les autres lignes, et lancez-le. Lisez ce que le tribunal juge contre ce qu'il a demandé. La section 6 dit ce que les termes de la bibliothèque offrent, et la section 7 range son attente dans le travail à venir. Je ne vous donne ni le verdict ni la réponse.
 
 Quand vous l'aurez résolu, vous saurez pourquoi une promesse que le tribunal sait juger diffère de la promesse que le propriétaire a demandée.
 

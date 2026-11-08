@@ -10,7 +10,7 @@ guards: [modality_narrated, wisecoding_narrated, wisecoding_rich_narrated]
 stage:
   built: "le tribunal derrière chaque bloc de ce chapitre sauf celui de la vérité, et les mots d'étape que le site imprime sur chaque produit"
   designed: "le registre des concepts repensés comme données, avec une garde qui échoue quand un concept n'a pas de preuve"
-  absent: "une page qui montre chaque concept repensé avec une preuve exécutée ; un fichier de tests pour le moteur de paradigme de la fusion de sections"
+  reached: "une page qui montre chaque concept repensé avec une preuve exécutée ; un fichier de tests pour le moteur de paradigme de la fusion de sections"
 status: draft
 rulings: ["12.19", "12.22", "12.29", "12.30"]
 research: research/ch03.md
@@ -118,7 +118,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 La réponse de l'hôte est inchangée : `TRUE`. La réponse étendue lit votre déclaration et dit `FALSE` ! « La vérité devient une affaire de politique », dit la narration, et la politique est écrite là où vous pouvez la lire.
 
-Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La limite, en trois mots d'étape. Le premier, **construit**, veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné ; c'est le *construit* du site lui-même. Le deuxième, **conçu**, couvre ce que le site appelle *en construction*, *spécification* et *proposition ratifiée*. Le troisième, **absent**, couvre ce que le site appelle *nommé*, un nom dont le travail est à venir, et ce que le dossier laisse sans nom. Cinq mots du site, trois du livre. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
+Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La section 7, ce qu'il couvre aujourd'hui, en trois mots d'étape. Le premier, **construit**, veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné ; c'est le *construit* du site lui-même. Le deuxième, **conçu**, couvre ce que le site appelle *en construction*, *spécification* et *proposition ratifiée*. Le troisième, **à venir**, couvre ce que le site appelle *nommé*, un nom dont le travail vient ensuite, et le travail plus loin vers lequel mène le sujet du chapitre. Cinq mots du site, trois du livre. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
 
 Et le livre est jugé comme la bibliothèque l'est. Chaque bloc qu'il contient s'est exécuté dans la bibliothèque la nuit où la page a été construite, au commit imprimé en haut de la page. Une page dont les promesses ne sont pas tenues ne se construit pas.
 
@@ -152,13 +152,13 @@ Le terrain mène en adoption. Les fiches de décision sont un standard léger qu
 
 Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. Je tiens cela pour une vue, non pour un résultat. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision se lit ; un exemple s'exécute. Ici, ils sont un seul objet : la décision, ce qu'elle a refusé, et le code qui s'exécute.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le tribunal derrière chaque bloc de ce chapitre sauf celui de la vérité, et les cinq mots d'étape que le site imprime sur chaque produit.
 
 Ce qui est conçu : le registre des concepts repensés comme données, une ligne par concept avec son article, son code, sa garde et son étape. À côté, une garde qui échoue quand un nouveau concept arrive sans ligne. Les deux sont aujourd'hui une spécification.
 
-Ce qui est absent : une page qui montre chaque concept avec une preuve exécutée ; la page de registre du site, lue le 9 octobre 2026, les liste chacun avec ses preuves. Un fichier de tests pour le module du moteur de l'un des moteurs de paradigme, la fusion de sections : il n'en a pas en propre, bien que ses méthodes de fusion s'exécutent dans `base/test/string/289_content.ring` et `max/test/stzListOfPairsTest.ring`. Et quelques réexamens où l'article va un pas au-delà du code d'aujourd'hui. L'article sur les quantificateurs demande si toutes vos notes `AreGreaterThan` la moyenne, et cette méthode s'écrit autrement dans la bibliothèque aujourd'hui. Ses quantificateurs plus conviviaux, certains, la plupart et peu, tirent au hasard, de sorte qu'ils ne portent aucune promesse aujourd'hui. Le registre est une lecture, et une lecture peut manquer un concept qui ne vit que dans un seul article.
+Ce qui est à venir : une page qui montre chaque concept avec une preuve exécutée ; la page de registre du site, lue le 9 octobre 2026, les liste chacun avec ses preuves. Un fichier de tests propre au module du moteur de l'un des moteurs de paradigme, la fusion de sections, dont les méthodes de fusion s'exécutent aujourd'hui dans `base/test/string/289_content.ring` et `max/test/stzListOfPairsTest.ring`. Et quelques réexamens où l'article va un pas au-delà du code d'aujourd'hui. L'article sur les quantificateurs demande si toutes vos notes `AreGreaterThan` la moyenne, et la bibliothèque écrit aujourd'hui cette méthode autrement. Ses quantificateurs plus conviviaux, certains, la plupart et peu, tirent au hasard, de sorte que leur promesse est un travail à venir. Le registre est une lecture, et une lecture peut manquer un concept qui ne vit que dans un seul article.
 
 Là s'arrête ce chapitre ; six portes suivent, une pour chaque sorte de lecteur.
 

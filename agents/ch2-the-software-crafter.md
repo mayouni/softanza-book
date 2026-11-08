@@ -2,7 +2,7 @@
 
 Source: Chapter 2. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; absent: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
+Stage: built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic; designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work; reached: the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target
 
 Run: 9 of 9 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -245,15 +245,15 @@ The messaging apps lead where the crafters already are. The restaurateur's tool 
 
 And the educator's door is at an earlier stage than the others. The course's editions in French, Arabic and Hausa are drafts; a reviewer's reading and a first institution to adopt the course are the next steps.
 
-The next section says what is built, what is designed and what is absent.
+The next section says what is built, what is designed and what lies ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic.
 
 What is designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work.
 
-What is absent: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And declaring a world to the crafter's own medium, the messaging app on their phone, is the direction of Chapter 25.
+What lies ahead: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And declaring a world to the crafter's own medium, the messaging app on their phone, is the direction of Chapter 25.
 
 ## 8. Six doors
 

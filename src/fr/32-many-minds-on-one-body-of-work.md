@@ -10,7 +10,7 @@ guards: [coderule_narrated, codegraph_narrated, coderule_project_narrated]
 stage:
   built: "le protocole, ses mémos et son registre des décisions ; trois hooks : l'un refuse l'indexation en bloc, l'autre refuse une modification de registre faite sur une vue périmée de son système source, le troisième refuse le travail sur une machine inondée ; l'instrument qui mesure les horodatages composés ; les seize règles de la maison de la bibliothèque, dont cinq sur un graphe du code"
   designed: "un surveillant qui réveille une session quand un fichier arrive, à la place des horloges ; un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit"
-  absent: "des chiffres de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui ait essayé le protocole ; une vérification d'un mot dans la langue du lecteur"
+  reached: "des chiffres de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui essaie le protocole ; une vérification d'un mot dans la langue du lecteur"
 status: draft
 rulings: ["12.16", "12.20", "12.29"]
 research: research/ch32.md
@@ -129,15 +129,15 @@ Le terrain mène en outillage pour de nombreux auteurs. Les branches, les files 
 
 Là où je pense que le dossier se distingue, c'est dans une habitude : chaque loi porte l'échec qui l'a payée, et le dossier publie son propre taux d'infraction à sa propre loi. Le bureau central a enfreint la loi des horodatages à peu près aussi souvent que le domaine de projets qu'il mesurait, sur une surface différente : 5 sur 25 contre 34 sur 151. Quatre des cinq datent d'avant la loi. Les deux chiffres sont imprimés côte à côte.
 
-Reste la limite, en mots d'étape.
+La section 7 en donne la somme dans les mots d'étape.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, et l'instrument qui mesure les horodatages. Les seize règles de la maison de la bibliothèque sont construites, dont cinq sur son graphe de code.
 
 Ce qui est conçu : un surveillant qui réveille une session quand un fichier arrive, ce qui est, à mon avis, le bon remplacement des horloges et reste à venir. Et un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Le style de la maison serait alors tenu par une machine autant que par ma lecture.
 
-Ce qui est absent : un chiffre de jetons dans le dossier des coûts ; toute équipe hors de ce domaine de projets qui ait employé le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur. La loi des mots demande cette vérification, et aucun outil ne l'exécute encore ; cette vérification est l'étape suivante. Mon étude du dossier a nommé une mesure de plus à prendre : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et je devrais surveiller le rapport. Le dossier ne contient aucune lecture de ce rapport.
+Ce qui est à venir : un chiffre de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui emploie le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur. La loi des mots demande cette vérification, et l'outil qui l'exécute est l'étape suivante. Mon étude du dossier a nommé une mesure de plus à prendre : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et je devrais surveiller le rapport. Sa première lecture est à venir, elle aussi.
 
 ## 8. Six portes
 

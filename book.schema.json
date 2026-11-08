@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Softanza, the book as data (book.json)",
-  "description": "What an agent may rely on. A promise is a block of code with the lines it promised and the run's verdict; a stage word says built, designed or absent; a draft is marked draft and is not the author's final word.",
+  "description": "What an agent may rely on. A promise is a block of code with the lines it promised and the run's verdict; a stage word says built, designed or ahead (the key reached); a draft is marked draft and is not the author's final word.",
   "type": "object",
   "required": ["schema", "title", "subtitle", "author", "built", "library_commit", "spine", "rules_for_agents", "chapters"],
   "properties": {

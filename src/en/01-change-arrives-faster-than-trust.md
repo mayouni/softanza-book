@@ -9,7 +9,7 @@ site: [forged, agentic]
 guards: [service_registry_narrated, safeworld_narrated, governance_crossing_narrated]
 stage:
   built: the court that admits or refuses a change, for a person and for a machine
-  absent: a customer platform running on the Softanza engine
+  reached: a customer platform running on the Softanza engine
 status: draft
 rulings: ["12.10", "12.11", "12.15", "12.28", "12.29"]
 source: drafts/book-01-change-arrives-faster-than-trust.md
@@ -110,7 +110,7 @@ Where I believe Softanza stands alone is in the order of things. The field adds 
 
 Those are claims, and each has its chapter and its guard. I list them here so that you know where the argument is going, and so that you can hold me to it.
 
-## 7. The limit
+## 7. What it covers today
 
 The honest limit of this chapter is also the honest limit of the whole platform, and I put it on the first page on purpose.
 

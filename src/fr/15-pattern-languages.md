@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 00_numbrex_narrated, tablex_narrated, 00_matrex_narr
 stage:
   built: "des motifs pour le texte, les nombres et les tableaux, chacun avec une garde ; la même petite habitude d'un support à l'autre (un constructeur, un motif dans une chaîne de caractères, Match, Tokens)"
   designed: "un seul moteur de motifs partagé par tous les supports ; le motif comme côté condition de la cascade ; le motif écrit à partir d'exemples"
-  absent: "le refus d'un mot que le langage de motifs ne connaît pas, dans les six supports qui ne sont pas du texte ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
+  reached: "le refus d'un mot inconnu, dans les six supports au-delà du texte ; une narration et une petite fonction pour les graphes ; les classes sœurs génétique, linguistique et quantique"
 status: draft
 rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
@@ -243,9 +243,9 @@ Vient ensuite le terrain, et où il mène.
 
 **Une date pour le bogue récurrent de la famille.** La même cause racine a frappé la famille langage par langage : les analyseurs découpaient avec une position de fin à travers une fonction qui compte. Les nombres et les matrices ont été réparés le 14 juin 2026, les tableaux le 5 octobre, et les graphes dans une correction dont le fichier ne donne pas la date. Le temps le porte encore. C'est la preuve que la famille partage une seule conception et les habitudes d'un seul analyseur ; c'est aussi la cause probable du cas ouvert du temps, à la section 5.
 
-Vient ensuite la limite.
+Vient ensuite la section 7.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : les chaînes de caractères, les nombres et les tableaux, chacun avec une garde et une petite fonction. L'habitude partagée.
 
@@ -275,7 +275,7 @@ o3 = new stzTimex("{@Event(Break) -> @Event(Meeting)}")
 #--> 0
 ```
 
-L'article promet que le premier est TRUE, et il l'est. Le deuxième correspond à l'événement unique que la ligne de temps contient, et le troisième montre pourquoi il le peut : l'étiquette du jeton est `"Lunch"`, le mot entre les parenthèses et rien de plus. Le dernier refuse la pause avant la réunion, parce que la flèche garde l'ordre de la ligne de temps. Le temps n'a toujours pas de garde narrée ; ce bloc en est la preuve dans ce livre.
+L'article promet que le premier est TRUE, et il l'est. Le deuxième correspond à l'événement unique que la ligne de temps contient, et le troisième montre pourquoi il le peut : l'étiquette du jeton est `"Lunch"`, le mot entre les parenthèses et rien de plus. Le dernier refuse la pause avant la réunion, parce que la flèche garde l'ordre de la ligne de temps. Une garde narrée pour le temps est la prochaine étape ; ce bloc en est la preuve dans ce livre.
 
 - **Graphes** : les étiquettes dans l'ordre le long d'un chemin, la négation, l'alternance et les propriétés numériques s'exécutent. La flèche signifie *plus tard sur un chemin*, et non *suivant*. Les quantificateurs (`+`, `*`, `?` ou un nombre après un jeton) sont lus et ignorés. Le graphe de la section 3 a trois nœuds ; ici `@Node10`, un nœud avec le quantificateur dix, est demandé entre eux. Le motif correspond-il ?
 
@@ -305,7 +305,7 @@ Un motif avec un mot que le langage ne connaît pas correspond à tous les nombr
 
 Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
 
-Ce qui est absent : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision seulement. L'explication d'un motif sans nom, puisque `rx("[a-z]+").Explain()` lève une erreur parce que la classe d'analyse est absente. Et tout usage des classes de motifs par le reste de la bibliothèque : en dehors du dossier de la regex, des tests et de la documentation, aucune classe ne prend un motif. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` n'ont pas de `Matches(pattern)`. Dans la documentation, le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant, et la galerie a quelques scripts qui les utilisent.
+Ce qui est à venir : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision. L'explication d'un motif sans nom. `rx("[a-z]+").Explain()` lève une erreur, et la classe d'analyse qu'elle appelle est la pièce à venir. Et l'usage des classes de motifs dans le reste de la bibliothèque : aujourd'hui elles servent le dossier de la regex, les tests et la documentation, et un `Matches(pattern)` sur `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` est la prochaine portée. Dans la documentation, le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant, et la galerie a quelques scripts qui les utilisent.
 
 ## 8. Six portes
 

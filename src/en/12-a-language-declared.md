@@ -10,7 +10,7 @@ guards: [structuredoutput_narrated, schema_grammar_narrated, constrained_decodin
 stage:
   built: "in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages"
   designed: "the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application"
-  absent: "the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold"
+  reached: "the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, re-taken with its model file"
 status: draft
 rulings: ["12.10", "12.21", "12.27", "12.29", "12.30"]
 research: research/ch12.md
@@ -213,7 +213,7 @@ Three more observations, each a limit.
 
 **The forge's grammar holds shape only.** A menu seat comes out as a general identifier, so the forged grammar lets `pizza` through. The library's own schema compiler, in the blocks above, closes the same menu into an alternation. On the estate's machine language, the forged grammar accepts a dangling reference that the court refuses. The record names a difference between mouth and court, the part that a context-free grammar cannot say: duplicate names, dangling references. I found no record that states the menu gap as a gap.
 
-**The forge is ahead of the vision.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The principles file, dated 1 October 2026, says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides. The forge has forged courts and grammars for several languages, outside the library, and forging the full list the principle promises is the next step. And the vision's text predates that work. In the book's stage words, the forge is built outside the library and designed for the library, and chapter 11's limit says the same.
+**The forge is ahead of the vision.** The vision's text, dated between 27 September and 5 October 2026, says the forge has not forged. The principles file, dated 1 October 2026, says that the forge does not exist. The same repository built the spike the same day and forged for several languages. So the true sentence has two sides. The forge has forged courts and grammars for several languages, outside the library, and forging the full list the principle promises is the next step. And the vision's text predates that work. In the book's stage words, the forge is built outside the library and designed for the library, and chapter 11's section 7 says the same.
 
 ### The parts of a declared language
 
@@ -273,9 +273,9 @@ A grammar over-approximates a court. Duplicate names, dangling references and th
 
 The code a forge emits must be read by someone. The family style that every declared language inherits has a success test, that learning the second language should take an evening, because it is the first language with different verbs. It is a design requirement and not a measurement. No learner has been timed in the record I read.
 
-The limit comes next, at the edge of a second closed language.
+Section 7 comes next, at the edge of a second closed language.
 
-## 7. The limit
+## 7. What it covers today
 
 The library has two closed formula languages, and they behave differently at the edge. A reader who takes the closed condition language of chapter 11 and of the condition above to cover every formula will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. Does the word `sin` that the condition refused run here?
 
@@ -289,15 +289,15 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 #--> [ 0, 0.84, -0.76 ]
 ```
 
-The sine the condition refused, the table computed, and it printed `[ 0, 0.84, -0.76 ]`! I also saw, and do not show, a second thing. On another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, I wrote a formula `@(:A) + HostBonus(@(:B))`. The function of mine inside it multiplies by a thousand. The formula printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. No guard asserts either behaviour.
+The sine the condition refused, the table computed, and it printed `[ 0, 0.84, -0.76 ]`! I also saw, and do not show, a second thing. On another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, I wrote a formula `@(:A) + HostBonus(@(:B))`. The function of mine inside it multiplies by a thousand. The formula printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. A guard that asserts either behaviour is ahead.
 
-What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, with limits. The natural layer's tongues as data.
+What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, each with its edge. The natural layer's tongues as data.
 
 What is built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
 
-What is designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. I did not find shown a printer for declared sentences, a knowledge graph forged from a declaration, or the one static binary per language. The library having a forge: nothing in it declares or forges a language. A grammar for every declared language shipping in the library: promised in the kernel, not shipped. And the projections: the world rendered to an application, a server, a page, a device.
+What is designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. A printer for declared sentences, a knowledge graph forged from a declaration and the one static binary per language are designed. The forge inside the library is designed. A grammar for every declared language shipping in the library: promised in the kernel, and designed. And the projections: the world rendered to an application, a server, a page, a device.
 
-What is absent: the forge's grammar for a menu word, which I saw above holds shape only, and the figure of two of ten against ten of ten, re-taken. And any record that the forge runs on the Haro runtime. At the time of the vision's writing the language did not exist; the charter's runs are on the older runtime and on the oracle.
+What lies ahead: the forge's grammar for a menu word, which holds shape today, as I saw above; the figure of two of ten against ten of ten, re-taken. And a record of the forge running on the Haro runtime. The vision was written before the language; the charter's runs are on the older runtime and on the oracle.
 
 The six doors follow, from the programmer to the agent.
 

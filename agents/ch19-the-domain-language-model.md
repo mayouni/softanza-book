@@ -2,7 +2,7 @@
 
 Source: Chapter 19. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; absent: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
+Stage: built: the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law; designed: a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger; reached: a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far
 
 Run: 7 of 7 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -249,20 +249,20 @@ The field leads in fluency, which is the point of an AI model. A first rung that
 
 Where I think this stands apart is in what the output is. A general AI model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
 
-Section 7 says what is built, what is designed and what is absent.
+Section 7 says what is built, what is designed and what lies ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
 
 What is designed comes in four points.
 
-- The grammar derived from a knowledge base by one call. This chapter's composition is the reader's, not the library's.
-- The second rung's corpus validated by the first rung's grammar before it is admitted. The design says so; the code renders the facts directly, with no such check. So "correct by construction" holds for the training text, and not for what the model says.
-- The five-stage validation of a chunk. None exists as a pipeline.
+- The grammar derived from a knowledge base by one call. This chapter's composition is the reader's; the library's one call is designed.
+- The second rung's corpus validated by the first rung's grammar before it is admitted. The design says so; the code renders the facts directly, and the check is designed. So "correct by construction" holds for the training text, and what the model says is a proposal for the gate.
+- The five-stage validation of a chunk; the pipeline that chains the stages lies ahead.
 - The foundry's steps beyond the bigram.
 
-What is absent: an end-of-sentence word for the second rung, which is why one of its sentences runs on. Absent too is a completion that sees the sentence so far; that is why a completion after a relation lists the objects of every fact of that relation. The first rung also answers a rephrased question with the type, as chapter 17 showed, where the law of this part says it should refuse.
+What lies ahead: an end-of-sentence word for the second rung, to end the sentence of it that runs on here. Ahead too is a completion that sees the sentence so far; today a completion after a relation lists the objects of every fact of that relation. And the first rung's refusal of a rephrased question: today it answers with the type, as chapter 17 showed, where the law of this part says it should refuse.
 
 ## 8. Six doors
 
@@ -284,7 +284,7 @@ Forge a domain of your own with three entities and two relations. Before you run
 
 Run it. Then write a sentence of the right shape and the wrong truth, and say which of the grammar and the graph refuses it, and which does not.
 
-I left this one in your hands. Section 3 says that completion sees one word and not the sentence so far, and section 7 lists it as absent. In your domain, give two entities the same relation with different objects, ask for the completion of that relation, and read the list against the sentence you had in mind. The library does not repair it, and I have not repaired it for you. Then compose, from what section 3 shows (the facts of a knowledge base, read one by one), a completion that sees the subject as well as the relation.
+I left this one in your hands. Section 3 says that completion sees one word and not the sentence so far, and section 7 lists it among the work ahead. In your domain, give two entities the same relation with different objects, ask for the completion of that relation, and read the list against the sentence you had in mind. The library does not repair it, and I have not repaired it for you. Then compose, from what section 3 shows (the facts of a knowledge base, read one by one), a completion that sees the subject as well as the relation.
 
 When you have solved it, you will know why a completion that sees one word lists the objects of every fact of that relation.
 

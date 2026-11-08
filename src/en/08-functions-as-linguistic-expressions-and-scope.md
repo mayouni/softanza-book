@@ -10,7 +10,7 @@ guards: [00_regex_narrated, 972_narration_viz-finding_a_recurring_substring, ful
 stage:
   built: "fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment"
   designed: "the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style"
-  absent: "five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code"
+  reached: "five forms: partial, future, free, default and multilingual; concurrency as a scope, from its plan to its code"
 status: draft
 rulings: ["12.3", "12.13", "12.19", "12.21"]
 research: research/ch08.md
@@ -252,24 +252,24 @@ The field leads in the guarantee. Python's keyword arguments are checked at the 
 
 On scope, the field leads in maturity. The closest field practice is the explicit context: the Go habit of passing a context to every call, a locale object that carries a frame. They are older and more widely used. What this paradigm adds is that the frame is one of a small, closed set, chosen in the verb, and the library can reason with it.
 
-Last, the limit, with what is built, what is designed and what is absent.
+Last, section 7, with what is built, what is designed and what lies ahead.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: fourteen of the twenty-two forms of a name run, some with examples other than the article's, and three more run in another shape. The library reads a name as a sentence. And scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
 
 What is designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
 
-What is absent, and the page should say each with what exists beside it:
+What lies ahead, each with what exists beside it:
 
-- **Partial**, `@Removed`, is in the archive only: the call is not defined.
+- **Partial**, `@Removed`, lives in the archive: defining the call in the live library is the work ahead.
 - **Future**, `BeforeQ`, was trimmed on purpose, as I said.
-- **Free**, the suffix that lets a call give its parameters in any order and any subset: there is no definition of it outside the archive. The library's own parser knows the name `FX` and not `FF`. The two narrations that tell it use two names, and the code has neither.
-- **Default**, `dftRange` and `infRange`: not defined; the library's comment names the informing form as planned.
-- **Multilingual**, a method named in French or Arabic: not in the live library. The names exist in the archive. The nearest thing today is the language packs of chapter 11.
-- The three that run in another shape. The exceptional form exists, but the article's example does not. Free order, as the article means it, a number and a string swapped in their positions, works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. The free order of named parameters is another thing, and chapter 7 runs it. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
+- **Free**, the suffix that lets a call give its parameters in any order and any subset: its definition lives in the archive. The library's own parser knows the name `FX`; the two narrations that tell it use two names, and its definition in the code, under one of them, is the work ahead.
+- **Default**, `dftRange` and `infRange`: ahead; the library's comment names the informing form as planned.
+- **Multilingual**, a method named in French or Arabic: ahead for the live library. The names exist in the archive. The nearest thing today is the language packs of chapter 11.
+- The three that run in another shape. The exceptional form exists, and the article's example is ahead. Free order, as the article means it, a number and a string swapped in their positions, works for the first order, and the swapped order is ahead: in my probe of 8 October, the swapped call ended the program with a status of one and an empty output. The free order of named parameters is another thing, and chapter 7 runs it. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
 
-On the scope side: the regex verbs differ from the table of the scope design document in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is not defined. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run under load, which the book's data does not keep, 61 of the 62 assertions of its narrated guard passed, and the one assertion that did not hold was a timing limit. I state what the code does: the system scope is built, with that result printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency is a plan of record with no code: the word `Concurrently` has no definition.
+On the scope side: the regex verbs differ from the table of the scope design document in two places. `MatchLine` lets a dot cross a line, where the table says it stays within one, and `MatchOneSegment`, which the table offers for the lazy case, is ahead in the code. The system scope is built, and the design document still calls it designed: the record contradicts itself. The scope design document, version 1.2 of 16 August 2026, is quoted here as the document's text. The record does not say who wrote it, and I do not print it as mine. The system foundation document of 20 July 2026 says the foundation is implemented. In one probe run under load, which the book's data does not keep, 61 of the 62 assertions of its narrated guard passed, and the one assertion that did not hold was a timing limit. I state what the code does: the system scope is built, with that result printed beside it, and the design document's word "designed" is the document's, out of date. And concurrency as a scope is a plan of record; its code, starting with a definition of the word `Concurrently`, is the work ahead.
 
 ## 8. Six doors
 

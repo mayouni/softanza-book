@@ -2,7 +2,7 @@
 
 Source: Chapter 11. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; absent: a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
+Stage: built: the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know; designed: the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar; reached: a natural layer closed all the way down, its bracketed lists as well as its words; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -229,13 +229,13 @@ The field built constrained decoding first. Softanza's sampler follows the refer
 
 And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core. This is my view.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
 
-What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it with its limits. A grammar for every declared language is designed and to come.
+What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it at its true size. A grammar for every declared language is designed and to come.
 
-What is absent, and the law states it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate. Does a host function inside the brackets run? Try one:
+What lies ahead, and the law states it. A natural layer closed all the way down. Its words are closed today, and one form, a list written inside brackets, is handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )
@@ -244,11 +244,11 @@ What is absent, and the law states it. The natural layer is not closed all the w
 
 > run: kept
 
-The function `upper` is not a word of the natural dictionary, and the list came back as `[ "X", 1 ]`. It ran anyway! The record already knows this escape and has routed its repair. Until the repair lands, "the natural layer is a closed language" is true of its words and not of its lists, and this book will say so.
+The function `upper` is not a word of the natural dictionary, and the list came back as `[ "X", 1 ]`. It ran anyway! The record already knows this escape and has routed its repair. "The natural layer is a closed language" holds today for its words, and holds for its lists when the repair lands; this book says so.
 
 And the Hausa pack reads Hausa written without the letter ɗ, which standard Hausa spelling uses; carrying that letter in the pack's encoding is to come. When I probed it on 8 October 2026 on the snapshot before this commit, a sentence written with the letter passed unread and unreported. The Hausa in this chapter is written without the hook, the way the pack reads it today. The foreign-language sentences printed in this chapter come from the library's narration and guards, or are composed from its vocabulary.
 
-These are the limits; the next section opens six doors on them.
+That is what the language covers today; the next section opens six doors on it.
 
 ## 8. Six doors
 

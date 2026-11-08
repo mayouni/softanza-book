@@ -10,7 +10,7 @@ guards: [06_stzsuperapp_narrated, 01_platform_narrated, full_scope_model_narrate
 stage:
   built: "un monde comme déclaration avec un être, un devenir et une manière d'être rencontré ; un but dont l'écart est mesuré ; une constellation de mondes avec des liens et trois barrières sur chaque traversée ; le socle commun comme plateforme ; la jointure des capacités ; le profil d'une solution comme fichier texte, et les trois portées du système"
   designed: "l'idiome quasi naturel de la constellation ; un appel acheminé dans une constellation emboîtée ; des coques qui embarquent le moteur ; la certification de l'architecte, qui est une proposition ; la fiche de garanties de cinq lignes, comme exigence"
-  absent: "un monde qui juge ses propres vérités ; une narration pour la constellation ou pour l'enveloppe de la plateforme ; une fiche de garanties de cinq lignes écrite pour une solution"
+  reached: "un monde qui juge ses propres vérités ; une narration pour la constellation ou pour l'enveloppe de la plateforme ; une fiche de garanties de cinq lignes écrite pour une solution"
 status: draft
 rulings: ["12.2", "12.12", "12.13", "12.15", "12.19", "12.25", "12.29"]
 research: research/ch23.md
@@ -377,9 +377,9 @@ Le compilateur mène sur les portées. Il vérifie contre une cible en usage quo
 
 Là où le terrain et le dossier se rencontrent : une super-appli est un graphe de graphes. La carte de contextes du terrain est un diagramme. Celle de Softanza est un registre qui refuse.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-Les vérités d'un monde sont narrées et non jugées. Le nombre dans une réaction en est le premier cas. Quatre-vingt-dix jours et un jour donnent-ils des propositions différentes ? Une réaction se déclenche pour chaque instance qui n'a pas de relation nommée d'après la chose qu'elle propose, et le commentaire au-dessus de `Pulse()` le dit. Faites tourner deux cliniques :
+Les vérités d'un monde sont déclarées et narrées, et les juger est le travail à venir. Le nombre dans une réaction en est le premier cas. Quatre-vingt-dix jours et un jour donnent-ils des propositions différentes ? Une réaction se déclenche pour chaque instance qui n'a pas de relation nommée d'après la chose qu'elle propose, et le commentaire au-dessus de `Pulse()` le dit. Faites tourner deux cliniques :
 
 ```haro
 oA = StzAppQ("clinic-a")
@@ -412,7 +412,7 @@ oB.Live()
 
 Les deux cliniques répondent `[ "propose", "checkup", "for", "bob" ]`. Quatre-vingt-dix jours et un jour donnent les mêmes propositions !
 
-La même lecture vaut pour `IsTrue`, qui est stocké et narré alors que les instances ne portent pas de champs contre lesquels le juger. Elle vaut pour le `Require` et le `Then` d'un flux, stockés et narrés, où je n'ai trouvé aucun exécutant ; et pour les bornes d'un raffinement. Un monde déclare aujourd'hui qu'un solde ne doit pas être négatif. Il ne juge pas un solde. Ce qu'il juge, c'est l'écart d'un but, une traversée et une capacité. Donc je dis « un monde qui veut » pour le but, et « narré » pour la vérité. Le `true when balance @ >= 0` du chapitre 4 est une déclaration seulement. Le chapitre le dit donc en une ligne : déclaré et narré ; jugé seulement pour les buts, les traversées et les capacités.
+La même lecture vaut pour `IsTrue`, qui est stocké et narré ; le juger demande des champs sur les instances, et c'est à venir. Elle vaut pour le `Require` et le `Then` d'un flux, stockés et narrés, avec leur exécutant à venir ; et pour les bornes d'un raffinement. Un monde déclare aujourd'hui qu'un solde ne doit pas être négatif, et le narre. Ce qu'il juge, c'est l'écart d'un but, une traversée et une capacité. Donc je dis « un monde qui veut » pour le but, et « narré » pour la vérité. Le `true when balance @ >= 0` du chapitre 4 est une déclaration seulement. Le chapitre le dit donc en une ligne : déclaré et narré ; jugé seulement pour les buts, les traversées et les capacités.
 
 La conception écrit plus que la classe ne parle. La classe parle-t-elle l'idiome quasi naturel de la conception pour la constellation ? Demandez-lui `Hosts`, `Admits` et `Explain` :
 
@@ -438,13 +438,13 @@ done
 #--> Error (R14) : Calling Method without definition: explain
 ```
 
-Trois fois la réponse est `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` et `Generate` ne sont pas non plus définis sur une constellation. La classe a `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, la famille `Gov*`, `CallAcross`, `Crossings`, les appels du socle commun, et des appels qui regardent : `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` et `LastCallMs`. Les verbes de composition sont ceux-là. Les trois aspects de la conception s'atteignent aujourd'hui par `AddWorld`, `Bond` et `OpenCommonsOn`, et la gouvernance par `Gov*` ; l'atteinte et la présence sont la partie qui n'est pas là. L'en-tête de la conception appelle elle-même le document une conception à venir.
+Trois fois la réponse est `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` et `Generate` répondent de la même façon sur une constellation. La classe a `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, la famille `Gov*`, `CallAcross`, `Crossings`, les appels du socle commun, et des appels qui regardent : `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` et `LastCallMs`. Les verbes de composition sont ceux-là. Les trois aspects de la conception s'atteignent aujourd'hui par `AddWorld`, `Bond` et `OpenCommonsOn`, et la gouvernance par `Gov*` ; l'atteinte et la présence sont la partie à venir. L'en-tête de la conception appelle elle-même le document une conception à venir.
 
 Ce qui est construit : le monde ; la constellation avec ses barrières, son registre de traversées avec les durées, une décision écrite sur une traversée autorisée, et une traversée refusée notée comme preuve ; la jointure des capacités de la plateforme, son socle commun, son registre, ses coques, son profil avec construction puis déploiement ; les trois portées.
 
-Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et rien n'est remis à la cible) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
+Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et remettre l'appel à la cible est la conception) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
 
-Ce qui est absent : une narration pour la constellation ou pour l'enveloppe, puisqu'aucune n'existe. La narration pour construire une première appli utilise des verbes que la classe n'a pas. Sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite : aucune solution n'en a une. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
+Ce qui est à venir : une narration pour la constellation ou pour l'enveloppe. La narration pour construire une première appli parle des verbes en avance sur la classe : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite pour une solution. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
 
 Les six portes viennent ensuite.
 

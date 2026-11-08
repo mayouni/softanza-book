@@ -10,13 +10,13 @@ guards: [knowledge_integration_narrated, provenance_survives_save_narrated, prog
 stage:
   built: "un système comme un fichier texte brut de faits, avec des lois (unique, transitive, symétrique) et la source de chaque fait ; Prove avec ses étapes, un non aussi certain qu'un oui ; le mode strict ; le fichier écrit, relu et livré, d'un catalogue de cours à la mémoire d'un agent d'IA"
   designed: "des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête qui joint ; plusieurs relations entre deux choses ; l'héritage de classes ; la validation au chargement"
-  absent: "le dialogue fondateur de 2022, que le livre montre comme texte ; Explain sur un graphe de connaissance ; la section des règles du fichier, que l'analyseur écarte"
+  reached: "le dialogue fondateur de 2022 comme code qui tourne, que le livre montre comme texte aujourd'hui ; Explain sur un graphe de connaissance ; un analyseur qui lit la section des règles du fichier"
 status: draft
 rulings: ["12.2", "12.6", "12.12", "12.13", "12.19"]
 research: research/ch14.md
 ---
 
-Dans ce chapitre, je prends les trois pratiques du terrain qui se rencontrent dans cette idée : la pile sémantique, la base de données de graphes de propriétés et les règles sur des faits. Je mets à côté d'elles un système qui est un fichier texte brut. J'exécute ce fichier : deux faits, une loi et une preuve avec ses étapes, puis une clinique en mode strict, où une rumeur refusée est gardée et nommée. J'écris le fichier, je le relis et je le montre à l'échelle, d'un catalogue de cours à la mémoire d'un agent d'IA. Je dis ce que j'ai décidé, qu'une entreprise se décrit dans un seul fichier et que le fichier est le programme. Je dis ce que j'ai refusé : un monde parallèle, une contradiction résolue en silence, la récupération. J'imprime la limite, un fichier qui à ce commit n'a pas de règles. Elle se tient à côté du principe : un système est un fichier, et y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.
+Dans ce chapitre, je prends les trois pratiques du terrain qui se rencontrent dans cette idée : la pile sémantique, la base de données de graphes de propriétés et les règles sur des faits. Je mets à côté d'elles un système qui est un fichier texte brut. J'exécute ce fichier : deux faits, une loi et une preuve avec ses étapes, puis une clinique en mode strict, où une rumeur refusée est gardée et nommée. J'écris le fichier, je le relis et je le montre à l'échelle, d'un catalogue de cours à la mémoire d'un agent d'IA. Je dis ce que j'ai décidé, qu'une entreprise se décrit dans un seul fichier et que le fichier est le programme. Je dis ce que j'ai refusé : un monde parallèle, une contradiction résolue en silence, la récupération. J'imprime ce que le fichier couvre aujourd'hui, des faits et des lois, les règles étant conçues. Cela se tient à côté du principe : un système est un fichier, et y ajouter une ligne fait que le système sait davantage, sans rien coder ni entraîner.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -206,11 +206,11 @@ Le terrain mène en normes et en portée, en connaissance générale. Une base d
 
 Voici où je pense que cela se distingue, avec les limites mesurées à côté. La connaissance est un fichier texte qu'une personne peut lire, modifier, comparer et livrer avec le programme. Chaque réponse est prouvable avec ses étapes, et un non est aussi certain qu'un oui. Ce qu'un fait affirme voyage avec sa source et ses refus. Et le même format porte un cours, le projet d'un apprenant et la mémoire d'un agent. Rien de cela n'a besoin d'un magasin, d'un serveur, d'un modèle d'IA ni d'un entraînement.
 
-Les pertes sont imprimées. La limite du chapitre vient ensuite, avec ses exécutions.
+Les pertes sont imprimées. La section 7 vient ensuite, avec ses exécutions.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
-La limite de ce chapitre est celle que ma directive, à la section 4, porte déjà : *entités, relations, une ontologie, règles*. Le fichier à ce commit n'a pas de règles. Voici le fichier avec une section de règles. Qu'en fait l'analyseur ?
+Ce que le sujet de ce chapitre couvre aujourd'hui se mesure à ma directive, à la section 4 : *entités, relations, une ontologie, règles*. Le fichier à ce commit tient des faits et des lois ; les règles dans le fichier sont conçues. Voici le fichier avec une section de règles. Qu'en fait l'analyseur ?
 
 ```haro
 cRules = 'knowledge "pairs"' + nl + nl + "facts" + nl + "    margherita | pairs-with | chianti" + nl + nl +
@@ -223,9 +223,9 @@ aM = oRul.ImportKnow(cRules)
 #--> 0
 ```
 
-Le fichier fusionne, `1`, et l'ontologie est vide, `0`. L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées : l'ontologie en tient `0`, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. Le fichier unique qui contient des règles, que promet la conception, n'est pas là, et cette section imprime ce manque comme la limite du chapitre.
+Le fichier fusionne, `1`, et l'ontologie est vide, `0`. L'analyseur reconnaît l'en-tête `rules`, et n'a de gestionnaire pour aucune des lignes qui le suivent. Elles sont écartées : l'ontologie en tient `0`, et aucun refus ne revient. La même loi sous l'en-tête `ontology` donne une ontologie de longueur 1. Les règles vivent ailleurs, comme données dans une règle attachée à un graphe, ce qui est le sujet des chapitres 29 et 30, et dans un fichier séparé qui nomme des fonctions de règle. Dans ce fichier il y a des faits et des lois. J'imprime « faits et lois », et j'envoie les règles à ces deux chapitres. Le fichier unique qui contient des règles est ce que promet la conception, et il est conçu ; cette section imprime le fichier tel qu'il est aujourd'hui.
 
-La loi n'est pas non plus dérivée sur un graphe d'instance. Prenons la même loi symétrique et le même fait que sur le monde par défaut. L'inverse y est-il ?
+Sur un graphe d'instance, la loi est enregistrée, et la dérivation y est conçue. Prenons la même loi symétrique et le même fait que sur le monde par défaut. L'inverse y est-il ?
 
 ```haro
 StzKnowledgeGraphQ("pairs") {
@@ -238,7 +238,7 @@ StzKnowledgeGraphQ("pairs") {
 }
 ```
 
-La loi est enregistrée, `1`, et l'arête inverse n'y est pas, `0` ! L'en-tête de la classe le dit : `only :unique and :transitive are acted on here` ; la symétrie est seulement enregistrée. Quatre autres limites, chacune avec son exécution.
+La loi est enregistrée, `1`, et l'arête inverse n'y est pas, `0` ! L'en-tête de la classe le dit : `only :unique and :transitive are acted on here` ; la symétrie est seulement enregistrée. Quatre autres mesures de ce que le fichier couvre aujourd'hui, chacune avec son exécution.
 
 **Une seule relation entre deux choses.** Le graphe stocke une arête par paire de nœuds. Admet-il une seconde relation entre les deux mêmes entités, `amina` et `bread` ? Exécutez-le :
 
@@ -252,9 +252,9 @@ aV = oShop.Admit("amina", "buys", "bread", [ :source = "till" ])
 #--> Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair).
 ```
 
-La seconde relation est refusée, `0`, avec la phrase propre de la bibliothèque, `Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)`. Un modèle de connaissance qui ne peut pas tenir *vend* et *achète* entre les deux mêmes entités est une vraie limite. Le code le dit : `known limitation, revisit with multi-edge support`.
+La seconde relation est refusée, `0`, avec la phrase propre de la bibliothèque, `Can't add fact: 'amina' and 'bread' already carry the edge 'sells' (stzGraph stores one edge per node pair)`. Tenir *vend* et *achète* entre les deux mêmes entités est conçu, et un modèle de connaissance en a besoin. Le code le dit : `known limitation, revisit with multi-edge support`.
 
-**Une question à deux étapes ne répond qu'à sa première étape.** `QueryPath` suit-il son second motif, et le prédicat d'une requête peut-il être une variable ? Exécutez-le :
+**Une question à deux étapes répond à sa première étape.** `QueryPath` suit-il son second motif, et le prédicat d'une requête peut-il être une variable ? Exécutez-le :
 
 ```haro
 StzKnowledgeGraphQ("coop2") {
@@ -282,7 +282,7 @@ aBad = oT.ImportKnow(cBad)
 #--> [ ]
 ```
 
-Rien. Le fichier fusionne, `1`, et la liste des refus est `[ ]` ; l'analyseur se tait et les trois lignes disparaissent ! Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur ne garde qu'une ligne ayant exactement trois champs.
+Rien. Le fichier fusionne, `1`, et la liste des refus est `[ ]` ; l'analyseur se tait et les trois lignes disparaissent ! Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur garde une ligne ayant exactement trois champs ; la validation au chargement est conçue.
 
 **Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne s'arrête avant de répondre. J'en montre le texte, `@Q("Apple").IsA(:Fruit)`. Le 8 octobre 2026 il s'est arrêté sur `Calling Function without definition: @isfruit`, et je cite ce message ici à la place d'un bloc. La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde le sens. Le monde connaît-il un nom à deux significations ?
 
@@ -297,19 +297,19 @@ Il connaît les deux : `[ "company", "fruit" ]`.
 
 L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que le centre s'est déplacé vers le fichier. Le chapitre garde le fichier comme ouverture, et le dialogue de 2022 reste en marge.
 
-Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait, et aucun héritage n'en découle. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, n'a aucune méthode de ce nom.
+Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait ; l'héritage qui en découle est conçu. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, est conçue.
 
-Ce qui est absent ou cassé : `Explain()` sur un graphe de connaissance, qui appelle `ApplyInference`, une fonction définie nulle part. Et `ValidateOntology()`, qui renvoie 1 quel que soit le contenu de l'ontologie, comme son propre commentaire le dit, `known defect`.
+Ce qui est à venir : `Explain()` sur un graphe de connaissance, qui appelle `ApplyInference`, une fonction à définir. Et `ValidateOntology()` qui juge ce que l'ontologie contient, là où aujourd'hui elle renvoie 1 quel que soit ce contenu, comme son propre commentaire le dit, `known defect`.
 
 Une note sur l'histoire du document de conception. Son amendement du 22 août 2026 dit qu'aucun fichier de connaissance n'existe nulle part dans l'arbre, et que c'est de l'hygiène et non un manque. À ce commit ce n'est plus vrai : il y en a quatre-vingt-dix-neuf, tous dans le module d'éducation.
 
-Voilà la limite, imprimée. Voyons maintenant les six portes.
+Voilà ce que le fichier couvre aujourd'hui, imprimé. Voyons maintenant les six portes.
 
 ## 8. Six portes
 
 **Le programmeur.** Une classe et un fichier texte : `Know`, `KnowRelation`, `ConstrainRelation`, `Prove`, `Query`, `WriteToKnowFile`, `ImportKnow`. Le fichier est comparable et se livre avec le programme.
 
-**L'analyste.** La page de l'offre le nomme : ce que vous déclarez, ce sont les entités, les règles et les flux de votre organisation, dans un fichier de connaissance en texte brut. Lisez « règles » comme la limite ci-dessus. Pour commencer, dans le cours : le chapitre intitulé « Enseigner un monde ».
+**L'analyste.** La page de l'offre le nomme : ce que vous déclarez, ce sont les entités, les règles et les flux de votre organisation, dans un fichier de connaissance en texte brut. Lisez « règles » comme la section 7 le lit. Pour commencer, dans le cours : le chapitre intitulé « Enseigner un monde ».
 
 **Le concepteur.** Le dossier est silencieux. Ni la page de l'offre ni l'étude ne relient le fichier de connaissance à la porte du concepteur, et je n'en invente pas.
 

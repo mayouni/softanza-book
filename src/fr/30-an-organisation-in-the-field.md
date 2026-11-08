@@ -10,7 +10,7 @@ guards: [graphruleset_narrated, gg_rule_governance, wisecoding_narrated, governa
 stage:
   built: "une règle construite comme un objet sur un modèle, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle qui ne gouverne rien ; un refus gardé comme un point de contrôle qu'une personne peut lire, avec son contexte ; l'autorité mise face au risque ; une décision gardée avec son autorité du moment ; le hors ligne comme une capacité qu'un monde doit demander"
   designed: "le hub et son étude ; un langage de règles qu'un programmeur local peut apprendre ; les promesses de l'étude : qu'une règle est vérifiée avant de s'appliquer et peut être défaite"
-  absent: "le hub, construit ; un mécanisme pour le travail fait hors ligne, gardé et envoyé plus tard ; un historique des versions d'une règle ; une plateforme client sur le moteur"
+  reached: "le hub, construit ; un mécanisme pour le travail fait hors ligne, gardé et envoyé plus tard ; un historique des versions d'une règle ; une plateforme client sur le moteur"
 status: draft
 rulings: ["12.13", "12.29"]
 research: research/ch30.md
@@ -253,15 +253,15 @@ Le terrain mène en hors ligne. Le logiciel local d'abord est une pratique avec 
 
 Le terrain mène en gens. Une table de décision est une chose qu'un analyste formé sait déjà lire. Et la spécification propre de l'organisation, qui préférait la suite de l'éditeur, avait de bonnes raisons : ses utilisateurs y ont déjà des comptes.
 
-La section suivante liste ce qui est construit, ce qui est conçu et ce qui est absent.
+La section suivante liste ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Ce qui est construit : une règle comme objet, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle morte ; le point de contrôle ; l'autorité face au risque ; la filiation ; le hors ligne comme capacité.
 
-Ce qui est conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation qui n'est pas celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque n'a que les pièces. Ce sont le gouverneur de règles, montré plus haut, et les refus d'un type de règle inconnu, d'un fichier manquant et d'un nom en double, qu'un test narré de la bibliothèque prouve et que ce chapitre ne montre pas.
+Ce qui est conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation propre, distincte de celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque tient les pièces aujourd'hui. Ce sont le gouverneur de règles, montré plus haut, et les refus d'un type de règle inconnu, d'un fichier manquant et d'un nom en double, qu'un test narré de la bibliothèque prouve, hors des blocs de ce chapitre.
 
-Ce qui est absent : un historique des versions d'une règle avec un retour en arrière. La filiation enregistre la décision, et la règle est reliée de nouveau. Je n'ai trouvé aucun magasin de versions de règles, et ma recherche n'était pas exhaustive. Le hub, construit. Le hors ligne comme mécanisme : aucune classe de la bibliothèque ne garde des entrées sur un appareil et ne les envoie quand le réseau revient. Et une plateforme client sur le moteur Softanza.
+Ce qui est à venir : un historique des versions d'une règle avec un retour en arrière. La filiation enregistre la décision, et la règle est reliée de nouveau ; un magasin de versions de règles est la pièce à venir, aussi loin que ma recherche dans la bibliothèque est allée. Le hub, construit. Le hors ligne comme mécanisme : une classe de la bibliothèque qui garde des entrées sur un appareil et les envoie quand le réseau revient. Et une plateforme client sur le moteur Softanza.
 
 Six portes suivent, une pour chaque lecteur.
 

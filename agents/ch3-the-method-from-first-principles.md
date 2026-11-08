@@ -2,7 +2,7 @@
 
 Source: Chapter 3. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; absent: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
+Stage: built: the court behind every block of this chapter but the truth one, and the stage words the site prints on every product; designed: the register of rethought concepts as data, with a guard that fails when a concept has no proof; reached: a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging
 
 Run: 5 of 5 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -118,7 +118,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`! "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
-So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **absent**, covers what the site calls *named*, a name whose work lies ahead, and what the record leaves unnamed. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
+So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. Section 7, what it covers today, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **ahead**, covers what the site calls *named*, a name whose work comes next, and the further work the chapter's subject leads to. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
 
 And the book is judged the way the library is. Every block in it ran inside the library on the night the page was built, at the commit printed at the top of the page. A page whose promises are not kept does not build.
 
@@ -152,13 +152,13 @@ The field leads in adoption. Decision records are a light standard that many tea
 
 Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. I hold this as a view, not a result. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record is read; an example is run. Here they are one object: the decision, what it refused, and the code that runs.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the court behind every block of this chapter but the truth one, and the five stage words the site prints on each product.
 
 What is designed: the register of rethought concepts as data, one row per concept with its article, its code, its guard and its stage. Beside it, a guard that fails when a new concept arrives without a row. Both are a specification today.
 
-What is absent: a page that shows each concept with a run proof; the site's register page, read on 9 October 2026, lists each with its evidence. A test file for the engine module of one paradigm engine, section merging: it has none of its own, though its merge methods run in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and that method is spelled differently in the library today. Its friendlier quantifiers, some, most and few, draw at random, so they carry no promise today. The register is a reading, and a reading can miss a concept that lives in only one article.
+What lies ahead: a page that shows each concept with a run proof; the site's register page, read on 9 October 2026, lists each with its evidence. A test file of its own for the engine module of one paradigm engine, section merging, whose merge methods run today in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and the library spells that method differently today. Its friendlier quantifiers, some, most and few, draw at random, so their promise is work ahead. The register is a reading, and a reading can miss a concept that lives in only one article.
 
 That is where this chapter stops; six doors follow, one for each kind of reader.
 

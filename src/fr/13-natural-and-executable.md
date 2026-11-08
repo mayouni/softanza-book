@@ -10,7 +10,7 @@ guards: [nnl_narrated, multilingual_pack_narrated, semantic_resolver_narrated, q
 stage:
   built: "les deux directions : des chaînes où l'humain est l'analyseur, et des phrases où c'est la machine ; cinq paquets de langue comme données et un sixième ajouté à l'exécution ; des refus avec raisons des deux côtés ; des cadres de question ; une chaîne de vérité mince ; du code naturel comme données dans les documents et les gabarits"
   designed: "une grammaire qui tient un modèle d'IA au lexique ; une garde qui vérifie qu'aucun socket ne s'ouvre pendant une exécution naturelle ; le plan émis comme une chaîne ; les exemples des articles épinglés comme fixtures"
-  absent: "toute machine qui juge la grammaire d'une chaîne ; l'ajami, le zarma et le peul ; une couche naturelle fermée jusqu'en bas ; un dictionnaire protégé de la dérive de la documentation dont il est lu ; les promesses des anciens articles, dont plusieurs ne tournent pas"
+  reached: "une machine qui juge la grammaire d'une chaîne ; l'ajami, le zarma et le peul ; une couche naturelle fermée jusqu'en bas ; un dictionnaire protégé de la dérive de la documentation dont il est lu ; chaque promesse des anciens articles tournant à ce commit"
 status: draft
 rulings: ["12.2", "12.6", "12.27", "12.30"]
 research: research/ch13.md
@@ -342,9 +342,9 @@ Et il y a une perte du côté de la bibliothèque elle-même. `Understood()` imp
 
 Là où est le gain, avec la perte à côté : la même phrase donne la même réponse, avec une raison, dans la langue de l'utilisateur, et conçue pour s'exécuter hors ligne, ce qu'aucune garde ne mesure. La perte est que la langue de l'utilisateur doit être dans un paquet, et qu'un mot extérieur est un littéral ou un refus. Le dossier dit que le cas gagnant est le travail réglementé ou souverain : une instruction qui s'exécute localement et peut être auditée au mot près.
 
-La section suivante dit où le chapitre s'arrête.
+La section 7 dit ce que le sujet du chapitre couvre aujourd'hui.
 
-## 7. La limite
+## 7. Ce qu'il couvre aujourd'hui
 
 Une chaîne non grammaticale s'exécute. La seconde chaîne ci-dessous se lit « which a length of 4 », ce qui n'est pas de l'anglais. Quelque chose la juge-t-il ? Exécutez les deux :
 
@@ -387,13 +387,13 @@ done
 #--> Strict natural mode: not understood: 'and_' (did you mean 'addn'?)
 ```
 
-**Plusieurs chaînes des anciens articles ne tournent plus.** La phrase de l'article sur le pont qui porte `IsAMQ` demande un marqueur que j'ai retiré par ma décision du 10 juillet 2026. Plusieurs chaînes de l'article quasi naturel ne tournent pas à ce commit : `InLowercase()` lève une erreur faute d'objet ; `LettersNB`, `BeforeQ` et `TheirQ().FirstCharQ()` ne sont pas définis ; et la forme à accolades `Naturally() { ... }` lève une erreur pour trop peu de paramètres. La chaîne de l'article sur le pont avec `ReplaceLowercaseCharsQ` n'est pas définie non plus. J'ai lancé douze chaînes de l'article quasi naturel le 8 octobre 2026, et huit fonctionnent. Dans cette exécution, le paragraphe de l'article sur le pont tournait encore en mode permissif, et imprimait deux boîtes imbriquées autour de « NOTHING SOFTANZA » au lieu de la seule qu'il promet. La machine l'a dit, puisque `UnderstoodAll()` vaut faux et que le mot non résolu est nommé (le bloc ci-dessus montre les deux), mais un lecteur doit le demander.
+**Les chaînes des anciens articles tournent en partie à ce commit.** La phrase de l'article sur le pont qui porte `IsAMQ` demande un marqueur que j'ai retiré par ma décision du 10 juillet 2026. Plusieurs chaînes de l'article quasi naturel ne tournent pas à ce commit : `InLowercase()` lève une erreur faute d'objet ; `LettersNB`, `BeforeQ` et `TheirQ().FirstCharQ()` ne sont pas définis ; et la forme à accolades `Naturally() { ... }` lève une erreur pour trop peu de paramètres. La chaîne de l'article sur le pont avec `ReplaceLowercaseCharsQ` n'est pas définie non plus. J'ai lancé douze chaînes de l'article quasi naturel le 8 octobre 2026, et huit fonctionnent. Dans cette exécution, le paragraphe de l'article sur le pont tournait encore en mode permissif, et imprimait deux boîtes imbriquées autour de « NOTHING SOFTANZA » au lieu de la seule qu'il promet. La machine l'a dit, puisque `UnderstoodAll()` vaut faux et que le mot non résolu est nommé (le bloc ci-dessus montre les deux), mais un lecteur doit le demander.
 
 Ce qui est construit : les deux directions ; cinq paquets comme données et un sixième à l'exécution ; des refus avec raisons des deux côtés ; les cadres de question, la chaîne de vérité mince, le registre évidentiel ; le code naturel comme données. Le dossier contient treize fichiers et environ douze mille lignes dans douze classes, d'après `wc` et `grep` le 8 octobre 2026.
 
-Ce qui est conçu : le plan d'une narration émis comme une chaîne exécutable, de sorte que les chaînes gagnent `Understood()` gratuitement. Une grammaire émise pour le lexique naturel, de sorte qu'un modèle d'IA ne puisse produire que des phrases que la couche exécute : j'ai cherché dans le dossier, et aucun émetteur de grammaire ne le touche. Une garde qui échoue si un socket s'ouvre pendant une exécution naturelle, qui n'existe pas. Un chiffre de couverture par paquet imprimé par une garde. Et les exemples des articles épinglés comme fixtures.
+Ce qui est conçu : le plan d'une narration émis comme une chaîne exécutable, de sorte que les chaînes gagnent `Understood()` gratuitement. Une grammaire émise pour le lexique naturel, de sorte qu'un modèle d'IA ne puisse produire que des phrases que la couche exécute. Une garde qui échoue si un socket s'ouvre pendant une exécution naturelle. Un chiffre de couverture par paquet imprimé par une garde. Et les exemples des articles épinglés comme fixtures.
 
-Ce qui est absent : le haoussa en écriture ajami, le zarma et le peul. Une couche naturelle fermée jusqu'en bas : une liste simple dans une phrase naturelle atteint le code hôte, ce que le chapitre 11 imprime, et un descripteur atteint le code hôte, ci-dessus. Toute machine qui juge la grammaire d'une chaîne. La lettre haoussa standard, que le paquet stocke brisée. Un dictionnaire protégé de la dérive. Le dossier ne tient pas non plus de récit, ni de date, de mon plaidoyer auprès du projet de l'ancien langage hôte pour que la programmation naturelle devienne une préoccupation première, ni une phrase de moi sur ce ton dont le livre puisse citer la source. Il ne tient qu'un mémo privé du 30 août 2026, qui donne mon jugement sur la forme naturelle livrée par ce langage. Le mémo est marqué privé : le livre ne le cite pas et ne m'attribue aucune expression tirée de lui.
+Ce qui est à venir : le haoussa en écriture ajami, le zarma et le peul. Une couche naturelle fermée jusqu'en bas : aujourd'hui une liste simple dans une phrase naturelle atteint le code hôte, ce que le chapitre 11 imprime, et un descripteur aussi, ci-dessus. Une machine qui juge la grammaire d'une chaîne. La lettre haoussa standard stockée entière dans le paquet, qui la stocke brisée aujourd'hui. Un dictionnaire protégé de la dérive. Et le récit de mon plaidoyer auprès du projet de l'ancien langage hôte pour que la programmation naturelle devienne une préoccupation première, avec sa date et une phrase de moi sur ce ton dont le livre puisse citer la source. Le dossier tient un mémo privé du 30 août 2026, qui donne mon jugement sur la forme naturelle livrée par ce langage. Le mémo est marqué privé : le livre le garde hors citation et ne m'attribue aucune expression tirée de lui.
 
 ## 8. Six portes
 

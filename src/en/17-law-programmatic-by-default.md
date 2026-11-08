@@ -11,13 +11,13 @@ guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agen
 stage:
   built: "the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model"
   designed: "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent; the typed unit of prediction, a design of the estate's with five validation stages; the negotiation between an agent and its reviewer"
-  absent: "four of the library's five own agents, induction from examples among them"
+  reached: "the wiring of four of the library's five own agents, induction from examples among them"
 status: draft
 rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then comes the limit, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then section 7 says what the law covers today, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -81,7 +81,7 @@ StzKnowledgeGraphQ("menu") {
 }
 ```
 
-A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples are absent. An AI model, where there is one, comes after all of them, not first.
+A goal was declared: every dish must say what it contains. The gap between the goal and what is known generated the question, and the question carries its reason. The world cannot be closed while it is incomplete: `Can't conclude: 2 gap(s) remain`. Chapter 18 shows the five ways you may answer: an option from a list, a data structure, a formula, a sentence, or examples. Three are wired; the formula and the examples lie ahead. An AI model, where there is one, comes after all of them, not first.
 
 The third piece is derivation, my definition at work. One law is declared, and a fact nobody recorded is proved:
 
@@ -191,13 +191,13 @@ Where I think the law stands apart is in three places. A decision here costs not
 
 The next section says where the law stops.
 
-## 7. The limit
+## 7. What it covers today
 
 What is built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
 
 What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
 
-What is absent: four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
+What lies ahead: the wiring of four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
 
 ```haro
 ? len(StzOwnAgents())
@@ -210,14 +210,14 @@ What is absent: four of the library's five own agents. How many does the library
 
 The validator, the ranker, the planner and the agent that would induce a pattern from your examples are declared and reserved. So the fifth register of an answer, examples, waits on the induction agent: wiring it is the next step.
 
-And one limit of the first rung that you will meet the moment you rephrase a question. It recognises a relation only by the word it was declared with. What does it do when you ask in other words?
+And one step ahead for the first rung, which you will meet the moment you rephrase a question. It recognises a relation only by the word it was declared with. What does it do when you ask in other words?
 
 ```haro
 ? oDLM.Ask("what does margherita contain?")
 #--> Margherita is a dish.
 ```
 
-It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, the answer here is a refusal, and that refusal is the next step. I print it here because a law is shown by a page that prints its stage as it stands, limit included. The request to the library is to refuse a question whose verb is not a declared relation.
+It did not refuse! It printed `Margherita is a dish.` That answer is true, and it is not what was asked. By the law of this chapter, the answer here is a refusal, and that refusal is the next step. I print it here because a law is shown by a page that prints its stage as it stands, bounds included. The request to the library is to refuse a question whose verb is not a declared relation.
 
 ## 8. Six doors
 

@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-11-08 23:21 UTC+01:00",
+ "built": "2026-11-08 23:52 UTC+01:00",
  "library_commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
  "edition": "proof copy",
  "runtime": {
@@ -27,7 +27,7 @@
  "rules_for_agents": [
   "A draft is a draft: a chapter whose status is draft is not the author's final word, and 'the author read it' is a status that only the author sets.",
   "You may quote any cell of a table. You may not turn an absent cell into a present one.",
-  "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
+  "Rely on the stage words: built means the code, a guard and a run; designed means a document describes it; ahead (the key reached) names the work the chapter's subject leads to, as the record names it.",
   "Rely on a promise only with its verdict, and only at the library commit named in this file.",
   "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
   "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.",
@@ -107,7 +107,7 @@
     }
    ],
    "open_questions": [],
-   "words": 1982,
+   "words": 1986,
    "french": true,
    "text": "agents/preface.md",
    "run": {
@@ -130,7 +130,7 @@
    "status": "draft",
    "stage": {
     "built": "the court that admits or refuses a change, for a person and for a machine",
-    "absent": "a customer platform running on the Softanza engine"
+    "reached": "a customer platform running on the Softanza engine"
    },
    "guards": [
     {
@@ -221,7 +221,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -257,7 +257,7 @@
    "stage": {
     "built": "the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic",
     "designed": "a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work",
-    "absent": "the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
+    "reached": "the platforms of the three customers running on the Softanza engine; a crafter's own medium, the messaging app on their phone, as a target"
    },
    "guards": [
     {
@@ -425,7 +425,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -461,7 +461,7 @@
    "stage": {
     "built": "the court behind every block of this chapter but the truth one, and the stage words the site prints on every product",
     "designed": "the register of rethought concepts as data, with a guard that fails when a concept has no proof",
-    "absent": "a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging"
+    "reached": "a page that shows each rethought concept with a run proof; a test file for the paradigm engine of section merging"
    },
    "guards": [
     {
@@ -583,7 +583,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -595,7 +595,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2672,
+   "words": 2675,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
@@ -619,7 +619,7 @@
    "stage": {
     "built": "the engine and its libraries; the base layer; worlds, constellations and platforms with their guards; the engine subset a part ships, for the web",
     "designed": "the max layer loaded by its entry file; the base layer building on the core one; a loader for one domain of base alone; a court that checks the layers against their contract",
-    "absent": "a whole program and its engine packed into one file; a customer platform on the engine"
+    "reached": "a whole program and its engine packed into one file; a customer platform on the engine"
    },
    "guards": [
     {
@@ -773,7 +773,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -785,7 +785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2651,
+   "words": 2660,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
@@ -809,7 +809,7 @@
    "stage": {
     "built": "the forms of the vocabulary in thousands of method names; the house rules as a court over the library's own code; the promise read by a machine in the house's own form",
     "designed": "a court of style for the code a programmer or an AI agent writes; the writing grammar declared in Haro, so an AI model can only write in it",
-    "absent": "any machine that judges today the style of a program written with the library"
+    "reached": "a machine that judges the style of a program written with the library"
    },
    "guards": [
     {
@@ -969,7 +969,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -1005,7 +1005,7 @@
    "stage": {
     "built": "the one-dimensional walker, the checker, the yielder and the performer on lists; the condition language compiled by the engine, with its host-code twin",
     "designed": "the four metaphors as native engine modules (only the yielder is one); a walker over any indexed structure",
-    "absent": "runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written"
+    "reached": "runnable code for the three models of the article 'Bridging Minds and Code'; the edge table of the walker narration as written"
    },
    "guards": [
     {
@@ -1158,7 +1158,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -1170,7 +1170,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2645,
+   "words": 2661,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
@@ -1194,7 +1194,7 @@
    "stage": {
     "built": "the library's sixteen house rules as a court over its own code; the promise judged as a claim; the small languages of ranges, lists and conditions in strings; the code seat; the viz prefix; alternatives and named parameters in any order, in part",
     "designed": "a court that judges the style of a program written with the library; a court that reads the goals; the writing grammar declared in Haro; the classic form of a test block as the one form",
-    "absent": "any machine that judges the style of the code you write today; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name"
+    "reached": "a machine that judges the style of the code you write; the writing in any human language of a function's name; the near-natural sentence as the deck wrote it; the eval-based code on a parameter's name"
    },
    "guards": [
     {
@@ -1396,7 +1396,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -1408,7 +1408,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3762,
+   "words": 3756,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
@@ -1432,7 +1432,7 @@
    "stage": {
     "built": "fourteen of the twenty-two forms, some with examples other than the article's, and three more in another shape; the library reading a name as a sentence; scope in the regex verbs, in the system and in the placement of a deployment",
     "designed": "the forms declared once as data and generated, in Haro; the scope paradigm for time, units, memory and style",
-    "absent": "five forms: partial, future, free, default and multilingual; concurrency as a scope: a plan with no code"
+    "reached": "five forms: partial, future, free, default and multilingual; concurrency as a scope, from its plan to its code"
    },
    "guards": [
     {
@@ -1619,7 +1619,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -1631,7 +1631,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2948,
+   "words": 2966,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
@@ -1655,7 +1655,7 @@
    "stage": {
     "built": "the Regexuter and the Listexuter, reacting with a state that remembers; Reaxis, reactive programming in plain words, on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills cascade to a fixpoint",
     "designed": "the Softanzuter proper, many faculties sharing one state and cascading until it settles; the universal engine behind it; its four siblings, analyser, genetic, linguistic and quantic",
-    "absent": "a dependency chain that links one trigger to another; a section-merging verb the article presents as its point"
+    "reached": "a dependency chain that links one trigger to another; a section-merging verb the article presents as its point"
    },
    "guards": [
     {
@@ -1812,7 +1812,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -1824,7 +1824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2742,
+   "words": 2761,
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
@@ -1848,7 +1848,7 @@
    "stage": {
     "built": "the refinement point declared in the source; the gate with five checks; the cascade of a point and of a class; reversal by step, by checkpoint and to zero; the trust floor and governed refining",
     "designed": "the experience the article describes: asking a point to explain itself, applying a plan, a one-line refinement; the cascade of the code graph joined to the gate; the refinement seat of Haro",
-    "absent": "a saved history: the file keeps the source and nothing of the timeline"
+    "reached": "a saved history of the timeline, beside the source the file keeps"
    },
    "guards": [
     {
@@ -1988,7 +1988,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -2000,7 +2000,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2394,
+   "words": 2378,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
@@ -2024,7 +2024,7 @@
    "stage": {
     "built": "the natural layer's vocabulary as data in five languages, with its refusals; the court of structured output, its grammar compiler and its sampler; the pattern languages, which accept a word they do not know",
     "designed": "the forge that produces a language's parser, court and grammar from its declaration alone; a grammar emitted for every declared language; the writing style as a declared grammar",
-    "absent": "a natural layer closed all the way down: one form of list still reaches host code; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack"
+    "reached": "a natural layer closed all the way down, its bracketed lists as well as its words; pattern classes that refuse a word they do not know; the standard Hausa letter ɗ in the Hausa pack"
    },
    "guards": [
     {
@@ -2219,7 +2219,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -2231,7 +2231,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2938,
+   "words": 2943,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
@@ -2255,7 +2255,7 @@
    "stage": {
     "built": "in the library: a declaration judged when it is declared; a court and a grammar from the one declaration, with the list of what the grammar dropped; a grammar machine that walks bytes and refuses by name; a description for a person and a prompt for an AI model from the same text. Outside the library: a forge that turns a declaration into a court and a grammar, run on the estate's own languages",
     "designed": "the forge inside the library; its full list of products from one declaration (printer, knowledge graph, natural door, narration, runtime, one static binary); the projections of a language to an application",
-    "absent": "the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, which needs a model file the snapshot does not hold"
+    "reached": "the forge's grammar for a menu word; a guard that asserts the refusal of a host function in a condition; the figure two of ten against ten of ten, re-taken with its model file"
    },
    "guards": [
     {
@@ -2414,7 +2414,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -2426,7 +2426,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3961,
+   "words": 3952,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
@@ -2450,7 +2450,7 @@
    "stage": {
     "built": "both directions: chains where the human is the parser, and sentences where the machine is; five language packs as data and a sixth added at runtime; refusals with reasons on both sides; question frames; a thin truth chain; natural code as data in documents and templates",
     "designed": "a grammar that holds an AI model to the lexicon; a guard that no socket opens during a natural run; the plan emitted as a chain; the article examples pinned as fixtures",
-    "absent": "any machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; the old articles' promises, several of which do not run"
+    "reached": "a machine that judges a chain's grammar; Ajami, Zarma and Fulfulde; a natural layer closed all the way down; a dictionary protected from the drift of the documentation it is read from; every promise of the old articles running at this commit"
    },
    "guards": [
     {
@@ -2685,7 +2685,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -2697,7 +2697,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3748,
+   "words": 3737,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
@@ -2721,7 +2721,7 @@
    "stage": {
     "built": "a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory",
     "designed": "rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load",
-    "absent": "the 2022 founding dialog, which the book shows as text; Explain on a knowledge graph; the rules section of the file, which the parser drops"
+    "reached": "the 2022 founding dialog as running code, which the book shows as text today; Explain on a knowledge graph; a parser that reads the rules section of the file"
    },
    "guards": [
     {
@@ -2871,7 +2871,7 @@
    ],
    "doors": {
     "programmer": "One class and a text file: `Know`, `KnowRelation`, `ConstrainRelation`, `Prove`, `Query`, `WriteToKnowFile`, `ImportKnow`. The file is diffable and ships with the program.",
-    "analyst": "The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read \"rules\" as the limit above. Where to start, in the course: the chapter called \"Teach a world\".",
+    "analyst": "The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read \"rules\" as section 7 reads it. Where to start, in the course: the chapter called \"Teach a world\".",
     "designer": "The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.",
     "decision-maker": "The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote.",
     "educator": "The whole education program is knowledge files. A learner teaches a world, then questions it, and the project's guard checks the world file, the agent file and one printed answer. An institution adapts by overlay, never by fork.",
@@ -2904,7 +2904,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -2916,7 +2916,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3491,
+   "words": 3513,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
@@ -2940,7 +2940,7 @@
    "stage": {
     "built": "patterns for text, numbers and tables, each with a guard; the same small habit across the media (a constructor, a pattern in a string, Match, Tokens)",
     "designed": "one pattern engine shared by every medium; the pattern as the condition side of the cascade; the pattern written from examples",
-    "absent": "the refusal of a word the pattern language does not know, in the six media that are not text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
+    "reached": "the refusal of an unknown word, in the six media beyond text; a narration and a small function for graphs; the genetic, linguistic and quantic siblings"
    },
    "guards": [
     {
@@ -3133,7 +3133,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -3145,7 +3145,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3131,
+   "words": 3138,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
@@ -3169,7 +3169,7 @@
    "stage": {
     "built": "a closed registry of six foreign runtimes and a process-based call that brings Python's and NodeJS's results home as lists; the trust postures; the twin's rehearsal of a spawn; a reader of Python and of JavaScript into one code graph",
     "designed": "the door governed, with a posture asked at the call; the engine's bridge and its three tiers; the domain library on top of the door; Haro wearing a Python syntax and a JavaScript one",
-    "absent": "a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court; the AI model as a door"
+    "reached": "a door whose way back is closed; a door for R that runs; a passing run of a foreign runtime in the library's own court"
    },
    "guards": [
     {
@@ -3355,7 +3355,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -3391,7 +3391,7 @@
    "stage": {
     "built": "the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model",
     "designed": "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent; the typed unit of prediction, a design of the estate's with five validation stages; the negotiation between an agent and its reviewer",
-    "absent": "four of the library's five own agents, induction from examples among them"
+    "reached": "the wiring of four of the library's five own agents, induction from examples among them"
    },
    "guards": [
     {
@@ -3546,7 +3546,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -3558,7 +3558,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2913,
+   "words": 2922,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
@@ -3582,7 +3582,7 @@
    "stage": {
     "built": "the goal, the gap and the question with its reason; a reply as an option, a data structure or a sentence split on commas and the word 'and'; the governed door with its refusals; the checkpoint with its lifetime; the goal fulfilled or revoked; one wired AI agent that stops where it would have to invent",
     "designed": "several readings of one reply, enumerated for the person to choose; the nearest alternatives named after a refusal; the example written back as a promise",
-    "absent": "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a value with a space in it"
+    "reached": "the formula register; the example register; a conversation whose question is worded in Arabic, Hausa or French; a conversation that judges a value with a space in it"
    },
    "guards": [
     {
@@ -3779,7 +3779,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -3791,7 +3791,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3310,
+   "words": 3313,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
@@ -3815,7 +3815,7 @@
    "stage": {
     "built": "the domain model's first rung with no neurons; its facts rendered as a corpus; a closed vocabulary; completion by lookup; a plain-text bundle that travels with its tests; a small second rung, a bigram, exported to a model file; the admission of a fact by a law",
     "designed": "a grammar derived from a knowledge base by one call; the typed unit of prediction validated in five stages; a second rung whose corpus is checked before it trains; the foundry that would make it larger",
-    "absent": "a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far"
+    "reached": "a pipeline that chains the five stages on any unit; an end-of-sentence word for the second rung; a completion that sees the sentence so far"
    },
    "guards": [
     {
@@ -3953,7 +3953,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -3965,7 +3965,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2667,
+   "words": 2684,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
@@ -3989,7 +3989,7 @@
    "stage": {
     "built": "reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in the engine's Zig code)",
     "designed": "the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks",
-    "absent": "a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check"
+    "reached": "the refusal of a plan with no executor; a ranking of a plan's risks; code already running in the process, which the threat model places out of scope; the Right to a Human as a machine check"
    },
    "guards": [
     {
@@ -4164,7 +4164,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -4176,7 +4176,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3927,
+   "words": 3932,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
@@ -4200,7 +4200,7 @@
    "stage": {
     "built": "the promise judged as a claim about a stop; the security plane with its ledger, sentinel, drill, response and secrets, and its table of guarantees tied to guards; the performance plane with its instrument and its governed loop; the perception law, adopted",
     "designed": "routes, the clock and weather, and perception for the promise runner; the plugin plane; the negotiation over a rejected plan",
-    "absent": "a human verdict on any picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store"
+    "reached": "a human verdict on each picture of the gallery; seven of the eight musical traditions heard by a person from them; a real vault and a real sandbox as proofs; a time-series store"
    },
    "guards": [
     {
@@ -4395,7 +4395,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -4407,7 +4407,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3727,
+   "words": 3736,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
@@ -4431,7 +4431,7 @@
    "stage": {
     "built": "five comparisons, four run on both sides with the other side's version and the date, and the fifth run on the Softanza side only; the four code pairs of the site, re-run, three of them on both sides; three field studies that end on what the field has and the library lacks, and a culture plan that prints its losses",
     "designed": "a comparison register as data; a comparison court whose rule is that a row with no source or date does not publish; both benchmarks re-run on the present engine",
-    "absent": "locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix, which I could not locate"
+    "reached": "locale collation; locale casing; a grapheme count on the public string; a time-zone database; the benchmark of 7 July 2026 re-run; the source of the coverage matrix"
    },
    "guards": [
     {
@@ -4528,7 +4528,7 @@
    ],
    "doors": {
     "programmer": "Copy a pair. Run both sides in your own versions, keep the output as it came, and add the line where the other tool is ahead.",
-    "analyst": "The coverage matrix is a buying aid only because it shows two absent rows and seven partial ones in its own colours. Read those first.",
+    "analyst": "The coverage matrix is a buying aid only because it shows its seven partial rows and its other two in its own colours. Read those first.",
     "designer": "The loss goes in the same block and in the same type as the win. The stage word is part of the interface.",
     "decision-maker": "Ask any vendor, this one included, for the other side's version, the date, whether it was run, and the line they lose. The memo of 13 September 2026 is a model of a headline withdrawn.",
     "educator": "A code pair is a lesson in what a line costs. The learner writes the other side's output before running it.",
@@ -4561,7 +4561,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -4573,7 +4573,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3935,
+   "words": 3929,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
@@ -4597,7 +4597,7 @@
    "stage": {
     "built": "a world as a declaration with a being, a becoming and a way of being met; a goal whose gap is measured; a constellation of worlds with bonds and three gates on every crossing; the commons as a platform; the capability seam; the profile of a solution as a text file, and the three system scopes",
     "designed": "the near-natural idiom of the constellation; a call routed into a nested constellation; shells that embed the engine; the architect's certification, which is a proposal; the five-row guarantee sheet, as a requirement",
-    "absent": "a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for any solution"
+    "reached": "a world that judges its own truths; a narration for the constellation or the platform envelope; a written five-row guarantee sheet for a solution"
    },
    "guards": [
     {
@@ -4773,7 +4773,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -4785,7 +4785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3744,
+   "words": 3743,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
@@ -4809,7 +4809,7 @@
    "stage": {
     "built": "a twin of files and a twin of the process environment, each with its history, snapshots, a narrated plan, its risks and, for the file twin, a validation against reality; the placement plan; the emulator's bundle, wired into the production attach; a deployment as a graph of steps with a rollback; the registry of services with its postures and the gate that refuses a fake at production",
     "designed": "the engine seen running in a browser; a drift check for recorded answers; branches of a twin; twins for databases, interfaces and networks; the emulated phase set by the emulated deploy",
-    "absent": "any live card-gateway adapter for payments (a hub adapter is built and proved only against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path"
+    "reached": "a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), an AI model, mail, SMS or an object store; live verification of a remote host; a person's look at the emulator's surface; a customer solution emulated and deployed through this path"
    },
    "guards": [
     {
@@ -4977,7 +4977,7 @@
     "programmer": "You code the whole integration against names, with doubles that raise when you forgot something and a counter that lets you assert a fee. The day you subscribe, you change a binding and not a line. The loss: a double you wrote yourself that declares nothing is taken for live by the gate.",
     "analyst": "Before anything moves you can read the placement plan, the external dependencies with the credentials production will ask for by name, the step graph, and which part depends on a fake. The sizes are estimates, and the findings are by part.",
     "designer": "The emulator generates a surface from the plan, with a parts grid by role and one window per part. I checked the generated text. Say \"generated\", and not \"seen\".",
-    "decision-maker": "\"Who may deploy?\" is a property. An assistant may plan the release and the site stays absent. A person may commit. Neither may ship a declared fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.",
+    "decision-maker": "\"Who may deploy?\" is a property. An assistant may plan the release and the site stays `absent`. A person may commit. Neither may ship a declared fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.",
     "educator": "A learner can build a whole shop's integration with no account, no key and no fee, and watch the double refuse what she forgot. Her deployment fails safely and rolls back.",
     "agent": "You may rehearse the whole integration and plan the whole release, in a world where nothing real can move: a sandbox payment moves no money and a mail sink sends no mail. You may ask whether you may go live and be told why not. You cannot commit. The loss: that guarantee covers the library's own doubles, and a surface bound to something live is outside it."
    },
@@ -5008,7 +5008,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -5020,7 +5020,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4100,
+   "words": 4103,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
@@ -5044,7 +5044,7 @@
    "stage": {
     "built": "the governed conversation with its question as data; the SMS port and its sandbox, with the bill per segment in two alphabets; a verifier for the body of an inbound message; five semantic values rendered as colour, earcon and phrase; a voice that speaks, and hears a closed grammar; a closed set of sentences a business agrees to say; a message of three fields between identities of one platform",
     "designed": "the commons service of messaging; conversational surfaces for a messaging app, SMS, USSD and voice, with a satisfiability matrix as a court; templates as a grammar",
-    "absent": "a messaging app, USSD or a telephone line, in any form; a conversational projection of a world; a channel, a session, a template, consent; the question in a language other than English; a voice for Hausa, Zarma or Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it"
+    "reached": "a messaging app, USSD and a telephone line as media; a conversational projection of a world; a channel, a session, a template, consent; the question in languages beyond English; a voice for Hausa, Zarma and Fulfulde; the twenty-two verbs as a list the library holds; a reply with a space in it"
    },
    "guards": [
     {
@@ -5231,7 +5231,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -5243,7 +5243,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3903,
+   "words": 3919,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
@@ -5266,8 +5266,8 @@
    "status": "draft",
    "stage": {
     "built": "the interface as a text with a court that finds the element serving no verb; two projections of it, native and web, with a recorded table of divergences and a page that can say DISAGREE; the accessibility tree emitted from the declaration; a page the language serves on the loopback; a world that proposes and whose proposals clear when it is acted on; screens declared as intents; one generated browser surface",
-    "designed": "the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar), none yet a class of the library; the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit",
-    "absent": "an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency"
+    "designed": "the shell kit with two shells; the chrome as closed kinds (spine, ribbon, rail, status bar); the facet as data; a rail bound to focus; status cells read from the courts, with a guard that a cell never shows a state the court did not emit",
+    "reached": "an IDE of this family; a list of the twenty-two verbs in the library and a refusal of an unknown verb; a guard that judges a shell against the verbs; an editor; a measured latency"
    },
    "guards": [
     {
@@ -5451,7 +5451,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -5463,7 +5463,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4197,
+   "words": 4220,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
@@ -5487,7 +5487,7 @@
    "stage": {
     "built": "three layers chosen by the entry file you load, each including the one beneath and none above; the dependency rule held at the loads; an engine of eighty-nine libraries, in Zig, built in optimised safe mode, with the engine's own count of what it exposes; Haro as a ratified charter and a spike whose courts run on the new runtime and on the old one",
     "designed": "the base layer inheriting the core layer; the max layer as a built layer; a court that checks the layers against their contract; a layer chosen by a declaration the compiler honours; the other faces of Haro over one program graph; a loader for one domain of base; the standalone engine repository and its command line; the engine's polyglot bridge, which is chapter 16's",
-    "absent": "a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print"
+    "reached": "a lean core layer that runs its strings; a Linux or macOS engine in service; a measured pass of the library on the new runtime under Linux; a `haro` executable; Haro running the library; a single executable with no dependency; an engine test count that I may print"
    },
    "guards": [
     {
@@ -5646,7 +5646,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -5658,7 +5658,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4942,
+   "words": 4940,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
@@ -5682,7 +5682,7 @@
    "stage": {
     "built": "the constellation of worlds with its bonds and norms; the payments sandbox and the production gate that refuses a fake; the speed budget declared and judged",
     "designed": "the Lock as a rule of the library; the constellation written in the near-natural idiom the design describes",
-    "absent": "the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine"
+    "reached": "the restaurant's live payment adapter; a measurement of the budget on a real mobile network; a speed expectation in the owner's own percentile; browser-side timing; the platform on the Softanza engine"
    },
    "guards": [
     {
@@ -5812,7 +5812,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -5824,7 +5824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3649,
+   "words": 3643,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
@@ -5848,7 +5848,7 @@
    "stage": {
     "built": "the organisation chart as a text a person can edit; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism; a rule written as data; one report with one verdict",
     "designed": "the content that would make the other six regimes differ from the first; a rule file that judges, and not only loads",
-    "absent": "the delivered product running on the library; a word from the bank's own people; an auditor's reading of a finding the library produced"
+    "reached": "the delivered product running on the library; the bank's own people's word on it; an auditor's reading of a finding the library produced"
    },
    "guards": [
     {
@@ -5989,7 +5989,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -6001,7 +6001,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2472,
+   "words": 2487,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
@@ -6025,7 +6025,7 @@
    "stage": {
     "built": "a rule built as an object on a model, its number changed and the model judged again; the rule governor that names a rule that governs nothing; a refusal kept as a checkpoint a person can read, with its context; authority set against risk; a decision kept with its authority at the time; offline as a capability a world must ask for",
     "designed": "the hub and its study; a rule language a local programmer can learn; the study's promises that a rule is checked before it applies and can be undone",
-    "absent": "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
+    "reached": "the hub, built; a mechanism for work done offline, kept and sent later; a version history of a rule; a customer platform on the engine"
    },
    "guards": [
     {
@@ -6172,7 +6172,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -6184,7 +6184,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2729,
+   "words": 2736,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
@@ -6208,7 +6208,7 @@
    "stage": {
     "built": "what the three projects delivered, each with a document (a first delivery followed by a field day; a product installed under licence; a design study built with the organisation's teams); the three lessons the library carries, each with a guard (a fake never ships; a chart judged under a regulator's rules; authority against risk, with its lineage); refusals that show an absence instead of hiding it",
     "designed": "the five-row guarantee sheet; a runtime that is the language's own running the library; the declared machine on a board",
-    "absent": "any customer platform on the engine; the customers' declarations written as Softanza's own, as files; a word from the bank; the record of the restaurant after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on any of it"
+    "reached": "a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August 2026; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; a named person's verdict on each of them"
    },
    "guards": [
     {
@@ -6342,7 +6342,7 @@
     "designer": "A feature ships shut until a person has seen or heard it, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.",
     "decision-maker": "Read the stage word before the testimonial. \"Built\" is a statement about a guard. \"Runs at a customer\" is a statement about a document. You can ask for it in writing, with a name beside it.",
     "educator": "Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.",
-    "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
+    "agent": "You may read the tables and quote any cell. A cell marked ahead stays ahead in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it."
    },
    "sections": [
     {
@@ -6371,7 +6371,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -6383,7 +6383,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4684,
+   "words": 4690,
    "french": true,
    "text": "agents/ch31-what-the-projects-show.md",
    "run": {
@@ -6407,7 +6407,7 @@
    "stage": {
     "built": "the protocol, its memos and its ledger of rulings; three hooks: one refuses wholesale staging, one refuses a register edit made on a stale view of its source system, one refuses work on a flooded machine; the instrument that measures composed stamps; the library's sixteen house rules, five of them over a code graph",
     "designed": "a watcher that wakes a session when a file arrives, in place of the clocks; a court of style for the code a programmer or an AI agent writes",
-    "absent": "token figures in the cost record; any team outside this estate that has tried the protocol; a check of a word in the reader's own language"
+    "reached": "token figures in the cost record; a team outside this estate trying the protocol; a check of a word in the reader's own language"
    },
    "guards": [
     {
@@ -6506,7 +6506,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -6518,7 +6518,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3083,
+   "words": 3080,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
@@ -6542,7 +6542,7 @@
    "stage": {
     "built": "a declared platform built, then deployed, and refused in the other order; the twin that touches nothing real; the production gate that refuses a fake service",
     "designed": "the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; live hosts and a real board",
-    "absent": "a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files"
+    "reached": "a customer solution running on the Softanza engine, and a named person's verdict on it; the customers' declarations as files"
    },
    "guards": [
     {
@@ -6622,7 +6622,7 @@
     "programmer": "Your code runs today through build, rehearsal and a governed deployment. What comes next is a customer running it on the engine, and the record will carry that claim the day it is true.",
     "analyst": "Ask for two things before you count a project as proof: a document, and a named verdict.",
     "designer": "What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.",
-    "decision-maker": "Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is absent.",
+    "decision-maker": "Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is ahead.",
     "educator": "Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.",
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it (chapter 24 shows the refusal)."
    },
@@ -6653,7 +6653,7 @@
     },
     {
      "n": 7,
-     "title": "The limit"
+     "title": "What it covers today"
     },
     {
      "n": 8,
@@ -6757,7 +6757,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1094,
+   "words": 1097,
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
@@ -6819,7 +6819,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1943,
+   "words": 1941,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {
@@ -6906,7 +6906,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1170,
+   "words": 1174,
    "french": true,
    "text": "agents/app-g-the-book-as-data.md",
    "run": {
