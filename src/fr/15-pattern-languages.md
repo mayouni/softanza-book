@@ -245,11 +245,11 @@ Vient ensuite le terrain, et où il mène.
 
 Vient ensuite la section 7.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : les chaînes de caractères, les nombres et les tableaux, chacun avec une garde et une petite fonction. L'habitude partagée.
+Construit : les chaînes de caractères, les nombres et les tableaux, chacun avec une garde et une petite fonction. L'habitude partagée.
 
-Ce qui est construit en partie : les listes, les matrices, le temps et les graphes, dans cet ordre.
+Construit en partie : les listes, les matrices, le temps et les graphes, dans cet ordre.
 
 - **Listes** : les types, les comptes, l'imbrication, la négation, l'alternance et les ensembles s'exécutent. Les intervalles à pas lèvent une erreur. Dans une exécution que je n'ai pas gardée comme bloc, le drapeau d'unicité a été ignoré, de sorte que `[@N2-3{1; 2; 3}U]` a accepté `[1, 1]`, bien que la classe ait du code pour une vérification d'unicité. Le joker de l'article, `@A`, n'est pas un jeton ; le vrai joker est `@$`. Et un objet réutilisé répond depuis un cache dont la clé est la longueur de la liste et la somme des codes de ses caractères, ce qui ne dépend pas de l'ordre. Un objet neuf répond 0 pour `["hello", 1]`, et le même objet après `[1, "hello"]` répond 1.
 - **Matrices** : la taille, la forme, l'élément et trois propriétés s'exécutent. L'en-tête de la classe liste les termes qui acceptent toute matrice : `row`, `col`, `pattern`, `determinant` et `sum`. Une matrice de deux par deux est acceptée par `{row(99)}`.
@@ -303,9 +303,9 @@ Cooking se trouve entre le premier et le dernier, donc la première réponse est
 
 Un motif avec un mot que le langage ne connaît pas correspond à tous les nombres ! Les jetons sont `[ ]`, et rien n'est levé. Les langages des matrices et des tableaux renvoient un jeton ERROR que rien ne lève, et les langages des nombres et du temps renvoient une liste vide. La session de la charte de Haro l'a consigné comme constat, que le dossier central a relayé le 28 septembre 2026 : les six classes de motifs acceptent en silence les jetons inconnus. Je l'ai reproduit à ce commit, et la demande est ouverte. Un langage fermé qui refuse est la loi du chapitre 11 ; y amener les six est la prochaine étape. Le chapitre l'imprime comme un constat du tribunal, et non comme une dette de moi. Je le tiens pour mon point de vue. L'exécution ci-dessus, à ce commit, est ce qui le soutient.
 
-Ce qui est conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
+Conçu : un seul moteur de motifs partagé par tous les supports. La conception du moteur dit que le moteur à retour arrière, le solveur de contraintes et le compilateur de motifs sont les mêmes dans tous les domaines, et que seul le vocabulaire change. Son étape est planifiée. À ce commit le vocabulaire change et le code aussi. Le fichier propre du moteur nommé *pattern* est autre chose : les palindromes, les répétitions et les suites arithmétiques et géométriques. Le motif comme côté condition de la cascade, plusieurs facultés qui se déclenchent l'une après l'autre sur un état partagé, est le troisième échelon du chapitre 9, et conçu.
 
-Ce qui est à venir : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision. L'explication d'un motif sans nom. `rx("[a-z]+").Explain()` lève une erreur, et la classe d'analyse qu'elle appelle est la pièce à venir. Et l'usage des classes de motifs dans le reste de la bibliothèque : aujourd'hui elles servent le dossier de la regex, les tests et la documentation, et un `Matches(pattern)` sur `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` est la prochaine portée. Dans la documentation, le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant, et la galerie a quelques scripts qui les utilisent.
+La suite : l'induction à partir d'exemples, qui est réservée. Les classes sœurs génétique, linguistique et quantique, qui sont de la vision. L'explication d'un motif sans nom. `rx("[a-z]+").Explain()` lève une erreur, et la classe d'analyse qu'elle appelle est la pièce à venir. Et l'usage des classes de motifs dans le reste de la bibliothèque : aujourd'hui elles servent le dossier de la regex, les tests et la documentation, et un `Matches(pattern)` sur `stzList`, `stzNumber`, `stzTable`, `stzMatrix` et `stzGraph` est la prochaine portée. Dans la documentation, le cours d'éducation les utilise, dans un chapitre et un exercice dont la réponse est vérifiée en exécutant le programme de l'apprenant, et la galerie a quelques scripts qui les utilisent.
 
 ## 8. Six portes
 

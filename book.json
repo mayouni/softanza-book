@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-11-08 23:52 UTC+01:00",
+ "built": "2026-11-09 00:52 UTC+01:00",
  "library_commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
  "edition": "proof copy",
  "runtime": {
@@ -27,7 +27,7 @@
  "rules_for_agents": [
   "A draft is a draft: a chapter whose status is draft is not the author's final word, and 'the author read it' is a status that only the author sets.",
   "You may quote any cell of a table. You may not turn an absent cell into a present one.",
-  "Rely on the stage words: built means the code, a guard and a run; designed means a document describes it; ahead (the key reached) names the work the chapter's subject leads to, as the record names it.",
+  "Rely on the stage words: built means the code, a guard and a run; designed means a document describes it; next (the key reached) names the work the chapter's subject leads to, as the record names it.",
   "Rely on a promise only with its verdict, and only at the library commit named in this file.",
   "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
   "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.",
@@ -107,7 +107,7 @@
     }
    ],
    "open_questions": [],
-   "words": 1986,
+   "words": 1985,
    "french": true,
    "text": "agents/preface.md",
    "run": {
@@ -221,7 +221,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -425,7 +425,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -437,7 +437,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3141,
+   "words": 3135,
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
@@ -583,7 +583,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -595,7 +595,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2675,
+   "words": 2668,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
@@ -773,7 +773,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -785,7 +785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2660,
+   "words": 2654,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
@@ -969,7 +969,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -981,7 +981,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3160,
+   "words": 3154,
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
@@ -1158,7 +1158,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -1170,7 +1170,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2661,
+   "words": 2655,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
@@ -1396,7 +1396,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -1408,7 +1408,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3756,
+   "words": 3750,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
@@ -1619,7 +1619,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -1631,7 +1631,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2966,
+   "words": 2960,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
@@ -1812,7 +1812,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -1824,7 +1824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2761,
+   "words": 2754,
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
@@ -1988,7 +1988,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -2000,7 +2000,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2378,
+   "words": 2372,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
@@ -2219,7 +2219,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -2231,7 +2231,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2943,
+   "words": 2937,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
@@ -2414,7 +2414,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -2426,7 +2426,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3952,
+   "words": 3944,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
@@ -2685,7 +2685,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -2697,7 +2697,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3737,
+   "words": 3730,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
@@ -2904,7 +2904,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -2916,7 +2916,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3513,
+   "words": 3509,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
@@ -3133,7 +3133,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -3145,7 +3145,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3138,
+   "words": 3130,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
@@ -3355,7 +3355,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -3367,7 +3367,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3363,
+   "words": 3359,
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
@@ -3546,7 +3546,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -3558,7 +3558,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2922,
+   "words": 2915,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
@@ -3779,7 +3779,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -3791,7 +3791,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3313,
+   "words": 3307,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
@@ -3953,7 +3953,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -3965,7 +3965,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2684,
+   "words": 2678,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
@@ -4164,7 +4164,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -4176,7 +4176,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3932,
+   "words": 3926,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
@@ -4395,7 +4395,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -4407,7 +4407,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3736,
+   "words": 3730,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
@@ -4561,7 +4561,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -4573,7 +4573,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3929,
+   "words": 3923,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
@@ -4773,7 +4773,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -4785,7 +4785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3743,
+   "words": 3737,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
@@ -5008,7 +5008,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -5020,7 +5020,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4103,
+   "words": 4100,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
@@ -5231,7 +5231,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -5243,7 +5243,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3919,
+   "words": 3913,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
@@ -5451,7 +5451,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -5463,7 +5463,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4220,
+   "words": 4214,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
@@ -5646,7 +5646,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -5658,7 +5658,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4940,
+   "words": 4934,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
@@ -5812,7 +5812,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -5824,7 +5824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3643,
+   "words": 3637,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
@@ -5989,7 +5989,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -6001,7 +6001,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2487,
+   "words": 2484,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
@@ -6172,7 +6172,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -6184,7 +6184,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2736,
+   "words": 2730,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
@@ -6342,7 +6342,7 @@
     "designer": "A feature ships shut until a person has seen or heard it, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.",
     "decision-maker": "Read the stage word before the testimonial. \"Built\" is a statement about a guard. \"Runs at a customer\" is a statement about a document. You can ask for it in writing, with a name beside it.",
     "educator": "Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.",
-    "agent": "You may read the tables and quote any cell. A cell marked ahead stays ahead in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it."
+    "agent": "You may read the tables and quote any cell. A cell marked next stays next in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it."
    },
    "sections": [
     {
@@ -6371,7 +6371,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -6383,7 +6383,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4690,
+   "words": 4683,
    "french": true,
    "text": "agents/ch31-what-the-projects-show.md",
    "run": {
@@ -6506,7 +6506,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -6518,7 +6518,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3080,
+   "words": 3074,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
@@ -6622,7 +6622,7 @@
     "programmer": "Your code runs today through build, rehearsal and a governed deployment. What comes next is a customer running it on the engine, and the record will carry that claim the day it is true.",
     "analyst": "Ask for two things before you count a project as proof: a document, and a named verdict.",
     "designer": "What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.",
-    "decision-maker": "Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is ahead.",
+    "decision-maker": "Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is next.",
     "educator": "Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.",
     "agent": "You may rehearse a deployment and explain it. You will be refused when you try to perform it (chapter 24 shows the refusal)."
    },
@@ -6653,7 +6653,7 @@
     },
     {
      "n": 7,
-     "title": "What it covers today"
+     "title": "Where it stands"
     },
     {
      "n": 8,
@@ -6665,7 +6665,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2743,
+   "words": 2737,
    "french": true,
    "text": "agents/ch33-the-next-line.md",
    "run": {

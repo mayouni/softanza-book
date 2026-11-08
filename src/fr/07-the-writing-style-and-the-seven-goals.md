@@ -52,7 +52,7 @@ Mon étude du dossier a écrit le style en quatorze règles, à partir de la lec
 | 10 | Le code voyage à l'intérieur d'un argument comme une petite chaîne | l'emplacement s'exécute ; le `@` sur le nom d'un paramètre est retiré |
 | 11 | De petits langages littéraux vivent dans des chaînes | s'exécute sous une forme ; la forme à accolades lève une erreur |
 | 12 | Une phrase peut être quasi naturelle | pas de ce chapitre ; aucune des trois formes du diaporama ne s'est exécutée telle qu'écrite |
-| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | à venir ; section 7 |
+| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | la suite ; section 7 |
 | 14 | Un commentaire parle avant le code, dans la voix du maître | s'exécute |
 
 La règle 11 d'abord, parce que c'est la plus étrange. Le langage hôte compte en entiers et coupe les décimales. Que garde un intervalle écrit à l'intérieur d'une chaîne ? Les commentaires ci-dessous parlent avant le code, dans la voix du maître, ce qui est la règle 14. Exécutez-le :
@@ -248,11 +248,11 @@ Là où je pense que le style se distingue, c'est que chaque règle sert une ét
 
 La section 7, qui suit, dit ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT` et `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste ; `ZZ` s'exécute au chapitre 8).
+Construit : les seize règles de la maison de la bibliothèque comme un tribunal sur son propre code, exécutées dans le bloc ci-dessus. Aussi construits : la promesse jugée par une machine ; les petits langages, l'emplacement, le préfixe. Et les fonctionnalités qui s'exécutent (`CS`, `XT` et `viz`, les paramètres nommés, le même verbe sur une chaîne et une liste ; `ZZ` s'exécute au chapitre 8).
 
-Ce qui est conçu :
+Conçu :
 
 - **Un tribunal qui juge le style d'un programme écrit avec la bibliothèque.** C'est une spécification dans l'étude : les quatorze règles comme règles de la maison sur le graphe d'un extrait. Ses exemples sont un argument positionnel là où un argument nommé existe, ou une ligne imprimée sans promesse. Le construire est l'étape suivante.
 - **Un tribunal qui lit les buts.** Il lirait les balises. À venir.
@@ -260,7 +260,7 @@ Ce qui est conçu :
 - **La grammaire d'écriture déclarée en Haro.** La moitié vocabulaire existe : les formes des noms de la bibliothèque sont des données en Haro, et le relevé de la session est de 584 orthographes livrées sur 595 qui concordent. La moitié usage, la scène, la chaîne, l'emplacement du code et la promesse, est la moitié à déclarer.
 - **La discipline déclarée une fois.** En partie faite sur le site, comme données, ce qui est la source de la page plutôt qu'un tribunal.
 
-Ce qui est à venir :
+La suite :
 
 - Une machine qui juge le style d'un programme écrit avec la bibliothèque, le tribunal conçu plus haut ; aujourd'hui, le tribunal de la maison juge le propre code de la bibliothèque.
 - Les règles 12 et 13 comme formes qui s'exécutent.

@@ -205,11 +205,11 @@ The field leads in actual use: such a platform is often one that a bank's audito
 
 Where I think this stands apart is that the chart is the data and the court is a rule over it. A chart is a text, a rule is data, a finding names the rule and the position, and the report is one verdict. The library's own comparison table for this feature is all wins, undated, with cost figures that cite nothing, and I will not print it.
 
-Now what it covers today, in the stage words.
+Now where it stands, in the stage words.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
+Built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
 
 Four things are designed, or built in part.
 

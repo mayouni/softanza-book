@@ -275,7 +275,7 @@ The code a forge emits must be read by someone. The family style that every decl
 
 Section 7 comes next, at the edge of a second closed language.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The library has two closed formula languages, and they behave differently at the edge. A reader who takes the closed condition language of chapter 11 and of the condition above to cover every formula will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. Does the word `sin` that the condition refused run here?
 
@@ -291,13 +291,13 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 
 The sine the condition refused, the table computed, and it printed `[ 0, 0.84, -0.76 ]`! I also saw, and do not show, a second thing. On another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, I wrote a formula `@(:A) + HostBonus(@(:B))`. The function of mine inside it multiplies by a thousand. The formula printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. A guard that asserts either behaviour is ahead.
 
-What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, each with its edge. The natural layer's tongues as data.
+Built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, each with its edge. The natural layer's tongues as data.
 
-What is built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
+Built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
 
-What is designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. A printer for declared sentences, a knowledge graph forged from a declaration and the one static binary per language are designed. The forge inside the library is designed. A grammar for every declared language shipping in the library: promised in the kernel, and designed. And the projections: the world rendered to an application, a server, a page, a device.
+Designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. A printer for declared sentences, a knowledge graph forged from a declaration and the one static binary per language are designed. The forge inside the library is designed. A grammar for every declared language shipping in the library: promised in the kernel, and designed. And the projections: the world rendered to an application, a server, a page, a device.
 
-What lies ahead: the forge's grammar for a menu word, which holds shape today, as I saw above; the figure of two of ten against ten of ten, re-taken. And a record of the forge running on the Haro runtime. The vision was written before the language; the charter's runs are on the older runtime and on the oracle.
+Next: the forge's grammar for a menu word, which holds shape today, as I saw above; the figure of two of ten against ten of ten, re-taken. And a record of the forge running on the Haro runtime. The vision was written before the language; the charter's runs are on the older runtime and on the oracle.
 
 The six doors follow, from the programmer to the agent.
 

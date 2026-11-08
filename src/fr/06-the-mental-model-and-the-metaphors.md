@@ -192,15 +192,15 @@ Le terrain mène en portée et en outillage. Les itérateurs et les compréhensi
 
 Et je n'imprimerai pas la comparaison que fait la bibliothèque elle-même des marcheurs avec les boucles et les itérateurs. Sa table a treize lignes, toutes en faveur du marcheur, aucune exécutée. Une table vaut d'être imprimée quand ses lignes ont été exécutées et qu'une perte figure à côté des gains ; pour celle-ci, c'est l'étape suivante.
 
-Ensuite, la section 7, dans les mots d'étape construit, conçu et à venir.
+Ensuite, la section 7, dans les mots d'étape construit, conçu et la suite.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le marcheur à une dimension, dans la couche max, et les marches sur les listes ; le vérificateur comme `CheckW`, `ContainsW` et `FindW` ; le producteur comme une classe adossée au moteur, et comme `YieldW` ; l'exécutant comme `PerformW` ; et le langage de condition W compilé par le moteur.
+Construit : le marcheur à une dimension, dans la couche max, et les marches sur les listes ; le vérificateur comme `CheckW`, `ContainsW` et `FindW` ; le producteur comme une classe adossée au moteur, et comme `YieldW` ; l'exécutant comme `PerformW` ; et le langage de condition W compilé par le moteur.
 
-Ce qui est conçu : les métaphores comme modules natifs du moteur. La conception du moteur marque les quatre comme prévus ; seul le producteur a un fichier de moteur. Et un marcheur qui ne porte plus du tout sur les listes mais sur toute structure indexée.
+Conçu : les métaphores comme modules natifs du moteur. La conception du moteur marque les quatre comme prévus ; seul le producteur a un fichier de moteur. Et un marcheur qui ne porte plus du tout sur les listes mais sur toute structure indexée.
 
-Ce qui est à venir, à ce commit et d'après mes exécutions : six chantiers, certains à construire et d'autres à aligner sur leurs articles.
+La suite, à ce commit et d'après mes exécutions : six chantiers, certains à construire et d'autres à aligner sur leurs articles.
 
 - La table de l'article sur la marche au bord et la bibliothèque diffèrent dans deux cas ; les aligner est l'étape suivante. Un pas unique plus grand que l'intervalle lève une erreur là où la table promet le silence, et un chemin de directions mêlées lève une erreur là où elle promet l'acceptation. Les deux principes tiennent dans les cas montrés plus haut. Le livre énonce le principe et imprime les cas qui s'exécutent, et laisse la table à son article.
 - Le code de l'article « Beyond Loops » diffère par endroits. L'historique d'un marcheur est une liste de marches ; une marche en arrière ne prend plus d'argument ; la direction s'imprime « backward » là où l'article dit « reverse ». L'exécution de l'article par le site a gardé dix blocs sur dix-huit.

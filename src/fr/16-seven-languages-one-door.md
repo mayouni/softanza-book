@@ -230,7 +230,7 @@ La portée du tribunal s'arrête aujourd'hui à la porte : le processus étrange
 
 Et le coût d'une facette, dans la table de la note : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le littéral `\n` est une barre oblique inverse et un `n` ; deux lettres de casse différente sont une seule variable. « Tout modèle écrit Haro sous la forme qu'il connaît » n'est vrai que des graphies qui sont la minorité.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 Le mot *gouverné* est une conception. La porte interroge-t-elle la gouvernance avant de s'exécuter ? Voici le bloc qui le montre :
 
@@ -286,9 +286,9 @@ oStat {
 
 L'appel a levé une erreur, et la trace garde pourtant `0` ! Le message de R était en français sur cette machine, je ne le promets donc pas. C'est là où en est la porte à ce commit, dans la voix de la liste ouverte du chapitre 11. Les exécutions ci-dessus en sont la preuve. Gouverner la porte est conçu, et le mot « gouvernée » de la vision reste donc une conception ; le construire est la prochaine étape. Le chemin du retour passe par un fichier que l'hôte évalue, et le fermer est aussi la prochaine étape. Et la porte R, en développement, lève une erreur à chaque appel aujourd'hui.
 
-Ce qui est conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu. Un module de même nom dans le macroplan, un registre de chaînes, a été marqué fait ; sa source est à venir. Puis les trois niveaux pour Python, dont le sous-processus externe est construit. Puis la bibliothèque de domaines au-dessus de la porte, ses classes à venir dans le code. Et les facettes, une note qui propose, sa décision à venir.
+Conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu. Un module de même nom dans le macroplan, un registre de chaînes, a été marqué fait ; sa source est à venir. Puis les trois niveaux pour Python, dont le sous-processus externe est construit. Puis la bibliothèque de domaines au-dessus de la porte, ses classes à venir dans le code. Et les facettes, une note qui propose, sa décision à venir.
 
-Ce qui est à venir : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, nommées dans l'article et à venir dans le code. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS sont atteintes par la classe. Le modèle d'IA se tient hors de ce volet ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre enseigne cette loi à sa place.
+La suite : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, nommées dans l'article et à venir dans le code. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS sont atteintes par la classe. Le modèle d'IA se tient hors de ce volet ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre enseigne cette loi à sa place.
 
 Et trois formes de porte que le registre connaît, Julia, C et Prolog : leurs exécutions attendent un runtime sur cette machine. Et une troisième relation, nommée dans l'étude à côté de la porte : l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu. `range0`, le range de Python comme fonction de l'hôte, a une garde. Le relevé propre du dossier lui compte cinq échecs sur des plages qui devraient être vides et un sur la forme de tranche `':5:-1'`. L'exécuter à ce commit est à venir.
 

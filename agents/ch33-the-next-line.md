@@ -146,15 +146,15 @@ The field leads on speed. The runtime Softanza measured itself against was faste
 
 Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artefact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
-## 7. What it covers today
+## 7. Where it stands
 
 This chapter looks ahead, so this section is short.
 
-What is built: the floor. Declare, build, deploy in order; rehearse on a twin; refuse a fake at the production gate; commit only through a governed actor.
+Built: the floor. Declare, build, deploy in order; rehearse on a twin; refuse a fake at the production gate; commit only through a governed actor.
 
-What is designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
+Designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
 
-What lies ahead: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. Naming the project that moves to the engine first, and the person who will perceive it, is the next step; I write both when the record carries them.
+Next: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. Naming the project that moves to the engine first, and the person who will perceive it, is the next step; I write both when the record carries them.
 
 ## 8. Six doors
 
@@ -164,7 +164,7 @@ What lies ahead: a customer solution running on the Softanza engine, a named per
 
 **The designer.** What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.
 
-**The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is ahead.
+**The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is next.
 
 **The educator.** Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.
 

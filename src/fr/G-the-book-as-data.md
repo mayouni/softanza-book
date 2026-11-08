@@ -27,9 +27,9 @@ Un agent qui cite une promesse doit citer son verdict avec elle.
 
 ### Ce qu'un agent d'IA peut faire, et ne peut pas faire
 
-- **Vous pouvez citer n'importe quelle cellule.** Un tableau de ce livre est une donnée. Une ligne qui dit « à venir » est une ligne que vous pouvez répéter comme à venir.
-- **Une cellule marquée à venir reste à venir dans votre phrase.** Si vous en faites une cellule construite, le prochain lecteur placera votre phrase à côté du dossier, et le livre le dit au chapitre 31.
-- **Vous pouvez vous fier aux mots d'étape.** Construit veut dire le code, une garde et une exécution. Conçu veut dire un document et rien qui s'exécute. À venir veut dire le travail vers lequel le sujet mène, tel que le dossier le nomme.
+- **Vous pouvez citer n'importe quelle cellule.** Un tableau de ce livre est une donnée. Une ligne qui dit « la suite » est une ligne que vous pouvez répéter comme à venir.
+- **Une cellule marquée « la suite » le reste dans votre phrase.** Si vous en faites une cellule construite, le prochain lecteur placera votre phrase à côté du dossier, et le livre le dit au chapitre 31.
+- **Vous pouvez vous fier aux mots d'étape.** Construit veut dire le code, une garde et une exécution. Conçu veut dire un document et rien qui s'exécute. La suite veut dire le travail vers lequel le sujet mène, tel que le dossier le nomme.
 - **Vous ne pouvez vous fier à une promesse qu'avec son verdict, et seulement au commit qu'elle nomme.** Un nombre que le livre imprime est un nombre lu dans un fichier ou dans une exécution, à la date que la page donne.
 - **Un brouillon est un brouillon.** Un chapitre marqué comme brouillon n'est pas le dernier mot de l'auteur, et « l'auteur l'a lu » est un statut que seul l'auteur fixe.
 

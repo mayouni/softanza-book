@@ -277,17 +277,17 @@ L'étude du dossier donne le ton que j'essaie de faire résonner. Une grille de 
 
 Voyons maintenant ce que le tribunal couvre aujourd'hui.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, tous présents.
+Construit : les promesses comme arrêts ; le volet de sécurité, avec son registre, sa sentinelle, son exercice, sa réponse, son attestation et ses secrets ; le volet de performance de sa première phase à sa dernière ; la loi de la perception, adoptée. Et les tables de verdict déclarées pour la voix chantée et les huit univers. La table de garanties tient 43 lignes qui nomment 57 fichiers de garde distincts, tous présents.
 
-Ce qui est conçu :
+Conçu :
 
 - Les routes et la carte du lanceur de promesses, son horloge et sa météo, ses excursions, sa perception et sa mutation, et ses tournées héritées. Tout cela est planifié. L'état *non perçu* est nommé dans l'en-tête du lanceur, et le lecteur n'en assigne aucun.
 - La négociation autour d'un plan rejeté, que le modèle de menace appelle conception.
 - Le volet des extensions, et avec lui la gouvernance du code étranger.
 
-Ce qui est à venir :
+La suite :
 
 - **Un verdict humain sur chaque image de la galerie.** La galerie tient quatre-vingt-quinze images, et le chapitre dit de chacune : non perçue. La deuxième exigence de la loi, un nom, une date et ce qu'ils ont dit, est le travail à venir pour chacune.
 - Sept des huit traditions musicales, chacune entendue par quelqu'un qui en vient.

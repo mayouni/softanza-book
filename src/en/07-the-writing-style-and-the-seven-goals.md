@@ -52,7 +52,7 @@ My study of the record wrote the style down as fourteen rules, from reading the 
 | 10 | Code travels inside an argument as a small string | the seat runs; the `@` on a parameter's name is retired |
 | 11 | Small literal languages live in strings | runs in one form; the braced form raises |
 | 12 | A sentence can be near-natural | not this chapter's; none of the deck's three forms ran as written |
-| 13 | A function may be named in any human language | ahead; section 7 |
+| 13 | A function may be named in any human language | next; section 7 |
 | 14 | A comment speaks before the code, in the teacher's voice | runs |
 
 Rule 11 first, because it is the strangest. The host language counts in integers and cuts the decimals. What does a range written inside a string keep? The comments below speak before the code, in the teacher's voice, which is rule 14. Run it:
@@ -248,11 +248,11 @@ Where I think the style stands apart is that every rule serves a step of thought
 
 Section 7, next, says what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
+Built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
 
-What is designed:
+Designed:
 
 - **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. Building it is the next step.
 - **A court that reads the goals.** It would read the tags. To come.
@@ -260,7 +260,7 @@ What is designed:
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is the half to declare.
 - **The discipline declared once.** Done in part on the site, as data, which is the page's source rather than a court.
 
-What lies ahead:
+Next:
 
 - A machine that judges the style of a program written with the library, the court designed above; today the house court judges the library's own code.
 - Rules 12 and 13 as running forms.

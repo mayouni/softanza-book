@@ -99,7 +99,7 @@ Where I believe Softanza stands alone is in the order of things. The field adds 
 
 Those are claims, and each has its chapter and its guard. I list them here so that you know where the argument is going, and so that you can hold me to it.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The honest limit of this chapter is also the honest limit of the whole platform, and I put it on the first page on purpose.
 

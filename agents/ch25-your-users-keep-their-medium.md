@@ -326,7 +326,7 @@ What the record claims instead: the dialogue is a rendering of a declared world 
 
 The field leads in places, and what the medium covers today comes next, printed whole.
 
-## 7. What it covers today
+## 7. Where it stands
 
 My study of the record has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
 
@@ -344,11 +344,11 @@ StzPlatformQ("neighbourhood") {
 
 It is a sender, a recipient, a body and a time in a SQL table; a medium, a status and parts are the work ahead. It is the message my study looked for, in its smallest form.
 
-What is built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, its wiring to a messaging provider ahead; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
+Built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, its wiring to a messaging provider ahead; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
 
-What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. `Provides` is designed, and its code in the application folder is ahead. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session; the library's own design is the line above. A spoken analysis and a spoken transport: demos and compositions, with the unit ahead.
+Designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. `Provides` is designed, and its code in the application folder is ahead. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session; the library's own design is the line above. A spoken analysis and a spoken transport: demos and compositions, with the unit ahead.
 
-What lies ahead:
+Next:
 
 - Ports for a messaging app, Telegram, USSD and the telephone call (zero hits in my search at this commit), and a shape for a USSD session in the library.
 - A conversational projection of a world. The projection today is `Generate`, which knows three surfaces and refuses a fourth. A shell that renders a question or a flow belongs to this work.

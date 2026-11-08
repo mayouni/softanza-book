@@ -192,15 +192,15 @@ The field leads in reach and in tooling. Iterators and comprehensions are in eve
 
 And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table is worth printing when its rows have been run and a loss stands beside the wins; for this one, that is the next step.
 
-Next, section 7, in the stage words built, designed and ahead.
+Next, section 7, in the stage words built, designed and next.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
+Built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
 
-What is designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
+Designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
 
-What lies ahead, at this commit and from my runs: six pieces of work, some to build and some to align with their articles.
+Next, at this commit and from my runs: six pieces of work, some to build and some to align with their articles.
 
 - The walking-at-the-edge article's table and the library differ in two cases; aligning them is the next step. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above. The book states the principle and prints the cases that run, and leaves the table to its article.
 - The "Beyond Loops" article's code differs in places. The history of a walker is a list of walks; a backward walk takes no argument now; the direction prints as "backward" where the article says "reverse". The site's own run of the article kept ten of eighteen blocks.

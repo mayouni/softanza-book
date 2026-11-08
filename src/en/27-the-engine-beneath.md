@@ -244,7 +244,7 @@ The memo's words: the peer leads every row, fib and binsearch are near-ties, and
 
 Section 7 says where the layers and the engine stop.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **In the lean layer, lists run and strings stop at the engine.** What does a string of the core give back when I ask it for its content?
 
@@ -264,11 +264,11 @@ The runtime answers: `Error (R3) : Calling Function without definition: stkengin
 
 **The third layer is written, and its wiring is ahead.** Its thirty-two classes are all in one folder, and you load them by hand. I ran the first of them that way, outside the blocks, and it counted a string of eleven characters. The other thirty-one are the next to run. Their library layer in the engine is ahead.
 
-What is built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, counted in the sources. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own state: an archive digest is recorded for nine of the nineteen, and a version for sixteen.
+Built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, counted in the sources. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own state: an archive digest is recorded for nine of the nineteen, and a version for sixteen.
 
-What is designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
+Designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
 
-What lies ahead: a Linux and a macOS engine in service; a measured pass of the library on the new runtime under Linux; a single executable with no dependency; an engine test count that I may print.
+Next: a Linux and a macOS engine in service; a measured pass of the library on the new runtime under Linux; a single executable with no dependency; an engine test count that I may print.
 
 ### Haro
 

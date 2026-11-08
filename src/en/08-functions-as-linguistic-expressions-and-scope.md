@@ -254,13 +254,13 @@ On scope, the field leads in maturity. The closest field practice is the explici
 
 Last, section 7, with what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: fourteen of the twenty-two forms of a name run, some with examples other than the article's, and three more run in another shape. The library reads a name as a sentence. And scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
+Built: fourteen of the twenty-two forms of a name run, some with examples other than the article's, and three more run in another shape. The library reads a name as a sentence. And scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
 
-What is designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
+Designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
 
-What lies ahead, each with what exists beside it:
+Next, each with what exists beside it:
 
 - **Partial**, `@Removed`, lives in the archive: defining the call in the live library is the work ahead.
 - **Future**, `BeforeQ`, was trimmed on purpose, as I said.

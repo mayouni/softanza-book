@@ -241,15 +241,15 @@ The field's reactive libraries lead in reach. Rx exists in most mainstream langu
 
 I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries. It is undated and unsourced.
 
-Section 7, next, says what all of this covers today.
+Section 7, next, says where all of this stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
+Built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
 
-What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
+Designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
 
-What lies ahead at this commit:
+Next at this commit:
 
 - A dependency chain that links one trigger to another. Today each state entry depends on its own trigger, so the chain records which trigger was active. Asking for the chain overflows the stack: the run ends with `Error (R4) : Stack Overflow`. A test that calls it is part of that work.
 - The Listexuter's seven classic tests, brought to their own promise: five differ from the output they expect, and two have their promise to write. The error log of that folder records, in the sixth file, `Error (C8) : Parentheses ')' is missing`.

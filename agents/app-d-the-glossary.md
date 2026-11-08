@@ -10,8 +10,6 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **agent.** A program that proposes and cannot commit. In the library an AI agent is a file, judged at load, whose AI model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
 
-**ahead.** One of the three stage words: the work the subject leads to, as the record names it; the front matter's key is `reached`. Chapter 3.
-
 **architect.** What one holds in the scope of a solution: the profile, the worlds and the governance. Not a rank. Chapter 23.
 
 **authority.** The level at which an actor may act, compared with the risk of the act. Distinct from permission: permission is held, and authority must cover the risk. Chapter 30.
@@ -78,6 +76,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **near-natural chain.** A sentence in which every link is a real call, so that the human is the parser. Chapter 13.
 
+**next.** One of the three stage words: the work the subject leads to, as the record names it; the front matter's key is `reached`. Chapter 3.
+
 **pack.** A human language as a block of data. Chapter 13.
 
 **perception.** What a person has seen or heard of a thing, named, dated, and quoted. A comparison proves sameness and never rightness. Chapters 21, 33.
@@ -112,7 +112,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
-**stage word.** One of built, designed, ahead, printed at the head of each chapter's section 7. Chapter 3.
+**stage word.** One of built, designed, next, printed at the head of each chapter's section 7. Chapter 3.
 
 **stamp.** The time a session writes on a message, a memo or a commit. Read from the clock, never composed; an instrument compares every stamp with its commit and publishes the rows. Chapter 32.
 

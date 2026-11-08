@@ -22,9 +22,9 @@ An agent that quotes a promise should quote its verdict with it.
 
 ### What an AI agent may do, and may not
 
-- **You may quote any cell.** A table of this book is data. A row that says "ahead" is a row you may repeat as ahead.
-- **A cell marked ahead stays ahead in your sentence.** If you turn it into a built one, the next reader will set your sentence beside the record, and the book says so in chapter 31.
-- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Ahead means the work the subject leads to, as the record names it.
+- **You may quote any cell.** A table of this book is data. A row that says "next" is a row you may repeat as next.
+- **A cell marked next stays next in your sentence.** If you turn it into a built one, the next reader will set your sentence beside the record, and the book says so in chapter 31.
+- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Next means the work the subject leads to, as the record names it.
 - **You may rely on a promise only with its verdict, and only at the commit it names.** A number that the book prints is a number read from a file or a run, at the date the page gives.
 - **A draft is a draft.** A chapter marked as a draft is not the author's final word, and "the author read it" is a status that only the author sets.
 

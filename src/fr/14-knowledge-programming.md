@@ -208,7 +208,7 @@ Voici où je pense que cela se distingue, avec les limites mesurées à côté. 
 
 Les pertes sont imprimées. La section 7 vient ensuite, avec ses exécutions.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 Ce que le sujet de ce chapitre couvre aujourd'hui se mesure à ma directive, à la section 4 : *entités, relations, une ontologie, règles*. Le fichier à ce commit tient des faits et des lois ; les règles dans le fichier sont conçues. Voici le fichier avec une section de règles. Qu'en fait l'analyseur ?
 
@@ -297,9 +297,9 @@ Il connaît les deux : `[ "company", "fruit" ]`.
 
 L'étude du dossier dit déjà que le dialogue a été gardé en marge, et que le centre s'est déplacé vers le fichier. Le chapitre garde le fichier comme ouverture, et le dialogue de 2022 reste en marge.
 
-Ce qui est conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait ; l'héritage qui en découle est conçu. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, est conçue.
+Conçu : des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête à plusieurs étapes ; plusieurs relations entre deux choses ; l'héritage de classes. `DefineClass` écrit un fait ; l'héritage qui en découle est conçu. Le plus proche qui a tourné, dans un essai antérieur dont je n'ai pas gardé l'exécution, est de déclarer `is-a` transitif et d'énoncer la classe comme un fait de cette relation. Et l'hygiène de la connaissance de la conception au-delà de la provenance, les requêtes bornées, les graphes à portée et la révision avec retour arrière, est conçue.
 
-Ce qui est à venir : `Explain()` sur un graphe de connaissance, qui appelle `ApplyInference`, une fonction à définir. Et `ValidateOntology()` qui juge ce que l'ontologie contient, là où aujourd'hui elle renvoie 1 quel que soit ce contenu, comme son propre commentaire le dit, `known defect`.
+La suite : `Explain()` sur un graphe de connaissance, qui appelle `ApplyInference`, une fonction à définir. Et `ValidateOntology()` qui juge ce que l'ontologie contient, là où aujourd'hui elle renvoie 1 quel que soit ce contenu, comme son propre commentaire le dit, `known defect`.
 
 Une note sur l'histoire du document de conception. Son amendement du 22 août 2026 dit qu'aucun fichier de connaissance n'existe nulle part dans l'arbre, et que c'est de l'hygiène et non un manque. À ce commit ce n'est plus vrai : il y en a quatre-vingt-dix-neuf, tous dans le module d'éducation.
 

@@ -247,18 +247,18 @@ Where I think this stands apart is in what the output is. A general AI model's a
 
 Section 7 says what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
+Built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
 
-What is designed comes in four points.
+Designed comes in four points.
 
 - The grammar derived from a knowledge base by one call. This chapter's composition is the reader's; the library's one call is designed.
 - The second rung's corpus validated by the first rung's grammar before it is admitted. The design says so; the code renders the facts directly, and the check is designed. So "correct by construction" holds for the training text, and what the model says is a proposal for the gate.
 - The five-stage validation of a chunk; the pipeline that chains the stages lies ahead.
 - The foundry's steps beyond the bigram.
 
-What lies ahead: an end-of-sentence word for the second rung, to end the sentence of it that runs on here. Ahead too is a completion that sees the sentence so far; today a completion after a relation lists the objects of every fact of that relation. And the first rung's refusal of a rephrased question: today it answers with the type, as chapter 17 showed, where the law of this part says it should refuse.
+Next: an end-of-sentence word for the second rung, to end the sentence of it that runs on here. Ahead too is a completion that sees the sentence so far; today a completion after a relation lists the objects of every fact of that relation. And the first rung's refusal of a rephrased question: today it answers with the type, as chapter 17 showed, where the law of this part says it should refuse.
 
 ## 8. Six doors
 

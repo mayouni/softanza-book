@@ -131,13 +131,13 @@ Là où je pense que le dossier se distingue, c'est dans une habitude : chaque l
 
 La section 7 en donne la somme dans les mots d'étape.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, et l'instrument qui mesure les horodatages. Les seize règles de la maison de la bibliothèque sont construites, dont cinq sur son graphe de code.
+Construit : le protocole et ses fichiers, les mémos datés, le registre des décisions, trois hooks qui s'exécutent dans chaque session sur cette machine, et l'instrument qui mesure les horodatages. Les seize règles de la maison de la bibliothèque sont construites, dont cinq sur son graphe de code.
 
-Ce qui est conçu : un surveillant qui réveille une session quand un fichier arrive, ce qui est, à mon avis, le bon remplacement des horloges et reste à venir. Et un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Le style de la maison serait alors tenu par une machine autant que par ma lecture.
+Conçu : un surveillant qui réveille une session quand un fichier arrive, ce qui est, à mon avis, le bon remplacement des horloges et reste à venir. Et un tribunal de style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Le style de la maison serait alors tenu par une machine autant que par ma lecture.
 
-Ce qui est à venir : un chiffre de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui emploie le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur. La loi des mots demande cette vérification, et l'outil qui l'exécute est l'étape suivante. Mon étude du dossier a nommé une mesure de plus à prendre : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et je devrais surveiller le rapport. Sa première lecture est à venir, elle aussi.
+La suite : un chiffre de jetons dans le dossier des coûts ; une équipe hors de ce domaine de projets qui emploie le protocole ; et une vérification qu'un mot se lit bien dans la langue du lecteur. La loi des mots demande cette vérification, et l'outil qui l'exécute est l'étape suivante. Mon étude du dossier a nommé une mesure de plus à prendre : le protocole qui rend le dossier digne de confiance coûte aussi de l'énergie dont le produit a besoin, et je devrais surveiller le rapport. Sa première lecture est à venir, elle aussi.
 
 ## 8. Six portes
 

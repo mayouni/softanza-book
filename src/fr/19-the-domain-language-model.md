@@ -247,18 +247,18 @@ Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La répo
 
 La section 7 dit ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le premier échelon et ses réponses ; les faits rendus comme corpus, avec un vocabulaire fermé ; la complétion par consultation ; et le lot qui voyage avec ses tests. Construit aussi : un second échelon qui s'entraîne en une fraction de seconde et exporte un petit fichier de modèle, et l'admission d'un fait par une loi.
+Construit : le premier échelon et ses réponses ; les faits rendus comme corpus, avec un vocabulaire fermé ; la complétion par consultation ; et le lot qui voyage avec ses tests. Construit aussi : un second échelon qui s'entraîne en une fraction de seconde et exporte un petit fichier de modèle, et l'admission d'un fait par une loi.
 
-Ce qui est conçu tient en quatre points.
+Conçu tient en quatre points.
 
 - La grammaire dérivée d'une base de connaissances par un seul appel. La composition de ce chapitre est celle du lecteur ; l'appel unique de la bibliothèque est conçu.
 - Le corpus du second échelon validé par la grammaire du premier avant d'être admis. La conception le dit ; le code rend les faits directement, et la vérification est conçue. Ainsi « correct par construction » vaut pour le texte d'entraînement, et ce que dit le modèle est une proposition pour la barrière.
 - La validation en cinq étapes d'un chunk ; le pipeline qui enchaîne les étapes est à venir.
 - Les étapes de la fonderie au-delà du bigramme.
 
-Ce qui est à venir : un mot de fin de phrase pour le second échelon, pour terminer celle de ses phrases qui n'en finit pas ici. Une complétion qui voit la phrase jusque-là est aussi à venir ; aujourd'hui une complétion après une relation énumère les objets de chaque fait de cette relation. Et le refus, par le premier échelon, d'une question reformulée : aujourd'hui il répond avec le type, comme l'a montré le chapitre 17, là où la loi de cette partie dit qu'il devrait refuser.
+La suite : un mot de fin de phrase pour le second échelon, pour terminer celle de ses phrases qui n'en finit pas ici. Une complétion qui voit la phrase jusque-là est aussi à venir ; aujourd'hui une complétion après une relation énumère les objets de chaque fait de cette relation. Et le refus, par le premier échelon, d'une question reformulée : aujourd'hui il répond avec le type, comme l'a montré le chapitre 17, là où la loi de cette partie dit qu'il devrait refuser.
 
 ## 8. Six portes
 

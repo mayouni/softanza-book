@@ -17,7 +17,7 @@ rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then section 7 says what the law covers today, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then section 7 says where the law stands, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -191,13 +191,13 @@ Where I think the law stands apart is in three places. A decision here costs not
 
 The next section says where the law stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
+Built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
 
-What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
+Designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
 
-What lies ahead: the wiring of four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
+Next: the wiring of four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
 
 ```haro
 ? len(StzOwnAgents())

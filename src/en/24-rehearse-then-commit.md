@@ -434,9 +434,9 @@ Fidelity has a stated boundary. Emulation is faithful but not omniscient, so it 
 
 Where I think the record stands apart is the coupling. The double, the plan, the credential names, the gate and the actor are declared in the same program that ships, and one gate judges them.
 
-That is the field; section 7 says what the chapter covers today.
+That is the field; section 7 says where the chapter's subject stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **A hand-written fake that says nothing about itself passes the gate.** The registry reads what the object says it is. A double that declares neither that it is a sandbox nor that it is local and real is taken for live: no opinion means live. So "production refuses a fake" is exact for the library's own doubles, and for any double that declares itself. What posture does the registry give a double that declares nothing, and is the surface sound? Ask it in the production phase:
 
@@ -472,11 +472,11 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **A plan flags today; ranking is the direction.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
-What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks", which lives outside the pinned tree. The law of chapter 33 asks the record to say who perceived a surface, so seeing the emulator's surface in a browser, and naming who saw it, is the next step. The chapter says: wired, and its build checked by a guard.
+Designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks", which lives outside the pinned tree. The law of chapter 33 asks the record to say who perceived a surface, so seeing the emulator's surface in a browser, and naming who saw it, is the next step. The chapter says: wired, and its build checked by a guard.
 
 Also designed: branches of a twin and the plan's alternatives and feedback; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
-What lies ahead: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients come after them, by deliberate choice. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
+Next: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients come after them, by deliberate choice. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
 
 ## 8. Six doors
 

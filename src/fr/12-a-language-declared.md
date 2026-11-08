@@ -275,7 +275,7 @@ Le code qu'une forge émet doit être lu par quelqu'un. Le style de famille dont
 
 La section 7 vient ensuite, au bord d'un second langage fermé.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 La bibliothèque a deux langages de formules fermés, et ils se comportent différemment au bord. Un lecteur qui croit que le langage fermé des conditions, celui du chapitre 11 et de la condition ci-dessus, couvre toutes les formules se trompera à table. La colonne calculée d'un tableau retombe, d'après son propre en-tête, sur le chemin d'évaluation classique quand le moteur ne peut pas compiler une formule. Le mot `sin` que la condition a refusé s'exécute-t-il ici ?
 
@@ -291,13 +291,13 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 
 Le sinus que la condition a refusé, le tableau l'a calculé, et il a imprimé `[ 0, 0.84, -0.76 ]` ! J'ai aussi vu, et je ne le montre pas, une seconde chose. Sur une autre table d'essai, avec A égal à 1, 3 et 10 et B égal à 2, 4 et 20, j'ai écrit une formule `@(:A) + HostBonus(@(:B))`. La fonction de moi qui s'y trouve multiplie par mille. La formule a imprimé `[ 2001, 4003, 20010 ]` : une fonction hôte définie par l'utilisateur s'est exécutée de l'intérieur d'une chaîne de formule. Et une formule qui nomme une fonction qui n'existe pas a levé l'erreur propre de l'hôte. Le second langage fermé est donc ouvert à son bord. Une garde qui affirme l'un ou l'autre comportement est à venir.
 
-Ce qui est construit : dans la bibliothèque, une déclaration jugée quand elle est déclarée ; un tribunal et une grammaire issus d'elle ; la liste de ce que la grammaire a laissé tomber. Une machine à grammaire qui dit qu'elle est contrainte ; un prompt et une description issus du même texte. Le build compte 151 assertions dans trois gardes narrées. Deux petits langages fermés de conditions, chacun avec son bord. Les langues de la couche naturelle comme données.
+Construit : dans la bibliothèque, une déclaration jugée quand elle est déclarée ; un tribunal et une grammaire issus d'elle ; la liste de ce que la grammaire a laissé tomber. Une machine à grammaire qui dit qu'elle est contrainte ; un prompt et une description issus du même texte. Le build compte 151 assertions dans trois gardes narrées. Deux petits langages fermés de conditions, chacun avec son bord. Les langues de la couche naturelle comme données.
 
-Ce qui est construit, mais hors de la bibliothèque : une forge d'une déclaration vers un tribunal et une grammaire, dans le dépôt de la charte de Haro.
+Construit, mais hors de la bibliothèque : une forge d'une déclaration vers un tribunal et une grammaire, dans le dépôt de la charte de Haro.
 
-Ce qui est conçu : la forge qui produit, à partir d'une seule déclaration, l'analyseur, le tribunal, l'imprimeur, la grammaire, le graphe de connaissance, la grammaire de requête, la porte naturelle, la narration, le runtime et un binaire statique. D'après ma lecture de la charte, le spike a montré le tribunal, la grammaire, un runtime qui parcourt la déclaration, une grammaire de requête, une narration et le tribunal de la lettre naturelle. Un imprimeur pour les phrases déclarées, un graphe de connaissance forgé à partir d'une déclaration et le binaire statique unique par langage sont conçus. La forge à l'intérieur de la bibliothèque est conçue. Une grammaire pour chaque langage déclaré livrée dans la bibliothèque : promise dans le noyau, et conçue. Et les projections : le monde rendu à une application, un serveur, une page, un appareil.
+Conçu : la forge qui produit, à partir d'une seule déclaration, l'analyseur, le tribunal, l'imprimeur, la grammaire, le graphe de connaissance, la grammaire de requête, la porte naturelle, la narration, le runtime et un binaire statique. D'après ma lecture de la charte, le spike a montré le tribunal, la grammaire, un runtime qui parcourt la déclaration, une grammaire de requête, une narration et le tribunal de la lettre naturelle. Un imprimeur pour les phrases déclarées, un graphe de connaissance forgé à partir d'une déclaration et le binaire statique unique par langage sont conçus. La forge à l'intérieur de la bibliothèque est conçue. Une grammaire pour chaque langage déclaré livrée dans la bibliothèque : promise dans le noyau, et conçue. Et les projections : le monde rendu à une application, un serveur, une page, un appareil.
 
-Ce qui est à venir : la grammaire de la forge pour un mot de menu, qui tient la forme aujourd'hui, comme je l'ai vu plus haut ; le chiffre de deux sur dix contre dix sur dix, repris. Et un enregistrement de la forge tournant sur le runtime de Haro. La vision a été écrite avant le langage ; les exécutions de la charte sont sur le runtime plus ancien et sur l'oracle.
+La suite : la grammaire de la forge pour un mot de menu, qui tient la forme aujourd'hui, comme je l'ai vu plus haut ; le chiffre de deux sur dix contre dix sur dix, repris. Et un enregistrement de la forge tournant sur le runtime de Haro. La vision a été écrite avant le langage ; les exécutions de la charte sont sur le runtime plus ancien et sur l'oracle.
 
 Les six portes suivent, du programmeur à l'agent.
 

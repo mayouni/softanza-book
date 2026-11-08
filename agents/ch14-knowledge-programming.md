@@ -212,7 +212,7 @@ Here is where I think this stands apart, with the measured limits beside it. The
 
 The losses are printed. Section 7 comes next, with its runs.
 
-## 7. What it covers today
+## 7. Where it stands
 
 What this chapter's subject covers today is measured against my directive, in section 4: *entities, relations, an ontology, rules*. The file at this commit holds facts and laws; rules in the file are designed. Here is the file with a rules section. What does the parser make of it?
 
@@ -313,9 +313,9 @@ It knows both: `[ "company", "fruit" ]`.
 
 The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. The chapter keeps the file as its opening, and the 2022 dialog stays at the margin.
 
-What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact; inheritance from it is designed. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, is designed.
+Designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact; inheritance from it is designed. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, is designed.
 
-What lies ahead: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function to be defined. And `ValidateOntology()` judging what the ontology holds, where today it returns 1 whatever the ontology holds, as its own comment says, `known defect`.
+Next: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function to be defined. And `ValidateOntology()` judging what the ontology holds, where today it returns 1 whatever the ontology holds, as its own comment says, `known defect`.
 
 One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education module.
 

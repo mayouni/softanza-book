@@ -254,13 +254,13 @@ Sur la portée, le terrain mène en maturité. La pratique la plus proche est le
 
 Enfin, la section 7, avec ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : quatorze des vingt-deux formes d'un nom tournent, certaines avec d'autres exemples que ceux de l'article, et trois autres tournent sous une autre forme. La bibliothèque lit un nom comme une phrase. Et la portée tourne dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement. L'article compte vingt-trois sections : les vingt-deux formes d'un nom, et « small functions », qui sont des fonctions et non une forme de nom. Le nombre du livre est vingt-deux, les formes d'un nom.
+Construit : quatorze des vingt-deux formes d'un nom tournent, certaines avec d'autres exemples que ceux de l'article, et trois autres tournent sous une autre forme. La bibliothèque lit un nom comme une phrase. Et la portée tourne dans les verbes de l'expression régulière, dans le système et dans le placement d'un déploiement. L'article compte vingt-trois sections : les vingt-deux formes d'un nom, et « small functions », qui sont des fonctions et non une forme de nom. Le nombre du livre est vingt-deux, les formes d'un nom.
 
-Ce qui est conçu : les formes de Haro comme données, avec des familles générées ; et le paradigme de portée pour le temps, les unités, la mémoire et le style, comme lignes d'un tableau.
+Conçu : les formes de Haro comme données, avec des familles générées ; et le paradigme de portée pour le temps, les unités, la mémoire et le style, comme lignes d'un tableau.
 
-Ce qui est à venir, chacune avec ce qui existe à côté :
+La suite, chacune avec ce qui existe à côté :
 
 - **Partielle**, `@Removed`, vit dans l'archive : définir l'appel dans la bibliothèque vivante est le travail à venir.
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.

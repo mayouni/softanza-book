@@ -146,13 +146,13 @@ Where Softanza stands apart, by the record, without a number: the SLA; the gover
 
 That is the list; now I say where this chapter stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: four of the five pairs, run on both sides, and the fifth on the Softanza side. The four code pairs of the site are built too. I re-ran them on 8 October 2026, three of them on both sides (the fourth has a comment for its other side). The outputs matched. So are the library's field studies of performance, incident analysis and plugins, with their loss sections, and the culture plan, which prints its losses. So are the harness of the string benchmark and the guard that the engine is optimised.
+Built: four of the five pairs, run on both sides, and the fifth on the Softanza side. The four code pairs of the site are built too. I re-ran them on 8 October 2026, three of them on both sides (the fourth has a comment for its other side). The outputs matched. So are the library's field studies of performance, incident analysis and plugins, with their loss sections, and the culture plan, which prints its losses. So are the harness of the string benchmark and the guard that the engine is optimised.
 
-What is designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of nine rows, the seven partial ones and the other two, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
+Designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of nine rows, the seven partial ones and the other two, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
 
-What lies ahead: a *compared* column on the Atlas, on the register of innovations and on the narrations. On the site: the field studies, the sixty-four grids themselves (it gives their number today), both benchmarks and the runtime table. In the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And two more: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
+Next: a *compared* column on the Atlas, on the register of innovations and on the narrations. On the site: the field studies, the sixty-four grids themselves (it gives their number today), both benchmarks and the runtime table. In the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And two more: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
 
 And one task for a later scan: reproducing the study's sixty-four tables, six hundred and fifteen rows and thirty-one documents, and the symbol counts.
 

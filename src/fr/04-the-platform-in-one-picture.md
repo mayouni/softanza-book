@@ -191,13 +191,13 @@ Les bibliothèques de texte du terrain mènent sur la locale : la propre carte d
 
 Et l'Atlas lui-même imprime ce qui reste à venir pour Softanza. La zone binaire est pour l'instant un plan, et son code livré est l'étape suivante ; le volet de l'extensibilité (greffons, interface de fonctions étrangères, embarqué) est surtout prévu ; la zone du système compte peu de voies notées fortes à ce jour. Je tiens cela pour une vue, non pour un résultat. Une carte qui imprime ses étapes est la seule sorte qui vaille la peine d'être lue.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Je mets maintenant sur l'image les trois mots d'étape, construit, conçu et à venir.
+Je mets maintenant sur l'image les trois mots d'étape, construit, conçu et la suite.
 
-Ce qui est construit : le moteur et ses bibliothèques, la couche base, les mondes, les constellations et les plateformes avec leurs gardes, et, pour le web, le sous-ensemble du moteur qu'une partie livre.
+Construit : le moteur et ses bibliothèques, la couche base, les mondes, les constellations et les plateformes avec leurs gardes, et, pour le web, le sous-ensemble du moteur qu'une partie livre.
 
-Ce qui est conçu, ou construit avec son entrée conçue. Les propres classes de la couche max sont écrites, et leur chargement par un fichier d'entrée est conçu. Que répond le runtime quand vous en demandez une ? Exécutez-le :
+Conçu, ou construit avec son entrée conçue. Les propres classes de la couche max sont écrites, et leur chargement par un fichier d'entrée est conçu. Que répond le runtime quand vous en demandez une ? Exécutez-le :
 
 ```haro
 try
@@ -212,7 +212,7 @@ Le runtime répond : `Error in class name, class not found: stxstring`. La class
 
 Le contrat des couches dit que la couche base s'appuie sur le noyau, par héritage ou par délégation. Pour les domaines communs, les deux partagent aujourd'hui le moteur et implémentent deux fois ces domaines. La couche noyau elle-même est en développement face au moteur aujourd'hui. Ses classes de chaîne et de caractère appellent des noms du moteur dont l'enregistrement dans le moteur vient ensuite dans ce développement, comme le rapporte mon étude du dossier. Le bloc de la section 3 ne montre que des listes. Un chargeur qui amène un domaine de la base sans les autres est conçu. Un tribunal qui lit le contrat des couches contre l'arbre et échoue en cas de dérive est une spécification, proposée dans cette étude. Ce qui est construit, ce sont deux implémentations qui partagent un moteur ; la ligne du contrat selon laquelle la base s'appuie sur le noyau est conçue.
 
-Ce qui est à venir : un programme entier et son moteur emballés dans un seul fichier autonome, et une plateforme cliente qui tourne sur le moteur.
+La suite : un programme entier et son moteur emballés dans un seul fichier autonome, et une plateforme cliente qui tourne sur le moteur.
 
 ## 8. Six portes
 

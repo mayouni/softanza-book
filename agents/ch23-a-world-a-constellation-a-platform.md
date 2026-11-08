@@ -383,7 +383,7 @@ The compiler leads on scopes. It checks against a target in daily use at scale; 
 
 Where the field and the record meet: a super-app is a graph of graphs. The field's context map is a diagram. Softanza's is a registry that refuses.
 
-## 7. What it covers today
+## 7. Where it stands
 
 A world's truths are declared and narrated, and judging them is the work ahead. The number in a reaction is the first case. Do ninety days and one day give different proposals? A reaction fires for each instance that lacks a relation named after the thing it proposes, and the comment above `Pulse()` says so. Run two clinics:
 
@@ -450,11 +450,11 @@ done
 
 Three times the answer is `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` and `Generate` answer the same way on a constellation. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part ahead. The design's own header calls the document a forward design.
 
-What is built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
+Built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
 
-What is designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and handing the call to the target is the design); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
+Designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and handing the call to the target is the design); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
 
-What lies ahead: a narration for the constellation or the envelope. The narration for building a first app speaks verbs ahead of the class: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet for a solution. A lane of the Atlas for the world, the constellation or the envelope.
+Next: a narration for the constellation or the envelope. The narration for building a first app speaks verbs ahead of the class: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet for a solution. A lane of the Atlas for the world, the constellation or the envelope.
 
 The six doors come next.
 

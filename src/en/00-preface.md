@@ -78,7 +78,7 @@ Each chapter has six short doors, near its end. A door is a way in for one kind 
 
 Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the AI model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
 
-Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. Section 7, what it covers today. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
+Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. Section 7, where it stands. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
 
 One more name you will meet. Softanza asks you the question you have to answer, in your own words, and refuses to guess the answer for you. I call that practice wise coding. Chapter 18 runs it, register by register.
 
@@ -88,7 +88,7 @@ Every block of code in this book was run inside the library. Under each title th
 
 Two words come back on many pages. The *record* is the repositories, sessions and files this book ran against, at the commit printed under each title. The *study* is my own study of that record, made before the chapters were drafted. When a page says that the record holds no answer, it means those files, at that commit.
 
-When a chapter says how far a piece has gone, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document describes it. *Ahead*: the work the subject leads to, as the record names it. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
+When a chapter says how far a piece has gone, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document describes it. *Next*: the work the subject leads to, as the record names it. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
 
 One more note. Haro's own executable is still in development, so the blocks marked `haro` run today on the runtime of the language the library was first written for, version 1.27, and each page says so. Appendix H, the project's history, tells how that came about. Inside the code, the library's own names, its classes, its files and its keys, still carry that language's name, and will until the library is retired from it; the prose does not.
 

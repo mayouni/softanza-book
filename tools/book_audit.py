@@ -11,7 +11,7 @@ Errors (the book breaks a rule it states):
   dup        the same long paragraph in two pages of one language
   assert     a sentence names a guard and a number of assertions that is not the guard's count in data/guards.json
   glossary   Appendix D cites a chapter that never uses the entry's word
-  stage      a stage word other than built, designed, reached (shown as ahead)
+  stage      a stage word other than built, designed, reached (shown as next)
   future     a date after today written as something that happened
   todo       TODO / TBD / lorem left in a page
 

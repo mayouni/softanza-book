@@ -342,9 +342,9 @@ And there is a loss on the library's own side. `Understood()` prints verbs and n
 
 Where the win is, with the loss beside it: the same sentence gives the same answer, with a reason, in the user's language, and designed to run offline, which no guard measures. The loss is that the user's language must be in a pack, and a word outside is a literal or a refusal. The record says the winning case is regulated or sovereign work: an instruction that executes locally and can be audited to the word.
 
-Section 7 says what the chapter's subject covers today.
+Section 7 says where the chapter's subject stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
 An ungrammatical chain runs. The second chain below reads "which a length of 4", which is not English. Does anything judge it? Run both:
 
@@ -389,11 +389,11 @@ done
 
 **The old articles' chains run in part at this commit.** The sentence of the bridging article that carries `IsAMQ` needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ` and `TheirQ().FirstCharQ()` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. The bridging article's chain with `ReplaceLowercaseCharsQ` is not defined either. I ran twelve chains of the near-natural article on 8 October 2026, and eight work. In that run, the bridging article's paragraph still ran in permissive mode, and printed two nested boxes around "NOTHING SOFTANZA" instead of the one it promises. The machine said so, since `UnderstoodAll()` is false and the unresolved word is named (the block above shows both), but a reader has to ask.
 
-What is built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
+Built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
 
-What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes. A guard that fails if a socket opens during a natural run. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
+Designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes. A guard that fails if a socket opens during a natural run. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
-What lies ahead: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: today a plain list in a natural sentence reaches host code, which chapter 11 prints, and so does a descriptor, above. A machine that judges a chain's grammar. The standard Hausa letter stored whole in the pack, which stores it broken today. A dictionary protected from drift. And the account of my plea to the project of the former host language that natural programming be made a first concern, with its date and a sentence of mine in that voice that the book can source. The record holds a private memo of 30 August 2026, which gives my judgement of the language's shipped natural form. The memo is marked private, so the book keeps it unquoted and sources no phrase of mine to it.
+Next: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: today a plain list in a natural sentence reaches host code, which chapter 11 prints, and so does a descriptor, above. A machine that judges a chain's grammar. The standard Hausa letter stored whole in the pack, which stores it broken today. A dictionary protected from drift. And the account of my plea to the project of the former host language that natural programming be made a first concern, with its date and a sentence of mine in that voice that the book can source. The record holds a private memo of 30 August 2026, which gives my judgement of the language's shipped natural form. The memo is marked private, so the book keeps it unquoted and sources no phrase of mine to it.
 
 ## 8. Six doors
 

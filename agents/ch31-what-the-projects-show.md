@@ -251,17 +251,17 @@ The field leads in speed. The runtime Softanza measured itself against was faste
 
 The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that a person looking at them is the next step.
 
-Where I think the record stands apart is that what its work covers today is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
+Where I think the record stands apart is that where its work stands is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
-## 7. What it covers today
+## 7. Where it stands
 
 This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the chart validator stands in the library, apart from the bank's product. The organisation's hub is the next to build, and its offline mechanism is to come.
+Built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the chart validator stands in the library, apart from the bank's product. The organisation's hub is the next to build, and its offline mechanism is to come.
 
-What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
+Designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What lies ahead: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; and a named person's verdict on each of them.
+Next: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; and a named person's verdict on each of them.
 
 The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are ahead. The site says they are being written as Softanza's own. On 8 October 2026 I searched the restaurant's repository, the bank's delivery and the organisation's study folder for a file of them. On 9 October 2026 I searched again, read-only, thirteen repositories beside the library. The file that declares a customer's platform as Softanza's own is the one to write next. The chapter's word for the declarations is *ahead*, and the stage line at the top says so.
 
@@ -277,7 +277,7 @@ The sum of every next step is the line that chapter 33 sets as the next mileston
 
 **The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.
 
-**The agent.** You may read the tables and quote any cell. A cell marked ahead stays ahead in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it.
+**The agent.** You may read the tables and quote any cell. A cell marked next stays next in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it.
 
 ## 9. Exercise
 

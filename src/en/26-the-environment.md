@@ -336,7 +336,7 @@ The field's fast editor treats the status bar as clutter. The pattern keeps one 
 
 That leaves section 7.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **The web projection carries the structure; roles, labels and intents travel in the native shell's accessibility tree.** `ToHtml` emits an identifier, a style and the text. The tree that carries roles is a separate artefact, as the block above shows, so a browser shell would infer from bare `div`s what the native shell emits. The accessibility library the plan adopts serves the native shells, and a web adapter for it is ahead.
 
@@ -372,11 +372,11 @@ This is the loss against the library's own page. It stands beside "a status bar 
 
 **`Orphans()` counts containers.** Whether a layout-only box must serve a verb is the constitution's rule to state.
 
-What is built: the interface as text with a court; four closed kinds, a closed list of nineteen roles, a closed field set, a mandatory rationale, a round trip to a fixpoint. Two projections, with a recorded table of three divergences and a page that can say DISAGREE. The accessibility tree, and a bridge that reaches a real screen reader's interface on Windows, which I read in its source. A declared value changes and the screen follows, with focus kept. A page hosted on the loopback, and a backend that refuses to leave the loopback unsigned. A world that proposes, screens declared as intents, one generated browser surface. And one binary shell, the sound plane's listening bench, in about seven hundred lines of Zig, which I read in its source.
+Built: the interface as text with a court; four closed kinds, a closed list of nineteen roles, a closed field set, a mandatory rationale, a round trip to a fixpoint. Two projections, with a recorded table of three divergences and a page that can say DISAGREE. The accessibility tree, and a bridge that reaches a real screen reader's interface on Windows, which I read in its source. A declared value changes and the screen follows, with focus kept. A page hosted on the loopback, and a backend that refuses to leave the loopback unsigned. A world that proposes, screens declared as intents, one generated browser surface. And one binary shell, the sound plane's listening bench, in about seven hundred lines of Zig, which I read in its source.
 
-What is designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar, whose classes in the library are the next step. The facet as data, with its group, its place in the life, its artefact kinds, its court and its profile. The rail bound to focus, and the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
+Designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar, whose classes in the library are the next step. The facet as data, with its group, its place in the life, its artefact kinds, its court and its profile. The rail bound to focus, and the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
 
-What lies ahead: an IDE of this family. A list of the twenty-two verbs inside the library, with a refusal of an unknown verb: today `transfer_funds` passes the court. A guard judging a shell against the verbs. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. The pieces run today, and an IDE of this family is the work they lead to.
+Next: an IDE of this family. A list of the twenty-two verbs inside the library, with a refusal of an unknown verb: today `transfer_funds` passes the court. A guard judging a shell against the verbs. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. The pieces run today, and an IDE of this family is the work they lead to.
 
 ## 8. Six doors
 

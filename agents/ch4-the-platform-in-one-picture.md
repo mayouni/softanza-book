@@ -195,13 +195,13 @@ At the scale of real users, the field's super-app hosts lead today. The record n
 
 And the Atlas itself prints what is still to come for Softanza. The binary area is a plan for now, and its shipped code is the next step; the plugin, foreign-function and embed plane of extensibility is mostly planned; the system area has few lanes rated strong so far. I hold this as a view, not a result. A map that prints its stages is the only kind worth reading.
 
-## 7. What it covers today
+## 7. Where it stands
 
-Now I put the three stage words on the picture, built, designed and ahead.
+Now I put the three stage words on the picture, built, designed and next.
 
-What is built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
+Built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
 
-What is designed, or built with its entry designed. The max layer's own classes are written, and loading them from an entry file is designed. What does the runtime answer when you ask for one? Run it:
+Designed, or built with its entry designed. The max layer's own classes are written, and loading them from an entry file is designed. What does the runtime answer when you ask for one? Run it:
 
 ```haro
 try
@@ -218,7 +218,7 @@ The runtime answers: `Error in class name, class not found: stxstring`. The clas
 
 The layer contract says the base layer builds on core, by inheritance or delegation. For the common domains, the two share the engine today and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names whose registration in the engine comes next in that development, as my study of the record reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is designed. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
-What lies ahead: a whole program and its engine packed into one file that stands alone, and a customer platform running on the engine.
+Next: a whole program and its engine packed into one file that stands alone, and a customer platform running on the engine.
 
 ## 8. Six doors
 

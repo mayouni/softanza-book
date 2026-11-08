@@ -222,13 +222,13 @@ The field built constrained decoding first. Softanza's sampler follows the refer
 
 And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core. This is my view.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
+Built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
 
-What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it at its true size. A grammar for every declared language is designed and to come.
+Designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it at its true size. A grammar for every declared language is designed and to come.
 
-What lies ahead, and the law states it. A natural layer closed all the way down. Its words are closed today, and one form, a list written inside brackets, is handed to the host to evaluate. Does a host function inside the brackets run? Try one:
+Next, and the law states it. A natural layer closed all the way down. Its words are closed today, and one form, a list written inside brackets, is handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )

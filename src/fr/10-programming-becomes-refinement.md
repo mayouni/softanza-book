@@ -268,13 +268,13 @@ Et sur la confiance, une bonne part de l'approche du terrain est faite pour pass
 
 Voyons maintenant ce que la barrière couvre aujourd'hui.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné. Les gardes de la section 5 les couvrent, avec deux exceptions, toutes deux à venir. Une garde ici pour la cascade d'une classe : la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et une garde qui affirme les autres points d'une ligne.
+Construit : le point de raffinement, la barrière avec ses cinq contrôles, la cascade d'un point et d'une classe, le retour en arrière, le plancher de confiance et le raffinement gouverné. Les gardes de la section 5 les couvrent, avec deux exceptions, toutes deux à venir. Une garde ici pour la cascade d'une classe : la garde du graphe de code scanne un chemin vivant de l'arbre de travail de la bibliothèque. Et une garde qui affirme les autres points d'une ligne.
 
-Ce qui est conçu : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, appartient à cette conception à ce commit. De même le raffinement en une ligne du document de conception, un point qui s'explique et un plan qui est appliqué. Joindre la cascade du graphe de code à la cascade de la barrière est conçu aussi. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, avec son propre siège de raffinement conçu.
+Conçu : l'expérience que décrit l'article d'origine. La classe que cet article nomme, `stzPolyCode`, appartient à cette conception à ce commit. De même le raffinement en une ligne du document de conception, un point qui s'explique et un plan qui est appliqué. Joindre la cascade du graphe de code à la cascade de la barrière est conçu aussi. Et Haro a une barrière dans un spike écrit uniquement dans l'ancien langage hôte, avec son propre siège de raffinement conçu.
 
-Ce qui est à venir, à partir de la barrière telle qu'elle est :
+La suite, à partir de la barrière telle qu'elle est :
 
 - Elle vérifie les contraintes de trois genres de point, un paramètre, un algorithme et une bibliothèque. Un point d'un autre genre, un bloc de code par exemple, est analysé et passe sans contrôle ; les contrôles pour ces genres sont l'étape suivante.
 - Une posture de confiance inconnue se classe comme de confiance : le code lui donne le rang le plus haut. Une proposition venue d'une origine que le code ne connaît pas franchit donc un plancher de confiance.

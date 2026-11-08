@@ -255,13 +255,13 @@ The field leads in people. A decision table is a thing a trained analyst already
 
 The next section lists what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
+Built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
 
-What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation of its own, apart from the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library holds the pieces today. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves, outside this chapter's blocks.
+Designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation of its own, apart from the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library holds the pieces today. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves, outside this chapter's blocks.
 
-What lies ahead: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound; a store of rule versions is the piece ahead, as far as my search of the library reached. The hub, built. Offline as a mechanism: a class of the library that keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
+Next: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound; a store of rule versions is the piece ahead, as far as my search of the library reached. The hub, built. Offline as a mechanism: a class of the library that keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
 
 Six doors follow, one for each reader.
 

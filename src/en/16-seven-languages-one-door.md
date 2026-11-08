@@ -230,7 +230,7 @@ The court's reach stops today at the door: the foreign process is outside it, an
 
 And the cost of a facet, in the memo's own table: a Python reader expects zero-based indexing, and Haro's is one-based. The literal `\n` is a backslash and an `n`; two letters of different case are one variable. "Any model writes Haro in the shape it knows" is true only of the spellings that are the minority.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The word *governed* is a design. Does the door ask the governance before it runs? This is the block that shows it:
 
@@ -286,9 +286,9 @@ oStat {
 
 The call raised, and the trace still holds `0`! R's message was in French on this machine, so I do not promise it. This is where the door stands at this commit, in the voice of chapter 11's open list. The runs above are its evidence. Governing the door is designed, so the vision's word "governed" stays a design; building it is the next step. The way back runs through a file that the host evaluates, and closing it is the next step too. And the R door, in development, raises on every call today.
 
-What else is designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done; its source is ahead. Then the three tiers for Python, of which the external subprocess is built. Then the domain library on top of the door, its classes ahead in code. And the facets, a memo that proposes, its ruling ahead.
+Also designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done; its source is ahead. Then the three tiers for Python, of which the external subprocess is built. Then the domain library on top of the door, its classes ahead in code. And the facets, a memo that proposes, its ruling ahead.
 
-What lies ahead: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, named in the article and ahead in the code. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached through the class. The AI model stands outside this plane; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book teaches that law in its place.
+Next: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, named in the article and ahead in the code. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached through the class. The AI model stands outside this plane; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book teaches that law in its place.
 
 And three door shapes the registry knows, Julia, C and Prolog: their runs wait for a runtime on this machine. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. Running it on this commit is ahead.
 

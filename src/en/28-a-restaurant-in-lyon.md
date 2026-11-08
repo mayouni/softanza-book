@@ -228,13 +228,13 @@ And the super-app hosts lead in installed base. The design names what the indust
 
 Now I say where the chapter stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
+Built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
 
-What is designed: the Lock as a rule of the library, which the record holds as a design; the near-natural idiom of the constellation, with the verbs the design names for the class.
+Designed: the Lock as a rule of the library, which the record holds as a design; the near-natural idiom of the constellation, with the verbs the design names for the class.
 
-What lies ahead: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August set for the next cycle. The interface rules as checks, the two-gesture rule among them, a seventy-fifth percentile expectation, and browser-side timing, whose design is the first step ahead. And the platform's path after 25 August 2026, where the record ends. As the record leaves it, the first version's next steps are production at the restaurant, the go-live gate, and a real order from a real customer. The owner's tightened speed thresholds stay his. I say that such a budget exists, and keep its numbers with him.
+Next: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August set for the next cycle. The interface rules as checks, the two-gesture rule among them, a seventy-fifth percentile expectation, and browser-side timing, whose design is the first step ahead. And the platform's path after 25 August 2026, where the record ends. As the record leaves it, the first version's next steps are production at the restaurant, the go-live gate, and a real order from a real customer. The owner's tightened speed thresholds stay his. I say that such a budget exists, and keep its numbers with him.
 
 And what runs today is ordinary. The worlds are single HTML files, one per world, each carrying its vendored framework and served as written. The server is a Node program of a few hundred lines. It uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. It all runs on these ordinary pieces, and the platform on the Softanza engine is the work ahead. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant runs on the pieces above.
 

@@ -241,15 +241,15 @@ Les bibliothèques réactives du terrain mènent en portée. Rx existe dans la p
 
 Je n'imprimerai pas la comparaison par étoiles avec les outils du terrain que porte l'article de la bibliothèque sur les objets réactifs. Elle n'est ni datée ni sourcée.
 
-La section 7, qui suit, dit ce que tout cela couvre aujourd'hui.
+La section 7, qui suit, dit où en est tout cela.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le Regexuter et le Listexuter ; Reaxis sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent.
+Construit : le Regexuter et le Listexuter ; Reaxis sur la boucle d'événements du moteur ; la ligne de temps, la grille et les opérations profondes ; l'agent d'IA dont les compétences s'enchaînent.
 
-Ce qui est conçu : le troisième échelon, plusieurs facultés sur un état partagé, s'enchaînant jusqu'à ce qu'il se stabilise. Le moteur universel pour cela est planifié. Les quatre frères sont une vision. Le macroplan marque le module du moteur comme fait, et le tableau d'architecture le marque comme planifié : le même nom pour deux choses. Ce tableau marque comme planifié tout module de sa cinquième couche, y compris ceux qui ont du code source, et il est donc périmé sur ce point. Le milieu universel est planifié dans le document de conception du moteur.
+Conçu : le troisième échelon, plusieurs facultés sur un état partagé, s'enchaînant jusqu'à ce qu'il se stabilise. Le moteur universel pour cela est planifié. Les quatre frères sont une vision. Le macroplan marque le module du moteur comme fait, et le tableau d'architecture le marque comme planifié : le même nom pour deux choses. Ce tableau marque comme planifié tout module de sa cinquième couche, y compris ceux qui ont du code source, et il est donc périmé sur ce point. Le milieu universel est planifié dans le document de conception du moteur.
 
-Ce qui est à venir à ce commit :
+La suite à ce commit :
 
 - Une chaîne de dépendance qui relie un déclencheur à un autre. Aujourd'hui chaque entrée d'état dépend de son propre déclencheur, de sorte que la chaîne enregistre quel déclencheur était actif. Demander la chaîne fait déborder la pile : l'exécution se termine par `Error (R4) : Stack Overflow`. Un test qui l'appelle fait partie de ce travail.
 - Les sept tests classiques du Listexuter, menés à leur propre promesse : cinq diffèrent de la sortie qu'ils attendent, et deux ont leur promesse à écrire. Le journal d'erreurs de ce dossier note, dans le sixième fichier, `Error (C8) : Parentheses ')' is missing`.

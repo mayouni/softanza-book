@@ -377,7 +377,7 @@ Le compilateur mène sur les portées. Il vérifie contre une cible en usage quo
 
 Là où le terrain et le dossier se rencontrent : une super-appli est un graphe de graphes. La carte de contextes du terrain est un diagramme. Celle de Softanza est un registre qui refuse.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 Les vérités d'un monde sont déclarées et narrées, et les juger est le travail à venir. Le nombre dans une réaction en est le premier cas. Quatre-vingt-dix jours et un jour donnent-ils des propositions différentes ? Une réaction se déclenche pour chaque instance qui n'a pas de relation nommée d'après la chose qu'elle propose, et le commentaire au-dessus de `Pulse()` le dit. Faites tourner deux cliniques :
 
@@ -440,11 +440,11 @@ done
 
 Trois fois la réponse est `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` et `Generate` répondent de la même façon sur une constellation. La classe a `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, la famille `Gov*`, `CallAcross`, `Crossings`, les appels du socle commun, et des appels qui regardent : `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` et `LastCallMs`. Les verbes de composition sont ceux-là. Les trois aspects de la conception s'atteignent aujourd'hui par `AddWorld`, `Bond` et `OpenCommonsOn`, et la gouvernance par `Gov*` ; l'atteinte et la présence sont la partie à venir. L'en-tête de la conception appelle elle-même le document une conception à venir.
 
-Ce qui est construit : le monde ; la constellation avec ses barrières, son registre de traversées avec les durées, une décision écrite sur une traversée autorisée, et une traversée refusée notée comme preuve ; la jointure des capacités de la plateforme, son socle commun, son registre, ses coques, son profil avec construction puis déploiement ; les trois portées.
+Construit : le monde ; la constellation avec ses barrières, son registre de traversées avec les durées, une décision écrite sur une traversée autorisée, et une traversée refusée notée comme preuve ; la jointure des capacités de la plateforme, son socle commun, son registre, ses coques, son profil avec construction puis déploiement ; les trois portées.
 
-Ce qui est conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et remettre l'appel à la cible est la conception) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
+Conçu : l'idiome quasi naturel ; un appel acheminé dans une constellation emboîtée (aujourd'hui une traversée est un verdict, et remettre l'appel à la cible est la conception) ; charger un monde sans reconstruire un hôte ; des coques qui embarquent le moteur ; la fiche de garanties de cinq lignes, que la vision demande et que la page de parcours du site marque conçue : une ligne pour chacun de cinq systèmes auxquels la solution répond, technique, social, écologique, économique et culturel.
 
-Ce qui est à venir : une narration pour la constellation ou pour l'enveloppe. La narration pour construire une première appli parle des verbes en avance sur la classe : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite pour une solution. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
+La suite : une narration pour la constellation ou pour l'enveloppe. La narration pour construire une première appli parle des verbes en avance sur la classe : sept de ses appels échouent à ce commit, et je la cite pour l'idée et non pour la syntaxe. Une plateforme de client sur le moteur comme constellation. La fiche de garanties de cinq lignes écrite pour une solution. Un couloir de l'Atlas pour le monde, la constellation ou l'enveloppe.
 
 Les six portes viennent ensuite.
 

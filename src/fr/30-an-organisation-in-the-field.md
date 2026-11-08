@@ -255,13 +255,13 @@ Le terrain mène en gens. Une table de décision est une chose qu'un analyste fo
 
 La section suivante liste ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : une règle comme objet, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle morte ; le point de contrôle ; l'autorité face au risque ; la filiation ; le hors ligne comme capacité.
+Construit : une règle comme objet, son nombre changé et le modèle jugé de nouveau ; le gouverneur de règles qui nomme une règle morte ; le point de contrôle ; l'autorité face au risque ; la filiation ; le hors ligne comme capacité.
 
-Ce qui est conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation propre, distincte de celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque tient les pièces aujourd'hui. Ce sont le gouverneur de règles, montré plus haut, et les refus d'un type de règle inconnu, d'un fichier manquant et d'un nom en double, qu'un test narré de la bibliothèque prouve, hors des blocs de ce chapitre.
+Conçu : le hub et son étude, dont le calendrier est dans le futur ; un langage de règles qu'un programmeur local peut apprendre ; et les promesses de l'étude sur les règles. L'exemple du langage dans l'étude est écrit dans une notation propre, distincte de celle de la bibliothèque. L'étude promet qu'une règle est vérifiée avant de s'appliquer, que son effet est montré avant d'être appliqué, qu'elle peut être défaite et que son historique est gardé. La bibliothèque tient les pièces aujourd'hui. Ce sont le gouverneur de règles, montré plus haut, et les refus d'un type de règle inconnu, d'un fichier manquant et d'un nom en double, qu'un test narré de la bibliothèque prouve, hors des blocs de ce chapitre.
 
-Ce qui est à venir : un historique des versions d'une règle avec un retour en arrière. La filiation enregistre la décision, et la règle est reliée de nouveau ; un magasin de versions de règles est la pièce à venir, aussi loin que ma recherche dans la bibliothèque est allée. Le hub, construit. Le hors ligne comme mécanisme : une classe de la bibliothèque qui garde des entrées sur un appareil et les envoie quand le réseau revient. Et une plateforme client sur le moteur Softanza.
+La suite : un historique des versions d'une règle avec un retour en arrière. La filiation enregistre la décision, et la règle est reliée de nouveau ; un magasin de versions de règles est la pièce à venir, aussi loin que ma recherche dans la bibliothèque est allée. Le hub, construit. Le hors ligne comme mécanisme : une classe de la bibliothèque qui garde des entrées sur un appareil et les envoie quand le réseau revient. Et une plateforme client sur le moteur Softanza.
 
 Six portes suivent, une pour chaque lecteur.
 

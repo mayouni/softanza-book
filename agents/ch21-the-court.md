@@ -281,17 +281,17 @@ The study of the record puts the tone I try to echo. A grid of two hundred and e
 
 Now to what the court covers today.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, all present.
+Built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, all present.
 
-What is designed:
+Designed:
 
 - The promise runner's routes and map, its clock and weather, its excursions, perception and mutation, and its inherited tours. All are planned. The state *unperceived* is named in the runner's header, and the reader assigns none of them.
 - The negotiation over a rejected plan, which the threat model calls design.
 - The plugin plane, and with it the governance of foreign code.
 
-What lies ahead:
+Next:
 
 - **A human verdict on each gallery picture.** The gallery holds ninety-five pictures, and the chapter calls each one unperceived. The law's second requirement, a name, a date and what they said, is the work ahead for each.
 - Seven of the eight musical traditions, heard by a person from each.

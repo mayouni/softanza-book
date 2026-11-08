@@ -336,7 +336,7 @@ L'éditeur rapide du terrain traite la barre d'état comme de l'encombrement. Le
 
 Reste la section 7.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 **La projection web porte la structure ; les rôles, les étiquettes et les intentions voyagent dans l'arbre d'accessibilité du shell natif.** `ToHtml` émet un identifiant, un style et le texte. L'arbre qui porte les rôles est un artefact séparé, comme le bloc ci-dessus le montre, donc un shell de navigateur devrait déduire à partir de `div` nus ce que le shell natif émet. La bibliothèque d'accessibilité que le plan adopte sert les shells natifs, et un adaptateur web pour elle est à venir.
 
@@ -372,11 +372,11 @@ Voilà la perte contre la page de la bibliothèque elle-même. Elle se tient à 
 
 **`Orphans()` compte les conteneurs.** Savoir si une boîte de mise en page seule doit servir un verbe est une règle que la constitution doit énoncer.
 
-Ce qui est construit : l'interface comme texte avec un tribunal ; quatre genres fermés, une liste fermée de dix-neuf rôles, un ensemble fermé de champs, une justification obligatoire, un aller-retour jusqu'à un point fixe. Deux projections, avec une table enregistrée de trois divergences et une page qui peut dire DISAGREE. L'arbre d'accessibilité, et un pont qui atteint l'interface d'un vrai lecteur d'écran sous Windows, que j'ai lu dans sa source. Une valeur déclarée change et l'écran suit, avec le focus conservé. Une page hébergée sur la boucle locale, et un backend qui refuse de quitter la boucle locale sans signature. Un monde qui propose, des écrans déclarés comme intentions, une surface de navigateur générée. Et un shell binaire, le banc d'écoute du volet sonore, en environ sept cents lignes de Zig, que j'ai lues dans leur source.
+Construit : l'interface comme texte avec un tribunal ; quatre genres fermés, une liste fermée de dix-neuf rôles, un ensemble fermé de champs, une justification obligatoire, un aller-retour jusqu'à un point fixe. Deux projections, avec une table enregistrée de trois divergences et une page qui peut dire DISAGREE. L'arbre d'accessibilité, et un pont qui atteint l'interface d'un vrai lecteur d'écran sous Windows, que j'ai lu dans sa source. Une valeur déclarée change et l'écran suit, avec le focus conservé. Une page hébergée sur la boucle locale, et un backend qui refuse de quitter la boucle locale sans signature. Un monde qui propose, des écrans déclarés comme intentions, une surface de navigateur générée. Et un shell binaire, le banc d'écoute du volet sonore, en environ sept cents lignes de Zig, que j'ai lues dans leur source.
 
-Ce qui est conçu : le kit de shells avec deux shells ; le chrome comme genres fermés nommés pour la colonne, le ruban, le rail et la barre d'état, leurs classes étant l'étape suivante. La facette comme donnée, avec son groupe, sa place dans la vie, ses genres d'artefacts, son tribunal et son profil. Le rail lié au focus, et les cellules de gouvernance lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis.
+Conçu : le kit de shells avec deux shells ; le chrome comme genres fermés nommés pour la colonne, le ruban, le rail et la barre d'état, leurs classes étant l'étape suivante. La facette comme donnée, avec son groupe, sa place dans la vie, ses genres d'artefacts, son tribunal et son profil. Le rail lié au focus, et les cellules de gouvernance lues dans les tribunaux, avec une garde qui interdit qu'une cellule montre un état que le tribunal n'a pas émis.
 
-Ce qui est à venir : un IDE de cette famille. Une liste des vingt-deux verbes dans la bibliothèque, avec un refus d'un verbe inconnu : aujourd'hui `transfer_funds` passe le tribunal. Une garde qui juge un shell contre les verbes. Un éditeur. Une latence mesurée. Je raconte le motif comme conçu, avec les pièces qui tournent comme preuve : le tribunal du chrome, les deux projections, l'arbre d'accessibilité, la page hébergée sur la boucle locale. Les pièces tournent aujourd'hui, et un IDE de cette famille est le travail vers lequel elles mènent.
+La suite : un IDE de cette famille. Une liste des vingt-deux verbes dans la bibliothèque, avec un refus d'un verbe inconnu : aujourd'hui `transfer_funds` passe le tribunal. Une garde qui juge un shell contre les verbes. Un éditeur. Une latence mesurée. Je raconte le motif comme conçu, avec les pièces qui tournent comme preuve : le tribunal du chrome, les deux projections, l'arbre d'accessibilité, la page hébergée sur la boucle locale. Les pièces tournent aujourd'hui, et un IDE de cette famille est le travail vers lequel elles mènent.
 
 ## 8. Six portes
 

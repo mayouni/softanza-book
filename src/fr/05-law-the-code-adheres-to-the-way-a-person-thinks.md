@@ -211,13 +211,13 @@ Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude
 
 Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, et la forme du verbe est un contrat sur l'objet. La promesse sous la ligne est l'exemple, le test et la documentation à la fois.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : les formes du vocabulaire, dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse jugée par une machine.
+Construit : les formes du vocabulaire, dans des milliers de noms de méthodes ; les règles de la maison comme un tribunal sur le propre code de la bibliothèque ; la promesse jugée par une machine.
 
-Ce qui est conçu : un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle d'IA y soit tenue avant d'être écrite.
+Conçu : un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle d'IA y soit tenue avant d'être écrite.
 
-Ce qui est à venir : la machine qui juge le style d'un programme écrit avec la bibliothèque ; son tribunal est conçu, et le construire est la prochaine étape. La chaîne de la diapositive fondatrice s'exécute aujourd'hui dans sa forme la plus proche, et une demande à la bibliothèque réclame le retour de son lien fluide. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
+La suite : la machine qui juge le style d'un programme écrit avec la bibliothèque ; son tribunal est conçu, et le construire est la prochaine étape. La chaîne de la diapositive fondatrice s'exécute aujourd'hui dans sa forme la plus proche, et une demande à la bibliothèque réclame le retour de son lien fluide. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
 
 ## 8. Six portes
 

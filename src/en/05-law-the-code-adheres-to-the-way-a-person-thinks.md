@@ -211,13 +211,13 @@ The field also leads, today, over Softanza's own pages. The study that measured 
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, and the verb's form is a contract about the object. The promise under the line is the example, the test and the documentation at once.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
+Built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
 
-What is designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
+Designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
 
-What lies ahead: the machine that judges the style of a program written with the library; its court is designed, and building it is the next step. The founding slide's chain runs today in its nearest form, and a request to the library asks for its fluent link back. In this book the discipline carries the name of its motto: what you think is what you write.
+Next: the machine that judges the style of a program written with the library; its court is designed, and building it is the next step. The founding slide's chain runs today in its nearest form, and a request to the library asks for its fluent link back. In this book the discipline carries the name of its motto: what you think is what you write.
 
 ## 8. Six doors
 

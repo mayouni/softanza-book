@@ -316,7 +316,7 @@ Ce que le dossier affirme à la place : le dialogue est un rendu d'un monde déc
 
 Le terrain est en tête sur certains points, et ce que le médium couvre aujourd'hui vient ensuite, imprimé en entier.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 Mon étude du dossier contient deux erreurs que les exécutions de ce chapitre corrigent. La première : elle dit que la parole vers texte manque. À ce commit elle existe, par décision, pour les commandes et non pour la dictée. La seconde : elle dit qu'aucun message n'existe. Il existe un message de trois champs, entre identités d'une même plateforme, et je le montre :
 
@@ -332,11 +332,11 @@ StzPlatformQ("neighbourhood") {
 
 C'est un expéditeur, un destinataire, un corps et une heure dans une table SQL ; un médium, un statut et des parties sont le travail à venir. C'est le message que mon étude cherchait, dans sa plus petite forme.
 
-Ce qui est construit : la conversation gouvernée ; le port SMS et son bac à sable ; un vérificateur de signature de corps avec protection contre le rejeu, son câblage à un fournisseur de messagerie à venir ; la couche sémantique de cinq valeurs rendues en couleur, en earcon et en phrase. Construits aussi : la voix ; un message minimal dans le socle commun ; un ensemble fermé de phrases avec un refus ; et les intentions et portées déclarées du monde.
+Construit : la conversation gouvernée ; le port SMS et son bac à sable ; un vérificateur de signature de corps avec protection contre le rejeu, son câblage à un fournisseur de messagerie à venir ; la couche sémantique de cinq valeurs rendues en couleur, en earcon et en phrase. Construits aussi : la voix ; un message minimal dans le socle commun ; un ensemble fermé de phrases avec un refus ; et les intentions et portées déclarées du monde.
 
-Ce qui est conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. Un seul fichier de conception le dit, en deux lignes : un schéma qui range la messagerie parmi les communs, et une esquisse qui écrit `Provides(:Messaging)`. `Provides` est conçu, et son code dans le répertoire de l'application est à venir. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont des propositions de mon étude du dossier, écrites par une session ; la conception propre de la bibliothèque est la ligne ci-dessus. Une analyse parlée et un transport parlé : des démonstrations et des compositions, avec l'unité à venir.
+Conçu : `Provides(:Messaging)` comme service du socle commun de la constellation. Un seul fichier de conception le dit, en deux lignes : un schéma qui range la messagerie parmi les communs, et une esquisse qui écrit `Provides(:Messaging)`. `Provides` est conçu, et son code dans le répertoire de l'application est à venir. Le runtime du socle commun comme pendant opérationnel des fournitures et partages déclarés. Les surfaces conversationnelles pour une application de messagerie, le SMS, l'USSD, la voix et le chat web, la matrice de satisfaisabilité comme tribunal, les gabarits comme grammaire, un canal dans le profil de plateforme : ce sont des propositions de mon étude du dossier, écrites par une session ; la conception propre de la bibliothèque est la ligne ci-dessus. Une analyse parlée et un transport parlé : des démonstrations et des compositions, avec l'unité à venir.
 
-Ce qui est à venir :
+La suite :
 
 - Des ports pour une application de messagerie, Telegram, l'USSD et l'appel téléphonique (zéro résultat dans ma recherche à ce commit), et une forme pour une session USSD dans la bibliothèque.
 - Une projection conversationnelle d'un monde. La projection d'aujourd'hui est `Generate`, qui connaît trois surfaces et en refuse une quatrième. Un shell qui rend une question ou un flux appartient à ce travail.

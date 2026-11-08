@@ -255,11 +255,11 @@ Next, the field, and where it leads.
 
 Next, section 7.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: strings, numbers and tables, each with a guard and a small function. The shared habit.
+Built: strings, numbers and tables, each with a guard and a small function. The shared habit.
 
-What is built in part: lists, matrices, time and graphs, in that order.
+Built in part: lists, matrices, time and graphs, in that order.
 
 - **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In a run I did not keep as a block, the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
@@ -319,9 +319,9 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 
 A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is open. A closed language that refuses is the law of chapter 11; bringing the six to it is the next step. The chapter prints it as a finding of the court, and not as a debt of mine. I hold that as my view. The run above, on this commit, is what stands behind it.
 
-What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
+Designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
-What lies ahead: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision. The explanation of an unnamed pattern. `rx("[a-z]+").Explain()` raises, and the analyser class it calls is the piece ahead. And the use of the pattern classes across the rest of the library: today they serve the regex folder, the tests and the docs, and a `Matches(pattern)` on `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` is the next reach. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
+Next: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision. The explanation of an unnamed pattern. `rx("[a-z]+").Explain()` raises, and the analyser class it calls is the piece ahead. And the use of the pattern classes across the rest of the library: today they serve the regex folder, the tests and the docs, and a `Matches(pattern)` on `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` is the next reach. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
 
 ## 8. Six doors
 

@@ -110,7 +110,7 @@ Là où je crois que Softanza se tient seul, c'est dans l'ordre des choses. Le t
 
 Ce sont des affirmations, et chacune a son chapitre et sa garde. Je les liste ici pour que vous sachiez où va l'argument, et pour que vous puissiez me le faire tenir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 La limite honnête de ce chapitre est aussi la limite honnête de toute la plateforme, et je la mets sur la première page à dessein.
 

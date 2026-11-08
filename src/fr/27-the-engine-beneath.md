@@ -244,7 +244,7 @@ Les mots du mémo : le pair est en tête sur chaque ligne, fib et binsearch sont
 
 La section 7 dit où s'arrêtent les couches et le moteur.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 **Dans la couche légère, les listes tournent et les chaînes s'arrêtent au moteur.** Que rend une chaîne du noyau quand je lui demande son contenu ?
 
@@ -264,11 +264,11 @@ Le runtime répond : `Error (R3) : Calling Function without definition: stkengin
 
 **La troisième couche est écrite, et son câblage est à venir.** Ses trente-deux classes sont toutes dans un seul répertoire, et vous les chargez à la main. J'ai exécuté la première ainsi, hors des blocs, et elle a compté une chaîne de onze caractères. Les trente et une autres sont les prochaines à exécuter. Leur couche de bibliothèque dans le moteur est à venir.
 
-Ce qui est construit : une couche est un répertoire, un préfixe et un fichier d'entrée. J'ai compté le 9 octobre 2026 à ce commit, par fichiers avec l'extension, en excluant les répertoires de test et d'archive. Noyau, 27 fichiers et 6 366 lignes ; base, 984 fichiers et 519 579 ; max, 115 et 31 292 ; et un répertoire de l'avenir, 51 fichiers et 6 356. La base représente 93,2 pour cent des lignes des trois couches. Le moteur : quatre-vingt-neuf bibliothèques issues des sources Zig, 401 fichiers source, 179 985 lignes, et 2 464 tests déclarés, comptés dans les sources. La chaîne d'outils est Zig 0.15.2 d'après le propre commentaire du fichier de construction. Dix-neuf bibliothèques embarquées, chacune avec un enregistrement de composant, version, source, licence et empreinte. L'état propre du dossier : une empreinte d'archive est consignée pour neuf des dix-neuf, et une version pour seize.
+Construit : une couche est un répertoire, un préfixe et un fichier d'entrée. J'ai compté le 9 octobre 2026 à ce commit, par fichiers avec l'extension, en excluant les répertoires de test et d'archive. Noyau, 27 fichiers et 6 366 lignes ; base, 984 fichiers et 519 579 ; max, 115 et 31 292 ; et un répertoire de l'avenir, 51 fichiers et 6 356. La base représente 93,2 pour cent des lignes des trois couches. Le moteur : quatre-vingt-neuf bibliothèques issues des sources Zig, 401 fichiers source, 179 985 lignes, et 2 464 tests déclarés, comptés dans les sources. La chaîne d'outils est Zig 0.15.2 d'après le propre commentaire du fichier de construction. Dix-neuf bibliothèques embarquées, chacune avec un enregistrement de composant, version, source, licence et empreinte. L'état propre du dossier : une empreinte d'archive est consignée pour neuf des dix-neuf, et une version pour seize.
 
-Ce qui est conçu : la couche base héritant de la couche noyau. Les sept domaines partagés sont implémentés deux fois sur le même moteur. Max comme couche construite. Un chargeur pour un domaine de la base. Un tribunal qui vérifie les couches contre leur contrat. Le dépôt autonome du moteur et sa ligne de commande, que l'architecture liste comme une phase. Le pont polyglotte du moteur, qui est celui du chapitre 16.
+Conçu : la couche base héritant de la couche noyau. Les sept domaines partagés sont implémentés deux fois sur le même moteur. Max comme couche construite. Un chargeur pour un domaine de la base. Un tribunal qui vérifie les couches contre leur contrat. Le dépôt autonome du moteur et sa ligne de commande, que l'architecture liste comme une phase. Le pont polyglotte du moteur, qui est celui du chapitre 16.
 
-Ce qui est à venir : un moteur Linux et macOS en service ; une passe mesurée de la bibliothèque sur le nouveau runtime sous Linux ; un exécutable unique sans dépendance ; un décompte de tests du moteur que je puisse imprimer.
+La suite : un moteur Linux et macOS en service ; une passe mesurée de la bibliothèque sur le nouveau runtime sous Linux ; un exécutable unique sans dépendance ; un décompte de tests du moteur que je puisse imprimer.
 
 ### Haro
 

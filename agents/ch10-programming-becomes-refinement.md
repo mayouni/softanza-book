@@ -276,13 +276,13 @@ And on trust, much of the field's approach is built to scale to any AI model. Mi
 
 Now, what the gate covers today.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions, both ahead. A guard here for the cascade of a class: the code-graph guard scans a live path of the library's working tree. And a guard that asserts the other points on a line.
+Built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions, both ahead. A guard here for the cascade of a class: the code-graph guard scans a live path of the library's working tree. And a guard that asserts the other points on a line.
 
-What is designed: the experience the original article describes. The class that article names, `stzPolyCode`, belongs to that design at this commit. So do the one-line refinement of the design document, a point that explains itself, and a plan that is applied. Joining the cascade of the code graph to the cascade of the gate is designed too. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement designed.
+Designed: the experience the original article describes. The class that article names, `stzPolyCode`, belongs to that design at this commit. So do the one-line refinement of the design document, a point that explains itself, and a plan that is applied. Joining the cascade of the code graph to the cascade of the gate is designed too. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement designed.
 
-What lies ahead, from the gate as it stands:
+Next, from the gate as it stands:
 
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes without a check; checks for those kinds are the next step.
 - An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.

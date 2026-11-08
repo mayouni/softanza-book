@@ -239,13 +239,13 @@ Et la porte du formateur en est à une étape plus précoce que les autres. Les 
 
 La section suivante dit ce qui est construit, ce qui est conçu et ce qui est à venir.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le fichier d'agent et son tribunal ; le registre qui refuse un faux en production ; des règles comme données sur un modèle ; les règles d'un régulateur qui jugent un organigramme ; la couche naturelle en haoussa et en arabe.
+Construit : le fichier d'agent et son tribunal ; le registre qui refuse un faux en production ; des règles comme données sur un modèle ; les règles d'un régulateur qui jugent un organigramme ; la couche naturelle en haoussa et en arabe.
 
-Ce qui est conçu : une garde qui échoue quand une étape d'une page de parcours casse, chaque étape exécutée dans l'ordre ; la porte par laquelle un agent de code demande à la bibliothèque de juger son travail.
+Conçu : une garde qui échoue quand une étape d'une page de parcours casse, chaque étape exécutée dans l'ordre ; la porte par laquelle un agent de code demande à la bibliothèque de juger son travail.
 
-Ce qui est à venir : les plateformes des trois clients qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et déclarer un monde au propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, est la direction du chapitre 25.
+La suite : les plateformes des trois clients qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et déclarer un monde au propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, est la direction du chapitre 25.
 
 ## 8. Six portes
 

@@ -434,9 +434,9 @@ La fidélité a une frontière déclarée. L'émulation est fidèle mais pas omn
 
 Là où je pense que le dossier se distingue, c'est dans le couplage. Le double, le plan, les noms de justificatifs, la barrière et l'acteur sont déclarés dans le même programme que celui qui est livré, et une seule barrière les juge.
 
-Voilà le terrain ; la section 7 dit ce que le chapitre couvre aujourd'hui.
+Voilà le terrain ; la section 7 dit où en est le sujet du chapitre.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
 **Un faux écrit à la main qui ne dit rien de lui-même passe la barrière.** Le registre lit ce que l'objet dit qu'il est. Un double qui ne déclare ni qu'il est un bac à sable ni qu'il est local et réel est pris pour réel : pas d'avis veut dire réel. Donc « la production refuse un faux » est exact pour les doubles propres de la bibliothèque, et pour tout double qui se déclare. Quelle posture le registre donne-t-il à un double qui ne déclare rien, et la surface est-elle saine ? Demandez-le-lui en phase de production :
 
@@ -472,11 +472,11 @@ Il répond `live`, et `IsSound()` répond `1` : le double toujours-oui est pass�
 
 **Un plan signale aujourd'hui ; classer est la direction.** Le chapitre 20 l'a dit, et le document du cadre dit "ranked risk assessment".
 
-Ce qui est conçu : le moteur tournant dans un navigateur. Les documents disent que le `solve 2 -8` du téléphone renvoie `x = 4` dans une page. La garde qui le vérifie, `wasm_narrated`, dit dans son propre en-tête qu'elle vérifie le câblage et la construction, puisque l'ancien langage hôte ne peut pas exécuter wasm. Elle cite une page dans le navigateur avec "8/8 checks", qui vit hors de l'arbre épinglé. La loi du chapitre 33 demande au dossier de dire qui a perçu une surface ; voir la surface de l'émulateur dans un navigateur, et nommer qui l'a vue, est donc l'étape suivante. Le chapitre dit : câblé, et sa construction vérifiée par une garde.
+Conçu : le moteur tournant dans un navigateur. Les documents disent que le `solve 2 -8` du téléphone renvoie `x = 4` dans une page. La garde qui le vérifie, `wasm_narrated`, dit dans son propre en-tête qu'elle vérifie le câblage et la construction, puisque l'ancien langage hôte ne peut pas exécuter wasm. Elle cite une page dans le navigateur avec "8/8 checks", qui vit hors de l'arbre épinglé. La loi du chapitre 33 demande au dossier de dire qui a perçu une surface ; voir la surface de l'émulateur dans un navigateur, et nommer qui l'a vue, est donc l'étape suivante. Le chapitre dit : câblé, et sa construction vérifiée par une garde.
 
 Est aussi conçu : des branches d'un jumeau et les alternatives et le retour du plan ; des jumeaux pour les bases de données, les interfaces et les réseaux ; et une vérification de dérive pour les réponses enregistrées.
 
-Ce qui est à venir : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels viennent après eux, par choix délibéré. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et les exécuter contre un hôte est l'étape suivante. Une solution client émulée et déployée par ce chemin : le chapitre 33 la porte comme la ligne suivante.
+La suite : un adaptateur réel de passerelle de cartes pour les paiements (un adaptateur du hub est construit et prouvé contre un jumeau, chapitre 31), un modèle de pointe, un magasin d'objets, les SMS ou le courrier. Les contrats et les doubles sont livrés, et les clients réels viennent après eux, par choix délibéré. La vérification réelle d'un hôte ou d'un compte distant : les commandes sont générées, et les exécuter contre un hôte est l'étape suivante. Une solution client émulée et déployée par ce chemin : le chapitre 33 la porte comme la ligne suivante.
 
 ## 8. Six portes
 

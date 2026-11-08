@@ -17,7 +17,7 @@ rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait non enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la section 7, ce que la loi couvre aujourd'hui, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait non enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la section 7, où en est la loi, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -191,13 +191,13 @@ Là où je pense que la loi se distingue, c'est en trois endroits. Une décision
 
 La section suivante dit où la loi s'arrête.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : le premier échelon du modèle de langage de domaine et son second, un petit bigramme, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
+Construit : le premier échelon du modèle de langage de domaine et son second, un petit bigramme, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
 
-Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise. La pile de décision qui perçoit, décide, réagit et apprend : ses pièces existent à côté de l'agent, et les câbler dedans est l'étape suivante. L'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque. La conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet est l'étape suivante.
+Conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise. La pile de décision qui perçoit, décide, réagit et apprend : ses pièces existent à côté de l'agent, et les câbler dedans est l'étape suivante. L'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque. La conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet est l'étape suivante.
 
-Ce qui est à venir : le câblage de quatre des cinq agents propres de la bibliothèque. Combien la bibliothèque en déclare-t-elle, et combien sont câblés ? La liste le dit clairement :
+La suite : le câblage de quatre des cinq agents propres de la bibliothèque. Combien la bibliothèque en déclare-t-elle, et combien sont câblés ? La liste le dit clairement :
 
 ```haro
 ? len(StzOwnAgents())

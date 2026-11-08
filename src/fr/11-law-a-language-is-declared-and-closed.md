@@ -222,13 +222,13 @@ Le terrain a construit le décodage contraint le premier. L'échantillonneur de 
 
 Et l'âge coupe dans les deux sens. Le code généré rend aussi bon marché la fabrication négligente de langages. C'est pourquoi le tribunal n'est pas un accessoire d'un langage déclaré. Il en est le cœur. C'est mon point de vue.
 
-## 7. Ce qu'il couvre aujourd'hui
+## 7. Où il en est
 
-Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus. Construits aussi : le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur, et les langages de motifs. Ceux-ci acceptent aujourd'hui un mot qu'ils ne connaissent pas ; les fermer est à venir.
+Construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus. Construits aussi : le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur, et les langages de motifs. Ceux-ci acceptent aujourd'hui un mot qu'ils ne connaissent pas ; les fermer est à venir.
 
-Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. L'exécuter depuis la bibliothèque est à venir. Le texte de la vision précède le forgeage (fabriquer les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la mise à jour de la vision est à venir. Le chapitre 12 la raconte à sa vraie taille. Une grammaire pour chaque langage déclaré est conçue et à venir.
+Conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. L'exécuter depuis la bibliothèque est à venir. Le texte de la vision précède le forgeage (fabriquer les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la mise à jour de la vision est à venir. Le chapitre 12 la raconte à sa vraie taille. Une grammaire pour chaque langage déclaré est conçue et à venir.
 
-Ce qui est à venir, et la loi l'énonce. Une couche naturelle fermée jusqu'au fond. Ses mots sont fermés aujourd'hui, et une forme, une liste écrite entre crochets, est remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
+La suite, et la loi l'énonce. Une couche naturelle fermée jusqu'au fond. Ses mots sont fermés aujourd'hui, et une forme, une liste écrite entre crochets, est remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )

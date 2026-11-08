@@ -1,6 +1,6 @@
 # Softanza · The Governed Software Platform of the AI Age
 
-Built 2026-11-08 23:52 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Every page below is a draft unless it says otherwise.
+Built 2026-11-09 00:52 UTC+01:00. Library commit 0950e246a7e756bafbe179ca70a6bd36ae5f99b5. Every page below is a draft unless it says otherwise.
 
 # Preface
 
@@ -78,7 +78,7 @@ Each chapter has six short doors, near its end. A door is a way in for one kind 
 
 Read nine chapters first. They carry the whole argument and can be read alone: the four of Part I, the last two, and three that each state a rule the book holds everywhere. Chapter 5: the code should read the way a person thinks. Chapter 11: a language is declared and closed. Chapter 17: a program is programmatic by default, which means rules and code decide first, and the AI model comes last. The reader has a button that shows only these nine. Come back to the others when one of them interests you.
 
-Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. Section 7, what it covers today. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
+Every chapter has the same nine parts, in the same order. The idea as the field holds it today. The first principle. The form it takes in Softanza, in code. The decision, and what I refused. The court: the named tests that prove the chapter's claim. The field, and what it does better. Section 7, where it stands. The six doors. An exercise, which you answer before you run it. Chapters 5, 11 and 17 open with one more short section, on what the AI age changes.
 
 One more name you will meet. Softanza asks you the question you have to answer, in your own words, and refuses to guess the answer for you. I call that practice wise coding. Chapter 18 runs it, register by register.
 
@@ -88,7 +88,7 @@ Every block of code in this book was run inside the library. Under each title th
 
 Two words come back on many pages. The *record* is the repositories, sessions and files this book ran against, at the commit printed under each title. The *study* is my own study of that record, made before the chapters were drafted. When a page says that the record holds no answer, it means those files, at that commit.
 
-When a chapter says how far a piece has gone, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document describes it. *Ahead*: the work the subject leads to, as the record names it. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
+When a chapter says how far a piece has gone, it uses three words and no others. *Built*: the code exists, a test exists, and a block ran. *Designed*: a document describes it. *Next*: the work the subject leads to, as the record names it. The project's website uses five names for the same things, and chapter 3 shows how they map to these three.
 
 One more note. Haro's own executable is still in development, so the blocks marked `haro` run today on the runtime of the language the library was first written for, version 1.27, and each page says so. Appendix H, the project's history, tells how that came about. Inside the code, the library's own names, its classes, its files and its keys, still carry that language's name, and will until the library is retired from it; the prose does not.
 
@@ -200,7 +200,7 @@ Where I believe Softanza stands alone is in the order of things. The field adds 
 
 Those are claims, and each has its chapter and its guard. I list them here so that you know where the argument is going, and so that you can hold me to it.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The honest limit of this chapter is also the honest limit of the whole platform, and I put it on the first page on purpose.
 
@@ -487,13 +487,13 @@ And the educator's door is at an earlier stage than the others. The course's edi
 
 The next section says what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic.
+Built: the agent file and its court; the registry that refuses a fake in production; rules as data on a model; a regulator's rules judging an organisation chart; the natural layer in Hausa and Arabic.
 
-What is designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work.
+Designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work.
 
-What lies ahead: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And declaring a world to the crafter's own medium, the messaging app on their phone, is the direction of Chapter 25.
+Next: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And declaring a world to the crafter's own medium, the messaging app on their phone, is the direction of Chapter 25.
 
 ## 8. Six doors
 
@@ -667,7 +667,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`! "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
-So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. Section 7, what it covers today, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **ahead**, covers what the site calls *named*, a name whose work comes next, and the further work the chapter's subject leads to. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
+So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. Section 7, where it stands, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **next**, covers what the site calls *named*, a name whose work comes next, and the further work the chapter's subject leads to. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
 
 And the book is judged the way the library is. Every block in it ran inside the library on the night the page was built, at the commit printed at the top of the page. A page whose promises are not kept does not build.
 
@@ -701,13 +701,13 @@ The field leads in adoption. Decision records are a light standard that many tea
 
 Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. I hold this as a view, not a result. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record is read; an example is run. Here they are one object: the decision, what it refused, and the code that runs.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the court behind every block of this chapter but the truth one, and the five stage words the site prints on each product.
+Built: the court behind every block of this chapter but the truth one, and the five stage words the site prints on each product.
 
-What is designed: the register of rethought concepts as data, one row per concept with its article, its code, its guard and its stage. Beside it, a guard that fails when a new concept arrives without a row. Both are a specification today.
+Designed: the register of rethought concepts as data, one row per concept with its article, its code, its guard and its stage. Beside it, a guard that fails when a new concept arrives without a row. Both are a specification today.
 
-What lies ahead: a page that shows each concept with a run proof; the site's register page, read on 9 October 2026, lists each with its evidence. A test file of its own for the engine module of one paradigm engine, section merging, whose merge methods run today in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and the library spells that method differently today. Its friendlier quantifiers, some, most and few, draw at random, so their promise is work ahead. The register is a reading, and a reading can miss a concept that lives in only one article.
+Next: a page that shows each concept with a run proof; the site's register page, read on 9 October 2026, lists each with its evidence. A test file of its own for the engine module of one paradigm engine, section merging, whose merge methods run today in `base/test/string/289_content.ring` and `max/test/stzListOfPairsTest.ring`. And a few rethinks where the article goes a step beyond the code of today. The article on quantifiers asks whether all your marks `AreGreaterThan` the average, and the library spells that method differently today. Its friendlier quantifiers, some, most and few, draw at random, so their promise is work ahead. The register is a reading, and a reading can miss a concept that lives in only one article.
 
 That is where this chapter stops; six doors follow, one for each kind of reader.
 
@@ -961,13 +961,13 @@ At the scale of real users, the field's super-app hosts lead today. The record n
 
 And the Atlas itself prints what is still to come for Softanza. The binary area is a plan for now, and its shipped code is the next step; the plugin, foreign-function and embed plane of extensibility is mostly planned; the system area has few lanes rated strong so far. I hold this as a view, not a result. A map that prints its stages is the only kind worth reading.
 
-## 7. What it covers today
+## 7. Where it stands
 
-Now I put the three stage words on the picture, built, designed and ahead.
+Now I put the three stage words on the picture, built, designed and next.
 
-What is built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
+Built: the engine and its libraries, the base layer, worlds, constellations and platforms with their guards, and, for the web, the engine subset a part ships.
 
-What is designed, or built with its entry designed. The max layer's own classes are written, and loading them from an entry file is designed. What does the runtime answer when you ask for one? Run it:
+Designed, or built with its entry designed. The max layer's own classes are written, and loading them from an entry file is designed. What does the runtime answer when you ask for one? Run it:
 
 ```haro
 try
@@ -984,7 +984,7 @@ The runtime answers: `Error in class name, class not found: stxstring`. The clas
 
 The layer contract says the base layer builds on core, by inheritance or delegation. For the common domains, the two share the engine today and implement those domains twice. The core layer itself is in development against the engine today. Its string and character classes call engine names whose registration in the engine comes next in that development, as my study of the record reports. The block in section 3 shows lists only. A loader that brings one domain of base without the others is designed. A court that reads the layer contract against the tree and fails on drift is a specification, proposed in that study. What is built is two implementations sharing one engine; the contract's line that base builds on core is designed.
 
-What lies ahead: a whole program and its engine packed into one file that stands alone, and a customer platform running on the engine.
+Next: a whole program and its engine packed into one file that stands alone, and a customer platform running on the engine.
 
 ## 8. Six doors
 
@@ -1244,13 +1244,13 @@ The field also leads, today, over Softanza's own pages. The study that measured 
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, and the verb's form is a contract about the object. The promise under the line is the example, the test and the documentation at once.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
+Built: the forms of the vocabulary, in thousands of method names; the house rules as a court over the library's own code; the promise judged by a machine.
 
-What is designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
+Designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
 
-What lies ahead: the machine that judges the style of a program written with the library; its court is designed, and building it is the next step. The founding slide's chain runs today in its nearest form, and a request to the library asks for its fluent link back. In this book the discipline carries the name of its motto: what you think is what you write.
+Next: the machine that judges the style of a program written with the library; its court is designed, and building it is the next step. The founding slide's chain runs today in its nearest form, and a request to the library asks for its fluent link back. In this book the discipline carries the name of its motto: what you think is what you write.
 
 ## 8. Six doors
 
@@ -1486,15 +1486,15 @@ The field leads in reach and in tooling. Iterators and comprehensions are in eve
 
 And I will not print the library's own comparison of walkers with loops and iterators. Its table has thirteen rows, all of them in the walker's favour, none of them run. A table is worth printing when its rows have been run and a loss stands beside the wins; for this one, that is the next step.
 
-Next, section 7, in the stage words built, designed and ahead.
+Next, section 7, in the stage words built, designed and next.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
+Built: the one-dimensional walker, in the max layer, and the walks on lists; the checker as `CheckW`, `ContainsW` and `FindW`; the yielder as a class backed by the engine, and as `YieldW`; the performer as `PerformW`; and the W condition language compiled by the engine.
 
-What is designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
+Designed: the metaphors as native engine modules. The engine's design marks all four as planned; only the yielder has an engine file. And a walker that is not about lists at all but about any indexed structure.
 
-What lies ahead, at this commit and from my runs: six pieces of work, some to build and some to align with their articles.
+Next, at this commit and from my runs: six pieces of work, some to build and some to align with their articles.
 
 - The walking-at-the-edge article's table and the library differ in two cases; aligning them is the next step. A single step larger than the range raises where the table promises silence, and a mixed-direction path raises where it promises acceptance. The two principles hold in the cases shown above. The book states the principle and prints the cases that run, and leaves the table to its article.
 - The "Beyond Loops" article's code differs in places. The history of a walker is a list of walks; a backward walk takes no argument now; the direction prints as "backward" where the article says "reverse". The site's own run of the article kept ten of eighteen blocks.
@@ -1585,7 +1585,7 @@ My study of the record wrote the style down as fourteen rules, from reading the 
 | 10 | Code travels inside an argument as a small string | the seat runs; the `@` on a parameter's name is retired |
 | 11 | Small literal languages live in strings | runs in one form; the braced form raises |
 | 12 | A sentence can be near-natural | not this chapter's; none of the deck's three forms ran as written |
-| 13 | A function may be named in any human language | ahead; section 7 |
+| 13 | A function may be named in any human language | next; section 7 |
 | 14 | A comment speaks before the code, in the teacher's voice | runs |
 
 Rule 11 first, because it is the strangest. The host language counts in integers and cuts the decimals. What does a range written inside a string keep? The comments below speak before the code, in the teacher's voice, which is rule 14. Run it:
@@ -1799,11 +1799,11 @@ Where I think the style stands apart is that every rule serves a step of thought
 
 Section 7, next, says what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
+Built: the sixteen house rules of the library as a court over its own code, run in the block above. Also built: the promise judged by a machine; the small languages, the seat, the prefix. And the features that run (`CS`, `XT` and `viz`, named parameters, the same verb on a string and a list; `ZZ` runs in chapter 8).
 
-What is designed:
+Designed:
 
 - **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. Building it is the next step.
 - **A court that reads the goals.** It would read the tags. To come.
@@ -1811,7 +1811,7 @@ What is designed:
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is the half to declare.
 - **The discipline declared once.** Done in part on the site, as data, which is the page's source rather than a court.
 
-What lies ahead:
+Next:
 
 - A machine that judges the style of a program written with the library, the court designed above; today the house court judges the library's own code.
 - Rules 12 and 13 as running forms.
@@ -2141,13 +2141,13 @@ On scope, the field leads in maturity. The closest field practice is the explici
 
 Last, section 7, with what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: fourteen of the twenty-two forms of a name run, some with examples other than the article's, and three more run in another shape. The library reads a name as a sentence. And scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
+Built: fourteen of the twenty-two forms of a name run, some with examples other than the article's, and three more run in another shape. The library reads a name as a sentence. And scope runs in the regex verbs, in the system, and in the placement of a deployment. The article counts twenty-three sections: the twenty-two forms of a name, and "small functions", which are functions and not a form of a name. The book's number is twenty-two, the forms of a name.
 
-What is designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
+Designed: Haro's forms as data, with generated families; and the scope paradigm for time, units, memory and style, as rows of a table.
 
-What lies ahead, each with what exists beside it:
+Next, each with what exists beside it:
 
 - **Partial**, `@Removed`, lives in the archive: defining the call in the live library is the work ahead.
 - **Future**, `BeforeQ`, was trimmed on purpose, as I said.
@@ -2444,15 +2444,15 @@ The field's reactive libraries lead in reach. Rx exists in most mainstream langu
 
 I will not print the star-rating comparison with the field's tools that the library's article on reactive objects carries. It is undated and unsourced.
 
-Section 7, next, says what all of this covers today.
+Section 7, next, says where all of this stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
+Built: the Regexuter and the Listexuter; Reaxis on the engine's event loop; the timeline, the grid and deep operations; the AI agent whose skills chain.
 
-What is designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
+Designed: the third rung, many faculties on one shared state, cascading until it settles. The universal engine for it is planned. The four siblings are vision. The macroplan marks the engine module as done, and the architecture table marks it planned: the same name for two things. That table marks every module of its fifth layer planned, including ones that have source, so it is stale on this point. The universal medium is planned in the engine design document.
 
-What lies ahead at this commit:
+Next at this commit:
 
 - A dependency chain that links one trigger to another. Today each state entry depends on its own trigger, so the chain records which trigger was active. Asking for the chain overflows the stack: the run ends with `Error (R4) : Stack Overflow`. A test that calls it is part of that work.
 - The Listexuter's seven classic tests, brought to their own promise: five differ from the output they expect, and two have their promise to write. The error log of that folder records, in the sixth file, `Error (C8) : Parentheses ')' is missing`.
@@ -2784,13 +2784,13 @@ And on trust, much of the field's approach is built to scale to any AI model. Mi
 
 Now, what the gate covers today.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions, both ahead. A guard here for the cascade of a class: the code-graph guard scans a live path of the library's working tree. And a guard that asserts the other points on a line.
+Built: the refinement point, the gate with its five checks, the cascade of a point and of a class, the reversal, the trust floor, and governed refining. The guards of section 5 cover them, with two exceptions, both ahead. A guard here for the cascade of a class: the code-graph guard scans a live path of the library's working tree. And a guard that asserts the other points on a line.
 
-What is designed: the experience the original article describes. The class that article names, `stzPolyCode`, belongs to that design at this commit. So do the one-line refinement of the design document, a point that explains itself, and a plan that is applied. Joining the cascade of the code graph to the cascade of the gate is designed too. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement designed.
+Designed: the experience the original article describes. The class that article names, `stzPolyCode`, belongs to that design at this commit. So do the one-line refinement of the design document, a point that explains itself, and a plan that is applied. Joining the cascade of the code graph to the cascade of the gate is designed too. And Haro has a gate in a spike written only in the former host language, with its own seat for refinement designed.
 
-What lies ahead, from the gate as it stands:
+Next, from the gate as it stands:
 
 - It checks the constraints of three kinds of point, a parameter, an algorithm and a library. A point of another kind, a block of code for instance, parses and passes without a check; checks for those kinds are the next step.
 - An unknown trust posture ranks as trusted: the code gives it the top rank. So a proposal from an origin the code does not know clears a floor of trusted.
@@ -3065,13 +3065,13 @@ The field built constrained decoding first. Softanza's sampler follows the refer
 
 And the age cuts both ways. Generated code makes careless language-making cheap too. That is why the court is not an accessory of a declared language. It is the core. This is my view.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
+Built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
 
-What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it at its true size. A grammar for every declared language is designed and to come.
+Designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it at its true size. A grammar for every declared language is designed and to come.
 
-What lies ahead, and the law states it. A natural layer closed all the way down. Its words are closed today, and one form, a list written inside brackets, is handed to the host to evaluate. Does a host function inside the brackets run? Try one:
+Next, and the law states it. A natural layer closed all the way down. Its words are closed today, and one form, a list written inside brackets, is handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 
 ```haro
 ? @@( Naturally("Create a list with [ upper('x'), 1 ] and remove its duplicates").Result() )
@@ -3402,7 +3402,7 @@ The code a forge emits must be read by someone. The family style that every decl
 
 Section 7 comes next, at the edge of a second closed language.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The library has two closed formula languages, and they behave differently at the edge. A reader who takes the closed condition language of chapter 11 and of the condition above to cover every formula will be wrong at the table. The calculated column of a table falls back, by its own header, to the classic evaluation path when the engine cannot compile a formula. Does the word `sin` that the condition refused run here?
 
@@ -3420,13 +3420,13 @@ o1.AddCalculatedCol(:SINE, 'sin(@(:A))')
 
 The sine the condition refused, the table computed, and it printed `[ 0, 0.84, -0.76 ]`! I also saw, and do not show, a second thing. On another probe table, with A as 1, 3 and 10 and B as 2, 4 and 20, I wrote a formula `@(:A) + HostBonus(@(:B))`. The function of mine inside it multiplies by a thousand. The formula printed `[ 2001, 4003, 20010 ]`: a user-defined host function ran from inside a formula string. And a formula that names a function that does not exist raised the host's own error. So the second closed language is open at its edge. A guard that asserts either behaviour is ahead.
 
-What is built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, each with its edge. The natural layer's tongues as data.
+Built: in the library, a declaration judged when declared; a court and a grammar from it; the list of what the grammar dropped. A grammar machine that says it is constrained; a prompt and a description from the same text. The build counts 151 assertions in three narrated guards. Two closed little languages of conditions, each with its edge. The natural layer's tongues as data.
 
-What is built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
+Built, but outside the library: a forge from a declaration to a court and a grammar, in the Haro charter's repository.
 
-What is designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. A printer for declared sentences, a knowledge graph forged from a declaration and the one static binary per language are designed. The forge inside the library is designed. A grammar for every declared language shipping in the library: promised in the kernel, and designed. And the projections: the world rendered to an application, a server, a page, a device.
+Designed: the forge producing from a declaration alone the parser, court, printer, grammar, knowledge graph, query grammar, natural door, narration, runtime and one static binary. By my reading of the charter, the spike has shown the court, the grammar, a runtime that walks the declaration, a query grammar, a narration and the court of the natural letter. A printer for declared sentences, a knowledge graph forged from a declaration and the one static binary per language are designed. The forge inside the library is designed. A grammar for every declared language shipping in the library: promised in the kernel, and designed. And the projections: the world rendered to an application, a server, a page, a device.
 
-What lies ahead: the forge's grammar for a menu word, which holds shape today, as I saw above; the figure of two of ten against ten of ten, re-taken. And a record of the forge running on the Haro runtime. The vision was written before the language; the charter's runs are on the older runtime and on the oracle.
+Next: the forge's grammar for a menu word, which holds shape today, as I saw above; the figure of two of ten against ten of ten, re-taken. And a record of the forge running on the Haro runtime. The vision was written before the language; the charter's runs are on the older runtime and on the oracle.
 
 The six doors follow, from the programmer to the agent.
 
@@ -3845,9 +3845,9 @@ And there is a loss on the library's own side. `Understood()` prints verbs and n
 
 Where the win is, with the loss beside it: the same sentence gives the same answer, with a reason, in the user's language, and designed to run offline, which no guard measures. The loss is that the user's language must be in a pack, and a word outside is a literal or a refusal. The record says the winning case is regulated or sovereign work: an instruction that executes locally and can be audited to the word.
 
-Section 7 says what the chapter's subject covers today.
+Section 7 says where the chapter's subject stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
 An ungrammatical chain runs. The second chain below reads "which a length of 4", which is not English. Does anything judge it? Run both:
 
@@ -3898,11 +3898,11 @@ done
 
 **The old articles' chains run in part at this commit.** The sentence of the bridging article that carries `IsAMQ` needs a marker that I removed by my ruling of 10 July 2026. Several chains of the near-natural article do not run at this commit: `InLowercase()` raises for lack of an object; `LettersNB`, `BeforeQ` and `TheirQ().FirstCharQ()` are not defined; and the brace form `Naturally() { ... }` raises for too few parameters. The bridging article's chain with `ReplaceLowercaseCharsQ` is not defined either. I ran twelve chains of the near-natural article on 8 October 2026, and eight work. In that run, the bridging article's paragraph still ran in permissive mode, and printed two nested boxes around "NOTHING SOFTANZA" instead of the one it promises. The machine said so, since `UnderstoodAll()` is false and the unresolved word is named (the block above shows both), but a reader has to ask.
 
-What is built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
+Built: both directions; five packs as data and a sixth at runtime; refusals with reasons on both sides; the question frames, the thin truth chain, the evidential register; natural code as data. The folder holds thirteen files and about twelve thousand lines in twelve classes, by `wc` and `grep` on 8 October 2026.
 
-What is designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes. A guard that fails if a socket opens during a natural run. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
+Designed: the plan of a narration emitted as an executable chain, so that chains gain `Understood()` for free. A grammar emitted for the natural lexicon, so that an AI model may only produce sentences the layer executes. A guard that fails if a socket opens during a natural run. A coverage figure per pack printed by a guard. And the articles' examples pinned as fixtures.
 
-What lies ahead: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: today a plain list in a natural sentence reaches host code, which chapter 11 prints, and so does a descriptor, above. A machine that judges a chain's grammar. The standard Hausa letter stored whole in the pack, which stores it broken today. A dictionary protected from drift. And the account of my plea to the project of the former host language that natural programming be made a first concern, with its date and a sentence of mine in that voice that the book can source. The record holds a private memo of 30 August 2026, which gives my judgement of the language's shipped natural form. The memo is marked private, so the book keeps it unquoted and sources no phrase of mine to it.
+Next: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer closed all the way down: today a plain list in a natural sentence reaches host code, which chapter 11 prints, and so does a descriptor, above. A machine that judges a chain's grammar. The standard Hausa letter stored whole in the pack, which stores it broken today. A dictionary protected from drift. And the account of my plea to the project of the former host language that natural programming be made a first concern, with its date and a sentence of mine in that voice that the book can source. The record holds a private memo of 30 August 2026, which gives my judgement of the language's shipped natural form. The memo is marked private, so the book keeps it unquoted and sources no phrase of mine to it.
 
 ## 8. Six doors
 
@@ -4162,7 +4162,7 @@ Here is where I think this stands apart, with the measured limits beside it. The
 
 The losses are printed. Section 7 comes next, with its runs.
 
-## 7. What it covers today
+## 7. Where it stands
 
 What this chapter's subject covers today is measured against my directive, in section 4: *entities, relations, an ontology, rules*. The file at this commit holds facts and laws; rules in the file are designed. Here is the file with a rules section. What does the parser make of it?
 
@@ -4263,9 +4263,9 @@ It knows both: `[ "company", "fruit" ]`.
 
 The study of the record already says the dialog was kept at the margin, and that the centre moved to the file. The chapter keeps the file as its opening, and the 2022 dialog stays at the margin.
 
-What is designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact; inheritance from it is designed. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, is designed.
+Designed: rules in the file; derivation on any graph; a multi-step query; several relations between two things; class inheritance. `DefineClass` writes a fact; inheritance from it is designed. The nearest that ran, in an earlier probe whose run I did not keep, is to declare `is-a` transitive and state the class as a fact of that relation. And the design's knowledge hygiene beyond provenance, bounded queries, scoped graphs and revision with rollback, is designed.
 
-What lies ahead: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function to be defined. And `ValidateOntology()` judging what the ontology holds, where today it returns 1 whatever the ontology holds, as its own comment says, `known defect`.
+Next: `Explain()` on a knowledge graph, which calls `ApplyInference`, a function to be defined. And `ValidateOntology()` judging what the ontology holds, where today it returns 1 whatever the ontology holds, as its own comment says, `known defect`.
 
 One note on the design document's history. Its amendment of 22 August 2026 says that no knowledge file exists anywhere in the tree, and that this is hygiene and not a gap. At this commit that is no longer true: there are ninety-nine, all of them in the education module.
 
@@ -4584,11 +4584,11 @@ Next, the field, and where it leads.
 
 Next, section 7.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: strings, numbers and tables, each with a guard and a small function. The shared habit.
+Built: strings, numbers and tables, each with a guard and a small function. The shared habit.
 
-What is built in part: lists, matrices, time and graphs, in that order.
+Built in part: lists, matrices, time and graphs, in that order.
 
 - **Lists**: types, counts, nesting, negation, alternation and sets run. Stepped ranges raise. In a run I did not keep as a block, the uniqueness flag was ignored, so `[@N2-3{1; 2; 3}U]` accepted `[1, 1]`, though the class has code for a uniqueness check. The wildcard of the article, `@A`, is not a token; the real wildcard is `@$`. And a reused object answers from a cache whose key is the list's length and the sum of its characters' codes, which does not depend on order. A fresh object answers 0 for `["hello", 1]`, and the same object after `[1, "hello"]` answers 1.
 - **Matrices**: size, shape, element and three properties run. The class header lists the terms that accept every matrix: `row`, `col`, `pattern`, `determinant` and `sum`. A matrix of two by two is accepted by `{row(99)}`.
@@ -4648,9 +4648,9 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 
 A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is open. A closed language that refuses is the law of chapter 11; bringing the six to it is the next step. The chapter prints it as a finding of the court, and not as a debt of mine. I hold that as my view. The run above, on this commit, is what stands behind it.
 
-What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
+Designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
-What lies ahead: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision. The explanation of an unnamed pattern. `rx("[a-z]+").Explain()` raises, and the analyser class it calls is the piece ahead. And the use of the pattern classes across the rest of the library: today they serve the regex folder, the tests and the docs, and a `Matches(pattern)` on `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` is the next reach. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
+Next: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision. The explanation of an unnamed pattern. `rx("[a-z]+").Explain()` raises, and the analyser class it calls is the piece ahead. And the use of the pattern classes across the rest of the library: today they serve the regex folder, the tests and the docs, and a `Matches(pattern)` on `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` is the next reach. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
 
 ## 8. Six doors
 
@@ -4939,7 +4939,7 @@ The court's reach stops today at the door: the foreign process is outside it, an
 
 And the cost of a facet, in the memo's own table: a Python reader expects zero-based indexing, and Haro's is one-based. The literal `\n` is a backslash and an `n`; two letters of different case are one variable. "Any model writes Haro in the shape it knows" is true only of the spellings that are the minority.
 
-## 7. What it covers today
+## 7. Where it stands
 
 The word *governed* is a design. Does the door ask the governance before it runs? This is the block that shows it:
 
@@ -5001,9 +5001,9 @@ oStat {
 
 The call raised, and the trace still holds `0`! R's message was in French on this machine, so I do not promise it. This is where the door stands at this commit, in the voice of chapter 11's open list. The runs above are its evidence. Governing the door is designed, so the vision's word "governed" stays a design; building it is the next step. The way back runs through a file that the host evaluates, and closing it is the next step too. And the R door, in development, raises on every call today.
 
-What else is designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done; its source is ahead. Then the three tiers for Python, of which the external subprocess is built. Then the domain library on top of the door, its classes ahead in code. And the facets, a memo that proposes, its ruling ahead.
+Also designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done; its source is ahead. Then the three tiers for Python, of which the external subprocess is built. Then the domain library on top of the door, its classes ahead in code. And the facets, a memo that proposes, its ruling ahead.
 
-What lies ahead: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, named in the article and ahead in the code. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached through the class. The AI model stands outside this plane; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book teaches that law in its place.
+Next: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, named in the article and ahead in the code. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached through the class. The AI model stands outside this plane; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book teaches that law in its place.
 
 And three door shapes the registry knows, Julia, C and Prolog: their runs wait for a runtime on this machine. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. Running it on this commit is ahead.
 
@@ -5070,7 +5070,7 @@ Stage: built: the domain language model's first rung and its second, a small big
 
 Run: 8 of 8 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
-In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then section 7 says what the law covers today, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
+In this chapter I state the law of Part IV and run it. I begin with my definition of intelligence and a domain language model with no neurons at all, which answers, says why, and refuses what it was never told. Then I show a conversation that asks you, a fact nobody recorded proved from one declared law, an AI model held to proposing, and an agent whose mind is code, refused at the gate. I say what I refused, which guards prove each block, and where the field leads. Then section 7 says where the law stands, printed as the stage it is: a question asked in other words, answered where a refusal is the next step. The law itself is one sentence: the mind is programmatic by default, a model is one faculty among others, the last one called, and what it says is a proposal that the court admits or refuses.
 
 ## What the AI age changes here
 
@@ -5256,13 +5256,13 @@ Where I think the law stands apart is in three places. A decision here costs not
 
 The next section says where the law stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
+Built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
 
-What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
+Designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
 
-What lies ahead: the wiring of four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
+Next: the wiring of four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
 
 ```haro
 ? len(StzOwnAgents())
@@ -5751,13 +5751,13 @@ Here is where I think the record stands apart. Every reply, in whatever form, is
 
 Section 7 comes next, and it names what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals. And the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
+Built: the goal, the gap, the question with its reason, the frame; the first register, the second, and the fourth in the form of a splitter; the governed door with its refusals. And the checkpoint and its lifetime; the goal fulfilled or revoked; the transcript; one wired agent; the tutor's four-language gap sentence.
 
-What is designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. Presenting competing readings of one reply is the designed step. And the *none acceptable* branch as written: the reason is built, and naming the nearest acceptable alternatives is designed. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example*, read on 9 October 2026, calls it a rule of the design, and the design is its stage. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages describe the design, which reaches past what the code builds. The code wires three of the five registers. The record names the formula and the examples as waiting, and for this chapter they lie ahead.
+Designed: the *several acceptable* branch as the design writes it. The protocol says that when several readings of a reply are acceptable, the system enumerates them and the person chooses. What is built is two different things. The values already known become numbered options in the question, before the reply. And a reply that carries several values has each one judged on its own, with the first kept under a unique law. Presenting competing readings of one reply is the designed step. And the *none acceptable* branch as written: the reason is built, and naming the nearest acceptable alternatives is designed. The refusal states a reason, and for a number, how many options were on the table. And the example written back as a promise: the site's page *by example*, read on 9 October 2026, calls it a rule of the design, and the design is its stage. The site's two pages on this, *wise* and *by example*, say "with the nearest alternatives" and "the person chooses". The two pages describe the design, which reaches past what the code builds. The code wires three of the five registers. The record names the formula and the examples as waiting, and for this chapter they lie ahead.
 
-What lies ahead: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French. And a conversation that judges a value with a space in it. In my run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. Both results come from my own run, outside the blocks this book records. The step ahead is a conversation that refuses with the reason and writes a checkpoint. It is a request to the library, and the exercise below uses one-word values.
+Next: the formula register; the example register, and the induction agent behind it; a conversation worded in Arabic, Hausa or French. And a conversation that judges a value with a space in it. In my run of 8 October 2026, on the version of the library this book runs, `ReplyIn` raised on each value containing a space that I tried. The error was an uninitialised variable. The three were "tomato sauce", "fromage et tomate", "jibini da tumatir". Called directly, the door returned the refusal properly. Both results come from my own run, outside the blocks this book records. The step ahead is a conversation that refuses with the reason and writes a checkpoint. It is a request to the library, and the exercise below uses one-word values.
 
 ## 8. Six doors
 
@@ -6074,18 +6074,18 @@ Where I think this stands apart is in what the output is. A general AI model's a
 
 Section 7 says what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
+Built: the first rung and its answers; the facts rendered as a corpus, with a closed vocabulary; completion by lookup; and the bundle that travels with its tests. Also built: a second rung that trains in a fraction of a second and exports a small model file, and the admission of a fact by a law.
 
-What is designed comes in four points.
+Designed comes in four points.
 
 - The grammar derived from a knowledge base by one call. This chapter's composition is the reader's; the library's one call is designed.
 - The second rung's corpus validated by the first rung's grammar before it is admitted. The design says so; the code renders the facts directly, and the check is designed. So "correct by construction" holds for the training text, and what the model says is a proposal for the gate.
 - The five-stage validation of a chunk; the pipeline that chains the stages lies ahead.
 - The foundry's steps beyond the bigram.
 
-What lies ahead: an end-of-sentence word for the second rung, to end the sentence of it that runs on here. Ahead too is a completion that sees the sentence so far; today a completion after a relation lists the objects of every fact of that relation. And the first rung's refusal of a rephrased question: today it answers with the type, as chapter 17 showed, where the law of this part says it should refuse.
+Next: an end-of-sentence word for the second rung, to end the sentence of it that runs on here. Ahead too is a completion that sees the sentence so far; today a completion after a relation lists the objects of every fact of that relation. And the first rung's refusal of a rephrased question: today it answers with the type, as chapter 17 showed, where the law of this part says it should refuse.
 
 ## 8. Six doors
 
@@ -6496,13 +6496,13 @@ The twin is a model of reality, not reality. The framework asks for fidelity and
 
 And the largest honest loss. The threat model puts *code already running in the process* out of scope: it can do anything the process can, wipe the ledger or read a secret. The workbench contains what is written through the bench. A function that does not ask for the bench is not confined. Reads are free: the workbench's own header says reads are sensing and stay free, and that only writes are confined to the twin. The architecture says that the escape is not a defect to be closed by removing it. It narrows it with a declared posture, and with code, not the file, deciding which functions an agent may call. I read this limit in the architecture, the threat model and the workbench's header.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load. The workbench is built, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; so is the roster's agent rehearsed and then committed, and so is the drill. The engine's bounded structures are built: 64 agent slots, an inbox of 8 messages (tested in the engine's Zig code) and a run queue of 256.
+Built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load. The workbench is built, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; so is the roster's agent rehearsed and then committed, and so is the drill. The engine's bounded structures are built: 64 agent slots, an inbox of 8 messages (tested in the engine's Zig code) and a run queue of 256.
 
-What is designed: the agent's side of the negotiation, in which the plan reaches the agent and the conversation about the plan is the next step. The architecture says so, and the threat model repeats it. I searched the library's code: revising a plan is the step ahead. The examination hall, which would certify an agent for a commit scope the way you certify a driver for a licence class: it lives in the documents, as design. Branches as parallel minds: snapshots and rollback are built, and the branch call is the step ahead. Twins for databases, interfaces and networks: the framework names them. The twin of files is built, and so is the twin of the process environment, with its variables, its working directory and its queued spawn (chapter 24). The other three are designed.
+Designed: the agent's side of the negotiation, in which the plan reaches the agent and the conversation about the plan is the next step. The architecture says so, and the threat model repeats it. I searched the library's code: revising a plan is the step ahead. The examination hall, which would certify an agent for a commit scope the way you certify a driver for a licence class: it lives in the documents, as design. Branches as parallel minds: snapshots and rollback are built, and the branch call is the step ahead. Twins for databases, interfaces and networks: the framework names them. The twin of files is built, and so is the twin of the process environment, with its variables, its working directory and its queued spawn (chapter 24). The other three are designed.
 
-What lies ahead: the items below, found while running and reading.
+Next: the items below, found while running and reading.
 
 - **A guard for an unset executor and an unset scope.** A plan with no executor answers that no executor is set, and that a human at the keyboard is unguarded, and `Execute()` is allowed. The refusal of the block above applies to an AI model set as the executor. Likewise the scope check runs only when a scope is set: a plan with an executor and no scope is committed with no check on the paths it touches. So "only a governed actor commits" is exact when an executor and a scope are set, and a person at a keyboard may commit a plan that names none.
 - **A plan flags; ranking is ahead.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE; a score and an order of severity are the ranking ahead. The chapter says "flags".
@@ -6846,17 +6846,17 @@ The study of the record puts the tone I try to echo. A grid of two hundred and e
 
 Now to what the court covers today.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, all present.
+Built: the promises as stops; the security plane, with its ledger, sentinel, drill, response, attestation and secrets; the performance plane from its first phase to its last; the perception law, adopted. And the declared verdict tables for the singing voice and the eight universes. The table of guarantees holds 43 rows that name 57 distinct guard files, all present.
 
-What is designed:
+Designed:
 
 - The promise runner's routes and map, its clock and weather, its excursions, perception and mutation, and its inherited tours. All are planned. The state *unperceived* is named in the runner's header, and the reader assigns none of them.
 - The negotiation over a rejected plan, which the threat model calls design.
 - The plugin plane, and with it the governance of foreign code.
 
-What lies ahead:
+Next:
 
 - **A human verdict on each gallery picture.** The gallery holds ninety-five pictures, and the chapter calls each one unperceived. The law's second requirement, a name, a date and what they said, is the work ahead for each.
 - Seven of the eight musical traditions, heard by a person from each.
@@ -7080,13 +7080,13 @@ Where Softanza stands apart, by the record, without a number: the SLA; the gover
 
 That is the list; now I say where this chapter stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: four of the five pairs, run on both sides, and the fifth on the Softanza side. The four code pairs of the site are built too. I re-ran them on 8 October 2026, three of them on both sides (the fourth has a comment for its other side). The outputs matched. So are the library's field studies of performance, incident analysis and plugins, with their loss sections, and the culture plan, which prints its losses. So are the harness of the string benchmark and the guard that the engine is optimised.
+Built: four of the five pairs, run on both sides, and the fifth on the Softanza side. The four code pairs of the site are built too. I re-ran them on 8 October 2026, three of them on both sides (the fourth has a comment for its other side). The outputs matched. So are the library's field studies of performance, incident analysis and plugins, with their loss sections, and the culture plan, which prints its losses. So are the harness of the string benchmark and the guard that the engine is optimised.
 
-What is designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of nine rows, the seven partial ones and the other two, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
+Designed or proposed: a comparison register as data; a comparison court; the re-run of both benchmarks. The study holds all three, and my search of the library and the site on 8 October 2026 places them at that stage. The site, read on 9 October 2026, prints five rules for comparing, the first being "Cite or do not publish". It also prints a list of nine rows, the seven partial ones and the other two, with the platforms that are deep there. It marks, in a line labelled designed, a register of comparisons held as data.
 
-What lies ahead: a *compared* column on the Atlas, on the register of innovations and on the narrations. On the site: the field studies, the sixty-four grids themselves (it gives their number today), both benchmarks and the runtime table. In the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And two more: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
+Next: a *compared* column on the Atlas, on the register of innovations and on the narrations. On the site: the field studies, the sixty-four grids themselves (it gives their number today), both benchmarks and the runtime table. In the library: locale collation; locale casing; a grapheme count on the public string; a time-zone database. And two more: the re-run of the benchmark of 7 July 2026, and the source of the coverage matrix.
 
 And one task for a later scan: reproducing the study's sixty-four tables, six hundred and fifteen rows and thirty-one documents, and the symbol counts.
 
@@ -7523,7 +7523,7 @@ The compiler leads on scopes. It checks against a target in daily use at scale; 
 
 Where the field and the record meet: a super-app is a graph of graphs. The field's context map is a diagram. Softanza's is a registry that refuses.
 
-## 7. What it covers today
+## 7. Where it stands
 
 A world's truths are declared and narrated, and judging them is the work ahead. The number in a reaction is the first case. Do ninety days and one day give different proposals? A reaction fires for each instance that lacks a relation named after the thing it proposes, and the comment above `Pulse()` says so. Run two clinics:
 
@@ -7590,11 +7590,11 @@ done
 
 Three times the answer is `Calling Method without definition`. `Shares`, `Provides`, `Norm`, `Reaches` and `Generate` answer the same way on a constellation. The class has `AddWorld`, `AddConstellation`, `Bond`, `Retire`, `Revive`, `Swap`, the `Gov*` family, `CallAcross`, `Crossings`, the commons calls, and calls that look: `Why`, `GraphQ`, `WorldQ`, `KindOf`, `IsActive`, `HasWorld`, `NumberOfWorlds`, `AreBonded`, `CrossingCount` and `LastCallMs`. The verbs of composition are these. The design's three aspects are reached today by `AddWorld`, `Bond` and `OpenCommonsOn`, and governance by `Gov*`; reach and presence are the part ahead. The design's own header calls the document a forward design.
 
-What is built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
+Built: the world; the constellation with its gates, its ledger of crossings with timings, a decision written on a cleared crossing, and a refused crossing noted as evidence; the platform's capability seam, its commons, its registry, its shells, its profile with building then deploying; the three scopes.
 
-What is designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and handing the call to the target is the design); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
+Designed: the near-natural idiom; a call routed into a nested constellation (today a crossing is a verdict, and handing the call to the target is the design); loading one world without rebuilding a host; shells that embed the engine; the five-row guarantee sheet, which the vision asks for and the site's journey page marks designed: one row for each of five systems the solution answers to, technical, social, ecological, economic and cultural.
 
-What lies ahead: a narration for the constellation or the envelope. The narration for building a first app speaks verbs ahead of the class: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet for a solution. A lane of the Atlas for the world, the constellation or the envelope.
+Next: a narration for the constellation or the envelope. The narration for building a first app speaks verbs ahead of the class: seven of its calls fail at this commit, and I cite it for the idea and not the syntax. A customer platform on the engine as a constellation. The written five-row guarantee sheet for a solution. A lane of the Atlas for the world, the constellation or the envelope.
 
 The six doors come next.
 
@@ -8103,9 +8103,9 @@ Fidelity has a stated boundary. Emulation is faithful but not omniscient, so it 
 
 Where I think the record stands apart is the coupling. The double, the plan, the credential names, the gate and the actor are declared in the same program that ships, and one gate judges them.
 
-That is the field; section 7 says what the chapter covers today.
+That is the field; section 7 says where the chapter's subject stands.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **A hand-written fake that says nothing about itself passes the gate.** The registry reads what the object says it is. A double that declares neither that it is a sandbox nor that it is local and real is taken for live: no opinion means live. So "production refuses a fake" is exact for the library's own doubles, and for any double that declares itself. What posture does the registry give a double that declares nothing, and is the surface sound? Ask it in the production phase:
 
@@ -8143,11 +8143,11 @@ It answers `live`, and `IsSound()` answers `1`: the always-yes double passed! Th
 
 **A plan flags today; ranking is the direction.** Chapter 20 said it, and the framework document says "ranked risk assessment".
 
-What is designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks", which lives outside the pinned tree. The law of chapter 33 asks the record to say who perceived a surface, so seeing the emulator's surface in a browser, and naming who saw it, is the next step. The chapter says: wired, and its build checked by a guard.
+Designed: the engine running in a browser. The documents say that the phone's `solve 2 -8` returns `x = 4` in a page. The guard that checks it, `wasm_narrated`, says in its own header that it checks the wiring and the build, since the host language cannot execute wasm. It cites an in-browser page with "8/8 checks", which lives outside the pinned tree. The law of chapter 33 asks the record to say who perceived a surface, so seeing the emulator's surface in a browser, and naming who saw it, is the next step. The chapter says: wired, and its build checked by a guard.
 
 Also designed: branches of a twin and the plan's alternatives and feedback; twins for databases, interfaces and networks; and a drift check for recorded answers.
 
-What lies ahead: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients come after them, by deliberate choice. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
+Next: a live card-gateway adapter for payments (a hub adapter is built and proved against a twin, chapter 31), a frontier model, an object store, SMS or mail. The contracts and doubles ship, and the live clients come after them, by deliberate choice. Live verification of a remote host or account: commands are generated, and running them against a host is the next step. A customer solution emulated and deployed through this path: chapter 33 carries it as the next line.
 
 ## 8. Six doors
 
@@ -8561,7 +8561,7 @@ What the record claims instead: the dialogue is a rendering of a declared world 
 
 The field leads in places, and what the medium covers today comes next, printed whole.
 
-## 7. What it covers today
+## 7. Where it stands
 
 My study of the record has two errors that this chapter's runs correct. The first: it says speech to text is missing. At this commit it exists, by decision, for commands and not for dictation. The second: it says no message exists. There is a message of three fields, between identities of one platform, and I show it:
 
@@ -8579,11 +8579,11 @@ StzPlatformQ("neighbourhood") {
 
 It is a sender, a recipient, a body and a time in a SQL table; a medium, a status and parts are the work ahead. It is the message my study looked for, in its smallest form.
 
-What is built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, its wiring to a messaging provider ahead; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
+Built: the governed conversation; the SMS port and its sandbox; a body-signature verifier with replay protection, its wiring to a messaging provider ahead; the semantic layer of five values rendered as colour, earcon and phrase. Also built: the voice; a minimal message in the commons; a closed set of sentences with a refusal; and the world's declared intents and reaches.
 
-What is designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. `Provides` is designed, and its code in the application folder is ahead. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session; the library's own design is the line above. A spoken analysis and a spoken transport: demos and compositions, with the unit ahead.
+Designed: `Provides(:Messaging)` as a commons service of the constellation. One design file says so, in two lines: a diagram that lists messaging among the commons, and a sketch that writes `Provides(:Messaging)`. `Provides` is designed, and its code in the application folder is ahead. The commons runtime as the operational counterpart of the declared provides and shares. Conversational surfaces for a messaging app, SMS, USSD, voice and web chat, the satisfiability matrix as a court, templates as a grammar, a channel in the platform profile: these are proposals of my study of the record, written by a session; the library's own design is the line above. A spoken analysis and a spoken transport: demos and compositions, with the unit ahead.
 
-What lies ahead:
+Next:
 
 - Ports for a messaging app, Telegram, USSD and the telephone call (zero hits in my search at this commit), and a shape for a USSD session in the library.
 - A conversational projection of a world. The projection today is `Generate`, which knows three surfaces and refuses a fourth. A shell that renders a question or a flow belongs to this work.
@@ -8998,7 +8998,7 @@ The field's fast editor treats the status bar as clutter. The pattern keeps one 
 
 That leaves section 7.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **The web projection carries the structure; roles, labels and intents travel in the native shell's accessibility tree.** `ToHtml` emits an identifier, a style and the text. The tree that carries roles is a separate artefact, as the block above shows, so a browser shell would infer from bare `div`s what the native shell emits. The accessibility library the plan adopts serves the native shells, and a web adapter for it is ahead.
 
@@ -9036,11 +9036,11 @@ This is the loss against the library's own page. It stands beside "a status bar 
 
 **`Orphans()` counts containers.** Whether a layout-only box must serve a verb is the constitution's rule to state.
 
-What is built: the interface as text with a court; four closed kinds, a closed list of nineteen roles, a closed field set, a mandatory rationale, a round trip to a fixpoint. Two projections, with a recorded table of three divergences and a page that can say DISAGREE. The accessibility tree, and a bridge that reaches a real screen reader's interface on Windows, which I read in its source. A declared value changes and the screen follows, with focus kept. A page hosted on the loopback, and a backend that refuses to leave the loopback unsigned. A world that proposes, screens declared as intents, one generated browser surface. And one binary shell, the sound plane's listening bench, in about seven hundred lines of Zig, which I read in its source.
+Built: the interface as text with a court; four closed kinds, a closed list of nineteen roles, a closed field set, a mandatory rationale, a round trip to a fixpoint. Two projections, with a recorded table of three divergences and a page that can say DISAGREE. The accessibility tree, and a bridge that reaches a real screen reader's interface on Windows, which I read in its source. A declared value changes and the screen follows, with focus kept. A page hosted on the loopback, and a backend that refuses to leave the loopback unsigned. A world that proposes, screens declared as intents, one generated browser surface. And one binary shell, the sound plane's listening bench, in about seven hundred lines of Zig, which I read in its source.
 
-What is designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar, whose classes in the library are the next step. The facet as data, with its group, its place in the life, its artefact kinds, its court and its profile. The rail bound to focus, and the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
+Designed: the shell kit with two shells; the chrome as closed kinds named for the spine, ribbon, rail and status bar, whose classes in the library are the next step. The facet as data, with its group, its place in the life, its artefact kinds, its court and its profile. The rail bound to focus, and the governance cells read from the courts, with a guard that a cell never shows a state the court did not emit.
 
-What lies ahead: an IDE of this family. A list of the twenty-two verbs inside the library, with a refusal of an unknown verb: today `transfer_funds` passes the court. A guard judging a shell against the verbs. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. The pieces run today, and an IDE of this family is the work they lead to.
+Next: an IDE of this family. A list of the twenty-two verbs inside the library, with a refusal of an unknown verb: today `transfer_funds` passes the court. A guard judging a shell against the verbs. An editor. A measured latency. I tell the pattern as designed, with the running pieces as evidence: the court of the chrome, the two projections, the accessibility tree, the page hosted on the loopback. The pieces run today, and an IDE of this family is the work they lead to.
 
 ## 8. Six doors
 
@@ -9343,7 +9343,7 @@ The memo's words: the peer leads every row, fib and binsearch are near-ties, and
 
 Section 7 says where the layers and the engine stop.
 
-## 7. What it covers today
+## 7. Where it stands
 
 **In the lean layer, lists run and strings stop at the engine.** What does a string of the core give back when I ask it for its content?
 
@@ -9365,11 +9365,11 @@ The runtime answers: `Error (R3) : Calling Function without definition: stkengin
 
 **The third layer is written, and its wiring is ahead.** Its thirty-two classes are all in one folder, and you load them by hand. I ran the first of them that way, outside the blocks, and it counted a string of eleven characters. The other thirty-one are the next to run. Their library layer in the engine is ahead.
 
-What is built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, counted in the sources. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own state: an archive digest is recorded for nine of the nineteen, and a version for sixteen.
+Built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, counted in the sources. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own state: an archive digest is recorded for nine of the nineteen, and a version for sixteen.
 
-What is designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
+Designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
 
-What lies ahead: a Linux and a macOS engine in service; a measured pass of the library on the new runtime under Linux; a single executable with no dependency; an engine test count that I may print.
+Next: a Linux and a macOS engine in service; a measured pass of the library on the new runtime under Linux; a single executable with no dependency; an engine test count that I may print.
 
 ### Haro
 
@@ -9649,13 +9649,13 @@ And the super-app hosts lead in installed base. The design names what the indust
 
 Now I say where the chapter stops.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
+Built: the constellation of worlds with its bonds and norm-gated crossings, retirement, revival, hot swap and nesting; the payments sandbox and the production gate; the speed budget declared and judged; the graph rules the Lock's construction uses.
 
-What is designed: the Lock as a rule of the library, which the record holds as a design; the near-natural idiom of the constellation, with the verbs the design names for the class.
+Designed: the Lock as a rule of the library, which the record holds as a design; the near-natural idiom of the constellation, with the verbs the design names for the class.
 
-What lies ahead: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August set for the next cycle. The interface rules as checks, the two-gesture rule among them, a seventy-fifth percentile expectation, and browser-side timing, whose design is the first step ahead. And the platform's path after 25 August 2026, where the record ends. As the record leaves it, the first version's next steps are production at the restaurant, the go-live gate, and a real order from a real customer. The owner's tightened speed thresholds stay his. I say that such a budget exists, and keep its numbers with him.
+Next: the restaurant's live payment adapter, which the library's charter calls a later task and the owner's decision. A measurement of the budget on a real mobile network, which the project's dashboard of 23 August set for the next cycle. The interface rules as checks, the two-gesture rule among them, a seventy-fifth percentile expectation, and browser-side timing, whose design is the first step ahead. And the platform's path after 25 August 2026, where the record ends. As the record leaves it, the first version's next steps are production at the restaurant, the go-live gate, and a real order from a real customer. The owner's tightened speed thresholds stay his. I say that such a budget exists, and keep its numbers with him.
 
 And what runs today is ordinary. The worlds are single HTML files, one per world, each carrying its vendored framework and served as written. The server is a Node program of a few hundred lines. It uses five of Node's own modules, serves the worlds on the local network, and keeps one thing: a journal, chained by hashes, replayed at restart. The first management application has a phone wrapper around a web view. It all runs on these ordinary pieces, and the platform on the Softanza engine is the work ahead. The library is the project's design reference. The constellation is, in the site's words, a design the library can run. The restaurant runs on the pieces above.
 
@@ -9906,11 +9906,11 @@ The field leads in actual use: such a platform is often one that a bank's audito
 
 Where I think this stands apart is that the chart is the data and the court is a rule over it. A chart is a text, a rule is data, a finding names the rule and the position, and the report is one verdict. The library's own comparison table for this feature is all wins, undated, with cost figures that cite nothing, and I will not print it.
 
-Now what it covers today, in the stage words.
+Now where it stands, in the stage words.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
+Built: the organisation chart as a model and as text; the validators of the regional regulator and of segregation of duties; the seven regimes as one mechanism with the SOX exemplar. Built too: a rule written as data, and the one report with its verdict.
 
 Four things are designed, or built in part.
 
@@ -10231,13 +10231,13 @@ The field leads in people. A decision table is a thing a trained analyst already
 
 The next section lists what is built, what is designed and what lies ahead.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
+Built: a rule as an object, its number changed and the model judged again; the rule governor that names a dead rule; the checkpoint; authority against risk; the lineage; offline as a capability.
 
-What is designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation of its own, apart from the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library holds the pieces today. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves, outside this chapter's blocks.
+Designed: the hub and its study, whose schedule is in the future; a rule language that a local programmer can learn; and the study's promises about rules. The language's sample in the study is written in a notation of its own, apart from the library's. The study promises that a rule is checked before it applies, that its effect is shown before it is applied, that it can be undone and that its history is kept. The library holds the pieces today. They are the rule governor, shown above, and the refusals of an unknown rule type, a missing file and a duplicate name, which a narrated test of the library proves, outside this chapter's blocks.
 
-What lies ahead: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound; a store of rule versions is the piece ahead, as far as my search of the library reached. The hub, built. Offline as a mechanism: a class of the library that keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
+Next: a version history of a rule with an undo. The lineage records the decision, and the rule is rebound; a store of rule versions is the piece ahead, as far as my search of the library reached. The hub, built. Offline as a mechanism: a class of the library that keeps entries on a device and sends them when the network returns. And a customer platform on the Softanza engine.
 
 Six doors follow, one for each reader.
 
@@ -10540,17 +10540,17 @@ The field leads in speed. The runtime Softanza measured itself against was faste
 
 The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that a person looking at them is the next step.
 
-Where I think the record stands apart is that what its work covers today is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
+Where I think the record stands apart is that where its work stands is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
-## 7. What it covers today
+## 7. Where it stands
 
 This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the chart validator stands in the library, apart from the bank's product. The organisation's hub is the next to build, and its offline mechanism is to come.
+Built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the chart validator stands in the library, apart from the bank's product. The organisation's hub is the next to build, and its offline mechanism is to come.
 
-What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
+Designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
-What lies ahead: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; and a named person's verdict on each of them.
+Next: a customer platform on the engine; the customers' declarations written as Softanza's own, as files; the bank's word on it; the restaurant's record after 25 August; the organisation's hub; an offline mechanism in the library; a live payments run against the organisation's sandbox; and a named person's verdict on each of them.
 
 The sum of every next step is the line that chapter 33 sets as the next milestone: *the solution ran on Softanza's own engine, and this is what the user said.* The customers' declarations are its first piece, and they are ahead. The site says they are being written as Softanza's own. On 8 October 2026 I searched the restaurant's repository, the bank's delivery and the organisation's study folder for a file of them. On 9 October 2026 I searched again, read-only, thirteen repositories beside the library. The file that declares a customer's platform as Softanza's own is the one to write next. The chapter's word for the declarations is *ahead*, and the stage line at the top says so.
 
@@ -10566,7 +10566,7 @@ The sum of every next step is the line that chapter 33 sets as the next mileston
 
 **The educator.** Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.
 
-**The agent.** You may read the tables and quote any cell. A cell marked ahead stays ahead in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it.
+**The agent.** You may read the tables and quote any cell. A cell marked next stays next in your sentence. If you turn it into a built one, the next reader of the record will set your sentence beside it.
 
 ## 9. Exercise
 
@@ -10728,13 +10728,13 @@ Where I think the record stands apart is in one habit: each law carries the fail
 
 Section 7 gives the sum in the stage words.
 
-## 7. What it covers today
+## 7. Where it stands
 
-What is built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's sixteen house rules are built, five of them over its code graph.
+Built: the protocol and its files, the dated memos, the ledger of rulings, three hooks that run in every session on this machine, and the instrument that measures stamps. The library's sixteen house rules are built, five of them over its code graph.
 
-What is designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
+Designed: a watcher that wakes a session when a file arrives, which, in my view, is the right replacement for the clocks and is still to come. And a court of style for the code that a programmer or an AI agent writes with the library. The house style would then be held by a machine as well as by my reading.
 
-What lies ahead: a token figure in the cost record; a team outside this estate using the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and the tool that performs it is the next step. My study of the record named one more measure to take: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. Its first reading is ahead as well.
+Next: a token figure in the cost record; a team outside this estate using the protocol; and a check that a word reads well in the reader's own language. The word law asks for that check, and the tool that performs it is the next step. My study of the record named one more measure to take: the protocol that makes the record trustworthy also costs energy the product needs, and I should watch the ratio. Its first reading is ahead as well.
 
 ## 8. Six doors
 
@@ -10923,15 +10923,15 @@ The field leads on speed. The runtime Softanza measured itself against was faste
 
 Where I think the record stands apart is in what it holds itself to. Every reference has a document. Every stage has a word. By the design document, the emulated deployment runs the same artefact that ships. A fake cannot ship and an AI model cannot commit. And a perception is a named, dated, quoted line, which a logo on a home page does not carry.
 
-## 7. What it covers today
+## 7. Where it stands
 
 This chapter looks ahead, so this section is short.
 
-What is built: the floor. Declare, build, deploy in order; rehearse on a twin; refuse a fake at the production gate; commit only through a governed actor.
+Built: the floor. Declare, build, deploy in order; rehearse on a twin; refuse a fake at the production gate; commit only through a governed actor.
 
-What is designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
+Designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
 
-What lies ahead: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. Naming the project that moves to the engine first, and the person who will perceive it, is the next step; I write both when the record carries them.
+Next: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. Naming the project that moves to the engine first, and the person who will perceive it, is the next step; I write both when the record carries them.
 
 ## 8. Six doors
 
@@ -10941,7 +10941,7 @@ What lies ahead: a customer solution running on the Softanza engine, a named per
 
 **The designer.** What you design is judged last by a person's sense. An AI model's opinion of a picture is a result; a person's is the verdict.
 
-**The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is ahead.
+**The decision-maker.** Read the stage word before the promise. Today the floor is built; the customer run on the engine is the next milestone, and its stage word is next.
 
 **The educator.** Teach that unperceived is a state and not a failure. An honest report can ship on it, if it says so.
 
@@ -11305,8 +11305,6 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **agent.** A program that proposes and cannot commit. In the library an AI agent is a file, judged at load, whose AI model, if it has one, holds no capability to produce effects. It names an actor and never a person. Chapters 17, 20.
 
-**ahead.** One of the three stage words: the work the subject leads to, as the record names it; the front matter's key is `reached`. Chapter 3.
-
 **architect.** What one holds in the scope of a solution: the profile, the worlds and the governance. Not a rank. Chapter 23.
 
 **authority.** The level at which an actor may act, compared with the risk of the act. Distinct from permission: permission is held, and authority must cover the risk. Chapter 30.
@@ -11373,6 +11371,8 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **near-natural chain.** A sentence in which every link is a real call, so that the human is the parser. Chapter 13.
 
+**next.** One of the three stage words: the work the subject leads to, as the record names it; the front matter's key is `reached`. Chapter 3.
+
 **pack.** A human language as a block of data. Chapter 13.
 
 **perception.** What a person has seen or heard of a thing, named, dated, and quoted. A comparison proves sameness and never rightness. Chapters 21, 33.
@@ -11407,7 +11407,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **spine.** The nine chapters that carry the whole argument and can be read alone. The preface.
 
-**stage word.** One of built, designed, ahead, printed at the head of each chapter's section 7. Chapter 3.
+**stage word.** One of built, designed, next, printed at the head of each chapter's section 7. Chapter 3.
 
 **stamp.** The time a session writes on a message, a memo or a commit. Read from the clock, never composed; an instrument compares every stamp with its commit and publishes the rows. Chapter 32.
 
@@ -12090,9 +12090,9 @@ An agent that quotes a promise should quote its verdict with it.
 
 ### What an AI agent may do, and may not
 
-- **You may quote any cell.** A table of this book is data. A row that says "ahead" is a row you may repeat as ahead.
-- **A cell marked ahead stays ahead in your sentence.** If you turn it into a built one, the next reader will set your sentence beside the record, and the book says so in chapter 31.
-- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Ahead means the work the subject leads to, as the record names it.
+- **You may quote any cell.** A table of this book is data. A row that says "next" is a row you may repeat as next.
+- **A cell marked next stays next in your sentence.** If you turn it into a built one, the next reader will set your sentence beside the record, and the book says so in chapter 31.
+- **You may rely on the stage words.** Built means the code, a guard and a run. Designed means a document and nothing that runs. Next means the work the subject leads to, as the record names it.
 - **You may rely on a promise only with its verdict, and only at the commit it names.** A number that the book prints is a number read from a file or a run, at the date the page gives.
 - **A draft is a draft.** A chapter marked as a draft is not the author's final word, and "the author read it" is a status that only the author sets.
 
