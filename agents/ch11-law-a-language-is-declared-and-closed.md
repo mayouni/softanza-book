@@ -6,7 +6,7 @@ Stage: built: the natural layer's vocabulary as data in five languages, with its
 
 Run: 11 of 11 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
-In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the natural layer is not yet closed, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
+In this chapter I state the law of Part III and run it. I begin with a sentence that runs because every word of it is in a dictionary the library owns, in English, Hausa, French and Arabic. I show what the library says about a word it does not know. Then I declare the shape of an answer as a schema, judge answers against it, and show the one thing a grammar cannot kill: a false answer in the right shape. I say which guards prove this, where the field is ahead, and where the closing of the natural layer stands, which the law states. The law itself is one sentence: a language is declared and closed, and whatever speaks it, a person or a model, is judged by it.
 
 ## What the AI age changes here
 
@@ -182,7 +182,7 @@ done
 
 > run: kept
 
-And patterns are small languages of their own, though not yet closed ones: chapter 15 shows the pattern classes accepting a word they do not know, without complaint. The shape of a list is declared, not written as a loop:
+And patterns are small languages of their own, open at this stage, with their closing to come: chapter 15 shows the pattern classes accepting a word they do not know, without complaint. The shape of a list is declared, not written as a loop:
 
 ```haro
 ? Lx("[@N, @S]").Match([42, "hello"])
@@ -207,7 +207,7 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 **I refused the open escape.** The meta-language that declares languages in the estate lives outside this library. Its founding rule refuses to define any form that would let a sentence reach host code, call a function, evaluate a string or touch a file. Not forbidden: unexpressible. An internal language that cannot refuse arbitrary host code is, in the words of the estate's field study, an API wearing a language's costume.
 
-**I refused natural language as a way to declare.** Natural language asks; it never declares. A model may draft a declaration, and by the vision's rule, which is designed and not yet built, the draft enters the world only as a proposal: the model proposes, the court decides, a person ratifies.
+**I refused natural language as a way to declare.** Natural language asks; it never declares. A model may draft a declaration, and by the vision's rule the draft enters the world only as a proposal: the model proposes, the court decides, a person ratifies. That rule is designed, and building it is the next step.
 
 **I kept the promise of 2020 and changed its mechanism.** My first slide promised executable natural language. The vision of 2026 judged that slogan: it promised more than a court can defend, because a natural sentence can be ambiguous and a lie can be grammatical. So the naturalness stays at the door, where a sentence asks or drafts, and the execution belongs to closed languages a court can judge. I built the natural layer that way long before the vision named it. Only words defined in the dictionary are interpreted. Every other word is skipped and reported, or refused in strict mode, never guessed.
 
@@ -217,7 +217,7 @@ The chapters of this part prove the law from five sides. Chapter 12 tells a lang
 
 ## 5. The court
 
-`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. Its run does not yet reach its end at this commit. I ran it twice on 8 October 2026, for chapter 13, and each time it stopped with an error raised from a string-splitting function, before its last assertion. So the page counts its assertions and does not claim its verdict. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
+`multilingual_pack_narrated` proves the languages as data: the packs, the programs in French and Arabic, a pack added at runtime, and the program paraphrasing back in its own language. `semantic_resolver_narrated` proves the unknown word with its suggestion, the strict mode, and the allow-list under which everything off the list is grammatically impossible. At this commit its run stops before its end. I ran it twice on 8 October 2026, for chapter 13, and each time it stopped with an error raised from a string-splitting function, before its last assertion. So the page counts the assertions it reaches. `literate_templates_narrated` proves that a template is a contract. `question_narrated` proves that a yes-or-no verdict records its why. `structuredoutput_narrated` proves the court of structured output, including the lie it lets through. `schema_grammar_narrated` proves the grammar compiler, and `constrained_decoding_narrated` the sampler that holds a model to it.
 
 Seven guards prove the law; the next section says where the field is ahead of it.
 
@@ -233,7 +233,7 @@ And the age cuts both ways. Generated code makes careless language-making cheap 
 
 What is built: the natural layer, its vocabulary as data in five languages, English, Hausa, French, Arabic and Turkish, and its refusals. Built too: the court of structured output with its grammar compiler and its sampler, and the pattern languages. These accept a word they do not know today; closing them is to come.
 
-What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. The library cannot run it yet. The vision's text says the forge has not yet forged (made a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and the vision has not caught up. Chapter 12 tells it with its limits. A grammar for every declared language is designed and to come.
+What is designed: the forge that would produce, from a language's declaration alone, its parser, its court, its printer (the part that writes a sentence back out) and its grammar for a model. The forge is built outside the library and designed for the library: a first sketch of it was built outside the library in October 2026. Running it from the library is to come. The vision's text predates the forging (making a language's parts from its declaration). The sketch has since forged courts and grammars for several languages, judged by those languages' own fixtures, and updating the vision is to come. Chapter 12 tells it with its limits. A grammar for every declared language is designed and to come.
 
 What is absent, and the law states it. The natural layer is not closed all the way down. One form, a list written inside brackets, is still handed to the host to evaluate. Does a host function inside the brackets run? Try one:
 
@@ -246,7 +246,7 @@ What is absent, and the law states it. The natural layer is not closed all the w
 
 The function `upper` is not a word of the natural dictionary, and the list came back as `[ "X", 1 ]`. It ran anyway! The record already knows this escape and has routed its repair. Until the repair lands, "the natural layer is a closed language" is true of its words and not of its lists, and this book will say so.
 
-And the Hausa pack does not yet read the letter ɗ, which standard Hausa spelling uses. The pack stores it in an encoding that does not carry it yet. When I probed it on 8 October 2026 on the snapshot before this commit, a sentence written with the letter was not read, and the pack did not report it. The Hausa in this chapter is written without the hook, the way the pack reads it today. The record holds no reading of the pack's sentences by a Hausa speaker. The foreign-language sentences printed in this chapter come from the library's narration and guards, or are composed from its vocabulary. No native speaker has read them as far as the record shows.
+And the Hausa pack reads Hausa written without the letter ɗ, which standard Hausa spelling uses; carrying that letter in the pack's encoding is to come. When I probed it on 8 October 2026 on the snapshot before this commit, a sentence written with the letter passed unread and unreported. The Hausa in this chapter is written without the hook, the way the pack reads it today. The foreign-language sentences printed in this chapter come from the library's narration and guards, or are composed from its vocabulary.
 
 These are the limits; the next section opens six doors on them.
 
@@ -278,6 +278,6 @@ I left this one in your hands. Section 7 says that a list written inside bracket
 
 > run: exercise
 
-Look at what the library does with the function, and say in one sentence what a closed natural layer would have done instead. When you have, you will know why "the natural layer is a closed language" is true of its words and not yet of its lists.
+Look at what the library does with the function, and say in one sentence what a closed natural layer would have done instead. When you have, you will know why "the natural layer is a closed language" is true of its words today, and of its lists once the repair lands.
 
 Chapter 12 is *A language, declared*. Its principle: declaring a language is as easy as declaring a variable.

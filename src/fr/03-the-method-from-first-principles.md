@@ -118,7 +118,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 La réponse de l'hôte est inchangée : `TRUE`. La réponse étendue lit votre déclaration et dit `FALSE` ! « La vérité devient une affaire de politique », dit la narration, et la politique est écrite là où vous pouvez la lire.
 
-Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La limite, en trois mots d'étape. Le premier, **construit**, veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné ; c'est le *construit* du site lui-même. Le deuxième, **conçu**, couvre ce que le site appelle *en construction*, *spécification* et *proposition ratifiée*. Le troisième, **absent**, couvre ce que le site appelle *nommé*, un nom sans rien derrière lui pour l'instant, et ce que personne n'a nommé. Cinq mots du site, trois du livre. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
+Voilà donc la méthode, sous la forme que vous rencontrerez dans chaque chapitre après celui-ci. Un concept tel que le terrain le tient. Le seul principe auquel le dossier revient. La reconception, en code qui s'exécute, avec sa promesse sous chaque bloc. La décision, et ce qui a été refusé. Le tribunal qui la prouve, par son nom. Le terrain, et où il mène. La limite, en trois mots d'étape. Le premier, **construit**, veut dire que le code existe, qu'une garde existe et qu'un bloc a tourné ; c'est le *construit* du site lui-même. Le deuxième, **conçu**, couvre ce que le site appelle *en construction*, *spécification* et *proposition ratifiée*. Le troisième, **absent**, couvre ce que le site appelle *nommé*, un nom dont le travail est à venir, et ce que le dossier laisse sans nom. Cinq mots du site, trois du livre. Puis six portes, une pour chaque sorte de lecteur, et un exercice.
 
 Et le livre est jugé comme la bibliothèque l'est. Chaque bloc qu'il contient s'est exécuté dans la bibliothèque la nuit où la page a été construite, au commit imprimé en haut de la page. Une page dont les promesses ne sont pas tenues ne se construit pas.
 
@@ -134,7 +134,7 @@ Il n'existe pas de fiche unique d'une décision appelée « la méthode ». La m
 
 **J'ai refusé la grille seule.** Les documents de la bibliothèque contiennent des dizaines de grilles de comparaison, et dans celles-ci la colonne de Softanza gagne presque chaque ligne. Un lecteur qui ne voit que ces grilles a raison d'en demander davantage qu'une grille. L'honnêteté du dossier est ailleurs : dans les sections des études de terrain intitulées « ce que le terrain a et qui manque à Softanza, honnêtement », et dans des chiffres mesurés. Quand le runtime sous Softanza a été mesuré de nouveau en septembre 2026 contre celui auquel il était comparé, le résultat annoncé auparavant ne s'est pas reproduit. La perte a été consignée le jour même, dans une note interne. C'est la règle que suit ce livre : une perte est imprimée à côté du gain, dans la même section.
 
-**J'ai refusé d'appeler une lecture un recensement.** Les quarante-six concepts sont une lecture du dossier par une session, non une liste que j'ai tranchée ligne par ligne. L'annexe A imprime le registre de quarante-six lignes tel que l'étude le donne, avec la colonne propre au livre, comme annexe de travail : les lignes n'ont pas été tranchées une à une.
+**J'ai refusé d'appeler une lecture un recensement.** Les quarante-six concepts sont une lecture du dossier par une session, non une liste que j'ai tranchée ligne par ligne. L'annexe A imprime le registre de quarante-six lignes tel que l'étude le donne, avec la colonne propre au livre, comme annexe de travail.
 
 Voilà les cinq refus ; voyons maintenant le tribunal qui juge les blocs ci-dessus.
 
@@ -148,9 +148,9 @@ Le tribunal est nommé ; vient ensuite le terrain, et où il mène.
 
 ## 6. Le terrain, et où il mène
 
-Le terrain mène en adoption. Les fiches de décision sont un standard léger que beaucoup d'équipes utilisent, avec des modèles et des outils autour. L'élément décision de ce livre existe dans ce livre et dans une étude du dossier, et pas encore comme donnée dans la bibliothèque. Les exemples de la documentation peuvent être exécutés par l'outil standard de Python, et Rust les exécute par défaut. Les promesses de Softanza sont jugées par les exécuteurs propres de la maison, qu'aucun outil extérieur ne lit encore. Et le terrain compare par grille, comme les pages du dossier le font aussi ; une grille seule est un début, et c'est pourquoi la section 4 demande la perte à côté du gain.
+Le terrain mène en adoption. Les fiches de décision sont un standard léger que beaucoup d'équipes utilisent, avec des modèles et des outils autour. L'élément décision de ce livre existe dans ce livre et dans une étude du dossier ; le porter dans la bibliothèque comme donnée est la prochaine étape. Les exemples de la documentation peuvent être exécutés par l'outil standard de Python, et Rust les exécute par défaut. Les promesses de Softanza sont jugées par les exécuteurs propres de la maison. Et le terrain compare par grille, comme les pages du dossier le font aussi ; une grille seule est un début, et c'est pourquoi la section 4 demande la perte à côté du gain.
 
-Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. Je tiens cela pour une vue, non pour un résultat. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision ne s'exécute pas. Un exemple ne dit pas ce qui a été refusé. Ici, ils sont un seul objet.
+Là où je pense que Softanza se distingue, c'est en un seul endroit : le réexamen est mené jusqu'au bout. Je tiens cela pour une vue, non pour un résultat. La décision est écrite, la reconception s'exécute, la promesse est jugée à la construction, et le mot d'étape dit jusqu'où chaque pièce est allée. Une fiche de décision se lit ; un exemple s'exécute. Ici, ils sont un seul objet : la décision, ce qu'elle a refusé, et le code qui s'exécute.
 
 ## 7. La limite
 
@@ -168,7 +168,7 @@ Là s'arrête ce chapitre ; six portes suivent, une pour chaque sorte de lecteur
 
 **L'analyste.** Votre règle est une déclaration, et son verdict nomme la règle qui a échoué, par son numéro.
 
-**Le concepteur.** Le mot d'étape fait partie de l'interface. Un produit qui n'existe pas encore le dit, en un mot que vous pouvez vérifier.
+**Le concepteur.** Le mot d'étape fait partie de l'interface. Un produit dit jusqu'où il est allé, en un mot que vous pouvez vérifier.
 
 **Le décideur.** Demandez à chaque fournisseur la perte à côté du gain. Le chapitre 1 en imprime une, avec sa date : le runtime sous Softanza est derrière celui auquel il était comparé, d'un facteur entre un et deux sur chaque ligne, mesuré le 13 septembre 2026 ; le chapitre 27 donne les lignes.
 

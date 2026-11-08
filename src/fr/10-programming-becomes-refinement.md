@@ -238,7 +238,7 @@ t {
 
 À zéro, `CanRevert()` a imprimé `0`. Un seul `Redo()`, et la valeur est `0.21`, le premier pas de nouveau.
 
-Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute. La structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. Je les ai exécutés plus haut dans l'ordre du récit, non dans celui du code. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b. Le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026, et le compte de la conception n'a pas été changé. Je rapporte ce qui tourne : cinq contrôles.
+Voilà la barrière sous la forme que la bibliothèque lui donne. Cinq contrôles, dans l'ordre où le code les exécute. La structure de la proposition, puis les contraintes du point, puis la gouvernance, puis la confiance de l'origine, et enfin la dérivation entre les points. Je les ai exécutés plus haut dans l'ordre du récit, non dans celui du code. L'en-tête du fichier appelle cela une barrière à quatre étapes sur une ligne et à cinq sur une autre. Le code numérote ses contrôles 1, 2, 3, 4 et 4b. Le contrôle de confiance a été ajouté aux quatre le 16 juillet 2026, et le compte de la conception est resté le même. Je rapporte ce qui tourne : cinq contrôles.
 
 Derrière la barrière se tiennent des décisions, et ce que j'ai refusé.
 
@@ -262,7 +262,7 @@ Vient ensuite le terrain, et où il mène.
 
 Le terrain mène en infrastructure, où planifier et appliquer sont la pratique quotidienne de nombreuses équipes et où l'application parle à de vrais fournisseurs ; c'est une connaissance générale, comme dans la section 1. La barrière de Softanza porte sur le changement apporté au code, que le terrain traite par une relecture.
 
-Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit qui n'a jamais été déclaré n'est pas un raffinement ici ; il est hors de la barrière.
+Les outils du terrain mènent en étendue : ils ne sont liés ni à une bibliothèque, ni à un langage, ni à un bouton déclaré. La barrière de Softanza juge ce que le code a déclaré comme point. Un changement apporté à un endroit non déclaré n'est pas un raffinement ici ; il est hors de la barrière.
 
 Et sur la confiance, une bonne part de l'approche du terrain est faite pour passer à l'échelle de n'importe quel modèle d'IA. La mienne repose sur une déclaration par point.
 
@@ -287,7 +287,7 @@ Ce qui est construit, et où cela s'arrête : les limites de la barrière telle 
 
 **L'analyste.** La règle qui couvre plusieurs points, c'est à vous de la déclarer, et la barrière la juge sur l'état que le changement produirait.
 
-**Le concepteur.** La cascade est ce que vous lisez à la place du diff : pour un point, quelle ligne et quels points sur elle ; pour une classe, quelles classes héritent. Ce sont deux cascades, pas encore une seule.
+**Le concepteur.** La cascade est ce que vous lisez à la place du diff : pour un point, quelle ligne et quels points sur elle ; pour une classe, quelles classes héritent. Ce sont deux cascades ; les réunir en une seule est l'étape suivante.
 
 **Le décideur.** Qui peut tourner quel bouton est une permission et une autorité contre un niveau de risque, et la décision est enregistrée avec son autorité du moment.
 

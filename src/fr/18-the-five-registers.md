@@ -61,7 +61,7 @@ oKB {
 
 La question offre les valeurs connues sous forme de numéros, et `2` a choisi `olives`.
 
-Que répond la porte à un numéro que personne n'a offert ? Exécutez-le :
+Que répond la porte à un numéro hors des options offertes ? Exécutez-le :
 
 ```haro
 oKB {
@@ -157,7 +157,7 @@ oKS {
 }
 ```
 
-La première valeur a été admise, et la seconde refusée avec la raison de la loi : `'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique`. Le refus arrive à une personne, comme un seul point de contrôle. Prenez garde à ce que vous lisez là-dedans. Le choix entre Mario et Giovanni a été fait par l'ordre. Il n'a pas été fait par une personne. La conception promet autre chose, et la section 7 dit quoi.
+La première valeur a été admise, et la seconde refusée avec la raison de la loi : `'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique`. Le refus arrive à une personne, comme un seul point de contrôle. Prenez garde à ce que vous lisez là-dedans. Le choix entre Mario et Giovanni a été fait par l'ordre, non par une personne. La conception promet autre chose, et la section 7 dit quoi.
 
 **Le troisième registre, la formule.** Une formule tapée en réponse est-elle évaluée ? Exécutez-le :
 
@@ -202,7 +202,7 @@ done
 #--> Softanza's own agent 'induction' is RESERVED, not wired yet -- refusing rather than returning a stub (LAW 3). See StzOwnAgents().
 ```
 
-Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence. Je tiens le silence pour la pire réponse, comme une vue et non comme un résultat : le lecteur qui a offert les exemples n'est pas informé qu'ils n'ont pas été compris. J'ai trouvé une seconde forme de la même faute, avec les mêmes exemples tapés comme une seule chaîne, jointe par une virgule. L'exercice à la fin de ce chapitre vous la remet.
+Ni admis ni refusés : `[ ]` et `[ ]`, le but toujours `pursuing`, et pas un seul point de contrôle ! Ce n'est pas le refus que décrit le protocole. C'est le silence. Je tiens le silence pour la pire réponse, comme une vue et non comme un résultat : le lecteur qui a offert les exemples n'apprend pas que la porte ne les a pas compris. J'ai trouvé une seconde forme de la même faute, avec les mêmes exemples tapés comme une seule chaîne, jointe par une virgule. L'exercice à la fin de ce chapitre vous la remet.
 
 Ainsi trois des cinq registres sont câblés, l'un d'eux sous sa forme la plus simple, un séparateur. Deux ne le sont pas. Je préfère que vous le rencontriez ici plutôt que sur une page de moi qui aurait dit cinq.
 
@@ -392,7 +392,7 @@ oKF2 {
 
 ## 5. Le tribunal
 
-`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace, et que la question est menée par le système, nomme son sujet et dit pourquoi il demande. Elle prouve que « X and Y » et une structure de données sont admis. Elle prouve qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle. Elle prouve enfin que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, et les options numérotées. Elle prouve le refus d'un numéro que personne n'a offert, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte et ne l'exécute pas ; le bloc du tuteur ci-dessus ne fait que lire le cours.
+`wisecoding_narrated` prouve que l'écart est calculé à partir de l'espace, et que la question est menée par le système, nomme son sujet et dit pourquoi il demande. Elle prouve que « X and Y » et une structure de données sont admis. Elle prouve qu'une loi d'unicité refuse par la conversation et que le refus atteint un point de contrôle. Elle prouve enfin que conclure avec un écart ouvert est refusé. `wisecoding_rich_narrated` prouve le but suivi jusqu'à accompli ou révoqué, le cadre, et les options numérotées. Elle prouve le refus d'un numéro hors des options offertes, la durée de vie d'un point de contrôle, et la fluidité qui n'est revendiquée qu'avec un modèle. `ownagentstack_narrated` prouve la liste de cinq, le wise coder câblé, l'agent réservé qui lève une erreur, et l'écart laissé à une personne. `tutor_gaps_narrated` prouve la question d'écart de l'exercice dans chaque langue, et qu'une étape sans question dans une langue est rouge, jamais une autre langue. Elle écrit des répertoires, aussi le livre la compte au lieu de l'exécuter ; le bloc du tuteur ci-dessus ne fait que lire le cours.
 
 Trois des gardes impriment leur propre total et se terminent en appelant `pf()`, qui imprime le temps et la version du runtime puis arrête l'exécution par une levée d'erreur. C'est leur façon de finir. `tutor_gaps_narrated` se termine par `Summary()`, qui imprime le total et un état, et ne lève pas d'erreur.
 
@@ -438,7 +438,7 @@ Choisissez un petit monde à vous, une boutique, une classe, une clinique, avec 
 
 1. un mot simple ;
 2. un numéro qui choisit une valeur que la première réponse a fait connaître ;
-3. un numéro que personne n'a offert ;
+3. un numéro hors des options offertes ;
 4. deux valeurs à la fois, pour une relation que vous avez déclarée unique ;
 5. une liste de deux paires d'exemples.
 

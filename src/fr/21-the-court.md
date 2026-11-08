@@ -105,7 +105,7 @@ next
 #--> HEARD
 ```
 
-Il répond `8`, `7` et `HEARD` : huit déclarées, et sept d'entre elles non perçues ! Une seule est entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par moi le 26 septembre 2026, à travers cinq exemples originaux, et mon verdict a été « far from being qualified ». Laquelle des parties échoue, l'accord, le phrasé, le rythme ou le timbre, je ne l'ai pas encore dit. Ces mots sont les miens, et ils sont l'unique perception enregistrée qui soit un refus.
+Il répond `8`, `7` et `HEARD` : huit déclarées, et sept d'entre elles non perçues ! Une seule est entendue, et le dossier de celle-ci porte un nom, une date et un verdict. Le compteur de ce bloc ne fait que compter les non entendues ; aucun compteur ne décide du verdict. L'unique tradition qui a été entendue l'a été par moi le 26 septembre 2026, à travers cinq exemples originaux, et mon verdict a été « far from being qualified ». Ces mots sont les miens, et ils sont l'unique perception enregistrée qui soit un refus.
 
 La loi est celle du domaine de projets, c'est-à-dire de l'ensemble de mes projets, adoptée le 25 septembre 2026 sur mon instruction. Elle exige que le dossier nomme celui qui perçoit et cite le verdict. Sa troisième exigence est celle que j'emporte avec moi : non perçu est un état, pas un échec. Elle refuse aussi deux choses. Elle ne dit pas qu'un humain doit garder chaque commit, parce qu'elle lie à la granularité d'une phase. Et elle ne dit pas qu'elle se généralise à partir d'un volet sans preuve supplémentaire, et elle a été retenue un mois pour ce motif.
 
@@ -161,7 +161,7 @@ StzCloseSecurityLedger()
 
 Il répond `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. Le tribunal a refusé le modèle d'IA, et le registre compte `1` refus, alors qu'aucune ligne du bloc n'y enregistre rien ! C'est la loi du chapitre 17, qu'un modèle ne détient pas la capacité de produire des effets, appliquée à une clé, avec le dossier en plus.
 
-Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections, et que chaque ligne de garantie contient une preuve. Une preuve est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation. Elle vérifie que chaque chemin de garde dans les lignes existe sur le disque, et qu'une fausse ligne plantée, avec une garantie sans preuve, est attrapée. Elle n'exécute pas les gardes, et elle ne vérifie pas qu'une garde affirme ce que dit sa ligne. Cela, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
+Qu'est-ce que la table de garanties lie à une garde ? La méta-garde du modèle de menace vérifie que le document existe avec ses sections, et que chaque ligne de garantie contient une preuve. Une preuve est le chemin d'une garde, une exécution de fuzzing, un contrôle de nomenclature logicielle ou un manuel d'exploitation. Elle vérifie que chaque chemin de garde dans les lignes existe sur le disque, et qu'une fausse ligne plantée, dont la garantie ne nomme aucune preuve, est attrapée. Exécuter les gardes, et vérifier que chaque garde affirme ce que dit sa ligne, c'est le travail de la barrière de sécurité. Donc « chacune liée à une garde » est, exactement, « chacune nomme au moins une preuve, et tout fichier de garde qu'elle nomme existe ».
 
 À ce commit, la table tient 43 garanties. Le site dit 38, sur trois pages. Les deux sont vrais de leurs dates : le document avait 38 lignes le 30 septembre 2026, et les lignes de 39 à 43 ont été ajoutées le 5 octobre. Le nombre du site est au site de le mettre à jour.
 
@@ -198,7 +198,7 @@ oBatch.AddSpan(w2)
 
 La pause n'a pas compté : dans la scène du chronomètre, `ElapsedMs() < 200` a imprimé `1`, et `Record()[:running]` a imprimé `0`, parce que le chronomètre s'était arrêté. Le second chronomètre a rejoint la trace du premier : `w2.TraceId() = w.TraceId()` a imprimé `1`, et le JSON du lot contient l'identifiant de trace `2` fois, pour deux spans.
 
-Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace, comme le montre le `1` ci-dessus, et le même identifiant de span, que ce bloc n'imprime pas. La phrase tient pour l'écho du serveur, que je n'ai pas exécuté, et non pour le chronomètre. C'est une demande à la bibliothèque.
+Prudence sur ce que cela ne prétend pas. La narration dit que le chronomètre rejoint reçoit un nouveau span. J'ai vérifié : il reçoit la même trace, comme le montre le `1` ci-dessus, et le même identifiant de span, que ce bloc n'imprime pas. La phrase appartient à l'écho du serveur, et non au chronomètre. C'est une demande à la bibliothèque.
 
 L'instrument n'est pas la fin du tribunal. Le jugement et l'action vivent à l'intérieur du programme. Un plan de performance est proposé par une machine, et seul un acteur effectif le valide. Que se passe-t-il quand un modèle d'IA demande à le valider, puis quand une personne le fait ? Exécutez-le :
 
@@ -259,7 +259,7 @@ Voyons maintenant les gardes qui prouvent ce qui s'est exécuté.
 
 `testoor_promises_narrated` prouve chaque règle de promesse plantée dans les deux sens. Un mensonge est divergent ; deux mensonges sont tous deux attrapés ; un mensonge court ne se cache pas dans une liste plus loin ; les graphies d'une valeur vraie sont toutes tenues. Une levée d'erreur attendue est honorée ; la prose est non jugée ; un programme qui ne compile pas n'est pas divergent ; une levée d'erreur en cours de route laisse les promesses suivantes non atteintes. `threat_model_narrated` prouve la méta-garde décrite plus haut, y compris son pendant négatif. `security_ledger_narrated`, `secretstore_narrated` et `secret_narrated` prouvent la chaîne et le sceau, le magasin et le secret. `security_sentinel_narrated` prouve la sentinelle déclenchée sur les fronts. `stopwatch_narrated` et `tracing_tail_narrated` prouvent l'instrument et le lot. `governed_loop_narrated` prouve le plan, le contrôle préalable, la validation et l'audit.
 
-La construction compte 11 assertions dans `threat_model_narrated`, un compte statique de ses appels d'assertion. Les autres sont aussi comptées par la construction, et non exécutées ici. Le volet de performance a douze gardes. Je n'imprime pas leur somme, parce que la construction les compte.
+La construction compte 11 assertions dans `threat_model_narrated`, un compte statique de ses appels d'assertion. Les autres sont aussi comptées par la construction. Le volet de performance a douze gardes. Je n'imprime pas leur somme, parce que la construction les compte.
 
 ## 6. Le terrain, et où il mène
 
@@ -285,7 +285,7 @@ Ce qui est conçu :
 
 - Les routes et la carte du lanceur de promesses, son horloge et sa météo, ses excursions, sa perception et sa mutation, et ses tournées héritées. Tout cela est planifié. L'état *non perçu* est nommé dans l'en-tête du lanceur, et le lecteur n'en assigne aucun.
 - La négociation autour d'un plan rejeté, que le modèle de menace appelle conception seulement.
-- Le volet des extensions : les extensions ne sont pas livrées, et le code étranger n'est pas encore gouverné.
+- Le volet des extensions, et avec lui la gouvernance du code étranger.
 
 Ce qui est absent :
 
@@ -354,4 +354,4 @@ remove("raise.haro")
 
 Exécutez-le. Lisez ce que le voyageur dit du mensonge, ce qu'il dit de la levée d'erreur, comment la tournée finit et quel est le code de sortie, puis comparez avec ce que chacune des deux promesses a donné seule à la section 3. La section 7 dit pourquoi je ne peux pas vous le dire : c'est un défaut possible du juge de promesses, que j'ai signalé sans rien construire dessus, et que j'ai laissé non corrigé exprès. Quand vous saurez dire ce que le tribunal répond ici, vous connaîtrez la question que la section 7 confie au volet Testoor.
 
-Le chapitre 22 est *Comparé, honnêtement*. Son principe est celui-ci : une comparaison ne vaut rien tant que la version de l'autre côté et la date ne sont pas sur la page, que l'autre côté n'a pas été exécuté, et que la perte n'est pas imprimée à côté du gain.
+Le chapitre 22 est *Comparé, honnêtement*. Son principe est celui-ci : une comparaison ne vaut rien tant que la version de l'autre côté et la date ne sont pas sur la page, que l'autre côté n'est pas exécuté, et que la perte n'est pas imprimée à côté du gain.

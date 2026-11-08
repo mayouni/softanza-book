@@ -16,7 +16,7 @@ rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
 ---
 
-In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the code of the articles this chapter rests on is not yet runnable at this commit. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
+In this chapter I take the seven steps of the mental model, of which chapter 5 ran the middle four on a list, and run them on a string, in the same order. Then I come to the loop, the place where the steps repeat, and to the four metaphors the library gives you instead: the walker, the checker, the yielder and the performer. I show the condition that all four carry inside an argument, the W condition the engine reads as data, and its WF twin, which runs host code. I say why I made the metaphors a design goal, why I replaced `eval` with a language the engine owns, and where the library at this commit departs from the code of the articles this chapter rests on. The principle under all of it is the chapter's own: when you would write a loop, name the move you are making, walk, check, yield or perform.
 
 ## 1. The concept, as the field holds it
 
@@ -144,7 +144,7 @@ Q([ 3, 8, 5, 12, 1, 9 ]) {
 
 The two agree: `FindW` with the string and `FindWF` with the function both print `[ 2, 4, 6 ]`. `ItemsW` gives the items themselves, `[ 8, 12, 9 ]`.
 
-The string form is the W condition; the function form is WF. They look alike, and the difference matters. The engine reads a W condition as data, in a small language of its own: literals, `@item`, arithmetic, comparisons, and a short list of functions. It cannot call your code. So what happens to a condition that tries to? It is not run:
+The string form is the W condition; the function form is WF. They look alike, and the difference matters. The engine reads a W condition as data, in a small language of its own: literals, `@item`, arithmetic, comparisons, and a short list of functions. It cannot call your code. So what happens to a condition that tries to? It stays data:
 
 ```haro
 o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
@@ -156,7 +156,7 @@ o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 
 Nothing was printed! The positions came back empty, `[ ]`, and `W()` shows the condition for what it is, data: `[ "where", "{ @item > 5 }" ]`. A W condition can be stored, shown to a person, and approved before it runs, because it cannot escape. The WF twin runs host code, and the library's own table says it is not safe with input you do not trust.
 
-The code of the article "Bridging Minds and Code" does not run at this commit, as section 7 says.
+The code of the article "Bridging Minds and Code" departs from the library at this commit, as section 7 says.
 
 The three models of that article, the semantic, the mental and the expression, are one idea in three places. The semantic model is the world of the program as knowledge: an apple is a fruit. The mental model is what you just did: create an object, store data in it, find things inside it, act on the positions. The expression model is the code that says it: select the object, type the name of the action, continue the flow of actions, convert the result into another object. Keep doing so until you have the final answer. So I tell them in words.
 
@@ -238,6 +238,6 @@ o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
 ? @@( o1.FindW('{ @item > 5 and print("hacked") }') )
 ```
 
-Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an AI agent should do about it. When you have solved it, you will know why an empty answer is not yet a proof that nothing matched.
+Run it. The condition begins by asking whether an item is above 5. Look at what comes back, and at what does not, and say why before you go back to the sections. Section 3 says what the engine does with a condition that calls code; section 6 says what that costs, and section 8 says what an AI agent should do about it. When you have solved it, you will know why an empty answer is no proof that nothing matched.
 
 The next chapter turns to the writing style, and to the seven goals. Its principle is one sentence: what you think is what you write.

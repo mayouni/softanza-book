@@ -118,7 +118,7 @@ SetItemsMakingAListFalse([ "false", "wrong", "dangerous" ])
 
 The host's answer is unchanged: `TRUE`. The extended answer reads your declaration and says `FALSE`! "Truth becomes a matter of policy", the narration says, and the policy is written where you can read it.
 
-So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **absent**, covers what the site calls *named*, a name with nothing behind it yet, and what nobody has named. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
+So this is the method, in the form you will meet in every chapter after this one. A concept as the field holds it. The one principle the record returns to. The redesign, in running code, with its promise under each block. The decision, and what was refused. The court that proves it, by name. The field, and where it leads. The limit, in three stage words. The first, **built**, means the code exists, a guard exists, and a block ran; it is the site's own *built*. The second, **designed**, covers what the site calls *in construction*, *specification* and *ratified proposal*. The third, **absent**, covers what the site calls *named*, a name whose work lies ahead, and what the record leaves unnamed. Five words of the site, three of the book. Then six doors, one for each kind of reader, and one exercise.
 
 And the book is judged the way the library is. Every block in it ran inside the library on the night the page was built, at the commit printed at the top of the page. A page whose promises are not kept does not build.
 
@@ -134,7 +134,7 @@ There is no single record of a decision called "the method". The method was deci
 
 **I refused the grid alone.** The library's documents hold dozens of comparison grids, and in them Softanza's column wins almost every row. A reader who sees only those grids is right to ask for more than a grid. The honesty in the record is elsewhere: in the sections of the field studies titled "what the field has that Softanza lacks, honestly", and in measured numbers. When the runtime beneath Softanza was measured again in September 2026 against the one it was compared with, the earlier headline did not reproduce. The loss was recorded the same day, in an internal memo. That is the rule this book follows: a loss is printed beside the win, in the same section.
 
-**I refused to call a reading a census.** The forty-six concepts are a reading of the record by one session, not a list I ruled row by row. Appendix A prints the register of forty-six rows as the study gives it, with the book's own column, as a working appendix: the rows are not ruled one by one.
+**I refused to call a reading a census.** The forty-six concepts are a reading of the record by one session, not a list I ruled row by row. Appendix A prints the register of forty-six rows as the study gives it, with the book's own column, as a working appendix.
 
 Those are the five refusals; now the court that judges the blocks above.
 
@@ -148,9 +148,9 @@ The court has been named; next, the field, and where it leads.
 
 ## 6. The field, and where it leads
 
-The field leads in adoption. Decision records are a light standard that many teams use, with templates and tools around them. The decision element of this book exists in this book and in one study of the record, and not yet as data in the library. Examples in documentation can be run by the standard tool of Python, and Rust runs them by default. The promises of Softanza are judged by the house's own runners, which no outside tool reads yet. And the field compares by grid, as the record's own pages also do; a grid alone is a start, which is why section 4 asks for the loss beside the win.
+The field leads in adoption. Decision records are a light standard that many teams use, with templates and tools around them. The decision element of this book exists in this book and in one study of the record; carrying it into the library as data is the next step. Examples in documentation can be run by the standard tool of Python, and Rust runs them by default. The promises of Softanza are judged by the house's own runners. And the field compares by grid, as the record's own pages also do; a grid alone is a start, which is why section 4 asks for the loss beside the win.
 
-Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. I hold this as a view, not a result. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record does not run. An example does not say what was refused. Here they are one object.
+Where I think Softanza stands apart is in one place only: the rethink is carried all the way down. I hold this as a view, not a result. The decision is written, the redesign runs, the promise is judged at build, and the stage word says how far each piece has gone. A decision record is read; an example is run. Here they are one object: the decision, what it refused, and the code that runs.
 
 ## 7. The limit
 
@@ -168,7 +168,7 @@ That is where this chapter stops; six doors follow, one for each kind of reader.
 
 **The analyst.** Your rule is a declaration, and its verdict names the rule that failed, by number.
 
-**The designer.** The stage word is part of the interface. A product that does not exist yet says so, in a word you can check.
+**The designer.** The stage word is part of the interface. A product says how far it has gone, in a word you can check.
 
 **The decision-maker.** Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by a factor between one and two on every row, measured on 13 September 2026; chapter 27 gives the rows.
 

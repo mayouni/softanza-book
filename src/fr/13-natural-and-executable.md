@@ -184,7 +184,7 @@ Le dictionnaire de phrases n'est pas le seul vocabulaire. Où va un mot qu'il ne
 #--> a-_-b
 ```
 
-La troisième ligne est aussi une limite : elle a imprimé `a-_-b`. Le mot `sep` n'était dans aucun dictionnaire, et il a servi de texte à remplacer. Un mot qu'elle ne connaît pas est un littéral.
+La troisième ligne montre l'autre face de la règle : elle a imprimé `a-_-b`. Le mot `sep` n'était dans aucun dictionnaire, et il a servi de texte à remplacer. Un mot qu'elle ne connaît pas est un littéral.
 
 **Cinq langues comme données.** Le dictionnaire est indexé par sens, et le mot de chaque langue aboutit à un seul identifiant. Un mot français, un mot arabe et un mot turc aboutissent-ils au même ? Exécutez :
 
@@ -403,7 +403,7 @@ Ce qui est absent : le haoussa en écriture ajami, le zarma et le peul. Une couc
 
 **Le concepteur.** Le ton d'un concepteur est dans les refus : un message nomme le mot et le mot le plus proche. Le dossier n'a pas de preuve propre au concepteur pour ce chapitre, et je garde la ligne courte.
 
-**Le décideur.** Demandez à toute affirmation de « langage naturel » ce qu'elle fait d'un mot qu'elle ne connaît pas. Ici elle le signale, le refuse en mode strict, ou le prend comme littéral, et dit lequel. Elle est conçue pour s'exécuter hors ligne, sans clé. L'affirmation d'absence de réseau n'est pas encore mesurée.
+**Le décideur.** Demandez à toute affirmation de « langage naturel » ce qu'elle fait d'un mot qu'elle ne connaît pas. Ici elle le signale, le refuse en mode strict, ou le prend comme littéral, et dit lequel. Elle est conçue pour s'exécuter hors ligne, sans clé.
 
 **Le formateur.** Un apprenant écrit en haoussa, en français, en arabe ou en turc, et le programme redit ce qu'il a compris dans la même langue. Le paquet haoussa parle neuf des vingt-cinq sens, et aucun locuteur de ces langues n'a lu les phrases de cette page, pour autant que le dossier le montre.
 

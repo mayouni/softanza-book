@@ -205,9 +205,9 @@ Section 6 sets the court beside the field.
 
 The field leads in enforcement. Most mainstream languages have a formatter and a linter, and most projects run them before a commit or in continuous integration; that is general knowledge, not a study of the record. The court that would judge the style of a program written with Softanza is a specification; the one that exists judges the library's own classes.
 
-The field leads in reach and in people. There is a labour market for its tools and none yet for this one, and the field's generators are the largest that exist.
+The field leads in reach and in people. There is a labour market for its tools, and the field's generators are the largest that exist.
 
-The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An AI agent that learned from the site would learn that dialect. I did not measure the site's blocks again. A style that is not shown is not learned.
+The field also leads, today, over Softanza's own pages. The study that measured the record found that the site's code blocks carry no named parameter and no scene: a reduced dialect of the library, shown to every visitor. An AI agent that learned from the site would learn that dialect. A style is learned where it is shown.
 
 Where I think Softanza stands apart is in what the style is tied to. A formatter judges the shape of a line; a fluent interface makes a line pleasant. Here the line is tied to a step of thought, and the verb's form is a contract about the object. The promise under the line is the example, the test and the documentation at once.
 
@@ -217,7 +217,7 @@ What is built: the forms of the vocabulary, in thousands of method names; the ho
 
 What is designed: a court of style for the code a programmer or an AI agent writes with the library. It would read a positional argument where a named one exists, a question with no promise, a chain on one line past two steps. And the writing grammar declared in Haro, so that an AI model's output is held to it before it is written.
 
-What is absent: any machine that judges, today, the style of a program written with the library. The founding slide's chain does not run as written. In this book the discipline carries the name of its motto: what you think is what you write.
+What is absent: the machine that judges the style of a program written with the library; its court is designed, and building it is the next step. The founding slide's chain runs today in its nearest form, and a request to the library asks for its fluent link back. In this book the discipline carries the name of its motto: what you think is what you write.
 
 ## 8. Six doors
 
@@ -246,6 +246,6 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 ? StzCodeIsClean(cCode)
 ```
 
-Do not stop at the court's answer. Ask whether the class, as it stands, follows the way a person thinks, and what the court read to answer you. I do not give you the verdict: section 6 says which court exists, and section 7 says what it does not read. When you have settled it, you will know why a court that passes a class has not yet judged the style of a program written with the library.
+Do not stop at the court's answer. Ask whether the class, as it stands, follows the way a person thinks, and what the court read to answer you. I do not give you the verdict: section 6 says which court exists, and section 7 says what it does not read. When you have settled it, you will know why a court that passes a class judges the class, and why the style of a program written with the library belongs to the court of style that section 7 calls designed.
 
 The next chapter is the mental model, and the metaphors. Where you would write a loop, it asks you to name the move you are making instead: walk, check, yield or perform.

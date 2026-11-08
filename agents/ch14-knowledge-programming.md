@@ -2,7 +2,7 @@
 
 Source: Chapter 14. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops
+Stage: built: a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory; designed: rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load; absent: the 2022 founding dialog, which the book shows as text; Explain on a knowledge graph; the rules section of the file, which the parser drops
 
 Run: 13 of 13 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -151,7 +151,7 @@ remove("clinic.zknw")
 
 It does: one fact merged, the source and the confidence back, `[ [ "source", "registry" ], [ "confidence", 0.95 ] ]`, one contradiction, and the law. A file of this kind was once written without its provenance. The export wrote only the bare triples, so knowledge read back from the disk no longer said where it came from. A strict graph could not load its own export. The fix is the two sections above. The guard that proves it is named in section 5.
 
-**A law that fires when a fact is added.** On the library's default world, the one behind the natural-language sugar, a symmetric law derives the reverse fact as the first one is added, with no call to a derivation step. Nobody wrote that Ibrahim is married to Amina. Does the default world know it?
+**A law that fires when a fact is added.** On the library's default world, the one behind the natural-language sugar, a symmetric law derives the reverse fact as the first one is added, with no call to a derivation step. The program writes one direction, Amina married to Ibrahim. Does the default world know the other?
 
 ```haro
 StzConstrainRelation("married-to", :Symmetric)
@@ -162,7 +162,7 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 
 > run: kept
 
-It answers `1`. The reverse fact is there, and nobody wrote it! This is the only place where a declared law fires on add that a run in this book shows, and it is the default world. The graph class also has a switch, `EnableAutoDerive`, that runs the derivation rules after every edge added; it is off by default, and I did not run it. I show the same law on an instance graph in section 7, where it does not.
+It answers `1`. The reverse fact is there, and nobody wrote it! This is the only place where a declared law fires on add that a run in this book shows, and it is the default world. The graph class also has a switch, `EnableAutoDerive`, that runs the derivation rules after every edge added; it is off by default, and the runs in this book leave it off. I show the same law on an instance graph in section 7, where it does not.
 
 **A system at scale.** The education program of the library is a knowledge file. Its catalogue, `program.zknw`, says what the program is called and which courses and languages it has. What is its name, and which languages does it carry? Ask it:
 
@@ -182,9 +182,9 @@ That is the form. Now what I decided, and what I refused.
 
 ## 4. The decision, and what I refused
 
-**I decided that a business describes itself in one file, and that the file is the program.** The design document records my directive: entities, relations, an ontology of domain-specific semantics, and rules, in a file that is readable, diffable and hand-editable, validated on load. The last two words I have not yet met, and section 7 says where.
+**I decided that a business describes itself in one file, and that the file is the program.** The design document records my directive: entities, relations, an ontology of domain-specific semantics, and rules, in a file that is readable, diffable and hand-editable, validated on load. Section 7 shows where I stand on the last two words.
 
-**I decided on four-letter extensions.** `.zknw` for knowledge, and the others of the family; the old spellings still read. The snapshot writes `.zknw` and still reads `.stzknow`. The file of rules was not renamed: the graph still writes and reads `.stzrulz`, though the family names four letters for it. I report it as the record has it.
+**I decided on four-letter extensions.** `.zknw` for knowledge, and the others of the family; the old spellings still read. The snapshot writes `.zknw` and still reads `.stzknow`. The file of rules keeps its old name: the graph writes and reads `.stzrulz`, while the family names four letters for it. I report it as the record has it.
 
 **I refused a parallel world.** The natural layer once held its entities in globals, and the design document called it the wrong home, the wrong shape and a parallel world. The resolution is one default graph standing behind the natural-language sugar. The old globals still exist, and the graph grows beside them: the library's header calls it a dual write. The law behind it is that naked domain globals are forbidden; a global form may exist only as thin sugar over one default instance. So the dialog of the symmetric law above is sugar over a graph of the same class as the first blocks used.
 
@@ -279,7 +279,7 @@ StzKnowledgeGraphQ("coop2") {
 
 > run: kept
 
-The path answers `[ "couscous" ]`, the first step and nothing more: `QueryPath` ignores the rest of its patterns, so it is no multi-step query yet. The variable predicate answers `[ ]`.
+The path answers `[ "couscous" ]`, the first step and nothing more: `QueryPath` reads the first of its patterns, so today it is a one-step query. The variable predicate answers `[ ]`.
 
 **A line that is not a fact.** Four lines, three of them not facts: two fields, four fields, and no bars. What does the parser refuse?
 
@@ -298,7 +298,7 @@ aBad = oT.ImportKnow(cBad)
 
 Nothing. The file merges, `1`, and the refused list is `[ ]`; the parser is silent and the three lines vanish! The design document promises that the file is "validated on load". At this commit the parser keeps only a line with exactly three fields.
 
-**The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line does not run. The text, which I show and do not run, is `@Q("Apple").IsA(:Fruit)`. On 8 October 2026 it stopped with `Calling Function without definition: @isfruit`; I did not keep that run as a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps the point. Does the world know one name with two meanings?
+**The 2022 founding dialog.** The narration tells knowledge programming through a dialog: an apple as a fruit and as a company, an owner, relations asked as questions. At this commit its first line stops before it answers. I show its text, `@Q("Apple").IsA(:Fruit)`. On 8 October 2026 it stopped with `Calling Function without definition: @isfruit`, and I quote that message here in place of a block. The string class reads the predicate as natural language and looks for a function by that name. Two other forms stop elsewhere. The narration's promise lines are stale. The nearest form that runs keeps the point. Does the world know one name with two meanings?
 
 ```haro
 StzKnow(:Apple, :Company)
@@ -329,7 +329,7 @@ That is the limit, printed. Now the six doors.
 
 **The designer.** The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.
 
-**The decision-maker.** The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote. I did not run the file offline.
+**The decision-maker.** The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote.
 
 **The educator.** The whole education program is knowledge files. A learner teaches a world, then questions it, and the project's guard checks the world file, the agent file and one printed answer. An institution adapts by overlay, never by fork.
 
@@ -337,7 +337,7 @@ That is the limit, printed. Now the six doors.
 
 ## 9. Exercise
 
-Here is a world with two facts, and a question it cannot answer yet. Your promise is the line proving that class 3b is part of primary, with the chain written out. Change the world, and not the question.
+Here is a world with two facts, and a question your change will let it answer. Your promise is the line proving that class 3b is part of primary, with the chain written out. Change the world, and not the question.
 
 ```haro exercise
 cWorld = 'knowledge "school"' + nl + nl + "facts" + nl +

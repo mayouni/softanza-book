@@ -265,7 +265,7 @@ Ce qui est absent, et la page doit dire chacune avec ce qui existe à côté :
 - **Partielle**, `@Removed`, n'est que dans l'archive : l'appel n'est pas défini.
 - **Future**, `BeforeQ`, a été écourtée exprès, comme je l'ai dit.
 - **Libre**, le suffixe qui laisse un appel donner ses paramètres dans n'importe quel ordre et n'importe quel sous-ensemble : il n'y en a aucune définition hors de l'archive. L'analyseur propre de la bibliothèque connaît le nom `FX` et pas `FF`. Les deux narrations qui la racontent emploient deux noms, et le code n'a ni l'un ni l'autre.
-- **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque appelle la forme informante pas encore construite.
+- **Par défaut**, `dftRange` et `infRange` : non définis ; le commentaire de la bibliothèque donne la forme informante comme prévue.
 - **Multilingue**, une méthode nommée en français ou en arabe : absente de la bibliothèque vivante. Les noms existent dans l'archive. Ce qui s'en approche le plus aujourd'hui, ce sont les paquets de langue du chapitre 11.
 - Les trois qui tournent sous une autre forme. La forme d'exception existe, mais l'exemple de l'article n'existe pas. L'ordre libre, au sens de l'article, un nombre et une chaîne permutés dans leurs positions, ne fonctionne que pour le premier ordre : dans ma sonde du 8 octobre, l'appel permuté a terminé le programme avec un statut de un et n'a rien imprimé. L'ordre libre des paramètres nommés est autre chose, et le chapitre 7 l'exécute. Et la forme d'énoncé est à moitié en place : la moitié « All » fonctionne, et la moitié « No » est l'étape suivante. Le propre test classique de la bibliothèque promet vrai sur deux de ses quatre lignes « No », et l'exécution imprime faux sur les quatre.
 
@@ -289,7 +289,7 @@ Du côté de la portée : les verbes de l'expression régulière diffèrent du t
 
 Prenez un verbe d'une bibliothèque que vous utilisez et qui se comporte autrement dans deux cadres : un mode, une locale, une cible. Dites en une phrase quel est le cadre caché. Puis écrivez, comme vous voudriez qu'ils soient, deux noms pour le même acte dans les deux cadres, avec le cadre dans le verbe. Avant de rien exécuter dans Softanza, prenez `Match` et `MatchLine` sur un texte de trois lignes et écrivez ce que chacun imprime pour un motif qui s'ancre au début.
 
-Exécutez-le. Si vos deux noms ne diffèrent que par un drapeau, vous n'avez pas encore déplacé le cadre dans le verbe.
+Exécutez-le. Si vos deux noms ne diffèrent que par un drapeau, le cadre est encore dans le drapeau : déplacez-le dans le verbe.
 
 Je vous laisse celui-ci, exprès. À la section 3, l'article promettait `SOFTANZA` à partir d'un retrait, et l'exécution a imprimé `STAZA`. Voici ce bloc avec un seul changement, le dernier argument de l'appel :
 

@@ -177,7 +177,7 @@ What runs every block of this book? I ask the runtime for its version:
 #--> 1.27
 ```
 
-It prints `1.27`: the version of the former host language, the oracle against which the new runtime is judged. Haro does not run the library. Under a future runtime the promise changes, as the proof line says.
+It prints `1.27`: the version of the former host language. It runs the library today, and it is the oracle against which the new runtime is judged. Under a future runtime the promise changes, as the proof line says.
 
 The decisions come next, and the first of them is about that future.
 
@@ -211,7 +211,7 @@ Section 5 reads what the court proves of all this, and what no guard proves.
 
 ## 5. The court
 
-`engine_is_optimised_narrated` proves that the engine is compiled with optimisation: twenty sums over two million doubles under a tenth of a second, and the right answer. It proves that an index of 99 and an index of 0 are refused and the buffer unharmed, and that the vendored parser which the optimised mode once broke now answers. I ran it: six of the seven assertions in the file were reached, and six passed. `engine_senses_narrated` proves that the engine gives the process five senses: memory, its peak, system memory, processor time, and a bounded series. I ran it: thirty-six of thirty-six, and the run then stops with "STOPPED!" by design. `wasm_narrated` proves that the engine's entry for the browser exports its curated interface and that the build has a target for it. It builds a subset and asserts that it is smaller. I did not run it, because it calls a build of the toolchain. `threat_model_narrated` reads the threat model and checks that each guarantee row names a proof and that each guard file it names exists. Rows G11, the fuzz harnesses, and G25, the bill of materials with its digests, concern the engine.
+`engine_is_optimised_narrated` proves that the engine is compiled with optimisation: twenty sums over two million doubles under a tenth of a second, and the right answer. It proves that an index of 99 and an index of 0 are refused and the buffer unharmed, and that the vendored parser which the optimised mode once broke now answers. I ran it: six of the seven assertions in the file were reached, and six passed. `engine_senses_narrated` proves that the engine gives the process five senses: memory, its peak, system memory, processor time, and a bounded series. I ran it: thirty-six of thirty-six, and the run then stops with "STOPPED!" by design. `wasm_narrated` proves that the engine's entry for the browser exports its curated interface and that the build has a target for it. It builds a subset and asserts that it is smaller. It calls a build of the toolchain, and I read it in its source. `threat_model_narrated` reads the threat model and checks that each guarantee row names a proof and that each guard file it names exists. Rows G11, the fuzz harnesses, and G25, the bill of materials with its digests, concern the engine.
 
 What does not exist: **no guard judges the layers.** No file under the test folders loads a layer's entry file or reads the contract. There are 529 narrated guards in base, and none in core or in max. My study of the record says 517 in one place and 387 in another, and the site 501; I print only what the build reads. And no guard judges the engine's counts: the numbers the engine's command-line status prints are typed constants dated 16 June 2026.
 
@@ -230,7 +230,7 @@ Section 6 sets the runtime beside the field, and the peer leads every row.
 | binsearch | 536 | 513.1 | 1.04 |
 | bytescan | 53 | 37.5 | 1.41 |
 
-The memo's words: the peer leads every row, fib and binsearch are near-ties, and nothing is worse than 2x. ARM is unmeasured. The win that the memo keeps: within 2x on every row, which no version of the former runtime ever was.
+The memo's words: the peer leads every row, fib and binsearch are near-ties, and nothing is worse than 2x. The win that the memo keeps: within 2x on every row, which no version of the former runtime ever was.
 
 **The headline is still alive in the repository's own notes.** As I read on 9 October 2026, the brief of the runtime's own repository and its notes still say that the spike beats the peers on every row. The correction is carried in another repository of the estate and in the memo. In the runtime's own record it is carried only for its release-candidate configuration, in one section of the notes. The memo asked for it. The memo of 13 September 2026 withdraws the claim, and the six rows above are its rows, although the repository's notes still carry the old claim. I name no peer, and describe it as chapter 22 does: a fast scripting runtime of the field.
 
@@ -246,7 +246,7 @@ Section 7 says where the layers and the engine stop.
 
 ## 7. The limit
 
-**The lean layer does not run.** What does a string of the core give back when I ask it for its content?
+**In the lean layer, lists run and strings stop at the engine.** What does a string of the core give back when I ask it for its content?
 
 ```haro
 o = new stkString("abc")
@@ -264,7 +264,7 @@ The runtime answers: `Error (R3) : Calling Function without definition: stkengin
 
 **The third layer is written and not wired.** Its thirty-two classes are all in one folder, and no entry file loads them. The first of them works when loaded by hand. I ran it and do not show it, a string of eleven characters counted by it. I tried none of the other thirty-one. A library layer for them in the engine does not exist.
 
-What is built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, which I did not run. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own gaps: an archive digest is recorded for nine of the nineteen, and three have no version.
+What is built: a layer is a folder, a prefix and an entry file. I counted on 9 October 2026 at this commit, by files with the extension, excluding test and archive folders. Core, 27 files and 6,366 lines; base, 984 files and 519,579; max, 115 and 31,292; and a folder of the future, 51 files and 6,356. Base is 93.2 per cent of the three layers' lines. The engine: eighty-nine libraries from the Zig sources, 401 source files, 179,985 lines, and 2,464 declared tests, counted in the sources. The toolchain is Zig 0.15.2 by the build file's own comment. Nineteen vendored libraries, each with a record of component, version, source, licence and digest. The record's own gaps: an archive digest is recorded for nine of the nineteen, and three have no version.
 
 What is designed: the base layer inheriting the core layer. The seven shared domains are implemented twice over the same engine. Max as a built layer. A loader for one domain of base. A court that checks the layers against their contract. The standalone engine repository and its command line, which the architecture lists as a phase. The engine's polyglot bridge, which is chapter 16's.
 
@@ -276,7 +276,7 @@ I tell what is built, what is designed, and what is absent, as the record has it
 
 **Built, as a charter, a family of grammars and a guard.** The charter, version 0.2, ratified on 1 October 2026. A spike of nineteen steps, which the record calls rungs, between 1 and 4 October, each a grammar document with fixtures. Its guard reported a pass of the whole run on 5 October. Its courts are programs that run byte-identical on the new compiler and on the official former runtime. The new compiler also formats and dumps the library's files: of about six thousand, nearly all print the reference's bytes, and a few dozen are refused by both. A first slice of a graph of the code was built on 5 October.
 
-**What Haro is today, in one sentence the record supports:** a ratified charter and a spike whose courts run on the new runtime and on the old one, over the surface the library is written in. There is no `haro` executable. The folder of binaries holds the compiler and two others. The forged courts load no library. **Haro does not run the library.** The vision of 27 September said that Haro does not exist and that the new runtime's Linux row is unmeasured. The first half is out of date, since a charter and a spike exist. The second half is still true of the wide suite on Linux.
+**What Haro is today, in one sentence the record supports:** a ratified charter and a spike whose courts run on the new runtime and on the old one, over the surface the library is written in. There is no `haro` executable. The folder of binaries holds the compiler and two others. The forged courts load no library. **The former host language runs the library today; Haro is the direction.** The vision of 27 September said that Haro does not exist and that the new runtime's Linux row was still to measure. The first half is out of date, since a charter and a spike exist. The second half still holds for the wide suite on Linux: the Linux pass is the next step.
 
 **Designed:** the three altitudes, declaring, declared, and computing; the six letters of its alphabet, which the charter names, five of them forged whole in the spike; refinement as the write surface; other faces over one program graph. Those faces arrive as printers before they arrive as parsers, and never as semantics. The verbs `haro forge`, `check`, `refine`, `run`, `project` and `narrate` are a recommendation, and not a program.
 
@@ -286,7 +286,7 @@ The six doors follow, one for each reader.
 
 ## 8. Six doors
 
-**The programmer.** You choose your depth by the file you load, and you can prove it in three fresh processes. The lean layer does not run its strings today: reach for base. Read the engine's count the way the library sees it, and not the way a page types it.
+**The programmer.** You choose your depth by the file you load, and you can prove it in three fresh processes. For strings today, reach for base. Read the engine's count the way the library sees it, and not the way a page types it.
 
 **The analyst.** Three numbers for "how big is the engine", and three methods. Ask which one a vendor means. The core library is the size of the base one for strings.
 

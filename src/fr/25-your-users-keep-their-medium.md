@@ -16,7 +16,7 @@ rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
 ---
 
-Dans ce chapitre, je prends une phrase de la constitution de l'interface, un nouveau médium ajoute des rendus, jamais des verbes, et je l'exécute sur le médium que je peux mesurer. Une question devient une ligne de texte, part sur un bac à sable SMS, et est facturée par segment dans deux alphabets. Je montre ce que la bibliothèque livre, la question comme donnée et le tribunal, et ce que vous écrivez, le rendu et le lecteur. Je rapporte les refus du dossier comme ceux du dossier : une conversation qui n'a pas besoin de modèle d'IA, et une voix qui entend des commandes et non de la dictée. Et j'imprime la limite entière : pas d'application de messagerie, pas d'USSD, pas de ligne téléphonique, et une réponse contenant un espace, que la conversation ne peut pas encore prendre.
+Dans ce chapitre, je prends une phrase de la constitution de l'interface, un nouveau médium ajoute des rendus, jamais des verbes, et je l'exécute sur le médium que je peux mesurer. Une question devient une ligne de texte, part sur un bac à sable SMS, et est facturée par segment dans deux alphabets. Je montre ce que la bibliothèque livre, la question comme donnée et le tribunal, et ce que vous écrivez, le rendu et le lecteur. Je rapporte les refus du dossier comme ceux du dossier : une conversation qui n'a pas besoin de modèle d'IA, et une voix qui entend des commandes et non de la dictée. Et j'imprime où en est le médium. Le SMS est le médium mesuré ici. Les surfaces conversationnelles pour une application de messagerie, l'USSD et la voix sont conçues, et une réponse contenant un espace est la limite connue du chapitre 18.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -36,7 +36,7 @@ Ce qu'ils ont en commun, c'est que le dialogue est écrit une fois par canal ou 
 
 **Un nouveau médium ajoute des rendus, jamais des verbes.**
 
-C'est une phrase de la constitution de l'interface, imprimée sur le site : « La grammaire est fermée : un nouveau médium ajoute des rendus, jamais des verbes. » Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles. L'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026. Le dépôt n'est pas nommé, puisqu'il n'est pas encore public.
+C'est une phrase de la constitution de l'interface, imprimée sur le site : « La grammaire est fermée : un nouveau médium ajoute des rendus, jamais des verbes. » Le dossier ne dit rien sur la question de savoir si la formulation est de moi. Je la cite comme celle de la constitution. Je ne la raconte pas comme ma phrase. Les vingt-deux verbes dont elle parle sont ceux de la constitution, en six familles. L'annexe C les imprime tels que je les ai lus dans le fichier propre de la constitution le 9 octobre 2026. Le dépôt est privé, et je le laisse sans nom.
 
 La même phrase, construite, pour une famille de valeurs et non pour les vingt-deux verbes : la valeur est partagée, et la façon dont elle est rendue est propre à chaque médium. C'est une décision de Central, l'entité de coordination du domaine de projets, sur ma délégation, du 30 septembre 2026. Il prouve que le principe n'est pas seulement un slogan. C'est la forme de trois faces qui fonctionnent : couleur, earcon, phrase.
 
@@ -288,7 +288,7 @@ Les refus ci-dessous, après le premier, sont ceux du dossier : des décisions d
 
 **Pas de sens inféré.** L'artisan du logiciel déclare toujours le sens. Une sixième valeur serait un amendement constitutionnel portant les habits d'une bibliothèque.
 
-**Un puits prouve ce que vous auriez envoyé.** La limite honnête du port SMS : le filtrage des opérateurs de téléphonie, les règles d'identifiant d'expéditeur, les particularités d'alphabet par pays, et les accusés de réception asynchrones. Rien de cela n'est modélisé ici.
+**Un puits prouve ce que vous auriez envoyé.** Le puits du port SMS prouve le message et sa facture. Le filtrage des opérateurs de téléphonie, les règles d'identifiant d'expéditeur, les particularités d'alphabet par pays et les accusés de réception asynchrones sont le travail d'un adaptateur réel, que la section 7 liste.
 
 **L'écran acquitte, et le son n'est pas l'acquittement.**
 
@@ -296,7 +296,7 @@ La section suivante nomme les gardes qui se tiennent derrière ces exécutions.
 
 ## 5. Le tribunal
 
-`sms_port_narrated` prouve la loi des segments, avec ses frontières à 160 et 161, 306 et 307, la falaise des émojis de 100 à 102 unités, 71 lettres arabes faisant deux segments, et les neuf caractères d'extension. Elle prouve l'E.164, le puits et sa facture, la panne contre le rejet, et le refus en production. Je l'ai exécutée une fois, et 53 assertions sur 53 ont passé. `wisecoding_rich_narrated` est celle du chapitre 18 : le cadre, les options numérotées, le refus d'un nombre que personne n'a offert, les points de contrôle avec une durée de vie. `payments_webhooks_narrated` prouve qu'une signature entrante est vérifiée avant d'être crue : non signée, falsifiée, rejouée. `sound_semantics_narrated` prouve que les cinq valeurs sont celles de la loi, que quatre sonnent et que `muted` est silencieuse, et qu'une valeur inventée est refusée. `sound_listener_narrated` prouve la grammaire fermée, que l'absence de correspondance est un résultat, et que la confiance est un appel séparé ; je l'ai exécutée une fois, et 21 ont passé. `sound_convergence_narrated` prouve que la boucle se ferme pour les quatre états, que la langue est négociée par direction, qu'une sixième valeur est refusée à la déclaration, et que la phrase d'un inconnu ne donne aucun sens.
+`sms_port_narrated` prouve la loi des segments, avec ses frontières à 160 et 161, 306 et 307, la falaise des émojis de 100 à 102 unités, 71 lettres arabes faisant deux segments, et les neuf caractères d'extension. Elle prouve l'E.164, le puits et sa facture, la panne contre le rejet, et le refus en production. Je l'ai exécutée une fois, et 53 assertions sur 53 ont passé. `wisecoding_rich_narrated` est celle du chapitre 18 : le cadre, les options numérotées, le refus d'un nombre hors des options offertes, les points de contrôle avec une durée de vie. `payments_webhooks_narrated` prouve qu'une signature entrante est vérifiée avant d'être crue : non signée, falsifiée, rejouée. `sound_semantics_narrated` prouve que les cinq valeurs sont celles de la loi, que quatre sonnent et que `muted` est silencieuse, et qu'une valeur inventée est refusée. `sound_listener_narrated` prouve la grammaire fermée, que l'absence de correspondance est un résultat, et que la confiance est un appel séparé ; je l'ai exécutée une fois, et 21 ont passé. `sound_convergence_narrated` prouve que la boucle se ferme pour les quatre états, que la langue est négociée par direction, qu'une sixième valeur est refusée à la déclaration, et que la phrase d'un inconnu ne donne aucun sens.
 
 Une réserve pour la ligne du tribunal. Les gardes du son ont besoin de la bibliothèque sonore du moteur, et pour la boucle, d'une voix et d'un module de reconnaissance. Sur une machine sans eux, les gardes de voix impriment "skipped" et passent. Un succès là ne prouve rien sur la parole. Les gardes pour le SMS et pour la conversation n'ont pas cette dépendance.
 
@@ -362,7 +362,7 @@ Voilà la limite, imprimée entière ; les six portes suivent.
 
 **Le décideur.** Une conversation par SMS peut être chiffrée dans un test : deux noms de plats en arabe ont fait passer une question de 93 caractères d'un segment à deux. La question à poser à un fournisseur, qu'est-ce qui refuse une phrase que votre entreprise n'a pas approuvée, a ici une réponse : un ensemble fermé.
 
-**Le formateur.** Le tuteur dit déjà l'étape manquante comme une question en quatre langues, dans des gabarits qui ne portent aucun code. Le dossier ne nomme pas d'apprenant sur un téléphone simple, et rien n'en sert un pour l'instant : il n'y a ni USSD ni application de messagerie.
+**Le formateur.** Le tuteur dit déjà l'étape manquante comme une question en quatre langues, dans des gabarits qui ne portent aucun code. Les surfaces conversationnelles pour l'USSD et une application de messagerie sont conçues pour servir un apprenant sur un téléphone simple.
 
 **L'agent.** Vous pouvez proposer une réponse, et seule une phrase de l'ensemble fermé passe. Une phrase inventée est refusée avec sa raison. Et vous ne pouvez pas donner un sens à une phrase : l'artisan du logiciel le déclare.
 
@@ -372,7 +372,7 @@ Prenez une question que votre propre monde pose. Le monde à une relation de l'e
 
 1. le nombre de segments de votre rendu de la question, avec des noms en alphabet latin ;
 2. ses segments si une option est un mot en écriture arabe ;
-3. ce qui se passe quand la réponse du client est un chiffre qui n'a pas été offert ;
+3. ce qui se passe quand la réponse du client est un chiffre hors des options offertes ;
 4. ce qui se passe quand la réponse est "yes please".
 
 ```haro exercise

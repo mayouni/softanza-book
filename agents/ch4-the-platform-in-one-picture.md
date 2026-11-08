@@ -187,7 +187,7 @@ Five guards stand beside the floors; the next section names what each proves.
 
 ## 6. The field, and where it leads
 
-Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and not yet carried to where base should build on core, as section 7 shows.
+Rust's three depths are enforced by its compiler and used every day on bare metal. Softanza's rule is held at the engine and at the entry files, and the line that base builds on core is designed, as section 7 shows.
 
 The field's text libraries lead on locale: Softanza's own map names the international components' locale layer as the clear gap of its strings, and names the bet behind it: its locale area leaves those components out on purpose, with no collation, no plural rules and no time zones.
 

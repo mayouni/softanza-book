@@ -21,7 +21,7 @@ Des fichiers se trouvent à côté du lecteur, et chacun est régénéré à cha
 
 ### Ce qu'est une promesse
 
-Un bloc de code qui commence par la balise `haro` est exécuté dans la bibliothèque au commit nommé sous le titre du chapitre. Les lignes qui commencent par `#-->` sont la promesse du bloc : ce que le bloc a imprimé quand l'auteur l'a écrit. Le juge compare la promesse à l'exécution, en ignorant l'espacement, et en lisant `TRUE` et `FALSE` comme 1 et 0. Une promesse est tenue, ou elle diffère, ou le bloc a levé une erreur, ou il s'est arrêté. Un bloc marqué comme exercice n'est pas exécuté, et un bloc qui touche des fichiers, l'horloge ou le hasard le dit, et montre la sortie qui a été enregistrée à sa date.
+Un bloc de code qui commence par la balise `haro` est exécuté dans la bibliothèque au commit nommé sous le titre du chapitre. Les lignes qui commencent par `#-->` sont la promesse du bloc : ce que le bloc a imprimé quand l'auteur l'a écrit. Le juge compare la promesse à l'exécution, en ignorant l'espacement, et en lisant `TRUE` et `FALSE` comme 1 et 0. Une promesse est tenue, ou elle diffère, ou le bloc a levé une erreur, ou il s'est arrêté. Un bloc marqué comme exercice est à lancer par le lecteur, et un bloc qui touche des fichiers, l'horloge ou le hasard le dit, et montre la sortie qui a été enregistrée à sa date.
 
 Un agent qui cite une promesse doit citer son verdict avec elle.
 

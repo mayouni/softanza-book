@@ -61,7 +61,7 @@ oDLM {
 }
 ```
 
-Personne n'a écrit ce corpus : chacune de ses six phrases est un fait de la base de connaissances, rendu. Le vocabulaire est fermé, chaque mot que le domaine contient avec une première entrée pour l'inconnu. Douze entrées, et `something-new`, un mot hors du domaine, est envoyé sur la première : `[ 2, 7, 1 ]`. « Correct par construction » vaut ici dans le seul sens que le code lui donne : chaque phrase est un fait enregistré. Cela ne vaut pas encore dans le sens que la conception visait ; la section 7 dit où.
+La base de connaissances écrit ce corpus : chacune de ses six phrases est un fait de la base de connaissances, rendu. Le vocabulaire est fermé, chaque mot que le domaine contient avec une première entrée pour l'inconnu. Douze entrées, et `something-new`, un mot hors du domaine, est envoyé sur la première : `[ 2, 7, 1 ]`. « Correct par construction » vaut ici dans le seul sens que le code lui donne : chaque phrase est un fait enregistré. Le sens plus large que vise la conception en est au stade conçu ; la section 7 dit où.
 
 La complétion est contrainte au domaine. Qu'offre le modèle après une entité qui porte des faits, après une relation, après un fragment, et après un mot que le domaine ne contient pas ? Exécutez-le :
 
@@ -196,7 +196,7 @@ next
 #    margherita contains mozzarella is  ->  0
 ```
 
-« Tiramisu is a wine » est faux, parce que le tiramisu est un plat. « Chianti is a wine » est vrai. Et « margherita contains mozzarella is » est une phrase qui n'en finit pas, parce que le bigramme n'a aucun mot qui termine une phrase. Le test contre le corpus est une barrière grossière, et il refuserait un fait vrai que personne n'a enregistré. La vraie barrière est le graphe et ses lois. Que répond le graphe quand la fausse phrase lui est proposée comme un fait ? Déclarez la loi, puis proposez :
+« Tiramisu is a wine » est faux, parce que le tiramisu est un plat. « Chianti is a wine » est vrai. Et « margherita contains mozzarella is » est une phrase qui n'en finit pas, parce que le bigramme n'a aucun mot qui termine une phrase. Le test contre le corpus est une barrière grossière, et il refuserait un fait vrai non enregistré. La vraie barrière est le graphe et ses lois. Que répond le graphe quand la fausse phrase lui est proposée comme un fait ? Déclarez la loi, puis proposez :
 
 ```haro
 oKB {
@@ -264,7 +264,7 @@ Ce qui est absent : un mot de fin de phrase pour le second échelon, ce qui expl
 
 **Le programmeur.** Un modèle de langage de domaine est un fichier que vous pouvez lire, comparer par diff et tester : ses faits, ses lois et ses goldens.
 
-**L'analyste.** Un fait que vous ajoutez fait que le modèle en sait plus, et une loi que vous ajoutez fait refuser davantage le graphe, sans entraînement ; les réponses propres du modèle ne la lisent pas encore.
+**L'analyste.** Un fait que vous ajoutez fait que le modèle en sait plus, et une loi que vous ajoutez fait refuser davantage le graphe, sans entraînement ; porter la loi dans les réponses propres du modèle est l'étape suivante.
 
 **Le concepteur.** Le refus du modèle fait partie de son contrat : le test golden dit ce qu'il doit refuser de répondre.
 

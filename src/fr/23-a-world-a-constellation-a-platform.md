@@ -228,7 +228,7 @@ done
 #--> stzSuperApp: world 'resto' already in the constellation.
 ```
 
-Le lien a survécu à l'échange : `CallAcross` répond encore `1` ! Le chapitre 28 utilise `Retire` et `Revive` ; ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre. Rien dans le code n'achemine un appel dans une constellation emboîtée, donc la récursion de la conception est celle d'un registre et pas encore celle d'un appel. Une traversée est un verdict : `CallAcross` autorise ou refuse par 1 ou 0, et rien n'est encore remis à la cible.
+Le lien a survécu à l'échange : `CallAcross` répond encore `1` ! Le chapitre 28 utilise `Retire` et `Revive` ; ce bloc est `Swap` et `AddConstellation`. L'emboîtement est un fait du registre, donc la récursion de la conception est celle d'un registre. Une traversée est un verdict : `CallAcross` autorise ou refuse par 1 ou 0, et ce verdict est toute sa réponse.
 
 Un piège. Un monde enregistré est une copie. L'ancien langage hôte copie un objet par valeur quand il est stocké, de sorte que le monde que vous enregistrez n'est pas le monde que vous tenez. L'en-tête de la classe le dit : les objets monde s'atteignent par l'index du registre, le chemin vivant. Configurez le monde entièrement, enregistrez-le, et atteignez-le par la constellation à partir de là. L'enveloppe a la même doctrine : poser un monde sur la plateforme récolte ses déclarations au moment de l'appel, et poser la gouvernance prend un instantané du régime.
 
@@ -452,7 +452,7 @@ Les six portes viennent ensuite.
 
 **Le programmeur.** Vous déclarez un monde avec des accolades, vous lui demandez de s'expliquer, et vous traversez entre les mondes avec un appel qui renvoie 0 et un `Why()` qui nomme la barrière. Surveillez la copie : configurez, puis enregistrez.
 
-**L'analyste.** Vous déclarez des choses, des relations et un but comme un état voulu du graphe, et l'écart est mesuré. Vos vérités et vos durées sont narrées et pas encore jugées.
+**L'analyste.** Vous déclarez des choses, des relations et un but comme un état voulu du graphe, et l'écart est mesuré. Vos vérités et vos durées sont narrées.
 
 **Le concepteur.** Un monde déclare des écrans comme des intentions, un raffinement comme un bouton borné, et où il apparaît. Les coques générées aujourd'hui sont des bouchons, et le persona qu'un monde sert n'est pas un champ.
 

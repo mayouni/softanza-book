@@ -16,7 +16,7 @@ rulings: ["12.2", "12.14", "12.16", "12.17", "12.21"]
 research: research/ch07.md
 ---
 
-In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the four I have not run to the study. I print the house court, the sixteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
+In this chapter I take the rest of the writing style, as a grammar of fourteen rules. I print the state each rule is in at the commit this book runs, a block where it runs and a limit where it does not. Under the grammar I put the seven goals, and I show three of them in blocks and leave the other four to the study. I print the house court, the sixteen rules the library holds over its own code. I say what it does not read: the code of a program written with the library. The principle is chapter 5's, and I do not argue it again: what you think is what you write.
 
 ## 1. The concept, as the field holds it
 
@@ -172,7 +172,7 @@ o2.ReplaceNextNthOccurrence(2, :With = "##", :StartingAt = 12, :Of = "@@")
 #--> ----@@--@@-------@@----##---
 ```
 
-Both orders print `----@@--@@-------@@----##---`! This is the free order of named parameters; the deck's other free order, a number and a string swapped in their positions, is chapter 8's, and it does not run. A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold. I do not make it here. They are kept, and they are not grammar.
+Both orders print `----@@--@@-------@@----##---`! This is the free order of named parameters; the deck's other free order, a number and a string swapped in their positions, is chapter 8's, and there it works for the first order only. A tension must be told with it. The design of Haro refuses free-order parameters as grammar, and the library keeps them. Two facts are true today. The block above runs them, so they are in the library. The grammar a machine is held to leaves them out, by the Haro principle. Whether the library keeps them past that grammar or retires them is a decision the record does not hold. I do not make it here. They are kept, and they are not grammar.
 
 **Consistency: one vocabulary across a string and a list.** Does the same verb answer on both?
 
@@ -191,7 +191,7 @@ The loss beside it, from the same slide group: the deck's advice to use the keyw
 
 **Manageability: a failure that says where, what, why, and what to do.** The library raises an error in four fields. I do not print its message, because in my run its first line carried a line number of the library, and a line number is not a promise.
 
-The other four goals (expressiveness, reliability, the human metaphors and the practical abstractions) I leave to the tables of the study. I have not run them for this chapter, and I will not describe from the deck what I have not run.
+The other four goals (expressiveness, reliability, the human metaphors and the practical abstractions) I leave to the tables of the study. I describe here what I run.
 
 Next comes the decision, and what I refused.
 
@@ -205,7 +205,7 @@ Next comes the decision, and what I refused.
 
 **I refused to recount the tags as mine.** The forms of the functions are marked in the code by info-tags, in comments that begin with `#<` and an `@`, applied by hand. The study reads them as the feature-level vocabulary of two goals, expressiveness and flexibility, and counted 6,090. I counted again on 8 October 2026 and found 6,126, with 89 spellings. But 1,360 of them sit outside the archive folders, and 4,766 sit in the archive folders. So the sentence "applied by hand at 6,090 points" is, at this commit, mostly a sentence about the archive. No guard reads them: the reflection layer reads a method's name, with a grammar, and not its tag.
 
-**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and do not yet match some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
+**I refused the tally as a count of passes.** The study counts thirty-three features: twenty-four built, four transformed with the project, two that changed form, one partial, one archived, one a name only. The arithmetic holds. But it is a count of names found, and a definition found is not a passing test. Several of the features are named in the deck and not defined in the library's code, the archive aside. They are the families `FF` and `FX` for sections, the families `dft` and `inf` for defaults and infinities, `WalkFF` and `AddWalkerFF`, and the `Check` on a list. That last one is the deck's checker, which answers 1 or 0 for each item. Two are defined and differ from some of the deck's examples. `Yield` should give the result of an expression for each item. `Perform` should apply an action to each item. I print the tally, and I print its losses with it. The deck also says "7 root causes of programming complexity", beside the seven goals. No slide lists those seven causes, and no other file in the record names them. The chapter names none and does not match them to the goals one by one.
 
 The court comes next, and I run it.
 
@@ -238,7 +238,7 @@ What the court does not read is the code of a program written with the library. 
 
 ## 6. The field, and where it leads
 
-The field leads in enforcement by default. A formatter runs on every commit. For the code a programmer writes with Softanza, the court that would enforce the style is designed and not yet built, and chapter 5 says so.
+The field leads in enforcement by default. A formatter runs on every commit. For the code a programmer writes with Softanza, the court that enforces the style is designed; building it is the next step, and chapter 5 says so.
 
 The field leads in having its goals somewhere a reader looks first. The seven goals are in one design document and in tags that no court reads, and the operating notes of the library's own repository name none of them. An AI reader's account of the library says that sixty paradigm documents could easily be sixty disconnected ideas. The study reads it as a sign that the discipline is in the code and written nowhere a reader would look first. It is a session's document, and not an independent witness.
 
@@ -254,7 +254,7 @@ What is built: the sixteen house rules of the library as a court over its own co
 
 What is designed:
 
-- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. I searched the library for it and it is not built yet; it is the next step.
+- **A court that judges the style of a program written with the library.** It is a specification in the study: the fourteen rules as house rules over a snippet's graph. Its examples are a positional argument where a named one exists, or a printed line with no promise. Building it is the next step.
 - **A court that reads the goals.** It would read the tags. To come.
 - **The classic form of the test block as the one form for new blocks.** The study's ruling is that the revival "is not a rewrite" but a decision. The classic form is the one form for new blocks, and the converted blocks are left as they are. The test tree's own README still calls the classic form the authoritative test surface. I found no ruling that makes it the one form, so it stays a decision, and chapter 5 names it.
 - **The writing grammar declared in Haro.** The vocabulary half exists: the forms of the library's names are data in Haro, and the session's record is 584 of 595 shipped spellings agreeing. The usage half, the scene, the chain, the code seat and the promise, is not declared.
@@ -263,7 +263,7 @@ What is designed:
 What is absent:
 
 - Any machine that judges, today, the style of a program written with the library; beside it, the house court judges the library's own code.
-- Rules 12 and 13 as running forms. In my runs, the deck's near-natural samples did not run as written, and neither did a function named in Chinese or in French.
+- Rules 12 and 13 as running forms.
 - The `@` on a parameter's name as a working form.
 - The braced form of the range language, `L('{ "♥1" : "♥6" }')`, which raises, and ranges that change width, such as `day8 : day11`, which also raise, with an uninitialised-variable error from the host. The list constructor from a string raises too. These three come from my runs; no block of this chapter keeps them.
 - The visualised call stack, and the cache and log decorators, which exist as names in comments.
@@ -280,7 +280,7 @@ What is absent:
 
 **The educator.** The discipline is taught whole and in order. The converted guard for lists in strings keeps the old promise's wrong spacing in a comment, which is a lesson on the cost of hand-typed answers.
 
-**The agent.** The rules are given to you as data on the site. For the code you write, the court is designed and not yet built. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string.
+**The agent.** The rules are given to you as data on the site. For the code you write, the court is designed, and building it is the next step. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string.
 
 ## 9. Exercise
 

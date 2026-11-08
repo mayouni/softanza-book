@@ -205,9 +205,9 @@ La section 6 met le tribunal à côté du terrain.
 
 Le terrain mène sur l'application des règles. La plupart des langages courants ont un formateur et un linter, et la plupart des projets les exécutent avant un commit ou en intégration continue ; c'est une connaissance générale, non une étude du dossier. Le tribunal qui jugerait le style d'un programme écrit avec Softanza est une spécification ; celui qui existe juge les propres classes de la bibliothèque.
 
-Le terrain mène en portée et en gens. Il y a un marché du travail pour ses outils et aucun encore pour celui-ci, et les générateurs du terrain sont les plus grands qui existent.
+Le terrain mène en portée et en gens. Il y a un marché du travail pour ses outils, et les générateurs du terrain sont les plus grands qui existent.
 
-Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude qui a mesuré le dossier a trouvé que les blocs de code du site ne portent ni paramètre nommé ni scène : un dialecte réduit de la bibliothèque, montré à chaque visiteur. Un agent d'IA qui apprendrait du site apprendrait ce dialecte. Je n'ai pas mesuré de nouveau les blocs du site. Un style qui n'est pas montré n'est pas appris.
+Le terrain mène aussi, aujourd'hui, sur les propres pages de Softanza. L'étude qui a mesuré le dossier a trouvé que les blocs de code du site ne portent ni paramètre nommé ni scène : un dialecte réduit de la bibliothèque, montré à chaque visiteur. Un agent d'IA qui apprendrait du site apprendrait ce dialecte. Un style s'apprend là où il est montré.
 
 Là où je pense que Softanza se distingue, c'est dans ce à quoi le style est lié. Un formateur juge la forme d'une ligne ; une interface fluide rend une ligne agréable. Ici la ligne est liée à une étape de pensée, et la forme du verbe est un contrat sur l'objet. La promesse sous la ligne est l'exemple, le test et la documentation à la fois.
 
@@ -217,7 +217,7 @@ Ce qui est construit : les formes du vocabulaire, dans des milliers de noms de m
 
 Ce qui est conçu : un tribunal du style pour le code qu'un programmeur ou un agent d'IA écrit avec la bibliothèque. Il lirait un argument positionnel là où un argument nommé existe, une question sans promesse, une chaîne sur une ligne au-delà de deux étapes. Et la grammaire d'écriture déclarée en Haro, pour que la sortie d'un modèle d'IA y soit tenue avant d'être écrite.
 
-Ce qui est absent : toute machine qui juge, aujourd'hui, le style d'un programme écrit avec la bibliothèque. La chaîne de la diapositive fondatrice ne s'exécute pas telle qu'écrite. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
+Ce qui est absent : la machine qui juge le style d'un programme écrit avec la bibliothèque ; son tribunal est conçu, et le construire est la prochaine étape. La chaîne de la diapositive fondatrice s'exécute aujourd'hui dans sa forme la plus proche, et une demande à la bibliothèque réclame le retour de son lien fluide. Dans ce livre, la discipline porte le nom de sa devise : ce que vous pensez est ce que vous écrivez.
 
 ## 8. Six portes
 
@@ -246,6 +246,6 @@ cCode = "class Basket" + nl + "def Add(x)" + nl + "	return x" + nl + "def AddQ(x
 ? StzCodeIsClean(cCode)
 ```
 
-Ne vous arrêtez pas à la réponse du tribunal. Demandez-vous si la classe, telle qu'elle est, suit la façon dont une personne pense, et ce que le tribunal a lu pour vous répondre. Je ne vous donne pas le verdict : la section 6 dit quel tribunal existe, et la section 7 dit ce qu'il ne lit pas. Quand vous aurez tranché, vous saurez pourquoi un tribunal qui laisse passer une classe n'a pas encore jugé le style d'un programme écrit avec la bibliothèque.
+Ne vous arrêtez pas à la réponse du tribunal. Demandez-vous si la classe, telle qu'elle est, suit la façon dont une personne pense, et ce que le tribunal a lu pour vous répondre. Je ne vous donne pas le verdict : la section 6 dit quel tribunal existe, et la section 7 dit ce qu'il ne lit pas. Quand vous aurez tranché, vous saurez pourquoi un tribunal qui laisse passer une classe juge la classe, et pourquoi le style d'un programme écrit avec la bibliothèque relève du tribunal du style que la section 7 dit conçu.
 
 Le chapitre suivant est le modèle mental, et les métaphores. Là où vous écririez une boucle, il vous demande de nommer plutôt le mouvement que vous faites : marcher, vérifier, produire ou exécuter.

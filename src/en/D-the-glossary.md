@@ -40,7 +40,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **declare.** To say what a thing is before it is built, in a text a court can judge. The act of the kernel. Chapters 3, 12.
 
-**designed.** One of the three stage words. A document says so, and nothing runs. Chapter 3.
+**designed.** One of the three stage words. A document describes it. Chapter 3.
 
 **door.** In this book, two senses. (1) The *doors* of a chapter: the programmer, the analyst, the designer, the decision-maker, the educator and the agent, six ways in which a chapter is useful, each a way of using the work and not a job title. (2) The *door* of the foreign runtimes: one governed way to run code in a language the platform does not speak. A door is a runtime and never a syntax. Chapters 2, 16.
 
@@ -56,7 +56,7 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **forge.** The machinery that produces a language's court, mouth, printer and grammar from its declaration alone. Built outside the library, designed for it. Chapters 11, 12.
 
-**gap.** What a goal needs and the world does not yet hold. A conversation that asks starts from the gap. Chapter 17.
+**gap.** What a goal needs beyond what the world holds. A conversation that asks starts from the gap. Chapter 17.
 
 **gate.** A place where something is refused before it goes on. The registration gate, the production gate, the capability seam. Chapters 20, 24.
 
@@ -64,9 +64,9 @@ Each entry gives the word as the book uses it, and the chapter where it is shown
 
 **governance.** Permission, authority and risk, compared before an act, fail-closed, with the decision kept. Chapters 20, 30.
 
-**guard.** A file of the library's test tree that holds assertions, and that proves a chapter. This book counts a guard's assertions and does not run most of them. Chapters 5, 21.
+**guard.** A file of the library's test tree that holds assertions, and that proves a chapter. This book cites most guards by their count of assertions. Chapters 5, 21.
 
-**Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro does not run the library yet. Chapters 3, 27.
+**Haro.** The language this book writes in: the surface of the former host language, kept and renamed, with a charter and a runtime still in construction. Haro running the library is the next step. Chapters 3, 27.
 
 **house rules.** The sixteen rules the library runs over its own code, five over a graph of the code and eleven over its text: a court an AI agent can run before it commits. Not the fourteen rules of writing of chapter 7, which no machine judges. Chapters 5, 32; Appendix B.
 

@@ -157,7 +157,7 @@ oKS {
 }
 ```
 
-The first value was admitted, and the second was refused with the law's reason: `'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique`. The refusal reaches a person, as one checkpoint. Be careful what you read in this. The choice between Mario and Giovanni was made by order. It was not made by a person. The design promises something else, and section 7 says what.
+The first value was admitted, and the second was refused with the law's reason: `'kitchen3' already bears 'led-by' (to 'mario'); the relation is :Unique`. The refusal reaches a person, as one checkpoint. Be careful what you read in this. The choice between Mario and Giovanni was made by order, not by a person. The design promises something else, and section 7 says what.
 
 **The third register, the formula.** Is a formula typed as a reply evaluated? Run it:
 
@@ -392,7 +392,7 @@ oKF2 {
 
 ## 5. The court
 
-`wisecoding_narrated` proves that the gap is computed from the space, and that the question is led by the system, names its subject and says why it asks. It proves that "X and Y" and a data structure admit. It proves that a unique law refuses through the conversation and the refusal reaches a checkpoint. It proves that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, and the numbered options. It proves the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it and does not run it; the tutor block above only reads the course.
+`wisecoding_narrated` proves that the gap is computed from the space, and that the question is led by the system, names its subject and says why it asks. It proves that "X and Y" and a data structure admit. It proves that a unique law refuses through the conversation and the refusal reaches a checkpoint. It proves that concluding with a gap open is refused. `wisecoding_rich_narrated` proves the goal monitored to fulfilled or revoked, the frame, and the numbered options. It proves the refusal of a number nobody offered, the lifetime of a checkpoint, and the fluency that is claimed only with a model. `ownagentstack_narrated` proves the roster of five, the wired wise coder, the reserved agent that raises, and the gap left for a person. `tutor_gaps_narrated` proves the exercise's gap question in each language, and that a step with no question in a language is red, never another language. It writes folders, so the book counts it rather than running it; the tutor block above only reads the course.
 
 Three of the guards print their own total and end by calling `pf()`, which prints the time and the runtime's version and then stops the run with a raise. That is their way to end. `tutor_gaps_narrated` ends with `Summary()`, which prints the total and a status, and does not raise.
 

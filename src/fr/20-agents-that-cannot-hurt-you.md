@@ -8,7 +8,7 @@ narrations: [stz-agents-that-cannot-hurt-you-narration.md, stz-service-virtualiz
 site: [agentic, security]
 guards: [safeworld_narrated, agentfile_narrated, agentloop_engine_narrated, containment_drill_narrated, virtual_system_twin_narrated]
 stage:
-  built: "la réversibilité comme contrat déclaré et comme barrière d'enregistrement ; la posture confrontée à la réversibilité, à la porte et au chargement ; l'atelier, le plan, le rejet du relecteur, l'acteur validant sous une portée ; l'exercice de confinement ; les emplacements bornés et la file du moteur (la boîte de réception bornée n'est testée qu'en Zig, non exécutée pour le livre)"
+  built: "la réversibilité comme contrat déclaré et comme barrière d'enregistrement ; la posture confrontée à la réversibilité, à la porte et au chargement ; l'atelier, le plan, le rejet du relecteur, l'acteur validant sous une portée ; l'exercice de confinement ; les emplacements bornés et la file du moteur (la boîte de réception bornée est testée dans le code Zig du moteur)"
   designed: "le côté de l'agent dans la négociation autour d'un plan ; la salle d'examen ; les branches comme esprits parallèles ; les jumeaux pour les bases de données, les interfaces et les réseaux"
   absent: "un plan sans exécutant qui soit refusé ; un classement des risques d'un plan ; le code déjà en cours d'exécution dans le processus, qui est hors de portée ; le Droit à un humain comme contrôle machine"
 status: draft
@@ -57,7 +57,7 @@ oGov {
 }
 ```
 
-Le premier refus se termine sur sa loi : rien ne planifie ce dont personne n'a énoncé la portée. Le numéro qu'il porte appartient à la liste des lois propre à la bibliothèque, que ce livre n'imprime pas. Avec les deux déclarées, le troisième appel répond `1`.
+Le premier refus se termine sur sa loi : seul ce dont la portée est énoncée est planifié. Le numéro qu'il porte appartient à la liste des lois propre à la bibliothèque, que ce livre n'imprime pas. Avec les deux déclarées, le troisième appel répond `1`.
 
 La réversibilité est le sixième contrat de la gouvernance, à côté du risque, de l'autorité, de la validation, de la mise hors service et de la filiation. Elle est orthogonale au risque : un acte de faible risque qui ne peut pas être défait mérite plus de cérémonie qu'un acte de grand risque qui peut l'être.
 
@@ -211,7 +211,7 @@ next
 
 Trente ! Le modèle d'IA a demandé, a été refusé, a appelé `Execute()` malgré tout, et rien n'a changé sur le disque.
 
-Le site montre cela avec un cours plus grand, dans sa démonstration d'éducation du 30 septembre 2026, que je n'ai pas exécutée pour ce livre, et il imprime un compte de six cent dix. Ce chiffre est celui du site, cité avec sa source et sa date. J'imprime trente, parce que trente est ce que ce bloc exécute.
+Le site montre cela avec un cours plus grand, dans sa démonstration d'éducation du 30 septembre 2026, et il imprime un compte de six cent dix. Ce chiffre est celui du site, cité avec sa source et sa date. J'imprime trente, parce que trente est ce que ce bloc exécute.
 
 **Une personne peut discuter avec un plan.** Le plan est un médium. Un relecteur rejette une étape, avec une raison. Que font les vingt-neuf autres étapes, et que reste-t-il sur le disque ? Le bloc imprime les comptes, non le nom du fichier :
 
@@ -259,7 +259,7 @@ Le moteur a refusé le résumeur, dans les mots de la règle du graphe ! Les arg
 
 Un registre, ici, est un relevé de ce qui s'est passé, tenu dans l'ordre où cela s'est passé. Cet agent fait tourner le registre propre du domaine de projets. Le chapitre 21 a le registre de sécurité, que le tribunal écrit et jamais la chose qu'il juge, une chaîne de hachage où une ligne modifiée est nommée. Le chapitre 23 a le registre de traversées de la constellation, avec les durées. Le mot a un autre sens ailleurs : l'une des cinq formes que peut prendre une réponse, ou le registre des innovations de l'annexe A.
 
-La doctrine avait été écrite avant d'être vraie, et le dossier l'a attrapé le jour même. Depuis, la fonction qui écrit pour cet agent a un chemin de répétition. Dans le tick d'un agent qui tient un atelier, elle écrit dans le jumeau. Hors d'un tel tick, dans l'état de migration que le domaine de projets vivant fait encore tourner, c'est toujours l'écriture directe. La déclaration ci-dessous est la mienne, écrite pour ce livre ; ce n'est pas le fichier d'effectif vivant, que je n'ai pas exécuté. Avec un atelier, l'agent déplace le fichier dans le jumeau. Deux compétences se déclenchent et vérifient ; le vrai fichier de journal est là où il était ; aucune archive n'existe ; le tick a exporté un plan. Et seul l'acteur validant, sous une portée, déplace le fichier :
+La doctrine avait été écrite avant d'être vraie, et le dossier l'a attrapé le jour même. Depuis, la fonction qui écrit pour cet agent a un chemin de répétition. Dans le tick d'un agent qui tient un atelier, elle écrit dans le jumeau. Hors d'un tel tick, dans l'état de migration que le domaine de projets vivant fait encore tourner, c'est toujours l'écriture directe. La déclaration ci-dessous est la mienne, écrite pour ce livre ; le fichier d'effectif vivant est celui du domaine de projets. Avec un atelier, l'agent déplace le fichier dans le jumeau. Deux compétences se déclenchent et vérifient ; le vrai fichier de journal est là où il était ; aucune archive n'existe ; le tick a exporté un plan. Et seul l'acteur validant, sous une portée, déplace le fichier :
 
 ```haro
 cEstate = StzReplace(WorkingDirectory(), "\", "/") + "/_estate"
@@ -338,7 +338,7 @@ Les blocs ont montré ce que fait le monde ; la section 4 dit ce que j'ai refus�
 
 **J'ai refusé un bouchon.** Demander un agent d'IA réservé lève une erreur. L'architecture dit que c'est la loi qui travaille, et non un défaut.
 
-**J'ai refusé d'abandonner en silence.** Dans le moteur, un envoi vers une boîte de réception pleine est refusé avec un code et compté. C'est testé dans le code Zig du moteur, par un test que je n'ai pas exécuté, et aucun bloc ici ni aucune garde narrée ne le montre. Quand la file d'exécution est pleine, les visites suivantes sont abandonnées et comptées. La boucle dit aussi ce qu'elle ne peut pas voir : l'intérieur d'un rappel, l'horloge, et si une déclaration de couverture est vraie.
+**J'ai refusé d'abandonner en silence.** Dans le moteur, un envoi vers une boîte de réception pleine est refusé avec un code et compté. C'est testé dans le code Zig du moteur, par un test propre au moteur. Quand la file d'exécution est pleine, les visites suivantes sont abandonnées et comptées. La boucle dit aussi ce qu'elle ne peut pas voir : l'intérieur d'un rappel, l'horloge, et si une déclaration de couverture est vraie.
 
 **J'ai refusé de laisser une machine être le dernier recours.** La constitution de l'interface du domaine de projets a un droit, le sixième sur six : le Droit à un humain. Partout où une machine sert, une personne est joignable, clairement, et sans pénalité. Il est appliqué par un jugement, celui d'une personne, et non par une garde qui s'exécute ; la bibliothèque ne le mentionne pas. La constitution le tient pour le bout humain de la boucle : c'est la règle 102 de la constitution (annexe C).
 
@@ -366,15 +366,15 @@ Le terrain mène en écosystème et en recrutement. Il y a un marché du travail
 
 Quand choisir laquelle, d'après la narration : la pile courante, quand la tâche est un travail de langage ouvert sur une matière que vous ne pouvez pas sélectionner. Ses exemples sont résumer des documents arbitraires, des produits conversationnels, de la recherche sur le web ouvert. La couche Softanza, quand les actions ont des conséquences et que quelqu'un finira par demander pourquoi elle a fait cela. Parmi ces cas, dans les mots de la narration : le travail réglementé ou audité, tout ce qui tourne sans surveillance, et tout ce qui doit continuer à fonctionner hors ligne à coût marginal nul. Les deux ne s'excluent pas, et un modèle d'IA peut siéger dans un système Softanza comme proposeur.
 
-Le jumeau est un modèle de la réalité, non la réalité. Le cadre demande de la fidélité et de l'honnêteté, et le plan se revalide contre la réalité avant d'être validé. Une fois le vrai fichier supprimé dans le dos du jumeau, la vérification dit que la cible est absente dans la réalité. Je l'ai vue avertir, et je n'ai pas testé si elle bloque la validation.
+Le jumeau est un modèle de la réalité, non la réalité. Le cadre demande de la fidélité et de l'honnêteté, et le plan se revalide contre la réalité avant d'être validé. Une fois le vrai fichier supprimé dans le dos du jumeau, la vérification dit que la cible est absente dans la réalité. Je l'ai vue avertir.
 
-Et la plus grande perte honnête. Le modèle de menace met *le code déjà en cours d'exécution dans le processus* hors de portée : il peut faire tout ce que le processus peut faire, effacer le registre ou lire un secret. L'atelier contient ce qui est écrit à travers l'atelier. Une fonction qui ne demande pas l'atelier n'est pas confinée. Les lectures sont libres : l'en-tête de l'atelier lui-même dit que les lectures sont de la perception et restent libres, et que seules les écritures sont confinées au jumeau. L'architecture dit que l'évasion n'est pas un défaut à fermer en le supprimant. Elle la réduit par une posture déclarée, et par du code, non le fichier, qui décide quelles fonctions un agent peut appeler. Je n'ai pas exécuté de fonction de confiance qui contourne l'atelier : j'ai lu cette limite dans l'architecture, dans le modèle de menace et dans l'en-tête de l'atelier.
+Et la plus grande perte honnête. Le modèle de menace met *le code déjà en cours d'exécution dans le processus* hors de portée : il peut faire tout ce que le processus peut faire, effacer le registre ou lire un secret. L'atelier contient ce qui est écrit à travers l'atelier. Une fonction qui ne demande pas l'atelier n'est pas confinée. Les lectures sont libres : l'en-tête de l'atelier lui-même dit que les lectures sont de la perception et restent libres, et que seules les écritures sont confinées au jumeau. L'architecture dit que l'évasion n'est pas un défaut à fermer en le supprimant. Elle la réduit par une posture déclarée, et par du code, non le fichier, qui décide quelles fonctions un agent peut appeler. J'ai lu cette limite dans l'architecture, dans le modèle de menace et dans l'en-tête de l'atelier.
 
 ## 7. La limite
 
-Ce qui est construit : la réversibilité comme contrat déclaré, et la barrière d'enregistrement, dans la porte de l'ancien langage hôte et dans le moteur ; la posture confrontée à la réversibilité à la porte et au chargement. L'atelier est construit, avec un plan qui se narre, signale, valide, accepte un rejet et tient une piste d'audit ; l'agent de l'effectif répété puis validé l'est aussi, et l'exercice aussi. Les structures bornées du moteur sont construites : 64 emplacements d'agent, une boîte de réception de 8 messages (testée en Zig seulement, non exécutée pour ce livre) et une file d'exécution de 256.
+Ce qui est construit : la réversibilité comme contrat déclaré, et la barrière d'enregistrement, dans la porte de l'ancien langage hôte et dans le moteur ; la posture confrontée à la réversibilité à la porte et au chargement. L'atelier est construit, avec un plan qui se narre, signale, valide, accepte un rejet et tient une piste d'audit ; l'agent de l'effectif répété puis validé l'est aussi, et l'exercice aussi. Les structures bornées du moteur sont construites : 64 emplacements d'agent, une boîte de réception de 8 messages (testée dans le code Zig du moteur) et une file d'exécution de 256.
 
-Ce qui est conçu : le côté de l'agent dans la négociation, où le plan parvient à l'agent mais où la conversation sur le plan ne le fait pas encore. L'architecture le dit, et le modèle de menace le répète. J'ai cherché dans le code de la bibliothèque et n'ai trouvé aucune révision d'un plan. La salle d'examen, qui certifierait un agent pour une portée de validation comme on certifie un conducteur pour une catégorie de permis : elle apparaît dans des documents et dans aucun code. Les branches comme esprits parallèles : les instantanés et le retour en arrière sont construits, et je n'ai trouvé aucun appel de branche. Les jumeaux pour les bases de données, les interfaces et les réseaux : le cadre les nomme. Le jumeau des fichiers est construit, et le jumeau de l'environnement du processus aussi, avec ses variables, son répertoire de travail et son lancement mis en file (chapitre 24). Les trois autres ne le sont pas.
+Ce qui est conçu : le côté de l'agent dans la négociation, où le plan parvient à l'agent et où la conversation sur le plan est l'étape suivante. L'architecture le dit, et le modèle de menace le répète. J'ai cherché dans le code de la bibliothèque et n'ai trouvé aucune révision d'un plan. La salle d'examen, qui certifierait un agent pour une portée de validation comme on certifie un conducteur pour une catégorie de permis : elle apparaît dans des documents et dans aucun code. Les branches comme esprits parallèles : les instantanés et le retour en arrière sont construits, et je n'ai trouvé aucun appel de branche. Les jumeaux pour les bases de données, les interfaces et les réseaux : le cadre les nomme. Le jumeau des fichiers est construit, et le jumeau de l'environnement du processus aussi, avec ses variables, son répertoire de travail et son lancement mis en file (chapitre 24). Les trois autres ne le sont pas.
 
 Chaque point ci-dessous est un écart, trouvé en exécutant et en lisant.
 
@@ -382,7 +382,7 @@ Chaque point ci-dessous est un écart, trouvé en exécutant et en lisant.
 - **Un plan signale ; il ne classe pas.** La narration dit qu'un plan classe ses propres risques. Le code renvoie un signal par étape destructrice, dans l'ordre des opérations, avec une étiquette comme DESTRUCTIVE. Il n'y a pas de score ni d'ordre de gravité. Le chapitre dit « signale ».
 - **La barrière est facultative chez l'hôte.** Un programme qui héberge la bibliothèque doit déclarer qu'il emploie la boucle du moteur ; tant que le dernier de ces programmes dans l'arbre propre de la bibliothèque n'a pas déclaré, le défaut reste inactif, et un programme neuf fait tourner l'ancienne boucle de tick de l'ancien langage hôte.
 - **La boucle vérifie qu'une déclaration de couverture existe, non qu'elle est vraie.**
-- **Les limites de l'exercice :** une forme d'attaque, en boucle locale, sur une seule machine.
+- **Le cadre de l'exercice :** une forme d'attaque, en boucle locale, sur une seule machine.
 
 Six portes suivent, le même chapitre vu de six endroits.
 
@@ -398,7 +398,7 @@ Six portes suivent, le même chapitre vu de six endroits.
 
 **Le formateur.** L'agent d'un apprenant qui range un répertoire de cours en supprimant tout est une leçon sur ce qu'est un plan. Elle voit ce qu'il aurait fait, et les fichiers sont toujours là.
 
-**L'agent.** Vous pouvez répéter sans limite, à l'intérieur du jumeau. Votre seul export est un plan, et on peut discuter avec vous à son sujet. Vous ne pouvez pas valider. Aujourd'hui la discussion est à sens unique : vous ne recevez pas encore l'objection du relecteur pour réviser.
+**L'agent.** Vous pouvez répéter sans limite, à l'intérieur du jumeau. Votre seul export est un plan, et on peut discuter avec vous à son sujet. Vous ne pouvez pas valider. Aujourd'hui la discussion va dans un seul sens, du relecteur au plan ; recevoir l'objection et réviser est l'étape suivante.
 
 ## 9. Exercice
 

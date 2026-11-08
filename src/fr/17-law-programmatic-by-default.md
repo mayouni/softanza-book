@@ -10,14 +10,14 @@ site: [agentic, wise]
 guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agentgraph_narrated, piagent_narrated, ownagentstack_narrated]
 stage:
   built: "le premier échelon du modèle de langage de domaine et son second, un petit bigramme ; la conversation qui demande ; la dérivation avec sa preuve ; l'agent programmatique ; la barrière qui refuse un modèle d'IA non gouverné"
-  designed: "la cascade de la machine pensante entre les facultés ; la pile de décision, ses pièces à côté de l'agent et pas encore dedans ; l'unité typée de prédiction, une conception du domaine de projets avec cinq étapes de validation et aucune chaîne de celles-ci dans la bibliothèque ; la négociation entre un agent et son relecteur"
+  designed: "la cascade de la machine pensante entre les facultés ; la pile de décision, ses pièces à côté de l'agent ; l'unité typée de prédiction, une conception du domaine de projets avec cinq étapes de validation ; la négociation entre un agent et son relecteur"
   absent: "quatre des cinq agents propres de la bibliothèque, dont l'induction à partir d'exemples"
 status: draft
 rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
 research: research/ch17.md
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait que personne n'a enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
+Dans ce chapitre, j'énonce la loi de la partie IV et je la fais tourner. Je commence par ma définition de l'intelligence et par un modèle de langage de domaine sans aucun neurone, qui répond, dit pourquoi, et refuse ce qu'on ne lui a jamais dit. Puis je montre une conversation qui vous interroge, un fait non enregistré prouvé à partir d'une seule loi déclarée, un modèle d'IA tenu à proposer, et un agent dont l'esprit est du code, refusé à la barrière. Je dis ce que j'ai refusé, quelles gardes prouvent chaque bloc, et où le terrain mène. Vient ensuite la limite, imprimée comme l'étape qu'elle est : une question posée avec d'autres mots, et une réponse là où un refus est l'étape suivante. La loi elle-même tient en une phrase : l'esprit est programmatique par défaut, un modèle est une faculté parmi d'autres, la dernière appelée, et ce qu'il dit est une proposition que le tribunal admet ou refuse.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -83,7 +83,7 @@ StzKnowledgeGraphQ("menu") {
 
 Un but a été déclaré : chaque plat doit dire ce qu'il contient. L'écart entre le but et ce qui est connu a engendré la question, et la question porte sa raison. Le monde ne peut pas être clos tant qu'il est incomplet : `Can't conclude: 2 gap(s) remain`. Le chapitre 18 montre les cinq façons de répondre : une option d'une liste, une structure de données, une formule, une phrase, ou des exemples. Trois sont câblées ; la formule et les exemples sont absents. Un modèle d'IA, s'il y en a un, vient après toutes, pas en premier.
 
-La troisième pièce est la dérivation, ma définition à l'œuvre. Une loi est déclarée, et un fait que personne n'a enregistré est prouvé :
+La troisième pièce est la dérivation, ma définition à l'œuvre. Une loi est déclarée, et un fait non enregistré est prouvé :
 
 ```haro
 StzKnowledgeGraphQ("kitchen") {
@@ -153,7 +153,7 @@ oRog.AddGovernedSkill(oSk, "order-stock")
 
 Le stock est bas, la compétence veut commander, et l'agent n'a jamais reçu la permission. `Pursue()` a imprimé `0` : la gouvernance l'a refusé ! Il ne se passe rien, et le journal dit pourquoi, par son nom : `refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'`. Le monde est comme il était.
 
-Mettez les pièces sur une ligne et vous avez la pile que la vision de la plateforme nomme son Étoile polaire, ratifiée le 27 septembre 2026 : percevoir, décider, réagir, apprendre. Rien de tout cela n'a besoin d'un modèle de langage. C'est une conception, pas un agent assemblé. Dans cette conception, la perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Les pièces existent dans la bibliothèque à côté de l'agent, pas encore dedans : l'agent ci-dessus n'en appelle aucune. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
+Mettez les pièces sur une ligne et vous avez la pile que la vision de la plateforme nomme son Étoile polaire, ratifiée le 27 septembre 2026 : percevoir, décider, réagir, apprendre. Rien de tout cela n'a besoin d'un modèle de langage. C'est une conception, pas un agent assemblé. Dans cette conception, la perception classe le monde dans le graphe de connaissances. Un planificateur décide. Des règles réagissent. L'agent note ses plans et garde le meilleur. Les pièces existent dans la bibliothèque à côté de l'agent, et les câbler dedans est l'étape suivante. Un modèle peut se tenir à côté de chaque étape comme une faculté de plus, et aucune ne dépend de lui.
 
 Le chapitre 18 raconte les cinq registres d'une réponse et la conversation qui demande. Le chapitre 19 raconte le modèle de langage de domaine, de son premier échelon, sans neurones, à son second, entraîné sur les faits propres du premier et rien d'autre. Le chapitre 20 raconte l'agent qui ne peut pas vous nuire : il propose, un atelier répète, le tribunal juge, et seul un acteur gouverné valide. Le chapitre 21 raconte le tribunal lui-même. Le chapitre 22 compare tout cela au terrain, et imprime où le terrain mène.
 
@@ -195,7 +195,7 @@ La section suivante dit où la loi s'arrête.
 
 Ce qui est construit : le premier échelon du modèle de langage de domaine et son second, un petit bigramme, la conversation qui demande, la dérivation avec sa preuve, l'agent programmatique, et la barrière qui refuse une composition non gouvernée.
 
-Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise. La pile de décision qui perçoit, décide, réagit et apprend, dont les pièces existent à côté de l'agent et pas encore dedans. L'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque. La conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet pas encore.
+Ce qui est conçu : la machine pensante du chapitre 9, où de nombreuses facultés partagent un état et se déclenchent en cascade jusqu'à ce qu'il se stabilise. La pile de décision qui perçoit, décide, réagit et apprend : ses pièces existent à côté de l'agent, et les câbler dedans est l'étape suivante. L'unité typée de prédiction, que le chapitre 19 raconte comme une conception du domaine de projets, validée en cinq étapes dans cette conception et enchaînée nulle part dans la bibliothèque. La conversation entre un agent et celui qui relit son plan : le plan atteint désormais l'agent, et la conversation à son sujet est l'étape suivante.
 
 Ce qui est absent : quatre des cinq agents propres de la bibliothèque. Combien la bibliothèque en déclare-t-elle, et combien sont câblés ? La liste le dit clairement :
 
@@ -208,7 +208,7 @@ Ce qui est absent : quatre des cinq agents propres de la bibliothèque. Combien 
 #--> 0
 ```
 
-Le validateur, le classeur, le planificateur et l'agent qui induirait un motif à partir de vos exemples sont déclarés et réservés. Ainsi le cinquième registre d'une réponse, les exemples, attend un agent qui n'existe pas encore.
+Le validateur, le classeur, le planificateur et l'agent qui induirait un motif à partir de vos exemples sont déclarés et réservés. Ainsi le cinquième registre d'une réponse, les exemples, attend l'agent d'induction : le câbler est l'étape suivante.
 
 Et une limite du premier échelon que vous rencontrerez dès que vous reformulerez une question. Il ne reconnaît une relation que par le mot avec lequel elle a été déclarée. Que fait-il quand vous demandez avec d'autres mots ?
 

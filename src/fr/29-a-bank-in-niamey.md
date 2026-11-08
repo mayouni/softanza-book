@@ -161,7 +161,7 @@ oRep {
 }
 ```
 
-Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Le code propre de la narration ne s'exécute pas au commit épinglé ; les appels ci-dessus, si. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. La règle régionale ne compare le département du supérieur d'un poste que lorsque ce département est déclaré, donc je m'attends à ce que le constat sur l'audit disparaisse quand le département du directeur général est laissé vide. Que dit-il quand il l'est ? Lancez-le :
+Ils disent `compliant`, et le rapport dit `SOUND`. C'est le mouvement que raconte la narration d'une banque virtuelle, d'une structure non conforme à une structure gouvernée. Les appels ci-dessus font ce mouvement au commit épinglé. Le rapport est une seule barrière sur les bases de règles qu'on lui donne. Et voici la limite de ce mouvement, sous forme de bloc. Un tribunal lit ce que l'organigramme déclare, et rien de plus. La règle régionale ne compare le département du supérieur d'un poste que lorsque ce département est déclaré, donc je m'attends à ce que le constat sur l'audit disparaisse quand le département du directeur général est laissé vide. Que dit-il quand il l'est ? Lancez-le :
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -177,7 +177,7 @@ oOrg2 {
 }
 ```
 
-Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour des règles pas encore écrites.
+Il dit `1` : une fonction d'audit qui rend compte au directeur général passe ! Déclarez le département, et le constat apparaît. Le même bloc montre le validateur bancaire qui répond `pass` : le commentaire de la bibliothèque dit qu'il passe à chaque fois, un emplacement réservé pour les règles à venir.
 
 Mon livre précédent, *Refinement-Oriented Programming*, raconte la discipline qui gouverne le changement à travers l'histoire de Softibank, une banque face à la lettre d'un régulateur. Ce chapitre ne la raconte pas de nouveau. Il dit ce que la bibliothèque porte.
 

@@ -225,7 +225,7 @@ En `[ 4, 3 ]`, puis en `[ 5, 3 ]`. Trois pas de plus vers la droite ont gagné u
 
 **J'ai refusé de construire les frères.** L'article qui raconte le Regexuter en décrit quatre autres : un analyseur, un génétique, un linguistique et un quantique. Dans le génétique les motifs évoluent contre un critère d'adaptation, dans le linguistique les déclencheurs sont des règles de grammaire, et dans le quantique un motif peut être dans plusieurs états à la fois. L'article donne à chacun un exemple d'appel, et aucune classe ne se tient derrière. La conception a trouvé plus tard un but pour deux d'entre eux. Répondre par l'exemple exige l'induction de motifs, le terrain du génétique ; plusieurs réponses acceptables exigent des candidats superposés, réduits par des règles ou par un choix, celui du quantique. Le chapitre 18 dit où cela en est. Ils restent une vision ; deux ont leur but écrit.
 
-**J'ai refusé de revendiquer la cascade.** L'architecture de la bibliothèque le dit elle-même : l'échafaudage anticipe la cascade mais ne redéclenche pas encore les déclencheurs dépendants jusqu'à un point fixe. Je préfère vous montrer le bloc qui échoue à enchaîner plutôt qu'un bloc qui y arrive.
+**J'ai refusé de revendiquer la cascade.** L'architecture de la bibliothèque le dit elle-même : l'échafaudage anticipe la cascade, et redéclencher les déclencheurs dépendants jusqu'à un point fixe est l'étape suivante. Je préfère vous montrer le bloc qui échoue à enchaîner plutôt qu'un bloc qui y arrive.
 
 ## 5. Le tribunal
 

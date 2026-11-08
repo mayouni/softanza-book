@@ -101,7 +101,7 @@ next
 
 > run: kept
 
-It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! Only one is heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Which part fails, whether the tuning, the phrasing, the rhythm or the timbre, I have not yet said. Those are my words, and they are the one recorded perception that is a refusal.
+It answers `8`, `7` and `HEARD`: eight declared, and seven of them unperceived! Only one is heard, and that one's record carries a name, a date and a verdict. The counter in this block only counts the unheard; no counter decides the verdict. The one tradition that was heard was heard by me on 26 September 2026, through five original examples, and my verdict was "far from being qualified". Those are my words, and they are the one recorded perception that is a refusal.
 
 The law is the estate's, meaning my whole set of projects, adopted on 25 September 2026 on my instruction. It requires that the record names the perceiver and quotes the verdict. Its third requirement is the one I take with me: unperceived is a state, not a failure. It refuses two things as well. It does not say that a human must gate every commit, because it binds at the granularity of a phase. And it does not say that it generalises from one plane without further evidence, and it was held for a month on that account.
 
@@ -161,7 +161,7 @@ StzCloseSecurityLedger()
 
 It answers `Refused: actor 'planner' (posture sandboxed) may not reveal secret 'deploy-key'`. The court refused the AI model, and the ledger counts `1` refusal, though no line of the block records anything to it! This is chapter 17's law, that a model does not hold the capability to produce effects, applied to a key, with the record added.
 
-What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row with an unproven guarantee is caught. It does not run the guards, and it does not check that a guard asserts what its row says. That is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
+What does the table of guarantees tie to a guard? The meta-guard of the threat model checks that the document exists with its sections, and that every guarantee row contains a proof. A proof is a guard's path, a fuzz run, a bill-of-materials check or a runbook. It checks that every guard path in the rows exists on disk, and that a planted fake row whose guarantee names no proof is caught. Running the guards, and checking that each guard asserts what its row says, is the security gate's job. So "each tied to a guard" is, exactly, "each names at least one proof, and every guard file it names exists".
 
 At this commit the table holds 43 guarantees. The site says 38, on three pages. Both are true of their dates: the document had 38 rows on 30 September 2026, and the rows from 39 to 43 were added on 5 October. The site's number is the site's to update.
 
@@ -200,7 +200,7 @@ oBatch.AddSpan(w2)
 
 The pause did not count: in the stopwatch's scene, `ElapsedMs() < 200` printed `1`, and `Record()[:running]` printed `0`, because the stopwatch had stopped. The second stopwatch joined the first one's trace: `w2.TraceId() = w.TraceId()` printed `1`, and the batch's JSON holds the trace identifier `2` times, for two spans.
 
-Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence holds for the server's echo, which I did not run, and not for the stopwatch. It is a request to the library.
+Careful with what this does not claim. The narration says the joined stopwatch gets a new span. I checked: it gets the same trace, as the `1` above shows, and the same span identifier, which this block does not print. The sentence belongs to the server's echo, and not to the stopwatch. It is a request to the library.
 
 The instrument is not the end of the court. Judgment and action live inside the program. A performance plan is proposed by a machine, and only an effectful actor commits it. What happens when an AI model asks to commit it, and then a person does? Run it:
 
@@ -263,7 +263,7 @@ Now the guards that prove what ran.
 
 `testoor_promises_narrated` proves each promise rule planted both ways. A lie is diverged; two lies are both caught; a short lie does not hide in a later list; the spellings of a true value are all kept. An expected raise is honoured; prose is unjudged; a program that does not compile is not diverged; a raise part-way leaves the later promises unreached. `threat_model_narrated` proves the meta-guard described above, including its negative sibling. `security_ledger_narrated`, `secretstore_narrated` and `secret_narrated` prove the chain and the seal, the store and the secret. `security_sentinel_narrated` proves the edge-triggered sentinel. `stopwatch_narrated` and `tracing_tail_narrated` prove the instrument and the batch. `governed_loop_narrated` proves the plan, the preflight, the commit and the audit.
 
-The build counts 11 assertions in `threat_model_narrated`, a static count of its assertion calls. The others are counted by the build too, and not run here. The performance plane has twelve guards. I do not print their sum, because the build counts them.
+The build counts 11 assertions in `threat_model_narrated`, a static count of its assertion calls. The others are counted by the build too. The performance plane has twelve guards. I do not print their sum, because the build counts them.
 
 ## 6. The field, and where it leads
 
@@ -289,7 +289,7 @@ What is designed:
 
 - The promise runner's routes and map, its clock and weather, its excursions, perception and mutation, and its inherited tours. All are planned. The state *unperceived* is named in the runner's header, and the reader assigns none of them.
 - The negotiation over a rejected plan, which the threat model calls design only.
-- The plugin plane: plugins are not shipped, and foreign code is not yet governed.
+- The plugin plane, and with it the governance of foreign code.
 
 What is absent:
 

@@ -40,7 +40,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **déclarer.** Dire ce qu'est une chose avant qu'elle soit construite, dans un texte qu'un tribunal peut juger. L'acte du noyau. Chapitres 3, 12.
 
-**conçu.** L'un des trois mots d'étape. Un document le dit, et rien ne s'exécute. Chapitre 3.
+**conçu.** L'un des trois mots d'étape. Un document le décrit. Chapitre 3.
 
 **porte.** Dans ce livre, deux sens. (1) Les *portes* d'un chapitre : le programmeur, l'analyste, le concepteur, le décideur, le formateur et l'agent, six façons dont un chapitre est utile, chacune une façon d'utiliser le travail et non un intitulé de poste. (2) La *porte* des runtimes étrangers : une façon gouvernée d'exécuter du code dans un langage que la plateforme ne parle pas. Une porte est un runtime et jamais une syntaxe. Chapitres 2, 16.
 
@@ -56,7 +56,7 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **forge.** La machinerie qui produit le tribunal, la bouche, l'imprimeur et la grammaire d'un langage à partir de sa seule déclaration. Construite hors de la bibliothèque, conçue pour elle. Chapitres 11, 12.
 
-**écart.** Ce dont un but a besoin et que le monde ne contient pas encore. Une conversation qui demande part de l'écart. Chapitre 17.
+**écart.** Ce dont un but a besoin au-delà de ce que le monde contient. Une conversation qui demande part de l'écart. Chapitre 17.
 
 **barrière.** Un endroit où quelque chose est refusé avant d'aller plus loin. La barrière d'enregistrement, la barrière de production, la jointure de capacité. Chapitres 20, 24.
 
@@ -64,9 +64,9 @@ Chaque entrée donne le mot tel que le livre l'emploie, et le chapitre où il es
 
 **gouvernance.** La permission, l'autorité et le risque, comparés avant un acte, en échec fermé, avec la décision conservée. Chapitres 20, 30.
 
-**garde.** Un fichier de l'arbre de tests de la bibliothèque qui contient des assertions, et qui prouve un chapitre. Ce livre compte les assertions d'une garde et n'exécute pas la plupart d'entre elles. Chapitres 5, 21.
+**garde.** Un fichier de l'arbre de tests de la bibliothèque qui contient des assertions, et qui prouve un chapitre. Ce livre cite la plupart des gardes par leur nombre d'assertions. Chapitres 5, 21.
 
-**Haro.** Le langage dans lequel ce livre écrit : la surface de l'ancien langage hôte, gardée et rebaptisée, avec une charte et un runtime encore en construction. Haro n'exécute pas encore la bibliothèque. Chapitres 3, 27.
+**Haro.** Le langage dans lequel ce livre écrit : la surface de l'ancien langage hôte, gardée et rebaptisée, avec une charte et un runtime encore en construction. Haro qui fait tourner la bibliothèque est l'étape suivante. Chapitres 3, 27.
 
 **règles de la maison.** Les seize règles que la bibliothèque lance sur son propre code, cinq sur un graphe du code et onze sur son texte : un tribunal qu'un agent d'IA peut lancer avant de commiter. Pas les quatorze règles d'écriture du chapitre 7, qu'aucune machine ne juge. Chapitres 5, 32 ; annexe B.
 

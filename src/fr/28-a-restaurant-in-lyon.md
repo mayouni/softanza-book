@@ -242,7 +242,7 @@ Six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 
-**Le programmeur.** Vous déclarez des mondes et des liens et vous exécutez une constellation où un appel vers un monde qui n'est pas encore actif est refusé avec sa raison. Le code du restaurant, lui, est une application web.
+**Le programmeur.** Vous déclarez des mondes et des liens et vous exécutez une constellation où un appel vers un monde en sommeil est refusé avec sa raison. Le code du restaurant, lui, est une application web.
 
 **L'analyste.** La rigueur dans les nombres était le contrat de la première application : une échéance calculée à partir de la date de facture, une date obligatoire, une dette sans échéance rendue visible.
 
@@ -267,6 +267,6 @@ Le tribunal vous dira la circonstance et la règle. Il n'écrira pas la déclara
 
 Je vous laisse celui-ci, volontairement. Le protocole de vitesse du propriétaire est au soixante-quinzième percentile, et le budget de la section 3 est jugé au quatre-vingt-quinzième. Prenez ce bloc, changez le percentile d'une attente pour un autre que la bibliothèque offre, gardez toutes les autres lignes, et lancez-le. Lisez ce que le tribunal juge contre ce qu'il a demandé. La section 6 dit ce que les termes de la bibliothèque offrent, et la section 7 range son attente parmi les choses absentes. Je ne vous donne ni le verdict ni la réponse.
 
-Quand vous l'aurez résolu, vous saurez pourquoi une promesse que le tribunal sait juger n'est pas encore la promesse que le propriétaire a demandée.
+Quand vous l'aurez résolu, vous saurez pourquoi une promesse que le tribunal sait juger diffère de la promesse que le propriétaire a demandée.
 
 Le chapitre 29 est une banque à Niamey, où une organisation est jugée par son propre organigramme, selon les règles d'un régulateur, par un programme qui lit l'organigramme comme une donnée. L'organigramme dit ce qui est, la règle dit ce qui doit être, et le verdict nomme la règle et le lieu.

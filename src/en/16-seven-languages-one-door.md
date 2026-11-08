@@ -36,7 +36,7 @@ The vision's own sentence, ratified in session on 28 August 2026, says it of the
 
 ## 3. The Softanza form
 
-The door's list is closed. The foreign languages are a registry, and the host is not on it. Which languages does the door know? Ask it about six, then about the host, under the name the library's own data still gives it, the former host language's, then about one that was never on the list:
+The door's list is closed. The foreign languages are a registry, and the host is not on it. Which languages does the door know? Ask it about six, then about the host, under the name the library's own data still gives it, the former host language's, then about one outside the list:
 
 ```haro
 oDoor = new stzExterCode(:python)
@@ -125,7 +125,7 @@ The data goes in by composing the code string with the host's own list printer, 
 
 **Which seven?** The title commits to a number, and I ruled on 12 October 2026 which one: the six foreign runtimes of the registry above and the host, as the article on the plane and the article on performance count them. The language model is not one of them, because it is not a door of this plane at all. Chapters 17 and 20 make the model a proposer that cannot commit, while the narrations run it as a first-class runtime through a function that is absent. Section 7 prints that as a limit. The record counts it differently elsewhere: seven domain modules with one for a language model, seven domains with the host as an eighth, the registry's six without the host, the vision's "7 selected languages" that it never lists, and the engine design's five with COBOL. The registry above is the one that runs.
 
-**A facet is not a door.** Reading a foreign language is also not running it. The two languages that I name as Haro's planned facets are also the two that the library can already read into one code graph. It does not run them and does not write them. One set of questions answers over both:
+**A facet is not a door.** Reading a foreign language is also not running it. The two languages that I name as Haro's planned facets are also the two that the library can already read into one code graph. Reading is all it does with them. One set of questions answers over both:
 
 ```haro
 cPy = "class Animal:" + nl +
@@ -155,7 +155,7 @@ StzJsCodeGraphFromSourceTS(cJs) {
 }
 ```
 
-This is a parser into an index of classes, methods and inheritance, and not a program graph that can print a program. It is a coincidence of the order of work, and not yet a facet. The record has one statement of mine on facets. I made it in session on 8 October 2026, and it says that a link should be made with the future vision of Haro and its facet languages. In that vision the former host language is already there, and Python and JavaScript are planned. The charter of Haro on this machine speaks of one grammar and one text. Its design memo for a second facet, which proposes and rules nothing, recommends printers read by humans before any parser. Its own table lists the collisions: a Python reader expects zero-based indexing and Haro's is one-based. The chapter says "planned" only with that statement named as its source.
+This is a parser into an index of classes, methods and inheritance, and not a program graph that can print a program. It is a coincidence of the order of work; the facet itself is planned. The record has one statement of mine on facets. I made it in session on 8 October 2026, and it says that a link should be made with the future vision of Haro and its facet languages. In that vision the former host language is already there, and Python and JavaScript are planned. The charter of Haro on this machine speaks of one grammar and one text. Its design memo for a second facet, which proposes and rules nothing, recommends printers read by humans before any parser. Its own table lists the collisions: a Python reader expects zero-based indexing and Haro's is one-based. The chapter says "planned" only with that statement named as its source.
 
 **A door is governed.** The governance has the word for foreign code. `external` is the posture the library defines as out-of-process. What does the governance answer before that posture is declared, and after? Ask it:
 
@@ -212,7 +212,7 @@ Now the court, and what it proves of the door.
 
 ## 5. The court
 
-`51_extercode_narrated` proves that the registry knows Python, R, Julia, Prolog, C and NodeJS, and rejects an unknown name. It proves that the lookup ignores case (tested for Python); that the code set is the code read back; and that the factory constructs and forwards. The smoke test it narrates says in its header: no `Execute`, by its own guardrail. `governance_narrated`, scene six, proves that an execution without a posture refuses and that a declared posture proceeds and names itself; scene seven, that postures travel through save and load. `virtual_environment_twin_narrated` proves that a queued spawn does not run until commit, by a marker file; that a scope refuses; and that the plan narrates and flags the spawn. `pycodegraph_narrated` and `jscodegraph_narrated` prove classes, methods, inheritance chains, owners, impact and cascade over Python and over JavaScript sources, offline and without the runtime. Both skip their parser scenarios when the engine's tree-sitter is absent, and the first also skips its Python-AST ones when Python is not on the path.
+`51_extercode_narrated` proves that the registry knows Python, R, Julia, Prolog, C and NodeJS, and rejects an unknown name. It proves that the lookup ignores case (tested for Python); that the code set is the code read back; and that the factory constructs and forwards. The smoke test it narrates says in its header: no `Execute`, by its own guardrail. `governance_narrated`, scene six, proves that an execution without a posture refuses and that a declared posture proceeds and names itself; scene seven, that postures travel through save and load. `virtual_environment_twin_narrated` proves that a queued spawn runs only at commit, by a marker file; that a scope refuses; and that the plan narrates and flags the spawn. `pycodegraph_narrated` and `jscodegraph_narrated` prove classes, methods, inheritance chains, owners, impact and cascade over Python and over JavaScript sources, offline and without the runtime. Both skip their parser scenarios when the engine's tree-sitter is absent, and the first also skips its Python-AST ones when Python is not on the path.
 
 I want to be exact about the court of the door. A guard that runs a foreign runtime and passes is absent from the snapshot; what the door's court holds today is a registry and a construction test. The folder's own run record, under an older runtime version, lists thirty-seven failures. Several promises cannot match by construction, because the file names carry a random suffix and the calls a duration.
 
@@ -250,7 +250,7 @@ oPy3 {
 
 The governance said no, and the door ran anyway, and returned `42`! Nothing in the door's folder mentions governance or posture. The door calls the system directly, and not the twin.
 
-The way back is not yet closed. The result file is read by the host's own `eval`, and a string that comes out of the foreign runtime is wrapped in single quotes without escaping. Can a foreign string that carries a quote and a call reach host code? The function used here is `upper`, harmless on purpose:
+Closing the way back is the next step. The result file is read by the host's own `eval`, and a string that comes out of the foreign runtime is wrapped in single quotes without escaping. Can a foreign string that carries a quote and a call reach host code? The function used here is `upper`, harmless on purpose:
 
 ```haro
 oPy4 = new stzExterCode(:python)
@@ -284,13 +284,13 @@ oStat {
 }
 ```
 
-The call raised, and the trace still holds `0`! R's message was in French on this machine, so I do not promise it. This is the limit of the door at this commit, in the voice of chapter 11's open list. The runs above are its evidence. Governing the door is designed and not yet built, so the vision's word "governed" stays a design. The way back is not yet closed, since data returns through a file that the host evaluates. And the R door, in development, raises on every call today.
+The call raised, and the trace still holds `0`! R's message was in French on this machine, so I do not promise it. This is the limit of the door at this commit, in the voice of chapter 11's open list. The runs above are its evidence. Governing the door is designed, so the vision's word "governed" stays a design; building it is the next step. The way back runs through a file that the host evaluates, and closing it is the next step too. And the R door, in development, raises on every call today.
 
 What else is designed: the engine's own polyglot bridge, which the engine design marks as planned. A module of the same name in the macroplan, a string registry, was once marked done with no source. Then the three tiers for Python, of which only the external subprocess exists. Then the domain library on top of the door, none of whose classes I found in code. And the facets, a memo that proposes and rules nothing.
 
 What is absent: the article's functions that bring data in, `@@R`, `@@C`, `XC()` and `XAI()`, which are defined in no file. Factories exist for Python, R, Julia and Prolog. The C and NodeJS doors are reached only by the class. The AI model is not a door of this plane at all; the article's function that runs it inside the host is the opposite of chapter 17's law, and the book does not teach it.
 
-And a door shape I did not run: Julia, C and Prolog, for which no runtime is installed here. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. I ran none of it.
+And three door shapes the registry knows, Julia, C and Prolog: their runs wait for a runtime on this machine. And a third relation, named in the study beside the door: the shim that pastes a solution found on the internet in another language and changes it a little. `range0`, Python's range as a host function, has a guard. The folder's own record lists for it five failures on ranges that should be empty and one on the slice form `':5:-1'`. I ran none of it.
 
 Six readings of the door follow, one for each person who meets it.
 
@@ -302,7 +302,7 @@ Six readings of the door follow, one for each person who meets it.
 
 **The designer.** There is nothing to design at the door itself. The record's lesson is its refusal: a language not on the list is refused by name, and "what about my language" has one answer.
 
-**The decision-maker.** The door is the one place where the closure ends, by decision. At this commit its governance is designed and not yet built, and its way back, not yet closed, reaches host code. The vision's word "governed" is a design. Every call's duration is recorded in the trace today.
+**The decision-maker.** The door is the one place where the closure ends, by decision. At this commit its governance is designed and its way back reaches host code: building the one and closing the other is the next step. The vision's word "governed" is a design. Every call's duration is recorded in the trace today.
 
 **The educator.** A learner sees which layer belongs to which language and runs a two-door pipeline. The lesson is the difference between reading a language, running it, and writing in its syntax.
 

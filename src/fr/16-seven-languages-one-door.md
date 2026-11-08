@@ -36,7 +36,7 @@ La phrase propre de la vision, ratifiée en session le 28 août 2026, le dit de 
 
 ## 3. La forme Softanza
 
-La liste de la porte est fermée. Les langages étrangers forment un registre, et l'hôte n'y figure pas. Quels langages la porte connaît-elle ? Interrogez-la sur six langages, puis sur l'hôte, sous le nom que les données propres de la bibliothèque lui donnent encore, celui de l'ancien langage hôte, puis sur un langage qui n'a jamais été sur la liste :
+La liste de la porte est fermée. Les langages étrangers forment un registre, et l'hôte n'y figure pas. Quels langages la porte connaît-elle ? Interrogez-la sur six langages, puis sur l'hôte, sous le nom que les données propres de la bibliothèque lui donnent encore, celui de l'ancien langage hôte, puis sur un langage hors de la liste :
 
 ```haro
 oDoor = new stzExterCode(:python)
@@ -125,7 +125,7 @@ Les données entrent en composant la chaîne de code avec l'afficheur de listes 
 
 **Lesquels, ces sept ?** Le titre s'engage sur un nombre, et j'ai tranché le 12 octobre 2026 lequel : les six runtimes étrangers du registre ci-dessus et l'hôte, comme les comptent l'article sur le volet et l'article sur la performance. Le modèle de langage n'en fait pas partie, car il n'est pas du tout une porte de ce volet. Les chapitres 17 et 20 font du modèle un proposeur qui ne peut pas valider, alors que les narrations l'exécutent comme un runtime de première classe par une fonction absente. La section 7 imprime cela comme une limite. Le dossier compte autrement ailleurs : sept modules de domaine dont un pour un modèle de langage, sept domaines avec l'hôte comme huitième, les six du registre sans l'hôte, les « 7 langages choisis » de la vision qu'elle n'énumère jamais, et les cinq de la conception du moteur avec COBOL. Le registre ci-dessus est celui qui s'exécute.
 
-**Une facette n'est pas une porte.** Lire un langage étranger n'est pas non plus l'exécuter. Les deux langages que je nomme comme facettes prévues de Haro sont aussi les deux que la bibliothèque sait déjà lire dans un seul graphe de code. Elle ne les exécute pas et ne les écrit pas. Un seul jeu de questions répond sur les deux :
+**Une facette n'est pas une porte.** Lire un langage étranger n'est pas non plus l'exécuter. Les deux langages que je nomme comme facettes prévues de Haro sont aussi les deux que la bibliothèque sait déjà lire dans un seul graphe de code. Les lire est tout ce qu'elle en fait. Un seul jeu de questions répond sur les deux :
 
 ```haro
 cPy = "class Animal:" + nl +
@@ -155,7 +155,7 @@ StzJsCodeGraphFromSourceTS(cJs) {
 }
 ```
 
-C'est un analyseur qui produit un index de classes, de méthodes et d'héritage, et non un graphe de programme capable d'imprimer un programme. C'est une coïncidence de l'ordre du travail, et pas encore une facette. Le dossier tient une seule déclaration de moi sur les facettes. Je l'ai faite en session le 8 octobre 2026, et elle dit qu'un lien doit être fait avec la future vision de Haro et de ses langages à facettes. Dans cette vision, l'ancien langage hôte est déjà là, et Python et JavaScript sont prévus. La charte de Haro sur cette machine parle d'une grammaire et d'un texte. Sa note de conception pour une seconde facette, qui propose et ne tranche rien, recommande des afficheurs lus par des humains avant tout analyseur. Sa propre table énumère les collisions : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le chapitre dit « prévues » seulement avec cette déclaration nommée comme source.
+C'est un analyseur qui produit un index de classes, de méthodes et d'héritage, et non un graphe de programme capable d'imprimer un programme. C'est une coïncidence de l'ordre du travail ; la facette elle-même est prévue. Le dossier tient une seule déclaration de moi sur les facettes. Je l'ai faite en session le 8 octobre 2026, et elle dit qu'un lien doit être fait avec la future vision de Haro et de ses langages à facettes. Dans cette vision, l'ancien langage hôte est déjà là, et Python et JavaScript sont prévus. La charte de Haro sur cette machine parle d'une grammaire et d'un texte. Sa note de conception pour une seconde facette, qui propose et ne tranche rien, recommande des afficheurs lus par des humains avant tout analyseur. Sa propre table énumère les collisions : un lecteur de Python attend une indexation à partir de zéro, et celle de Haro part de un. Le chapitre dit « prévues » seulement avec cette déclaration nommée comme source.
 
 **Une porte est gouvernée.** La gouvernance a le mot pour le code étranger. `external` est la posture que la bibliothèque définit comme hors processus. Que répond la gouvernance avant que cette posture soit déclarée, et après ? Interrogez-la :
 
@@ -212,7 +212,7 @@ Voyons maintenant le tribunal, et ce qu'il prouve de la porte.
 
 ## 5. Le tribunal
 
-`51_extercode_narrated` prouve que le registre connaît Python, R, Julia, Prolog, C et NodeJS, et rejette un nom inconnu. Il prouve que la recherche ignore la casse (testé pour Python) ; que le code posé est le code relu ; et que la fabrique construit et transmet. Le test de fumée qu'il narre dit dans son en-tête : pas d'`Execute`, par son propre garde-fou. `governance_narrated`, scène six, prouve qu'une exécution sans posture refuse et qu'une posture déclarée procède et se nomme ; la scène sept, que les postures voyagent par la sauvegarde et le chargement. `virtual_environment_twin_narrated` prouve qu'un lancement mis en file ne s'exécute pas avant la validation, par un fichier témoin ; qu'une portée refuse ; et que le plan narre et signale le lancement. `pycodegraph_narrated` et `jscodegraph_narrated` prouvent les classes, les méthodes, les chaînes d'héritage, les propriétaires, l'impact et la cascade sur des sources Python et sur des sources JavaScript, hors ligne et sans le runtime. Tous deux sautent leurs scènes d'analyse quand le tree-sitter du moteur est absent, et le premier saute aussi celles de l'AST Python quand Python n'est pas sur le chemin.
+`51_extercode_narrated` prouve que le registre connaît Python, R, Julia, Prolog, C et NodeJS, et rejette un nom inconnu. Il prouve que la recherche ignore la casse (testé pour Python) ; que le code posé est le code relu ; et que la fabrique construit et transmet. Le test de fumée qu'il narre dit dans son en-tête : pas d'`Execute`, par son propre garde-fou. `governance_narrated`, scène six, prouve qu'une exécution sans posture refuse et qu'une posture déclarée procède et se nomme ; la scène sept, que les postures voyagent par la sauvegarde et le chargement. `virtual_environment_twin_narrated` prouve qu'un lancement mis en file ne s'exécute qu'à la validation, par un fichier témoin ; qu'une portée refuse ; et que le plan narre et signale le lancement. `pycodegraph_narrated` et `jscodegraph_narrated` prouvent les classes, les méthodes, les chaînes d'héritage, les propriétaires, l'impact et la cascade sur des sources Python et sur des sources JavaScript, hors ligne et sans le runtime. Tous deux sautent leurs scènes d'analyse quand le tree-sitter du moteur est absent, et le premier saute aussi celles de l'AST Python quand Python n'est pas sur le chemin.
 
 Je veux être exact sur le tribunal de la porte. Une garde de l'instantané qui exécute un runtime étranger et passe est absente ; ce que tient aujourd'hui le tribunal de la porte, c'est un registre et un test de construction. Le propre relevé d'exécution du répertoire, sous une version plus ancienne du runtime, énumère trente-sept échecs. Plusieurs promesses ne peuvent pas correspondre par construction, parce que les noms de fichiers portent un suffixe aléatoire et les appels une durée.
 
@@ -250,7 +250,7 @@ oPy3 {
 
 La gouvernance a dit non, et la porte s'est exécutée quand même, et a renvoyé `42` ! Rien dans le répertoire de la porte ne mentionne la gouvernance ni la posture. La porte appelle directement le système, et non le jumeau.
 
-Le chemin du retour n'est pas encore fermé. Le fichier de résultat est lu par le propre `eval` de l'hôte, et une chaîne qui sort du runtime étranger est enveloppée entre apostrophes simples sans échappement. Une chaîne étrangère qui porte une apostrophe et un appel peut-elle atteindre le code de l'hôte ? La fonction utilisée ici est `upper`, inoffensive exprès :
+Fermer le chemin du retour est la prochaine étape. Le fichier de résultat est lu par le propre `eval` de l'hôte, et une chaîne qui sort du runtime étranger est enveloppée entre apostrophes simples sans échappement. Une chaîne étrangère qui porte une apostrophe et un appel peut-elle atteindre le code de l'hôte ? La fonction utilisée ici est `upper`, inoffensive exprès :
 
 ```haro
 oPy4 = new stzExterCode(:python)
@@ -284,13 +284,13 @@ oStat {
 }
 ```
 
-L'appel a levé une erreur, et la trace garde pourtant `0` ! Le message de R était en français sur cette machine, je ne le promets donc pas. C'est la limite de la porte à ce commit, dans la voix de la liste ouverte du chapitre 11. Les exécutions ci-dessus en sont la preuve. Gouverner la porte est conçu et pas encore construit, et le mot « gouvernée » de la vision reste donc une conception. Le chemin du retour n'est pas encore fermé, puisque les données reviennent par un fichier que l'hôte évalue. Et la porte R, en développement, lève une erreur à chaque appel aujourd'hui.
+L'appel a levé une erreur, et la trace garde pourtant `0` ! Le message de R était en français sur cette machine, je ne le promets donc pas. C'est la limite de la porte à ce commit, dans la voix de la liste ouverte du chapitre 11. Les exécutions ci-dessus en sont la preuve. Gouverner la porte est conçu, et le mot « gouvernée » de la vision reste donc une conception ; le construire est la prochaine étape. Le chemin du retour passe par un fichier que l'hôte évalue, et le fermer est aussi la prochaine étape. Et la porte R, en développement, lève une erreur à chaque appel aujourd'hui.
 
 Ce qui est conçu en plus : le pont polyglotte propre du moteur, que la conception du moteur marque comme prévu. Un module de même nom dans le macroplan, un registre de chaînes, a été marqué fait alors qu'il n'avait aucune source. Puis les trois niveaux pour Python, dont seul le sous-processus externe existe. Puis la bibliothèque de domaines au-dessus de la porte, dont je n'ai trouvé aucune classe dans le code. Et les facettes, une note qui propose et ne tranche rien.
 
 Ce qui est absent : les fonctions de l'article qui font entrer les données, `@@R`, `@@C`, `XC()` et `XAI()`, qui ne sont définies dans aucun fichier. Des fabriques existent pour Python, R, Julia et Prolog. Les portes C et NodeJS ne sont atteintes que par la classe. Le modèle d'IA n'est pas du tout une porte de ce volet ; la fonction de l'article qui l'exécute dans l'hôte est le contraire de la loi du chapitre 17, et le livre ne l'enseigne pas.
 
-Et une forme de porte que je n'ai pas exécutée : Julia, C et Prolog, pour lesquels aucun runtime n'est installé ici. Et une troisième relation, nommée dans l'étude à côté de la porte : l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu. `range0`, le range de Python comme fonction de l'hôte, a une garde. Le relevé propre du dossier lui compte cinq échecs sur des plages qui devraient être vides et un sur la forme de tranche `':5:-1'`. Je n'en ai rien exécuté.
+Et trois formes de porte que le registre connaît, Julia, C et Prolog : leurs exécutions attendent un runtime sur cette machine. Et une troisième relation, nommée dans l'étude à côté de la porte : l'adaptateur qui colle une solution trouvée sur internet dans un autre langage et la change un peu. `range0`, le range de Python comme fonction de l'hôte, a une garde. Le relevé propre du dossier lui compte cinq échecs sur des plages qui devraient être vides et un sur la forme de tranche `':5:-1'`. Je n'en ai rien exécuté.
 
 Six lectures de la porte suivent, une pour chacun de ceux qui la rencontrent.
 
@@ -302,7 +302,7 @@ Six lectures de la porte suivent, une pour chacun de ceux qui la rencontrent.
 
 **Le concepteur.** Il n'y a rien à concevoir à la porte elle-même. La leçon du dossier est son refus : un langage hors de la liste est refusé par son nom, et « et mon langage ? » a une seule réponse.
 
-**Le décideur.** La porte est l'unique endroit où la fermeture prend fin, par décision. À ce commit sa gouvernance est conçue et pas encore construite, et son chemin du retour, pas encore fermé, atteint le code de l'hôte. Le mot « gouvernée » de la vision est une conception. La durée de chaque appel est enregistrée aujourd'hui dans la trace.
+**Le décideur.** La porte est l'unique endroit où la fermeture prend fin, par décision. Sa gouvernance est conçue à ce commit, et son chemin du retour atteint le code de l'hôte : construire l'une et fermer l'autre est la prochaine étape. Le mot « gouvernée » de la vision est une conception. La durée de chaque appel est enregistrée aujourd'hui dans la trace.
 
 **Le formateur.** Un apprenant voit quelle couche appartient à quel langage et exécute un pipeline à deux portes. La leçon est la différence entre lire un langage, l'exécuter, et écrire dans sa syntaxe.
 

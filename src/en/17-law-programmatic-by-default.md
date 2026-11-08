@@ -10,7 +10,7 @@ site: [agentic, wise]
 guards: [dlm_narrated, wisecoding_narrated, knowledge_integration_narrated, agentgraph_narrated, piagent_narrated, ownagentstack_narrated]
 stage:
   built: "the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model"
-  designed: "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer"
+  designed: "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent; the typed unit of prediction, a design of the estate's with five validation stages; the negotiation between an agent and its reviewer"
   absent: "four of the library's five own agents, induction from examples among them"
 status: draft
 rulings: ["12.18", "12.19", "12.25", "12.26", "12.29"]
@@ -153,7 +153,7 @@ oRog.AddGovernedSkill(oSk, "order-stock")
 
 The stock is low, the skill wants to order, and the agent was never given the permission. `Pursue()` printed `0`: governance refused it! Nothing happens, and the log says why, by name: `refused: 'rogue-bot' lacks PERMISSION (can) for 'order-stock'`. The world is as it was.
 
-Put the pieces in a line and you have the stack the vision of the platform names as its North Star, ratified on 27 September 2026: perceive, decide, react, learn. None of it needs a language model. It is a design, not an assembled agent. In it, perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. The pieces exist in the library beside the agent, not yet inside it: the agent above calls none of them. A model may sit beside each step as one more faculty, and none of them depends on it.
+Put the pieces in a line and you have the stack the vision of the platform names as its North Star, ratified on 27 September 2026: perceive, decide, react, learn. None of it needs a language model. It is a design, not an assembled agent. In it, perception classifies the world into the knowledge graph. A planner decides. Rules react. The agent scores its plans and keeps the best. The pieces exist in the library beside the agent, and wiring them into it is the next step. A model may sit beside each step as one more faculty, and none of them depends on it.
 
 Chapter 18 tells the five registers of an answer and the conversation that asks. Chapter 19 tells the domain language model, from its first rung, with no neurons, to its second, trained on the first one's own facts and nothing else. Chapter 20 tells the agent that cannot hurt you: it proposes, a workbench rehearses, the court judges, and only a governed actor commits. Chapter 21 tells the court itself. Chapter 22 compares all of it with the field, and prints where the field leads.
 
@@ -195,7 +195,7 @@ The next section says where the law stops.
 
 What is built: the domain language model's first rung and its second, a small bigram, the conversation that asks, derivation with its proof, the programmatic agent, and the gate that refuses an ungoverned composition.
 
-What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn, whose pieces exist beside the agent and not yet inside it. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan does not yet.
+What is designed: the thinking machine of chapter 9, where many faculties share one state and cascade until it settles. The decision stack of perceive, decide, react and learn: its pieces exist beside the agent, and wiring them into it is the next step. The typed unit of prediction, which chapter 19 tells as a design of the estate's, validated in five stages in that design and chained nowhere in the library. The conversation between an agent and the one who reviews its plan: the plan now reaches the agent, and the conversation about the plan is the next step.
 
 What is absent: four of the library's five own agents. How many does the library declare, and how many are wired? The roster says it plainly:
 
@@ -208,7 +208,7 @@ What is absent: four of the library's five own agents. How many does the library
 #--> 0
 ```
 
-The validator, the ranker, the planner and the agent that would induce a pattern from your examples are declared and reserved. So the fifth register of an answer, examples, waits on an agent that does not exist yet.
+The validator, the ranker, the planner and the agent that would induce a pattern from your examples are declared and reserved. So the fifth register of an answer, examples, waits on the induction agent: wiring it is the next step.
 
 And one limit of the first rung that you will meet the moment you rephrase a question. It recognises a relation only by the word it was declared with. What does it do when you ask in other words?
 

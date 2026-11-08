@@ -16,7 +16,7 @@ rulings: ["12.4", "12.18", "12.26"]
 research: research/ch15.md
 ---
 
-In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development, and I keep its one tension for the limit: a word the language does not know is not yet refused. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
+In this chapter I start from the regular expression, which is what a pattern is for a working programmer, and carry its habit to data that is not text: lists, numbers, tables, matrices, time and graphs. I run the same small move in each medium, a constructor, a pattern in a string, `Match`, and I show you at once that the grammar is not quite one. I say what the guards prove and where the family is still in development. I keep its one tension for section 7: refusing a word the language does not know is the family's next step. The principle is this: a pattern is a rule about the shape of data, written as data, and the same habit serves every kind of data.
 
 ## 1. The concept, as the field holds it
 
@@ -219,7 +219,7 @@ Graphs have no `Tokens`, no `Pattern` and no working `Explain` at this commit, a
 
 **I refused the declarative builder as a headline.** The builders are the classes that write a regex from named steps in code, not from a string. Eighteen of the fifty-one files in the builder's test folder are marked retired: the parser of a declarative pattern is pending. The article's lead example, `CanContainAChar(:Between = ...)`, raises. What runs is the conditional builder, and the look-around object. I do not build the chapter on the builder's headline form.
 
-**I have not yet refused a word the language does not know.** That is the tension of this chapter, and I keep it for section 7.
+**Refusing a word the language does not know is my next step.** That is the tension of this chapter, and I keep it for section 7.
 
 ## 5. The court
 
@@ -239,9 +239,9 @@ Next, the field, and where it leads.
 
 **Tables.** Data-quality libraries lead in reach and ecosystem. Here a rule is a sentence the person who owns the data can read. The loss is that it runs only on `stzTable`.
 
-**Where the family is still in development.** The class headers print their known gaps as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed but not yet used by the match. Matrices: known gaps today, each carried as a warning on its method.
+**Where the family is still in development.** The class headers print their known gaps as warnings: for matrices and graphs. That is rare, and I say it. Graphs: the quantifiers are parsed, and bringing them into the match is the next step. Matrices: known gaps today, each carried as a warning on its method.
 
-**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also a likely reason time does not yet match.
+**A date for the family's one recurring bug.** The same root cause hit the family language by language: the parsers sliced with an end position through a function that counts. The numbers and matrices were repaired on 14 June 2026, the tables on 5 October, and the graphs in a fix whose date the file does not give. Time still carries it. This is evidence that the family shares one design and one parser's habits; it is also the likely cause of the open case of time in section 5.
 
 Next, the limit.
 
@@ -288,7 +288,7 @@ The article promises that the first is TRUE, and it is. The second matches the s
 
 Cooking lies between the first and the last, so the first answer is the arrow's meaning. The second answers 1 too! The quantifier is ignored. The cache of this class is keyed by the node and edge counts and the node ids. A second graph with the same ids and other labels is answered from the cache, until `ClearCache()`: the answer can be stale.
 
-**The refusal the family has not yet made.** Chapter 11's law is that a language is declared and closed, with refusals. What does the family answer when it is asked a word it does not know? Run it:
+**The refusal, the family's next step.** Chapter 11's law is that a language is declared and closed, with refusals. What does the family answer when it is asked a word it does not know? Run it:
 
 ```haro
 ? Nx("{@Banana(3)}").Match(7)
@@ -301,15 +301,15 @@ Cooking lies between the first and the last, so the first answer is the arrow's 
 #--> 0
 ```
 
-A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is not closed. A closed language that cannot refuse is not yet the law of chapter 11. The chapter prints it as a finding of the court, and not as a debt of mine. I hold that as my view. The run above, on this commit, is what stands behind it.
+A pattern with a word the language does not know matches every number! The tokens are `[ ]`, and nothing is raised. The matrix and table languages return an ERROR token that nothing raises, and the number and time languages return an empty list. The Haro charter session filed this as a finding, which the central record relayed on 28 September 2026: the six pattern classes accept unknown tokens silently. I reproduced it on this commit, and the request is open. A closed language that refuses is the law of chapter 11; bringing the six to it is the next step. The chapter prints it as a finding of the court, and not as a debt of mine. I hold that as my view. The run above, on this commit, is what stands behind it.
 
 What is designed: one pattern engine shared by all the media. The engine design says the backtracking engine, the constraint solver and the pattern compiler are the same across all domains, and that only the vocabulary changes. Its status is planned. At this commit the vocabulary changes and so does the code. The engine's own file named *pattern* is another thing: palindromes, repeats and arithmetic and geometric sequences. The pattern as the condition side of the cascade, many faculties firing one after another on a shared state, is chapter 9's third rung, and designed.
 
-What is absent: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision only. The explanation of an unnamed pattern, since `rx("[a-z]+").Explain()` raises because the analyser class was never built. And any use of the pattern classes by the rest of the library: outside the regex folder, the tests and the docs, no class takes a pattern. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` have no `Matches(pattern)`. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
+What is absent: induction from examples, which is reserved. The genetic, linguistic and quantic siblings, which are vision only. The explanation of an unnamed pattern, since `rx("[a-z]+").Explain()` raises because the analyser class is absent. And any use of the pattern classes by the rest of the library: outside the regex folder, the tests and the docs, no class takes a pattern. `stzList`, `stzNumber`, `stzTable`, `stzMatrix` and `stzGraph` have no `Matches(pattern)`. In the docs, the education course uses them, in a chapter and an exercise whose answer is checked by running the learner's program, and the gallery has a few scripts that use them.
 
 ## 8. Six doors
 
-**The programmer.** One habit across seven kinds of data, with graphs still lacking the small function: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.
+**The programmer.** One habit across seven kinds of data, with a small function for six of them: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.
 
 **The analyst.** A data-quality rule is a sentence of the table language. The person who owns the data can read it.
 
@@ -319,7 +319,7 @@ What is absent: induction from examples, which is reserved. The genetic, linguis
 
 **The educator.** The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number.
 
-**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media that are not text can yet refuse a word it does not know, and that writing a pattern from examples is reserved.
+**The agent.** A pattern is a small closed notation that an agent can be held to and can read back. Be told that refusing a word it does not know is the next step for the six media that are not text, and that writing a pattern from examples is reserved.
 
 ## 9. Exercise
 

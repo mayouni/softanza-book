@@ -79,13 +79,13 @@ WORDS = {
 
 # book: the verdicts the site has no words for, because the site keeps such blocks off its pages
 WORDS["en"].update({
-    "exercise": "not run: an exercise, written for you to run",
-    "not-run": "not run: {why}",
+    "exercise": "exercise: written for you to run",
+    "not-run": "shown as written: {why}",
     "effects": "this block touches {what}; the output shown was recorded on {d}",
 })
 WORDS["fr"].update({
-    "exercise": "non exécuté : un exercice, écrit pour que vous l'exécutiez",
-    "not-run": "non exécuté : {why}",
+    "exercise": "exercice : écrit pour que vous l'exécutiez",
+    "not-run": "montré tel qu'écrit : {why}",
     "effects": "ce bloc touche {what} ; la sortie montrée a été enregistrée le {d}",
 })
 

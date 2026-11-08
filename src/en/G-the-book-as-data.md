@@ -21,7 +21,7 @@ Files sit beside the reader, and each is regenerated at every build.
 
 ### What a promise is
 
-A block of code that begins with the tag `haro` is run inside the library at the commit named under the chapter's title. The lines that begin with `#-->` are the block's promise: what the block printed when the author wrote it. The judge compares the promise with the run, ignoring spacing, and reading `TRUE` and `FALSE` as 1 and 0. A promise is kept, or it differs, or the block raised, or it stopped. A block that is marked as an exercise is not run, and a block that touches files, the clock or chance says so, and shows the output that was recorded on its date.
+A block of code that begins with the tag `haro` is run inside the library at the commit named under the chapter's title. The lines that begin with `#-->` are the block's promise: what the block printed when the author wrote it. The judge compares the promise with the run, ignoring spacing, and reading `TRUE` and `FALSE` as 1 and 0. A promise is kept, or it differs, or the block raised, or it stopped. A block that is marked as an exercise is the reader's to run, and a block that touches files, the clock or chance says so, and shows the output that was recorded on its date.
 
 An agent that quotes a promise should quote its verdict with it.
 

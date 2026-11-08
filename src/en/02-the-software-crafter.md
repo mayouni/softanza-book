@@ -233,9 +233,9 @@ Coding agents lead in hands. They already read, search, edit and run. What they 
 
 Low-code leads in installed base and in everything around it, as general knowledge has it. The organisation in the field keeps its vendor's suite for its accounts, its documents and its notifications. The crafter's platform sits beside the field's tools, not in place of them.
 
-The messaging apps lead where the crafters already are, and the record of the restaurant does not yet make one his medium. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form, and not his answer. No page of the site names those apps, and no conversational medium is a target of the platform yet. Chapter 25 is about that direction.
+The messaging apps lead where the crafters already are. The restaurateur's tool before the project was a spreadsheet; his own report of 4 July 2026 says so. The line that names messaging apps is the label of an option in the scoping form. A conversational medium as a target of the platform is a direction, and Chapter 25 is about it.
 
-And the educator's door is at an earlier stage than the others. The course's editions in French, Arabic and Hausa are drafts that a reviewer has yet to read, and the first institution to adopt it is still to come.
+And the educator's door is at an earlier stage than the others. The course's editions in French, Arabic and Hausa are drafts; a reviewer's reading and a first institution to adopt the course are the next steps.
 
 The next section says what is built, what is designed and what is absent.
 
@@ -245,7 +245,7 @@ What is built: the agent file and its court; the registry that refuses a fake in
 
 What is designed: a guard that fails when a step of a journey page breaks, each step run in order; the door through which a coding agent asks the library to judge its work.
 
-What is absent: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And the crafter's own medium, the messaging app on their phone, is not yet something a world can be declared to.
+What is absent: the platforms of the three customers running on the Softanza engine. Today the restaurant's platform is a set of web worlds, each a single file; the bank's is a Python application; the organisation's hub is a design. Their declarations are being written as Softanza's own. And declaring a world to the crafter's own medium, the messaging app on their phone, is the direction of Chapter 25.
 
 ## 8. Six doors
 
@@ -257,7 +257,7 @@ What is absent: the platforms of the three customers running on the Softanza eng
 
 **The decision-maker.** You declare your world, your governance, and what each actor may commit, and you own all of it, in plain text.
 
-**The educator.** You declare a course in your learners' language, and every exercise is checked by running, in the site's words. The editions in French, Arabic and Hausa are drafts a reviewer has yet to read.
+**The educator.** You declare a course in your learners' language, and every exercise is checked by running, in the site's words. The editions in French, Arabic and Hausa are drafts, and a reviewer's reading is the next step.
 
 **The agent.** You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit.
 

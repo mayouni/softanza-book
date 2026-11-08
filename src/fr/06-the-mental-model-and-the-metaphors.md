@@ -16,7 +16,7 @@ rulings: ["12.3", "12.6", "12.14", "12.16", "12.17"]
 research: research/ch06.md
 ---
 
-Dans ce chapitre, je prends les sept étapes du modèle mental, dont le chapitre 5 a exécuté les quatre du milieu sur une liste, et je les exécute sur une chaîne, dans le même ordre. Puis j'en viens à la boucle, l'endroit où les étapes se répètent, et aux quatre métaphores que la bibliothèque vous donne à la place : le marcheur, le vérificateur, le producteur et l'exécutant. Je montre la condition que les quatre portent à l'intérieur d'un argument, la condition W que le moteur lit comme des données, et son jumeau WF, qui exécute du code hôte. Je dis pourquoi j'ai fait des métaphores un but de conception, pourquoi j'ai remplacé `eval` par un langage que le moteur possède, et où le code des articles sur lesquels ce chapitre repose n'est pas encore exécutable à ce commit. Le principe sous tout cela est celui du chapitre : quand vous écririez une boucle, nommez le mouvement que vous faites, marcher, vérifier, produire ou exécuter.
+Dans ce chapitre, je prends les sept étapes du modèle mental, dont le chapitre 5 a exécuté les quatre du milieu sur une liste, et je les exécute sur une chaîne, dans le même ordre. Puis j'en viens à la boucle, l'endroit où les étapes se répètent, et aux quatre métaphores que la bibliothèque vous donne à la place : le marcheur, le vérificateur, le producteur et l'exécutant. Je montre la condition que les quatre portent à l'intérieur d'un argument, la condition W que le moteur lit comme des données, et son jumeau WF, qui exécute du code hôte. Je dis pourquoi j'ai fait des métaphores un but de conception, pourquoi j'ai remplacé `eval` par un langage que le moteur possède, et où la bibliothèque, à ce commit, s'écarte du code des articles sur lesquels ce chapitre repose. Le principe sous tout cela est celui du chapitre : quand vous écririez une boucle, nommez le mouvement que vous faites, marcher, vérifier, produire ou exécuter.
 
 ## 1. Le concept, tel que le terrain le tient
 
@@ -124,7 +124,7 @@ Q([ 1, "haro", 3, "python", 5, "ruby" ]) {
 }
 ```
 
-Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`. Le producteur a rendu `[ "HARO", "PYTHON", "RUBY" ]`. La liste n'a pas été touchée ! L'exécutant a changé la liste : `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. Le verbe vous dit lequel, si bien qu'une conception peut dire « cette étape ne fait que lire » et le penser.
+Regardez les deux sorties de `Content()`, avant et après l'appel à `PerformW`. Le producteur a rendu `[ "HARO", "PYTHON", "RUBY" ]`. La liste est restée intacte ! L'exécutant a changé la liste : `[ 1, "HARO", 3, "PYTHON", 5, "RUBY" ]`. Le verbe vous dit lequel, si bien qu'une conception peut dire « cette étape ne fait que lire » et le penser.
 
 Maintenant ce que les quatre partagent : une condition voyage à l'intérieur d'un argument. C'est une petite chaîne, gardée dans une variable si vous voulez. Elle se place au même endroit pour find, pour items et pour contains. Et elle a un jumeau qui prend une vraie fonction :
 
@@ -144,7 +144,7 @@ Q([ 3, 8, 5, 12, 1, 9 ]) {
 
 Les deux s'accordent : `FindW` avec la chaîne et `FindWF` avec la fonction impriment tous deux `[ 2, 4, 6 ]`. `ItemsW` rend les éléments eux-mêmes, `[ 8, 12, 9 ]`.
 
-La forme en chaîne est la condition W ; la forme en fonction est WF. Elles se ressemblent, et la différence compte. Le moteur lit une condition W comme des données, dans un petit langage à lui : des littéraux, `@item`, l'arithmétique, les comparaisons, et une courte liste de fonctions. Il ne peut pas appeler votre code. Alors que devient une condition qui essaie ? Elle n'est pas exécutée :
+La forme en chaîne est la condition W ; la forme en fonction est WF. Elles se ressemblent, et la différence compte. Le moteur lit une condition W comme des données, dans un petit langage à lui : des littéraux, `@item`, l'arithmétique, les comparaisons, et une courte liste de fonctions. Il ne peut pas appeler votre code. Alors que devient une condition qui essaie ? Elle reste à l'état de données :
 
 ```haro
 o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
@@ -156,7 +156,7 @@ o1 = new stzList([ 3, 8, 5, 12, 1, 9 ])
 
 Rien n'a été imprimé ! Les positions sont revenues vides, `[ ]`, et `W()` montre la condition pour ce qu'elle est, des données : `[ "where", "{ @item > 5 }" ]`. Une condition W peut être stockée, montrée à une personne et approuvée avant de s'exécuter, parce qu'elle ne peut pas s'échapper. Le jumeau WF exécute du code hôte, et la table propre de la bibliothèque dit qu'il n'est pas sûr avec une entrée à laquelle vous ne faites pas confiance.
 
-Le code de l'article « Bridging Minds and Code » ne s'exécute pas à ce commit, comme le dit la section 7.
+Le code de l'article « Bridging Minds and Code » s'écarte de la bibliothèque à ce commit, comme le dit la section 7.
 
 Les trois modèles de cet article, le sémantique, le mental et celui de l'expression, sont une seule idée en trois endroits. Le modèle sémantique est le monde du programme comme connaissance : une pomme est un fruit. Le modèle mental est ce que vous venez de faire : créer un objet, y stocker des données, y trouver des choses, agir sur les positions. Le modèle d'expression est le code qui le dit : choisir l'objet, taper le nom de l'action, continuer le flux d'actions, convertir le résultat en un autre objet. Continuer ainsi jusqu'à la réponse finale. Alors je les raconte en mots.
 
@@ -238,6 +238,6 @@ o1 = new stzList([ 4, 9, 12, 7, 20, 3 ])
 ? @@( o1.FindW('{ @item > 5 and print("hacked") }') )
 ```
 
-Exécutez-le. La condition commence par demander si un élément est au-dessus de 5. Regardez ce qui revient, et ce qui ne revient pas, et dites pourquoi avant de retourner aux sections. La section 3 dit ce que le moteur fait d'une condition qui appelle du code ; la section 6 dit ce que cela coûte, et la section 8 dit ce qu'un agent d'IA doit en faire. Quand vous l'aurez résolu, vous saurez pourquoi une réponse vide n'est pas encore la preuve que rien n'a correspondu.
+Exécutez-le. La condition commence par demander si un élément est au-dessus de 5. Regardez ce qui revient, et ce qui ne revient pas, et dites pourquoi avant de retourner aux sections. La section 3 dit ce que le moteur fait d'une condition qui appelle du code ; la section 6 dit ce que cela coûte, et la section 8 dit ce qu'un agent d'IA doit en faire. Quand vous l'aurez résolu, vous saurez pourquoi une réponse vide ne prouve pas que rien n'a correspondu.
 
 Le chapitre suivant passe au style d'écriture, et aux sept buts. Son principe tient en une phrase : ce que vous pensez est ce que vous écrivez.

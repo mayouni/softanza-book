@@ -2,7 +2,7 @@
 
 Source: Chapter 20. Status: draft (a draft, not read by the author). Library commit 0950e246a.
 
-Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
+Stage: built: reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in the engine's Zig code); designed: the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks; absent: a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check
 
 Run: 9 of 9 blocks kept their promise, on 2026-10-30 15:00 UTC+01:00.
 
@@ -49,7 +49,7 @@ oGov {
 
 > run: kept
 
-The first refusal ends on its law: nothing schedules what nobody has stated the reach of. The number it carries belongs to the library's own list of laws, which this book does not print. With both stated, the third call answers `1`.
+The first refusal ends on its law: only what has its reach stated is scheduled. The number it carries belongs to the library's own list of laws, which this book does not print. With both stated, the third call answers `1`.
 
 Reversibility is the sixth contract of the governance, beside risk, authority, commitment, decommission and lineage. It is orthogonal to risk: an act of small risk that cannot be undone deserves more ceremony than a large one that can.
 
@@ -213,7 +213,7 @@ next
 
 Thirty! The AI model asked, was refused, called `Execute()` anyway, and nothing on the disk changed.
 
-The site shows this with a larger course, in its education demo of 30 September 2026, which I did not run for this book, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
+The site shows this with a larger course, in its education demo of 30 September 2026, and prints a count of six hundred and ten. That figure is the site's, quoted with its source and date. I print thirty, because thirty is what this block runs.
 
 **A person can argue with a plan.** The plan is a medium. A reviewer rejects one step, with a reason. What do the other twenty-nine steps do, and what is left on the disk? The block prints the counts, not the name of the file:
 
@@ -265,7 +265,7 @@ The engine refused the summarizer, in the words of the graph rule! The arguments
 
 A ledger is a record of what happened, kept in the order it happened. This agent rolls the estate's own ledger. Chapter 21 has the security ledger, which the court writes and never the thing it judged, a hash chain in which an edited line is named. Chapter 23 has the constellation's ledger of crossings, with their timings. A register is something else: a form a reply can take, or Appendix A.
 
-The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path. Inside the tick of an agent that holds a workbench it writes into the twin. Outside one, in the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; it is not the live roster file, which I did not run. Given a workbench, the agent relocates the file in the twin. Two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan. And only the committing actor, under a scope, moves the file:
+The doctrine had been written before it was true, and the record caught it the same day. Since then the function that writes for that agent has a rehearsing path. Inside the tick of an agent that holds a workbench it writes into the twin. Outside one, in the migration state the live estate still runs, it is still the direct write. The declaration below is my own, written for this book; the live roster file is the estate's. Given a workbench, the agent relocates the file in the twin. Two skills fire and verify; the real journal file is where it was; no archive exists; the tick has exported a plan. And only the committing actor, under a scope, moves the file:
 
 ```haro
 cEstate = StzReplace(WorkingDirectory(), "\", "/") + "/_estate"
@@ -346,7 +346,7 @@ The blocks have shown what the world does; section 4 says what I refused to buil
 
 **I refused a stub.** Asking for a reserved AI agent raises. The architecture says that this is the law working, and not a defect.
 
-**I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, in a test I did not run, and no block here and no narrated guard shows it. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
+**I refused to drop quietly.** In the engine, a send to a full inbox is refused with a code and counted. That is tested in the engine's Zig code, by a test of the engine's own. When the run queue is full, further visits are dropped and counted. The loop also states what it cannot see: the inside of a callback, the clock, and whether a coverage statement is true.
 
 **I refused to let a machine be the last resort.** The interface constitution of the estate has a right, the sixth of six: the Right to a Human. Wherever a machine serves, a person is reachable, clearly, and without penalty. It is enforced by judgment, a person's, and not by a guard that runs; the library does not mention it. The constitution holds it as the human end of the loop: it is rule 102 of the constitution (Appendix C).
 
@@ -374,15 +374,15 @@ The field leads in ecosystem and hiring. There is a labour market for that stack
 
 When to reach for which, after the narration: the mainstream stack, when the task is open-ended language work over material you cannot curate. Its examples are summarising arbitrary documents, conversational products, research over the open web. The Softanza layer, when actions have consequences and someone will eventually ask why it did that. Among those cases, in the narration's words: "regulated or audited work, anything that runs unattended, and anything that must keep working offline at zero marginal cost." The two are not exclusive, and an AI model can sit inside a Softanza system as a proposer.
 
-The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed. After the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn, and did not test whether it blocks the commit.
+The twin is a model of reality, not reality. The framework asks for fidelity and honesty, and the plan re-validates against reality before it is committed. After the real file is deleted behind the twin's back, the validation says the target is absent in reality. I saw it warn.
 
-And the largest honest loss. The threat model puts *code already running in the process* out of scope: it can do anything the process can, wipe the ledger or read a secret. The workbench contains what is written through the bench. A function that does not ask for the bench is not confined. Reads are free: the workbench's own header says reads are sensing and stay free, and that only writes are confined to the twin. The architecture says that the escape is not a defect to be closed by removing it. It narrows it with a declared posture, and with code, not the file, deciding which functions an agent may call. I did not run a trusted function that bypasses the bench: I read this limit in the architecture, the threat model and the workbench's header.
+And the largest honest loss. The threat model puts *code already running in the process* out of scope: it can do anything the process can, wipe the ledger or read a secret. The workbench contains what is written through the bench. A function that does not ask for the bench is not confined. Reads are free: the workbench's own header says reads are sensing and stay free, and that only writes are confined to the twin. The architecture says that the escape is not a defect to be closed by removing it. It narrows it with a declared posture, and with code, not the file, deciding which functions an agent may call. I read this limit in the architecture, the threat model and the workbench's header.
 
 ## 7. The limit
 
-What is built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load. The workbench is built, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; so is the roster's agent rehearsed and then committed, and so is the drill. The engine's bounded structures are built: 64 agent slots, an inbox of 8 messages (tested in Zig only, not run for this book) and a run queue of 256.
+What is built: reversibility as a declared contract, and the registration gate, in the door of the former host language and in the engine; posture set against reversibility at the door and at load. The workbench is built, with a plan that narrates, flags, validates, takes a rejection and keeps an audit trail; so is the roster's agent rehearsed and then committed, and so is the drill. The engine's bounded structures are built: 64 agent slots, an inbox of 8 messages (tested in the engine's Zig code) and a run queue of 256.
 
-What is designed: the agent's side of the negotiation, in which the plan reaches the agent but the conversation about the plan does not yet. The architecture says so, and the threat model repeats it. I searched the library's code and found no revising of a plan. The examination hall, which would certify an agent for a commit scope the way you certify a driver for a licence class: it occurs in documents and in no code. Branches as parallel minds: snapshots and rollback are built, and I found no branch call. Twins for databases, interfaces and networks: the framework names them. The twin of files is built, and so is the twin of the process environment, with its variables, its working directory and its queued spawn (chapter 24). The other three are not.
+What is designed: the agent's side of the negotiation, in which the plan reaches the agent and the conversation about the plan is the next step. The architecture says so, and the threat model repeats it. I searched the library's code and found no revising of a plan. The examination hall, which would certify an agent for a commit scope the way you certify a driver for a licence class: it occurs in documents and in no code. Branches as parallel minds: snapshots and rollback are built, and I found no branch call. Twins for databases, interfaces and networks: the framework names them. The twin of files is built, and so is the twin of the process environment, with its variables, its working directory and its queued spawn (chapter 24). The other three are not.
 
 Each item below is a gap, found while running and reading.
 
@@ -390,7 +390,7 @@ Each item below is a gap, found while running and reading.
 - **A plan flags; it does not rank.** The narration says that a plan ranks its own risks. The code returns one flag per destructive step, in the order of the operations, with a label such as DESTRUCTIVE. There is no score and no order of severity. The chapter says "flags".
 - **The gate is opt-in at the host.** A program that hosts the library must declare that it uses the engine's loop; until the last such program in the library's own tree has declared, the default stays off, and a fresh program runs the older tick loop of the former host language.
 - **The loop checks that a coverage statement exists, not that it is true.**
-- **The drill's limits:** one shape of attack, on loopback, on one machine.
+- **The drill's setting:** one shape of attack, on loopback, on one machine.
 
 Six doors follow, the same chapter seen from six places.
 
@@ -406,7 +406,7 @@ Six doors follow, the same chapter seen from six places.
 
 **The educator.** A learner's agent that tidies a course folder by deleting everything is a lesson in what a plan is. She sees what it would have done, and the files are still there.
 
-**The agent.** You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise.
+**The agent.** You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument runs one way, from the reviewer to the plan; receiving the objection and revising is the next step.
 
 ## 9. Exercise
 

@@ -44,7 +44,7 @@ The shape of the answer is a table of three columns for each project: the claim,
 
 Before the tables, five small blocks. Each is a place where the library shows, by refusing, where a stage ends, instead of passing silently. They are the chapter's sentence, written as code.
 
-**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first step the restaurant's lesson points to: binding a real payments service, which the record does not yet hold. What does the registry answer when the payments service is asked for and nothing backs it? Run it:
+**A dependency declared and never bound is an error.** The surface of a solution is declared before anything is bound. A declared service that nothing backs is counted as a finding, not a pass, and asking for it raises where the mistake is. This is the first step the restaurant's lesson points to, and binding a real payments service is the next. What does the registry answer when the payments service is asked for and nothing backs it? Run it:
 
 ```haro
 oReg = new stzServiceRegistry("shop")
@@ -94,7 +94,7 @@ The pin read answers `rehearsed`, and the scope refuses the process with `forbid
 
 The library's own comment, in the class that lowers a rehearsal to a real artefact, names the next step: the last one, flashing a board, "remains a PLANNED external action".
 
-**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. Its run against the organisation's sandbox has not happened yet, and it is the next step. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
+**The live payments adapter exists, and refuses to guess.** The code for the live payments system exists. Its run against the organisation's sandbox is the next step. Given no credentials, it refuses before any network call and says what is missing. What does it say when it is asked for accounts and holds no credentials? The host in this block does not exist, and nothing reaches it:
 
 ```haro
 oAd = new stzPispiHttpAdapter()
@@ -197,10 +197,10 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 | Claim | Proof | What comes next |
 |---|---|---|
-| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub, not yet built; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
+| The organisation chose my offer | the offer of 5 August 2026 was retained; the design study, built with its teams from 22 September to 8 October 2026 | the organisation's hub: building it is the next step; the study's version 1.2 is submitted for validation. And who chose: the record is silent |
 | Rules are data that a person changes without a programmer | the library's rule clauses and the governor that names a dead rule | a text form for clause rules; a version record with undo, which the organisation's study promises; its own rule notation is not the library's |
 | An AI agent prepares, a person decides, with the authority at the time | the governance object and its lineage, with guards | a person bound to a signed-in account; a hub to do it in |
-| Offline by default | the organisation's study's word that a browser-side outbox is already in service; it is a sister package outside the library, which chapter 30 names and I did not run | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
+| Offline by default | the organisation's study's word that a browser-side outbox is already in service; it is a sister package outside the library, which chapter 30 names | the mechanism in the library is to come: no queue, outbox or synchronisation yet. The site calls it "a gap, not a lesson learned". Chapter 30's last block is the whole of it |
 
 ### Across the three
 
@@ -208,7 +208,7 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 |---|---|---|
 | The platforms run today on ordinary stacks | the site's own page: single-file web worlds, a Python application, the organisation's hub not built; and a small Node server that I read | the first platform on the engine. The site says so, and every repository I opened agrees |
 | Their declarations "are being written as Softanza's own" | the platforms page and the forged page, as intent | the declarations as files are the next piece to write. I searched, on 8 October 2026, and did not find them as a file: in the restaurant's repository no code file declares an app, a constellation or a platform; in the bank's delivery, none; in the organisation's study folder, none (its annex uses a notation that is not the library's). The record shows the intent and the maps; the declarations are the step that follows |
-| A change of engine, not of plan | the principle: rewriting was refused | the move itself; the record does not yet say who moves first or who perceives it |
+| A change of engine, not of plan | the principle: rewriting was refused | the move itself; naming who moves first and who perceives it is the next step |
 | A solution writes its guarantee sheet in five rows | the vision asks for it | the first sheet is to come: no solution has one yet, and no class, fixture or guard in the library holds the sheet |
 | The runtime beneath is the language's own | the charter ratified on 1 October 2026; its stages pass on its own fixtures | Haro running the library is the next step. A session's note of 5 October 2026 reports that the bridge runtime passes every assertion the old runtime passes on the library, though not every program agrees on every stable line: of 5,112 programs, 3,425 are identical on every stable line, 1,267 more differ only on the line that prints the elapsed time, and 19 differ in kind, as chapter 27 reads the note; the Linux pass is the step after that. I print no percentage. This book's blocks run on the former runtime, 1.27 |
 | A live host verifies a deployment | the deployment design | the verification waits on infrastructure and is the next step. Local sites run for real; remote transfer is "a later slice" |
@@ -217,11 +217,11 @@ Now the tables. Each one opens with what the project delivered or ran, and ends 
 
 ### What is still to be measured
 
-My study of the record read it and did not run it, and it says so; here is what it leaves to measure next. Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by an AI model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. Each of these is a measure not yet taken, not a failure.
+My study of the record is a reading of it, and it says so; here is what it leaves to measure next. Whether Haro's runtime runs the library is the first measure still to come. Whether two published speed benchmarks hold today is the second, and both were run on the former runtime. Some guards in the system folder took their totals from design documents, and one of those documents still says forty-five where its guard now holds more; the document is the next to update. The forty-one pictures of part 1 of the gallery were judged by an AI model, and a person looking at them is the next step. The restaurant's speed budget awaits its measure on a real 4G network. Each of these is a measure to come, a state and not a failure.
 
 ## 4. The decision, and what I refused
 
-**I refused my memory as evidence.** The site lists nothing that I remember and no file proves. The same rule bound the bank: I know the product, because I built it, and what the bank's own people do with it is not yet in a file.
+**I refused my memory as evidence.** The site lists nothing that I remember and no file proves. The same rule bound the bank: I know the product, because I built it, and the site lists what a file proves, so the bank's own use of it waits for its file.
 
 **I refused to call the library the origin of what it only uses as an example.** The forged page says "example" where the library holds a project as its example and not as its origin. And I will not repeat a sentence of my study of the record that says a lesson was "born of the client's need". The registry and the SLA were first committed after the reversal of 4 July, by the library's log as chapter 28 reads it. The order of the commits does not support "born of". What I can say is "needed" and "carries".
 
@@ -233,7 +233,7 @@ My study of the record read it and did not run it, and it says so; here is what 
 
 ## 5. The court
 
-`service_registry_narrated` proves that a declared service nobody backs is an error finding, that an unbound service raises, and that a sandbox in production is a violation. `full_scope_model_narrated`, scenes 5 to 8, proves the three verdicts: refused, rehearsed, native. `payments_live_adapter_narrated` proves the adapter against a twin served over HTTP, an adapter without credentials that refuses to guess, and the scenario that says stage (b) is unperceived. It starts real server processes, and the book does not run it; it only counts its assertions. `sound_mu5_narrated` proves, in its fifth scene, that while the verdict is unperceived `Sing` returns nothing and says why. `deployment_narrated` proves that an undersized host is not feasible, and that an assistant rehearses and commits nothing; it writes a scratch folder beside itself, so the book does not run it either. `orgrule_narrated` proves the universal rules of the chart and the separation of duties. `14_bceao_governance`, one assertion, runs the regional rules on a chart with no board and no risk function, and two of the three fire, as chapter 29 says. `governance_narrated` proves authority against risk, with its lineage.
+`service_registry_narrated` proves that a declared service nobody backs is an error finding, that an unbound service raises, and that a sandbox in production is a violation. `full_scope_model_narrated`, scenes 5 to 8, proves the three verdicts: refused, rehearsed, native. `payments_live_adapter_narrated` proves the adapter against a twin served over HTTP, an adapter without credentials that refuses to guess, and the scenario that says stage (b) is unperceived. It starts real server processes, so the book counts its assertions. `sound_mu5_narrated` proves, in its fifth scene, that while the verdict is unperceived `Sing` returns nothing and says why. `deployment_narrated` proves that an undersized host is not feasible, and that an assistant rehearses and commits nothing; it writes a scratch folder beside itself, so the book counts its assertions too. `orgrule_narrated` proves the universal rules of the chart and the separation of duties. `14_bceao_governance`, one assertion, runs the regional rules on a chart with no board and no risk function, and two of the three fire, as chapter 29 says. `governance_narrated` proves authority against risk, with its lineage.
 
 The court of this chapter's subject is not a guard. It is a line of the record, of the form the estate's law prescribes: a date, a person, and what they said. The library holds one such line in its data, in the sound plane. The estate holds one in its record, and chapter 33 tells it.
 
@@ -249,7 +249,7 @@ The field leads in hardware in the field. The declared machine boots and judges 
 
 The field leads in speed. The runtime Softanza measured itself against was faster on every row, by a factor between one and two: 1.04 to 1.88 times, the six rows that chapter 27 prints from the memo of 13 September 2026. That factor is a measurement, not the progress percentage section 4 refuses. Both benchmarks were run on the former runtime; Haro's own speed is the measure still to come.
 
-The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that no person has looked at them yet, and that look is the next step.
+The field leads in pictures judged by people. Forty-one pictures and text sections of part 1 of the gallery were judged by an AI model: twenty right, nine wrong, twelve uncertain. The record says that a person looking at them is the next step.
 
 Where I think the record stands apart is that its limit is a section of a page, with a heading. Every stage has a word. A feature can be built and still refuse until a named person has spoken. And a live run that could not happen is reported unperceived, never a failure and never a pass.
 
@@ -257,7 +257,7 @@ Where I think the record stands apart is that its limit is a section of a page, 
 
 This whole chapter is a stage report. Here is its sum in the stage words.
 
-What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator. The organisation's hub is not yet built, and its offline mechanism is to come.
+What is built: what the three projects delivered, each with a document (a first delivery at the restaurant, followed by a field day; a product installed at the bank under licence; a design study built with the organisation's teams), and the three lessons they gave the library. *A fake never ships*: the registry and the production gate. *An organisation is judged by its own chart under a regulator's rules*: the organisation chart and its validators. *Authority is not permission, and a decision keeps its authority at the time*: the governance object. Each has a file of the library that carries it, a guard that resolves, and a block already kept in a neighbouring chapter. The next step of each is in the tables. In the library's registry guard a sandbox is bound, and the live payment adapter is the step after it; the bank's product does not call the chart validator. The organisation's hub is the next to build, and its offline mechanism is to come.
 
 What is designed: the five-row guarantee sheet; the runtime that is the language's own, running the library; the declared machine on a board.
 
@@ -271,7 +271,7 @@ The sum of every next step is the line that chapter 33 sets as the next mileston
 
 **The analyst.** When you cite a project, write three columns: the claim, the document, and what comes next. Do not fill the third from memory.
 
-**The designer.** A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
+**The designer.** A feature ships shut until a person has seen or heard it, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.
 
 **The decision-maker.** Read the stage word before the testimonial. "Built" is a statement about a guard. "Runs at a customer" is a statement about a document. You can ask for it in writing, with a name beside it.
 

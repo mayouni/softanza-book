@@ -225,7 +225,7 @@ At `[ 4, 3 ]`, then at `[ 5, 3 ]`. Three more moves to the right gained one colu
 
 **I refused to build the siblings.** The article that tells the Regexuter describes four more: an analyser, a genetic one, a linguistic one and a quantic one. In the genetic one patterns evolve against a fitness, in the linguistic one triggers are grammar rules, and in the quantic one a pattern can be in several states at once. The article gives each a sample call, and no class stands behind it. The design later found a purpose for two of them. Answering by example demands pattern induction, the genetic one's ground; several acceptable answers demand superposed candidates, collapsed by rules or by choice, the quantic one's. Chapter 18 tells where that stands. They remain a vision; two have their purpose written.
 
-**I refused to claim the cascade.** The library's architecture says it itself: the scaffolding anticipates cascading but does not yet re-fire dependent triggers to a fixpoint. I would rather show you the block that fails to cascade than a block that does.
+**I refused to claim the cascade.** The library's architecture says it itself: the scaffolding anticipates cascading, and re-firing dependent triggers to a fixpoint is the next step. I would rather show you the block that fails to cascade than a block that does.
 
 ## 5. The court
 

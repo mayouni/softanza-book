@@ -16,7 +16,7 @@ rulings: ["12.15", "12.23", "12.24", "12.25", "12.26", "12.27"]
 research: research/ch25.md
 ---
 
-In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print the limit whole: no messaging app, no USSD, no telephone line, and a reply with a space in it, which the conversation cannot yet take.
+In this chapter I take one sentence of the interface constitution, a new medium adds renderings, never verbs, and I run it over the medium I can measure. A question becomes a line of text, goes out over an SMS sandbox, and is billed per segment in two alphabets. I show what the library ships, the question as data and the court, and what you write, the rendering and the reader. I report the record's refusals as the record's: a conversation that needs no AI model, and a voice that hears commands and not dictation. And I print where the medium stands. SMS is the medium measured here. The conversational surfaces for a messaging app, USSD and voice are designed, and a reply with a space in it is chapter 18's known limit.
 
 ## 1. The concept, as the field holds it
 
@@ -36,7 +36,7 @@ What they share is that the dialogue is written once per channel or once per fra
 
 **A new medium adds renderings, never verbs.**
 
-It is a sentence of the interface constitution, printed on the site: "The grammar is closed: a new medium adds renderings, never verbs." The record is silent on whether the wording is mine. I quote it as the constitution's. I do not tell it as my own sentence. The twenty-two verbs it speaks of are the constitution's, in six families. Appendix C prints them as I read them from the constitution's own file on 9 October 2026. The repository is unnamed, since it is not public yet.
+It is a sentence of the interface constitution, printed on the site: "The grammar is closed: a new medium adds renderings, never verbs." The record is silent on whether the wording is mine. I quote it as the constitution's. I do not tell it as my own sentence. The twenty-two verbs it speaks of are the constitution's, in six families. Appendix C prints them as I read them from the constitution's own file on 9 October 2026. The repository is private, and I leave it unnamed.
 
 The same sentence, built, for one family of values and not for the twenty-two verbs: the value is shared, and how it is rendered is each medium's own. It is a ruling by Central, the estate's coordination entity, on my delegation, of 30 September 2026. It proves that the principle is not only a slogan. It is the shape of three working faces: colour, earcon, phrase.
 
@@ -288,7 +288,7 @@ The refusals below, after the first, are the record's: a session's decisions, wr
 
 **No inferred meaning.** The crafter still declares the meaning. A sixth value would be a constitutional amendment wearing a library's clothes.
 
-**A sink proves what you would have sent.** The SMS port's honest limit: carrier filtering, sender-ID rules, per-country alphabet quirks, and asynchronous delivery receipts. None of it is modelled here.
+**A sink proves what you would have sent.** The SMS port's sink proves the message and its bill. Carrier filtering, sender-ID rules, per-country alphabet quirks and asynchronous delivery receipts are the work of a live adapter, which section 7 lists.
 
 **The screen acknowledges, and the sound is not the acknowledgement.**
 
@@ -362,7 +362,7 @@ That is the limit, printed whole; the six doors follow.
 
 **The decision-maker.** A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.
 
-**The educator.** The tutor already says the missing step as a question in four languages, in templates that carry no code. The record does not name a learner on a plain phone, and nothing serves one yet: there is no USSD and no messaging app.
+**The educator.** The tutor already says the missing step as a question in four languages, in templates that carry no code. The conversational surfaces for USSD and a messaging app are designed to serve a learner on a plain phone.
 
 **The agent.** You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the crafter declares it.
 

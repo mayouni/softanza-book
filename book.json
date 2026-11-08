@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-10-30 15:01 UTC+01:00",
+ "built": "2026-11-08 23:21 UTC+01:00",
  "library_commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
  "edition": "proof copy",
  "runtime": {
@@ -30,7 +30,7 @@
   "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
   "Rely on a promise only with its verdict, and only at the library commit named in this file.",
   "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
-  "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro does not run the library yet.",
+  "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.",
   "Never name the products of other repositories: the book describes them, and says 'the interface constitution' for the one it quotes."
  ],
  "files": {
@@ -107,7 +107,7 @@
     }
    ],
    "open_questions": [],
-   "words": 1979,
+   "words": 1982,
    "french": true,
    "text": "agents/preface.md",
    "run": {
@@ -395,7 +395,7 @@
     "analyst": "You declare your organisation's entities, rules and flows in plain text, and the rules judge the model.",
     "designer": "You declare a picture, a map or a screen as a program, and the first rule of an interface can come from a real trade: for a restaurateur, the speed of ordering.",
     "decision-maker": "You declare your world, your governance, and what each actor may commit, and you own all of it, in plain text.",
-    "educator": "You declare a course in your learners' language, and every exercise is checked by running, in the site's words. The editions in French, Arabic and Hausa are drafts a reviewer has yet to read.",
+    "educator": "You declare a course in your learners' language, and every exercise is checked by running, in the site's words. The editions in French, Arabic and Hausa are drafts, and a reviewer's reading is the next step.",
     "agent": "You declare yourself in a file: what you cover, how reversible your acts are. You get a workbench and a court. You do not get the capability to commit."
    },
    "sections": [
@@ -437,7 +437,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3164,
+   "words": 3141,
    "french": true,
    "text": "agents/ch2-the-software-crafter.md",
    "run": {
@@ -551,7 +551,7 @@
    "doors": {
     "programmer": "Every claim you make can carry its promise. An enforced constraint refuses a bad update at the object's single update point, the one `UpdateWith()` reaches: `Update()` for a string or a number, `_SetContent()` for a list.",
     "analyst": "Your rule is a declaration, and its verdict names the rule that failed, by number.",
-    "designer": "The stage word is part of the interface. A product that does not exist yet says so, in a word you can check.",
+    "designer": "The stage word is part of the interface. A product says how far it has gone, in a word you can check.",
     "decision-maker": "Ask every vendor for the loss beside the win. Chapter 1 prints one, with its date: the runtime beneath Softanza trails the one it was compared with by a factor between one and two on every row, measured on 13 September 2026; chapter 27 gives the rows.",
     "educator": "Each rethink has an article that argues it: the concept, the field's form, the redesign. That is a curriculum, ordered by family.",
     "agent": "You learn this platform from the platform, and you are corrected by it. A verdict that says why is written for you as much as for a person."
@@ -595,7 +595,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2679,
+   "words": 2672,
    "french": true,
    "text": "agents/ch3-the-method-from-first-principles.md",
    "run": {
@@ -785,7 +785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2652,
+   "words": 2651,
    "french": true,
    "text": "agents/ch4-the-platform-in-one-picture.md",
    "run": {
@@ -981,7 +981,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3141,
+   "words": 3160,
    "french": true,
    "text": "agents/ch5-law-the-code-adheres-to-the-way-a-person-thinks.md",
    "run": {
@@ -1170,7 +1170,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2647,
+   "words": 2645,
    "french": true,
    "text": "agents/ch6-the-mental-model-and-the-metaphors.md",
    "run": {
@@ -1367,7 +1367,7 @@
     "designer": "The viz prefix draws the answer where the eye expects it. The goals are the headings under which a design is judged, one feature at a time.",
     "decision-maker": "Seven goals and thirty-three features are a reading grid. In the study's reading, a feature that serves none is refused, and a goal with no feature is a gap. The tally is printed with its losses.",
     "educator": "The discipline is taught whole and in order. The converted guard for lists in strings keeps the old promise's wrong spacing in a comment, which is a lesson on the cost of hand-typed answers.",
-    "agent": "The rules are given to you as data on the site. For the code you write, the court is designed and not yet built. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string."
+    "agent": "The rules are given to you as data on the site. For the code you write, the court is designed, and building it is the next step. Write the question, then the promise under it, and put your condition in the seat, not in an evaluation of a string."
    },
    "sections": [
     {
@@ -1408,7 +1408,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3810,
+   "words": 3762,
    "french": true,
    "text": "agents/ch7-the-writing-style-and-the-seven-goals.md",
    "run": {
@@ -1631,7 +1631,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2947,
+   "words": 2948,
    "french": true,
    "text": "agents/ch8-functions-as-linguistic-expressions-and-scope.md",
    "run": {
@@ -1824,7 +1824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2741,
+   "words": 2742,
    "french": true,
    "text": "agents/ch9-patterns-of-thought.md",
    "run": {
@@ -1956,7 +1956,7 @@
    "doors": {
     "programmer": "Declare the places that may change, and propose changes to them as typed proposals. A refusal names its stage.",
     "analyst": "The rule that spans several points is yours to declare, and the gate judges it on the state the change would produce.",
-    "designer": "The cascade is what you read instead of the diff: for a point, which line and which points on it; for a class, which classes inherit. They are two cascades, not yet one.",
+    "designer": "The cascade is what you read instead of the diff: for a point, which line and which points on it; for a class, which classes inherit. They are two cascades; joining them into one is the next step.",
     "decision-maker": "Who may turn which knob is a permission and an authority against a risk tier, and the decision is recorded with its authority at the time.",
     "educator": "Step back one, rewind to a named checkpoint, rewind to zero, go forward again. A learner can try without fear because every step keeps its prior value.",
     "agent": "You may propose. Your origin is on the proposal, and a point can set a floor your origin does not clear."
@@ -2000,7 +2000,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2389,
+   "words": 2394,
    "french": true,
    "text": "agents/ch10-programming-becomes-refinement.md",
    "run": {
@@ -2231,7 +2231,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2969,
+   "words": 2938,
    "french": true,
    "text": "agents/ch11-law-a-language-is-declared-and-closed.md",
    "run": {
@@ -2426,7 +2426,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3967,
+   "words": 3961,
    "french": true,
    "text": "agents/ch12-a-language-declared.md",
    "run": {
@@ -2654,7 +2654,7 @@
     "programmer": "Write the chain as the sentence and read it aloud. The library refuses what its subject cannot do, and says why. You are the parser, so the sentence is only as grammatical as you are.",
     "analyst": "A requirement can be a paragraph that runs, with a paraphrase that comes back. Today it acts on strings, lists and numbers, so the analyst's domain words go in a knowledge file (chapter 14), not here.",
     "designer": "A designer's tone is in the refusals: a message names the word and the nearest word. The record has no designer-specific evidence for this chapter, and I keep the line short.",
-    "decision-maker": "Ask any \"natural language\" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key. The no-network claim is not yet measured.",
+    "decision-maker": "Ask any \"natural language\" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key.",
     "educator": "A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no speaker of those languages has read this page's sentences, as far as the record shows.",
     "agent": "Speak the lexicon. Use strict mode and an allow-list (chapter 11). Expect refusal with a reason. Your sentence is a proposal. A grammar that would hold you to the lexicon is designed and not built."
    },
@@ -2697,7 +2697,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3753,
+   "words": 3748,
    "french": true,
    "text": "agents/ch13-natural-and-executable.md",
    "run": {
@@ -2721,7 +2721,7 @@
    "stage": {
     "built": "a system as a plain text file of facts, with laws (unique, transitive, symmetric) and the source of each fact; Prove with its steps, a no as certain as a yes; strict mode; the file written, read back and shipped, from a course catalogue to an AI agent's memory",
     "designed": "rules in the file; derivation on any graph; a query that joins; several relations between two things; class inheritance; validation on load",
-    "absent": "the 2022 founding dialog, which does not run; Explain on a knowledge graph; the rules section of the file, which the parser drops"
+    "absent": "the 2022 founding dialog, which the book shows as text; Explain on a knowledge graph; the rules section of the file, which the parser drops"
    },
    "guards": [
     {
@@ -2873,7 +2873,7 @@
     "programmer": "One class and a text file: `Know`, `KnowRelation`, `ConstrainRelation`, `Prove`, `Query`, `WriteToKnowFile`, `ImportKnow`. The file is diffable and ships with the program.",
     "analyst": "The offering page names it: what you declare is your organisation's entities, rules and flows, in a plain-text knowledge file. Read \"rules\" as the limit above. Where to start, in the course: the chapter called \"Teach a world\".",
     "designer": "The record is silent. Neither the offering page nor the study ties the knowledge file to the designer's door, and I do not invent one.",
-    "decision-maker": "The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote. I did not run the file offline.",
+    "decision-maker": "The file is plain text that a manager can read. Every fact can carry a source and a confidence. A refused claim is kept, named and never resolved. An answer comes with its proof, and a no is certain. The design's second law says no capability may require anything paid or remote.",
     "educator": "The whole education program is knowledge files. A learner teaches a world, then questions it, and the project's guard checks the world file, the agent file and one printed answer. An institution adapts by overlay, never by fork.",
     "agent": "Your memory is a knowledge graph with provenance, and your world is a file you load and query."
    },
@@ -2916,7 +2916,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3497,
+   "words": 3491,
    "french": true,
    "text": "agents/ch14-knowledge-programming.md",
    "run": {
@@ -3099,12 +3099,12 @@
     "12.26"
    ],
    "doors": {
-    "programmer": "One habit across seven kinds of data, with graphs still lacking the small function: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.",
+    "programmer": "One habit across seven kinds of data, with a small function for six of them: a small constructor, a pattern in a string, `Match`. The pattern is data you can read and compose. Use the ones with a guard: text, numbers, tables, matrices and graphs, the last two with the gaps of section 7, and build nothing on the cache of a reused list pattern.",
     "analyst": "A data-quality rule is a sentence of the table language. The person who owns the data can read it.",
     "designer": "A pattern states a shape the interface can show before the data arrives, and a half-typed value is answered on the way.",
     "decision-maker": "A rule is a line and not a procedure. It can be reviewed, and its verdict is 1 or 0. Say beside it that a pattern with an unknown word is not refused, and that a graph arrow means *later*.",
     "educator": "The course teaches patterns in two chapters, in English, French, Arabic and Hausa. The ladder is a curriculum: text, list, number.",
-    "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that none of the six media that are not text can yet refuse a word it does not know, and that writing a pattern from examples is reserved."
+    "agent": "A pattern is a small closed notation that an agent can be held to and can read back. Be told that refusing a word it does not know is the next step for the six media that are not text, and that writing a pattern from examples is reserved."
    },
    "sections": [
     {
@@ -3145,7 +3145,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3117,
+   "words": 3131,
    "french": true,
    "text": "agents/ch15-pattern-languages.md",
    "run": {
@@ -3324,7 +3324,7 @@
     "programmer": "You write Haro and, for the layer another language does best, you hand it a string of code and a list of data and take a list back. In the plan, a Python or JavaScript programmer will also write Haro in a syntax they know. Two different things: a syntax brings you, and a runtime brings your libraries.",
     "analyst": "The statistical layer is R's, the machine-learning layer Python's, the logic layer Prolog's. You stay in one file and one list of results. The R door is in development and raises today, and the record says so.",
     "designer": "There is nothing to design at the door itself. The record's lesson is its refusal: a language not on the list is refused by name, and \"what about my language\" has one answer.",
-    "decision-maker": "The door is the one place where the closure ends, by decision. At this commit its governance is designed and not yet built, and its way back, not yet closed, reaches host code. The vision's word \"governed\" is a design. Every call's duration is recorded in the trace today.",
+    "decision-maker": "The door is the one place where the closure ends, by decision. At this commit its governance is designed and its way back reaches host code: building the one and closing the other is the next step. The vision's word \"governed\" is a design. Every call's duration is recorded in the trace today.",
     "educator": "A learner sees which layer belongs to which language and runs a two-door pipeline. The lesson is the difference between reading a language, running it, and writing in its syntax.",
     "agent": "You never reach the door by yourself. A function in an AI agent's file must carry a posture, and `external` fits a foreign runtime; and an AI model has no capability to produce effects (chapter 20)."
    },
@@ -3367,7 +3367,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3360,
+   "words": 3363,
    "french": true,
    "text": "agents/ch16-seven-languages-one-door.md",
    "run": {
@@ -3390,7 +3390,7 @@
    "status": "draft",
    "stage": {
     "built": "the domain language model's first rung and its second, a small bigram; the conversation that asks; derivation with its proof; the programmatic agent; the gate that refuses an ungoverned AI model",
-    "designed": "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent and not yet inside it; the typed unit of prediction, a design of the estate's with five validation stages and no chain of them in the library; the negotiation between an agent and its reviewer",
+    "designed": "the thinking machine's cascade across faculties; the decision stack, its pieces beside the agent; the typed unit of prediction, a design of the estate's with five validation stages; the negotiation between an agent and its reviewer",
     "absent": "four of the library's five own agents, induction from examples among them"
    },
    "guards": [
@@ -3558,7 +3558,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2908,
+   "words": 2913,
    "french": true,
    "text": "agents/ch17-law-programmatic-by-default.md",
    "run": {
@@ -3791,7 +3791,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3314,
+   "words": 3310,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {
@@ -3920,7 +3920,7 @@
    ],
    "doors": {
     "programmer": "A domain language model is a file you can read, diff and test: its facts, its laws and its goldens.",
-    "analyst": "A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; the model's own answers do not read it yet.",
+    "analyst": "A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; carrying the law into the model's own answers is the next step.",
     "designer": "The model's refusal is part of its contract: the golden test says what it must decline to answer.",
     "decision-maker": "The model can only say what the domain holds, and the gate keeps the record of what it refused and why.",
     "educator": "Rung one is a model a learner can read in full. Rung two is small enough to train in front of a class.",
@@ -3965,7 +3965,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2663,
+   "words": 2667,
    "french": true,
    "text": "agents/ch19-the-domain-language-model.md",
    "run": {
@@ -3987,7 +3987,7 @@
    "spine": false,
    "status": "draft",
    "stage": {
-    "built": "reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in Zig only, not run for the book)",
+    "built": "reversibility as a declared contract and a registration gate; posture set against reversibility, at the door and at load; the workbench, the plan, the reviewer's rejection, the committing actor under a scope; the containment drill; the engine's bounded slots and queue (the bounded inbox is tested in the engine's Zig code)",
     "designed": "the agent's side of the negotiation over a plan; the examination hall; branches as parallel minds; twins for databases, interfaces and networks",
     "absent": "a plan with no executor that is refused; a ranking of a plan's risks; code already running in the process, which is out of scope; the Right to a Human as a machine check"
    },
@@ -4135,7 +4135,7 @@
     "designer": "The plan is the one artefact that crosses from the agent to the person, and a person can reject one step. The Right to a Human says a person is reachable wherever a machine serves, and the right is held by judgment.",
     "decision-maker": "You declare what each agent covers and how reversible it is before it may exist, and you decide the scope and the actor that commits. An AI model is structurally unable to commit, even when fooled; the threat model assumes it will be. The hardest part is the one the design leaves to you: which functions code allows an agent to call.",
     "educator": "A learner's agent that tidies a course folder by deleting everything is a lesson in what a plan is. She sees what it would have done, and the files are still there.",
-    "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument is one-way: you do not yet receive the reviewer's objection and revise."
+    "agent": "You may rehearse without limit, inside the twin. Your only export is a plan, and you can be argued with over it. You may not commit. Today the argument runs one way, from the reviewer to the plan; receiving the objection and revising is the next step."
    },
    "sections": [
     {
@@ -4176,7 +4176,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3966,
+   "words": 3927,
    "french": true,
    "text": "agents/ch20-agents-that-cannot-hurt-you.md",
    "run": {
@@ -4407,7 +4407,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3763,
+   "words": 3727,
    "french": true,
    "text": "agents/ch21-the-court.md",
    "run": {
@@ -4532,7 +4532,7 @@
     "designer": "The loss goes in the same block and in the same type as the win. The stage word is part of the interface.",
     "decision-maker": "Ask any vendor, this one included, for the other side's version, the date, whether it was run, and the line they lose. The memo of 13 September 2026 is a model of a headline withdrawn.",
     "educator": "A code pair is a lesson in what a line costs. The learner writes the other side's output before running it.",
-    "agent": "When you repeat a claim about another tool, carry its version and date, and say if you did not run it. The register that would make this checkable by an AI agent is proposed and not built."
+    "agent": "When you repeat a claim about another tool, carry its version and date, and say whether you ran it. A register that makes this checkable by an AI agent is proposed."
    },
    "sections": [
     {
@@ -4573,7 +4573,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4016,
+   "words": 3935,
    "french": true,
    "text": "agents/ch22-compared-honestly.md",
    "run": {
@@ -4740,7 +4740,7 @@
    ],
    "doors": {
     "programmer": "You declare a world with braces, ask it to explain itself, and cross between worlds with a call that returns 0 and a `Why()` that names the gate. Watch the copy: configure, then register.",
-    "analyst": "You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated and not yet judged.",
+    "analyst": "You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated.",
     "designer": "A world declares screens as intents, a refinement as a bounded knob, and where it appears. The shells generated today are stubs, and the persona a world serves is not a field.",
     "decision-maker": "You declare who may cross where and at what risk, in three gates, and every cleared crossing leaves a decision: the block printed its rationale, and its record holds the authority and the risk of its moment. Your architect's file is text you own.",
     "educator": "The record is thin. The education plan lists a ladder from practitioner to architect to contributor among five competing level schemes, and I say so. The exercise below is judged by running.",
@@ -4785,7 +4785,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3766,
+   "words": 3744,
    "french": true,
    "text": "agents/ch23-a-world-a-constellation-a-platform.md",
    "run": {
@@ -4976,7 +4976,7 @@
    "doors": {
     "programmer": "You code the whole integration against names, with doubles that raise when you forgot something and a counter that lets you assert a fee. The day you subscribe, you change a binding and not a line. The loss: a double you wrote yourself that declares nothing is taken for live by the gate.",
     "analyst": "Before anything moves you can read the placement plan, the external dependencies with the credentials production will ask for by name, the step graph, and which part depends on a fake. The sizes are estimates, and the findings are by part.",
-    "designer": "The emulator generates a surface from the plan, with a parts grid by role and one window per part. I checked the generated text only, and never the look. Say \"generated\", and not \"seen\".",
+    "designer": "The emulator generates a surface from the plan, with a parts grid by role and one window per part. I checked the generated text. Say \"generated\", and not \"seen\".",
     "decision-maker": "\"Who may deploy?\" is a property. An assistant may plan the release and the site stays absent. A person may commit. Neither may ship a declared fake. The loss to print: live hosts and real providers are gated by infrastructure, and the record names no live run.",
     "educator": "A learner can build a whole shop's integration with no account, no key and no fee, and watch the double refuse what she forgot. Her deployment fails safely and rolls back.",
     "agent": "You may rehearse the whole integration and plan the whole release, in a world where nothing real can move: a sandbox payment moves no money and a mail sink sends no mail. You may ask whether you may go live and be told why not. You cannot commit. The loss: that guarantee covers the library's own doubles, and a surface bound to something live is outside it."
@@ -5020,7 +5020,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4144,
+   "words": 4100,
    "french": true,
    "text": "agents/ch24-rehearse-then-commit.md",
    "run": {
@@ -5201,7 +5201,7 @@
     "analyst": "The goal is the schema of the conversation. The transcript says which message produced which fact. The sandbox counts the bill before a provider exists.",
     "designer": "Your user keeps the phone they have: a text line with numbers, or a spoken phrase. The constitution's verbs are the grammar you render, and a verb the medium cannot render should be a red cell, and not a silent omission. That is designed and not built, since the matrix does not exist.",
     "decision-maker": "A conversation by SMS can be priced in a test: two Arabic dish names moved a 93-character question from one segment to two. The question to ask a vendor, what refuses a sentence your business did not approve, has an answer here: a closed set.",
-    "educator": "The tutor already says the missing step as a question in four languages, in templates that carry no code. The record does not name a learner on a plain phone, and nothing serves one yet: there is no USSD and no messaging app.",
+    "educator": "The tutor already says the missing step as a question in four languages, in templates that carry no code. The conversational surfaces for USSD and a messaging app are designed to serve a learner on a plain phone.",
     "agent": "You may propose a reply, and only a sentence of the closed set passes. An invented one is refused with its reason. And you cannot give a meaning to a phrase: the crafter declares it."
    },
    "sections": [
@@ -5243,7 +5243,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3888,
+   "words": 3903,
    "french": true,
    "text": "agents/ch25-your-users-keep-their-medium.md",
    "run": {
@@ -5420,7 +5420,7 @@
     "programmer": "You write the shell as text, and a court tells you the one box that serves no verb before anything is drawn. The same file is a native window and a page, and the library has a page that says when they disagree.",
     "analyst": "The ribbon is the order of your solution's life, and not of a tool's features. The status cell reads the court, and you can ask the world what it proposes before it is asked to act.",
     "designer": "Your interface has a constitution of twenty-two verbs and a closed grammar that adds renderings and never verbs. Every element must say which verb it serves, and the library already finds the ones that say none.",
-    "decision-maker": "Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, which caught the empty-box case when I read it by hand on 8 October 2026; no guard judges it yet.",
+    "decision-maker": "Ask of any environment three things. Does its status bar read a court? Does its assistant live in one panel and propose? And who judges that the two shells agree? Here the answers are: designed; designed, with the rail's law built beneath it in chapter 20; and a self-checking page, which caught the empty-box case when I read it by hand on 8 October 2026; its guard is to come.",
     "educator": "The exercise is a prediction: say what the court will answer before you run it. The status word that is a constant is a lesson in the difference between a label and a truth.",
     "agent": "The shell is a text file that you can read and write, and the tree a screen reader reads is the tree you may read. Your proposals appear in a rail and commit nowhere."
    },
@@ -5463,7 +5463,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4212,
+   "words": 4197,
    "french": true,
    "text": "agents/ch26-the-environment.md",
    "run": {
@@ -5612,7 +5612,7 @@
     "12.29"
    ],
    "doors": {
-    "programmer": "You choose your depth by the file you load, and you can prove it in three fresh processes. The lean layer does not run its strings today: reach for base. Read the engine's count the way the library sees it, and not the way a page types it.",
+    "programmer": "You choose your depth by the file you load, and you can prove it in three fresh processes. For strings today, reach for base. Read the engine's count the way the library sees it, and not the way a page types it.",
     "analyst": "Three numbers for \"how big is the engine\", and three methods. Ask which one a vendor means. The core library is the size of the base one for strings.",
     "designer": "A layer is a decision about what you ship, and not about taste. At the binary, core and base have a library per domain and the third layer has none; the web subset, which chapters 4 and 24 show, is a subset and not a layer.",
     "decision-maker": "The two questions of chapter 4, plus two. What runs it: version 1.27 today, with the replacement in development. What the replacement measures: within 2x of a fast peer on every row, by 1.04 to 1.88 times, which no version of the former runtime ever was, and ten megabytes of memory more than the old one. This is my view: a record that prints its loss is the only kind to trust.",
@@ -5658,7 +5658,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4929,
+   "words": 4942,
    "french": true,
    "text": "agents/ch27-the-engine-beneath.md",
    "run": {
@@ -5778,7 +5778,7 @@
     "12.30"
    ],
    "doors": {
-    "programmer": "You declare worlds and bonds and run a constellation in which a call to a world that is not yet active is refused with its reason. The restaurant's own code, however, is a web application.",
+    "programmer": "You declare worlds and bonds and run a constellation in which a call to a sleeping world is refused with its reason. The restaurant's own code, however, is a web application.",
     "analyst": "Rigour in numbers was the contract of the first application: a due date computed from the invoice date, a date required, a debt with no due date made visible.",
     "designer": "Fifteen interface rules from one directive, the three-second test; and a refused button is disabled and visible, never hidden. On who held the phone in the eleven iterations, the project's files say both, the real user and me, and the chapter does not choose.",
     "decision-maker": "The owner accepted the Lock in writing, tightened the speed budget himself, and kept the gate on fixed fees. The library's mirror is a deployment that an entitled person may commit and that is still refused over a fake.",
@@ -5824,7 +5824,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3654,
+   "words": 3649,
    "french": true,
    "text": "agents/ch28-a-restaurant-in-lyon.md",
    "run": {
@@ -6001,7 +6001,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2478,
+   "words": 2472,
    "french": true,
    "text": "agents/ch29-a-bank-in-niamey.md",
    "run": {
@@ -6184,7 +6184,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2741,
+   "words": 2729,
    "french": true,
    "text": "agents/ch30-an-organisation-in-the-field.md",
    "run": {
@@ -6339,7 +6339,7 @@
    "doors": {
     "programmer": "Your demo is a rehearsal until a target has run it. Ask the scope whether the line was native, rehearsed or refused, and write the same word beside your own claims.",
     "analyst": "When you cite a project, write three columns: the claim, the document, and what comes next. Do not fill the third from memory.",
-    "designer": "A feature that no person has seen or heard ships shut, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.",
+    "designer": "A feature ships shut until a person has seen or heard it, and says so. The stage is a state of the design and not an apology. I hold this as a view, not a result. What stands behind it on this page is the sound plane, where `Sing` refuses until a person has heard the voice.",
     "decision-maker": "Read the stage word before the testimonial. \"Built\" is a statement about a guard. \"Runs at a customer\" is a statement about a document. You can ask for it in writing, with a name beside it.",
     "educator": "Teach the difference between a project that taught the library and a project that runs on it. The first is shown here, and the second is the next milestone, in chapter 33. Unperceived is a state, not a failure.",
     "agent": "You may read the tables and quote any cell. You may not turn an absent cell into a present one. If you do, the next reader of the record will find your sentence and the missing file side by side."
@@ -6383,7 +6383,7 @@
     }
    ],
    "open_questions": [],
-   "words": 4702,
+   "words": 4684,
    "french": true,
    "text": "agents/ch31-what-the-projects-show.md",
    "run": {
@@ -6518,7 +6518,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3080,
+   "words": 3083,
    "french": true,
    "text": "agents/ch32-many-minds-on-one-body-of-work.md",
    "run": {
@@ -6665,7 +6665,7 @@
     }
    ],
    "open_questions": [],
-   "words": 2746,
+   "words": 2743,
    "french": true,
    "text": "agents/ch33-the-next-line.md",
    "run": {
@@ -6696,7 +6696,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1592,
+   "words": 1594,
    "french": true,
    "text": "agents/app-a-the-register-of-innovations.md",
    "run": {
@@ -6757,7 +6757,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1092,
+   "words": 1094,
    "french": true,
    "text": "agents/app-b-the-fourteen-house-rules.md",
    "run": {
@@ -6819,7 +6819,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1951,
+   "words": 1943,
    "french": true,
    "text": "agents/app-d-the-glossary.md",
    "run": {
@@ -6906,7 +6906,7 @@
    "doors": {},
    "sections": [],
    "open_questions": [],
-   "words": 1167,
+   "words": 1170,
    "french": true,
    "text": "agents/app-g-the-book-as-data.md",
    "run": {

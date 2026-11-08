@@ -228,7 +228,7 @@ done
 
 > run: kept
 
-The bond survived the swap: `CallAcross` still answers `1`! Chapter 28 uses `Retire` and `Revive`; this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry. Nothing in the code routes a call into a nested constellation, so the recursion of the design is a registry's recursion and not yet a call's. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and nothing is handed to the target yet.
+The bond survived the swap: `CallAcross` still answers `1`! Chapter 28 uses `Retire` and `Revive`; this block is `Swap` and `AddConstellation`. Nesting is a fact of the registry, so the recursion of the design is a registry's recursion. A crossing is a verdict: `CallAcross` clears or refuses with 1 or 0, and the verdict is its whole answer.
 
 One trap. A registered world is a copy. The host language copies an object by value when it is stored, so the world you register is not the world you hold. The header of the class says it: world objects are reached through the registry index, the live path. Configure the world fully, register it, and reach it through the constellation from then on. The envelope has the same doctrine: setting a world on the platform harvests its declarations at call time, and setting the governance snapshots the regime.
 
@@ -462,7 +462,7 @@ The six doors come next.
 
 **The programmer.** You declare a world with braces, ask it to explain itself, and cross between worlds with a call that returns 0 and a `Why()` that names the gate. Watch the copy: configure, then register.
 
-**The analyst.** You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated and not yet judged.
+**The analyst.** You declare things, relations and a goal as a wanted state of the graph, and the gap is measured. Your truths and durations are narrated.
 
 **The designer.** A world declares screens as intents, a refinement as a bounded knob, and where it appears. The shells generated today are stubs, and the persona a world serves is not a field.
 

@@ -177,7 +177,7 @@ Qu'est-ce qui exécute chaque bloc de ce livre ? Je demande sa version au runtim
 #--> 1.27
 ```
 
-Il imprime `1.27` : la version de l'ancien langage hôte, l'oracle contre lequel le nouveau runtime est jugé. Haro n'exécute pas la bibliothèque. Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
+Il imprime `1.27` : la version de l'ancien langage hôte. Elle exécute la bibliothèque aujourd'hui, et elle est l'oracle contre lequel le nouveau runtime est jugé. Sous un futur runtime la promesse change, comme la ligne de preuve le dit.
 
 Les décisions viennent ensuite, et la première porte sur cet avenir.
 
@@ -211,7 +211,7 @@ La section 5 lit ce que le tribunal prouve de tout cela, et ce qu'aucune garde n
 
 ## 5. Le tribunal
 
-`engine_is_optimised_narrated` prouve que le moteur est compilé avec optimisation : vingt sommes sur deux millions de doubles en moins d'un dixième de seconde, et la bonne réponse. Elle prouve qu'un indice de 99 et un indice de 0 sont refusés et le tampon intact, et que l'analyseur embarqué que le mode optimisé avait cassé répond maintenant. Je l'ai exécutée : six des sept assertions du fichier ont été atteintes, et six ont réussi. `engine_senses_narrated` prouve que le moteur donne au processus cinq sens : la mémoire, son pic, la mémoire du système, le temps du processeur, et une série bornée. Je l'ai exécutée : trente-six sur trente-six, et l'exécution s'arrête ensuite avec "STOPPED!" par conception. `wasm_narrated` prouve que l'entrée du moteur pour le navigateur exporte son interface choisie et que la construction a une cible pour elle. Elle construit un sous-ensemble et affirme qu'il est plus petit. Je ne l'ai pas exécutée, parce qu'elle appelle une construction de la chaîne d'outils. `threat_model_narrated` lit le modèle de menaces et vérifie que chaque ligne de garantie nomme une preuve et que chaque fichier de garde nommé existe. Les lignes G11, les harnais de fuzzing, et G25, la nomenclature de composants avec ses empreintes, concernent le moteur.
+`engine_is_optimised_narrated` prouve que le moteur est compilé avec optimisation : vingt sommes sur deux millions de doubles en moins d'un dixième de seconde, et la bonne réponse. Elle prouve qu'un indice de 99 et un indice de 0 sont refusés et le tampon intact, et que l'analyseur embarqué que le mode optimisé avait cassé répond maintenant. Je l'ai exécutée : six des sept assertions du fichier ont été atteintes, et six ont réussi. `engine_senses_narrated` prouve que le moteur donne au processus cinq sens : la mémoire, son pic, la mémoire du système, le temps du processeur, et une série bornée. Je l'ai exécutée : trente-six sur trente-six, et l'exécution s'arrête ensuite avec "STOPPED!" par conception. `wasm_narrated` prouve que l'entrée du moteur pour le navigateur exporte son interface choisie et que la construction a une cible pour elle. Elle construit un sous-ensemble et affirme qu'il est plus petit. Elle appelle une construction de la chaîne d'outils, et je l'ai lue dans sa source. `threat_model_narrated` lit le modèle de menaces et vérifie que chaque ligne de garantie nomme une preuve et que chaque fichier de garde nommé existe. Les lignes G11, les harnais de fuzzing, et G25, la nomenclature de composants avec ses empreintes, concernent le moteur.
 
 Ce qui n'existe pas : **aucune garde ne juge les couches.** Aucun fichier sous les répertoires de test ne charge le fichier d'entrée d'une couche ni ne lit le contrat. Il y a 529 gardes narrées dans base, et aucune dans noyau ou dans max. Mon étude du dossier dit 517 à un endroit et 387 à un autre, et le site 501 ; je n'imprime que ce que la construction lit. Et aucune garde ne juge les décomptes du moteur : les nombres qu'imprime la commande d'état en ligne de commande du moteur sont des constantes typées datées du 16 juin 2026.
 
@@ -230,7 +230,7 @@ La section 6 place le runtime à côté du terrain, et le pair est en tête sur 
 | binsearch | 536 | 513,1 | 1,04 |
 | bytescan | 53 | 37,5 | 1,41 |
 
-Les mots du mémo : le pair est en tête sur chaque ligne, fib et binsearch sont des quasi-égalités, et rien n'est pire que 2x. ARM n'est pas mesuré. La victoire que le mémo garde : à moins de 2x sur chaque ligne, ce qu'aucune version de l'ancien runtime n'a jamais été.
+Les mots du mémo : le pair est en tête sur chaque ligne, fib et binsearch sont des quasi-égalités, et rien n'est pire que 2x. La victoire que le mémo garde : à moins de 2x sur chaque ligne, ce qu'aucune version de l'ancien runtime n'a atteint.
 
 **L'affirmation phare est encore vivante dans les notes propres du dépôt.** Comme je l'ai lu le 9 octobre 2026, le cahier des charges du dépôt propre du runtime et ses notes disent encore que le spike bat les pairs sur chaque ligne. La correction est portée dans un autre dépôt du domaine de projets et dans le mémo. Dans le dossier propre du runtime, elle n'est portée que pour sa configuration de version candidate, dans une section des notes. Le mémo l'a demandée. Le mémo du 13 septembre 2026 retire l'affirmation, et les six lignes ci-dessus sont les siennes, bien que les notes du dépôt portent encore l'ancienne affirmation. Je ne nomme aucun pair, et je le décris comme le fait le chapitre 22 : un runtime de script rapide du terrain.
 
@@ -246,7 +246,7 @@ La section 7 dit où s'arrêtent les couches et le moteur.
 
 ## 7. La limite
 
-**La couche légère ne tourne pas.** Que rend une chaîne du noyau quand je lui demande son contenu ?
+**Dans la couche légère, les listes tournent et les chaînes s'arrêtent au moteur.** Que rend une chaîne du noyau quand je lui demande son contenu ?
 
 ```haro
 o = new stkString("abc")
@@ -264,7 +264,7 @@ Le runtime répond : `Error (R3) : Calling Function without definition: stkengin
 
 **La troisième couche est écrite et non câblée.** Ses trente-deux classes sont toutes dans un seul répertoire, et aucun fichier d'entrée ne les charge. La première d'entre elles fonctionne chargée à la main. Je l'ai exécuté et je ne le montre pas, une chaîne de onze caractères comptée par elle. Je n'ai essayé aucune des trente et une autres. Une couche de bibliothèque pour elles dans le moteur n'existe pas.
 
-Ce qui est construit : une couche est un répertoire, un préfixe et un fichier d'entrée. J'ai compté le 9 octobre 2026 à ce commit, par fichiers avec l'extension, en excluant les répertoires de test et d'archive. Noyau, 27 fichiers et 6 366 lignes ; base, 984 fichiers et 519 579 ; max, 115 et 31 292 ; et un répertoire de l'avenir, 51 fichiers et 6 356. La base représente 93,2 pour cent des lignes des trois couches. Le moteur : quatre-vingt-neuf bibliothèques issues des sources Zig, 401 fichiers source, 179 985 lignes, et 2 464 tests déclarés, que je n'ai pas exécutés. La chaîne d'outils est Zig 0.15.2 d'après le propre commentaire du fichier de construction. Dix-neuf bibliothèques embarquées, chacune avec un enregistrement de composant, version, source, licence et empreinte. Les lacunes propres du dossier : une empreinte d'archive est consignée pour neuf des dix-neuf, et trois n'ont pas de version.
+Ce qui est construit : une couche est un répertoire, un préfixe et un fichier d'entrée. J'ai compté le 9 octobre 2026 à ce commit, par fichiers avec l'extension, en excluant les répertoires de test et d'archive. Noyau, 27 fichiers et 6 366 lignes ; base, 984 fichiers et 519 579 ; max, 115 et 31 292 ; et un répertoire de l'avenir, 51 fichiers et 6 356. La base représente 93,2 pour cent des lignes des trois couches. Le moteur : quatre-vingt-neuf bibliothèques issues des sources Zig, 401 fichiers source, 179 985 lignes, et 2 464 tests déclarés, comptés dans les sources. La chaîne d'outils est Zig 0.15.2 d'après le propre commentaire du fichier de construction. Dix-neuf bibliothèques embarquées, chacune avec un enregistrement de composant, version, source, licence et empreinte. Les lacunes propres du dossier : une empreinte d'archive est consignée pour neuf des dix-neuf, et trois n'ont pas de version.
 
 Ce qui est conçu : la couche base héritant de la couche noyau. Les sept domaines partagés sont implémentés deux fois sur le même moteur. Max comme couche construite. Un chargeur pour un domaine de la base. Un tribunal qui vérifie les couches contre leur contrat. Le dépôt autonome du moteur et sa ligne de commande, que l'architecture liste comme une phase. Le pont polyglotte du moteur, qui est celui du chapitre 16.
 
@@ -276,7 +276,7 @@ Je dis ce qui est construit, ce qui est conçu, et ce qui est absent, tel que le
 
 **Construit, comme une charte, une famille de grammaires et une garde.** La charte, version 0.2, ratifiée le 1er octobre 2026. Un spike de dix-neuf étapes, que le dossier appelle des échelons, entre le 1er et le 4 octobre, chacun un document de grammaire avec des fixtures. Sa garde a rapporté un succès de l'exécution entière le 5 octobre. Ses tribunaux sont des programmes qui tournent à l'identique à l'octet sur le nouveau compilateur et sur l'ancien runtime officiel. Le nouveau compilateur met aussi en forme et exporte les fichiers de la bibliothèque : sur environ six mille, presque tous impriment les octets de la référence, et quelques dizaines sont refusés par les deux. Une première tranche d'un graphe du code a été construite le 5 octobre.
 
-**Ce qu'est Haro aujourd'hui, en une phrase que le dossier soutient :** une charte ratifiée et un spike dont les tribunaux tournent sur le nouveau runtime et sur l'ancien, sur la surface dans laquelle la bibliothèque est écrite. Il n'y a pas d'exécutable `haro`. Le répertoire des binaires contient le compilateur et deux autres. Les tribunaux forgés ne chargent aucune bibliothèque. **Haro n'exécute pas la bibliothèque.** La vision du 27 septembre disait que Haro n'existe pas et que la ligne Linux du nouveau runtime n'est pas mesurée. La première moitié est périmée, puisqu'une charte et un spike existent. La seconde moitié reste vraie de la suite large sous Linux.
+**Ce qu'est Haro aujourd'hui, en une phrase que le dossier soutient :** une charte ratifiée et un spike dont les tribunaux tournent sur le nouveau runtime et sur l'ancien, sur la surface dans laquelle la bibliothèque est écrite. Il n'y a pas d'exécutable `haro`. Le répertoire des binaires contient le compilateur et deux autres. Les tribunaux forgés ne chargent aucune bibliothèque. **L'ancien langage hôte exécute la bibliothèque aujourd'hui ; Haro est la direction.** La vision du 27 septembre disait que Haro n'existe pas et que la ligne Linux du nouveau runtime restait à mesurer. La première moitié est périmée, puisqu'une charte et un spike existent. La seconde moitié vaut toujours pour la suite large sous Linux : la passe Linux est l'étape suivante.
 
 **Conçu :** les trois altitudes, déclarant, déclaré, et calculant ; les six lettres de son alphabet, que la charte nomme, cinq d'entre elles forgées entières dans le spike ; le raffinement comme surface d'écriture ; d'autres faces sur un même graphe de programme. Ces faces arrivent comme imprimeurs avant d'arriver comme analyseurs, et jamais comme sémantique. Les verbes `haro forge`, `check`, `refine`, `run`, `project` et `narrate` sont une recommandation, et non un programme.
 
@@ -286,13 +286,13 @@ Les six portes suivent, une pour chaque lecteur.
 
 ## 8. Six portes
 
-**Le programmeur.** Vous choisissez votre profondeur par le fichier que vous chargez, et vous pouvez le prouver en trois processus neufs. La couche légère n'exécute pas ses chaînes aujourd'hui : prenez la base. Lisez le décompte du moteur comme la bibliothèque le voit, et non comme une page le tape.
+**Le programmeur.** Vous choisissez votre profondeur par le fichier que vous chargez, et vous pouvez le prouver en trois processus neufs. Pour les chaînes aujourd'hui, prenez la base. Lisez le décompte du moteur comme la bibliothèque le voit, et non comme une page le tape.
 
 **L'analyste.** Trois nombres pour « quelle est la taille du moteur », et trois méthodes. Demandez laquelle un fournisseur veut dire. La bibliothèque noyau a la taille de celle de la base pour les chaînes.
 
 **Le concepteur.** Une couche est une décision sur ce que vous livrez, et non sur le goût. Au niveau du binaire, le noyau et la base ont une bibliothèque par domaine et la troisième couche n'en a aucune ; le sous-ensemble web, que les chapitres 4 et 24 montrent, est un sous-ensemble et non une couche.
 
-**Le décideur.** Les deux questions du chapitre 4, plus deux. Ce qui l'exécute : la version 1.27 aujourd'hui, avec le remplaçant en développement. Ce que le remplaçant mesure : à moins de 2x d'un pair rapide sur chaque ligne, de 1,04 à 1,88 fois, ce qu'aucune version de l'ancien runtime n'a jamais été, et dix mégaoctets de mémoire de plus que l'ancien. C'est mon point de vue : un dossier qui imprime sa perte est le seul genre à croire.
+**Le décideur.** Les deux questions du chapitre 4, plus deux. Ce qui l'exécute : la version 1.27 aujourd'hui, avec le remplaçant en développement. Ce que le remplaçant mesure : à moins de 2x d'un pair rapide sur chaque ligne, de 1,04 à 1,88 fois, ce qu'aucune version de l'ancien runtime n'a atteint, et dix mégaoctets de mémoire de plus que l'ancien. C'est mon point de vue : un dossier qui imprime sa perte est le seul genre à croire.
 
 **Le formateur.** Enseignez la règle de dépendance en faisant charger le noyau seul à l'apprenant et prédire, puis compter. Enseignez « mesuré, jamais affirmé » avec le mémo du 13 septembre 2026.
 

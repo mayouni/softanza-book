@@ -279,7 +279,7 @@ What is absent, and the page should say each with what exists beside it:
 - **Partial**, `@Removed`, is in the archive only: the call is not defined.
 - **Future**, `BeforeQ`, was trimmed on purpose, as I said.
 - **Free**, the suffix that lets a call give its parameters in any order and any subset: there is no definition of it outside the archive. The library's own parser knows the name `FX` and not `FF`. The two narrations that tell it use two names, and the code has neither.
-- **Default**, `dftRange` and `infRange`: not defined; the library's comment calls the informing form not yet built.
+- **Default**, `dftRange` and `infRange`: not defined; the library's comment names the informing form as planned.
 - **Multilingual**, a method named in French or Arabic: not in the live library. The names exist in the archive. The nearest thing today is the language packs of chapter 11.
 - The three that run in another shape. The exceptional form exists, but the article's example does not. Free order, as the article means it, a number and a string swapped in their positions, works for the first order only: in my probe of 8 October, the swapped call ended the program with a status of one and printed nothing. The free order of named parameters is another thing, and chapter 7 runs it. And the statement form is half in place: the "All" half works, and the "No" half is the next step. The library's own classic test promises true on two of its four "No" lines, and the run prints false on all four.
 
@@ -303,7 +303,7 @@ On the scope side: the regex verbs differ from the table of the scope design doc
 
 Take one verb from a library you use that behaves differently in two frames: a mode, a locale, a target. Say in one sentence what the hidden frame is. Then write, as you would like it to be, two names for the same act in the two frames, with the frame in the verb. Before you run anything in Softanza, take `Match` and `MatchLine` on a text of three lines and write what each prints for a pattern that anchors at the start.
 
-Run it. If your two names differ only by a flag, you have not yet moved the frame into the verb.
+Run it. If your two names differ only by a flag, the frame is still in the flag: move it into the verb.
 
 I left this one in your hands, on purpose. In section 3 the article promised `SOFTANZA` from a removal, and the run printed `STAZA`. Here is that block with one change, the last argument of the call:
 

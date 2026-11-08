@@ -10,7 +10,7 @@ guards: [knowledge_integration_narrated, provenance_survives_save_narrated, prog
 stage:
   built: "un système comme un fichier texte brut de faits, avec des lois (unique, transitive, symétrique) et la source de chaque fait ; Prove avec ses étapes, un non aussi certain qu'un oui ; le mode strict ; le fichier écrit, relu et livré, d'un catalogue de cours à la mémoire d'un agent d'IA"
   designed: "des règles dans le fichier ; la dérivation sur n'importe quel graphe ; une requête qui joint ; plusieurs relations entre deux choses ; l'héritage de classes ; la validation au chargement"
-  absent: "le dialogue fondateur de 2022, qui ne tourne pas ; Explain sur un graphe de connaissance ; la section des règles du fichier, que l'analyseur écarte"
+  absent: "le dialogue fondateur de 2022, que le livre montre comme texte ; Explain sur un graphe de connaissance ; la section des règles du fichier, que l'analyseur écarte"
 status: draft
 rulings: ["12.2", "12.6", "12.12", "12.13", "12.19"]
 research: research/ch14.md
@@ -151,7 +151,7 @@ remove("clinic.zknw")
 
 Oui : un fait fusionné, la source et la confiance revenues, `[ [ "source", "registry" ], [ "confidence", 0.95 ] ]`, une contradiction, et la loi. Un fichier de ce genre a été écrit un jour sans sa provenance. L'export n'écrivait que les triplets nus, de sorte que la connaissance relue depuis le disque ne disait plus d'où elle venait. Un graphe strict ne pouvait pas charger son propre export. La correction, ce sont les deux sections ci-dessus. La garde qui la prouve est nommée à la section 5.
 
-**Une loi qui se déclenche quand un fait est ajouté.** Sur le monde par défaut de la bibliothèque, celui qui est derrière le sucre syntaxique du langage naturel, une loi symétrique dérive le fait inverse au moment où le premier est ajouté, sans appel à une étape de dérivation. Personne n'a écrit qu'Ibrahim est marié à Amina. Le monde par défaut le sait-il ?
+**Une loi qui se déclenche quand un fait est ajouté.** Sur le monde par défaut de la bibliothèque, celui qui est derrière le sucre syntaxique du langage naturel, une loi symétrique dérive le fait inverse au moment où le premier est ajouté, sans appel à une étape de dérivation. Le programme écrit un seul sens, Amina mariée à Ibrahim. Le monde par défaut connaît-il l'autre ?
 
 ```haro
 StzConstrainRelation("married-to", :Symmetric)
@@ -160,7 +160,7 @@ StzKnowRelation("amina", "married-to", "ibrahim")
 #--> 1
 ```
 
-Il répond `1`. Le fait inverse est là, et personne ne l'a écrit ! C'est le seul endroit où une loi déclarée se déclenche à l'ajout qu'une exécution de ce livre montre, et c'est le monde par défaut. La classe de graphe a aussi un interrupteur, `EnableAutoDerive`, qui lance les règles de dérivation après chaque arête ajoutée ; il est éteint par défaut, et je ne l'ai pas exécuté. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
+Il répond `1`. Le fait inverse est là, et personne ne l'a écrit ! C'est le seul endroit où une loi déclarée se déclenche à l'ajout qu'une exécution de ce livre montre, et c'est le monde par défaut. La classe de graphe a aussi un interrupteur, `EnableAutoDerive`, qui lance les règles de dérivation après chaque arête ajoutée ; il est éteint par défaut, et les exécutions de ce livre le laissent éteint. Je montre la même loi sur un graphe d'instance à la section 7, où cela ne fonctionne pas.
 
 **Un système à l'échelle.** Le programme d'éducation de la bibliothèque est un fichier de connaissance. Son catalogue, `program.zknw`, dit comment s'appelle le programme et quels cours et quelles langues il a. Quel est son nom, et quelles langues porte-t-il ? Demandez-le-lui :
 
@@ -178,9 +178,9 @@ Voilà la forme. Voyons maintenant ce que j'ai décidé, et ce que j'ai refusé.
 
 ## 4. La décision, et ce que j'ai refusé
 
-**J'ai décidé qu'une entreprise se décrit dans un seul fichier, et que le fichier est le programme.** Le document de conception enregistre ma directive : des entités, des relations, une ontologie de sémantiques propres au domaine, et des règles, dans un fichier lisible, comparable et modifiable à la main, validé au chargement. Je n'ai pas encore rencontré les deux derniers mots, et la section 7 dit où.
+**J'ai décidé qu'une entreprise se décrit dans un seul fichier, et que le fichier est le programme.** Le document de conception enregistre ma directive : des entités, des relations, une ontologie de sémantiques propres au domaine, et des règles, dans un fichier lisible, comparable et modifiable à la main, validé au chargement. La section 7 montre où j'en suis sur les deux derniers mots.
 
-**J'ai décidé des extensions à quatre lettres.** `.zknw` pour la connaissance, et les autres de la famille ; les anciennes graphies se lisent encore. L'instantané écrit `.zknw` et lit encore `.stzknow`. Le fichier de règles n'a pas été renommé : le graphe écrit et lit toujours `.stzrulz`, bien que la famille lui donne quatre lettres. Je le rapporte comme le dossier l'a.
+**J'ai décidé des extensions à quatre lettres.** `.zknw` pour la connaissance, et les autres de la famille ; les anciennes graphies se lisent encore. L'instantané écrit `.zknw` et lit encore `.stzknow`. Le fichier de règles garde son ancien nom : le graphe écrit et lit `.stzrulz`, alors que la famille lui donne quatre lettres. Je le rapporte comme le dossier l'a.
 
 **J'ai refusé un monde parallèle.** La couche naturelle tenait autrefois ses entités dans des globales, et le document de conception l'a appelé le mauvais foyer, la mauvaise forme et un monde parallèle. La résolution est un graphe par défaut, unique, derrière le sucre syntaxique du langage naturel. Les anciennes globales existent encore, et le graphe grandit à côté : l'en-tête de la bibliothèque appelle cela une double écriture. La loi qui le sous-tend est que les globales de domaine nues sont interdites ; une forme globale ne peut exister que comme mince sucre sur une instance par défaut. Ainsi le dialogue de la loi symétrique ci-dessus est du sucre sur un graphe de la même classe que celui des premiers blocs.
 
@@ -267,7 +267,7 @@ StzKnowledgeGraphQ("coop2") {
 }
 ```
 
-Le chemin répond `[ "couscous" ]`, la première étape et rien de plus : `QueryPath` ignore le reste de ses motifs, donc ce n'est pas encore une requête à plusieurs étapes. Le prédicat variable répond `[ ]`.
+Le chemin répond `[ "couscous" ]`, la première étape et rien de plus : `QueryPath` lit le premier de ses motifs, donc c'est aujourd'hui une requête à une étape. Le prédicat variable répond `[ ]`.
 
 **Une ligne qui n'est pas un fait.** Quatre lignes, dont trois ne sont pas des faits : deux champs, quatre champs, et aucune barre. Que refuse l'analyseur ?
 
@@ -284,7 +284,7 @@ aBad = oT.ImportKnow(cBad)
 
 Rien. Le fichier fusionne, `1`, et la liste des refus est `[ ]` ; l'analyseur se tait et les trois lignes disparaissent ! Le document de conception promet que le fichier est « validé au chargement ». À ce commit l'analyseur ne garde qu'une ligne ayant exactement trois champs.
 
-**Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne ne tourne pas. Le texte, que je montre et ne lance pas, est `@Q("Apple").IsA(:Fruit)`. Le 8 octobre 2026 il s'est arrêté sur `Calling Function without definition: @isfruit` ; je n'ai pas gardé cette exécution comme bloc. La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde le sens. Le monde connaît-il un nom à deux significations ?
+**Le dialogue fondateur de 2022.** La narration raconte la programmation de la connaissance par un dialogue : une pomme comme fruit et comme entreprise, un propriétaire, des relations demandées comme des questions. À ce commit sa première ligne s'arrête avant de répondre. J'en montre le texte, `@Q("Apple").IsA(:Fruit)`. Le 8 octobre 2026 il s'est arrêté sur `Calling Function without definition: @isfruit`, et je cite ce message ici à la place d'un bloc. La classe de chaîne de caractères lit le prédicat comme du langage naturel et cherche une fonction de ce nom. Deux autres formes s'arrêtent ailleurs. Les lignes de promesse de la narration sont périmées. La forme la plus proche qui tourne garde le sens. Le monde connaît-il un nom à deux significations ?
 
 ```haro
 StzKnow(:Apple, :Company)
@@ -313,7 +313,7 @@ Voilà la limite, imprimée. Voyons maintenant les six portes.
 
 **Le concepteur.** Le dossier est silencieux. Ni la page de l'offre ni l'étude ne relient le fichier de connaissance à la porte du concepteur, et je n'en invente pas.
 
-**Le décideur.** Le fichier est du texte brut qu'un responsable peut lire. Chaque fait peut porter une source et une confiance. Une affirmation refusée est gardée, nommée et jamais résolue. Une réponse vient avec sa preuve, et un non est certain. La deuxième loi de la conception dit qu'aucune capacité ne doit exiger rien de payant ni de distant. Je n'ai pas exécuté le fichier hors ligne.
+**Le décideur.** Le fichier est du texte brut qu'un responsable peut lire. Chaque fait peut porter une source et une confiance. Une affirmation refusée est gardée, nommée et jamais résolue. Une réponse vient avec sa preuve, et un non est certain. La deuxième loi de la conception dit qu'aucune capacité ne doit exiger rien de payant ni de distant.
 
 **Le formateur.** Tout le programme d'éducation est fait de fichiers de connaissance. Un apprenant enseigne un monde, puis l'interroge, et la garde du projet vérifie le fichier du monde, le fichier de l'agent et une réponse imprimée. Une institution s'adapte par surcouche, jamais par fourche.
 
@@ -321,7 +321,7 @@ Voilà la limite, imprimée. Voyons maintenant les six portes.
 
 ## 9. Exercice
 
-Voici un monde avec deux faits, et une question à laquelle il ne peut pas encore répondre. Votre promesse est la ligne qui prouve que la classe 3b fait partie du primaire, avec la chaîne écrite en entier. Changez le monde, et non la question.
+Voici un monde avec deux faits, et une question à laquelle votre changement lui permettra de répondre. Votre promesse est la ligne qui prouve que la classe 3b fait partie du primaire, avec la chaîne écrite en entier. Changez le monde, et non la question.
 
 ```haro exercise
 cWorld = 'knowledge "school"' + nl + nl + "facts" + nl +

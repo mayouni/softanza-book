@@ -161,7 +161,7 @@ oRep {
 
 > run: kept
 
-They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one. The narration's own code does not run at the pinned commit; the calls above do. The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. The regional rule compares the department of a position's superior only when that department is declared, so I expect the finding on audit to vanish when the chief executive's department is left blank. What does it say when it is? Run it:
+They say `compliant`, and the report says `SOUND`. That is the move the narration of a virtual bank tells, from a non-compliant structure to a governed one. The calls above make that move at the pinned commit. The report is one gate over the rule bases it is given. And here is the limit of it, as a block. A court reads what the chart declares and no more. The regional rule compares the department of a position's superior only when that department is declared, so I expect the finding on audit to vanish when the chief executive's department is left blank. What does it say when it is? Run it:
 
 ```haro
 oOrg2 = new stzOrgChart("bank")
@@ -179,7 +179,7 @@ oOrg2 {
 
 > run: kept
 
-It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for rules not written yet.
+It says `1`: an audit function that reports to the chief executive passes! Declare the department, and the finding appears. The same block shows the banking validator answering `pass`: the library's own comment says it passes every time, a placeholder for the rules to come.
 
 My earlier book, *Refinement-Oriented Programming*, tells the discipline of governing change through the story of Softibank, a bank facing a regulator's letter. This chapter does not retell it. It tells what the library carries.
 

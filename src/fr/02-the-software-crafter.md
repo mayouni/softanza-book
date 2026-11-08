@@ -233,9 +233,9 @@ Les agents de code mènent en mains. Ils lisent, cherchent, modifient et exécut
 
 Le low-code mène en base installée et en tout ce qui l'entoure, comme la connaissance générale le tient. L'organisation sur le terrain garde la suite de son éditeur pour ses comptes, ses documents et ses notifications. La plateforme de l'artisan du logiciel se place à côté des outils du terrain, non à leur place.
 
-Les applications de messagerie mènent là où les artisans du logiciel sont déjà, et le dossier du restaurant n'en fait pas encore son médium. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage, et non sa réponse. Aucune page du site ne nomme ces applications, et aucun médium conversationnel n'est encore une cible de la plateforme. Le chapitre 25 parle de cette direction.
+Les applications de messagerie mènent là où les artisans du logiciel sont déjà. L'outil du restaurateur avant le projet était un tableur ; son propre rapport du 4 juillet 2026 le dit. La ligne qui nomme les applications de messagerie est l'intitulé d'une option du formulaire de cadrage. Un médium conversationnel comme cible de la plateforme est une direction, et le chapitre 25 en parle.
 
-Et la porte du formateur en est à une étape plus précoce que les autres. Les éditions du cours en français, en arabe et en haoussa sont des brouillons qu'un relecteur n'a pas encore lus, et la première institution à l'adopter reste à venir.
+Et la porte du formateur en est à une étape plus précoce que les autres. Les éditions du cours en français, en arabe et en haoussa sont des brouillons ; la lecture d'un relecteur et une première institution qui adopte le cours sont les prochaines étapes.
 
 La section suivante dit ce qui est construit, ce qui est conçu et ce qui est absent.
 
@@ -245,7 +245,7 @@ Ce qui est construit : le fichier d'agent et son tribunal ; le registre qui refu
 
 Ce qui est conçu : une garde qui échoue quand une étape d'une page de parcours casse, chaque étape exécutée dans l'ordre ; la porte par laquelle un agent de code demande à la bibliothèque de juger son travail.
 
-Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et le propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, n'est pas encore quelque chose auquel un monde puisse être déclaré.
+Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur Softanza. Aujourd'hui la plateforme du restaurant est un ensemble de mondes web, chacun un fichier unique ; celle de la banque est une application Python ; le hub de l'organisation est une conception. Leurs déclarations sont en cours d'écriture comme celles de Softanza. Et déclarer un monde au propre médium de l'artisan du logiciel, l'application de messagerie sur son téléphone, est la direction du chapitre 25.
 
 ## 8. Six portes
 
@@ -257,7 +257,7 @@ Ce qui est absent : les plateformes des trois clients qui tournent sur le moteur
 
 **Le décideur.** Vous déclarez votre monde, votre gouvernance, et ce que chaque acteur peut valider, et vous possédez tout, en texte brut.
 
-**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site. Les éditions en français, en arabe et en haoussa sont des brouillons qu'un relecteur n'a pas encore lus.
+**Le formateur.** Vous déclarez un cours dans la langue de vos apprenants, et chaque exercice est vérifié en l'exécutant, selon les mots du site. Les éditions en français, en arabe et en haoussa sont des brouillons, et la lecture d'un relecteur est la prochaine étape.
 
 **L'agent.** Vous vous déclarez dans un fichier : ce que vous couvrez, à quel point vos actes sont réversibles. Vous recevez un atelier et un tribunal. Vous ne recevez pas la capacité de valider.
 

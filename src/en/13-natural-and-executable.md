@@ -184,7 +184,7 @@ The sentence-dictionary is not the only vocabulary. Where does a word go that it
 #--> a-_-b
 ```
 
-The third line is also a limit: it printed `a-_-b`. The word `sep` was in no dictionary, and was used as the text to replace. A word it does not know is a literal.
+The third line shows the other face of the rule: it printed `a-_-b`. The word `sep` was in no dictionary, and was used as the text to replace. A word it does not know is a literal.
 
 **Five languages as data.** The dictionary is keyed by meaning, and each language's word lands on one id. Do a French, an Arabic and a Turkish word land on the same one? Run it:
 
@@ -403,7 +403,7 @@ What is absent: Hausa in the Ajami script, Zarma and Fulfulde. A natural layer c
 
 **The designer.** A designer's tone is in the refusals: a message names the word and the nearest word. The record has no designer-specific evidence for this chapter, and I keep the line short.
 
-**The decision-maker.** Ask any "natural language" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key. The no-network claim is not yet measured.
+**The decision-maker.** Ask any "natural language" claim what it does with a word it does not know. Here it reports it, refuses it in strict mode, or takes it as a literal, and says which. It is designed to run offline with no key.
 
 **The educator.** A learner writes in Hausa, French, Arabic or Turkish, and the program says back what it understood in the same language. The Hausa pack speaks nine of twenty-five meanings, and no speaker of those languages has read this page's sentences, as far as the record shows.
 

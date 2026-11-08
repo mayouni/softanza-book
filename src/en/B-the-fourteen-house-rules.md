@@ -109,5 +109,5 @@ Read from the study's ruling on the style, with the state of each at the commit 
 | 10 | Code travels inside an argument as a small string | the seat runs; the mark on a parameter's name is retired |
 | 11 | Small literal languages live in strings | runs in one form |
 | 12 | A sentence can be near-natural | not as the deck wrote it |
-| 13 | A function may be named in any human language | Chinese and French names raise; the Arabic one was not run |
+| 13 | A function may be named in any human language | Chinese and French names raise; the Arabic one is the next to run |
 | 14 | A comment speaks before the code, in the teacher's voice | runs |

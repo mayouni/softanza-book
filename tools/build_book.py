@@ -38,21 +38,21 @@ UI = {
     "draft_title": "Written, its code run and judged, read by fresh readers; awaiting the author's review",
     "review_title": "The author is reviewing this page; his remarks are being applied",
     "published_title": "Approved by the author: this is the book's text",
-    "missing": "Missing · the source has not been received",
+    "missing": "Missing · the source is awaited",
     "proof": "Run on {d} inside the library at commit {sha}: {k} of {n} blocks kept their promise.",
     "proof_none": "This page has no code to run.",
-    "engine": "The blocks were run by the bridge runtime that carries the former host language's code, build {v}; Haro does not run the library yet. {eng}",
+    "engine": "The blocks were run by the bridge runtime that carries the former host language's code, build {v}. Haro's own runtime is in development. {eng}",
     "eng_at": "The engine binaries were built in a checkout of this commit, newest built {d}; {n} engine change(s) committed after that build are not in them.",
     "eng_at0": "The engine binaries were built in a checkout of this commit, newest built {d}.",
     "eng_copy": "The engine binaries were copied from the library's working checkout, newest built {d}; they are not pinned to this commit.",
-    "stale": "This page's code changed after its last run; its verdicts are not shown until it runs again.",
-    "contents": "Contents", "not_drafted": "not yet drafted", "words": "words",
+    "stale": "This page's code changed after its last run; its verdicts appear with its next run.",
+    "contents": "Contents", "not_drafted": "in writing", "words": "words",
     "decision": "The decision, and what was refused",
     "court_head": "Read from the library's test tree at commit {sha} on {d}. The figure is the number of assertions the guard holds, counted in its file; the site shows each one run.",
     "assertions": "assertions", "guard_missing": "this guard does not exist in the test tree",
     "stage": {"built": "built", "designed": "designed", "absent": "absent"},
     "doors_h": ["Door", "What you take from this chapter"],
-    "untranslated": "This chapter is not yet written in English.",
+    "untranslated": "This chapter reads in French; its English edition is in writing.",
     "read_other": "Read it in French",
     "prev": "← Previous", "next": "Next →",
     "series": "First of the AYOUNI books", "back_cover": "From the back cover",
@@ -82,21 +82,21 @@ UI = {
     "draft_title": "Écrit, son code exécuté et jugé, lu par des lecteurs neufs ; en attente de la relecture de l'auteur",
     "review_title": "L'auteur relit cette page ; ses remarques sont en cours d'application",
     "published_title": "Approuvé par l'auteur : c'est le texte du livre",
-    "missing": "Manquant · la source n'a pas été reçue",
+    "missing": "Manquant · la source est attendue",
     "proof": "Exécuté le {d} dans la bibliothèque au commit {sha} : {k} bloc(s) sur {n} ont tenu leur promesse.",
     "proof_none": "Cette page n'a pas de code à exécuter.",
-    "engine": "Les blocs ont été exécutés par le runtime passerelle qui porte le code de l'ancien langage hôte, build {v} ; Haro n'exécute pas encore la bibliothèque. {eng}",
+    "engine": "Les blocs ont été exécutés par le runtime passerelle qui porte le code de l'ancien langage hôte, build {v}. Le runtime propre de Haro est en développement. {eng}",
     "eng_at": "Les binaires du moteur ont été construits dans une copie de ce commit, le plus récent le {d} ; {n} changement(s) du moteur commité(s) après cette construction n'y sont pas.",
     "eng_at0": "Les binaires du moteur ont été construits dans une copie de ce commit, le plus récent le {d}.",
     "eng_copy": "Les binaires du moteur ont été copiés depuis la copie de travail de la bibliothèque, le plus récent construit le {d} ; ils ne sont pas liés à ce commit.",
-    "stale": "Le code de cette page a changé depuis sa dernière exécution ; ses verdicts ne sont pas montrés avant qu'elle soit exécutée à nouveau.",
-    "contents": "Sommaire", "not_drafted": "pas encore rédigé", "words": "mots",
+    "stale": "Le code de cette page a changé depuis sa dernière exécution ; ses verdicts paraissent à sa prochaine exécution.",
+    "contents": "Sommaire", "not_drafted": "en cours d'écriture", "words": "mots",
     "decision": "La décision, et ce qui a été refusé",
     "court_head": "Lu dans l'arbre de tests de la bibliothèque au commit {sha} le {d}. Le chiffre est le nombre d'assertions que la garde contient, compté dans son fichier ; le site montre chacune exécutée.",
     "assertions": "assertions", "guard_missing": "cette garde n'existe pas dans l'arbre de tests",
     "stage": {"built": "construit", "designed": "conçu", "absent": "absent"},
     "doors_h": ["Porte", "Ce que vous retirez de ce chapitre"],
-    "untranslated": "Ce chapitre n'est pas encore écrit en français. Le français est rédigé à partir de l'anglais que l'auteur a marqué « lu ».",
+    "untranslated": "Ce chapitre se lit en anglais ; son édition française est en cours d'écriture, à partir de l'anglais.",
     "read_other": "Le lire en anglais",
     "prev": "← Précédent", "next": "Suivant →",
     "series": "Premier des livres AYOUNI", "back_cover": "Quatrième de couverture",
@@ -1337,7 +1337,7 @@ AGENT_RULES = [
     "Rely on the stage words: built means the code, a guard and a run; designed means a document and nothing that runs; absent means that the record was searched, and the chapter says how far.",
     "Rely on a promise only with its verdict, and only at the library commit named in this file.",
     "A number printed in the book was read from a file or a run at the date its page gives; a number the book could not read is null.",
-    "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro does not run the library yet.",
+    "The blocks ran on the bridge runtime that carries the former host language's code (its build is in data/book-run.json); Haro's own runtime is in development.",
     "Never name the products of other repositories: the book describes them, and says 'the interface constitution' for the one it quotes.",
 ]
 
@@ -1372,7 +1372,7 @@ def with_verdicts(body, blocks):
     for k, b in enumerate(spans):
         out.append(body[last:b["end"]])
         rec = blocks[k] if k < len(blocks) else {}
-        v = rec.get("verdict") or "not run"
+        v = rec.get("verdict") or "shown as written"
         out.append("\n\n> run: " + v + (" (touches " + ", ".join(rec["effects"]) + ")" if rec.get("effects") else ""))
         last = b["end"]
     out.append(body[last:])
@@ -1442,7 +1442,7 @@ def agents_files(st, en_src, runs, guards, built, fr_ids):
     (ROOT / "book.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     lines = [f"# {st['title']} · {st['subtitle']}", "", f"> {st['tagline'].rstrip('.')}. By {st['author']}. {st['series']}.", "",
              "This book runs: every code block was run inside the Softanza library at the commit named below, and judged against the `#-->` promise lines it carries. A draft is marked as a draft.", "",
-             f"Edition: {data['edition']} (" + ", ".join(f"{sum(1 for c in chapters if OLD_STAGE.get(c['status'], c['status']) == s)} {s}" for s in STAGES) + f"; {len(chapters)} pages). Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the bridge runtime, build {(rt or {}).get('version', 'null')}; Haro does not run the library yet.", "",
+             f"Edition: {data['edition']} (" + ", ".join(f"{sum(1 for c in chapters if OLD_STAGE.get(c['status'], c['status']) == s)} {s}" for s in STAGES) + f"; {len(chapters)} pages). Built {built}. Library commit {lib.get('commit', 'null')}. Blocks ran on the bridge runtime, build {(rt or {}).get('version', 'null')}. Haro's own runtime is in development.", "",
              "## Files", "",
              "- book.json: the whole book as data, one entry per chapter, preface and appendix; book.schema.json describes it",
              "- llms-full-book.txt: every page as text, with the verdict of the last run under each code block",

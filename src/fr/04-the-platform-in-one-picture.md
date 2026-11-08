@@ -183,7 +183,7 @@ Cinq gardes se tiennent à côté des étages ; la section suivante dit ce que c
 
 ## 6. Le terrain, et où il mène
 
-Les trois profondeurs de Rust sont imposées par son compilateur et employées chaque jour sur le métal nu. La règle de Softanza est tenue au moteur et aux fichiers d'entrée, et pas encore portée là où la base devrait s'appuyer sur le noyau, comme le montre la section 7.
+Les trois profondeurs de Rust sont imposées par son compilateur et employées chaque jour sur le métal nu. La règle de Softanza est tenue au moteur et aux fichiers d'entrée, et la ligne selon laquelle la base s'appuie sur le noyau est conçue, comme le montre la section 7.
 
 Les bibliothèques de texte du terrain mènent sur la locale : la propre carte de Softanza nomme la couche de locale des composants internationaux comme l'écart net de ses chaînes, et nomme le pari derrière lui : sa zone de locale laisse ces composants dehors à dessein, sans collation, sans règles de pluriel et sans fuseaux horaires.
 

@@ -287,7 +287,7 @@ What is built, and where it stops: the limits of the gate as it stands.
 
 **The analyst.** The rule that spans several points is yours to declare, and the gate judges it on the state the change would produce.
 
-**The designer.** The cascade is what you read instead of the diff: for a point, which line and which points on it; for a class, which classes inherit. They are two cascades, not yet one.
+**The designer.** The cascade is what you read instead of the diff: for a point, which line and which points on it; for a class, which classes inherit. They are two cascades; joining them into one is the next step.
 
 **The decision-maker.** Who may turn which knob is a permission and an authority against a risk tier, and the decision is recorded with its authority at the time.
 

@@ -9,7 +9,7 @@ rulings: ["12.19"]
 
 My study of the record read four inventories the library keeps of itself: the narrations with their titles, the design documents, the engine's phase of paradigm engines, and an outside reader's list of rethought concepts. It crossed them, and found forty-six innovations in seven families. This is that register, as the study ruled it on 7 October 2026, with one column of this book's own: the chapter that tells each row. A later ruling the same day adds a forty-seventh row, answer by example, with the stage words of a plan: nothing induces yet, as chapter 18 says. It is not in this table, which keeps the forty-six the study counted.
 
-Read the register as the study reads it, and no better. It is a reading and not a census. A concept with no narration and no design document of its own was not counted. The study's evidence counts files that name the thing in code outside tests and archives, test files, and the engine module where one exists; it counts files that name a thing, and not tests that pass. I have not re-counted any of them. The study also counted how many pages of the site named each innovation; the site has changed since, and I leave that column out.
+Read the register as the study reads it, and no better. It is a reading and not a census. The register counts a concept that has a narration or a design document of its own. The study's evidence counts files that name the thing in code outside tests and archives, test files, and the engine module where one exists; it counts files that name a thing, and not tests that pass. I have not re-counted any of them. The study also counted how many pages of the site named each innovation; the site has changed since, and I leave that column out.
 
 Of the forty-six, eight are not told in this book: the adverb engine, named variables, the unified find, object history, the intent-based file interface, natural folder navigation, the invisible and the lookalike, and statistics with the linear solver and matrices. They are in the register because the record holds them, and untold here because this book had to choose.
 
@@ -83,7 +83,7 @@ The study counted twelve engines; the register gives nine of them a row of their
 | 37 | The System Foundation and the virtual twin | three scopes over one solution; rehearse, then commit | 23, 24 | guards; the engine |
 | 38 | Emulate, deploy, provision; dev to deploy | the whole solution running before it ships | 24 | four narrations that run |
 | 39 | Service virtualization | code first, subscribe later; production refuses a fake | 24, 28 | a narration; the registry |
-| 40 | The performance plane | the honest stopwatch, the frame profiler, the governed loop, judgment, the tail | 21 (the frame profiler is not shown) | ten narrations |
+| 40 | The performance plane | the honest stopwatch, the frame profiler, the governed loop, judgment, the tail | 21 (all but the frame profiler) | ten narrations |
 | 41 | The security plane | the event, the ledger, the sentinel, the drill, the response, attestation | 21 | eight narrations; an incident analysis of 815 lines |
 | 42 | Governance lineage | answerable forever | 30 | a narration |
 | 43 | The front door and secrets | authentication and credentials, self-redacting | 21 (secrets; the front door as an event only) | two narrations |
@@ -102,6 +102,6 @@ The study's reading, which I keep: what the site names is what has a product pag
 
 The study also reconciled the twelve engines. The macroplan marks the phase done. Eight of the twelve have a source file under their name in the engine; four have none, which are truth, quantifiers, polyglot and polycode, the first two reported done as libraries. On the library's side three engines have no test file at all: adverb, section merging and named variables. Two of the three are rows 16 and 21 above, which this book does not tell, and the third, row 19, it tells as an absence.
 
-### What is not measured
+### How to read the evidence
 
-No code was run to make the register. The evidence column counts files that name a thing, and the engine's done marks are the macroplan's. Whether an innovation's narration runs once its stale names are repaired was not tested. A row's chapter in the fourth column is the chapter that tells it, and a row that says "named in" is a row the chapter mentions and does not tell.
+No code was run to make the register. The evidence column counts files that name a thing, and the engine's done marks are the macroplan's. Whether an innovation's narration runs once its stale names are repaired is the test to come. A row's chapter in the fourth column is the chapter that tells it, and a row that says "named in" is a row the chapter mentions and does not tell.

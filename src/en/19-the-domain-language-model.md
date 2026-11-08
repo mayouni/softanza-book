@@ -61,7 +61,7 @@ oDLM {
 }
 ```
 
-No one wrote that corpus: each of its six sentences is a fact of the knowledge base, rendered. The vocabulary is closed, every word the domain holds with a first entry for the unknown. Twelve entries, and `something-new`, a word outside the domain, maps to the first one: `[ 2, 7, 1 ]`. "Correct by construction" holds here in the one sense the code gives it: each sentence is a recorded fact. It does not yet hold in the sense the design intended; section 7 says where.
+The knowledge base writes that corpus: each of its six sentences is a fact of the knowledge base, rendered. The vocabulary is closed, every word the domain holds with a first entry for the unknown. Twelve entries, and `something-new`, a word outside the domain, maps to the first one: `[ 2, 7, 1 ]`. "Correct by construction" holds here in the one sense the code gives it: each sentence is a recorded fact. The fuller sense the design intends is at the designed stage; section 7 says where.
 
 Completion is constrained to the domain. What does the model offer after an entity that bears facts, after a relation, after a fragment, and after a word the domain does not hold? Run it:
 
@@ -264,7 +264,7 @@ What is absent: an end-of-sentence word for the second rung, which is why one of
 
 **The programmer.** A domain language model is a file you can read, diff and test: its facts, its laws and its goldens.
 
-**The analyst.** A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; the model's own answers do not read it yet.
+**The analyst.** A fact you add makes the model know more, and a law you add makes the graph refuse more, with no training; carrying the law into the model's own answers is the next step.
 
 **The designer.** The model's refusal is part of its contract: the golden test says what it must decline to answer.
 

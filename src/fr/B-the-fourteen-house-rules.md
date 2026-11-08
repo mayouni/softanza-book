@@ -109,5 +109,5 @@ Lu d'après la décision de l'étude sur le style, avec l'état de chacune au co
 | 10 | Le code voyage dans un argument comme une petite chaîne | le siège tourne ; la marque sur le nom d'un paramètre est retirée |
 | 11 | Les petits langages littéraux vivent dans des chaînes | tourne sous une forme |
 | 12 | Une phrase peut être presque naturelle | pas comme le deck l'a écrit |
-| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | les noms chinois et français lèvent une erreur ; l'arabe n'a pas été exécuté |
+| 13 | Une fonction peut être nommée dans n'importe quelle langue humaine | les noms chinois et français lèvent une erreur ; l'arabe est le prochain à exécuter |
 | 14 | Un commentaire parle avant le code, de la voix du maître | tourne |

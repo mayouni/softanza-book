@@ -6,13 +6,13 @@ This is the one page of the book whose prose names the language Softanza grew up
 
 ## Where it began
 
-Softanza was born on Ring, a small scripting language. I wrote its library in Ring for years. I taught Ring, I promoted it in the field, and I spent nine months writing its book, *Beginning Ring Programming*, published by Apress in 2020. In 2021 I described the library to the Ring community for the first time. In 2022 the first presentation of Softanza called it "a best friend of existing Ring programmers". Ring's simplicity and its multiparadigm expressiveness are two things Softanza keeps, because they were never the problem.
+Softanza was born on Ring, a small scripting language. I wrote its library in Ring for years. I taught Ring, I promoted it in the field, and I spent nine months writing its book, *Beginning Ring Programming*, published by Apress in 2020. In 2021 I described the library to the Ring community for the first time. In 2022 the first presentation of Softanza called it "a best friend of existing Ring programmers". Ring's simplicity and its multiparadigm expressiveness are two things Softanza keeps, because the problem lay elsewhere.
 
 ## What real projects taught
 
 Three things, and they are the reasons for the move to Haro.
 
-**The limits showed.** Real projects showed that Ring was not suited to the challenges of modern applications. The limits are in three places: performance, strong typing and ease of build. The project's own sessions measured them, and the record keeps the rows with their reproductions. Chapter 27 prints the measure of the first: the engine within 2x of a fast peer of the field on every row, which the former runtime never was. Its memory stands beside the former runtime's.
+**The limits showed.** Real projects showed that Ring was not suited to the challenges of modern applications. The limits are in three places: performance, strong typing and ease of build. The project's own sessions measured them, and the record keeps the rows with their reproductions. Chapter 27 prints the measure of the first: the engine within 2x of a fast peer of the field on every row, a mark the former runtime never reached. Its memory stands beside the former runtime's.
 
 **The direction could not be influenced.** The direction of a language belongs to its owner, and we could not influence the direction of ours. The project built Ring++ to solve those three pains without leaving Ring, and it did not meet the reception we hoped for.
 

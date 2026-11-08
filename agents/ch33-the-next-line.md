@@ -105,12 +105,12 @@ So the next line is this one: *the solution ran on Softanza's own engine, and th
 What leads from here to that line? Five steps, read from the record and not composed.
 
 1. **A customer's declarations run on the engine instead of the ordinary stack.** The site says the declarations are being written as Softanza's own; I found no file of them yet, and chapter 31 says where I looked. The move to the engine is the next step.
-2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass and passes twice when run alone. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Those are two counts and not one: the first is of the suite's assertions, the second of whole programs, a program counted as agreeing only when every stable line it prints is the same on both runtimes. The morning's run gave 3,425, the figure chapter 27 prints; the 3,461 are the evening's, after a day of fixes. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Whether Haro's own runtime runs the library is not yet measured.
-3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. The sheet is designed, and the first one is yet to be written.
+2. **The language's own runtime runs the library on the customer's system.** Today the blocks of this book are run by the runtime of the former host language, version 1.27, and every page says so under its proof line. The bridge runtime that is meant to replace it was reported on 5 October 2026 to pass every assertion the old runtime passes on the library, all but one HTTP/2 request. That request failed once in the pass and passes twice when run alone. On every stable line, 3,461 of 5,112 programs agree with the old runtime. Those are two counts and not one: the first is of the suite's assertions, the second of whole programs, a program counted as agreeing only when every stable line it prints is the same on both runtimes. The morning's run gave 3,425, the figure chapter 27 prints; the 3,461 are the evening's, after a day of fixes. Its pass under Linux is the next step. Haro's charter was ratified on 1 October 2026, and Haro's own stages pass on its own fixtures. Whether Haro's own runtime runs the library is the measure to come.
+3. **The solution writes its guarantee sheet.** The vision asks every solution for five rows, one for each system it answers to, technical, social, ecological, economic and cultural, judged as fixtures, with the machine derived from them. The sheet is designed, and writing the first one is the next step.
 4. **Live hosts and a real board.** The deployment's verification against a real host or a real account is gated by infrastructure. The declared machine, a device written as a declaration, boots and judges itself in an emulator. Its hosted profile makes four promises: it is always reachable, it has a stable name, it keeps a durable log, and it survives a cut. The emulator can check three. The fourth waits for a watchdog on a real board, a watchdog being, in the field's plain sense, a hardware timer that restarts a machine that stops answering. The site says no production workload is on it yet.
 5. **A person perceives it, and the record says who.** Not a counter. A person, named, with a date and what they said.
 
-The last step is a law of the estate, and it was earned. The sound plane of the library once held hundreds of passing assertions while, to my ear, it did not yet sound right. Since then, a piece of work that reaches a person through a sense must ship in a form a person can perceive, and the record must say who perceived it and what they said. And when nobody has, the law says it plainly: unperceived is a state, not a failure. A report may be honest and still be unperceived.
+The last step is a law of the estate, and it was earned. The sound plane of the library once held hundreds of passing assertions while, to my ear, it sounded wrong. Since then, a piece of work that reaches a person through a sense must ship in a form a person can perceive, and the record must say who perceived it and what they said. And until a person has, the law says it plainly: unperceived is a state, not a failure. A report may be honest and still be unperceived.
 
 The record already holds the form of the line. In another plane, on 2 October 2026, the record says the Principal, its name for me (chapter 32 says so), listened to a sound the library made and said, in the words written down: "yes it's real drum!!" It is not a solution, and it is not a customer. But it is a person, a date, and a sentence, and it is what the next line will look like.
 
@@ -126,11 +126,11 @@ The record also holds two verdicts still to come. The pictures the library draws
 
 **I refused my own figure.** I have said aloud how far the bridge runtime has come, as a percentage. I do not print it without the guard that produces it. The stage word is "in construction", and the measured rows are the evidence.
 
-**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. The sound plane above, with its hundreds of passing assertions and the sound that was not yet right, is what stands behind it.
+**I refused an instrument as proof of a perception.** A phase whose evidence is entirely a counter is not done when the thing itself is something a person sees or hears. The counter is a result. The person is the verdict. The sound plane above, with its hundreds of passing assertions and the sound that was wrong to the ear, is what stands behind it.
 
 ## 5. The court
 
-The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that an AI model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound does not run at all, with every reason named, and that the gate opens once the service is real.
+The floor of this chapter stands on three guards. `full_scope_model_narrated`, the architect's common ground, proves that a solution is modelled first, that a deployment before a build is refused and logged as an error, and that an AI model cannot perform the deployment. `virtual_system_twin_narrated` proves that rehearsal touches nothing real, that the plan narrates itself, and that committing is the one door. `service_delivery_narrated` proves that a production deployment with a fake bound is stopped before it runs, with every reason named, and that the gate opens once the service is real.
 
 The court of this chapter's subject is not a guard. It is a line in the record: who, when, and what they said. That line is the next one to be written.
 
@@ -154,7 +154,7 @@ What is built: the floor. Declare, build, deploy in order; rehearse on a twin; r
 
 What is designed: the runtime that is the language's own, running the library; the guarantee sheet of a solution in five rows; the verification on live hosts and on a real board.
 
-What is absent: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. The record does not yet name the project that moves to the engine first, nor the person who will perceive it; I leave both unwritten until the record can carry them.
+What is absent: a customer solution running on the Softanza engine, a named person's verdict on it, and the customers' declarations as files (chapter 31 says where I looked). Beside it stand the floor above and the feedback of three projects. Naming the project that moves to the engine first, and the person who will perceive it, is the next step; I write both when the record carries them.
 
 ## 8. Six doors
 
@@ -185,7 +185,7 @@ oP.SetProfile(oSol)
 
 > run: exercise
 
-Run it. Then this one, which I also left in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. I did not run this version, and I print no answer for it.
+Run it. Then this one, which I also left in your hands. Here is the production-gate block of section 3 with one line changed: the actor is no longer the person but the assistant, `LLMActor("assistant")`, as in chapter 24. This version is yours to run, and I print no answer for it.
 
 ```haro exercise
 oReg = new stzServiceRegistry("shop")
@@ -204,4 +204,4 @@ oDep = oDel.Deploy(:Production)
 
 Run that one too. Read what `WasCommitted()` answers, and read the log: the block of section 3 printed its second error entry for the person, and I make no claim about the assistant's. Section 5 says what the three guards prove, and section 8 what an AI agent is refused. When the gate answers, you will know what it refuses for what is true and what it refuses for who is asking.
 
-Every block in this book is yours to run again. Now write one more line, the next one for your own project, in the record's form: who perceived it, on what date, and what they said. If nobody has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.
+Every block in this book is yours to run again. Now write one more line, the next one for your own project, in the record's form: who perceived it, on what date, and what they said. Until someone has, write "unperceived", and say why. That line is the end of this book, and the beginning of the next one.

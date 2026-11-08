@@ -19,7 +19,7 @@ figures:
   - "10 of 10 against 2 of 10, one model of 135 million parameters, ten prompts: SOFTANZA_STRUCTURED_OUTPUT.md (C9) section 2.1"
 ---
 
-Dans ce chapitre, j'énonce la loi de la partie III et je la fais tourner. Je commence par une phrase qui tourne parce que chaque mot est dans un dictionnaire que la bibliothèque possède, en anglais, en hausa, en français et en arabe. Je montre ce qu'elle dit d'un mot qu'elle ne connaît pas. Puis je déclare la forme d'une réponse comme un schéma, je juge des réponses contre lui, et je montre la seule chose qu'une grammaire ne peut pas tuer : une réponse fausse dans la bonne forme. Je dis quelles gardes le prouvent, où le terrain est en avance, et où la couche naturelle n'est pas encore fermée, ce que la loi énonce. La loi elle-même tient en une phrase : un langage est déclaré et fermé, et ce qui le parle, une personne ou un modèle, est jugé par lui.
+Dans ce chapitre, j'énonce la loi de la partie III et je la fais tourner. Je commence par une phrase qui tourne parce que chaque mot est dans un dictionnaire que la bibliothèque possède, en anglais, en hausa, en français et en arabe. Je montre ce qu'elle dit d'un mot qu'elle ne connaît pas. Puis je déclare la forme d'une réponse comme un schéma, je juge des réponses contre lui, et je montre la seule chose qu'une grammaire ne peut pas tuer : une réponse fausse dans la bonne forme. Je dis quelles gardes le prouvent, où le terrain est en avance, et où en est la fermeture de la couche naturelle, ce que la loi énonce. La loi elle-même tient en une phrase : un langage est déclaré et fermé, et ce qui le parle, une personne ou un modèle, est jugé par lui.
 
 ## Ce que l'âge de l'IA change ici
 
@@ -177,7 +177,7 @@ done
 #--> Unfilled template hole! The narration still contains a {#n} slot with no value for it.
 ```
 
-Et les motifs sont de petits langages à part entière, mais pas encore fermés : le chapitre 15 montre les classes de motifs acceptant sans se plaindre un mot qu'elles ne connaissent pas. La forme d'une liste est déclarée, pas écrite comme une boucle :
+Et les motifs sont de petits langages à part entière, ouverts à ce stade, leur fermeture étant à venir : le chapitre 15 montre les classes de motifs acceptant sans se plaindre un mot qu'elles ne connaissent pas. La forme d'une liste est déclarée, pas écrite comme une boucle :
 
 ```haro
 ? Lx("[@N, @S]").Match([42, "hello"])
@@ -200,7 +200,7 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 **J'ai refusé l'échappée ouverte.** Le méta-langage qui déclare les langages du domaine de projets vit hors de cette bibliothèque. Sa règle fondatrice refuse de définir toute forme qui laisserait une phrase atteindre le code de l'hôte, appeler une fonction, évaluer une chaîne ou toucher un fichier. Pas interdit : inexprimable. Un langage interne qui ne peut pas refuser le code arbitraire de l'hôte est, selon les mots de l'étude de terrain du domaine de projets, une API déguisée en langage.
 
-**J'ai refusé le langage naturel comme façon de déclarer.** Le langage naturel demande ; il ne déclare jamais. Un modèle peut rédiger une déclaration, et, par la règle de la vision, qui est conçue et pas encore construite, le brouillon n'entre dans le monde que comme une proposition : le modèle propose, le tribunal décide, une personne ratifie.
+**J'ai refusé le langage naturel comme façon de déclarer.** Le langage naturel demande ; il ne déclare jamais. Un modèle peut rédiger une déclaration, et, par la règle de la vision, le brouillon n'entre dans le monde que comme une proposition : le modèle propose, le tribunal décide, une personne ratifie. Cette règle est conçue, et la construire est la prochaine étape.
 
 **J'ai tenu la promesse de 2020 et changé son mécanisme.** Ma première diapositive promettait un langage naturel exécutable. La vision de 2026 a jugé ce slogan : il promettait plus qu'un tribunal ne peut défendre, parce qu'une phrase naturelle peut être ambiguë et qu'un mensonge peut être grammatical. Le naturel reste donc à la porte, là où une phrase demande ou rédige, et l'exécution appartient à des langages fermés qu'un tribunal peut juger. J'ai construit la couche naturelle ainsi bien avant que la vision le nomme. Seuls les mots définis dans le dictionnaire sont interprétés. Tout autre mot est sauté et signalé, ou refusé en mode strict, jamais deviné.
 
@@ -210,7 +210,7 @@ Les chapitres de cette partie prouvent la loi de cinq côtés. Le chapitre 12 ra
 
 ## 5. Le tribunal
 
-`multilingual_pack_narrated` prouve les langues comme données : les paquets, les programmes en français et en arabe, un paquet ajouté à l'exécution, et le programme qui se paraphrase dans sa propre langue. `semantic_resolver_narrated` prouve le mot inconnu avec sa suggestion, le mode strict, et la liste d'autorisation sous laquelle tout ce qui est hors liste est grammaticalement impossible. Son exécution n'atteint pas encore sa fin à ce commit. Je l'ai exécutée deux fois le 8 octobre 2026, pour le chapitre 13, et chaque fois elle s'est arrêtée sur une erreur levée par une fonction de découpage de chaîne, avant sa dernière assertion. La page compte donc ses assertions et ne revendique pas son verdict. `literate_templates_narrated` prouve qu'un gabarit est un contrat. `question_narrated` prouve qu'un verdict par oui ou non enregistre son pourquoi. `structuredoutput_narrated` prouve le tribunal de la sortie structurée, y compris le mensonge qu'il laisse passer. `schema_grammar_narrated` prouve le compilateur de grammaire, et `constrained_decoding_narrated` l'échantillonneur qui y tient un modèle.
+`multilingual_pack_narrated` prouve les langues comme données : les paquets, les programmes en français et en arabe, un paquet ajouté à l'exécution, et le programme qui se paraphrase dans sa propre langue. `semantic_resolver_narrated` prouve le mot inconnu avec sa suggestion, le mode strict, et la liste d'autorisation sous laquelle tout ce qui est hors liste est grammaticalement impossible. À ce commit, son exécution s'arrête avant sa fin. Je l'ai exécutée deux fois le 8 octobre 2026, pour le chapitre 13, et chaque fois elle s'est arrêtée sur une erreur levée par une fonction de découpage de chaîne, avant sa dernière assertion. La page compte donc les assertions qu'elle atteint. `literate_templates_narrated` prouve qu'un gabarit est un contrat. `question_narrated` prouve qu'un verdict par oui ou non enregistre son pourquoi. `structuredoutput_narrated` prouve le tribunal de la sortie structurée, y compris le mensonge qu'il laisse passer. `schema_grammar_narrated` prouve le compilateur de grammaire, et `constrained_decoding_narrated` l'échantillonneur qui y tient un modèle.
 
 Sept gardes prouvent la loi ; la section suivante dit où le terrain est en avance.
 
@@ -226,7 +226,7 @@ Et l'âge coupe dans les deux sens. Le code généré rend aussi bon marché la 
 
 Ce qui est construit : la couche naturelle, son vocabulaire comme données en cinq langues, l'anglais, le hausa, le français, l'arabe et le turc, et ses refus. Construits aussi : le tribunal de la sortie structurée avec son compilateur de grammaire et son échantillonneur, et les langages de motifs. Ceux-ci acceptent aujourd'hui un mot qu'ils ne connaissent pas ; les fermer est à venir.
 
-Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. La bibliothèque ne peut pas encore l'exécuter. Le texte de la vision dit que la forge n'a pas encore forgé (fabriqué les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la vision ne l'a pas rattrapée. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est conçue et à venir.
+Ce qui est conçu : la forge qui produirait, à partir de la seule déclaration d'un langage, son analyseur, son tribunal, son imprimeur (la partie qui réécrit une phrase) et sa grammaire pour un modèle. La forge est construite hors de la bibliothèque et conçue pour la bibliothèque : une première esquisse en a été construite hors de la bibliothèque en octobre 2026. L'exécuter depuis la bibliothèque est à venir. Le texte de la vision précède le forgeage (fabriquer les parties d'un langage à partir de sa déclaration). L'esquisse a depuis forgé des tribunaux et des grammaires pour plusieurs langages, jugés par les propres fixtures de ces langages, et la mise à jour de la vision est à venir. Le chapitre 12 la raconte avec ses limites. Une grammaire pour chaque langage déclaré est conçue et à venir.
 
 Ce qui est absent, et la loi l'énonce. La couche naturelle n'est pas fermée jusqu'au fond. Une forme, une liste écrite entre crochets, est encore remise à l'hôte pour être évaluée. Une fonction de l'hôte à l'intérieur des crochets s'exécute-t-elle ? Essayez-en une :
 
@@ -237,7 +237,7 @@ Ce qui est absent, et la loi l'énonce. La couche naturelle n'est pas fermée ju
 
 La fonction `upper` n'est pas un mot du dictionnaire naturel, et la liste est revenue `[ "X", 1 ]`. Elle s'est exécutée quand même ! Le dossier connaît déjà cette échappée et a acheminé sa réparation. Tant que la réparation n'est pas arrivée, « la couche naturelle est un langage fermé » est vrai de ses mots et pas de ses listes, et ce livre le dira.
 
-Et le paquet hausa ne lit pas encore la lettre ɗ, qu'emploie l'orthographe standard du hausa. Le paquet la stocke dans un encodage qui ne la porte pas encore. Quand je l'ai sondé le 8 octobre 2026 sur l'instantané précédant ce commit, une phrase écrite avec cette lettre n'était pas lue, et le paquet ne le signalait pas. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Le dossier ne tient aucune lecture des phrases du paquet par un locuteur du hausa. Les phrases en langue étrangère imprimées dans ce chapitre viennent de la narration et des gardes de la bibliothèque, ou sont composées à partir de son vocabulaire. Aucun locuteur natif ne les a lues pour autant que le dossier le montre.
+Et le paquet hausa lit le hausa écrit sans la lettre ɗ, qu'emploie l'orthographe standard du hausa ; porter cette lettre dans l'encodage du paquet est à venir. Quand je l'ai sondé le 8 octobre 2026 sur l'instantané précédant ce commit, une phrase écrite avec cette lettre est passée sans être lue ni signalée. Le hausa de ce chapitre est écrit sans le crochet, comme le paquet le lit aujourd'hui. Les phrases en langue étrangère imprimées dans ce chapitre viennent de la narration et des gardes de la bibliothèque, ou sont composées à partir de son vocabulaire.
 
 Voilà les limites ; la section suivante ouvre six portes sur elles.
 
@@ -267,6 +267,6 @@ Je vous laisse celui-ci. La section 7 dit qu'une liste écrite entre crochets es
 ? @@( Naturally("Create a list with [ lower('X'), 1 ] and remove its duplicates").Result() )
 ```
 
-Regardez ce que la bibliothèque fait de la fonction, et dites en une phrase ce qu'aurait fait une couche naturelle fermée. Quand vous l'aurez fait, vous saurez pourquoi « la couche naturelle est un langage fermé » est vrai de ses mots et pas encore de ses listes.
+Regardez ce que la bibliothèque fait de la fonction, et dites en une phrase ce qu'aurait fait une couche naturelle fermée. Quand vous l'aurez fait, vous saurez pourquoi « la couche naturelle est un langage fermé » est vrai de ses mots aujourd'hui, et de ses listes une fois la réparation faite.
 
 Le chapitre 12 est *Un langage, déclaré*. Son principe : déclarer un langage est aussi facile que déclarer une variable.

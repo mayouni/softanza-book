@@ -242,7 +242,7 @@ Six doors follow, one for each reader.
 
 ## 8. Six doors
 
-**The programmer.** You declare worlds and bonds and run a constellation in which a call to a world that is not yet active is refused with its reason. The restaurant's own code, however, is a web application.
+**The programmer.** You declare worlds and bonds and run a constellation in which a call to a sleeping world is refused with its reason. The restaurant's own code, however, is a web application.
 
 **The analyst.** Rigour in numbers was the contract of the first application: a due date computed from the invoice date, a date required, a debt with no due date made visible.
 
@@ -267,6 +267,6 @@ The court will tell you the circumstance and the rule. It will not write the dec
 
 I left this one in your hands, on purpose. The owner's speed protocol is at the seventy-fifth percentile, and the budget of section 3 is judged at the ninety-fifth. Take that block, change the percentile of one expectation to another that the library offers, keep every other line, and run it. Read what the court judges against what he asked for. Section 6 says what the library's terms offer, and section 7 lists his expectation among the things absent. I give you neither the verdict nor the answer.
 
-When you have solved it, you will know why a promise the court can judge is not yet the promise the owner asked for.
+When you have solved it, you will know why a promise the court can judge differs from the promise the owner asked for.
 
 Chapter 29 is a bank in Niamey, where an organisation is judged by its own chart, under a regulator's rules, by a program that reads the chart as data. The chart says what is, the rule says what must be, and the verdict names the rule and the place.
