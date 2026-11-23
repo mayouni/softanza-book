@@ -189,7 +189,7 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
                  f"{kept} of {runnable} blocks kept their promise. The verdicts printed are the run's, never rewritten.")
         line = f"Printed {stamped}. {series}."
     out.append(f'<section class="pfront colophon"><p class="warn">{esc(warn)}</p><p>{esc(proof)}</p><p>{esc(line)}</p>'
-               f'<p>© Mansour Ayouni · AYOUNI</p></section>')
+               f'<p>{esc(ui["colophon"])}</p></section>')            # the copyright page carries the colophon line (COLOPHON-03)
 
     # contents
     rows = []
@@ -244,7 +244,7 @@ def compose(lang, st, pages, runs, guards, ui, pgmap):
 
     # the open book: the invitation to organisations and the colophon line on the last page (house OPEN-BOOK.md, revised)
     out.append(f'<section class="pfront colophon ask"><p class="warn">{esc(ui["invite"] + ui["invite_mail"] + ".")}</p>'
-               f'<p>{esc(ui["offer_link"])} : {esc(ui["offer_url"])}</p>'
+               f'<p>{esc(ui["offer_link"])}{" :" if fr else ":"} {esc(ui["offer_url"])}</p>'
                f'<p>{esc(ui["colophon"])}</p><p>{esc(ui["licence_url"])}</p></section>')
     # the inside back cover on a recto, the back cover on the last page, a verso (COVER-05)
     if PAD_END:
