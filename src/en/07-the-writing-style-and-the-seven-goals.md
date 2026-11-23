@@ -246,7 +246,7 @@ The site once showed a reduced dialect: its blocks had no named parameter and no
 
 Where I think the style stands apart is that every rule serves a step of thought, and every step has a written form. The verb's form is a contract on the object. And the promise under the line is the example, the test and the documentation at once. The 2022 matrix served as a skeleton for one architect over about three hundred thousand hand-written lines, by my study's count.
 
-Section 7, next, says what is built, what is designed and what lies ahead.
+Section 7, next, says what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 

@@ -246,7 +246,7 @@ Le site a montré un jour un dialecte réduit : ses blocs n'avaient ni paramètr
 
 Là où je pense que le style se distingue, c'est que chaque règle sert une étape de pensée, et que chaque étape a une forme écrite. La forme du verbe est un contrat sur l'objet. Et la promesse sous la ligne est l'exemple, le test et la documentation à la fois. La matrice de 2022 a servi de squelette à un architecte pour environ trois cent mille lignes écrites à la main, selon le compte de mon étude.
 
-La section 7, qui suit, dit ce qui est construit, ce qui est conçu et ce qui est à venir.
+La section 7, qui suit, dit ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

@@ -245,7 +245,7 @@ Le terrain mène en fluidité, ce qui est le but d'un modèle d'IA. Un premier �
 
 Là où je pense que ceci se distingue, c'est dans ce qu'est la sortie. La réponse d'un modèle d'IA général est du texte, et chaque vérification sur elle se fait après coup. Ici chaque réponse du premier échelon porte son pourquoi et une certitude de un. Chaque proposition du second peut être soumise à une barrière, et la barrière peut la refuser avec une raison. Un modèle qui ne peut dire que ce que le domaine contient, et une barrière qui se souvient de ce qu'elle a refusé : voilà ce qu'une banque, un ministère ou une école peut signer. Je tiens cela pour une vue, non pour un résultat.
 
-La section 7 dit ce qui est construit, ce qui est conçu et ce qui est à venir.
+La section 7 dit ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

@@ -272,7 +272,7 @@ Next: a Linux and a macOS engine in service; a measured pass of the library on t
 
 ### Haro
 
-I tell what is built, what is designed, and what lies ahead, as the record has it on 9 October 2026.
+I tell what is built, what is designed, and what comes next, as the record has it on 9 October 2026.
 
 **Built, as a charter, a family of grammars and a guard.** The charter, version 0.2, ratified on 1 October 2026. A spike of nineteen steps, which the record calls rungs, between 1 and 4 October, each a grammar document with fixtures. Its guard reported a pass of the whole run on 5 October. Its courts are programs that run byte-identical on the new compiler and on the official former runtime. The new compiler also formats and dumps the library's files: of about six thousand, nearly all print the reference's bytes, and a few dozen are refused by both. A first slice of a graph of the code was built on 5 October.
 

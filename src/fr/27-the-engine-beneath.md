@@ -272,7 +272,7 @@ La suite : un moteur Linux et macOS en service ; une passe mesurée de la biblio
 
 ### Haro
 
-Je dis ce qui est construit, ce qui est conçu, et ce qui est à venir, tel que le dossier l'a au 9 octobre 2026.
+Je dis ce qui est construit, ce qui est conçu, et ce qui vient ensuite, tel que le dossier l'a au 9 octobre 2026.
 
 **Construit, comme une charte, une famille de grammaires et une garde.** La charte, version 0.2, ratifiée le 1er octobre 2026. Un spike de dix-neuf étapes, que le dossier appelle des échelons, entre le 1er et le 4 octobre, chacun un document de grammaire avec des fixtures. Sa garde a rapporté un succès de l'exécution entière le 5 octobre. Ses tribunaux sont des programmes qui tournent à l'identique à l'octet sur le nouveau compilateur et sur l'ancien runtime officiel. Le nouveau compilateur met aussi en forme et exporte les fichiers de la bibliothèque : sur environ six mille, presque tous impriment les octets de la référence, et quelques dizaines sont refusés par les deux. Une première tranche d'un graphe du code a été construite le 5 octobre.
 

@@ -5,7 +5,7 @@
  "tagline": "Declare what you know. A court keeps it. The AI model comes last.",
  "author": "Mansour Ayouni",
  "series": "First of the AYOUNI books",
- "built": "2026-11-09 00:52 UTC+01:00",
+ "built": "2026-11-23 09:59 UTC+01:00",
  "library_commit": "0950e246a7e756bafbe179ca70a6bd36ae5f99b5",
  "edition": "proof copy",
  "runtime": {
@@ -3791,7 +3791,7 @@
     }
    ],
    "open_questions": [],
-   "words": 3307,
+   "words": 3306,
    "french": true,
    "text": "agents/ch18-the-five-registers.md",
    "run": {

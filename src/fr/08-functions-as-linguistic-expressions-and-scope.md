@@ -252,7 +252,7 @@ Le terrain mène en garantie. Les arguments nommés de Python sont vérifiés à
 
 Sur la portée, le terrain mène en maturité. La pratique la plus proche est le contexte explicite : l'habitude de Go de passer un contexte à chaque appel, un objet de locale qui porte un cadre. Elles sont plus anciennes et plus largement employées. Ce que ce paradigme ajoute, c'est que le cadre fait partie d'un petit ensemble fermé, choisi dans le verbe, et que la bibliothèque peut raisonner avec lui.
 
-Enfin, la section 7, avec ce qui est construit, ce qui est conçu et ce qui est à venir.
+Enfin, la section 7, avec ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

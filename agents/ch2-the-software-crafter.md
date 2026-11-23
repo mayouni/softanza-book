@@ -245,7 +245,7 @@ The messaging apps lead where the crafters already are. The restaurateur's tool 
 
 And the educator's door is at an earlier stage than the others. The course's editions in French, Arabic and Hausa are drafts; a reviewer's reading and a first institution to adopt the course are the next steps.
 
-The next section says what is built, what is designed and what lies ahead.
+The next section says what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 

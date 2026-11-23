@@ -408,7 +408,7 @@ The field is honest about costs, and so is the record. Several candidates is the
 
 Here is where I think the record stands apart. Every reply, in whatever form, is judged by the world's laws before it counts, with the reason. The session keeps a transcript and a checkpoint that a person can read. The field's reply is a prompt, and the human keeps what comes out.
 
-Section 7 comes next, and it names what is built, what is designed and what lies ahead.
+Section 7 follows, and it names what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 

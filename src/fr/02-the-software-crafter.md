@@ -237,7 +237,7 @@ Les applications de messagerie mènent là où les artisans du logiciel sont dé
 
 Et la porte du formateur en est à une étape plus précoce que les autres. Les éditions du cours en français, en arabe et en haoussa sont des brouillons ; la lecture d'un relecteur et une première institution qui adopte le cours sont les prochaines étapes.
 
-La section suivante dit ce qui est construit, ce qui est conçu et ce qui est à venir.
+La section suivante dit ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

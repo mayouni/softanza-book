@@ -257,7 +257,7 @@ The field leads in offline. Local-first software is a practice with synchronisin
 
 The field leads in people. A decision table is a thing a trained analyst already knows how to read. And the organisation's own specification, which preferred the vendor's suite, had good reasons: its users already have accounts there.
 
-The next section lists what is built, what is designed and what lies ahead.
+The next section lists what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 

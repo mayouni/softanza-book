@@ -408,7 +408,7 @@ Le terrain est honnête sur les coûts, et le dossier aussi. Plusieurs candidats
 
 Voici où je pense que le dossier se distingue. Chaque réponse, sous quelque forme que ce soit, est jugée par les lois du monde avant de compter, avec la raison. La session garde une transcription et un point de contrôle qu'une personne peut lire. La réponse du terrain est un prompt, et l'humain garde ce qui sort.
 
-La section 7 vient ensuite, et elle nomme ce qui est construit, ce qui est conçu et ce qui est à venir.
+La section 7 suit, et elle nomme ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

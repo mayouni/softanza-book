@@ -245,7 +245,7 @@ The field leads in fluency, which is the point of an AI model. A first rung that
 
 Where I think this stands apart is in what the output is. A general AI model's answer is text, and every check on it is after the fact. Here every answer of the first rung carries its why and a certainty of one. Every proposal of the second can be put to a gate, and the gate can refuse it with a reason. A model that can only say what the domain holds, and a gate that remembers what it refused: that is what a bank, a ministry or a school can sign. I hold that as a view, not a result.
 
-Section 7 says what is built, what is designed and what lies ahead.
+Section 7 says what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 

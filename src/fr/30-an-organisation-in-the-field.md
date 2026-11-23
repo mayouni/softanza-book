@@ -253,7 +253,7 @@ Le terrain mène en hors ligne. Le logiciel local d'abord est une pratique avec 
 
 Le terrain mène en gens. Une table de décision est une chose qu'un analyste formé sait déjà lire. Et la spécification propre de l'organisation, qui préférait la suite de l'éditeur, avait de bonnes raisons : ses utilisateurs y ont déjà des comptes.
 
-La section suivante liste ce qui est construit, ce qui est conçu et ce qui est à venir.
+La section suivante liste ce qui est construit, ce qui est conçu et ce qui vient ensuite.
 
 ## 7. Où il en est
 

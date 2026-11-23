@@ -266,7 +266,7 @@ The field leads in the guarantee. Python's keyword arguments are checked at the 
 
 On scope, the field leads in maturity. The closest field practice is the explicit context: the Go habit of passing a context to every call, a locale object that carries a frame. They are older and more widely used. What this paradigm adds is that the frame is one of a small, closed set, chosen in the verb, and the library can reason with it.
 
-Last, section 7, with what is built, what is designed and what lies ahead.
+Last, section 7, with what is built, what is designed and what comes next.
 
 ## 7. Where it stands
 
